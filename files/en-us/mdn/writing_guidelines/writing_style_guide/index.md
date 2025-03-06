@@ -585,8 +585,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 #### Link text
 
-- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page with the page title "ARIA states and properties" will be:
-  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) page with the page title "ARIA states and properties" will be:
+  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
   - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.

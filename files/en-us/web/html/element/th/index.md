@@ -411,7 +411,7 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role"><code>columnheader</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role"><code>rowheader</code></a>
       </td>
     </tr>
     <tr>
