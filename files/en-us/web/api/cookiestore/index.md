@@ -142,6 +142,7 @@ This example shows how to delete a named cookie using the {{domxref("CookieStore
 
 The code first sets two cookies and logs them to the console.
 We then delete one of the cookies, and then list all cookies again.
+The deleted cookie ("cookie1") is present in the first log array, and not in the second.
 
 ```js
 async function cookieTest() {
@@ -170,8 +171,6 @@ async function cookieTest() {
   console.log(await cookieStore.getAll());
 }
 ```
-
-When run in a console we should see the deleted cookie ("cookie1") is present in the first log array, and not in the second.
 
 ## Specifications
 
