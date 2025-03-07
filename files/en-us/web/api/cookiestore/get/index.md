@@ -94,7 +94,7 @@ The object returned for a match contains the following properties:
 
 This example shows how to get a particular cookie by name.
 
-The code first creates a cookie named "cookie1" using {{domxref("CookieStore.set()")}}, logging any errors.
+The code first creates a cookie named "cookie1" using {{domxref("CookieStore.set()")}}, logging any errors to the console.
 It then waits on `get()` to retrieve information about that same cookie.
 If the returned promise resolves with an object we log the cookie: otherwise we log that no matching cookie was found.
 
@@ -119,11 +119,6 @@ async function cookieTest() {
 
 cookieTest();
 ```
-
-When run in a browser this will display information about "cookie1" in the console.
-Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
-
-The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ## Specifications
 

@@ -114,7 +114,7 @@ async function setTestCookies() {
 
 The `cookieTest()` method calls `setTestCookies()` and then waits on `getAll()`.
 This returns a {{jsxref("Promise")}} that resolves with all of the cookies for this context as an array of objects, or an empty array if there are no cookies.
-If the returned promise resolves with array containing cookie information we iterate the array and log each cookie.
+If the returned promise resolves with array containing cookie information we iterate the array and log each cookie ("cookie1" and "cookie2").
 
 ```js
 async function cookieTest() {
@@ -133,11 +133,6 @@ async function cookieTest() {
   }
 }
 ```
-
-When run in a browser this will display information about "cookie1" and "cookie2" in the console.
-Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
-
-The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ## Specifications
 
