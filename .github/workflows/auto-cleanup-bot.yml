@@ -32,7 +32,7 @@ jobs:
 
       - name: Lint markdown files
         run: |
-          # yarn content fix-flaws
+          yarn content:legacy fix-flaws
           yarn fix:md
           yarn fix:fm
           node scripts/sort_and_unique_file_lines.js .vscode/dictionaries
