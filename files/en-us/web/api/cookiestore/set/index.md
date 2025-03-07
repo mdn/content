@@ -70,8 +70,8 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 This example sets a cookie by passing a `name` and `value` of "cookie1" and "cookie1-value", respectively.
 The other properties of the cookie are set with default values, as defined in the [`options`](#options) parameter.
 
-The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged.
-It then gets the same cookie and displays its properties.
+The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged to the console.
+It then gets and logs the cookie that was just set.
 
 ```js
 async function cookieTest() {
@@ -88,17 +88,12 @@ async function cookieTest() {
 }
 ```
 
-When run in a browser this will display information about "cookie1" in the console.
-Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
-
-The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
-
 ### Setting a cookie with options
 
 This example sets a cookie by passing an `options` object with `name`, `value`, `expires`, and `partitioned`.
 
-The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged.
-The example then gets the new cookie, if it exists, and logs its properties.
+The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged to the console.
+It then gets and logs the cookie that was just set.
 
 ```js
 async function cookieTest() {
@@ -122,12 +117,6 @@ async function cookieTest() {
   console.log(cookie);
 }
 ```
-
-When run in a browser this will display information about "cookie1" in the console.
-Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
-Even if the values are not displayed, they are still set.
-
-The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ## Specifications
 

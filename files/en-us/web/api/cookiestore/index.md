@@ -80,9 +80,6 @@ async function cookieTest() {
 cookieTest();
 ```
 
-Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
-Even if the values are not displayed, they are still set.
-
 ### Getting cookies
 
 This example shows how you can get a particular cookie using {{domxref("CookieStore.get()")}} or all cookies using {{domxref("CookieStore.getAll()")}}.
