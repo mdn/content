@@ -8,7 +8,7 @@ browser-compat: api.CookieStore.delete
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie that matches with the given `name` or `options` object.
+The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie that matches the given `name` or `options` object.
 The method expires the cookie by changing its date to one in the past.
 
 Note that there is no error if a cookie cannot be matched: the returned promise will fulfill when the matched cookie is deleted or if no cookie is matched.
@@ -169,10 +169,10 @@ async function cookieTest() {
   try {
     await cookieStore.delete("cookie1");
   } catch (error) {
-    log(`Error deleting cookie1: ${error}`);
+    console.log(`Error deleting cookie1: ${error}`);
   }
 
-  // Delete cookie2 specified partitioned as true
+  // Delete cookie2, setting partitioned to true
   try {
     await cookieStore.delete({
       name: "cookie2",
@@ -202,7 +202,7 @@ The code can be tested by copying it into a test harness and running it with a [
 
 ### Delete cookies created using document.cookies
 
-This example shows how we can use `delete()` to remove a cookie created using {{domxref("document.cookie")}}.
+This example shows how we can use `delete()` to remove a cookie that was created using {{domxref("document.cookie")}}.
 
 A potential issue is that cookies created with `document.cookie` have a default path equal to the path of the document they are created in (unlike cookies created with {{domxref("CookieStore.set()")}}, which have a default [`path`](#path) of `/`).
 In order to be able to know the path later when we match the cookie, we can explicitly set the value when creating the cookie.
@@ -213,7 +213,7 @@ In order to be able to know the path later when we match the cookie, we can expl
 
 The example code below first creates two cookies "doc_cookie1" and "doc_cookie2" using `document.cookie` and logs their names.
 
-The first cookie uses the default path, which will depend on where the cookies is deployed, while the second sets the path to `/`.
+The first cookie uses the default path, which will depend on the location of the document that set the cookie, while the second sets the path to `/`.
 The code then deletes both cookies without specifying a `path` match option, and lists the cookies again.
 
 ```js
@@ -226,30 +226,30 @@ async function cookieTest() {
   // Delete cookie1 specifying just the name
 
   // Log cookie names
-  const cookieNames = (await cookieStore.getAll())
+  let cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Initial cookies: ${cookieNames}`);
+  console.log(`Initial cookies: ${cookieNames}`);
 
-  // Delete doc_cookie1 (should fail)
+  // Delete doc_cookie1 (fails if cookie path is not the root ("/")
   try {
     await cookieStore.delete("doc_cookie1");
   } catch (error) {
-    log(`Error deleting doc_cookie1: ${error}`);
+    console.log(`Error deleting doc_cookie1: ${error}`);
   }
 
   // Delete doc_cookie2 (should succeed)
   try {
     await cookieStore.delete("doc_cookie2");
   } catch (error) {
-    log(`Error deleting cookie2: ${error}`);
+    console.log(`Error deleting cookie2: ${error}`);
   }
 
   // Log cookie names again (to show cookie1 deleted)
   cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Cookies attempting deletion: ${cookieNames}`);
+  console.log(`Cookies remaining: ${cookieNames}`);
 }
 
 cookieTest();
@@ -257,7 +257,7 @@ cookieTest();
 
 When run, the console log should show that both "doc_cookie1" and "doc_cookie2" are present initially.
 Afterwards `doc_cookie2` should not be present: it will have been deleted because its path matches the default path used by `delete()`.
-The cookie `doc_cookie2` will be removed if the code is run from a page in the root, but otherwise will not match the path, and hence not be removed.
+The cookie `doc_cookie1` will be removed if the code is run from a page in the root, but otherwise will not match the path, and hence not be removed.
 
 The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
