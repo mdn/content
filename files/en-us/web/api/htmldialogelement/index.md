@@ -22,6 +22,11 @@ _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}.
   - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A string that sets or returns the return value for the dialog.
+- {{domxref("HTMLDialogElement.closedBy")}}
+  - : A string representing the current mechanisms that close the dialog.
+    - `"none"`: The dialog is not closed by close requests (e.g. the <kbd>Esc</kbd> key) or light dismiss.
+    - `"closerequest"`: The dialog is closed by close requests only.
+    - `"any"`: The dialog is closed by close requests and light dismiss.
 
 ## Instance methods
 

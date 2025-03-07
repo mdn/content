@@ -28,6 +28,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > [!NOTE]
     > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended.
 
+- `closedby`
+
+  - : Indicates the mechanisms which will close the dialog. The value can be one of the following:
+    - `"none"`: The dialog is not closed by close requests (e.g., the <kbd>Esc</kbd> key) or light dismiss.
+    - `"closerequest"`: The dialog is closed by close requests only.
+    - `"any"`: The dialog is closed by close requests and light dismiss.
+
 ## Usage notes
 
 - HTML {{HTMLElement("form")}} elements can be used to close a dialog box if they have the attribute `method="dialog"` or if the button used to submit the form has [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input#formmethod) set. When a `<form>` within a `<dialog>` is submitted via the `dialog` method, the dialog box closes, the states of the form controls are saved but not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the value of the button that was activated.
