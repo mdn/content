@@ -17,7 +17,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 - {{domxref("CookieStore.delete()")}}
   - : The `delete()` method deletes a cookie with the given `name` or `options` object.
-    It returns a {{jsxref("Promise")}} that resolves when the deletion completes or if no cookies is matched.
+    It returns a {{jsxref("Promise")}} that resolves when the deletion completes or if no cookies are matched.
 - {{domxref("CookieStore.get()")}}
   - : The `get()` method gets a single cookie with the given `name` or `options` object.
     It returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
@@ -43,7 +43,7 @@ The examples below can be tested by copying the code into a test harness and run
 
 This example shows how to set cookies by passing a `name` and `value`, and by setting an `options` value.
 
-The `cookieTest()` method first sets a cookie with `name` and `value` properties, while the second is set with `name`, `value`, and `expires` properties.
+The `cookieTest()` method sets one cookie with `name` and `value` properties and another with `name`, `value`, and `expires` properties.
 We then use the {{domxref("CookieStore.get()")}} method to get each of the cookies, which are then logged.
 
 ```js
