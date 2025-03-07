@@ -1,6 +1,6 @@
 ---
 title: CSS scroll anchoring
-slug: Web/CSS/CSS_schroll_anchoring
+slug: Web/CSS/CSS_scroll_anchoring
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-scroll-anchoring/
 ---
@@ -22,7 +22,7 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 ## Glossary and definitions
 
 - {{glossary("Scroll container")}}
-- {{glossary("Scrolling box")}}
+- {{glossary("Scroll snap")}}
 
 ## Guides
 
@@ -32,7 +32,6 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 ## Related concepts
 
 - {{CSSxRef("overscroll-behavior")}}
-- {{glossary("Scroll snap")}}
 
 ## Specifications
 
