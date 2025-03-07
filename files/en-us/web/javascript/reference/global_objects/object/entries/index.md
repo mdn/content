@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an Object
 
-Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring), you can iterate through objects easily.
 
 ```js
 // Using for...of loop

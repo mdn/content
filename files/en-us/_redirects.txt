@@ -13431,7 +13431,8 @@
 /en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/en-US/docs/Web/JavaScript/Reference/Operators#Assignment_operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
 /en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/en-US/docs/Web/JavaScript/Reference/Operators
-/en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+/en-US/docs/Web/JavaScript/Reference/Operators/Destructing_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring
+/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment	/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring
 /en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/en-US/docs/Web/JavaScript/Reference/Operators

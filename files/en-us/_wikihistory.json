@@ -71445,6 +71445,16 @@
       "SteveLee"
     ]
   },
+  "Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs": {
+    "modified": "2019-03-24T00:12:10.850Z",
+    "contributors": [
+      "chrisdavidmills",
+      "carlkibler",
+      "bledwards1",
+      "Sheppy",
+      "Aaronlev"
+    ]
+  },
   "Web/Accessibility/ARIA/Reference/Roles": {
     "modified": "2020-04-01T14:49:41.249Z",
     "contributors": [
@@ -71858,16 +71868,6 @@
       "Sheppy",
       "Fleshgrinder",
       "hhillen"
-    ]
-  },
-  "Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs": {
-    "modified": "2019-03-24T00:12:10.850Z",
-    "contributors": [
-      "chrisdavidmills",
-      "carlkibler",
-      "bledwards1",
-      "Sheppy",
-      "Aaronlev"
     ]
   },
   "Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns": {
@@ -118446,7 +118446,7 @@
     "modified": "2020-10-15T22:30:30.567Z",
     "contributors": ["fscholz", "wbamberg"]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2020-10-15T21:27:55.696Z",
     "contributors": [
       "chrisdavidmills",
