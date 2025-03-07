@@ -129,7 +129,7 @@ element.innerHTML = userInput;
 // Throws a TypeError
 ```
 
-It's recommended that you use the default policy only to transition from legacy code that passes input directly to injection sinks. That is, it helps you discover the places in your code where you're using injection sinks directly, so you can rerwite the code to create and pass trusted types instead.
+It's recommended that you use the default policy only to transition from legacy code that passes input directly to injection sinks. That is, it helps you discover the places in your code where you're using injection sinks directly, so you can rewrite the code to create and pass trusted types instead.
 
 ### Cross-browser support for trusted types
 
