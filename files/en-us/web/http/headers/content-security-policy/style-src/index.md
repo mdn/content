@@ -178,6 +178,8 @@ The `'unsafe-eval'` source expression controls several style methods that create
 - {{domxref("CSSGroupingRule.insertRule()")}}
 - {{domxref("CSSStyleDeclaration.cssText")}}
 
+No browser has implemented `'unsafe-eval'`, and these CSSOM methods are always allowed despite the `style-src` directive.
+
 ## Specifications
 
 {{Specifications}}
