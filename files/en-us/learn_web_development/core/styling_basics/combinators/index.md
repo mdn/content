@@ -27,7 +27,7 @@ The final selectors we will look at are called combinators. Combinators are used
         <ul>
           <li>The basic concept of combinators.</li>
           <li>Descendant and child combinators.</li>
-          <li>Next- and subsequent-sibling combinators.</li>
+          <li>Next-sibling and subsequent-sibling combinators.</li>
           <li>Nesting.</li>
           <li>Combining combinators with selectors.</li>
         <ul>
