@@ -340,7 +340,7 @@ Next, create a file named `index.js`, and give it these contents:
 import init, { greet } from "hello-wasm";
 
 init().then(() => {
-  greet('WebAssembly with npm');
+  greet("WebAssembly with npm");
 });
 ```
 
