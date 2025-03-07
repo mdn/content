@@ -25,7 +25,7 @@ You'll find out how to build this example in the sections below.
 You can build customizable `<select>` elements using the following HTML and CSS features:
 
 - Plain old {{htmlelement("select")}}, {{htmlelement("option")}}, and {{htmlelement("optgroup")}} elements. The new features are built on top of existing select functionality as progressive enhancements, meaning that customizable selects can be easily designed to fall back to classic selects in non-supporting browsers.
-- The {{htmlelement("selectedcontent")}} element, which under the hood provides a {{htmlelement("slot")}} into which is placed the contents of the currently-selected `<option>`. This is the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}**, as it is the button you need to press to open the drop-down menu.
+- The {{htmlelement("selectedcontent")}} element, which contains a clone of the currently-selected `<option>` (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This is the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}** (as it is the button you need to press to open the drop-down menu).
 - The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the select drop-down menu, otherwise known as the **picker**. The picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`.
 - The {{cssxref("appearance")}} property value `base-select`, which opts the `<select>` element and the `::picker(select)` pseudo-element into the browser-defined default styles and behavior for customizable select.
 - The {{cssxref(":open")}} pseudo-class, which targets the select `<button>` when the picker (`::picker(select)`) is open.
@@ -82,7 +82,7 @@ Our example is a typical {{htmlelement("select")}} menu that allows you to choos
 
 This is nearly the same as "classic" `<select>` markup, with the following differences:
 
-- The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element provides a {{htmlelement("slot")}} into which is placed the contents of the currently-selected {{htmlelement("option")}}. This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will fill in the selected value inside the select button implicitly, but you won't be able to select it using CSS.
+- The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element contains a clone of the currently-selected {{htmlelement("option")}} (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will fill in the selected value inside the select button implicitly, but you won't be able to select it using CSS.
 - The rest of the `<select>` contents represents the picker (the `<select>` drop-down menu). This obviously includes the `<option>` elements representing the different choices in the picker, but you can also include other content if desired.
 - Traditionally, `<option>` elements could only contain text, but in a customizable select you can include markup structures including images and more besides. In our example, each `<option>` contains two {{htmlelement("span")}} elements containing an icon and a text label respectively, allowing each one to be styled and positioned independently.
 
@@ -258,7 +258,7 @@ Our example now renders like this:
 
 If you select any pet option from the last few live examples, you'll notice a problem — the pet icons cause the select `<button>` to increase in height, which also changes the position of the picker icon, and there is no spacing between the option icon and label — not a great look.
 
-This can be fixed by hiding the icon when it is contained inside the `<selectedcontent>` slot, which represents the contents of the selected `<option>` as they appear inside the select `<button>`. In our example, it is hidden using {{cssxref("display", "display: none")}}:
+This can be fixed by hiding the icon when it is contained inside `<selectedcontent>`, which represents the contents of the selected `<option>` as they appear inside the select `<button>`. In our example, it is hidden using {{cssxref("display", "display: none")}}:
 
 ```css live-sample___fourth-render live-sample___full-render
 selectedcontent .icon {
