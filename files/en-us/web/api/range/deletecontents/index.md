@@ -8,13 +8,18 @@ browser-compat: api.Range.deleteContents
 
 {{ApiRef("DOM")}}
 
-The **`Range.deleteContents()`** method removes the contents of
-the {{ domxref("Range") }} from the {{ domxref("Document") }}.
+The **`Range.deleteContents()`** method removes all completely-selected {{ domxref("Node") }}s within this range from the document. For the partially selected nodes at the start or end of the range, only the selected portion of the text is deleted, while the node itself remains intact. Afterwards, the range is collapsed to the end of the last selected node.
 
-In the context of a {{ domxref("Range") }}, when a node is partially selected—meaning it overlaps with the start or end of the selection—only the selected portion of the text is deleted, while the node itself remains intact. However, if a node is fully selected, the entire node and its contents are removed.
+```plain
+<p>paragraph 1</p><p>paragraph 2</p><p>paragraph 3</p>
+       ^----------- selection ------------^
 
-Unlike {{ domxref("Range.extractContents()") }}, this method does not return a
-{{domxref("DocumentFragment")}} containing the deleted content.
+deleteContents() returns:
+
+<p>para</p><p>graph 3</p>
+```
+
+Unlike {{ domxref("Range.extractContents()") }}, this method does not return a {{domxref("DocumentFragment")}} containing the deleted content.
 
 ## Syntax
 
