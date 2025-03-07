@@ -97,6 +97,7 @@ for (const n of fibonacci()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.filter`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.forEach()")}}
 - {{jsxref("Iterator.prototype.every()")}}

@@ -386,7 +386,7 @@ We also added an SVG icon above the alert paragraph, to make it look a bit nicer
 
 ## Making our Alert component accessible
 
-Our `Alert` component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.
+Our `Alert` component is working fine, but it's not very friendly to assistive technologies. The problem is elements that are dynamically added and removed from the page. While visually evident to users who can see the page, they may not be so obvious to users of assistive technologies, like screen readers. To handle those situations, we can take advantage of [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), which provide a way to programmatically expose dynamic content changes so that they can be detected and announced by assistive technologies.
 
 We can declare a region that contains dynamic content that should be announced by assistive technologies with the `aria-live` property followed by the politeness setting, which is used to set the priority with which screen readers should handle updates to that regions. The possible settings are `off`, `polite`, or `assertive`.
 

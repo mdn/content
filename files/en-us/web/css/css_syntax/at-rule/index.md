@@ -102,7 +102,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 
 ## See also
 
-- [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - [Nesting CSS at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface

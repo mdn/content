@@ -1065,7 +1065,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
       <td><a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a></td>
       <td>Defines an explicit role for an element for use by assistive technologies.</td>

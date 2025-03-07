@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 137 that affect developers. Firefox 137 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [April 1, 2025](https://whattrainisitnow.com/release/?version=137).
+This article provides information about the changes in Firefox 137 that affect developers. Firefox 137 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 1, 2025](https://whattrainisitnow.com/release/?version=137).
 
 ## Changes for web developers
 
@@ -17,6 +17,8 @@ This article provides information about the changes in Firefox 137 that affect d
 #### Removals
 
 ### CSS
+
+- The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
 
 #### Removals
 
@@ -48,6 +50,8 @@ This article provides information about the changes in Firefox 137 that affect d
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) is now hardware enabled on Android, and hardware and software enabled on Linux. This adds to existing hardware and software support on Windows and macOS. ([Firefox bug 1950032](https://bugzil.la/1950032)).
 
 #### Removals
 

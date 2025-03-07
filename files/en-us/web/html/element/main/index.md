@@ -51,7 +51,7 @@ The content of a `<main>` element should be unique to the document. Content that
 
 ### Landmark
 
-The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
+The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
 
 ### Skip navigation
 
@@ -158,7 +158,7 @@ Browser reader mode functionality looks for the presence of the `<main>` element
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >
@@ -187,4 +187,4 @@ Browser reader mode functionality looks for the presence of the `<main>` element
 
 - Basic structural elements: {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}
 - Section-related elements: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, or {{HTMLElement("nav")}}
-- [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role)
+- [ARIA: Main role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
