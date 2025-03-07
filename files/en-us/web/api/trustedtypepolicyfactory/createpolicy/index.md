@@ -44,6 +44,8 @@ A {{domxref("TrustedTypePolicy")}} object.
 
 ## Examples
 
+### Creating a policy for HTML sinks
+
 The below code creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
 
 ```js
@@ -54,9 +56,9 @@ const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
 
 ### Creating a default policy
 
-On a site where Trusted Types are enforced via a Content Security Policy with the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) directive set to `script`, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, the following default policy will be used.
+On a site where Trusted Types are enforced via a Content Security Policy with the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) directive set to `script`, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, a [default policy](/en-US/docs/Web/API/Trusted_Types_API#the_default_policy) will be used.
 
-The policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.
+The default policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.
 
 ```js
 trustedTypes.createPolicy("default", {

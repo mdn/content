@@ -89,6 +89,8 @@ Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control 
 
 ### The default policy
 
+In the Trusted Types API, you can define a _default policy_. This helps you find any places in your code where you're still passing strings into injection sinks, so you can rewrite the code to create and pass trusted types instead.
+
 If you create a policy named `"default"`, and your CSP enforces the use of trusted types, then any string argument passed into injection sinks will be automatically passed to this policy. For example, suppose we create a policy like this:
 
 ```js
@@ -129,7 +131,8 @@ element.innerHTML = userInput;
 // Throws a TypeError
 ```
 
-It's recommended that you use the default policy only to transition from legacy code that passes input directly to injection sinks. That is, it helps you discover the places in your code where you're using injection sinks directly, so you can rewrite the code to create and pass trusted types instead.
+> [!NOTE]
+> It's recommended that you use the default policy only while you are transitioning from legacy code that passes input directly to injection sinks, to code that uses trusted types explicitly.
 
 ### Cross-browser support for trusted types
 
