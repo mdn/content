@@ -337,7 +337,7 @@ In your `package.json`, you can add `build` and `serve` scripts that will run we
 Next, create a file named `index.js`, and give it these contents:
 
 ```js
-import init, { greet } from 'hello-wasm';
+import init, { greet } from "hello-wasm";
 
 init().then(() => {
   greet('WebAssembly with npm');
