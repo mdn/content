@@ -266,7 +266,7 @@ foo(3); // 3 + 3 = 6
 (function () {
   'use strict';
   let arguments = [1, 2, 3]; // SyntaxError: Unexpected eval or arguments in strict mode
-})()
+})();
 ```
 
 > [!NOTE]
