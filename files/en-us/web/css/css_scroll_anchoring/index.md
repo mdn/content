@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-anchoring/
 
 {{CSSRef}}
 
-The **CSS scroll anchoring** module defines a mechanism to prevent page moving while the user is in the middle of consuming the content which may occur when changes in DOM elements occur above the visible region of a scrolling box.
+The **CSS scroll anchoring** module defines a mechanism to prevent page movement due to DOM changes above the visible region of a scrolling box while the user is consuming the visible content.
 
 Scroll anchoring attempts to keep the user's view of the document stable across layout changes. It works by selecting a DOM node (the anchor node) whose movement is used to determine adjustments to the scroll position. The anchor node is always a descendant of the scrolling box.
 
@@ -27,7 +27,7 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 ## Guides
 
 - [Guide to scroll anchoring](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
-  - : How and why to enable scroll anchoring, and how and why to disable it, along with suppression triggers.
+  - : How to enable and disable scroll anchoring and suppression triggers, and when and why you should use them.
 
 ## Related concepts
 
