@@ -81,8 +81,8 @@ Each object contains the following properties:
   - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
-    - The `url` option is present and is not equal with the creation URL, if in main thread.
-    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - The method is called in the main thread, and the `url` option is specified but does not match the URL of the current window.
+    - The method is called in a worker and the `url` option is specified, but does not match the origin of the worker.
     - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
