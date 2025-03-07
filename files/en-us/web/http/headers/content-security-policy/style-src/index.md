@@ -53,6 +53,8 @@ This directive may have one of the following values:
     - [`'<hash_algorithm>-<hash_value>'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#hash_algorithm-hash_value)
     - [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample)
 
+    Note that the [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) value is included in the specification and intends to block CSSOM methods that parse and insert CSS strings, including the `cssText` setters and `insertRule()` methods. However, no browser has implemented this behavior, and these methods are always allowed despite the `style-src` directive.
+
 ## Examples
 
 ### Violation cases
@@ -169,16 +171,6 @@ When generating the hash, don't include the {{HTMLElement("style")}} tags and no
   }
 </style>
 ```
-
-### Unsafe style expressions
-
-The `'unsafe-eval'` source expression controls several style methods that create style declarations from strings. If `'unsafe-eval'` isn't specified with the `style-src` directive, the following methods are blocked and won't have any effect:
-
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
-
-No browser has implemented `'unsafe-eval'`, and these CSSOM methods are always allowed despite the `style-src` directive.
 
 ## Specifications
 
