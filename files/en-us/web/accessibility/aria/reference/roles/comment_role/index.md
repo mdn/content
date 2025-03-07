@@ -86,5 +86,3 @@ None
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
-
-## See also
