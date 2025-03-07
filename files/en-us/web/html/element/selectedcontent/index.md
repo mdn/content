@@ -1,0 +1,119 @@
+---
+title: "<selectedcontent>: The selected option display element"
+slug: Web/HTML/Element/selectedcontent
+page-type: html-element
+browser-compat: html.elements.selectedcontent
+---
+
+{{HTMLSidebar}}
+
+The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content, created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood. `<selectedcontent>` represents the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}** as it is the button you need to press to open the drop-down picker.
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but has no other attributes defined on it.
+
+## Description
+
+When creating a [Customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), you can include the `<selectedcontent>` element inside a {{htmlelement("button")}} element, which in turn needs to be the first child of the `<select>` element:
+
+```html
+<select>
+  <button>
+    <selectedcontent></selectedcontent>
+  </button>
+
+  ...
+</select>
+```
+
+Any subsequent `<select>` content will be included in the drop-down picker.
+
+Whenever the `<select>` element's selected `<option>` switches from one option to another, the `<selectedcontent>` element's content is removed and replaced by a new cloned copy of the DOM structure of the newly selected <code>option</code>, which is created using {{domxref("Node.cloneNode", "cloneNode()")}}.
+
+## Styling with CSS
+
+It is useful to be able to target the currently-selected `<option>` element's content as it appears inside the select `<button>` with CSS styles, without affecting the styling of the content as it appears inside the picker.
+
+For example, your `<option>` elements may contain icons, images, or even videos. This content might look nice inside the picker, but could cause the select `<button>` to increase in size, look untidy, and affect the surrounding layout.
+
+This can be fixed by hiding the problem content when it is contained inside `<selectedcontent>`. For example:
+
+```css
+selectedcontent img {
+  display: none;
+}
+```
+
+> [!NOTE]
+> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select `<button>` implicitly, but this targetting will not be possible.
+
+## Examples
+
+You can see a full example that includes the `<selectedcontent>` element in our [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) guide.
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
+          >form-associated </a
+        >element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Mirrors content from the selected {{htmlelement("option")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        A {{htmlelement("button")}} element that is the first child of a {{htmlelement("select")}} element.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        None
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        None
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLSelectedContentElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- The {{HTMLElement("select")}} element
+- The {{HTMLElement("option")}} element
+- The {{HTMLElement("optgroup")}} element
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
