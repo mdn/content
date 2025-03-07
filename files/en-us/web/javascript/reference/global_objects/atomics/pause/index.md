@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Atomics.pause
 
 {{JSRef}}
 
-The **`Atomics.pause()`** static method provides a micro-wait primitive by hinting to the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores without yielding the current thread.
+The **`Atomics.pause()`** static method provides a micro-wait primitive that hints to the CPU that the caller is spinning while waiting on access to a shared resource. This allows the system to reduce the resources allocated to the core (such as power) or thread, without yielding the current thread.
 
 `pause()` has no observable behavior other than timing. The exact behavior is dependent on the CPU architecture and the operating system. For example, in Intel x86, it may be a `pause` instruction as per [Intel's optimization manual](https://www.intel.com/content/www/us/en/content-details/671488/intel-64-and-ia-32-architectures-optimization-reference-manual-volume-1.html). It could be a no-op in certain platforms.
 
@@ -36,7 +36,11 @@ None ({{jsxref("undefined")}}).
 
 ### Using Atomics.pause()
 
-Consider a thread that tries to acquire a lock in a futex. Without micro-waits, one would just call {{jsxref("Atomics.wait()")}} or {{jsxref("Atomics.waitAsync()")}}. However, this can be inefficient because it causes the thread to be scheduled out and back in, which is expensive. Instead, we can implement a fast path by making the CPU spin for a short while to see if it can acquire the lock without waiting, and only yield back to the kernel if it can't. This is known as [busy waiting](https://en.wikipedia.org/wiki/Busy_waiting), or [spinlocking](https://en.wikipedia.org/wiki/Spinlock).
+Calling {{jsxref("Atomics.wait()")}} or {{jsxref("Atomics.waitAsync()")}} in order to wait for access to shared memory causes the thread to be scheduled out of the core and then back in again after the wait. This is efficient during times of high contention, where access to the shared memory could take some time. When contention is low, then it is often more efficient to poll on the lock without yielding the thread: this approach is known as [busy waiting](https://en.wikipedia.org/wiki/Busy_waiting) or [spinlocking](https://en.wikipedia.org/wiki/Spinlock). The `pause()` method allows you to spinlock more efficiently while waiting, by providing a hint to the CPU about what the thread is doing, and hence its low need for resources.
+
+To cater for both conditions, a common approach is to first spinlock in the hope that contention is low, and then wait if the lock is not gained after a short time. If we acquired the lock via spinlocking already, then the `wait()` call will be a no-op.
+
+The example below shows how this approach can be used with `Atomics.pause()` and `Atomics.wait()`.
 
 ```js
 // Imagine another thread also has access to this shared memory
