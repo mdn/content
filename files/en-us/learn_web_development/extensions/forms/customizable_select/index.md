@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-This article explains how to use a number of HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, checkbox to indicate which item is currently selected, each individual {{htmlelement("option")}} element, and more besides.
+This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, checkbox to indicate which item is currently selected, each individual {{htmlelement("option")}} element, and more besides.
 
 ## Background
 
