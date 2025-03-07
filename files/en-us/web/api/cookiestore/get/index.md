@@ -82,8 +82,8 @@ The object returned for a match contains the following properties:
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The `options` parameter is an empty object.
-    - The `url` option is present and is not equal with the creation URL, if in main thread.
-    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - The `url` option is specified but is not equal with the URL of the window that created the cookie (if created by the main thread).
+    - The `url` option is specified but its origin is not equal to the origin of the resource that created the cookie.
     - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
