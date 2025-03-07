@@ -1121,7 +1121,7 @@
 /en-US/docs/Cryptanalysis	/en-US/docs/Glossary/Cryptanalysis
 /en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/CustomElements	/en-US/docs/Web/API/Web_components/Using_custom_elements
-/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
+/en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/About_the_Document_Object_Model	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/DOM/AbstractView	/en-US/docs/Web/API/Document/defaultView
@@ -12868,7 +12868,7 @@
 /en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
-/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
+/en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/Web/HTML/Element/<rb>:_The_Ruby_Base_element	/en-US/docs/Web/HTML/Element/rb
 /en-US/docs/Web/HTML/Element/Input/<input_type=_checkbox_>	/en-US/docs/Web/HTML/Element/input/checkbox
 /en-US/docs/Web/HTML/Element/Input/<input_type=_color_>	/en-US/docs/Web/HTML/Element/input/color
@@ -13553,7 +13553,7 @@
 /en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Media/Audio_and_video_manipulation	/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation
 /en-US/docs/Web/Media/Autoplay_guide	/en-US/docs/Web/Media/Guides/Autoplay
-/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
+/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/Web/Media/Formats	/en-US/docs/Web/Media/Guides/Formats
 /en-US/docs/Web/Media/Formats/Audio_codecs	/en-US/docs/Web/Media/Guides/Formats/Audio_codecs
 /en-US/docs/Web/Media/Formats/Audio_concepts	/en-US/docs/Web/Media/Guides/Formats/Audio_concepts
@@ -13566,6 +13566,7 @@
 /en-US/docs/Web/Media/Formats/Video_concepts	/en-US/docs/Web/Media/Guides/Formats/Video_concepts
 /en-US/docs/Web/Media/Formats/WebRTC_codecs	/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs
 /en-US/docs/Web/Media/Formats/codecs_parameter	/en-US/docs/Web/Media/Guides/Formats/codecs_parameter
+/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/Web/Media/HTML_media	/en-US/docs/Web/Media/Guides/Audio_and_video_delivery
 /en-US/docs/Web/Media/Streaming	/en-US/docs/Web/Media/Guides/Streaming
 /en-US/docs/Web/Media/images	/en-US/docs/Web/Media/Guides/Images
