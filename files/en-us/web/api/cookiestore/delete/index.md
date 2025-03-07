@@ -198,26 +198,22 @@ The cookie named "cookie1" is still present because it does not match the cookie
 
 ### Delete cookies created using document.cookies
 
-This example shows that we can use `delete()` to remove a cookie that was created using {{domxref("document.cookie")}}.
-
-Cookies created with {{domxref("CookieStore.set()")}} have a [default path](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) of `/`, which is also the default [`path`](#path) for cookies to be deleted, while cookies created with `document.cookie` have a default path equal to the path of the document they are created in.
-What this means is that the default `delete()` options will not match a cookie created using `document.cookie` unless it is created from a root page, or explicitly sets the path to the root.
+Deleting a cookie that was created using {{domxref("document.cookie")}} has the same requirements as deleting a cookie created using {{domxref("CookieStore.set()")}}: the cookie either needs to match the passed `options`, or the `name` and the default options.
 
 > [!NOTE]
-> If you're using `document.cookie` you should explicitly set the path to a known value, and match that path when deleting the cookie.
+> Cookies created with `set()` always have a [default path](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) of `/`, while cookies created with `document.cookie` have a default path equal to the path of the document they are created in.
+> Therefore when deleting cookies created with `document.cookie`, you can't assume they have the path `/` (unless it was been explicitly set as such), and hence that it will match the default `delete()` options.
 
-The code below uses `document.cookie` to first create a cookie named "doc_cookie1" with the path `/some_path`, simulating the case where `document.cookie` is called from some document that is not the root.
-It then creates "doc_cookie2" with the path set to `/`, and logs both cookies.
+The code below uses `document.cookie` to create cookies named "doc_cookie1" and "doc_cookie2", with the paths `/some_path` and `/` respectively, and then logs both cookies.
 The code then deletes both cookies without specifying a `path` match option, and lists the cookies again.
 
 ```js
 async function cookieTest() {
   // Create doc_cookie1 with path /some_path
-  // This simulates setting document.cookie def from a page at /some_path
   document.cookie =
     "doc_cookie1=doc_cookie1_name; SameSite=None; Secure; path=/some_path";
 
-  // Create doc_cookie2 with path /, the CookieStore.set() default
+  // Create doc_cookie2 with path / (the CookieStore.set() default)
   document.cookie =
     "doc_cookie2=doc_cookie2_name; SameSite=None; Secure; path=/";
 
@@ -227,7 +223,7 @@ async function cookieTest() {
     .join(" ");
   console.log(`Initial cookies: ${cookieNames}`);
 
-  // Delete doc_cookie1 (fails if cookie path is not the root ("/")
+  // Delete doc_cookie1 (should fail)
   try {
     await cookieStore.delete("doc_cookie1");
   } catch (error) {
@@ -252,7 +248,8 @@ cookieTest();
 ```
 
 When run, the first log should show that both cookies are present.
-The second log should still include "doc_cookie1" (but not "doc_cookie2"), because `/some_path` did not match the default deletion path (`/`).
+The second log should not include "doc_cookie2", as it should have matched and been deleted.
+It should include "doc_cookie1" because `/some_path` will not match the default deletion path (`/`).
 
 ## Specifications
 
