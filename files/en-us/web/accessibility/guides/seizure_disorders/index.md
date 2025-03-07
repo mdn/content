@@ -460,7 +460,7 @@ img {
 
 #### Take advantage of media queries with {{HTMLElement('style')}}
 
-In setting up media queries, you are enabling controls by the user; these controls are made available in the browser or in the OS. See the MDN document, [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely) to see more details of how a user accesses the controls.
+In setting up media queries, you are enabling controls by the user; these controls are made available in the browser or in the OS. See the MDN document, [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Guides/Browsing_safely) to see more details of how a user accesses the controls.
 
 #### `prefers-reduced-motion`
 
@@ -570,7 +570,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 ### MDN
 
-- [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
+- [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Guides/Browsing_safely)
 - [Accessibility: Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [Applying SVG effects to HTML Content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
