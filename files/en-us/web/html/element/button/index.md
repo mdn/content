@@ -294,7 +294,8 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
         <a
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
-        >
+        >. If the <code>&lt;button&gt;</code> is the first child of a <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select element</a>, then it may also
+   contain zero or one {{htmlelement("selectedcontent")}} element.
       </td>
     </tr>
     <tr>
