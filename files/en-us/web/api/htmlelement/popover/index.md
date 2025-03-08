@@ -14,7 +14,7 @@ It reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/
 
 ## Value
 
-An enumerated value; possible values are:
+The {{glossary("enumerated")}} values are:
 
 - `"auto"`
 
