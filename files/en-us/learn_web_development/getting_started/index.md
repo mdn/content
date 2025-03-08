@@ -22,5 +22,3 @@ There is no prerequisite knowledge for starting this course. Also note that we d
   - : This module covers the fundamentals of how the web works at a high level — including the model used for communication, the core technologies involved, how those technologies are created, and how a web browser renders and displays websites to a user.
 - [Soft skills](/en-US/docs/Learn_web_development/Getting_started/Soft_skills)
   - : This module provides recommendations of soft skills you can aim to get better at while learning web development, and which constitute good traits to have when entering the industry. They will help immensely in developing the right attitudes for learning, researching, and collaborating, and increase the chances of getting hired.
-
-## See also

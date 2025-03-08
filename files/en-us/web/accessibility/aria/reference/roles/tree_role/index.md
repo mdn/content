@@ -236,5 +236,3 @@ The alternative multi-selection model is a modifier key model in which moving fo
 ## Specifications
 
 {{Specifications}}
-
-## See also

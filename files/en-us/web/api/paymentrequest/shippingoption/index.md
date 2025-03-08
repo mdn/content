@@ -25,6 +25,8 @@ a selected a shipping option.
 
 ## Value
 
+An object or `null`.
+
 ## Examples
 
 In the example below, the {{domxref('PaymentRequest.shippingaddresschange_event', 'shippingaddresschange')}} and

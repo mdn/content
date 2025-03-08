@@ -71,7 +71,3 @@ If you need to change the configuration of the connection in some way (such as c
 To explicitly trigger ICE restart, start the renegotiation process by calling {{domxref("RTCPeerConnection.createOffer()")}}, specifying the `iceRestart` option with a value of `true`. Then handle the connection process from then on just like you normally would. This generates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection.
 
 The answerer side of the connection will automatically begin ICE restart when new values are detected for the ICE ufrag and ICE password.
-
-## Transmission
-
-## Reception

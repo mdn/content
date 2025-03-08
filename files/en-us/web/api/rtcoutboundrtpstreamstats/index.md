@@ -112,8 +112,6 @@ The following properties are common to all WebRTC statistics objects.
 - {{domxref("RTCOutboundRtpStreamStats.type", "type")}}
   - : A string with the value `"outbound-rtp"`, indicating the type of statistics that the object contains.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

@@ -57,5 +57,3 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 ## Specifications
 
 {{Specifications}}
-
-## See also

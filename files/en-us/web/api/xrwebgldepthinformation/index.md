@@ -28,8 +28,6 @@ This interface inherits properties from its parent, {{domxref("XRDepthInformatio
 - {{domxref("XRDepthInformation.width")}} {{ReadOnlyInline}}
   - : Contains the width of the depth buffer (number of columns).
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}
