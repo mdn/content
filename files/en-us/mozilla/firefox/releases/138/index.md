@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ## Changes for add-on developers
 
+- The {{WebExtAPIRef("contextualIdentities")}} API is no longer defined in Firefox for Android. Previously, it was defined but not functional. ([Firefox bug 1659500](https://bugzil.la/1659500))
+
 ### Removals
 
 ### Other
