@@ -10,7 +10,7 @@ browser-compat: javascript.operators.void
 The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - void operator", "taller")}}
+{{InteractiveExample("JavaScript Demo: void operator", "taller")}}
 
 ```js interactive-example
 const output = void 1;

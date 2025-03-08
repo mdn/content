@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.globalThis
 
 The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+{{InteractiveExample("JavaScript Demo: globalThis", "shorter")}}
 
 ```js interactive-example
 function canMakeHTTPRequest() {

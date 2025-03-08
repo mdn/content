@@ -18,7 +18,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 - If you need to find all elements that satisfy the provided testing function, use {{jsxref("Array/filter", "filter()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];

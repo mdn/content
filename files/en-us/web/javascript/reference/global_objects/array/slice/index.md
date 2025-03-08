@@ -12,7 +12,7 @@ an array into a new array object selected from `start` to `end`
 (`end` not included) where `start` and `end` represent
 the index of items in that array. The original array will not be modified.
 
-{{InteractiveExample("JavaScript Demo: Array.slice()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.slice()", "taller")}}
 
 ```js interactive-example
 const animals = ["ant", "bison", "camel", "duck", "elephant"];

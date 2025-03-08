@@ -9,7 +9,7 @@ browser-compat: javascript.operators.delete
 
 The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 
-{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+{{InteractiveExample("JavaScript Demo: delete operator")}}
 
 ```js interactive-example
 const Employee = {
