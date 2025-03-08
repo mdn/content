@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/) contains rules that control what happens when you create a grid and do not explicitly place some or all of the child items within the grid. When you don't need explicit control over content placement, this "auto-placement" is the simplest way of creating a grid for a set of items.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) contains rules that control what happens when you create a grid and do not explicitly place some or all of the child items within the grid. When you don't need explicit control over content placement, this "auto-placement" is the simplest way of creating a grid for a set of items.
 
 ## Default placement
 

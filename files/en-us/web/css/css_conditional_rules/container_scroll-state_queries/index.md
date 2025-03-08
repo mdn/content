@@ -818,4 +818,4 @@ Try scrolling the document down and up, and note how the `<h2>` and `<p>` elemen
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-- [CSS positioning](/en-US/docs/Web/CSS/CSS_positioning) module
+- [CSS positioning](/en-US/docs/Web/CSS/CSS_positioned_layout) module
