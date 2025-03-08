@@ -9,7 +9,7 @@ browser-compat: javascript.operators.bitwise_not
 
 The **bitwise NOT (`~`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bit of the operand is `0`, and a `0` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+{{InteractiveExample("JavaScript Demo: Bitwise NOT (~) operator")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101

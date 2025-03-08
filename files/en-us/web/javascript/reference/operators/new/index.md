@@ -9,7 +9,7 @@ browser-compat: javascript.operators.new
 
 The **`new`** operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
 
-{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+{{InteractiveExample("JavaScript Demo: new operator")}}
 
 ```js interactive-example
 function Car(make, model, year) {

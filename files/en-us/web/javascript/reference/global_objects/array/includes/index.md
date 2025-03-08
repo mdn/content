@@ -11,7 +11,7 @@ The **`includes()`** method of {{jsxref("Array")}} instances determines whether 
 includes a certain value among its entries, returning `true` or
 `false` as appropriate.
 
-{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.includes()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];

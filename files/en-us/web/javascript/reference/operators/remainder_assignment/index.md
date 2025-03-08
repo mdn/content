@@ -9,7 +9,7 @@ browser-compat: javascript.operators.remainder_assignment
 
 The **remainder assignment (`%=`)** operator performs [remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Remainder assignment (%=) operator")}}
 
 ```js interactive-example
 let a = 3;

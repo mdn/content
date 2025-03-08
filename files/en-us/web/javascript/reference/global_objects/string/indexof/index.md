@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.indexOf
 
 The **`indexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 
-{{InteractiveExample("JavaScript Demo: String.indexOf()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.indexOf()", "taller")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";

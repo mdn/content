@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.forEach
 The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
 
-{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

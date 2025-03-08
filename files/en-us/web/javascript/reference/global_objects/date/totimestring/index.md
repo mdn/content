@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.toTimeString
 
 The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 
-{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toTimeString()", "shorter")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30");

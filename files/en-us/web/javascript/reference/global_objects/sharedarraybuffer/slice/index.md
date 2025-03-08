@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.SharedArrayBuffer.slice
 
 The **`slice()`** method of {{jsxref("SharedArrayBuffer")}} instances returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.slice()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

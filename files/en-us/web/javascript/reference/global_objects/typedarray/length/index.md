@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.length
 
 The **`length`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in elements) of this typed array.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.length", "shorter")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

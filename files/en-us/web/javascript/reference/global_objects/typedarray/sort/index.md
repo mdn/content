@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.sort
 
 The **`sort()`** method of {{jsxref("TypedArray")}} instances sorts the elements of a typed array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same typed array, now sorted. This method has the same algorithm as {{jsxref("Array.prototype.sort()")}}, except that it sorts the values numerically instead of as strings by default.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.sort()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.sort()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([40, 10, 50, 20, 30]);

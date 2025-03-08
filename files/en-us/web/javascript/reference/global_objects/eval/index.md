@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.eval
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+{{InteractiveExample("JavaScript Demo: eval()")}}
 
 ```js interactive-example
 console.log(eval("2 + 2"));

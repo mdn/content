@@ -11,7 +11,7 @@ The **`async function`** declaration creates a {{Glossary("binding")}} of a new 
 
 You can also define async functions using the [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function).
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function declaration", "taller")}}
 
 ```js interactive-example
 function resolveAfter2Seconds() {

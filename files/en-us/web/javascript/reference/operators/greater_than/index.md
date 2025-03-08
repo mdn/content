@@ -10,7 +10,7 @@ browser-compat: javascript.operators.greater_than
 The **greater than (`>`)** operator returns `true` if the left
 operand is greater than the right operand, and `false` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+{{InteractiveExample("JavaScript Demo: Greater than (>) operator")}}
 
 ```js interactive-example
 console.log(5 > 3);

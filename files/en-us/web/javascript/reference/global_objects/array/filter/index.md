@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.filter
 
 The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
 
 ```js interactive-example
 const words = ["spray", "elite", "exuberant", "destruction", "present"];

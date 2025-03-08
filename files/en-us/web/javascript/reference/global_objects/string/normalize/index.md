@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.String.normalize
 The **`normalize()`** method of {{jsxref("String")}} values returns the Unicode Normalization
 Form of this string.
 
-{{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.normalize()", "taller")}}
 
 ```js interactive-example
 const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";

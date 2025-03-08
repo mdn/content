@@ -11,7 +11,7 @@ The **`shift()`** method of {{jsxref("Array")}} instances removes the **first**
 element from an array and returns that removed element. This method changes the length
 of the array.
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.shift()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];

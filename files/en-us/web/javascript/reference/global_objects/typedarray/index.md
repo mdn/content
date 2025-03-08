@@ -15,23 +15,6 @@ different global properties, whose values are typed array constructors for speci
 element types, listed below. On the following pages you will find common properties and
 methods that can be used with any typed array containing elements of any type.
 
-{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
-
-```js interactive-example
-// Create a TypedArray with a size in bytes
-const typedArray1 = new Int8Array(8);
-typedArray1[0] = 32;
-
-const typedArray2 = new Int8Array(typedArray1);
-typedArray2[1] = 42;
-
-console.log(typedArray1);
-// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
-
-console.log(typedArray2);
-// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
-```
-
 ## Description
 
 The `TypedArray` constructor (often referred to as `%TypedArray%` to indicate its "intrinsicness", since it does not correspond to any global exposed to a JavaScript program) serves as the common superclass of all `TypedArray` subclasses. Think about `%TypedArray%` as an "abstract class" providing a common interface of utility methods for all typed array subclasses. This constructor is not directly exposed: there is no global `TypedArray` property. It is only accessible through `Object.getPrototypeOf(Int8Array)` and similar.
