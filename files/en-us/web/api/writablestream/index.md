@@ -33,7 +33,7 @@ This object comes with built-in backpressure and queuing.
 
 ## Examples
 
-The following example illustrates several features of this interface. It shows the creation of the `WritableStream` with a custom sink and an API-supplied queueing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
+The following example illustrates several features of this interface. It shows the creation of the `WritableStream` with a custom sink and an API-supplied queueing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. Next, the string is written to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of their operations.
 
 ```js
 const list = document.querySelector("ul");
@@ -41,26 +41,22 @@ const list = document.querySelector("ul");
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
-  const encoder = new TextEncoder();
-  const encoded = encoder.encode(message);
-  encoded.forEach((chunk) => {
-    defaultWriter.ready
-      .then(() => defaultWriter.write(chunk))
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
+  defaultWriter.ready
+  .then(() => defaultWriter.write(message)
+  .then(() => {
+    console.log("Message written to sink.");
+  })
+  .catch((err) => {
+    console.log("Error writing message error:", err);
   });
-  // Call ready again to ensure that all chunks are written
+  // Call ready again to ensure that all data is written
   //   before closing the writer.
   defaultWriter.ready
     .then(() => {
       defaultWriter.close();
     })
     .then(() => {
-      console.log("All chunks written");
+      console.log("All messages written");
     })
     .catch((err) => {
       console.log("Stream error:", err);
@@ -73,14 +69,10 @@ let result = "";
 const writableStream = new WritableStream(
   {
     // Implement the sink
-    write(chunk) {
+    write(message) {
       return new Promise((resolve, reject) => {
-        const buffer = new ArrayBuffer(1);
-        const view = new Uint8Array(buffer);
-        view[0] = chunk;
-        const decoded = decoder.decode(view, { stream: true });
         const listItem = document.createElement("li");
-        listItem.textContent = `Chunk decoded: ${decoded}`;
+        listItem.textContent = `Message received: ${message}`;
         list.appendChild(listItem);
         result += decoded;
         resolve();
