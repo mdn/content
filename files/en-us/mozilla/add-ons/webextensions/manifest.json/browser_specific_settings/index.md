@@ -16,14 +16,18 @@ browser-compat: webextensions.manifest.browser_specific_settings
     <tr>
       <th scope="row">Mandatory</th>
       <td>
-        Usually, no (but see also
-        <a
-          href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id"
-          >When do you need an Add-on ID?</a
-        >). Mandatory if the extension ID cannot be determined, see
-        <a href="#firefox_gecko_properties"
-          ><code>browser_specific_settings.gecko.id</code></a
-        >.
+        <ul>
+          <li>In Firefox:
+            <ul>
+              <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li> 
+              <li>Manifest V2: Not required unless an extension ID must be specified.</li>
+            </ul>
+            See <a href="#id"
+              ><code>browser_specific_settings.gecko.id</code></a
+            >
+            for more information.</li>
+          <li>In Safari, not required.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -49,7 +53,7 @@ The `browser_specific_settings` key contains keys that are specific to a particu
 
 ### Firefox (Gecko) properties
 
-Firefox stores browser-specific settings in these sub-keys:
+Firefox stores browser-specific settings in these properties:
 
 - `gecko` for the desktop version of Firefox.
 - `gecko_android` for the Android version of Firefox.
@@ -57,7 +61,24 @@ Firefox stores browser-specific settings in these sub-keys:
 The `gecko` subkey supports these properties:
 
 - `id`
-  - : The extension ID. When provided, this property must contain 80 characters or less and have the format `^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`, like `myextension@example.org`. The extension ID is decided by the developer - the only requirement is that when publishing the extension it must be unique. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
+  - : The extension ID. When provided, this property must be a:
+    - (recommended) string contain 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). Be aware that using a real email address here may attract spam.
+    - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (`^\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}$`)
+
+    When signing extensions, addons.mozilla.org (AMO) requires the ID to be unique.
+
+    For example:
+
+    ```json
+      "id": "extensionname@example.org"
+    ```
+
+    ```json
+      "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+    ```
+
+    See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) for more information about setting extension IDs.
+
 - `strict_min_version`
   - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
 - `strict_max_version`
@@ -74,26 +95,7 @@ The `gecko_android` subkey supports these properties:
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
-To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e. `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
-
-#### Extension ID format
-
-The extension ID must be one of the following:
-
-- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- A string formatted like an email address: `extensionname@example.org`
-
-The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
-
-For example:
-
-```json
-"id": "extensionname@example.org"
-```
-
-```json
-"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
-```
+To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
 ### Safari properties
 
