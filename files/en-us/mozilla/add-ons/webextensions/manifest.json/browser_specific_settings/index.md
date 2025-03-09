@@ -19,7 +19,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
         <ul>
           <li>In Firefox:
             <ul>
-              <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li> 
+              <li>Manifest V3: Mandatory for signing extensions, i.e., distribution through addons.mozilla.org (AMO) or self-distribution, to provide an extension ID.</li>
               <li>Manifest V2: Not required unless an extension ID must be specified.</li>
             </ul>
             See <a href="#id"
@@ -61,7 +61,9 @@ Firefox stores browser-specific settings in these properties:
 The `gecko` subkey supports these properties:
 
 - `id`
+
   - : The extension ID. When provided, this property must be a:
+
     - (recommended) string contain 80 characters or less formatted like an email address. (`^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`). Be aware that using a real email address here may attract spam.
     - [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) (`^\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}$`)
 
