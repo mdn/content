@@ -315,7 +315,6 @@ The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both a
 ```html
 <div class="modern">HSL</div>
 <div class="legacy">HSL</div>
-<div class="modernWithAlpha">HSL</div>
 <div class="modernHSLA">HSLA</div>
 <div class="legacyHSLA">HSLA</div>
 ```
@@ -344,10 +343,6 @@ div.modern {
 
 div.legacy {
   background-color: hsl(90, 80%, 50%);
-}
-
-div.modernWithAlpha {
-  background-color: hsl(90 80% 50% / 50%);
 }
 
 div.modernHSLA {
