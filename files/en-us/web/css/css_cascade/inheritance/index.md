@@ -94,6 +94,10 @@ em {
 
 We can see here another border around the word "emphasized text".
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)

@@ -61,19 +61,19 @@ This article provides information about the changes in Firefox 136 that affect d
 
 #### General
 
-- Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzilla.mozilla.org/show_bug.cgi?id=1927721)).
+- Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzil.la/1927721)).
 
-- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzilla.mozilla.org/show_bug.cgi?id=1943551)).
+- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
 
 #### WebDriver BiDi
 
-- The `session.subscribe` command now returns a subscription ID, which can be used with `session.unsubscribe` to precisely target the same previously subscribed events and contexts as the original subscription. This helps prevent unintended side effects when multiple subscriptions exist, such as those limited to a specific tab ([Firefox bug 1938576](https://bugzilla.mozilla.org/show_bug.cgi?id=1938576)).
+- The `session.subscribe` command now returns a subscription ID, which can be used with `session.unsubscribe` to precisely target the same previously subscribed events and contexts as the original subscription. This helps prevent unintended side effects when multiple subscriptions exist, such as those limited to a specific tab ([Firefox bug 1938576](https://bugzil.la/1938576)).
 
   Note: The previous logic for removing events by name and context has been deprecated and will be removed in a future release.
 
-- Added support for the `userContexts` field in the `script.addPreloadScript` command, allowing clients to specify in which user contexts (containers) the script should always be loaded automatically, including any new browsing contexts opened within such specified user contexts ([Firefox bug 1940927](https://bugzilla.mozilla.org/show_bug.cgi?id=1940927)).
+- Added support for the `userContexts` field in the `script.addPreloadScript` command, allowing clients to specify in which user contexts (containers) the script should always be loaded automatically, including any new browsing contexts opened within such specified user contexts ([Firefox bug 1940927](https://bugzil.la/1940927)).
 
-- The `browsingContext.contextDestroyed` event now returns a fully serialized browsing context tree when a context is closed, including all its child contexts ([Firefox bug 1860955](https://bugzilla.mozilla.org/show_bug.cgi?id=1860955)).
+- The `browsingContext.contextDestroyed` event now returns a fully serialized browsing context tree when a context is closed, including all its child contexts ([Firefox bug 1860955](https://bugzil.la/1860955)).
 
 ## Changes for add-on developers
 
