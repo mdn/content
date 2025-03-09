@@ -287,7 +287,7 @@ If you're looking for tools to expedite the web development process, and you kno
 
 **Content-management systems** (**CMSes**) are any tools that allow a user to create content for the web without directly writing code themselves. They're a good solution for large projects, especially projects that require input from content writers who have limited coding ability, or for programmers who want to save time. They do, however, require a significant amount of time to set up, and utilizing a CMS means that you surrender at least some measure of control over the final output of your website. For example: if your chosen CMS doesn't author accessible content by default, it's often difficult to improve this.
 
-A few popular CMS systems include [WordPress](https://wordpress.com/), [Joomla](https://www.joomla.org/), and [Drupal](https://www.drupal.org/).
+A few popular CMS systems include [WordPress](https://wordpress.com/), [Joomla](https://www.joomla.org/), and [Drupal](https://new.drupal.org/).
 
 ### Server-side rendering
 

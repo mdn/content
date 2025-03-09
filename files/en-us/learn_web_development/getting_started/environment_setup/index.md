@@ -20,7 +20,7 @@ This module assumes no prior technical knowledge, beyond basic computer usage. Y
 
 If you need to refresh yourself on such basics, we'd recommend the following resources depending on what operating system you are using:
 
-- [Windows help and learning](https://support.microsoft.com/windows), Microsoft (2024)
+- [Windows help and learning](https://support.microsoft.com/en-us/windows), Microsoft (2024)
 - [macOS User Guide](https://support.apple.com/guide/mac-help/welcome/mac), Apple (2024)
 - [Official Ubuntu documentation](https://help.ubuntu.com/), ubuntu.com (2024)
 
