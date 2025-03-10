@@ -9,7 +9,49 @@ browser-compat: css.types.gradient.conic-gradient
 
 The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and {{glossary("color wheel", "color wheels")}}. The result of the `conic-gradient()` function is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: conic-gradient()")}}
+
+```css interactive-example-choice
+background: conic-gradient(red, orange, yellow, green, blue);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  from 0.25turn at 50% 30%,
+  #f69d3c,
+  10deg,
+  #3f87a6,
+  350deg,
+  #ebf8e1
+);
+```
+
+```css interactive-example-choice
+background: conic-gradient(from 3.1416rad at 10% 50%, #e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  red 6deg,
+  orange 6deg 18deg,
+  yellow 18deg 45deg,
+  green 45deg 110deg,
+  blue 110deg 200deg,
+  purple 200deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 

@@ -11,7 +11,41 @@ The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alig
 
 You can adjust how the replaced element's object's intrinsic size (that is, its natural size) is adjusted to fit within the element's box using the {{cssxref("object-fit")}} property.
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## Syntax
 
