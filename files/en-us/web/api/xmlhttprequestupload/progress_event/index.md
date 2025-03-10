@@ -39,7 +39,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ## Examples
 
-## Using the `progress` event
+### Using the `progress` event
 
 You can use the `progress` event to get info about the progress of a lengthy upload. For a complete code example that uploads a file and displays a progress bar, see the main {{domxref("XMLHttpRequestUpload")}} page.
 

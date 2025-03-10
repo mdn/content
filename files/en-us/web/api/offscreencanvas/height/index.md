@@ -12,6 +12,8 @@ The **`height`** property returns and sets the height of an {{domxref("Offscreen
 
 ## Value
 
+A positive integer representing the height of the offscreen canvas in CSS pixels.
+
 ## Examples
 
 Creating a new offscreen canvas and returning or setting the height of the offscreen canvas:
