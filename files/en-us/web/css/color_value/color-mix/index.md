@@ -15,6 +15,7 @@ Choosing the correct color space is important for producing desired results. Giv
 - If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
 - If avoiding graying out in color mixing is desired, i.e. maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
 - Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
+
 ## Syntax
 
 ```css
