@@ -41,7 +41,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 - {{domxref("RTCRtpSender.setParameters()")}}
   - : Applies changes to parameters which configure how the `track` is encoded and transmitted to the remote peer.
 - {{domxref("RTCRtpSender.setStreams()")}}
-  - : Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.
+  - : Sets the {{domxref("MediaStream", "stream(s)", "", 1)}} associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.
 - {{domxref("RTCRtpSender.replaceTrack()")}}
   - : Attempts to replace the track currently being sent by the `RTCRtpSender` with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.
 

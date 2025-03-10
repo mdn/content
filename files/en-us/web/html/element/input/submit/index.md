@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_submit
 
 ## Value
 
-An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise.
+An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is displayed as the button's label. Buttons do not have a true value otherwise. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ### Setting the value attribute
 
@@ -46,13 +46,13 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after {{Glossary("Percent-encoding", "percent-encoding")}} the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
-If specified, the value of the `formenctype` attribute overrides the owning form's [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute.
+If specified, the value of the `formenctype` attribute overrides the owning form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
@@ -98,9 +98,9 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: If the `<button>` is inside a {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
 
-### A simple submit button
+### A basic submit button
 
-We'll begin by creating a form with a simple submit button:
+We'll begin by creating a form with a basic submit button:
 
 ```html
 <form>
@@ -116,11 +116,11 @@ We'll begin by creating a form with a simple submit button:
 
 This renders like so:
 
-{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
 
 Try entering some text into the text field, and then submitting the form.
 
-Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=usertext`, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) for more details.
+Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=user-text`, where "user-text" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) for more details.
 
 ### Adding a keyboard shortcut to a submit button
 
@@ -158,7 +158,8 @@ To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attrib
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
 
-> **Note:** See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
+> [!NOTE]
+> See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
 
 ## Validation
 
@@ -166,7 +167,7 @@ Submit buttons don't participate in constraint validation; they have no real val
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
+We've included basic examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
 
 ## Technical Summary
 
@@ -201,7 +202,7 @@ We've included simple examples above. There isn't really anything more to say ab
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -217,7 +218,6 @@ We've included simple examples above. There isn't really anything more to say ab
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [Forms and buttons](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#actual_buttons)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - The {{HTMLElement("button")}} element
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

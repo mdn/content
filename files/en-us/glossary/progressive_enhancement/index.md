@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 The word _progressive_ in _progressive enhancement_ means creating a design that achieves a simpler-but-still-usable experience for users of older browsers and devices with limited capabilities, while at the same time being a design that **progresses the user experience up** to a more-compelling, fully-featured experience for users of newer browsers and devices with richer capabilities.
 
-[Feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) is generally used to determine whether browsers can handle more modern functionality, while [polyfills](/en-US/docs/Glossary/Polyfill) are often used to add missing features with JavaScript.
+[Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is generally used to determine whether browsers can handle more modern functionality, while {{Glossary("polyfill", "polyfills")}} are often used to add missing features with JavaScript.
 
 Special notice should be taken of accessibility. Acceptable alternatives should be provided where possible.
 

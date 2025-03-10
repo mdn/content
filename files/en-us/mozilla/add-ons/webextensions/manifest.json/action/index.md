@@ -52,9 +52,9 @@ An action is a button that your extension adds to the browser's toolbar. The but
 
 This key replaces [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
+You must specify this key to include a browser toolbar button in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("action")}} API.
 
-You can also create and manipulate actions programmatically using the {{WebExtAPIRef("action")}} .
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) when the user clicks the button.
 
 ## Syntax
 
@@ -155,7 +155,7 @@ The `action` key is an object that may have any of these properties, all optiona
         <p>
           You cannot specify multiple icons of the same sizes.<br /><br />See
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action#choosing_icon_sizes"
+            href="#choosing_icon_sizes"
             >Choosing icon sizes</a
           >
           for more guidance on this.
@@ -186,7 +186,7 @@ The `action` key is an object that may have any of these properties, all optiona
             ><a href="/en-US/docs/Web/HTML/Element/script"
               >&#x3C;script>
             </a></code
-          >must have
+          > must have
           <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code>
           attribute to load a file. Don't use
           <code

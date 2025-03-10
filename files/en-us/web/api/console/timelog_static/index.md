@@ -1,8 +1,8 @@
 ---
 title: "console: timeLog() static method"
 short-title: timeLog()
-slug: Web/API/console/timelog_static
-page-type: web-api-instance-method
+slug: Web/API/console/timeLog_static
+page-type: web-api-static-method
 browser-compat: api.console.timeLog_static
 ---
 
@@ -13,10 +13,10 @@ The **`console.timeLog()`** static method logs the current value of a timer that
 ## Syntax
 
 ```js-nolint
-timeLog()
-timeLog(label)
-timeLog(label, val1)
-timeLog(label, val1, /* …, */ valN)
+console.timeLog()
+console.timeLog(label)
+console.timeLog(label, val1)
+console.timeLog(label, val1, /* …, */ valN)
 ```
 
 ### Parameters
@@ -106,5 +106,5 @@ Notice that the timer's name is displayed when the timer value is logged using `
 ## See also
 
 - {{domxref("console/time_static", "console.time()")}}
-- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
-- [Node.JS documentation for `console.timeLog()`](https://nodejs.org/docs/latest/api/console.html#consoletimeloglabel-data)
+- See {{domxref("console/timeEnd_static", "console.timeEnd()")}} for additional examples
+- [Node.js documentation for `console.timeLog()`](https://nodejs.org/docs/latest/api/console.html#consoletimeloglabel-data)

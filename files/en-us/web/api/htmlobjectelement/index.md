@@ -47,7 +47,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the [`standby`](/en-US/docs/Web/HTML/Element/object#standby) HTML attribute, specifying a message to display while the object loads.
 - {{domxref("HTMLObjectElement.type")}}
   - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Element/object#type) HTML attribute, specifying the MIME type of the resource.
-- {{domxref("HTMLObjectElement.useMap")}}
+- {{domxref("HTMLObjectElement.useMap")}} {{deprecated_inline}}
   - : A string that reflects the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) HTML attribute, specifying a {{HTMLElement("map")}} element to use.
 - {{domxref("HTMLObjectElement.validationMessage")}} {{ReadOnlyInline}}
   - : Returns a string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
@@ -65,7 +65,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLObjectElement.checkValidity()")}}
-  - : Returns a boolean value that always is `true`, because `object` objects are never candidates for constraint validation.
+  - : Always returns `true` because {{HTMLElement("object")}} elements are never candidates for constraint validation.
+- {{domxref("HTMLObjectElement.getSVGDocument()")}}
+  - : Returns the embedded SVG as a {{domxref("Document")}}.
+- {{domxref("HTMLObjectElement.reportValidity()")}}
+  - : Always returns `true` because {{HTMLElement("object")}} elements are never candidates for constraint validation.
 - {{domxref("HTMLObjectElement.setCustomValidity()")}}
   - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 

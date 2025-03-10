@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.changed
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
 
@@ -25,7 +25,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
 - `expires`
   - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
+  - : A {{jsxref("boolean")}} indicating whether the cookie is used only in a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
@@ -36,6 +36,9 @@ An array of objects containing the changed cookie(s). Each object contains the f
       - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
     - `"none"`
       - : Cookies will be sent in all contexts.
+
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
 
 ## Examples
 

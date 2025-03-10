@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.EventSource.message_event
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-The `message` event of the {{domxref("EventSource")}} API is fired when data is received through an event source.
+The **`message`** event of the {{domxref("EventSource")}} interface is fired when data is received through an event source.
 
 This event is not cancelable and does not bubble.
 

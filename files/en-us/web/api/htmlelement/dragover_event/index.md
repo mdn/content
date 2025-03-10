@@ -55,7 +55,7 @@ For a complete example of drag and drop, see the page for the [`drag`](/en-US/do
 <div class="dropzone">
   <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
@@ -91,7 +91,7 @@ source.addEventListener("dragstart", (event) => {
   dragged = event.target;
 });
 
-const target = document.getElementById("droptarget");
+const target = document.getElementById("drop-target");
 target.addEventListener("dragover", (event) => {
   // prevent default to allow drop
   event.preventDefault();

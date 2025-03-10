@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.String.substring
 
 The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample("JavaScript Demo: String.substring()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+```
 
 ## Syntax
 
@@ -48,6 +58,8 @@ Any argument value that is {{jsxref("NaN")}} is treated as if it were `0`.
 The following example uses `substring()` to display characters from the
 string `"Mozilla"`:
 
+<!-- cSpell:ignore Mozill -->
+
 ```js
 const anyString = "Mozilla";
 
@@ -70,6 +82,8 @@ The following example uses the `substring()` method and
 {{jsxref("String/length", "length")}} property to extract the last characters of a
 particular string. This method may be easier to remember, given that you don't need to
 know the starting and ending indices as you would in the above examples.
+
+<!-- cSpell:ignore illa zilla -->
 
 ```js
 const text = "Mozilla";
@@ -138,9 +152,7 @@ numbers.
 
 ### Replacing a substring within a string
 
-The following example replaces a substring within a string. It will replace both
-individual characters and substrings. The function call at the end of the example
-changes the string `Brave New World` to `Brave New Web`.
+The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example creates a string `Brave New Web` from the original string `Brave New World`.
 
 ```js
 // Replaces oldS with newS in the string fullS

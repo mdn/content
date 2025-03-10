@@ -5,11 +5,12 @@ page-type: web-api-interface
 browser-compat: api.ResizeObserverSize
 ---
 
-{{DefaultAPISidebar("Resize Observer API")}}
+{{APIRef("Resize Observer API")}}
 
-The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
+The **`ResizeObserverSize`** interface of the [Resize Observer API](/en-US/docs/Web/API/Resize_Observer_API) is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
 
-> **Note:** In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
+> [!NOTE]
+> In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
 
 ## Instance properties
 
@@ -18,7 +19,8 @@ The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}}
 - {{domxref("ResizeObserverSize.inlineSize")}} {{ReadOnlyInline}}
   - : The length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Examples
 

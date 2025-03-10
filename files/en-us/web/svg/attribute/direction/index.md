@@ -2,7 +2,7 @@
 title: direction
 slug: Web/SVG/Attribute/direction
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.direction
+browser-compat: svg.global_attributes.direction
 ---
 
 {{SVGRef}}
@@ -13,7 +13,8 @@ It applies only to glyphs oriented perpendicular to the inline-base direction, w
 
 In many cases, the bidirectional Unicode algorithm produces the desired result automatically, so this attribute doesn't need to be specified in those cases. For other cases, such as when using right-to-left languages, it may be sufficient to add the `direction` attribute to the outermost {{SVGElement("svg")}} element, and allow that direction to inherit to all text elements:
 
-> **Note:** As a presentation attribute, `direction` can be used as a CSS property. See {{cssxref("direction", "CSS direction")}} for further information.
+> [!NOTE]
+> As a presentation attribute, `direction` also has a CSS property counterpart: {{cssxref("direction")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -73,4 +74,4 @@ svg {
 
 ## See also
 
-- {{cssxref("direction", "CSS direction")}}
+- CSS {{cssxref("direction")}} property

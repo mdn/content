@@ -17,7 +17,8 @@ This method is not affected by the canvas's transformation matrix. If the specif
 rectangle extends outside the bounds of the canvas, the pixels outside the canvas are
 transparent black in the returned `ImageData` object.
 
-> **Note:** Image data can be painted onto a canvas using the
+> [!NOTE]
+> Image data can be painted onto a canvas using the
 > {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
 You can find more information about `getImageData()` and general

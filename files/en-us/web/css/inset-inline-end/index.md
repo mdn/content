@@ -9,7 +9,63 @@ browser-compat: css.properties.inset-inline-end
 
 The **`inset-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline end inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/inset-inline-end.html")}}
+This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
+
+{{InteractiveExample("CSS Demo: inset-inline-end")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">
+      I am absolutely positioned with inset-inline-end: 50px
+    </div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-inline-end: 50px;
+  inline-size: 140px;
+  min-block-size: 80px;
+}
+```
 
 ## Syntax
 
@@ -17,6 +73,8 @@ The **`inset-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logic
 /* <length> values */
 inset-inline-end: 3px;
 inset-inline-end: 2.4em;
+inset-inline-end: calc(anchor(self-start) + 5px);
+inset-inline-end: anchor-size(height);
 
 /* <percentage>s of the width or height of the containing block */
 inset-inline-end: 10%;

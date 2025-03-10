@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Path2D.addPath
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`Path2D.addPath()`** method
 of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
@@ -25,7 +25,7 @@ addPath(path, transform)
   - : A {{domxref("Path2D")}} path to add.
 - `transform` {{optional_inline}}
   - : A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
-    is added. (Technically a `DOMMatrixInit` object).
+    is added. (Technically an object that possesses the same properties as a `DOMMatrix` object.)
 
 ### Return value
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.getKey
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`getKey()`** method of the
 {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
@@ -15,8 +15,6 @@ for retrieving specific records from an object store.
 
 If a key is successfully found, then a structured clone of it is created and set as the
 result of the request object.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -52,7 +50,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 let openRequest = indexedDB.open("telemetry");
 openRequest.onsuccess = (event) => {
   let db = event.target.result;
-  let store = db.transaction("netlogs").objectStore("netlogs");
+  let store = db.transaction("net-logs").objectStore("net-logs");
 
   let today = new Date();
   let yesterday = new Date(today);

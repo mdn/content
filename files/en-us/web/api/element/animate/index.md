@@ -13,7 +13,8 @@ is a shortcut method which creates a new {{domxref("Animation")}}, applies it to
 element, then plays the animation. It returns the created {{domxref("Animation")}}
 object instance.
 
-> **Note:** Elements can have multiple animations applied to them. You can get a list of the
+> [!NOTE]
+> Elements can have multiple animations applied to them. You can get a list of the
 > animations that affect an element by calling {{domxref("Element.getAnimations()")}}.
 
 ## Syntax

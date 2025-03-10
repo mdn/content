@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Int32Array.Int32Array
 
 {{JSRef}}
 
-The **`Int32Array()`** constructor creates {{jsxref("Int32Array")}} objects. The contents are initialized to `0`.
+The **`Int32Array()`** constructor creates {{jsxref("Int32Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 

@@ -17,7 +17,8 @@ In general, the higher this number is, the more heavily compressed the video dat
 An unsigned 64-bit integer value which indicates the sum of the quantization parameter (QP) value for every frame sent so far on the track described by the {{domxref("RTCOutboundRtpStreamStats")}} object.
 Since the value of QP is typically larger to indicate higher compression factors, the larger this sum is, the more heavily compressed the stream generally has been.
 
-> **Note:** This value is only available for video media.
+> [!NOTE]
+> This value is only available for video media.
 
 ## Usage notes
 

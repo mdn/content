@@ -14,7 +14,7 @@ page-type: firefox-release-notes
 
 #### HTML 5 support
 
-- [Using audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Element/audio) and [`video`](/en-US/docs/Web/HTML/Element/video) elements.
 - Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
@@ -85,7 +85,7 @@ page-type: firefox-release-notes
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
 - [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
   - : The selectors API allows querying a document to locate the elements that match a given selection rule.
 - [Mouse gesture events](https://web.archive.org/web/20210724051233/https://developer.mozilla.org/en-US/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
@@ -217,4 +217,4 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ## See also
 
-{{Firefox_for_developers('3')}}
+{{Firefox_for_developers}}

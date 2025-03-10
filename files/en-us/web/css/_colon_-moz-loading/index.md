@@ -1,5 +1,5 @@
 ---
-title: ":-moz-loading"
+title: :-moz-loading
 slug: Web/CSS/:-moz-loading
 page-type: css-pseudo-class
 status:
@@ -10,7 +10,8 @@ status:
 
 The **`:-moz-loading`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements that can't be displayed because they have not started loading, such as images that haven't started to arrive yet. Note that images that are _in the process_ of loading _are not_ matched by this pseudo-class.
 
-> **Note:** This selector is mainly intended to be used by theme developers.
+> [!NOTE]
+> This selector is mainly intended to be used by theme developers.
 
 ## Syntax
 

@@ -1,14 +1,37 @@
 ---
-title: How to add images and media
+title: How to add images, media, and assets
+short-title: Add media
 slug: MDN/Writing_guidelines/Howto/Images_media
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
+This page describes how to add images and media to documentation pages on MDN.
 
-## Adding images
+## Storing and using media with shared-assets
 
-To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+Before you add any images or media (especially when demonstrating a technology where the media content is secondary) check if there is something you can use that already exists in the [mdn/shared-assets repository](https://github.com/mdn/shared-assets).
+Treat this repository as a **media library** that you can browse to pick an appropriate resource for an example without worrying about storage, deployment, or licensing.
+
+The repository contains audio, video, fonts, images such as photos, diagrams and icons, and miscellaneous files like PDFs, subtitles files, color profiles, and so on.
+If there's nothing suitable in the repository, you can add your resources along with any source files for the media you want to include.
+You can find examples in the [HTTP directory of the shared-assets](https://github.com/mdn/shared-assets/tree/main/images/diagrams/http) repository.
+
+To use anything from the shared-assets repository in an MDN page, see the [Using shared assets in documentation](https://github.com/mdn/shared-assets?tab=readme-ov-file#using-shared-assets-in-documentation) section of the project README.
+
+## Using vector formats
+
+In general, if you're adding images, especially diagrams, consider using a vector format like SVG for the following reasons:
+
+- **Authors can edit SVG directly** using any IDE or online tools.
+  Editing a .png usually involves recreating an asset from scratch or using image editing software, which is error-prone and can introduce visual or compression artifacts.
+- **SVG can be diffed by Git**. In contrast, an entire file is diffed as a change in binaries when modified, so a .png that's 1MB will increase the repository size by 1MB on each merge commit when it's been modified.
+- **Flexible UX**. SVGs are vector formats, so they don't appear blurry at any scaling.
+
+## Committing images to content repositories
+
+If the shared assets repository is not appropriate for your use case, you can add images to a content (en-US or translated-content) repository.
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using [Markdown image syntax](https://github.github.com/gfm/#images) or the equivalent HTML `<img>` element.
 
 Let's walk through an example:
 
@@ -18,8 +41,7 @@ Let's walk through an example:
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
+   # Run "yarn" to make sure dependencies are up-to-date
    yarn
    git checkout -b my-images
    ```
@@ -33,15 +55,16 @@ Let's walk through an example:
    ```
 
 3. Run `filecheck` on each image, which might complain if something's wrong.
-   For more details, see the [Compressing images](#compressing-images) section.
+   For more details, see the [Compressing images](#compressing_images) section.
 
    ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
+4. Reference your image in the document using the Markdown syntax for images, providing [descriptive text for the `alt` attribute](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) between the brackets that describe the image, or include an {{htmlelement("img")}} element with `alt` attribute inside `files/en-us/web/css/index.md`:
 
-   ```html
+   ```md
+   ![My cool image](my-cool-image.png)
    <img src="my-cool-image.png" alt="My cool image" />
    ```
 
@@ -77,19 +100,20 @@ Don't include "screenshot" or "Bing" as the user doesn't need to know it's a scr
 
 The syntax in markdown and HTML:
 
-```html-nolint
+```md-nolint
 ![<alt-text>](<url-of-image>)
 <img alt="<alt-text>" src="<url-of-image>">
 ```
 
 Examples:
 
-```html
+```md
 ![OpenWebDocs Logo: Carle the book worm](carle.png)
 <img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png" />
 ```
 
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
+For hints on alt text, see [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 ## Compressing images
 
@@ -105,7 +129,7 @@ For example:
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
-## Adding videos
+## Adding videos to MDN pages
 
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.
 This article discusses when including videos in articles is appropriate and provides tips on how to create simple but effective videos on a budget.
@@ -122,7 +146,8 @@ There are several arguments against using video content for technical documentat
 - Video has accessibility problems: it's more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
 - Following on from the last point, video is much harder to edit/update/maintain than text content.
 
-> **Note:** It's worth keeping these problems in mind even when you are making videos, so you can try to alleviate some of them.
+> [!NOTE]
+> It's worth keeping these problems in mind even when you are making videos, so you can try to alleviate some of them.
 
 There are many popular video sites that provide a lot of video tutorials.
 MDN Web Docs isn't a video-driven site, but video does have a place on MDN Web Docs in certain contexts.
@@ -132,9 +157,7 @@ It is especially useful when trying to describe processes that cross over multip
 
 In such cases, it is often more effective to just **show** what you mean.
 
-<!-- We most commonly use videos when explaining features of the [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).-->
-
-## Guidelines for video content
+### Guidelines for video content
 
 Video content for MDN Web Docs should be:
 
@@ -152,7 +175,7 @@ See [Working with the Animation Inspector](https://firefox-source-docs.mozilla.o
 In addition, you should consider the following tips:
 
 - The video will end up being uploaded to YouTube before embedding.
-  We recommend a 16:9 aspect ratio for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
+  We recommend a 16:9 {{glossary("aspect ratio")}} for this use, so that it fills up the entire viewing frame and you don't end up with ugly black bars on the top and bottom (or left and right) of your video.
   So for example, you might choose a resolution of 1024×576, 1152×648, or 1280×720.
 - Record the video in HD, so that it looks better when uploaded.
 - For DevTools videos, it is often a good idea to choose a contrasting theme to the page content. For example, choose the dark theme if the example webpage is light-themed. It is easier to see what is going on and where the DevTools start and the page ends.
@@ -160,7 +183,7 @@ In addition, you should consider the following tips:
 - Make sure the thing you are trying to demonstrate isn't covered up by the mouse cursor.
 - Consider whether or not it would be useful to configure the screen recording tool to add a visual indicator of mouse clicks.
 
-## Guidelines for video tools
+### Video tools and software
 
 You'll need a tool for recording the video.
 These range from free to expensive and simple to complex.
@@ -178,7 +201,7 @@ The following table provides some recommendations for good starter tools:
 | ScreenFlow                | macOS                 | Medium | Yes                                 |
 | Kazam                     | Linux                 | Free   | Minimal                             |
 
-### QuickTime Player tips
+#### QuickTime Player tips
 
 If you are using macOS, you should have QuickTime Player available.
 The recording steps using this tool are pretty simple:
@@ -193,16 +216,13 @@ The recording steps using this tool are pretty simple:
 
 ### Other resources
 
-- [How to Add Custom Callouts to Screencast Videos in Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
-## Workflow for creating videos
+### Workflow for creating videos
 
-The following subsections describe the general steps you'd want to follow to create a video and add it to an MDN Web Docs article.
-
-### Preparing
+The following sections describe the general steps you'd want to follow to create a video and add it to an MDN Web Docs article.
 
 First, plan the flow you want to capture: consider the best points to start and end.
-
 Make sure the desktop background and your browser profile are clean.
 Plan the size and positioning of browser windows, especially if you will be using multiple windows.
 
@@ -222,9 +242,10 @@ Plan carefully what you are actually going to record, and practice the steps a f
   Not everyone will be able to view your video in high definition.
   You will be able to zoom particular parts in post-production, but it's a good idea to zoom the app beforehand as well.
 
-> **Note:** Don't zoom so far that the UIs you are showing start to look unfamiliar or ugly.
+> [!NOTE]
+> Don't zoom so far that the UIs you are showing start to look unfamiliar or ugly.
 
-### Recording
+#### Recording
 
 When recording the workflow you want to show, go through the flow smoothly and steadily.
 Pause for a second or two when you are at key moments — for example, when you're about to click a button.
@@ -232,9 +253,10 @@ Make sure the mouse pointer doesn't obscure any icons or text that are important
 
 Remember to pause for a second or two at the end to show the result of the flow.
 
-> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
+> [!NOTE]
+> If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
 
-### Post-processing
+#### Post-processing
 
 You'll be able to highlight key moments in post-production.
 A highlight can consist of a couple of things, which you'll often combine, like:
@@ -247,19 +269,19 @@ Aim for the highlight to last for 1-2 seconds.
 It's a good idea to add a short transition (200-300 milliseconds) at the start and end of the highlights.
 
 Use some restraint here: don't make the video a constant procession of zooming in and out, otherwise viewers will get seasick.
-
 Crop the video to the desired aspect ratio, if required.
 
-### Uploading
+#### Uploading and embedding video
 
 Videos currently have to be uploaded to YouTube to be displayed on MDN Web Docs, for example, to the [mozhacks](https://www.youtube.com/user/mozhacks/videos) channel.
 Ask a member of MDN Web Docs team to upload the video if you don't have somewhere appropriate to put it.
 
-> **Note:** Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
+> [!NOTE]
+> Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
 
 ### Embedding
 
-Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
+Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_youtube.rs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
 ```plain
@@ -272,3 +294,7 @@ For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, 
 ```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```
+
+## See also
+
+- [Using SVG format instead of .png images](https://github.com/orgs/mdn/discussions/631) MDN GitHub discussion

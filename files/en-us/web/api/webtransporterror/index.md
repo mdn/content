@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportError`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents an error related to the API, which can arise from server errors, network connection problems, or client-initiated abort operations (for example, arising from a {{domxref("WritableStream.abort()")}} call).
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Constructor
 
@@ -30,7 +28,7 @@ _Inherits properties from its parent, {{DOMxRef("DOMException")}}._
 ## Examples
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

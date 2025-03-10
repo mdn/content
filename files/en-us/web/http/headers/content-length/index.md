@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Length
 
 {{HTTPSidebar}}
 
-The **`Content-Length`** header indicates the size of the message body, in bytes, sent to the recipient.
+The HTTP **`Content-Length`** header indicates the size, in bytes, of the message body sent to the recipient.
 
 <table class="properties">
   <tbody>
@@ -16,18 +16,18 @@ The **`Content-Length`** header indicates the size of the message body, in bytes
       <td>
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        {{Glossary("Payload header")}}
+        {{Glossary("Content header")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -40,8 +40,8 @@ Content-Length: <length>
 
 ## Directives
 
-- \<length>
-  - : The length in decimal number of octets.
+- `<length>`
+  - : The length in octets.
 
 ## Specifications
 

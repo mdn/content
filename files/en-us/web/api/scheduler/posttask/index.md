@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Scheduler.postTask
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`postTask()`** method of the {{domxref("Scheduler")}} interface is used for adding tasks to be [scheduled](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) according to their [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 
@@ -73,13 +73,13 @@ The following examples are slightly simplified versions of the live examples pro
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" (such as [`Window.scheduler`](/en-US/docs/Web/API/Window#scheduler)).
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global scope (such as {{domxref("Window.scheduler")}} in window's scope or {{domxref("WorkerGlobalScope.scheduler")}} in worker's scope).
 
 For example, the code below logs "Feature: Supported" if the API is supported on this browser.
 
 ```js
 // Check that feature is supported
-if ("scheduler" in this) {
+if ("scheduler" in globalThis) {
   console.log("Feature: Supported");
 } else {
   console.error("Feature: NOT Supported");
@@ -128,8 +128,8 @@ runTask2();
 
 ### Permanent priorities
 
-[Task priorities](#task_priorities) may be set using `priority` parameter in the optional second argument.
-Priorities that are set in this way cannot be changed (are [immutable](#mutable_and_immutable_task_priority)).
+[Task priorities](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) may be set using `priority` parameter in the optional second argument.
+Priorities that are set in this way cannot be changed (are [immutable](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority)).
 
 Below we post two groups of three tasks, each member in reverse order of priority.
 The final task has the default priority.
@@ -137,7 +137,7 @@ When run, each task simply logs it's expected order (we're not waiting on the re
 
 ```js
 // three tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 1"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 1"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 1"), {
   priority: "user-visible",
 });
@@ -146,7 +146,7 @@ scheduler.postTask(() => console.log("usr-blk 1"), {
 });
 
 // three more tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 2"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 2"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 2"), {
   priority: "user-visible",
 });
@@ -168,16 +168,17 @@ usr-blk 2
 usr-vis 1
 usr-vis 2
 usr-vis 3 (default)
-bckg 1
-bckg 2
+bkg 1
+bkg 2
 ```
 
 ### Changing task priorities
 
-[Task priorities](#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
-If set in this way, the priority of the task [can then be changed](#mutable_and_immutable_task_priority) using the controller associated with the signal.
+[Task priorities](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
+If set in this way, the priority of the task [can then be changed](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority) using the controller associated with the signal.
 
-> **Note:** Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
+> [!NOTE]
+> Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
 
 The code below first shows how to create a {{domxref("TaskController")}}, setting the initial priority of its signal to `user-blocking` in the [`TaskController()` constructor](/en-US/docs/Web/API/TaskController/TaskController).
 
@@ -244,7 +245,7 @@ abortTaskController.abort();
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("Window.setTimeout", "setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 The code below shows two tasks added (as arrow functions) with a delay.

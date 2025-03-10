@@ -6,13 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByName
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntriesByName()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline with the given _name_ and _type_.
 
 If you are interested in performance entries of certain types, see {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}. For all performance entries, see {{domxref("Performance.getEntries", "getEntries()")}}.
 
-> **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
+> [!NOTE]
+> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
 > To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
 
 The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
@@ -37,7 +38,7 @@ getEntriesByName(name, type)
 - `name`
   - : The name of the entries to retrieve.
 - `type` {{optional_inline}}
-  - : The type of entries to retrieve such as "`mark`". The valid entry types are
+  - : The type of entries to retrieve such as `"mark"`. The valid entry types are
     listed in {{domxref("PerformanceEntry.entryType")}}.
 
 ### Return value
@@ -50,7 +51,7 @@ specified criteria, an empty array is returned.
 
 ### Logging performance markers
 
-The following example logs all {{domxref("PerformanceMark")}} objects named "`debug-mark`".
+The following example logs all {{domxref("PerformanceMark")}} objects named `"debug-mark"`.
 
 ```js
 const debugMarks = performance.getEntriesByName("debug-mark", "mark");

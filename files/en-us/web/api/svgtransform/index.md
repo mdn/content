@@ -143,7 +143,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   </thead>
   <tbody>
     <tr>
-      <td><code>type</code></td>
+      <td><code>{{domxref("SVGTransform.type", "type")}}</code></td>
       <td>unsigned short</td>
       <td>
         The type of the value as specified by one of the SVG_TRANSFORM_*
@@ -151,7 +151,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
       </td>
     </tr>
     <tr>
-      <td><code>angle</code></td>
+      <td><code>{{domxref("SVGTransform.angle", "angle")}}</code></td>
       <td>float</td>
       <td>
         A convenience attribute for <code>SVG_TRANSFORM_ROTATE</code>,
@@ -163,7 +163,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
       </td>
     </tr>
     <tr>
-      <td><code>matrix</code></td>
+      <td><code>{{domxref("SVGTransform.matrix", "matrix")}}</code></td>
       <td>{{ domxref("DOMMatrix") }}</td>
       <td>
         <p>
@@ -220,7 +220,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     <tr>
       <td>
         <code
-          ><strong>setMatrix</strong>(in {{ domxref("DOMMatrix") }}
+          ><strong>{{domxref("SVGTransform.setMatrix", "setMatrix")}}</strong>(in {{ domxref("DOMMatrix") }}
           <em>matrix</em>)</code
         >
       </td>
@@ -245,7 +245,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     <tr>
       <td>
         <code
-          ><strong>setTranslate</strong>(in float <em>tx</em> , in float
+          ><strong>{{domxref("SVGTransform.setTranslate", "setTranslate")}}</strong>(in float <em>tx</em>, in float
           <em>ty</em>)</code
         >
       </td>
@@ -270,7 +270,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     <tr>
       <td>
         <code
-          ><strong>setScale</strong>(in float <em>sx</em> , in float
+          ><strong>{{domxref("SVGTransform.setScale", "setScale")}}</strong>(in float <em>sx</em>, in float
           <em>sy</em>)</code
         >
       </td>
@@ -295,8 +295,8 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     <tr>
       <td>
         <code
-          ><strong>setRotate</strong>(in float <em>angle</em>, in float
-          <em>cx</em> , in float <em>cy</em>)</code
+          ><strong>{{domxref("SVGTransform.setRotate", "setRotate")}}</strong>(in float <em>angle</em>, in float
+          <em>cx</em>, in float <em>cy</em>)</code
         >
       </td>
       <td><em>void</em></td>
@@ -320,7 +320,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     </tr>
     <tr>
       <td>
-        <code><strong>setSkewX</strong>(in float <em>angle</em>)</code>
+        <code><strong>{{domxref("SVGTransform.setSkewX", "setSkewX")}}</strong>(in float <em>angle</em>)</code>
       </td>
       <td><em>void</em></td>
       <td>
@@ -341,7 +341,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     </tr>
     <tr>
       <td>
-        <code><strong>setSkewY</strong>(in float <em>angle</em>)</code>
+        <code><strong>{{domxref("SVGTransform.setSkewY", "setSkewY")}}</strong>(in float <em>angle</em>)</code>
       </td>
       <td><em>void</em></td>
       <td>
@@ -362,6 +362,10 @@ An `SVGTransform` object can be designated as read only, which means that attemp
     </tr>
   </tbody>
 </table>
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

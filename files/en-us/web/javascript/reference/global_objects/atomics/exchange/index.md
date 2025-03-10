@@ -7,12 +7,23 @@ browser-compat: javascript.builtins.Atomics.exchange
 
 {{JSRef}}
 
-The **`Atomics.exchange()`** static method stores a given value
-at a given position in the array and returns the old value at that position. This atomic
-operation guarantees that no other write happens between the read of the old value and
-the write of the new value.
+The **`Atomics.exchange()`** static method exchanges a given value at a given position in the array and returns the old value at that position. This atomic operation guarantees that no other write happens between the read of the old value and the write of the new value.
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -23,20 +34,15 @@ Atomics.exchange(typedArray, index, value)
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
-  - : The position in the `typedArray` to exchange a
-    `value`.
+  - : The position in the `typedArray` to exchange a `value`.
 - `value`
   - : The number to exchange.
 
 ### Return value
 
-The old value at the given position
-(`typedArray[index]`).
+The old value at the given position (`typedArray[index]`).
 
 ### Exceptions
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FontFace
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFace`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) represents a single usable font face.
 
@@ -41,7 +41,7 @@ For URL font sources it allows authors to trigger when the remote font is fetche
   - : A string that retrieves or sets the _style_ of the font. It is equivalent to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 - {{domxref("FontFace.unicodeRange")}}
   - : A string that retrieves or sets the _range of unicode code points_ encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
-- {{domxref("FontFace.variant")}}
+- {{domxref("FontFace.variant")}} {{non-standard_inline}}
   - : A string that retrieves or sets the _variant_ of the font.
 - {{domxref("FontFace.variationSettings")}} {{Experimental_Inline}}
   - : A string that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
@@ -52,12 +52,12 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 
 ## Examples
 
-The code below defines a font face using data at the URL "myfont.woff" with a few font descriptors.
+The code below defines a font face using data at the URL "my-font.woff" with a few font descriptors.
 Just to show how it works, we then define the `stretch` descriptor using a property.
 
 ```js
 //Define a FontFace
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", "url(my-font.woff)", {
   style: "italic",
   weight: "400",
 });

@@ -10,8 +10,7 @@ browser-compat: api.NavigationHistoryEntry.getState
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`getState()`** method of the
-{{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
+The **`getState()`** method of the {{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
 
 ## Syntax
 
@@ -27,7 +26,7 @@ None.
 
 A value representing the state. This can be any [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) data type.
 
-If no state is defined, it returns `undefined`.
+If no state is defined or if current document is not fully active, it returns `undefined`.
 
 ### Exceptions
 

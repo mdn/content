@@ -89,7 +89,7 @@ For {{SVGElement('mask')}}, `maskUnits` defines the coordinate system in use for
 - `userSpaceOnUse`
   - : This value indicates that all coordinates for the geometry attributes refer to the user coordinate system as defined when the mask was created.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }}.
+  - : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

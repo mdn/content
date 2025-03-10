@@ -42,7 +42,8 @@ Use this key to register one or more web-based protocol handlers.
 
 A protocol handler is an application that knows how to handle particular types of links: for example, a mail client is a protocol handler for "mailto:" links. When the user clicks a "mailto:" link, the browser opens the application selected as the handler for the "mailto:" protocol (or offers them a choice of handlers, depending on their settings).
 
-> **Note:** By default, extensions do not run in private browsing windows. As protocol handlers are part of the extension, they don't work in private browsing windows by default. Whether an extension can access private browsing windows and its protocol handlers become active is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}.
+> [!NOTE]
+> By default, extensions do not run in private browsing windows. As protocol handlers are part of the extension, they don't work in private browsing windows by default. Whether an extension can access private browsing windows and its protocol handlers become active is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}.
 
 With this key, you can register a website as a handler for a particular protocol. The syntax and semantics of this key is very much like the [`Navigator.registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) function, except that with `registerProtocolHandler()` a website can only register itself as a handler.
 

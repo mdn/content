@@ -8,7 +8,7 @@ status:
 browser-compat: api.Serial.getPorts
 ---
 
-{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
 
@@ -29,7 +29,9 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
+  - : The returned `Promise` rejects with this error in either of the following situations:
+    - A {{httpheader('Permissions-Policy/serial','serial')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature.
+    - A user permission prompt was denied.
 
 ## Examples
 

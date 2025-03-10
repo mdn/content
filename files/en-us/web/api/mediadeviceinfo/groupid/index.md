@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.groupId
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`groupId`** readonly property of
+The **`groupId`** read-only property of
 the {{domxref("MediaDeviceInfo")}} interface returns a string that
 is a group identifier.
 
@@ -20,10 +20,6 @@ and microphone.
 
 A string which uniquely identifies the group of related devices to
 which this device belongs.
-
-## Specifications
-
-{{Specifications}}
 
 ## Examples
 
@@ -53,11 +49,9 @@ The `getDeviceGroup()` function takes as input the
 be built. The function starts by initializing the result array, `devList`, to
 be an empty array.
 
-Then {{domxref("MediaDevices.enumerateDevices",
-  "navigator.mediaDevices.enumerateDevices()")}} is called to get the list of all media
-devices. Once the promise resolves, we walk the list using {{jsxref("Array.forEach",
-  "forEach()")}}. For each device, if its {{domxref("MediaDeviceInfo.groupId",
-  "groupId")}} matches the main device's `groupId`, we push the
+Then {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is called to get the list of all media
+devices. Once the promise resolves, we walk the list using {{jsxref("Array.forEach", "forEach()")}}.
+For each device, if its `groupId` matches the main device's `groupId`, we push the
 {{domxref("MediaDeviceInfo")}} object onto the list.
 
 Finally, the list, which now contains a `MediaDeviceInfo` object for each
@@ -89,6 +83,10 @@ const getDeviceGroup = (mainDevInfo) => {
   return devList;
 };
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

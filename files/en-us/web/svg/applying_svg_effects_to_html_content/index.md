@@ -10,7 +10,8 @@ Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/doc
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
 
-> **Note:** References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
+> [!NOTE]
+> References to SVG in external files must be to the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the referencing document.
 
 ## Using embedded SVG
 
@@ -232,7 +233,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also [CSS filter](/en-US/docs/Web/CSS/filter#blur%28%29_2)). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/filter-function/blur). You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

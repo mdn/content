@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.cache
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
@@ -32,7 +32,7 @@ A `RequestCache` value. The available values are:
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
-- `only-if-cached` — The browser looks for a matching request in its HTTP cache.
+- `only-if-cached` — The browser looks for a matching request in its HTTP cache. {{experimental_inline}}
 
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Status/504) status.

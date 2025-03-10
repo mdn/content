@@ -10,7 +10,8 @@ browser-compat: api.ShadowRoot.adoptedStyleSheets
 
 The **`adoptedStyleSheets`** property of the {{domxref("ShadowRoot")}} interface sets an array of constructed stylesheets to be used by the shadow DOM subtree.
 
-> **Note:** A constructed stylesheet is a stylesheet created programmatically using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) (as compared to one created by a user-agent when importing a stylesheet from a script, imported using {{HTMLElement('style')}} and {{CSSXref('@import')}}, or linked to via {{HTMLElement('link')}}).
+> [!NOTE]
+> A constructed stylesheet is a stylesheet created programmatically using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) (as compared to one created by a user-agent when importing a stylesheet from a script, imported using {{HTMLElement('style')}} and {{CSSXref('@import')}}, or linked to via {{HTMLElement('link')}}).
 
 The same constructed stylesheet can be adopted by multiple {{domxref("ShadowRoot")}} instances, and by the parent document (using the {{domxref("Document.adoptedStyleSheets")}} property).
 Changing an adopted stylesheet will affect all the adopting objects.

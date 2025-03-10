@@ -1,10 +1,9 @@
 ---
 title: Information contained in a WebIDL file
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
 
@@ -17,19 +16,20 @@ WebIDL can be found in multiple locations:
 - Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).
 - Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
 
-  - For Gecko, all WebIDL files are grouped in a single directory: <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
-  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
-  - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/master/Source/WebCore/html/DOMTokenList.idl>
+  - For Gecko, all WebIDL files are grouped in a single directory: <https://searchfox.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
+  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
+  - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
 ## Different dialects of WebIDL
 
-WebIDL is defined in [its specification](https://heycam.github.io/webidl/). But it has been designed to be extended to convey more information, and browser vendors have done so:
+WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But it has been designed to be extended to convey more information, and browser vendors have done so:
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
-> **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
+> [!NOTE]
+> We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
 
 ## Interfaces
 
@@ -171,7 +171,8 @@ Here, it is defined that when the global scope is of type `DedicatedWorkerGlobal
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
@@ -186,7 +187,8 @@ interface SpeechSynthesis {
 
 Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
-> **Note:** the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ### Available only in system code
 
@@ -219,6 +221,18 @@ readonly attribute MediaError? error;
 
 The property value is an object of type `MediaError`. The question mark (`'?'`) indicates that it can take a value of `null`, and the documentation must explain _when_ this may occur. If no question mark is present, the `error` property can't be `null`.
 
+The type of the property may be prefixed with an _extended attribute_, a string enclosed in square brackets (like `[LegacyNullToEmptyString]`). Such extended attributes indicate special behaviors that must be described in the prose. Here is a list of standard extended attributes of types, and the addition that must be made:
+
+- `[LegacyNullToEmptyString]`
+
+  - : The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
+
+    Add the following sentence to the end of the _Value_ section of the article:
+
+    _When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
+
+    The small inline example has to be adapted for each property.
+
 ### Writing permissions on the property
 
 ```webidl
@@ -229,10 +243,10 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 - In the interface, by adding the \\{{ReadOnlyInline}} macro next to its definition term.
 - In the first sentence of its own page, by starting the description with: _The read-only **`HTMLMediaElement.error`** property…_
-- By adding the `Read-only` tag to its own page.
 - By starting its description in the interface page with _Returns…_
 
-> **Note:** Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
+> [!NOTE]
+> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
 
 ### Throwing exceptions
 
@@ -243,7 +257,7 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 In some cases, like when some values are illegal, setting a new value can lead to an exception being raised. This is marked using the `[SetterThrows]` annotation. When this happens, the Syntax section of the property page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://webidl.spec.whatwg.org/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) raises a {{jsxref('TypeError')}} exception. This must be documented, but is only implicitly marked in the WebIDL document.
 
 It is uncommon to have getters throwing exceptions, though it happens in a few cases. In this case the `[GetterThrows]` annotation is used. Here also, the Syntax section of the property page _must_ have an Exceptions subsection.
 
@@ -256,7 +270,7 @@ partial interface Blob {
 
 ### Not throwing exceptions
 
-When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
+When the semantics of WebIDL is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
@@ -281,7 +295,8 @@ Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or
 
 For interface objects, the default is to return a _reference_ to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.
 
-> **Note:** The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
+> [!NOTE]
+> The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
 
 Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
@@ -314,7 +329,8 @@ For documentation, the subpage must contain a sentence indicating if it is avail
 
 ### Preferences
 
-> **Note:** This information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -325,7 +341,8 @@ In Gecko, the availability of some properties may be controlled by a preference.
 
 Here `media.webvtt.enabled` controls the `textTracks` property.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
 
 ## Methods
 
@@ -349,15 +366,20 @@ TextTrack addTextTrack(TextTrackKind kind,
 
 The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
 
+Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
+
+- `[LegacyNullToEmptyString]`
+  - : Add the following sentence at the end of the parameter description: _A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
+
 ### Type of the return value
 
 ```webidl
 DOMString canPlayType(DOMString type);
 ```
 
-The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
+The return value type is indicated before the method name — in the above case the value is an object of type `DOMString`. If the return type is followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple "None.".
+If the return value is the `void` keyword, it means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should simply state "None (\{{jsxref("undefined")}}).".
 
 ### Throwing exceptions
 
@@ -368,7 +390,7 @@ The keyword `void` means that there is no return value. It is not a return value
 
 Some methods can throw exceptions. This is marked using the `[Throws]` annotation. When this happens, the Syntax section of the method page _must_ have an Exceptions subsection. The list of exceptions and the conditions to have them thrown are listed, as textual information, in the specification of that API.
 
-Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://heycam.github.io/webidl/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
+Note that some exceptions are not explicitly marked but are defined by the JavaScript bindings. [Trying to set an illegal enumerated value](https://webidl.spec.whatwg.org/#es-enumeration) (mapped to a JavaScript {{jsxref('String')}}) as a parameter will raise a {{jsxref('TypeError')}} exception. This must be documented, but it is only implicitly marked in the WebIDL document.
 
 Have a look at one of these [_Exceptions_ sections](/en-US/docs/Web/API/SubtleCrypto/importKey#exceptions).
 
@@ -380,9 +402,10 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
-In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
+In Gecko, the availability of some methods may be controlled by a preference. This is marked in the WebIDL too.
 
 ```webidl
 [Pref="media.webvtt.enabled"]
@@ -393,7 +416,8 @@ In Gecko, the availability of some properties may be controlled by a preference.
 
 Here `media.webvtt.enabled` controls the `addTextTrack()` method.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ## Special methods
 
@@ -418,7 +442,8 @@ serializer; // Standard version
 
 The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
-> **Note:** the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
+> [!NOTE]
+> The WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
 
 ### Iterator-like methods
 
@@ -437,14 +462,15 @@ The iterator will iterate over values of type _valueType_. The generated methods
 - `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (that are `unsigned long`).
 - `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values.
 - `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
-- `forEach()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys that calls a given callback function one for each entry in the list.
+- `forEach()`, which executes a given callback function once for each entry in the list.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
 
-> **Note:** the value pairs to iterate over can be defined in two different ways:
->
-> 1. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)…"_.
-> 2. In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
+The values to iterate over can be defined in one of the following ways:
+
+- In the WebIDL file, using the `iterable<valueType>` notation. For example, see {{domxref('DOMTokenList')}}.
+- Implicitly in the WebIDL file, if the interface supports indexed properties. This is indicated when the interface includes `getter` methods with a parameter of type `unsigned long`.
+- Outside the WebIDL file, in the accompanying prose. Such a prose is typically found in the specification and usually starts with: _"The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…"_.
 
 #### Pair iterator
 
@@ -452,22 +478,23 @@ Such an iterator allows to use the syntax `for (const p in object)` as a shortha
 iterable<keyType, valueType>
 ```
 
-The iterator will iterate over values of type _valueType_, with keys of type _keyType_. The generated methods will be:
+The iterator will iterate over values of type _valueType_ with keys of type _keyType_, that is the value pairs. The generated methods will be:
 
-- `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
-- `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('FormData.values()')}}
-- `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
+- `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the value pairs. For example, see {{domxref('FormData.entries()')}}.
+- `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. For example, see {{domxref('FormData.values()')}}.
+- `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. For example, see {{domxref('FormData.keys()')}}.
+- `forEach()`, which executes a given callback function once for each entry in the list. For example, see {{domxref('Headers.forEach()')}}.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
-> **Note:** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
->
-> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
+The value pairs to iterate over can be defined in one of the following ways:
+
+- In the WebIDL file, using the `iterable<keyType, valueType>` notation. For example, see {{domxref('FormData')}}.
+- Outside the WebIDL file, in the accompanying prose. Such a prose is typically found in the specification and usually starts with: _"The [value pairs to iterate over](https://webidl.spec.whatwg.org/#dfn-value-pairs-to-iterate-over)…"_.
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach()`, and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```webidl
 setlike<valueType>
@@ -475,10 +502,10 @@ setlike<valueType>
 
 The generated properties will be:
 
-- `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes. E.g. {{domxref('NodeList.entries()')}}.
-- `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('NodeList.values()')}}.
-- `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('NodeList.keys()')}},
-- `forEach()`.
+- `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes. For example, see {{domxref('NodeList.entries()')}}.
+- `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. For example, see {{domxref('NodeList.values()')}}.
+- `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. For example, see {{domxref('NodeList.keys()')}}.
+- `forEach()`, which executes a given callback function once for each entry in the list. For example, see {{domxref('NodeList.forEach()')}}.
 
 In cases where the set-like declaration is not prefixed by read-only, the following methods are also generated:
 

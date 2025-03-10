@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createRenderPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createRenderPipeline()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPURenderPipeline")}} that can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
@@ -46,11 +46,13 @@ The `depthStencil` object can contain the following properties:
 
 - `depthBias` {{optional_inline}}
   - : A number representing a constant depth bias that is added to each fragment. If omitted, `depthBias` defaults to 0.
+    > [!NOTE]
+    > The `depthBias`, `depthBiasClamp`, and `depthBiasSlopeScale` properties must be set to `0` for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`. If not, a {{domxref("GPUValidationError")}} will be generated and the returned {{domxref("GPURenderPipeline")}} will be invalid.
 - `depthBiasClamp` {{optional_inline}}
   - : A number representing the maximum depth bias of a fragment. If omitted, `depthBiasClamp` defaults to 0.
 - `depthBiasSlopeScale` {{optional_inline}}
   - : A number representing a depth bias that scales with the fragment's slope. If omitted, `depthBiasSlopeScale` defaults to 0.
-- `depthCompare`
+- `depthCompare` {{optional_inline}}
 
   - : An enumerated value specifying the comparison operation used to test fragment depths against `depthStencilAttachment` depth values. Possible values are:
 
@@ -63,8 +65,14 @@ The `depthStencil` object can contain the following properties:
     - `"greater-equal"`: A provided value passes the comparison test if it is greater than or equal to the sampled value.
     - `"always"`: Comparison tests always pass.
 
-- `depthWriteEnabled`
+    `depthCompare` is not required if the specified `format` does not have a depth component, or if the comparison operation is not used.
+
+- `depthWriteEnabled` {{optional_inline}}
+
   - : A boolean. A value of `true` specifies that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. Setting it to `false` means it cannot.
+
+    `depthWriteEnabled` is not required if the specified `format` does not have a depth component.
+
 - `format`
   - : An enumerated value specifying the `depthStencilAttachment` format that the {{domxref("GPURenderPipeline")}} will be compatible with. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 - `stencilBack` {{optional_inline}}
@@ -88,7 +96,8 @@ The `depthStencil` object can contain the following properties:
 
         If omitted, `depthFailOp` defaults to `"keep"`.
 
-        > **Note:**: The render state stencil value is initialized to 0 at the start of a render pass.
+        > [!NOTE]
+        > The render state stencil value is initialized to 0 at the start of a render pass.
 
     - `failOp` {{optional_inline}}
       - : An enumerated value specifying the stencil operation performed if the fragment stencil comparison test described by `compare` fails. Possible and default values are the same as for `depthFailOp`.
@@ -130,8 +139,12 @@ The `fragment` object contains an array of objects, each of which can contain th
     }
     ```
 
-- `entryPoint`
+- `entryPoint` {{optional_inline}}
+
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@fragment` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
+
+    You can omit the `entryPoint` property if your shader code contains a single function with the `@fragment` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
+
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `targets`
@@ -159,15 +172,22 @@ The `fragment` object contains an array of objects, each of which can contain th
             - `"one"`
             - `"one-minus-dst"`
             - `"one-minus-src"`
+            - `"one-minus-src1"`
             - `"one-minus-src-alpha"`
+            - `"one-minus-src1-alpha"`
             - `"one-minus-dst-alpha"`
             - `"one-minus-constant"`
             - `"src"`
+            - `"src1"`
             - `"src-alpha"`
+            - `"src1-alpha"`
             - `"src-alpha-saturated"`
             - `"zero"`
 
             If omitted, `dstFactor` defaults to `"zero"`.
+
+            > [!NOTE]
+            > The `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factor operations to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
         - `operation` {{optional_inline}}
 
@@ -184,7 +204,8 @@ The `fragment` object contains an array of objects, each of which can contain th
         - `srcFactor` {{optional_inline}}
           - : An enumerated value that defines the blend factor operation to be performed on values from the fragment shader. Possible values are the same as for `dstFactor`. If omitted, `srcFactor` defaults to `"one"`.
 
-        > **Note:** For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
+        > [!NOTE]
+        > For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
 
     - `format`
       - : An enumerated value specifying the required format for output colors. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
@@ -192,18 +213,18 @@ The `fragment` object contains an array of objects, each of which can contain th
 
       - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:
 
-        - `GPUFlagsConstant.RED`
-        - `GPUFlagsConstant.GREEN`
-        - `GPUFlagsConstant.BLUE`
-        - `GPUFlagsConstant.ALPHA`
-        - `GPUFlagsConstant.ALL`
+        - `GPUColorWrite.RED`
+        - `GPUColorWrite.GREEN`
+        - `GPUColorWrite.BLUE`
+        - `GPUColorWrite.ALPHA`
+        - `GPUColorWrite.ALL`
 
-        If omitted, `writeMask` defaults to `GPUFlagsConstant.ALL`.
+        If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
         Note that multiple flags can be specified by separating values with pipe symbols, for example:
 
         ```js
-        writeMask: GPUFlagsConstant.RED | GPUFlagsConstant.ALPHA;
+        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
         ```
 
 ### `multisample` object structure
@@ -246,6 +267,8 @@ The `primitive` object can contain the following properties:
 
     If omitted, `frontFace` defaults to `"ccw"`.
 
+    > [!NOTE] > `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
+
 - `stripIndexFormat` {{optional_inline}}
 
   - : An enumerated value that determines the index buffer format and primitive restart value in the case of pipelines with strip topologies (`"line-strip"` or `"triangle-strip"`). The primitive restart value specifies which index value indicates that a new primitive should be started rather than continuing to construct the strip with the prior indexed vertices. Possible values are:
@@ -268,9 +291,11 @@ The `primitive` object can contain the following properties:
     If omitted, `topology` defaults to `"triangle-list"`.
 
 - `unclippedDepth` {{optional_inline}}
+
   - : A boolean. A value of `true` indicates that depth clipping is disabled. If omitted, `unclippedDepth` defaults to `false`. Note that to control depth clipping, the `depth-clip-control` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
-> **Note:** `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
+    > [!NOTE]
+    > The `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `unclippedDepth` property to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
 ### `vertex` object structure
 
@@ -298,8 +323,12 @@ The `vertex` object can contain the following properties:
     }
     ```
 
-- `entryPoint`
+- `entryPoint` {{optional_inline}}
+
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@vertex` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
+
+    You can omit the `entryPoint` property if your shader code contains a single function with the `@vertex` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
+
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `buffers` {{optional_inline}}
@@ -335,20 +364,28 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
+  - The [`depthBias`](#depthbias), [`depthBiasClamp`](#depthbiasclamp), and [`depthBiasSlopeScale`](#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
   - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:
   - `targets.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
   - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
+  - If the `src1`, `one-minus-src1`, `src1-alpha`, or `one-minus-src1-alpha` blend factor operations are used, the `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+  - If the `entryPoint` property is omitted, the shader code contains a single fragment shader entry point function for the browser to use as the default entry point.
+- For `primitive` objects:
+  - If the `unclippedDepth` property is used, the `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+- For `vertex` objects:
+  - If the `entryPoint` property is omitted, the shader code contains a single vertex shader entry point function for the browser to use as the default entry point.
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 
-Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
+Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
 // ...

@@ -26,7 +26,8 @@ The possible values are:
   - : Node starts after and ends before the Range, i.e. the Node is completely selected by
     the Range.
 
-> **Warning:** This method [has been removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
+> [!WARNING]
+> This method [has been removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
 > will not exist in future versions of Firefox, which was the only browser implementing
 > it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as
 > possible.

@@ -6,11 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.Event.currentTarget
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`currentTarget`** read-only property of the {{domxref("Event")}} interface identifies the element to which the event handler has been attached.
 
-This will not always be the same as the element on which the event was fired, because the event may have fired on a descendant of the element with the handler, and then [bubbled](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling) up to the element with the handler. The element on which the event was fired is given by {{domxref("Event.target")}}.
+This will not always be the same as the element on which the event was fired, because the event may have fired on a descendant of the element with the handler, and then [bubbled](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up to the element with the handler. The element on which the event was fired is given by {{domxref("Event.target")}}.
+
+Note that the value of `currentTarget` is only available in a handler for the event. Outside an event handler it will be `null`. This means that, for example, if you take a reference to the `Event` object inside an event handler and then access its `currentTarget` property outside the event handler, its value will be `null`.
 
 ## Value
 
@@ -87,5 +89,4 @@ In both cases, `currentTarget` identifies the parent, because that's the element
 
 ## See also
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
-- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling)
+- [Learn: Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)

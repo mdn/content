@@ -9,7 +9,49 @@ browser-compat: html.elements.data
 
 The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of content with a machine-readable translation. If the content is time- or date-related, the {{HTMLElement("time")}} element must be used.
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
+
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `value`
+  - : This attribute specifies the machine-readable translation of the content of the element.
+
+## Examples
+
+The following example displays product names but also associates each name with a product number.
+
+```html
+<p>New Products</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -38,7 +80,7 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -53,7 +95,7 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >
@@ -69,30 +111,6 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `value`
-  - : This attribute specifies the machine-readable translation of the content of the element.
-
-## Examples
-
-The following example displays product names but also associates each name with a product number.
-
-```html
-<p>New Products</p>
-<ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
-</ul>
-```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

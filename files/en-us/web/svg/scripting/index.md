@@ -59,13 +59,15 @@ In addition, the {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTML
 
 You can also use `document.getElementById("svg_elem_name").getSVGDocument()`, which gives the same result.
 
-> **Note:** You may find documentation referring to an `SVGDocument` interface. Prior to SVG 2, SVG documents were represented using that interface. However, SVG documents are now represented using the {{domxref("XMLDocument")}} interface instead.
+> [!NOTE]
+> You may find documentation referring to an `SVGDocument` interface. Prior to SVG 2, SVG documents were represented using that interface. However, SVG documents are now represented using the {{domxref("XMLDocument")}} interface instead.
 
 ### Inter-document scripting: calling JavaScript functions
 
-When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use `parent.functionname()` to reference the function. Although the Adobe SVG viewer plugin allows the use of `functionname()`, it's not the preferred way to do things.
+When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use `parent.functionName()` to reference the function. Although the Adobe SVG viewer plugin allows the use of `functionName()`, it's not the preferred way to do things.
 
-> **Note:** According to the [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) the `"parent"` JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use `"top"` instead of `"parent"`. Since it is a beta version of their plugin, we can probably safely ignore this.
+> [!NOTE]
+> According to the [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) the `"parent"` JS variable is broken in Adobe's SVG version 6 preview plugin. The suggested workaround is to use `"top"` instead of `"parent"`. Since it is a beta version of their plugin, we can probably safely ignore this.
 
 More information and some examples can be found on the [SVG wiki inter-document scripting page](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication).
 

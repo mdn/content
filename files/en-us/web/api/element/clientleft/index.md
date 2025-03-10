@@ -14,10 +14,12 @@ is an overflow causing a left vertical scrollbar to be rendered.
 `clientLeft` does not include the left margin or the left padding.
 `clientLeft` is read-only.
 
-> **Note:** This property will round the value to an integer. If you
+> [!NOTE]
+> This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-> **Note:** When an element has
+> [!NOTE]
+> When an element has
 > `display: inline`, `clientLeft` returns `0`
 > regardless of the element's border.
 
@@ -49,7 +51,7 @@ In the following example, the client area has a white background and a 24px blac
 ```css
 #container {
   margin: 3rem;
-  background-color: rgb(255, 255, 204);
+  background-color: rgb(255 255 204);
   border: 4px dashed black;
 }
 

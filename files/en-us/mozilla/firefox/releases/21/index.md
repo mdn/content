@@ -17,7 +17,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### JavaScript
 
-- EcmaScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
+- ECMAScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
 - [parseInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) no longer treats strings with leading "0" as octal ([Firefox bug 786135](https://bugzil.la/786135)).
 
 ### CSS
@@ -37,8 +37,8 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ([Firefox bug 833719](https://bugzil.la/833719)).
 - Various keyCode values for OEM specific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
 - The function [`window.crypto.getRandomValues`](/en-US/docs/Web/API/Crypto/getRandomValues) has been implemented ([Firefox bug 440046](https://bugzil.la/440046)).
-- The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ([Firefox bug 672190](https://bugzil.la/672190)).
-- CSSOM: the method {{domxref("CSSKeyframesRule")}}`.insertRule` has been removed to {{domxref("CSSKeyframesRule")}}`.appendRule` to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
+- The non-standard methods `NodeIterator.expandEntityReferences()` and `TreeWalker.expandEntityReferences()` have been removed ([Firefox bug 672190](https://bugzil.la/672190)).
+- CSSOM: the method `CSSKeyframesRule.insertRule()` has been removed to {{domxref("CSSKeyframesRule.appendRule()")}} to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
 - CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is now thrown ([Firefox bug 765599](https://bugzil.la/765599)).
 - Until now, when the same headers were repeatedly set with [`XMLHttpRequest.setRequestHeader`](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader), the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ([Firefox bug 819051](https://bugzil.la/819051)).
 
@@ -52,7 +52,8 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
 
   - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ([Firefox bug 783049](https://bugzil.la/783049)).
-    > **Note:** the patch for this new header landed in Firefox 21, it is disabled on builds ([Firefox bug 842657](https://bugzil.la/842657)).
+    > [!NOTE]
+    > The patch for this new header landed in Firefox 21, it is disabled on builds ([Firefox bug 842657](https://bugzil.la/842657)).
 
 ### Worker
 
@@ -114,4 +115,4 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Older versions
 
-{{Firefox_for_developers('20')}}
+{{Firefox_for_developers}}

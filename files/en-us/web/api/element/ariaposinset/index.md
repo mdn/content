@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaPosInSet
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaPosInSet`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
+The **`ariaPosInSet`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
 
 ## Value
 

@@ -11,12 +11,12 @@ The **`PerformancePaintTiming`** interface provides timing information about "pa
 
 There are two key paint moments this API provides:
 
-- {{Glossary("First paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First contentful paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
 
 A third key paint moment is provided by the {{domxref("LargestContentfulPaint")}} API:
 
-- {{Glossary("Largest contentful paint")}} (LCP): Render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
+- {{Glossary("Largest Contentful Paint")}} (LCP): Render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
 
 The data this API provides helps you minimize the time that users have to wait before they can see the site's content start to appear. Decreasing the time until these key paint moments make sites feel more responsive, performant, and engaging for your users.
 
@@ -29,7 +29,7 @@ Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
-  - : Returns "`paint`".
+  - : Returns `"paint"`.
 - {{domxref("PerformanceEntry.name")}}
   - : Returns either `"first-paint"` or `"first-contentful-paint"`.
 - {{domxref("PerformanceEntry.startTime")}}

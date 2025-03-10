@@ -37,7 +37,8 @@ The code to generate that image looks something like this:
 </svg>
 ```
 
-> **Note:** The `stroke`, `stroke-width`, and `fill` attributes are explained later in the tutorial.
+> [!NOTE]
+> The `stroke`, `stroke-width`, and `fill` attributes are explained later in the tutorial.
 
 ## Rectangle
 
@@ -125,7 +126,8 @@ A {{SVGElement("polyline")}} is a group of connected straight lines. Since the l
 
 A {{SVGElement("polygon")}} is similar to a {{SVGElement("polyline")}}, in that it is composed of straight line segments connecting a list of points. For polygons though, the path automatically connects the last point with the first, creating a closed shape.
 
-> **Note:** A rectangle is a type of polygon, so a polygon can be used to create a `<rect/>` element that does not have rounded corners.
+> [!NOTE]
+> A rectangle is a type of polygon, so a polygon can be used to create a `<rect/>` element that does not have rounded corners.
 
 ```xml
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>

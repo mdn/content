@@ -9,7 +9,21 @@ browser-compat: html.elements.var
 
 The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 
-{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
+  <var>l</var> represents the length, <var>w</var> the width and
+  <var>h</var> the height of the box.
+</p>
+```
+
+```css interactive-example
+var {
+  font-weight: bold;
+}
+```
 
 ## Attributes
 
@@ -45,7 +59,7 @@ var {
 
 ### Basic example
 
-Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
+Here's a basic example, using `<var>` to denote variable names in a mathematical equation.
 
 ```html
 <p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
@@ -57,7 +71,7 @@ Here's a simple example, using `<var>` to denote variable names in a mathematica
 
 ### Overriding the default style
 
-Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered using bold Courier if it's available, otherwise it falls back to the default monospace font.
+Using CSS, you can override the default style for the `<var>` element. In this example, variable names are rendered in bold, using Courier if it's available, otherwise it falls back to the default monospace font.
 
 #### CSS
 
@@ -114,7 +128,7 @@ This HTML uses `<var>` to enclose the names of two variables.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

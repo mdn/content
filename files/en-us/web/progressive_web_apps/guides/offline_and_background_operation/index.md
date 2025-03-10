@@ -48,7 +48,7 @@ In this guide, when we show code samples, we'll indicate which part of the app t
 
 Offline operation allows a PWA to provide a good user experience even when the device does not have network connectivity. This is enabled by adding a service worker to an app.
 
-A service worker _controls_ some or all of the app's pages. When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("caches")}} property in the service worker global scope.
+A service worker _controls_ some or all of the app's pages. When the service worker is installed, it can fetch the resources from the server for the pages it controls (including pages, styles, scripts, and images, for example) and add them to a local cache. The {{domxref("Cache")}} interface is used to add resources to the cache. `Cache` instances are accessible through the {{domxref("WorkerGlobalScope.caches")}} property in the service worker global scope.
 
 Then whenever the app requests a resource (for example, because the user opened the app or clicked an internal link), the browser fires an event called {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} in the service worker's global scope. By listening for this event, the service worker can intercept the request.
 
@@ -120,7 +120,8 @@ self.addEventListener("fetch", (event) => {
 
 This means that in many situations, the web app will function well even if network connectivity is intermittent. From the point of view of the main app code, it is completely transparent: the app just makes network requests and gets responses. Also, because the service worker is in a separate thread, the main app code can stay responsive to user input while resources are fetched and cached.
 
-> **Note:** The strategy described here is just one way a service worker could implement caching. Specifically, in a cache first strategy, we check the cache first before the network, meaning that we are more likely to return a quick response without incurring a network cost, but are more likely to return a stale response.
+> [!NOTE]
+> The strategy described here is just one way a service worker could implement caching. Specifically, in a cache first strategy, we check the cache first before the network, meaning that we are more likely to return a quick response without incurring a network cost, but are more likely to return a stale response.
 >
 > An alternative would be a _network first_ strategy, in which we try to fetch the resource from the server first, and fall back to the cache if the device is offline.
 >
@@ -361,7 +362,7 @@ When the PWA no longer needs periodic background updates, (for example, because 
 ```js
 // main.js
 
-async function registerPeriodicSync() {
+async function unregisterPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.unregister("update-news");
 }
@@ -398,7 +399,7 @@ The pattern for subscribing to push messages looks like this:
      - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
      - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 
-3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("fetch()")}}).
+3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("WorkerGlobalScope/fetch", "fetch()")}}).
 
 After this, the app server is able to start sending push messages.
 

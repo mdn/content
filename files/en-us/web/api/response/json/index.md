@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{DOMxRef("Response")}} interface takes
 a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
@@ -29,11 +29,22 @@ None.
 A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
 anything that can be represented by JSON — an object, an array, a string, a number…
 
+### Exceptions
+
+- {{domxref("DOMException")}} `AbortError`
+  - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+- {{jsxref("SyntaxError")}}
+  - : The response body cannot be parsed as JSON.
+
 ## Examples
 
-In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
-  "Request()")}} constructor, then use it to fetch a `.json` file. When the
-fetch is successful, we read and parse the data using `json()`, then read
+In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)),
+we create a new request using the {{DOMxRef("Request.Request", "Request()")}} constructor, then use it to fetch a `.json` file.
+When the fetch is successful, we read and parse the data using `json()`, then read
 values out of the resulting objects as you'd expect and insert them into list items to
 display our product data.
 

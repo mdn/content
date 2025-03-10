@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef}}
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their {{cssxref("specificity")}}. The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 
 In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting the DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
@@ -19,7 +19,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
+- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator))
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
@@ -102,12 +102,12 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{glossary("Pseudo-class")}} glossary term
 - [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
 - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
-- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
-- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
-- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
-- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#relative-selector)
+- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector)
+- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
+- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
+- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## Guides
 
@@ -123,29 +123,28 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
-- [Learn: CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors), [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), and [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers).
+  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators), [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), and [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
 
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
-- [Learn: UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+- [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
 ## Related concepts
 
 - {{CSSXref(":popover-open")}} pseudo-class
+- {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-
-  - : [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
-
+  - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}} pseudo-class
@@ -178,13 +177,12 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 
   - {{CSSxRef("::cue")}}
-  - {{CSSxRef("::cue-region")}}
 
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 
 - {{domxref("Document.querySelector")}} method
 - {{domxref("Document.querySelectorAll")}} method
@@ -197,6 +195,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 ## See also
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
-- [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascading and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

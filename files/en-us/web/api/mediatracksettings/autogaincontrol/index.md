@@ -3,7 +3,7 @@ title: "MediaTrackSettings: autoGainControl property"
 short-title: autoGainControl
 slug: Web/API/MediaTrackSettings/autoGainControl
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.autoGainControl
+browser-compat: api.MediaStreamTrack.applyConstraints.autoGainControl_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

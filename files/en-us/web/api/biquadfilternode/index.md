@@ -45,7 +45,8 @@ The `BiquadFilterNode` interface represents a simple low-order filter, and is cr
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-> **Note:** Though the `AudioParam` objects returned are read-only, the values they represent are not.
+> [!NOTE]
+> Though the `AudioParam` objects returned are read-only, the values they represent are not.
 
 - {{domxref("BiquadFilterNode.frequency")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing a frequency in the current filtering algorithm measured in hertz (Hz).

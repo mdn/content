@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBCursor.continuePrimaryKey
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`continuePrimaryKey()`** method of the
 {{domxref("IDBCursor")}} interface advances the cursor to the item whose key
@@ -23,8 +23,6 @@ the cursor's got value flag has been unset.
 
 This method is only valid for cursors coming from an index. Using it for cursors coming
 from an object store will throw an error.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -48,7 +46,7 @@ None ({{jsxref("undefined")}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if this IDBCursor's transaction is inactive.
+  - : Thrown if this `IDBCursor`'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key parameter has any of the following conditions:
     - The key is not a valid key.

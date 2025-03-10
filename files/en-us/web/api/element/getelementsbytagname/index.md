@@ -37,9 +37,10 @@ getElementsByTagName(tagName)
 
 ### Parameters
 
-- `tagName` is the qualified name to look for. The special string
-  `"*"` represents all elements. For compatibility with XHTML, lower-case
-  should be used.
+- `tagName`
+  - : The qualified name to look for. The special string
+    `"*"` represents all elements. For compatibility with XHTML, lower-case
+    should be used.
 
 ### Return value
 

@@ -10,7 +10,8 @@ status:
 
 {{APIRef("UI Events")}}
 
-> **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
+> [!WARNING]
+> Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
 >
 > The method has been removed from the DOM specification and is not supported by any current browser.
 > Firefox hides this method behind the preference (`dom.keyboardevent.init_key_event.enabled`) from version 93 and plans to remove it shortly afterwards.
@@ -27,7 +28,7 @@ this way must have been created with the
 ## Syntax
 
 ```js-nolint
-initKeyEvent (type, bubbles, cancelable, view,
+initKeyEvent(type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
 ```
@@ -57,8 +58,7 @@ initKeyEvent (type, bubbles, cancelable, view,
     generated is a combination of keys containing the <kbd>Meta</kbd> key.
 - `keyCode`
   - : An `unsigned long` representing the virtual key code value of the key
-    which was pressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
-    }} for the list of key codes.
+    which was pressed, otherwise `0`. See {{domxref("KeyboardEvent.keyCode")}} for the list of key codes.
 - `charCode`
   - : An `unsigned long` representing the Unicode character associated with
     the pressed key otherwise `0`.

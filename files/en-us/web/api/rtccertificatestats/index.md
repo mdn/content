@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCStatsReport.type_certificate
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The **`RTCCertificateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report information about a certificate used by an {{domxref("RTCDtlsTransport")}} and its underlying {{domxref("RTCIceTransport")}}.
 

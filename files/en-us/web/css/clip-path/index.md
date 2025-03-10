@@ -9,7 +9,68 @@ browser-compat: css.properties.clip-path
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## Syntax
 
@@ -32,11 +93,13 @@ clip-path: view-box;
 /* <basic-shape> values */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
+clip-path: ellipse(50px 60px at 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
+clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Box and shape values combined */
 clip-path: padding-box circle(50px at 0 100px);
@@ -54,7 +117,7 @@ The `clip-path` property is specified as one or a combination of the values list
 ### Values
 
 - `<clip-source>`
-  - : A {{cssxref("url", "url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
@@ -67,8 +130,14 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines an ellipse using two radii and a position.
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : Defines a polygon using an SVG filling rule and a set of vertices.
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
+    - {{cssxref("basic-shape/rect","rect()")}}
+      - : Defines a rectangle using the specified distances from the edges of the reference box.
+    - {{cssxref("basic-shape/shape","shape()")}}
+      - : Defines a shape using an optional SVG filling rule and shape commands for lines, curves, and arcs.
+    - {{cssxref("basic-shape/xywh","xywh()")}}
+      - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
 - `<geometry-box>`
 
@@ -92,7 +161,8 @@ The `clip-path` property is specified as one or a combination of the values list
 - `none`
   - : No clipping path is created.
 
-> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> [!NOTE]
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
@@ -588,6 +658,8 @@ svg text.em {
   <option value="circle(100px at 110px 100px)">circle</option>
   <option value="url(#cross)" selected>cross</option>
   <option value="inset(20px round 20px)">inset</option>
+  <option value="rect(10px 10px 180px 220px round 20px)">rect</option>
+  <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
   <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
     path
   </option>
@@ -624,10 +696,9 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 ## See also
 
+- {{CSSxRef("clip-rule")}}
+- {{CSSxRef("mask")}}
+- {{CSSxRef("filter")}}
+- SVG {{SVGAttr("clip-path")}} attribute
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- SVG attributes:
-
-  - {{SVGAttr("clip-path")}}
-  - {{SVGAttr("clip-rule")}}

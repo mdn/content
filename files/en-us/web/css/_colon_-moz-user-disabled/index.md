@@ -1,5 +1,5 @@
 ---
-title: ":-moz-user-disabled"
+title: :-moz-user-disabled
 slug: Web/CSS/:-moz-user-disabled
 page-type: css-pseudo-class
 status:
@@ -10,7 +10,8 @@ status:
 
 The **`:-moz-user-disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing images that were not loaded because images have been entirely disabled by the user's preferences.
 
-> **Note:** This selector is mainly intended to be used by theme developers.
+> [!NOTE]
+> This selector is mainly intended to be used by theme developers.
 
 ## Syntax
 

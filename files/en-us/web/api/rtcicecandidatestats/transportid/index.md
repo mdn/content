@@ -3,7 +3,7 @@ title: "RTCIceCandidateStats: transportId property"
 short-title: transportId
 slug: Web/API/RTCIceCandidateStats/transportId
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidateStats.transportId
+browser-compat: api.RTCStatsReport.type_local-candidate.transportId
 ---
 
 {{APIRef("WebRTC")}}

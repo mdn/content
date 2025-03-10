@@ -2,14 +2,15 @@
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-linejoin
+browser-compat: svg.global_attributes.stroke-linejoin
 ---
 
 {{SVGRef}}
 
 The **`stroke-linejoin`** attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.
 
-> **Note:** As a presentation attribute `stroke-linejoin` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `stroke-linejoin` also has a CSS property counterpart: {{cssxref("stroke-linejoin")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -133,7 +134,8 @@ svg {
 
 ### arcs
 
-> **Note:** The `arcs` value as been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
+> [!NOTE]
+> The `arcs` value isn't widely supported yet.
 
 The `arcs` value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
@@ -213,7 +215,8 @@ svg {
 
 The `miter` value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.
 
-> **Note:** If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the line join falls back to `bevel`.
+> [!NOTE]
+> If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the line join falls back to `bevel`.
 
 ```css hidden
 html,
@@ -271,7 +274,8 @@ svg {
 
 ### miter-clip
 
-> **Note:** the `miter-clip` value as been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
+> [!NOTE]
+> The `miter-clip` value isn't widely supported yet.
 
 The `miter-clip` value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.
 
@@ -373,3 +377,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke-linejoin")}} property

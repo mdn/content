@@ -1,7 +1,7 @@
 ---
 title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
-page-type: guide
+page-type: css-property
 browser-compat: css.properties.custom-property
 ---
 
@@ -16,15 +16,16 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ## Syntax
 
 ```css
---somekeyword: left;
---somecolor: #0000ff;
---somecomplexvalue: 3px 6px rgb(20, 32, 54);
+--some-keyword: left;
+--some-color: #0000ff;
+--some-complex-value: 3px 6px rgb(20 32 54);
 ```
 
 - `<declaration-value>`
-  - : This value matches any sequence of one or more tokens, so long as the sequence does not contain an disallowed token. It represents the entirety of what a valid declaration can have as its value.
+  - : This value matches any sequence of one or more tokens, so long as the sequence does not contain any disallowed token. It represents the entirety of what a valid declaration can have as its value.
 
-> **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
+> [!NOTE]
+> Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
 ## Example
 
@@ -88,5 +89,5 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 - The {{cssxref("var", "var()")}} function
 - {{cssxref("@property")}} at-rule
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties) guide
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) guide
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

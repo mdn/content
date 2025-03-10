@@ -10,7 +10,8 @@ browser-compat: api.AnimationEffect.getComputedTiming
 
 The `getComputedTiming()` method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.
 
-> **Note:** These values are comparable to the computed styles of an Element returned using `window.getComputedStyle(elem)`.
+> [!NOTE]
+> These values are comparable to the computed styles of an Element returned using `window.getComputedStyle(elem)`.
 
 ## Syntax
 

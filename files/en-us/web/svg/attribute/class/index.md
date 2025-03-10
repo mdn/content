@@ -2,12 +2,10 @@
 title: class
 slug: Web/SVG/Attribute/class
 page-type: svg-attribute
-browser-compat: svg.attributes.style.class
+browser-compat: svg.global_attributes.class
 ---
 
 {{SVGRef}}
-
-« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
 Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
 
@@ -134,6 +132,10 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

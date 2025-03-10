@@ -55,7 +55,7 @@ _No changes._
 
 - The {{JSxRef("Symbol.prototype.description")}} property has been implemented ([Firefox bug 1472170](https://bugzil.la/1472170)).
 - The {{JSxRef("Object.fromEntries()")}} method has been added ([Firefox bug 1469019](https://bugzil.la/1469019)).
-- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of "TypeError: x is undefined" the console now returns the more descriptive [x is undefined; can't access its "y" property](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
 
 #### Removals
 
@@ -99,8 +99,8 @@ _No changes._
 - The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ([Firefox bug 1421091](https://bugzil.la/1421091)).
 - {{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper `TypeError` when a non-finite value is found in the `values` array ([Firefox bug 1472095](https://bugzil.la/1472095)).
 - In addition, `setValueCurveAtTime()` has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ([Firefox bug 1308436](https://bugzil.la/1308436)).
-- The `RTCRTPStreamStats` dictionary has been renamed to {{DOMxRef("RTCRtpStreamStats")}} for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
-- Support for the `RTCRtpStreamStats` dictionary's {{DOMxRef("RTCRtpStreamStats.kind", "kind")}} property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
+- The `RTCRTPStreamStats` dictionary has been renamed to `RTCRtpStreamStats` for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
+- Support for the `RTCRtpStreamStats` dictionary's `kind` property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
 - The `RTCRtpStreamStats` dictionary's `isRemote` property is deprecated and will be removed in Firefox 65. A warning is now output to console when this property is accessed. See [this blog post on the Advancing WebRTC blog](https://blog.mozilla.org/webrtc/getstats-isremote-65/) for details ([Firefox bug 1393306](https://bugzil.la/1393306)).
 
 #### Canvas and WebGL
@@ -135,7 +135,7 @@ _No changes._
 
 #### New features
 
-- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
 - Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 
@@ -158,7 +158,7 @@ _No changes._
 ### Other
 
 - Corrected the behavior of {{DOMxRef("PerformanceObserver.observe()")}} to do nothing if no valid entry types are found in the specified array of entry types to observe, or if the array is empty or missing. Previously, Firefox was incorrectly throwing a `TypeError` ([Firefox bug 1403027](https://bugzil.la/1403027)).
-- In [OpenSearch](/en-US/docs/Web/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
+- In [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
 
 ## Changes for add-on developers
 
@@ -182,7 +182,7 @@ _No changes._
 
 #### Search
 
-- The new {{WebExtAPIRef("search")}} AP[I](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search) enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
+- The new {{WebExtAPIRef("search")}} API enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
 - {{WebExtAPIRef("topSites.get()")}} now takes an `options` parameter enabling you to set various options for the list of sites returned ([Firefox bug 1445836](https://bugzil.la/1445836)).
 
 #### Tabs
@@ -214,4 +214,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(62)}}
+{{Firefox_for_developers}}

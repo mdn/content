@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Function.length
 
 The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
 
 ## Value
 
@@ -19,7 +31,13 @@ A number.
 
 ## Description
 
-A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters. This number excludes the {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} and only includes parameters before the first one with a default value. By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.
+A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters:
+
+- Only parameters before the first one with a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are counted.
+- A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) counts as a single parameter.
+- The [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) is excluded.
+
+By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.
 
 The {{jsxref("Function")}} constructor is itself a `Function` object. Its `length` data property has a value of `1`.
 
@@ -42,6 +60,10 @@ console.log(((...args) => {}).length);
 console.log(((a, b = 1, c) => {}).length);
 // 1, only parameters before the first one with
 // a default value are counted
+
+console.log((({ a, b }, [c, d]) => {}).length);
+// 2, destructuring patterns each count as
+// a single parameter
 ```
 
 ## Specifications

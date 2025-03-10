@@ -2,12 +2,10 @@
 title: Set.prototype.symmetricDifference()
 slug: Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Set.symmetricDifference
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`symmetricDifference()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
 
@@ -30,7 +28,11 @@ A new {{jsxref("Set")}} object containing elements which are in either this set 
 
 In mathematical notation, _symmetric difference_ is defined as:
 
-<math display="block"><semantics><mrow><mi>A</mi><mo>⊖</mo><mi>B</mi><mo>=</mo><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">A\ominus B = (A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>A</mi><mo>⊖</mo><mi>B</mi><mo>=</mo><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">A\ominus B = (A\setminus B)\cup(B\setminus A)</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 And using Venn diagram:
 
@@ -49,7 +51,7 @@ The following example computes the symmetric difference between the set of even 
 ```js
 const evens = new Set([2, 4, 6, 8]);
 const squares = new Set([1, 4, 9]);
-console.log(evens.symmetricDifference(squares)); // Set(5) { 1, 2, 6, 8, 9 }
+console.log(evens.symmetricDifference(squares)); // Set(5) { 2, 6, 8, 1, 9 }
 ```
 
 ## Specifications
@@ -63,6 +65,7 @@ console.log(evens.symmetricDifference(squares)); // Set(5) { 1, 2, 6, 8, 9 }
 ## See also
 
 - [Polyfill of `Set.prototype.symmetricDifference` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.symmetricDifference`](https://www.npmjs.com/package/set.prototype.symmetricdifference)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

@@ -18,16 +18,14 @@ This is considered [a bug](/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
 ## See also
 
-- [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - The JavaScript global object: [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - [Null pointer](https://en.wikipedia.org/wiki/Null_pointer) on Wikipedia
-- **[Glossary](/en-US/docs/Glossary)**
-
+- Related glossary terms:
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}
   - {{Glossary("bigint")}}
   - {{Glossary("boolean")}}
-  - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - {{jsxref("Symbol")}}
+  - {{Glossary("symbol")}}

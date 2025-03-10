@@ -7,22 +7,18 @@ browser-compat: http.headers.Content-Security-Policy.report-to
 
 {{HTTPSidebar}}
 
-The `Content-Security-Policy`
-**`Report-To`** HTTP response header field
-instructs the user agent to store reporting endpoints for an origin.
+The `Content-Security-Policy` **`report-to`** directive indicates the name of the endpoint that the browser should use for reporting CSP violations.
 
-```http
-Content-Security-Policy: …; report-to groupname
-```
+If a CSP violation occurs, a report is generated that contains a serialized {{domxref("CSPViolationReportBody")}} object instance.
+This report is sent to the URL that corresponds to the endpoint name, using the generic mechanisms defined in the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
-The directive has no effect in and of itself, but only gains meaning in combination
-with other directives.
+The server must separately provide the mapping between endpoint names and their corresponding URLs in the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">CSP version</th>
-      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th scope="row">Directive type</th>
@@ -30,8 +26,7 @@ with other directives.
     </tr>
     <tr>
       <th colspan="2" scope="row">
-        This directive is not supported in the {{HTMLElement("meta")}}
-        element.
+        This directive is not supported in the {{HTMLElement("meta")}} element.
       </th>
     </tr>
   </tbody>
@@ -40,43 +35,67 @@ with other directives.
 ## Syntax
 
 ```http
-Content-Security-Policy: report-to <json-field-value>;
+Content-Security-Policy: …; report-to <endpoint_name>
 ```
+
+`<endpoint_name>` is the name of an endpoint provided by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+It can also be the name of a group that is provided by the server in the {{HTTPHeader("Report-To")}} {{deprecated_inline}} HTTP response header.
+
+### Violation report syntax
+
+A CSP violation report is a JSON-serialized {{domxref("Report")}} object instance, with a `type` property that has a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object (see the respective objects for their property definitions).
+Reports are sent to the target endpoint(s) via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+
+The JSON for a single report might look like this:
+
+```json
+{
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+}
+```
+
+## Usage notes
+
+The `report-to` directive is intended to replace `report-uri`, and browsers that support `report-to` ignore the `report-uri` directive.
+However, until `report-to` is broadly supported you can specify both directives as shown:
+
+```http
+Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
+```
+
+Note that other examples in this topic do not show `report-uri`.
 
 ## Examples
 
-See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
-examples.
+### Setting a CSP violation report endpoint
+
+A server can define the mapping between endpoint names and URLs using the {{HTTPHeader("Reporting-Endpoints")}} header in the HTTP response.
+Any name can be used: here we've chosen `name-of-endpoint`.
 
 ```http
-Report-To: { "group": "csp-endpoint",
-              "max_age": 10886400,
-              "endpoints": [
-                { "url": "https://example.com/csp-reports" }
-              ] },
-            { "group": "hpkp-endpoint",
-              "max_age": 10886400,
-              "endpoints": [
-                { "url": "https://example.com/hpkp-reports" }
-              ] }
-Content-Security-Policy: …; report-to csp-endpoint
+Reporting-Endpoints: name-of-endpoint="https://example.com/csp-reports"
 ```
 
-```http
-Report-To: { "group": "endpoint-1",
-              "max_age": 10886400,
-              "endpoints": [
-                { "url": "https://example.com/reports" },
-                { "url": "https://backup.com/reports" }
-              ] }
-
-Content-Security-Policy: …; report-to endpoint-1
-```
+The server can set this endpoint name as the target for sending CSP violation reports to using the `report-to` directive:
 
 ```http
-Reporting-Endpoints: endpoint-1="https://example.com/reports"
-
-Content-Security-Policy: …; report-to endpoint-1
+Content-Security-Policy: default-src 'self'; report-to name-of-endpoint
 ```
 
 ## Specifications
@@ -89,5 +108,7 @@ Content-Security-Policy: …; report-to endpoint-1
 
 ## See also
 
+- {{HTTPHeader("Reporting-Endpoints")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

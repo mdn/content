@@ -14,7 +14,8 @@ In WebGL objects are built using sets of vertices, each of which has a position 
 
 Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer.
 
-> **Note:** Add the following function to your `init-buffers.js` module:
+> [!NOTE]
+> Add the following function to your `init-buffers.js` module:
 
 ```js
 function initColorBuffer(gl) {
@@ -49,7 +50,8 @@ This code starts by creating a JavaScript array containing four 4-value vectors,
 
 Of course, we also need to call this new function from `initBuffers()`, and return the new buffer it creates.
 
-> **Note:** At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
+> [!NOTE]
+> At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
 
 ```js
 const colorBuffer = initColorBuffer(gl);
@@ -62,7 +64,8 @@ return {
 
 To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer.
 
-> **Note:** Update the `vsSource` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `vsSource` declaration in your `main()` function like this:
 
 ```js
 // Vertex shader program
@@ -89,7 +92,8 @@ The key difference here is that for each vertex, we pass its color using a `vary
 
 In order to pick up the interpolated color for each pixel, we need to change the fragment shader to fetch the value from the `vColor` varying.
 
-> **Note:** Update the `fsSource` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `fsSource` declaration in your `main()` function like this:
 
 ```js
 // Fragment shader program
@@ -109,7 +113,8 @@ Each fragment receives the interpolated color based on its position relative to 
 
 Next, you need to add code to look up the attribute location for the colors and set up that attribute for the shader program.
 
-> **Note:** Update the `programInfo` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `programInfo` declaration in your `main()` function like this:
 
 ```js
 // Collect all the info needed to use the shader program.
@@ -131,7 +136,8 @@ const programInfo = {
 
 Next, `drawScene()` needs to use these colors when drawing the square.
 
-> **Note:** Add the following function to your `draw-scene.js` module:
+> [!NOTE]
+> Add the following function to your `draw-scene.js` module:
 
 ```js
 // Tell WebGL how to pull out the colors from the color buffer
@@ -155,7 +161,8 @@ function setColorAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **Note:** Call the `setColorAttribute()` function from `drawScene()`, right before the `gl.useProgram()` call:
+> [!NOTE]
+> Call the `setColorAttribute()` function from `drawScene()`, right before the `gl.useProgram()` call:
 
 ```js
 setColorAttribute(gl, buffers, programInfo);

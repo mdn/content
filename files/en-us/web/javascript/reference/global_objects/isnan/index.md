@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.isNaN
 
 The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}}, first converting the value to a number if necessary. Because coercion inside the `isNaN()` function can be [surprising](#description), you may prefer to use {{jsxref("Number.isNaN()")}}.
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## Syntax
 
@@ -30,7 +45,7 @@ isNaN(value)
 
 `isNaN()` is a function property of the global object.
 
-For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against {{jsxref("NaN")}}.
+For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against {{jsxref("NaN")}}.
 
 This behavior of `isNaN()` for non-numeric arguments can be confusing! For example, an empty string is coerced to 0, while a boolean is coerced to 0 or 1; both values are intuitively "not numbers", but they don't evaluate to `NaN`, so `isNaN()` returns `false`. Therefore, `isNaN()` answers neither the question "is the input the floating point {{jsxref("NaN")}} value" nor the question "is the input not a number".
 
@@ -38,7 +53,8 @@ This behavior of `isNaN()` for non-numeric arguments can be confusing! For examp
 
 The `isNaN()` function answers the question "is the input functionally equivalent to {{jsxref("NaN")}} when used in a number context". If `isNaN(x)` returns `false`, you can use `x` in an arithmetic expression as if it's a valid number that's not `NaN`. If `isNaN(x)` returns `true`, `x` will get coerced to `NaN` and make most arithmetic expressions return `NaN` (because `NaN` propagates). You can use this, for example, to test whether an argument to a function is arithmetically processable (usable "like" a number), and handle values that are not number-like by throwing an error, providing a default value, etc. This way, you can have a function that makes use of the full versatility JavaScript provides by implicitly converting values depending on context.
 
-> **Note:** The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) performs both number addition and string concatenation. Therefore, even if `isNaN()` returns `false` for both operands, the `+` operator may still return a string, because it's not used as an arithmetic operator. For example, `isNaN("1")` returns `false`, but `"1" + 1` returns `"11"`. To be sure that you are working with numbers, [coerce the value to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and use {{jsxref("Number.isNaN()")}} to test the result.
+> [!NOTE]
+> The [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) performs both number addition and string concatenation. Therefore, even if `isNaN()` returns `false` for both operands, the `+` operator may still return a string, because it's not used as an arithmetic operator. For example, `isNaN("1")` returns `false`, but `"1" + 1` returns `"11"`. To be sure that you are working with numbers, [coerce the value to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) and use {{jsxref("Number.isNaN()")}} to test the result.
 
 ## Examples
 
@@ -64,6 +80,11 @@ isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
 // Dates
 isNaN(new Date()); // false; Date objects can be converted to a number (timestamp)
 isNaN(new Date().toString()); // true; the string representation of a Date object cannot be parsed as a number
+
+// Arrays
+isNaN([]); // false; the primitive representation is "", which coverts to the number 0
+isNaN([1]); // false; the primitive representation is "1"
+isNaN([1, 2]); // true; the primitive representation is "1,2", which cannot be parsed as number
 ```
 
 ## Specifications

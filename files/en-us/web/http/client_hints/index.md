@@ -27,7 +27,8 @@ It is also relatively "privacy-preserving", in that it is up to the client to de
 
 There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client even if not requested.
 
-> **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
+> [!NOTE]
+> Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -56,15 +57,22 @@ In other words, the request for a specific set of hints does not expire until th
 A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
-> **Note:** The client hints set for a particular origin can also be cleared by sending a {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} response header for a URL inside that origin.
+> [!NOTE]
+> The client hints set for a particular origin can also be cleared by sending a {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} response header for a URL inside that origin.
 
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.
-
 The low entropy hints are those that don't give away much information that might be used to create a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) for a user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
-These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
+Low entropy hints are:
+
+- {{HTTPHeader("Save-Data")}},
+- {{HTTPHeader("Sec-CH-UA")}},
+- {{HTTPHeader("Sec-CH-UA-Mobile")}}, and
+- {{HTTPHeader("Sec-CH-UA-Platform")}}.
+
+## High entropy hints
 
 The high entropy hints are those that have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision whether to provide them.
 The decision might be based on user preferences, a permission request, or the permission policy.
@@ -89,7 +97,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+> [!NOTE]
+> We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 As `Sec-CH-Prefers-Reduced-Motion` is a critical hint that was not in the original request, the client automatically retries the request — this time telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations.
 
@@ -104,14 +113,18 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 ### User-agent client hints
 
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
-Headers include: {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Arch")}}, {{HTTPHeader("Sec-CH-UA-Bitness")}}, {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}, {{HTTPHeader("Sec-CH-UA-Full-Version")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Model")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}, and {{HTTPHeader("Sec-CH-UA-Platform-Version")}}.
+For a list of `Sec-CH-UA-*` headers, see [User agent client hints headers](/en-US/docs/Web/HTTP/Headers#user_agent_client_hints).
 
 Client hints are available to web page JavaScript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
-> **Note:** Servers currently get most of the same information by parsing the {{HTTPHeader("User-Agent")}} header.
+> [!NOTE]
+> Servers currently get most of the same information by parsing the {{HTTPHeader("User-Agent")}} header.
 > For historical reasons this header contains a lot of largely irrelevant information, and information that might be used to identify a _particular user_.
 > UA client hints provide a more efficient and privacy preserving way of getting the desired information.
 > They are eventually expected to replace this older approach.
+
+> [!NOTE]
+> User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
 
 ### User preference media features client hints
 
@@ -121,7 +134,7 @@ Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("
 ### Device client hints
 
 Device client hints allow a server to vary responses based on device characteristics including available memory and screen properties.
-Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
+Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
 
 ### Network client hints
 

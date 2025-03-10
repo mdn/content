@@ -2,20 +2,24 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#CY
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
+browser-compat:
+  - svg.elements.circle.cy
+  - svg.elements.ellipse.cy
+  - svg.elements.radialGradient.cy
 ---
 
 {{SVGRef}}
 
-The **`cy`** attribute define the y-axis coordinate of a center point.
+The **`cy`** attribute defines the y-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
+
+> [!NOTE]
+> As a _geometry property_, {{cssxref("cy")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
 
 ## Example
 
@@ -50,17 +54,7 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -73,7 +67,8 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
+> [!NOTE]
+> The y-axis coordinate of the center of the `<circle>` can also be defined with the {{cssxref("cy")}} _geometry property_. If set in CSS, the `cy` property value overrides the `cy` attribute value.
 
 ## ellipse
 
@@ -83,17 +78,7 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -106,7 +91,8 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
+> [!NOTE]
+> The y-axis coordinate of the center of the `<ellipse>` can also be defined with the {{cssxref("cy")}} _geometry property_. If set in CSS, the `cy` property value overrides the `cy` attribute value.
 
 ## radialGradient
 
@@ -117,9 +103,7 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
       </td>
     </tr>
     <tr>
@@ -194,3 +178,15 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Geometry properties: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}

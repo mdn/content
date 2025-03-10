@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRReferenceSpaceEvent()`**
 constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which

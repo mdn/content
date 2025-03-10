@@ -32,8 +32,8 @@ new WaveShaperNode(context, options)
         signal is nominally within the range \[-1;1].
     - `oversample`
       - : Specifies what type of oversampling (if any) should be
-        used when applying the shaping curve. Valid values are '`none`',
-        '`2x`', or '`4x`'. The default is '`none`'.
+        used when applying the shaping curve. Valid values are `"none"`,
+        `"2x"`, or `"4x"`. The default is `"none"`.
     - `channelCount`
       - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise

@@ -94,7 +94,7 @@ orderButton.addEventListener(
       output = "You didn't order anything!";
     }
 
-    outputBox.innerHTML = output;
+    outputBox.textContent = output;
   },
   false,
 );
@@ -122,4 +122,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- [Drop-down controls](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls)
+- [Drop-down controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls)

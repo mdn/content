@@ -6,7 +6,7 @@ page-type: guide
 
 {{SVGRef}}
 
-In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
+In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two basic principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
 
 [View the example](https://mdn.dev/archives/media/samples/svg/swarm-of-motes.xhtml). The linked example was written with 2006 best practices. The example below has been updated to modern JavaScript best practices. Both work.
 
@@ -44,7 +44,7 @@ In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/W
 cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </svg:svg>
 
-    <p>A swarm of motes, governed by two simple principles.
+    <p>A swarm of motes, governed by two basic principles.
     First, each mote tries to move towards the cursor, and
     second each mote tries to move away from the average
     mote position. Combined, we get this very natural
@@ -52,14 +52,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </p>
 
     <div>
-    (C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
+    (C) 2006 <a id='email-me' href='#'>Nick Johnson</a>
 
     <script type='text/javascript'>
     <![CDATA[
       // foil spam bots
       let email = '@riovia.net';
       email ='nick' + email;
-      document.getElementById('emailme').href = 'mailto:'+email;
+      document.getElementById('email-me').href = 'mailto:'+email;
     ]]>
     </script>
     This software is free for you to use in any way whatsoever,

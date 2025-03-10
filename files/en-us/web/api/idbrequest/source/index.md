@@ -6,14 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.IDBRequest.source
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`source`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the source of the request, such as an
 Index or an object store. If no source exists (such as when calling
 {{domxref("IDBFactory.open")}}), it returns null.
-
-{{AvailableInWorkers}}
 
 ## Value
 

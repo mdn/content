@@ -1,21 +1,21 @@
 ---
-title: Compatibility tables and the browser compatibility data repository (BCD)
+title: Browser Compatibility tables and Browser Compatibility Data (BCD)
+short-title: Compat tables and BCD
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 page-type: mdn-writing-guide
 browser-compat: api.AbortController
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
 MDN has a standard format for tables that illustrate compatibility of shared technologies across all browsers, such as DOM, HTML, CSS, JavaScript, SVG, etc.
-To make this data available in multiple projects programmatically, a Node.js package is built from the [`browser-compat-data` repository](https://github.com/mdn/browser-compat-data) and published to npm.
+To make this data available in multiple projects programmatically, a Node.js package is built from the [browser-compat-data repository](https://github.com/mdn/browser-compat-data) and published to npm.
 
 To modify the data within these tables, comprehensive documentation along with the most recent details of conventions and JSON schemas used to represent the data can be found in the repository's [contributing guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md).
 If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Using BCD data in MDN pages
 
-Once data has been included in the [`browser-compat-data`](https://github.com/mdn/browser-compat-data) repo, you can start dynamically including browser compatibility and specification tables based on that data within MDN pages.
+Once data has been included in the [browser-compat-data](https://github.com/mdn/browser-compat-data) repo, you can start dynamically including browser compatibility and specification tables based on that data within MDN pages.
 
 To get started with BCD data in MDN pages, use the query string specified in the BCD source file for the relevant data you wish to include.
 For example:

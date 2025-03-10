@@ -13,7 +13,8 @@ browser-compat: api.BaseAudioContext.createScriptProcessor
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
 creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
-> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+> [!NOTE]
+> This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 ## Syntax
 
@@ -45,10 +46,12 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
   - : Integer specifying the number of channels for this node's output, defaults to 2.
     Values of up to 32 are supported.
 
-> **Warning:** Webkit currently (version 31) requires that a valid
+> [!WARNING]
+> WebKit currently (version 31) requires that a valid
 > `bufferSize` be passed when calling this method.
 
-> **Note:** It is invalid for both `numberOfInputChannels` and
+> [!NOTE]
+> It is invalid for both `numberOfInputChannels` and
 > `numberOfOutputChannels` to be zero.
 
 ### Return value
@@ -63,7 +66,8 @@ The following example shows how to use a `ScriptProcessorNode` to take a track l
 
 For each channel and each sample frame, the script node's {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} event handler uses the associated `audioProcessingEvent` to loop through each channel of the input buffer, and each sample in each channel, and add a small amount of white noise, before setting that result to be the output sample in each case.
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/script-processor-node/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/).
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/script-processor-node/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/script-processor-node).
 
 ```js
 const myScript = document.querySelector("script");
@@ -137,9 +141,7 @@ playButton.addEventListener("click", () => {
 
 ## Specifications
 
-Since the August 29 2014 [Web Audio API specification](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor) publication, this feature has been deprecated. It is no longer on track to become a standard.
-
-It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+{{Specifications}}
 
 ## Browser compatibility
 

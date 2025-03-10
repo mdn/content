@@ -20,7 +20,8 @@ while +1200 and -1200 detune it up or down by one octave.
 A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-> **Note:** Though the `AudioParam` returned is read-only, the
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the
 > value it represents is not.
 
 ## Examples

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getTransformFeedbackVarying
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getTransformFeedbackVarying()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns
@@ -24,7 +24,7 @@ getTransformFeedbackVarying(program, index)
   - : A {{domxref("WebGLProgram")}}.
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the varying variable whose
-    information to retrieve`.`
+    information to retrieve.
 
 ### Return value
 

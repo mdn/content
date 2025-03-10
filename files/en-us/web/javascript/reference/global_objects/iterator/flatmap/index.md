@@ -2,14 +2,12 @@
 title: Iterator.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.flatMap
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
-The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
+The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 
 ## Syntax
 
@@ -20,7 +18,7 @@ flatMap(callbackFn)
 ### Parameters
 
 - `callbackFn`
-  - : A function to execute for each element produced by the iterator. It should return an iterator or iterable that yields elements to be yielded by `flatMap()`, or a single non-iterator/iterable value to be yielded. The function is called with the following arguments:
+  - : A function to execute for each element produced by the iterator. It should return an iterator or iterable that yields elements to be yielded by `flatMap()`. Note that unlike {{jsxref("Array.prototype.flatMap()")}}, you cannot return single non-iterator/iterable values. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
@@ -28,7 +26,7 @@ flatMap(callbackFn)
 
 ### Return value
 
-A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers). The first time the iterator helper's `next()` method is called, it calls `callbackFn` on the first element produced by the underlying iterator, and the return value, which should be an iterator or iterable, is yielded one-by-one by the iterator helper (like {{jsxref("Operators/yield*", "yield*")}}). The next element is fetched from the underlying iterator when the previous one returned by `callbackFn` is completed. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). The first time the iterator helper's `next()` method is called, it calls `callbackFn` on the first element produced by the underlying iterator, and the return value, which should be an iterator or iterable, is yielded one-by-one by the iterator helper (like {{jsxref("Operators/yield*", "yield*")}}). The next element is fetched from the underlying iterator when the previous one returned by `callbackFn` is completed. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
 
 ### Exceptions
 
@@ -37,7 +35,7 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
 
 ## Description
 
-`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `@@iterator` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
+`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `[Symbol.iterator]()` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
 
 ```js
 [1, 2, 3]
@@ -65,14 +63,14 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
         return {
           ...it,
           [Symbol.iterator]() {
-            console.log("@@iterator called");
+            console.log("Symbol.iterator called");
             return it;
           },
         };
     }
   })
   .toArray();
-// Logs "@@iterator called"
+// Logs "Symbol.iterator called"
 // Returns [1, 2, 3]
 ```
 
@@ -146,3 +144,4 @@ Or, if the behavior of iterating by code points is intended, you can use {{jsxre
 ## See also
 
 - [Polyfill of `Iterator.prototype.flatMap` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.flatMap`](https://www.npmjs.com/package/es-iterator-helpers)

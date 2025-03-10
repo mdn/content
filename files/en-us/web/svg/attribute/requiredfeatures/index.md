@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/requiredFeatures
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.conditional_processing.requiredFeatures
+browser-compat: svg.global_attributes.requiredFeatures
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -107,7 +107,7 @@ text {
 
 ## Feature strings
 
-The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [hasFeature](/en-US/docs/DOM/DOMImplementation.hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
+The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [`hasFeature`](/en-US/docs/Web/API/DOMImplementation/hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
 - `http://www.w3.org/TR/SVG11/feature#SVG`
 
@@ -174,7 +174,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
   - : The browser supports all DOM interfaces and methods to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`.
 - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
-  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
+  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Structure`
   - : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#BasicStructure`
@@ -182,7 +182,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
   - : The browser supports the {{SVGAttr("enable-background")}} attribute
 - `http://www.w3.org/TR/SVG11/feature#ConditionalProcessing`
-  - : The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
+  - : The browser supports the {{SVGElement("switch")}} element, and the `requiredFeatures`, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Image`
   - : The browser supports the {{SVGElement("image")}} element.
 - `http://www.w3.org/TR/SVG11/feature#Style`
@@ -196,9 +196,9 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#BasicText`
   - : The browser supports the {{SVGElement("text")}} element
 - `http://www.w3.org/TR/SVG11/feature#PaintAttribute`
-  - : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("color-interpolation")}} and {{SVGAttr("color-rendering")}} attributes
+  - : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("color-interpolation")}} and `color-rendering` attributes
 - `http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute`
-  - : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}} and {{SVGAttr("color-rendering")}} attributes
+  - : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}} and `color-rendering` attributes
 - `http://www.w3.org/TR/SVG11/feature#OpacityAttribute`
   - : The browser supports the {{SVGAttr("opacity")}}, {{SVGAttr("stroke-opacity")}} and {{SVGAttr("fill-opacity")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#GraphicsAttribute`
@@ -222,11 +222,11 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#BasicFilter`
   - : The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements
 - `http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute`
-  - : The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes
+  - : The browser supports the `onunload`, `onabort`, `onerror`, `onresize`, `onscroll` and `onzoom` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute`
-  - : The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onfocusin`, `onfocusout`, `onactivate`, `onclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmousemove`, `onmouseout` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute`
-  - : The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onbegin`, `onend`, `onrepeat` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#Cursor`
   - : The browser supports the {{SVGElement("cursor")}} element
 - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`

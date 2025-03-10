@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bufferSubData()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer
@@ -15,14 +15,8 @@ object's data store.
 ## Syntax
 
 ```js-nolint
-// WebGL1
 bufferSubData(target, offset)
 bufferSubData(target, offset, srcData)
-
-// WebGL2
-bufferSubData(target, dstByteOffset, srcOffset)
-bufferSubData(target, dstByteOffset, srcData, srcOffset)
-bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
 ```
 
 ### Parameters
@@ -85,6 +79,7 @@ None ({{jsxref("undefined")}}).
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
+const data = new Float32Array([1, 2, 3, 4]);
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
 gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
@@ -100,6 +95,7 @@ gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);
 
 ## See also
 
+- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}
 - {{domxref("WebGLRenderingContext.bufferData()")}}
 - Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

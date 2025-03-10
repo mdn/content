@@ -12,4 +12,4 @@ See also {{Glossary("SIMD")}} for a parallel architecture that allows one same o
 
 ## See also
 
-- [SISD](https://en.wikipedia.org/wiki/SISD) on Wikipedia
+- [SISD](https://en.wikipedia.org/wiki/Single_instruction,_single_data) on Wikipedia

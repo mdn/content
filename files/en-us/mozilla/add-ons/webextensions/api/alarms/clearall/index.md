@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.clearAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cancels all active alarms.
 
@@ -42,4 +42,5 @@ clearAlarms.then(onClearedAll);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

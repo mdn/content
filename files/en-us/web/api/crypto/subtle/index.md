@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Crypto.subtle
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`Crypto.subtle`** read-only property returns a
 {{domxref("SubtleCrypto")}} which can then be used to perform low-level

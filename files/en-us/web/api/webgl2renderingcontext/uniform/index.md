@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**
 methods of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of
@@ -78,7 +78,7 @@ uniform4uiv(location, data, srcOffset, srcLength)
 - `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
-- `data, v0, v1, v2, v3`
+- `data`, `v0`, `v1`, `v2`, `v3`
 
   - : A new value to be used for the uniform variable. Possible types:
 

@@ -9,7 +9,17 @@ browser-compat: javascript.operators.subtraction_assignment
 
 The **subtraction assignment (`-=`)** operator performs [subtraction](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a -= 3));
+// Expected output: -1
+
+console.log((a -= "Hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 
@@ -23,16 +33,26 @@ x -= y
 
 ## Examples
 
-### Using subtraction assignment
+### Subtraction assignment using numbers
 
 ```js
 let bar = 5;
 
 bar -= 2; // 3
-bar -= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+bar -= "foo"; // NaN
+```
+
+### Subtraction assignment using BigInts
+
+```js
 let foo = 3n;
 foo -= 2n; // 1n
+foo -= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

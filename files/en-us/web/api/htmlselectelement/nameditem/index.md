@@ -23,11 +23,12 @@ namedItem(str)
 
 ### Parameters
 
-- `str` is a string.
+- `str`
+  - : A string representing the `name` or `id` of the option.
 
 ### Return value
 
-- `item` is a {{domxref("HTMLOptionElement")}}.
+An {{domxref("HTMLOptionElement")}} or `null`.
 
 ## Examples
 

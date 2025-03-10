@@ -29,7 +29,8 @@ const knotBBox = new Box3(
 );
 ```
 
-> **Note:** The `boundingBox` property takes the `Geometry` itself as reference, and not the `Mesh`. So any transformations such as scale, position, etc. applied to the `Mesh` will be ignored while computing the calculating box.
+> [!NOTE]
+> The `boundingBox` property takes the `Geometry` itself as reference, and not the `Mesh`. So any transformations such as scale, position, etc. applied to the `Mesh` will be ignored while computing the calculating box.
 
 A more simple alternative that fixes the previous issue is to set those boundaries later on with `Box3.setFromObject`, which will compute the dimensions taking into account a 3D entity's **transformations _and_ any child meshes** as well.
 
@@ -85,7 +86,8 @@ The **`Box3.intersectsBox`** method is available for performing this test.
 knotBbox.intersectsBox(otherBox);
 ```
 
-> **Note:** This is different from the `Box3.containsBox` method, which checks whether the Box3 _fully_ wraps another one.
+> [!NOTE]
+> This is different from the `Box3.containsBox` method, which checks whether the Box3 _fully_ wraps another one.
 
 #### `Sphere` vs. `Sphere`
 

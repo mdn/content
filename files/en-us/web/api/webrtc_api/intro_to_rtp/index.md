@@ -8,7 +8,8 @@ page-type: guide
 
 The **Real-time Transport Protocol** (**RTP**), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 
-> **Note:** WebRTC actually uses **SRTP** (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.
+> [!NOTE]
+> WebRTC actually uses **SRTP** (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.
 
 Keeping latency to a minimum is especially important for WebRTC, since face-to-face communication needs to be performed with as little {{Glossary("latency")}} as possible. The more time lag there is between one user saying something and another hearing it, the more likely there is to be episodes of cross-talking and other forms of confusion.
 
@@ -55,7 +56,8 @@ Each {{domxref("RTCPeerConnection")}} has methods which provide access to the li
 
 Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces [above](#rtcpeerconnection_and_rtp), you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
 
-> **Note:** This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
+> [!NOTE]
+> This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
 
 In the examples below, we'll refer to the peer which is turning "hold" mode on and off as the local peer and the user being placed on hold as the remote peer.
 

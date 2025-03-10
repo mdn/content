@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Intl.Locale.getTimeZones
 
 The **`getTimeZones()`** method of {{jsxref("Intl.Locale")}} instances returns a list of supported time zones for this locale.
 
-> **Note:** In some versions of some browsers, this method was implemented as an accessor property called `timeZones`. However, because it returns a new array on each access, it is now implemented as a method to prevent the situation of `locale.timeZones === locale.timeZones` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
+> [!NOTE]
+> In some versions of some browsers, this method was implemented as an accessor property called `timeZones`. However, because it returns a new array on each access, it is now implemented as a method to prevent the situation of `locale.timeZones === locale.timeZones` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
 
 ## Syntax
 
@@ -23,7 +24,10 @@ None.
 
 ### Return value
 
-An array of strings representing supported time zones for the associated `Locale`, where each value is an [IANA time zone canonical name](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database), sorted in alphabetical order. If the locale identifier does not contain a region subtag, the returned value is `undefined`.
+An array of strings representing supported time zones for the associated `Locale`, where each value is an [IANA time zone canonical name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), sorted in alphabetical order. If the locale identifier does not contain a region subtag, the returned value is `undefined`.
+
+> [!NOTE]
+> The standardization of `Temporal` requires browsers to always return the primary identifier in the IANA database, which may change over time. See [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information.
 
 ## Examples
 

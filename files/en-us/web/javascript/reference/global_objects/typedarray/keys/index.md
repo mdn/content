@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.TypedArray.keys
 
 The **`keys()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.keys()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const keys = uint8.keys();
+
+keys.next();
+keys.next();
+
+console.log(keys.next().value);
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -68,6 +79,6 @@ console.log(arrKeys.next().value); // 4
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Array.prototype.keys()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

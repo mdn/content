@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
 
@@ -62,7 +62,8 @@ gettingPanel.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

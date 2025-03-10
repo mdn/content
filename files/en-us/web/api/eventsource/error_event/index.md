@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.EventSource.error_event
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-The `error` event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.
+The **`error`** event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.
 
 This event is not cancelable and does not bubble.
 

@@ -17,13 +17,7 @@ already have been handled by touch event handlers. This doesn't necessarily mean
 device is a touch screen. For example, stylus and mouse devices typically generate
 touch events on mobile browsers.
 
-## Syntax
-
-```js-nolint
-const boolean = InputDeviceCapabilities.firesTouchEvents
-```
-
-### Returns
+## Value
 
 A {{jsxref('Boolean')}}
 

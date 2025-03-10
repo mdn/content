@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.get
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
 returns a byte string of all the values of a header within a `Headers` object
@@ -14,7 +14,7 @@ with a given name. If the requested header doesn't exist in the `Headers`
 object, it returns `null`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax

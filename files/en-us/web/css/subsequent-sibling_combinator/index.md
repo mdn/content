@@ -5,7 +5,7 @@ page-type: css-combinator
 browser-compat: css.selectors.subsequent-sibling
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 The **subsequent-sibling combinator** (`~`, a tilde) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
 

@@ -6,11 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.ResizeObserverSize.blockSize
 ---
 
-{{DefaultAPISidebar("Resize Observer API")}}
+{{APIRef("Resize Observer API")}}
 
 The **`blockSize`** read-only property of the {{domxref("ResizeObserverSize")}} interface returns the length of the observed element's border box in the block dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.
 
-> **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Value
 

@@ -10,7 +10,8 @@ browser-compat: api.OscillatorNode.detune
 
 The `detune` property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Value
 
@@ -22,7 +23,7 @@ The following example shows basic usage of an {{ domxref("AudioContext") }} to c
 
 ```js
 // create web audio api context
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();

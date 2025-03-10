@@ -11,7 +11,22 @@ The **`class`** keyword can be used to define a class inside an expression.
 
 You can also define classes using the [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class).
 
-{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+
+```js interactive-example
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
+};
+
+console.log(new Rectangle(5, 8).area());
+// Expected output: 40
+```
 
 ## Syntax
 
@@ -24,7 +39,8 @@ class name {
 }
 ```
 
-> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `class` to avoid ambiguity with a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). The `class` keyword only begins an expression when it appears in a context that cannot accept statements.
+> [!NOTE]
+> An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `class` to avoid ambiguity with a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). The `class` keyword only begins an expression when it appears in a context that cannot accept statements.
 
 ## Description
 
@@ -32,9 +48,9 @@ A `class` expression is very similar to, and has almost the same syntax as, a [`
 
 ## Examples
 
-### A simple class expression
+### A basic class expression
 
-This is just a simple anonymous class expression which you can refer to using the variable `Foo`.
+This is just an anonymous class expression which you can refer to using the variable `Foo`.
 
 ```js
 const Foo = class {
@@ -77,4 +93,4 @@ Foo.name; // "NamedFoo"
 ## See also
 
 - {{jsxref("Statements/class", "class")}}
-- {{jsxref("Classes", "Classes", "", "true")}}
+- {{jsxref("Classes", "Classes", "", 1)}}

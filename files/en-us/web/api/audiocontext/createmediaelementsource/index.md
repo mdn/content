@@ -31,7 +31,8 @@ A {{domxref("MediaElementAudioSourceNode")}}.
 
 This simple example creates a source from an {{htmlelement("audio") }} element using `createMediaElementSource()`, then passes the audio through a {{ domxref("GainNode") }} before feeding it into the {{ domxref("AudioDestinationNode") }} for playback. When the mouse pointer is moved, the `updatePage()` function is invoked, which calculates the current gain as a ratio of mouse Y position divided by overall window height. You can therefore increase and decrease the volume of the playing music by moving the mouse pointer up and down.
 
-> **Note:** You can also [view this example running live](https://mdn.github.io/webaudio-examples/media-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/media-source-buffer).
+> [!NOTE]
+> You can also [view this example running live](https://mdn.github.io/webaudio-examples/media-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/media-source-buffer).
 
 ```js
 const audioCtx = new AudioContext();
@@ -65,7 +66,8 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **Note:** As a consequence of calling `createMediaElementSource()`, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.
+> [!NOTE]
+> As a consequence of calling `createMediaElementSource()`, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.
 
 ## Specifications
 

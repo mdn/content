@@ -13,9 +13,9 @@ While the `CSSRuleList` object is read-only, and cannot be directly modified, it
 
 To edit the underlying rules returned by `CSSRule` objects, use {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleSheet.deleteRule()")}}, which are methods of {{domxref("CSSStyleSheet")}}.
 
-The interface has no constructor. An instance of `CSSRuleList` is returned by {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}.
+This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs represent list structures using types based on JavaScript [arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).
 
-> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
+These historical reasons do not mean that you as a developer should avoid `CSSRuleList`. You don't create `CSSRuleList` objects yourself, but you get them from APIs such as {{domxref("CSSStyleSheet.cssRules")}} and {{domxref("CSSKeyframesRule.cssRules")}}, and these APIs are not deprecated. However, be careful of the semantic differences from a real array.
 
 ## Instance properties
 

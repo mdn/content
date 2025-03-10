@@ -7,11 +7,45 @@ browser-compat: css.properties.aspect-ratio
 
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified aspect ratio is used in the calculation of auto sizes and some other layout functions.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified {{glossary("aspect ratio")}} is used in the calculation of auto sizes and some other layout functions.
 
 At least one of the box's sizes needs to be automatic in order for `aspect-ratio` to have any effect. If neither the width nor height is an automatic size, then the provided aspect ratio has no effect on the box's preferred sizes.
 
-{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+{{InteractiveExample("CSS Demo: aspect-ratio")}}
+
+```css interactive-example-choice
+aspect-ratio: auto;
+```
+
+```css interactive-example-choice
+aspect-ratio: 1 / 1;
+```
+
+```css interactive-example-choice
+aspect-ratio: 16 / 9;
+```
+
+```css interactive-example-choice
+aspect-ratio: 0.5;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    height="640"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria.jpg"
+    width="466" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: auto;
+}
+```
 
 ## Syntax
 
@@ -31,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, then If the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
 
 If the element is not a replaced element, then the given `ratio` is used.
 
@@ -44,6 +78,10 @@ If the element is not a replaced element, then the given `ratio` is used.
 - {{cssxref("&lt;ratio&gt;")}}
 
   - : The box's preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
+
+- `auto && <ratio>`
+
+  - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio, like an `<img>` element. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
 
 ## Formal definition
 
@@ -101,7 +139,7 @@ div:nth-child(5) {
 
 ### Fallback to natural aspect ratio
 
-In this example we are using two`<img>` elements. The first element does not have its `src` attribute set to an image file.
+In this example we are using two `<img>` elements. The first element does not have its `src` attribute set to an image file.
 
 ```html
 <img src="" /> <img src="plumeria.jpg" />
@@ -135,6 +173,7 @@ Note how the first image without replaced content keeps the `3/2` aspect ratio, 
 
 ## See also
 
-- [Image aspect-ratio: preventing jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Image aspect-ratio: preventing jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

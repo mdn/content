@@ -17,12 +17,6 @@ The **`<font-face>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the CSS 
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("font-family")}} {{Deprecated_Inline}}
 - {{SVGAttr("font-style")}} {{Deprecated_Inline}}
 - {{SVGAttr("font-variant")}} {{Deprecated_Inline}}

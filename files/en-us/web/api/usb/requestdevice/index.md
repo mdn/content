@@ -8,7 +8,7 @@ status:
 browser-compat: api.USB.requestDevice
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the {{domxref("USB")}}
 interface returns a {{jsxref("Promise")}} that resolves with an instance of

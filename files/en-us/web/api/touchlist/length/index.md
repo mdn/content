@@ -19,7 +19,7 @@ The number of touch points in `touchList`.
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
 {{domxref("TouchList.item()","item")}} method and the
-{{domxref("TouchList.length","length")}} property.
+`length` property.
 
 ```js
 const target = document.getElementById("target");

@@ -2,7 +2,6 @@
 title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 page-type: css-function
-browser-compat: css.types.color.device-cmyk
 spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk
 ---
 
@@ -10,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk
 
 The **`device-cmyk()`** functional notation is used to express CMYK colors in a device dependent way, specifying the cyan, magenta, yellow, and black components.
 
-This approach to color is useful when creating material to be output to a particular printer, when the output for particular ink combinations is known. CSS processors may attempt to approximate the color, however the end result is likely to be different to the printed result.
+This approach to color is useful when creating material to be output to a particular printer, when the output for particular ink combinations is known. CSS processors may attempt to approximate the color, however, the end result is likely to be different from the printed result.
 
 ## Syntax
 
@@ -36,9 +35,9 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
   - : An optional fallback {{CSSXref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Specifications
 
@@ -47,3 +46,8 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 ## Browser compatibility
 
 There is no browser implementing this feature.
+
+## See also
+
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- {{cssxref("@page")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.mark
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`mark()`** method creates a named {{domxref("PerformanceMark")}} object representing a high resolution timestamp marker in the browser's performance timeline.
 

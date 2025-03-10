@@ -2,11 +2,10 @@
 title: Communication channels
 slug: MDN/Community/Communication_channels
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-There are various communication channels using which community can contact MDN Web Docs staff and participate in discussions.
+There are various communication channels that the community can use to contact MDN Web Docs staff and participate in discussions.
 
 ## Chat rooms
 
@@ -43,7 +42,7 @@ Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Dis
 
 ## Social media
 
-You can follow MDN Web Docs on [Mastodon](https://mozilla.social/@mdn) and [Twitter](https://twitter.com/MozDevNet).
+You can follow MDN Web Docs on [Mastodon](https://mastodon.social/@mdn) and [X](https://x.com/MozDevNet).
 Feel free to tag us in your posts if you want to share something with us or say hello, although we can't guarantee that we can respond to everything.
 
 ## Forums
@@ -56,8 +55,8 @@ You can use the forums listed below for discussing code problems.
 
 ## Localization channels
 
-Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
+Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Translated_content).
 
-## Mailing list
+## Email
 
-For any nonpublic communication, send an email to [mdn-admins](mailto:mdn-admins@mozilla.org).
+For any nonpublic communication, send an email to [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla.com).

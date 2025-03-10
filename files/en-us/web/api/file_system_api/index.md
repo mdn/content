@@ -5,11 +5,19 @@ page-type: web-api-overview
 browser-compat:
   - api.FileSystemHandle
   - api.FileSystemFileHandle
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemWritableFileStream
+  - api.FileSystemSyncAccessHandle
+spec-urls:
+  - https://fs.spec.whatwg.org/
+  - https://wicg.github.io/file-system-access/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-The File System API — with extensions provided via the [File System Access API](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
+The **File System API** — with extensions provided via the [**File System Access API**](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
+
+See [Relationship to other file-related APIs](/en-US/docs/Web/API/File_API#relationship_to_other_file-related_apis) for a comparison between this API, the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API), and the [File API](/en-US/docs/Web/API/File_API).
 
 ## Concepts and Usage
 
@@ -21,18 +29,46 @@ The handles represent a file or directory on the user's system. You can first ga
 
 You can also gain access to file handles via:
 
-- The {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API', 'HTML Drag and Drop API', '', 'nocode')}}.
-- The [File Handling API](https://developer.chrome.com/en/articles/file-handling/).
+- The {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
+- The [File Handling API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
 
 Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected. This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it (note that this is not the case with the [Origin private file system](#origin_private_file_system), because it is not visible to the user).
 
-> **Note:** The different exceptions that can be thrown when using the features of this API are listed on relevant pages as defined in the spec. However, the situation is made more complex by the interaction of the API and the underlying operating system. A proposal has been made to [list the error mappings in the spec](https://github.com/whatwg/fs/issues/57), which includes useful related information.
+> [!NOTE]
+> The different exceptions that can be thrown when using the features of this API are listed on relevant pages as defined in the spec. However, the situation is made more complex by the interaction of the API and the underlying operating system. A proposal has been made to [list the error mappings in the spec](https://github.com/whatwg/fs/issues/57), which includes useful related information.
 
-> **Note:** Objects based on {{domxref("FileSystemHandle")}} can also be serialized into an {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} database instance, or transferred via {{domxref("window.postMessage", "postMessage()")}}.
+> [!NOTE]
+> Objects based on {{domxref("FileSystemHandle")}} can also be serialized into an {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} database instance, or transferred via {{domxref("window.postMessage", "postMessage()")}}.
 
 ### Origin private file system
 
 The origin private file system (OPFS) is a storage endpoint provided as part of the File System API, which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+
+The following are some possible use cases:
+
+- Apps with persistent uploader
+
+  - When a file or directory is selected for upload, you can copy the file into a local sandbox and upload a chunk at a time.
+  - The app can restart uploads after an interruption, such as the browser being closed or crashing, connectivity getting interrupted, or the computer getting shut down.
+
+- Video game or other apps with lots of media assets
+
+  - The app downloads one or several large tarballs and expands them locally into a directory structure.
+  - The app pre-fetches assets in the background, so the user can go to the next task or game level without waiting for a download.
+
+- Audio or photo editor with offline access or local cache (great for performance and speed)
+
+  - The app can write to files in place (for example, overwriting just the ID3/EXIF tags and not the entire file).
+
+- Offline video viewer
+
+  - The app can download large files (>1GB) for later viewing.
+  - The app can access partially downloaded files (so that you can watch the first chapter of your DVD, even if the app is still downloading the rest of the content or if the app didn't complete the download because you had to run to catch a train).
+
+- Offline web mail client
+
+  - The client downloads attachments and stores them locally.
+  - The client caches attachments for later upload.
 
 Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) for instructions on how to use it.
 
@@ -43,16 +79,33 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 
 ## Interfaces
 
+- {{domxref("FileSystemChangeRecord")}} {{experimental_inline}}
+  - : Contains details of a single change observed by a {{domxref("FileSystemObserver")}}.
 - {{domxref("FileSystemHandle")}}
-  - : The **`FileSystemHandle`** interface is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
+  - : An object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 - {{domxref("FileSystemFileHandle")}}
   - : Provides a handle to a file system entry.
 - {{domxref("FileSystemDirectoryHandle")}}
-  - : provides a handle to a file system directory.
+  - : Provides a handle to a file system directory.
+- {{domxref("FileSystemObserver")}} {{experimental_inline}}
+  - : Provides a mechanism to observe changes to selected files or directories.
 - {{domxref("FileSystemSyncAccessHandle")}}
   - : Provides a synchronous handle to a file system entry, which operates in-place on a single file on disk. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](#origin_private_file_system).
 - {{domxref("FileSystemWritableFileStream")}}
-  - : is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.
+  - : A {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.
+
+### Extensions to other interfaces
+
+- {{domxref("Window.showDirectoryPicker()")}}
+  - : Displays a directory picker which allows the user to select a directory.
+- {{domxref("Window.showOpenFilePicker()")}}
+  - : Shows a file picker that allows a user to select a file or multiple files.
+- {{domxref("Window.showSaveFilePicker()")}}
+  - : Shows a file picker that allows a user to save a file.
+- {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
+  - : Returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
+- {{domxref("StorageManager.getDirectory()")}}
+  - : Used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system). Returns a {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
 
 ## Examples
 
@@ -212,7 +265,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were unergonomically specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
+> [!NOTE]
+> In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were unergonomically specified as asynchronous methods. This has now been [amended](https://github.com/whatwg/fs/issues/7), but some browsers still support the asynchronous versions.
 
 ## Specifications
 
@@ -224,5 +278,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) on web.dev
-- [The origin private file system](https://web.dev/articles/origin-private-file-system) on web.dev
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- [The origin private file system](https://web.dev/articles/origin-private-file-system)

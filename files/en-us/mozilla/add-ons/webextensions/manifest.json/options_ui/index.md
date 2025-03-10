@@ -34,16 +34,16 @@ browser-compat: webextensions.manifest.options_ui
   </tbody>
 </table>
 
-Use the `options_ui` key to define an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) for your extension.
+Use the `options_ui` key to define an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) for your extension. You use this page to enable users to modify your extension's settings.
 
-The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
+The way the user opens the page is browser-dependent and also depends on the `open_in_tab` setting. Your extension can also open the page using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
 You specify `options_ui` as a path to an HTML file packaged with your extension. The HTML file can include CSS and JavaScript files, just like a normal web page. Unlike a normal page, though, the JavaScript can use all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension has [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. However, it runs in a different scope than your background scripts.
 
 If you want to **share** data or functions between the JavaScript on your **options page** and your **background script(s)**, you can do so directly by obtaining a reference to the [Window](/en-US/docs/Web/API/Window) of your background scripts by using {{WebExtAPIRef("extension.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.
 The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used to share options between your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) and your **[content script(s).](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)**
 
-In general, you will want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local")}} (if the settings are local to the current machine/profile). If you do so and your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) (or [content script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.
+In general, you want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local")}} (if the settings are local to the current machine/profile). If you do so and your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) (or [content script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.
 
 ## Syntax
 
@@ -94,11 +94,14 @@ The `options_ui` key is an object with the following contents:
       <td><code>open_in_tab</code><br />{{optional_inline}}</td>
       <td><code>Boolean</code></td>
       <td>
+        <ul>
+          <li>If <code>false</code>, the options page opens in the browser's add-on manager.</li>
+        <li>
+          If <code>true</code>, the options page opens in a normal browser
+          tab.
+        </li>
+        </ul>
         <p>Defaults to <code>false</code>.</p>
-        <p>
-          If <code>true</code>, the options page will open in a normal browser
-          tab, rather than being integrated into the browser's add-ons manager.
-        </p>
       </td>
     </tr>
     <tr>

@@ -2,14 +2,15 @@
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill-rule
+browser-compat: svg.global_attributes.fill-rule
 ---
 
 {{SVGRef}}
 
 The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the _inside_ part of a shape.
 
-> **Note:** As a presentation attribute, `fill-rule` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `fill-rule` also has a CSS property counterpart: {{cssxref("fill-rule")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -178,3 +179,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("fill-rule")}} property

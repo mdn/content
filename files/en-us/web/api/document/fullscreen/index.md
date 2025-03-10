@@ -14,7 +14,8 @@ The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only prop
 
 Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.
 
-> **Note:** Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
+> [!NOTE]
+> Since this property is deprecated, you can determine if fullscreen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
 
 ## Value
 

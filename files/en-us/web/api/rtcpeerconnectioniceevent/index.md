@@ -15,7 +15,7 @@ Only one event is of this type: {{domxref("RTCPeerConnection.icecandidate_event"
 
 ## Instance properties
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+_A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also implements these properties_.
 
 - {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
@@ -27,14 +27,14 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 
 ## Instance methods
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
+_A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
 
 ## Examples
 
 ```js
 pc.onicecandidate = (ev) => {
   console.log(
-    `The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`,
+    `The ICE candidate ('${ev.candidate.candidate}') added to connection.`,
   );
 };
 ```

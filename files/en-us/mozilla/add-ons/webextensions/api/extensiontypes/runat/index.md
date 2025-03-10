@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.RunAt
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The soonest that the JavaScript or CSS will be injected into the tab.
 
@@ -25,7 +25,8 @@ The default value is `"document_idle"`.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/extensionTypes/#type-RunAt) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes#type-RunAt) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

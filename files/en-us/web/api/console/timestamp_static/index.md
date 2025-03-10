@@ -1,25 +1,23 @@
 ---
 title: "console: timeStamp() static method"
 short-title: timeStamp()
-slug: Web/API/console/timestamp_static
-page-type: web-api-instance-method
+slug: Web/API/console/timeStamp_static
+page-type: web-api-static-method
 status:
   - non-standard
 browser-compat: api.console.timeStamp_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
 
-The **`console.timeStamp()`** static method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)). This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.
+The **`console.timeStamp()`** static method adds a single marker to the browser's Performance tool ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)). This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.
 
 You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
 ```js-nolint
-timeStamp(label)
+console.timeStamp(label)
 ```
 
 ### Parameters

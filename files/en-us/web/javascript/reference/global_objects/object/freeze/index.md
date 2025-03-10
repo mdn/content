@@ -11,7 +11,21 @@ The **`Object.freeze()`** static method _freezes_ an object. Freezing an object 
 
 Freezing an object is the highest integrity level that JavaScript provides.
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -37,6 +51,8 @@ For data properties of a frozen object, their values cannot be changed since the
 that are objects can still be modified, unless they are also frozen. As an object, an
 array can be frozen; after doing so, its elements cannot be altered and no elements can
 be added to or removed from the array.
+
+[Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) do not have the concept of property descriptors. Freezing an object with private properties does not prevent the values of these private properties from being changed. (Freezing objects is usually meant as a security measure against external code, but external code cannot access private properties anyway.) Private properties cannot be added or removed from the object, whether the object is frozen or not.
 
 `freeze()` returns the same object that was passed into the function. It
 _does not_ create a frozen copy.
@@ -161,7 +177,7 @@ said to be immutable because the entire object _state_ (values and references to
 other objects) within the whole object is fixed. Note that strings, numbers, and
 booleans are always immutable and that Functions and Arrays are objects.
 
-#### What is "shallow freeze"?
+### Deep freezing
 
 The result of calling `Object.freeze(object)` only applies to the
 immediate properties of `object` itself and will prevent future property
@@ -188,14 +204,9 @@ employee.address.city = "Noida"; // attributes of child object can be modified
 console.log(employee.address.city); // "Noida"
 ```
 
-To make an object immutable, recursively freeze each non-primitive property
-(deep freeze). Use the pattern on a case-by-case basis based on your design when you
-know the object contains no [cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference
-graph, otherwise an endless loop will be triggered. An enhancement to
-`deepFreeze()` would be to have an internal function that receives a path
-(e.g. an Array) argument so you can suppress calling `deepFreeze()`
-recursively when an object is in the process of being made immutable. You still run a
-risk of freezing an object that shouldn't be frozen, such as [`window`](/en-US/docs/Web/API/Window).
+To make an object immutable, recursively freeze each non-primitive property (deep freeze). Use the pattern on a case-by-case basis based on your design when you know the object contains no [cycles](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>) in the reference graph, otherwise an endless loop will be triggered. For example, functions created with the [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function) syntax have a [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property with a `constructor` property that points to the function itself, so they have cycles by default. Other functions, such as [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), can still be frozen.
+
+An enhancement to `deepFreeze()` would be to store the objects it has already visited, so you can suppress calling `deepFreeze()` recursively when an object is in the process of being made immutable. For one example, see [using `WeakSet` to detect circular references](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet#use_case_detecting_circular_references). You still run a risk of freezing an object that shouldn't be frozen, such as [`window`](/en-US/docs/Web/API/Window).
 
 ```js
 function deepFreeze(object) {

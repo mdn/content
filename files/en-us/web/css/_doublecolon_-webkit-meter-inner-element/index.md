@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-inner-element"
+title: ::-webkit-meter-inner-element
 slug: Web/CSS/::-webkit-meter-inner-element
 page-type: css-pseudo-element
 status:
@@ -18,10 +18,6 @@ browser-compat: css.selectors.-webkit-meter-inner-element
   /* ... */
 }
 ```
-
-## Specifications
-
-Not part of any standard.
 
 ## Examples
 
@@ -74,6 +70,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

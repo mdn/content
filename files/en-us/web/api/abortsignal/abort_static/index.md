@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.AbortSignal.abort_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`AbortSignal.abort()`** static method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an {{domxref("AbortSignal/abort_event","abort")}} event).
 
@@ -20,7 +20,8 @@ return controller.signal;
 
 This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organized such that the abort logic should be run even if the intended fetch operation has not been started).
 
-> **Note:** The method is similar in purpose to {{JSxRef("Promise.reject")}}.
+> [!NOTE]
+> The method is similar in purpose to {{JSxRef("Promise.reject")}}.
 
 ## Syntax
 

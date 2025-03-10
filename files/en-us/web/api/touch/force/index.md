@@ -23,7 +23,7 @@ represented by the force attribute, and the sensitivity in levels of pressure, m
 ## Examples
 
 This example illustrates using the {{domxref("Touch")}} interface's
-{{domxref("Touch.force")}} property. This property is a relative value of pressure
+`Touch.force` property. This property is a relative value of pressure
 applied, in the range `0.0` to `1.0`, where `0.0` is no
 pressure, and `1.0` is the highest level of pressure the touch device is
 capable of sensing.

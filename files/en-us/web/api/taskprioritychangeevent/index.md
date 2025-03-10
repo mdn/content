@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TaskPriorityChangeEvent
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskPriorityChangeEvent`** is the interface for the [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
 

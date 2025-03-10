@@ -9,7 +9,18 @@ browser-compat: javascript.operators.addition_assignment
 
 The **addition assignment (`+=`)** operator performs [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (which is either numeric addition or string concatenation) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## Syntax
 
@@ -23,46 +34,39 @@ x += y
 
 ## Examples
 
-### Using addition assignment
-
-```js
-let baz = true;
-
-// Boolean + Number -> addition
-baz += 1; // 2
-
-// Number + Boolean -> addition
-baz += false; // 2
-```
-
-```js
-let foo = "foo";
-
-// String + Boolean -> concatenation
-foo += false; // "foofalse"
-
-// String + String -> concatenation
-foo += "bar"; // "foofalsebar"
-```
+### Addition assignment using numbers
 
 ```js
 let bar = 5;
-
-// Number + Number -> addition
 bar += 2; // 7
-
-// Number + String -> concatenation
-bar += "foo"; // "7foo"
 ```
+
+Other non-string, non-BigInt values are coerced to numbers:
+
+```js
+let baz = true;
+baz += 1; // 2
+baz += false; // 2
+```
+
+### Addition assignment using BigInts
 
 ```js
 let x = 1n;
-
-// BigInt + BigInt -> addition
 x += 2n; // 3n
 
-// BigInt + Number -> throws TypeError
 x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+### Addition assignment using strings
+
+```js
+let foo = "foo";
+foo += false; // "foofalse"
+foo += "bar"; // "foofalsebar"
+
+let bar = 5;
+bar += "foo"; // "5foo"
 ```
 
 ## Specifications

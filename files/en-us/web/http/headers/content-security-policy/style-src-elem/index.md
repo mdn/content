@@ -35,12 +35,18 @@ The directive does not set valid sources for inline style attributes; these are 
 
 ## Syntax
 
-One or more sources can be allowed for the `style-src-elem` policy:
-
 ```http
-Content-Security-Policy: style-src-elem <source>;
-Content-Security-Policy: style-src-elem <source> <source>;
+Content-Security-Policy: style-src-elem 'none';
+Content-Security-Policy: style-src-elem <source-expression-list>;
 ```
+
+This directive may have one of the following values:
+
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
+
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the same source expression values are applicable as for [`style-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src), with the exception of [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-hashes).
 
 `style-src-elem` can be used in conjunction with {{CSP("style-src")}}:
 
@@ -48,12 +54,6 @@ Content-Security-Policy: style-src-elem <source> <source>;
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src-elem <source>;
 ```
-
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
-
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 

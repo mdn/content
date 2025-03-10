@@ -2,28 +2,32 @@
 title: visibility
 slug: Web/SVG/Attribute/visibility
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.visibility
+browser-compat: svg.global_attributes.visibility
 ---
 
 {{SVGRef}}
 
 The **`visibility`** attribute lets you control the visibility of graphical elements. With a value of `hidden` or `collapse` the current graphics element is invisible.
 
-> **Note:** If the `visibility` attribute is set to `hidden` on a text element, then the text is invisible but still takes up space in text layout calculations.
+> [!NOTE]
+> If the `visibility` attribute is set to `hidden` on a text element, then the text is invisible but still takes up space in text layout calculations.
 
 Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elements which have their `visibility` attribute set to `hidden` still might receive events.
 
-> **Note:** As a presentation attribute, `visibility` can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `visibility` also has a CSS property counterpart: {{cssxref("visibility")}}. When both are specified, the CSS property takes priority.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("audio")}}
-- {{SVGElement("canvas")}}
+- `<audio>`
+- `<canvas>`
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
-- {{SVGElement("iframe")}}
+- `<iframe>`
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("path")}}
@@ -34,9 +38,37 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
-- {{SVGElement("video")}}
+- `<video>`
 
-## Example
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>visible</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+- `visible`
+  - : This value indicates that the element will be painted.
+- `hidden`
+  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
+- `collapse`
+  - : This value is equal to `hidden`.
+
+## Examples
 
 ### Example 1
 
@@ -126,34 +158,6 @@ button.addEventListener("click", (evt) => {
 
 {{EmbedLiveSample("Example 2", "100%", "80")}}
 
-## Usage notes
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code>visible</code> | <code>hidden</code> | <code>collapse</code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>visible</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-- `visible`
-  - : This value indicates that the element will be painted.
-- `hidden`
-  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
-- `collapse`
-  - : This value is equal to `hidden`.
-
 ## Specifications
 
 {{Specifications}}
@@ -165,4 +169,4 @@ button.addEventListener("click", (evt) => {
 ## See also
 
 - {{SVGAttr("display")}} attribute
-- {{cssxref("visibility", "CSS visibility")}}
+- CSS {{cssxref("visibility")}} property

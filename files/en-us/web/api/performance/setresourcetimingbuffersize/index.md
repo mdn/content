@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`setResourceTimingBufferSize()`** method sets the desired size of the browser's resource timing buffer which stores the "`resource`" performance entries.
+The **`setResourceTimingBufferSize()`** method sets the desired size of the browser's resource timing buffer which stores the `"resource"` performance entries.
 
 The specification requires the resource timing buffer initially to be 250 or greater.
 
@@ -26,7 +26,7 @@ setResourceTimingBufferSize(maxSize)
 ### Parameters
 
 - `maxSize`
-  - : A `number` representing the maximum number of {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in its performance entry buffer.
+  - : A `number` representing the maximum number of {{domxref("PerformanceEntry")}} objects the browser should hold in its performance entry buffer.
 
 ### Return value
 
@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ### Setting a resource timing buffer size
 
-The following call allows 500 "`resource`" performance entries in the browser's performance timeline.
+The following call allows 500 `"resource"` performance entries in the browser's performance timeline.
 
 ```js
 performance.setResourceTimingBufferSize(500);

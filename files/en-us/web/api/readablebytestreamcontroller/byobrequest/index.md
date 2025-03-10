@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`byobRequest`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the current BYOB request, or `null` if there are no pending requests.
 

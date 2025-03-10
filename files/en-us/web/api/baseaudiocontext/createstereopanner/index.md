@@ -12,7 +12,8 @@ The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }} inter
 stereo panning to an audio source.
 It positions an incoming audio stream in a stereo image using a [low-cost panning algorithm](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm).
 
-> **Note:** The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
+> [!NOTE]
+> The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
 > constructor is the recommended way to create a {{domxref("StereoPannerNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -62,7 +63,7 @@ const panNode = audioCtx.createStereoPanner();
 
 panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
-  panValue.innerHTML = panControl.value;
+  panValue.textContent = panControl.value;
 };
 
 // connect the MediaElementAudioSourceNode to the panNode

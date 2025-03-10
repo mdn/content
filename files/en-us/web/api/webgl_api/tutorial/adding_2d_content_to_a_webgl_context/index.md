@@ -14,7 +14,8 @@ The complete source code for this project is [available on GitHub](https://githu
 
 This project uses the [glMatrix](https://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN.
 
-> **Note:** Update your "index.html" so it looks like this:
+> [!NOTE]
+> Update your "index.html" so it looks like this:
 
 ```html
 <!doctype html>
@@ -22,7 +23,6 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <link rel="stylesheet" href="./webgl.css" type="text/css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
@@ -32,7 +32,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -43,7 +43,7 @@ The most important thing to understand before we get started is that even though
 
 ### The shaders
 
-A **shader** is a program, written using the [OpenGL ES Shading Language](https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf) (**GLSL**), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.
+A **shader** is a program, written using the [OpenGL ES Shading Language](https://registry.khronos.org/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf) (**GLSL**), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.
 
 There are two shader functions run when drawing WebGL content: the **vertex shader** and the **fragment shader**. You write these in GLSL and pass the text of the code into WebGL to be compiled for execution on the GPU. Together, a set of vertex and fragment shaders is called a **shader program**.
 
@@ -59,7 +59,8 @@ The vertex shader can, as needed, also do things like determine the coordinates 
 
 Our vertex shader below receives vertex position values from an attribute we define called `aVertexPosition`. That position is then multiplied by two 4x4 matrices we provide called `uProjectionMatrix` and `uModelViewMatrix`; `gl_Position` is set to the result. For more info on projection and other matrixes [you might find this article useful](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
-> **Note:** Add this code to your `main()` function:
+> [!NOTE]
+> Add this code to your `main()` function:
 
 ```js
 // Vertex shader program
@@ -83,7 +84,8 @@ The **fragment shader** is called once for every pixel on each shape to be drawn
 
 In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.
 
-> **Note:** Add this code to your `main()` function:
+> [!NOTE]
+> Add this code to your `main()` function:
 
 ```js
 const fsSource = `
@@ -97,7 +99,8 @@ const fsSource = `
 
 Now that we've defined the two shaders we need to pass them to WebGL, compile them, and link them together. The code below creates the two shaders by calling `loadShader()`, passing the type and source for the shader. It then creates a program, attaches the shaders and links them together. If compiling or linking fails the code displays an alert.
 
-> **Note:** Add these two functions to your "webgl-demo.js" script:
+> [!NOTE]
+> Add these two functions to your "webgl-demo.js" script:
 
 ```js
 //
@@ -165,7 +168,8 @@ The `loadShader()` function takes as input the WebGL context, the shader type, a
 4. To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
 5. If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
 
-> **Note:** Add this code to your `main()` function:
+> [!NOTE]
+> Add this code to your `main()` function:
 
 ```js
 // Initialize a shader program; this is where all the lighting
@@ -175,7 +179,8 @@ const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 
 After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. [Uniforms](/en-US/docs/Web/API/WebGL_API/Data#uniforms) are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around
 
-> **Note:** Add this code to your `main()` function:
+> [!NOTE]
+> Add this code to your `main()` function:
 
 ```js
 // Collect all the info needed to use the shader program.
@@ -199,7 +204,8 @@ Before we can render our square plane, we need to create the buffer that contain
 
 We'll do that using a function we call `initBuffers()`, which we will implement in a separate [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). As we explore more advanced WebGL concepts, this module will be augmented to create more — and more complex — 3D objects.
 
-> **Note:** Create a new file called "init-buffers.js", and give it the following contents:
+> [!NOTE]
+> Create a new file called "init-buffers.js", and give it the following contents:
 
 ```js
 function initBuffers(gl) {
@@ -240,7 +246,8 @@ Once that's done, we create a JavaScript array containing the position for each 
 
 Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. We'll do this in a `drawScene()` function that, again, we'll implement in a separate JavaScript module.
 
-> **Note:** Create a new file called "draw-scene.js", and give it the following contents:
+> [!NOTE]
+> Create a new file called "draw-scene.js", and give it the following contents:
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -266,7 +273,7 @@ function drawScene(gl, programInfo, buffers) {
   const zFar = 100.0;
   const projectionMatrix = mat4.create();
 
-  // note: glmatrix.js always has the first argument
+  // note: glMatrix always has the first argument
   // as the destination to receive the result.
   mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
@@ -338,14 +345,16 @@ Then we establish the position of the square plane by loading the identity posit
 
 Finally, let's call `initBuffers()` and `drawScene()`.
 
-> **Note:** Add this code to the start of your "webgl-demo.js" file:
+> [!NOTE]
+> Add this code to the start of your "webgl-demo.js" file:
 
 ```js
 import { initBuffers } from "./init-buffers.js";
 import { drawScene } from "./draw-scene.js";
 ```
 
-> **Note:** Add this code to the end of your `main()` function:
+> [!NOTE]
+> Add this code to the end of your `main()` function:
 
 ```js
 // Here's where we call the routine that builds all the

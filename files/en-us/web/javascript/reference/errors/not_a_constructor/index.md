@@ -69,10 +69,10 @@ function Car(make, model, year) {
 }
 ```
 
-Now you can create an object called `mycar` as follows:
+Now you can create an object called `myCar` as follows:
 
 ```js
-const mycar = new Car("Eagle", "Talon TSi", 1993);
+const myCar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### In Promises

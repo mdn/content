@@ -19,7 +19,8 @@ It's really useful for WebXR and gaming.
 In 3D spaces, it's the only way to achieve realistic audio. Libraries like [three.js](https://threejs.org/) and [A-frame](https://aframe.io/) harness its potential when dealing with sound.
 It's worth noting that you don't _have_ to move sound within a full 3D space either — you could stick with just a 2D plane, so if you were planning a 2D game, this would still be the node you were looking for.
 
-> **Note:** There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects.
+> [!NOTE]
+> There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects.
 > This is much simpler to use, but obviously nowhere near as versatile.
 > If you just want a simple stereo panning effect, our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/main/stereo-panner-node)) should give you everything you need.
 
@@ -32,9 +33,10 @@ See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/sp
 
 The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls.
 When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc.
-This is done by setting the different properties of the `PannerNode` object instance in relation to that movement, to emulate spacialization.
+This is done by setting the different properties of the `PannerNode` object instance in relation to that movement, to emulate spatialization.
 
-> **Note:** The experience is much better if you use headphones, or have some kind of surround sound system to plug your computer into.
+> [!NOTE]
+> The experience is much better if you use headphones, or have some kind of surround sound system to plug your computer into.
 
 ## Creating an audio listener
 
@@ -46,7 +48,6 @@ They remain static. The `pannerNode` can then calculate its sound position relat
 Let's create our context and listener and set the listener's position to emulate a person looking into our room:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
@@ -78,7 +79,7 @@ These two together can nicely set the direction.
 Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:
 
 To start we can set the [`panningModel`](/en-US/docs/Web/API/PannerNode/panningModel).
-This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:
+This is the spatialization algorithm that's used to position the audio in 3D space. We can set this to:
 
 `equalpower` — The default and the general way panning is figured out
 
@@ -540,12 +541,13 @@ For a more in depth look at playing/controlling audio and audio graphs check out
 Hopefully, this article has given you an insight into how Web Audio spatialization works, and what each of the {{domxref("PannerNode")}} properties do (there are quite a few of them).
 The values can be hard to manipulate sometimes and depending on your use case it can take some time to get them right.
 
-> **Note:** There are slight differences in the way the audio spatialization sounds across different browsers.
+> [!NOTE]
+> There are slight differences in the way the audio spatialization sounds across different browsers.
 > The panner node does some very involved maths under the hood;
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
 Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).
-There is also a [Codepen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
+There is also a [CodePen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
 If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles.
 We rolled our own in this article to give you an idea of how it works, but you'll save a lot of time by taking advantage of work others have done before you.

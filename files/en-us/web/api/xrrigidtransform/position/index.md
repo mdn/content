@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.position
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRRigidTransform")}} property
 **`position`** is a {{domxref("DOMPointReadOnly")}} object which
@@ -18,7 +18,8 @@ transform.
 A read-only {{domxref("DOMPointReadOnly")}} indicating the 3D position component of the
 transform matrix. The units are meters.
 
-> **Note:** The `w` component of the point is always 1.0.
+> [!NOTE]
+> The `w` component of the point is always 1.0.
 
 ## Examples
 

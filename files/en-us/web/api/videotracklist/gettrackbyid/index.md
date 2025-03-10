@@ -10,8 +10,7 @@ browser-compat: api.VideoTrackList.getTrackById
 
 The **{{domxref("VideoTrackList")}}** method
 **`getTrackById()`** returns the first
-{{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
-    "id")}} matches the specified string.
+{{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id", "id")}} matches the specified string.
 
 This lets you find a specified track if
 you know its ID string.

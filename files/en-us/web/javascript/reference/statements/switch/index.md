@@ -9,7 +9,23 @@ browser-compat: javascript.statements.switch
 
 The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch", "taller")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## Syntax
 
@@ -29,7 +45,7 @@ switch (expression) {
 
 - `expression`
   - : An expression whose result is matched against each `case` clause.
-- `case caseExpressionN` {{optional_inline}}
+- `caseExpressionN` {{optional_inline}}
   - : A `case` clause used to match against `expression`. If the value of `expression` matches the value of any `caseExpressionN`, execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of `expression` doesn't match any of the `case` clauses. A `switch` statement can only have one `default` clause.

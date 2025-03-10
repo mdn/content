@@ -24,11 +24,14 @@ async function resolveDirectory(file) {
       .withErrors()
       .withFullPaths()
       .filter((filePath) => filePath.endsWith("index.md"))
+      .exclude((dirName) => dirName === "conflicting" || dirName === "orphaned")
       .crawl(file);
     return api.withPromise();
   } else if (
     stats.isFile() &&
     file.endsWith("index.md") &&
+    !file.includes("/conflicting/") &&
+    !file.includes("/orphaned/") &&
     !file.includes("tests/front-matter_test_files")
   ) {
     return [file];

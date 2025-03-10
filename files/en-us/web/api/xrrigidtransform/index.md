@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XRRigidTransform
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRRigidTransform`** is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface that represents the 3D geometric transform described by a position and orientation.
 
@@ -20,7 +20,7 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 
 ## Constructor
 
-- {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
+- {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}
   - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
 ## Instance properties

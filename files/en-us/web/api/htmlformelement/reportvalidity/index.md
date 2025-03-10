@@ -8,11 +8,7 @@ browser-compat: api.HTMLFormElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLFormElement.reportValidity()`** method returns
-`true` if the element's child controls satisfy their validation constraints.
-When `false` is returned, cancelable
-[`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event) events are fired for
-each invalid child and validation problems are reported to the user.
+The **`reportValidity()`** method of the {{domxref("HTMLFormElement")}} interface performs the same validity checking steps as the {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}} method. In addition, for each {{domxref("HTMLElement/invalid_event", "invalid")}} event that was fired and not canceled, the browser displays the problem to the user.
 
 ## Syntax
 
@@ -20,17 +16,21 @@ each invalid child and validation problems are reported to the user.
 reportValidity()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-`true` or `false`
+Returns `true` if the associated controls' values have no validity problems; otherwise, returns `false`.
 
 ## Example
 
 ```js
-document.forms["myform"].addEventListener(
+document.forms["my-form"].addEventListener(
   "submit",
   () => {
-    document.forms["myform"].reportValidity();
+    document.forms["my-form"].reportValidity();
   },
   false,
 );
@@ -43,3 +43,10 @@ document.forms["myform"].addEventListener(
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLFormElement.checkValidity()")}}
+- {{HTMLElement("form")}}
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

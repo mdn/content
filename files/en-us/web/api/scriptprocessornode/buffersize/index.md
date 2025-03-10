@@ -12,7 +12,8 @@ browser-compat: api.ScriptProcessorNode.bufferSize
 
 The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range `256` – `16384`.
 
-> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+> [!NOTE]
+> This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 ## Value
 
@@ -24,9 +25,7 @@ See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioCo
 
 ## Specifications
 
-Since the August 29, 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
-
-It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+{{Specifications}}
 
 ## Browser compatibility
 

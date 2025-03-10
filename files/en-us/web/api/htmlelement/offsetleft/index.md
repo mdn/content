@@ -37,7 +37,7 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 <div
   style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
   <span>Short span. </span>
-  <span id="longspan">Long span that wraps within this div.</span>
+  <span id="long-span">Long span that wraps within this div.</span>
 </div>
 
 <div
@@ -46,11 +46,11 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 <script>
   const box = document.getElementById("box");
-  const longspan = document.getElementById("longspan");
-  box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = longspan.offsetTop + document.body.scrollTop + "px";
-  box.style.width = longspan.offsetWidth + "px";
-  box.style.height = longspan.offsetHeight + "px";
+  const longSpan = document.getElementById("long-span");
+  box.style.left = longSpan.offsetLeft + document.body.scrollLeft + "px";
+  box.style.top = longSpan.offsetTop + document.body.scrollTop + "px";
+  box.style.width = longSpan.offsetWidth + "px";
+  box.style.height = longSpan.offsetHeight + "px";
 </script>
 ```
 

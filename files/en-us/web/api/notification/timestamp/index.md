@@ -8,7 +8,7 @@ status:
 browser-compat: api.Notification.timestamp
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`timestamp`** read-only property of the
 {{domxref("Notification")}} interface returns a number, as
@@ -23,7 +23,7 @@ missed message could be set in the past.
 
 ## Value
 
-A number representing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
+A number representing a timestamp, given as {{Glossary("Unix time")}} in milliseconds.
 
 ## Examples
 

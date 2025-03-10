@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMRect
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
 
@@ -24,13 +24,13 @@ It inherits from its parent, {{domxref("DOMRectReadOnly")}}.
 
 _`DOMRect` inherits properties from its parent, {{domxref("DOMRectReadOnly")}}. The difference is that they are not read-only anymore._
 
-- {{domxref("DOMRectReadOnly.x")}}
+- {{domxref("DOMRect.x")}}
   - : The x coordinate of the `DOMRect`'s origin (typically the top-left corner of the rectangle).
-- {{domxref("DOMRectReadOnly.y")}}
+- {{domxref("DOMRect.y")}}
   - : The y coordinate of the `DOMRect`'s origin (typically the top-left corner of the rectangle).
-- {{domxref("DOMRectReadOnly.width")}}
+- {{domxref("DOMRect.width")}}
   - : The width of the `DOMRect`.
-- {{domxref("DOMRectReadOnly.height")}}
+- {{domxref("DOMRect.height")}}
   - : The height of the `DOMRect`.
 - {{domxref("DOMRectReadOnly.top")}}
   - : Returns the top coordinate value of the `DOMRect` (has the same value as `y`, or `y + height` if `height` is negative).

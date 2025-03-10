@@ -11,7 +11,7 @@ browser-compat: api.MediaStream.getAudioTracks
 The **`getAudioTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the
 {{domxref("MediaStreamTrack")}} objects in this
-stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
+stream's [track set](https://www.w3.org/TR/mediacapture-streams/#dfn-track-set) where {{domxref("MediaStreamTrack.kind")}}
 is `audio`.
 
 ## Syntax
@@ -27,11 +27,12 @@ None.
 ### Return value
 
 An array of {{domxref("MediaStreamTrack")}} objects, one for each audio track contained
-in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind",
-  "kind")}} property is `audio`. The array is empty if the stream contains no
+in the stream. Audio tracks are those tracks whose {{domxref("MediaStreamTrack.kind", "kind")}}
+property is `audio`. The array is empty if the stream contains no
 audio tracks.
 
-> **Note:** The order of the returned tracks is not defined by the
+> [!NOTE]
+> The order of the returned tracks is not defined by the
 > specification and may, in fact, change from one call to `getAudioTracks()`
 > to the next.
 

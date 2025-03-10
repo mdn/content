@@ -7,9 +7,58 @@ browser-compat: css.properties.float
 
 {{CSSRef}}
 
-The **`float`** CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/position#absolute_positioning)).
+The **`float`** [CSS](/en-US/docs/Web/CSS) property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/position#absolute_positioning)).
 
-{{EmbedInteractiveExample("pages/css/float.html")}}
+{{InteractiveExample("CSS Demo: float")}}
+
+```css interactive-example-choice
+float: none;
+```
+
+```css interactive-example-choice
+float: left;
+```
+
+```css interactive-example-choice
+float: right;
+```
+
+```css interactive-example-choice
+float: inline-start;
+```
+
+```css interactive-example-choice
+float: inline-end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Float me</div>
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  width: 80%;
+  line-height: normal;
+}
+
+#example-element {
+  border: solid 10px #efac09;
+  background-color: #040d46;
+  color: white;
+  padding: 1em;
+  width: 40%;
+}
+```
 
 A _floating element_ is one where the computed value of `float` is not `none`.
 
@@ -32,7 +81,8 @@ As `float` implies the use of the block layout, it modifies the computed value o
 | `inline-grid`        | `grid`         |
 | _other_              | _unchanged_    |
 
-> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`. This was an exception to the rule, that the name of the DOM member is the {{Glossary("camel_case", "camel-case")}} name of the hyphenated CSS name (because "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
+> [!NOTE]
+> When accessing a CSS property in JavaScript through the {{domxref("HTMLElement.style")}} object, single-word property names are used as is. Although `float` is a reserved keyword in JavaScript, the CSS `float` property is accessed as `float` in modern browsers. In older browsers, you must use `cssFloat` to access the `float` property. (This is similar to how the "class" attribute is accessed as "className" and the "for" attribute of a `<label>` element is accessed as "htmlFor".)
 
 ## Syntax
 
@@ -147,5 +197,5 @@ Sometimes you may want to force an item to move below any floated elements. For 
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - Use {{cssxref("clear")}} to force an item to move below a floated element.

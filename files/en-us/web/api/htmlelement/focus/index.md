@@ -33,8 +33,8 @@ focus(options)
         A value of `false` for `preventScroll` (the default) means that the browser will scroll the element into view after focusing it.
         If `preventScroll` is set to `true`, no scrolling will occur.
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value that should be set to `true` to force visible indication that the element is focused.
-        By default, or if the property is not `true`, a browser may still provide visible indication if it determines that this would improve accessibility for users.
+      - : A boolean value that should be set to `true` to force, or `false` to prevent visible indication that the element is focused.
+        If the property is not specified, a browser will provide visible indication if it determines that this would improve accessibility for users.
 
 ### Return value
 
@@ -78,7 +78,7 @@ This example demonstrates how you can set the focus on a button element.
 
 First we define three buttons.
 Both the middle and right button will set focus on the left-most button.
-The right right-most button will also specify `focusVisible`.
+The right-most button will also specify `focusVisible`.
 
 ```html
 <button id="myButton">Button</button>

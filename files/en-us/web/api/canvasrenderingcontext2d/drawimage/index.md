@@ -88,7 +88,11 @@ This example draws an image to the canvas using the `drawImage()` method.
 ```html
 <canvas id="canvas"></canvas>
 <div style="display:none;">
-  <img id="source" src="rhino.jpg" width="300" height="227" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
 </div>
 ```
 
@@ -141,7 +145,7 @@ const image = new Image(60, 45); // Using optional size for image
 image.onload = drawImageActualSize; // Draw when image has loaded
 
 // Load an image of intrinsic size 300x227 in CSS pixels
-image.src = "rhino.jpg";
+image.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 
 function drawImageActualSize() {
   // Use the intrinsic size of image in CSS pixels for the canvas element

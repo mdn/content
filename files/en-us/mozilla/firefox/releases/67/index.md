@@ -93,7 +93,7 @@ _No changes._
 
 #### Media, Web Audio, and WebRTC
 
-- The [AV1 video codec](/en-US/docs/Web/Media/Formats/Video_codecs#av1) is now supported on Linux.
+- The [AV1 video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) is now supported on Linux.
 - [dav1d](https://code.videolan.org/videolan/dav1d) is now the default media decoder for [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) (see for example [Firefox bug 1533742](https://bugzil.la/1533742) and [Firefox bug 1535038](https://bugzil.la/1535038)).
 - Calling {{domxref("RTCPeerConnection.addTrack()")}} without specifying any streams to which to add the new track now works as expected: it adds a streamless track to the connection. Each peer is responsible for managing the association between the track and any stream on its end ([Firefox bug 1231414](https://bugzil.la/1231414)).
 - The {{domxref("MediaDeviceInfo.groupId")}} property is now implemented ([Firefox bug 1213453](https://bugzil.la/1213453)). While it has existed in Firefox since Firefox 39, it did not actually gather related devices together into the same group IDs.
@@ -147,4 +147,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(66)}}
+{{Firefox_for_developers}}

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReadableStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
@@ -37,7 +37,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.pipeTo()")}}
   - : Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
 - {{domxref("ReadableStream.tee()")}}
-  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
+  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new `ReadableStream` instances. Each of those streams receives the same incoming data.
 
 ## Async iteration
 
@@ -75,7 +75,7 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 
 In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.
 
-It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
+It demonstrates the usage of a `ReadableStream` in combination with a {{jsxref("Uint8Array")}}.
 
 ```js
 fetch("https://www.example.org")
@@ -133,15 +133,19 @@ function iteratorToStream(iterator) {
     async pull(controller) {
       const { value, done } = await iterator.next();
 
+      if (value) {
+        controller.enqueue(value);
+      }
       if (done) {
         controller.close();
-      } else {
-        controller.enqueue(value);
       }
     },
   });
 }
 ```
+
+> [!WARNING]
+> This example assumes that the return value (`value` when `done` is `true`), if present, is also a chunk to be enqueued. Some iterator APIs may use the return value for different purposes. You may need to adjust the code based on the API you are interacting with.
 
 ### Async iteration of a stream using for await...of
 

@@ -3,16 +3,14 @@ title: "PointerEvent: azimuthAngle property"
 short-title: azimuthAngle
 slug: Web/API/PointerEvent/azimuthAngle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PointerEvent.azimuthAngle
 ---
 
-{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
+{{ APIRef("Pointer Events") }}
 
 The **`azimuthAngle`** read-only property of the {{domxref("PointerEvent")}} interface represents the angle between the Y-Z plane and the plane containing both the transducer (pointer or stylus) axis and the Y axis.
 
-Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either {{domxref("PointerEvent.tiltx", "tiltX")}} and {{domxref("PointerEvent.tilty", "tiltY")}} or {{domxref("PointerEvent.altitudeAngle", "altitudeAngle")}} and `azimuthAngle`.
+Depending on the specific hardware and platform, user agents will likely only receive one set of values for the transducer orientation relative to the screen plane — either {{domxref("PointerEvent.tiltX", "tiltX")}} and {{domxref("PointerEvent.tiltY", "tiltY")}} or {{domxref("PointerEvent.altitudeAngle", "altitudeAngle")}} and `azimuthAngle`.
 
 ![The azimuth angle of a pointer compared to the altitude angle](azimuth_altitude_angles.svg)
 

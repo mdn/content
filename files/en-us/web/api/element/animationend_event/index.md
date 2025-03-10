@@ -90,19 +90,17 @@ animated.onanimationend = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(100%) scaleX(3);
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(0) scaleX(1);
   }
 }
 ```

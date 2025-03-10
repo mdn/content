@@ -37,4 +37,6 @@ console.log(example.points.length); // 5
 
 {{Specifications}}
 
+## Browser compatibility
+
 {{Compat}}

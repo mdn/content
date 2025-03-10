@@ -1,6 +1,6 @@
 ---
 title: "Magnetometer: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/Magnetometer/y
 page-type: web-api-instance-property
 status:
@@ -8,7 +8,7 @@ status:
 browser-compat: api.Magnetometer.y
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`y`** read-only property of the
 {{domxref("Magnetometer")}} interface returns a number specifying

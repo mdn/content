@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.URL.href
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`href`** property of the {{domxref("URL")}} interface is
 a string containing the whole URL.
-
-{{AvailableInWorkers}}
 
 ## Value
 

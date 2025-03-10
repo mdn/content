@@ -6,18 +6,20 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.get
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single credential instance that matches the provided parameters, which the browser can then use to authenticate with a relying party. This is used by several different credential-related APIs with significantly different purposes:
+The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single {{glossary("credential")}}, which can then be used to authenticate a user to a website.
 
-- The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) uses `get()` to authenticate using basic federated credentials or username/password credentials.
-- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) uses `get()` to authenticate or provide additional factors during MFA with public key credentials (based on asymmetric cryptography).
-- The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) uses `get()` to authenticate with federated identity providers (IdPs).
-- The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) uses `get()` to request retrieval of a one-time password (OTP) from a specially-formatted SMS message sent by an app server.
+The method accepts a single optional `options` argument, which may include:
 
-The below reference page starts with a syntax section that explains the general method call structure and parameters that apply to all the different APIs. After that, it is split into separate sections providing parameters, return values, and examples specific to each API.
+- A `mediation` property indicating how and whether the user should be asked to participate in the operation.
+  This controls, for example, whether the site can silently sign a user in using a stored credential.
+- A `signal` property enabling the operation to be cancelled using an {{domxref("AbortController")}}.
+- One or more properties — `password`, `federated`, `identity`, `otp`, `publicKey` — which indicate the [types of credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types) being requested. If set, the values of these properties include any parameters that the browser needs in order to find an appropriate credential of the requested type.
 
-## General syntax
+The API always fulfills with a single credential or `null`. If multiple credentials are available and user mediation is allowed, then the browser will ask the user to select a single credential.
+
+## Syntax
 
 ```js-nolint
 get()
@@ -28,116 +30,121 @@ get(options)
 
 - `options` {{optional_inline}}
 
-  - : An object that contains options for the request. The options include criteria that the credentials are required or allowed to have, and options for interacting with the user. It can contain the following properties:
-
-    - "Credential type"
-
-      - : An object or boolean defining the type of credential being requested — this can be one of one of:
-
-        - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
-        - `identity`: An object containing details of federated identity providers (IdPs) that a relying party (RP) website can use for purposes such as signing in or signing up on a website. It causes the `get()` call to initiate a request for a user to sign in to an RP with an IdP. See the [Federated Credential Management API](#federated_credential_management_api) section below for more details.
-        - `otp`: An object containing transport type hints. Causes the `get()` call to initiate a request for the retrieval of an OTP. See the [WebOTP API](#webotp_api) section below for more details.
-        - `publicKey`: An object containing requirements for returned public key credentials. Causes the `get()` call to use an existing set of public key credentials to authenticate to a relying party. See the [Web Authentication API](#web_authentication_api) section below for more details.
+  - : An object that contains options for the request. It can contain the following properties:
 
     - `mediation` {{optional_inline}}
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
-        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+        - `"conditional"`
 
-        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
+          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
 
-        - `"required"`: The user will always be asked to authenticate, even if prevent silent access (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is set to `false`. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
+        - `"optional"`
 
-        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically log the user in if possible; if consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
+          - : If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
-        If `mediation` is omitted, it will default to `"optional"`.
+        - `"required"`
+
+          - : The user will always be asked to authenticate. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
+
+        - `"silent"`
+          - : The user will not be asked to authenticate. The user agent will automatically reauthenticate the user and log them in if possible. If consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
+
+        The default value is `"optional"`.
+
+        > [!NOTE]
+        > In the case of a [federated authentication (FedCM API)](/en-US/docs/Web/API/FedCM_API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the identity provider (IdP) via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation and the relying party (RP) via the {{domxref("IdentityCredential.isAutoSelected")}} property. This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
-      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `get()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
-## Credential Management API
+    - `password` {{optional_inline}}
+      - : This option asks the browser to retrieve a stored [password](/en-US/docs/Web/API/Credential_Management_API/Credential_types#passwords) as a {{domxref("PasswordCredential")}} object. It is a boolean value.
+    - `identity` {{optional_inline}}
 
-The [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) lets a website store and retrieve password and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
+      - : This option asks the browser to retrieve a [federated identity credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types#federated_identity_credentials) as an {{domxref("IdentityCredential")}} object, using the [Federated Credential Management API](/en-US/docs/Web/API/FedCM_API).
 
-### `federated` object structure
+        This option's value is an {{domxref("IdentityCredentialRequestOptions")}} object containing details of the specific identity providers that the website wants to use.
 
-`federated` will contain the following properties:
+    - `federated` {{optional_inline}}
 
-- `protocols`
-  - : An array of strings representing the protocols of the requested credentials' federated identity providers (for example, `"openidconnect"`).
-- `providers`
-  - : An array of strings representing the credentials' federated identity providers (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
+      - : This option asks the browser to retrieve a [federated identity credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types#federated_identity_credentials) as a {{domxref("FederatedCredential")}} object. This interface is now superseded, and developers should prefer to use the `identity` option, if it is available.
 
-### `password` boolean value
+        This option's value is an object with the following properties:
 
-`password` is a single boolean value. If set to `true`, it indicates that the requested credential is a password credential.
+        - `protocols`
+          - : An array of strings representing the protocols of the requested credentials' federated identity providers (for example, `"openidconnect"`).
+        - `providers`
+          - : An array of strings representing the credentials' federated identity providers (for example `"https://www.facebook.com"` or `"https://accounts.google.com"`).
 
-### Return value
+    - `otp` {{optional_inline}}
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance matching the provided parameters:
+      - : This option asks the browser to retrieve a [one-time password (OTP)](/en-US/docs/Web/API/Credential_Management_API/Credential_types#one-time_passwords) as an {{domxref("OTPCredential")}} object.
 
-- If the provided credential type was a `federated` object, the returned instance will be a {{domxref("FederatedCredential")}}.
-- If the provided credential type was a `password` boolean value of `true`, the returned instance will be a {{domxref("PasswordCredential")}}.
+        This option's value is an array of strings which may only contain the string value `"sms"`.
 
-If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+    - `publicKey` {{optional_inline}}
 
-### Examples
+      - : This option asks the browser to retrieve an [assertion signed using the Web Authentication API](/en-US/docs/Web/API/Credential_Management_API/Credential_types#web_authentication_assertions) as a {{domxref("PublicKeyCredential")}}.
 
-```js
-navigator.credentials
-  .get({
-    protocols: ["openidconnect"],
-    providers: ["https://www.facebook.com", "https://accounts.google.com"],
-  })
-  .then((fedCred) => {
-    console.log(fedCred.provider);
-  });
-```
-
-## Federated Credential Management API
-
-The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
-
-> **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
-
-### `identity` object structure
-
-`identity` can contain the following properties:
-
-- `context` {{optional_inline}}
-  - : An enumerated value specifying the context in which the user is authenticating with FedCM. The browser uses this value to vary the text in its FedCM UI to better suit the context. Possible values are:
-    - `continue`: Suitable for situations where the user is choosing an identity to continue to the next page in the flow, which requires a sign-in. Browsers will provide a text string similar to "Continue to \<page-origin\> with \<IdP\>".
-    - `signin`: Suitable for general situations where the user is signing in with an IdP account they've already used on this origin. Browsers will provide a text string similar to "Sign in to \<page-origin\> with \<IdP\>". This is the default value.
-    - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
-    - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
-- `providers`
-  - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
-    - `configURL`
-      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) section on the _FedCM API_ landing page for more information.
-    - `clientId`
-      - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
-    - `loginHint` {{optional_inline}}
-      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint).
-    - `nonce` {{optional_inline}}
-      - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
+        This option's value is a {{domxref("PublicKeyCredentialRequestOptions")}} object.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+A {{jsxref("Promise")}} that resolves with one of the following subclasses of {{domxref("Credential")}}:
+
+- {{domxref("PasswordCredential")}}
+- {{domxref("IdentityCredential")}}
+- {{domxref("FederatedCredential")}}
+- {{domxref("OTPCredential")}}
+- {{domxref("PublicKeyCredential")}}
+
+If [conditional mediation](#mediation) was specified in the `get()` call, the browser UI dialog is shown and the promise remains pending until the user picks an account to sign-in with from available autofill suggestions:
+
+- If the user then makes a gesture outside of the browser UI dialog, it closes without resolving or rejecting the promise and without causing a user-visible error condition.
+- If the user selects a credential, the relevant {{domxref("PublicKeyCredential")}} is returned to the caller.
+
+If a single credential cannot be unambiguously obtained, the promise resolves with `null`.
 
 ### Exceptions
 
+- `AbortError` {{domxref("DOMException")}}
+
+  - : The request was aborted by a call to the {{domxref("AbortController.abort", "abort()")}} method of the {{domxref("AbortController")}} associated with this method's [`signal`](#signal) option.
+
+- `IdentityCredentialError` {{domxref("DOMException")}}
+
+  - : When requesting an {{domxref("IdentityCredential")}}, the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about the reason.
+
 - `NetworkError` {{domxref("DOMException")}}
-  - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
+
+  - : When requesting an {{domxref("IdentityCredential")}}, the {{glossary("identity provider")}} (IdP) did not respond within 60 seconds, the provided credentials were not valid/found, or the browser's login status for the IdP is set to `"logged-out"` (see [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status). In the latter case, there may be some delay in the rejection to avoid leaking the IdP login status to the RP.
+
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
-### Examples
+  - : Thrown in one of the following situations:
 
-Relying parties can call `get()` with the `identity` option to make a request for users to login to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
+    - The user canceled the request.
+
+    - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
+
+      - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}
+      - {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}
+      - {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}}
+
+    - The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Headers/Origin#null).
+
+- `SecurityError` {{domxref("DOMException")}}
+
+  - : The calling domain is not a valid domain.
+
+## Examples
+
+### Retrieving a federated identity credential
+
+Relying parties can call `get()` with the `identity` option to make a request for users to sign in to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
 
 ```js
 async function signIn() {
@@ -155,7 +162,7 @@ async function signIn() {
 }
 ```
 
-Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
 A similar call including the `context` and `loginHint` extensions would look like so:
 
@@ -177,169 +184,31 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
-
-## WebOTP API
-
-The [WebOTP API](/en-US/docs/Web/API/WebOTP_API) lets a web client request an OTP from an SMS sent by the web app's server. This capability is intended to streamline usage of OTPs in web apps, for example when using phone numbers as additional factors in sign-in flows. The OTP is retrieved from the SMS and can be set as a verification input value automatically after the user gives consent, avoiding the need for the user to manually go into their SMS app and copy and paste it.
-
-### `otp` object structure
-
-`otp` will contain the following properties:
-
-- `transport`
-  - : An array of strings representing transport hints for how the OTP should ideally be transmitted. This will always contain a single hint — `"sms"`. Unknown values will be ignored.
-
-### Return value
-
-A {{jsxref("Promise")}} that resolves with an {{domxref("OTPCredential")}} object instance.
-
-### Exceptions
-
-- `AbortError` {{domxref("DOMException")}}
-  - : The `get()` operation is associated with an {{domxref("AbortSignal")}} (i.e., set in the `signal` property) that has already been aborted.
-- `SecurityError` {{domxref("DOMException")}}
-  - : Either the usage is blocked by a {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) or the calling domain is not a valid domain.
-
-### Examples
-
-The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted, then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
+If the IdP is unable to validate a request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) it will reject the promise returned from `CredentialsContainer.get()`:
 
 ```js
-navigator.credentials
-  .get({
-    otp: { transport: ["sms"] },
-    signal: ac.signal,
-  })
-  .then((otp) => {
-    input.value = otp.code;
-    if (form) form.submit();
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+async function signIn() {
+  try {
+    const identityCredential = await navigator.credentials.get({
+      identity: {
+        providers: [
+          {
+            configURL: "https://accounts.idp.example/config.json",
+            clientId: "********",
+            nonce: "******",
+          },
+        ],
+      },
+    });
+  } catch (e) {
+    // Handle the error in some way, for example provide information
+    // to help the user succeed in a future sign-in attempt
+    console.error(e);
+  }
+}
 ```
 
-> **Note:** For a full explanation of the code, see the {{domxref('WebOTP API','','',' ')}} landing page. You can also [see this code as part of a full working demo](https://web-otp.glitch.me/).
-
-## Web Authentication API
-
-The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure multi-authentication (MFA) without SMS texts. Check out the linked API landing page for more usage information.
-
-> **Note:** Usage of `get()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
-
-### `publicKey` object structure
-
-`publicKey` can contain the following properties:
-
-- `allowCredentials` {{optional_inline}}
-
-  - : An array of objects defining a restricted list of the acceptable credentials for retrieval. Each object will contain the following properties:
-
-    - `id`
-
-      - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} representing the ID of the public key credential to retrieve. This value is mirrored by the {{domxref("PublicKeyCredential.rawId", "rawId")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
-
-    - `transports`
-
-      - : An array of strings providing hints as to the methods the client could use to communicate with the relevant authenticator of the public key credential to retrieve. Possible transports are: `"ble"`, `"hybrid"`, `"internal"`, `"nfc"`, and `"usb"`.
-
-        > **Note:** This value is mirrored by the return value of the {{domxref("AuthenticatorAttestationResponse.getTransports", "PublicKeyCredential.response.getTransports()")}} method of the {{domxref("PublicKeyCredential")}} object returned by the `create()` call that originally created the credential.
-        > At that point, it should be stored by the app for later use.
-
-    - `type`
-      - : A string defining the type of the public key credential to retrieve. This can currently take a single value, `"public-key"`, but more values may be added in the future. This value is mirrored by the {{domxref("Credential.type", "type")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
-
-    If `allowCredentials` is omitted, it will default to an empty array, meaning that any credential is potentially acceptable for retrieval without the relying party first providing an ID.
-
-- `attestation` {{optional_inline}}
-
-  - : A string specifying the relying party's preference for how the attestation statement (i.e., provision of verifiable evidence of the authenticity of the authenticator and its data) is conveyed during authentication. The value can be one of the following:
-
-    - `"none"`
-
-      - : Specifies that the relying party is not interested in authenticator attestation. This might be to avoid additional user consent for round trips to the relying party server to relay identifying information, or round trips to an attestation certificate authority (CA), with the aim of making the authentication process smoother. If `"none"` is chosen as the `attestation` value, and the authenticator signals that it uses a CA to generate its attestation statement, the client app will replace it with a "None" attestation statement, indicating that no attestation statement is available.
-
-    - `"direct"`
-
-      - : Specifies that the relying party wants to receive the attestation statement as generated by the authenticator.
-
-    - `"enterprise"`
-
-      - : Specifies that the relying party wants to receive an attestation statement that may include uniquely identifying information. This is intended for controlled deployments within an enterprise where the organization wishes to tie registrations to specific authenticators.
-
-    - `"indirect"`
-      - : Specifies that the relying party wants to receive a verifiable attestation statement, but it will allow the client to decide how to receive it. For example, the client could choose to replace the authenticator's assertion statement with one generated by an anonymization CA to protect user privacy.
-
-    If `attestation` is omitted, it will default to `"none"`.
-
-- `attestationFormats` {{optional_inline}}
-
-  - : An array of strings specifying the relying party's preference for the attestation statement format used by the authenticator. Values should be ordered from highest to lowest preference, and should be considered hints — the authenticator may choose to issue an attestation statement in a different format. For a list of valid formats, see [WebAuthn Attestation Statement Format Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-attestation-statement-format-ids).
-
-    If omitted, `attestationFormats` defaults to an empty array.
-
-- `challenge`
-
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, or {{jsxref("DataView")}} originating from the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of the {{domxref("AuthenticatorAssertionResponse.signature")}} (available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call).
-
-- `extensions` {{optional_inline}}
-
-  - : An object containing properties representing the input values for any requested extensions. These extensions are used to specific additional processing by the client or authenticator during the authentication process. Examples include dealing with legacy FIDO API credentials, and evaluating outputs from a pseudo-random function (PRF) associated with a credential.
-
-    Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on using extensions, and which ones are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
-
-- `rpId` {{optional_inline}}
-
-  - : A string that specifies the relying party's identifier (for example `"login.example.org"`). For security purposes:
-
-    - The calling web app verifies that `rpId` matches the relying party's origin.
-    - The authenticator verifies that `rpId` matches the `rpId` of the credential used for the authentication ceremony.
-
-    If `rpId` is omitted, it will default to the current origin's domain.
-
-- `timeout` {{optional_inline}}
-
-  - : A numerical hint, in milliseconds, indicating the time the relying party is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
-
-- `userVerification` {{optional_inline}}
-
-  - : A string specifying the relying party's requirements for user verification of the authentication process. This verification is initiated by the authenticator, which will request the user to provide an available factor (for example a PIN or a biometric input of some kind).
-
-    The value can be one of the following:
-
-    - `"required"`
-      - : The relying party requires user verification, and the operation will fail if it does not occur.
-    - `"preferred"`
-      - : The relying party prefers user verification if possible, but the operation will not fail if it does not occur.
-    - `"discouraged"`
-      - : The relying party does not want user verification, in the interests of making user interaction as smooth as possible.
-
-    If `userVerification` is omitted, it will default to `"preferred"`.
-
-- `hints` {{optional_inline}}
-
-  - : An array of strings providing hints as to what authentication UI the user-agent should provide for the user.
-
-    The values can be any of the following:
-
-    - `"security-key"`
-      - : Authentication requires a separate dedicated physical device to provide the key.
-    - `"client-device"`
-      - : The user authenticates using their own device, such as a phone.
-    - `"hybrid"`
-      - : Authentication relies on a combination of authorization/authentication methods, potentially relying on both user and server-based mechanisms.
-
-### Return value
-
-A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
-
-### Exceptions
-
-- `SecurityError` {{domxref("DOMException")}}
-  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-
-### Examples
+### Retrieving a public key credential
 
 The following snippet shows a typical `get()` call with the WebAuthn `publicKey` option:
 
@@ -379,7 +248,26 @@ navigator.credentials.get({ publicKey }).then((publicKeyCredential) => {
 
 Some of this data will need to be stored on the server — for example the `signature` to provide proof that authenticator possesses the genuine private key used to create the credential, and the `userHandle` to link the user with the credential, sign in attempt, and other data.
 
-> **Note:** See [Authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) for more information about how the overall flow works.
+See [Authenticating a user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) for more information about how the overall flow works.
+
+### Retrieving a one-time password
+
+The code below triggers the browser's permission flow when an SMS message arrives. If permission is granted, then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
+
+```js
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+```
 
 ## Specifications
 

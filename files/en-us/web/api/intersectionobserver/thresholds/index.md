@@ -30,7 +30,8 @@ If no `threshold` option was included when
 `IntersectionObserver()` was used to instantiate the observer, the value of
 `thresholds` is `[0]`.
 
-> **Note:** Although the `options` object you can specify when creating an
+> [!NOTE]
+> Although the `options` object you can specify when creating an
 > {{domxref("IntersectionObserver")}} has a field named
 > `threshold`, this property is called
 > `thresholds`. Confusing? Yes. If you accidentally use

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onNavigated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user navigates the inspected window to a new page.
 
@@ -53,7 +53,8 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

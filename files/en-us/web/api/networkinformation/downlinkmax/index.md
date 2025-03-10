@@ -8,22 +8,17 @@ status:
 browser-compat: api.NetworkInformation.downlinkMax
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`NetworkInformation.downlinkMax`** read-only property
-returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
-connection technology.
-
-{{AvailableInWorkers}}
+The **`downlinkMax`** read-only property of the {{domxref("NetworkInformation")}} interface returns the maximum downlink speed, in megabits per second (Mbps), for the underlying connection technology.
 
 ## Value
 
-An `unrestricted double` representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
+An number representing the maximum downlink speed, in megabits per second (Mb/s), for the underlying connection technology.
 
 ## Examples
 
-The following example monitors the connection using the `change` event and
-logs changes as they occur.
+The following example monitors the connection using the `change` event and logs changes as they occur.
 
 ```js
 function logConnectionType() {

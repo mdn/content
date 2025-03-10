@@ -8,11 +8,9 @@ browser-compat:
 spec-urls: https://w3c.github.io/web-locks/
 ---
 
-{{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **Web Locks API** allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
-
-{{AvailableInWorkers}}
 
 ## Concepts and Usage
 
@@ -45,7 +43,7 @@ The API provides optional functionality that may be used as needed, including:
 
 Locks are scoped to origins; the locks acquired by a tab from `https://example.com` have no effect on the locks acquired by a tab from `https://example.org:8080` as they are separate origins.
 
-The main entry point is `navigator.locks.request()` which requests a lock. It takes a lock name, an optional set of options, and a callback. The callback is invoked when the lock is granted. The lock is automatically released when the callback returns, so usually the callback is an _async function_, which causes the lock to be released only when the async function has completely finished.
+The main entry point is {{domxref("LockManager.request", "navigator.locks.request()")}} which requests a lock. It takes a lock name, an optional set of options, and a callback. The callback is invoked when the lock is granted. The lock is automatically released when the callback returns, so usually the callback is an _async function_, which causes the lock to be released only when the async function has completely finished.
 
 The `request()` method itself returns a promise which resolves once the lock has been released;
 within an async function, a script can `await` the call to make the asynchronous code flow linearly.
@@ -77,7 +75,7 @@ Several options can be passed when requesting a lock:
 
 ### Monitoring
 
-The `navigator.locks.query()` method can be used by scripts to introspect the state of the lock manager for the origin. This can be useful when debugging, for example, identifying why a lock could not be acquired. The results are a snapshot of the lock manager state, which identifies held and requested locks and some additional data (e.g. mode) about each, at the time the snapshot was taken.
+The {{domxref("LockManager.query", "navigator.locks.query()")}} method can be used by scripts to introspect the state of the lock manager for the origin. This can be useful when debugging, for example, identifying why a lock could not be acquired. The results are a snapshot of the lock manager state, which identifies held and requested locks and some additional data (e.g. mode) about each, at the time the snapshot was taken.
 
 ### Advanced use
 
@@ -85,17 +83,13 @@ For more complicated cases, such as holding the lock for an arbitrary amount of 
 
 ```js
 // Capture promise control functions:
-let resolve, reject;
-const p = new Promise((res, rej) => {
-  resolve = res;
-  reject = rej;
-});
+const { promise, resolve, reject } = Promise.withResolvers();
 
 // Request the lock:
 navigator.locks.request(
   "my_resource",
   // Lock is acquired.
-  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+  (lock) => promise, // Now lock will be held until either resolve() or reject() is called.
 );
 ```
 
@@ -108,14 +102,14 @@ A deadlock occurs when a process can no longer make progress because each part i
 - {{domxref("Lock")}}
   - : Provides the name and mode of a previously requested lock, which is received in the callback to {{domxref("LockManager.request()")}}.
 - {{domxref("LockManager")}}
-  - : Provides methods for requesting a new {{domxref("Lock")}} object and querying for an existing Lock object. To get an instance of LockManager, call {{domxref("navigator.locks")}}.
+  - : Provides methods for requesting a new {{domxref("Lock")}} object and querying for an existing {{domxref('Lock')}} object. To get an instance of {{domxref("LockManager")}}, call {{domxref("navigator.locks")}}.
 
 ### Extensions to other interfaces
 
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("WorkerNavigator.locks")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
+  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 
 ## Specifications
 

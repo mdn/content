@@ -7,9 +7,30 @@ browser-compat: css.types.clamp
 
 {{CSSRef}}
 
-The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
+The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
-{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
+{{InteractiveExample("CSS Demo: clamp()")}}
+
+```css interactive-example-choice
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1.5rem, 2.5vw, 4rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1rem, 10vw, 2rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    The font-size of this text varies depending on the base font of the page,
+    and the size of the viewport.
+  </div>
+</section>
+```
 
 Note that using `clamp()` for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) but in one line, and without the use of media queries.
 
@@ -58,7 +79,7 @@ Keep the following aspects in mind while working with the function:
 
 Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -66,7 +87,7 @@ Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;
 
 ### min(), max(), and clamp() comparison
 
-In this example we have a web page that uses {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} to set sizes responsively.
+In this example we have a web page that uses {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and `clamp()` to set sizes responsively.
 
 The example adjusts the sizes of page elements in three ways:
 
@@ -74,7 +95,7 @@ The example adjusts the sizes of page elements in three ways:
 - the font size of paragraph text
 - the font size of heading text
 
-In all three cases, the page uses a combination of a viewport-relative units ([`vw`](/en-US/docs/Web/CSS/length#vw) and [`<percentage>`](/en-US/docs/Web/CSS/percentage)), to set a size that varies with the viewport width, and a value that is not viewport relative ([`rem`](/en-US/docs/Web/CSS/length#rem) and [`px`](/en-US/docs/Web/CSS/length#px)) to implement minimum and/or maximum sizes.
+In all three cases, the page uses a combination of a viewport-relative units ([`vw`](/en-US/docs/Web/CSS/length#vw) and {{cssxref("percentage")}}), to set a size that varies with the viewport width, and a value that is not viewport relative ([`rem`](/en-US/docs/Web/CSS/length#rem) and [`px`](/en-US/docs/Web/CSS/length#px)) to implement minimum and/or maximum sizes.
 
 The example is at <https://mdn.github.io/css-examples/min-max-clamp/>. Open it in a new window and try adjusting the window width.
 
@@ -153,4 +174,4 @@ p {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("max", "max()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

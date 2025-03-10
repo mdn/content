@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AbortSignal.reason
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.
 

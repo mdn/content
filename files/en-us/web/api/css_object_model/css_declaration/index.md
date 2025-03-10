@@ -5,7 +5,7 @@ page-type: guide
 spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
 
-{{ APIRef("CSSOM") }}
+{{DefaultAPISidebar("CSSOM")}}
 
 A **CSS declaration** is an abstract concept not exposed as an object in the DOM. It represents a CSS property and value pairing.
 

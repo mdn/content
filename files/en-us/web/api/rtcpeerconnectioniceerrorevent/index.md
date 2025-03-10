@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCPeerConnectionIceErrorEvent
 ---
 
-{{DefaultAPISidebar("WebRTC API")}}
+{{APIRef("WebRTC")}}
 
 The **`RTCPeerConnectionIceErrorEvent`** interface—based upon the {{domxref("Event")}} interface—provides details pertaining to an {{Glossary("ICE")}} error announced by sending an {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}} event to the {{domxref("RTCPeerConnection")}} object.
 
@@ -23,7 +23,7 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 - {{domxref("RTCPeerConnectionIceErrorEvent.address", "address")}} {{ReadOnlyInline}}
   - : A string providing the local IP address used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server being used to negotiate the connection, or `null` if the local IP address has not yet been exposed as part of a local ICE candidate.
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} {{ReadOnlyInline}}
-  - : An unsigned integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server. If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes. The 701 error is fired only once per server URL, and only while the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} is `gathering`.
+  - : An unsigned integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server. If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes. The 701 error is fired only once per server URL, and only while the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`.
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
   - : A string containing the STUN reason text returned by the STUN or TURN server. If communication with the STUN or TURN server couldn't be established at all, this string will be a browser-specific string explaining the error.
 - {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}

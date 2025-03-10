@@ -6,70 +6,83 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-An HTTP {{HTTPHeader("Range")}} request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download.
+An HTTP {{HTTPHeader("Range")}} request asks the server to send parts of a resource back to a client.
+Range requests are useful for various clients, including media players that support random access, data tools that require only part of a large file, and download managers that let users pause and resume a download.
 
 ## Checking if a server supports partial requests
 
-If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than "`none`", then the server supports range requests. You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
+If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header with any value other than `none`, the server supports range requests.
+If responses omit the `Accept-Ranges` header, it indicates the server doesn't support partial requests.
+If range requests are not supported, applications can adapt to this condition; for instance, download managers can disable pause buttons that relied on range requests to resume a download.
+
+To check if a server supports range requests, you can issue a {{HTTPMethod("HEAD")}} request to inspect headers without requesting the resource in full.
+If you use [curl](https://curl.se/), you can use the `-I` flag to make a `HEAD` request:
 
 ```bash
-curl -I http://i.imgur.com/z4d4kWk.jpg
+curl -I https://i.imgur.com/z4d4kWk.jpg
 ```
+
+This will produce the following HTTP request:
 
 ```http
-HTTP/1.1 200 OK
-…
-Accept-Ranges: bytes
-Content-Length: 146515
+HEAD /z4d4kWk.jpg HTTP/2
+Host: i.imgur.com
+User-Agent: curl/8.7.1
+Accept: */*
 ```
 
-In this response, `Accept-Ranges: bytes` indicates that bytes can be used as units to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
-
-If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites include the header but give it the explicit value "`none`" to indicate they lack support:
-
-```bash
-curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
-```
+The response only contains headers and doesn't include a response body:
 
 ```http
-HTTP/1.1 200 OK
+HTTP/2 200
+content-type: image/jpeg
+last-modified: Thu, 02 Feb 2017 11:15:53 GMT
 …
-Accept-Ranges: none
+accept-ranges: bytes
+content-length: 146515
 ```
 
-A download manager might disable its pause button in that case.
+In this response, `Accept-Ranges: bytes` indicates that 'bytes' can be used as units to define a range (currently, no other unit is possible).
+The {{HTTPHeader("Content-Length")}} header is also helpful as it indicates the total size of the image if you were to make the same request using the `GET` method instead.
 
 ## Requesting a specific range from a server
 
-If the server supports range requests, then by including the {{HTTPHeader("Range")}} header in your HTTP request, you can specify which part or parts of the document you want the server to return.
+If the server supports range requests, you can specify which part (or parts) of the document you want the server to return by including the {{HTTPHeader("Range")}} header in a HTTP request.
 
 ### Single part ranges
 
-We can request a single range from a resource. Again, we can test a request by using cURL. The "`-H`" option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
+We can request a single range from a resource using curl for illustration.
+The `-H` option appends a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
+The last option is `--output -` which will allow printing the binary output to the terminal:
 
 ```bash
-curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"
+curl https://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023" --output -
 ```
 
 The issued request looks like this:
 
 ```http
-GET /z4d4kWk.jpg HTTP/1.1
+GET /z4d4kWk.jpg HTTP/2
 Host: i.imgur.com
+User-Agent: curl/8.7.1
+Accept: */*
 Range: bytes=0-1023
 ```
 
-The server responses with the {{HTTPStatus("206")}} `Partial Content` status:
+The server responds with a {{HTTPStatus("206", "206 Partial Content")}} status:
 
 ```http
-HTTP/1.1 206 Partial Content
-Content-Range: bytes 0-1023/146515
-Content-Length: 1024
+HTTP/2 206
+content-type: image/jpeg
+content-length: 1024
+content-range: bytes 0-1023/146515
 …
+
 (binary content)
 ```
 
-The {{HTTPHeader("Content-Length")}} header now indicates the size of the requested range (and not the full size of the image). The {{HTTPHeader("Content-Range")}} response header indicates where in the full resource this partial message belongs.
+The {{HTTPHeader("Content-Length")}} header indicates the size of the requested range, not the full size of the image.
+The {{HTTPHeader("Content-Range")}} response header indicates where this partial message belongs within the full resource.
 
 ### Multipart ranges
 
@@ -79,7 +92,9 @@ The {{HTTPHeader("Range")}} header also allows you to get multiple ranges at onc
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-The server responses with the {{HTTPStatus("206")}} `Partial Content` status and a {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` header, indicating that a multipart byterange follows. Each part contains its own `Content-Type` and `Content-Range` fields and the required boundary parameter specifies the boundary string used to separate each body-part.
+The server responds with the {{HTTPStatus("206", "206 Partial Content")}} status as shown below.
+The response contains a {{HTTPHeader("Content-Type")}} header, indicating that a multipart byterange follows.
+The boundary string (`3d6b6a416f9b5` in this case) separates the body parts, each of which has its own `Content-Type` and `Content-Range` fields:
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -90,7 +105,7 @@ Content-Length: 282
 Content-Type: text/html
 Content-Range: bytes 0-50/1270
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 <head>
     <title>Example Do

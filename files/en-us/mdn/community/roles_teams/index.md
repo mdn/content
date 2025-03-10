@@ -1,12 +1,12 @@
 ---
 title: MDN Web Docs roles and teams
+short-title: Roles and teams
 slug: MDN/Community/Roles_teams
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's current members can be found at [github.com/orgs/mdn](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
@@ -36,8 +36,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 - Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
-- Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
-  If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
+- Submitting bug reports. Check out [the main repositories](/en-US/docs/MDN/Community/Our_repositories) for more information.
 - Commenting on issues to move conversations towards a fruitful resolution.
 - Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.
@@ -47,7 +46,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 To be a contributor, you must follow:
 
-- [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)
+- [Mozilla's code of conduct](https://www.mozilla.org/en-US/about/governance/policies/participation/)
 - Contribution guidelines (check the `CONTRIBUTING.md` file in each repository; for example, these are the [contribution guidelines](https://github.com/mdn/content/blob/main/CONTRIBUTING.md) for the `mdn/content` repository).
 
 **Privileges:**
@@ -110,7 +109,8 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating-a-maintainer).
+> [!NOTE]
+> If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -121,7 +121,8 @@ Maintainers have the permissions to approve and merge pull requests.
 Owners have wide permissions to manage users and [GitHub teams](https://github.com/orgs/mdn/teams), maintain access across repositories in the [MDN organization](https://github.com/mdn), maintain repository settings, and deploy to production.
 Owners are bound by all the requirements of other contributor roles.
 
-> **Note:** The role of an owner is currently limited to Mozilla staff.
+> [!NOTE]
+> The role of an owner is currently limited to Mozilla staff.
 
 **Requirements:**
 
@@ -132,7 +133,7 @@ In addition to the responsibilities of other contributor roles, owners have the 
 - Suggesting, documenting, and implementing new policies through the [pull request process](/en-US/docs/MDN/Community/Pull_requests).
 - Following and contributing to issues and discussions across the MDN organization.
 - Ensuring that an issue or pull request gets feedback from one or more members within one week.
-- [Archiving](https://help.github.com/articles/about-archiving-repositories/) or deleting unmaintained repositories.
+- [Archiving](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) or deleting unmaintained repositories.
 - Discussing GitHub features, selecting the ones to use, and documenting decisions.
 
 **Privileges:**
@@ -202,7 +203,7 @@ Community managers have a distinct role in many respects.
 Community managers share many of the same responsibilities as a [maintainer](#maintainer).
 In addition, community managers have the following responsibilities:
 
-- Addressing reports of violation of [Mozilla's code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) and deciding on the appropriate action.
+- Addressing reports of violation of our [code of conduct](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) which is [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) and deciding on the appropriate action.
 - Organizing and running community events.
 - Organizing community-related project meetings.
 - Determining media strategies to promote the MDN project.
@@ -276,7 +277,7 @@ Life happens and your commitment levels as a contributor could change over time.
 - Downgrade to a less-demanding role.
 - Step away from the project completely (apply for an emeritus status).
 
-In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact-the-mdn-team).
+In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact_the_mdn_team).
 
 ### Demoting or removing inactive contributors
 
@@ -295,7 +296,7 @@ We define inactivity as:
 
 Inactivity harms the project; it may lead to unexpected delays, contributor attrition, and a loss of trust in the project. Contributors must be active to set an example and show commitment to the project.
 
-Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping-down-or-applying-for-emeritus-status).
+Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping_down_or_applying_for_emeritus_status).
 
 ## Teams
 

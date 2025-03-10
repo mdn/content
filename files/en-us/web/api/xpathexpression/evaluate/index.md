@@ -9,7 +9,7 @@ browser-compat: api.XPathExpression.evaluate
 {{APIRef("DOM XPath")}}
 
 The **`evaluate()`** method of the
-{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XPath) expression on the given node or document and
+{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XML/XPath) expression on the given node or document and
 returns an {{domxref("XPathResult")}}.
 
 ## Syntax
@@ -53,7 +53,7 @@ In case result cannot be converted to the specified type, an
 #### NAMESPACE_ERR
 
 If the expression contains namespace prefixes which cannot be resolved by the specified
-{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`XPathNSResolver`, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
 #### WRONG_DOCUMENT_ERR

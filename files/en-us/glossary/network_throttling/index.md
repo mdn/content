@@ -14,4 +14,5 @@ Browser developer tools generally have network throttling options, to allow you 
 
 ## See also
 
-- [Synthetic monitoring](/en-US/docs/Glossary/Synthetic_monitoring)
+- Related glossary terms:
+  - {{Glossary("Synthetic monitoring")}}

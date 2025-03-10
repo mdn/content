@@ -11,9 +11,8 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the
 {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-To set allowed types for {{HTMLElement("object")}} and {{HTMLElement("embed")}}, use the {{CSP("plugin-types")}} directive.
-
-> **Note:** Elements controlled by `object-src` are perhaps coincidentally
+> [!NOTE]
+> Elements controlled by `object-src` are perhaps coincidentally
 > considered legacy HTML elements and aren't receiving new standardized features (such as
 > the security attributes `sandbox` or `allow` for
 > `<iframe>`). Therefore it is [recommended](https://csp.withgoogle.com/docs/strict-csp.html) to restrict
@@ -41,18 +40,22 @@ To set allowed types for {{HTMLElement("object")}} and {{HTMLElement("embed")}},
 
 ## Syntax
 
-One or more sources can be allowed for the `object-src` policy:
-
 ```http
-Content-Security-Policy: object-src <source>;
-Content-Security-Policy: object-src <source> <source>;
+Content-Security-Policy: object-src 'none';
+Content-Security-Policy: object-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
@@ -83,4 +86,3 @@ The following {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements ar
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}}
-- {{CSP("plugin-types")}}

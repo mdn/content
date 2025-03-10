@@ -2,6 +2,10 @@
 title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
 page-type: guide
+spec-urls:
+  - https://www.rfc-editor.org/rfc/rfc6455
+  - https://www.rfc-editor.org/rfc/rfc7230
+  - https://www.rfc-editor.org/rfc/rfc7540
 ---
 
 {{HTTPSidebar}}
@@ -45,7 +49,8 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Note:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!NOTE]
+> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
@@ -79,7 +84,7 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key confirms that "Yes, I really mean to open a WebSocket connection."
 
-This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
+This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
 
 ```http
 Sec-WebSocket-Key: key
@@ -140,12 +145,15 @@ Sec-WebSocket-Accept: hash
 - `hash`
   - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/en-US/docs/Glossary/Base64) encoded to obtain the value of this property.
 
-## References
+## Specifications
+
+{{specifications}}
+
+## See also
 
 - [WebSocket API](/en-US/docs/Web/API/WebSocket)
-- [HTTP](/en-US/docs/Web/HTTP)
-- Specifications and RFCs:
-
-  - {{RFC(7230)}}
-  - {{RFC(6455)}}
-  - {{RFC(7540)}}
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}

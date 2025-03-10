@@ -6,11 +6,12 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamBYOBReader()`** constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 
-> **Note:** You generally wouldn't use this constructor manually;
+> [!NOTE]
+> You generally wouldn't use this constructor manually;
 > instead, you'd use the {{domxref("ReadableStream.getReader()")}} method with the argument `"byob"`.
 
 ## Syntax

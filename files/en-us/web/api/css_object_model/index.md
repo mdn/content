@@ -19,7 +19,6 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("AnimationEvent")}}
 - {{DOMxRef("CaretPosition")}}
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSCharsetRule")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
 - {{DOMxRef("CSSFontFaceRule")}}
@@ -33,18 +32,19 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSMediaRule")}}
 - {{DOMxRef("CSSNamespaceRule")}}
 - {{DOMxRef("CSSPageRule")}}
+- {{DOMxRef("CSSPositionTryRule")}}
+- {{DOMxRef("CSSPositionTryDescriptors")}}
 - {{DOMxRef("CSSRule")}}
 - {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSStartingStyleRule")}}
 - {{DOMxRef("CSSStyleDeclaration")}}
 - {{DOMxRef("CSSStyleSheet")}}
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("CSSVariablesMap")}}
-- {{DOMxRef("CSSViewportRule")}}
+- {{DOMXRef("CSSNestedDeclarations")}}
 - {{DOMxRef("FontFace")}}
 - {{DOMxRef("FontFaceSet")}}
 - {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("GetStyleUtils")}}
 - {{DOMxRef("MediaList")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}
@@ -52,41 +52,40 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("StyleSheet")}}
 - {{DOMxRef("StyleSheetList")}}
 - {{DOMxRef("TransitionEvent")}}
+- {{DOMxRef("VisualViewport")}}
 
 Several other interfaces are also extended by the CSSOM-related specifications: {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, and {{DOMxRef("SVGElement")}}.
 
-### CSS Typed Object Model {{Experimental_Inline}}
+### CSS Typed Object Model
 
-{{SeeCompatTable}}
-
-- {{DOMxRef("CSSImageValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSKeywordValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathInvert")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMax")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMin")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathNegate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathProduct")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathSum")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMatrixComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericArray")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPerspective")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPositionValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSRotate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSScale")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkew")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewX")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewY")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSStyleValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTranslate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnitValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnparsedValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSVariableReferenceValue")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMap")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMapReadOnly")}} {{Experimental_Inline}}
+- {{DOMxRef("CSSImageValue")}}
+- {{DOMxRef("CSSKeywordValue")}}
+- {{DOMxRef("CSSMathInvert")}}
+- {{DOMxRef("CSSMathMax")}}
+- {{DOMxRef("CSSMathMin")}}
+- {{DOMxRef("CSSMathNegate")}}
+- {{DOMxRef("CSSMathProduct")}}
+- {{DOMxRef("CSSMathSum")}}
+- {{DOMxRef("CSSMathValue")}}
+- {{DOMxRef("CSSMatrixComponent")}}
+- {{DOMxRef("CSSNumericArray")}}
+- {{DOMxRef("CSSNumericValue")}}
+- {{DOMxRef("CSSPerspective")}}
+- {{DOMxRef("CSSPositionValue")}}
+- {{DOMxRef("CSSRotate")}}
+- {{DOMxRef("CSSScale")}}
+- {{DOMxRef("CSSSkew")}}
+- {{DOMxRef("CSSSkewX")}}
+- {{DOMxRef("CSSSkewY")}}
+- {{DOMxRef("CSSStyleValue")}}
+- {{DOMxRef("CSSTransformComponent")}}
+- {{DOMxRef("CSSTransformValue")}}
+- {{DOMxRef("CSSTranslate")}}
+- {{DOMxRef("CSSUnitValue")}}
+- {{DOMxRef("CSSUnparsedValue")}}
+- {{DOMxRef("CSSVariableReferenceValue")}}
+- {{DOMxRef("StylePropertyMap")}}
+- {{DOMxRef("StylePropertyMapReadOnly")}}
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
 
@@ -98,7 +97,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 ## Tutorials
 
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (it needs some updating as it was made in the DHTML/Ajax era)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Specifications
@@ -112,4 +111,4 @@ All these features have been added little by little over the years to the differ
 ## See also
 
 - [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)
-- [Houdini](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

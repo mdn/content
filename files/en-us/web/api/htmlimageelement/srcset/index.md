@@ -18,12 +18,13 @@ candidate string contains an image URL and an optional width or pixel density de
 that indicates the conditions under which that candidate should be used instead of the
 image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
-The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
-  "sizes")}} property, are a crucial component in designing responsive websites, as they
+The `srcset` property, along with the {{domxref("HTMLImageElement.sizes", "sizes")}}
+property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> [!NOTE]
+> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -76,8 +77,8 @@ candidate, and assign it a default descriptor of `1x`.
 "header640.png 640w, header960.png 960w, header1024.png 1024w"
 ```
 
-This string provides versions of a header image to use when the {{Glossary("user
-  agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px.
+This string provides versions of a header image to use when the {{Glossary("user agent", "user agent's")}}
+renderer needs an image of width 640px, 960px, or 1024px.
 
 Note that if any resource in a `srcset` is described with a "w" descriptor, all
 resources within that `srcset` must also be described with "w" descriptors, and
@@ -113,7 +114,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }
@@ -132,11 +133,13 @@ the URL selected by the browser from the `srcset`.
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "Image: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```
@@ -150,7 +153,7 @@ reloading the page to see the results change.
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Responsive_images).
 
 ## Specifications
 
@@ -162,6 +165,6 @@ For additional examples, see our guide to [responsive images](/en-US/docs/Learn/
 
 ## See also
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

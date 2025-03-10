@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.getViewport
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
@@ -55,9 +55,6 @@ represent one eye's perspective on the scene. Since the framebuffer is split in 
 one half for each eye, setting the WebGL viewport to match the WebXR layer's viewport
 will ensure that when rendering the scene for the current eye's pose, it is rendered
 into the correct half of the framebuffer.
-
-**<<<--- add link to appropriate section in the Cameras and views
-article --->>>**
 
 ```js
 function drawFrame(time, frame) {

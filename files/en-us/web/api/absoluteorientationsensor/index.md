@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.AbsoluteOrientationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation in relation to the Earth's reference coordinate system.
 
@@ -46,7 +46,7 @@ sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener("error", (error) => {
+sensor.addEventListener("error", (event) => {
   if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }

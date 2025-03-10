@@ -7,7 +7,7 @@ browser-compat: svg.elements.stop
 
 {{SVGRef}}
 
-The SVG **`<stop>`** element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
+The **`<stop>`** [SVG](/en-US/docs/Web/SVG) element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
 
 ## Example
 
@@ -45,23 +45,12 @@ svg {
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("stop-color")}}
   - : This attribute defines the color of the gradient stop. It can be used as a CSS property.
-    _Value type_: `currentcolor`|[**\<color>**](/en-US/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/en-US/docs/Web/SVG/Content_type#icccolor); _Default value_: `black`; _Animatable_: **yes**
+    _Value type_: [**\<color>**](/en-US/docs/Web/SVG/Content_type#color); _Default value_: `black`; _Animatable_: **yes**
 - {{SVGAttr("stop-opacity")}}
   - : This attribute defines the opacity of the gradient stop. It can be used as a CSS property.
-    _Value type_: [**\<opacity>**](/en-US/docs/Web/SVG/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
+    _Value type_: [**\<opacity-value>**](/en-US/docs/Web/SVG/Content_type#opacity_value); _Default value_: `1`; _Animatable_: **yes**
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-- [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('stop-color')}}, {{SVGAttr('stop-opacity')}}, {{SVGAttr('visibility')}}
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

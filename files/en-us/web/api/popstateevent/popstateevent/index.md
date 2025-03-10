@@ -10,7 +10,8 @@ browser-compat: api.PopStateEvent.PopStateEvent
 
 The **`PopStateEvent()`** constructor creates a new {{domxref("PopStateEvent")}} object.
 
-> **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/popstate_event", "popstate")}} events.
+> [!NOTE]
+> A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/popstate_event", "popstate")}} events.
 
 ## Syntax
 

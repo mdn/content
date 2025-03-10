@@ -12,7 +12,8 @@ The read-only **`metaKey`** property of the {{domxref("TouchEvent")}} interface 
 
 This property is {{ReadOnlyInline}}.
 
-> **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).
+> [!NOTE]
+> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).
 
 ## Value
 

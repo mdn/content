@@ -9,7 +9,7 @@ browser-compat: api.DataTransfer.clearData
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag
-operation's {{domxref("DataTransfer","drag data")}} for the given type. If data for the
+operation's [drag data](/en-US/docs/Web/API/DataTransfer) for the given type. If data for the
 given type does not exist, this method does nothing.
 
 If this method is called with no arguments or the format is an empty
@@ -19,7 +19,8 @@ This method does _not_ remove files from the drag operation, so it's possible
 for there still to be an entry with the type `"Files"` left in the object's
 {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-> **Note:** This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
+> [!NOTE]
+> This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
 > because that's the only time the drag operation's data store is writable.
 
 ## Syntax
@@ -45,7 +46,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}},
 {{domxref("DataTransfer.setData()","setData()")}} and
-{{domxref("DataTransfer.clearData()","clearData()")}} methods.
+`clearData()` methods.
 
 ### HTML
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRReferenceSpace")}}
 interface's **`getOffsetReferenceSpace()`** method returns a
@@ -77,8 +77,7 @@ In this code, we obtain a local reference space, then
 use `getOffsetReferenceSpace()` to create a new space whose origin is
 adjusted to a position given by `startPosition` and whose orientation is
 looking directly along the Z axis. Then the first animation frame is requested using
-{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame",
-  "requestAnimationFrame()")}}.
+{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ### Implementing rotation based on non-XR inputs
 
@@ -93,7 +92,7 @@ mouse to change the viewing angle.
 
 First, we add an event handler for {{domxref("Element.mousemove_event", "mousemove")}}
 events, which calls our code to perform the rotation if the right mouse button is down.
-Note also that we set {{domxref("Element.oncontextmenu", "oncontextmenu")}} up to be
+Note also that we set {{domxref("Element.contextmenu_event", "oncontextmenu")}} up to be
 ignored by calling {{domxref("Event.preventDefault", "preventDefault()")}} on those
 events. This prevents the right-clicks from causing the context menu from appearing in
 the browser.
@@ -162,7 +161,7 @@ function applyMouseMovement(refSpace) {
 
 This function creates an inverse orientation matrix—used to orient the viewer—from the
 current pitch and yaw values, then uses that matrix as the source of the orientation
-when calling {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}.
+when calling {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}.
 The new {{domxref("XRRigidTransform")}}'s reference space is then fetched and returned
 to the caller.
 

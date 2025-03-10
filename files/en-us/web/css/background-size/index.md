@@ -10,7 +10,42 @@ browser-compat: css.properties.background-size
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.
 The image can be left to its natural size, stretched, or constrained to fit the available space.
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 Spaces not covered by a background image are filled with the {{cssxref("background-color")}} property, and the background color will be visible behind background images that have transparency/translucency.
 
@@ -87,7 +122,8 @@ These attributes are as follows:
 - CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
 - Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
-> **Note:** In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
+> [!NOTE]
+> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
 Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:
 
@@ -103,7 +139,8 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
     The other dimension is computed using the specified dimension and the intrinsic proportions.
   - If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.
 
-  > **Note:** SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
+  > [!NOTE]
+  > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
 
 - **If the `background-size` has one `auto` component and one non-`auto` component:**
 
@@ -113,7 +150,8 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
     The unspecified dimension is computed using the image's corresponding intrinsic dimension, if there is one.
     If there is no such intrinsic dimension, it becomes the corresponding dimension of the background positioning area.
 
-> **Note:** Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers.
+> [!NOTE]
+> Background sizing for vector images that lack intrinsic dimensions or proportions is not yet fully implemented in all browsers.
 > Be careful about relying on the behavior described above, and test in multiple browsers to be sure the results are acceptable.
 
 ## Formal definition
@@ -167,5 +205,5 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 ## See also
 
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

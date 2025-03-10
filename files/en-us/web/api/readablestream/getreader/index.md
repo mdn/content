@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStream.getReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`getReader()`** method of the {{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
 While the stream is locked, no other reader can be acquired until this one is released.

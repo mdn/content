@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoFrame.timestamp
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`timestamp`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the timestamp of the video in microseconds.
 

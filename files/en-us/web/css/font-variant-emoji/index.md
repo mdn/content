@@ -49,6 +49,16 @@ The `font-variant-emoji` property is specified using a single keyword value from
 
 {{CSSSyntax}}
 
+## Accessibility
+
+While the use of emojis may seem fun, you should consider their impact on accessibility, specifically for users with visual and cognitive impairments. Consider the following factors while using emojis:
+
+- Display on screen-readers: Screen-readers will read out the alt text of an emoji. Keep this in mind to consider the position of an emoji in the content. Repeated and overuse of emojis will have a detrimental effect on screen-reader users. It is better to use emojis than emoticons; emoticons will be read out as punctuation characters.
+
+- Contrast with background: When using emojis, consider their colors and how that will work with the background color, especially if you have background colors that can change, such as light/dark modes.
+
+- Intent of use: Do not use emojis to replace words because your understanding of the emoji meaning may differ from that of the users'. Also consider that emojis might have different meanings in different cultures and geographies. Our recommendation is to preferably limit usage to commonly known emojis.
+
 ## Examples
 
 ### Changing the way an emoji is displayed
@@ -58,12 +68,12 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 #### HTML
 
 ```html hidden
-<p class="nosupport">
+<p class="no-support">
   Your Browser does not support <code>font-variant-emoji</code>. This image
   shows how it is rendered with support.
 </p>
 <img
-  class="nosupport"
+  class="no-support"
   src="./font-variant-emoji-example.jpg"
   alt="a telephone emoji show as text, black and white next to a telephone emoji shown as emoji full color and graphical representation" />
 ```
@@ -85,7 +95,7 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 
 ```css hidden
 @supports (font-variant-emoji: emoji) {
-  .nosupport {
+  .no-support {
     display: none;
   }
   .emojis {
@@ -118,16 +128,6 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
 #### Result
 
 {{ EmbedLiveSample('Changing the way an emoji is displayed') }}
-
-## Accessibility concerns
-
-While the use of emojis may seem fun, you should consider their impact on accessibility, specifically for users with visual and cognitive impairments. Consider the following factors while using emojis:
-
-- Display on screen-readers: Screen-readers will read out the alt text of an emoji. Keep this in mind to consider the position of an emoji in the content. Repeated and overuse of emojis will have a detrimental effect on screen-reader users. It is better to use emojis than emoticons; emoticons will be read out as punctuation characters.
-
-- Contrast with background: When using emojis, consider their colors and how that will work with the background color, especially if you have background colors that can change, such as light/dark modes.
-
-- Intent of use: Do not use emojis to replace words because your understanding of the emoji meaning may differ from that of the users'. Also consider that emojis might have different meanings in different cultures and geographies. Our recommendation is to preferably limit usage to commonly known emojis.
 
 ## Specifications
 

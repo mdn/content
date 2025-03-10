@@ -18,7 +18,8 @@ Examples include:
 
 {{InheritanceDiagram}}
 
-> **Note:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Instance properties
 

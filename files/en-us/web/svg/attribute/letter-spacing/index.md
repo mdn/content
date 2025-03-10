@@ -2,18 +2,19 @@
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.letter-spacing
+browser-compat: svg.global_attributes.letter-spacing
 ---
 
 {{SVGRef}}
 
-The **`letter-spacing`** attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.
+The **`letter-spacing`** attribute controls spacing between text characters.
 
 If the attribute value is a unitless number (like `128`), the browser processes it as a {{cssxref("length")}} in the current user coordinate system.
 
 If the attribute value has a unit identifier, such as `.25em` or `1%`, then the browser converts the \<length> into its corresponding value in the current user coordinate system.
 
-> **Note:** As a presentation attribute, `letter-spacing` can be used as a CSS property. See the {{cssxref("letter-spacing", "CSS letter-spacing")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `letter-spacing` also has a CSS property counterpart: {{cssxref("letter-spacing")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -72,4 +73,4 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## See also
 
-- {{cssxref("letter-spacing", "CSS letter-spacing")}}
+- CSS {{cssxref("letter-spacing")}} property

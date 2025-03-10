@@ -72,7 +72,7 @@ That means if a managed cache intentionally ignores a `no-store` directive, ther
 
 Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) header to standardize those.
 
-![Type of Cache](type-of-cache.png)
+![Types of caches, including a private cache in the browser, a shared (proxy) cache, a reverse proxy cache, and a shared (managed) cache in a CDN, leading to the origin server's cache](https://mdn.github.io/shared-assets/images/diagrams/http/cache/type-of-cache.svg)
 
 ## Heuristic caching
 
@@ -157,11 +157,15 @@ If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defin
 
 The way that responses are distinguished from one another is essentially based on their URLs:
 
-![keyed with url](keyed-with-url.png)
+| URL                              | Response body            |
+| -------------------------------- | ------------------------ |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 But the contents of responses are not always the same, even if they have the same URL. Especially when content negotiation is performed, the response from the server can depend on the values of the `Accept`, `Accept-Language`, and `Accept-Encoding` request headers.
 
-For example, for English content returned with an `Accept-Language: en` header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding "`Accept-Language`" to the value of the `Vary` header.
+For example, for English content returned with an `Accept-Language: en` header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding `Accept-Language` to the value of the `Vary` header.
 
 ```http
 Vary: Accept-Language
@@ -169,9 +173,14 @@ Vary: Accept-Language
 
 That causes the cache to be keyed based on a composite of the response URL and the `Accept-Language` request header — rather than being based just on the response URL.
 
-![keyed with url and language](keyed-with-url-and-language.png)
+| URL                              | `Accept-Language` | Response body            |
+| -------------------------------- | ----------------- | ------------------------ |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
-Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include "`User-Agent`" in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
+Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include `User-Agent` in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
 
 For applications that employ cookies to prevent others from reusing cached personalized content, you should specify `Cache-Control: private` instead of specifying a cookie for `Vary`.
 
@@ -255,7 +264,8 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> [!NOTE]
+> RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
 > During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
 > If you are only considering caching, you may think that `Last-Modified` is unnecessary.
 > However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
@@ -346,7 +356,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -437,7 +447,7 @@ Note that, instead of implementing that directive, [Chrome has changed its imple
 
 ## Deleting stored responses
 
-There is basically no way to delete responses that have already been stored with a long `max-age`.
+There is no way to delete responses on an intermediate server that have been stored with a long `max-age`.
 
 Imagine that the following response from `https://example.com/` was stored.
 
@@ -453,11 +463,10 @@ Cache-Control: max-age=31536000
 
 You may want to overwrite that response once it expired on the server, but there is nothing the server can do once the response is stored — since no more requests reach the server due to caching.
 
-One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST`, but that is usually difficult to intentionally do for many clients.
+One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST`, but for many clients that is difficult to do.
 
-There is also a specification for a `Clear-Site-Data: cache` header and value, but [not all browsers support it](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4) — and even when it's used, it only affects browser caches and has no effect on intermediate caches.
-
-Therefore, it should be assumed that any stored response will remain for its `max-age` period unless the user manually performs a reload, force-reload, or clear-history action.
+The [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) header and directive value can be used to clear browser caches — but has no effect on intermediate caches.
+Otherwise responses will remain in the browser cache until `max-age` expires, unless the user manually performs a reload, force-reload, or clear-history action.
 
 Caching reduces access to the server, which means that the server loses control of that URL. If the server does not want to lose control of a URL — for example, in the case that a resource is frequently updated — you should add `no-cache` so that the server will always receive requests and send the intended responses.
 
@@ -471,7 +480,7 @@ Request collapse occurs when requests are arriving at the same time, so even if 
 
 If the response is personalized to a particular user and you do not want it to be shared in collapse, you should add the `private` directive:
 
-![Request Collapse](request-collapse.png)
+![Request collapse shown as multiple clients sending GET requests and a cache consolidating them into one GET to the origin. The origin server responds with a 200 OK that the cache shares back to all clients.](https://mdn.github.io/shared-assets/images/diagrams/http/cache/request-collapse.svg)
 
 ## Common caching patterns
 
@@ -566,7 +575,8 @@ Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
 The `public` value has the effect of making the response storable even if the `Authorization` header is present.
 
-> **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
+> [!NOTE]
+> The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
 
 So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `38` (1 month).
@@ -609,7 +619,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 **Cache busting** is a technique to make a response cacheable over a long period by changing the URL when the content changes. The technique can be applied to all subresources, such as images.
 
-> **Note:** When evaluating the use of `immutable` and QPACK:
+> [!NOTE]
+> When evaluating the use of `immutable` and QPACK:
 > If you're concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 

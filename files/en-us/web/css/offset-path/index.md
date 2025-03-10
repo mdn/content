@@ -11,7 +11,74 @@ The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for a
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
-{{EmbedInteractiveExample("pages/css/offset-path.html")}}
+{{InteractiveExample("CSS Demo: offset-path")}}
+
+```css interactive-example-choice
+offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+```
+
+```css interactive-example-choice
+offset-path: path("M0,0 L60,70 L-60,30z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  animation: distance 8000ms infinite linear;
+  animation-play-state: paused;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#default-example {
+  position: relative;
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 ## Syntax
 
@@ -33,6 +100,8 @@ offset-path: ellipse(50% 50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
+offset-path: rect(5px 5px 160px 145px round 20%);
+offset-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Coordinate box */
 offset-path: content-box;
@@ -52,7 +121,7 @@ offset-path: unset;
 
 ### Values
 
-The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url","&lt;url&gt;")}} value, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
+The `offset-path` property takes as its value an `<offset-path>` value, a [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values) value, or both, or the `none` keyword. The `<offset-path>` value is a {{cssxref("ray","ray()")}} function, a {{cssxref("url_value", "&lt;url&gt;")}} value, or a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) value.
 
 - `none`
 
@@ -60,19 +129,19 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
 - `<offset-path>`
 
-  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 
     - {{cssxref("ray","ray()")}}
 
       - : Defines a line starting at a set position, of a set length, and extending at the specified angle. The `ray()` function accepts up to four parameters – an {{CSSxRef("angle")}}, an optional size value, the optional keyword `contain`, and an optional `at <position>`.
 
-    - {{cssxref("url","&lt;url&gt;")}}
+    - {{cssxref("url_value", "&lt;url&gt;")}}
 
       - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
-    - [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape)
+    - {{cssxref("basic-shape")}}
 
-      - : Specifies the offset path as the equivalent path of a [CSS basic shape function](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes), such as [`circle()`](/en-US/docs/Web/CSS/basic-shape/circle), [`ellipse()`](/en-US/docs/Web/CSS/basic-shape/ellipse), [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset), {{cssxref("path","path()")}}, or [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon). For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the ellipse, starting at the rightmost point of the ellipse, proceeding clockwise through a full rotation. For `ellipse()` and `circle()`, which accept the `at <position>` parameter, if the `<position>` is omitted, the position defaults to `center` unless the element has an {{cssxref("offset-position")}} specified. In this case, the `offset-position` value is used for the `at <position>` parameter.
+      - : Specifies the offset path as the equivalent path of a [CSS basic shape function](/en-US/docs/Web/CSS/basic-shape), such as {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/path","path()")}}, {{cssxref("basic-shape/polygon","polygon()")}}, {{cssxref("basic-shape/rect","rect()")}}, or {{cssxref("basic-shape/xywh","xywh()")}}. For example, if the `<basic_shape>` is an `ellipse()` function, then the path is the outline of the ellipse, starting at the rightmost point of the ellipse, proceeding clockwise through a full rotation. For `ellipse()` and `circle()`, which accept the `at <position>` parameter, if the `<position>` is omitted, the position defaults to `center` unless the element has an {{cssxref("offset-position")}} specified. In this case, the `offset-position` value is used for the `at <position>` parameter. More complex shapes can be defined using the {{cssxref("basic-shape/shape","shape()")}} function.
 
 - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#values)
 
@@ -213,10 +282,10 @@ In this example, the {{svgelement("svg")}} element creates a house with a chimne
   offset-path: path(
     "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
   );
-  animation: followpath 4s linear infinite;
+  animation: follow-path 4s linear infinite;
 }
 
-@keyframes followpath {
+@keyframes follow-path {
   to {
     offset-distance: 100%;
   }
@@ -294,9 +363,9 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
-- {{cssxref("path","path()")}}
+- {{cssxref("basic-shape/path","path()")}}
 - Other demos:
-  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on Codepen by CSS-Tricks
-  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on Codepen by Eric Willigers
-  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on Codepen by Eric Willigers
+  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks
+  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on CodePen by Eric Willigers
+  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on CodePen by Eric Willigers
   - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) on JSFiddle by Eric Willigers

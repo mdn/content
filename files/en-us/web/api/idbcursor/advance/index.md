@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.IDBCursor.advance
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`advance()`** method of the {{domxref("IDBCursor")}}
 interface sets the number of times a cursor should move
 its position forward.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -34,7 +32,7 @@ None ({{jsxref("undefined")}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if this IDBCursor's transaction is inactive.
+  - : Thrown if this `IDBCursor`'s transaction is inactive.
 - {{jsxref("TypeError")}}
   - : Thrown if the value passed into the `count` parameter was zero or a negative number.
 - `InvalidStateError` {{domxref("DOMException")}}

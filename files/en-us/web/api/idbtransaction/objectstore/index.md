@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.objectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`objectStore()`** method of the
 {{domxref("IDBTransaction")}} interface returns an object store that has already been
@@ -15,8 +15,6 @@ added to the scope of this transaction.
 Every call to this method on the same transaction object, with the same name, returns
 the same {{domxref("IDBObjectStore")}} instance. If this method is called on a different
 transaction object, a different {{domxref("IDBObjectStore")}} instance is returned.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -57,7 +55,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -86,13 +85,13 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML +=
-      "<li>Transaction completed: database modification finished.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed: database modification finished.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -104,7 +103,8 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 }
 ```

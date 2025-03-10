@@ -8,14 +8,12 @@ status:
 browser-compat: api.URLPattern.exec
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`exec()`** method of the {{domxref("URLPattern")}} interface takes a URL or
 object of URL parts, and returns either an object containing the results of
 matching the URL to the pattern, or `null` if the URL does not match the
 pattern.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

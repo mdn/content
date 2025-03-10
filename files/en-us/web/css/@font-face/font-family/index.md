@@ -20,7 +20,7 @@ font-family: "font family";
 font-family: "another font family";
 
 /* <custom-ident> value */
-font-family: examplefont;
+font-family: example-font;
 ```
 
 ### Values

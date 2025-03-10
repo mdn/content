@@ -8,7 +8,9 @@ browser-compat: api.Element.hasAttributeNS
 
 {{ APIRef("DOM") }}
 
-`hasAttributeNS` returns a boolean value indicating whether the current element has the specified attribute.
+The **`hasAttributeNS()`** method of the {{domxref("Element")}} interface returns a boolean value indicating whether the current element has the specified attribute with the specified namespace.
+
+If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.hasAttribute()", "hasAttribute()")}} method instead.
 
 ## Syntax
 
@@ -18,8 +20,10 @@ hasAttributeNS(namespace,localName)
 
 ### Parameters
 
-- `namespace` is a string specifying the namespace of the attribute.
-- `localName` is the name of the attribute.
+- `namespace`
+  - : A string specifying the namespace of the attribute.
+- `localName`
+  - : The name of the attribute.
 
 ### Return value
 
@@ -37,10 +41,6 @@ if (
 }
 ```
 
-## Notes
-
-{{ DOMAttributeMethods() }}
-
 ## Specifications
 
 {{Specifications}}
@@ -48,3 +48,9 @@ if (
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

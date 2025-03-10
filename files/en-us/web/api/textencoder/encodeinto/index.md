@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TextEncoder.encodeInto
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the
@@ -39,7 +39,7 @@ An object, which contains two members:
 
 ## Encode into a specific position
 
-_encoder_`.encodeInto()` always puts its output at the start of the array.
+`encodeInto()` always puts its output at the start of the array.
 However, it is sometimes useful to make the output start at a particular index.
 The solution is [`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray):
 
@@ -61,9 +61,16 @@ console.log(u8array.join()); // 0,0,104,101,108,108,111,0
 ## Buffer sizing
 
 To convert a JavaScript string `s`, the output space needed for full conversion is never less than `s.length` bytes and never greater than `s.length * 3` bytes.
+The exact UTF-8-to-UTF-16 length ratio for your string depends on the language you are working with:
+
+- For basic English text that uses mostly ASCII characters, the ratio is close to 1.
+- For text in scripts using characters U+0080 to U+07FF, which includes Greek, Cyrillic, Hebrew, Arabic, etc., the ratio is about 2.
+- For text in scripts using characters U+0800 to U+FFFF, which includes Chinese, Japanese, Korean, etc., the ratio is about 3.
+- It's not common for entire scripts to be written in [non-BMP characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) (although they do exist). These characters are usually math symbols, emojis, historical scripts, etc. The ratio for these characters is 2, because they take 4 bytes in UTF-8 and 2 in UTF-16.
+
 If the output allocation (typically within Wasm heap) is expected to be short-lived, it makes sense to allocate `s.length * 3` bytes for the output, in which case the first conversion attempt is guaranteed to convert the whole string.
-Note that the `s.length * 3` is rare because the string would have to be packed with some of the few characters that expand into 3 bytes.
-It is unlikely that long text will exceed `s.length * 2` bytes in length.
+
+For example, if your text is primarily English, it is unlikely that long text will exceed `s.length * 2` bytes in length.
 Thus, a more optimistic approach might be to allocate `s.length * 2 + 5` bytes, and perform reallocation in the rare circumstance that the optimistic prediction was wrong.
 
 If the output is expected to be long-lived, it makes sense to compute minimum allocation `roundUpToBucketSize(s.length)`, the maximum allocation size `s.length * 3`, and to have a chosen (as a tradeoff between memory usage and speed) threshold `t` such that if `roundUpToBucketSize(s.length) + t >= s.length * 3`, you allocate for `s.length * 3`.

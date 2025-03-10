@@ -9,7 +9,19 @@ browser-compat: javascript.functions.default_parameters
 
 **Default function parameters** allow named parameters to be initialized with default values if no value or `undefined` is passed.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## Syntax
 
@@ -69,7 +81,8 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **Note:** The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
+> [!NOTE]
+> The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 The default parameter initializers live in their own scope, which is a parent of the scope created for the function body.
 
@@ -98,6 +111,17 @@ function f(a, b = () => console.log(a)) {
 f(); // undefined
 f(5); // 5
 ```
+
+The default parameter allows any expression, but you cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} that would pause the evaluation of the default expression. The parameter must be initialized _synchronously_.
+
+```js example-bad
+async function f(a = await Promise.resolve(1)) {
+  return a;
+}
+```
+
+> [!NOTE]
+> Because the default parameter is evaluated when the function is called, not when the function is defined, the validity of the `await` and `yield` operators depends on the function itself, not its surrounding function. For example, if the current function is not `async`, `await` will be parsed as an identifier and follow normal [identifier syntax rules](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers), even when this function is nested in an `async` function.
 
 ## Examples
 
@@ -209,7 +233,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 ### Destructured parameter with default value assignment
 
-You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax.
+You can use default value assignment with the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax.
 
 A common way of doing that is to set an empty object/array as the default value for the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
 

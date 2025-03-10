@@ -8,7 +8,7 @@ status:
 browser-compat: api.TaskSignal.any_static
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}
+{{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`TaskSignal.any()`** static method takes an iterable of {{domxref("AbortSignal")}} objects and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted.
 

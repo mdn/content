@@ -11,7 +11,8 @@ browser-compat: svg.elements.font-face.descent
 
 The **`descent`** attribute defines the maximum unaccented depth of the font.
 
-> **Note:** It was specified to share the syntax and semantics of the obsolete `descent` descriptor of the {{cssxref("@font-face")}} at-rule defined in an early version of CSS 2.
+> [!NOTE]
+> It was specified to share the syntax and semantics of the obsolete `descent` descriptor of the {{cssxref("@font-face")}} at-rule defined in an early version of CSS 2.
 
 You can use this attribute with the following SVG elements:
 

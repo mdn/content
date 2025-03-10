@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Object.constructor
 
 The **`constructor`** data property of an {{jsxref("Object")}} instance returns a reference to the constructor function that created the instance object. Note that the value of this property is a reference to _the function itself_, not a string containing the function's name.
 
-> **Note:** This is a property of JavaScript objects. For the `constructor` method in classes, see [its own reference page](/en-US/docs/Web/JavaScript/Reference/Classes/constructor).
+> [!NOTE]
+> This is a property of JavaScript objects. For the `constructor` method in classes, see [its own reference page](/en-US/docs/Web/JavaScript/Reference/Classes/constructor).
 
 ## Value
 
@@ -17,7 +18,8 @@ A reference to the constructor function that created the instance object.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** This property is created by default on the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property of every constructor function and is inherited by all objects created by that constructor.
+> [!NOTE]
+> This property is created by default on the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property of every constructor function and is inherited by all objects created by that constructor.
 
 ## Description
 
@@ -45,6 +47,8 @@ Note that `constructor` usually comes from the constructor's [`prototype`](/en-U
 ```js
 const o = new TypeError(); // Inheritance: TypeError -> Error -> Object
 const proto = Object.getPrototypeOf;
+
+Object.hasOwn(o, "constructor"); // false
 proto(o).constructor === TypeError; // true
 proto(proto(o)).constructor === Error; // true
 proto(proto(proto(o))).constructor === Object; // true
@@ -134,7 +138,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 The `constructor` of instances of `Child` will be `Parent` due to `Child.prototype` being re-assigned.
 
-This is usually not a big deal — the language almost never reads the `constructor` property of an object. The only exception is when using [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) to create new instances of a class, but such cases are rare, and you should be using the [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) syntax to subclass builtins anyway.
+This is usually not a big deal — the language almost never reads the `constructor` property of an object. The only exception is when using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) to create new instances of a class, but such cases are rare, and you should be using the [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) syntax to subclass builtins anyway.
 
 However, ensuring that `Child.prototype.constructor` always points to `Child` itself is crucial when some caller is using `constructor` to access the original class from an instance. Take the following case: the object has the `create()` method to create itself.
 
@@ -182,7 +186,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // it's pretty fine
 ```
 
-Note that when manually adding the `constructor` property, it's crucial to make the property [non-enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties), so `constructor` won't be visited in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops — as it normally isn't.
+Note that when manually adding the `constructor` property, it's crucial to make the property [non-enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), so `constructor` won't be visited in [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops — as it normally isn't.
 
 If the code above looks like too much boilerplate, you may also consider using [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) to manipulate the prototype chain.
 
@@ -295,7 +299,8 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 Again, using `Object.setPrototypeOf()` may have adverse performance effects, so make sure it happens immediately after the constructor declaration and before any instances are created — to avoid objects being "tainted".
 
-> **Note:** Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of `constructor` in each specific case. In most cases, `constructor` is not used and reassigning it is not necessary.
+> [!NOTE]
+> Manually updating or setting the constructor can lead to different and sometimes confusing consequences. To prevent this, just define the role of `constructor` in each specific case. In most cases, `constructor` is not used and reassigning it is not necessary.
 
 ## Specifications
 

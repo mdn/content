@@ -25,7 +25,7 @@ HTMLTableElement.summary = "Usage statistics";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -38,7 +38,7 @@ getMetadata(successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.NOT_FOUND_ERR`
   - : The {{domxref("FileSystemEntry")}} refers to an item which doesn't exist.
@@ -79,4 +79,3 @@ workingDirectory.getFile(
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

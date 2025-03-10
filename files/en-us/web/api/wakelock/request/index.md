@@ -8,9 +8,9 @@ browser-compat: api.WakeLock.request
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The **`request()`** method of the
-{{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
-{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and locking.
+The **`request()`** method of the {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("WakeLockSentinel")}} object if the system screen wake lock is granted.
+
+The screen wake lock prevents device screens from dimming or locking when an application needs to keep running.
 
 ## Syntax
 
@@ -25,7 +25,8 @@ request(type)
   - : A string specifying the screen wake lock type, from among the following enumerated types:
 
     - `screen`
-      - : Prevents the screen from turning off. Only visible documents can acquire the screen wake lock.
+      - : Prevents the screen from turning off.
+        Only visible documents can acquire the screen wake lock.
 
 If no `type` parameter is explicitly specified, the `request()` method defaults to using the `screen` type.
 
@@ -43,12 +44,12 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
     - The document is not fully active.
     - The document's visibility state is `hidden`.
     - The {{Glossary("User Agent")}} could not acquire platform's wake lock.
+      For example, this might happen if the device is low on battery.
 
 ## Examples
 
 The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object.
-The `request()` method is wrapped in a `try...catch` statement
-to account for if the browser refuses the request for any reason.
+The `request()` method is wrapped in a `try...catch` statement to handle cases where the browser refuses the request for any reason.
 
 ```js
 const requestWakeLock = async () => {
@@ -63,6 +64,9 @@ const requestWakeLock = async () => {
 
 requestWakeLock();
 ```
+
+The screen wake lock may be revoked by the device after it has been granted.
+The returned {{domxref("WakeLockSentinel")}} can be used to check the status of the lock, and/or to manually cancel a held screen wake lock.
 
 ## Specifications
 

@@ -8,7 +8,7 @@ browser-compat: api.Window.appinstalled_event
 
 {{APIRef}}
 
-The **`appinstalled`** event of the [Web Manifest API](/en-US/docs/Web/Manifest) is fired when the browser has successfully installed a page as an application.
+The **`appinstalled`** event of the [Web Manifest API](/en-US/docs/Web/Progressive_web_apps/Manifest) is fired when the browser has successfully installed a page as an application.
 
 This event is not cancelable and does not bubble.
 
@@ -43,6 +43,10 @@ window.onappinstalled = () => {
   console.log("Thank you for installing our app!");
 };
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

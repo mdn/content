@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 60 that will affe
 ### Developer tools
 
 - In the CSS Pane rules view (see [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)), the keyboard shortcuts for precise value increments (increase/decrease by 0.1) have changed from `Alt` + `Up`/`Down` to `Ctrl` + `Up`/`Down` on Linux and Windows, to avoid clashes with default OS-level shortcuts (see [Firefox bug 1413314](https://bugzil.la/1413314)).
-- Also in the CSS Pane rules view, [CSS variable names](/en-US/docs/Web/CSS/Using_CSS_custom_properties) will now auto-complete ([Firefox bug 1422635](https://bugzil.la/1422635)). If you enter `var(` into a property value and then type a dash (`-`), any variables you have declared in your CSS will then appear in an autocomplete list.
+- Also in the CSS Pane rules view, [CSS variable names](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) will now auto-complete ([Firefox bug 1422635](https://bugzil.la/1422635)). If you enter `var(` into a property value and then type a dash (`-`), any variables you have declared in your CSS will then appear in an autocomplete list.
 - In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html), a _Reload when…_ dropdown has been added to allow users to enable/disable automatic page reloads when touch simulation is toggled, or simulated user agent is changed. See [Controlling page reload behavior](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-page-reload-behavior) for more details ([Firefox bug 1428816](https://bugzil.la/1428816)).
 - The `view_source.tab` preference has been removed so you can no longer toggle [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) mode between appearing in a new tab or new window. Page sources will always appear in new tabs from now on ([Firefox bug 1418403](https://bugzil.la/1418403)).
 
@@ -116,7 +116,7 @@ _No changes._
 
 ### JavaScript
 
-The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures) syntax has been removed ([Firefox bug 1426519](https://bugzil.la/1426519)).
+The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) syntax has been removed ([Firefox bug 1426519](https://bugzil.la/1426519)).
 
 ### APIs
 
@@ -154,4 +154,4 @@ Theme API:
 
 ## Older versions
 
-{{Firefox_for_developers(59)}}
+{{Firefox_for_developers}}

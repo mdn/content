@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.TaskPriorityChangeEvent.previousPriority
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
-The readonly **`previousPriority`** property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
+The **`previousPriority`** read-only property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
 
 This is the value that was set in the [`TaskPriorityChangeEvent` constructor](/en-US/docs/Web/API/TaskPriorityChangeEvent/TaskPriorityChangeEvent) argument `options.previous`. <!-- link? -->
 

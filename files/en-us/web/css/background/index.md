@@ -5,11 +5,49 @@ page-type: css-shorthand-property
 browser-compat: css.properties.background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
+The **`background`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method. Component properties not set in the `background` shorthand property value declaration are set to their default values.
 
-{{EmbedInteractiveExample("pages/css/background.html")}}
+{{InteractiveExample("CSS Demo: background")}}
+
+```css interactive-example-choice
+background: green;
+```
+
+```css interactive-example-choice
+background: content-box radial-gradient(crimson, skyblue);
+```
+
+```css interactive-example-choice
+background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background: left 5% / 15% 60% repeat-x
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background:
+  center / contain no-repeat
+    url("/shared-assets/images/examples/firefox-logo.svg"),
+  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Constituent properties
 
@@ -59,7 +97,7 @@ The syntax of each layer is as follows:
   - `<bg-size>`
   - `<repeat-style>`
 
-- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: "`center/80%`".
+- The `<bg-size>` value may only be included immediately after `<position>`, separated with the '/' character, like this: `center/80%`.
 - The `<box>` value may be included zero, one, or two times. If included once, it sets both {{cssxref("background-origin")}} and {{cssxref("background-clip")}}. If it is included twice, the first occurrence sets {{cssxref("background-origin")}}, and the second sets {{cssxref("background-clip")}}.
 - The `<background-color>` value may only be included in the last layer specified.
 
@@ -88,13 +126,6 @@ background: transparent;
 background: repeat scroll 0% 0% / auto padding-box border-box none transparent;
 ```
 
-## Accessibility concerns
-
-Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
-
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
-
 ## Formal definition
 
 {{cssinfo}}
@@ -103,6 +134,13 @@ Browsers do not provide any special information on background images to assistiv
 
 {{csssyntax}}
 
+## Accessibility
+
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
+
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
 ## Examples
 
 ### Setting backgrounds with color keywords and images
@@ -110,7 +148,7 @@ Browsers do not provide any special information on background images to assistiv
 #### HTML
 
 ```html
-<p class="topbanner">
+<p class="top-banner">
   Starry sky<br />
   Twinkle twinkle<br />
   Starry sky
@@ -126,8 +164,8 @@ Browsers do not provide any special information on background images to assistiv
   background: pink;
 }
 
-.topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+.top-banner {
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 

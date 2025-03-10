@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothDevice.id
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothDevice.id`** read-only property returns a
 string that uniquely identifies a device.

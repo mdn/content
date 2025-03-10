@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
-`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Error types
 
@@ -41,14 +41,19 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
+## Static properties
+
+- {{jsxref("Error.stackTraceLimit")}} {{non-standard_inline}}
+  - : A non-standard numerical property that limits how many stack frames to include in an error stack trace.
+
 ## Static methods
 
-- `Error.captureStackTrace()` {{non-standard_inline}}
-  - : A non-standard V8 function that creates the {{jsxref("Error/stack", "stack")}} property on an Error instance.
-- `Error.stackTraceLimit` {{non-standard_inline}}
-  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+- {{jsxref("Error.captureStackTrace()")}} {{non-standard_inline}}
+  - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
+- {{jsxref("Error.isError()")}}
+  - : Returns `true` if the argument is an error, or `false` otherwise.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
-  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
+  - : A non-standard function that, if provided by user code, is called by the JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stack traces. See the [V8 Stack Trace API](https://v8.dev/docs/stack-trace-api#customizing-stack-traces) docs.
 
 ## Instance properties
 
@@ -152,7 +157,8 @@ try {
 }
 ```
 
-> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+> [!NOTE]
+> If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
 
 [Custom error types](#custom_error_types) can also use the `cause` property, provided the subclasses' constructor passes the `options` parameter when calling `super()`. The `Error()` base class constructor will read `options.cause` and define the `cause` property on the new error instance.
 
@@ -172,11 +178,13 @@ console.log(new MyError("test", { cause: new Error("cause") }).cause);
 
 You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. This results in cleaner and more consistent error handling code.
 
-See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
+See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on Stack Overflow for an in-depth discussion.
 
-> **Warning:** Builtin subclassing cannot be reliably transpiled to pre-ES6 code, because there's no way to construct the base class with a particular `new.target` without {{jsxref("Reflect.construct()")}}. You need [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) or manually call {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} at the end of the constructor; otherwise, the constructed instance will not be a `CustomError` instance. See [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) for more information.
+> [!WARNING]
+> Builtin subclassing cannot be reliably transpiled to pre-ES6 code, because there's no way to construct the base class with a particular `new.target` without {{jsxref("Reflect.construct()")}}. You need [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) or manually call {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} at the end of the constructor; otherwise, the constructed instance will not be a `CustomError` instance. See [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) for more information.
 
-> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
+> [!NOTE]
+> Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
 
 ```js
 class CustomError extends Error {
@@ -184,7 +192,7 @@ class CustomError extends Error {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    // Maintains proper stack trace for where our error was thrown (non-standard)
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, CustomError);
     }
@@ -202,7 +210,7 @@ try {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
-  console.error(e.stack); // stacktrace
+  console.error(e.stack); // stack trace
 }
 ```
 
@@ -217,6 +225,7 @@ try {
 ## See also
 
 - [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

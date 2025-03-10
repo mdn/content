@@ -46,7 +46,8 @@ immediately appears in the collection.
 The opposite is also true; as elements no longer match the set of names, they are
 immediately removed from the collection.
 
-> **Note:** In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
+> [!NOTE]
+> In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
 > class names are compared in a case-insensitive fashion. Otherwise, they're case
 > sensitive.
 
@@ -83,31 +84,31 @@ You can use either the {{domxref("HTMLCollection.item", "item()")}} method on th
 returned `HTMLCollection` or standard array syntax to examine individual
 elements in the collection. However, the following code will not
 work as one might expect because `"matches"` will change as
-soon as any `"colorbox"` class is removed.
+soon as any `"color-box"` class is removed.
 
 ```js
-const matches = element.getElementsByClassName("colorbox");
+const matches = element.getElementsByClassName("color-box");
 
 for (let i = 0; i < matches.length; i++) {
-  matches[i].classList.remove("colorbox");
-  matches.item(i).classList.add("hueframe");
+  matches[i].classList.remove("color-box");
+  matches.item(i).classList.add("hue-frame");
 }
 ```
 
 Instead, use another method, such as:
 
 ```js
-const matches = element.getElementsByClassName("colorbox");
+const matches = element.getElementsByClassName("color-box");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add("hueframe");
-  matches[0].classList.remove("colorbox");
+  matches.item(0).classList.add("hue-frame");
+  matches[0].classList.remove("color-box");
 }
 ```
 
-This code finds descendant elements with the `"colorbox"` class, adds the
-class `"hueframe"`, by calling `item(0)`, then removes
-`"colorbox"` (using array notation). Another element (if any are left) will
+This code finds descendant elements with the `"color-box"` class, adds the
+class `"hue-frame"`, by calling `item(0)`, then removes
+`"color-box"` (using array notation). Another element (if any are left) will
 then become `item(0)`.
 
 ### Filtering the results using array methods

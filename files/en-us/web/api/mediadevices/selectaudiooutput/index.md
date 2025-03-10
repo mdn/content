@@ -8,11 +8,11 @@ status:
 browser-compat: api.MediaDevices.selectAudioOutput
 ---
 
-{{APIRef("WebRTC")}} {{SeeCompatTable}}
+{{APIRef("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
+The **`selectAudioOutput()`** method of the {{domxref("MediaDevices")}} interface prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
 
-Following selection, if the device is available it can be enumerated using [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices) and set as the audio output sink using [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId).
+Following selection, if the device is available it can be enumerated using {{domxref("MediaDevices.enumerateDevices()")}} and set as the audio output sink using {{domxref("HTMLMediaElement.setSinkId()")}}.
 
 On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.
 
@@ -37,7 +37,8 @@ selectAudioOutput(options)
         The option is intended for applications that want to store a device id so that the same device can be used by default in future sessions.
         Note that the method may return a new ID for the same device, and that persisted ids _must be passed_ through `selectAudioOutput()` successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.
 
-        > **Note:** A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
+        > [!NOTE]
+        > A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
         > In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.
         > If permission for the specified device was previously granted but has since been revoked, the user-agent might display all allowed devices, highlighting the one with the specified ID.
 
@@ -61,14 +62,14 @@ Access to the API is subject to the following constraints:
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
-The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method [`navigator.permissions.query()`](/en-US/docs/Web/API/Permissions/query), passing a permission descriptor with the `speaker-selection` permission.
+The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method {{domxref("Permissions.query", "navigator.permissions.query()")}}, passing a permission descriptor with the `speaker-selection` permission.
 
 ## Examples
 
 Here's an example of using `selectAudioOutput()`, within a function that is triggered by a button click.
-It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
+It outputs the selected {{domxref("MediaDeviceInfo.deviceId", "device IDs", "", "nocode")}} and labels (if available) or an error message.
 
 ```js
 document.querySelector("#myButton").addEventListener("click", () => {
@@ -105,6 +106,6 @@ audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2Nbxqg
 
 ## See also
 
-- [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)
-- [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
+- {{domxref("HTMLMediaElement.setSinkId()")}}
+- {{domxref("HTMLMediaElement.sinkId")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.copyBufferSubData()`** method of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) copies part of the data of a
@@ -20,7 +20,7 @@ copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 
 ### Parameters
 
-- `readTarget writeTarget`
+- `readTarget`, `writeTarget`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) from whose data store
     should be read or written. Possible values:
@@ -38,7 +38,7 @@ copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
     - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer operations.
     - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer operations.
 
-- `readOffset writeOffset`
+- `readOffset`, `writeOffset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the byte offset from which to start reading
     from or writing to the buffer.
 - `size`

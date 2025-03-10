@@ -44,7 +44,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 
 ### Page properties
 
-The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
+The `@page` at-rule can contain only page descriptors and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
 - [`margin`](/en-US/docs/Web/CSS/margin)
   - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
@@ -133,7 +133,8 @@ The specification mentions following CSS properties to be applicable to page box
 
 The @page rule defines properties of the page box. The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
-> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+> [!NOTE]
+> The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
 ### Related properties
 
@@ -151,16 +152,14 @@ Where the `<page-body>` includes:
 - page-properties
 - page-margin properties
 
-and `<pseudo-selector>` represents these pseudo-classes:
+and `<pseudo-page>` represents these pseudo-classes:
 
-- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
+- {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
 
 ## Margin at-rules
-
-> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
@@ -289,48 +288,38 @@ An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#example
 ### Using the size property to change the page orientation
 
 This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
+Clicking the print button will launch a print dialog with the HTML sections split into individual pages.
 
-#### HTML
-
-```html
-<button>Print Webpage</button>
+```html live-sample___page-size
+<button>Print page</button>
 <article>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header one</h2>
+    <p>Paragraph one.</p>
   </section>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header two</h2>
+    <p>Paragraph two.</p>
   </section>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header three</h2>
+    <p>Paragraph three.</p>
   </section>
 </article>
 ```
 
-#### CSS
+```js live-sample___page-size
+const button = document.querySelector("button");
 
-```css
+button.addEventListener("click", () => {
+  window.print();
+});
+```
+
+```css live-sample___page-size
 @page {
   size: landscape;
-  margin: 20%;
+  margin: 2cm;
 }
 
 section {
@@ -345,7 +334,7 @@ section {
 }
 ```
 
-```css hidden
+```css hidden live-sample___page-size
 body {
   font-family: "Helvetica", sans-serif;
   background-color: silver;
@@ -365,31 +354,18 @@ section {
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
   margin: 0 auto;
-  margin-block-end: 1.5rem;
+  margin-block-end: 1rem;
   border: 1px dashed;
 }
 ```
 
-#### JavaScript
-
-```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", () => {
-  window.print();
-});
-```
-
-#### Result
-
-Clicking the print button will launch a print dialog with the html sections split into individual pages.
-{{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
+{{EmbedLiveSample('page-size', '100%', '540', , , , , "allow-modals")}}
 
 ### @page pseudo-class examples
 
-Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
+See the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
-- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
+- {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
@@ -404,8 +380,8 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
+- The {{cssxref("page")}} property
 - The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
-- The {{Cssxref("page")}} property
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture)
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/) on pagedjs.org
+- [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) Bugzilla for tracking progress on the subject (page-based counters, etc.)

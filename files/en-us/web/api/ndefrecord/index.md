@@ -24,7 +24,8 @@ The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_
   - : Returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
 - {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the record identifier, which is an absolute or relative URL used to identify the record.
-    > **Note:** The uniqueness of the identifier is enforced only by the generator of the record.
+    > [!NOTE]
+    > The uniqueness of the identifier is enforced only by the generator of the record.
 - {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("DataView")}} containing the raw bytes of the record's payload.
 - {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}

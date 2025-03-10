@@ -6,15 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string
 describing the type of content being requested.
 
 The string must be one of the `audio`, `audioworklet`,
-`document`, `embed`, `font`, `frame`,
-`iframe`, `image`, `manifest`, `object`,
+`document`, `embed`, `fencedframe`, `font`, `frame`,
+`iframe`, `image`, `json`, `manifest`, `object`,
 `paintworklet`, `report`, `script`, `sharedworker`,
 `style`, `track`, `video`, `worker`
 or `xslt` strings, or the empty string, which is the default value.
@@ -45,7 +45,7 @@ Possible values are:
     - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
-    - {{domxref("fetch()")}}
+    - {{domxref("Window/fetch", "fetch()")}}
     - {{domxref("navigator.sendBeacon()")}}
     - {{domxref("WebSocket")}}
     - {{domxref("XMLHttpRequest")}}
@@ -58,10 +58,14 @@ Possible values are:
   - : The target is a document (HTML or XML).
 - `"embed"`
   - : The target is embedded content.
+- `"fencedframe"`
+  - : The target is a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 - `"font"`
   - : The target is a font.
 - `"image"`
   - : The target is an image.
+- `"json"`
+  - : The target is a JSON file.
 - `"manifest"`
   - : The target is a manifest.
 - `"object"`

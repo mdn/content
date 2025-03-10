@@ -7,7 +7,7 @@ status:
 browser-compat: api.PaymentManager
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PaymentManager`** interface of the {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} is used to manage various aspects of payment app functionality.
 
@@ -22,7 +22,7 @@ It is accessed via the {{domxref("ServiceWorkerRegistration.paymentManager")}} p
 
 ## Instance methods
 
-- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("PaymentManager.enableDelegations", "enableDelegations()")}} {{Experimental_Inline}}
   - : Delegates responsibility for providing various parts of the required payment information to the payment app rather than collecting it from the browser (for example, via autofill).
 
 ## Examples

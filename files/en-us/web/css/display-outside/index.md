@@ -2,7 +2,9 @@
 title: <display-outside>
 slug: Web/CSS/display-outside
 page-type: css-type
-browser-compat: css.properties.display.display-outside
+browser-compat:
+  - css.properties.display.block
+  - css.properties.display.inline
 ---
 
 {{CSSRef}}
@@ -18,7 +20,9 @@ Valid `<display-outside>` values:
 - `inline`
   - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> [!NOTE]
+> When browsers encounter a display property with only an **outer** `display` value (e.g., `display: block` or `display: inline`), the inner value defaults to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> This is backwards-compatible with single-keyword syntax.
 
 ## Formal syntax
 
@@ -65,5 +69,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [Formatting Contexts explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)

@@ -13,16 +13,16 @@ The **`PaintWorkletGlobalScope`** interface of the [CSS Painting API](/en-US/doc
 
 ## Privacy concerns
 
-To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, and for children of such elements. For details, see the following:
+To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an `href` attribute, and for children of such elements. For details, see the following:
 
 - The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
 - The CSS Painting API spec issue ["CSS Paint API leaks browsing history"](https://github.com/w3c/css-houdini-drafts/issues/791)
 
 ## Instance properties
 
-_This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
+_This interface inherits properties from {{domxref('WorkletGlobalScope')}}._
 
-- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{Experimental_Inline}}
+- {{domxref('PaintWorkletGlobalScope.devicePixelRatio')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current device's ratio of physical pixels to logical pixels.
 
 ## Instance methods
@@ -31,10 +31,6 @@ _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 
 - {{domxref('PaintWorkletGlobalScope.registerPaint()')}} {{Experimental_Inline}}
   - : Registers a class to programmatically generate an image where a CSS property expects a file.
-
-### Event
-
-None.
 
 ## Examples
 
@@ -113,5 +109,6 @@ You can also use the {{cssxref('@supports')}} at-rule.
 
 ## See also
 
+- [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

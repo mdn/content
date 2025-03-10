@@ -10,6 +10,10 @@ browser-compat: api.HTMLFormElement.encoding
 
 The **`HTMLFormElement.encoding`** property is an alternative name for the {{domxref("HTMLFormElement.enctype","enctype")}} element on the DOM {{domxref("HTMLFormElement")}} object.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

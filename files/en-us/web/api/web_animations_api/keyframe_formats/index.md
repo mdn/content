@@ -103,7 +103,7 @@ There are two different ways to format keyframes:
 
 ### Implicit to/from keyframes
 
-In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js
 let rotate360 = [{ transform: "rotate(360deg)" }];
@@ -113,7 +113,7 @@ We have only specified the end state of the animation, and the beginning state i
 
 ## Attributes
 
-Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
+Keyframes specify property-value pairs of the [CSS properties to be animated](/en-US/docs/Web/CSS/CSS_animated_properties). The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
 Two exceptional CSS properties are:
 

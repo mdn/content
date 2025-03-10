@@ -1,12 +1,12 @@
 ---
 title: "DOMPoint: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/DOMPoint/y
 page-type: web-api-instance-property
 browser-compat: api.DOMPoint.y
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPoint`** interface's
 **`y`** property holds the vertical coordinate, _y_,
@@ -33,5 +33,4 @@ to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
 ## See also
 
 - The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
-    "w")}}.
+  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w", "w")}}.

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Searches for text in a tab.
 
@@ -23,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ```js-nolint
 browser.find.find(
-  queryphrase,       // string
+  queryPhrase,       // string
   options            // optional object
 )
 ```
@@ -47,7 +47,7 @@ browser.find.find(
     - `tabId`
       - : `integer`. ID of the tab to search. Defaults to the active tab.
 
-- `queryphrase`
+- `queryPhrase`
   - : `string`. The text to search for.
 
 ### Return value

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getVertexAttribOffset
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getVertexAttribOffset()`** method
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the address of a

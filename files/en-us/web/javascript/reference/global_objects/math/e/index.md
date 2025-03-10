@@ -9,11 +9,30 @@ browser-compat: javascript.builtins.Math.E
 
 The **`Math.E`** static data property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.
 
-{{EmbedInteractiveExample("pages/js/math-e.html")}}
+{{InteractiveExample("JavaScript Demo: Math.E")}}
+
+```js interactive-example
+function compoundOneYear(interestRate, currentVal) {
+  return currentVal * Math.E ** interestRate;
+}
+
+console.log(Math.E);
+// Expected output: 2.718281828459045
+
+console.log((1 + 1 / 1000000) ** 1000000);
+// Expected output: 2.718280469 (approximately)
+
+console.log(compoundOneYear(0.05, 100));
+// Expected output: 105.12710963760242
+```
 
 ## Value
 
-<math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2.718</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{Math.E} = e \approx 2.718</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 {{js_property_attributes(0, 0, 0)}}
 

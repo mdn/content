@@ -12,15 +12,16 @@ The **`WEBGL_draw_buffers`** extension is part of the [WebGL API](/en-US/docs/We
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL `#version 300 es`.
+> [!NOTE]
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL `#version 300 es`.
 
 ## Constants
 
 This extension exposes new constants, which can be used in the {{domxref("WebGLRenderingContext.framebufferRenderbuffer()", "gl.framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.framebufferTexture2D()", "gl.framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "gl.getFramebufferAttachmentParameter()")}} {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}, and {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} methods.
 
-- `ext.COLOR_ATTACHMENT0_WEBGL ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
+- `ext.COLOR_ATTACHMENT0_WEBGL`, `ext.COLOR_ATTACHMENT1_WEBGL`, `ext.COLOR_ATTACHMENT2_WEBGL`, `ext.COLOR_ATTACHMENT3_WEBGL`, `ext.COLOR_ATTACHMENT4_WEBGL`, `ext.COLOR_ATTACHMENT5_WEBGL`, `ext.COLOR_ATTACHMENT6_WEBGL`, `ext.COLOR_ATTACHMENT7_WEBGL`, `ext.COLOR_ATTACHMENT8_WEBGL`, `ext.COLOR_ATTACHMENT9_WEBGL`, `ext.COLOR_ATTACHMENT10_WEBGL`, `ext.COLOR_ATTACHMENT11_WEBGL`, `ext.COLOR_ATTACHMENT12_WEBGL`, `ext.COLOR_ATTACHMENT13_WEBGL`, `ext.COLOR_ATTACHMENT14_WEBGL`, `ext.COLOR_ATTACHMENT15_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer.
-- `ext.DRAW_BUFFER0_WEBGL ext.DRAW_BUFFER1_WEBGL ext.DRAW_BUFFER2_WEBGL ext.DRAW_BUFFER3_WEBGL ext.DRAW_BUFFER4_WEBGL ext.DRAW_BUFFER5_WEBGL ext.DRAW_BUFFER6_WEBGL ext.DRAW_BUFFER7_WEBGL ext.DRAW_BUFFER8_WEBGL ext.DRAW_BUFFER9_WEBGL ext.DRAW_BUFFER10_WEBGL ext.DRAW_BUFFER11_WEBGL ext.DRAW_BUFFER12_WEBGL ext.DRAW_BUFFER13_WEBGL ext.DRAW_BUFFER14_WEBGL ext.DRAW_BUFFER15_WEBGL`
+- `ext.DRAW_BUFFER0_WEBGL`, `ext.DRAW_BUFFER1_WEBGL`, `ext.DRAW_BUFFER2_WEBGL`, `ext.DRAW_BUFFER3_WEBGL`, `ext.DRAW_BUFFER4_WEBGL`, `ext.DRAW_BUFFER5_WEBGL`, `ext.DRAW_BUFFER6_WEBGL`, `ext.DRAW_BUFFER7_WEBGL`, `ext.DRAW_BUFFER8_WEBGL ext.DRAW_BUFFER9_WEBGL`, `ext.DRAW_BUFFER10_WEBGL`, `ext.DRAW_BUFFER11_WEBGL`, `ext.DRAW_BUFFER12_WEBGL`, `ext.DRAW_BUFFER13_WEBGL`, `ext.DRAW_BUFFER14_WEBGL`, `ext.DRAW_BUFFER15_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} returning a draw buffer.
 - `ext.MAX_COLOR_ATTACHMENTS_WEBGL`
   - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of framebuffer color attachment points.

@@ -2,14 +2,15 @@
 title: flood-color
 slug: Web/SVG/Attribute/flood-color
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.flood-color
+browser-compat: svg.global_attributes.flood-color
 ---
 
 {{SVGRef}}
 
 The **`flood-color`** attribute indicates what color to use to flood the current filter primitive subregion.
 
-> **Note:** As a presentation attribute, `flood-color` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `flood-color` also has a CSS property counterpart: {{cssxref("flood-color")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -76,4 +77,5 @@ svg {
 
 ## See also
 
+- CSS {{cssxref("flood-color")}} property
 - {{SVGAttr("flood-opacity")}}

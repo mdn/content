@@ -7,22 +7,60 @@ browser-compat: css.types.counters
 
 {{CSSRef}}
 
-The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables combining markers when nesting counters. The function returns a string that concatenates the current values of the named and nested counters, if any are present, with the string provided. The third, optional parameter enables defining the list style.
+The **`counters()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) enables combining markers when nesting counters. The function returns a string that concatenates the current values of the named and nested counters, if any are present, with the string provided. The third, optional parameter enables defining the list style.
 
 The `counters()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) through the {{cssxref("content")}} property, but theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 
 The `counters()` function has two forms: `counters(<name>, <string>)` and `counters(<name>, <string>, <style>)`. The generated text is the value of all counters with the given `<name>`, arranged from the outermost to the innermost, and separated by the specified `<string>`. The counters are rendered in the `<style>` indicated, defaulting to `decimal` if no `<style>` is specified.
 
-{{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: counters()", "tabbed-standard")}}
+
+```css interactive-example
+ol {
+  counter-reset: index;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: index;
+  content: counters(index, ".", decimal) " ";
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Mars</li>
+  <li>
+    Saturn
+    <ol>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ol>
+  </li>
+  <li>
+    Uranus
+    <ol>
+      <li>Titania</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntax
 
 ```css
 /* Simple usage  - style defaults to decimal */
-counters(countername, '.');
+counters(counter-name, '.');
 
 /* changing the counter display */
-counters(countername, '-', upper-roman)
+counters(counter-name, '-', upper-roman)
 ```
 
 A [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer-defined content.
@@ -40,9 +78,10 @@ The `counters()` function accepts two or three parameters. The first parameter i
 
 The return value is a string containing all the values of all the counters in the element's CSS counters set named `<counter-name>` in the counter style defined by `<counter-style>` (or decimal, if omitted). The return string is sorted in outermost-first to innermost-last order, joined by the `<string>` specified.
 
-> **Note:** For information about non-concatenated counters, see the {{cssxref("counter", "counter()")}} function, which omits the `<string>` as a parameter.
+> [!NOTE]
+> For information about non-concatenated counters, see the {{cssxref("counter", "counter()")}} function, which omits the `<string>` as a parameter.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

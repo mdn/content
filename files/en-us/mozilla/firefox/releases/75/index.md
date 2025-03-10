@@ -15,12 +15,12 @@ This article provides information about the changes in Firefox 75 that will affe
 ### Developer tools
 
 - It is now possible to resize the rectangle of the [Measuring Tool](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) ([Firefox bug 1152321](https://bugzil.la/1152321)).
-- In the [inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ([Firefox bug 963933](https://bugzil.la/963933)).
+- In the [inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), you can now use [XPath](/en-US/docs/Web/XML/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ([Firefox bug 963933](https://bugzil.la/963933)).
 - You can now filter [WebSocket](/en-US/docs/Web/API/WebSockets_API) messages using [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), in addition to plain text search, by writing the regular expression in slashes ([Firefox bug 1593837](https://bugzil.la/1593837)).
 
 ### HTML
 
-- The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
+- The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Guides/Lazy_loading), by setting its value to `lazy` ([Firefox bug 1542784](https://bugzil.la/1542784)).
 - The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ([Firefox bug 1614329](https://bugzil.la/1614329)).
 
 ### CSS
@@ -30,14 +30,15 @@ This article provides information about the changes in Firefox 75 that will affe
 
 ### Accessibility
 
-The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
+New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
 
 - `aria-description` ([Firefox bug 1608961](https://bugzil.la/1608961)).
-- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
-- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
+- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
+- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
 - Multiple IDs on `aria-details` ([Firefox bug 1608883](https://bugzil.la/1608883)).
 
-> **Note:** On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
+> [!NOTE]
+> On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
 
 ### JavaScript
 
@@ -110,4 +111,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(74)}}
+{{Firefox_for_developers}}

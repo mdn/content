@@ -9,7 +9,46 @@ browser-compat: css.properties.box-decoration-break
 
 The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
-{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
+{{InteractiveExample("CSS Demo: box-decoration-break")}}
+
+```css interactive-example-choice
+-webkit-box-decoration-break: slice;
+box-decoration-break: slice;
+```
+
+```css interactive-example-choice
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <span id="example-element">This text breaks across multiple lines.</span>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-container {
+  width: 14rem;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #6f6f6f, #000);
+  color: white;
+  box-shadow:
+    8px 8px 10px 0 #ff1492,
+    -5px -5px 5px 0 #00f,
+    5px 5px 15px 0 #ff0;
+  padding: 0 1em;
+  border-radius: 16px;
+  border-style: solid;
+  margin-left: 10px;
+  font: 24px sans-serif;
+  line-height: 2;
+}
+```
 
 The specified value will impact the appearance of the following properties:
 
@@ -43,7 +82,7 @@ The `box-decoration-break` property is specified as one of the keyword values li
 - `slice`
   - : The element is initially rendered as if its box were not fragmented, after which the rendering for this hypothetical box is sliced into pieces for each line/column/page. Note that the hypothetical box can be different for each fragment since it uses its own height if the break occurs in the inline direction, and its own width if the break occurs in the block direction. See the CSS specification for details.
 - `clone`
-  - : Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment. The {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, and {{ Cssxref("box-shadow") }} are applied to each fragment independently. The background is also drawn independently for each fragment, which means that a background image with {{ Cssxref("background-repeat") }}`: no-repeat` may nevertheless repeat multiple times.
+  - : Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment. The {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, and {{ Cssxref("box-shadow") }} are applied to each fragment independently. The background is also drawn independently for each fragment, which means that a background image with {{ Cssxref("background-repeat", "background-repeat: no-repeat") }} may nevertheless repeat multiple times.
 
 ## Formal definition
 
@@ -57,70 +96,111 @@ The `box-decoration-break` property is specified as one of the keyword values li
 
 ### Inline box fragments
 
-An inline element that contains line breaks styled with:
+An inline element with a box decoration may have unexpected appearance when it contains line breaks due to the initial `slice` value.
+The following example shows the effect of adding `box-decoration-break: clone` to a {{htmlelement("span")}} that contains {{htmlelement("br")}} tags:
 
-```html
-<style>
-  .example {
-    background: linear-gradient(to bottom right, yellow, green);
-    box-shadow:
-      8px 8px 10px 0px deeppink,
-      -5px -5px 5px 0px blue,
-      5px 5px 15px 0px yellow;
-    padding: 0em 1em;
-    border-radius: 16px;
-    border-style: solid;
-    margin-left: 10px;
-    font: 24px sans-serif;
-    line-height: 2;
-  }
-</style>
-…
-<span class="example">The<br />quick<br />orange fox</span>
+```css hidden
+body {
+  display: flex;
+  background-color: grey;
+  justify-content: space-around;
+}
+
+span {
+  padding: 0em 1em;
+  border-radius: 1rem;
+  border-style: solid;
+  margin: 1rem;
+  font: 22px sans-serif;
+  line-height: 2;
+}
 ```
-
-This results in:
-
-![A screenshot of the rendering of an inline element styled with box-decoration-break:slice and styles given in the example.](box-decoration-break-inline-slice.png)
-
-Adding `box-decoration-break: clone` to the above styles:
 
 ```css
--webkit-box-decoration-break: clone;
-box-decoration-break: clone;
+span {
+  background: linear-gradient(to bottom right, yellow, green);
+  box-shadow:
+    8px 8px 10px 0px deeppink,
+    -5px -5px 5px 0px blue,
+    5px 5px 15px 0px yellow;
+}
+
+#clone {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 ```
 
-This one results in:
+```html
+<p>
+  <span>The<br />quick<br />orange fox</span>
+</p>
+<p>
+  <span id="clone">The<br />quick<br />orange fox</span>
+</p>
+```
 
-![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
-
-You can [try the two inline examples above](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html) in your browser.
-
-Here's an example of an inline element using a large `border-radius` value. The second `"iM"` has a line-break between the `"i"` and the `"M"`. For comparison, the first `"iM"` is without line breaks. Note that if you stack the rendering of the two fragments horizontally next to each other it will result in the non-fragmented rendering.
-
-![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
-
-[Try the above example](https://mdn.dev/archives/media/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html) in your browser.
+{{embedlivesample("inline_box_fragments", "100%", "210")}}
 
 ### Block box fragments
 
-A block element with similar styles as above and no fragmentation results in:
+The following example shows how block elements with box decoration look when they contain line breaks in a [multi-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout).
+Notice how the result of `box-decoration-break: slice` would be the equivalent of the first {{htmlelement("div")}} if stacked vertically.
 
-![A screenshot of the rendering of the block element used in the examples without any fragmentation.](box-decoration-break-block.png)
+```css hidden
+body {
+  background-color: grey;
+}
+span {
+  padding: 0em 2em;
+  border-radius: 250px;
+  border-style: solid;
+  margin-left: 1em;
+  font: 20px sans-serif;
+  line-height: 1.5;
+}
+```
 
-Fragmenting the above block into three columns results in:
+```css
+span {
+  display: block;
+  background: linear-gradient(to bottom right, yellow, green);
+  box-shadow:
+    inset 8px 8px 10px 0px deeppink,
+    inset -5px -5px 5px 0px blue,
+    inset 5px 5px 15px 0px yellow;
+}
+#base {
+  width: 33%;
+}
+.columns {
+  columns: 3;
+}
 
-![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:slice.](box-decoration-break-block-slice.png)
+.clone {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+```
 
-Note that stacking these pieces vertically will result in the non-fragmented rendering.
+```html
+<div id="base">
+  <span>The<br />quick<br />orange fox</span>
+</div>
+<br />
 
-Now, the same example but styled with `box-decoration-break: clone` results in:
+<h2>'box-decoration-break: slice'</h2>
+<div class="columns">
+  <span>The<br />quick<br />orange fox</span>
+</div>
 
-![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone.](box-decoration-break-block-clone.png)
+<h2>'box-decoration-break: clone'</h2>
+<div class="columns">
+  <span class="clone">The<br />quick<br />orange fox</span>
+</div>
+```
 
-Note here that each fragment has an identical replicated border, box-shadow, and background.
-
-You can [try the block examples above](https://mdn.dev/archives/media/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html) in your browser.
+{{embedlivesample("block_box_fragments", "", "340")}}
 
 ## Specifications
 

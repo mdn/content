@@ -7,7 +7,7 @@ browser-compat: api.Blob
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
+The **`Blob`** interface represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
 
 Blobs can represent data that isn't necessarily in a JavaScript-native format. The {{DOMxRef("File")}} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system.
 
@@ -33,6 +33,8 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 - {{DOMxRef("Blob.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
+- {{DOMxRef("Blob.bytes()")}}
+  - : Returns a promise that resolves with an {{jsxref("Uint8Array")}} containing the contents of the `Blob`.
 - {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
 - {{DOMxRef("Blob.stream()")}}
@@ -55,11 +57,9 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### Creating a URL representing the contents of a typed array
 
-The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
+The following example creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
-#### HTML
-
-```html
+```html live-sample___url-from-array
 <p>
   This example creates a typed array containing the ASCII codes for the space
   character through the letter Z, then converts it to an object URL. A link to
@@ -67,11 +67,9 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 </p>
 ```
 
-#### JavaScript
-
 The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute (assuming the data contains an image, of course).
 
-```js
+```js live-sample___url-from-array
 function showViewLiveResultButton() {
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
@@ -101,18 +99,15 @@ if (!showViewLiveResultButton()) {
   }
 
   const url = typedArrayToURL(bytes, "text/plain");
-
   const link = document.createElement("a");
+
   link.href = url;
   link.innerText = "Open the array URL";
-
   document.body.appendChild(link);
 }
 ```
 
-#### Result
-
-{{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}
+{{EmbedLiveSample('url-from-array', , , , , , , 'allow-popups')}}
 
 ### Extracting data from a blob
 

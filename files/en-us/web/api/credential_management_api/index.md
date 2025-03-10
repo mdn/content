@@ -2,24 +2,36 @@
 title: Credential Management API
 slug: Web/API/Credential_Management_API
 page-type: web-api-overview
-browser-compat: api.Credential
+browser-compat:
+  - api.Credential
+  - api.CredentialsContainer
+  - api.FederatedCredential
+  - api.PasswordCredential
+spec-urls: https://w3c.github.io/webappsec-credential-management/
 ---
 
-{{DefaultAPISidebar("Credential Management API")}}
+{{DefaultAPISidebar("Credential Management API")}}{{securecontext_header}}
 
-The Credential Management API lets a website store and retrieve password, public key, and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
+The Credential Management API enables a website to create, store, and retrieve {{glossary("credential", "credentials")}}. A credential is an item which enables a system to make an {{glossary("authentication")}} decision: for example, to decide whether to sign a user into an account. We can think of it as a piece of evidence that a user presents to a website to demonstrate that they really are the person they are claiming to be.
 
-## Credential management concepts and usage
+## Concepts and usage
 
-This API lets websites interact with a user agent's password system directly so that websites can deal in a uniform way with site credentials and user agents can provide better assistance with the management of their credentials. For example, user agents have a particularly hard time dealing with federated identity providers or esoteric sign-in mechanisms.
+The central interface is the {{domxref("CredentialsContainer")}}, which is accessed through the {{domxref("navigator.credentials")}} property and provides three main functions:
 
-To address these problems, the Credential Management API provides ways for a website to store and retrieve different types of credentials. This gives users capabilities such as seeing the federated account they used to sign on to a site, or resuming a session without the explicit sign-in flow of an expired session.
+- {{domxref("CredentialsContainer.create", "create()")}}: create a new credential.
+- {{domxref("CredentialsContainer.store", "store()")}}: store a new credential locally.
+- {{domxref("CredentialsContainer.get", "get()")}}: retrieve a credential, which can then be used to log a user in.
 
-> **Note:** This API is restricted to top-level contexts. Calls to `get()` and `store()` within an `<iframe>` element will resolve without effect.
+The API supports four different types of credential, which are all represented as subclasses of {{domxref("Credential")}}:
 
-### Subdomain-shared credentials
+| Type                    | Interface                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| Password                | {{domxref("PasswordCredential")}}                                                  |
+| Federated identity      | {{domxref("IdentityCredential")}}, {{domxref("FederatedCredential")}} (deprecated) |
+| One-time password (OTP) | {{domxref("OTPCredential")}}                                                       |
+| Web Authentication      | {{domxref("PublicKeyCredential")}}                                                 |
 
-Later versions of the spec allow credentials to be retrieved from a different subdomain. For example, a password stored in `login.example.com` may be used to log in to `www.example.com`. To take advantage of this, a password must be explicitly stored by calling {{domxref("CredentialsContainer.store()")}}. This is sometimes referred to as public suffix list (PSL) matching; however the spec only _recommends_ using PSL to determine the effective scope of a credential. It does not require it. Hence browsers may vary in their implementation.
+The guide page [Credential types](/en-US/docs/Web/API/Credential_Management_API/Credential_types) gives an overview of the different credential types and how they are used.
 
 ## Interfaces
 
@@ -31,8 +43,11 @@ Later versions of the spec allow credentials to be retrieved from a different su
   - : Provides information about credentials from a federated identity provider, which is an entity that a website trusts to correctly authenticate a user, and which provides an API for that purpose. [OpenID Connect](https://openid.net/developers/specs/) is an example of such a framework.
 - {{domxref("PasswordCredential")}}
   - : Provides information about a username/password pair.
-- {{domxref("PublicKeyCredential")}}
-  - : Provides a credential for logging in using a more secure system based on asymmetric cryptography instead of a password.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
 
 ## Specifications
 
@@ -41,3 +56,9 @@ Later versions of the spec allow credentials to be retrieved from a different su
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Web Authentication API", "", "", "nocode")}}
+- {{domxref("WebOTP API", "", "", "nocode")}}
+- {{domxref("FedCM API", "Federated Credential Management (FedCM) API", "", "nocode")}}

@@ -23,7 +23,10 @@ matchMedia(mediaQueryString)
 ### Parameters
 
 - `mediaQueryString`
+
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+
+    Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia("(max-width: 600px)")` works, whereas `matchMedia("max-width: 600px")` does not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
 
 ### Return value
 
@@ -42,8 +45,8 @@ property, which will be `true` if the document meets the media query's
 requirements.
 
 If you need to be kept aware of whether or not the document matches the media query at
-all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
-  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#monitoring_screen_resolution_or_zoom_level_changes)
+all times, you can instead watch for the {{domxref("MediaQueryList.change_event", "change")}} event to be delivered to the object.
+There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#monitoring_screen_resolution_or_zoom_level_changes)
 in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
@@ -61,11 +64,7 @@ let mql = window.matchMedia("(max-width: 600px)");
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
 
-The JavaScript code passes the media query to match into {{domxref("Window.matchMedia",
-  "matchMedia()")}} to compile it, then sets the `<span>`'s
-{{domxref("HTMLElement.innerText", "innerText")}} to the value of the results'
-{{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or
-not the document matches the media query at the moment the page was loaded.
+The JavaScript code passes the media query to match into `matchMedia()` to compile it, then sets the `<span>`'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.
 
 ### HTML
 

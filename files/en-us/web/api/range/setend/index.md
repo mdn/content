@@ -8,8 +8,7 @@ browser-compat: api.Range.setEnd
 
 {{ApiRef("DOM")}}
 
-The **`Range.setEnd()`** method sets the end position of a {{
-  domxref("Range") }} to be located at the given offset into the specified node x.Setting
+The **`Range.setEnd()`** method sets the end position of a {{domxref("Range")}} to be located at the given offset into the specified node x.Setting
 the end point above (higher in the document) than the start point will result in a
 collapsed range with the start and end points both set to the specified end position.
 

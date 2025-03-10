@@ -9,7 +9,24 @@ browser-compat: javascript.operators.yield
 
 The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## Syntax
 
@@ -27,7 +44,8 @@ yield expression
 
 Returns the optional value passed to the generator's `next()` method to resume its execution.
 
-> **Note:** This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
+> [!NOTE]
+> This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
 
 ## Description
 

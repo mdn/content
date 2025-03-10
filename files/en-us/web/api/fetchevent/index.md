@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FetchEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 This is the event type for `fetch` events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", 1)}}. It contains information about the fetch, including the request and how the receiver will treat the response. It provides the {{domxref("FetchEvent.respondWith", "event.respondWith()")}} method, which allows us to provide a response to this fetch.
 
@@ -24,6 +24,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
 - {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
   - : A promise that is pending while the event has not been handled, and fulfilled once it has.
+- {{domxref("FetchEvent.isReload")}} {{ReadOnlyInline}} {{Deprecated_inline}} {{Non-standard_inline}}
+  - : Returns `true` if the event was dispatched by the user attempting to reload the page, and `false` otherwise.
 - {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
 - {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}

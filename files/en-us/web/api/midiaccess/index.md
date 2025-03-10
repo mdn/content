@@ -9,6 +9,8 @@ browser-compat: api.MIDIAccess
 
 The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) provides methods for listing MIDI input and output devices, and obtaining access to those devices.
 
+`MIDIAccess` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
+
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -22,12 +24,12 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 
 ### Events
 
-- {{domxref("MIDIAccess.statechange_event")}}
+- {{domxref("MIDIAccess.statechange_event", "statechange")}}
   - : Called whenever a new MIDI port is added or an existing port changes state.
 
 ## Examples
 
-The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Information about the input and output ports is returned.
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a `MIDIAccess` object. Information about the input and output ports is returned.
 
 When a port changes state, information about that port is printed to the console.
 

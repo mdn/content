@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebGLFramebuffer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLFramebuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a collection of buffers that serve as a rendering destination.
 
@@ -19,6 +19,8 @@ The `WebGLFramebuffer` object does not define any methods or properties of its o
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 
 ## Examples
 
@@ -44,4 +46,6 @@ const buffer = gl.createFramebuffer();
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 - Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

@@ -14,7 +14,8 @@ Welcome to the MDN game development center! In this area of the site, we provide
 
 We've also included a reference section so you can easily find information about all the most common APIs used in game development.
 
-> **Note:** Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learning Area](/en-US/docs/Learn) is a good place to go to get started with the basics.
+> [!NOTE]
+> Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learn web development](/en-US/docs/Learn_web_development) section is a good place to go to get started with the basics.
 
 ## Port native games to the Web
 
@@ -42,8 +43,6 @@ For a list of web game examples, see our list of [Tutorials](/en-US/docs/Games/T
   - : Weekly newsletter about HTML game development, sent every Friday. Contains the latest articles, tutorials, tools, and resources.
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : List of the most popular HTML game frameworks along with their rating, features and samples.
-- [JSBreakouts](https://jsbreakouts.org/)
-  - : Compare JavaScript Breakout clones in different frameworks to help you choose the right one for you.
 - [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRFrame.fillPoses
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`fillPoses()`** method of the {{domxref("XRFrame")}} interface populates a {{jsxref("Float32Array")}} with the matrices of the poses relative to a given base space and returns `true` if successful for all spaces.
 

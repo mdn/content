@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorker.statechange_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} changes.
 

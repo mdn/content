@@ -38,7 +38,7 @@ Without further specification, one user unit equals one screen unit. To explicit
 <svg width="100" height="100">…</svg>
 ```
 
-The above element defines a simple SVG canvas with 100x100px. One user unit equals one screen unit.
+The above element defines an SVG canvas with 100x100px. One user unit equals one screen unit.
 
 ```html
 <svg width="200" height="200" viewBox="0 0 100 100">…</svg>

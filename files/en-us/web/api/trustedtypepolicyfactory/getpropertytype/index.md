@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.
 
@@ -34,11 +34,11 @@ A string with one of:
 - `"TrustedScript"`
 - `"TrustedScriptURL"`
 
-Or, null.
+Or, `null`.
 
 ## Examples
 
-In this example, passing the {{htmlelement("div")}} element and `innerHTML` property to `getPropertyType` returns "TrustedHTML".
+In this example, passing the {{htmlelement("div")}} element and `innerHTML` attribute to `getPropertyType()` returns "TrustedHTML".
 
 ```js
 console.log(trustedTypes.getPropertyType("div", "innerHTML")); // "TrustedHTML"

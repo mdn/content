@@ -22,7 +22,7 @@ ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
 Note: This is probably out of date.
 
-You may use the fullZoom feature for a [XUL:iframe](/en-US/docs/XUL/iframe) as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:
+You may use the fullZoom feature for a `<XUL:iframe>` as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:
 
 ```js
 var zoom = 1.5;

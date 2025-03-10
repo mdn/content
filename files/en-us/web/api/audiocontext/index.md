@@ -23,10 +23,10 @@ An audio context controls both the creation of the nodes it contains and the exe
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
 - {{domxref("AudioContext.baseLatency")}} {{ReadOnlyInline}}
-  - : Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
+  - : Returns the number of seconds of processing latency incurred by the `AudioContext` passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
 - {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
-- {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns the sink ID of the current output audio device.
 
 ## Instance methods
@@ -47,7 +47,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
   - : Returns a new `AudioTimestamp` object containing two audio timestamp values relating to the current audio context.
 - {{domxref("AudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended/paused.
-- {{domxref("AudioContext.setSinkId()")}} {{Experimental_Inline}}
+- {{domxref("AudioContext.setSinkId()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Sets the output audio device for the `AudioContext`.
 - {{domxref("AudioContext.suspend()")}}
   - : Suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process.

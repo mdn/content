@@ -10,19 +10,14 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-When an HTML document has been switched to
-[`designMode`](/en-US/docs/Web/API/Document/designMode), its
-`document` object exposes an **`execCommand`**
-method to run commands that manipulate the current editable region, such as [form inputs](/en-US/docs/Web/HTML/Element/input) or
-[`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-elements.
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Element/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
-Most commands affect the document's [selection](/en-US/docs/Web/API/Selection) (bold, italics, etc.), while others
-insert new elements (adding a link), or affect an entire line (indenting). When using
-`contentEditable`, `execCommand()` affects the currently active
-editable element.
+To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `execCommand` in many cases, but `execCommand` is still sometimes useful. In particular, the Clipboard API doesn't replace the `insertText` command, which you can use to programmatically replace text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
+Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
+
+> [!NOTE]
+> Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
 
 ## Syntax
 
@@ -50,7 +45,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point.
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -71,7 +66,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
       - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Safari.)
-    - `hiliteColor`
+    - `highlightColor`
       - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function.
     - `increaseFontSize`
       - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point.
@@ -127,7 +122,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
-        > **Note:** This argument is logically backwards (i.e., use `false` to use CSS,
+        > [!NOTE]
+        > This argument is logically backwards (i.e., use `false` to use CSS,
         > `true` to use HTML). This has been deprecated in favor of `styleWithCSS`.
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
@@ -145,8 +141,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 > **Note:** `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
-> verify browser support before calling a command. From Firefox 82, nested
-> `document.execCommand()` calls will always return `false`.
+> verify browser support before calling a command.
 
 ## Examples
 
@@ -154,7 +149,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 
@@ -225,7 +220,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

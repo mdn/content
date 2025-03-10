@@ -35,7 +35,7 @@ Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAtt
 </svg>
 ```
 
-This snippet gets the element, and logs the `baseVal` and `animVal`of the {{domxref("SVGClipPathElement.clipPathUnits")}} property. As no animation is happening, they have the same value.
+This snippet gets the element, and logs the `baseVal` and `animVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property. As no animation is happening, they have the same value.
 
 ```js
 const clipPathElt = document.getElementById("clip1");

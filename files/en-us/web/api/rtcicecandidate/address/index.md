@@ -18,7 +18,8 @@ You can't specify the value of `address` directly in the options object, but its
 
 A string providing the IP address from which the candidate comes.
 
-> **Note:** If `port` is `null` — and
+> [!NOTE]
+> If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the
 > candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
 > will fail, throwing an `OperationError` exception.
@@ -45,7 +46,7 @@ To do this, configure the ICE agent's ICE transport policy with an object confir
 const rtcConfig = {
   iceServers: [
     {
-      urls: "turn:myturn.server.ip",
+      urls: "turn:my-turn.server.ip",
       username: "username",
       credential: "password",
     },

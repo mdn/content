@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.MediaCapabilities
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{DefaultAPISidebar("Media Capabilities API")}}
 
 The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
 
@@ -15,7 +15,8 @@ These features include:
 - More and more finely-detailed information about the display's properties, so that informed decisions can be made when choosing the best format to play on the user's device. For example, you can use the API to ensure that you don't try to play High Dynamic Range (HDR) content on a Standard Dynamic Range (SDR) screen.
 - Support for getting real-time feedback about the playback of media, so your code can make informed decisions about adapting the stream's quality or other settings to manage the user's perceived media performance and quality. One feature of this is the ability to detect when the device switches GPUs, so you can make appropriate adjustments based on the new GPU's capabilities.
 
-> **Note:** The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.
+> [!NOTE]
+> The display capabilities functionality mentioned in the third point above have not yet appeared in any browser. They will be a useful feature of the API once available, but there is a high probability of the display capabilities functionality changing a great deal before browser implementations arrive.
 
 ## The MediaCapabilities interface
 
@@ -39,8 +40,8 @@ The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter 
 
 In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
-- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
-- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the aspect ratio.
+- The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
+- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the {{glossary("aspect ratio")}}.
 - The `bitrate` is the number of bits used to encode one second of video.
 - The `framerate` is the number of frames which are played per second of time when playing the video.
 
@@ -82,7 +83,8 @@ Now that we've created a video decoding configuration we can pass it as a parame
 let promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
 ```
 
-The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
+The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises.
+Once the promise states are fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
 
 ### Handling the response
 
@@ -140,7 +142,6 @@ li {
         <option>video/webm; codecs=vp9</option>
         <option>video/mp4; codecs=avc1</option>
         <option>video/mp4; codecs=avc1.420034</option>
-        <option>video/ogg; codecs=theora</option>
         <option>invalid</option>
       </select>
     </li>
@@ -227,7 +228,7 @@ let mc = {
           result.powerEfficient ? " IS " : " IS NOT "
         }power efficient.`;
         const ul = document.getElementById("results");
-        li.innerHTML = content;
+        li.textContent = content;
         ul.appendChild(li);
       })
       .catch((error) => {

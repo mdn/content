@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.IDBIndex.unique
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`unique`** read-only property returns a boolean that
 states whether the index allows duplicate keys.
@@ -15,8 +15,6 @@ This is decided when the index is created, using the
 {{domxref("IDBObjectStore.createIndex")}} method. This method takes an optional
 parameter, `unique`, which if set to `true` means that the index
 will not be able to accept duplicate entries.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -44,7 +42,7 @@ complete working example, see our [IndexedDB-examples demo repo](https://github.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+  tableEntry.textContent = "";
   const transaction = db.transaction(["contactsList"], "readonly");
   const objectStore = transaction.objectStore("contactsList");
 
@@ -55,15 +53,20 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if (cursor) {
       const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.value.id}</td>` +
-        `<td>${cursor.value.lName}</td>` +
-        `<td>${cursor.value.fName}</td>` +
-        `<td>${cursor.value.jTitle}</td>` +
-        `<td>${cursor.value.company}</td>` +
-        `<td>${cursor.value.eMail}</td>` +
-        `<td>${cursor.value.phone}</td>` +
-        `<td>${cursor.value.age}</td>`;
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

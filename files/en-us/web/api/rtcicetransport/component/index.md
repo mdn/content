@@ -8,9 +8,7 @@ browser-compat: api.RTCIceTransport.component
 
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}**
-property **`component`** specifies whether the object is
-serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
+The **`component`** read-only property of the {{domxref("RTCIceTransport")}} interface specifies whether the object is serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
 
 ## Value
 

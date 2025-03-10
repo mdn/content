@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadTime
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DownloadTime` type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.
 
@@ -27,7 +27,8 @@ A `DownloadTime` can be one of three different types:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadTime) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadTime) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

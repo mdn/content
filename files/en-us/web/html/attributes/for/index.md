@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: for"
+short-title: for
 slug: Web/HTML/Attributes/for
 page-type: html-attribute
 browser-compat:
@@ -10,6 +11,57 @@ browser-compat:
 {{HTMLSidebar}}
 
 The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and {{htmlelement("output")}}. When used on a `<label>` element it indicates the form element that this label describes. When used on an `<output>` element it allows for an explicit relationship between the elements that represent values which are used in the output.
+
+{{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  <label>First Name (no "for" attribute):</label>
+  <input id="first" type="text" value="Jane" />
+</p>
+<p>
+  <label for="last">Last Name (w/ "for" attribute):</label>
+  <input id="last" type="text" value="Doe" />
+</p>
+<p id="result">
+  <strong id="result-label">Full Name:</strong>
+  <output for="first last" aria-labelledby="result-label" id="output"></output>
+</p>
+```
+
+```css interactive-example
+label[for="paragraph"] {
+  color: rebeccapurple;
+}
+
+#result {
+  text-align: center;
+}
+
+#result-label {
+  font-size: 16pt;
+}
+
+#result-label,
+#output {
+  display: block;
+}
+```
+
+```js interactive-example
+const firstNameEl = document.getElementById("first");
+const lastNameEl = document.getElementById("last");
+const outputEl = document.getElementById("output");
+
+function updateOutput() {
+  const value = `${firstNameEl.value} ${lastNameEl.value}`;
+  outputEl.innerText = value;
+}
+
+updateOutput();
+firstNameEl.addEventListener("input", updateOutput);
+lastNameEl.addEventListener("input", updateOutput);
+```
 
 ## Usage
 

@@ -6,16 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.documentURI
 ---
 
-{{HTTPSidebar}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`documentURI`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a string
-representing the URI of the document or worker in which the violation was found.
+The **`documentURI`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URI of the document or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
 
 ## Value
 
-A string representing the URI of the document or worker in which the
-violation was found.
+A string representing the URI of the document or worker in which the violation occurred.
 
 ## Examples
 
@@ -35,4 +32,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.documentURL")}}

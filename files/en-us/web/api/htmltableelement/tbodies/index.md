@@ -37,7 +37,7 @@ A live {{domxref("HTMLCollection")}}.
 This snippet gets the number of bodies in a table.
 
 ```js
-mytable.tBodies.length;
+myTable.tBodies.length;
 ```
 
 ## Specifications

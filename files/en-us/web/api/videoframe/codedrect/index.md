@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedRect
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`codedRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} with the width and height matching {{domxref("VideoFrame.codedWidth")}} and {{domxref("VideoFrame.codedHeight")}}.
 

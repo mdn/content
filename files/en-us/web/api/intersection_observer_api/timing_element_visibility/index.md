@@ -185,7 +185,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
   font-size: 14px;
   bottom: 30px;
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 ```
 
@@ -219,7 +219,7 @@ These are used as follows:
 - `adObserver`
   - : Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the `<main>` element's bounds.
 - `refreshIntervalID`
-  - : Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
+  - : Used to store the interval ID returned by {{domxref("Window.setInterval", "setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
 #### Setting up
 
@@ -316,11 +316,11 @@ function intersectionCallback(entries) {
 
 As previously mentioned, the {{domxref("IntersectionObserver")}} callback receives as input an array of all of the observer's targeted elements which have become either more or less visible than one of the intersection observer ratios. We iterate over each of those entries—which are of type {{domxref("IntersectionObserverEntry")}}. If the target element is intersecting with the root, we know it has just transitioned from the obscured state to the visible state. If it's become at least 75% visible, then we consider the ad visible and we start the timer by setting the ad's `dataset.lastViewStarted` attribute to the transition time in {{domxref("IntersectionObserverEntry.time", "entry.time")}}, then add the ad to the set `visibleAds` so we know to process it as time goes by.
 
-If the ad has transitioned to the not-intersecting state, we remove the ad from the set of visible ads. Then we have one special behavior: we look to see if {{domxref("IntersectionObserverEntry.intersectionRatio", "entry.ratio")}} is 0.0; if it is, that means the element has become totally obscured. If that's the case, and the ad has been visible for at least a minute total, we call a function we'll create called `replaceAd()` to replace the existing ad with a new one. This way, the user sees a variety of ads over time, but the ads are only replaced while they can't be seen, resulting in a smooth experience.
+If the ad has transitioned to the not-intersecting state, we remove the ad from the set of visible ads. Then we have one special behavior: we look to see if {{domxref("IntersectionObserverEntry.intersectionRatio", "entry.intersectionRatio")}} is 0.0; if it is, that means the element has become totally obscured. If that's the case, and the ad has been visible for at least a minute total, we call a function we'll create called `replaceAd()` to replace the existing ad with a new one. This way, the user sees a variety of ads over time, but the ads are only replaced while they can't be seen, resulting in a smooth experience.
 
 #### Handling periodic actions
 
-Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
+Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("Window.setInterval", "setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
 ```js
 function handleRefreshInterval() {
@@ -371,7 +371,7 @@ function updateAdTimer(adBox) {
 }
 ```
 
-To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Global_attributes#data-*)) on every ad:
+To track an element's visible time, we use two custom data attributes (see [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)) on every ad:
 
 - `lastViewStarted`
   - : The time in milliseconds, relative to the time at which the document was created, at which the ad's visibility count was last updated, or the ad last became visible. 0 if the ad was not visible as of the last time it was checked.

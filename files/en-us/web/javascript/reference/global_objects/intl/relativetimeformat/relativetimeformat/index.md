@@ -23,7 +23,7 @@ new Intl.RelativeTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
 
@@ -39,7 +39,7 @@ new Intl.RelativeTimeFormat(locales, options)
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `numberingSystem`
-      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `style`
       - : The style of the formatted relative time. Possible values are:
         - `"long"` (default)
@@ -65,8 +65,7 @@ The following example shows how to create a relative time formatter using the En
 ```js
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // other values: "lookup"
+const rtf = new Intl.RelativeTimeFormat("en-US", {
   numeric: "always", // other values: "auto"
   style: "long", // other values: "short" or "narrow"
 });
@@ -80,18 +79,26 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using the auto option
 
-If `numeric:auto` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This allows to not always have to use numeric values in the output.
+If the `numeric: "auto"` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This is useful when you don't want to use numeric values in the output.
 
 ```js
 // Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const rtf = new Intl.RelativeTimeFormat("en-US", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
 rtf.format(-1, "day"); // "yesterday"
 
 // Format relative time using positive day unit (1).
 rtf.format(1, "day"); // "tomorrow"
+```
+
+When the value is `0`, the output may be dependent on the unit. "0 seconds" is represented by the localized version of "now".
+
+```js
+rtf.format(0, "second"); // "now"
+rtf.format(0, "day"); // "today"
+rtf.format(0, "minute"); // "this minute"
 ```
 
 ## Specifications

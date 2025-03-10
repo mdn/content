@@ -7,9 +7,53 @@ browser-compat: css.properties.text-shadow
 
 {{CSSRef}}
 
-The **`text-shadow`** CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
+The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## Syntax
 
@@ -65,7 +109,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## Examples
 
-### Simple shadow
+### Basic shadow
 
 ```css
 .red-text-shadow {
@@ -80,7 +124,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 </p>
 ```
 
-{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
+{{EmbedLiveSample('Basic_shadow', '660px', '90px')}}
 
 ### Multiple shadows
 
@@ -119,4 +163,3 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

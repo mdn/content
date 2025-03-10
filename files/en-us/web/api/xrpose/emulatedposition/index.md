@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRPose.emulatedPosition
 ---
 
-{{APIRef}}
+{{APIRef}}{{SecureContext_Header}}
 
 The `emulatedPosition` read-only attribute of the
 {{DOMxRef("XRPose")}} interface is a Boolean value indicating whether or not both the

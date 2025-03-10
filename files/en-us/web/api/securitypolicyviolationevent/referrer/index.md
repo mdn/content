@@ -6,17 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
 
-{{HTTPSidebar}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`referrer`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a string
-representing the referrer of the resources whose policy was violated. This will be a URL
-or `null`.
+The **`referrer`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the referrer for the resources whose [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) was violated.
+This will be a URL or `null`.
 
 ## Value
 
-A string representing the URL of the referrer of the violating
-resources.
+A string representing the URL for the referrer of the resources whose policy was violated, or `null`.
 
 ## Examples
 
@@ -36,4 +33,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.referrer")}}

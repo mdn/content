@@ -14,7 +14,7 @@ Only the current document is included, so usually there is only one {{domxref("P
 
 ## Navigation timestamps
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](/en-US/docs/Web/API/PerformanceNavigationTiming/timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 Figure 1. Navigation timestamps ([source](https://w3c.github.io/navigation-timing/#process)).
 
 The document navigation timestamps (in addition to those from [Resource Timing](/en-US/docs/Web/API/Performance_API/Resource_timing)) are:
@@ -35,7 +35,7 @@ The {{domxref("PerformanceNavigationTiming")}} interface provides additional pro
 
 ## Example
 
-The `domContentLoadedEventEnd` and `domContentLoadedEventStart` timestamps can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+The `domContentLoadedEventEnd` and `domContentLoadedEventStart` timestamps can be used to measure how long it takes to process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
 
 This example uses a {{domxref("PerformanceObserver")}}, which notifies the caller about new `navigation` performance entries as they are recorded in the browser's performance timeline. The example uses the `buffered` option to access entries that were recorded before the observer was created.
 

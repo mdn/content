@@ -9,7 +9,22 @@ browser-compat: javascript.operators.new_target
 
 The **`new.target`** meta-property lets you detect whether a function or constructor was called using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. In constructors and functions invoked using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator, `new.target` returns a reference to the constructor or function that `new` was called upon. In normal function calls, `new.target` is {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## Syntax
 
@@ -124,7 +139,8 @@ map.upsert("a", {
 console.log(map.get("a")); // 2
 ```
 
-> **Note:** In fact, due to the lack of `Reflect.construct()`, it is not possible to properly subclass built-ins (like [`Error` subclassing](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#custom_error_types)) when transpiling to pre-ES6 code.
+> [!NOTE]
+> In fact, due to the lack of `Reflect.construct()`, it is not possible to properly subclass built-ins (like [`Error` subclassing](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#custom_error_types)) when transpiling to pre-ES6 code.
 
 However, if you are writing ES6 code, prefer using classes and `extends` instead, as it's more readable and less error-prone.
 

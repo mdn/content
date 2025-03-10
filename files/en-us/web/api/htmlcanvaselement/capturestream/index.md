@@ -71,4 +71,4 @@ stream.getTracks().forEach((track) => pc.addTrack(track, stream));
 - {{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream
   from a media element.
 - {{domxref("MediaStream")}}
-- {{domxref("Media Capture and Streams API")}}
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)

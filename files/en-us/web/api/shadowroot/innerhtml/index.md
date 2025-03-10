@@ -16,6 +16,8 @@ interface sets or returns a reference to the DOM tree inside the
 
 A string.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `sr.innerHTML = null` is equivalent to `sr.innerHTML = ""`.
+
 ## Examples
 
 ```js

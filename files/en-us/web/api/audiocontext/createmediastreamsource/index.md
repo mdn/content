@@ -13,8 +13,7 @@ Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }}
 object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }}
 instance), the audio from which can then be played and manipulated.
 
-For more details about media stream audio source nodes, check out the {{
-    domxref("MediaStreamAudioSourceNode") }} reference page.
+For more details about media stream audio source nodes, check out the {{domxref("MediaStreamAudioSourceNode")}} reference page.
 
 ## Syntax
 
@@ -35,18 +34,16 @@ whose media is obtained from the specified source stream.
 
 ## Examples
 
-In this example, we grab a media (audio + video) stream from {{
-    domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}
-element to play then mute the audio, but then also feed the audio into a {{
-    domxref("MediaStreamAudioSourceNode") }}. Next, we feed this source audio into a low
-pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
+In this example, we grab a media (audio + video) stream from {{domxref("navigator.getUserMedia")}}, feed the media into a {{htmlelement("video")}} element to play then mute the audio, but then also feed the audio into a {{domxref("MediaStreamAudioSourceNode")}}.
+Next, we feed this source audio into a low pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
 then a {{domxref("AudioDestinationNode") }}.
 
 The range slider below the {{ htmlelement("video") }} element controls the amount of
 gain given to the lowpass filter — increase the value of the slider to make the audio
 sound more bass heavy!
 
-> **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer).
+> [!NOTE]
+> You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer).
 
 ```js
 const pre = document.querySelector("pre");
@@ -74,7 +71,7 @@ if (navigator.mediaDevices) {
       const audioCtx = new AudioContext();
       const source = audioCtx.createMediaStreamSource(stream);
 
-      // Create a biquadfilter
+      // Create a biquad filter
       const biquadFilter = audioCtx.createBiquadFilter();
       biquadFilter.type = "lowshelf";
       biquadFilter.frequency.value = 1000;
@@ -102,10 +99,11 @@ if (navigator.mediaDevices) {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 ```
 
-> **Note:** As a consequence of calling
+> [!NOTE]
+> As a consequence of calling
 > `createMediaStreamSource()`, audio playback from the media stream will
 > be re-routed into the processing graph of the {{domxref("AudioContext")}}. So
 > playing/pausing the stream can still be done through the media element API and the

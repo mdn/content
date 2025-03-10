@@ -37,25 +37,25 @@ Note that this code is identical for both peers involved in the connection.
 
 ### Create the signaling and peer connections
 
-First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace `stun.myserver.tld` with the address of a real STUN server.
+First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace `stun.my-server.tld` with the address of a real STUN server.
 
 ```js
 const config = {
-  iceServers: [{ urls: "stun:stun.mystunserver.tld" }],
+  iceServers: [{ urls: "stun:stun.my-stun-server.tld" }],
 };
 
 const signaler = new SignalingChannel();
 const pc = new RTCPeerConnection(config);
 ```
 
-This code also gets the {{HTMLElement("video")}} elements using the classes "selfview" and "remoteview"; these will contain, respectively, the local user's self-view and the view of the incoming stream from the remote peer.
+This code also gets the {{HTMLElement("video")}} elements using the classes "self-view" and "remote-view"; these will contain, respectively, the local user's self-view and the view of the incoming stream from the remote peer.
 
 ### Connecting to a remote peer
 
 ```js
 const constraints = { audio: true, video: true };
-const selfVideo = document.querySelector("video.selfview");
-const remoteVideo = document.querySelector("video.remoteview");
+const selfVideo = document.querySelector("video.self-view");
+const remoteVideo = document.querySelector("video.remote-view");
 
 async function start() {
   try {
@@ -90,7 +90,7 @@ pc.ontrack = ({ track, streams }) => {
 };
 ```
 
-When the `track` event occurs, this handler executes. Using [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into `addTrack()` earlier.
+When the `track` event occurs, this handler executes. Using [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into `addTrack()` earlier.
 
 We add an unmute event handler to the track, because the track will become unmuted once it starts receiving packets. We put the remainder of our reception code in there.
 
@@ -296,7 +296,7 @@ Since rollback works by postponing changes until the next negotiation (which wil
 
 The code checks to see if the message is an offer, and if so, if the local signaling state isn't `stable`. If it's not stable, _and_ the local peer is the polite one, we need to trigger rollback so we can replace the outgoing offer with the new incoming one. And these must both be completed before we can proceed with handling the received offer.
 
-Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously _sent_ offer with the newly _received_ offer. The impolite peer has now become the callee instead of the caller.
+Since there isn't a single "roll back and use this offer instead", performing this change on the polite peer requires two steps, executed in the context of [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), which is used to ensure that both statements execute completely before continuing to handle the received offer. The first statement triggers rollback and the second sets the remote description to the received one, thus completing the process of replacing the previously _sent_ offer with the newly _received_ offer. The polite peer has now become the callee instead of the caller.
 
 All other descriptions received from the impolite peer are processed as normal, by passing them into {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 

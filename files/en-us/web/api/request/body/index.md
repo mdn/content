@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Request.body
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`body`** property of the {{domxref("Request")}}
+The **`body`** read-only property of the {{domxref("Request")}}
 interface contains a {{domxref("ReadableStream")}} with the body contents
 that have been added to the request. Note that a request using the
 `GET` or `HEAD` method cannot have a body

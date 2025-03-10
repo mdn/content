@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.now
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`performance.now()`** method returns a high resolution timestamp in milliseconds. It represents the time elapsed since {{domxref("Performance.timeOrigin")}} (the time when navigation has started in window contexts, or the time when the worker is run in {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts).
 
@@ -56,11 +56,26 @@ currentTime = performance.timeOrigin + performance.now();
 
 The specification (Level 2) requires that `performance.now()` should tick during sleep. It appears that only Firefox on Windows, and Chromiums on Windows keep ticking during sleep. Relevant browser bugs for other operating systems:
 
-- Chrome/Chromium ([bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
-- Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
-- Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
+- Chrome/Chromium ([bug](https://crbug.com/1206450))
+- Firefox ([bug](https://bugzil.la/1709767))
+- Safari/WebKit ([bug](https://webkit.org/b/225610))
 
-More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115).
+More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601).
+
+## Security requirements
+
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), `performance.now()` is coarsened based on whether or not the document is {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+
+- Resolution in isolated contexts: 5 microseconds
+- Resolution in non-isolated contexts: 100 microseconds
+
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
+
+```js
+if (crossOriginIsolated) {
+  // Use measureUserAgentSpecificMemory
+}
+```
 
 ## Examples
 
@@ -74,26 +89,6 @@ doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
-
-## Security requirements
-
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), `performance.now()` is coarsened based on site isolation status.
-
-- Resolution in isolated contexts: 5 microseconds
-- Resolution in non-isolated contexts: 100 microseconds
-
-Cross-origin isolate your site using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
-
-```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-```
-
-These headers ensure a top-level document does not share a browsing context group with
-cross-origin documents. COOP process-isolates your document and potential attackers
-can't access to your global object if they were opening it in a popup, preventing a set
-of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## Specifications
 

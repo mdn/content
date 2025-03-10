@@ -7,9 +7,24 @@ browser-compat: javascript.operators.yield_star
 
 {{jsSidebar("Operators")}}
 
-The **`yield*`** operator is used to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}.
+The **`yield*`** operator can be used within generator (sync or async) functions to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}. Inside async generator functions, it can additionally be used to delegate to another async iterable object, such as an {{jsxref("AsyncGenerator")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+
+```js interactive-example
+function* func1() {
+  yield 42;
+}
+
+function* func2() {
+  yield* func1();
+}
+
+const iterator = func2();
+
+console.log(iterator.next().value);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -28,11 +43,13 @@ Returns the value returned by that iterator when it's closed (when `done` is `tr
 
 ## Description
 
-The `yield*` expression iterates over the operand and yields each value returned by it. It delegates iteration of the current generator to an underlying iterator — which we will refer to as "generator" and "iterator", respectively. `yield*` first gets the iterator from the operand by calling the latter's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method. Then, each time the `next()` method of the generator is called, `yield*` calls the iterator's `next()` method, passing the argument received by the generator's `next()` method (always `undefined` for the first call), and yielding the same result object as what's returned from the iterator's `next()` method. If the iterator result has `done: true`, then the `yield*` expression stops executing and returns the `value` of that result.
+The `yield*` expression iterates over the operand and yields each value returned by it. It delegates iteration of the current generator to an underlying iterator — which we will refer to as "generator" and "iterator", respectively. `yield*` first gets the iterator from the operand by calling the latter's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method. Then, each time the `next()` method of the generator is called, `yield*` calls the iterator's `next()` method, passing the argument received by the generator's `next()` method (always `undefined` for the first call), and yielding the same result object as what's returned from the iterator's `next()` method. If the iterator result has `done: true`, then the `yield*` expression stops executing and returns the `value` of that result.
 
 The `yield*` operator forwards the current generator's {{jsxref("Generator/throw", "throw()")}} and {{jsxref("Generator/return", "return()")}} methods to the underlying iterator as well. If the current generator is prematurely closed through one of these methods, the underlying iterator will be notified. If the generator's `throw()`/`return()` method is called, the `throw()`/`return()` method of the underlying iterator is called with the same argument. The return value of `throw()`/`return()` is handled like the `next()` method's result, and if the method throws, the exception is propagated from the `yield*` expression.
 
-If the underlying iterator doesn't have a `throw()` method, this causes `yield*` to throw a {{jsxref("TypeError")}} – but before throwing the error, the underlying iterator's `return()` method is called if one exists. If the underlying iterator doesn't have a `return()` method, the `yield*` expression turns into a {{jsxref("Statements/return", "return")}} statement, just like calling `return()` on a suspended {{jsxref("Operators/yield", "yield")}} expression.
+If the underlying iterator doesn't have a `return()` method, the `yield*` expression turns into a {{jsxref("Statements/return", "return")}} statement, just like calling `return()` on a suspended {{jsxref("Operators/yield", "yield")}} expression.
+
+If the underlying iterator doesn't have a `throw()` method, this causes `yield*` to throw a {{jsxref("TypeError")}} – but before throwing the error, the underlying iterator's `return()` method is called if one exists.
 
 ## Examples
 
@@ -110,6 +127,31 @@ console.log(gen.next()); // {value: 1, done: false}
 console.log(gen.next()); // {value: 2, done: false}
 console.log(gen.next()); // {value: 3, done: false} done is false because g5 generator isn't finished, only g4
 console.log(gen.next()); // {value: 'foo', done: true}
+```
+
+### Use with async generators
+
+```js
+async function* g1() {
+  await Promise.resolve(0);
+  yield "foo";
+}
+
+function* g2() {
+  yield "bar";
+}
+
+async function* g3() {
+  // Can use yield* on both async and sync iterators
+  yield* g1();
+  yield* g2();
+}
+
+const gen = g3();
+
+console.log(await gen.next()); // {value: "foo", done: false}
+console.log(await gen.next()); // {value: "bar", done: false}
+console.log(await gen.next()); // {done: true}
 ```
 
 ### Method forwarding

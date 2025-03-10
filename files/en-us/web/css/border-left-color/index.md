@@ -7,9 +7,48 @@ browser-compat: css.properties.border-left-color
 
 {{CSSRef}}
 
-The **`border-left-color`** CSS property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
+The **`border-left-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
 
-{{EmbedInteractiveExample("pages/css/border-left-color.html")}}
+{{InteractiveExample("CSS Demo: border-left-color")}}
+
+```css interactive-example-choice
+border-left-color: red;
+```
+
+```css interactive-example-choice
+border-left-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-left-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-left-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-left-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -18,7 +57,7 @@ The **`border-left-color`** CSS property sets the color of an element's left [bo
 border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255 0 0);
-border-left-color: hsl(100deg 50% 25% / 0.75);
+border-left-color: hsl(100deg 50% 25% / 75%);
 border-left-color: currentcolor;
 border-left-color: transparent;
 
@@ -52,10 +91,10 @@ The `border-left-color` property is specified as a single value.
 #### HTML
 
 ```html
-<div class="mybox">
+<div class="my-box">
   <p>
     This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    <span class="red-text">red</span>.
   </p>
 </div>
 ```
@@ -63,13 +102,13 @@ The `border-left-color` property is specified as a single value.
 #### CSS
 
 ```css
-.mybox {
+.my-box {
   border: solid 0.3em gold;
   border-left-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```

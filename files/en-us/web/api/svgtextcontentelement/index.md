@@ -61,20 +61,22 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
   - : Returns a {{domxref("DOMPoint")}} representing the position of a typographic character after text layout has been performed.
 
-    > **Note:** In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.
+    > [!NOTE]
+    > In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.
 
 - {{domxref("SVGTextContentElement.getEndPositionOfChar()")}}
 
   - : Returns a {{domxref("DOMPoint")}} representing the trailing position of a typographic character after text layout has been performed.
 
-    > **Note:** In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.
+    > [!NOTE]
+    > In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.
 
 - {{domxref("SVGTextContentElement.getExtentOfChar()")}}
   - : Returns a {{domxref("DOMRect")}} representing the computed tight bounding box of the glyph cell that corresponds to a given typographic character.
 - {{domxref("SVGTextContentElement.getRotationOfChar()")}}
   - : Returns a float representing the rotation of typographic character.
 - {{domxref("SVGTextContentElement.getCharNumAtPosition()")}}
-  - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned
+  - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
 - {{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}
   - : Selects text within the element.
 

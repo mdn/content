@@ -57,7 +57,7 @@ if ("virtualKeyboard" in navigator) {
 
 ### Detect the virtual keyboard geometry using CSS environment variables
 
-The VirtualKeyboard API also exposes the following {{cssxref("env", "CSS environment variables", "", "nocode")}}: `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
+The VirtualKeyboard API also exposes the following [CSS environment variables](/en-US/docs/Web/CSS/env): `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
 
 The `keyboard-inset-*` CSS environment variables are useful to adapt your layout to the virtual keyboard appearance using CSS. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport. The `width` and `height` variables are also available if needed.
 
@@ -110,6 +110,13 @@ The code snippet below shows how to use the `virtualkeyboardpolicy` attribute an
 
 - {{domxref('VirtualKeyboard')}} {{experimental_inline}}
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
+
+## Extensions to other interfaces
+
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to the {{DOMxRef("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
+- {{domxref("HTMLElement.virtualkeyboardpolicy")}} {{experimental_inline}}
+  - : A string indicating whether to use the browser's default policy for showing the virtual keyboard when the element is focused, or to handle showing the virtual keyboard manually.
 
 ## Specifications
 

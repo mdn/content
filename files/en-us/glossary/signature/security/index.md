@@ -22,4 +22,6 @@ Digital signatures rely on asymmetric cryptography, also known as [public-key cr
 ## See also
 
 - [Digital signature](https://en.wikipedia.org/wiki/Digital_signature) on Wikipedia
-- See {{glossary("digest")}}, {{glossary("encryption")}}
+- Related glossary terms:
+  - {{glossary("digest")}}
+  - {{glossary("encryption")}}

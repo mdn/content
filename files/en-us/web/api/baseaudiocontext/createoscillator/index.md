@@ -12,7 +12,8 @@ The `createOscillator()` method of the {{domxref("BaseAudioContext")}}
 interface creates an {{domxref("OscillatorNode")}}, a source representing a periodic
 waveform. It basically generates a constant tone.
 
-> **Note:** The {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
+> [!NOTE]
+> The {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
 > constructor is the recommended way to create a {{domxref("OscillatorNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 

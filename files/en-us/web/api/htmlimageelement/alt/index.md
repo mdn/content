@@ -49,7 +49,7 @@ In the HTML for this example, shown below, the {{HTMLElement("img")}} element in
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="" />
+    <img src="margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
     <p>
@@ -91,7 +91,7 @@ p {
 }
 
 .left-margin {
-  background-color: rgb(241, 240, 237);
+  background-color: rgb(241 240 237);
   width: 9em;
   height: 100%;
   float: left;
@@ -107,7 +107,7 @@ p {
 }
 
 .contents {
-  background-color: rgb(241, 240, 235);
+  background-color: rgb(241 240 235);
   height: 100%;
   margin-left: 2em;
   padding-top: 1em;
@@ -128,17 +128,17 @@ In other words, it should be the same text you would use in a textual button to 
 For example, in the snippet of HTML below, a toolbar which uses icon images as link labels provides `alt` attributes for each giving a textual label to use instead of the icon when the icons cannot be or are intentionally not used.
 
 ```html
-<li class="toolbar" aria-role="toolbar">
-  <a href="songs.html" aria-role="button">
+<li class="toolbar" role="toolbar">
+  <a href="songs.html" role="button">
     <img src="songicon.svg" alt="Songs" />
   </a>
-  <a href="albums.html" aria-role="button">
+  <a href="albums.html" role="button">
     <img src="albumicon.svg" alt="Albums"
   /></a>
-  <a href="artists.html" aria-role="button">
+  <a href="artists.html" role="button">
     <img src="artisticon.svg" alt="Artists" />
   </a>
-  <a href="playlists.html" aria-role="button">
+  <a href="playlists.html" role="button">
     <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>
@@ -147,7 +147,7 @@ For example, in the snippet of HTML below, a toolbar which uses icon images as l
 ### Images containing diagrams or maps
 
 When an image contains information presented as a diagram, chart, graph, or map, the `alt` text should provide the same information, at least in summary form.
-This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format like [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics).
+This is true whether the /me image is in a bitmapped format such as [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) or [JPEG](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or in a vector format like [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics).
 
 - For a map, the `alt` text could be directions to the place indicated by the map, similarly to how you would explain it verbally.
 - For a chart, the text could describe the items in the chart and their values.
@@ -162,7 +162,7 @@ Logos (such as corporate or brand logos) and informational icons should use the 
 That is, if an image is a corporate logo, the `alt` text should be the name of the company.
 If the image is an icon representing a status or other information, the text should be the name of that state.
 
-For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be "`Updated Recently"` or even "`Updated on 27 August 2019"`.
+For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be `"Updated Recently"` or even `"Updated on 27 August 2019"`.
 
 In this example, a starburst image with the word "New!" is used to indicate that an article is about something new (and probably supposedly also exciting).
 The `alt` attribute is set to `New Page!` to allow that text to be displayed in place of the image if the image isn't available.
@@ -242,7 +242,7 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 ### Other images
 
 Images showing objects or scenes should have `alt` text describing what's seen in the image.
-A photo of a yellow teapot might literally have its `alt` attribute set to "`A yellow teapot"`.
+A photo of a yellow teapot might literally have its `alt` attribute set to `"A yellow teapot"`.
 
 ## Specifications
 

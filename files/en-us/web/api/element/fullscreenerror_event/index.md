@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.Element.fullscreenerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Fullscreen API")}}
 
-The `fullscreenerror` event is fired when the browser cannot switch to fullscreen mode.
+The **`fullscreenerror`** event is fired when the browser cannot switch to fullscreen mode.
 
 As with the [`fullscreenchange` event](/en-US/docs/Web/API/Element/fullscreenchange_event), two `fullscreenerror` events are fired; the first is sent to the {{domxref("Element")}} which failed to change modes, and the second is sent to the {{domxref("Document")}} which owns that element.
 

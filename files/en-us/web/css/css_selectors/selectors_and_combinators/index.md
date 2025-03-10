@@ -7,7 +7,7 @@ spec-urls:
   - https://drafts.csswg.org/css-pseudo/
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 CSS selectors are used to define a pattern of the elements that you want to select for applying a set of CSS rules on the selected elements. Combinators define the relationship between the selectors. Using various selectors and combinators, you can precisely select and style the desired elements based on their type, attributes, state, or relationship to other elements.
 
@@ -54,7 +54,7 @@ p.myClass#myId {
 
 #### Result
 
-{{EmbedLiveSample("Basic selectors", "100%", 100)}}
+{{EmbedLiveSample("Basic selectors", "100%", 120)}}
 
 ## Combinators
 
@@ -101,7 +101,7 @@ h2 + p + p {
 #myId > .myClass {
   outline: 3px dashed red;
 }
-> p {
+* > p {
   font-size: 1.1rem;
 }
 ```
@@ -126,7 +126,7 @@ h2 + p + p {
 
 #### Result
 
-{{EmbedLiveSample("Combinators", "100%", 300)}}
+{{EmbedLiveSample("Combinators", "100%", 500)}}
 
 ### Creating complex selectors with CSS nesting
 
@@ -157,8 +157,10 @@ h2 {
     outline: 3px dashed red;
   }
 }
-> p {
-  font-size: 1.1rem;
+* {
+  & > p {
+    font-size: 1.1rem;
+  }
 }
 ```
 
@@ -193,12 +195,12 @@ The case sensitivity of the attribute depends on the language. Generally, in HTM
 
 ## Pseudo-class selectors
 
-The [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](#simple-selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree. {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
+The [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module defines over 60 [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Pseudo-classes are [simple selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector), prefixed with a colon (`:`), that allow the selection of elements based on state information that is not contained in the document tree. {{CSSxRef("pseudo-classes")}} can be used to style an element based on its _state_.
 For example, the {{cssxref(":target")}} simple selector targets element of a URL containing a fragment identifier, and the [`a:visited`](/en-US/docs/Web/CSS/:visited) [compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) matches all {{HTMLElement("a")}} elements that have been visited by a user.
 
 The pseudo-classes can be categorized as [element display state](/en-US/docs/Web/CSS/Pseudo-classes#element_display_state_pseudo-classes), [input](/en-US/docs/Web/CSS/Pseudo-classes#input_pseudo-classes), [linguistic](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), [location](/en-US/docs/Web/CSS/Pseudo-classes#location_pseudo-classes), [resource state](/en-US/docs/Web/CSS/Pseudo-classes#resource_state_pseudo-classes), [time-dimensional](/en-US/docs/Web/CSS/Pseudo-classes#time-dimensional_pseudo-classes), [tree-structural](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes), [user action](/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes), and [functional](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes).
 
-Multiple pseudo-classes can be combined to create [compound selectors](#compound-selector). When combining a pseudo-class into a compound selector with a type or universal selector, the pseudo-class must follow the type selector or universal selector, if present.
+Multiple pseudo-classes can be combined to create [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector). When combining a pseudo-class into a compound selector with a type or universal selector, the pseudo-class must follow the type selector or universal selector, if present.
 
 ## Pseudo-element selectors
 
@@ -216,5 +218,5 @@ See the [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#specifications) and 
 
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

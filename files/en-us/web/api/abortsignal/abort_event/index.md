@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.AbortSignal.abort_event
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
 

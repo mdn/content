@@ -1,5 +1,5 @@
 ---
-title: ":required"
+title: :required
 slug: Web/CSS/:required
 page-type: css-pseudo-class
 browser-compat: css.selectors.required
@@ -9,11 +9,47 @@ browser-compat: css.selectors.required
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute set on it.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:required {
+  background-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
+```
 
 This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
 
-> **Note:** The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
+> [!NOTE]
+> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
 
 ## Syntax
 
@@ -22,6 +58,15 @@ This pseudo-class is useful for highlighting fields that must have valid data be
   /* ... */
 }
 ```
+
+## Accessibility
+
+Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
+
+If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
+
+- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## Examples
 
@@ -71,15 +116,6 @@ input:required:invalid {
 
 {{EmbedLiveSample('Examples', 600, 120)}}
 
-## Accessibility concerns
-
-Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
-
-If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
-
-- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
-- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
-
 ## Specifications
 
 {{Specifications}}
@@ -91,4 +127,4 @@ If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, requ
 ## See also
 
 - Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

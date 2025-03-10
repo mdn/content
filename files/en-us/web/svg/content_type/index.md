@@ -42,13 +42,13 @@ SVG makes use of a number of data types. This article lists these types along wi
     anything ::= Char*
     ```
 
-    where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0, section 2.2.
+    where Char is any valid non-control Unicode character.
 
 ## Clock-value
 
 - \<clock-value>
 
-  - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
+  - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/smil-animation/#Timing-ClockValueSyntax) specification. The grammar for clock values is repeated here:
 
     ```plain
     Clock-val         ::= Full-clock-val | Partial-clock-val
@@ -66,7 +66,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     DIGIT             ::= [0-9]
     ```
 
-    For `Timecount` values, the default metric suffix is "`s`" (for seconds). No embedded white space is allowed in clock values, although leading and trailing white space characters will be ignored.
+    For `Timecount` values, the default metric suffix is `s` (for seconds). No embedded white space is allowed in clock values, although leading and trailing white space characters will be ignored.
 
     The following are examples of legal clock values:
 
@@ -92,25 +92,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
   - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
-    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/).
-
-    A \<color> is either a keyword or a numerical RGB specification.
-
-    In addition to these color keywords, users may specify keywords that correspond to the colors used by objects in the user's environment. The normative definition of these keywords is found in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
-
-    The format of an RGB value in hexadecimal notation is a "`#`" immediately followed by either three or six hexadecimal characters. The three-digit RGB notation (`#rgb`) is converted into six-digit form (`#rrggbb`) by replicating digits, not by adding zeros. For example, `#fb0` expands to `#ffbb00`. This ensures that white (`#ffffff`) can be specified with the short notation (`#fff`) and removes any dependencies on the color depth of the display. The format of an RGB value in the functional notation is an RGB start-function, followed by a comma-separated list of three numerical values (either three integer values or three percentage values) followed by "`)`". An RGB start-function is the case-insensitive string "`rgb(`", for example "`RGB(`" or "`rGb(`". For compatibility, the all-lowercase form "`rgb(`" is preferred. The integer value `255` corresponds to `100%`, and to `F` or `FF` in the hexadecimal notation: `rgb(255,255,255)` = `rgb(100%,100%,100%)` = `#FFF`. White space characters are allowed around the numerical values. All RGB colors are specified in the sRGB color space. Using sRGB provides an unambiguous and objectively measurable definition of the color, which can be related to international standards.
-
-    ```plain
-    color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
-                  | "rgb("integer, integer, integer")"
-                  | "rgb("integer "%", integer "%", integer "%)"
-                  | color-keyword
-    hexdigit ::= [0-9A-Fa-f]
-    ```
-
-    where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
-
-    The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
+    The definition of \<color> in SVG is exactly the same as the CSS {{cssxref("color_value", "&lt;color&gt;")}} definition.
 
 ## Coordinate
 
@@ -134,7 +116,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## FuncIRI
 
 - \<FuncIRI>
-  - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url", "CSS URI")}}.
+  - : Functional notation for a reference. The syntax for this reference is the same as the [CSS URI](/en-US/docs/Web/CSS/url_value).
 
 ## Integer
 
@@ -164,14 +146,14 @@ SVG makes use of a number of data types. This article lists these types along wi
     http://example.com/someDrawing.svg
     ```
 
-    An _IRI_ can also address a particular element within an XML document by including an _IRI_ fragment identifier as part of the _IRI_. An _IRI_ which includes an _IRI_ fragment identifier consists of an optional base _IRI_, followed by a "`#`" character, followed by the _IRI_ fragment identifier. For example, the following _IRI_ can be used to specify the element whose ID is "`Lamppost`" within file `someDrawing.svg`:
+    An _IRI_ can also address a particular element within an XML document by including an _IRI_ fragment identifier as part of the _IRI_. An _IRI_ which includes an _IRI_ fragment identifier consists of an optional base _IRI_, followed by a `#` character, followed by the _IRI_ fragment identifier. For example, the following _IRI_ can be used to specify the element whose ID is `Lamppost` within file `someDrawing.svg`:
 
     ```plain
     http://example.com/someDrawing.svg#Lamppost
     ```
 
     _IRIs_ are used in the {{SVGAttr("href")}} attribute.
-    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are `url(` and `)`, for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes.
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
@@ -197,7 +179,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 - \<length>
 
   - : A length is a distance measurement, given as a number along with a unit.
-    The SVG2 specification aligns with CSS [`<length>`](/en-US/docs/Web/CSS/length) data types and units for the attribute syntax and values.
+    The SVG2 specification aligns with CSS {{cssxref("length")}} data types and units for the attribute syntax and values.
     A length unit identifier must be provided and the values of the length unit identifiers are case-insensitive.
     The syntax follows the CSS `<length>` syntax:
 
@@ -295,13 +277,11 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
-    Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
-
 ## Percentage
 
 - \<percentage>
 
-  - : Percentages are specified as a number followed by a "`%`" character:
+  - : Percentages are specified as a number followed by a `%` character:
 
     ```plain
     percentage ::= number "%"

@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.String.replace
 
 The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Syntax
 
@@ -36,7 +47,7 @@ This method does not mutate the string value it's called on. It returns a new st
 
 A string pattern will only be replaced once. To perform a global search and replace, use a regular expression with the `g` flag, or use [`replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) instead.
 
-If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replace()`. In this case the behavior of `replace()` is entirely encoded by the `@@replace` method — for example, any mention of "capturing groups" in the description below is actually functionality provided by [`RegExp.prototype[@@replace]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replace()`. In this case the behavior of `replace()` is entirely encoded by the `[Symbol.replace]()` method — for example, any mention of "capturing groups" in the description below is actually functionality provided by [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace).
 
 If the `pattern` is an empty string, the replacement is prepended to the start of the string.
 
@@ -44,7 +55,7 @@ If the `pattern` is an empty string, the replacement is prepended to the start o
 "xxx".replace("", "_"); // "_xxx"
 ```
 
-A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+A regexp with the `g` flag is the only case where `replace()` replaces more than once. For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replace()`, see [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace).
 
 ### Specifying a string as the replacement
 
@@ -76,7 +87,8 @@ The replacement string can include the following special replacement patterns:
 
 You can specify a function as the second parameter. In this case, the function will be invoked after the match has been performed. The function's result (return value) will be used as the replacement string.
 
-> **Note:** The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
+> [!NOTE]
+> The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
 
 The function has the following signature:
 
@@ -90,7 +102,7 @@ The arguments to the function are as follows:
 
 - `match`
   - : The matched substring. (Corresponds to `$&` above.)
-- `p1, p2, …, pN`
+- `p1`, `p2`, …, `pN`
   - : The `n`th string found by a capture group (including named capturing groups), provided the first argument to `replace()` is a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if the `pattern` is `/(\a+)(\b+)/`, then `p1` is the match for `\a+`, and `p2` is the match for `\b+`. If the group is part of a disjunction (e.g. `"abc".replace(/(a)|(b)/, replacer)`), the unmatched alternative will be `undefined`.
 - `offset`
   - : The offset of the matched substring within the whole string being examined. For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.
@@ -128,7 +140,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 This logs `'Twas the night before Christmas...'`.
 
-> **Note:** See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
+> [!NOTE]
+> See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
 
 ### Using the global and ignoreCase flags with replace()
 
@@ -246,9 +259,10 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ## See also
 
 - [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

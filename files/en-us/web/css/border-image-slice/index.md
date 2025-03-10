@@ -9,11 +9,52 @@ browser-compat: css.properties.border-image-slice
 
 The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the image specified by {{cssxref("border-image-source")}} into regions. These regions form the components of an element's [border image](/en-US/docs/Web/CSS/border-image).
 
-{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
+{{InteractiveExample("CSS Demo: border-image-slice")}}
+
+```css interactive-example-choice
+border-image-slice: 30;
+```
+
+```css interactive-example-choice
+border-image-slice: 30 fill;
+```
+
+```css interactive-example-choice
+border-image-slice: 44;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-florid.svg") round;
+border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+border-image-width: 30px 48px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png)
+![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)
 
 The above diagram illustrates the location of each region.
 
@@ -178,4 +219,5 @@ sliceSlider.addEventListener("input", () => {
 
 ## See also
 
-- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

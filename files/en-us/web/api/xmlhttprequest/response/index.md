@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.response
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
@@ -17,8 +17,8 @@ property.
 
 ## Value
 
-An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
-  "responseType")}}. You may attempt to request the data be provided in a specific format
+An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType", "responseType")}}.
+You may attempt to request the data be provided in a specific format
 by setting the value of `responseType` after calling
 {{domxref("XMLHttpRequest.open", "open()")}} to initialize the request but before
 calling {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.

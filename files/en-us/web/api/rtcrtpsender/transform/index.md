@@ -21,7 +21,7 @@ A {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} -->
 ## Example
 
 This example shows how you might stream video from a user's webcam over WebRTC, adding a WebRTC encoded transform to modify the outgoing streams.
-Note that this is is part of a larger example in the guide topic [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
+Note that this is part of a larger example in the guide topic [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
 The code assumes that there is an {{domxref("RTCPeerConnection")}} called `peerConnection` that is already connected to a remote peer.
 It first gets a {{domxref("MediaStreamTrack")}}, using {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}} to get a video {{domxref("MediaStream")}} from a media device, and then the {{domxref("MediaStream.getTracks()")}} method to get the first {{domxref("MediaStreamTrack")}} in the stream.

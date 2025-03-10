@@ -9,81 +9,50 @@ browser-compat: html.elements.dl
 
 The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description list. The element encloses a list of groups of terms (specified using the {{HTMLElement("dt")}} element) and descriptions (provided by {{HTMLElement("dd")}} elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, and if the <code>&#x3C;dl></code> element's children include one
-        name-value group, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <p>
-          Either: Zero or more groups each consisting of one or more
-          {{HTMLElement("dt")}} elements followed by one or more
-          {{HTMLElement("dd")}} elements, optionally intermixed with
-          {{HTMLElement("script")}} and
-          {{HTMLElement("template")}} elements.<br />Or: (in
-          {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2
-          and later) One or more {{HTMLElement("div")}} elements,
-          optionally intermixed with {{HTMLElement("script")}} and
-          {{HTMLElement("template")}} elements.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
-          ></code
-        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLDListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Accessibility
+
+Each screen reader exposes `<dl>` content differently, including total count, terms/definitions context, and navigation methods. These differences are not necessarily bugs.
+As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigating with the virtual cursor (not via the read-all command). VoiceOver does not support list navigation commands with `<dl>`. Be careful applying ARIA `term` and `definition` roles to `<dl>` constructs as VoiceOver (macOS and iOS) will adjust how they are announced.
+
+- [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
 
 ## Examples
 
@@ -182,7 +151,7 @@ dt::after {
 
 ### Wrapping name-value groups in `div` elements
 
-[WHATWG](/en-US/docs/Glossary/WHATWG) HTML allows wrapping each name-value group in a {{HTMLElement("dl")}} element in a {{HTMLElement("div")}} element. This can be useful when using [microdata](/en-US/docs/Web/HTML/Microdata), or when [global attributes](/en-US/docs/Web/HTML/Global_attributes) apply to a whole group, or for styling purposes.
+HTML allows wrapping each name-value group in a `<dl>` element in a {{HTMLElement("div")}} element. This can be useful when using [microdata](/en-US/docs/Web/HTML/Microdata), or when [global attributes](/en-US/docs/Web/HTML/Global_attributes) apply to a whole group, or for styling purposes.
 
 ```html
 <dl>
@@ -215,13 +184,77 @@ Do not use this element (nor {{HTMLElement("ul")}} elements) to merely create in
 
 To change the indentation of a description term, use the [CSS](/en-US/docs/Web/CSS) {{cssxref("margin")}} property.
 
-## Accessibility concerns
+## Technical summary
 
-Each screen reader exposes `<dl>` content differently, including total count, terms/definitions context, and navigation methods. These differences are not necessarily bugs.
-As of iOS 14, VoiceOver will announce that `<dl>` content is a list when navigating with the virtual cursor (not via the read-all command). VoiceOver does not support list navigation commands with `<dl>`. Be careful applying ARIA `term` and `definition` roles to `<dl>` constructs as VoiceOver (macOS and iOS) will adjust how they are announced.
-
-- [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
-- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, and if the <code>&#x3C;dl></code> element's children include one
+        name-value group, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <p>
+          Either: Zero or more groups each consisting of one or more
+          {{HTMLElement("dt")}} elements followed by one or more
+          {{HTMLElement("dd")}} elements, optionally intermixed with
+          {{HTMLElement("script")}} and
+          {{HTMLElement("template")}} elements.<br />Or: (in
+          {{Glossary("WHATWG")}} HTML, {{Glossary("W3C")}} HTML 5.2
+          and later) One or more {{HTMLElement("div")}} elements,
+          optionally intermixed with {{HTMLElement("script")}} and
+          {{HTMLElement("template")}} elements.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >flow content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

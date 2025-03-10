@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.changePaymentMethod
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`changePaymentMethod()`** method of the {{domxref("PaymentRequestEvent")}} interface is used by the payment handler to get an updated total, given such payment method details as the billing address.
 
@@ -37,7 +37,9 @@ A {{jsxref("Promise")}} that resolves with a `PaymentRequestDetailsUpdate` objec
 - `total`
   - : An updated total based on the changed payment method. The total can change, for example, because the billing address of the payment method selected by the user changes the applicable sales tax.
 - `modifiers`
-  - : An array of [`PaymentDetailsModifier`](https://www.w3.org/TR/payment-request/#paymentdetailsmodifier-dictionary) objects.
+
+  - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in {{domxref("PaymentRequestEvent.modifiers")}}.
+
 - `paymentMethodErrors`
   - : An object containing validation errors for the payment method, if any.
 

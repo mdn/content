@@ -57,7 +57,7 @@ moveTo(newParent, newName, successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_MODIFICATION_ERR`
   - : The requested operation involves an impossible change, such as moving a directory
@@ -101,5 +101,4 @@ workingDirectory.getFile(
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry.copyTo()")}}

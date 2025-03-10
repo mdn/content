@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrack.enabled
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`enabled`** property on the
+The **`enabled`** property of the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
 `true` if the track is allowed to render the source stream or
 `false` if it is not. This can be used to intentionally mute a
@@ -22,11 +22,12 @@ which every sample's value is 0). For video tracks, every frame is filled entire
 black pixels.
 
 The value of `enabled`, in essence, represents what a typical user would
-consider the muting state for a track, whereas the {{domxref("MediaStreamTrack.muted",
-  "muted")}} property indicates a state in which the track is temporarily unable to output
+consider the muting state for a track, whereas the {{domxref("MediaStreamTrack.muted", "muted")}}
+property indicates a state in which the track is temporarily unable to output
 data, such as a scenario in which frames have been lost in transit.
 
-> **Note:** If the track has been disconnected, the value of this property
+> [!NOTE]
+> If the track has been disconnected, the value of this property
 > can be changed, but has no effect.
 
 ## Value
@@ -38,7 +39,8 @@ render its actual media to the output. When `enabled` is set to
 Empty audio frames have every sample's value set to 0. Empty video frames have every
 pixel set to black.
 
-> **Note:** When implementing a mute/unmute feature, you should use the
+> [!NOTE]
+> When implementing a mute/unmute feature, you should use the
 > `enabled` property.
 
 ## Usage notes

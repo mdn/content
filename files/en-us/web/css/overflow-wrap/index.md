@@ -7,13 +7,50 @@ browser-compat: css.properties.overflow-wrap
 
 {{CSSRef}}
 
-The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+> [!NOTE]
+> The property was originally a nonstandard and unprefixed Microsoft extension called `word-wrap`, and was implemented by most browsers with the same name. It has since been renamed to `overflow-wrap`, with `word-wrap` being an alias.
 
-> **Note:** In contrast to {{cssxref("word-break")}}, `overflow-wrap` will only create a break if an entire word cannot be placed on its own line without overflowing.
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
 
-The property was originally a nonstandard and unprefixed Microsoft extension called `word-wrap`, and was implemented by most browsers with the same name. It has since been renamed to `overflow-wrap`, with `word-wrap` being an alias.
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
+
+> [!NOTE]
+> In contrast to {{cssxref("word-break")}}, `overflow-wrap` will only create a break if an entire word cannot be placed on its own line without overflowing.
 
 ## Syntax
 
@@ -138,6 +175,7 @@ p {
 ## See also
 
 - {{cssxref("word-break")}}
+- {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

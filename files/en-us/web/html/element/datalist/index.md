@@ -9,16 +9,46 @@ browser-compat: html.elements.datalist
 
 The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
 
-> **Note:** The `<option>` element can store a value as internal content and in the `value` and `label` attributes. Which one will be visible in the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
+Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
+
+> **Note:** `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
 
 ## Attributes
 
 This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
+
+## Accessibility
+
+When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
+
+- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
+- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
+- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
 
 ## Examples
 
@@ -46,7 +76,8 @@ Typically the right side of a control will also have an arrow pointing to the pr
 The types {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} can show an interface that allows a convenient selection of a date and time.
 Predefined values can be shown there, allowing the user to quickly fill the control value.
 
-> **Note:** When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
+> [!NOTE]
+> When these types are not supported, a basic `text` type will be rendered instead, creating a text field. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
 <input type="time" list="popularHours" />
@@ -93,20 +124,6 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 
 {{EmbedLiveSample("Color_type", 600, 70)}}
 
-### Password type
-
-The specification allows linking `<datalist>` with a {{HTMLElement("input/password", "password")}} type, but no browser supports it for security reasons.
-
-```html
-<label for="pwd">Enter a password:</label>
-<input type="password" list="randomPassword" id="pwd" />
-<datalist id="randomPassword">
-  <option value="5Mg[_3DnkgSu@!q#"></option>
-</datalist>
-```
-
-{{EmbedLiveSample("Password_type", 600, 40)}}
-
 ## Technical summary
 
 <table class="properties">
@@ -138,7 +155,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -152,7 +169,7 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"
           >listbox</a
         >
       </td>
@@ -167,14 +184,6 @@ The specification allows linking `<datalist>` with a {{HTMLElement("input/passwo
     </tr>
   </tbody>
 </table>
-
-## Accessibility concerns
-
-When deciding to use the `<datalist>` element, here are some accessibility issues to be mindful of:
-
-- The font size of the data list's options does not zoom, always remaining the same size. The contents of the autosuggest do not grow or shrink when the rest of the contents are zoomed in or out.
-- As targeting the list of options with CSS is very limited to non-existent, rendering can not be styled for high-contrast mode.
-- Some screen reader/browser combinations, including NVDA and Firefox, do not announce the contents of the autosuggest popup.
 
 ## Specifications
 

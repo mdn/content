@@ -7,7 +7,7 @@ status:
 browser-compat: api.CaptureController
 ---
 
-{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`CaptureController`** interface provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}.
 

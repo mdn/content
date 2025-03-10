@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.addTransceiver
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method **`addTransceiver()`** creates a new {{domxref("RTCRtpTransceiver")}} and adds it to the set of transceivers associated with the `RTCPeerConnection`.
+The **`addTransceiver()`** method of the {{domxref("RTCPeerConnection")}} interface creates a new {{domxref("RTCRtpTransceiver")}} and adds it to the set of transceivers associated with the `RTCPeerConnection`.
 Each transceiver represents a bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an {{domxref("RTCRtpReceiver")}} associated with it.
 
 ## Syntax
@@ -21,10 +21,7 @@ addTransceiver(trackOrKind, init)
 ### Parameters
 
 - `trackOrKind`
-  - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
-    string which is used as the {{domxref("MediaStreamTrack.kind",
-    "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
-    extension of the {{domxref("RTCRtpReceiver")}} itself.
+  - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a string which is used as the {{domxref("MediaStreamTrack.kind", "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by extension of the {{domxref("RTCRtpReceiver")}} itself.
 - `init` {{optional_inline}}
   - : An object for specifying any options when creating the new transceiver.
     Possible values are:

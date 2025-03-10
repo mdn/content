@@ -10,12 +10,13 @@ browser-compat: api.Element.securitypolicyviolation_event
 
 The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 
-The event is fired on the element that violates the policy and bubbles.
+The event is fired on the element when there is a violation of the CSP policy.
+
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed).
 It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
 
-The handler can be assigned using the `onsecuritypolicyviolation` property or using {{domxref("EventTarget.addEventListener()")}}.
-
-> **Note:** You must add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+> [!NOTE]
+> You should add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
 > While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
 
 ## Syntax
@@ -37,6 +38,10 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 ## Examples
 
 The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
+
+> [!NOTE]
+> The example doesn't assign the handler directly to an element because, as noted above, for elements defined in HTML, the event would fired before this code could run.
+> You might however add the event listener directly to an element that is dynamically constructed!
 
 ```js
 window.onsecuritypolicyviolation = (e) => {

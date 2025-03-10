@@ -2,10 +2,8 @@
 title: API reference page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheInterface
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing._
 >
@@ -22,21 +20,21 @@ browser-compat: path.to.feature.NameOfTheInterface
 > slug: Web/API/NameOfTheInterface
 > page-type: web-api-interface
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheInterface
 > ---
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page. This is just the name of the interface. For example, the [Request](/en-US/docs/Web/API/Request) interface page has a _title_ of _Request_.
+>   - : Title heading displayed at the top of the page. This is just the name of the interface. For example, the [Request](/en-US/docs/Web/API/Request) interface page has a _title_ of _Request_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/API/NameOfTheParentInterface`. For example, [Request](/en-US/docs/Web/API/Request) slug is "Web/API/Request".
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
@@ -49,21 +47,31 @@ browser-compat: path.to.feature.NameOfTheInterface
 >
 > **Top-of-page macros**
 >
-> By default, there are five macro calls at the top of a template. You should update or delete them according to the advice below.
+> A number of macro calls appear at the top of the content section (immediately below the page front matter).
 >
-> - `\{{APIRef("<em>GroupDataName</em>")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page. For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_. See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this.
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+> These macros are automatically added by the toolchain (there is no need to add/remove):
+>
+> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
 > - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts). If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). If it isn't, then you can remove the macro call.
-> - `\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}}` — this generates the main body of the page (Constructor, Properties, Methods and Events).
+> - `\{{AvailableInWorkers}}` — this generates a **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
+>   If it is only available in window context, then you can remove the macro call.
+>   If it is also available or only available in worker context, then you may also need to passing an parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) page.
+> - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page. For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_. See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
 >
-> Samples of the **Experimental**, **Secure context**, and **Deprecated** banners are shown right after this note block.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
+>
+> Samples of the **Secure context**, **Available in workers**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > _Remember to remove this whole explanatory note before publishing._
 
-{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
+The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
 
 {{InheritanceDiagram}}
 
@@ -80,10 +88,10 @@ _Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentIn
 
 Include one term and definition for each property.
 
-- `\{{DOMxRef("NameOfTheInterface.staticProperty1")}}` {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticProperty1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.staticProperty2")}}`
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Instance properties
 
@@ -91,10 +99,10 @@ _Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentIn
 
 Include one term and definition for each property.
 
-- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.property2")}}`
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Static methods
 
@@ -102,10 +110,10 @@ _Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInter
 
 Include one term and definition for each method.
 
-- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.staticMethod2()")}}`
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Instance methods
 
@@ -113,10 +121,10 @@ _Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInter
 
 Include one term and definition for each method.
 
-- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.method2()")}}`
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Events
 
@@ -124,12 +132,14 @@ _Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterf
 
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`eventname1`](#)
+- `\{{DOMxRef("NameOfTheInterface.event1", "event1")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname1` property.
-- [`eventname2`](#)
-  - : Fired when _(include a description of when the event fires)_.
+    If the event is not experimental/deprecated/non-standard, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.event2", "event2")}}`
+  - : Fired when (include the description of when the event fires).
     Also available via the `oneventname2` property.
+    If the event is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Examples
 
@@ -141,7 +151,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -166,7 +177,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

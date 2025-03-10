@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.XRSessionEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRSessionEvent`** interface describes an event which indicates the change of the state of an {{domxref("XRSession")}}. These events occur, for example, when the session ends or the visibility of its context changes.
 
@@ -41,8 +41,8 @@ _The following events are represented using the `XRSessionEvent` interface, and 
 This example creates a listener that watches for the visibility state of the session to change. It reacts by calling a function `mySessionVisible()` with a Boolean indicating whether or not the session is visible; this function might, for instance, spin up or reconfigure a worker that handles rendering the scene.
 
 ```js
-xrSession.addEventListener("visibilitystate", (e) => {
-  switch (e.session.visibilitystate) {
+xrSession.addEventListener("visibilitychange", (e) => {
+  switch (e.session.visibilityState) {
     case "visible":
     case "visible-blurred":
       mySessionVisible(true);

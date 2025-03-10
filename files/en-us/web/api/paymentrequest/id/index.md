@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PaymentRequest.id
 ---
 
-{{APIRef("Payment Request API")}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`id`** read-only attribute of the
 {{domxref("PaymentRequest")}} interface returns a unique identifier for a particular

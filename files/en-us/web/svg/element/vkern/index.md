@@ -9,19 +9,13 @@ browser-compat: svg.elements.vkern
 
 {{SVGRef}}{{deprecated_header}}
 
-The **`<vkern>`** SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
+The **`<vkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
 
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
 
 - {{SVGAttr("u1")}} {{Deprecated_Inline}}
 - {{SVGAttr("g1")}} {{Deprecated_Inline}}

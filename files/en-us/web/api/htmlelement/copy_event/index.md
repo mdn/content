@@ -31,7 +31,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, `copy`, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
 
@@ -85,5 +85,5 @@ editor.onpaste = logPaste;
 ## See also
 
 - Related events
-  - {{domxref("HTMLElement.cut_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxref("HTMLElement.cut_event", "cut")}} event
+  - {{domxref("HTMLElement.paste_event", "paste")}} event

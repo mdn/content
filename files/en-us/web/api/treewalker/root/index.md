@@ -8,8 +8,7 @@ browser-compat: api.TreeWalker.root
 
 {{ APIRef("DOM") }}
 
-The **`TreeWalker.root`** read-only property returns the node
-that is the root of what the TreeWalker traverses.
+The **`TreeWalker.root`** read-only property returns the root {{domxref("Node")}} that the {{domxref("TreeWalker")}} traverses.
 
 ## Value
 

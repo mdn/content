@@ -7,9 +7,23 @@ browser-compat: javascript.operators.exponentiation
 
 {{jsSidebar("Operators")}}
 
-The **exponentiation (`**`)\*\* operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
+The **exponentiation (`**`)** operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Syntax
 
@@ -19,7 +33,7 @@ x ** y
 
 ## Description
 
-The `**` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt exponentiation if both operands become BigInts; otherwise, it performs number exponentiation. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `**` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt exponentiation if both operands become BigInts; otherwise, it performs number exponentiation. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 For both numbers and BigInts, `0` raised to a positive power returns `0`, and `0` raised to a power of `0` returns `1`. For numbers, `0` raised to a negative number returns `Infinity`, while `-0` raised to a negative number returns `-Infinity`.
 
@@ -39,7 +53,7 @@ Note that some programming languages use the caret symbol `^` for exponentiation
 
 ## Examples
 
-### Basic exponentiation
+### Exponentiation using numbers
 
 ```js
 2 ** 3; // 8
@@ -50,13 +64,32 @@ Note that some programming languages use the caret symbol `^` for exponentiation
 NaN ** 2; // NaN
 NaN ** 0; // 1
 1 ** Infinity; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+2 ** "3"; // 8
+2 ** "hello"; // NaN
+```
+
+### Exponentiation using BigInts
+
+```js
 2n ** 3n; // 8n
 2n ** 1024n; // A very large number, but not Infinity
+```
 
+You cannot mix BigInt and number operands in exponentiation.
+
+```js example-bad
 2n ** 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 ** 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// To do exponentiation with a BigInt and a non-BigInt, convert either operand
+To do exponentiation with a BigInt and a non-BigInt, convert either operand:
+
+```js
 2n ** BigInt(2); // 4n
 Number(2n) ** 2; // 4
 ```

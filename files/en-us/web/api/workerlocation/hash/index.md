@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.hash
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`hash`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.hash", "hash")}} part of the worker's location.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.parameters
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The read-only **`parameters`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated
@@ -20,8 +20,7 @@ getter.
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their
-calculated values can be used in the {{domxref("AudioWorkletProcessor.process",
-  "process")}} method of your {{domxref("AudioWorkletProcessor")}}.
+calculated values can be used in the {{domxref("AudioWorkletProcessor.process", "process")}} method of your {{domxref("AudioWorkletProcessor")}}.
 
 ## Examples
 

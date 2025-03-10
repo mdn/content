@@ -93,7 +93,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
   - : Returns an object which indicates the current configuration of the connection.
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
   - : Initiates the gathering of an identity assertion and returns a {{jsxref("Promise")}} which resolves to an identity assertion encoded as a string.
-    This has an effect only f {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} is not `closed`.
+    This has an effect only if {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} is not `closed`.
 - {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}}
   - : Returns an array of {{DOMxRef("RTCRtpReceiver")}} objects, each of which represents one {{Glossary("RTP")}} receiver.
 - {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
@@ -129,7 +129,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Adds a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Instead of using this obsolete method, you should instead use {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to send to the remote peer.
-- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Creates a new {{DOMxRef("RTCDTMFSender")}}, associated to a specific {{DOMxRef("MediaStreamTrack")}}, that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Removes a {{DOMxRef("MediaStream")}} as a local source of audio or video.
@@ -183,4 +183,4 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
 - [Get started with WebRTC](https://web.dev/articles/webrtc-basics)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and file sharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

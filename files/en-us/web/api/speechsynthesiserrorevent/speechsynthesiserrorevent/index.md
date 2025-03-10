@@ -10,7 +10,8 @@ browser-compat: api.SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent
 
 The **`SpeechSynthesisErrorEvent()`** constructor creates a new {{domxref("SpeechSynthesisErrorEvent")}} object.
 
-> **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing events.
+> [!NOTE]
+> A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing events.
 
 ## Syntax
 

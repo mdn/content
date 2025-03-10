@@ -45,7 +45,7 @@ const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
 const foo2 = null;
-foo2.substring(1); // TypeError: foo is null
+foo2.substring(1); // TypeError: foo2 is null
 ```
 
 Certain methods might require a specific type.
@@ -55,7 +55,7 @@ const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
 const foo2 = "bar";
-Object.create(foo2); // TypeError: "foo" is not an object or null
+Object.create(foo2); // TypeError: "foo2" is not an object or null
 ```
 
 ### Fixing the issue

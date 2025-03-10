@@ -6,11 +6,11 @@ page-type: web-api-static-method
 browser-compat: api.Response.error_static
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`error()`** static method of the {{domxref("Response")}} interface returns a new `Response` object associated with a network error.
 
-This is mainly useful when writing service workers: it enables a service worker to send a response from a {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler that will cause the {{domxref("fetch()")}} call in the main app code to reject the promise.
+This is mainly useful when writing service workers: it enables a service worker to send a response from a {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler that will cause the {{domxref("Window/fetch", "fetch()")}} call in the main app code to reject the promise.
 
 An error response has its {{domxref("Response.type","type")}} set to `error`.
 

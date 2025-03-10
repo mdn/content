@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.RegExp.flags
 
 The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) of this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+```
 
 ## Description
 
@@ -39,4 +49,6 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 ## See also
 
 - [Polyfill of `RegExp.prototype.flags` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `RegExp.prototype.flags`](https://www.npmjs.com/package/regexp.prototype.flags)
+- [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) in the Regular expressions guide
 - {{jsxref("RegExp.prototype.source")}}

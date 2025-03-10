@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBTransaction.abort
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`abort()`** method of the {{domxref("IDBTransaction")}}
 interface rolls back all the changes to objects in the database associated with this
@@ -14,8 +14,6 @@ transaction.
 
 All pending {{domxref("IDBRequest")}} objects created during this transaction have
 their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref("DOMException")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -54,7 +52,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -82,13 +81,13 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML +=
-      "<li>Transaction completed: database modification finished.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed: database modification finished.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -100,7 +99,8 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 
   // Abort the transaction we just did

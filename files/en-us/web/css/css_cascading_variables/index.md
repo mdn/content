@@ -91,7 +91,7 @@ input {
 }
 ```
 
-{{EmbedLiveSample("",600,160)}}
+{{EmbedLiveSample("Custom properties in action",600,160)}}
 
 In these color swatches, the {{cssxref("background-color")}} is set using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function as `hsl(var(--hue) 50% 50%)`.
 Each color swatch increments the {{cssxref("hue")}} value by 10 degrees like `calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` etc.
@@ -109,7 +109,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 
 ## Guides
 
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 
   - : Explains how to use custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 
@@ -128,7 +128,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 
 ## See also
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS `env()`](/en-US/docs/Web/CSS/env) function
 - [CSS `calc()`](/en-US/docs/Web/CSS/calc) function
 - [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method

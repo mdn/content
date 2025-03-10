@@ -38,7 +38,7 @@ _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
 - {{domxref("MediaStream.getAudioTracks()")}}
   - : Returns a list of the {{domxref("MediaStreamTrack")}} objects stored in the `MediaStream` object that have their `kind` attribute set to `audio`. The order is not defined, and may not only vary from one browser to another, but also from one call to another.
 - {{domxref("MediaStream.getTrackById()")}}
-  - : Returns the track whose ID corresponds to the one given in parameters, `trackid`. If no parameter is given, or if no track with that ID does exist, it returns `null`. If several tracks have the same ID, it returns the first one.
+  - : Returns the track whose ID corresponds to the one given in parameters, `trackId`. If no parameter is given, or if no track with that ID does exist, it returns `null`. If several tracks have the same ID, it returns the first one.
 - {{domxref("MediaStream.getTracks()")}}
   - : Returns a list of all {{domxref("MediaStreamTrack")}} objects stored in the `MediaStream` object, regardless of the value of the `kind` attribute. The order is not defined, and may not only vary from one browser to another, but also from one call to another.
 - {{domxref("MediaStream.getVideoTracks()")}}
@@ -52,9 +52,9 @@ _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
   - : Fired when a new {{domxref("MediaStreamTrack")}} object is added.
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
   - : Fired when a {{domxref("MediaStreamTrack")}} object has been removed.
-- {{domxref("MediaStream/active_event", "active")}}
+- {{domxref("MediaStream/active_event", "active")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is activated.
-- {{domxref("MediaStream/inactive_event", "inactive")}}
+- {{domxref("MediaStream/inactive_event", "inactive")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is inactivated.
 
 ## Specifications

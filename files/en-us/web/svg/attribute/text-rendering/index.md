@@ -2,14 +2,15 @@
 title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.text-rendering
+browser-compat: svg.global_attributes.text-rendering
 ---
 
 {{SVGRef}}
 
 The **`text-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering text.
 
-> **Note:** As a presentation attribute, `text-rendering` can be used as a CSS property. See the {{cssxref("text-rendering", "CSS text-rendering")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `text-rendering` also has a CSS property counterpart: {{cssxref("text-rendering")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -75,4 +76,4 @@ svg {
 
 ## See also
 
-- {{cssxref("text-rendering", "CSS text-rendering")}}
+- CSS {{cssxref("text-rendering")}} property

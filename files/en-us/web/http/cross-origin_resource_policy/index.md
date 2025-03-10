@@ -11,13 +11,15 @@ browser-compat: http.headers.Cross-Origin-Resource-Policy
 
 CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb) (CORB), which is a mechanism to prevent some cross-origin reads by default.
 
-> **Note:** The policy is only effective for [`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) requests, which are issued by default for CORS-safelisted methods/headers.
+> [!NOTE]
+> The policy is only effective for [`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) requests, which are issued by default for CORS-safelisted methods/headers.
 
 As this policy is expressed via a _[response header](/en-US/docs/Glossary/Response_header)_, the actual request is not prevented—rather, the browser prevents the _result_ from being leaked by stripping the response body.
 
 ## Usage
 
-> **Note:** Due to a [bug in Chrome](https://crbug.com/1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
+> [!NOTE]
+> Due to a [bug in Chrome](https://crbug.com/1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
 
 Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header, which accepts one of three values:
 
@@ -25,7 +27,8 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 
   - : Only requests from the same _{{Glossary("Site")}}_ can read the resource.
 
-    > **Warning:** This is less secure than an {{Glossary("origin")}}. The [algorithm for checking if two origins are same site](https://html.spec.whatwg.org/multipage/origin.html#same-site) is defined in the HTML standard and involves checking the _registrable domain_.
+    > [!WARNING]
+    > This is less secure than an {{Glossary("origin")}}. The [algorithm for checking if two origins are same site](https://html.spec.whatwg.org/multipage/origin.html#same-site) is defined in the HTML standard and involves checking the _registrable domain_.
 
 - `same-origin`
   - : Only requests from the same _{{Glossary("origin")}}_ (i.e. scheme + host + port) can read the resource.

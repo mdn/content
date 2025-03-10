@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.tlsVersionRestrictionConfig
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to read the highest and lowest versions of TLS supported by the browser.
 

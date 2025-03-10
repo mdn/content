@@ -7,11 +7,20 @@ browser-compat: javascript.statements.while
 
 {{jsSidebar("Statements")}}
 
-The **`while`** statement creates a loop that executes a specified statement
-as long as the test condition evaluates to true. The condition is evaluated before
-executing the statement.
+The **`while`** statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
 
-{{EmbedInteractiveExample("pages/js/statement-while.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - While")}}
+
+```js interactive-example
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+```
 
 ## Syntax
 
@@ -21,18 +30,16 @@ while (condition)
 ```
 
 - `condition`
-  - : An expression evaluated before each pass through the loop. If this condition
-    [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. When condition
-    [evaluates to false](/en-US/docs/Glossary/Falsy), execution continues with the statement after the
-    `while` loop.
+  - : An expression evaluated _before_ each pass through the loop. If this condition [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. When condition [evaluates to false](/en-US/docs/Glossary/Falsy), execution continues with the statement after the `while` loop.
 - `statement`
+  - : A statement that is executed as long as the condition evaluates to true. You can use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) to execute multiple statements.
 
-  - : An optional statement that is executed as long as the condition evaluates to true.
-    To execute multiple statements within the loop, use a {{jsxref("Statements/block", "block", "", 1)}} statement
-    (`{ /* ... */ }`) to group those statements.
+## Description
 
-    Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and re-evaluates `condition`.
 
 ## Examples
 
@@ -95,7 +102,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 
 The problem with this line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
-Therefore, in cases like that one, some [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
+Therefore, in cases like that one, some [code-linting tools](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 
 > Expected a conditional expression and instead saw an assignment.
 

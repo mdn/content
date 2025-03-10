@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetails.screenschange_event
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`screenschange`** event of the {{domxref("ScreenDetails")}} interface is fired when the set of screens available to the system has changed: that is, a new screen has become available or an existing screen has become unavailable. This will be reflected in a change in the {{domxref("ScreenDetails.screens", "screens")}} array.
 

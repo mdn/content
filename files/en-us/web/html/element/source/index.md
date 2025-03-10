@@ -7,63 +7,21 @@ browser-compat: html.elements.source
 
 {{HTMLSidebar}}
 
-The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
+The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Guides/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Guides/Formats).
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None; it is a {{Glossary("void element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>It must have a start tag, but must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        <div>
-          A media element—{{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-            >flow content</a
-          >
-          or {{HTMLElement("track")}} element.
-        </div>
-        <div>
-          A {{HTMLElement("picture")}} element, and it must be placed
-          before the {{HTMLElement("img")}} element.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLSourceElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 ## Attributes
 
@@ -71,7 +29,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `type`
 
-  - : Specifies the [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally including a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+  - : Specifies the [MIME media type of the image](/en-US/docs/Web/Media/Guides/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Guides/Formats/Containers), optionally including a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
 
 - `src`
 
@@ -113,7 +71,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Usage notes
 
-The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
+The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use `</source>` in your HTML.
 
 The browser goes through a list of `<source>` elements to find a format it supports. It uses the first one it can display. For each `<source>` element:
 
@@ -125,13 +83,13 @@ If none of the `<source>` elements provide a usable source:
 - In the case of a `<picture>` element, the browser will fall back to using the image specified in the `<picture>` element's {{HTMLElement("img")}} child.
 - In the case of an `<audio>` or `<video>` element, the browser will fall back to displaying the content included between the element's opening and closing tags.
 
-For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types). For details on the video and audio media types you can use, see the [Media type and format guide](/en-US/docs/Web/Media/Formats).
+For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types). For details on the video and audio media types you can use, see the [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
 
 ## Examples
 
 ### Using the `type` attribute with `<video>`
 
-This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Formats).
+This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
 
 ```html
 <video controls>
@@ -154,7 +112,7 @@ This example demonstrates how to offer an alternate source file for viewports ab
 </video>
 ```
 
-For more examples, the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) article in the Learn area is a great resource.
+For more examples, the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) article in the Learn area is a great resource.
 
 ### Using the `media` attribute with `<picture>`
 
@@ -200,6 +158,62 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 </picture>
 ```
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        <div>
+          A media element—{{HTMLElement("audio")}} or
+          {{HTMLElement("video")}}—and it must be placed before any
+          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+            >flow content</a
+          >
+          or {{HTMLElement("track")}} element.
+        </div>
+        <div>
+          A {{HTMLElement("picture")}} element, and it must be placed
+          before the {{HTMLElement("img")}} element.
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLSourceElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -213,6 +227,6 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 - {{HTMLElement("audio")}} element
 - {{HTMLElement("picture")}} element
 - {{HTMLElement("video")}} element
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
-- [Media type and format guide](/en-US/docs/Web/Media/Formats)
-- [Web performance](/en-US/docs/Learn/Performance)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+- [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats)
+- [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

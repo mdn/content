@@ -16,9 +16,12 @@ A boolean value.
 
 ## Examples
 
+```html
+<input id="my-file-input" type="file" multiple />
+```
+
 ```js
-// fileInput is a <input type=file multiple>
-let fileInput = document.getElementById("myfileinput");
+let fileInput = document.getElementById("my-file-input");
 
 if (fileInput.multiple) {
   // Loop fileInput.files

@@ -6,7 +6,8 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)Firefox 46 was released on April 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+Firefox 46 was released on April 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -34,7 +35,7 @@ Highlights:
 
 - The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ([Firefox bug 1231485](https://bugzil.la/1231485)).
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ([Firefox bug 1213126](https://bugzil.la/1213126)).
-- The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
+- The experimental support of the {{cssxref("@font-face/font-display", "font-display")}} descriptor (of {{cssxref("@font-face")}}; it requires to switch `layout.css.font-display.enabled` to `true` ([Firefox bug 1157064](https://bugzil.la/1157064)).
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ([Firefox bug 1239153](https://bugzil.la/1239153)).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1236506](https://bugzil.la/1236506)).
@@ -45,7 +46,7 @@ Highlights:
 - The ES2015 {{jsxref("RegExp.prototype.unicode", "RegExp unicode (u) flag", "", 1)}} has been implemented ([Firefox bug 1135377](https://bugzil.la/1135377)).
 - The ES2015 block-level functions have been implemented ([Firefox bug 1071646](https://bugzil.la/1071646)).
 - The ES2015 {{jsxref("TypedArray.prototype.sort()")}} method has been implemented ([Firefox bug 1121937](https://bugzil.la/1121937)).
-- The ES2015 {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}} has been implemented ([Firefox bug 1067049](https://bugzil.la/1067049)).
+- The ES2015 [`arguments[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator) has been implemented ([Firefox bug 1067049](https://bugzil.la/1067049)).
 - The experimental [ECMAScript Shared Memory API](https://web.archive.org/web/20220124015148/https://tc39.es/ecmascript_sharedmem/shmem.html) has been implemented. See the {{jsxref("SharedArrayBuffer")}} and {{jsxref("Atomics")}} objects. To use this experimental API set `javascript.options.shared_memory` to `true` in about:config.
 - Redeclaration of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) variables now throws a {{jsxref("SyntaxError")}} instead of a {{jsxref("TypeError")}} as per the ECMAScript specification ([Firefox bug 1198833](https://bugzil.la/1198833)).
 - In [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting properties on {{Glossary("primitive")}} values will now throw a {{jsxref("TypeError")}} ([Firefox bug 603201](https://bugzil.la/603201)).
@@ -100,7 +101,7 @@ _No change._
 - The asynchronous {{domxref("FileReader")}} is now available in Web workers ([Firefox bug 901097](https://bugzil.la/901097)).
 - Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) has been updated:
 
-  - {{domxref("AnimationEffectTimingReadOnly")}} and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
+  - The `AnimationEffectTimingReadOnly` dictionary and {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} have been implemented ([Firefox bug 1214536](https://bugzil.la/1214536)).
 
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has now been enabled by default, for all release versions, not just Nightly as it previously was ([Firefox bug 1221106](https://bugzil.la/1221106).)
 - Sanitization of WOFF fonts has been loosened a bit ([Firefox bug 1244693](https://bugzil.la/1244693)).
@@ -153,4 +154,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers(45)}}
+{{Firefox_for_developers}}

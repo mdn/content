@@ -11,7 +11,8 @@ The **`ANGLE_instanced_arrays`** extension is part of the [WebGL API](/en-US/doc
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the "`ANGLE`" suffix.
+> [!NOTE]
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the `ANGLE_` suffix.
 >
 > Despite the name "ANGLE", this extension works on any device if the hardware supports it and not just on Windows when using the ANGLE library. "ANGLE" just indicates that this extension has been written by the ANGLE library authors.
 
@@ -37,7 +38,8 @@ This extension exposes three new methods.
 
 The following example shows how to draw a given geometry multiple times with a single draw call.
 
-> **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use.
+> [!WARNING]
+> The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use.
 
 ```js
 // enable the extension

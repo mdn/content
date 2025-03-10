@@ -122,7 +122,7 @@ Firefox 3.5 closes a security hole that made it possible to use remote chrome. T
 
 Previously, it was possible to get a load context from a request by querying various docShell APIs. In particular, it was a common practice to use `notificationCallbacks.getInterface(nsIDOMWindow)` to get the window object associated with the load. While the older approach may work in some circumstances, it is not recommended to use it anymore ([details](https://bugzil.la/457153#c16)).
 
-This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](http://mxr.mozilla.org/mozilla-central/source/docshell/base/nsILoadContext.idl) on mxr).
+This correct and reliable way to do this is to use an `nsILoadContext` (see the [interface definition](https://searchfox.org/mozilla-central/source/docshell/base/nsILoadContext.idl)).
 
 From JavaScript, you do it like this:
 
@@ -180,7 +180,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Firefox bug 407725](https://bugzil.la/407725) and [Webkit bug 467045](https://bugzil.la/467045).
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Firefox bug 407725](https://bugzil.la/407725) and [WebKit bug 467045](https://bugzil.la/467045).
 
 ## XPCNativeWrapper
 
@@ -199,4 +199,4 @@ Firefox 3.5 introduces support for adding and removing progress listeners that l
 ## For Theme developers
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
-- Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).
+- Go to the MozillaZine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

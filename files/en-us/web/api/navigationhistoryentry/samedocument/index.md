@@ -10,8 +10,7 @@ browser-compat: api.NavigationHistoryEntry.sameDocument
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`sameDocument`** read-only property of the
-{{domxref("NavigationHistoryEntry")}} interface returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value, or `false` otherwise.
+The **`sameDocument`** read-only property of the {{domxref("NavigationHistoryEntry")}} interface returns `true` if this history entry is for the same `document` as the current {{domxref("Document")}} value and current document is fully active, or `false` otherwise.
 
 ## Value
 

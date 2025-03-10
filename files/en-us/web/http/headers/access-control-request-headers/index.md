@@ -7,7 +7,7 @@ browser-compat: http.headers.Access-Control-Request-Headers
 
 {{HTTPSidebar}}
 
-The **`Access-Control-Request-Headers`** request header is used by browsers when issuing a {{glossary("preflight request")}} to let the server know which [HTTP headers](/en-US/docs/Web/HTTP/Headers) the client might send when the actual request is made (such as with {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}}). The complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}} will answer this browser-side header.
+The HTTP **`Access-Control-Request-Headers`** {{Glossary("request header")}} is used by browsers when issuing a {{glossary("preflight request")}} to let the server know which [HTTP headers](/en-US/docs/Web/HTTP/Headers) the client might send when the actual request is made (such as with {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}}). The complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}} will answer this browser-side header.
 
 <table class="properties">
   <tbody>
@@ -16,8 +16,8 @@ The **`Access-Control-Request-Headers`** request header is used by browsers when
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -25,18 +25,18 @@ The **`Access-Control-Request-Headers`** request header is used by browsers when
 ## Syntax
 
 ```http
-Access-Control-Request-Headers: <header-name>, <header-name>, …
+Access-Control-Request-Headers: <header-name>,<header-name>,…
 ```
 
 ## Directives
 
-- \<header-name>
-  - : A comma-delimited list of [HTTP headers](/en-US/docs/Web/HTTP/Headers) that are included in the request.
+- `<header-name>`
+  - : A sorted list of unique, comma-separated, lowercase [HTTP headers](/en-US/docs/Web/HTTP/Headers) that are included in the request.
 
 ## Examples
 
 ```http
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 ## Specifications

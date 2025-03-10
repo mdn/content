@@ -10,6 +10,8 @@ browser-compat: api.Element.pointerover_event
 
 The `pointerover` event is fired when a pointing device is moved into an element's hit test boundaries.
 
+`pointerover` events have the same problems as {{domxref("Element/mouseover_event", "mouseover")}}. If the target element has child elements, `pointerout` and `pointerover` events fire as the pointer moves over the boundaries of these elements too, not just the target element itself. Usually, {{domxref("Element/pointerenter_event", "pointerenter")}} and {{domxref("Element/pointerleave_event", "pointerleave")}} events' behavior is more sensible, because they are not affected by moving into child elements.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -34,6 +36,8 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 - {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
 - {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
@@ -91,7 +95,6 @@ para.onpointerover = (event) => {
 
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
-  - {{domxref('Element/pointerover_event', 'pointerover')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
   - {{domxref('Element/pointermove_event', 'pointermove')}}
@@ -100,3 +103,4 @@ para.onpointerover = (event) => {
   - {{domxref('Element/pointerout_event', 'pointerout')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseover_event", "mouseover")}}

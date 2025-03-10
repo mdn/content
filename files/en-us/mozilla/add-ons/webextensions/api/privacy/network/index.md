@@ -7,7 +7,7 @@ browser-compat: webextensions.api.privacy.network
 
 {{AddonSidebar}}
 
-The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
+The `privacy.network` property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
 Default values for these properties tend to vary across browsers.
 
@@ -30,7 +30,7 @@ Default values for these properties tend to vary across browsers.
 - `httpsOnlyMode`
 
   - : This setting allows your extension to determine if a user has enabled
-    [HTTPS-Only mode](https://support.mozilla.org/kb/https-only-prefs). This property is read-only on all platforms. Its underlying value is a string that may take one of three values:
+    [HTTPS-Only mode](https://support.mozilla.org/en-US/kb/https-only-prefs). This property is read-only on all platforms. Its underlying value is a string that may take one of three values:
 
     - `"always"`: HTTPS-Only mode is on.
     - `"never"`: HTTPS-Only mode is off.
@@ -79,7 +79,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

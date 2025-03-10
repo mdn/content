@@ -1,17 +1,15 @@
 ---
-title: "::view-transition"
+title: ::view-transition
 slug: Web/CSS/::view-transition
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.view-transition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`::view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of the [view transitions](/en-US/docs/Web/API/View_Transitions_API) overlay, which contains all view transitions and sits over the top of all other page content.
+The **`::view-transition`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the root of the [view transitions](/en-US/docs/Web/API/View_Transition_API) overlay, which contains all view transition snapshot groups and sits over the top of all other page content.
 
-During a view transition, `::view-transition` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is the top-level node of this tree, and has one or more {{cssxref("::view-transition-group")}}s as children.
+During a view transition, `::view-transition` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_pseudo-element_tree). It is the top-level node of this tree, and has one or more {{cssxref("::view-transition-group")}}s as children.
 
 `::view-transition` is given the following default styling in the UA stylesheet:
 
@@ -36,7 +34,7 @@ All {{cssxref("::view-transition-group")}} pseudo-elements are positioned relati
 
 ```css
 ::view-transition {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 ```
 
@@ -50,5 +48,5 @@ All {{cssxref("::view-transition-group")}} pseudo-elements are positioned relati
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

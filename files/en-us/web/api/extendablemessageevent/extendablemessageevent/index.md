@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("ExtendableMessageEvent")}} object.
 

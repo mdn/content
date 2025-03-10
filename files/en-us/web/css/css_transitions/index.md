@@ -2,7 +2,9 @@
 title: CSS transitions
 slug: Web/CSS/CSS_transitions
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-transitions/
+spec-urls:
+  - https://drafts.csswg.org/css-transitions/
+  - https://drafts.csswg.org/css-transitions-2/
 ---
 
 {{CSSRef}}
@@ -14,6 +16,7 @@ The **CSS transitions** module lets you create gradual transitions between the v
 ### Properties
 
 - {{cssxref("transition")}}
+- {{cssxref("transition-behavior")}}
 - {{cssxref("transition-delay")}}
 - {{cssxref("transition-duration")}}
 - {{cssxref("transition-property")}}
@@ -22,6 +25,10 @@ The **CSS transitions** module lets you create gradual transitions between the v
 ### At rules
 
 - {{cssxref("@starting-style")}}
+
+### Interfaces
+
+- {{domxref("CSSStartingStyleRule")}}
 
 ## Guides
 
@@ -34,4 +41,5 @@ The **CSS transitions** module lets you create gradual transitions between the v
 
 ## See also
 
-- Related to CSS transitions, [CSS animations](/en-US/docs/Web/CSS/CSS_animations) provide finer control over animated properties.
+- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling transitions to and from [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size).
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module.

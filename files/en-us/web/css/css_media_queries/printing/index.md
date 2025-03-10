@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
 ---
 
+{{CSSRef}}
+
 There may be times in which your website or application would like to improve the user's experience when printing content. There are several possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
@@ -21,11 +23,11 @@ Add the following to your {{HTMLElement("head")}} tag.
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
 ```
 
-## Using media queries and @page to improve layout
+## Using media queries and @page to control printed content
 
-You can use the CSS {{cssxref("@media")}} at-rule to set a different appearance for your webpage when it is printed on paper and when it is displayed on the screen. The `print` option sets the styles that will be used when the content is printed.
+You can use the CSS {{cssxref("@media")}} at-rule to set different styles for your webpage when it is printed on paper or as a PDF versus when it is displayed on the screen. The `print` [media type](/en-US/docs/Web/CSS/@media#media_types) sets the styles for printed media; these styles will only be used for printed content.
 
-Add this at the end of your stylesheet. Note that specificity and precedence rules still apply:
+Add this at the end of your stylesheet. Note that [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) and precedence rules still apply:
 
 ```css
 @media print {
@@ -42,7 +44,7 @@ You can also use the {{cssxref("@page")}} at-rule to modify different aspects of
 
 ## Detecting print requests
 
-Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to let content determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
+Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to determine when printing may have occurred. You can use this to adjust the user interface presented during printing (for example displaying or hiding user interface elements during the print process).
 
 ## Examples
 

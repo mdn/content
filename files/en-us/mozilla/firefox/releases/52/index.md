@@ -73,7 +73,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### New features
 
-- Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}}, {{jsxref("Operators/async_function", "async function expression")}}, and the {{jsxref("Operators/await", "await")}} keyword ([Firefox bug 1185106](https://bugzil.la/1185106)).
+- Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}} declaration, {{jsxref("Operators/async_function", "async function")}} expression, and the {{jsxref("Operators/await", "await")}} keyword ([Firefox bug 1185106](https://bugzil.la/1185106)).
 - Implemented ES2017 [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in functions ([Firefox bug 1303788](https://bugzil.la/1303788)).
 - Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ([Firefox bug 1243717](https://bugzil.la/1243717)).
 - The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ([Firefox bug 1291212](https://bugzil.la/1291212)).
@@ -81,8 +81,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### Changes and removals
 
-- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
-- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1204024](https://bugzil.la/1204024)).
+- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
+- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1204024](https://bugzil.la/1204024)).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ([Firefox bug 1130636](https://bugzil.la/1130636)).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ([Firefox bug 1232266](https://bugzil.la/1232266)).
 - {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ([Firefox bug 1122396](https://bugzil.la/1122396)).
@@ -101,8 +101,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ([Firefox bug 1305928](https://bugzil.la/1305928)).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been re-enabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)
 - The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ([Firefox bug 687787](https://bugzil.la/687787)).
-- The {{domxref("isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
-- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
+- The {{domxref("WorkerGlobalScope.isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
+- The [Web App Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) install event has been renamed {{domxref("Window.appinstalled_event", "appinstalled")}} to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)
@@ -132,7 +132,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### WebRTC
 
 - When an ICE connection is temporarily disrupted, the {{domxref("RTCPeerConnection.iceConnectionState")}} property now gets set to `"disconnected"`; this indicates a transitory failure that may resolve itself shortly, with the connection returning to the `"connected"` state afterward ([Firefox bug 852665](https://bugzil.la/852665)).
-- The {{domxref("MediaDevices.devicechange_event")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
+- The `MediaDevices` {{domxref("MediaDevices.devicechange_event", "devicechange")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
 - The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.
 - Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a [WebRTC](/en-US/docs/Glossary/WebRTC) connection, [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.
 - Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{domxref("HTMLElement/change_event", "change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ([Firefox bug 882674](https://bugzil.la/882674)).
@@ -198,4 +198,4 @@ New APIs:
 
 ## Older versions
 
-{{Firefox_for_developers(51)}}
+{{Firefox_for_developers}}

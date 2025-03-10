@@ -26,7 +26,7 @@ A `MediaElementAudioSourceNode` has no inputs and exactly one output, and is cre
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaElementAudioSourceNode")}} doesn't have any input)
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and <code>MediaElementAudioSourceNode</code> doesn't have any input)
       </td>
     </tr>
   </tbody>

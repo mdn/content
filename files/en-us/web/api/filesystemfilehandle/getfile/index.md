@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.getFile
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a
@@ -44,7 +44,7 @@ uses the `getFile()` method to retrieve the contents.
 ```js
 async function getTheFile() {
   // open file picker
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // get file contents
   const fileData = await fileHandle.getFile();

@@ -11,14 +11,15 @@ browser-compat: api.Node.lastChild
 The read-only **`lastChild`** property of the {{domxref("Node")}} interface
 returns the last child of the node, or `null` if there are no child nodes.
 
-> **Note:** This property returns any type of node that is the last child of this one.
+> [!NOTE]
+> This property returns any type of node that is the last child of this one.
 > It may be a {{domxref("Text")}} or a {{domxref("Comment")}} node.
 > If you want to get the last {{domxref("Element")}} that is a child of another element,
 > consider using {{domxref("Element.lastElementChild")}}.
 
 ## Value
 
-A {{domxref("Node")}} that is the last child of the node, or `null` is there are no child nodes.
+A {{domxref("Node")}} that is the last child of the node, or `null` if there are no child nodes.
 
 ## Example
 

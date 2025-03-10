@@ -10,17 +10,13 @@ browser-compat: svg.elements.feSpotLight
 The **`<feSpotLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a light source that can be used to create a spotlight effect.
 It is used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
 
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}

@@ -40,7 +40,8 @@ sending credentials like cookies in requests.
 Access-Control-Allow-Origin: *
 ```
 
-> **Warning:** Using the wildcard to allow all sites to access a private
+> [!WARNING]
+> Using the wildcard to allow all sites to access a private
 > API is a bad idea.
 
 To allow any site to make CORS requests _without_ using the `*`

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets an alarm, given its name.
 
@@ -47,4 +47,5 @@ getAlarm.then(gotAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

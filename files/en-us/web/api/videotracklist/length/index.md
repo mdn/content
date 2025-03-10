@@ -25,8 +25,7 @@ A number indicating how many video tracks are included in the
 ## Examples
 
 This snippet gets the number of video tracks in the first {{HTMLElement("video")}}
-element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
-  "querySelector()")}}.
+element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.
 
 ```js
 const videoElem = document.querySelector("video");

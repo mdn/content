@@ -9,7 +9,8 @@ browser-compat: api.SpeechRecognition
 
 The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 
-> **Note:** On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+> [!NOTE]
+> On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
 {{InheritanceDiagram}}
 
@@ -25,7 +26,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.grammars")}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Element/html#lang) attribute value, or the user agent's language setting if that isn't set either.
+  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute value, or the user agent's language setting if that isn't set either.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}

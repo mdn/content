@@ -15,8 +15,8 @@ page-type: glossary-definition
 - **Idle**
   - : When using the main JavaScript thread, work in chunks for less than **50ms** to free up the thread for user interactions.
 - **Load**
-  - : Deliver interactive content in less than **1 second**.
+  - : Deliver interactive content in less than **5 second**.
 
 ## See also
 
-- [Recommended Web Performance Timings: How long is too long](/en-US/docs/Web/Performance/How_long_is_too_long)
+- [Recommended Web Performance Timings: How long is too long](/en-US/docs/Web/Performance/Guides/How_long_is_too_long)

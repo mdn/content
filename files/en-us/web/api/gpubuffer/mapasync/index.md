@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.mapAsync
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`mapAsync()`** method of the
 {{domxref("GPUBuffer")}} interface maps the specified range of the `GPUBuffer`. It returns a {{jsxref("Promise")}} that resolves when the `GPUBuffer`'s content is ready to be accessed. While the `GPUBuffer` is mapped it cannot be used in any GPU commands.
@@ -53,7 +53,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("Undefined")}} when the `GPUBu
 
 ### Validation
 
-The following criteria must be met when calling **`mapSync()`**, otherwise an `OperationError` {{domxref("DOMException")}} is thrown, the promise is rejected, and a {{domxref("GPUValidationError")}} is generated:
+The following criteria must be met when calling **`mapAsync()`**, otherwise an `OperationError` {{domxref("DOMException")}} is thrown, the promise is rejected, and a {{domxref("GPUValidationError")}} is generated:
 
 - `offset` is a multiple of 8.
 - The total range to be mapped (`size` if specified, or {{domxref("GPUBuffer.size")}} - `offset` if not) is a multiple of 4.

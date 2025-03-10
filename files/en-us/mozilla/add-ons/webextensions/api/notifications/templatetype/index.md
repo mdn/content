@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.TemplateType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".
 
@@ -43,4 +43,5 @@ Currently Firefox only supports "basic" here.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

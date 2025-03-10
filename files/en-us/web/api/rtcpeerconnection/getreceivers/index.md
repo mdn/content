@@ -8,7 +8,7 @@ browser-compat: api.RTCPeerConnection.getReceivers
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnection.getReceivers()`** method returns an array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP receiver.
+The **`getReceivers()`** method of the {{domxref("RTCPeerConnection")}} interface returns an array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP receiver.
 Each RTP receiver manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
 
 ## Syntax

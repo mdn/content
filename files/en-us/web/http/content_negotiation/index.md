@@ -8,7 +8,8 @@ page-type: guide
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 
-> **Note:** You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
+> [!NOTE]
+> You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
 
 ## Principles of content negotiation
 
@@ -45,9 +46,10 @@ The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that
 
 The `Accept` header is defined by the browser, or any other user agent, and can vary according to the context. For example, fetching an HTML page or an image, a video, or a script. It's different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }}, or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
 
-### The `Accept-CH` header {{experimental_inline}}
+### The `Accept-CH` header
 
-> **Note:** This is part of an **experimental** technology called _Client Hints_. Initial support comes in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_. Initial support comes in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
 The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the server can use to select an appropriate response. Valid values are:
 
@@ -57,12 +59,6 @@ The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the s
 | `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
 | `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
 
-### The `Accept-CH-Lifetime` header
-
-> **Note:** This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
-
-The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt in to sharing the device memory with the server. The value is given in milliseconds and it's optional.
-
 ### The `Accept-Encoding` header
 
 The {{HTTPHeader("Accept-Encoding")}} header defines the acceptable content encoding (supported compressions). The value is a q-factor list (e.g., `br, gzip;q=0.8`) that indicates the priority of the encoding values. The default value `identity` is at the lowest priority (unless otherwise noted).
@@ -71,7 +67,7 @@ Compressing HTTP messages is one of the most important ways to improve the perfo
 
 ### The `Accept-Language` header
 
-The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It's a list of values with quality factors (e.g., `"de, en;q=0.7`"). A default value is often set according to the language of the graphical interface of the user agent, but most browsers allow different language preferences to be set.
+The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It's a list of values with quality factors (e.g., `de, en;q=0.7`). A default value is often set according to the language of the graphical interface of the user agent, but most browsers allow different language preferences to be set.
 
 Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy) increase, a modified value can be used to fingerprint the user. It's not recommended to change it and a website can't trust this value to reflect the actual intention of the user. It's best for site designers to avoid using language detection via this header as it can lead to a poor user experience.
 
@@ -80,19 +76,20 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### The `User-Agent` header
 
-> **Note:** Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 
-A _product token_ is a name followed by a '`/`' and a version number, like `Firefox/4.0.1`. The user agent can include as many of these as it wants. A _comment_ is an optional string delimited by parentheses. The information provided in a comment isn't standardized, though several browsers add several tokens to it separated by '`;`'.
+A _product token_ is a name followed by a `/` and a version number, like `Firefox/4.0.1`. The user agent can include as many of these as it wants. A _comment_ is an optional string delimited by parentheses. The information provided in a comment isn't standardized, though several browsers add several tokens to it separated by `;`.
 
 ### The `Vary` response header
 
 In contrast to the previous `Accept-*` headers, which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers the server uses during the server-driven content negotiation phase. The `Vary` header is needed to inform the cache of the decision criteria so that it can reproduce it. This allows the cache to be functional while ensuring that the right content is served to the user.
 
-The special value '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
+The special value `*` means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
 
-The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
+The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard `*` prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
 
 ## Agent-driven negotiation
 
@@ -103,3 +100,7 @@ HTTP allows another negotiation type: _agent-driven negotiation_ or _reactive ne
 ![A client requesting a URL with headers denoting a preference for content types. The server has multiple resources represented by the URL and sends back multiple responses so the client may choose a body with a preferred compression algorithms applied.](httpnego3.png)
 
 Unfortunately, the HTTP standard doesn't specify the format of the page for choosing between the available resources, which prevents the process from being automated. Besides falling back to the _server-driven negotiation_, this method is almost always used with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed to fetch the real resource, slowing the availability of the resource to the user.
+
+## See also
+
+- [Caching](/en-US/docs/Web/HTTP/Caching)

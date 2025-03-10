@@ -43,7 +43,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - The non-standard `Keyboard` interface, prefixed as `mozKeyboard`, now has the `Keyboard.setSelectedOption()` and `Keyboard.setValue()` methods, as well as the `Keyboard.onfocuschange`. _This interface, only available for Firefox OS, has been removed in Firefox 31._
 - The [`java`](/en-US/docs/LiveConnect_Reference/java) and [`Packages`](/en-US/docs/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](/en-US/docs/LiveConnect).
 - The `CSSRule.type` associated with {{domxref("CSSNamespaceRule")}} has been updated from `UNKNOWN_RULE` (`0`) to `NAMESPACE_RULE` (`10`) ([bug 765590](https://bugzil.la/765590)).
-- WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general `DOMRequest`.
+- WebSMS API: `SmsRequest` has been superseded by the more general `DOMRequest`.
 - The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ([Firefox bug 766937](https://bugzil.la/766937)).
 - The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to `null` or `undefined`, is now being handled as an empty dictionary ([Firefox bug 7691119](https://bugzil.la/7691119)).
 
@@ -51,7 +51,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 - [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objects now offer `isFinite()`, `toInteger()`, and `isInteger()` methods. ([bug 761480](https://bugzil.la/761480), [bug 761495](https://bugzil.la/761495))
 - The Harmony [spread operator](https://web.archive.org/web/20161222114355/http://wiki.ecmascript.org/doku.php?id=harmony:spread) is now supported in [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) initializers ([bug 574130](https://bugzil.la/574130)). Note it is not yet supported in calls ([bug 762363](https://bugzil.la/762363)).
-- The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ([Firefox bug 730873](https://bugzil.la/730873)).
+- The experimental `TypedArray.prototype.move()` method has been added (available in Aurora and Nightly channels only) ([Firefox bug 730873](https://bugzil.la/730873)).
 
 ### WebGL
 

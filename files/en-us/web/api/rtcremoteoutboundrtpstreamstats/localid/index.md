@@ -21,8 +21,8 @@ A string which can be compared to the value of an {{domxref("RTCInboundRtpStream
 You can think of the local and remote views of the same RTP stream as pairs, each of which has a reference back to the other one.
 Thus, if an {{domxref("RTCStatsReport")}} includes an `remote-outbound-rtp` statistics object (of type `RTCRemoteOutboundRtpStreamStats`), it should also have a corresponding `inbound-rtp` object.
 Both of these provide information about the same batch of packets being transmitted from the remote peer to the local device.
-The difference is
-that `remote-outbound-rtp` describes statistics about the transmission(s) from the perspective of the remote peer, while `inbound-rtp` offers statistics about the incoming data from the local peer's perspective.
+
+The difference is that `remote-outbound-rtp` describes statistics about data sent by the remote peer from the perspective of the remote peer, while `inbound-rtp` offers statistics about the incoming data from the local peer's perspective.
 
 You can [examine, try out, and experiment](#try_it_and_fork_it) with this example on Glitch.
 
@@ -176,7 +176,7 @@ Each one represents approximately one second of time (since that's much time we'
 
 ### Try it and fork it
 
-This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me/), examine, or remix.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

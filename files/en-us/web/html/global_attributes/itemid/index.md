@@ -2,7 +2,7 @@
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
 page-type: html-attribute
-browser-compat: html.global_attributes.itemid
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -13,7 +13,8 @@ An `itemid` attribute can only be specified for an element that has both [`items
 
 The exact meaning of an `itemtype`'s global identifier is provided by the definition of that identifier within the specified vocabulary. The vocabulary defines whether several items with the same global identifier can coexist and, if so, how items with the same identifier are handled.
 
-> **Note:** The {{glossary("WHATWG")}} definition specifies that an `itemid` must be a {{glossary("URL")}}. However, the following example correctly illustrates that a {{glossary("URN")}} may also be used. This inconsistency may reflect the incomplete nature of the Microdata specification.
+> [!NOTE]
+> The {{glossary("WHATWG")}} definition specifies that an `itemid` must be a {{glossary("URL")}}. However, the following example correctly illustrates that a {{glossary("URN")}} may also be used. This inconsistency may reflect the incomplete nature of the Microdata specification.
 
 ## Examples
 
@@ -71,10 +72,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -52,9 +52,9 @@ Left values are the destination of an assignment.
   - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 - {{jsxref("Operators/new", "new")}}
   - : The `new` operator creates an instance of a constructor.
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
+- {{jsxref("Operators/new.target", "new.target")}}
   - : In constructors, `new.target` refers to the constructor that was invoked by {{jsxref("Operators/new", "new")}}.
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
   - : An object exposing context-specific metadata to a JavaScript module.
 - {{jsxref("Operators/super", "super")}}
   - : The `super` keyword calls the parent constructor or allows accessing properties of the parent object.
@@ -218,8 +218,8 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Logical OR assignment.
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : Nullish coalescing assignment.
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-  - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
+  - : Destructuring allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
 ### Yield operators
 

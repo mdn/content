@@ -13,7 +13,8 @@ The **`HTMLTableElement.createCaption()`** method returns the
 If no `<caption>` element exists on the table, this method creates
 it, and then returns it.
 
-> **Note:** If no caption exists, `createCaption()` inserts a
+> [!NOTE]
+> If no caption exists, `createCaption()` inserts a
 > new caption directly into the table. The caption does not need to be added
 > separately as would be the case if {{domxref("Document.createElement()")}} had
 > been used to create the new `<caption>` element.

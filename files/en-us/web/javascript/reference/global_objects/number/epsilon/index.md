@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.Number.EPSILON
 
 The **`Number.EPSILON`** static data property represents the difference between 1 and the smallest floating point number greater than 1.
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
 
 ## Value
 
@@ -78,7 +88,8 @@ console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 
 In addition to magnitude, it is important to consider the _accuracy_ of your input. For example, if the numbers are collected from a form input and the input value can only be adjusted by steps of `0.1` (i.e. [`<input type="number" step="0.1">`](/en-US/docs/Web/HTML/Attributes/step)), it usually makes sense to allow a much larger tolerance, such as `0.01`, since the data only has a precision of `0.1`.
 
-> **Note:** Important takeaway: do not simply use `Number.EPSILON` as a threshold for equality testing. Use a threshold that is appropriate for the magnitude and accuracy of the numbers you are comparing.
+> [!NOTE]
+> Important takeaway: do not simply use `Number.EPSILON` as a threshold for equality testing. Use a threshold that is appropriate for the magnitude and accuracy of the numbers you are comparing.
 
 ## Specifications
 
@@ -91,4 +102,5 @@ In addition to magnitude, it is important to consider the _accuracy_ of your inp
 ## See also
 
 - [Polyfill of `Number.EPSILON` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.EPSILON`](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number")}}

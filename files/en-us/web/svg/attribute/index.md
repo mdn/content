@@ -1,5 +1,6 @@
 ---
 title: SVG Attribute reference
+short-title: Attributes
 slug: Web/SVG/Attribute
 page-type: landing-page
 ---
@@ -48,10 +49,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
-- {{SVGAttr("color-rendering")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("cx")}}
@@ -60,7 +57,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### D
 
 - {{SVGAttr("d")}}
-- {{SVGAttr("decelerate")}}
+- {{SVGAttr("data-*")}}
+- {{SVGAttr("decoding")}}
 - {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
 - {{SVGAttr("direction")}}
@@ -75,7 +73,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -85,7 +82,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
 - {{SVGAttr("filter")}}
-- {{SVGAttr("filterRes")}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
@@ -96,9 +92,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
-- {{SVGAttr("format")}}
-- {{SVGAttr("from")}}
 - {{SVGAttr("fr")}}
+- {{SVGAttr("from")}}
 - {{SVGAttr("fx")}}
 - {{SVGAttr("fy")}}
 
@@ -109,7 +104,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("glyph-name")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
-- {{SVGAttr("glyphRef")}}
 - {{SVGAttr("gradientTransform")}}
 - {{SVGAttr("gradientUnits")}}
 
@@ -117,10 +111,11 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("hanging")}}
 - {{SVGAttr("height")}}
-- {{SVGAttr("href")}}
-- {{SVGAttr("hreflang")}}
 - {{SVGAttr("horiz-adv-x")}}
 - {{SVGAttr("horiz-origin-x")}}
+- {{SVGAttr("horiz-origin-y")}}
+- {{SVGAttr("href")}}
+- {{SVGAttr("hreflang")}}
 
 ### I
 
@@ -140,7 +135,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("k4")}}
 - {{SVGAttr("kernelMatrix")}}
 - {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("keyPoints")}}
 - {{SVGAttr("keySplines")}}
 - {{SVGAttr("keyTimes")}}
@@ -192,8 +186,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### P
 
-- {{SVGAttr("panose-1")}}
 - {{SVGAttr("paint-order")}}
+- {{SVGAttr("panose-1")}}
 - {{SVGAttr("path")}}
 - {{SVGAttr("pathLength")}}
 - {{SVGAttr("patternContentUnits")}}
@@ -233,6 +227,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("scale")}}
 - {{SVGAttr("seed")}}
 - {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("side")}}
 - {{SVGAttr("slope")}}
 - {{SVGAttr("spacing")}}
 - {{SVGAttr("specularConstant")}}
@@ -301,7 +296,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("vert-origin-x")}}
 - {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
-- {{SVGAttr("viewTarget")}}
 - {{SVGAttr("visibility")}}
 
 ### W
@@ -325,7 +319,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -347,26 +340,33 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - Core attributes
 
-  - : [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
-
-    {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
-
-- Style attributes
-
-  - : [Style attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-
-    {{SVGAttr("class")}}, {{SVGAttr("style")}}
+  - {{SVGAttr("id")}}
+  - {{SVGAttr("class")}}
+  - {{SVGAttr("style")}}
+  - {{SVGAttr("lang")}}
+  - {{SVGAttr("tabindex")}}
+  - {{SVGAttr("xml:lang")}}
+  - {{SVGAttr("xml:space")}}
 
 - Conditional processing attributes
-  - : {{SVGAttr("requiredExtensions")}}, {{SVGAttr("requiredFeatures")}}, {{SVGAttr("systemLanguage")}}.
+  - {{SVGAttr("requiredExtensions")}}
+  - {{SVGAttr("requiredFeatures")}}
+  - {{SVGAttr("systemLanguage")}}
 
 ### XLink attributes
 
-{{SVGAttr("xlink:href")}}{{deprecated_inline}} , {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}}, {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:type")}}
+- {{SVGAttr("xlink:role")}}
+- {{SVGAttr("xlink:arcrole")}}
+- {{SVGAttr("xlink:title")}}
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
 
 ### Presentation attributes
 
-> **Note:** All [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
+> [!NOTE]
+> All SVG presentation attributes can be used as CSS properties.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -376,13 +376,13 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
-- {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
+- {{SVGAttr("cx")}}
+- {{SVGAttr("cy")}}
+- {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
@@ -398,17 +398,21 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("font-weight")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("height")}}
 - {{SVGAttr("image-rendering")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("lighting-color")}}
 - {{SVGAttr("marker-end")}}
 - {{SVGAttr("marker-mid")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("mask")}}
+- {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
 - {{SVGAttr("pointer-events")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
 - {{SVGAttr("shape-rendering")}}
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("stop-opacity")}}
@@ -422,14 +426,19 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
 - {{SVGAttr("unicode-bidi")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
+- {{SVGAttr("white-space")}}
+- {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
 
 ### Filters attributes
 
@@ -447,38 +456,82 @@ Below is a list of all of the attributes available in SVG along with links to re
 - Animation timing attributes
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
 - Animation value attributes
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}
 - Animation addition attributes
   - : {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 
 ### Event attributes
 
-- Animation event attributes
-
-  - : [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
-
-    **`onbegin`**, **`onend`**, **`onrepeat`**
-
-- Document event attributes
-
-  - : [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes)
-
-    **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
-
-- Global event attributes
-
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)
-
-    **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
-
-- Graphical event attributes
-
-  - : [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
-
-    **`onactivate`**, **`onfocusin`**, **`onfocusout`**
+- **`onabort`**
+- **`onactivate`**
+- **`onbegin`**
+- **`oncancel`**
+- **`oncanplay`**
+- **`oncanplaythrough`**
+- **`onchange`**
+- **`onclick`**
+- **`onclose`**
+- **`oncuechange`**
+- **`ondblclick`**
+- **`ondrag`**
+- **`ondragend`**
+- **`ondragenter`**
+- **`ondragleave`**
+- **`ondragover`**
+- **`ondragstart`**
+- **`ondrop`**
+- **`ondurationchange`**
+- **`onemptied`**
+- **`onend`**
+- **`onended`**
+- **`onerror`**
+- **`onerror`**
+- **`onfocus`**
+- **`onfocusin`**
+- **`onfocusout`**
+- **`oninput`**
+- **`oninvalid`**
+- **`onkeydown`**
+- **`onkeypress`**
+- **`onkeyup`**
+- **`onload`**
+- **`onloadeddata`**
+- **`onloadedmetadata`**
+- **`onloadstart`**
+- **`onmousedown`**
+- **`onmouseenter`**
+- **`onmouseleave`**
+- **`onmousemove`**
+- **`onmouseout`**
+- **`onmouseover`**
+- **`onmouseup`**
+- **`onmousewheel`**
+- **`onpause`**
+- **`onplay`**
+- **`onplaying`**
+- **`onprogress`**
+- **`onratechange`**
+- **`onrepeat`**
+- **`onreset`**
+- **`onresize`**
+- **`onresize`**
+- **`onscroll`**
+- **`onscroll`**
+- **`onseeked`**
+- **`onseeking`**
+- **`onselect`**
+- **`onshow`**
+- **`onstalled`**
+- **`onsubmit`**
+- **`onsuspend`**
+- **`ontimeupdate`**
+- **`ontoggle`**
+- **`onunload`**
+- **`onvolumechange`**
+- **`onwaiting`**
 
 ## See also
 
 - [SVG element reference](/en-US/docs/Web/SVG/Element)
 - [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG interface reference](/en-US/docs/Web/API/SVG_API#interfaces)

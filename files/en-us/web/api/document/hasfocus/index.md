@@ -11,7 +11,8 @@ browser-compat: api.Document.hasFocus
 The **`hasFocus()`** method of the {{domxref("Document")}} interface returns a boolean value indicating whether the document or any element inside the document has focus.
 This method can be used to determine whether the active element in a document has focus.
 
-> **Note:** When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in the document, but an active element does not necessarily have focus.
+> [!NOTE]
+> When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in the document, but an active element does not necessarily have focus.
 > For example, an active element within a popup window that is not the foreground doesn't have focus.
 
 ## Syntax
@@ -31,29 +32,27 @@ None.
 
 ## Examples
 
+### Checking if the document has focus
+
 The following example checks whether the document has focus or not.
 A function called `checkPageFocus()` updates a paragraph element depending on the result of `document.hasFocus()`.
 Opening a new window will cause the document to lose focus and switching back to the original window will cause the document to regain focus.
 
-### HTML
-
-```html
+```html live-sample___has-focus
 <p id="log">Focus check results are shown here.</p>
 <button id="newWindow">Open new window</button>
 ```
 
-```css hidden
+```css hidden live-sample___has-focus
 body {
   padding: 1rem;
   background: gray;
   text-align: center;
-  font-size: 1.5rem;
+  font: 1.5rem sans-serif;
 }
 ```
 
-### JavaScript
-
-```js
+```js live-sample___has-focus
 const body = document.querySelector("body");
 const log = document.getElementById("log");
 
@@ -79,9 +78,7 @@ document.getElementById("newWindow").addEventListener("click", openWindow);
 setInterval(checkDocumentFocus, 300);
 ```
 
-### Result
-
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample('has-focus', , , , , , , 'allow-popups')}}
 
 ## Specifications
 

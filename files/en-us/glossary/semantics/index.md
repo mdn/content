@@ -24,7 +24,7 @@ In HTML, for example, the {{htmlelement("Heading_Elements", "h1")}} element is a
 <h1>This is a top level heading</h1>
 ```
 
-By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
+By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) will style an {{htmlelement("Heading_Elements", "h1")}} with a large font size to make it _look_ like a heading (although you could style it to look like anything you wanted).
 
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
@@ -70,6 +70,5 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
 - [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("SEO")}}

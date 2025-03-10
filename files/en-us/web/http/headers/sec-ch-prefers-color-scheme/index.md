@@ -9,7 +9,8 @@ browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-Prefers-Color-Scheme`** [user preference media feature client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) request header provides the user's preference for light or dark color themes. A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
+The HTTP **`Sec-CH-Prefers-Color-Scheme`** {{Glossary("request header")}} is a [media feature client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) which provides the user's preference for light or dark color themes.
+A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
 
 If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content including images or CSS to display a light or dark mode for subsequent rendered content.
 
@@ -25,8 +26,8 @@ This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -48,11 +49,12 @@ Sec-CH-Prefers-Color-Scheme: <preference>
 ### Directives
 
 - `<preference>`
-
   - : A string indicating the user agent's preference for dark or light content: `"light"` or `"dark"`.
     The value may originate from a corresponding setting in the underlying operating system.
 
 ## Examples
+
+### Using Sec-CH-Prefers-Color-Scheme
 
 The client makes an initial request to the server:
 
@@ -71,7 +73,8 @@ Vary: Sec-CH-Prefers-Color-Scheme
 Critical-CH: Sec-CH-Prefers-Color-Scheme
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Color-Scheme` in the {{httpheader("Vary")}} header to indicate that responses should be separately cached based on the value of this header (even if the URL stays the same).
+> [!NOTE]
+> We've also specified `Sec-CH-Prefers-Color-Scheme` in the {{httpheader("Vary")}} header to indicate that responses should be separately cached based on the value of this header (even if the URL stays the same).
 > Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Color-Scheme` that it has a user preference for dark content:
@@ -95,8 +98,8 @@ The client will include the header in subsequent requests in the current session
 ## See also
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
-- [`prefers-color-scheme` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching varying responses](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [`prefers-color-scheme` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

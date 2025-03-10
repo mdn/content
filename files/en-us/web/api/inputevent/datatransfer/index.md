@@ -15,11 +15,11 @@ editable content.
 
 ## Value
 
-A {{domxref("DataTransfer")}} object.
+A {{domxref("DataTransfer")}} object or `null`. The spec has an [overview](https://w3c.github.io/input-events/#overview) of its value in various cases.
 
 ## Examples
 
-In the following simple example we've set up an event listener on the [input](/en-US/docs/Web/API/HTMLElement/input_event) event so that when any
+In the following simple example we've set up an event listener on the [input](/en-US/docs/Web/API/Element/input_event) event so that when any
 content is pasted into the contenteditable {{htmlelement("p")}} element, its HTML source
 is retrieved via the
 [`InputEvent.dataTransfer.getData()`](/en-US/docs/Web/API/DataTransfer/getData)

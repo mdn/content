@@ -15,10 +15,13 @@ When used for encryption, the public key is used to encrypt and the private key 
 As a result, it's common for an encryption system to use a symmetric algorithm to encrypt the message, then a public-key system to encrypt the symmetric key. This arrangement can confer the benefits of both systems.
 
 Commonly used public-key cryptosystems are RSA (for both signing and encryption), DSA (for signing) and Diffie-Hellman (for key agreement).
+Elliptic-curve cryptography offers an alternative approach to these cryptographic systems with the benefit of using comparatively smaller key sizes, faster operations, and smaller storage and transmission.
+Popular elliptic-curve algorithms include [Elliptic-curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie–Hellman) and [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), which developers will often encounter abbreviated as **ECDH** and **ECDSA**.
 
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- [SubtleCrypto supported algorithms](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms)
+- Related glossary terms:
   - {{Glossary("Symmetric-key cryptography")}}
+- [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) on Wikipedia

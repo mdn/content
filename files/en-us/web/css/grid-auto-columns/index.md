@@ -7,9 +7,62 @@ browser-compat: css.properties.grid-auto-columns
 
 {{CSSRef}}
 
-The **`grid-auto-columns`** CSS property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
+The **`grid-auto-columns`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid column {{glossary("grid tracks", "track")}} or pattern of tracks.
 
-{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-columns")}}
+
+```css interactive-example-choice
+grid-auto-columns: auto;
+```
+
+```css interactive-example-choice
+grid-auto-columns: 1fr;
+```
+
+```css interactive-example-choice
+grid-auto-columns: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-columns: minmax(10px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element > div:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+#example-element > div:nth-child(2) {
+  grid-column: 2;
+}
+```
 
 If a grid item is positioned into a column that is not explicitly sized by {{cssxref("grid-template-columns")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a column that is out of range, or by the auto-placement algorithm creating additional columns.
 
@@ -49,7 +102,8 @@ grid-auto-columns: min-content max-content auto;
 grid-auto-columns: 100px 150px 390px;
 grid-auto-columns: 10% 33.3%;
 grid-auto-columns: 0.5fr 3fr 1fr;
-grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-columns: minmax(100px, auto) minmax(max-content, 2fr)
+  minmax(20%, 80vmax);
 grid-auto-columns: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 /* Global values */
@@ -142,6 +196,8 @@ grid-auto-columns: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid")}}
+- [Auto-placement in grid layout: sizing rows in the implicit grid](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)
+- Video: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

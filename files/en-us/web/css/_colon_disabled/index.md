@@ -1,5 +1,5 @@
 ---
-title: ":disabled"
+title: :disabled
 slug: Web/CSS/:disabled
 page-type: css-pseudo-class
 browser-compat: css.selectors.disabled
@@ -9,7 +9,39 @@ browser-compat: css.selectors.disabled
 
 The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-disabled.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
 
 ## Syntax
 
@@ -56,29 +88,22 @@ input[type="text"]:disabled {
 
 ### JavaScript
 
+Toggle the disabled input fields when the checkbox is clicked
+
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
-);
+const checkbox = document.querySelector("#billing-checkbox");
+const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-function toggleBilling() {
-  // Select the billing text fields
-  const billingItems = document.querySelectorAll('#billing input[type="text"]');
-
-  // Toggle the billing text fields
+checkbox.addEventListener("change", () => {
   billingItems.forEach((item) => {
     item.disabled = !item.disabled;
   });
-}
+});
 ```
 
 ### Result
+
+Check/un-check the checkbox to change the styling on the billing fields.
 
 {{EmbedLiveSample('Examples', 300, 250)}}
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.isOpen
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns `true` if the extension's sidebar is open in a given window.
 

@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.append
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`append()`** method of the {{domxref("URLSearchParams")}}
 interface appends a specified key/value pair as a new search parameter.
 
 As shown in the example below, if the same key is appended multiple times it will
 appear in the parameter string multiple times for each value.
-
-{{availableinworkers}}
 
 ## Syntax
 
@@ -35,13 +33,15 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
-let url = new URL("https://example.com?foo=1&bar=2");
-let params = new URLSearchParams(url.search);
+### Adding the same parameter multiple times
 
-//Add a second foo parameter.
+```js
+const url = new URL("https://example.com?foo=1&bar=2");
+const params = new URLSearchParams(url.search);
+
+// Add a second foo parameter.
 params.append("foo", 4);
-//Query string is now: 'foo=1&bar=2&foo=4'
+// Query string is now: 'foo=1&bar=2&foo=4'
 ```
 
 ## Specifications

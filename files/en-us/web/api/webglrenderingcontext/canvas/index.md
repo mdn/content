@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.canvas
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.canvas`** property is a read-only
 reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}

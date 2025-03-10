@@ -6,7 +6,7 @@ page-type: guide
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
-JavaScript is designed on a simple object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
+JavaScript is designed on an object-based paradigm. An object is a collection of [properties](/en-US/docs/Glossary/Property/JavaScript), and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a [method](/en-US/docs/Glossary/Method).
 
 Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
 
@@ -87,8 +87,8 @@ This statement creates `myCar` and assigns it the specified values for its prope
 You can create any number of `Car` objects by calls to `new`. For example,
 
 ```js
-const kenscar = new Car("Nissan", "300ZX", 1992);
-const vpgscar = new Car("Mazda", "Miata", 1990);
+const randCar = new Car("Nissan", "300ZX", 1992);
+const kenCar = new Car("Mazda", "Miata", 1990);
 ```
 
 An object can have a property that is itself another object. For example, suppose you define an object called `Person` as follows:
@@ -144,7 +144,7 @@ You can also use the [`class`](/en-US/docs/Web/JavaScript/Reference/Classes) syn
 
 ### Using the Object.create() method
 
-Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
+Objects can also be created using the {{jsxref("Object.create()")}} method. This method can be very useful, because it allows you to choose the [prototype](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) object for the object you want to create, without having to define a constructor function.
 
 ```js
 // Animal properties and method encapsulation
@@ -253,7 +253,7 @@ myCar[propertyName] = "Mustang";
 console.log(myCar); // { make: 'Ford', model: 'Mustang' }
 ```
 
-However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 Nonexistent properties of an object have value {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
@@ -321,26 +321,26 @@ function listAllProperties(myObj) {
 }
 ```
 
-For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ### Deleting properties
 
 You can remove a non-inherited property using the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator. The following code shows how to remove a property.
 
 ```js
-// Creates a new object, myobj, with two properties, a and b.
-const myobj = new Object();
-myobj.a = 5;
-myobj.b = 12;
+// Creates a new object, myObj, with two properties, a and b.
+const myObj = new Object();
+myObj.a = 5;
+myObj.b = 12;
 
-// Removes the a property, leaving myobj with only the b property.
-delete myobj.a;
-console.log("a" in myobj); // false
+// Removes the a property, leaving myObj with only the b property.
+delete myObj.a;
+console.log("a" in myObj); // false
 ```
 
 ## Inheritance
 
-All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more information.
+All objects in JavaScript inherit from at least one other object. The object being inherited from is known as the prototype, and the inherited properties can be found in the `prototype` object of the constructor. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) for more information.
 
 ### Defining properties for all objects of one type
 
@@ -489,30 +489,30 @@ In JavaScript, objects are a reference type. Two distinct objects are never equa
 ```js
 // Two variables, two distinct objects with the same properties
 const fruit = { name: "apple" };
-const fruitbear = { name: "apple" };
+const anotherFruit = { name: "apple" };
 
-fruit == fruitbear; // return false
-fruit === fruitbear; // return false
+fruit == anotherFruit; // return false
+fruit === anotherFruit; // return false
 ```
 
 ```js
 // Two variables, a single object
 const fruit = { name: "apple" };
-const fruitbear = fruit; // Assign fruit object reference to fruitbear
+const anotherFruit = fruit; // Assign fruit object reference to anotherFruit
 
-// Here fruit and fruitbear are pointing to same object
-fruit == fruitbear; // return true
-fruit === fruitbear; // return true
+// Here fruit and anotherFruit are pointing to same object
+fruit == anotherFruit; // return true
+fruit === anotherFruit; // return true
 
 fruit.name = "grape";
-console.log(fruitbear); // { name: "grape" }; not { name: "apple" }
+console.log(anotherFruit); // { name: "grape" }; not { name: "apple" }
 ```
 
 For more information about comparison operators, see [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators).
 
 ## See also
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

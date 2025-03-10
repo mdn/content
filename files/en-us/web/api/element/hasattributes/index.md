@@ -47,3 +47,7 @@ if (foo.hasAttributes()) {
 
 - {{domxref("Element.attributes")}}
 - {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

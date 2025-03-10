@@ -8,7 +8,7 @@ browser-compat: api.AnalyserNode.getFloatFrequencyData
 
 {{ APIRef("Web Audio API") }}
 
-The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it. Each array value is a _sample_, the magnitude of the signal at a particular time.
+The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
 
 Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a `48000` Hz sample rate, the last item of the array will represent the decibel value for `24000` Hz.
 
@@ -90,7 +90,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
       analyserNode.getFloatFrequencyData(dataArray);
 
       //Draw black background
-      canvasCtx.fillStyle = "rgb(0, 0, 0)";
+      canvasCtx.fillStyle = "rgb(0 0 0)";
       canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
       //Draw spectrum
@@ -98,8 +98,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
       let posX = 0;
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = (dataArray[i] + 140) * 2;
-        canvasCtx.fillStyle =
-          "rgb(" + Math.floor(barHeight + 100) + ", 50, 50)";
+        canvasCtx.fillStyle = `rgb(${Math.floor(barHeight + 100)} 50 50)`;
         canvasCtx.fillRect(
           posX,
           canvas.height - barHeight / 2,

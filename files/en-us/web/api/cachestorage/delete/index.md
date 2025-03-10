@@ -6,12 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.CacheStorage.delete
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`delete()`** method of the {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`.
 If no {{domxref("Cache")}} object is found, it resolves to `false`.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 ## Syntax
 
@@ -69,4 +69,4 @@ this.addEventListener("activate", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

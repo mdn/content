@@ -4,15 +4,15 @@ short-title: src
 slug: Web/API/SpeechGrammar/src
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechGrammar.src
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
-The **`src`** property of the {{domxref("SpeechGrammar")}}
-interface sets and returns a string containing the grammar from within in the
-`SpeechGrammar` object.
+The **`src`** property of the {{domxref("SpeechGrammar")}} interface
+is used to get or set a string that contains the grammar within the `SpeechGrammar` object.
 
 ## Value
 
@@ -29,7 +29,7 @@ speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // should return the same as the contents of the grammar variable
-console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in line 4.
+console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in addFromString.
 ```
 
 ## Specifications

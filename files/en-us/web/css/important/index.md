@@ -6,7 +6,7 @@ page-type: css-keyword
 
 {{CSSRef}}
 
-A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/Cascade). A declaration that is not _important_ is called _normal_.
+A `!` delimiter followed by the `important` keyword marks the declaration as important. The `!important` flag alters the rules selecting declarations inside the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade). A declaration that is not _important_ is called _normal_.
 
 To mark a declaration important, add the _important flag_ (`!important`) after the value in the declaration. While white space is allowed between the delimiter and the keyword, the flag is generally written as `!important` without any white space.
 
@@ -22,11 +22,12 @@ The `!important` comes after the value of the property value pair declaration, p
 
 ## Impact on the cascade
 
-When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
+When it comes to important declarations, the [cascade origin and layer orders](/en-US/docs/Web/CSS/CSS_cascade/Cascade) are reversed. Without the important flag, declarations in the author's style sheets override declarations in a user's style sheet, which override declarations in the user-agent's default style sheet.
 
 When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all important declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
 
-> **Note:** All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
+> [!NOTE]
+> All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 
@@ -56,7 +57,7 @@ Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Global
 
 ### !important and specificity
 
-While `!important` is not part of determining specificity, it is related. Important declarations override all other declarations from the same [origin and cascade layer](/en-US/docs/Web/CSS/Cascade).
+While `!important` is not part of determining specificity, it is related. Important declarations override all other declarations from the same [origin and cascade layer](/en-US/docs/Web/CSS/CSS_cascade/Cascade).
 
 ```css
 #myElement#myElement#myElement .myClass.myClass p:hover {
@@ -68,7 +69,7 @@ p {
 }
 ```
 
-This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an important declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
+This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) matches a normal declaration, an important declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
 
 When two important declarations from the same origin and layer apply to the same element, browsers select and use the declaration with the highest specificity.
 
@@ -142,7 +143,7 @@ Even when working to override high-specificity styles not under your control, su
 
 If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 
-### Accessibility
+### Accessibility concerns
 
 Important styles from a user stylesheet take precedence over the author style sheet's important declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding important styles in their own user's style sheet.
 
@@ -152,5 +153,5 @@ This feature is supported in all browsers.
 
 ## See also
 
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
-- [CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [CSS Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)

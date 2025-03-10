@@ -43,7 +43,7 @@ No notable changes.
 
 #### Canvas
 
-- Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) image format.
+- Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) image format.
   This allows canvas elements to export their content as webp data when using the methods: {{domxref("HTMLCanvasElement.toDataURL()")}}, {{domxref("HTMLCanvasElement.toBlob()")}}, and {{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}.
   ([Firefox bug 1511670](https://bugzil.la/1511670)).
 
@@ -53,7 +53,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`, `framerateMean`, `framerateStdDev`, and `droppedFrames`.
+- A number of deprecated non-standard statistics fields have been removed from the WebRTC API {{domxref("RTCStatsReport")}} interface, including: `bitrateMean`, `bitrateStdDev`, `framerateMean`, `framerateStdDev`, and `droppedFrames`.
   ([Firefox bug 1367562](https://bugzil.la/1367562)).
 
 ### WebDriver conformance (Marionette)
@@ -68,4 +68,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(95)}}
+{{Firefox_for_developers}}

@@ -2,14 +2,12 @@
 title: Iterator.prototype.take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.take
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
-The **`take()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that yields the given number of elements in this iterator and then terminates.
+The **`take()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields the given number of elements in this iterator and then terminates.
 
 ## Syntax
 
@@ -24,7 +22,7 @@ take(limit)
 
 ### Return value
 
-A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers). The returned iterator helper yields the elements in the original iterator one-by-one, and then completes (the `next()` method produces `{ value: undefined, done: true }`) once `limit` elements have been yielded, or when the original iterator is exhausted, whichever comes first.
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). The returned iterator helper yields the elements in the original iterator one-by-one, and then completes (the `next()` method produces `{ value: undefined, done: true }`) once `limit` elements have been yielded, or when the original iterator is exhausted, whichever comes first.
 
 ### Exceptions
 
@@ -71,11 +69,11 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-Because `fibonacci()` is an infinite iterator, you can't use a `for` loop to iterate it directly.
+Because `fibonacci()` is an infinite iterator, using a `for` loop to iterate it without any logic to exit early (such as a {{jsxref("Statements/break", "break")}} statement) would result in an infinite loop.
 
 ### Combining drop() with take()
 
-You can combine `drop()` with {{jsxref("Iterator.prototype.take()")}} to get a slice of an iterator:
+You can combine `take()` with {{jsxref("Iterator.prototype.drop()")}} to get a slice of an iterator:
 
 ```js
 for (const n of fibonacci().drop(2).take(5)) {
@@ -132,5 +130,6 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.take` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.take`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.drop()")}}

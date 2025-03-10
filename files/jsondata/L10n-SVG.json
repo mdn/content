@@ -1,5 +1,6 @@
 {
   "animationAdditionAttributes": {
+    "de": "Attribute für Animationserweiterungen",
     "en-US": "Animation addition attributes",
     "es": "Atributos de adición de animación",
     "fr": "Attributs d'ajout d'animation",
@@ -11,6 +12,7 @@
     "zh-TW": "動畫累加屬性"
   },
   "animationAttributeTargetAttributes": {
+    "de": "Attribute für Animationsziele",
     "en-US": "Animation attribute target attributes",
     "es": "Atributos de destino de atributo de animación",
     "fr": "Attributs de cible d'animation",
@@ -22,6 +24,7 @@
     "zh-TW": "動畫屬性目標屬性"
   },
   "animationElement": {
+    "de": "Animationselement",
     "en-US": "Animation element",
     "es": "Elemento de animación",
     "fr": "Élément d'animation",
@@ -33,6 +36,7 @@
     "zh-TW": "動畫元素"
   },
   "animationElements": {
+    "de": "Animationselemente",
     "en-US": "Animation elements",
     "es": "Elementos de animación",
     "fr": "Éléments d'animation",
@@ -44,6 +48,7 @@
     "zh-TW": "動畫元素"
   },
   "animationEventAttributes": {
+    "de": "Animations-Ereignisattribute",
     "en-US": "Animation event attributes",
     "es": "Atributos de eventos de animación",
     "fr": "Attributs d'évènement d'animation",
@@ -55,6 +60,7 @@
     "zh-TW": "動畫事件屬性"
   },
   "animationTimingAttributes": {
+    "de": "Animations-Timing-Attribute",
     "en-US": "Animation timing attributes",
     "es": "Atributos de tiempo de animación",
     "fr": "Attributs de temporisation d'animation",
@@ -66,6 +72,7 @@
     "zh-TW": "動畫計時屬性"
   },
   "animationValueAttributes": {
+    "de": "Animationswert-Attribute",
     "en-US": "Animation value attributes",
     "es": "Atributos de valor de animación",
     "fr": "Attributs de valeur d'animation",
@@ -77,6 +84,7 @@
     "zh-TW": "動畫值屬性"
   },
   "anyElementsOrCharacterData": {
+    "de": "Beliebige Elemente oder Zeichendaten",
     "en-US": "Any elements or character data",
     "es": "Cualquier elemento o dato de carácter",
     "fr": "Tout élément ou caractère de donnée",
@@ -88,6 +96,7 @@
     "zh-TW": "任意元素或字元資料"
   },
   "anyNumberOfElementsAnyOrder": {
+    "de": "Beliebige Anzahl folgender Elemente, in beliebiger Reihenfolge:",
     "en-US": "Any number of the following elements, in any order:",
     "es": "Cualquier número de los siguientes elementos, en cualquier orden:",
     "fr": "Tout élément de cette liste, quel qu'en soit l'ordre :",
@@ -99,6 +108,7 @@
     "zh-TW": "任意數量、任意順序的下列元素："
   },
   "anyNumberOfElementsDescriptiveElementsScriptAndTwoToFourStopElements": {
+    "de": "Beliebige Anzahl beschreibender Elemente, {{SVGElement(\"script\")}} und zwei bis vier {{SVGElement(\"stop\")}} Elemente.",
     "en-US": "Any number of descriptive elements, {{SVGElement(\"script\")}} and from two to four {{SVGElement(\"stop\")}} elements.",
     "es": "Cualquier número de elementos descriptivos, {{SVGElement(\"script\")}} y de dos a cuatro elementos de {{SVGElement(\"stop\")}}.",
     "fr": "N'importe quelle quantité d'éléments descriptifs, {{SVGElement(\"script\")}} et de deux à quatre éléments {{SVGElement(\"stop\")}}.",
@@ -110,6 +120,7 @@
     "zh-TW": "任意數量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 個 {{SVGElement(\"stop\")}} 元素。"
   },
   "anyNumberOfElementsWithMeshgradientElement": {
+    "de": "Beliebige Anzahl von Animationselementen, beschreibenden Elementen, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}} und {{SVGElement(\"style\")}}-Elementen sowie null oder ein {{SVGElement(\"meshgradient\")}} Element.",
     "en-US": "Any number of animation elements, descriptive elements, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, and {{SVGElement(\"style\")}} elements, along with zero or one {{SVGElement(\"meshgradient\")}} element.",
     "es": "Cualquier número de elementos de animación, elementos descriptivos, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, y {{SVGElement(\"style\")}}, junto con cero o un {{SVGElement(\"meshgradient\")}} elemento.",
     "fr": "N'importe quelle quantité d'éléments d'animation ou d'éléments descriptifs ou d'éléments {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, et {{SVGElement(\"style\")}}, ainsi que zéro ou un élément {{SVGElement(\"meshgradient\")}}.",
@@ -121,6 +132,7 @@
     "zh-TW": "任意數量的動畫元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 個 {{SVGElement(\"meshgradient\")}} 元素。"
   },
   "ariaAttributes": {
+    "de": "ARIA-Attribute",
     "en-US": "ARIA attributes",
     "es": "Atributos ARIA",
     "fr": "Attributs ARIA",
@@ -132,6 +144,7 @@
     "zh-TW": "ARIA 屬性"
   },
   "basicShapeElement": {
+    "de": "Grundformelement",
     "en-US": "Basic shape element",
     "es": "Elemento de forma básica",
     "fr": "Élément de forme basique",
@@ -143,6 +156,7 @@
     "zh-TW": "基本形狀元素"
   },
   "categories": {
+    "de": "Kategorien",
     "en-US": "Categories",
     "es": "Categorias",
     "fr": "Catégories",
@@ -154,6 +168,7 @@
     "zh-TW": "類型"
   },
   "characterDataElementsInAnyOrder": {
+    "de": "Zeichendaten und beliebige Anzahl folgender Elemente, in beliebiger Reihenfolge:",
     "en-US": "Character data and any number of the following elements, in any order:",
     "es": "Datos de carácter y cualquier número de los siguientes elementos, en cualquier orden:",
     "fr": "Des données caractères et n'importe quelle quantité des éléments suivants, dans n'importe quel ordre :",
@@ -165,6 +180,7 @@
     "zh-TW": "任意順序的字元資料和任意數量、任意順序的下列元素："
   },
   "conditionalProcessingAttributes": {
+    "de": "Bedingte Verarbeitungsattribute",
     "en-US": "Conditional processing attributes",
     "es": "Atributos de procesamiento condicional",
     "fr": "Attributs de traitement conditionnel",
@@ -176,6 +192,7 @@
     "zh-TW": "條件處理屬性"
   },
   "containerElement": {
+    "de": "Container-Element",
     "en-US": "Container element",
     "es": "Elemento contenedor",
     "fr": "Élément conteneur",
@@ -187,6 +204,7 @@
     "zh-TW": "容器元素"
   },
   "coreAttributes": {
+    "de": "Kernattribute",
     "en-US": "Core attributes",
     "es": "Atributos principales",
     "fr": "Attributs principaux",
@@ -198,6 +216,7 @@
     "zh-TW": "核心屬性"
   },
   "descriptiveElement": {
+    "de": "Beschreibendes Element",
     "en-US": "Descriptive element",
     "es": "Elemento descriptivo",
     "fr": "Élément descriptif",
@@ -209,6 +228,7 @@
     "zh-TW": "描述性元素"
   },
   "descriptiveElements": {
+    "de": "Beschreibende Elemente",
     "en-US": "Descriptive elements",
     "es": "Elementos descriptivos",
     "fr": "Éléments descriptifs",
@@ -220,6 +240,7 @@
     "zh-TW": "描述性元素"
   },
   "documentEventAttributes": {
+    "de": "Dokumentereignis-Attribute",
     "en-US": "Document event attributes",
     "es": "Atributos de eventos de documentos",
     "fr": "Attributs d'évènement du document",
@@ -231,6 +252,7 @@
     "zh-TW": "文件事件屬性"
   },
   "empty": {
+    "de": "Leer",
     "en-US": "Empty",
     "es": "Vacío",
     "fr": "Vide",
@@ -242,6 +264,7 @@
     "zh-TW": "空"
   },
   "filterAttributes": {
+    "de": "Filterattribute",
     "en-US": "Filter attributes",
     "es": "Filtrar atributos",
     "fr": "Attributs de filtre",
@@ -253,6 +276,7 @@
     "zh-TW": "濾鏡属性"
   },
   "filterPrimitiveElement": {
+    "de": "Primitives Filterelement",
     "en-US": "Filter primitive element",
     "es": "Filtrar elemento primitivo",
     "fr": "Élément de primitive de filtre",
@@ -264,6 +288,7 @@
     "zh-TW": "濾鏡元素"
   },
   "filterPrimitiveElements": {
+    "de": "Primitive Filterelemente",
     "en-US": "Filter primitive elements",
     "es": "Filtrar elementos primitivos",
     "fr": "Éléments de primitive de filtre",
@@ -275,6 +300,7 @@
     "zh-TW": "濾鏡元素"
   },
   "fontElement": {
+    "de": "Schriftelement",
     "en-US": "Font element",
     "es": "Elemento de fuente",
     "fr": "Élément de police",
@@ -286,6 +312,7 @@
     "zh-TW": "字型元素"
   },
   "globalEventAttributes": {
+    "de": "Globale Ereignisattribute",
     "en-US": "Global event attributes",
     "es": "Atributos de eventos globales",
     "fr": "Attributs d'évènement globaux",
@@ -297,6 +324,7 @@
     "zh-TW": "全域事件屬性"
   },
   "gradientElement": {
+    "de": "Gradient-Element",
     "en-US": "Gradient element",
     "es": "Elemento degradado",
     "fr": "Élément de dégradé",
@@ -308,6 +336,7 @@
     "zh-TW": "漸層元素"
   },
   "gradientElements": {
+    "de": "Gradient-Elemente",
     "en-US": "Gradient elements",
     "es": "Elementos de degradado",
     "fr": "Éléments de dégradés",
@@ -319,6 +348,7 @@
     "zh-TW": "漸層元素"
   },
   "graphicalEventAttributes": {
+    "de": "Grafische Ereignisattribute",
     "en-US": "Graphical event attributes",
     "es": "Atributos de eventos gráficos",
     "fr": "Attributs d'évènement graphique",
@@ -330,6 +360,7 @@
     "zh-TW": "圖形事件屬性"
   },
   "graphicsElement": {
+    "de": "Grafikelement",
     "en-US": "Graphics element",
     "es": "Elemento gráfico",
     "fr": "Élément graphique",
@@ -341,6 +372,7 @@
     "zh-TW": "圖形元素"
   },
   "graphicsReferencingElement": {
+    "de": "Grafikreferenzierende Elemente",
     "en-US": "Graphics referencing element",
     "es": "Elemento de referencia de gráficos",
     "fr": "Elément en rapport avec les graphismes",
@@ -352,6 +384,7 @@
     "zh-TW": "圖形參照元素"
   },
   "info_in_preview_not_available": {
+    "de": "SVG-Informationen in der Vorschau nicht verfügbar",
     "en-US": "SVG info in preview not available",
     "es": "Información SVG en vista previa no disponible",
     "fr": "Informations SVG non disponibles en prévisualisation",
@@ -363,6 +396,7 @@
     "zh-TW": "SVG 資訊在預覽中不可用"
   },
   "lightSourceElement": {
+    "de": "Lichtquellenelement",
     "en-US": "Light source element",
     "es": "Elemento fuente de luz",
     "fr": "Élément de source de lumière",
@@ -374,6 +408,7 @@
     "zh-TW": "光源元素"
   },
   "neverRenderedElement": {
+    "de": "Nie gerendertes Element",
     "en-US": "Never-rendered element",
     "es": "Elemento nunca renderizado",
     "fr": "Élément jamais rendu",
@@ -385,6 +420,7 @@
     "zh-TW": "非渲染元素"
   },
   "noCategory": {
+    "de": "Keine",
     "en-US": "None",
     "es": "Ninguna",
     "fr": "Aucune",
@@ -396,6 +432,7 @@
     "zh-TW": "無"
   },
   "paintServerElement": {
+    "de": "Paint-Server-Element",
     "en-US": "Paint server element",
     "es": "Elemento de servidor de pintura",
     "fr": "Élément du serveur de peinture",
@@ -407,6 +444,7 @@
     "zh-TW": "繪製伺服器元素"
   },
   "permittedContent": {
+    "de": "Erlaubter Inhalt",
     "en-US": "Permitted content",
     "es": "Contenido permitido",
     "fr": "Contenu autorisé",
@@ -418,6 +456,7 @@
     "zh-TW": "允許的內容"
   },
   "presentationAttributes": {
+    "de": "Präsentationsattribute",
     "en-US": "Presentation attributes",
     "es": "Atributos de presentación",
     "fr": "Attributs de présentation",
@@ -429,6 +468,7 @@
     "zh-TW": "表現屬性"
   },
   "renderableElement": {
+    "de": "Renderbares Element",
     "en-US": "Renderable element",
     "es": "Elemento renderizable",
     "fr": "Élément pouvant être rendu",
@@ -440,6 +480,7 @@
     "zh-TW": "彩現元素"
   },
   "shapeElement": {
+    "de": "Formelement",
     "en-US": "Shape element",
     "es": "Elemento de forma",
     "fr": "Élément de forme",
@@ -451,6 +492,7 @@
     "zh-TW": "形狀元素"
   },
   "shapeElements": {
+    "de": "Formelemente",
     "en-US": "Shape elements",
     "es": "Elementos de forma",
     "fr": "Éléments de formes",
@@ -462,6 +504,7 @@
     "zh-TW": "形狀元素"
   },
   "structuralElement": {
+    "de": "Strukturelement",
     "en-US": "Structural element",
     "es": "Elemento estructural",
     "fr": "Élément structurel",
@@ -473,6 +516,7 @@
     "zh-TW": "結構元素"
   },
   "structuralElements": {
+    "de": "Strukturelemente",
     "en-US": "Structural elements",
     "es": "Elementos estructurales",
     "fr": "Éléments structurels",
@@ -484,6 +528,7 @@
     "zh-TW": "結構元素"
   },
   "styleAttributes": {
+    "de": "Stilattribute",
     "en-US": "Style attributes",
     "es": "Atributos de estilo",
     "fr": "Attributs de style",
@@ -495,6 +540,7 @@
     "zh-TW": "樣式屬性"
   },
   "textContentChildElement": {
+    "de": "Untergeordnetes Element mit Textinhalt",
     "en-US": "Text content child element",
     "es": "Elemento secundario de contenido de texto",
     "fr": "Élément enfant de conteneur de texte",
@@ -506,6 +552,7 @@
     "zh-TW": "文字內容子元素"
   },
   "textContentChildElements": {
+    "de": "Untergeordnete Elemente mit Textinhalt",
     "en-US": "Text content child elements",
     "es": "Elementos secundarios de contenido de texto",
     "fr": "Éléments enfants de conteneur de texte",
@@ -517,6 +564,7 @@
     "zh-TW": "文字內容子元素"
   },
   "textContentElement": {
+    "de": "Element mit Textinhalt",
     "en-US": "Text content element",
     "es": "Elemento de contenido de texto",
     "fr": "Élément conteneur de texte",
@@ -528,6 +576,7 @@
     "zh-TW": "文字內容元素"
   },
   "textContentElements": {
+    "de": "Elemente mit Textinhalt",
     "en-US": "Text content elements",
     "es": "Elementos de contenido de texto",
     "fr": "Éléments avec du contenu texte",
@@ -539,6 +588,7 @@
     "zh-TW": "文字內容元素"
   },
   "transferFunctionAttributes": {
+    "de": "Transfer-Funktionsattribute",
     "en-US": "Transfer function attributes",
     "es": "Atributos de la función de transferencia",
     "fr": "Attributs de fonction de transfert",
@@ -550,6 +600,7 @@
     "zh-TW": "遞移函式屬性"
   },
   "xLinkAttributes": {
+    "de": "XLink-Attribute",
     "en-US": "XLink attributes",
     "es": "Atributos Xlink",
     "fr": "Attributs XLink",

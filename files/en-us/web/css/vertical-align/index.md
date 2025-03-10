@@ -9,9 +9,51 @@ browser-compat: css.properties.vertical-align
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
 
-The vertical-align property can be used in two contexts:
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
+
+The `vertical-align` property can be used in two contexts:
 
 - To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
 - To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
@@ -198,24 +240,26 @@ p {
 
 ### Vertical alignment in a table cell
 
+In this example, we have a table with a single row containing six cells. The row sets `vertical-align` to `bottom` as the default value.
+
+- The first four cells each set their own `vertical-align` values, and these override the row's value.
+- The fifth cell does not set any `vertical-align` value, so inherits the row's value.
+
+The sixth cell is only used to ensure that the cells are tall enough to see the effect.
+
 #### HTML
 
 ```html
 <table>
-  <tr>
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
+  <tr class="bottom">
+    <td class="baseline">baseline</td>
+    <td class="top">top</td>
+    <td class="middle">middle</td>
+    <td>bottom</td>
+    <td>Row's style</td>
     <td>
-      <p>
-        There is a theory which states that if ever anyone discovers exactly
-        what the Universe is for and why it is here, it will instantly disappear
-        and be replaced by something even more bizarre and inexplicable.
-      </p>
-      <p>
-        There is another theory which states that this has already happened.
-      </p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      pretium felis eu sem mattis vulputate.
     </td>
   </tr>
 </table>
@@ -240,6 +284,22 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
+
+.bottom {
+  vertical-align: bottom;
+}
+
+.baseline {
+  vertical-align: baseline;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
+}
 ```
 
 #### Result
@@ -256,7 +316,7 @@ td {
 
 ## See also
 
-- [Typical use cases of Flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
+- [Typical use cases of flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
-- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

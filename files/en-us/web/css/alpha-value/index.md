@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-color-alpha-value
 
 {{CSSRef}}
 
-The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
+The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
 
 ## Syntax
 
-The value of an `<alpha-value>` is given as either a [`<number>`](/en-US/docs/Web/CSS/number) or a [`<percentage>`](/en-US/docs/Web/CSS/percentage).
+The value of an `<alpha-value>` is given as either a [`<number>`](/en-US/docs/Web/CSS/number) or a {{cssxref("percentage")}}.
 
 If given as a number, the useful range is 0 (fully transparent) to 1.0 (fully opaque), with decimal values in between; that is, 0.5 indicates that half of the foreground color is used and half of the background color is used. Values outside the range of 0 to 1 are permitted, but are [clamped](<https://en.wikipedia.org/wiki/Clamping_(graphics)>) to lie within the range 0 to 1.
 
@@ -53,7 +53,7 @@ shape-image-threshold: 0.7;
 
 ## See also
 
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS Color](/en-US/docs/Web/CSS/CSS_colors)
 - [`<color>`](/en-US/docs/Web/CSS/color_value)

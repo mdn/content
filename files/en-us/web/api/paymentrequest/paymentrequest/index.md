@@ -29,7 +29,7 @@ new PaymentRequest(methodData, details, options)
 
     - `supportedMethods`
 
-      - : A string containing a [payment method identifier](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers). This is either a URL or one of the the [standardized payment method identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#standardized_payment_method_identifiers). The value and structure of the `data` field will vary depending on the value of the `supportedMethods` field.
+      - : A string containing a [payment method identifier](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers). This is either a URL or one of the [standardized payment method identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#standardized_payment_method_identifiers). The value and structure of the `data` field will vary depending on the value of the `supportedMethods` field.
 
     - `data`
       - : A JSON-serializable object that provides optional information that might be

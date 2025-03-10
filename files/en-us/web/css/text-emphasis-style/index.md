@@ -9,7 +9,39 @@ browser-compat: css.properties.text-emphasis-style
 
 The **`text-emphasis-style`** [CSS](/en-US/docs/Web/CSS) property sets the appearance of emphasis marks. It can also be set, and reset, using the {{cssxref("text-emphasis")}} shorthand.
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+
+```css interactive-example-choice
+text-emphasis-style: none;
+```
+
+```css interactive-example-choice
+text-emphasis-style: triangle;
+```
+
+```css interactive-example-choice
+text-emphasis-style: "x";
+```
+
+```css interactive-example-choice
+text-emphasis-style: filled double-circle;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 ## Syntax
 
@@ -19,10 +51,8 @@ text-emphasis-style: none; /* No emphasis marks */
 
 /* <string> values */
 text-emphasis-style: "x";
-text-emphasis-style: "点";
 text-emphasis-style: "\25B2";
 text-emphasis-style: "*";
-text-emphasis-style: "foo"; /* Should NOT be used. It may be computed to or rendered as 'f' only */
 
 /* Keyword values */
 text-emphasis-style: filled;

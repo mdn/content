@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.OrientationSensor.quaternion
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`quaternion`** read-only
 property of the {{domxref("OrientationSensor")}} interface returns a four element

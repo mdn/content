@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.TrustedTypePolicyFactory
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`TrustedTypePolicyFactory`** interface of the {{domxref('Trusted Types API')}} creates policies and allows the verification of Trusted Type objects against created policies.
+The **`TrustedTypePolicyFactory`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} creates policies and allows the verification of Trusted Type objects against created policies.
 
 ## Instance properties
 
@@ -41,7 +41,7 @@ We then use the policy to sanitize a string, creating a {{domxref("TrustedHTML")
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<"),
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");

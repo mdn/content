@@ -13,7 +13,7 @@ The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")
 
 ## Instance properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGPatternElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("pattern")}} element.
@@ -23,6 +23,10 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("patternContentUnits")}} attribute of the given {{SVGElement("pattern")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 - {{domxref("SVGPatternElement.patternTransform")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("patternTransform")}} attribute of the given {{SVGElement("pattern")}} element.
+- {{domxref("SVGPatternElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("pattern")}} element.
+- {{domxref("SVGPatternElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("pattern")}} element.
 - {{domxref("SVGPatternElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("pattern")}} element.
 - {{domxref("SVGPatternElement.y")}} {{ReadOnlyInline}}
@@ -34,7 +38,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
 ## Specifications
 

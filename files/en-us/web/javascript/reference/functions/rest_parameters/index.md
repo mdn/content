@@ -9,7 +9,23 @@ browser-compat: javascript.functions.rest_parameters
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters", "taller")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Syntax
 
@@ -18,6 +34,13 @@ function f(a, b, ...theArgs) {
   // …
 }
 ```
+
+There are some additional syntax restrictions:
+
+- A function definition can only have one rest parameter.
+- The rest parameter must be the last parameter in the function definition.
+- [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are not allowed after the rest parameter.
+- The rest parameter cannot have a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ## Description
 
@@ -38,18 +61,28 @@ myFun("one", "two", "three", "four", "five", "six");
 // manyMoreArgs, ["three", "four", "five", "six"]
 ```
 
-A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
+The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), which allows you to ignore certain parameter positions.
+
+```js
+function ignoreFirst(...[, b, c]) {
+  return b + c;
+}
+```
+
+However, the following are all syntax errors:
 
 ```js-nolint example-bad
 function wrong1(...one, ...wrong) {}
 function wrong2(...wrong, arg2, arg3) {}
+function wrong3(...wrong,) {}
+function wrong4(...wrong = []) {}
 ```
 
 The rest parameter is not counted towards the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property.
 
 ### The difference between rest parameters and the arguments object
 
-There are three main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:
+There are four main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:
 
 - The `arguments` object is **not a real array**, while rest parameters are {{jsxref("Array")}} instances, meaning methods like {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/pop", "pop()")}} can be applied on it directly.
 - The `arguments` object has the additional (deprecated) [`callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property.

@@ -2,7 +2,7 @@
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.marker-mid
+browser-compat: svg.global_attributes.marker-mid
 ---
 
 {{SVGRef}}
@@ -11,7 +11,8 @@ The **`marker-mid`** attribute defines the arrowhead or polymarker that will be 
 
 The marker is rendered on every vertex other than the first and last vertices of the [path data](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 
-> **Note:** As a presentation attribute, `marker-mid` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `marker-mid` also has a CSS property counterpart: {{cssxref("marker-mid")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -87,3 +88,4 @@ svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("marker-end")}}
+- CSS {{cssxref('marker-mid')}} property

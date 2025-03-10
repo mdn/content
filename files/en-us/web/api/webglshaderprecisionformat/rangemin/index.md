@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLShaderPrecisionFormat.rangeMin
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLShaderPrecisionFormat.rangeMin`** property returns the base 2 log of the absolute value of the minimum value that can be represented.
 

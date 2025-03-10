@@ -2,10 +2,8 @@
 title: HTTP header page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheHeader
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -22,21 +20,21 @@ browser-compat: path.to.feature.NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader
 > page-type: http-header
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
 >
 > - **title**
->   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
+>   - : Title heading displayed at the top of the page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
 > - **page-type**
 >   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
->   - : Include (appropriate) technology status keys: [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (if not on a standards track).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -45,27 +43,43 @@ browser-compat: path.to.feature.NameOfTheHeader
 >     Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+>     Browser compatibility does not apply for HTTP headers where no specific implementation is provided (such as automatically adding a request header to some requests or changing behavior based on data in a response header).
+>     For these cases, remove the browser-compat key and value.
+>
 > ---
 >
 > **Top-of-page macros**
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
+> These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the header you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   If it isn't, then you can remove the macro call.
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
+>
+> You should update or delete the following macros according to the advice below:
+>
 > - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
+>
+> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
+>
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SeeCompatTable}}{{deprecated_header}}{{httpsidebar}}
+{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the http header and saying what it does.
-This should ideally be 1 or 2 short sentences.
+The first sentence of the page must follow this format:
+
+> The HTTP **`header-name`** (header type) is used for X in Y circumstances.
+
+The 'header type' should say if it's a {{Glossary("Request_header", "request header")}}, a {{Glossary("Response_header", "response header")}}, or if it may be either.
+The summary paragraph should ideally be one or two short sentences.
+
+You can mention notable gotchas or common pitfalls in this section, linking to examples or more detailed documentation (guides, etc.) in this section.
+Two or three paragraphs in this section is appropriate, and if there are substantial usage notes to include, use a "Description" section after "Directives" below.
 
 <table class="properties">
   <tbody>
@@ -79,14 +93,14 @@ This should ideally be 1 or 2 short sentences.
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes or no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>"Yes" or "No"</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes or no</td>
+      <td>"Yes" or "No"</td>
     </tr>
   </tbody>
 </table>
@@ -112,7 +126,12 @@ Multiple directives are comma-separated (delete information as appropriate).
 - `directive2`
   - : etc.
 
-If the header has a lot of available directives, feel free to include multiple definition lists, subsections and explanations as appropriate.
+If the header has a lot of available directives,
+feel free to include multiple definition lists, subsections, and explanations as appropriate.
+
+## Description
+
+If there is too much content to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
 
 ## Examples
 
@@ -120,11 +139,12 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 
 ### A descriptive heading
 
-Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
+Each example **must** have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -149,7 +169,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications
@@ -160,13 +180,21 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
+_If the browser has no specific handling for the header, remove the macro below._
+_Otherwise, to use this macro, remove the backticks and backslash in the markdown file._
+
 `\{{Compat}}`
 
-_To use this macro, remove the backticks and backslash in the markdown file._
+_If the browser has specific handling for the header, remove the text below:_
+
+This header has no specification-defined user-agent integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 
 Include links to reference pages and guides related to the current HTTP header. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+You can link to relevant response statuses like `\{{HTTPStatus("123", "123 Response Status")}}` and headers like `\{{HTTPHeader("Header-Name")}}`.
+You may group related statuses and headers in a single list item for brevity.
 
 - link1
 - link2

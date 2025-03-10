@@ -11,7 +11,38 @@ The **`<dt>`** [HTML](/en-US/docs/Web/HTML) element specifies a term in a descri
 
 The subsequent {{HTMLElement("dd")}} (**Description Details**) element provides the definition or other related text associated with the term specified using `<dt>`.
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 ## Attributes
 
@@ -59,7 +90,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
         {{Glossary("W3C")}} HTML 5.2 and later) a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used before a
-        {{HTMLElement("dd")}} or another {{HTMLElement("dt")}}
+        {{HTMLElement("dd")}} or another <code>&lt;dt&gt;</code>
         element.
       </td>
     </tr>
@@ -75,7 +106,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
       <th scope="row">Permitted ARIA roles</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >

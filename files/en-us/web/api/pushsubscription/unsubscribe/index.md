@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PushSubscription.unsubscribe
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `unsubscribe()` method of the {{domxref("PushSubscription")}} interface
 returns a {{jsxref("Promise")}} that resolves to a boolean value when the

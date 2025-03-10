@@ -12,7 +12,7 @@ The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area whic
 ## Syntax
 
 ```css
-/* <geometry-box> values */
+/* <coord-box> values */
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;
@@ -59,13 +59,13 @@ One or more of the keyword values listed below, separated by commas.
   - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `no-clip`
   - : The painted content is not clipped.
-- `border` {{non-standard_inline}}
+- `border`
   - : This keyword behaves the same as `border-box`.
-- `padding` {{non-standard_inline}}
+- `padding`
   - : This keyword behaves the same as `padding-box`.
-- `content` {{non-standard_inline}}
+- `content`
   - : This keyword behaves the same as `content-box`.
-- `text` {{non-standard_inline}}
+- `text`
   - : This keyword clips the mask image to the text of the element.
 
 ## Formal definition
@@ -80,9 +80,28 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Clipping a mask to the border box
 
-Change the `mask-clip` value to any of the allowed values detailed above. If viewing the example in a Chromium-based browser change the value of `-webkit-mask-clip`.
+Click "Play" in the live sample to open the code in the MDN Playground and change the `mask-clip` value to any of the allowed values described above.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
+```html live-sample___mask-clip-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-clip-example
+.masked {
+  width: 100px;
+  height: 100px;
+  background-color: #8cffa0;
+  margin: 20px;
+  border: 20px solid #8ca0ff;
+  padding: 20px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-size: 100% 100%;
+  mask-clip: border-box;
+}
+```
+
+{{EmbedLiveSample("mask-clip-example", "", "250px")}}
 
 ## Specifications
 

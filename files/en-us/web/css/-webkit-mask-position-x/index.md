@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-position-x"
+title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
 page-type: css-property
 status:
@@ -89,4 +89,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}

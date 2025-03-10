@@ -6,9 +6,9 @@ page-type: guide
 
 {{AddonSidebar}}
 
-Native manifests are specially formatted JSON files that are provisioned on the user's computer by some means outside the extension installation process. For example, a native manifest might be provisioned by a device administrator or by a native application installer.
+Native manifests are JSON files provisioned on the user's computer by means other than the extension installation process. For example, a native manifest might be provisioned by a device administrator or native application installer.
 
-There are three different types of native manifest:
+There are three types of native manifest:
 
 <table class="standard-table">
   <tbody>
@@ -17,7 +17,7 @@ There are three different types of native manifest:
         <a href="#native_messaging_manifests">Native messaging manifests</a>
       </td>
       <td>
-        Enable a feature called
+        Enables a feature called
         <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging"
           >native messaging</a
         >, in which an extension can communicate with a native app installed on
@@ -29,25 +29,25 @@ There are three different types of native manifest:
         <a href="#managed_storage_manifests">Managed storage manifests</a>
       </td>
       <td>
-        Define read-only data that an extension can access using the
+        Defines read-only data that an extension can access using the
         {{WebExtAPIRef("storage.managed")}} API.
       </td>
     </tr>
     <tr>
       <td><a href="#pkcs_11_manifests">PKCS #11 manifests</a></td>
       <td>
-        Enable an extension to use the {{WebExtAPIRef("pkcs11")}} API
+        Enables an extension to use the {{WebExtAPIRef("pkcs11")}} API
         to enumerate PKCS #11 security modules and install them in Firefox.
       </td>
     </tr>
   </tbody>
 </table>
 
-For all native manifests, you need to arrange things so the browser can find the manifest. The section on [manifest location](#manifest_location) describes these rules.
+For all native manifests, you need to store the file so the browser can find it. The section on [manifest location](#manifest_location) describes how to do this. On Linux and macOS, the files are in a fixed location, on Windows the file location is written to the Windows Registry.
 
 ## Native messaging manifests
 
-The native messaging manifest contains a single JSON object with the following properties:
+The native messaging manifest is a file with a name that matches the string passed by the extension into {{WebExtAPIRef("runtime.connectNative()")}} or {{WebExtAPIRef("runtime.sendNativeMessage()")}} with the `.json` extension. It contains a JSON object with these properties:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -70,15 +70,11 @@ The native messaging manifest contains a single JSON object with the following p
           the extension.
         </p>
         <p>
-          On MacOS and Linux, it must also match the native messaging manifest's
-          filename (excluding the <code>.json</code> extension).
-        </p>
-        <p>
-          On Windows, it must match the name of the registry key you create,
+          On Windows, use this value as the name of the registry key you create
           that contains the location of the native messaging manifest.
         </p>
         <p>
-          The name must match the following regular expression:
+          The name must match the regular expression:
           <code>"^\w+(\.\w+)*$"</code>. This means that it may only contain
           (lowercase or uppercase) alphanumeric characters, underscores, and
           dots. It may not start or end with a dot, and a dot cannot be followed
@@ -97,8 +93,8 @@ The native messaging manifest contains a single JSON object with the following p
       <td>
         <p>Path to the native application.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
-          Linux it must be absolute.
+          On Windows, this may be relative to the manifest itself. On macOS and
+          Linux, it must be absolute.
         </p>
       </td>
     </tr>
@@ -108,7 +104,7 @@ The native messaging manifest contains a single JSON object with the following p
       <td>
         <p>Describes the method used to connect the extension with the app.</p>
         <p>
-          Currently, only one value can be given here, <code>"stdio"</code>,
+          Takes the value <code>"stdio"</code> only,
           which indicates that messages are received by the app using standard
           input (<code>stdin</code>) and sent using standard output
           (<code>stdout</code>).
@@ -125,26 +121,29 @@ The native messaging manifest contains a single JSON object with the following p
             href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/"
             >Add-on ID</a
           >
-          values. Each value represents an extension which is allowed to
+          values. Each value represents an extension allowed to
           communicate with this native application.
         </p>
-        <p>
-          Note that this means you will probably want to include the
-          <code
-            ><a
-              href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-              >browser_specific_settings</a
-            ></code
-          >
-          key in your extension's <code>manifest.json</code> file, so you can
-          set an explicit ID during development.
-        </p>
+        <div class="notecard note">
+          <p>
+            <strong>Note:</strong> This means you want to include
+            the
+            <code
+              ><a
+                href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
+                >browser_specific_settings</a
+              ></code
+            >
+            key in your extension's <code>manifest.json</code> file so you
+            set an explicit ID during development.
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>
 </table>
 
-For example, here's a manifest for the `ping_pong` native application:
+For example, here's the content of the `ping_pong.json` manifest file for the `ping_pong` native application from the [native messaging example](https://github.com/mdn/webextensions-examples/tree/main/native-messaging):
 
 ```json
 {
@@ -156,11 +155,11 @@ For example, here's a manifest for the `ping_pong` native application:
 }
 ```
 
-This allows the extension whose ID is `ping_pong@example.org` to connect, by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `/path/to/native-messaging/app/ping_pong.py`.
+This allows the extension with the ID `ping_pong@example.org` to connect by passing the name `ping_pong` into the relevant {{WebExtAPIRef("runtime")}} API function. The native application is at `/path/to/native-messaging/app/ping_pong.py`.
 
 ## Managed storage manifests
 
-The managed storage manifest contains a single JSON object with the following properties:
+The managed storage manifest is a file with a name that matches the ID specified in the extension's [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key with the `.json` extension. It contains a JSON object with these properties:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -177,7 +176,7 @@ The managed storage manifest contains a single JSON object with the following pr
       <td>
         <p>
           The ID of the extension that can access this storage, given as the ID
-          you've specified in the extension's
+          specified in the extension's
           <code
             ><a
               href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
@@ -185,6 +184,10 @@ The managed storage manifest contains a single JSON object with the following pr
             ></code
           >
           key.
+        </p>
+        <p>
+          On Windows, use this as the name of the registry key you create,
+          which contains the location of the manifest.
         </p>
       </td>
     </tr>
@@ -206,7 +209,7 @@ The managed storage manifest contains a single JSON object with the following pr
       <td>
         <p>
           A JSON object that may contain any valid JSON values, including
-          strings, numbers, booleans, arrays, or objects. This will become the
+          strings, numbers, booleans, arrays, or objects. This becomes the
           data in the <code>browser.storage.managed</code> storage area.
         </p>
       </td>
@@ -214,11 +217,11 @@ The managed storage manifest contains a single JSON object with the following pr
   </tbody>
 </table>
 
-For example:
+For example, in the [favourite-colour example](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) manage storage data is set in the file named `favourite-colour-examples@mozilla.org.json`, which contains:
 
 ```json
 {
-  "name": "favourite-color-examples@mozilla.org",
+  "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
   "data": {
@@ -227,7 +230,7 @@ For example:
 }
 ```
 
-Given this JSON manifest, the `favourite-color-examples@mozilla.org` extension could access the data using code like this:
+The `favourite-colour-examples@mozilla.org` extension then accesses the data using code like this:
 
 ```js
 let storageItem = browser.storage.managed.get("color");
@@ -238,7 +241,7 @@ storageItem.then((res) => {
 
 ## PKCS #11 manifests
 
-The PKCS #11 manifest is a file containing a JSON object with the following properties:
+The PKCS #11 manifest is a file with a name that matches the name of the PKCS #11 module (as used in the <code>pkcs11</code> API) with the `.json` extension. It contains a JSON object with these properties:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -254,19 +257,15 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
       <td>String</td>
       <td>
         <p>Name of the PKCS #11 module.</p>
-        <p>This must match the name used in the <code>pkcs11</code> API.</p>
+        <p>This must match the name used in the {{WebExtAPIRef("pkcs11")}} API.</p>
         <p>
-          On MacOS and Linux, it must also match the manifest's filename
-          (excluding the extension).
-        </p>
-        <p>
-          On Windows, it must match the name of the registry key you create,
+          On Windows, use this as the name of the registry key you create,
           which contains the location of the manifest.
         </p>
         <p>
-          The name must match the following regular expression:
+          The name must match the regular expression:
           <code>"^\w+(\.\w+)*$"</code>. This means that it may only contain
-          lowercase alphanumeric characters, underscores and dots. It may not
+          lowercase alphanumeric characters, underscores, and dots. It may not
           start or end with a dot, and a dot cannot be followed by another dot.
         </p>
       </td>
@@ -275,9 +274,9 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
       <td><code>description</code></td>
       <td>String</td>
       <td>
-        <p>Description of the module.</p>
+        <p>Description of the PKCS #11 module.</p>
         <p>
-          This is used to set the friendly name for the module in the browser's
+          This sets the friendly name for the module in the browser's
           UI (for example, the "Security Devices" dialog in Firefox).
         </p>
       </td>
@@ -286,10 +285,9 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
       <td><code>path</code></td>
       <td>String</td>
       <td>
-        <p>Path to the module.</p>
+        <p>Path to the PKCS #11 module.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
-          Linux it must be absolute.
+          The path to the PKCS #11 module may be absolute or relative to the manifest itself.
         </p>
       </td>
     </tr>
@@ -308,12 +306,12 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
             href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/"
             >Add-on ID</a
           >
-          values. Each value represents an extension which is allowed to
+          values. Each value represents an extension allowed to
           interact with the module.
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> This means you will probably want to include
+            <strong>Note:</strong> This means you want to include
             the
             <code
               ><a
@@ -321,7 +319,7 @@ The PKCS #11 manifest is a file containing a JSON object with the following prop
                 >browser_specific_settings</a
               ></code
             >
-            key in your extension's <code>manifest.json</code> file, so you can
+            key in your extension's <code>manifest.json</code> file so you
             set an explicit ID during development.
           </p>
         </div>
@@ -372,9 +370,10 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 The key should have a single default value, which is the path to the manifest.
 
-> **Warning:** As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
+> [!WARNING]
+> As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
-> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view).
+> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://learn.microsoft.com/en-us/windows/win32/winprog64/accessing-an-alternate-registry-view).
 
 For per-user visibility, create a registry key with the following name:
 

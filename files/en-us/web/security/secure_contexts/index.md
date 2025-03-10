@@ -27,7 +27,8 @@ However, it's important to note that if a non-secure context causes a new window
 
 Locally-delivered resources such as those with `http://127.0.0.1` URLs, `http://localhost` and `http://*.localhost` URLs (e.g. `http://dev.whatever.localhost/`), and `file://` URLs are also considered to have been delivered securely.
 
-> **Note:** Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
+> [!NOTE]
+> Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
 
 Resources that are not local, to be considered secure, must meet the following criteria:
 
@@ -36,7 +37,7 @@ Resources that are not local, to be considered secure, must meet the following c
 
 ## Feature detection
 
-Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.
+Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("Window.isSecureContext")}} or {{domxref("WorkerGlobalScope.isSecureContext")}} boolean, which is exposed on the global scope.
 
 ```js
 if (window.isSecureContext) {
@@ -54,6 +55,6 @@ if (window.isSecureContext) {
 ## See also
 
 - [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
-- {{domxref("isSecureContext")}}
+- {{domxref("Window.isSecureContext")}} and {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header

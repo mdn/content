@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Workers API")}}
 
 The **`connect`** event is fired in shared workers at their {{domxref("SharedWorkerGlobalScope")}} when a new client connects.
 

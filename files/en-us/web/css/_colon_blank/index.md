@@ -1,15 +1,16 @@
 ---
-title: ":blank"
+title: :blank
 slug: Web/CSS/:blank
 page-type: css-pseudo-class
 status:
   - experimental
-browser-compat: css.selectors.blank
+spec-urls: https://drafts.csswg.org/selectors/#blank-pseudo
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+> [!NOTE]
+> The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
 >
 > See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
 
@@ -25,7 +26,7 @@ The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Examples
 
-### Simple :blank example
+### Basic :blank example
 
 In eventual supporting browsers, the `:blank` pseudo-class will enable developers to highlight in some way input controls that are not required, but still have no content filled in, perhaps as a reminder to users.
 
@@ -45,7 +46,7 @@ textarea:blank {
 
 #### Result
 
-{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}
+{{EmbedLiveSample('Basic_blank_example', '100%', 150)}}
 
 ## Specifications
 
@@ -53,7 +54,7 @@ textarea:blank {
 
 ## Browser compatibility
 
-{{Compat}}
+Currently, no browsers have implemented this feature.
 
 ## See also
 

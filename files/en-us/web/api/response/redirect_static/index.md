@@ -6,11 +6,12 @@ page-type: web-api-static-method
 browser-compat: api.Response.redirect_static
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`redirect()`** static method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 
-> **Note:** This can be used alongside the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API).
+> [!NOTE]
+> This can be used alongside the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API).
 > A controlling service worker could intercept a page's request and redirect it as desired.
 > This will actually lead to a real redirect if a service worker sends it upstream.
 
@@ -26,7 +27,7 @@ Response.redirect(url, status)
 - `url`
   - : The URL that the new response is to originate from.
 - `status` {{optional_inline}}
-  - : An optional number indicating the status code for the response: one of {{HTTPStatus("301", "301")}}, {{HTTPStatus("302", "302")}}, {{HTTPStatus("303", "303")}}, {{HTTPStatus("307", "307")}}, or {{HTTPStatus("308", "308")}}. If omitted, {{HTTPStatus("302", "302 (Found)")}} is used by default.
+  - : An optional number indicating the status code for the response: one of {{HTTPStatus("301", "301")}}, {{HTTPStatus("302", "302")}}, {{HTTPStatus("303", "303")}}, {{HTTPStatus("307", "307")}}, or {{HTTPStatus("308", "308")}}. If omitted, {{HTTPStatus("302", "302 Found")}} is used by default.
 
 ### Return value
 

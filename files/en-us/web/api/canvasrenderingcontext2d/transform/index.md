@@ -14,7 +14,8 @@ method of the Canvas 2D API multiplies the current transformation with the matri
 described by the arguments of this method. This lets you scale, rotate, translate
 (move), and skew the context.
 
-> **Note:** See also the
+> [!NOTE]
+> See also the
 > {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} method, which
 > resets the current transform to the identity matrix and then invokes
 > `transform()`.
@@ -25,19 +26,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 transform(a, b, c, d, e, f)
 ```
 
-The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
-<mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
-</mtd><mtd><mi>c</mi>
-</mtd><mtd><mi>e</mi>
-</mtd></mtr><mtr><mtd><mi>b</mi>
-</mtd><mtd><mi>d</mi>
-</mtd><mtd><mi>f</mi>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
-</mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
-&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics></math>.
 
 ### Parameters
 

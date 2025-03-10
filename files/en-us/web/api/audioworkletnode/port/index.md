@@ -6,14 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.port
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated
 {{domxref("MessagePort")}}. It can be used to communicate between the node and its
 associated {{domxref("AudioWorkletProcessor")}}.
 
-> **Note:** The port at the other end of the channel is
+> [!NOTE]
+> The port at the other end of the channel is
 > available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the
 > processor.
 

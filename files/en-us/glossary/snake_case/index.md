@@ -16,6 +16,7 @@ Snake case is the most popular convention in Python, Rust, and various other lan
 
 ## See also
 
-- [Camel case](/en-US/docs/Glossary/Camel_case)
-- [Kebab case](/en-US/docs/Glossary/Kebab_case)
+- Related glossary terms:
+  - {{Glossary("Camel case")}}
+  - {{Glossary("Kebab case")}}
 - [typescript-eslint rule: `naming-convention`](https://typescript-eslint.io/rules/naming-convention/)

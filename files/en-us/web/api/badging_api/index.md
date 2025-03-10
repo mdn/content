@@ -28,7 +28,7 @@ A badge can have one of three possible values, which are set internally:
   - : Indicating that no badge is currently set. A badge can be in this state due to it being cleared by the application, or being reset by the user agent.
 - `flag`
   - : Indicating that the badge is set, but has no specific data to display. A badge will be in this state if the application has set a badge, but has not passed any value to the method.
-- `an integer`
+- an integer
   - : A value passed when setting the badge. This value will never be `0`, passing a value of `0` when setting a badge will cause the user agent to clear the badge by setting it to `nothing`.
 
 ### Setting badges
@@ -64,13 +64,13 @@ None.
 To set a notification badge on the current app with a value of 12:
 
 ```js
-navigator.clearAppBadge(12);
+navigator.setAppBadge(12);
 ```
 
 To clear a notification badge on the current app:
 
 ```js
-navigator.setAppBadge();
+navigator.clearAppBadge();
 ```
 
 ## Specifications

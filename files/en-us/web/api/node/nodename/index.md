@@ -28,7 +28,7 @@ A string. Values for the different types of nodes are:
   - : The value of {{domxref("DocumentType.name")}}
 - {{domxref("Element")}}
   - : The value of {{domxref("Element.tagName")}}, that is the _uppercase_ name of the element tag if an HTML element,
-    or the _lowercase_ element tag if an XML element (like a SVG or MATHML element).
+    or the _lowercase_ element tag if an XML element (like a SVG or MathML element).
 - {{domxref("ProcessingInstruction")}}
   - : The value of {{domxref("ProcessingInstruction.target")}}
 - {{domxref("Text")}}
@@ -54,14 +54,14 @@ and the following script:
 
 ```js
 let node = document.querySelector("body").firstChild;
-let result = "Node names are:<br/>";
+let result = "Node names are:\n";
 while (node) {
-  result += `${node.nodeName}<br/>`;
+  result += `${node.nodeName}\n`;
   node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "450")}}

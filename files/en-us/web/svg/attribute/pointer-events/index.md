@@ -2,14 +2,15 @@
 title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.pointer-events
+browser-compat: svg.global_attributes.pointer-events
 ---
 
 {{SVGRef}}
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
 
-> **Note:** As a presentation attribute {{cssxref('pointer-events')}} can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `pointer-events` also has a CSS property counterpart: {{cssxref("pointer-events")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -116,3 +117,7 @@ _For a detailed explanation of each possible value, have a look at the CSS {{css
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("pointer-events")}} property

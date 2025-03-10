@@ -9,11 +9,33 @@ browser-compat: html.elements.br
 
 The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 As you can see from the above example, a `<br>` element is included at each point where we want the text to break. The text after the `<br>` begins again at the start of the next line of the text block.
 
-> **Note:** Do not use `<br>` to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the [CSS](/en-US/docs/Web/CSS) {{cssxref('margin')}} property to control their size.
+> [!NOTE]
+> Do not use `<br>` to create margins between paragraphs; wrap them in {{htmlelement("p")}} elements and use the [CSS](/en-US/docs/Web/CSS) {{cssxref('margin')}} property to control their size.
 
 ## Attributes
 
@@ -30,9 +52,15 @@ The `<br>` element has a single, well-defined purpose — to create a line break
 
 You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the {{cssxref("line-height")}} property that was designed for that purpose.
 
+## Accessibility
+
+Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
+
+Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
+
 ## Examples
 
-### Simple br
+### Basic br
 
 In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
@@ -46,13 +74,7 @@ USA<br />
 
 #### Result
 
-{{ EmbedLiveSample('Simple_br', 640, 120) }}
-
-## Accessibility concerns
-
-Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
-
-Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
+{{ EmbedLiveSample('Basic_br', 640, 120) }}
 
 ## Technical summary
 
@@ -80,7 +102,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        Must have a start tag, and must not have an end tag. In XHTML documents,
+        Must have a start tag and must not have an end tag. In XHTML documents,
         write this element as <code>&#x3C;br /></code>.
       </td>
     </tr>
@@ -104,7 +126,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

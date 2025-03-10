@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.TypedArray.includes
 
 The **`includes()`** method of {{jsxref("TypedArray")}} instances determines whether a typed array includes a certain value among its entries, returning `true` or `false` as appropriate. This method has the same algorithm as {{jsxref("Array.prototype.includes()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-includes.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.includes()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.includes(20));
+// Expected output: true
+
+// Check from position 3
+console.log(uint8.includes(20, 3));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -43,10 +54,9 @@ uint8.includes(2); // true
 uint8.includes(4); // false
 uint8.includes(3, 3); // false
 
-// NaN handling (only true for Float32 and Float64)
+// NaN handling (only relevant for floating point arrays)
 new Uint8Array([NaN]).includes(NaN); // false, since the NaN passed to the constructor gets converted to 0
-new Float32Array([NaN]).includes(NaN); // true;
-new Float64Array([NaN]).includes(NaN); // true;
+new Float32Array([NaN]).includes(NaN); // true
 ```
 
 ## Specifications

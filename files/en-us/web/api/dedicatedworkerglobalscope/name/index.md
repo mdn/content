@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DedicatedWorkerGlobalScope.name
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`name`** read-only property of the
 {{domxref("DedicatedWorkerGlobalScope")}} interface returns the name that the

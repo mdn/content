@@ -13,12 +13,12 @@ browser-compat: api.UIEvent.initUIEvent
 The **`UIEvent.initUIEvent()`** method initializes a UI event
 once it's been created.
 
-Events initialized in this way must have been created with the {{
-  domxref("Document.createEvent()") }} method. This method must be called to set the event
+Events initialized in this way must have been created with the {{domxref("Document.createEvent()")}} method. This method must be called to set the event
 before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
 dispatched, it doesn't do anything anymore.
 
-> **Warning:** Do not use this method anymore as it is deprecated.
+> [!WARNING]
+> Do not use this method anymore as it is deprecated.
 >
 > Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 

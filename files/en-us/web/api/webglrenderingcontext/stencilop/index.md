@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilOp
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilOp()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets both the front and back-facing
 stencil test actions.
@@ -18,8 +18,6 @@ stencilOp(fail, zfail, zpass)
 ```
 
 ### Parameters
-
-All three parameters accept all constants listed below.
 
 - `fail`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test fails.
@@ -72,8 +70,7 @@ gl.stencilOp(gl.INCR, gl.DECR, gl.INVERT);
 ```
 
 To get the current information about stencil and depth pass or fail, query the
-following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FAIL);

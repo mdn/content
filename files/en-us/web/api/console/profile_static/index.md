@@ -2,13 +2,13 @@
 title: "console: profile() static method"
 short-title: profile()
 slug: Web/API/console/profile_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 status:
   - non-standard
 browser-compat: api.console.profile_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
 
 The **`console.profile()`** static method starts recording a performance profile (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
 
@@ -16,12 +16,10 @@ You can optionally supply an argument to name the profile and this then enables 
 
 To stop recording call {{domxref("console/profileEnd_static", "console.profileEnd()")}}.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
 ```js-nolint
-profile(profileName)
+console.profile(profileName)
 ```
 
 ### Parameters

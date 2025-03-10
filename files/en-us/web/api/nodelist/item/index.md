@@ -13,22 +13,18 @@ doesn't throw exceptions as long as you provide arguments. A value of `null`
 is returned if the index is out of range, and a {{jsxref("TypeError")}} is thrown if no
 argument is provided.
 
+In JavaScript, instead of calling `nodeList.item(index)`, you can also access the `index` directly, like `nodeList[index]`.
+
 ## Syntax
 
 ```js-nolint
 item(index)
 ```
 
-JavaScript also offers an array-like bracketed syntax for obtaining an item from a
-NodeList by index:
-
-```js
-nodeItem = nodeList[index];
-```
-
 ### Parameters
 
-- `index` is the index of the node to be fetched. The index is zero-based.
+- `index`
+  - : The index of the node to be fetched. The index is zero-based.
 
 ### Return value
 

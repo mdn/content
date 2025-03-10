@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.saveAsPDF
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.
 
@@ -36,7 +36,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then tries to save the currently active tab as a PDF file, then logs the result:
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), then tries to save the currently active tab as a PDF file, then logs the result:
 
 ```js
 browser.browserAction.onClicked.addListener(() => {

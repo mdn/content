@@ -34,7 +34,8 @@ left edge of the content area.
 
 ![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-> **Note:** The `x` property is only valid if the computed
+> [!NOTE]
+> The `x` property is only valid if the computed
 > value of the image's {{cssxref("display")}} property is either
 > `table-column` or `table-column-group`; in other words, either
 > of those are set directly on the {{HTMLElement("img")}} or they're inherited from a
@@ -44,7 +45,7 @@ left edge of the content area.
 ## Example
 
 The example below demonstrates the use of the `HTMLImageElement` properties
-{{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.
+`x` and {{domxref("HTMLImageElement.y", "y")}}.
 
 ### HTML
 
@@ -78,15 +79,15 @@ The JavaScript code that fetches the image from the table and looks up its
 `x` and `y` values is below.
 
 ```js
-let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo");
+const logBox = document.querySelector("pre");
+const tbl = document.getElementById("userinfo");
 
-let log = (msg) => {
-  logBox.innerHTML += `${msg}<br>`;
+const log = (msg) => {
+  logBox.innerText += `${msg}\n`;
 };
 
-let cell = tbl.rows[1].cells[2];
-let image = cell.querySelector("img");
+const cell = tbl.rows[1].cells[2];
+const image = cell.querySelector("img");
 
 log(`Image's global X: ${image.x}`);
 log(`Image's global Y: ${image.y}`);
@@ -95,8 +96,8 @@ log(`Image's global Y: ${image.y}`);
 This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}}
 property to get a list of the rows in the table, from which it looks up row 1 (which,
 being a zero-based index, means the second row from the top). Then it looks at that
-{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells",
-  "cells")}} property to get a list of the cells in that row. The third cell is taken from
+{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells", "cells")}}
+property to get a list of the cells in that row. The third cell is taken from
 that row (once again, specifying 2 as the zero-based offset).
 
 From there, we can get the `<img>` element itself from the cell by
@@ -117,13 +118,13 @@ The CSS defining the appearance of the table:
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(100, 100, 100);
+  border: 2px solid rgb(100 100 100);
   font-family: sans-serif;
 }
 
 td,
 th {
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(100 100 100);
   padding: 10px 14px;
 }
 

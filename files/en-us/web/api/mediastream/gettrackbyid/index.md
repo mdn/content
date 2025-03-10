@@ -8,10 +8,9 @@ browser-compat: api.MediaStream.getTrackById
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStream.getTrackById()`** method returns a
-{{domxref("MediaStreamTrack")}} object representing the track with the specified ID
-string. If there is no track with the specified ID, this method returns
-`null`.
+The **`getTrackById()`** method of the {{domxref("MediaStream")}} interface
+returns a {{domxref("MediaStreamTrack")}} object representing the track with the specified ID
+string. If there is no track with the specified ID, this method returns `null`.
 
 ## Syntax
 

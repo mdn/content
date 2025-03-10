@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskPriorityChangeEvent()`** constructor creates a new {{domxref("TaskPriorityChangeEvent")}} object.
 

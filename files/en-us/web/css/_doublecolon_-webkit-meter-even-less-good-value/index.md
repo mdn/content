@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-even-less-good-value"
+title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/::-webkit-meter-even-less-good-value
 page-type: css-pseudo-element
 status:
@@ -20,10 +20,6 @@ Red is the default color.
   /* ... */
 }
 ```
-
-## Specifications
-
-Not part of any standard.
 
 ## Examples
 
@@ -80,6 +76,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples', '100%', 50) }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

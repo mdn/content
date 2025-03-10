@@ -9,9 +9,10 @@ browser-compat: api.PluginArray
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available [plugins](/en-US/docs/Mozilla/Add-ons/Plugins); it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
+The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects; it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
-> **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
+> [!NOTE]
+> Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
 ## Instance properties
 

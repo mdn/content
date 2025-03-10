@@ -9,7 +9,26 @@ browser-compat: html.elements.ol
 
 The **`<ol>`** [HTML](/en-US/docs/Web/HTML) element represents an ordered list of items — typically rendered as a numbered list.
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Attributes
 
@@ -31,13 +50,14 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_at
 
     The specified type is used for the entire list unless a different [`type`](/en-US/docs/Web/HTML/Element/li#type) attribute is used on an enclosed {{HTMLElement("li")}} element.
 
-    > **Note:** Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
+    > [!NOTE]
+    > Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
 
 ## Usage notes
 
 Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/::marker), such as a number or letter.
 
-The `<ol>` and {{HTMLElement("ul")}} elements may nest as deeply as desired, alternating between `<ol>` and `<ul>` however you like.
+The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed.
 
 The `<ol>` and {{HTMLElement("ul")}} elements both represent a list of items. The difference is with the `<ol>` element, the order is meaningful. For example:
 
@@ -45,11 +65,11 @@ The `<ol>` and {{HTMLElement("ul")}} elements both represent a list of items. Th
 - Turn-by-turn directions
 - The list of ingredients in decreasing proportion on nutrition information labels
 
-To determine which list to use, try changing the order of the list items; if the meaning changes, use the `<ol>` element — otherwise you can use {{HTMLElement("ul")}}.
+To determine which list to use, try changing the order of the list items; if the meaning changes, use the `<ol>` element — otherwise you can use {{HTMLElement("ul")}} otherwise, or {{HTMLElement("menu")}} if your list is a menu.
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```html
 <ol>
@@ -62,7 +82,7 @@ To determine which list to use, try changing the order of the list items; if the
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Basic_example", 400, 100)}}
 
 ### Using Roman Numeral type
 
@@ -170,7 +190,7 @@ To determine which list to use, try changing the order of the list items; if the
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -185,7 +205,7 @@ To determine which list to use, try changing the order of the list items; if the
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >
@@ -194,12 +214,12 @@ To determine which list to use, try changing the order of the list items; if the
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

@@ -15,7 +15,46 @@ This is useful because the `max-width` is always used for horizontal sizes and `
 
 Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See [`writing-mode` examples](/en-US/docs/Web/CSS/writing-mode#examples), which show the different writing modes in action.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 
@@ -23,6 +62,8 @@ Any time you would normally use `max-height` or `max-width`, you should instead 
 /* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> values */
 max-block-size: 75%;
@@ -57,22 +98,24 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
 - `min-content`
   - : The intrinsic minimum `max-block-size`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ### How writing-mode affects directionality
 
 The values of `writing-mode` affect the mapping of `max-block-size` to `max-width` or `max-height` as follows:
 
-| Values of `writing-mode`                                                                                                                                              | `max-block-size` is equivalent to |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
+| Values of `writing-mode`                                                  | `max-block-size` is equivalent to |
+| ------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
-> **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
+> [!NOTE]
+> The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
-> **Note:** The writing modes `lr`, `lr-tb`, `rl`, `rb`, and `rb-tl` are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.
+> [!NOTE]
+> The writing modes `lr`, `lr-tb`, `rl`, `rb`, and `rb-tl` are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.
 
 ## Formal definition
 
@@ -88,7 +131,7 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 
 In this example, the same text (the opening sentences from [Herman Melville's](https://en.wikipedia.org/wiki/Herman_Melville) novel _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
-Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
+Everything else about the two boxes is identical, including the values used for `max-block-size`.
 
 #### HTML
 

@@ -9,9 +9,27 @@ browser-compat: javascript.builtins.Math.exp
 
 The **`Math.exp()`** static method returns [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E) raised to the power of a number. That is
 
-<math display="block"><semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚎𝚡𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.exp}(x)} = \mathrm{e}^x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚎𝚡𝚙</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.exp}(x)} = \mathrm{e}^x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-exp.html")}}
+{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+
+```js interactive-example
+console.log(Math.exp(0));
+// Expected output: 1
+
+console.log(Math.exp(1));
+// Expected output: 2.718281828459 (approximately)
+
+console.log(Math.exp(-1));
+// Expected output: 0.36787944117144233
+
+console.log(Math.exp(2));
+// Expected output: 7.38905609893065
+```
 
 ## Syntax
 

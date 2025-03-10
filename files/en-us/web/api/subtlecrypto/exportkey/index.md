@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.exportKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
 interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
@@ -64,7 +64,8 @@ The promise is rejected when one of the following exceptions is encountered:
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
 
 ### Raw export
 

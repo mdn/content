@@ -6,11 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`initiatorType`** read-only property is a string representing web platform feature that initiated the resource load.
 
-> **Note:** This property does not represent the type of content fetched. A `.css` file can be fetched using a {{HTMLElement("link")}} element leading to an `initiatorType` of `link`. When loading images using `background: url()` in a CSS file, the `initiatorType` will be `css` and not `img`.
+> [!NOTE]
+> This property does not represent the type of content fetched. A `.css` file can be fetched using a {{HTMLElement("link")}} element leading to an `initiatorType` of `link`. When loading images using `background: url()` in a CSS file, the `initiatorType` will be `css` and not `img`.
 
 ## Value
 
@@ -29,7 +30,7 @@ The `initiatorType` property can have the following values, or `other` if none o
 - `embed`
   - : If the request was initiated by an {{HTMLElement("embed")}} element's `src` attribute.
 - `fetch`
-  - : If the request was initiated by a {{domxref("fetch()")}} method.
+  - : If the request was initiated by a {{domxref("Window/fetch", "fetch()")}} method.
 - `frame`
   - : If the request was initiated by loading a {{HTMLElement("frame")}} element.
 - `iframe`

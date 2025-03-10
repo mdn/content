@@ -10,7 +10,7 @@ browser-compat: api.BaseAudioContext.decodeAudioData
 
 The `decodeAudioData()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to asynchronously decode audio file data contained in an
-{{jsxref("ArrayBuffer")}} that is loaded from {{domxref("fetch()")}},
+{{jsxref("ArrayBuffer")}} that is loaded from {{domxref("Window/fetch", "fetch()")}},
 {{domxref("XMLHttpRequest")}}, or {{domxref("FileReader")}}. The decoded
 {{domxref("AudioBuffer")}} is resampled to the {{domxref("AudioContext")}}'s sampling
 rate, then passed to a callback or promise.
@@ -36,7 +36,7 @@ decodeAudioData(arrayBuffer, successCallback, errorCallback)
 
 - `arrayBuffer`
   - : An ArrayBuffer containing the audio data to be decoded, usually grabbed from
-    {{domxref("fetch()")}}, {{domxref("XMLHttpRequest")}} or {{domxref("FileReader")}}.
+    {{domxref("Window/fetch", "fetch()")}}, {{domxref("XMLHttpRequest")}} or {{domxref("FileReader")}}.
 - `successCallback` {{optional_inline}}
   - : A callback function to be invoked when the decoding successfully finishes. The
     single argument to this callback is an {{domxref("AudioBuffer")}} representing the
@@ -58,9 +58,10 @@ In this section we will first cover the promise-based syntax and then the callba
 
 ### Promise-based syntax
 
-In this example `loadAudio()` uses {{domxref("fetch()")}} to retrieve an audio file and decodes it into an {{domxref("AudioBuffer")}}. It then caches the `audioBuffer` in the global `buffer` variable for later playback.
+In this example `loadAudio()` uses {{domxref("Window/fetch", "fetch()")}} to retrieve an audio file and decodes it into an {{domxref("AudioBuffer")}}. It then caches the `audioBuffer` in the global `buffer` variable for later playback.
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data/promise).
 
 ```js
 let audioCtx;
@@ -81,10 +82,11 @@ async function loadAudio() {
 
 ### Callback syntax
 
-In this example `loadAudio()` uses {{domxref("fetch()")}} to retrieve an audio
+In this example `loadAudio()` uses {{domxref("Window/fetch", "fetch()")}} to retrieve an audio
 file and decodes it into an {{domxref("AudioBuffer")}} using the callback-based version of `decodeAudioData()`. In the callback, it plays the decoded buffer.
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/callback/).
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data/callback).
 
 ```js
 let audioCtx;

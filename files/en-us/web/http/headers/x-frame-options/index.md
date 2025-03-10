@@ -7,11 +7,12 @@ browser-compat: http.headers.X-Frame-Options
 
 {{HTTPSidebar}}
 
-The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.
+> [!NOTE]
+> For more comprehensive options than offered by this header, see the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
+
+The HTTP **`X-Frame-Options`** {{Glossary("response header")}} can be used to indicate whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [clickjacking](/en-US/docs/Web/Security/Types_of_attacks#clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 
 The added security is provided only if the user accessing the document is using a browser that supports `X-Frame-Options`.
-
-> **Warning:** The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which [obsoletes](https://w3c.github.io/webappsec-csp/#frame-ancestors-and-frame-options) this header for supporting browsers.
 
 <table class="properties">
   <tbody>
@@ -20,8 +21,8 @@ The added security is provided only if the user accessing the document is using 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -48,7 +49,8 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 
 ## Examples
 
-> **Warning:** Setting `X-Frame-Options` inside the {{HTMLElement("meta")}} element (e.g., `<meta http-equiv="X-Frame-Options" content="deny">`) has no effect and should not be used! `X-Frame-Options` is only enforced via HTTP headers, as shown in the examples below.
+> [!WARNING]
+> Setting `X-Frame-Options` inside the {{HTMLElement("meta")}} element (e.g., `<meta http-equiv="X-Frame-Options" content="deny">`) has no effect. `X-Frame-Options` is only enforced via HTTP headers, as shown in the examples below.
 
 ### Configuring Apache
 
@@ -112,11 +114,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 ### Configuring Express
 
-You can use [Helmet](https://helmetjs.github.io/) to configure an Express app to [set the **legacy** X-Frame-Options](https://helmetjs.github.io/#x-frame-options) header on old browsers.
-
-> **Warning:** It's recommended to use the {{HTTPHeader("Content-Security-Policy")}} HTTP header with the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive instead.
-
-To use Helmet to set `X-Frame-Options`, add the following to your server configuration to set the `SAMEORIGIN` directive:
+To set `X-Frame-Options` to `SAMEORIGIN` using [Helmet](https://helmetjs.github.io/) add the following to your server configuration:
 
 ```js
 const helmet = require("helmet");
@@ -139,5 +137,5 @@ app.use(
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://learn.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://learn.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

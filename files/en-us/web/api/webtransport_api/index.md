@@ -5,11 +5,9 @@ page-type: web-api-overview
 browser-compat: api.WebTransport
 ---
 
-{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **WebTransport API** provides a modern update to {{domxref("WebSockets API", "WebSockets", "", "nocode")}}, transmitting data between client and server using [HTTP/3 Transport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/). WebTransport provides support for multiple streams, unidirectional streams, and out-of-order delivery. It enables reliable transport via {{domxref("Streams API", "streams", "", "nocode")}} and unreliable transport via UDP-like datagrams.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -17,12 +15,12 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 These include:
 
-- **Head-of-line blocking**
+- **{{glossary("head of line blocking", "Head-of-line blocking")}}**
   - : HTTP/2 allows multiplexing, so a single connection can stream multiple resources simultaneously. However, if a single resource fails, all other resources on that connection are held up until any missing packets are retransmitted. With QUIC, only the failing resource is affected.
 - **Faster performance**
   - : QUIC is more performant than TCP in many ways. QUIC can handle security features by itself, rather than handing responsibility off to other protocols like TLS — meaning fewer round trips. And streams provide better transport efficiency than the older packet mechanism. That can make a significant difference, especially on high-latency networks.
 - **Better network transitions**
-  - : QUIC uses a unique connection ID to handle the source and destination of each request — to ensure that packets are delivered correctly. This ID can persist between different networks, meaning that, for example, a download can continue interrupted if you switch from Wifi to a mobile network. HTTP/2, on the other hand, uses IP addresses as identifiers, so network transitions can be problematic.
+  - : QUIC uses a unique connection ID to handle the source and destination of each request — to ensure that packets are delivered correctly. This ID can persist between different networks, meaning that, for example, a download can continue without getting interrupted if you switch from Wi-Fi to a mobile network. HTTP/2, on the other hand, uses IP addresses as identifiers, so network transitions can be problematic.
 - **Unreliable transport**
   - : HTTP/3 supports unreliable data transmission via datagrams.
 
@@ -100,7 +98,7 @@ When using reliable transmission via streams you can also set the relative prior
 
 ### Unidirectional transmission
 
-To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer")}} to allow data to be written to the stream and sent to the server.
+To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can [get a writer](/en-US/docs/Web/API/WritableStream/getWriter) to allow data to be written to the stream and sent to the server.
 
 ```js
 async function writeData() {

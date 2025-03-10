@@ -9,7 +9,17 @@ browser-compat: javascript.statements.try_catch
 
 The **`try...catch`** statement is comprised of a `try` block and either a `catch` block, a `finally` block, or both. The code in the `try` block is executed first, and if it throws an exception, the code in the `catch` block will be executed. The code in the `finally` block will always be executed before control flow exits the entire construct.
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## Syntax
 
@@ -59,7 +69,7 @@ You can also use the `try` statement to handle JavaScript exceptions. See the [J
 
 When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
-It needs not be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
+It doesn't need to be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple identifiers at once.
 
 ```js
 try {
@@ -113,7 +123,7 @@ The `finally` block contains statements to execute after the `try` block and `ca
 
 - Immediately after the `try` block finishes execution normally (and no exceptions were thrown);
 - Immediately after the `catch` block finishes execution normally;
-- Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
+- Immediately before the execution of a control-flow statement (`return`, `throw`, `break`, `continue`) in the `try` block or `catch` block that would exit the block.
 
 If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.
 
@@ -168,7 +178,7 @@ You can create "Conditional `catch` blocks" by combining `try...catch` blocks wi
 
 ```js
 try {
-  myroutine(); // may throw three types of exceptions
+  myRoutine(); // may throw three types of exceptions
 } catch (e) {
   if (e instanceof TypeError) {
     // statements to handle TypeError exceptions

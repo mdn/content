@@ -40,7 +40,7 @@ No notable changes.
 ### WebAssembly
 
 - WebAssembly now supports exceptions that can be thrown and caught in either WebAssembly or JavaScript (or some other runtime), crossing between the environment boundaries if not handled.
-  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
+  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) ([Firefox bug 1759217](https://bugzil.la/1759217)).
 
 ### WebDriver conformance (Marionette)
 
@@ -54,4 +54,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(99)}}
+{{Firefox_for_developers}}

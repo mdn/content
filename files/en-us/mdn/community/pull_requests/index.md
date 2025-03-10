@@ -1,10 +1,9 @@
 ---
-title: Pull request submission and review guidelines
+title: Pull request submission and reviews
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This document describes how contributors make changes to MDN Web Docs and how the changes are reviewed and land on the site.
 Content changes to MDN Web Docs include:
@@ -19,9 +18,9 @@ Regardless of how content changes are done, they are submitted as pull requests 
 The content changes go through the following stages before they are published on MDN Web Docs:
 
 1. **Submitting changes:** As a pull request author, you submit changes via opening a pull request.
-   See the sections [Before you start](#before-you-start), [Open a pull request](#open-a-pull-request), and [After you open a pull request](#after-you-open-a-pull-request) to learn more about our processes.
-2. **Reviewing changes:** Your changes are reviewed by [MDN members and volunteers](#pull-request-review-process).
-   See the section [Pull request review process](#pull-request-review-process) for more details.
+   See the sections [Before you start](#before_you_start), [Open a pull request](#open_a_pull_request), and [After you open a pull request](#after_you_open_a_pull_request) to learn more about our processes.
+2. **Reviewing changes:** Your changes are reviewed by MDN members and volunteers.
+   See the section [Pull request review process](#pull_request_review_process) for more details.
 3. **Viewing published changes:** Content updated on `mdn/content` goes live within a day of merging via a site rebuild once every 24 hours.
 
 ## Submitting changes
@@ -62,7 +61,7 @@ When you're ready to open a pull request, follow these guidelines:
   If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
 - **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
 - **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
-  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 - **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
 - **Accompany code example changes with content changes:** This is important to ensure that updated examples are served correctly.
   If you're making content changes that affect how examples are used, the related code examples should also be updated.
@@ -70,7 +69,6 @@ When you're ready to open a pull request, follow these guidelines:
 - **Don't make grammar-only changes:**
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
-- **Don't enable auto-merge.**
 
 ### After you open a pull request
 
@@ -202,3 +200,4 @@ Reviewers are encouraged to read the following articles for help with common tas
 - [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
 - [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
 - [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
+- [How to do a code review](https://google.github.io/eng-practices/review/reviewer/) on google.github.io/eng-practices

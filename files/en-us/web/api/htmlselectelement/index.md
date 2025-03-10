@@ -15,8 +15,6 @@ The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTM
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
-- {{domxref("HTMLSelectElement.autofocus")}}
-  - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
   - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Element/select#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
@@ -56,12 +54,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Adds an element to the collection of `option` elements for this `select` element.
-- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
-  - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns `false`).
-- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
-  - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in square brackets or parentheses, without calling this method explicitly.
 - {{domxref("HTMLSelectElement.namedItem()")}}
@@ -77,11 +71,13 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 ## Events
 
+_This interface inherits the events of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
+
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLElement/change_event", "change")}} event
   - : Fires when the user selects an option.
-- {{domxref("HTMLElement/input_event", "input")}} event
+- {{domxref("Element/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 
 ## Example

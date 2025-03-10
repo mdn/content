@@ -60,4 +60,4 @@ ndef
 
 ## See also
 
-- {{DOMxRef("NDEFReader.readingerror_event")}}
+- {{DOMxRef("NDEFReader.readingerror_event", "readingerror")}} event

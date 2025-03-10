@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Object.seal
 
 The **`Object.seal()`** static method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// Expected output: 33
+
+delete object1.property1; // Cannot delete when sealed
+console.log(object1.property1);
+// Expected output: 33
+```
 
 ## Syntax
 
@@ -35,6 +50,8 @@ Attempting to delete or add properties to a sealed object, or to convert a data 
 to accessor or vice versa, will fail, either silently or by throwing a
 {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
 {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
+
+[Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) do not have the concept of property descriptors. Private properties cannot be added or removed from the object, whether the object is sealed or not.
 
 The prototype chain remains untouched. However, due to the effect of [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), the `[[Prototype]]` cannot be reassigned.
 

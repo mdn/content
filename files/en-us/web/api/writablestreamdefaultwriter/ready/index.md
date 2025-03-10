@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.ready
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ready`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a {{jsxref("Promise")}}
@@ -30,7 +30,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     // Make sure the stream and its writer are able to
     //   receive data.

@@ -16,11 +16,12 @@ It uses the following syntax: `<msubsup> base subscript superscript </msubsup>`.
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the subscript down.
+  - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the subscript down.
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the superscript up.
+  - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the superscript up.
 
-> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -35,6 +36,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ```
 
 {{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -48,7 +48,7 @@ t.border = "2px";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

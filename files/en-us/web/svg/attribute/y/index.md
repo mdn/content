@@ -1,5 +1,5 @@
 ---
-title: "y"
+title: y
 slug: Web/SVG/Attribute/y
 page-type: svg-attribute
 spec-urls:
@@ -17,68 +17,11 @@ spec-urls:
 
 The **`y`** attribute defines a y-axis coordinate in the user coordinate system.
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{SVGElement("cursor")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
-- {{SVGElement("glyphRef")}}
-- {{SVGElement("image")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("rect")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("text")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("use")}}
+You can use this attribute with the SVG elements described in the sections below.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="20" x="20" width="60" height="60" />
-  <rect y="120" x="20" width="60" height="60" />
-  <rect y="220" x="20" width="60" height="60" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-## feBlend
+### `<feBlend>`
 
 For {{SVGElement('feBlend')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -111,7 +54,7 @@ For {{SVGElement('feBlend')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feColorMatrix
+### `<feColorMatrix>`
 
 For {{SVGElement('feColorMatrix')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -144,7 +87,7 @@ For {{SVGElement('feColorMatrix')}}, `y` defines the minimum y coordinate for th
   </tbody>
 </table>
 
-## feComponentTransfer
+### `<feComponentTransfer>`
 
 For {{SVGElement('feComponentTransfer')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -177,7 +120,7 @@ For {{SVGElement('feComponentTransfer')}}, `y` defines the minimum y coordinate 
   </tbody>
 </table>
 
-## feComposite
+### `<feComposite>`
 
 For {{SVGElement('feComposite')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -210,7 +153,7 @@ For {{SVGElement('feComposite')}}, `y` defines the minimum y coordinate for the 
   </tbody>
 </table>
 
-## feConvolveMatrix
+### `<feConvolveMatrix>`
 
 For {{SVGElement('feConvolveMatrix')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -243,7 +186,7 @@ For {{SVGElement('feConvolveMatrix')}}, `y` defines the minimum y coordinate for
   </tbody>
 </table>
 
-## feDiffuseLighting
+### `<feDiffuseLighting>`
 
 For {{SVGElement('feDiffuseLighting')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -276,7 +219,7 @@ For {{SVGElement('feDiffuseLighting')}}, `y` defines the minimum y coordinate fo
   </tbody>
 </table>
 
-## feDisplacementMap
+### `<feDisplacementMap>`
 
 For {{SVGElement('feDisplacementMap')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -309,7 +252,7 @@ For {{SVGElement('feDisplacementMap')}}, `y` defines the minimum y coordinate fo
   </tbody>
 </table>
 
-## feDropShadow
+### `<feDropShadow>`
 
 For {{SVGElement('feDropShadow')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -342,7 +285,7 @@ For {{SVGElement('feDropShadow')}}, `y` defines the minimum y coordinate for the
   </tbody>
 </table>
 
-## feFlood
+### `<feFlood>`
 
 For {{SVGElement('feFlood')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -375,7 +318,7 @@ For {{SVGElement('feFlood')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feFuncA
+### `<feFuncA>`
 
 For {{SVGElement('feFuncA')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -408,7 +351,7 @@ For {{SVGElement('feFuncA')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feFuncB
+### `<feFuncB>`
 
 For {{SVGElement('feFuncB')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -441,7 +384,7 @@ For {{SVGElement('feFuncB')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feFuncG
+### `<feFuncG>`
 
 For {{SVGElement('feFuncG')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -474,7 +417,7 @@ For {{SVGElement('feFuncG')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feFuncR
+### `<feFuncR>`
 
 For {{SVGElement('feFuncR')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -507,7 +450,7 @@ For {{SVGElement('feFuncR')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feGaussianBlur
+### `<feGaussianBlur>`
 
 For {{SVGElement('feGaussianBlur')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -540,7 +483,7 @@ For {{SVGElement('feGaussianBlur')}}, `y` defines the minimum y coordinate for t
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 For {{SVGElement('feImage')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -573,7 +516,7 @@ For {{SVGElement('feImage')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feMerge
+### `<feMerge>`
 
 For {{SVGElement('feMerge')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -606,7 +549,7 @@ For {{SVGElement('feMerge')}}, `y` defines the minimum y coordinate for the rend
   </tbody>
 </table>
 
-## feMergeNode
+### `<feMergeNode>`
 
 For {{SVGElement('feMergeNode')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -639,7 +582,7 @@ For {{SVGElement('feMergeNode')}}, `y` defines the minimum y coordinate for the 
   </tbody>
 </table>
 
-## feMorphology
+### `<feMorphology>`
 
 For {{SVGElement('feMorphology')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -672,7 +615,7 @@ For {{SVGElement('feMorphology')}}, `y` defines the minimum y coordinate for the
   </tbody>
 </table>
 
-## feOffset
+### `<feOffset>`
 
 For {{SVGElement('feOffset')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -705,7 +648,7 @@ For {{SVGElement('feOffset')}}, `y` defines the minimum y coordinate for the ren
   </tbody>
 </table>
 
-## fePointLight
+### `<fePointLight>`
 
 For {{SVGElement('fePointLight')}}, `y` defines the y location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
@@ -732,7 +675,7 @@ For {{SVGElement('fePointLight')}}, `y` defines the y location for the light sou
   </tbody>
 </table>
 
-## feSpecularLighting
+### `<feSpecularLighting>`
 
 For {{SVGElement('feSpecularLighting')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -765,7 +708,7 @@ For {{SVGElement('feSpecularLighting')}}, `y` defines the minimum y coordinate f
   </tbody>
 </table>
 
-## feSpotLight
+### `<feSpotLight>`
 
 For {{SVGElement('feSpotLight')}}, `y` defines the y location for the light source in the coordinate system defined by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
@@ -792,7 +735,7 @@ For {{SVGElement('feSpotLight')}}, `y` defines the y location for the light sour
   </tbody>
 </table>
 
-## feTile
+### `<feTile>`
 
 For {{SVGElement('feTile')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -825,7 +768,7 @@ For {{SVGElement('feTile')}}, `y` defines the minimum y coordinate for the rende
   </tbody>
 </table>
 
-## feTurbulence
+### `<feTurbulence>`
 
 For {{SVGElement('feTurbulence')}}, `y` defines the minimum y coordinate for the rendering area of the primitive.
 
@@ -858,7 +801,7 @@ For {{SVGElement('feTurbulence')}}, `y` defines the minimum y coordinate for the
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 For {{SVGElement('filter')}}, `y` defines the y coordinate of the upper left corner for the rendering area of the filter.
 
@@ -891,7 +834,7 @@ For {{SVGElement('filter')}}, `y` defines the y coordinate of the upper left cor
   </tbody>
 </table>
 
-## foreignObject
+### `<foreignObject>`
 
 For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper left corner of its viewport.
 
@@ -924,11 +867,13 @@ For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper l
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> [!NOTE]
+> The y-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
-## glyphRef
+### `<glyphRef>`
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `y` defines the y-axis coordinate of the glyph.
 
@@ -955,7 +900,7 @@ For {{SVGElement('glyphRef')}}, `y` defines the y-axis coordinate of the glyph.
   </tbody>
 </table>
 
-## image
+### `<image>`
 
 For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corner of the image.
 
@@ -988,9 +933,10 @@ For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corn
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
+> [!NOTE]
+> The y-axis coordinate of the `<image>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
-## mask
+### `<mask>`
 
 For {{SVGElement('mask')}}, `y` defines the y coordinate of the upper left corner of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
@@ -1023,7 +969,7 @@ For {{SVGElement('mask')}}, `y` defines the y coordinate of the upper left corne
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `y` defines the y coordinate of the upper left corner of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
@@ -1050,7 +996,7 @@ For {{SVGElement('pattern')}}, `y` defines the y coordinate of the upper left co
   </tbody>
 </table>
 
-## rect
+### `<rect>`
 
 For {{SVGElement('rect')}}, `y` defines the y coordinate of the upper left corner of the shape.
 
@@ -1083,9 +1029,10 @@ For {{SVGElement('rect')}}, `y` defines the y coordinate of the upper left corne
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
+> [!NOTE]
+> The y-axis coordinate of the `<rect>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
-## svg
+### `<svg>`
 
 For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner of its viewport.
 
@@ -1118,9 +1065,10 @@ For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
+> [!NOTE]
+> The y-axis coordinate of the `<svg>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
-## text
+### `<text>`
 
 For {{SVGElement('text')}}, if it contains a single value, `y` defines the y coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1197,9 +1145,10 @@ line {
 
 {{EmbedLiveSample('text', '100%', 100)}}
 
-## tref
+### `<tref>`
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `y` defines the y coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1234,7 +1183,7 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
   </tbody>
 </table>
 
-## tspan
+### `<tspan>`
 
 For {{SVGElement('tspan')}}, if it contains a single value, `y` defines the y coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1313,7 +1262,7 @@ line {
 
 {{EmbedLiveSample('tspan', '100%', 100)}}
 
-## use
+### `<use>`
 
 For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner of the referenced element.
 
@@ -1346,8 +1295,35 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+> [!NOTE]
+> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("y")}} _geometry property_ overrides the y-axis coordinate of the `<use>` set by the `y` attribute in some browsers. This behavior is at-risk.
+
+## Examples
+
+This example contains three {{SVGElement("rect")}} elements, each with a `y` value smaller than the previous value.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <rect y="220" x="20" width="60" height="60" fill="red" />
+  <rect y="120" x="20" width="60" height="60" fill="yellow" />
+  <rect y="20" x="20" width="60" height="60" fill="purple" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("y")}} property

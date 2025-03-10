@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 
@@ -32,6 +32,8 @@ new EncodedVideoChunk(options)
       - : An integer representing the length of the video in microseconds.
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the video data.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that `EncodedVideoChunk` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `EncodedVideoChunk` will use that buffer directly instead of copying from it.
 
 ## Examples
 
@@ -43,6 +45,7 @@ const init = {
   data: videoBuffer,
   timestamp: 23000000,
   duration: 2000000,
+  transfer: [videoBuffer],
 };
 chunk = new EncodedVideoChunk(init);
 ```

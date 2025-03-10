@@ -14,8 +14,7 @@ to display the video in picture-in-picture mode.
 
 It's not guaranteed that the video will be put into picture-in-picture. If permission
 to enter that mode is granted, the returned {{jsxref("Promise")}} will resolve and the
-video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
-  "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
+video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
 
 ## Syntax
 

@@ -23,7 +23,8 @@ localStorage["colorSetting"] = "#a4509b";
 localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **Note:** It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
+> [!NOTE]
+> It's recommended to use the Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) to prevent the [pitfalls](https://2ality.com/2012/01/objects-as-maps.html) associated with using plain objects as key-value stores.
 
 The two mechanisms within Web Storage are as follows:
 
@@ -40,9 +41,7 @@ To be able to use localStorage, we should first verify that it is supported and 
 
 ### Testing for availability
 
-> **Note:** This API is available in current versions of all major browsers. Testing for availability is necessary only if you must support very old browsers, or in the limited circumstances described below.
-
-Browsers that support localStorage have a property on the window object named `localStorage`. However, just asserting that the property exists may throw exceptions. If the `localStorage` object does exist, there is still no guarantee that the localStorage API is actually available, as various browsers offer settings that disable localStorage. So a browser may _support_ localStorage, but not make it _available_ to the scripts on the page.
+Browsers that support localStorage have a property on the window object named `localStorage`. However, just testing that the property exists, like in normal feature detection, may be insufficient. Various browsers offer settings that disable the storage API, without hiding the global object. So a browser may _support_ `localStorage`, but not make it _available_ to the scripts on the page.
 
 For example, for a document viewed in a browser's private browsing mode, some browsers might give us an empty `localStorage` object with a quota of zero, effectively making it unusable. Conversely, we might get a legitimate `QuotaExceededError`, which means that we've used up all available storage space, but storage _is_ actually _available_. Our feature detection should take these scenarios into account.
 
@@ -60,15 +59,7 @@ function storageAvailable(type) {
   } catch (e) {
     return (
       e instanceof DOMException &&
-      // everything except Firefox
-      (e.code === 22 ||
-        // Firefox
-        e.code === 1014 ||
-        // test name field too, because code might not be present
-        // everything except Firefox
-        e.name === "QuotaExceededError" ||
-        // Firefox
-        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      e.name === "QuotaExceededError" &&
       // acknowledge QuotaExceededError only if there's something already stored
       storage &&
       storage.length !== 0
@@ -87,21 +78,22 @@ if (storageAvailable("localStorage")) {
 }
 ```
 
-You can test for sessionStorage instead by calling `storageAvailable('sessionStorage')`.
-
-See here for a [brief history of feature-detecting localStorage](https://gist.github.com/paulirish/5558557).
+You can test for `sessionStorage` instead by calling `storageAvailable("sessionStorage")`.
 
 ## Example
 
 To illustrate some typical web storage usage, we have created an example, imaginatively called **Web Storage Demo**. The [landing page](https://mdn.github.io/dom-examples/web-storage/) provides controls that can be used to customize the color, font, and decorative image:
 
-![Web storage example with text box to choose the color by entering a hex value, and two dropdown menus to choose the font style, and decorative image.](landing.png)When you choose different options, the page is instantly updated; in addition, your choices are stored in `localStorage`, so that when you leave the page and load it again, later on, your choices are remembered.
+![Web storage example with text box to choose the color by entering a hex value, and two dropdown menus to choose the font style, and decorative image.](landing.png)
+
+When you choose different options, the page is instantly updated; in addition, your choices are stored in `localStorage`, so that when you leave the page and load it again, later on, your choices are remembered.
 
 We have also provided an [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.
 
 ![Event output page](event-output.png)
 
-> **Note:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/main/web-storage).
+> [!NOTE]
+> As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/main/web-storage).
 
 ### Testing whether your storage has been populated
 
@@ -117,7 +109,8 @@ if (!localStorage.getItem("bgcolor")) {
 
 The {{domxref("Storage.getItem()")}} method is used to get a data item from storage; in this case, we are testing to see whether the `bgcolor` item exists; if not, we run `populateStorage()` to add the existing customization values to the storage. If there are already values there, we run `setStyles()` to update the page styling with the stored values.
 
-> **Note:** You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.
+> [!NOTE]
+> You could also use {{domxref("Storage.length")}} to test whether the storage object is empty or not.
 
 ### Getting values from storage
 
@@ -184,7 +177,9 @@ However, there's no generic way to store arbitrary data types. Furthermore, the 
 
 ### Responding to storage changes with the StorageEvent
 
-The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object (note that this event is not fired for sessionStorage changes). This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+The {{domxref("Window/storage_event", "storage")}} event is fired whenever a change is made to the {{domxref("Storage")}} object of another document that shares the same storage space. This won't work on the same page that is making the changes — it is really a way for other pages on the origin using the storage to sync any changes that are made. Pages on other origins can't access the same storage objects.
+
+For `localStorage`, the storage space is shared between all tabs with the same origin. For `sessionStorage`, the storage space is only shared within the tab, among all iframes from the same origin.
 
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/main/web-storage/event.js)) the only JavaScript is as follows:
 
@@ -206,8 +201,8 @@ Here we add an event listener to the `window` object that fires when the {{domxr
 
 Web Storage also provides a couple of simple methods to remove data. We don't use these in our demo, but they are very simple to add to your project:
 
-- {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that domain.
-- {{domxref("Storage.clear()")}} takes no arguments, and empties the entire storage object for that domain.
+- {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that origin.
+- {{domxref("Storage.clear()")}} takes no arguments, and empties the entire storage object for that origin.
 
 ## Specifications
 

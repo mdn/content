@@ -3,12 +3,10 @@ title: "EncodedAudioChunk: EncodedAudioChunk() constructor"
 short-title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.EncodedAudioChunk.EncodedAudioChunk
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`EncodedAudioChunk()`** constructor creates a new {{domxref("EncodedAudioChunk")}} object representing a chunk of encoded audio.
 
@@ -34,6 +32,8 @@ new EncodedAudioChunk(options)
       - : An integer representing the length of the audio in microseconds.
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the audio data.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that `EncodedAudioChunk` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `EncodedAudioChunk` will use that buffer directly instead of copying from it.
 
 ## Examples
 
@@ -45,6 +45,7 @@ const init = {
   data: audioBuffer,
   timestamp: 23000000,
   duration: 2000000,
+  transfer: [audioBuffer],
 };
 chunk = new EncodedAudioChunk(init);
 ```

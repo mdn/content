@@ -6,11 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaPressed
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
-The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
+The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 
@@ -50,4 +51,4 @@ console.log(el.ariaPressed); // "true"
 
 ## See also
 
-- [ARIA: button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [ARIA: button role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)

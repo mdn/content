@@ -17,13 +17,13 @@ A list of frame objects. It is similar to an
 array in that it has a `length` property and its items can be accessed
 using the `[i]` notation.
 
-- `frameList === window` evaluates to true.
+- `frames === window` evaluates to true.
 - Each item in the `window.frames` pseudo-array represents the {{domxref("Window")}}
   object corresponding to the given {{HTMLElement("frame")}}'s or
   {{HTMLElement("iframe")}}'s content, not the `frame` or `iframe` DOM element (i.e.,
   `window.frames[0]` is the same thing as
   `document.getElementsByTagName("iframe")[0].contentWindow`).
-- For more details about the returned value, refer to this [thread on mozilla.dev.platform](https://groups.google.com/d/topic/mozilla.dev.platform/VijG80aFnU8?hl=en&pli=1).
+- For more details about the returned value, refer to this [thread on mozilla.dev.platform](https://groups.google.com/g/mozilla.dev.platform/c/VijG80aFnU8).
 
 ## Examples
 

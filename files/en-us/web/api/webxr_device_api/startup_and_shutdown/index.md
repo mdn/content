@@ -32,10 +32,6 @@ The polyfill is maintained alongside the specification, and is kept up to date w
 
 Be sure to read the readme carefully; the polyfill comes in several versions depending on what degree of compatibility with newer JavaScript features your target browsers include.
 
-#### WebXR API Emulator extension
-
-Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
-
 ##### Emulator usage
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
@@ -46,7 +42,7 @@ While somewhat awkward compared to using an actual headset, this makes it possib
 
 Download the WebXR API Emulator for your supported browser below:
 
-- [Google Chrome](https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje)
+- [Google Chrome](https://chromewebstore.google.com/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje)
 - [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/)
 
 The [source code for the extension](https://github.com/MozillaReality/WebXR-emulator-extension) is also available on GitHub.
@@ -214,7 +210,7 @@ async function runSession(session) {
 
   // Set up WebGL data and such
 
-  const worldData = loadGLPrograms(session, "worlddata.xml");
+  const worldData = loadGLPrograms(session, "world-data.xml");
   if (!worldData) {
     return null;
   }
@@ -251,7 +247,8 @@ Next, any data and setup needed for the WebGL renderer is performed before then 
 
 At this point, the `XRSession` itself has been fully configured, so we can begin rendering. First, we need a reference space within which coordinates for the world will be stated. We can get the initial reference space for the session by calling the `XRSession`'s {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} method. We specify when calling `requestReferenceSpace()` the name of the type of reference space we want; in this case, `unbounded`. You might just as easily specify `local` or `viewer`, depending on your needs.
 
-> **Note:** To understand how to select the right reference space for your needs, see [Selecting the reference space type](/en-US/docs/Web/API/WebXR_Device_API/Geometry#selecting_the_reference_space_type).
+> [!NOTE]
+> To understand how to select the right reference space for your needs, see [Selecting the reference space type](/en-US/docs/Web/API/WebXR_Device_API/Geometry#selecting_the_reference_space_type).
 
 The reference space returned by `requestReferenceSpace()` places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a _new_ reference space [which offsets the coordinate system](/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space) so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into `getOffsetReferenceSpace()` is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.
 
@@ -298,7 +295,8 @@ Occasionally, discontinuities or jumps in the [native origin](/en-US/docs/Web/AP
 
 When this happens, a {{domxref("XRReferenceSpace.reset_event", "reset")}} event is sent to the session's {{domxref("XRReferenceSpace")}}. The event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property is an {{domxref("XRRigidTransform")}} detailing the transform needed to realign the native origin.
 
-> **Note:** The `reset` event is fired at the {{domxref("XRReferenceSpace")}}, not the {{domxref("XRSession")}}!
+> [!NOTE]
+> The `reset` event is fired at the {{domxref("XRReferenceSpace")}}, not the {{domxref("XRSession")}}!
 
 Another common cause for `reset` events is when a bounded reference space (`bounded-floor`) has its geometry as specified by the {{domxref("XRBoundedReferenceSpace")}}'s property {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} change.
 

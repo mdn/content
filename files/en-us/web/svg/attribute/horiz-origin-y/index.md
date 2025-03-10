@@ -11,7 +11,8 @@ browser-compat: svg.elements.font.horiz-origin-y
 
 The **`horiz-origin-y`** attribute indicates the y-coordinate in the font coordinate system of the origin of a {{Glossary("glyph")}} to be used when drawing horizontally oriented text.
 
-> **Note:** The origin applies to all glyphs in the font.
+> [!NOTE]
+> The origin applies to all glyphs in the font.
 
 You can use this attribute with the following SVG elements:
 
@@ -25,7 +26,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></code
         >
@@ -43,7 +44,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<number>`
-  - : This value indicates the x-coordinate of the origin of a glyph for horizontally oriented text.
+  - : This value indicates the y-coordinate of the origin of a glyph for horizontally oriented text.
 
 ## Specifications
 

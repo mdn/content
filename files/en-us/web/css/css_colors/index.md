@@ -32,57 +32,64 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### At-rules and descriptors
 
-- {{cssxref("@color-profile")}}
-  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+> [!NOTE]
+> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule, along with its `components`, `rendering-intent` and `src` descriptors. These features have not yet been implemented in any browser.
 
 ### Functions
 
-- Absolute color functions, including:
-  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and its `rgba()` alias
-  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and its `hsla()` alias
+- Color functions:
+  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)
+  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl)
   - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
   - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
   - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
   - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
-- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+- {{CSSXref("color_value/light-dark", "light-dark()")}}
+
+> [!NOTE]
+> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions, which have not yet been implemented in any browser.
 
 ### Data types
 
 - {{cssxref("&lt;color&gt;")}}
-- [`<absolute-color-function>`](#functions)
+- [`<color-function>`](#functions)
 - {{cssxref("hex-color")}}
 - {{cssxref("named-color")}}
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
+- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_color_spaces_with_color)
 
-### Keywords
+### Glossary terms and keywords
 
+- {{glossary("color space")}}
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- {{glossary("interpolation")}}
+- {{glossary("RGB")}}
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
 ### Interfaces
 
-- `CSSColorProfileRule` {{Experimental_Inline}}
+> [!NOTE]
+> The CSS color module introduces the `CSSColorProfileRule` interface, which has not been implemented in any browser.
 
 ## Guides
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
-  - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+  - : A guide to using CSS to apply color to a variety of types of content, including all CSS properties that accept `<color>` as a value.
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
+  - : An overview of color spaces and the different `<color>` functional notations available in CSS.
+- [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
+  - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+  - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
-  - : This tool makes it easy to create, adjust, and experiment with custom colors.
 
 ## Related concepts
 

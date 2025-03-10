@@ -1,22 +1,20 @@
 ---
 title: "console: countReset() static method"
 short-title: countReset()
-slug: Web/API/console/countreset_static
-page-type: web-api-instance-method
+slug: Web/API/console/countReset_static
+page-type: web-api-static-method
 browser-compat: api.console.countReset_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.countReset()`** static method resets counter used with {{domxref("console/count_static", "console.count()")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
 ```js-nolint
-countReset()
-countReset(label)
+console.countReset()
+console.countReset(label)
 ```
 
 ### Parameters
@@ -33,18 +31,14 @@ None ({{jsxref("undefined")}}).
 For example, given code like this:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count();
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.count();
 console.countReset();
 ```
@@ -64,18 +58,14 @@ Note that the call to `console.counterReset()` resets the value of the default c
 If we pass the `user` variable as the `label` argument with the string "bob" to the first invocation of `console.count()`, and the string "alice" to the second:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count(user);
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.countReset("bob");
 console.count("alice");
 ```
@@ -103,5 +93,5 @@ Resetting the value of the counter "bob" only changes the value of that counter.
 ## See also
 
 - [Microsoft Edge's documentation for `console.countReset()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#countreset)
-- [Node.JS documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
+- [Node.js documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
 - [Google Chrome's documentation for `console.countReset()`](https://developer.chrome.com/docs/devtools/console/api/#countreset)

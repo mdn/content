@@ -1,10 +1,10 @@
 ---
 title: How to write an API reference
+short-title: Write an API reference
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This guide takes you through all you need to know to write an API reference on MDN.
 
@@ -46,7 +46,8 @@ You will return to build demos many times through the course of documenting an A
 
 When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.
 
-> **Note:** If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
+> [!NOTE]
+> If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
 > If you need help, refer to demos you have found, or ask an engineering contact.
 
 ### Create the list of documents you need to write or update
@@ -64,11 +65,12 @@ Before you start you should write down a list of all the pages you should create
 7. Concept/guide pages
 8. Examples
 
-> **Note:** We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
+> [!NOTE]
+> We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
 
 #### Overview pages
 
-A single API overview page is used to describe the role of the API, its top-level interfaces, related features contained in other interfaces, and other high level details.
+A single API overview page is used to describe the role of the API, its top-level interfaces, related features contained in other interfaces, and other high-level details.
 Its name and slug should be the name of the API plus "API" on the end. It is placed at the top level of the API reference, as a child of [https://developer.mozilla.org/en-US/docs/Web/API](/en-US/docs/Web/API).
 
 Example:
@@ -95,19 +97,20 @@ Examples:
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioNode](/en-US/docs/Web/API/AudioNode)
 
-> **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
+> [!NOTE]
+> We document every member appearing in the interface. You should bear the following rules in mind:
 
 - We document methods defined on the prototype of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods).
   On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).
   Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
-- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
-- Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
+- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
+- Special methods like the stringifier (`toString()`) and the jsonifier (`toJSON()`) are also listed if they do exist.
 - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
 #### Constructor pages
 
-Each interface has 0 or 1 constructors, documented on a subpage of the interface's page. It describes the purpose of the constructor and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the constructor, which is exactly the same as the interface name, and the title is interface name, dot, constructor name, then parentheses on the end.
+Each interface has zero or one constructors, documented on a subpage of the interface's page. It describes the purpose of the constructor and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the constructor, which is exactly the same as the interface name, and the title is interface name, dot, constructor name, then parentheses on the end.
 
 Example:
 
@@ -145,7 +148,7 @@ Examples:
 
 #### Event pages
 
-Document events as sub pages of their target interfaces and use the slug _eventname_\_event with the title set to `Interface: eventName event`.
+Document events as subpages of their target interfaces and use the slug _eventname_\_event with the title set to `Interface: eventName event`.
 
 Don't create pages for `on` event handler properties. Mention both ways to access the event on the `eventName_event` page.
 
@@ -218,7 +221,7 @@ The features of a landing page are outlined below:
 1. **Description**: the first paragraph of the landing page should provide a short, concise description of the API's overarching purpose.
 2. **Concepts and usage section**: The next section should be titled "\[name of API] concepts and usage", and provide an overview of all the main functionality that the API provides, what problems it solves, and how it works — all at a high level. This section should be fairly short, and not go into code or specific implementation details.
 3. **List of interfaces**: This section should be titled "\[name of API] interfaces", and provide links to the reference page for each interface that makes up the API, along with a short description of what each one does. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create new pages.
-4. **Examples**: This section should show a simple use case or two for the API.
+4. **Examples**: This section should show a use case or two for the API.
 5. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 6. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 7. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.
@@ -229,14 +232,9 @@ Now you should be ready to start writing your interface pages. Each interface re
 
 1. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each interface page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-2. **Standardization status**: The banner indicating the standardization status should be added next (these can be placed on the same line as the \\{{APIRef}} macro.):
-
-   - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
-
+2. **Feature status**: A [banner indicating the feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) (such as deprecated, non standard, or experimental) is added automatically, if needed. For that you need to [update the status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 3. **Description**: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. If the interface is actually a dictionary, you should use that term instead of "interface".
-4. **Inheritance diagram:** Use the [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface.
+4. **Inheritance diagram:** Use the [`\{{InheritanceDiagram}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/inheritance_diagram.rs) macro to embed an SVG inheritance diagram for the interface.
 5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using [description/definition lists](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists). Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
 
    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
@@ -246,7 +244,8 @@ Now you should be ready to start writing your interface pages. Each interface re
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
-   > **Note:** Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
+   > [!NOTE]
+   > Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 
 6. **Examples**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [GitHub](https://github.com/) repo containing the full example, and you could also link to a live example created using the [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
@@ -277,13 +276,9 @@ Property pages must have the following sections:
 1. **Title**: the title of the page must be **InterfaceName.propertyName**. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-3. **Standardization status**: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the \\{{APIRef}} macro):
+3. **Feature status**: A [banner indicating the feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) (such as deprecated, non standard, or experimental) is added automatically, if needed. For that you need to [update the status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 
-   - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
-
-4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read only or not. The structure of the first sentence must be:
+4. **Description**: the first paragraph of the property page should provide a short, concise description of the property's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default/initial value, and whether it's read-only or not. The structure of the first sentence must be:
 
    - For read-only properties
      - : The **`InterfaceName.property`** read-only property returns a \\{{domxref("type")}} that…
@@ -315,11 +310,7 @@ Method pages need the following sections:
 1. **Title**: the title of the page must be **InterfaceName.method()** (with the two terminal parentheses), but the slug (the end of the page URL) must not include the parentheses. Also the interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
-3. **Standardization status**: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \\{{APIRef}} macro):
-
-   - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
+3. **Feature status**: A [banner indicating the feature status](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) (such as deprecated, non standard, or experimental) is added automatically, if needed. For that you need to [update the status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 
 4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
 
@@ -348,8 +339,8 @@ Method pages need the following sections:
 The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
-- {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+- {{domxref("Window/fetch", "fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 ## Sidebars
 
-Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide explains how.
+Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide explains how.

@@ -48,7 +48,7 @@ In this example, each counter number is prefixed by "Book " (with a space) and f
   <li>Flamer, by Mike Curato</li>
   <li>Gender Queer: A Memoir, by Maia Kobabe</li>
   <li>Tricks, by Ellen Hopkins</li>
-  <li>The Handmaid’s Tale: The Graphic Novel, by Margaret Atwood</li>
+  <li>The Handmaid's Tale: The Graphic Novel, by Margaret Atwood</li>
   <li>Crank, by Ellen Hopkins</li>
 </ol>
 ```

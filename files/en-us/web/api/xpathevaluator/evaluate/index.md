@@ -29,7 +29,7 @@ evaluate(expression, contextNode, resolver, type, result)
 - `contextNode`
   - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
 - `resolver` {{optional_inline}}
-  - : Permits translation of all prefixes, including the `xml` namespace
+  - : A {{domxref("Node")}}, `null`, or any object implementing the {{domxref("Node/lookupNamespaceURI", "lookupNamespaceURI")}} method. Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
 - `type` {{optional_inline}}
   - : Specifies the type of result to be returned by evaluating the expression. This must
@@ -60,7 +60,7 @@ In case result cannot be converted to the specified type, an
 #### NAMESPACE_ERR
 
 If the expression contains namespace prefixes which cannot be resolved by the specified
-{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`XPathNSResolver`, a {{domxref("DOMException")}} of type
 `NAMESPACE_ERROR` is raised.
 
 #### WRONG_DOCUMENT_ERR

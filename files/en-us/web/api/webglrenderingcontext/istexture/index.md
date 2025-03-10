@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.isTexture
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.isTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
 passed {{domxref("WebGLTexture")}} is valid and `false` otherwise.

@@ -37,9 +37,9 @@ console.log(div.outerHTML);
 
 // use the classList API to remove and add classes
 div.classList.remove("foo");
-div.classList.add("anotherclass");
+div.classList.add("another-class");
 
-// <div class="anotherclass"></div>
+// <div class="another-class"></div>
 console.log(div.outerHTML);
 
 // if visible is set remove it, otherwise add it

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.vertexAttribI4[u]i[v]()`**
 methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify integer
@@ -26,7 +26,7 @@ vertexAttribI4uiv(index, value)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
     modified.
-- `v0, v1, v2, v3`
+- `v0`, `v1`, `v2`, `v3`
   - : An integer {{jsxref("Number")}} for the vertex attribute value.
 - `value`
   - : A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of

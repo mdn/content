@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onAuthRequired
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the server sends a `401` or `407` status code and a `WWW-Authenticate` header using the `Basic` scheme (that is, when the server asks the client to provide authentication credentials, such as a username and password).
 
@@ -31,9 +31,12 @@ The listener can respond in one of four ways:
 
   - : The extension might need to fetch credentials asynchronously. For example, the extension might need to fetch credentials from storage or ask the user. In this case, the listener can supply credentials asynchronously as follows:
 
-    - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
-    - in the listener, return a `Promise` that resolves with an object containing an `authCredentials` property, set to the credentials to supply
-      > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
+    - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
+    - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
+    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback` can be called asynchronously and takes a `webRequest.BlockingResponse` object as its only parameter
+
+      > [!NOTE]
+      > Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
 
 See [Examples](#examples).
 
@@ -43,9 +46,7 @@ If your extension provides bad credentials, then the listener is called again. F
 
 In Firefox and Chrome Manifest V2 extensions, you must add the [`"webRequest"` and `"webRequestBlocking"` API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) to your `manifest.json`.
 
-For Chrome Manifest V3 extensions, the `"webRequestBlocking"` permission is no longer available (except for policy-installed extensions). Instead, the `"webRequest"` and `"webRequestAuthProvider"` permissions enable you to supply credentials asynchronously.
-
-> **Note:** Firefox does not support `"webRequestAuthProvider"`, but support is planned. See [bug 1820569](https://bugzilla.mozilla.org/show_bug.cgi?id=1820569).
+For Manifest V3 extensions, Chrome no longer supports the `"webRequestBlocking"` permission (except for policy-installed extensions). Instead, the `"webRequest"` and `"webRequestAuthProvider"` permissions enable you to supply credentials asynchronously. Firefox continues to support `"webRequestBlocking"` in Manifest V3 and provides `"webRequestAuthProvider"` to offer cross-browser compatibility.
 
 ## Proxy authorization
 
@@ -84,23 +85,28 @@ Events have three functions:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
+    - `asyncCallback` {{optional_inline}}
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
+      - : A function to call, at most once, to asynchronously modify the request object.
+        This parameter is only present if the event listener is registered with `"asyncBlocking"` in the `extraInfoSpec` array. `asyncCallback` is undefined if `extraInfoSpec` is not provided or contains `"blocking"`.
 
-    - To handle the request synchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
-      This behavior is the same for Firefox and Chrome. However, synchronous handling is only appropriate for the simplest of extensions.
-    - To handle the request asynchronously:
-      - in Firefox, the `extraInfoSpec` array must include `"blocking"`, and the event handler function can return a Promise that resolves to a `BlockingResponse` object, with its `cancel` or `authCredentials` properties set. This is basically the same as handling the event synchronously.
-      - in Chrome, the `extraInfoSpec` array must include `"asyncBlocking"` (without `"blocking"`). The event handler function is passed a function as a second parameter (called `asyncCallback`) that should be invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}} depending on the settings in `extraInfoSpec`.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that are sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`. Extra options for the event. You can pass any of the following values:
+  - : `array` of `string`. Extra options for the event. You can pass any of these values:
 
-    - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. To handle the request asynchronously in Chrome, use `"asyncBlocking"` instead.
-    - `"responseHeaders"`: include `responseHeaders` in the `details` object passed to the listener
+    - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. Return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
+
+      - In Chrome, the event listener must respond synchronously.
+      - In Firefox, the event listener can respond synchronously or return a promise that resolves to a `BlockingResponse` object to respond asynchronously.
+
+    - `"asyncBlocking"`: handle the request asynchronously. The return value of the event listener is ignored. To resolve the event, pass the `asyncCallback` parameter a `BlockingResponse` object.
+
+      - Supported from Chrome 120 and Firefox 128.
+      - Not supported in Safari.
 
 ## Additional objects
 
@@ -178,7 +184,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -187,12 +193,17 @@ Events have three functions:
 
     The classification flags include:
 
-    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting ("an origin found to fingerprint").
+      - `fingerprinting` indicates the domain is in the fingerprinting and tracking category. Examples of this type of domain include advertisers who want to associate a profile with the visiting user.
+      - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request. The `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails.
     - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
-    - `any_strict_tracking`: a meta flag that combines tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
-    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
+    - `any_social_tracking`: a meta flag that combines all social tracking flags.
+
+    You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
 ## Examples
 
@@ -319,7 +330,8 @@ browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

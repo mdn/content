@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onAdded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the extension granted new permissions.
 
@@ -54,4 +54,5 @@ browser.permissions.onAdded.addListener(handleAdded);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

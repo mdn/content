@@ -10,7 +10,8 @@ browser-compat: api.PannerNode.setPosition
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-> **Note:** The suggested replacement for this deprecated method is to instead set the [`positionX`](/en-US/docs/Web/API/PannerNode/positionX), [`positionY`](/en-US/docs/Web/API/PannerNode/positionY), and [`positionZ`](/en-US/docs/Web/API/PannerNode/positionZ) attributes directly.
+> [!NOTE]
+> The suggested replacement for this deprecated method is to instead set the [`positionX`](/en-US/docs/Web/API/PannerNode/positionX), [`positionY`](/en-US/docs/Web/API/PannerNode/positionY), and [`positionZ`](/en-US/docs/Web/API/PannerNode/positionZ) attributes directly.
 
 The `setPosition()` method of the {{ domxref("PannerNode") }} Interface defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.) The three parameters `x`, `y` and `z` are unitless and describe the source's position in 3D space using the right-hand Cartesian coordinate system.
 

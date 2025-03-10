@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 71 that will affe
 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html):
 
 - The [Web sockets inspector](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) is now enabled by default ([Firefox bug 1573805](https://bugzil.la/1573805)).
-- You can now do a [full text search](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#search-in-requests) of request/response bodies, headers, and cookies.
+- You can now do a [full-text search](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#search-in-requests) of request/response bodies, headers, and cookies.
 - You can now enter patterns to [block specific URLs](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#blocking-specific-urls) from loading.
 - The [Timings tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#timings) now exposes timing data sent in the {{httpheader("Server-Timing")}} header ([Firefox bug 1403051](https://bugzil.la/1403051)).
 
@@ -43,7 +43,7 @@ This article provides information about the changes in Firefox 71 that will affe
 - Added the [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) value from CSS Grid Level 2 to {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} ([Firefox bug 1580894](https://bugzil.la/1580894))
 - Added support for the {{cssxref("column-span")}} property to [Multiple-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1426010](https://bugzil.la/1426010))
 - Added support for the `path()` value of {{cssxref("clip-path")}} ([Firefox bug 1488530](https://bugzil.la/1488530))
-- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
+- Mapped the `height` and `width` HTML attributes on the {{htmlelement("img")}} element to an internal {{cssxref("aspect-ratio")}} property ([Firefox bug 1585637](https://bugzil.la/1585637)). [See the guide to this feature on MDN](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images).
 
 #### Removals
 
@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 #### Removals
 
-- The non-standard Array generic methods have been removed in Firefox 71 ([Firefox bug 1222547](https://bugzil.la/1222547)). They were first introduced in Firefox 1.5 ([JavaScript 1.6](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.6)) and deprecated from Firefox 68 onwards. If your use case is to use array generics on array-like objects, you can convert your object to a proper array using [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) and then use standard array methods.
+- The non-standard Array generic methods have been removed in Firefox 71 ([Firefox bug 1222547](https://bugzil.la/1222547)). They were first introduced in Firefox 1.5 and deprecated from Firefox 68 onwards. If your use case is to use array generics on array-like objects, you can convert your object to a proper array using [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) and then use standard array methods.
 
 ### MathML
 
@@ -86,11 +86,11 @@ The API also provides a way to receive notifications when the device's media con
 
 The following non-standard {{domxref("DataTransfer")}} members have been removed ([Firefox bug 1345192](https://bugzil.la/1345192)):
 
-- {{domxref("DataTransfer.mozItemCount")}}
-- {{domxref("DataTransfer.mozClearDataAt()")}}
-- {{domxref("DataTransfer.mozGetDataAt()")}}
-- {{domxref("DataTransfer.mozSetDataAt()")}}
-- {{domxref("DataTransfer.mozTypesAt()")}}
+- `DataTransfer.mozItemCount`
+- `DataTransfer.mozClearDataAt()`
+- `DataTransfer.mozGetDataAt()`
+- `DataTransfer.mozSetDataAt()`
+- `DataTransfer.mozTypesAt()`
 
 ### WebDriver conformance (Marionette)
 
@@ -121,4 +121,4 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 
 ## Older versions
 
-{{Firefox_for_developers(70)}}
+{{Firefox_for_developers}}

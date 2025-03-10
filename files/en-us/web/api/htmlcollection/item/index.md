@@ -11,7 +11,8 @@ browser-compat: api.HTMLCollection.item
 The {{domxref("HTMLCollection")}} method `item()`
 returns the element located at the specified offset into the collection.
 
-> **Note:** Because the contents of an `HTMLCollection` are
+> [!NOTE]
+> Because the contents of an `HTMLCollection` are
 > live, changes to the underlying DOM can and will cause the position of individual
 > elements in the collection to change, so the index value will not necessarily remain
 > constant for a given element.
@@ -48,6 +49,10 @@ const images = document.images; // This is an HTMLCollection
 const img0 = images.item(0); // You can use the item() method this way
 const img1 = images[1]; // But this notation is easier and more common
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

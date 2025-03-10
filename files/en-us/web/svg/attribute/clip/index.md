@@ -4,14 +4,17 @@ slug: Web/SVG/Attribute/clip
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.attributes.presentation.clip
+browser-compat: svg.global_attributes.clip
 ---
 
 {{SVGRef}}{{deprecated_header}}
 
-The **`clip`** attribute is a presentation attribute defining the visible region of an element.
+The **`clip`** attribute defines the visible region of an element. You should use {{svgattr("clip-path")}} instead.
 
-This attribute has the same parameter values as defined for the {{ cssxref("clip","CSS clip property") }}. Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the `rect()`. The value of `auto` defines a clipping path along the bounds of the viewport created by the given element.
+> [!NOTE]
+> As a presentation attribute, `clip` also has a CSS property counterpart: {{cssxref("clip")}}. When both are specified, the CSS property takes priority.
+
+This attribute has the same parameter values as defined for the CSS {{cssxref("clip")}} property. Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the `rect()`. The value of `auto` defines a clipping path along the bounds of the viewport created by the given element.
 
 You can use this attribute with the following SVG elements:
 
@@ -49,8 +52,6 @@ svg {
 {{EmbedLiveSample("Example", '100%', 150)}}
 
 ## Usage notes
-
-> **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
 <table class="properties">
   <tbody>

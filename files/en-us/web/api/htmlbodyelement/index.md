@@ -38,7 +38,8 @@ The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLBodyElement`.
 
-> **Note:** Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+> [!NOTE]
+> Using `addEventListener()` on `HTMLBodyElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.
@@ -46,6 +47,12 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
   - : Fired when the associated document is about to be printed or previewed for printing.
 - {{domxref("window.beforeunload_event", "HTMLBodyElement.onbeforeunload")}}
   - : Fired when the window, the document and its resources are about to be unloaded.
+- {{domxref("window.blur_event", "HTMLBodyElement.onblur")}}
+  - : Fired when the window loses focus.
+- {{domxref("window.error_event", "HTMLBodyElement.onerror")}}
+  - : Fired when an error occurs and bubbles up to the window.
+- {{domxref("window.focus_event", "HTMLBodyElement.onfocus")}}
+  - : Fired when the window gains focus.
 - {{domxref("window.gamepadconnected_event", "HTMLBodyElement.ongamepadconnected")}}
   - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
 - {{domxref("window.gamepaddisconnected_event", "HTMLBodyElement.ongamepaddisconnected")}}
@@ -54,6 +61,8 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 - {{domxref("window.languagechange_event", "HTMLBodyElement.onlanguagechange")}}
   - : Fired when the user's preferred language changes.
+- {{domxref("window.load_event", "HTMLBodyElement.onload")}}
+  - : Fired when the document has finished loading.
 - {{domxref("window.message_event", "HTMLBodyElement.onmessage")}}
   - : Fired when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
 - {{domxref("window.messageerror_event", "HTMLBodyElement.onmessageerror")}}
@@ -70,12 +79,18 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
   - : Fired when the active history entry changes while the user navigates the session history.
 - {{domxref("window.rejectionhandled_event", "HTMLBodyElement.onrejectionhandled")}}
   - : Fired whenever a JavaScript {{jsxref("Promise")}} is rejected and the rejection has been handled.
+- {{domxref("window.resize_event", "HTMLBodyElement.onresize")}}
+  - : Fired when the document view has been resized.
+- {{domxref("window.scroll_event", "HTMLBodyElement.onscroll")}}
+  - : Fired when the document view or an element has been scrolled.
 - {{domxref("window.storage_event", "HTMLBodyElement.onstorage")}}
   - : Fired when a storage area (`localStorage`) has been modified in the context of another document.
 - {{domxref("window.unhandledrejection_event", "HTMLBodyElement.onunhandledrejection")}}
   - : Fired whenever a {{jsxref("Promise")}} is rejected but the rejection was not handled.
 - {{domxref("window.unload_event", "HTMLBodyElement.onunload")}}
   - : Fired when the document is being unloaded.
+
+Note that while `onblur`, `onerror`, `onfocus`, `onload`, `onresize`, and `onscroll` are available on any element, their meanings on the `<body>` element are not the same as on other elements. They listen for events on the `window` object instead.
 
 ## Specifications
 

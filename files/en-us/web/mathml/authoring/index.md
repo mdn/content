@@ -21,10 +21,10 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>MathML in HTML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>MathML in HTML</h1>
 
     <p>
       One over square root of two (inline style):
@@ -53,9 +53,11 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 </html>
 ```
 
-> **Note:** To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
+> [!NOTE]
+> To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
 
-> **Note:** Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
+> [!NOTE]
+> Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
 
 #### Fallback for browsers without MathML support
 
@@ -65,7 +67,7 @@ It is recommended to provide a fallback mechanism for browsers without MathML su
 <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
 ```
 
-If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org) library as a MathML polyfill:
+If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org/) library as a MathML polyfill:
 
 ```html
 <script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
@@ -77,11 +79,12 @@ Alternatively, you can also just display a warning at the top of the page for br
 <script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
 ```
 
-> **Note:** These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
+> [!NOTE]
+> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
 
 #### Mathematical fonts
 
-As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathematical fonts are instrumental to render MathML content. It's thus always a good idea to share the [installation instructions for such fonts](/en-US/docs/Web/MathML/Fonts#installation_instructions) or to provide them as [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
 
 The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
@@ -99,7 +102,8 @@ Several fonts are proposed and you can just select a different style, for exampl
   href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
 ```
 
-> **Note:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
+> [!NOTE]
+> The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
 
 ## Conversion from a simple syntax
 
@@ -136,7 +140,7 @@ A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can
 </html>
 ```
 
-For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](http://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
+For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](https://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
 
 ```html
 <!doctype html>
@@ -194,7 +198,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -205,12 +209,12 @@ After running that command, a file `output.html` containing the following HTML o
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
   </body>
 </html>
@@ -230,7 +234,8 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/msp
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
-> **Note:** Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
+> [!NOTE]
+> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid).
 
 ## Graphical interfaces
 
@@ -242,13 +247,15 @@ A simple approach is to integrate [converters from a simple syntax](#conversion_
 
 ![LaTeX input box in Thunderbird](thunderbird.png)
 
-> **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
+> [!NOTE]
+> You can also use the **Insert > HTML** command to paste any MathML content.
 
 [LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the _StartMath_ syntax provides extra equation panels to insert pre-defined mathematical constructions.
 
 ![StarMath input box in Libre Office](libreoffice.png)
 
-> **Note:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
+> [!NOTE]
+> To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
 ### WYSIYWG editors
 
@@ -258,7 +265,8 @@ Other editors provide math editing features that are directly integrated into th
 
 ![TeXmacs example](texmacs.png)
 
-> **Note:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
+> [!NOTE]
+> By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
 
 ### Optical character and handwriting recognitions
 

@@ -17,7 +17,7 @@ The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", 
 
 ## Instance properties
 
-- {{domxref("WorkletSharedStorage.context", "context")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.context", "context")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Contains contextual data passed into the shared storage worklet from the associated browsing context via the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 
 ## Instance methods
@@ -37,16 +37,16 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
   - : Returns a new async iterator for the key-value pairs of a `WorkletSharedStorage` object instance's enumerable properties.
 - {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Experimental_Inline}}
   - : Returns a new async iterator containing the keys for each item in a `WorkletSharedStorage` object instance.
-- `WorkletSharedStorage[@@asyncIterator]()` {{Experimental_Inline}}
+- `WorkletSharedStorage[Symbol.asyncIterator]()` {{Experimental_Inline}}
   - : Returns the {{domxref("WorkletSharedStorage.entries", "entries()")}} function by default.
 
 ## Examples
 
 ### Passing contextual data via `setSharedStorageContext()`
 
-You can use the [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/).
+You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
 
-In this example, we store data from both the embedding page and the fenced frame using [shared storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/).
+In this example, we store data from both the embedding page and the fenced frame using [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
 
 On the embedding page, we set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 

@@ -9,13 +9,31 @@ browser-compat: javascript.operators.property_accessors
 
 **Property accessors** provide access to an object's properties by using the dot notation or the bracket notation.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## Syntax
 
 ```js-nolint
 object.propertyName
 object[expression]
+object.#privateProperty
 ```
 
 ## Description
@@ -67,6 +85,8 @@ If you use a method for a numeric literal, and the numeric literal has no expone
 // because 77. === 77.0, no ambiguity
 ```
 
+In addition, [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be accessed using dot notation within the class that defines them.
+
 ### Bracket notation
 
 In the `object[expression]` syntax, the `expression` should evaluate to a string or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that represents the property's name. So, it can be any string literal, for example, including `'1foo'`, `'!bar!'`, or even `' '` (a space).
@@ -100,7 +120,7 @@ Obj[key]; // evaluates to Obj["name"], and returns "Michel"
 Obj[getKey()]; // evaluates to Obj["name"], and returns "Michel"
 ```
 
-However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 ### Property names
 

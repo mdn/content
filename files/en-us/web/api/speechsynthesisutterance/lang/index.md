@@ -10,7 +10,7 @@ browser-compat: api.SpeechSynthesisUtterance.lang
 
 The **`lang`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the language of the utterance.
 
-If unset, the app's (i.e. the {{htmlelement("html")}} [`lang`](/en-US/docs/Web/HTML/Element/html#lang) value) lang will be used, or the user-agent default if that is unset too.
+If unset, the app's (i.e. the {{htmlelement("html")}} [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) value) lang will be used, or the user-agent default if that is unset too.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrack.stop
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.stop()`** method stops the track.
+The **`stop()`** method of the {{domxref("MediaStreamTrack")}} interface stops the track.
 
 ## Syntax
 

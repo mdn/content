@@ -24,7 +24,7 @@ The `http-equiv` attribute is logged to the console showing a `refresh` [pragma 
 
 ```js
 // given <meta http-equiv="refresh" content="10" />
-let meta = document.querySelector("meta[http-equiv]");
+const meta = document.querySelector("meta[http-equiv]");
 console.log(meta.httpEquiv);
 // refresh
 console.log(meta.content);

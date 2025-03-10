@@ -8,7 +8,7 @@ status:
 browser-compat: api.IdleDetector.start
 ---
 
-{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`start()`** method of the {{domxref("IdleDetector")}} interface returns a
 {{jsxref("Promise")}} that resolves when the detector starts listening for changes in the

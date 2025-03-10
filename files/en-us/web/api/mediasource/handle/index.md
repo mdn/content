@@ -3,20 +3,16 @@ title: "MediaSource: handle property"
 short-title: handle
 slug: Web/API/MediaSource/handle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.MediaSource.handle
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("dedicated")}}
 
 The **`handle`** read-only property of the {{domxref("MediaSource")}} interface returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 
 > **Note:** `handle` is only visible on {{domxref("MediaSource")}} instances inside dedicated workers.
 
 Each `MediaSource` object created inside a dedicated worker has its own distinct `MediaSourceHandle`. The `handle` getter will always return the `MediaSourceHandle` instance specific to the associated dedicated worker `MediaSource` instance. If the handle has already been transferred to the main thread using {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}}, the handle instance in the worker is technically detached and can't be transferred again.
-
-{{AvailableInWorkers}}
 
 ## Value
 

@@ -9,7 +9,84 @@ browser-compat: css.properties.list-style-type
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
 
-{{EmbedInteractiveExample("pages/css/list-style-type.html")}}
+{{InteractiveExample("CSS Demo: list-style-type")}}
+
+```css interactive-example-choice
+list-style-type: space-counter;
+```
+
+```css interactive-example-choice
+list-style-type: disc;
+```
+
+```css interactive-example-choice
+list-style-type: circle;
+```
+
+```css interactive-example-choice
+list-style-type: "\1F44D";
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all unhighlighted" id="example-element">
+      <li>Apollo</li>
+      <li>Hubble</li>
+      <li>Chandra</li>
+      <li>Cassini-Huygens</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="note">
+    <p>
+      <code>space-counter</code> is defined with
+      <a
+        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        target="_parent"
+        ><code>@counter-style</code></a
+      >
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 The marker will be [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/color_value) of the element it applies to.
 
@@ -186,11 +263,11 @@ A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 - `hangul-consonant`: `-moz-hangul-consonant`
 - `urdu`: `-moz-urdu`
 
-See the [compatibility table](#browser-compatibility) to check which browsers support which extension.
+See the [compatibility table](#browser_compatibility) to check which browsers support which extension.
 
-## Accessibility concerns
+## Accessibility
 
-Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility).
 
 ## Formal definition
 
@@ -690,8 +767,9 @@ input {
 
 ```js
 const container = document.querySelector(".container");
+const list = document.querySelector("ol");
+
 container.addEventListener("change", (event) => {
-  const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });
 ```

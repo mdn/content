@@ -17,7 +17,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSPropertyRule.inherits")}} {{ReadOnlyInline}}
   - : Returns the inherit flag of the custom property.
-- {{domxref("CSSPropertyRule.initialvalue")}} {{ReadOnlyInline}}
+- {{domxref("CSSPropertyRule.initialValue")}} {{ReadOnlyInline}}
   - : Returns the initial value of the custom property.
 - {{domxref("CSSPropertyRule.name")}} {{ReadOnlyInline}}
   - : Returns the name of the custom property.

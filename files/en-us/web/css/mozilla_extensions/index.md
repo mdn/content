@@ -10,14 +10,15 @@ status:
 
 Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.
 
-> **Note:** These extensions are mostly experimental or deprecated but kept for backward compatibility. Avoid using them on production websites.
+> [!NOTE]
+> These extensions are mostly experimental or deprecated but kept for backward compatibility. Avoid using them on production websites.
 
 ## Mozilla-only properties
 
 - {{CSSxRef("box-align", "-moz-box-align")}} {{deprecated_inline}}
 - {{CSSxRef("box-direction", "-moz-box-direction")}} {{deprecated_inline}}
 - {{CSSxRef("box-flex", "-moz-box-flex")}} {{deprecated_inline}}
-- {{CSSxRef("box-ordinal-group" ,"-moz-box-ordinal-group")}} {{deprecated_inline}}
+- {{CSSxRef("box-ordinal-group", "-moz-box-ordinal-group")}} {{deprecated_inline}}
 - {{CSSxRef("box-orient", "-moz-box-orient")}} {{deprecated_inline}}
 - {{CSSxRef("box-pack", "-moz-box-pack")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
@@ -31,7 +32,8 @@ Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_,
 
 ## Formerly proprietary properties that are now standard
 
-> **Note:** To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
+> [!NOTE]
+> To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
 
 ### A
 
@@ -435,24 +437,23 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
 
-### L
+### L – M
 
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef("::-moz-list-bullet")}}
 - {{CSSxRef("::-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
+- {{CSSxRef("::-moz-meter-bar")}}
 
 ### N – R
 
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-page")}}
-- {{CSSxRef("::-moz-page-sequence")}}
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
@@ -468,7 +469,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::-moz-scrolled-page-sequence")}}
 - {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}

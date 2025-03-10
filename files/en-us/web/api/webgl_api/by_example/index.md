@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example
 page-type: guide
 ---
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}
 
 _WebGL by example_ is a series of live samples with short explanations that showcase WebGL concepts and capabilities.
 
@@ -31,7 +31,7 @@ Explanations about the examples are found in both the main text and in comments 
 - [Color masking](/en-US/docs/Web/API/WebGL_API/By_example/Color_masking)
   - : Modifying random colors by applying color masking and thus limiting the range of displayed colors to specific shades.
 - [Basic scissoring](/en-US/docs/Web/API/WebGL_API/By_example/Basic_scissoring)
-  - : How to draw simple rectangles and squares with scissoring operations.
+  - : How to draw rectangles and squares with scissoring operations.
 - [Canvas size and WebGL](/en-US/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL)
   - : The example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
 - [Boilerplate 1](/en-US/docs/Web/API/WebGL_API/By_example/Boilerplate_1)
@@ -39,7 +39,7 @@ Explanations about the examples are found in both the main text and in comments 
 - [Scissor animation](/en-US/docs/Web/API/WebGL_API/By_example/Scissor_animation)
   - : Some animation fun with scissoring and clearing operations.
 - [Raining rectangles](/en-US/docs/Web/API/WebGL_API/By_example/Raining_rectangles)
-  - : A simple game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
+  - : A game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
 
 ### Shader programming basics
 
@@ -48,11 +48,11 @@ Explanations about the examples are found in both the main text and in comments 
 - [Hello vertex attributes](/en-US/docs/Web/API/WebGL_API/By_example/Hello_vertex_attributes)
   - : Combining shader programming and user interaction through vertex attributes.
 - [Textures from code](/en-US/docs/Web/API/WebGL_API/By_example/Textures_from_code)
-  - : A simple demonstration of procedural texturing with fragment shaders.
+  - : A demonstration of procedural texturing with fragment shaders.
 
 ### Miscellaneous advanced examples
 
 - [Video textures](/en-US/docs/Web/API/WebGL_API/By_example/Video_textures)
   - : This example demonstrates how to use video files as textures.
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.CertificateInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object describing a single [X.509 certificate](https://datatracker.ietf.org/doc/html/rfc5280).
 

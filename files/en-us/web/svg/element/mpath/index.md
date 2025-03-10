@@ -7,20 +7,13 @@ browser-compat: svg.elements.mpath
 
 {{SVGRef}}
 
-The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.
+The **`<mpath>`** [SVG](/en-US/docs/Web/SVG) sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.
 
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-
-### Specific attributes
 
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 

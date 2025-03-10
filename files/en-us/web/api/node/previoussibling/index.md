@@ -13,7 +13,8 @@ returns the node immediately preceding the specified one in its parent's
 {{domxref("Node.childNodes", "childNodes")}} list,
 or `null` if the specified node is the first in that list.
 
-> **Note:** Browsers insert text nodes into a document to represent whitespace in the source markup.
+> [!NOTE]
+> Browsers insert text nodes into a document to represent whitespace in the source markup.
 > Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild)
 > or `Node.previousSibling`
 > may refer to a whitespace text node rather than the actual element the author intended to get.

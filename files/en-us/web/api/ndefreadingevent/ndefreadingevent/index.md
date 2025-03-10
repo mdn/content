@@ -8,7 +8,7 @@ status:
 browser-compat: api.NDEFReadingEvent.NDEFReadingEvent
 ---
 
-{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFReadingEvent()`** constructor creates a new {{domxref("NDEFReadingEvent")}} object which represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
@@ -34,7 +34,7 @@ new NDEFReadingEvent(type, options)
       - : An object with the following members:
 
         - `data` {{optional_inline}}
-          - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
+          - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}
           - : A string specifying the record's encoding.
         - `id` {{optional_inline}}
@@ -42,7 +42,7 @@ new NDEFReadingEvent(type, options)
         - `lang` {{optional_inline}}
           - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
         - `mediaType` {{optional_inline}}
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
         - `recordType`
 
           - : A string indicating the type of data stored in `data`. It must be one of the following values:
@@ -56,7 +56,7 @@ new NDEFReadingEvent(type, options)
               - : An empty {{domxref("NDEFRecord")}}.
 
             - `"mime"`
-              - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+              - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
             - `"smart-poster"`
               - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
             - `"text"`

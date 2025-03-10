@@ -123,8 +123,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Click the button in this example to increment the {{HTMLElement("input/number",
-  "number")}} input type:
+Click the button in this example to increment the {{HTMLElement("input/number", "number")}} input type:
 
 ### HTML
 

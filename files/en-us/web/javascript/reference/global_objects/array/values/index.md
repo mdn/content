@@ -9,7 +9,20 @@ browser-compat: javascript.builtins.Array.values
 
 The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that iterates the value of each item in the array.
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript Demo: Array.values()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntax
 
@@ -27,7 +40,7 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Description
 
-`Array.prototype.values()` is the default implementation of [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator).
+`Array.prototype.values()` is the default implementation of [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator).
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
@@ -70,7 +83,8 @@ console.log(iterator.next().value); // undefined
 
 ### Reusing the iterable
 
-> **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
+> [!WARNING]
+> The array iterator object should be a one-time use object. Do not reuse it.
 
 The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for...of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 
@@ -119,6 +133,16 @@ arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
+Unlike [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), the array iterator object does not save the array's length at the time of its creation, but reads it once on each iteration. Therefore, if the array grows during iteration, the iterator will visit the new elements too. This may lead to infinite loops.
+
+```js
+const arr = [1, 2, 3];
+for (const e of arr) {
+  arr.push(e * 10);
+}
+// RangeError: invalid array length
+```
+
 ### Iterating sparse arrays
 
 `values()` will visit empty slots as if they are `undefined`.
@@ -162,10 +186,11 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.values`](https://www.npmjs.com/package/array.prototype.values)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.values()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

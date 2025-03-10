@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.VisualViewport.resize_event
 ---
 
-{{APIRef("Window")}}
+{{APIRef("Visual Viewport")}}
 
-The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is resized.
+The **`resize`** event of the {{domxref("VisualViewport")}} interface is fired when the visual viewport is resized. This allows you to position elements relative to the visual viewport as it is zoomed, which would normally be anchored to the layout viewport.
 
 ## Syntax
 
@@ -26,21 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
-
-```js
-visualViewport.addEventListener("resize", () => {
-  // …
-});
-```
-
-Or use the `onresize` event handler property:
-
-```js
-visualViewport.onresize = () => {
-  // …
-};
-```
+See the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API#examples) landing page for a usage demo.
 
 ## Specifications
 
@@ -49,7 +35,3 @@ visualViewport.onresize = () => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Visual Viewport API homepage](/en-US/docs/Web/API/Visual_Viewport_API)

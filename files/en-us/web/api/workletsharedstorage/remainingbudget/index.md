@@ -15,7 +15,7 @@ The **`remainingBudget()`** method of the
 
 The navigation budget is the number of entropy bits permitted inside a {{htmlelement("fencedframe")}} due to the {{domxref("WindowSharedStorage.selectURL()")}} calls per origin every 24 hours. This is not the same as the number of navigations; rather, it is based on the number of potential navigations in each call. Each time a `selectURL()` navigation occurs, the corresponding origin's budget decreases by the logarithm (base 2) of the number of URL choices.
 
-Navigation budget is a mechanism designed to limit the rate of leakage of cross-site data to the destination pages navigated to in [fenced frames](/en-US/docs/Web/API/Fenced_Frame_API).
+Navigation budget is a mechanism designed to limit the rate of leakage of cross-site data to the destination pages navigated to in [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
 ## Syntax
 
@@ -34,7 +34,7 @@ A {{jsxref("Promise")}} that fulfills with a number representing the remaining n
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}} or if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+  - : Thrown if the worklet module has not yet been added with {{domxref("Worklet.addModule", "addModule()")}} or if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 

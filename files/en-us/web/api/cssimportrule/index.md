@@ -7,7 +7,7 @@ browser-compat: api.CSSImportRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSImportRule`** interface represents an {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -23,7 +23,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
   - : Returns the value of the `media` attribute of the associated stylesheet.
 - {{domxref("CSSImportRule.styleSheet")}} {{ReadOnlyInline}}
   - : Returns the associated stylesheet.
-- {{domxref("CSSImportRule.supportsText")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("CSSImportRule.supportsText")}} {{ReadOnlyInline}}
   - : Returns the supports condition specified by the {{cssxref("@import")}} rule.
 
 ## Instance methods

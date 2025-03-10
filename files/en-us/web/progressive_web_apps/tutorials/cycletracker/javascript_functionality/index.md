@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
-If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `style.css`.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/blob/main/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/blob/main/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `style.css`.
 
 The last line in the HTML file calls the `app.js` JavaScript file. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript code to capture form submissions, locally store submitted data, and populate the past-periods section.
 
@@ -21,7 +21,7 @@ At the end of this lesson, you will have a fully functional app. In future lesso
 
 When a user visits the page, we check if they have existing data stored in local storage. The first time a user visits the page, there won't be any data. When a new user selects two dates and submits the form, we need to:
 
-1. Create a "`<h2>Past periods</h2>`" header
+1. Create a `<h2>Past periods</h2>` header
 2. Create an {{HTMLelement("ul")}}
 3. Populate the `<ul>` with a single {{HTMLelement("li")}} containing information about that cycle
 4. Save the data to local storage
@@ -36,7 +36,7 @@ For each subsequent form submission, we need to:
 Existing users will have existing data in local storage. When a user comes back to our webpage with the same browser on the same device, we need to:
 
 1. Retrieve the data from local storage
-2. Create a "`<h2>Past periods</h2>`" header
+2. Create a `<h2>Past periods</h2>` header
 3. Create an {{HTMLelement("ul")}}
 4. Populate the `<ul>` with an {{HTMLelement("li")}} for every menstrual cycle saved in local storage.
 
@@ -111,15 +111,15 @@ function checkDatesInvalid(startDate, endDate) {
 }
 ```
 
-In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to alert assistive technology users to the error.
+In a more robust version of this app, we would, at minimum, include error messaging informing the user there is an error. A good application would inform the user what the error is, put focus on the offending form control, and use [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) to alert assistive technology users to the error.
 
 ## Local storage
 
 We are using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), specifically [window.localStorage](/en-US/docs/Web/API/Window/localStorage), to store start and end date pairs in a stringified JSON object.
 
-[LocalStorage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. We're using localStorage to make this simple and client-side only. This means the data will only be stored on one browser on a single device. Clearing the browser data will also lose all locally stored periods. What may seem like a limitation for many applications may be an asset in the case of this application, as menstrual cycle data is personal, and the user of such an app may very rightly be concerned about privacy.
+[LocalStorage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage#storing_simple_data_—_web_storage) has several limitations, but suffices for our apps needs. We're using localStorage to make this simple and client-side only. This means the data will only be stored on one browser on a single device. Clearing the browser data will also lose all locally stored periods. What may seem like a limitation for many applications may be an asset in the case of this application, as menstrual cycle data is personal, and the user of such an app may very rightly be concerned about privacy.
 
-For a more robust application, other [client side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) options like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
+For a more robust application, other [client side storage](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) options like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) and, discussed later, service workers, have better performance.
 
 Limitations of `localStorage` include:
 
@@ -142,7 +142,7 @@ function storeNewPeriod(startDate, endDate) {
   // Get data from storage.
   const periods = getAllStoredPeriods();
 
-  // Add the new period objet to the end of the array of period objects.
+  // Add the new period object to the end of the array of period objects.
   periods.push({ startDate, endDate });
 
   // Sort the array so that periods are ordered by start date, from newest
@@ -192,7 +192,7 @@ function renderPastPeriods() {
   }
 
   // Clear the list of past periods, since we're going to re-render it.
-  pastPeriodContainer.innerHTML = "";
+  pastPeriodContainer.textContent = "";
 
   const pastPeriodHeader = document.createElement("h2");
   pastPeriodHeader.textContent = "Past periods";
@@ -289,7 +289,7 @@ function renderPastPeriods() {
   if (periods.length === 0) {
     return;
   }
-  pastPeriodContainer.innerHTML = "";
+  pastPeriodContainer.textContent = "";
   pastPeriodHeader.textContent = "Past periods";
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
@@ -311,7 +311,7 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality/) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 

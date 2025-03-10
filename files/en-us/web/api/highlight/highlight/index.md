@@ -21,7 +21,7 @@ new Highlight(range1, range2, /* …, */ rangeN)
 
 ### Parameters
 
-- `range1, /* …, */ rangeN` {{optional_inline}}
+- `range1`, …, `rangeN` {{optional_inline}}
   - : One ore more initial {{domxref("Range")}} objects to add in the new highlight.
 
 ### Return value

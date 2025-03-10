@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: aspectRatio property"
 short-title: aspectRatio
 slug: Web/API/MediaTrackSupportedConstraints/aspectRatio
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.aspectRatio
+browser-compat: api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

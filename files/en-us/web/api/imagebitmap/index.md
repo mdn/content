@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.ImageBitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-The **`ImageBitmap`** interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("createImageBitmap()")}} factory method. `ImageBitmap` provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
+The **`ImageBitmap`** interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("Window.createImageBitmap()")}} or {{domxref("WorkerGlobalScope.createImageBitmap()")}} factory method. `ImageBitmap` provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
 
 `ImageBitmap` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
@@ -33,7 +33,8 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 
 ## See also
 
-- {{domxref("createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}

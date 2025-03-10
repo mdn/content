@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.beginQuery
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.beginQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) starts an asynchronous query. The
 `target` parameter indicates which kind of query to begin.

@@ -56,7 +56,7 @@ The older approach to creating events uses APIs inspired by Java. The following 
 const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent("build", true, true);
+event.initEvent("build");
 
 // Listen for the event.
 elem.addEventListener(
@@ -160,7 +160,7 @@ function simulateClick() {
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
     <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
     <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
   </ol>

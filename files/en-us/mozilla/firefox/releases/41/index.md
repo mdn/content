@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -52,12 +52,12 @@ Highlights:
 - `Date.prototype` is now an ordinary object, not a {{jsxref("Date")}} instance anymore ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Date.prototype.toString")}} is now a generic method ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} has been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
-- {{jsxref("Map.@@species", "Map[@@species]")}} and {{jsxref("Set.@@species", "Set[@@species]")}} getters have been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species) and [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species) getters have been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
 - Non-standard {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} support has been dropped ([Firefox bug 1023609](https://bugzil.la/1023609)).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, curly braces are required for [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ([Firefox bug 1150855](https://bugzil.la/1150855)).
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ([Firefox bug 1059908](https://bugzil.la/1059908) and [Firefox bug 1166950](https://bugzil.la/1166950)).
-- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
+- As part of ES2015 specification compliance, parenthesized [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ([Firefox bug 1141865](https://bugzil.la/1141865)).
 
 ### Interfaces/APIs/DOM
@@ -113,15 +113,15 @@ Highlights:
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 916893](https://bugzil.la/916893)).
 - `DOMRequest` and `DOMCursor` are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1167650](https://bugzil.la/1167650)).
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) has been completely implemented and is now enabled by default ([Firefox bug 1149381](https://bugzil.la/1149381)).
-- Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
-- The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ([Firefox bug 1174731](https://bugzil.la/1174731)).
+- Shared workers can no longer be shared between private (i.e., browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
+- The {{domxref("URL.searchParams")}} property is now read-only ([Firefox bug 1174731](https://bugzil.la/1174731)).
 - The {{domxref('HTMLAnchorElement.hash')}} property no longer decodes URL fragment ([Firefox bug 1093611](https://bugzil.la/1093611)).
 
 ### MathML
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see [Firefox bug 947654](https://bugzil.la/947654) and [Firefox bug 1160456](https://bugzil.la/1160456).
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g., `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as the first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see [Firefox bug 947654](https://bugzil.la/947654) and [Firefox bug 1160456](https://bugzil.la/1160456).
 
 ### SVG
 
@@ -129,7 +129,7 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ### Audio/Video
 
-- The `media.autoplay.enabled` preference now also apply to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ([Firefox bug 659285](https://bugzil.la/659285)).
+- The `media.autoplay.enabled` preference now also applies to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ([Firefox bug 659285](https://bugzil.la/659285)).
 
 ## Networking
 
@@ -163,4 +163,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers('40')}}
+{{Firefox_for_developers}}

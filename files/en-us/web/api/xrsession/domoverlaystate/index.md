@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.domOverlayState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`domOverlayState`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} provides information about the DOM overlay, if the feature is enabled.

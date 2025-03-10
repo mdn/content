@@ -8,17 +8,18 @@ status:
 browser-compat: api.WorkerNavigator.product
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
 The value of the **`WorkerNavigator.product`** property is always
-"`Gecko`", in any browser. This property is kept only for compatibility
+`"Gecko"`, in any browser. This property is kept only for compatibility
 purposes.
 
-> **Note:** Do not rely on this property to return a real product name. All browsers return "`Gecko`" as the value of this property.
+> [!NOTE]
+> Do not rely on this property to return a real product name. All browsers return `"Gecko"` as the value of this property.
 
 ## Value
 
-The string "`Gecko`".
+The string `"Gecko"`.
 
 ## Specifications
 

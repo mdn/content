@@ -9,7 +9,36 @@ browser-compat: html.elements.input.type_checkbox
 
 {{htmlelement("input")}} elements of type **`checkbox`** are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners. A checkbox allows you to select single values for submission in a form (or not).
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **Note:** [Radio buttons](/en-US/docs/Web/HTML/Element/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Element/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
@@ -37,16 +66,18 @@ In this example, we've got a name of `subscribe`, and a value of `newsletter`. W
 
 If the `value` attribute was omitted, the default value for the checkbox is `on`, so the submitted data in that case would be `subscribe=on`.
 
-> **Note:** If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
+> [!NOTE]
+> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
 
 ## Additional attributes
 
-In addition to the common attributes shared by all {{HTMLElement("input")}} elements, "`checkbox`" inputs support the following attributes.
+In addition to the [common attributes](/en-US/docs/Web/HTML/Element/input#attributes) shared by all {{HTMLElement("input")}} elements, `checkbox` inputs support the following attributes.
 
 - `checked`
 
   - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
-    > **Note:** Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
+    > [!NOTE]
+    > Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
     > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 - `value`
@@ -109,13 +140,16 @@ Beyond accessibility, this is another good reason to properly set up `<label>` e
 
 ### Indeterminate state checkboxes
 
-In addition to the checked and unchecked states, there is a third state a checkbox can be in: **indeterminate**. This is a state in which it's impossible to say whether the item is toggled on or off. This is set using the {{domxref("HTMLInputElement")}} object's `indeterminate` property via JavaScript (it cannot be set using an HTML attribute):
+A checkbox can be in an **indeterminate** state. This is set using the {{domxref("HTMLInputElement")}} object's [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property via JavaScript (it cannot be set using an HTML attribute):
 
 ```js
 inputInstance.indeterminate = true;
 ```
 
-A checkbox in the indeterminate state has a horizontal line in the box (it looks somewhat like a hyphen or minus sign) instead of a check/tick in most browsers.
+When `indeterminate` is `true`, the checkbox has a horizontal line in the box (it looks somewhat like a hyphen or minus sign) instead of a check/tick in most browsers.
+
+> [!NOTE]
+> This is purely a visual change. It has no impact on whether the checkbox's `value` is used in a form submission. That is decided by the `checked` state, regardless of the `indeterminate` state.
 
 There are not many use cases for this property. The most common is when a checkbox is available that "owns" a number of sub-options (which are also checkboxes). If all of the sub-options are checked, the owning checkbox is also checked, and if they're all unchecked, the owning checkbox is unchecked. If any one or more of the sub-options have a different state than the others, the owning checkbox is in the indeterminate state.
 
@@ -162,15 +196,13 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **Note:** If you submit a form with an indeterminate checkbox, the same thing happens as if the checkbox were unchecked — no data is submitted to represent the checkbox.
-
 ## Validation
 
 Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (offered to all {{HTMLElement("input")}}s). However, most of the {{domxref("ValidityState")}}s will always be `false`. If the checkbox has the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, but is not checked, then {{domxref("ValidityState.valueMissing")}} will be `true`.
 
 ## Examples
 
-The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a simple block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
+The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a short block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
 
 ### HTML
 
@@ -286,18 +318,18 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code>checked</code></td>
+      <td><code><a href="#checked">checked</a></code></td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code><a href="#checked">checked</a></code>,
-        <code><a href="#indeterminate">indeterminate</a></code> and
-        <code><a href="#value">value</a></code>
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/checked">checked</a></code>,
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/indeterminate">indeterminate</a></code> and
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/value">value</a></code>
       </td>
     </tr>
     <tr>
@@ -312,7 +344,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -329,4 +361,3 @@ otherCheckbox.addEventListener("change", () => {
 
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors that let you style checkboxes based on their current state
 - {{domxref("HTMLInputElement")}}: HTML DOM API that implements the `<input>` element
-- [CSS property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

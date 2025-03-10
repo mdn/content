@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoFrame.format
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`format`** property of the {{domxref("VideoFrame")}} interface returns the pixel format of the `VideoFrame`.
 

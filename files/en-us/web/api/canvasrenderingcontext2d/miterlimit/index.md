@@ -11,7 +11,8 @@ browser-compat: api.CanvasRenderingContext2D.miterLimit
 The **`CanvasRenderingContext2D.miterLimit`** property of the
 Canvas 2D API sets the miter limit ratio.
 
-> **Note:** For more info about miters, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> For more info about miters, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 

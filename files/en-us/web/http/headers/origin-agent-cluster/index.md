@@ -9,9 +9,36 @@ browser-compat: http.headers.Origin-Agent-Cluster
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Origin-Agent-Cluster`** HTTP response header is used to request that the associated {{domxref("Document")}} should be placed in an _origin-keyed agent cluster_. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
+The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an **origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)**. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
 
 The effect of this is that a resource-intensive document will be less likely to degrade the performance of documents from other origins.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntax
+
+```http
+Origin-Agent-Cluster: <boolean>
+```
+
+### Directives
+
+- `<boolean>`
+  - : `?1` indicates that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster.
+    Values other than `?1` are ignored (e.g., the `?0` structured field for false).
+
+## Description
 
 Modern web browsers have a multiprocess architecture in which pages from different origins can run in different operating system processes. This is important for performance, because it means that a resource-intensive page will not have as much of an impact on other pages that the user has open.
 
@@ -27,8 +54,8 @@ By setting the `Origin-Agent-Cluster` header, a page can request that the browse
 The browser is not required to honor the request. If it does, the {{domxref("Window.originAgentCluster")}} property returns `true`, and the window is not able to do the following things, which all depend on same-site, cross-origin communication:
 
 - Use {{domxref("Document.domain")}}.
-- Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages using {{domxref("Window.postMessage()", "postMessage()")}}.
-- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
+- Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects to other same-site cross-origin pages using {{domxref("Window.postMessage()", "postMessage()")}}.
+- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
 Origin-keyed agent clusters should not be viewed as a security feature: browsers may ignore the request for various reasons, or choose to implement it in a way that does not provide memory protection (for example, using separate threads instead of separate processes). Instead, this feature is a hint that the user experience would be improved if this origin were allocated dedicated resources.
 
@@ -40,33 +67,6 @@ The browser will ensure that all pages from a given origin are either origin-key
 - If the first page from an origin sets the header and is made origin-keyed, then all other pages from that origin will be origin-keyed whether they ask for it or not.
 
 To avoid this kind of unpredictable situation, you should set this header for all pages from a given origin, or none of them.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
-
-## Syntax
-
-```http
-Origin-Agent-Cluster: <boolean>
-```
-
-### Directives
-
-- `<boolean>`
-
-  - : `?1` indicates that the user-agent prefers a mobile experience (true).
-
-    `?0` indicates that user-agent does not prefer a mobile experience (false).
 
 ## Examples
 

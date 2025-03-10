@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
 returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
@@ -35,5 +35,3 @@ A {{jsxref("Promise")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMPoint.z
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPoint`** interface's
 **`z`** property specifies the depth coordinate of a point in
@@ -34,5 +34,4 @@ to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
 ## See also
 
 - The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.y", "y")}}, and the perspective value, {{domxref("DOMPoint.w",
-    "w")}}.
+  {{domxref("DOMPoint.y", "y")}}, and the perspective value, {{domxref("DOMPoint.w", "w")}}.

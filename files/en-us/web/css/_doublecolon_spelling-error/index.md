@@ -1,13 +1,11 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.spelling-error
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as incorrectly spelled.
 
@@ -34,7 +32,7 @@ Only a small subset of CSS properties can be used in a rule with `::spelling-err
 
 ## Examples
 
-### Simple document spell check
+### Basic document spell check
 
 In this example, eventual supporting browsers should highlight any flagged spelling errors with the styles shown.
 
@@ -50,13 +48,13 @@ In this example, eventual supporting browsers should highlight any flagged spell
 
 ```css
 ::spelling-error {
-  text-decoration: wavy red;
+  text-decoration: wavy red underline;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Simple_document_spell_check', '100%', 60)}}
+{{EmbedLiveSample('Basic_document_spell_check', '100%', 60)}}
 
 ## Specifications
 

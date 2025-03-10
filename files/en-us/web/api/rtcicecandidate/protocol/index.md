@@ -25,7 +25,8 @@ A string that indicates what network protocol the candidate uses:
 - `udp`
   - : The candidate will use the {{Glossary("UDP")}} transport protocol for its data. This is the preferred protocol for media interactions because of its better performance profile.
 
-> **Note:** If `protocol` is `null` — and `protocol` is supported by the {{Glossary("user agent")}} — passing the
+> [!NOTE]
+> If `protocol` is `null` — and `protocol` is supported by the {{Glossary("user agent")}} — passing the
 > candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} will fail, throwing an `OperationError` exception.
 
 ## Usage notes

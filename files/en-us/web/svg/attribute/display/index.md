@@ -2,7 +2,7 @@
 title: display
 slug: Web/SVG/Attribute/display
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.display
+browser-compat: svg.global_attributes.display
 ---
 
 {{SVGRef}}
@@ -23,7 +23,8 @@ The `display` attribute only affects the direct rendering of a given element, wh
 
 This attribute also affects direct rendering into offscreen canvases, such as occurs with masks or clip paths. Thus, setting `display="none"` on a child of a {{SVGElement("mask")}} will prevent the given child element from being rendered as part of the mask. Similarly, setting `display="none"` on a child of a {{SVGElement("clipPath")}} element will prevent the given child element from contributing to the clipping path.
 
-> **Note:** As a presentation attribute, `display` can be used as a CSS property. See {{cssxref("display", "CSS display")}} for further information.
+> [!NOTE]
+> As a presentation attribute, `display` also has a CSS property counterpart: {{cssxref("display")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with any SVG element.
 
@@ -67,7 +68,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("display")}}</td>
+      <td>See {{cssxref("display", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>
@@ -76,7 +77,7 @@ svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the {{cssxref("display", "CSS display")}} property.
+For a description of the values, please refer to the CSS {{cssxref("display")}} property.
 
 ## Specifications
 
@@ -89,4 +90,4 @@ For a description of the values, please refer to the {{cssxref("display", "CSS d
 ## See also
 
 - {{SVGAttr("visibility")}} attribute
-- {{cssxref("display", "CSS display")}}
+- CSS {{cssxref("display")}} property

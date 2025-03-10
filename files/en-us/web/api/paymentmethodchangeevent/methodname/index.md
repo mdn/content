@@ -19,7 +19,7 @@ within the payment handler are described by the `PaymentMethodChangeEvent`.
 A string which uniquely identifies the currently-selected payment
 handler. This may be a string chosen from the list of standardized payment method
 identifiers, or a URL used by the payment processing service. See
-[Payment method identifiers](/en-US/docs/Web/API/Payment_Request_API#payment_method_identifiers) for more information.
+[Payment method identifiers](/en-US/docs/Web/API/Payment_Request_API/Concepts#payment_method_identifiers) for more information.
 
 The default value is the empty string, `""`.
 

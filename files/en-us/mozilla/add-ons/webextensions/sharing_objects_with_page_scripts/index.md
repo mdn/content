@@ -6,9 +6,11 @@ page-type: guide
 
 {{AddonSidebar}}
 
-> **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
+> [!NOTE]
+> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
 
-> **Warning:** As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
+> [!WARNING]
+> As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
 >
 > The isolation between content scripts and scripts loaded by web pages is intended to make it more difficult for hostile web pages to do this.
 >
@@ -33,7 +35,7 @@ So, for example, when a content script accesses the page's [window](/en-US/docs/
 
 In Firefox, DOM objects in content scripts get an extra property `wrappedJSObject`. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.
 
-Let's take a simple example. Suppose a web page loads a script:
+Let's take an example. Suppose a web page loads a script:
 
 ```html
 <!doctype html>
@@ -91,7 +93,7 @@ Firefox also provides APIs enabling content scripts to make objects available to
 
 ### exportFunction
 
-Given a function defined in the content script, `exportFunction()` exports it to the page script's scope, so the page script can call it.
+Given a function defined in the content script, [`exportFunction()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) exports it to the page script's scope, so the page script can call it.
 
 For example, let's consider an extension which has a background script like this:
 
@@ -151,7 +153,7 @@ window.notify("Message from the page script!");
 
 ### cloneInto
 
-Given an object defined in the content script, this creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
+Given an object defined in the content script, [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
 
 For example, here's a content script that defines an object that contains a function, then clones it into the page script's scope:
 

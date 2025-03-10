@@ -11,7 +11,16 @@ The **`function`** declaration creates a {{Glossary("binding")}} of a new functi
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function", "shorter")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## Syntax
 
@@ -50,7 +59,8 @@ A `function` declaration creates a {{jsxref("Function")}} object. Each time when
 
 ### Block-level function declaration
 
-> **Warning:** In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks behave strangely. Only declare functions in blocks if you are in strict mode.
+> [!WARNING]
+> In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks behave strangely. Only declare functions in blocks if you are in strict mode.
 
 Functions can be conditionally declared — that is, a function statement can be nested within an [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement. However, in non-strict mode, the results are inconsistent across implementations.
 

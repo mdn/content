@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The _control flow_ is the order in which the computer executes statements in a script.
+**Control flow** is the order in which the computer executes statements in a script.
 
 Code is run in order from the first line in the file to the last line, unless the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
 
@@ -28,6 +28,6 @@ Control flow means that when you read a script, you must not only read from star
 
 ## See also
 
+- [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Control flow](https://en.wikipedia.org/wiki/Control_flow) on Wikipedia
-- [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow) on MDN
-- [Statements (Control flow)](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN

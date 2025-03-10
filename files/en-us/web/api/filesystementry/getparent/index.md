@@ -34,7 +34,7 @@ getParent(successCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_STATE_ERR`
   - : The operation failed because the file system's state doesn't permit it. This can
@@ -96,4 +96,3 @@ A similar approach can be taken elsewhere in the File and Directory Entries API.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

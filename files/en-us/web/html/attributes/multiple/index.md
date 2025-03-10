@@ -1,15 +1,52 @@
 ---
 title: "HTML attribute: multiple"
+short-title: multiple
 slug: Web/HTML/Attributes/multiple
 page-type: html-attribute
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple
+browser-compat:
+  - html.elements.input.multiple
+  - html.elements.select.multiple
 ---
 
 {{HTMLSidebar}}
 
-The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. Valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}, the manner by which the user opts for multiple values depends on the form control.
+The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. The attribute is valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}. The manner by which the user opts for multiple values depends on the form control.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## Overview
 
@@ -120,7 +157,7 @@ When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, 
 
 Note the difference in appearance between the example with `multiple` set and the other `file` input without.
 
-When the form is submitted, had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as`?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting multipart form data, we much use post. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
+When the form is submitted, had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as `?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting multipart form data, we must use post. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
 
 ### select
 
@@ -182,6 +219,10 @@ There are a few ways to select multiple options in a `<select>` element with a `
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

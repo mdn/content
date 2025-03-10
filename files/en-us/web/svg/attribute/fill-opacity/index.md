@@ -2,14 +2,15 @@
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.fill-opacity
+browser-compat: svg.global_attributes.fill-opacity
 ---
 
 {{SVGRef}}
 
 The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to a shape.
 
-> **Note:** As a presentation attribute `fill-opacity` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `fill-opacity` also has a CSS property counterpart: {{cssxref("fill-opacity")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -61,7 +62,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
+          ><a href="/en-US/docs/Web/SVG/Content_type#paint"
             >&#x3C;percentage></a
           ></strong
         >
@@ -78,7 +79,8 @@ svg {
   </tbody>
 </table>
 
-> **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (_See [Browser compatibility](#browser_compatibility) below_) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
+> [!NOTE]
+> SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (_See [Browser compatibility](#browser_compatibility) below_) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
 
 ## Specifications
 
@@ -87,3 +89,10 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("fill-opacity")}} property
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke-opacity")}}

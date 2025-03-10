@@ -29,7 +29,7 @@ _The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, 
 
 ## Events
 
-_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
+_Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}}
   - : Fires when a new reading is available from compatible NFC devices.

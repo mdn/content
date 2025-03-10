@@ -54,7 +54,22 @@ The `mask-mode` property is specified as one or more of the keyword values liste
 
 ### Using alpha mask mode
 
-{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}
+```html live-sample___mask-mode-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-mode-example
+.masked {
+  width: 227px;
+  height: 200px;
+  background: blue linear-gradient(red, blue);
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-mode: alpha;
+}
+```
+
+{{EmbedLiveSample("mask-mode-example", "", "250px")}}
 
 ## Specifications
 

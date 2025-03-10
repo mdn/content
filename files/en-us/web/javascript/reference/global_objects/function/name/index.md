@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Function.name
 
 The **`name`** data property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
 
 ## Value
 
@@ -17,7 +31,8 @@ A string.
 
 {{js_property_attributes(0, 0, 1)}}
 
-> **Note:** In non-standard, pre-ES2015 implementations the `configurable` attribute was `false` as well.
+> [!NOTE]
+> In non-standard, pre-ES2015 implementations the `configurable` attribute was `false` as well.
 
 ## Description
 
@@ -118,7 +133,7 @@ f.name; // "f"
 
 ### Initializer and default value
 
-Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., will inherit the name of the bound identifier as their `name`.
+Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., will inherit the name of the bound identifier as their `name`.
 
 ```js
 const [f = () => {}] = [];
@@ -180,7 +195,8 @@ class Foo {}
 Foo.name; // "Foo"
 ```
 
-> **Warning:** JavaScript will set the function's `name` property only if a function does not have an own property called `name`. However, classes' [static members](/en-US/docs/Web/JavaScript/Reference/Classes/static) will be set as own properties of the class constructor function, and thus prevent the built-in `name` from being applied. See [an example](#telling_the_constructor_name_of_an_object) below.
+> [!WARNING]
+> JavaScript will set the function's `name` property only if a function does not have an own property called `name`. However, classes' [static members](/en-US/docs/Web/JavaScript/Reference/Classes/static) will be set as own properties of the class constructor function, and thus prevent the built-in `name` from being applied. See [an example](#telling_the_constructor_name_of_an_object) below.
 
 ### Symbol as function name
 
@@ -267,7 +283,8 @@ Therefore you may not rely on the built-in `name` property to always hold a clas
 
 ### JavaScript compressors and minifiers
 
-> **Warning:** Be careful when using the `name` property with source-code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build time.
+> [!WARNING]
+> Be careful when using the `name` property with source-code transformations, such as those carried out by JavaScript compressors (minifiers) or obfuscators. These tools are often used as part of a JavaScript build pipeline to reduce the size of a program prior to deploying it to production. Such transformations often change a function's name at build time.
 
 Source code such as:
 
@@ -307,4 +324,5 @@ In the uncompressed version, the program runs into the truthy branch and logs "'
 ## See also
 
 - [Polyfill for `Function: name` in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
 - {{jsxref("Function")}}

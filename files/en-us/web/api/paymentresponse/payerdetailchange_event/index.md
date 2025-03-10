@@ -3,13 +3,10 @@ title: "PaymentResponse: payerdetailchange event"
 short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
-status:
-  - deprecated
-  - non-standard
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}
 
 A **`payerdetailchange`** event is fired by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form. This can happen when the payer is retrying to submit its details after an error has been detected.
 
@@ -121,6 +118,10 @@ response.addEventListener("payerdetailchange", async (ev) => {
   // …
 });
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

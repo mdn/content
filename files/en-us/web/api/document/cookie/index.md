@@ -37,25 +37,25 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     If a domain is specified, subdomains are always included.
     Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots.
 
-    > **Note:** The domain _must_ match the domain of the JavaScript origin.
+    > [!NOTE]
+    > The domain _must_ match the domain of the JavaScript origin.
     > Setting cookies to foreign domains will be silently ignored.
 
-  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
+  - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
-    > **Warning:** When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
+    > [!WARNING]
+    > When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
     > Many browsers let users specify that cookies should never expire, which is not necessarily safe.
 
     See {{jsxref("Date.toUTCString()")}} for help formatting this value.
 
   - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g., `60*60*24*365` or 31536000 for a year).
 
-  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
+  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
 
-  - `;path=path`: Indicates the path that must exist in the requested URL for the browser to send the {{httpheader("Cookie")}} header (e.g., '`/`',
-    '`/mydir`'). If not specified, it defaults to the current path of the current document location.
+  - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Cookies#define_where_cookies_are_sent) for more information).
 
-  - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
-    requests. Possible values are `lax`, `strict` or `none`.
+  - `;samesite`: The `SameSite` attribute of a {{httpheader("Set-Cookie")}} header can be set by a server to specify when the cookie will be sent. Possible values are `lax`, `strict` or `none` (see also [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)).
 
     - The `lax` value will send the cookie for all same-site requests and top-level navigation GET requests.
       This is sufficient for user tracking, but it will prevent many [Cross-Site Request Forgery](/en-US/docs/Glossary/CSRF) (CSRF) attacks.
@@ -75,11 +75,14 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains.
     For Chrome the path attribute must always be the origin.
 
-  > **Note:** The dash is considered part of the prefix.
+  > [!NOTE]
+  > The dash is considered part of the prefix.
 
-  > **Note:** These flags are only settable with the `secure` attribute.
+  > [!NOTE]
+  > These flags are only settable with the `secure` attribute.
 
-> **Note:** As you can see from the code above, `document.cookie` is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
+> [!NOTE]
+> As you can see from the code above, `document.cookie` is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
 
 ## Examples
 
@@ -90,7 +93,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 // needs to work cross-origin.
 // It is more common not to set the `SameSite` attribute, which results in the default,
 // and more secure, value of `SameSite=Lax;`
-document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "name=Oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
@@ -319,7 +322,7 @@ Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12
 - Keep in mind that the more cookies you have, the more data will be transferred between the server and the client for each request.
   This will make each request slower.
   It is highly recommended for you to use [WHATWG DOM Storage](/en-US/docs/Web/API/Web_Storage_API) if you are going to keep "client-only" data.
-- [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
+- [RFC 2965](https://datatracker.ietf.org/doc/html/rfc2965) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**.
   Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
 
 The reason for the [syntax](#syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):

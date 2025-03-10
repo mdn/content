@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebGLRenderingContext
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
 
@@ -262,7 +262,6 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
 - [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
@@ -289,7 +288,7 @@ The following properties and methods provide general information and functionali
 
 - {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
   - : Specifies the color space of the WebGL drawing buffer.
-- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}}
   - : Specifies the color space to convert to when importing textures.
 
 ## Working with extensions

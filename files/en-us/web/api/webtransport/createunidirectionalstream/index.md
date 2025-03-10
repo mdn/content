@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
 
@@ -20,8 +20,6 @@ The relative order in which queued bytes are emptied from created streams can be
 If set, queued bytes in streams with a higher send order are guaranteed to be sent before queued bytes for streams with a lower send order.
 If the order number is not set then the order in which bytes are sent is implementation dependent.
 Note however that even though bytes from higher send-order streams are sent first, they may not arrive first.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -61,7 +59,7 @@ async function writeData() {
   const stream = await transport.createUnidirectionalStream({
     sendOrder: "596996858",
   });
-  const writer = stream.writable.getWriter();
+  const writer = stream.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
   writer.write(data1);
@@ -82,7 +80,7 @@ You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly 
 // ...
 
 const stream = await transport.createUnidirectionalStream();
-const writer = ws.getWriter();
+const writer = stream.getWriter();
 
 // ...
 

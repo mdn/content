@@ -11,7 +11,7 @@ browser-compat: api.Keyboard.lock
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
-{{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
+{{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves after enabling the
 capture of keypresses for any or all of the keys on the physical keyboard. This method
 can only capture keys that are granted access by the underlying operating
 system.

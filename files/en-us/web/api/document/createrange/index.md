@@ -28,7 +28,7 @@ The created {{domxref("Range")}} object.
 ## Examples
 
 ```js
-let range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);

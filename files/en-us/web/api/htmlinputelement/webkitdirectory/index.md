@@ -14,7 +14,8 @@ and indicates that the {{HTMLElement("input")}} element should let the user sele
 When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items.
 The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.
 
-> **Note:** This property is called `webkitEntries` in the specification due to its
+> [!NOTE]
+> This property is called `webkitdirectory` in the specification due to its
 > origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
 ## Value
@@ -62,7 +63,8 @@ The entry for `PIC2343.jpg` will have a `webkitRelativePath` of
 `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg`. This makes it
 possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 
-> **Note:** The behavior of `webkitRelativePath` is different
+> [!NOTE]
+> The behavior of `webkitRelativePath` is different
 > in _Chromium < 72_. See [this bug](https://crbug.com/124187) for
 > further details.
 
@@ -75,14 +77,14 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener(
+document.getElementById("file-picker").addEventListener(
   "change",
   (event) => {
     let output = document.getElementById("listing");

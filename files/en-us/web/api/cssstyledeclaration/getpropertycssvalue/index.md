@@ -15,7 +15,8 @@ method interface returns a {{domxref('CSSValue')}} containing the CSS value for 
 property. Note that it returns `null` if the property name is a
 shorthand property.
 
-> **Note:** This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

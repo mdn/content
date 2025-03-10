@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`OffscreenCanvas.transferToImageBitmap()`** method creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`. The `OffscreenCanvas` allocates a new image for its subsequent rendering.
 
@@ -31,6 +31,13 @@ As described in the {{domxref("OffscreenCanvas")}} examples, passing this `Image
 If your goal is to pass the `ImageBitmap` to other web APIs which do not consume it - for example, {{domxref("CanvasRenderingContext2D.drawImage()")}} - then you should _close_ it when you're done with it by calling {{domxref("ImageBitmap.close()")}}. Don't simply drop the JavaScript reference to the `ImageBitmap`; doing so will keep its graphics resource alive until the next time the garbage collector runs.
 
 If you call `transferToImageBitmap()` and don't intend to pass it to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}, consider whether you need to call `transferToImageBitmap()` at all. Many web APIs which accept `ImageBitmap` also accept `OffscreenCanvas` as an argument.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Throws if:
+    - the canvas has transferred to another context scope, such as a worker
+    - the canvas context mode has not been set by calling {{domxref("OffscreenCanvas.getContext()")}}.
 
 ## Examples
 

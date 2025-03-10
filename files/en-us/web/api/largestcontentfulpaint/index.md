@@ -2,12 +2,10 @@
 title: LargestContentfulPaint
 slug: Web/API/LargestContentfulPaint
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.LargestContentfulPaint
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
 The `LargestContentfulPaint` interface provides timing information about the largest image or text paint before user input on a web page.
 
@@ -25,8 +23,8 @@ To measure render times of other elements, use the {{domxref("PerformanceElement
 
 Additional key paint moments are provided by the {{domxref("PerformancePaintTiming")}} API:
 
-- {{Glossary("First paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First contentful paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
 
 `LargestContentfulPaint` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -37,7 +35,7 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns "`largest-contentful-paint`".
+  - : Returns `"largest-contentful-paint"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -47,24 +45,24 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 It also supports the following properties:
 
-- {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.element")}} {{ReadOnlyInline}}
   - : The element that is the current largest contentful paint.
-- {{domxref("LargestContentfulPaint.renderTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.renderTime")}} {{ReadOnlyInline}}
   - : The time the element was rendered to the screen. May not be available if the element is a cross-origin image loaded without the `Timing-Allow-Origin` header.
-- {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.loadTime")}} {{ReadOnlyInline}}
   - : The time the element was loaded.
-- {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.size")}} {{ReadOnlyInline}}
   - : The intrinsic size of the element returned as the area (width \* height).
-- {{domxref("LargestContentfulPaint.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.id")}} {{ReadOnlyInline}}
   - : The id of the element. This property returns an empty string when there is no id.
-- {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.url")}} {{ReadOnlyInline}}
   - : If the element is an image, the request url of the image.
 
 ## Instance methods
 
 _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
-- {{domxref("LargestContentfulPaint.toJSON()")}} {{Experimental_Inline}}
+- {{domxref("LargestContentfulPaint.toJSON()")}}
   - : Returns a JSON representation of the `LargestContentfulPaint` object.
 
 ## Examples
@@ -87,9 +85,13 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### Cross-origin image render time
 
-For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property is `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} is exposed. To expose cross-origin render time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback.
 
-For example, to allow `https://developer.mozilla.org` to see `renderTime`, the cross-origin resource should send:
+Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
+
+To expose more accurate cross-origin render-time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
@@ -114,5 +116,5 @@ const isAccurateLCP = entry.renderTime ? true : false;
 ## See also
 
 - {{Glossary("Largest Contentful Paint")}}
-- {{Glossary("First contentful paint")}}
-- {{Glossary("First paint")}}
+- {{Glossary("First Contentful Paint")}}
+- {{Glossary("First Paint")}}

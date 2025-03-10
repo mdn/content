@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLElement.showPopover
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Popover API")}}
 
 The **`showPopover()`** method of the {{domxref("HTMLElement")}} interface shows a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by adding it to the {{glossary("top layer")}}.
 
@@ -16,11 +16,21 @@ When `showPopover()` is called on an element with the [`popover`](/en-US/docs/We
 
 ```js-nolint
 showPopover()
+showPopover(options)
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+
+  - : An object that can contain the following properties:
+
+    - `source` {{optional_inline}}
+
+      - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the show action, that is, its control element. Establishing a relationship between a popover and its invoker using the `source` option has two useful effects:
+
+        - The browser places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+        - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 ### Return value
 
@@ -38,7 +48,7 @@ The following example provides functionality to show a popover by pressing a par
 First, some HTML:
 
 ```html
-<div id="mypopover">
+<div id="mypopover" popover>
   <h2>Help!</h2>
 
   <p>You can use the following commands to control the app</p>

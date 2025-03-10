@@ -7,7 +7,7 @@ browser-compat: svg.elements.view
 
 {{SVGRef}}
 
-A view is a defined way to view the image, like a zoom level or a detail view.
+The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of an SVG document. A specific view can be displayed by referencing the `<view>` element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) as the target fragment of a URL.
 
 ## Usage context
 
@@ -15,18 +15,15 @@ A view is a defined way to view the image, like a zoom level or a detail view.
 
 ## Attributes
 
-### Global attributes
-
-- [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
-
-### Specific attributes
-
-- {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
+  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
+    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+- {{SVGAttr("viewBox")}}
+  - : This attribute defines the bound of the SVG viewport for the pattern fragment.
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-- {{SVGAttr("viewTarget")}} {{Deprecated_Inline}}
+  - : This attribute specifies whether the SVG document can be magnified and panned.
+    _Value type_: **disable | magnify** ; _Default value_: magnify; _Animatable_: **no**
 
 ## Example
 
@@ -58,10 +55,6 @@ A view is a defined way to view the image, like a zoom level or a detail view.
 ### Result
 
 {{EmbedLiveSample("Example", "85ch", "240px")}}
-
-## DOM Interface
-
-This element implements the {{domxref("SVGViewElement")}} interface.
 
 ## Specifications
 

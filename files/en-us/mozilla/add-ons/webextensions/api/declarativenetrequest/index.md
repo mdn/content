@@ -24,7 +24,7 @@ The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIR
 The declarative rules are defined by four fields:
 
 - `id` – An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
-- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedents](#matching_precedents) for details on how priority affects which rules are applied.
+- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedence](#matching_precedence) for details on how priority affects which rules are applied.
 - `condition` – The {{WebExtAPIRef("declarativeNetRequest.RuleCondition","condition")}} under which this rule is triggered.
 - `action` – The {{WebExtAPIRef("declarativeNetRequest.RuleAction","action")}} to take when the rule is matched. Rules can do one of these things:
   - block a network request.
@@ -32,7 +32,7 @@ The declarative rules are defined by four fields:
   - modify headers from a network request.
   - prevent another matching rule from being applied.
 
-> **Note:**
+> [!NOTE]
 > A redirect action does not redirect the request, and the request continues as usual when:
 >
 > - the action does not change the request.
@@ -93,7 +93,7 @@ Rules are organized into rulesets:
 - **dynamic ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}}. These rules persist across sessions and extension updates.
 - **session ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateSessionRules","updateSessionRules")}}. These rules do not persist across browser sessions.
 
-> **Note:**
+> [!NOTE]
 > Errors and warnings about invalid static rules are only displayed during [testing](#testing). Invalid static rules in permanently installed extensions are ignored. Therefore, it's important to verify that your static rulesets are valid by testing.
 
 ## Limits
@@ -102,14 +102,20 @@ Rules are organized into rulesets:
 
 An extension can:
 
-- specify static rulesets as part of the [`"declarative_net_request"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}}.
-- enable static rulesets up to at least the value of {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}}, and the number of enabled static rulesets must not exceed the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}. In addition, the number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value and should instead use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
+- specify static rulesets in the [`"declarative_net_request"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}}.
+- enable static rulesets (in the `"declarative_net_request"` manifest key or programmatically) so that the number of rules (enabled or disabled) they contain doesn't exceed the value of {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}} and the number of enable static rulesets doesn't exceed the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}.
+  > [!NOTE]
+  > The number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value; instead, they should use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
+- disable rules in static rulesets up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}. However, these disabled rules count towards the {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}}.
 
 ### Dynamic and session-scoped rules
 
-The number of dynamic and session-scoped rules an extension can add is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
+The number of dynamic and session-scoped rules an extension can add is limited to:
 
-## Matching precedents
+- In Safari and up to Chrome 119 and Firefox 127, the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
+- From Chrome 120 and Firefox 128, the values of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}} and {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}}
+
+## Matching precedence
 
 When the browser evaluates how to handle requests, it checks each extension's rules that have a condition that matches the request and chooses the one to consider applying as follows:
 
@@ -123,7 +129,8 @@ When the browser evaluates how to handle requests, it checks each extension's ru
    5. "redirect" redirects the request.
    6. "modifyHeaders" rewrites request or response headers or both.
 
-> **Note:** When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
+> [!NOTE]
+> When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
 >
 > - The "block" action does not support additional properties, and therefore there is no ambiguity: all matching "block" actions would result in the same outcome.
 > - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. It is still possible to redirect repeatedly when the redirected request matches another rule condition.
@@ -131,7 +138,8 @@ When the browser evaluates how to handle requests, it checks each extension's ru
 >
 > To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
 
-> **Note:** After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
+> [!NOTE]
+> After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
 > This cannot be relied upon across browsers, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:
@@ -188,12 +196,18 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
   - : The minimum number of static rules guaranteed to an extension across its enabled static rulesets.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_GETMATCHEDRULES_CALLS_PER_INTERVAL")}}
   - : The number of times {{WebExtAPIRef("declarativeNetRequest.getMatchedRules")}} can be called within a period of {{WebExtAPIRef("declarativeNetRequest.GETMATCHEDRULES_QUOTA_INTERVAL")}}.
-- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}
-  - : The maximum number of combined dynamic and session scoped rules an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}
+  - : The maximum number of static rules that can be disabled on each static ruleset.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} {{deprecated_inline}}
+  - : The maximum number of dynamic and session-scoped rules an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES")}}
+  - : The maximum number of dynamic rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}
   - : The maximum number of static rulesets an extension can enable.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_REGEX_RULES")}}
   - : The maximum number of regular expression rules that an extension can add.
+- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES")}}
+  - : The maximum number of session-scoped rules an extension can add.
 - {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS")}}
   - : The maximum number of static rulesets an extension can specify as part of the [`declarative_net_request.rule_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key.
 - {{WebExtAPIRef("declarativeNetRequest.SESSION_RULESET_ID")}}
@@ -203,6 +217,8 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 
 - {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount()")}}
   - : Returns the number of static rules an extension can enable before the global static rule limit is reached.
+- {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds()")}}
+  - : Returns the IDs of the disabled rules in a static ruleset.
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules()")}}
   - : Returns the set of dynamic rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.getEnabledRulesets()")}}
@@ -210,7 +226,7 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.getMatchedRules()")}}
   - : Returns all the rules matched for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.getSessionRules()")}}
-  - : Returns the set of session scoped rules for the extension.
+  - : Returns the set of session-scoped rules for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.isRegexSupported()")}}
   - : Checks if a regular expression is supported as a {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}}`.regexFilter` rule condition.
 - {{WebExtAPIRef("declarativeNetRequest.setExtensionActionOptions()")}}
@@ -222,7 +238,9 @@ If the request was not blocked or redirected, the matching `modifyHeaders` actio
 - {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets()")}}
   - : Updates the set of active static rulesets for the extension.
 - {{WebExtAPIRef("declarativeNetRequest.updateSessionRules()")}}
-  - : Modifies the set of session scoped rules for the extension.
+  - : Modifies the set of session-scoped rules for the extension.
+- {{WebExtAPIRef("declarativeNetRequest.updateStaticRules()")}}
+  - : Modifies the enabled state of rules in a static ruleset.
 
 ## Events
 

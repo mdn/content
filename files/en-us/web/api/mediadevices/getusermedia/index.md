@@ -8,14 +8,15 @@ browser-compat: api.MediaDevices.getUserMedia
 
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
+The **`getUserMedia()`** method of the {{domxref("MediaDevices")}} interface prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
 That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.
 
 It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} object.
 If the user denies permission, or matching media is not available, then the promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}} respectively.
 
-> **Note:** It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
+> [!NOTE]
+> It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
 
 ## Syntax
 
@@ -55,6 +56,10 @@ object when the requested media has successfully been obtained.
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
 
+- `InvalidStateError` {{domxref("DOMException")}}
+
+  - : Thrown if current document is not fully active.
+
 - `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
@@ -65,7 +70,8 @@ object when the requested media has successfully been obtained.
     globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), this error is
     returned if Permissions Policy is not configured to allow access to the input source(s).
 
-    > **Note:** Older versions of the specification used `SecurityError`
+    > [!NOTE]
+    > Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
 
 - `NotFoundError` {{domxref("DOMException")}}
@@ -82,7 +88,8 @@ object when the requested media has successfully been obtained.
     was impossible to meet, and a `message` property containing a
     human-readable string explaining the problem.
 
-    > **Note:** Because this error can occur even when the user has not yet granted
+    > [!NOTE]
+    > Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
@@ -145,8 +152,7 @@ is over.
 
 ### Security
 
-There are a number of ways security management and controls in a {{Glossary("user
-  agent")}} can cause `getUserMedia()` to return a security-related error.
+There are a number of ways security management and controls in a {{Glossary("user agent")}} can cause `getUserMedia()` to return a security-related error.
 
 #### Permissions Policy
 
@@ -240,7 +246,8 @@ navigator.mediaDevices
   });
 ```
 
-> **Note:** If the current document isn't loaded securely,
+> [!NOTE]
+> If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
 > `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
@@ -420,7 +427,8 @@ const constraints = {
 };
 ```
 
-> **Note:** In certain cases, it may be necessary to release the current camera facing mode before you can switch to a different one. To ensure the camera switch, it is advisable to free up the media resources by invoking the "stop()" method on the track before requesting a different facing mode.
+> [!NOTE]
+> In certain cases, it may be necessary to release the current camera facing mode before you can switch to a different one. To ensure the camera switch, it is advisable to free up the media resources by invoking the "stop()" method on the track before requesting a different facing mode.
 
 ## Specifications
 
@@ -432,13 +440,10 @@ const constraints = {
 
 ## See also
 
-- The older {{domxref("navigator.getUserMedia()")}} legacy API
-- {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): Capturing
-  screen contents as a {{domxref("MediaStream")}}
-- {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
-  contents
-- [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
-  rather than video
+- The older {{domxref("Navigator.getUserMedia()")}} legacy API
+- {{domxref("MediaDevices.enumerateDevices()")}}: Listing available media devices
+- {{domxref("WebRTC API", "", "", "nocode")}}
+- {{domxref("Media Capture and Streams API", "", "", "nocode")}}
+- {{domxref("Screen Capture API", "", "", "nocode")}}: Capturing screen contents as a {{domxref("MediaStream")}}
+- {{domxref("MediaDevices.getDisplayMedia()")}}: Getting a stream containing screen contents
+- {{domxref("Media Capture and Streams API/Taking Still Photos", "Taking webcam photos", "", "nocode")}}: A tutorial on using `getUserMedia()` to take still photos rather than video

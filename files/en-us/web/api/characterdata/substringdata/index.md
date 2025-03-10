@@ -16,7 +16,7 @@ and extending for a given number of characters afterwards.
 ## Syntax
 
 ```js-nolint
-  domString = characterData.substringData(offset, count)
+substringData(offset, count)
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ and extending for a given number of characters afterwards.
 
 A string with the substring.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` + `count` is larger than the length of the contained data.

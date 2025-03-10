@@ -7,20 +7,20 @@ browser-compat: http.status.103
 
 {{HTTPSidebar}}
 
-The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server is expecting the final response will link.
-This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
+The HTTP **`103 Early Hints`** [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server expects the final response will link to.
+This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent a final response.
+Preloaded resources indicated by early hints are fetched by the client as soon as the hints are received.
 
 The early hint response is primarily intended for use with the {{HTTPHeader("Link")}} header, which indicates the resources to be loaded.
 It may also contain a [`Content-Security-Policy`](/en-US/docs/Web/HTTP/CSP) header that is enforced while processing the early hint.
 
 A server might send multiple `103` responses, for example, following a redirect.
-Browsers only process the first early hint response, and this response must be discarded if the request results in a cross-origin redirect.
-Preloaded resources from the early hint are effectively pre-pended to the `Document`'s head element, and then followed by the resources loaded in the final response.
+Browsers only process the first early hints response, and this response must be discarded if the request results in a cross-origin redirect.
 
-> **Note:** For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
+> [!NOTE]
+> For compatibility and security reasons, it is recommended to [only send HTTP `103 Early Hints` responses over HTTP/2 or later](https://www.rfc-editor.org/rfc/rfc8297#section-3) unless the client is known to handle informational responses correctly.
 >
-> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser-compatibility) below.
->
+> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser_compatibility) below.
 > Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
 
 ## Syntax
@@ -34,7 +34,7 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 ### Preconnect example
 
 The following `103` early hint response shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`https://cdn.example.com`).
-Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
+Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute, this is a hint that the page is likely to need resources from the target resource's origin, and that the browser may improve the user experience by preemptively initiating a connection to that origin.
 
 ```http
 103 Early Hint
@@ -55,17 +55,15 @@ This includes a crossorigin font preload and an `<img>` loaded from the addition
 200 OK
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
-<link rel="preload" href="https://cdn.example.com/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.example.com/fonts/my-font.woff2" as="font" type="font/woff2" crossorigin>
 ...
 <img src="https://cdn.example.com/images/image.jpg" alt="">
 ...
 ```
 
 ### Preload example
-
-> **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser-compatibility) section below.
 
 The following `103` early hint response indicates a stylesheet `style.css` might be needed by the final response.
 
@@ -81,7 +79,7 @@ This includes a link to the stylesheet, which may already have been preloaded fr
 200 OK
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...
@@ -98,17 +96,17 @@ Link: </style.css>; rel=preload; as=style
 ```
 
 The early response restricts preloading to the same origin as the request.
-The stylesheet will preload if the origin matches.
+The stylesheet will be preloaded if the origin matches.
 
 The final response might set the CSP to `none`, as shown below.
-The stylesheet has already preloaded, but will not be used when rendering the page.
+The stylesheet has already been preloaded, but will not be used when rendering the page.
 
 ```http
 200 OK
 Content-Security-Policy: style-src: none;
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...
@@ -125,4 +123,9 @@ Content-Type: text/html
 ## See also
 
 - {{HTTPHeader("Link")}}
-- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) ({{htmlelement("link")}} attribute)
+- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) ({{htmlelement("link")}} attribute)
+- [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) ({{htmlelement("link")}} attribute)
+- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the Cloudflare blog

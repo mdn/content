@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.LockManager.request
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
 The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
@@ -23,8 +23,6 @@ When a `"shared"` lock for a given name is held, other `"shared"` locks for the 
 This shared/exclusive lock pattern is common in database transaction architecture, for example to allow multiple simultaneous readers (each requests a `"shared"` lock) but only one writer (a single `"exclusive"` lock).
 This is known as the readers-writer pattern.
 In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"readonly"` and `"readwrite"` transactions which have the same semantics.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -60,12 +58,13 @@ request(name, options, callback)
       - : If `true`, then any held locks with the same name will be released, and the request will be granted, preempting any queued requests for it.
         The default value is `false`.
 
-        > **Warning:** Use with care!
+        > [!WARNING]
+        > Use with care!
         > Code that was previously running inside the lock continues to run, and may clash with the code that now holds the lock.
 
     - `signal` {{optional_inline}}
-      - : An `AbortSignal` (the `signal` property of an `AbortController`);
-        if specified and the `AbortController` is aborted, the lock request is dropped if it was not already granted.
+      - : An {{domxref("AbortSignal")}} (the {{domxref("AbortController.signal", "signal")}} property of an {{domxref("AbortController")}});
+        if specified and the {{domxref("AbortController")}} is aborted, the lock request is dropped if it was not already granted.
 
 - `callback`
   - : Method called when the lock is granted.
@@ -102,7 +101,7 @@ await navigator.locks.request("my_resource", async (lock) => {
 });
 ```
 
-### Mode Example
+### `mode` example
 
 The following example shows how to use the `mode` option for readers and writers.
 
@@ -136,7 +135,7 @@ async function do_write() {
 }
 ```
 
-### ifAvailable Example
+### `ifAvailable` example
 
 To grab a lock only if it isn't already being held, use the `ifAvailable` option.
 In this function `await` means the method will not return until the callback is complete.
@@ -158,7 +157,7 @@ await navigator.locks.request(
 );
 ```
 
-### signal Example
+### `signal` example
 
 To only wait for a lock for a short period of time, use the `signal` option.
 

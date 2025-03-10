@@ -9,7 +9,17 @@ browser-compat: javascript.operators.multiplication_assignment
 
 The **multiplication assignment (`*=`)** operator performs [multiplication](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= "hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 
@@ -23,16 +33,26 @@ x *= y
 
 ## Examples
 
-### Using multiplication assignment
+### Multiplication assignment using numbers
 
 ```js
 let bar = 5;
-
 bar *= 2; // 10
-bar *= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+let bar = 5;
+bar *= "foo"; // NaN
+```
+
+### Multiplication assignment using BigInts
+
+```js
 let foo = 3n;
 foo *= 2n; // 6n
+foo *= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

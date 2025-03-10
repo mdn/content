@@ -45,7 +45,7 @@ createPattern(image, repetition)
     - `"repeat-y"` (vertical only)
     - `"no-repeat"` (neither direction)
 
-    If `repetition` is specified as an empty string (`""`) or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"` will be used.
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`): both are synonyms of `"repeat"`.
 
 ### Return value
 
@@ -63,7 +63,7 @@ Once created, the pattern is assigned to the canvas context's fill style and app
 
 The original image looks like this:
 
-![A flowery pattern](canvas_createpattern.png)
+![A flowery pattern](canvas_create_pattern.png)
 
 #### HTML
 
@@ -78,7 +78,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "canvas_createpattern.png";
+img.src = "canvas_create_pattern.png";
 // Only use the image after it's loaded
 img.onload = () => {
   const pattern = ctx.createPattern(img, "repeat");

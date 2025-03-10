@@ -42,7 +42,8 @@ then you can invoke the `play()` method on the element
 audioElement.play();
 ```
 
-> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
+> [!NOTE]
+> A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
 
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
@@ -69,5 +70,5 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
+- [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
 - HTML element implementing this interface: {{HTMLElement("audio")}}.

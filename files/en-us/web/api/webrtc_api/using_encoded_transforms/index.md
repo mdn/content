@@ -39,7 +39,7 @@ const supportsEncodedTransforms =
 
 ## Adding a transform for outgoing frames
 
-A transform running in a worker is inserted into the outgoing WebRTC pipeline by assigning its corresponding `RTCRtpScriptTransform` to the {{domxref("RTCRtpSender.transform")}} for an outgong track.
+A transform running in a worker is inserted into the outgoing WebRTC pipeline by assigning its corresponding `RTCRtpScriptTransform` to the {{domxref("RTCRtpSender.transform")}} for an outgoing track.
 
 This example shows how you might stream video from a user's webcam over WebRTC, adding a WebRTC encoded transform to modify the outgoing streams.
 The code assumes that there is an {{domxref("RTCPeerConnection")}} called `peerConnection` that is already connected to a remote peer.
@@ -180,7 +180,7 @@ The [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransf
 In the previous example we passed static information, but sometimes you might want to modify the transform algorithm in the worker at runtime, or get information back from the worker.
 For example, a WebRTC conference call that supports encryption might need to add a new key to the algorithm used by the transform.
 
-While it is possible to share information between the worker running the tranform code and the main thread using {{domxref("Worker.postMessage()")}}, it is generally easier to share a {{domxref("MessageChannel")}} as an [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) option, because then the channel context is directly available in the `event.transformer.options` when you are handling a new encoded frame.
+While it is possible to share information between the worker running the transform code and the main thread using {{domxref("Worker.postMessage()")}}, it is generally easier to share a {{domxref("MessageChannel")}} as an [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) option, because then the channel context is directly available in the `event.transformer.options` when you are handling a new encoded frame.
 
 The code below creates a {{domxref("MessageChannel")}} and [transfers](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) its second port to the worker.
 The main thread and transform can subsequently communicate using the first and second ports.
@@ -219,7 +219,7 @@ event.transformer.options.port.onmessage = (event) => {
 ### Triggering a key frame
 
 Raw video is rarely sent or stored because it consumes a lot of space and bandwidth to represent each frame as a complete image.
-Instead, codecs periodically generate a "key frame" that contains enough infomation to construct a full image, and between key frames sends "delta frames" that just include the changes since the last delta frame.
+Instead, codecs periodically generate a "key frame" that contains enough information to construct a full image, and between key frames sends "delta frames" that just include the changes since the last delta frame.
 While this is far more efficient that sending raw video, it means that in order to display the image associated with a particular delta frame, you need the last key frame and all subsequent delta frames.
 
 This can cause a delay for new users joining a WebRTC conference application, because they can't display video until they have received their first key frame.
@@ -228,7 +228,7 @@ Similarly, if an encoded transform was used to encrypt frames, the recipient wou
 In order to ensure that a new key frame can be sent as early as possible when needed, the {{domxref("RTCRtpScriptTransformer")}} object in `event.transformer` has two methods: {{domxref("RTCRtpScriptTransformer.generateKeyFrame()")}}, which causes the codec to generate a key frame, and {{domxref("RTCRtpScriptTransformer.sendKeyFrameRequest()")}}, which a receiver can use to request a key frame from the sender.
 
 The example below shows how the main thread might pass an encryption key to a sender transform, and trigger the codec to generate a key frame.
-Note that the main thread doesn't have direct access to the {{domxref("RTCRtpScriptTransformer")}} object, so it needs to pass the key and restriction identifier ("rid") to the worker (the "rid" is a stream id, which indicates the encoder that must generat the key frame).
+Note that the main thread doesn't have direct access to the {{domxref("RTCRtpScriptTransformer")}} object, so it needs to pass the key and restriction identifier ("rid") to the worker (the "rid" is a stream id, which indicates the encoder that must generate the key frame).
 Here we do that with a `MessageChannel`, using the same pattern as in the previous section.
 The code assumes there is already a peer connection, and that `videoSender` is an {{domxref("RTCRtpSender")}}.
 
@@ -259,8 +259,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to encrypt frames (not shown)
 
   // Get codec to generate a new key frame using the rid
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.generateKeyFrame(rid);
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.generateKeyFrame(rid);
 };
 ```
 
@@ -286,7 +286,7 @@ event.transformer.options.port.onmessage = (event) => {
 - {{domxref("RTCRtpScriptTransform")}}
 - {{domxref("RTCRtpReceiver.transform")}}
 - {{domxref("RTCRtpSender.transform")}}
-- {{domxref("DedicatedWorkerGlobalScope.rtctransform_event")}}
+- {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event
 - {{domxref("RTCTransformEvent")}}
 - {{domxref("RTCRtpScriptTransformer")}}
 - {{domxref("RTCEncodedVideoFrame")}}

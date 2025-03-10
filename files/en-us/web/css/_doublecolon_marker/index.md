@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
 browser-compat: css.selectors.marker
@@ -9,7 +9,27 @@ browser-compat: css.selectors.marker
 
 The **`::marker`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to [`display: list-item`](/en-US/docs/Web/CSS/display), such as the {{HTMLElement("li")}} and {{HTMLElement("summary")}} elements.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+
+```css interactive-example
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
+}
+```
+
+```html interactive-example
+<p>Group known as Mercury Seven:</p>
+<ul>
+  <li>Malcolm Scott Carpenter</li>
+  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
+  <li>John Herschel Glenn Jr.</li>
+  <li>Virgil Ivan (Gus) Grissom</li>
+  <li>Walter Marty (Wally) Schirra Jr.</li>
+  <li>Alan Bartlett Shepard Jr.</li>
+  <li>Donald Kent (Deke) Slayton</li>
+</ul>
+```
 
 ## Allowable properties
 
@@ -22,7 +42,8 @@ The `::marker` pseudo-element supports a limited number of CSS properties, inclu
 - The {{CSSxRef("content")}} property
 - All [animation](/en-US/docs/Web/CSS/CSS_animations#properties) and [transition](/en-US/docs/Web/CSS/CSS_transitions#properties) properties
 
-> **Note:** The specification states that additional CSS properties may be supported in the future.
+> [!NOTE]
+> The specification states that additional CSS properties may be supported in the future.
 
 ## Syntax
 

@@ -19,6 +19,8 @@ A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
 `closed`. (See {{DOMxRef("Element.attachShadow()")}} for further details).
 
+Some built-in elements, such as {{HTMLElement("input")}} and {{HTMLElement("img")}}, have user-agent shadow roots that are closed to script. Therefore, their `shadowRoot` property is always `null`.
+
 ## Examples
 
 The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/main/life-cycle-callbacks)
@@ -46,7 +48,7 @@ class Square extends HTMLElement {
 ```
 
 In the `updateStyle()` function itself, we get a reference to the shadow DOM
-using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal
+using `Element.shadowRoot`. From here we use standard DOM traversal
 techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then
 update the CSS found inside it:
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextDecoderStream.encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a string containing the name of the encoding algorithm used by the specific decoder.
 

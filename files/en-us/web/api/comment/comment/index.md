@@ -16,21 +16,22 @@ parameter as its textual content.
 
 ```js-nolint
 new Comment()
-new Comment(aString)
+new Comment(content)
 ```
 
 ### Parameters
 
-- `aString` {{optional_inline}}
+- `content` {{optional_inline}}
+  - : A string representing the textual content of the comment.
 
 ### Return value
 
-A new {{domxref("Comment")}} containing `aString`, or the empty string if no parameter was given.
+A new {{domxref("Comment")}} containing `content`, or the empty string if no parameter was given.
 
 ## Example
 
 ```js
-let comment = new Comment("Test");
+const comment = new Comment("Test");
 ```
 
 ## Specifications

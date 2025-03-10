@@ -6,4 +6,4 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The **Table Wrapper Box** is the box generated around [table grid boxes](/en-US/docs/Glossary/Table_Grid_Box) which accounts for the space needed for any caption displayed for the table. This box will become the containing block for absolutely positioned items where the table is the containing block.
+The **Table Wrapper Box** is the box generated around {{Glossary("table grid box", "table grid boxes")}} which accounts for the space needed for any caption displayed for the table. This box will become the containing block for absolutely positioned items where the table is the containing block.

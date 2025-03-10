@@ -43,7 +43,7 @@ dataChannel.addEventListener("closing", (ev) => {
 });
 ```
 
-You can also set the {{domxref("RTCDataChannel.closing_event", "onclosing")}} event handler property directly:
+You can also set the `onclosing` event handler property directly:
 
 ```js
 pc.onclosing = (ev) => {

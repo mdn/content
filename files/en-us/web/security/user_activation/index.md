@@ -28,10 +28,10 @@ If an activation has been triggered, the user agent differentiates between two t
 
 APIs that require transient activation (list is not exhaustive):
 
-- {{domxref("Window/beforeunload_event", "beforeunload")}} event
 - {{domxref("Clients.openWindow()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
+- {{domxref("Clipboard.write()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("ContactsManager.select()")}}
 - {{domxref("Document.requestStorageAccess()")}}
@@ -39,7 +39,6 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Element.requestFullScreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
 - {{domxref("EyeDropper.open()")}}
-- {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLSelectElement.showPicker()")}}
@@ -56,13 +55,12 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("RemotePlayback.prompt()")}}
 - {{domxref("Serial.requestPort()")}}
 - {{domxref("USB.requestDevice()")}}
-- {{domxref("Keyboard.lock()")}}
 - {{domxref("Window.getScreenDetails()")}}
 - {{domxref("Window.open()")}}
 - {{domxref("Window.queryLocalFonts()")}}
+- {{domxref("Window.showDirectoryPicker()")}}
 - {{domxref("Window.showOpenFilePicker()")}}
 - {{domxref("Window.showSaveFilePicker()")}}
-- {{domxref("Window.showDirectoryPicker()")}}
 - {{domxref("WindowClient.focus()")}}
 - {{domxref("XRSystem.requestSession()")}}
 
@@ -72,9 +70,10 @@ APIs that require transient activation (list is not exhaustive):
 
 APIs that require sticky activation (not exhaustive):
 
+- {{domxref("Window/beforeunload_event", "beforeunload")}} event
 - {{domxref("Navigator.vibrate()")}}
 - {{domxref("VirtualKeyboard.show()")}}
-- Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
+- Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
 
 ## UserActivation API
 

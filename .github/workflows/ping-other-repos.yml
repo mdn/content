@@ -11,6 +11,10 @@ name: Ping other repos
 on:
   push:
     branches: [main]
+
+# No GITHUB_TOKEN permissions, as we use REPO_PINGER_MDN_SPEC_LINKS.
+permissions: {}
+
 jobs:
   ping:
     # Don't run in forks, or when Dependabot merges a PR.
@@ -22,7 +26,7 @@ jobs:
       - name: Ping w3c/mdn-spec-links
         # This is one of many possible repos we can ping. When adding other
         # repos, you can follow this w3c/mdn-spec-links one as an example.
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3.0.0
         with:
           token: ${{ secrets.REPO_PINGER_MDN_SPEC_LINKS }}
           repository: w3c/mdn-spec-links

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.append
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`append()`** method of the {{domxref("Headers")}}
 interface appends a new value onto an existing header inside a `Headers`
@@ -18,7 +18,7 @@ that if the specified header already exists and accepts multiple values,
 `append()` will append the new value onto the end of the set of values.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax

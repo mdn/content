@@ -12,12 +12,12 @@ In other words, an algorithm is a means of describing a way to solve a problem s
 
 For example:
 
-- A cooking recipe is a simple algorithm for humans.
+- A cooking recipe is an algorithm for humans.
 - A sorting algorithm is often used in computer programming to explain to a machine how to sort data.
 
 Common algorithms are Pathfinding algorithms such as the optimization [Traveling Salesman Problem](https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem), [Tree Traversal algorithms](https://brilliant.org/wiki/traversals/), and so on.
 
-There are also [Machine Learning algorithms](https://www.coursera.org/articles/machine-learning-algorithms) such as [Linear Regression](https://people.cs.pitt.edu/~milos/courses/cs2750-Spring03/lectures/class6.pdf), Logistic Regression, Decision Tree, Random Forest, Support Vector Machine, Recurrent Neural Network (RNN), Long Short Term Memory (LSTM) Neural Network, Convolutional Neural Network (CNN), Deep Convolutional Neural Network, and so on.
+There are also [Machine Learning algorithms](https://www.coursera.org/articles/machine-learning-algorithms) such as [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression), Logistic Regression, Decision Tree, Random Forest, Support Vector Machine, Recurrent Neural Network (RNN), Long Short Term Memory (LSTM) Neural Network, Convolutional Neural Network (CNN), Deep Convolutional Neural Network, and so on.
 
 ## See also
 

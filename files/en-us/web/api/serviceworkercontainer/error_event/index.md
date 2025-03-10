@@ -9,7 +9,7 @@ status:
 browser-compat: api.ServiceWorkerContainer.error_event
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{Deprecated_header}}{{Non-standard_header}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `error` event fires when an error occurs in the service worker.
 
@@ -30,8 +30,8 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-navigator.serviceWorker.onerror = (errorevent) => {
-  console.error(`received error message: ${errorevent.message}`);
+navigator.serviceWorker.onerror = (event) => {
+  console.error(`received error message: ${event.message}`);
 };
 ```
 

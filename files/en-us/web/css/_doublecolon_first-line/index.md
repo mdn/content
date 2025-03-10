@@ -1,5 +1,5 @@
 ---
-title: "::first-line"
+title: ::first-line
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
 browser-compat: css.selectors.first-line
@@ -9,11 +9,29 @@ browser-compat: css.selectors.first-line
 
 The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-line", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>
+  In warm ocean waters around the world, you may see a strange sight: A fish
+  leaping from the water and soaring dozens of meters before returning to the
+  ocean's depths. Early Mediterranean sailors thought these flying fish returned
+  to the shore at night to sleep, and therefore called this family of marine
+  fish Exocoetidae.
+</p>
+```
 
 The effects of `::first-line` are limited by the length and content of the first line of text in the element. The length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text. `::first-line` has no effect when the first child of the element, which would be the first part of the first line, is an inline block-level element, such as an inline table.
 
-> **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#first-line) introduced the double-colon notation (`::`) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), which are single-colon `:`. Browsers accept both `::first-line` and `:first-line`, which was introduced in CSS2.
+> **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#first-line) introduced the double-colon notation (`::`) to distinguish [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) from the single-colon (`:`) [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes). Browsers accept both `::first-line` and `:first-line`, which was introduced in CSS2.
 
 For the purposes of CSS {{CSSXref("background")}}, the `::first-line` pseudo-element is like an inline-level element meaning that in a left-justified first line, the background may not extend all the way to the right margin.
 
@@ -37,7 +55,9 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Examples
 
-### HTML
+### Styling first line of a paragraph
+
+#### HTML
 
 ```html
 <p>
@@ -51,12 +71,19 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 </span>
 ```
 
-### CSS
+#### CSS
+
+```css hidden
+* {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
 
 ```css
 ::first-line {
   color: blue;
-  text-transform: uppercase;
+  font-weight: bold;
 
   /* WARNING: DO NOT USE THESE */
   /* Many properties are invalid in ::first-line pseudo-elements */
@@ -67,7 +94,53 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ### Result
 
-{{EmbedLiveSample('Examples', 350, 160)}}
+{{EmbedLiveSample('styling_first_line_of_a_paragraph', 350, 130)}}
+
+### Styling the first line of a SVG text element
+
+In this example, we style the first line of an SVG {{SVGElement("text")}} element using the `::first-line` pseudo-element.
+
+> [!NOTE]
+> At time of writing this feature has [limited support](#browser_compatibility).
+
+#### HTML
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+In order to make the SVG `<text>` element wrap to multiple lines, we use the {{cssxref("white-space", "", "#multiple_lines_in_svg_text_element")}} CSS property. We then select the first line using the `::first-line` pseudo-element.
+
+```css hidden
+text {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+```
+
+```css
+text {
+  white-space: break-spaces;
+}
+
+text::first-line {
+  fill: blue;
+  font-weight: bold;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("styling_the_first_line_of_a_SVG_text_element", "100%", 150)}}
 
 ## Specifications
 
@@ -80,3 +153,4 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 ## See also
 
 - {{cssxref("::first-letter")}}
+- {{cssxref("white-space")}}

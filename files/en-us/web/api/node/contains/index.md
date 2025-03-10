@@ -14,7 +14,8 @@ whether a node is a descendant of a given node, that is the node itself,
 one of its direct children ({{domxref("Node.childNodes", "childNodes")}}),
 one of the children's direct children, and so on.
 
-> **Note:** A node is _contained_ inside itself.
+> [!NOTE]
+> A node is _contained_ inside itself.
 
 ## Syntax
 

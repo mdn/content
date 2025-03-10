@@ -9,7 +9,39 @@ browser-compat: css.properties.text-emphasis-color
 
 The **`text-emphasis-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of emphasis marks. This value can also be set using the {{cssxref("text-emphasis")}} shorthand.
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-color")}}
+
+```css interactive-example-choice
+text-emphasis-color: currentColor;
+```
+
+```css interactive-example-choice
+text-emphasis-color: red;
+```
+
+```css interactive-example-choice
+text-emphasis-color: rgba(90, 200, 160, 0.8);
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled;
+}
+```
 
 ## Syntax
 
@@ -20,7 +52,7 @@ text-emphasis-color: currentcolor;
 /* <color> */
 text-emphasis-color: #555;
 text-emphasis-color: blue;
-text-emphasis-color: rgba(90, 200, 160, 0.8);
+text-emphasis-color: rgb(90 200 160 / 80%);
 text-emphasis-color: transparent;
 
 /* Global values */
@@ -81,5 +113,4 @@ em {
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - The other emphasis mark related properties: {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis')}}, and {{cssxref("text-emphasis-position")}}.
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

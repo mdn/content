@@ -26,7 +26,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 
 The CSS below includes a media query with one style rule.
 As this rule lives in the last stylesheet added to the document, it will be the first CSSRule returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
-`myRules[0]` returns a {{domxref("CSSMediaRule")}} object, from which we can get the `mediaText`.
+`myRules[0]` returns a `CSSMediaRule` object, from which we can get the `mediaText`.
 
 ```html
 <p id="log"></p>

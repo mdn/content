@@ -11,7 +11,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **`<custom-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary user-defined string used as an {{glossary("identifier")}}. It is case-sensitive, and certain values are forbidden in various contexts to prevent ambiguity.
+The **`<custom-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes an arbitrary user-defined string used as an {{glossary("identifier")}}. It is case-sensitive, and certain values are forbidden in various contexts to prevent ambiguity.
 
 ## Syntax
 
@@ -21,10 +21,27 @@ The syntax of `<custom-ident>` is similar to CSS identifiers (such as property n
 - any decimal digit (`0` to `9`),
 - a hyphen (`-`),
 - an underscore (`_`),
-- an escaped character (preceded by a backslash, `\`),
+- an [escaped character](#escaping_characters) (preceded by a backslash, `\`),
 - a [Unicode](https://en.wikipedia.org/wiki/Unicode) character (in the format of a backslash, `\`, followed by one to six hexadecimal digits, representing its Unicode code point)
 
-Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity). On the other hand, as there are several ways to escape a character, `toto\?` and `toto\3F` are the same identifiers.
+Note that `id1`, `Id1`, `iD1`, and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity).
+
+### Escaping characters
+
+Any Unicode code point can be included as part of a `<custom-ident>` or quoted {{cssxref("string")}} by escaping it.
+
+In CSS, there are several ways to escape a character. Escape sequences start with a backslash (`\`), and continue with:
+
+- One to six hex (`ABCDEF0123456789`) digits. The hex digits can optionally be followed by white space. The hex escape sequence gets replaced by the Unicode code point whose value is given by those digits. The whitespace allows the sequences to be followed by actual hex digits (versus replaced ones).
+- Any Unicode code point that is not a hex digit or a newline character.
+
+Examples:
+
+- "&B" can be written as `\26 B` or `\000026B`.
+- "hi.there" can be written as `hi\.there` or `hi\002Ethere`.
+- "toto?" can be written as `toto\?`, `toto\3F`, or `toto\00003F`.
+
+To include actual white space after an escape sequence, include two white spaces in the escape sequence.
 
 ### Forbidden values
 
@@ -119,7 +136,7 @@ ground-level      A mix of alphanumeric characters and a dash
 -test             A dash followed by alphanumeric characters
 _internal         An underscore followed by alphanumeric characters
 \22 toto          A Unicode character followed by a sequence of alphanumeric characters
-bili\.bob         A correctly escaped period
+scooby\.doo       A correctly escaped period
 ```
 
 ### Invalid identifiers
@@ -127,9 +144,9 @@ bili\.bob         A correctly escaped period
 ```plain example-bad
 34rem             It must not start with a decimal digit.
 -12rad            It must not start with a dash followed by a decimal digit.
-bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
-'bilibob'         This would be a <string>.
-"bilibob"         This would be a <string>.
+scooby.doo        Only alphanumeric characters, _, and - needn't be escaped.
+'scoobyDoo'       This would be a <string>.
+"scoobyDoo"       This would be a <string>.
 ```
 
 ## Specifications

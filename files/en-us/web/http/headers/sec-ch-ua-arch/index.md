@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Arch
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
+The HTTP **`Sec-CH-UA-Arch`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which contains the user-agent's underlying CPU architecture, such as ARM or x86.
 
 This might be used by a server, for example, to select and offer the correct binary format of an executable for a user to download.
 
@@ -23,8 +23,8 @@ This might be used by a server, for example, to select and offer the correct bin
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -42,6 +42,8 @@ Sec-CH-UA-Arch: <arch>
 
 ## Examples
 
+### Using Sec-CH-UA-Arch
+
 A server requests the `Sec-CH-UA-Arch` header by including the {{HTTPHeader("Accept-CH")}} in a response to some request from the client, using the name of the desired header as a token:
 
 ```http
@@ -53,7 +55,7 @@ The client may choose to provide the hint, and add the `Sec-CH-UA-Arch` header t
 For example, on a Windows X86 based computer, the client might add the header as shown:
 
 ```http
-GET /GET /my/page HTTP/1.1
+GET /my/page HTTP/1.1
 Host: example.site
 
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
@@ -76,6 +78,6 @@ Note above that the [low entropy headers](/en-US/docs/Web/HTTP/Client_hints#low_
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

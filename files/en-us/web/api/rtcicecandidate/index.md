@@ -19,7 +19,8 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
   - : Creates an `RTCIceCandidate` object to represent a single ICE candidate, optionally configured based on a configuration object.
 
-    > **Note:** For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
+    > [!NOTE]
+    > For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
 
 ## Instance properties
 
@@ -48,7 +49,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{ReadOnlyInline}}
   - : If `protocol` is `"tcp"`, `tcpType` represents the type of TCP candidate. Otherwise, `tcpType` is `null`.
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
-  - : A string indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
+  - : A string indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value).
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
   - : A string containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.
 
@@ -56,7 +57,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
   - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.
-    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure a candidate.
+    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure a candidate.
 
 ## Examples
 

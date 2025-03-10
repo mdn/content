@@ -12,7 +12,8 @@ The `createBiquadFilter()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("BiquadFilterNode") }}, which represents a second order
 filter configurable as several different common filter types.
 
-> **Note:** The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
+> [!NOTE]
+> The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
 > recommended way to create a {{domxref("BiquadFilterNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 

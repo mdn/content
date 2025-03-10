@@ -10,9 +10,11 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.codecId
 
 The **`codecId`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary is a string that uniquely identifies the object that was inspected to produce the data in the {{domxref("RTCCodecStats")}} for the {{Glossary("RTP")}} stream.
 
+`RTCRemoteOutboundRtpStreamStats` and `RTCCodecStats` objects are correlated by iterating the {{domxref("RTCStatsReport")}} to find the statistics objects where `RTCRemoteOutboundRtpStreamStats.codecId` is equal to {{domxref("RTCCodecStats.id")}}.
+
 ## Value
 
-A string which uniquely identifies the object from which the contents of the stream's {{domxref("RTCCodecStats")}} are derived.
+A string that contains the {{domxref("RTCCodecStats.id","id")}} of the object that was inspected to produce the {{domxref("RTCCodecStats")}} object associated with this RTP stream.
 
 ## Specifications
 

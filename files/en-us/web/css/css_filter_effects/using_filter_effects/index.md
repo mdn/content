@@ -30,18 +30,18 @@ The CSS filter effects module provides 10 [`<filter-function>`](/en-US/docs/Web/
 
 The following table lists the 10 filter functions, along with their value types, the minimum valid value if applicable, the largest value that creates an effect, and the initial value used for [interpolation](/en-US/docs/Glossary/Interpolation).
 
-| Filter function                                             | Parameter type                                                      | Min value | Max effect | Interpolation value  | Default value (no effect)             |
-| ----------------------------------------------------------- | ------------------------------------------------------------------- | --------- | ---------- | -------------------- | ------------------------------------- |
-| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `0`                  | `blur(0)`                             |
-| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
-| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                       | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                          |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
-| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
-| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                        |           |            | `0`                  | `hue-rotate(0deg)`                    |
-| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
-| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref ("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `saturate(100%)`                      |
-| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}}  | `0`       | `100%`     | `0`                  | `sepia(0%)`                           |
+| Filter function                                             | Parameter type                                                     | Min value | Max effect | Interpolation value  | Default value (no effect)             |
+| ----------------------------------------------------------- | ------------------------------------------------------------------ | --------- | ---------- | -------------------- | ------------------------------------- |
+| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `0`                  | `blur(0)`                             |
+| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       |            | `1`                  | `brightness(1)` or `brightness(100%)` |
+| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                      | `0`       |            | `1`                  | `contrast(1)` or `contrast(100%)`     |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                         |           |            | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`     |
+| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `grayscale(0)` or `grayscale(0%)`     |
+| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                       |           |            | `0`                  | `hue-rotate(0deg)`                    |
+| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `invert(0)` or `invert(0%)`           |
+| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `opacity(1)` or `opacity(100%)`       |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `1`                  | `saturate(100%)`                      |
+| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} | `0`       | `100%`     | `0`                  | `sepia(0%)`                           |
 
 The minimum value allowed is included for filter functions that have a minimum value. Including a value less than the minimum value for any filter function invalidates the entire property declaration, not just the offending filter function in the comma-separated list.
 
@@ -82,7 +82,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 300)}}
+{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 550)}}
 
 ### Applying filter effects to other elements
 
@@ -122,7 +122,7 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: rgb(255 255 255 / 10%);
   text-shadow: 2px 2px black;
 }
 ```
@@ -143,14 +143,14 @@ p {
 ```html hidden
 <div
   class="container"
-  style="background-image: url(listen_to_black_women.jpg);">
+  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
 </div>
 ```
 
-{{EmbedLiveSample('Applying_multiple_filters','100%','280')}}
+{{EmbedLiveSample('Applying_multiple_filters','100%','300')}}
 
 ### Applying repeated filters
 
@@ -167,14 +167,12 @@ img {
 }
 ```
 
-```css nolint
+```css
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(210deg 100% 50%)
-    )
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(30deg 100% 50%)
-    );
+  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
+    drop-shadow(2px 2px 0 hsl(120deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
 }
 img + img {
   filter: none;
@@ -222,7 +220,8 @@ The same filters are applied to both the lines of text but in a different order.
 
 No filter effect is applied to the third line to show the original effect as a comparison. So the third line stays as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changes the text in the first two lines to `#252500`.
 
-> **Note:** The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)`, while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
+> [!NOTE]
+> The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)`, while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
 ## Using SVG filters
 
@@ -273,13 +272,21 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <tbody>
     <tr>
       <td>
-        <img class="filter" src="flag.jpg" alt="Pride flag" />
+        <img
+          class="filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" class="svgFilter" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag"
+          class="svgFilter" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>
@@ -291,7 +298,9 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+  <image
+    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    filter="url(#blur)" />
 </svg>
 ```
 
@@ -306,7 +315,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','280')}}
+{{EmbedLiveSample('blur_example','100%','550')}}
 
 ## See also
 

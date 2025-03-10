@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Report.url
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`url`** read-only property of the {{domxref("Report")}}
 interface returns the URL of the document that generated the report.

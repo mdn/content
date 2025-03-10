@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-optimum-value"
+title: ::-webkit-meter-optimum-value
 slug: Web/CSS/::-webkit-meter-optimum-value
 page-type: css-pseudo-element
 status:
@@ -20,10 +20,6 @@ Green is the default color.
   /* ... */
 }
 ```
-
-## Specifications
-
-Not part of any standard.
 
 ## Examples
 
@@ -82,6 +78,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples', '100%', 50) }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

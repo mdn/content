@@ -12,14 +12,29 @@ spec-urls: https://drafts.csswg.org/css-color/#typedef-hue
 
 {{CSSRef}}
 
-The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the hue angle of a color.
+The **`<hue>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents the hue angle of a color.
 It is used in the color functions that accept hue expressed as a single value, specifically [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) functional notations.
+
+## Syntax
+
+A `<hue>` can be either an `<angle>` or a `<number>`.
+
+### Values
+
+- {{CSSXref("&lt;angle&gt;")}}
+  - : An angle expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
+- `<number>`
+  - : A real number, representing degrees of the hue angle.
+
+As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg)`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
+
+## Description
 
 ![An sRGB color wheel](color_wheel.svg)
 
-The color wheel above shows hues at all angles in the [sRGB](https://en.wikipedia.org/wiki/SRGB) color space. In particular, _red_ is at `0deg`, _yellow_ is at `60deg`, _lime_ is at `120deg`, _cyan_ is at `180deg`, _blue_ is at `240deg`, and _magenta_ is at `300deg`.
+The color wheel above shows hues at all angles in the [sRGB](https://en.wikipedia.org/wiki/SRGB) {{glossary("color space")}}. In particular, _red_ is at `0deg`, _yellow_ is at `60deg`, _lime_ is at `120deg`, _cyan_ is at `180deg`, _blue_ is at `240deg`, and _magenta_ is at `300deg`.
 
-> **Note:** The angles corresponding to particular hues depend on the color space. For example, the hue angle of sRGB green is `120deg` in the sRGB color space, but `134.39deg` in the CIELAB color space.
+The angles corresponding to particular hues differ depending on the color space. For example, the hue angle of sRGB green is `120deg` in the sRGB color space, but `134.39deg` in the CIELAB color space.
 
 The following table lists typical colors at various angles in the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces:
 
@@ -106,24 +121,11 @@ The following table lists typical colors at various angles in the sRGB (used by 
   </tbody>
 </table>
 
-## Syntax
-
-A `<hue>` can be either an `<angle>` or a `<number>`.
-
-### Values
-
-- {{CSSXref("&lt;angle&gt;")}}
-  - : An angle expressed in degrees, gradians, radians, or turns using the `deg`, `grad`, `rad`, or `turn`, respectively.
-- `<number>`
-  - : A real number, representing degrees of the hue angle.
-
-As an `<angle>` is periodic, `<hue>` is normalized to the range `[0deg, 360deg)`. It implicitly wraps around such that `480deg` is the same as `120deg`, `-120deg` is the same as `240deg`, `-1turn` is the same as `1turn`, and so on.
-
-### Interpolation
+## Interpolation of `<hue>` values
 
 `<hue>` values are interpolated as {{CSSXref("&lt;angle&gt;")}} values, and the default interpolation algorithm is [`shorter`](/en-US/docs/Web/CSS/hue-interpolation-method#values). In some color-related CSS functions, this can be overridden by the {{CSSXref("&lt;hue-interpolation-method&gt;")}} component.
 
-### Formal syntax
+## Formal syntax
 
 {{csssyntax}}
 
@@ -155,7 +157,7 @@ p {
 }
 span {
   font-family: monospace;
-  background: rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 10%);
   padding: 3px;
 }
 #hue-slider {

@@ -6,45 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.form
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLSelectElement.form`** read-only property returns a
-{{domxref("HTMLFormElement")}} representing the form that this element is associated
-with. If the element is not associated with a {{HTMLElement("form")}} element, then
-it returns `null`.
+The **`form`** read-only property of the {{domxref("HTMLSelectElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this {{htmlelement("select")}}, or `null` if this select is not owned by any form.
 
 ## Value
 
-A {{domxref("HTMLFormElement")}}.
-
-## Examples
-
-```html
-<form id="pet-form">
-  <label for="pet-select">Choose a pet</label>
-  <select name="pets" id="pet-select">
-    <option value="dog">Dog</option>
-    <option value="cat">Cat</option>
-    <option value="parrot">Parrot</option>
-  </select>
-
-  <button type="submit">Submit</button>
-</form>
-
-<label for="lunch-select">Choose your lunch</label>
-<select name="lunch" id="lunch-select">
-  <option value="salad">Salad</option>
-  <option value="sandwich">Sandwich</option>
-</select>
-
-<script>
-  const petSelect = document.getElementById("pet-select");
-  const petForm = petSelect.form; // <form id="pet-form">
-
-  const lunchSelect = document.getElementById("lunch-select");
-  const lunchForm = lunchSelect.form; // null
-</script>
-```
+An {{domxref("HTMLFormElement")}} or `null`.
 
 ## Specifications
 
@@ -53,3 +21,11 @@ A {{domxref("HTMLFormElement")}}.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLSelectElement")}}
+- {{domxref("HTMLFormElement")}}
+- {{HTMLElement("select")}}
+- HTML [`form`](/en-US/docs/Web/HTML/Element/select#form) attribute
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

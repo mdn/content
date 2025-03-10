@@ -12,9 +12,8 @@ Unless intentionally using a [web worker](/en-US/docs/Web/API/Web_Workers_API/Us
 
 ## See also
 
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
 - [Web worker API](/en-US/docs/Web/API/Web_Workers_API)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Thread")}}

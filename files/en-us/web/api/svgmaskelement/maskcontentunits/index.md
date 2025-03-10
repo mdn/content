@@ -10,7 +10,8 @@ browser-compat: api.SVGMaskElement.maskContentUnits
 
 The read-only **`maskContentUnits`** property of the {{domxref("SVGMaskElement")}} interface reflects the {{SVGAttr("maskContentUnits")}} attribute. It indicates which coordinate system to use for the contents of the {{SVGElement("mask")}} element.
 
-> **Note:** Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
+> [!NOTE]
+> Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
 
 ## Value
 

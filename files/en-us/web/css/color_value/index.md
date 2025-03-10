@@ -7,10 +7,11 @@ browser-compat: css.types.color
 
 {{CSSRef}}
 
-The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
+The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
 
-> **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
+> [!NOTE]
+> Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
 ## Syntax
 
@@ -29,7 +30,7 @@ rgb(255 0 153 / 80%)
 
 /* HSL (Hue, Saturation, Lightness) */
 hsl(150 30% 60%)
-hsl(150 30% 60% / 0.8)
+hsl(150 30% 60% / 80%)
 
 /* HWB (Hue, Whiteness, Blackness) */
 hwb(12 50% 0%)
@@ -51,6 +52,14 @@ oklab(59% 0.1 0.1 / 0.5)
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
+/* Relative CSS colors */
+/* HSL hue change */
+hsl(from red 240deg s l)
+/* HWB alpha channel change */
+hwb(from green h w b / 0.5)
+/* LCH lightness change */
+lch(from blue calc(l + 20) c h)
+
 /* light-dark */
 light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
@@ -60,15 +69,16 @@ A `<color>` value can be specified using one of the methods listed below:
 
 - By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
-- By parameters in a color space using functional notations:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
-  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
+- By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
+  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
+  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+- By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
-- By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
+- By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
-### currentcolor keyword
+### `currentcolor` keyword
 
 The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
@@ -88,7 +98,7 @@ If `currentcolor` is used as the value of the `color` property, it instead takes
 
 Each component of any CSS color functions - except for those using the legacy comma-separated syntax - can be specified as the keyword `none` to be a missing component.
 
-Explicitly specifying missing components is useful in [color interpolation](#interpolation_with_missing_components) for cases where you would like to interpolate some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
+Explicitly specifying [missing components in color interpolation](#interpolation_with_missing_components) is useful for cases where you would like to {{glossary("interpolation", "interpolate")}} some color components but not others. For all other purposes, a missing component will effectively have a zero value in an appropriate unit: `0`, `0%`, or `0deg`. For example, the following colors are equivalent when used outside of interpolation:
 
 ```css
 /* These are equivalent */
@@ -104,7 +114,7 @@ background-color: hsl(0deg 100% 50%);
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
-When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
+When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
 ### Interpolation with missing components
 
@@ -118,7 +128,8 @@ color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
 color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
-> **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
+> [!NOTE]
+> If a component is missing from both colors, this component will be missing after the interpolation.
 
 #### Interpolating colors from different spaces: analogous components
 
@@ -147,7 +158,7 @@ lch(80% 30 none)
 color(display-p3 0.7 0.5 none)
 ```
 
-the preprocessing procedure is:
+The preprocessing procedure is:
 
 1. Replace the missing components in both colors with a zero value:
 
@@ -177,9 +188,9 @@ the preprocessing procedure is:
    oklch(63.612% 0.1522 78.748)
    ```
 
-## Accessibility considerations
+## Accessibility
 
-Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
+Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 
 ## Formal syntax
 
@@ -187,9 +198,9 @@ Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/We
 
 ## Examples
 
-### Color value tester
+### Exploring color values
 
-In this example we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
+In this example, we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
 
 #### HTML
 
@@ -234,9 +245,9 @@ inputElem.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("color_value_tester", "100%", 300)}}
+{{EmbedLiveSample("exploring_color_values", "100%", 300)}}
 
-### Fully saturated sRGB colors
+### Generating fully saturated sRGB colors
 
 This example shows fully saturated sRGB colors in the sRGB color space.
 
@@ -312,9 +323,9 @@ div:nth-child(12) {
 
 #### Result
 
-{{EmbedLiveSample("fully_saturated_srgb_colors", "100%", 200)}}
+{{EmbedLiveSample("generating_fully_saturated_sRGB_colors", "100%", 200)}}
 
-### Reds of different shades
+### Creating different shades of red
 
 This example shows reds of different shades in the sRGB color space.
 
@@ -368,9 +379,9 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_shades", "100%", 150)}}
+{{EmbedLiveSample("creating_different_shades_of_red", "100%", 150)}}
 
-### Reds of different saturations
+### Creating reds of different saturation
 
 This example shows reds of different saturations in the sRGB color space.
 
@@ -422,7 +433,7 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_saturations", "100%", 150)}}
+{{EmbedLiveSample("creating_reds_of_different_saturation", "100%", 150)}}
 
 ## Specifications
 
@@ -438,4 +449,5 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

@@ -7,14 +7,47 @@ browser-compat: css.types.basic-shape.polygon
 
 {{CSSRef}}
 
-The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). It's used to draw a [polygon](https://en.wikipedia.org/wiki/Polygon) by providing one or more pairs of coordinates, each of which represents a vertex of the shape.
+The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types). It's used to draw a [polygon](https://en.wikipedia.org/wiki/Polygon) by providing one or more pairs of coordinates, each of which represents a vertex of the shape.
 
-{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+{{InteractiveExample("CSS Demo: polygon()")}}
+
+```css interactive-example-choice
+clip-path: polygon(
+  0% 20%,
+  60% 20%,
+  60% 0%,
+  100% 50%,
+  60% 100%,
+  60% 80%,
+  0% 80%
+);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
 ```css-nolint
-
 /* Specified as coordinate list */
 /* polygon(<length-percentage> <length-percentage>, ... )*/
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
@@ -43,11 +76,61 @@ Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Element/polygon) element has sep
 
 Returns a {{cssxref("basic-shape")}} value.
 
+## Description
+
+You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points, which creates a triangle, but there's no upper limit.
+
+The `polygon()` function accepts comma-separated coordinates or points as its values. Each point is represented by a pair of space-separated `x` and `y` values, which indicate the points' coordinates within the polygon.
+
+<code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
+
+Given the above, mapping the coordinates of the container can be visualized as:
+
+| axis | point 1 | point 2 | point 3 | point 4 | point n       |
+| ---- | ------- | ------- | ------- | ------- | ------------- |
+| x    | 0%      | 100%    | 100%    | 0%      | x<sub>n</sub> |
+| y    | 0%      | 0%      | 100%    | 100%    | y<sub>n</sub> |
+
+Applying those coordinates to the CSS {{cssxref("clip-path")}} property using the `polygon()` function:
+
+```css
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+```
+
+This would create a rectangle shape the size of its parent content by specifying the coordinates of its four corners: top-left (`0% 0%`), top-right (`100% 0%`), bottom-right (`100% 100%`), and bottom-left (`0% 100%`).
+
 ## Formal syntax
 
 {{csssyntax}}
 
 ## Examples
+
+### Create a triangle
+
+In this example, a triangle is formed by defining the coordinates of its three points.
+
+#### HTML
+
+```html
+<div class="triangle"></div>
+```
+
+#### CSS
+
+```css
+.triangle {
+  width: 400px;
+  height: 400px;
+  background-color: magenta;
+  clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Create a triangle", '100%', 400)}}
+
+The coordinates for the triangle are the top-right corner (`100% 0%`), the center point (`50% 50%`), and the bottom-right corner (`100% 100%`) of the container.
 
 ### Setting a polygon for shape-outside
 

@@ -55,11 +55,11 @@ One or more of the keyword values listed below, separated by commas.
   - : The position is relative to the stroke bounding box.
 - `view-box`
   - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
-- `content` {{non-standard_inline}}
+- `content`
   - : Same as `content-box`.
-- `padding` {{non-standard_inline}}
+- `padding`
   - : Same as `padding-box`.
-- `border` {{non-standard_inline}}
+- `border`
   - : Same as `border-box`.
 
 ## Formal definition
@@ -74,9 +74,27 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Setting mask origin to border-box
 
-Try some of the other possible values by updating the CSS in the box below.
+Click "Play" in the live sample to open the code in the MDN Playground and try some of the other possible `mask-origin` values.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}
+```html live-sample___mask-origin-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-origin-example
+.masked {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid blue;
+  background-color: #8cffa0;
+  padding: 10px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-origin: border-box;
+}
+```
+
+{{EmbedLiveSample("mask-origin-example", "", "200px")}}
 
 ## Specifications
 

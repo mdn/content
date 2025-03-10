@@ -6,29 +6,27 @@ page-type: web-api-instance-property
 browser-compat: api.IDBCursor.primaryKey
 ---
 
-{{APIRef("IDBCursor")}}
+{{APIRef("IDBCursor")}} {{AvailableInWorkers}}
 
 The **`primaryKey`** read-only property of the
 {{domxref("IDBCursor")}} interface returns the cursor's current effective key. If the
 cursor is currently being iterated or has iterated outside its range, this is set to
 undefined. The cursor's primary key can be any data type.
 
-{{AvailableInWorkers}}
-
 ## Value
 
 A value of any data type.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is advancing or has finished.
 
 ## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
-log the primary key of the cursor to the console, something like this (its the album
-title in each case, which is our primarykey):
-
-```plain
-Hemispheres
-```
+log the primary key of the cursor to the console.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,

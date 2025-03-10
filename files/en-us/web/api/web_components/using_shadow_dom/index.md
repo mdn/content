@@ -46,7 +46,7 @@ This fragment produces the following DOM structure (excluding whitespace-only te
             - P
                 - #text: Here we will add a link to the
                 - A href="https://www.mozilla.org/"
-                - #text: Mozilla homepage
+                    - #text: Mozilla homepage
 ```
 
 _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
@@ -64,7 +64,13 @@ You can affect the nodes in the shadow DOM in exactly the same way as non-shadow
 
 Before shadow DOM was made available to web developers, browsers were already using it to encapsulate the inner structure of an element. Think for example of a {{htmlelement("video")}} element, with the default browser controls exposed. All you see in the DOM is the `<video>` element, but it contains a series of buttons and other controls inside its shadow DOM. The shadow DOM spec enables you to manipulate the shadow DOM of your own custom elements.
 
+### Attribute inheritance
+
+The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attributes from their shadow host.
+
 ## Creating a shadow DOM
+
+### Imperatively with JavaScript
 
 The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
 
@@ -85,7 +91,35 @@ shadow.appendChild(span);
 
 The result looks like this:
 
-{{EmbedLiveSample("Creating a shadow DOM")}}
+{{EmbedLiveSample("Imperatively with JavaScript")}}
+
+### Declaratively with HTML
+
+Creating a shadow DOM via JavaScript API might be a good option for client-side rendered applications. For other applications, a server-side rendered UI might have better performance and, therefore, a better user experience. In such cases, you can use the {{htmlelement("template")}} element to declaratively define the shadow DOM. The key to this behavior is the {{glossary("enumerated")}} `shadowrootmode` attribute, which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method.
+
+```html
+<div id="host">
+  <template shadowrootmode="open">
+    <span>I'm in the shadow DOM</span>
+  </template>
+</div>
+```
+
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
+
+> [!NOTE]
+> By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
+
+After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this (there's no `<template>` element in the DOM tree):
+
+```plain
+- DIV id="host"
+  - #shadow-root
+    - SPAN
+      - #text: I'm in the shadow DOM
+```
+
+Note that in addition to the `shadowrootmode`, you can use `<template>` attributes such as `shadowrootclonable` and `shadowrootdelegatesfocus` to specify other properties of the generated shadow root.
 
 ## Encapsulation from JavaScript
 

@@ -15,13 +15,13 @@ The HTML specification defines the following set of standard metadata names:
 
 - `application-name`: the name of the application running in the web page.
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Browsers may use this to identify the application. It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status.
   > - Simple web pages shouldn't define an application-name.
 
 - `author`: the name of the document's author.
-- `description`: a short and accurate summary of the content of the page. Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
+- `description`: a short and accurate summary of the content of the page. Search engines like [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) may use this field to control the appearance of the webpage in the search result.
 - `generator`: the identifier of the software that generated the page.
 - `keywords`: words relevant to the page's content separated by commas.
 - `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:
@@ -90,13 +90,13 @@ The HTML specification defines the following set of standard metadata names:
     </tbody>
   </table>
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Dynamically inserting `<meta name="referrer">` (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behavior unpredictable.
   > - When several conflicting policies are defined, the `no-referrer` policy is applied.
 
 - [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color): indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. The `content` attribute contains a valid CSS {{cssxref("&lt;color&gt;")}}. The `media` attribute with a valid media query list can be included to set the media the theme color metadata applies to.
-- `color-scheme`: specifies one or more color schemes with which the document is compatible.
+- <a id="color-scheme" href="#color-scheme">`color-scheme`</a>: specifies one or more color schemes with which the document is compatible.
 
   The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. The primary use for `<meta name="color-scheme">` is to indicate compatibility with—and order of preference for—light and dark color modes.
 
@@ -104,7 +104,7 @@ The HTML specification defines the following set of standard metadata names:
 
   - `normal`
     - : The document is unaware of color schemes and should be rendered using the default color palette.
-  - \[`light` | `dark`]+
+  - `light`, `dark`, `light dark`, `dark light`
     - : One or more color schemes supported by the document. Specifying the same color scheme more than once has the same effect as specifying it only once. Indicating multiple color schemes indicates that the first scheme is preferred by the document, but that the second specified scheme is acceptable if the user prefers it.
   - `only light`
     - : Indicates that the document _only_ supports light mode, with a light background and dark foreground colors. By specification, `only dark` _is not valid_, because forcing a document to render in dark mode when it isn't truly compatible with it can result in unreadable content; all major browsers default to light mode if not otherwise configured.
@@ -208,14 +208,16 @@ The CSS Device Adaptation specification defines the following metadata name:
     </tbody>
   </table>
 
-  > **Warning:**
+  > [!WARNING]
   >
   > Disabling zooming capabilities by setting `user-scalable` to a value of `no` prevents people experiencing low vision conditions from being able to read and understand page content.
   >
-  > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+  > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
   > - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### Other metadata names
+
+#### Names defined in the WHATWG MetaExtensions wiki
 
 The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions) contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:
 
@@ -224,28 +226,31 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 - `publisher`: the name of the document's publisher.
 - `robots`: the behavior that cooperative crawlers, or "robots", should use with the page. It is a comma-separated list of the values below:
 
-  | Value          | Description                                                                 | Used by                                                                                                                                                                                                                                                |
-  | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-  | `index`        | Allows the robot to index the page (default).                               | All                                                                                                                                                                                                                                                    |
-  | `noindex`      | Requests the robot to not index the page.                                   | All                                                                                                                                                                                                                                                    |
-  | `follow`       | Allows the robot to follow the links on the page (default).                 | All                                                                                                                                                                                                                                                    |
-  | `nofollow`     | Requests the robot to not follow the links on the page.                     | All                                                                                                                                                                                                                                                    |
-  | `all`          | Equivalent to `index, follow`                                               | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                          |
-  | `none`         | Equivalent to `noindex, nofollow`                                           | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                          |
-  | `noarchive`    | Requests the search engine not to cache the page content.                   | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
-  | `nosnippet`    | Prevents displaying any description of the page in search engine results.   | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
-  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
-  | `nocache`      | Synonym of `noarchive`.                                                     | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
+  | Value          | Description                                                                 | Used by                                                                                                                                                                                                                                                  |
+  | -------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `index`        | Allows the robot to index the page (default).                               | All                                                                                                                                                                                                                                                      |
+  | `noindex`      | Requests the robot to not index the page.                                   | All                                                                                                                                                                                                                                                      |
+  | `follow`       | Allows the robot to follow the links on the page (default).                 | All                                                                                                                                                                                                                                                      |
+  | `nofollow`     | Requests the robot to not follow the links on the page.                     | All                                                                                                                                                                                                                                                      |
+  | `all`          | Equivalent to `index, follow`                                               | [Google](https://developers.google.com/search/docs/crawling-indexing/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                            |
+  | `none`         | Equivalent to `noindex, nofollow`                                           | [Google](https://developers.google.com/search/docs/crawling-indexing/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                            |
+  | `noarchive`    | Requests the search engine not to cache the page content.                   | [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
+  | `nosnippet`    | Prevents displaying any description of the page in search engine results.   | [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
+  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag)                                                                                                                                                                    |
+  | `nocache`      | Synonym of `noarchive`.                                                     | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                            |
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
-  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, use a _{{Glossary("robots.txt")}}_ file.
+  > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
+  > - The `<meta name="robots">` element and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
-  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
 
-<!-- ## Technical summary -->
+#### Other names
+
+- `application-title`: Used to customize an app's title bar for web applications installed as standalone apps on supporting desktop operating systems. While the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the application when it is running as a standalone installed app.
 
 ## Specifications
 
@@ -258,4 +263,4 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## See also
 
 - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- [Metadata: the `<meta>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) in [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

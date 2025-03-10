@@ -9,7 +9,7 @@ browser-compat: api.HTMLFrameSetElement
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.
+The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLElement("frameset")}} elements.
 
 {{InheritanceDiagram}}
 
@@ -32,7 +32,8 @@ The {{domxref("HTMLElement")}} events are inherited.
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `HTMLFrameSetElement`.
 
-> **Note:** Using `addEventListener()` on `HTMLFrameSetElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+> [!NOTE]
+> Using `addEventListener()` on `HTMLFrameSetElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
 
 - {{domxref("window.afterprint_event", "HTMLFrameSetElement.onafterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.
@@ -82,4 +83,4 @@ The following {{domxref("Window")}} `onXYZ` event handler properties are also av
 ## See also
 
 - HTML element implementing this interface: {{HTMLElement("frameset")}}
-- The equivalent of this element outside of frames: {{domxref("HTMLFrameSetElement")}}.
+- The equivalent of this element outside of frames: `HTMLFrameSetElement`.

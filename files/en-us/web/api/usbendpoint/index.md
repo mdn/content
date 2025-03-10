@@ -7,7 +7,7 @@ status:
 browser-compat: api.USBEndpoint
 ---
 
-{{APIRef("WebUSB API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about an endpoint provided by the USB device. An endpoint represents a unidirectional data stream into or out of a device.
 

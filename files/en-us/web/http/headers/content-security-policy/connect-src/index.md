@@ -9,14 +9,14 @@ browser-compat: http.headers.Content-Security-Policy.connect-src
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be
-loaded using script interfaces. The APIs that are restricted are:
+loaded using script interfaces. The following APIs are controlled by this directive:
 
-- {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping),
-- {{domxref("fetch()")}},
-- {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}},
-- {{domxref("EventSource")}}, and
-- {{domxref("Navigator.sendBeacon()")}}.
+- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute in {{htmlelement("a")}} elements
+- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}
+- {{domxref("Navigator.sendBeacon()")}}
 
 > **Note:** `connect-src 'self'` does not resolve to websocket
 > schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
@@ -43,18 +43,22 @@ loaded using script interfaces. The APIs that are restricted are:
 
 ## Syntax
 
-One or more sources can be allowed for the connect-src policy:
-
 ```http
-Content-Security-Policy: connect-src <source>;
-Content-Security-Policy: connect-src <source> <source>;
+Content-Security-Policy: connect-src 'none';
+Content-Security-Policy: connect-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
@@ -100,7 +104,7 @@ The following connections are blocked and won't load:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping)
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

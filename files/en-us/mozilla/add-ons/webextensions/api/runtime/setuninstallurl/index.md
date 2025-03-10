@@ -5,9 +5,9 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.setUninstallURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. The URL can be up to 1023 characters. This limit used to be 255, see [Browser compatibility](browser_compatibility) for more details.
+Sets the URL to be visited when the extension is uninstalled. This can be used to clean up server-side data, do analytics, or implement surveys. The URL can be up to 1023 characters. This limit used to be 255, see [Browser compatibility](#browser_compatibility) for more details.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -49,7 +49,8 @@ settingUrl.then(onSetURL, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

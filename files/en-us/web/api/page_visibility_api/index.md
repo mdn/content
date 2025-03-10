@@ -13,7 +13,7 @@ This is especially useful for saving resources and improving performance by lett
 
 ## Concepts and usage
 
-When the user minimizes the window or switches to another tab, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
+When the user minimizes the window, switches to another tab, or the document is entirely obscured by another window, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
 
 Visibility states of an {{HTMLElement("iframe")}} are the same as the parent document. Hiding an `<iframe>` using CSS properties (such as {{cssxref("display", "display: none;")}}) doesn't trigger visibility events or change the state of the document contained within the frame.
 
@@ -23,23 +23,23 @@ Let's consider a few use cases for the Page Visibility API.
 
 - A site has an image carousel that shouldn't advance to the next slide unless the user is viewing the page
 - An application showing a dashboard of information doesn't want to poll the server for updates when the page isn't visible
-- A page wants to detect when it is being prerendered so it can keep accurate count of page views
 - A site wants to switch off sounds when a device is in standby mode (user pushes power button to turn screen off)
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
-> **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
+> [!NOTE]
+> While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
 ### Policies in place to aid background page performance
 
 Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for more details.
+- Timers such as {{domxref("Window.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
 - Browsers implement budget-based background timeout throttling. This operates in a similar way across modern browsers, with the details being as follows:
 
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
+  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
   - Timer tasks are only permitted when the budget is non-negative.
   - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
   - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
@@ -78,7 +78,15 @@ The Page Visibility API adds the following events to the {{domxref("Document")}}
 
 ### Pausing audio on page hide
 
-This example pauses audio when the user switches to a different tab, and plays when they switch back.
+This example pauses playing audio when the page is hidden and resumes playing when the page becomes visible again.
+The `<audio>` element controls allow the user to toggle between playing and paused audio.
+The boolean `playingOnHide` is used to prevent audio from playing if the page changes to a `visible` state, but the media wasn't playing on page hide.
+
+```css hidden
+audio {
+  width: 100%;
+}
+```
 
 #### HTML
 
@@ -93,23 +101,24 @@ This example pauses audio when the user switches to a different tab, and plays w
 ```js
 const audio = document.querySelector("audio");
 
-// Handle page visibility change:
-// - If the page is hidden, pause the audio
-// - If the page is shown, play the audio
+let playingOnHide = false;
+
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    playingOnHide = !audio.paused;
     audio.pause();
   } else {
-    audio.play();
+    // Page became visible! Resume playing if audio was "playing on hide"
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
-
-Try playing the audio, then switching to a different tab and back again.
+{{EmbedLiveSample("Pausing audio on page hide", "", 50)}}
 
 ## Specifications
 
@@ -118,3 +127,9 @@ Try playing the audio, then switching to a different tab and back again.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
+- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

@@ -17,7 +17,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Performance
 
@@ -40,43 +40,57 @@ The `Set` object provides some methods that allow you to compose sets like you w
     <tr>
       <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
       <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math>
+      </td>
       <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="A Venn diagram where two circles overlap. The difference of A and B is the part of A that is not overlapping B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
       <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math>
+      </td>
       <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
       <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math></td>
+      <td>
+        <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+      </td>
       <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/union", "A.union(B)")}}</td>
       <td><code>Set</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
       <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
+      </td>
       <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
       <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math></td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diragram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
       <td><code>Boolean</code></td>
-      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
+      </td>
       <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
   </tbody>
@@ -86,7 +100,7 @@ To make them more generalizable, these methods don't just accept `Set` objects, 
 
 ### Set-like objects
 
-All [set methods](#set_methods) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
 
 - A {{jsxref("Set/size", "size")}} property that contains a number.
 - A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.
@@ -104,7 +118,8 @@ const b = new Map([
 console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
-> **Note:** The set-like protocol invokes the `keys()` method instead of [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
+> [!NOTE]
+> The set-like protocol invokes the `keys()` method instead of [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
 
 [Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are not set-like because they don't have a `has()` method or the `size` property, and their `keys()` method produces indices instead of elements. {{jsxref("WeakSet")}} objects are also not set-like because they don't have a `keys()` method.
 
@@ -128,7 +143,7 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`@@iterator`](#set.prototypeiterator).
+- Read-only `Set`-like objects have the property [`size`](#set.prototype.size), and the methods: [`entries()`](#set.prototype.entries), [`forEach()`](#set.prototype.foreach), [`has()`](#set.prototype.has), [`keys()`](#set.prototype.keys), [`values()`](#set.prototype.values), and [`[Symbol.iterator]()`](#set.prototypesymbol.iterator).
 - Writeable `Set`-like objects additionally have the methods: [`clear()`](#set.prototype.clear), [`delete()`](#set.prototype.delete), and [`add()`](#set.prototype.add).
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
@@ -151,7 +166,7 @@ The following are examples of writable `Set`-like browser objects:
 
 ## Static properties
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
+- [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Instance properties
@@ -162,8 +177,8 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : The constructor function that created the instance object. For `Set` instances, the initial value is the {{jsxref("Set/Set", "Set")}} constructor.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
-- `Set.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Set.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -173,7 +188,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.prototype.difference()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.difference()")}}
   - : Takes a set and returns a new set containing elements in this set but not in the given set.
 - {{jsxref("Set.prototype.entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order. This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
@@ -181,23 +196,23 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 - {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- {{jsxref("Set.prototype.intersection()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.intersection()")}}
   - : Takes a set and returns a new set containing elements in both this set and the given set.
-- {{jsxref("Set.prototype.isDisjointFrom()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isDisjointFrom()")}}
   - : Takes a set and returns a boolean indicating if this set has no elements in common with the given set.
-- {{jsxref("Set.prototype.isSubsetOf()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isSubsetOf()")}}
   - : Takes a set and returns a boolean indicating if all elements of this set are in the given set.
-- {{jsxref("Set.prototype.isSupersetOf()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.isSupersetOf()")}}
   - : Takes a set and returns a boolean indicating if all elements of the given set are in this set.
 - {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
-- {{jsxref("Set.prototype.symmetricDifference()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.symmetricDifference()")}}
   - : Takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
-- {{jsxref("Set.prototype.union()")}} {{experimental_inline}}
+- {{jsxref("Set.prototype.union()")}}
   - : Takes a set and returns a new set containing elements which are in either or both of this set and the given set.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 
 ## Examples
@@ -404,6 +419,7 @@ console.assert(set.size === array.length);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

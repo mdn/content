@@ -11,7 +11,18 @@ The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {
 
 The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Element/source#srcset), [`media`](/en-US/docs/Web/HTML/Element/source#media), and [`type`](/en-US/docs/Web/HTML/Element/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
@@ -25,60 +36,12 @@ Common use cases for `<picture>`:
 - **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
-  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > [!NOTE]
+  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, phrasing content, embedded content
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Zero or more {{HTMLElement("source")}} elements, followed by one
-        {{HTMLElement("img")}} element, optionally intermixed with
-        script-supporting elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>Any element that allows embedded content.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLPictureElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -88,7 +51,8 @@ This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attri
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
-> **Note:** Use these properties on the child `<img>` element, **not** the `<picture>` element.
+> [!NOTE]
+> Use these properties on the child `<img>` element, **not** the `<picture>` element.
 
 ## Examples
 
@@ -148,11 +112,11 @@ The `sizes` attribute is not mandatory when using srcset, but it is recommended 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
 Please note that sizes will have its effect only if width dimension descriptors are provided with srcset instead of pixel ratio values (200w instead of 2x for example).
-For more information on using `srcset`, see the [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) documentation.
+For more information on using `srcset`, see the [Responsive images](/en-US/docs/Web/HTML/Responsive_images) documentation.
 
 ### The type attribute
 
-The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
+The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
 
 ```html
 <picture>
@@ -161,6 +125,57 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
   <img src="photo.jpg" alt="photo" />
 </picture>
 ```
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, phrasing content, embedded content
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Zero or more {{HTMLElement("source")}} elements, followed by one
+        {{HTMLElement("img")}} element, optionally intermixed with
+        script-supporting elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>Any element that allows embedded content.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLPictureElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
@@ -175,4 +190,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
 - {{HTMLElement("img")}} element
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

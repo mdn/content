@@ -6,16 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
 
-{{HTTPSidebar}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`effectiveDirective`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a string
-representing the directive whose enforcement uncovered the violation.
+The **`effectiveDirective`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) directive that was violated.
+
+This supersedes {{domxref("SecurityPolicyViolationEvent.violatedDirective")}}, its historical alias.
 
 ## Value
 
-A string representing the directive whose enforcement uncovered the
-violation.
+A string representing the particular [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives) that was violated.
 
 ## Examples
 
@@ -35,4 +34,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.effectiveDirective")}}

@@ -55,8 +55,8 @@ playback to begin:
 - Listen for the {{domxref("HTMLMediaElement.canplay_event", "canplay")}} event. It
   is sent to the `<audio>` element when there's enough audio
   available to begin playback, although interruptions may occur.
-- Listen for the {{domxref("HTMLMediaElement.canplaythrough_event",
-  "canplaythrough")}} event. It is sent when it's estimated that the audio should be
+- Listen for the {{domxref("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} event.
+  It is sent when it's estimated that the audio should be
   able to play to the end without interruption.
 
 The event-based approach is best:

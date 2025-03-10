@@ -14,7 +14,8 @@ The `getAnimations()` method of the {{domxref("Element")}} interface
 in future. It can optionally return {{domxref("Animation")}} objects for descendant
 elements too.
 
-> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
+> [!NOTE]
+> This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 

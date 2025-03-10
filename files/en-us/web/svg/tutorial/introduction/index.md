@@ -12,11 +12,11 @@ page-type: guide
 
 ![Mozilla dino logo](dino.svg)
 
-SVG came about in 1999 after several competing formats had been submitted to the [W3C](https://www.w3.org) and failed to be fully ratified. SVG is supported by all major [browsers](https://caniuse.com/#search=svg). A downside is loading SVG can be slow. SVG does offer benefits, some of which include having a [DOM interface](/en-US/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
+SVG came about in 1999 after several competing formats had been submitted to the [W3C](https://www.w3.org/) and failed to be fully ratified. SVG is supported by all major [browsers](https://caniuse.com/#search=svg). A downside is loading SVG can be slow. SVG does offer benefits, some of which include having a [DOM interface](/en-US/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
 
 ## Basic ingredients
 
-[HTML](/en-US/docs/Web/HTML) provides elements for defining headers, paragraphs, tables, and so on. In much the same way, SVG provides elements for circles, rectangles, and simple and complex curves. A simple SVG document consists of nothing more than the {{ SVGElement('svg') }} root element and several basic shapes that build a graphic together. In addition, there is the {{ SVGElement('g') }} element, which is used to group several basic shapes together.
+[HTML](/en-US/docs/Web/HTML) provides elements for defining headers, paragraphs, tables, and so on. In much the same way, SVG provides elements for circles, rectangles, and simple and complex curves. A basic SVG document consists of nothing more than the {{ SVGElement('svg') }} root element and several basic shapes that build a graphic together. In addition, there is the {{ SVGElement('g') }} element, which is used to group several basic shapes together.
 
 Starting from this basic structure, the SVG image can become arbitrarily complex. SVG supports gradients, rotations, filter effects, animations, interactivity with JavaScript, and so on. But all these extra features of the language rely on this relatively small set of elements to define the graphics area.
 
@@ -31,7 +31,7 @@ Before starting you should have a basic understanding of XML or another markup l
 - SVG elements and attributes should all be entered in the case shown here since XML is case-sensitive (unlike HTML).
 - Attribute values in SVG must be placed inside quotes, even if they are numbers.
 
-SVG is a huge specification. This tutorial attempts to cover the basics. Once you are familiar, you should be able to use the [Element Reference](/en-US/docs/Web/SVG/Element) and the [Interface Reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces) to find out anything else you need to know.
+SVG is a huge specification. This tutorial attempts to cover the basics. Once you are familiar, you should be able to use the [Element Reference](/en-US/docs/Web/SVG/Element) and the [Interface Reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom) to find out anything else you need to know.
 
 ## Flavors of SVG
 

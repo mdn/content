@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment), a fallback alignment is specified in order to deal with cases where the requested alignment cannot be fulfilled. For example, if you specify `justify-content: space-between` there must be more than one [alignment subject](/en-US/docs/Glossary/Alignment_Subject). If there is not, the fallback alignment is used. This is specified per alignment method, as detailed below.
+In [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment), a fallback alignment is specified in order to deal with cases where the requested alignment cannot be fulfilled. For example, if you specify `justify-content: space-between` there must be more than one {{Glossary("alignment subject")}}. If there is not, the fallback alignment is used. This is specified per alignment method, as detailed below.
 
 - First baseline
   - : `start`

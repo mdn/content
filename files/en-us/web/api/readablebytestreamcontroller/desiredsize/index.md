@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableByteStreamController.desiredSize
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`desiredSize`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
 

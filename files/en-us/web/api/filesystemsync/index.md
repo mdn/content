@@ -10,10 +10,11 @@ browser-compat: api.FileSystemSync
 
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync` object represents a file system. It has two properties.
+In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API), a `FileSystemSync` object represents a file system. It has two properties.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
-> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File System API](/en-US/docs/Web/API/File_System_API) instead.
 
 ## Basic concepts
 
@@ -37,4 +38,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

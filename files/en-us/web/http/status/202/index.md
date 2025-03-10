@@ -7,20 +7,49 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`202 Accepted`**
-response status code indicates that the request has been accepted for processing, but
-the processing has not been completed; in fact, processing may not have started yet. The
-request might or might not eventually be acted upon, as it might be disallowed when
-processing actually takes place.
+The HTTP **`202 Accepted`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that a request has been accepted for processing, but processing has not been completed or may not have started.
+The actual processing of the request is not guaranteed; a task or action may fail or be disallowed when a server tries to process it.
 
-202 is non-committal, meaning that there is no way for the HTTP to later send an
-asynchronous response indicating the outcome of processing the request. It is intended
-for cases where another process or server handles the request, or for batch processing.
+A `202` response is non-committal, meaning there is no way to later send an asynchronous HTTP response to indicate the outcome of the processing.
+This response code is typically used when the request is handled by another process or server, or when requests are processed in batches.
 
 ## Status
 
 ```http
 202 Accepted
+```
+
+## Examples
+
+### Begin automated task
+
+In the following example, we want to kick off an automation process to email dog owners about a pickup task:
+
+```http
+POST /tasks HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "task": "emailDogOwners",
+  "template": "pickup"
+}
+```
+
+The response indicates that the request to start a task was accepted for processing.
+A URL is sent in the response body so the client can track changes to the status of the task:
+
+```http
+HTTP/1.1 202 Accepted
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+Content-Type: application/json
+
+{
+  "message": "Request accepted. Starting to process task.",
+  "taskId": "123",
+  "monitorUrl": "http://example.com/tasks/123/status"
+}
 ```
 
 ## Specifications
@@ -30,3 +59,5 @@ for cases where another process or server handles the request, or for batch proc
 ## See also
 
 - {{HTTPHeader("Accept")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

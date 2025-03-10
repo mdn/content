@@ -65,7 +65,7 @@ The CSS for the container element specifies the type of the container.
 The {{cssxref("@container")}} then applies a new width, font-size and background color to the contained element "card" if the width is less than 650px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* A container context based on inline size */
   .post {
     container-type: inline-size;
@@ -88,7 +88,7 @@ Since we added the `@container` as the second rule above, we can access the asso
 Last of all, we log the container name and query properties.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
@@ -107,3 +107,9 @@ The card should change background and as the width of the page transitions throu
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
+- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

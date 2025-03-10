@@ -7,7 +7,7 @@ browser-compat: http.headers.Cache-Control
 
 {{HTTPSidebar}}
 
-The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — in both requests and responses — that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g. Proxies, CDNs).
+The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
 
 <table class="properties">
   <tbody>
@@ -19,25 +19,25 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-Caching directives follow the validation rules below:
+Cache directives follow these rules:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.
-- Multiple directives are comma-separated.
-- Some directives have an optional argument.
+- Multiple directives are permitted and must be comma-separated (e.g., `Cache-control: max-age=180, public`).
+- Some directives have an optional argument. When an argument is provided, it is separated from the directive name by an equals symbol (`=`). Typically, arguments for the directives are integers and are therefore not enclosed in quote characters (e.g., `Cache-control: max-age=12`).
 
 ### Cache directives
 
@@ -68,23 +68,23 @@ Note: Check the [compatibility table](#browser_compatibility) for their support;
 
 This section defines the terms used in this document, some of which are from the specification.
 
-- `(HTTP) cache`
+- (HTTP) cache
   - : Implementation that holds requests and responses for reusing in subsequent requests. It can be either a shared cache or a private cache.
-- `Shared cache`
+- Shared cache
   - : Cache that exists between the origin server and clients (e.g. Proxy, CDN). It stores a single response and reuses it with multiple users — so developers should avoid storing personalized contents to be cached in the shared cache.
-- `Private cache`
+- Private cache
   - : Cache that exists in the client. It is also called _local cache_ or _browser cache_. It can store and reuse personalized content for a single user.
-- `Store response`
+- Store response
   - : Store a response in caches when the response is cacheable. However, the cached response is not always reused as-is. (Usually, "cache" means storing a response.)
-- `Reuse response`
+- Reuse response
   - : Reuse cached responses for subsequent requests.
-- `Revalidate response`
+- Revalidate response
   - : Ask the origin server whether or not the stored response is still [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). Usually, the revalidation is done through a conditional request.
-- `Fresh response`
+- Fresh response
   - : Indicates that the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can be reused for subsequent requests, depending on request directives.
-- `Stale response`
+- Stale response
   - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again.
-- `Age`
+- Age
   - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 ## Directives
@@ -104,7 +104,9 @@ Cache-Control: max-age=604800
 Indicates that caches can store this response and reuse it for subsequent requests while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 Note that `max-age` is not the elapsed time since the response was received; it is the elapsed time since the response was generated on the origin server.
-So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#freshness_lifetime).
+So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+
+If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0` (this is noted in the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification).
 
 ```http
 Cache-Control: max-age=604800
@@ -219,7 +221,7 @@ Cache-Control: public, max-age=604800, immutable
 A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
 
 ```html
-<script src=https://example.com/react.0.0.0.js></script>
+<script src="https://example.com/react.0.0.0.js"></script>
 ```
 
 When a user reloads the browser, the browser will send conditional requests for validating to the origin server. But it's not necessary to revalidate those kinds of static resources even when a user reloads the browser, because they're never modified.
@@ -294,21 +296,18 @@ Cache-Control: max-age=0
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
-If the `max-age` value isn't non-negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. However, the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification states:
-
-> Caches are encouraged to consider responses that have invalid freshness information to be stale.
-
-In other words, for any `max-age` value that isn't an integer or isn't non-negative, the caching behavior that's encouraged is to treat the value as if it were `0`.
+If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0`.
 
 #### `max-stale`
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
+If no _N_ value is specified, the client will accept a stale response of any age.
 
 ```http
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+For example, a request with the header above indicates that the browser will accept a stale response from the cache that has expired within the last hour.
 
 Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 
@@ -424,11 +423,12 @@ But for now, you can simply use `no-cache` instead.
 
 ### Clearing an already-stored cache
 
-Unfortunately, there are no cache directives for clearing already-stored responses from caches.
+There are no cache directives for clearing already-stored responses from caches on _intermediate_ servers.
 
 Imagine that clients/caches store a [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
-Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
+[`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) can be used to clear every stored response for a site in the browser cache, so use this with care.
+Note that this will not affected shared or intermediate caches.
 
 ## Specifications
 

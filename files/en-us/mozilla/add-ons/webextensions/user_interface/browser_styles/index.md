@@ -19,15 +19,16 @@ Your extension can include user interface elements - browser and page action [po
 
 You can style these elements to match the browser's style. The manifest.json keys include an optional property to help with this: `browser_style`. If this is included and set to `true`, your document gets one or more extra stylesheets that help make it look consistent with the browser's UI and with other extensions that use the `browser_style` property.
 
-> **Note:**
+> [!NOTE]
 > Support for `browser_style` in Manifest V3 is deprecated. Starting from Firefox 115, the default value of `options_ui.browser_style` and `sidebar_action.browser_style` changes from `true` to `false`. In Firefox 118, `"browser_style": true` will no longer be supported in Manifest V3 extensions.
 > If your Manifest V3 extension depends on the `"browser_style": true` styles, follow the [Manifest V3 migration guide for `browser_style`](#manifest_v3_migration).
 > See ([Firefox bug 1827910](https://bugzil.la/1827910)) for more information.
-> If you want to apply the Firefox style to your extension, see the [Firefox Style Guide](https://acorn.firefox.com/latest/).
+> If you want to apply the Firefox style to your extension, see the [Firefox Style Guide](https://acorn.firefox.com/latest).
 
 When considering whether to use `browser_style: true`, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
 
-> **Warning:** When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
+> [!WARNING]
+> When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this causes a problem, include `browser_style:false` instead.
 
 > **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style` in Manifest V2. So for cross-browser extensions you need to add both keys. `chrome_style` is not available in Manifest V3.
 
@@ -121,11 +122,12 @@ As `browser_style` is a deprecated in Manifest V3 you may want to remove support
 - Does the appearance of your extensions UI change?
   - If the appearance doesn't change, remove the key.
   - If the appearance changes, experiment to determine what dependency exist and add the relevant properties in the extension's stylesheet. The styles are most likely to cause layout changes are `box-sizing:`, `border-box`, and `display: flex`.
-    If you cannot identify the dependencies, include the content of [extension.css](https://hg.mozilla.org/mozilla-central/raw-file/a445f1762c895000bcdabd9d95697522359d41ed/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
+    If you cannot identify the dependencies, include the content of [extension.css](https://searchfox.org/mozilla-central/source/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
 
 ## Firefox panel components (legacy)
 
-> **Note:** This feature is non-standard and only works in Firefox.
+> [!NOTE]
+> This feature is non-standard and only works in Firefox.
 
 The `chrome://browser/content/extension.css` stylesheet also contains the styles for the legacy Firefox panel components (navigation components).
 
@@ -340,13 +342,13 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-separator {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgb(0 0 0 / 0.15);
   min-height: 1px;
 }
 
 /* Panel Section - Header */
 .panel-section-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgb(0 0 0 / 0.15);
   padding: 16px;
 }
 
@@ -380,13 +382,13 @@ button.panel-section-tabs-button {
 }
 
 .panel-list-item:not(.disabled):hover {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(0 0 0 / 0.06);
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+  border-top: 1px solid rgb(0 0 0 / 0.1);
 }
 
 .panel-list-item:not(.disabled):hover:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(0 0 0 / 0.1);
 }
 
 .panel-list-item.disabled {
@@ -415,8 +417,8 @@ button.panel-section-tabs-button {
 
 /* Panel Section - Footer */
 .panel-section-footer {
-  background-color: rgba(0, 0, 0, 0.06);
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(0 0 0 / 0.06);
+  border-top: 1px solid rgb(0 0 0 / 0.15);
   color: #1a1a1a;
   display: flex;
   flex-direction: row;
@@ -440,11 +442,11 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-footer-button:hover {
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgb(0 0 0 / 0.06);
 }
 
 .panel-section-footer-button:hover:active {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(0 0 0 / 0.1);
 }
 
 .panel-section-footer-button.default {
@@ -464,7 +466,7 @@ button.panel-section-tabs-button {
 }
 
 .panel-section-footer-separator {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(0 0 0 / 0.1);
   width: 1px;
   z-index: 99;
 }
@@ -475,10 +477,10 @@ button.panel-section-tabs-button {
 body {
   background: #fcfcfc;
   background-clip: padding-box;
-  border: 1px solid rgba(24, 26, 27, 0.2);
+  border: 1px solid rgb(24 26 27 / 0.2);
   box-shadow:
-    0 3px 5px rgba(24, 26, 27, 0.1),
-    0 0 7px rgba(24, 26, 27, 0.1);
+    0 3px 5px rgb(24 26 27 / 0.1),
+    0 0 7px rgb(24 26 27 / 0.1);
   box-sizing: content-box;
   margin: 2em auto 0.5em;
   width: 384px;

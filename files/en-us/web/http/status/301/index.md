@@ -2,14 +2,19 @@
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
 page-type: http-status-code
-browser-compat: http.status.301
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
 ---
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect status response code indicates that the requested resource has been definitively moved to the URL given by the {{HTTPHeader("Location")}} headers. A browser redirects to the new URL and search engines update their links to the resource.
+The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the requested resource has been permanently moved to the URL in the {{HTTPHeader("Location")}} header.
 
-> **Note:** Although the [specification](#specifications) requires the method and the body to remain unchanged when the redirection is performed, not all user-agents meet this requirement. Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for {{HTTPMethod("POST")}} methods instead, as the method change is explicitly prohibited with this status.
+A browser receiving this status will automatically request the resource at the URL in the `Location` header, redirecting the user to the new page.
+Search engines receiving this response will attribute links to the original URL to the redirected resource, passing the {{Glossary("SEO")}} ranking to the new URL.
+
+> [!NOTE]
+> In the [Fetch Standard](https://fetch.spec.whatwg.org/#http-redirect-fetch), when a user agent receives a `301` in response to a {{HTTPMethod("POST")}} request, it uses the {{HTTPMethod("GET")}} method in the subsequent redirection request, as permitted by the HTTP [specification](#specifications).
+> To avoid user agents modifying the request, use {{HTTPStatus("308", "308 Permanent Redirect")}} instead, as altering the method after a `308` response is prohibited.
 
 ## Status
 
@@ -17,32 +22,39 @@ The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect stat
 301 Moved Permanently
 ```
 
-## Example
+## Examples
 
-### Client request
+### 301 response to a moved resource
+
+The following {{HTTPMethod("GET")}} request is made to a resource with a `301` redirection in place.
 
 ```http
-GET /index.php HTTP/1.1
-Host: www.example.org
+GET /en-US/docs/AJAX HTTP/2
+Host: developer.mozilla.org
+User-Agent: curl/8.6.0
+Accept: */*
 ```
 
-### Server response
+The response includes the `301` status along with the {{HTTPHeader("Location")}} header that indicates the URL where the resource has moved.
 
 ```http
-HTTP/1.1 301 Moved Permanently
-Location: http://www.example.org/index.asp
+HTTP/2 301
+cache-control: max-age=2592000,public
+location: /en-US/docs/Learn_web_development/Core/Scripting/Network_requests
+content-type: text/plain; charset=utf-8
+date: Fri, 19 Jul 2024 12:57:17 GMT
+content-length: 97
+
+Moved Permanently. Redirecting to /en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 ```
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- {{HTTPStatus("308", "308 Permanent Redirect")}}, the equivalent of this status code
-  where the method used never changes.
-- {{HTTPStatus("302", "302 Found")}}, a temporary redirect
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- {{HTTPStatus("308", "308 Permanent Redirect")}} equivalent to `301`, but the request method is not modified
+- {{HTTPStatus("302", "302 Found")}} temporary redirect

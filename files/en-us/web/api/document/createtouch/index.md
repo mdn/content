@@ -13,7 +13,8 @@ browser-compat: api.Document.createTouch
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
 
-> **Note:** Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
+> [!NOTE]
+> Use the {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} constructor.
 
 ## Syntax
 
@@ -23,7 +24,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 
 ### Parameters
 
-> **Note:** All parameters are optional.
+> [!NOTE]
+> All parameters are optional.
 
 - `view`
   - : The {{DOMxRef("window")}} in which the touch occurred.
@@ -40,7 +42,8 @@ createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 - `screenY`
   - : The value for {{DOMxRef("Touch.screenY")}}.
 
-> **Note:** Previous versions of this method included the
+> [!NOTE]
+> Previous versions of this method included the
 > following additional parameters but those parameters are not included in either of the
 > standards listed below. Consequently, these parameters should be considered deprecated
 > and not used.

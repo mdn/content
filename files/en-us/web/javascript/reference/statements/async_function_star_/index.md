@@ -11,7 +11,27 @@ The **`async function*`** declaration creates a {{Glossary("binding")}} of a new
 
 You can also define async generator functions using the [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## Syntax
 
@@ -27,7 +47,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **Note:** Async generator functions do not have arrow function counterparts.
+> [!NOTE]
+> Async generator functions do not have arrow function counterparts.
 
 > **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space). However, there cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function*` declaration.
 

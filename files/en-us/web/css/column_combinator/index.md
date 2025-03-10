@@ -4,10 +4,10 @@ slug: Web/CSS/Column_combinator
 page-type: css-combinator
 status:
   - experimental
-browser-compat: css.selectors.column
+spec-urls: https://drafts.csswg.org/selectors/#selectordef-column
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 
@@ -76,7 +76,7 @@ col.selected||td {
 
 ## Browser compatibility
 
-{{Compat}}
+Currently, no browsers have implemented this feature.
 
 ## See also
 

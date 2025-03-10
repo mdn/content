@@ -9,7 +9,28 @@ browser-compat: html.elements.label
 
 The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for an item in a user interface.
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
@@ -41,42 +62,25 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `for`
+- [`for`](/en-US/docs/Web/HTML/Attributes/for)
 
-  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes#id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
+  - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes/id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
-    > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
+    > [!NOTE]
+    > To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
     The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
 
     Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
 
-    > **Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
+    > [!NOTE]
+    > A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
 
 ## Styling with CSS
 
 There are no special styling considerations for `<label>` elements — structurally they are simple inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
 
-## Examples
-
-### Defining an implicit label
-
-```html
-<label>Click me <input type="text" /></label>
-```
-
-{{EmbedLiveSample('Simple_label_example', '200', '50')}}
-
-### Defining an explicit label with the "for" attribute
-
-```html
-<label for="username">Click me to focus on the input field</label>
-<input type="text" id="username" />
-```
-
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
-
-## Accessibility concerns
+## Accessibility
 
 ### Interactive content
 
@@ -131,6 +135,25 @@ If a [form](/en-US/docs/Web/HTML/Element/form), or a section of a form needs a t
 
 An {{HTMLElement("input")}} element with a `type="button"` declaration and a valid `value` attribute does not need a label associated with it. Doing so may actually interfere with how assistive technology parses the button input. The same applies for the {{HTMLElement("button")}} element.
 
+## Examples
+
+### Defining an implicit label
+
+```html
+<label>Click me <input type="text" /></label>
+```
+
+{{EmbedLiveSample('Defining an implicit label', '200', '50')}}
+
+### Defining an explicit label with the "for" attribute
+
+```html
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
+```
+
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
+
 ## Technical summary
 
 <table class="properties">
@@ -172,7 +195,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

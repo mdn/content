@@ -25,7 +25,7 @@ The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
 - `document.createElementNS(null, "FOO")` no longer creates an HTML element node in HTML documents. `document.createElement("FOO")`
   or `document.createElementNS("http://www.w3.org/1999/xhtml", "foo")` continue
   to work in HTML documents.
-- The [`name`](/en-US/docs/Web/XPath/Functions/name) and the [`local-name`](/en-US/docs/Web/XPath/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
+- The [`name`](/en-US/docs/Web/XML/XPath/Reference/Functions/name) and the [`local-name`](/en-US/docs/Web/XML/XPath/Reference/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
 
 The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
@@ -49,4 +49,5 @@ Support for the obsolete `contents.rdf` method for registering chrome has been r
 
 Make sure you include a [chrome.manifest](/en-US/docs/Chrome_Registration) in your XPI.
 
-> **Note:** Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.
+> [!NOTE]
+> Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.

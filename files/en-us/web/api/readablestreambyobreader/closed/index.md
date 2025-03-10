@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`closed`** read-only property of the {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that fulfills when the stream closes, or rejects if the stream throws an error or the reader's lock is released.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user clicks a notification, but not on any of the notification's buttons (for that, see {{WebExtAPIRef("notifications.onButtonClicked")}}).
 
@@ -43,7 +43,7 @@ Events have three functions:
 
 ## Examples
 
-In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClicked")}} event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
+In this simple example we add a listener to the `notifications.onClicked` event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
 
 ```js
 browser.notifications.onClicked.addListener((notificationId) => {
@@ -53,4 +53,5 @@ browser.notifications.onClicked.addListener((notificationId) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

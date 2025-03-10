@@ -8,14 +8,15 @@ status:
 browser-compat: api.ScreenDetailed.availLeft
 ---
 
-{{APIRef("Window Management API")}}{{seecompattable}}
+{{APIRef("Window Management API")}}{{seecompattable}}{{SecureContext_Header}}
 
 The **`availLeft`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a number representing the x-coordinate (left-hand edge) of the available screen area inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin).
 
 This is equal to the {{domxref("ScreenDetailed.left")}} property, plus the width of any OS UI element drawn on the left of the screen. Windows cannot be placed in those areas, so `availLeft` is useful for giving you the left boundary of the actual area available to open or place windows.
 
-> **Note:** A non-standard implementation of the `availLeft` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+> [!NOTE]
+> A non-standard implementation of the `availLeft` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
 
 ## Value
 

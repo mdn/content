@@ -3,12 +3,10 @@ title: "HTMLCanvasElement: contextlost event"
 short-title: contextlost
 slug: Web/API/HTMLCanvasElement/contextlost_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.HTMLCanvasElement.contextlost_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`contextlost`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent detects that the backing storage associated with a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) context is lost.
 Contexts can be lost for several reasons like driver crashes or the application runs out of memory, etc.
@@ -64,3 +62,4 @@ canvas.addEventListener("contextlost", (event) => {
 
 - [`HTMLCanvasElement: contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
 - [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost)
+- [`OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)

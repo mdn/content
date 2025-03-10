@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: qpSum property"
 short-title: qpSum
 slug: Web/API/RTCInboundRtpStreamStats/qpSum
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.qpSum
+browser-compat: api.RTCStatsReport.type_inbound-rtp.qpSum
 ---
 
 {{APIRef("WebRTC")}}
@@ -25,7 +25,8 @@ An unsigned 64-bit integer value which indicates the sum of the quantization par
 larger to indicate higher compression factors, the larger this sum is, the more heavily
 compressed the stream generally has been.
 
-> **Note:** This value is only available for video media.
+> [!NOTE]
+> This value is only available for video media.
 
 ## Usage notes
 

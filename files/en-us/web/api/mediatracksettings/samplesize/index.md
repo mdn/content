@@ -3,7 +3,7 @@ title: "MediaTrackSettings: sampleSize property"
 short-title: sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.sampleSize
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleSize_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -30,7 +30,7 @@ CD audio among others. Other common sample sizes are 8 (for reduced bandwidth
 requirements) and 24 (for high-resolution professional audio).
 
 Each audio channel on the track requires sampleSize bits.
-That means that a given sample actually uses (`sampleSize`/8)\*{{domxref("MediaTrackSettings.channelCount","channelCount")}} bytes of data.
+That means that a given sample actually uses (`sampleSize` / 8) \* {{domxref("MediaTrackSettings.channelCount","channelCount")}} bytes of data.
 For example, 16-bit stereo audio requires (16/8)\*2 or 4 bytes per sample.
 
 ## Examples

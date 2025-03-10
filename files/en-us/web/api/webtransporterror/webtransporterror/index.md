@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.WebTransportError.WebTransportError
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportError()`** constructor creates a new {{domxref("WebTransportError")}} object instance.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -32,7 +30,7 @@ new WebTransportError(init)
 A developer would not use this constructor manually. A new `WebTransportError` object is constructed when an error related to WebTransport occurs, for example a server error or network connection problem.
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

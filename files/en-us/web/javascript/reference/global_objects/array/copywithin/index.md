@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Array.copyWithin
 
 The **`copyWithin()`** method of {{jsxref("Array")}} instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c", "d", "e"];
+
+// Copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+```
 
 ## Syntax
 
@@ -22,21 +34,21 @@ copyWithin(target, start, end)
 
 - `target`
   - : Zero-based index at which to copy the sequence to, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). This corresponds to where the element at `start` will be copied to, and all elements between `start` and `end` are copied to succeeding indices.
-    - Negative index counts back from the end of the array — if `target < 0`, `target + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= target < 0`, `target + array.length` is used.
     - If `target < -array.length`, `0` is used.
     - If `target >= array.length`, nothing is copied.
     - If `target` is positioned after `start` after normalization, copying only happens until the end of `array.length` (in other words, `copyWithin()` never extends the array).
 - `start`
   - : Zero-based index at which to start copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `start < 0`, `start + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length`, `0` is used.
     - If `start >= array.length`, nothing is copied.
 - `end` {{optional_inline}}
   - : Zero-based index at which to end copying elements from, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `copyWithin()` copies up to but not including `end`.
-    - Negative index counts back from the end of the array — if `end < 0`, `end + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
     - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be copied.
-    - If `end` is positioned before or at `start` after normalization, nothing is copied.
+    - If `end` implies a position before or at the position that `start` implies, nothing is copied.
 
 ### Return value
 
@@ -109,6 +121,7 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## See also
 
 - [Polyfill of `Array.prototype.copyWithin` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.copyWithin`](https://www.npmjs.com/package/array.prototype.copywithin)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.copyWithin()")}}

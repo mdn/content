@@ -15,7 +15,7 @@ The core of this example—the spinning, textured, lighted cube—is taken from 
 
 While reading this article and the accompanying source code, it's helpful to keep in mind that the display for a 3D headset is a single screen, divided in half. The left half of the screen is seen only by the left eye, while the right half is only seen by the right eye. Rendering the scene for immersive presentation requires multiple renders of the scene—once from the perspective of each eye.
 
-When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its {{domxref("XRWebGLLayer.viewport", "viewport")}} configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
+When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its [viewport](/en-US/docs/Web/API/XRWebGLLayer/getViewport) configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
 
 This example demonstrates this by showing the canvas on the screen, even when presenting a scene as an immersive display using an XR device.
 
@@ -61,7 +61,8 @@ const MOUSE_SPEED = 0.003;
 - `MOVE_DISTANCE`
   - : The distance to move in response to any of the keys used to move the viewer through the scene.
 
-> **Note:** This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
+> [!NOTE]
+> This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
 
 ## Setup and utility functions
 
@@ -276,7 +277,7 @@ After storing the newly-created {{domxref("XRSession")}} object into `xrSession`
 
 Then we get a reference to the {{HTMLElement("canvas")}} found in our HTML—as well as its WebGL rendering context—which will be used as the drawing surface for the scene. The `xrCompatible` property is requested when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the element to gain access to the WebGL rendering context for the canvas. This ensures that the context is configured for use as a source for WebXR rendering.
 
-Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "mouselook" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
+Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
 
 Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) and its preceding articles [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL) and [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL). Then our `loadTexture()` function is called to load the texture file.
 
@@ -356,47 +357,13 @@ function handleKeyDown(event) {
 
 The keys and their effects are:
 
-- The
-
-  <kbd>W</kbd>
-
-  key moves the viewer upward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>S</kbd>
-
-  key moves the viewer downward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>A</kbd>
-
-  key slides the viewer to the left by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>D</kbd>
-
-  key slides the viewer to the right by `MOVE_DISTANCE`.
-
-- The up arrow key,
-
-  <kbd>↑</kbd>
-
-  , slides the viewer forward by `MOVE_DISTANCE`.
-
-- The down arrow key,
-
-  <kbd>↓</kbd>
-
-  , slides the viewer backward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>R</kbd>
-
-  key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
+- The <kbd>W</kbd> key moves the viewer upward by `MOVE_DISTANCE`.
+- The <kbd>S</kbd> key moves the viewer downward by `MOVE_DISTANCE`.
+- The <kbd>A</kbd> key slides the viewer to the left by `MOVE_DISTANCE`.
+- The <kbd>D</kbd> key slides the viewer to the right by `MOVE_DISTANCE`.
+- The up arrow key, <kbd>↑</kbd>, slides the viewer forward by `MOVE_DISTANCE`.
+- The down arrow key, <kbd>↓</kbd>, slides the viewer backward by `MOVE_DISTANCE`.
+- The <kbd>R</kbd> key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
 
 These offsets will be applied by the renderer starting with the next frame drawn.
 
@@ -479,7 +446,8 @@ The time elapsed since the last frame was rendered (in seconds) is computed by s
 
 The `drawFrame()` function ends by iterating over every view found in the {{domxref("XRViewerPose")}}, setting up the viewport for the view, and calling `renderScene()` to render the frame. By setting the viewport for each view, we handle the typical scenario in which the views for each eye are each rendered onto half of the WebGL frame. The XR hardware then handles ensuring that each eye only sees the portion of that image that is intended for that eye.
 
-> **Note:** In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
+> [!NOTE]
+> In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
 
 ### Applying the user inputs
 
@@ -526,7 +494,7 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 The `renderScene()` function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example ([view the code on GitHub](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample7/webgl-demo.js)). But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();
@@ -677,8 +645,7 @@ function displayMatrix(mat, rowLength, target) {
 
   if (mat && rowLength && rowLength <= mat.length) {
     let numRows = mat.length / rowLength;
-    outHTML =
-      "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
+    outHTML = "<math display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
 
     for (let y = 0; y < numRows; y++) {
       outHTML += "<mtr>\n";
@@ -725,5 +692,5 @@ There are few limitations on what can be done if you set yourself to it.
 ## See also
 
 - [Learn WebGL](https://learnwebgl.brown37.net/#) (includes some great visualizations of the camera and how it relates to the virtual world)
-- [WebGL Fundamentals](https://webglfundamentals.org)
+- [WebGL Fundamentals](https://webglfundamentals.org/)
 - [Learn OpenGL](https://learnopengl.com/)

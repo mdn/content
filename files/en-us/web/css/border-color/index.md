@@ -7,13 +7,52 @@ browser-compat: css.properties.border-color
 
 {{CSSRef}}
 
-The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
+The **`border-color`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
 
-You can find more information about border colors in [CSS colors](/en-US/docs/Web/CSS/CSS_colors/Applying_color#borders_2).
+You can find out more information about border colors in [Applying colors to HTML elements](/en-US/docs/Web/CSS/CSS_colors/Applying_color#borders).
 
 ## Constituent properties
 
@@ -34,7 +73,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* top | left and right | bottom */
-border-color: red rgb(240, 30, 50, 0.7) green;
+border-color: red rgb(240 30 50 / 70%) green;
 
 /* top | right | bottom | left */
 border-color: red yellow green blue;

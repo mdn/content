@@ -21,7 +21,7 @@ The {{domxref("ImageData")}} object represents the underlying pixel data of an a
 
 The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
-The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height`×`width`×4)-1.
+The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height` × `width` × 4) - 1.
 
 For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:
 
@@ -60,7 +60,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgba(0,0,0,0)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgb(0 0 0 / 0%)).
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 
@@ -78,7 +78,8 @@ const myImageData = ctx.getImageData(left, top, width, height);
 
 This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
-> **Note:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
+> [!NOTE]
+> Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
@@ -106,11 +107,11 @@ function pick(event, destination) {
   const pixel = ctx.getImageData(x, y, 1, 1);
   const data = pixel.data;
 
-  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-  destination.style.background = rgba;
-  destination.textContent = rgba;
+  const rgbColor = `rgb(${data[0]} ${data[1]} ${data[2]} / ${data[3] / 255})`;
+  destination.style.background = rgbColor;
+  destination.textContent = rgbColor;
 
-  return rgba;
+  return rgbColor;
 }
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
@@ -212,7 +213,7 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
-zoomctx.drawImage(
+zoomCtx.drawImage(
   canvas,
   Math.min(Math.max(0, x - 5), img.width - 10),
   Math.min(Math.max(0, y - 5), img.height - 10),
@@ -281,9 +282,10 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mai
 
 ## Saving images
 
-The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
+The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/URI/Reference/Schemes/data) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
-> **Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
+> [!NOTE]
+> Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
 > See [Security and tainted canvases](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
@@ -291,11 +293,11 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
+Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("img")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 
-- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(_callback_, _type_, _encoderOptions_)")}}
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
   - : Creates a `Blob` object representing the image contained in the canvas.
 
 ## See also

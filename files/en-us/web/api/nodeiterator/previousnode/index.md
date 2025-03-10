@@ -17,7 +17,7 @@ set.
 
 In old browsers, as specified in old versions of the specifications, the method may
 throws the `INVALID_STATE_ERR` {{domxref("DOMException")}} if this method
-is called after the {{domxref("NodeIterator.detach()")}}method. Recent browsers never
+is called after the {{domxref("NodeIterator.detach()")}} method. Recent browsers never
 throw.
 
 ## Syntax

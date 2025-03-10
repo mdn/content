@@ -53,7 +53,7 @@ pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

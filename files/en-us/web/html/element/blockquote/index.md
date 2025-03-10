@@ -9,7 +9,40 @@ browser-compat: html.elements.blockquote
 
 The **`<blockquote>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see [Notes](#usage_notes) for how to change it). A URL for the source of the quotation may be given using the `cite` attribute, while a text representation of the source can be given using the {{HTMLElement("cite")}} element.
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 ## Attributes
 
@@ -19,6 +52,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
 
 ## Usage notes
+
+According to the specification, attribution for the quotation, if any, must be placed outside the `<blockquote>` element.
 
 To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.
 
@@ -72,7 +107,7 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -87,7 +122,7 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code>
-          <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents"
+          <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents"
             >blockquote</a
           ></code
         >
@@ -116,3 +151,4 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
 
 - The {{HTMLElement("q")}} element for inline quotations.
 - The {{HTMLElement("cite")}} element for source citations.
+- [The blockquote element](https://heydonworks.com/article/the-blockquote-element/) via heydonworks.com (2024)

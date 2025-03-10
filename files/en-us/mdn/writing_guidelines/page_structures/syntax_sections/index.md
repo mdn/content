@@ -2,9 +2,8 @@
 title: Syntax sections
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
 
@@ -26,7 +25,8 @@ slice(start, end)
 ```
 ````
 
-> **Note:** The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
+> [!NOTE]
+> The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
 > For JavaScript syntax sections `-nolint` is also required because the syntax section is deliberatively not "quite" JavaScript and we don't want the linter to "fix" it (return values and end-of-line semicolons are omitted).
 
 ### General style rules
@@ -49,7 +49,7 @@ A few rules to follow in terms of markup within the syntax block:
 
 #### Syntax block
 
-Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
+Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor page):
 
 ```js-nolint
 new IntersectionObserver(callback, options)
@@ -102,9 +102,9 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 ##### Formal syntax
 
-Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](multiple_linesoptional_parameters).
+Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](#multiple_linesoptional_parameters).
 
-While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, "`[ ]`" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
+While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, `[ ]` indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
 
 ```js-nolint
 arr.slice([begin[, end]])
@@ -188,7 +188,8 @@ Next, include a "Parameters" subsection, which explains what each parameter shou
 
 The name of each parameter in the list should be contained in markdown code fence notation `` ` ` ``.
 
-> **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
+> [!NOTE]
+> Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
 #### Return value section
 
@@ -206,7 +207,8 @@ Determining what exceptions are thrown by a method can require a good perusal of
 
 The exception names and explanations should be included in a description list.
 
-> **Note:** If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".
+> [!NOTE]
+> If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".
 
 ### Properties
 
@@ -231,7 +233,8 @@ JavaScript built-in object reference pages follow the same basic rules as API re
 
 CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
 
-> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
+> [!NOTE]
+> We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
 
 Inside the syntax section you'll find the following contents.
 
@@ -245,11 +248,10 @@ Next, you should include a "Values" section — this contains a description list
 
 #### Formal syntax
 
-The last section, "Formal syntax", is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
+The last section, "Formal syntax", is automatically generated using the `\{{CSSSyntax}}` macro. This macro fetches data from the CSS specifications using the [@webref/css npm package](https://www.npmjs.com/package/@webref/css). To include the formal syntax in your document:
 
-The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
-
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+1. Add a heading like: `## Formal syntax`.
+2. Place the `\{{CSSSyntax}}` macro directly below this heading.
 
 ### Selectors
 

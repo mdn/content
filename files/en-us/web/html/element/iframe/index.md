@@ -9,11 +9,29 @@ browser-compat: html.elements.iframe
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 Each embedded browsing context has its own [document](/en-US/docs/Web/API/Document) and allows URL navigations. The navigations of each embedded browsing context are linearized into the [session history](/en-US/docs/Web/API/History) of the _topmost_ browsing context. The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
 
-> **Warning:** Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
+> [!WARNING]
+> Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
 
 ## Attributes
 
@@ -23,21 +41,30 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
+    See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
+
+    > [!NOTE]
+    > A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
 - `allowfullscreen`
 
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
-    > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
+    > [!NOTE]
+    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- `allowpaymentrequest` {{Experimental_Inline}}
+- `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
-    > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
+    > [!NOTE]
+    > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
-- `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
+- `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
+
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+
+- `credentialless` {{Experimental_Inline}}
 
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 
@@ -59,7 +86,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
         This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
-        > **Note:** Loading is only deferred when JavaScript is enabled.
+        > [!NOTE]
+        > Loading is only deferred when JavaScript is enabled.
         > This is an anti-tracking measure.
 
 - `name`
@@ -73,7 +101,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `no-referrer-when-downgrade`
       - : The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`
-      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`
       - : The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`
@@ -91,10 +119,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `allow-downloads`
       - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
-    - `allow-downloads-without-user-activation` {{experimental_inline}}
-      - : Allows for downloads to occur without a gesture from the user.
     - `allow-forms`
-      - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
+      - : Allows the page to submit forms. If this keyword is not used, a form will be displayed as normal, but submitting it will not trigger input validation, send data to a web server, or close a dialog.
     - `allow-modals`
       - : Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
     - `allow-orientation-lock`
@@ -104,7 +130,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-popups`
       - : Allows popups (like from {{domxref("Window.open()")}}, `target="_blank"`, {{domxref("Window.showModalDialog()")}}). If this keyword is not used, that functionality will silently fail.
     - `allow-popups-to-escape-sandbox`
-      - : Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to.
+      - : Allows a sandboxed document to open a new browsing context without forcing the sandboxing flags upon it. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon the page the ad links to. If this flag is not included, a redirected page, popup window, or new tab will be subject to the same sandbox restrictions as the originating `<iframe>`.
     - `allow-presentation`
       - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
@@ -118,17 +144,30 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-top-navigation-by-user-activation`
       - : Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
     - `allow-top-navigation-to-custom-protocols`
-      - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+      - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
 
+    > [!NOTE]
+    > When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
+
 - `src`
+
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+
+    > [!NOTE]
+    > The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `srcdoc`
-  - : Inline HTML to embed, overriding the `src` attribute. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+  - : Inline HTML to embed, overriding the `src` attribute. Its content should follow the syntax of a full HTML document, which includes the doctype directive, `<html>`, `<body>` tags, etc., although most of them can be omitted, leaving only the body content. This doc will have `about:srcdoc` as its location. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
+
+    > [!NOTE]
+    > The `about:srcdoc` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+
 - `width`
   - : The width of the frame in CSS pixels. Default is `300`.
 
@@ -169,17 +208,32 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 
 ## Positioning and scaling
 
-As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<iframe>` elements.
 
 ## `error` and `load` event behavior
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
+## Accessibility
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
 ## Examples
 
-### A simple \<iframe>
+### A basic \<iframe>
 
-This example embeds the page at <https://example.org> in an iframe.
+This example embeds the page at <https://example.org> in an iframe. This is a common use case of iframes: to embed content from another site. For example, the live sample itself, and the [try it](#try_it) example at the top, are both `<iframe>` embeds of content from another MDN site.
 
 #### HTML
 
@@ -194,19 +248,47 @@ This example embeds the page at <https://example.org> in an iframe.
 
 #### Result
 
-{{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+{{ EmbedLiveSample('A_basic_iframe', 640,400)}}
 
-## Accessibility concerns
+### Embedding source code in an \<iframe>
 
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+This example directly renders source code in an iframe. This can be used as a technique to prevent script injection when displaying user-generated content, when combined with the `sandbox` attribute.
 
-```html
-<iframe
-  title="Wikipedia page for Avocados"
-  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+Note that when using `srcdoc`, any relative URLs in the embedded content will be resolved relative to the URL of the embedding page. If you want to use anchor links that point to places in the embedded content, you need to explicitly specify `about:srcdoc` as the base URL.
+
+#### HTML
+
+```html-nolint
+<article>
+  <footer>Nine minutes ago, <i>jc</i> wrote:</footer>
+  <iframe
+    sandbox
+    srcdoc="<p>There are two ways to use the <code>iframe</code> element:</p>
+<ol>
+<li><a href=&quot;about:srcdoc#embed_another&quot;>To embed content from another page</a></li>
+<li><a href=&quot;about:srcdoc#embed_user&quot;>To embed user-generated content</a></li>
+</ol>
+<h2 id=&quot;embed_another&quot;>Embedding content from another page</h2>
+<p>Use the <code>src</code> attribute to specify the URL of the page to embed:</p>
+<pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
+<h2 id=&quot;embed_user&quot;>Embedding user-generated content</h2>
+<p>Use the <code>srcdoc</code> attribute to specify the content to embed. This post is already an example!</p>
+"
+    width="500"
+    height="250"
+></iframe>
+</article>
 ```
 
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+Here's how to write escape sequences when using `srcdoc`:
+
+- First, write the HTML out, escaping anything you would escape in a normal HTML document (such as `<`, `>`, `&`, etc.).
+- `&lt;` and `<` represent the exact same character in the `srcdoc` attribute. Therefore, to make it an actual escape sequence in the HTML document, replace any ampersands (`&`) with `&amp;`. For example, `&lt;` becomes `&amp;lt;`, and `&amp;` becomes `&amp;amp;`.
+- Replace any double quotes (`"`) with `&quot;` to prevent the `srcdoc` attribute from being prematurely terminated (if you use `'` instead, then you should replace `'` with `&apos;` instead). This step happens after the previous one, so `&quot;` generated in this step doesn't become `&amp;quot;`.
+
+#### Result
+
+{{ EmbedLiveSample('Embedding_source_code_in_an_iframe', 640, 300)}}
 
 ## Technical summary
 
@@ -233,7 +315,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tags are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -250,9 +332,9 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

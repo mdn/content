@@ -3,12 +3,10 @@ title: "ImageCapture: getPhotoCapabilities() method"
 short-title: getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ImageCapture.getPhotoCapabilities
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}
 
 The **`getPhotoCapabilities()`**
 method of the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}}
@@ -37,6 +35,13 @@ A {{jsxref("Promise")}} that resolves with an object containing the following pr
   - : Returns an object indicating the image width range supported by the user agent.
 - `fillLightMode`
   - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
 
 ## Examples
 

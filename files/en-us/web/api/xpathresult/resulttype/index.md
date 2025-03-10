@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.resultType
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`resultType`** property of the
 {{domxref("XPathResult")}} interface represents the type of the result, as defined by
 the type constants.
-
-{{AvailableInWorkers}}
 
 ## Value
 

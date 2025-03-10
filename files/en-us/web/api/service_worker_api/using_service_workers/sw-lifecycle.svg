@@ -86,7 +86,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:254px;margin-left:962px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -144,7 +144,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:202px;height:1px;padding-top:164px;margin-left:385px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Pages loaded in the browser (client)</xhtml:div>
         </xhtml:div>
@@ -202,7 +202,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:202px;height:1px;padding-top:394px;margin-left:325px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Scope of pages for the service worker</xhtml:div>
         </xhtml:div>
@@ -242,7 +242,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:259px;margin-left:782px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+           data-drawio-colors="color: rgb(0 0 0); background-color: rgb(255 255 255);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;background-color:#fff;white-space:nowrap">
             <xhtml:font
@@ -282,7 +282,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:49px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -322,7 +322,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:284px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:div>
@@ -405,7 +405,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:524px;margin-left:682px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -451,7 +451,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:559px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -503,7 +503,7 @@
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:536px;margin-left:918px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap">i<xhtml:font
    face="Courier New">nstall</xhtml:font>
@@ -598,7 +598,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:656px;margin-left:918px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap">event.waitUntil()</xhtml:div>
         </xhtml:div>
@@ -670,7 +670,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:202px;height:1px;padding-top:614px;margin-left:970px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Setting up caches, offline assets, etc.</xhtml:div>
         </xhtml:div>
@@ -697,7 +697,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:554px;margin-left:1042px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -757,7 +757,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:734px;margin-left:682px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -789,7 +789,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:769px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -862,7 +862,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:944px;margin-left:682px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -894,7 +894,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:979px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -946,7 +946,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:971px;margin-left:918px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap"><xhtml:font
    face="Courier New">activate</xhtml:font>
@@ -980,7 +980,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:202px;height:1px;padding-top:1024px;margin-left:817px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Finishing setup, cleaning old resources for previous versions</xhtml:div>
         </xhtml:div>
@@ -1053,7 +1053,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:1139px;margin-left:812px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -1094,7 +1094,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:1174px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -1146,7 +1146,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:1196px;margin-left:726px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap">
             <xhtml:div
@@ -1232,7 +1232,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:816px;margin-left:1042px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -1262,7 +1262,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:779px;margin-left:1042px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -1321,7 +1321,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:1004px;margin-left:1042px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -1380,7 +1380,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:1184px;margin-left:1042px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v1</xhtml:div>
         </xhtml:div>
@@ -1446,7 +1446,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:1174px;margin-left:981px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+           data-drawio-colors="color: rgb(0 0 0); background-color: rgb(255 255 255);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;background-color:#fff;white-space:nowrap">
             <xhtml:font
@@ -1550,7 +1550,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:188px;height:1px;padding-top:1389px;margin-left:2px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:14px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
             <xhtml:font
@@ -1702,7 +1702,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:1364px;margin-left:682px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v2</xhtml:div>
         </xhtml:div>
@@ -1779,7 +1779,7 @@ event</xhtml:div>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:1434px;margin-left:952px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:19px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">v2</xhtml:div>
         </xhtml:div>

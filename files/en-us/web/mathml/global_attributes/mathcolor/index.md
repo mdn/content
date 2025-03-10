@@ -11,7 +11,33 @@ browser-compat: mathml.global_attributes.mathcolor
 
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [color](/en-US/docs/Web/CSS/color) of a MathML element.
 
-> **Note:** Use CSS for styling MathML whenever possible. The `mathcolor` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `color` property, if set.
+> [!NOTE]
+> Use CSS for styling MathML whenever possible. The `mathcolor` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `color` property, if set.
+
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  font-size: 1.5rem;
+}
+```
+
+```html
+<math display="block">
+  <msqrt mathcolor="tomato">
+    <mi mathcolor="darkgreen">x</mi>
+  </msqrt>
+</math>
+```
+
+{{EmbedLiveSample("Example", "", 150)}}
 
 ## Syntax
 
@@ -33,19 +59,13 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 <!-- <rgb()> values -->
 <math mathcolor="rgb(34, 12, 64, 0.6)">
-<math mathcolor="rgba(34, 12, 64, 0.6)">
 <math mathcolor="rgb(34 12 64 / 0.6)">
-<math mathcolor="rgba(34 12 64 / 0.3)">
-<math mathcolor="rgb(34.0 12 64 / 60%)">
-<math mathcolor="rgba(34.6 12 64 / 30%)">
+<math mathcolor="rgb(34.6 12 64 / 60%)">
 
 <!-- <hsl()> values -->
 <math mathcolor="hsl(30, 100%, 50%, 0.6)">
-<math mathcolor="hsla(30, 100%, 50%, 0.6)">
 <math mathcolor="hsl(30 100% 50% / 0.6)">
-<math mathcolor="hsla(30 100% 50% / 0.6)">
-<math mathcolor="hsl(30.0 100% 50% / 60%)">
-<math mathcolor="hsla(30.2 100% 50% / 60%)">
+<math mathcolor="hsl(30.2 100% 50% / 60%)">
 
 <!-- <hwb()> values -->
 <math mathcolor="hwb(90 10% 10%)">

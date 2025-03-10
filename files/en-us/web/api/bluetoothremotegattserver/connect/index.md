@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the
@@ -35,5 +35,3 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer"
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

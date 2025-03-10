@@ -40,7 +40,7 @@ The `return()` method, when called, can be seen as if a `return value;` statemen
 
 ### Using return()
 
-The following example shows a simple async generator and the `return` method.
+The following example shows an async generator and the `return` method.
 
 ```js
 // An async task. Pretend it's doing something more useful
@@ -71,9 +71,9 @@ If no `value` argument is passed into the `return()` method, the promise will re
 
 ```js
 async function* createAsyncGenerator() {
-  yield await Promise.resolve(1);
+  yield Promise.resolve(1);
   yield await Promise.resolve(2);
-  yield await Promise.resolve(3);
+  yield 3;
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next().then((res) => console.log(res)); // { value: 1, done: false }

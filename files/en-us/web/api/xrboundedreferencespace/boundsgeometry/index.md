@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRBoundedReferenceSpace.boundsGeometry
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRBoundedReferenceSpace")}}
 property **`boundsGeometry`** is an array of

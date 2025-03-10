@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetailed.label
 ---
 
-{{APIRef("Window Management API")}}{{SeeCompatTable}}
+{{APIRef("Window Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`label`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a string providing a descriptive label for the screen, for example "Built-in Retina Display".

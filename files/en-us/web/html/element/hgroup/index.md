@@ -9,9 +9,37 @@ browser-compat: html.elements.hgroup
 
 The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
-> **Note:** The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification but is still part of the WHATWG specification and is at least partially supported by most browsers.
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 ## Attributes
 
@@ -47,10 +75,6 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
 
 {{EmbedLiveSample('Examples')}}
 
-## Accessibility concerns
-
-The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
-
 ## Technical summary
 
 <table class="properties">
@@ -79,7 +103,7 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -94,8 +118,8 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >generic</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
+            >group</a
           ></code
         >
       </td>

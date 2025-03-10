@@ -60,8 +60,6 @@ To use this API you need to have the "downloads" [API permission](/en-US/docs/Mo
   - : Removes a downloaded file from disk, but not from the browser's download history.
 - {{WebExtAPIRef("downloads.acceptDanger()")}}
   - : Prompts the user to accept or cancel a dangerous download.
-- {{WebExtAPIRef("downloads.drag()")}}
-  - : Initiates dragging the downloaded file to another application.
 - {{WebExtAPIRef("downloads.setShelfEnabled()")}}
   - : Enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.
 
@@ -80,7 +78,8 @@ To use this API you need to have the "downloads" [API permission](/en-US/docs/Mo
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,19 +7,74 @@ browser-compat: html.elements.template
 
 {{HTMLSidebar}}
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
-
-Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the **`<template>`** element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
 ## Attributes
 
-The only standard attributes that the `<template>` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In Chromium-based browsers, the `<template>` element also supports a non-standard [`shadowrootmode` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) proposal. In supporting browsers, a `<template>` element with the `shadowrootmode` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element. `shadowrootmode` can take a value of `open` or `closed`; these are equivalent to the `open` and `closed` values of the {{domxref("Element.attachShadow()")}} `mode` option.
+- `shadowrootmode`
 
-Also, the corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
+    It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
+
+    - `open`
+
+      - : Exposes the internal shadow root DOM for JavaScript (recommended for most use cases).
+
+    - `closed`
+
+      - : Hides the internal shadow root DOM from JavaScript.
+
+    > [!NOTE]
+    > The HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM for the first `<template>` in a node with this attribute set to an allowed value.
+    > If the attribute is not set, or not set to an allowed value — or if a `ShadowRoot` has already been declaratively created in the same parent — then an {{domxref("HTMLTemplateElement")}} is constructed.
+    > A {{domxref("HTMLTemplateElement")}} cannot subsequently be changed into a shadow root after parsing, for example, by setting {{domxref("HTMLTemplateElement.shadowRootMode")}}.
+
+    > [!NOTE]
+    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
+
+- `shadowrootclonable`
+
+  - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
+
+- `shadowrootdelegatesfocus`
+
+  - : Sets the value of the [`delegatesFocus`](/en-US/docs/Web/API/ShadowRoot/delegatesFocus) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
+    The value defaults to `false`.
+
+- `shadowrootserializable` {{experimental_inline}}
+
+  - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
+    The value defaults to `false`.
+
+## Usage notes
+
+There are two main ways to use the `<template>` element.
+
+### Template document fragment
+
+By default, the element's content is not rendered.
+The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
+This fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+
+Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
+For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+
+### Declarative Shadow DOM
+
+If the `<template>` element contains the [`shadowrootmode`](#shadowrootmode) attribute with a value of either `open` or `closed`, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a {{domxref("ShadowRoot")}}, which is attached to the parent element.
+This is the declarative equivalent of calling {{domxref("Element.attachShadow()")}} to attach a shadow root to an element.
+
+If the element has any other value for `shadowrootmode`, or does not have the `shadowrootmode` attribute, the parser generates a {{domxref("HTMLTemplateElement")}}.
+Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
 
 ## Examples
+
+### Generating table rows
 
 First we start with the HTML portion of the example.
 
@@ -89,7 +144,117 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Examples", 500, 120)}}
+{{EmbedLiveSample("Generating table rows", 500, 120)}}
+
+### Implementing a declarative shadow DOM
+
+In this example, a hidden support warning is included at the beginning of the markup. This warning is later set to be displayed via JavaScript if the browser doesn't support the `shadowrootmode` attribute. Next, there are two {{HTMLElement("article")}} elements, each containing nested {{HTMLElement("style")}} elements with different behaviors. The first `<style>` element is global to the whole document. The second one is scoped to the shadow root generated in place of the `<template>` element because of the presence of the `shadowrootmode` attribute.
+
+```html
+<p hidden>
+  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+</p>
+<article>
+  <style>
+    p {
+      padding: 8px;
+      background-color: wheat;
+    }
+  </style>
+  <p>I'm in the DOM.</p>
+</article>
+<article>
+  <template shadowrootmode="open">
+    <style>
+      p {
+        padding: 8px;
+        background-color: plum;
+      }
+    </style>
+    <p>I'm in the shadow DOM.</p>
+  </template>
+</article>
+```
+
+```js
+const isShadowRootModeSupported =
+  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute("hidden", isShadowRootModeSupported);
+```
+
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
+
+### Declarative Shadow DOM with delegated focus
+
+This example demonstrates how `shadowrootdelegatesfocus` is applied to a shadow root that is created declaratively, and the effect this has on focus.
+
+The code first declares a shadow root inside a `<div>` element, using the `<template>` element with the `shadowrootmode` attribute.
+This displays both a non-focusable `<div>` containing text and a focusable `<input>` element.
+It also uses CSS to style elements with [`:focus`](/en-US/docs/Web/CSS/:focus) to blue, and to set the normal styling of the host element.
+
+```html
+<div>
+  <template shadowrootmode="open">
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+The second code block is identical except that it sets the `shadowrootdelegatesfocus` attribute, which delegates focus to the first focusable element in the tree if a non-focusable element in the tree is selected.
+
+```html
+<div>
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
+    <style>
+      :host {
+        display: block;
+        border: 1px dotted black;
+        padding: 10px;
+        margin: 10px;
+      }
+      :focus {
+        outline: 2px solid blue;
+      }
+    </style>
+    <div>Clickable Shadow DOM text</div>
+    <input type="text" placeholder="Input inside Shadow DOM" />
+  </template>
+</div>
+```
+
+Last of all we use the following CSS to apply a red border to the parent `<div>` element when it has focus.
+
+```css
+div:focus {
+  border: 2px solid red;
+}
+```
+
+The results are shown below.
+When the HTML is first rendered, the elements have no styling, as shown in the first image.
+For the shadow root that does not have `shadowrootdelegatesfocus` set you can click anywhere except the `<input>` and the focus does not change (if you select the `<input>` element it will look like the second image).
+
+![Screenshot of code with no focus set](template_with_no_focus.png)
+
+For the shadow root with `shadowrootdelegatesfocus` set, clicking on the text (which is non-focusable) selects the `<input>` element, as this is the first focusable element in the tree.
+This also focuses the parent element as shown below.
+
+![Screenshot of the code where the element has focus](template_with_focus.png)
 
 ## Avoiding DocumentFragment pitfalls
 
@@ -164,7 +329,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -213,6 +378,12 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)
+- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
+- {{HTMLElement("slot")}} HTML element
+- {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
+- [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebGLRenderingContext.drawingBufferWidth
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLRenderingContext.drawingBufferWidth`**
 property represents the actual width of the current drawing buffer. It should match the

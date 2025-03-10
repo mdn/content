@@ -1,7 +1,7 @@
 ---
-title: "CSSImportRule: stylesheet property"
-short-title: stylesheet
-slug: Web/API/CSSImportRule/stylesheet
+title: "CSSImportRule: styleSheet property"
+short-title: styleSheet
+slug: Web/API/CSSImportRule/styleSheet
 page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.styleSheet
 ---
@@ -10,10 +10,10 @@ browser-compat: api.CSSImportRule.styleSheet
 
 The read-only **`styleSheet`** property of the
 {{domxref("CSSImportRule")}} interface returns the CSS Stylesheet specified by the
-{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule). This will be
+{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). This will be
 in the form of a {{domxref("CSSStyleSheet")}} object.
 
-An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) always has
+An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) always has
 an associated stylesheet.
 
 ## Value

@@ -54,8 +54,8 @@ In this example, the tag name `swsh` and a boolean value `1` are used as the val
 #### HTML
 
 ```html
-<p class="swashoff">Swash is off here</p>
-<p class="swashon">Swash is on here</p>
+<p class="swash-off">Swash is off here</p>
+<p class="swash-on">Swash is on here</p>
 ```
 
 #### CSS
@@ -74,10 +74,10 @@ p {
   font-size: 3rem;
   margin: 0.7rem 3rem;
 }
-.swashoff {
+.swash-off {
   font-family: MonteCarlo;
 }
-.swashon {
+.swash-on {
   font-family: MonteCarlo2;
 }
 ```

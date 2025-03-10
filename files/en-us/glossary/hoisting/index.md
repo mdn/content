@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.
+JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables, classes, or imports to the top of their {{glossary("scope")}}, prior to execution of the code.
 
 _Hoisting_ is not a term normatively defined in the ECMAScript specification. The spec does define a group of declarations as [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration), but this only includes [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), and [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) declarations. Hoisting is often considered a feature of [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declarations as well, although in a different way. In colloquial terms, any of the following behaviors may be regarded as hoisting:
 
@@ -49,7 +49,9 @@ For more information on hoisting, see:
 
 ## See also
 
-- [`var` statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [`let` statement](/en-US/docs/Web/JavaScript/Reference/Statements/let) — MDN
-- [`const` statement](/en-US/docs/Web/JavaScript/Reference/Statements/const) — MDN
-- [`function` statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
+- [`var` statement](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`let` statement](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`const` statement](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`function` statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` statement](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)

@@ -29,7 +29,7 @@ A string.
 
 For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
 this example would set `currentDomain` to the string
-"`developer.mozilla.org`".
+`"developer.mozilla.org"`.
 
 ```js
 const currentDomain = document.domain;
@@ -39,9 +39,9 @@ The getter for this property returns the domain portion of the current document'
 origin. In most cases, this will be the hostname portion of the document's URL. However,
 there are some exceptions:
 
-- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/URI/Reference/Schemes/data), then it will
   return the empty string.
-- If the `document.domain` [setter](#setter) has been used, then
+- If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.
 
 Although the getter is not dangerous in the same way that the setter is, it is likely
@@ -53,10 +53,10 @@ const currentHostname = location.hostname;
 ```
 
 For the URL `https://developer.mozilla.org/en-US/docs/Web`,
-`currentHostname` is also the string "`developer.mozilla.org`".
+`currentHostname` is also the string `"developer.mozilla.org"`.
 Other alternatives that provide slightly different information are
 {{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+{{domxref("Window.origin")}}, which provides the full origin.
 
 ### Setting the domain
 
@@ -115,7 +115,7 @@ blanket exposure of all data caused by `document.domain`.
 
 #### Failures
 
-The setter will throw a "`SecurityError`" {{domxref("DOMException")}} in
+The setter will throw a `SecurityError` {{domxref("DOMException")}} in
 several cases:
 
 - The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
@@ -136,12 +136,12 @@ modern isolation features:
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
 - If used on an origin-isolated page, i.e. one that uses the
-  {{httpheader("Origin-Isolation")}} HTTP header
+  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
 Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
+{{domxref("Window.localStorage")}}, [IndexDB API](/en-US/docs/Web/API/IndexedDB_API), {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}}.
 
 ## Specifications
 
@@ -156,4 +156,4 @@ Affected APIs include (but are not limited to):
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
-- {{domxref("origin")}}
+- {{domxref("Window.origin")}}

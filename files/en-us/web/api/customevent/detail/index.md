@@ -6,10 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CustomEvent.detail
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The read-only **`detail`** property of the {{domxref("CustomEvent")}} interface
-returns any data passed when initializing the event.
+The read-only **`detail`** property of the {{domxref("CustomEvent")}} interface returns any data passed when initializing the event.
 
 ## Value
 
@@ -30,12 +29,14 @@ const dogFound = new CustomEvent("animalfound", {
   },
 });
 
+const element = document.createElement("div"); // create a <div> element
+
 // add an appropriate event listener
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+element.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // dispatch the events
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+element.dispatchEvent(catFound);
+element.dispatchEvent(dogFound);
 
 // "cat" and "dog" logged in the console
 ```

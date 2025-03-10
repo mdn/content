@@ -2,14 +2,15 @@
 title: clip-rule
 slug: Web/SVG/Attribute/clip-rule
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.clip-rule
+browser-compat: svg.global_attributes.clip-rule
 ---
 
 {{SVGRef}}
 
-« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
-
 The `clip-rule` attribute only applies to graphics elements that are contained within a {{ SVGElement("clipPath") }} element. The `clip-rule` attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to {{ SVGElement("clipPath") }} definitions.
+
+> [!NOTE]
+> As a presentation attribute, `clip-rule` also has a CSS property counterpart: {{cssxref("clip-rule")}}. When both are specified, the CSS property takes priority.
 
 The following fragment of code will cause an evenodd clipping rule to be applied to the clipping path because `clip-rule` is specified on the {{ SVGElement("path") }} element that defines the clipping shape:
 
@@ -32,8 +33,6 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
   <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
 </g>
 ```
-
-As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet
 
 ## Usage notes
 
@@ -92,7 +91,11 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-- [Graphical elements](/en-US/docs/Web/SVG/Element#graphical) »
+- [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -101,3 +104,4 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 ## See also
 
 - {{ SVGElement("clipPath") }}
+- CSS {{cssxref("clip-rule")}} property

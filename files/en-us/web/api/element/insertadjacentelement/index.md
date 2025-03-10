@@ -45,9 +45,9 @@ The element that was inserted, or `null`, if the insertion failed.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - Thrown if the `position` specified is not a recognized value.
+  - : Thrown if the `position` specified is not a recognized value.
 - {{jsxref("TypeError")}}
-  - Thrown if the `element` specified is not a valid element.
+  - : Thrown if the `element` specified is not a valid element.
 
 ### Visualization of position names
 
@@ -61,7 +61,8 @@ The element that was inserted, or `null`, if the insertion failed.
 <!-- afterend -->
 ```
 
-> **Note:** The `beforebegin` and
+> [!NOTE]
+> The `beforebegin` and
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 

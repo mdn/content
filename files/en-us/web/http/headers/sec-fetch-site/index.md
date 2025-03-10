@@ -7,11 +7,11 @@ browser-compat: http.headers.Sec-Fetch-Site
 
 {{HTTPSidebar}}
 
-The **`Sec-Fetch-Site`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.
+The HTTP **`Sec-Fetch-Site`** {{Glossary("fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.
 
 In other words, this header tells a server whether a request for a resource is coming from the same origin, the same site, a different site, or is a "user initiated" request. The server can then use this information to decide if the request should be allowed.
 
-Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in other {{Glossary("Fetch metadata request header","Fetch metadata request headers")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.
+Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in another {{Glossary("fetch metadata request header")}}. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.
 
 <table class="properties">
   <tbody>
@@ -20,14 +20,14 @@ Same-origin requests would usually be allowed by default, but what happens for r
       <td>{{Glossary("Fetch Metadata Request Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes (prefix <code>Sec-</code>)</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -48,7 +48,7 @@ Sec-Fetch-Site: none
 - `same-origin`
   - : The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).
 - `same-site`
-  - : The request initiator and the server hosting the resource have the same scheme, domain and/or subdomain, but not necessarily the same port.
+  - : The request initiator and the server hosting the resource have the same {{glossary("site")}}, including the scheme.
 - `none`
   - : This request is a user-originated operation. For example: entering a URL into the address bar, opening a bookmark, or dragging-and-dropping a file into the browser window.
 
@@ -83,11 +83,6 @@ Sec-Fetch-Site: cross-site
 
 ## See also
 
-- Related headers
-
-  - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - {{HTTPHeader("Sec-Fetch-User")}}
-  - {{HTTPHeader("Sec-Fetch-Dest")}}
-
+- {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-User")}}, {{HTTPHeader("Sec-Fetch-Dest")}} fetch metadata request headers
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

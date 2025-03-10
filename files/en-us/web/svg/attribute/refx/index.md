@@ -62,7 +62,8 @@ For {{SVGElement("symbol")}}, `refX` defines the x coordinate of the symbol, whi
 
 Unlike other positioning attributes, `refX` is interpreted as being in the coordinate system of the symbol contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes. If the attribute is not specified, no horizontal adjustment is made, and the left side of the symbol's rectangular viewport region (regardless of the `viewBox` coordinate) is positioned at the x coordinate.
 
-> **Note:** For backwards compatibility, the behavior when `refX` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
+> [!NOTE]
+> For backwards compatibility, the behavior when `refX` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
 
 <table class="properties">
   <tbody>

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An event handler called repeatedly when response data is available. The handler is passed an [`Event` object](/en-US/docs/Web/API/Event) with a `data` property. The `data` property includes a chunk of the response data as an {{jsxref("ArrayBuffer")}}.
 
@@ -17,7 +17,10 @@ Without an `ondata` listener, you don't receive the original response body, and 
 
 This example adds an `ondata` listener which replaces "Example" in the response with "WebExtension Example" using the {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} method.
 
-> **Note:** This example only works for occurrences of "Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
+> [!NOTE]
+> This example only works for occurrences of "Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
+
+<!-- cSpell:ignore Examp -->
 
 ```js
 function listener(details) {

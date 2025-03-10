@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_media-source.type
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's property **`type`** is a string with value `media-source`.
+The **`type`** property of the {{domxref("RTCAudioSourceStats")}} dictionary is a string with value `media-source`.
 
 The type of `media-source` identifies the type of statistics as either {{domxref("RTCAudioSourceStats")}} or {{domxref("RTCVideoSourceStats")}} when iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}}.
 The type of stats can further be differentiated using the {{domxref("RTCAudioSourceStats.kind", "kind")}}, which will be `audio` for `RTCAudioSourceStats`.

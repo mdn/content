@@ -92,7 +92,8 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
-> **Note:** Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
+> [!NOTE]
+> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
 
 The `export default` syntax allows any expression.
 
@@ -212,6 +213,12 @@ The "export from" syntax allows the `as` token to be omitted, which makes the de
 export { default, function2 } from "bar.js";
 ```
 
+`export from` supports all features that `import` supports — for example, [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with):
+
+```js
+export { default } from "./data.json" with { type: "json" };
+```
+
 ## Examples
 
 ### Using named exports
@@ -249,7 +256,7 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // Logs "From graph draw function"
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```

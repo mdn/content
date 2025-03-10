@@ -6,14 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.installing
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`installing`** property of the
+The **`installing`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `installing`. This property is
 initially set to `null`.
-
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Value
 

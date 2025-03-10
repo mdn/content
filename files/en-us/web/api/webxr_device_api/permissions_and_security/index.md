@@ -33,7 +33,8 @@ Specifically:
 - If the document making the request isn't trustworthy, the request is denied and `false` is returned through the promise's fulfillment routine. A trustworthy document is one which is both responsible and active, and which currently has focus.
 - If the user's intent to open an inline XR presentation is not well understood, the request is denied. Understanding of the [user's intent](#user_intent) may be either implicit or explicit.
 
-> **Note:** Additional requirements may be put into effect due to the specific features requested by the options object when calling `requestSession()`.
+> [!NOTE]
+> Additional requirements may be put into effect due to the specific features requested by the options object when calling `requestSession()`.
 
 ## User intent
 

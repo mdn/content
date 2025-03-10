@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FontFaceSet
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.
 
@@ -50,7 +50,7 @@ This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in 
 - {{domxref("FontFaceSet.has","FontFaceSet.has()")}}
   - : Returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 - {{domxref("FontFaceSet.keys","FontFaceSet.keys()")}}
-  - : An alias for {{domxref("CustomStateSet.values()")}}.
+  - : An alias for {{domxref("FontFaceSet.values()")}}.
 - {{domxref("FontFaceSet.load","FontFaceSet.load()")}}
   - : Returns a {{jsxref("Promise")}} which resolves to a list of font-faces for a requested font.
 - {{domxref("FontFaceSet.values","FontFaceSet.values()")}}

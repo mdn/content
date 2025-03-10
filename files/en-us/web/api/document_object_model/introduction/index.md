@@ -62,7 +62,7 @@ doc.nodeName # DOM property of document object
 p_list = doc.getElementsByTagName("para")
 ```
 
-For more information on what technologies are involved in writing JavaScript on the web, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+For more information on what technologies are involved in writing JavaScript on the web, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Accessing the DOM
 
@@ -108,7 +108,8 @@ and then adds it to the tree for the document:
 
 This page tries to describe the various objects and types in simple terms. But there are a number of different data types being passed around the API that you should be aware of.
 
-> **Note:** Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as **elements**, although strictly speaking not every node is an element.
+> [!NOTE]
+> Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as **elements**, although strictly speaking not every node is an element.
 
 The following table briefly describes these data types.
 

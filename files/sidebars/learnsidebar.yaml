@@ -1,0 +1,450 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Learn_web_development/Getting_started
+    title: Getting_started_modules
+  - link: /Learn_web_development/Getting_started/Environment_setup
+    title: Environment_setup
+    details: closed
+    children:
+      - /Learn_web_development/Getting_started/Environment_setup/Installing_software
+      - /Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
+      - /Learn_web_development/Getting_started/Environment_setup/Code_editors
+      - /Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
+      - /Learn_web_development/Getting_started/Environment_setup/Command_line
+  - link: /Learn_web_development/Getting_started/Your_first_website
+    title: Your_first_website
+    details: closed
+    children:
+      - /Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
+      - /Learn_web_development/Getting_started/Your_first_website/Creating_the_content
+      - /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+      - /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+      - /Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+  - link: /Learn_web_development/Getting_started/Web_standards
+    title: Web_standards
+    details: closed
+    children:
+      - /Learn_web_development/Getting_started/Web_standards/How_the_web_works
+      - /Learn_web_development/Getting_started/Web_standards/The_web_standards_model
+      - /Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
+  - link: /Learn_web_development/Getting_started/Soft_skills
+    title: Soft_skills
+    details: closed
+    children:
+      - /Learn_web_development/Getting_started/Soft_skills/Research_and_learning
+      - /Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork
+      - /Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
+      - /Learn_web_development/Getting_started/Soft_skills/Job_interviews
+  - type: section
+    link: /Learn_web_development/Core
+    title: Core_modules
+  - link: /Learn_web_development/Core/Structuring_content
+    title: Structuring_content_with_HTML
+    details: closed
+    children:
+      - /Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+      - /Learn_web_development/Core/Structuring_content/Webpage_metadata
+      - /Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
+      - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
+      - /Learn_web_development/Core/Structuring_content/Lists
+      - /Learn_web_development/Core/Structuring_content/Structuring_documents
+      - /Learn_web_development/Core/Structuring_content/Advanced_text_features
+      - /Learn_web_development/Core/Structuring_content/Creating_links
+      - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
+      - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
+      - /Learn_web_development/Core/Structuring_content/HTML_images
+      - /Learn_web_development/Core/Structuring_content/HTML_video_and_audio
+      - /Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+      - /Learn_web_development/Core/Structuring_content/HTML_table_basics
+      - /Learn_web_development/Core/Structuring_content/Table_accessibility
+      - /Learn_web_development/Core/Structuring_content/Planet_data_table
+      - /Learn_web_development/Core/Structuring_content/HTML_forms
+      - /Learn_web_development/Core/Structuring_content/Debugging_HTML
+  - link: /Learn_web_development/Core/Styling_basics
+    title: CSS_styling_basics
+    details: closed
+    children:
+      - /Learn_web_development/Core/Styling_basics/What_is_CSS
+      - /Learn_web_development/Core/Styling_basics/Getting_started
+      - /Learn_web_development/Core/Styling_basics/Styling_a_bio_page
+      - /Learn_web_development/Core/Styling_basics/Basic_selectors
+      - /Learn_web_development/Core/Styling_basics/Attribute_selectors
+      - /Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
+      - /Learn_web_development/Core/Styling_basics/Combinators
+      - /Learn_web_development/Core/Styling_basics/Box_model
+      - /Learn_web_development/Core/Styling_basics/Handling_conflicts
+      - /Learn_web_development/Core/Styling_basics/Values_and_units
+      - /Learn_web_development/Core/Styling_basics/Sizing
+      - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
+      - /Learn_web_development/Core/Styling_basics/Overflow
+      - /Learn_web_development/Core/Styling_basics/Images_media_forms
+      - /Learn_web_development/Core/Styling_basics/Tables
+      - /Learn_web_development/Core/Styling_basics/Debugging_CSS
+      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
+  - link: /Learn_web_development/Core/Text_styling
+    title: CSS_text_styling
+    details: closed
+    children:
+      - /Learn_web_development/Core/Text_styling/Fundamentals
+      - /Learn_web_development/Core/Text_styling/Styling_lists
+      - /Learn_web_development/Core/Text_styling/Styling_links
+      - /Learn_web_development/Core/Text_styling/Web_fonts
+      - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
+  - link: /Learn_web_development/Core/CSS_layout
+    title: CSS_layout
+    details: closed
+    children:
+      - /Learn_web_development/Core/CSS_layout/Introduction
+      - /Learn_web_development/Core/CSS_layout/Floats
+      - /Learn_web_development/Core/CSS_layout/Positioning
+      - /Learn_web_development/Core/CSS_layout/Flexbox
+      - /Learn_web_development/Core/CSS_layout/Grids
+      - /Learn_web_development/Core/CSS_layout/Responsive_Design
+      - /Learn_web_development/Core/CSS_layout/Media_queries
+      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
+  - link: /Learn_web_development/Core/Scripting
+    title: Dynamic_scripting_with_JavaScript
+    details: closed
+    children:
+      - /Learn_web_development/Core/Scripting/What_is_JavaScript
+      - /Learn_web_development/Core/Scripting/A_first_splash
+      - /Learn_web_development/Core/Scripting/What_went_wrong
+      - /Learn_web_development/Core/Scripting/Variables
+      - /Learn_web_development/Core/Scripting/Math
+      - /Learn_web_development/Core/Scripting/Strings
+      - /Learn_web_development/Core/Scripting/Useful_string_methods
+      - /Learn_web_development/Core/Scripting/Arrays
+      - /Learn_web_development/Core/Scripting/Silly_story_generator
+      - /Learn_web_development/Core/Scripting/Conditionals
+      - /Learn_web_development/Core/Scripting/Loops
+      - /Learn_web_development/Core/Scripting/Functions
+      - /Learn_web_development/Core/Scripting/Build_your_own_function
+      - /Learn_web_development/Core/Scripting/Return_values
+      - /Learn_web_development/Core/Scripting/Events
+      - /Learn_web_development/Core/Scripting/Event_bubbling
+      - /Learn_web_development/Core/Scripting/Image_gallery
+      - /Learn_web_development/Core/Scripting/Object_basics
+      - /Learn_web_development/Core/Scripting/DOM_scripting
+      - /Learn_web_development/Core/Scripting/Network_requests
+      - /Learn_web_development/Core/Scripting/JSON
+      - /Learn_web_development/Core/Scripting/Debugging_JavaScript
+  - link: /Learn_web_development/Core/Frameworks_libraries
+    title: JavaScript_frameworks_and_libraries
+    details: closed
+    children:
+      - /Learn_web_development/Core/Frameworks_libraries/Introduction
+      - /Learn_web_development/Core/Frameworks_libraries/Main_features
+      - /Learn_web_development/Core/Frameworks_libraries/React_getting_started
+      - /Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
+      - /Learn_web_development/Core/Frameworks_libraries/React_components
+      - /Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
+      - /Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering
+      - /Learn_web_development/Core/Frameworks_libraries/React_accessibility
+      - /Learn_web_development/Core/Frameworks_libraries/React_resources
+  - link: /Learn_web_development/Core/Accessibility
+    title: Accessibility
+    details: closed
+    children:
+      - /Learn_web_development/Core/Accessibility/What_is_accessibility
+      - /Learn_web_development/Core/Accessibility/Tooling
+      - /Learn_web_development/Core/Accessibility/HTML
+      - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+      - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+      - /Learn_web_development/Core/Accessibility/Multimedia
+      - /Learn_web_development/Core/Accessibility/Mobile
+      - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+  - link: /Learn_web_development/Core/Design_for_developers
+    title: Design_for_developers
+  - link: /Learn_web_development/Core/Version_control
+    title: Version_control
+  - type: section
+    link: /Learn_web_development/Extensions
+    title: Extension_modules
+  - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+    title: Advanced JavaScript objects
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
+      - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
+      - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
+      - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
+      - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
+  - link: /Learn_web_development/Extensions/Client-side_APIs
+    title: Client-side_web_APIs
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Client-side_APIs/Introduction
+      - /Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
+      - /Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
+      - /Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
+      - /Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
+  - link: /Learn_web_development/Extensions/Async_JS
+    title: Asynchronous_JavaScript
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Async_JS/Introducing
+      - /Learn_web_development/Extensions/Async_JS/Promises
+      - /Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
+      - /Learn_web_development/Extensions/Async_JS/Introducing_workers
+      - /Learn_web_development/Extensions/Async_JS/Sequencing_animations
+  - link: /Learn_web_development/Extensions/Forms
+    title: Web_forms
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Forms/Your_first_form
+      - /Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
+      - /Learn_web_development/Extensions/Forms/Basic_native_form_controls
+      - /Learn_web_development/Extensions/Forms/HTML5_input_types
+      - /Learn_web_development/Extensions/Forms/Other_form_controls
+      - /Learn_web_development/Extensions/Forms/Styling_web_forms
+      - /Learn_web_development/Extensions/Forms/Advanced_form_styling
+      - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
+      - /Learn_web_development/Extensions/Forms/Form_validation
+      - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
+  - link: /Learn_web_development/Extensions/Client-side_tools
+    title: Understanding_client-side_tools
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Client-side_tools/Overview
+      - /Learn_web_development/Extensions/Client-side_tools/Package_management
+      - /Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
+      - /Learn_web_development/Extensions/Client-side_tools/Deployment
+  - link: /Learn_web_development/Extensions/Server-side
+    title: Server-side_websites
+    details: closed
+    children:
+      - link: /Learn_web_development/Extensions/Server-side/First_steps
+        title: Server-side_first_steps
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Server-side/First_steps/Introduction
+          - /Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
+          - /Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
+          - /Learn_web_development/Extensions/Server-side/First_steps/Website_security
+      - link: /Learn_web_development/Extensions/Server-side/Django
+        title: Django_web_framework_(Python)
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Server-side/Django/Introduction
+          - /Learn_web_development/Extensions/Server-side/Django/development_environment
+          - /Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
+          - /Learn_web_development/Extensions/Server-side/Django/skeleton_website
+          - /Learn_web_development/Extensions/Server-side/Django/Models
+          - /Learn_web_development/Extensions/Server-side/Django/Admin_site
+          - /Learn_web_development/Extensions/Server-side/Django/Home_page
+          - /Learn_web_development/Extensions/Server-side/Django/Generic_views
+          - /Learn_web_development/Extensions/Server-side/Django/Sessions
+          - /Learn_web_development/Extensions/Server-side/Django/Authentication
+          - /Learn_web_development/Extensions/Server-side/Django/Forms
+          - /Learn_web_development/Extensions/Server-side/Django/Testing
+          - /Learn_web_development/Extensions/Server-side/Django/Deployment
+          - /Learn_web_development/Extensions/Server-side/Django/web_application_security
+          - /Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
+      - link: /Learn_web_development/Extensions/Server-side/Express_Nodejs
+        title: Express_web_framework_(Node.js)
+        details: closed
+        children:
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
+          - /Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
+  - link: /Learn_web_development/Extensions/Performance
+    title: Web_performance
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Performance/why_web_performance
+      - /Learn_web_development/Extensions/Performance/What_is_web_performance
+      - /Learn_web_development/Extensions/Performance/Perceived_performance
+      - /Learn_web_development/Extensions/Performance/Measuring_performance
+      - /Learn_web_development/Extensions/Performance/Multimedia
+      - /Learn_web_development/Extensions/Performance/video
+      - /Learn_web_development/Extensions/Performance/JavaScript
+      - /Learn_web_development/Extensions/Performance/HTML
+      - /Learn_web_development/Extensions/Performance/CSS
+      - /Learn_web_development/Extensions/Performance/business_case_for_performance
+  - link: /Learn_web_development/Extensions/Testing
+    title: Testing
+    details: closed
+    children:
+      - /Learn_web_development/Extensions/Testing/Introduction
+      - /Learn_web_development/Extensions/Testing/Testing_strategies
+      - /Learn_web_development/Extensions/Testing/HTML_and_CSS
+      - /Learn_web_development/Extensions/Testing/Feature_detection
+      - /Learn_web_development/Extensions/Testing/Automated_testing
+      - /Learn_web_development/Extensions/Testing/Your_own_automation_environment
+  - link: /Learn_web_development/Extensions/Transform_animate
+    title: Transform_and_animate_CSS
+  - link: /Learn_web_development/Extensions/Security_privacy
+    title: Security_and_privacy
+  - type: section
+    title: Further_resources
+  - link: /Learn_web_development/Howto
+    title: How_to_solve_common_problems
+    details: closed
+    children:
+      - /Learn_web_development/Howto/Solve_HTML_problems
+      - /Learn_web_development/Howto/Solve_CSS_problems
+      - /Learn_web_development/Howto/Solve_JavaScript_problems
+      - /Learn_web_development/Howto/Web_mechanics
+      - /Learn_web_development/Howto/Tools_and_setup
+      - /Learn_web_development/Howto/Design_and_accessibility
+  - link: /Learn_web_development/About
+    title: About
+  - link: /Learn_web_development/Educators
+    title: Resources_for_educators
+  - link: /Learn_web_development/Changelog
+    title: Changelog
+l10n:
+  de:
+    CSS_layout: CSS-Layout
+    Asynchronous_JavaScript: Asynchrones JavaScript
+    Client-side_web_APIs: Client-seitige Web-APIs
+    Web_forms: Webformulare — Arbeiten mit Benutzerdaten
+    Django_web_framework_(Python): Django Web-Framework (Python)
+    Further_resources: Weitere Ressourcen
+    Getting_started_modules: Einstiegsmodule
+    Environment_setup: Umgebung einrichten
+    Your_first_website: Ihre erste Website
+    Web_standards: Webstandards
+    Soft_skills: Soziale Kompetenzen
+    Core_modules: Kernmodule
+    Structuring_content_with_HTML: Inhalte mit HTML strukturieren
+    CSS_styling_basics: Grundlagen des CSS-Stylings
+    CSS_text_styling: CSS-Textgestaltung
+    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
+    Accessibility: Barrierefreiheit
+    Design_for_developers: Design für Entwickler:innen
+    Version_control: Versionskontrolle
+    Extension_modules: Erweiterungsmodule
+    Understanding_client-side_tools: Verständnis für clientseitige Tools
+    Server-side_websites: Serverseitige Programmierung
+    Server-side_first_steps: Erste Schritte auf der Serverseite
+    Express_web_framework_(Node.js): Express Web-Framework (Node.js)
+    Web_performance: Web-Performance
+    Testing: Tests
+    Transform_and_animate_CSS: CSS transformieren und animieren
+    Security_and_privacy: Sicherheit und Datenschutz
+    How_to_solve_common_problems: Häufige Probleme lösen
+    About: Über
+    Resources_for_educators: Ressourcen für Lehrkräfte
+    Changelog: Änderungsprotokoll
+  en-US:
+    Getting_started_modules: Getting started modules
+    Environment_setup: Environment setup
+    Your_first_website: Your first website
+    Web_standards: Web standards
+    Soft_skills: Soft skills
+    Core_modules: Core modules
+    Structuring_content_with_HTML: Structuring content with HTML
+    CSS_styling_basics: CSS styling basics
+    CSS_text_styling: CSS text styling
+    CSS_layout: CSS layout
+    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
+    Accessibility: Accessibility
+    Design_for_developers: Design for developers
+    Version_control: Version control
+    Extension_modules: Extension modules
+    Client-side_web_APIs: Client-side web APIs
+    Asynchronous_JavaScript: Asynchronous JavaScript
+    Web_forms: Web forms
+    Understanding_client-side_tools: Understanding client-side tools
+    Server-side_websites: Server-side websites
+    Server-side_first_steps: Server-side first steps
+    Django_web_framework_(Python): Django web framework (Python)
+    Express_web_framework_(Node.js): Express web framework (Node.js)
+    Web_performance: Web performance
+    Testing: Testing
+    Transform_and_animate_CSS: Transform and animate CSS
+    Security_and_privacy: Security and privacy
+    Further_resources: Further resources
+    How_to_solve_common_problems: How to solve common problems
+    About: About
+    Resources_for_educators: Resources for educators
+    Changelog: Changelog
+  pt-BR:
+    CSS_layout: Esquemas CSS
+    Asynchronous_JavaScript: Asynchronous JavaScript
+    Client-side_web_APIs: APIs Web na aplicação Cliente
+    Web_forms: Web forms — Working with user data
+    Django_web_framework_(Python): Framework Web Django (Python)
+    Further_resources: Mais recursos
+  ru:
+    CSS_layout: CSS макет
+    Asynchronous_JavaScript: Асинхронный JavaScript
+    Client-side_web_APIs: Клиентский веб API
+    Web_forms: HTML-формы — работа с пользовательскими данными
+    Django_web_framework_(Python): Веб-фреймворк Django (Python)
+    Further_resources: Дальнейшее чтение
+  zh-CN:
+    Getting_started_modules: 入门模块
+    Environment_setup: 配置环境
+    Your_first_website: 你的第一个网站
+    Web_standards: Web 标准
+    Soft_skills: 软性技能
+    Core_modules: 核心模块
+    Structuring_content_with_HTML: 使用 HTML 构建内容
+    CSS_styling_basics: CSS 样式基础
+    CSS_text_styling: CSS 文本样式
+    CSS_layout: CSS 排版
+    Dynamic_scripting_with_JavaScript: 使用 JavaScript 动态编码
+    JavaScript_frameworks_and_libraries: JavaScript 架构和库
+    Accessibility: 无障碍
+    Design_for_developers: 为开发人员设计
+    Version_control: 版本控制
+    Extension_modules: 扩展模块
+    Client-side_web_APIs: 客户端 Web API
+    Asynchronous_JavaScript: 异步 JavaScript
+    Web_forms: Web 表单
+    Understanding_client-side_tools: 理解客户端工具
+    Server-side_websites: 服务端网站
+    Server-side_first_steps: 服务端基础
+    Django_web_framework_(Python): Django web 框架（Python）
+    Express_web_framework_(Node.js): Express web 框架（Node.js）
+    Web_performance: Web 性能
+    Testing: 测试
+    Transform_and_animate_CSS: CSS 变换与动画化
+    Security_and_privacy: 安全与隐私
+    Further_resources: 更多资源
+    How_to_solve_common_problems: 如何解决常见问题
+    About: 关于
+    Resources_for_educators: 面向教育工作者的资源
+    Changelog: 更新日志
+  zh-TW:
+    CSS_layout: CSS 版面配置
+    Asynchronous_JavaScript: 非同步的 JavaScript
+    Client-side_web_APIs: 客戶端 web APIs
+    Web_forms: 網頁表單-與使用者資料合作
+    Django_web_framework_(Python): Django 網站框架 (Python)
+    Further_resources: 更多資源
+  fr:
+    CSS_layout: Disposition en CSS
+    Asynchronous_JavaScript: JavaScript asynchrone
+    Client-side_web_APIs: Les API web côté client
+    Web_forms: Formulaires web — Travailler avec les données des utilisateur·rice·s
+    Django_web_framework_(Python): Django (Python)
+    Further_resources: Ressources complémentaires
+  ja:
+    CSS_layout: CSS レイアウト
+    Asynchronous_JavaScript: 非同期 JavaScript
+    Client-side_web_APIs: クライアントサイド Web API
+    Web_forms: ウェブフォーム — ユーザーデータの操作
+    Django_web_framework_(Python): Django ウェブフレームワーク (Python)
+    Further_resources: その他のリソース
+  ko:
+    CSS_layout: CSS 레이아웃
+    Asynchronous_JavaScript: JavaScript의 비동기성
+    Client-side_web_APIs: 클라이언트 사이드 웹 API
+    Web_forms: 웹 Form — 사용자 데이터 사용하기
+    Django_web_framework_(Python): Django 웹 프레임워크 (Python)
+    Further_resources: 추가 자료

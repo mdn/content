@@ -91,7 +91,6 @@ const template = `<article>
   <h3>#POS. NAME</h3>
   <ul>
   <li><span>Author:</span> <strong>AUTHOR</strong></li>
-  <li><span>Twitter:</span> <a href='https://twitter.com/TWITTER'>@TWITTER</a></li>
   <li><span>Website:</span> <a href='http://WEBSITE/'>WEBSITE</a></li>
   <li><span>GitHub:</span> <a href='https://GITHUB'>GITHUB</a></li>
   <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>
@@ -104,7 +103,6 @@ for (let i = 0; i < games.length; i++) {
     .replace(/SLUG/g, games[i].slug)
     .replace(/NAME/g, games[i].name)
     .replace(/AUTHOR/g, games[i].author)
-    .replace(/TWITTER/g, games[i].twitter)
     .replace(/WEBSITE/g, games[i].website)
     .replace(/GITHUB/g, games[i].github);
   entry = entry.replace("<a href='http:///'></a>", "-");
@@ -236,7 +234,6 @@ const games = [
     slug: "lost-in-cyberspace",
     name: "Lost in Cyberspace",
     author: "Zosia and Bartek",
-    twitter: "bartaz",
     website: "",
     github: "github.com/bartaz/lost-in-cyberspace",
   },
@@ -244,7 +241,6 @@ const games = [
     slug: "vernissage",
     name: "Vernissage",
     author: "Platane",
-    twitter: "platane_",
     website: "github.com/Platane",
     github: "github.com/Platane/js13k-2017",
   },
@@ -253,7 +249,6 @@ const games = [
     slug: "emma-3d",
     name: "Emma-3D",
     author: "Prateek Roushan",
-    twitter: "",
     website: "",
     github: "github.com/coderprateek/Emma-3D",
   },

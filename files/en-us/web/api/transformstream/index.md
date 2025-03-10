@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TransformStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.
 
@@ -86,66 +86,6 @@ const transformContent = {
 class AnyToU8Stream extends TransformStream {
   constructor() {
     super({ ...transformContent, textencoder: new TextEncoder() });
-  }
-}
-```
-
-### Polyfilling TextEncoderStream and TextDecoderStream
-
-Note that this is deprecated by the native constructors. This is intended as a polyfill for unsupported platforms.
-
-```js
-const tes = {
-  start() {
-    this.encoder = new TextEncoder();
-  },
-  transform(chunk, controller) {
-    controller.enqueue(this.encoder.encode(chunk));
-  },
-};
-
-let _jstes_wm = new WeakMap(); /* info holder */
-class JSTextEncoderStream extends TransformStream {
-  constructor() {
-    let t = { ...tes };
-
-    super(t);
-    _jstes_wm.set(this, t);
-  }
-  get encoding() {
-    return _jstes_wm.get(this).encoder.encoding;
-  }
-}
-```
-
-Similarly, `TextDecoderStream` can be written as such:
-
-```js
-const tds = {
-  start() {
-    this.decoder = new TextDecoder(this.encoding, this.options);
-  },
-  transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk, { stream: true }));
-  },
-};
-
-let _jstds_wm = new WeakMap(); /* info holder */
-class JSTextDecoderStream extends TransformStream {
-  constructor(encoding = "utf-8", { ...options } = {}) {
-    let t = { ...tds, encoding, options };
-
-    super(t);
-    _jstds_wm.set(this, t);
-  }
-  get encoding() {
-    return _jstds_wm.get(this).decoder.encoding;
-  }
-  get fatal() {
-    return _jstds_wm.get(this).decoder.fatal;
-  }
-  get ignoreBOM() {
-    return _jstds_wm.get(this).decoder.ignoreBOM;
   }
 }
 ```

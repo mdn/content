@@ -10,9 +10,13 @@ browser-compat: http.headers.DNT
 
 {{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
-The **`DNT`** (**D**o **N**ot
-**T**rack) request header indicates the user's tracking preference. It lets
-users indicate whether they would prefer privacy rather than personalized content.
+> [!NOTE]
+> The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
+
+The HTTP **`DNT`** (Do Not Track) {{Glossary("request header")}} indicates the user's tracking preference.
+It lets users indicate whether they would prefer privacy rather than personalized content.
+
+DNT is deprecated in favor of [Global Privacy Control](https://globalprivacycontrol.org/), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients from {{domxref("navigator.globalPrivacyControl")}}.
 
 <table class="properties">
   <tbody>
@@ -21,8 +25,8 @@ users indicate whether they would prefer privacy rather than personalized conten
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -37,11 +41,11 @@ DNT: null
 
 ## Directives
 
-- 0
+- `0`
   - : The user prefers to allow tracking on the target site.
-- 1
+- `1`
   - : The user prefers not to be tracked on the target site.
-- null
+- `null`
   - : The user has not specified a preference about tracking.
 
 ## Examples
@@ -57,7 +61,7 @@ navigator.doNotTrack; // "0", "1" or null
 
 ## Specifications
 
-{{Specifications}}
+Part of the discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field) specification.
 
 ## Browser compatibility
 
@@ -73,3 +77,5 @@ navigator.doNotTrack; // "0", "1" or null
 - DNT browser settings help:
   - [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)
   - [Chrome](https://support.google.com/chrome/answer/2790761)
+- [GPC - Global Privacy Control](https://globalprivacycontrol.org/)
+  - [Enabling GPC in Firefox](https://support.mozilla.org/en-US/kb/global-privacy-control?as=u&utm_source=inproduct)

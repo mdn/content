@@ -14,12 +14,17 @@
     "url": "git+https://github.com/mdn/content.git"
   },
   "engines": {
-    "node": ">=18.16.0"
+    "node": ">=20"
   },
   "type": "module",
   "scripts": {
-    "build": "env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
-    "content": "env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
+    "info:deprecated": "node -e \"process.stderr.write('\\n🗑️  This command is deprecated, and will be removed soon.\\n\\n')\"",
+    "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
+    "postinstall": "node scripts/update-history.js",
+    "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
+    "build:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
+    "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
+    "content:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "fix:fm": "node scripts/front-matter_linter.js --fix true",
     "fix:js": "prettier -w \"**/*.(m)?js\"",
@@ -31,8 +36,10 @@
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky install",
-    "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "prepare": "husky || true",
+    "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
+    "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "start:rari": "yarn -s info:deprecated && yarn start",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
@@ -40,24 +47,25 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.38.1",
-    "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
-    "async": "^3.2.5",
+    "@mdn/yari": "4.7.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "async": "^3.2.6",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "fdir": "^6.1.1",
+    "fdir": "^6.4.3",
     "gray-matter": "^4.0.3",
-    "husky": "8.0.3",
-    "js-yaml": "^4.1.0",
-    "lint-staged": "15.2.0",
-    "markdownlint-cli2": "0.11.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.3",
+    "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
-    "prettier": "3.1.1"
+    "prettier": "3.5.3",
+    "yaml": "^2.7.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

@@ -5,11 +5,11 @@ page-type: web-api-interface
 browser-compat: api.Response
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
+You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("Window/fetch", "fetch()")}}.
 
 ## Constructor
 
@@ -52,6 +52,8 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
 - {{domxref("Response.blob()")}}
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
+- {{domxref("Response.bytes()")}}
+  - : Returns a promise that resolves with a {{jsxref("Uint8Array")}} representation of the response body.
 - {{domxref("Response.clone()")}}
   - : Creates a clone of a `Response` object.
 - {{domxref("Response.formData()")}}
@@ -86,22 +88,26 @@ You can also use the {{domxref("Response.Response", "Response()")}} constructor 
 const response = new Response();
 ```
 
-### An Ajax Call
+### A PHP Call
 
-Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.
+Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value.
 
 ```js
-// Function to do an Ajax call
-const doAjax = async () => {
-  const response = await fetch("Ajax.php"); // Generate the Response object
+// Function to fetch JSON using PHP
+const getJSON = async () => {
+  // Generate the Response object
+  const response = await fetch("getJSON.php");
   if (response.ok) {
-    return response.json(); // Get JSON value from the response body
+    // Get JSON value from the response body
+    return response.json();
   }
   throw new Error("*** PHP file not found");
 };
 
 // Call the function and output value or error message to console
-doAjax().then(console.log).catch(console.log);
+getJSON()
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications

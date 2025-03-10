@@ -6,11 +6,16 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.popoverTargetElement
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Popover API")}}
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLInputElement")}} interface gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`.
 
 It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
+
+Establishing a relationship between a popover and its invoker button using the `popoverTargetElement` property has two additional useful effects:
+
+- The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+- The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 ## Value
 
@@ -83,7 +88,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note:** A popover element is hidden by default, but if the API is not supported your element will display "as usual".
+> [!NOTE]
+> A popover element is hidden by default, but if the API is not supported your element will display "as usual".
 
 You can try out the example below.
 Show and hide the popover by toggling the button.
@@ -101,4 +107,5 @@ The "auto" popover can also be light dismissed by selecting outside the bounds o
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

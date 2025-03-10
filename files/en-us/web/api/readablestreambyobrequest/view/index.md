@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableStreamBYOBRequest.view
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`view`** getter property of the {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
 

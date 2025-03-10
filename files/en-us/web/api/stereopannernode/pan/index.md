@@ -14,7 +14,8 @@ The `pan` property of the {{ domxref("StereoPannerNode") }} interface is an [a-r
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} containing the panning to apply.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

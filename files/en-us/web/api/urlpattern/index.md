@@ -7,15 +7,12 @@ status:
 browser-compat: api.URLPattern
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`URLPattern`** interface matches URLs or parts of URLs against a pattern.
-The pattern can contain capturing groups that extract parts of the matched URL.
+The **`URLPattern`** interface of the {{domxref("URL Pattern API", "", "", "nocode")}} matches URLs or parts of URLs against a pattern. The pattern can contain capturing groups that extract parts of the matched URL.
 
 More information about the syntax of patterns can be found on the API overview
-page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
-
-{{AvailableInWorkers}}
+page: {{domxref("URL Pattern API", "", "", "nocode")}}.
 
 ## Constructor
 
@@ -24,28 +21,28 @@ page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
 
 ## Instance properties
 
-- {{domxref("URLPattern.hash", "hash")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _hash_ part
     of a URL.
-- {{domxref("URLPattern.hostname", "hostname")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _hostname_
     part of a URL.
-- {{domxref("URLPattern.password", "password")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _password_
     part of a URL.
-- {{domxref("URLPattern.pathname", "pathname")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _pathname_
     part of a URL.
-- {{domxref("URLPattern.port", "port")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _port_ part
     of a URL.
-- {{domxref("URLPattern.protocol", "protocol")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _protocol_
     part of a URL.
-- {{domxref("URLPattern.search", "search")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _search_ part
     of a URL.
-- {{domxref("URLPattern.username","username")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _username_
     part of a URL.
 

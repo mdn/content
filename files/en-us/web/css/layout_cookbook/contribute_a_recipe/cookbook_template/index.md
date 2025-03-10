@@ -6,7 +6,8 @@ page-type: guide
 
 {{CSSRef}}
 
-> **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
+> [!NOTE]
+> This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
 > _Comment in italics are information about how to use part of the template._
 
 _Description of the problem this recipe solves or the pattern you are demonstrating._
@@ -17,13 +18,35 @@ _What does this pattern need to include, or what problems does it need to solve?
 
 ## Recipe
 
-_Change the path to the example below to point to your merged example. The last parameter is the live example height, which you can change as needed._
+_Change the example code. The last parameter is the live example height, which you can change as needed. Mention that you can click "Play" in code blocks to edit the example in the MDN Playground._
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+```html live-sample___center-example
+<div class="container">
+  <div class="item">I am centered!</div>
+</div>
+```
 
-_Change the link to point to your merged download version._
+```css live-sample___center-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
 
-[Download the example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+
+  width: 10em;
+}
+```
+
+{{EmbedLiveSample("center-example", "", "250px")}}
 
 ## Choices made
 
@@ -36,10 +59,6 @@ _If there are useful alternative methods for building the recipe, or fallback re
 ## Accessibility concerns
 
 _Include this is there are any specific things to watch out for in regard to accessibility. If not relevant for your pattern this can be omitted._
-
-## Browser compatibility
-
-_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
 
 ## See also
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.depthUsage
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`depthUsage`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} describes which depth-sensing usage is used.

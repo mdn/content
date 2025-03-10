@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`size()`** method of the
 {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's

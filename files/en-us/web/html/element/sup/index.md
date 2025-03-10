@@ -9,7 +9,25 @@ browser-compat: html.elements.sup
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 
-{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+</p>
+
+<p>
+  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## Attributes
 
@@ -103,7 +121,7 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -118,7 +136,7 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
           ></code
         >
       </td>

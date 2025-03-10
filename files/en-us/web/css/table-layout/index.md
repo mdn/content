@@ -7,9 +7,68 @@ browser-compat: css.properties.table-layout
 
 {{CSSRef}}
 
-The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
+The **`table-layout`** [CSS](/en-US/docs/Web/CSS) property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 
-{{EmbedInteractiveExample("pages/css/table-layout.html")}}
+{{InteractiveExample("CSS Demo: table-layout")}}
+
+```css interactive-example-choice
+table-layout: auto;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: auto;
+width: 100%;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 100%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Lion</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Norwegian Lemming</td>
+      <td>Europe</td>
+    </tr>
+    <tr>
+      <td>Seal</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  border: 1px solid #139;
+}
+
+th,
+td {
+  border: 2px solid #a19;
+  padding: 0.25rem 0.5rem;
+}
+```
 
 ## Syntax
 
@@ -34,7 +93,7 @@ table-layout: unset;
 
 - `fixed`
 
-  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the [`width`](/en-US/docs/Web/CSS/width) property. If the value of the `width` property is set to `auto`or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
+  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the [`width`](/en-US/docs/Web/CSS/width) property. If the value of the `width` property is set to `auto` or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
     The fixed table layout algorithm is faster than the automatic layout algorithm because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells because it depends only on explicitly set widths.
 
     In the fixed table layout algorithm, the width of each column is determined as follows:
@@ -114,3 +173,4 @@ td {
 ## See also
 
 - [`<table>`](/en-US/docs/Web/HTML/Element/table)
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module

@@ -11,23 +11,12 @@ The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("r
 
 Other direct children will be bypassed and therefore not rendered. If a child element is a container element, like {{SVGElement("g")}}, then its subtree is also processed/rendered or bypassed/not rendered.
 
-> **Note:** The `display` and `visibility` properties have no effect on `<switch>` element processing. In particular, setting `display:none` on a child has no effect on the true/false testing for `<switch>` processing.
+> [!NOTE]
+> The `display` and `visibility` properties have no effect on `<switch>` element processing. In particular, setting `display:none` on a child has no effect on the true/false testing for `<switch>` processing.
 
 ## Usage context
 
 {{svginfo}}
-
-## Attributes
-
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
 
 ## DOM Interface
 

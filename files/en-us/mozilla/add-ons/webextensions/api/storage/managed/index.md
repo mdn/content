@@ -5,17 +5,17 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.storage.managed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.
 
 ## Provisioning managed storage
 
-The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/mv3/manifest/storage/) article.
+The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/reference/manifest/storage) article.
 
-For Firefox, you need to create a JSON manifest file in a specific format and location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+For Firefox, you need to create a [JSON manifest (native manifest) file in a specific format and location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or use the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty).
 
-Here's an example manifest:
+Here's an example native manifest:
 
 ```json
 {
@@ -36,6 +36,9 @@ storageItem.then((res) => {
   console.log(`Managed colour is: ${res.colour}`);
 });
 ```
+
+> [!NOTE]
+> In Firefox, a browser restart is required to load changes to the JSON manifest or policy into managed storage. In other browsers, the loading of changes is dynamic.
 
 ## Methods
 
@@ -59,7 +62,8 @@ The `managed` object implements the events defined on the {{WebExtAPIRef("storag
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

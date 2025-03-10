@@ -74,7 +74,6 @@ Content scripts can see and manipulate the page's DOM, just like normal scripts 
 
 Unlike normal page scripts, content scripts can:
 
-- Make cross-domain XHR requests.
 - Use a small subset of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API).
 - [Exchange messages with their background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) and can in this way indirectly access all the WebExtension APIs.
 

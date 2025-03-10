@@ -37,7 +37,8 @@ Touch events are similar to mouse events except they support simultaneous touche
 
 This example tracks multiple touchpoints at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
 
-> **Note:** The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
+> [!NOTE]
+> The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
 
 ### Create a canvas
 
@@ -272,7 +273,8 @@ You can test this example on mobile devices by touching the box below.
 
 {{EmbedLiveSample('Example','100%', 900)}}
 
-> **Note:** More generally, the example will work on platforms that provide touch events.
+> [!NOTE]
+> More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:
 >
 > - On Firefox enable "touch simulation" in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (you may need to reload the page).

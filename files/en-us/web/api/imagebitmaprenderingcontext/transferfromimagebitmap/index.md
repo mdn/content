@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageBitmapRenderingContext.transferFromImageBitmap()`**
 method displays the given {{domxref("ImageBitmap")}} in the canvas associated with this

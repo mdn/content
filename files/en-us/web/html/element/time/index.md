@@ -15,7 +15,25 @@ It may represent one of the following:
 - A precise date in the [Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) (with optional time and timezone information).
 - [A valid time duration](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string).
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 ## Attributes
 
@@ -34,50 +52,133 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 ### Valid datetime values
 
-- a valid year string
-  - : `2011`
-- a valid month string
-  - : `2011-11`
-- a valid date string
-  - : `2011-11-18`
-- a valid yearless date string
-  - : `11-18`
-- a valid week string
-  - : `2011-W47`
-- a valid time string
-
-  - : `14:54`
-
-    `14:54:39`
-
-    `14:54:39.929`
-
-- a valid local date and time string
-
-  - : `2011-11-18T14:54:39.929`
-
-    `2011-11-18 14:54:39.929`
-
-- a valid global date and time string
-
-  - : `2011-11-18T14:54:39.929Z`
-
-    `2011-11-18T14:54:39.929-0400`
-
-    `2011-11-18T14:54:39.929-04:00`
-
-    `2011-11-18 14:54:39.929Z`
-
-    `2011-11-18 14:54:39.929-0400`
-
-    `2011-11-18 14:54:39.929-04:00`
-
-- a valid duration string
-  - : `PT4H18M3S`
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Microsyntax</th>
+      <th scope="col">Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Valid month string</td>
+      <td><code><em>YYYY</em>-<em>MM</em></code></td>
+      <td><code>2011-11</code>, <code>2013-05</code></td>
+    </tr>
+    <tr>
+      <td>Valid date string</td>
+      <td><code><em>YYYY</em>-<em>MM</em>-<em>DD</em></code></td>
+      <td><code>1887-12-01</code></td>
+    </tr>
+    <tr>
+      <td>Valid yearless date string</td>
+      <td><code><em>MM</em>-<em>DD</em></code></td>
+      <td><code>11-12</code></td>
+    </tr>
+    <tr>
+      <td>Valid time string</td>
+      <td>
+        <code><em>HH</em>:<em>MM</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>23:59</code><br />
+        <code>12:15:47</code><br />
+        <code>12:15:52.998</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid local date and time string</td>
+      <td>
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>2013-12-25 11:12</code><br />
+        <code>1972-07-25 13:43:07</code><br />
+        <code>1941-03-15 07:06:23.678</code><br />
+        <code>2013-12-25T11:12</code><br />
+        <code>1972-07-25T13:43:07</code><br />
+        <code>1941-03-15T07:06:23.678</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid time-zone offset string</td>
+      <td>
+        <code>Z</code><br />
+        <code>+<em>HHMM</em></code><br />
+        <code>+<em>HH</em>:<em>MM</em></code><br />
+        <code>-<em>HHMM</em></code><br />
+        <code>-<em>HH</em>:<em>MM</em></code>
+      </td>
+      <td>
+        <code>Z</code><br />
+        <code>+0200</code><br />
+        <code>+04:30</code><br />
+        <code>-0300</code><br />
+        <code>-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid global date and time string</td>
+      <td style="max-width:12em">
+        Any combination of a valid local date and time string followed by a
+        valid time-zone offset string
+      </td>
+      <td>
+        <code>2013-12-25 11:12+0200</code><br />
+        <code>1972-07-25 13:43:07+04:30</code><br />
+        <code>1941-03-15 07:06:23.678Z</code><br />
+        <code>2013-12-25T11:12-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>Valid week string</td>
+      <td><code><em>YYYY</em>-W<em>WW</em></code></td>
+      <td><code>2013-W46</code></td>
+    </tr>
+    <tr>
+      <td>Four or more ASCII digits</td>
+      <td><code><em>YYYY</em></code></td>
+      <td><code>2013</code>, <code>0001</code></td>
+    </tr>
+    <tr>
+      <td>Valid duration string</td>
+      <td>
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code><em>w</em>w <em>d</em>d <em>h</em>h <em>m</em>m <em>s</em>s</code>
+      </td>
+      <td>
+        <code>P12DT7H12M13S</code><br />
+        <code>P12DT7H12M13.3S</code><br />
+        <code>P12DT7H12M13.45S</code><br />
+        <code>P12DT7H12M13.455S</code><br />
+        <code>PT7H12M13S</code><br />
+        <code>PT7H12M13.2S</code><br />
+        <code>PT7H12M13.56S</code><br />
+        <code>PT7H12M13.999S</code><br />
+        <code>7d 5h 24m 13s</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -87,7 +188,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Result
 
-{{EmbedLiveSample('Simple_example', 250, 80)}}
+{{EmbedLiveSample('Basic_example', 250, 80)}}
 
 ### `datetime` example
 
@@ -132,7 +233,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -147,7 +248,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
           ></code
         >
       </td>

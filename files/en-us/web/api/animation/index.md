@@ -26,6 +26,8 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : Returns the current finished Promise for this animation.
 - {{domxref("Animation.id")}}
   - : Gets and sets the `String` used to identify the animation.
+- {{domxref("Animation.overallProgress")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a number between `0` and `1` indicating the animation's overall progress towards its finished state.
 - {{domxref("Animation.pending")}} {{ReadOnlyInline}}
   - : Indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.
 - {{domxref("Animation.playState")}} {{ReadOnlyInline}}
@@ -67,7 +69,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 - {{domxref("Animation.finish_event", "finish")}}
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
-  - : Fires when the animation is [automatically removed](#automatically_removing_filling_animations) by the browser.
+  - : Fires when the animation is [automatically removed](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#automatically_removing_filling_animations) by the browser.
 
 ## Accessibility concerns
 
@@ -78,7 +80,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Specifications

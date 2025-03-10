@@ -14,7 +14,8 @@ The **`lastPacketReceivedTimestamp`** property of the {{domxref("RTCInboundRtpSt
 
 A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most recently received packet arrived on this RTP stream.
 
-> **Note:** This value differs from the {{domxref("RTCInboundRtpStreamStats.timestamp", "timestamp")}},
+> [!NOTE]
+> This value differs from the {{domxref("RTCInboundRtpStreamStats.timestamp", "timestamp")}},
 > which represents the time at which the statistics object was created.
 
 ## Specifications

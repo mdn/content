@@ -51,7 +51,8 @@ None ({{jsxref("undefined")}}).
   </tbody>
 </table>
 
-> **Note:** If the keyframes cannot be processed or are malformed, the `KeyframeEffect`'s keyframes are not modified.
+> [!NOTE]
+> If the keyframes cannot be processed or are malformed, the `KeyframeEffect`'s keyframes are not modified.
 
 ## Examples
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.overscroll-behavior-inline
 
 {{CSSRef}}
 
-The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-inline`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
 
@@ -34,7 +34,7 @@ The `overscroll-behavior-inline` property is specified as a keyword chosen from 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no {{Glossary("Scroll_chaining", "scroll chaining")}} occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
@@ -79,9 +79,9 @@ main {
   background-color: white;
   background-image: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+    rgb(0 0 0 / 0%) 0px,
+    rgb(0 0 0 / 0%) 19px,
+    rgb(0 0 0 / 50%) 20px
   );
 }
 
@@ -101,15 +101,15 @@ div > div {
   background-color: yellow;
   background-image: repeating-linear-gradient(
     to right,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 19px,
-    rgba(0, 0, 0, 0.5) 20px
+    rgb(0 0 0 / 0%) 0px,
+    rgb(0 0 0 / 0%) 19px,
+    rgb(0 0 0 / 50%) 20px
   );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgb(255 0 0 / 50%);
   margin: 0;
   width: 360px;
   position: relative;
@@ -132,4 +132,8 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module

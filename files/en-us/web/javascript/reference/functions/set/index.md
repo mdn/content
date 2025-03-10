@@ -9,7 +9,22 @@ browser-compat: javascript.functions.set
 
 The **`set`** syntax binds an object property to a function to be called when there is an attempt to set that property. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## Syntax
 
@@ -34,10 +49,19 @@ There are some additional syntax restrictions:
 
 ## Description
 
-In JavaScript, a setter can be used to execute a function whenever a specified property
-is attempted to be changed. Setters are most often used in conjunction with getters to
-create a type of pseudo-property. It is not possible to simultaneously have a setter on
-a property that holds an actual value.
+In JavaScript, a setter can be used to execute a function whenever an attempt is made to change a property's value. Setters are most often used in conjunction with getters.
+
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The setter syntax allows you to specify the setter function in an object initializer.
+
+```js
+const obj = {
+  set prop() {
+    // setter, the code executed when setting obj.prop
+  },
+}
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 

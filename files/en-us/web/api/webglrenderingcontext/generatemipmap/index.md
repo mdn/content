@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.generateMipmap
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.generateMipmap()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) generates a set of mipmaps for a
@@ -62,7 +62,5 @@ gl.generateMipmap(gl.TEXTURE_2D);
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameteri()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
