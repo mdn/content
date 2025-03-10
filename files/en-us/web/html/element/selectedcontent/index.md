@@ -103,7 +103,7 @@ You can see a full example that includes the `<selectedcontent>` element in our 
 
 ## Specifications
 
-{{Specifications}}
+Not currently part of a specification. See https://github.com/whatwg/html/pull/10633 for the relevant specification PR.
 
 ## Browser compatibility
 

@@ -32,6 +32,43 @@ The `::picker(select)` selector targets all descendants of customizable `<select
 
 This allows you to target all of the picker contents as a single entity, for example if you want to customize its border, animate it when it appears and disappears, or position it somewhere different to the default position. Our [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) guide shows many examples of `::picker(select)` usage.
 
+### Picker popover behavior
+
+The select control `<button>` and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which brings several advantages such as accessibility semantics, tabbing order adjustments, and the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class.
+
+See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_drop-down_using_popover_states) for a typical usae case allowed by the implicit popover association.
+
+### Picker anchor positioning
+
+A further side-effect of the implicit invoker/popover relationship mentioned above is that the button and the picker also have an implicit anchor reference, meaning that the picker is automatically associated with the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This has several advantages, most notably:
+
+- The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor). For reference, the related default styles are as follows:
+
+  ```css
+  inset: auto;
+  margin: 0;
+  min-inline-size: anchor-size(self-inline);
+  min-block-size: 1lh;
+  /* Go to the edge of the viewport, and add scrollbars if needed. */
+  max-block-size: stretch;
+  overflow: auto;
+  /* Below and span-right, by default. */
+  position-area: block-end span-inline-end;
+  ```
+
+- The browser default styles also define some position try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding). For reference, the related default fallback styles are as follows:
+
+  ```css
+  position-try-order: most-block-size;
+  position-try-fallbacks:
+    /* First try above and span-right, */
+    /* then below but span-left, */
+    /* then above and span-left. */
+    block-start span-inline-end,
+    block-end span-inline-start,
+    block-start span-inline-start;
+  ```
+
 ## Examples
 
 ### Basic custom select usage
