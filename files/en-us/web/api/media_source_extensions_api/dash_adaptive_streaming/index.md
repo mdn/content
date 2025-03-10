@@ -1,27 +1,15 @@
 ---
 title: DASH Adaptive Streaming for HTML video
-slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
+slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 page-type: guide
 sidebar: mediasidebar
 ---
 
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
-## Browser Support
-
-Firefox 21 includes an implementation of DASH for HTML WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
-
-Firefox 23 removed support for DASH for HTML WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via JavaScript libraries such as dash.js. See bug [778617](https://bugzil.la/778617) for details.
-
-## Using DASH - Server Side
-
 First you'll need to convert your WebM video to a DASH manifest with the accompanying video files in various bit rates. To start with you'll only need the FFmpeg program from [ffmpeg.org](https://www.ffmpeg.org/), with libvpx and libvorbis support for WebM video and audio, at least version 2.5 (probably; this was tested with 3.2.5).
 
-### 1. Use your existing WebM file to create one audio file and multiple video files
-
-For example:
-
-The file **_in.video_** can be any container with at least one audio and one video stream that can be decoded by FFmpeg,
+First, use your existing WebM file to create one audio file and multiple video files. In the example below, the file **_in.video_** can be any container with at least one audio and one video stream that can be decoded by FFmpeg.
 
 Create the audio using:
 
@@ -68,7 +56,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
 ```
 
-### 2. Create the manifest file
+Then, create the manifest file.
 
 ```bash
 ffmpeg \
@@ -86,21 +74,9 @@ ffmpeg \
 
 The `-map` arguments correspond to the input files in the sequence they are given; you should have one for each file. The `-adaptation_sets` argument assigns them into adaptation sets; for example, this creates one set (0) that contains the streams 0, 1, 2 and 3 (the videos), and another set (1) that contains only stream 4, the audio stream.
 
-Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve `.mpd` files with `mimetype="application/dash+xml"`, then you're all set.
+Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve `.mpd` files with `Content-Type: application/dash+xml`, then you're all set.
 
-## Using DASH - Client Side
-
-You'll want to modify your web page to point to the DASH manifest first, instead of directly to a particular video file:
-
-```html
-<video>
-  <source src="movie.mpd" />
-  <source src="movie.webm" />
-  Your browser does not support the video tag.
-</video>
-```
-
-That's it! If DASH is supported by the browser, your video will now stream adaptively.
+Then, in order to correctly connect this `.mpd` file to your `<video>` element, you need a JavaScript library like dash.js, because no browser has native support for DASH. Read [dash.js quickstart](https://dashif.org/dash.js/pages/quickstart/) for how to set up your page to use it.
 
 ## See also
 
