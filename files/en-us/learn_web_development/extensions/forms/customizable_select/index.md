@@ -186,7 +186,7 @@ Let's have a look at the work so far — note how the picker arrow rotates smoot
 
 The select picker can be targeted using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element. As mentioned earlier, the picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`. In our example, this means all the `<option>` elements and ther contents.
 
-First of all, the picker's default black {{cssxref("border")}} border is removed:
+First of all, the picker's default black {{cssxref("border")}} is removed:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 ::picker(select) {

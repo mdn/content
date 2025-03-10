@@ -63,9 +63,7 @@ You can see a full example that includes the `<selectedcontent>` element in our 
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
-          >form-associated </a
-        >element.
+       None
       </td>
     </tr>
     <tr>
