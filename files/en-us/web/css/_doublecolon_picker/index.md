@@ -36,7 +36,7 @@ This allows you to target all of the picker contents as a single entity, for exa
 
 ### Basic custom select usage
 
-To opt-in to custom select functionality, your `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
+To opt-in to custom select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
 
 ```css
 select,
