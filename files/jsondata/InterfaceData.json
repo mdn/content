@@ -116,14 +116,6 @@
       "inh": "Event",
       "impl": []
     },
-    "AudioRenderCapacity": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "AudioRenderCapacityEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "AudioScheduledSourceNode": {
       "inh": "AudioNode",
       "impl": []
@@ -3522,6 +3514,10 @@
     },
     "SVGPathElement": {
       "inh": "SVGGeometryElement",
+      "impl": []
+    },
+    "SVGPathSegment": {
+      "inh": "",
       "impl": []
     },
     "SVGPatternElement": {

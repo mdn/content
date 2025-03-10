@@ -27,7 +27,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     It is recommended to use the `.show()` or `.showModal()` method to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it is non-modal.
 
     > [!NOTE]
-    > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended.
+    > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended. See {{domxref("HTMLDialogElement.open", "open")}} for more information.
 
 - `closedby`
 

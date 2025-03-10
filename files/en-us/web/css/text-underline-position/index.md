@@ -9,7 +9,36 @@ browser-compat: css.properties.text-underline-position
 
 The **`text-underline-position`** [CSS](/en-US/docs/Web/CSS) property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
 
-{{EmbedInteractiveExample("pages/css/text-underline-position.html")}}
+{{InteractiveExample("CSS Demo: text-underline-position")}}
+
+```css interactive-example-choice
+text-underline-position: auto;
+```
+
+```css interactive-example-choice
+text-underline-position: under;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element"
+      >C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></span
+    >
+    is the chemical formula for caffeine.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 ## Syntax
 

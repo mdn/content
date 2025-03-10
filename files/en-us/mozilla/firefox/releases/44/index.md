@@ -150,7 +150,7 @@ Highlights:
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
 - The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event and its event handler, have been implemented ([Firefox bug 1178091](https://bugzil.la/1178091)).
-- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()`} removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
+- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()` removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ([Firefox bug 1103188](https://bugzil.la/1103188)).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ([Firefox bug 1070216](https://bugzil.la/1070216)).
 - Support for the non-standard constraint style option list for `RTCOfferOptions` has been removed.

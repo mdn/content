@@ -9,7 +9,47 @@ browser-compat: css.properties.border-block-start-width
 
 The **`border-block-start-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of the logical block-start border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, or {{cssxref("border-left-width")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-block-start-width.html")}}
+{{InteractiveExample("CSS Demo: border-block-start-width")}}
+
+```css interactive-example-choice
+border-block-start-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-start-width: 4px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start-width: 4px;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntax
 

@@ -9,7 +9,40 @@ browser-compat: css.properties.mix-blend-mode
 
 The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
 
-{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+
+```css interactive-example-choice
+mix-blend-mode: normal;
+```
+
+```css interactive-example-choice
+mix-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+mix-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+mix-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: sandybrown;
+}
+```
 
 ## Syntax
 

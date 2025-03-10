@@ -9,7 +9,48 @@ browser-compat: css.properties.column-rule-style
 
 The **`column-rule-style`** [CSS](/en-US/docs/Web/CSS) property sets the style of the line drawn between columns in a multi-column layout.
 
-{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
+{{InteractiveExample("CSS Demo: column-rule-style")}}
+
+```css interactive-example-choice
+column-rule-style: none;
+```
+
+```css interactive-example-choice
+column-rule-style: dotted;
+```
+
+```css interactive-example-choice
+column-rule-style: solid;
+```
+
+```css interactive-example-choice
+column-rule-style: double;
+```
+
+```css interactive-example-choice
+column-rule-style: ridge;
+column-rule-color: #88f;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## Syntax
 

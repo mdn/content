@@ -47,11 +47,11 @@ Having modern web browsers available to you is essential for web development so 
 For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. You'll most commonly come across web browsers on desktop, laptop, and mobile devices, but you will also come across web browsers on other devices such as tablets, watches, and TVs. If possible, make sure you have one browser from each line installed and available to test on (so you don't just test in multiple browsers based on the same rendering engine):
 
 - Desktop browsers:
-  - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/browsers/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
+  - Chromium: [Google Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge), [Vivaldi](https://vivaldi.com/).
   - Gecko: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/).
   - WebKit: [Apple Safari](https://www.apple.com/safari/).
 - Mobile/alternative device browsers:
-  - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/browsers/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
+  - Chromium (Android): [Google Chrome](https://www.google.com/chrome/go-mobile/), [Opera](https://www.opera.com/opera), [Brave](https://brave.com/download/), [Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile), [Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet), [Vivaldi](https://vivaldi.com/android/).
   - Gecko (Android): [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/).
   - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]

@@ -20,7 +20,7 @@ This module assumes no prior technical knowledge, beyond basic computer usage. Y
 
 If you need to refresh yourself on such basics, we'd recommend the following resources depending on what operating system you are using:
 
-- [Windows help and learning](https://support.microsoft.com/windows), Microsoft (2024)
+- [Windows help and learning](https://support.microsoft.com/en-us/windows), Microsoft (2024)
 - [macOS User Guide](https://support.apple.com/guide/mac-help/welcome/mac), Apple (2024)
 - [Official Ubuntu documentation](https://help.ubuntu.com/), ubuntu.com (2024)
 
@@ -36,5 +36,3 @@ If you need to refresh yourself on such basics, we'd recommend the following res
   - : This article discusses some issues you should be aware of with file systems so you can set up a sensible file structure for your website.
 - [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
-
-## See also

@@ -1,6 +1,6 @@
 ---
 title: Stacking context example 3
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
+slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 page-type: guide
 ---
 
@@ -157,12 +157,12 @@ div.lev3 {
 
 ## See also
 
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): How floating elements are handled with stacking.
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): How to use `z-index` to change default stacking.
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): Notes on the stacking context.
-- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
-- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
+- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
+- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
 
 > [!NOTE]
 > The sample image looks wrong - with the second level 2 overlapping the level 3 menus - because level 2 has opacity, which creates a new stacking context.

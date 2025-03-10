@@ -17,7 +17,7 @@ This event is closely modeled on the events defined in the [`webRequest`](/en-US
 
 The event is fired before any of the `webRequest` events for the same request.
 
-When the event is fired, the listener is called with an object containing information about the request. The listener returns a {{WebExtAPIRef("proxy.ProxyInfo")}} object representing a proxy to use (or an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects, enabling the browser to fail over if a proxy is unreachable).
+When the event is fired, the listener is called with an object containing information about the request. The listener returns a {{WebExtAPIRef("proxy.ProxyInfo")}} object representing a proxy to use (or an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects, enabling the browser to fail over if a proxy is unreachable). By default, the request fails over to any browser-defined proxy unless a `null` object or an array ending in a `null` object is returned.
 
 To use `proxy.onRequest`, an extension must have the "proxy" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of the requests that it intercepts, which means that the match patterns in the `filter` argument must be a subset of the extension's host permissions.
 
@@ -38,9 +38,9 @@ Events have three functions:
 - `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : Stops listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : Checks whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
 ## addListener syntax
 
@@ -48,7 +48,7 @@ Events have three functions:
 
 - `listener`
 
-  - : The function that is called when this event occurs. The function is passed a single argument, which is a {{WebExtAPIRef("proxy.RequestDetails")}} object containing details of the request.
+  - : The function called when this event occurs. The function is passed one argument, which is a {{WebExtAPIRef("proxy.RequestDetails")}} object containing details of the request.
 
     The listener can return any of:
 
@@ -57,18 +57,16 @@ Events have three functions:
     - a `Promise` that resolves to a `ProxyInfo` object.
     - a `Promise` that resolves to an array of `ProxyInfo` objects.
 
-    If the listener returns an array, or a Promise that resolves to an array, then all `ProxyInfo` objects after the first one represent failovers: if the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires the browser will try the proxy at position N+1.
+    When the listener returns an array or a Promise that resolves to an array, the `ProxyInfo` objects after the first one represent failovers. If the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires, the browser tries the proxy at position N+1.
+
+    By default, the request fails over to any browser-defined proxy unless a `null` object or an array ending in a `null` object (`[{ ... proxy info ...} , null]``) is returned.
 
     If there is an error specifying the {{WebExtAPIRef("proxy.ProxyInfo")}} objects, then {{WebExtAPIRef("proxy.onError")}} is called.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to the listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events sent to the listener.
 - `extraInfoSpec` {{optional_inline}}
   - : `array` of `string`. Extra options for the event. Pass `"requestHeaders"` to include the request headers in the `details` object passed to the listener.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -93,3 +91,7 @@ browser.proxy.onRequest.addListener(handleProxyRequest, {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
