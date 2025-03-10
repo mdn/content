@@ -108,7 +108,7 @@ The `background-position-y` property is specified as one or more values, separat
 
 ### Basic example
 
-The following example shows a simple background image implementation, with background-position-x and background-position-y used to define the image's horizontal and vertical positions separately.
+The following example shows a background image implementation, with background-position-x and background-position-y used to define the image's horizontal and vertical positions separately.
 
 #### HTML
 
