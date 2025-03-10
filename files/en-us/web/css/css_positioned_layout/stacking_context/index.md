@@ -53,8 +53,6 @@ In summary:
 
 ## Example
 
-![Example of stacking rules modified using z-index](understanding_zindex_04.png)
-
 In this example, every positioned element creates its own stacking context, because of their positioning and `z-index` values. The hierarchy of stacking contexts is organized as follows:
 
 - Root
@@ -67,7 +65,7 @@ In this example, every positioned element creates its own stacking context, beca
     - DIV #5
     - DIV #6
 
-It is important to note that DIV #4, DIV #5 and DIV #6 are children of DIV #3, so stacking of those elements is completely resolved within DIV #3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.
+In this case, DIV #4, DIV #5 and DIV #6 are children of DIV #3, so stacking of those elements is completely resolved within DIV #3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.
 
 DIV #4 is rendered under DIV #1 because DIV #1's z-index (5) is valid within the stacking context of the root element, while DIV #4's z-index (6) is valid within the stacking context of DIV #3. So, DIV #4 is under DIV #1, because DIV #4 belongs to DIV #3, which has a lower z-index value.
 
@@ -144,7 +142,7 @@ In our example (sorted according to the final rendering order):
 
 ### CSS
 
-```css
+```css hidden
 * {
   margin: 0;
 }
@@ -154,19 +152,35 @@ html {
     12px/20px Arial,
     sans-serif;
 }
-div {
-  opacity: 0.7;
-  position: relative;
-}
-h1 {
-  font: inherit;
-  font-weight: bold;
-}
 #div1,
 #div2 {
   border: 1px dashed #696;
   padding: 10px;
   background-color: #cfc;
+}
+#div3 {
+  border: 1px dashed #900;
+  background-color: #fdd;
+  padding: 40px 20px 20px;
+}
+#div4,
+#div5 {
+  border: 1px dashed #996;
+  background-color: #ffc;
+}
+#div6 {
+  background-color: #ddf;
+  text-align: center;
+  border: 1px dashed #009;
+}
+```
+
+Every {{htmlelement("div")}} has an opacity and a position set; both properties create a stacking context. The CSS for the colors, fonts, alignment, and borders has been hidden for brevity.
+
+```css
+div {
+  opacity: 0.7;
+  position: relative;
 }
 #div1 {
   z-index: 5;
@@ -182,14 +196,7 @@ h1 {
   top: 40px;
   left: 180px;
   width: 330px;
-  border: 1px dashed #900;
-  background-color: #fdd;
   padding: 40px 20px 20px;
-}
-#div4,
-#div5 {
-  border: 1px dashed #996;
-  background-color: #ffc;
 }
 #div4 {
   z-index: 6;
@@ -208,10 +215,7 @@ h1 {
   left: 180px;
   width: 150px;
   height: 125px;
-  border: 1px dashed #009;
   padding-top: 125px;
-  background-color: #ddf;
-  text-align: center;
 }
 ```
 
@@ -219,12 +223,15 @@ h1 {
 
 {{ EmbedLiveSample('Example', '100%', '396') }}
 
+### Other examples
+
+Additional examples include a [2-level hierarchy with `z-index` on the last level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1), a [2-level HTML hierarchy, `z-index` on all levels](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2), and a [3-level HTML hierarchy, `z-index` on the second level](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3).
+
 ## See also
 
-- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
-- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
-- [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
-- [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
-- [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level
-- [Top layer](/en-US/docs/Glossary/Top_layer)
+- [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
+- [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
+- [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
+- {{glossary("Top layer")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout/) module
