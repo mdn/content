@@ -29,7 +29,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 - The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the select drop-down menu, otherwise known as the **picker**. The picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`.
 - The {{cssxref("appearance")}} property value `base-select`, which opts the `<select>` element and the `::picker(select)` pseudo-element into the browser-defined default styles and behavior for customizable select.
 - The {{cssxref(":open")}} pseudo-class, which targets the select `<button>` when the picker (`::picker(select)`) is open.
-- The {{cssxref("::picker-icon")}} pseudo-element, which targets the picker icon inside the select `<button>` — the little down-facing arrow on the inline-end side.
+- The {{cssxref("::picker-icon")}} pseudo-element, which targets the picker icon inside the select `<button>` — the down-facing arrow on the inline-end side.
 - The {{cssxref(":checked")}} pseudo-class, which targets the currently-selected `<option>` element.
 - The {{cssxref("::checkmark")}} pseudo-element, which targets the checkmark placed inside the currently-selected `<option>` element to provide a visual indication of which one is selected.
 

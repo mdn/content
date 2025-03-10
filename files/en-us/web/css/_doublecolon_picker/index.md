@@ -26,7 +26,7 @@ The **`::picker()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web
 
 ## Description
 
-The `::picker()` pseudo-element targets the picker part of a form control, that is, the pop-up part that appears to allow you to make a selection when you press the control button.
+The `::picker()` pseudo-element targets the picker part of a form control, that is, the pop-up part that appears to allow you to make a selection when you press the control button. It is only available to target when the originating element has a picker and has base appearance set on it via the {{cssxref("appearance")}} property `base-select` value.
 
 The `::picker(select)` selector targets all descendants of customizable `<select>` element except for the first `<button>` child; these decendants are grouped together by the browser and rendered as the picker. The first `<button>` child represents the control button that opens the picker when pressed.
 
@@ -67,4 +67,4 @@ You could then, for example, remove the picker's default black {{cssxref("border
 - {{cssxref("appearance")}}
 - {{cssxref("::picker-icon")}}, {{cssxref("::checkmark")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
-- [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
