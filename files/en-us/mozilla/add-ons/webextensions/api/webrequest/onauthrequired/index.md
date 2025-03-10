@@ -33,7 +33,7 @@ The listener can respond in one of four ways:
 
     - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
     - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
-    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
+    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback` can be called asynchronously and takes a `webRequest.BlockingResponse` object as its only parameter
 
       > [!NOTE]
       > Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).

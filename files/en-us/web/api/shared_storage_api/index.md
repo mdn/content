@@ -34,9 +34,9 @@ The currently available output gates for the Shared Storage API are discussed in
 
 The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method, is used to select a URL from a provided list to display to the user, based on shared storage data. This gate be used for the following purposes:
 
-- [**Creative rotation**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/creative-rotation): Use stored data such as creative IDs, view counts, and user interaction to determine which creative content users see across different sites. This approach helps in balancing views and prevents overexposure of certain content, which in turn can help avoid a negative user experience.
-- [**A/B testing**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/ab-testing): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
-- [**Custom user experiences**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/known-customer): Share custom content and calls-to-action based on a user's registration status or other user states.
+- [**Creative rotation**](https://developers.google.com/privacy-sandbox/private-advertising/select-url/creative-rotation): Use stored data such as creative IDs, view counts, and user interaction to determine which creative content users see across different sites. This approach helps in balancing views and prevents overexposure of certain content, which in turn can help avoid a negative user experience.
+- [**A/B testing**](https://developers.google.com/privacy-sandbox/private-advertising/select-url/ab-testing): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
+- [**Custom user experiences**](https://developers.google.com/privacy-sandbox/private-advertising/select-url/known-customer): Share custom content and calls-to-action based on a user's registration status or other user states.
 
 ### Run
 
@@ -50,7 +50,7 @@ The [Private Aggregation API](https://developers.google.com/privacy-sandbox/priv
 
 ## Understanding how shared storage works
 
-There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/ab-testing) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developers.google.com/privacy-sandbox/private-advertising/select-url/ab-testing) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 
 ### Writing to shared storage
 

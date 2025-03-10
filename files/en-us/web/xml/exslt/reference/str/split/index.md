@@ -45,4 +45,4 @@ Returns a node set like:
 
 ## See also
 
-- [`str:tokenize()`](/en-US/docs/Web/XML/EXSLT/str/tokenize)
+- [`str:tokenize()`](/en-US/docs/Web/XML/EXSLT/Reference/str/tokenize)

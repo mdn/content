@@ -18,7 +18,7 @@ The final selectors we will look at are called combinators. Combinators are used
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>
