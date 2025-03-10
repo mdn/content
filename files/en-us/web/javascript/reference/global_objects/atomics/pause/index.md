@@ -21,7 +21,7 @@ Atomics.pause(durationHint)
 ### Parameters
 
 - `durationHint` {{optional_inline}}
-  - : An integer that is positively correlated with the wait duration. Larger values result in longer waits (and more `pause` instructions sent), but the exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused, to the order of tens to hundreds of nanoseconds. The hint may be ignored. This allows implementation of a backoff strategy by controlling the relative pause duration within each spin-loop iteration without subjecting to the overhead of JavaScript function calls; see [backoff strategies](#backoff_strategies).
+  - : An integer that an implementation may use to determine how long to wait. For a value `n + 1`, an implementation waits at least as long as it does for a given value `n`. The exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused on the order of tens to hundreds of nanoseconds. This can be used to implement a [backoff strategy](#backoff_strategies) by increasing the `durationHint` passed in. There is no guarantee that an implementation will make use of this hint.
 
 ### Return value
 
@@ -41,6 +41,9 @@ Calling {{jsxref("Atomics.wait()")}} or {{jsxref("Atomics.waitAsync()")}} in ord
 To cater for both conditions, a common approach is to first spinlock in the hope that contention is low, and then wait if the lock is not gained after a short time. If we acquired the lock via spinlocking already, then the `wait()` call will be a no-op.
 
 The example below shows how this approach can be used with `Atomics.pause()` and `Atomics.wait()`.
+
+> [!WARNING]
+> Using spinlocking on the main thread is not recommended, as it will freeze the entire page. In general, unless designed very carefully, spinlocks may not actually be more performant than a regular wait.
 
 ```js
 // Imagine another thread also has access to this shared memory
@@ -66,6 +69,9 @@ Atomics.wait(i32, 0, 1);
 ### Backoff strategies
 
 The `durationHint` parameter can be used to implement backoff strategies. For example, a thread can start with a small hint and increase it exponentially on each iteration. This is preferable to calling `pause()` many times because in un-JITed code, function calls themselves have a high overhead.
+
+> [!NOTE]
+> Implementations may not actually use `durationHint` at all and always wait for a constant time.
 
 ```js
 // Exponential backoff
