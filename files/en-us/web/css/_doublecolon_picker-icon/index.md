@@ -33,7 +33,7 @@ Selecting customizable `<select>` picker icons is the only current use case for 
 
 ### Animating the picker icon
 
-To opt-in to custom select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
+To opt-in to customizable select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
 
 ```css
 select,

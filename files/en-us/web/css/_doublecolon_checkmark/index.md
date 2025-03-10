@@ -33,7 +33,7 @@ The `::checkmark` selector is useful for example if you want to hide the checkma
 
 ### Customizing the checkmark
 
-To opt-in to custom select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
+To opt-in to customizable select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
 
 ```css
 select,
