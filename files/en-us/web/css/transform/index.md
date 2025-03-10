@@ -46,7 +46,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) will be created.
 In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 > [!WARNING]
@@ -113,7 +113,7 @@ Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "pre
 
 Find out more:
 
-- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Formal definition

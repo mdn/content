@@ -119,7 +119,7 @@ If the above CSS is included in the iframe, the paragraphs will become red when 
 
 #### SVG
 
-In an [SVG](/en-US/docs/Web/SVG/) document, the viewport is the visible area of the SVG image. You can set any height and width on an {{htmlelement("SVG")}}, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
+In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of the SVG image. You can set any height and width on an {{htmlelement("SVG")}}, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
 
 ```html
 <svg height="300" width="400"></svg>

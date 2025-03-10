@@ -81,7 +81,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-The arrow function just returns the `type` of each array element each time it is called. Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
+The arrow function just returns the `type` of each array element each time it is called. Note that the function argument `{ type }` is a basic example of [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#unpacking_properties_from_objects_passed_as_a_function_parameter). This unpacks the `type` property of an object passed as a parameter, and assigns it to a variable named `type` in the body of the function.
 This is a very succinct way to access the relevant values of elements within a function.
 
 We can also create groups inferred from values in one or more properties of the elements. Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
@@ -119,6 +119,7 @@ const result2 = Object.groupBy(inventory, myCallback);
 ## See also
 
 - [Polyfill of `Object.groupBy` in `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [es-shims polyfill of `Object.groupBy`](https://www.npmjs.com/package/object.groupby)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Object.fromEntries()")}}

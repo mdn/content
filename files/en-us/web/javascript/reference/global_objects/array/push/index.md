@@ -152,6 +152,7 @@ were dealing with an actual array.
 ## See also
 
 - [Polyfill of `Array.prototype.push` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.push`](https://www.npmjs.com/package/array.prototype.push)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}

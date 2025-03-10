@@ -10,5 +10,5 @@ page-type: glossary-definition
 
 ## See also
 
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [Type system](https://en.wikipedia.org/wiki/Type_system#DYNAMIC) on Wikipedia

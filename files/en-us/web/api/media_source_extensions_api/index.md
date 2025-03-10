@@ -35,7 +35,7 @@ The two most common use cases for DASH involve watching content "on demand" or "
 
 Live profile content can introduce latency due to its transcoding and broadcasting, so DASH is not suitable for real time communication like [WebRTC](/en-US/docs/Web/API/WebRTC_API) is. It can however support significantly more client connections than WebRTC.
 
-There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript.
+There are numerous available free and open source tools for transcoding content and preparing it for use with DASH, DASH file servers, and DASH client libraries written in JavaScript. The [DASH Adaptive Streaming for HTML video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming) article provides an example of how to use DASH with MSE.
 
 ### Availability in workers
 

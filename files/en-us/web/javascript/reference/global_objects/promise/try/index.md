@@ -171,6 +171,7 @@ Unlike `Promise()`, this `NotPromise()` constructor _does not_ gracefully handle
 ## See also
 
 - [Polyfill of `Promise.try` in `core-js`](https://github.com/zloirock/core-js#promisetry)
+- [es-shims polyfill of `Promise.try`](https://www.npmjs.com/package/promise.try)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}
 - [`Promise()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)

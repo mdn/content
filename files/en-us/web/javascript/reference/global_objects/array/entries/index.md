@@ -117,6 +117,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.entries`](https://www.npmjs.com/package/array.prototype.entries)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}

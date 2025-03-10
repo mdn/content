@@ -98,6 +98,7 @@ for (const codePoint of str) {
 ## See also
 
 - [Polyfill of `String.prototype.codePointAt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.codePointAt`](https://www.npmjs.com/package/string.prototype.codepointat)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

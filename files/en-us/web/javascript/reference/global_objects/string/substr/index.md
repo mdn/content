@@ -86,5 +86,6 @@ console.log(aString.substr(20, 2)); // ''
 ## See also
 
 - [Polyfill of `String.prototype.substr` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.substr`](https://www.npmjs.com/package/string.prototype.substr)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

@@ -133,7 +133,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("box-shadow")}}
 
 > [!NOTE]
-> The CSS Backgrounds Module Level 4 introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. These have not yet been implemented.
+> The CSS backgrounds module level 4 introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. These have not yet been implemented.
 
 ### Data types
 
@@ -141,16 +141,18 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 ## Guides
 
-- [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : Explains how to implement decorative images using CSS background images.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : Explains how to set one or more backgrounds on an element.
+  - : Setting one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : Describes how to change the size and repeating behavior of background images.
-- [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : Explains how borders, along with other box model properties, impact the CSS box model.
+  - : Changing the size and repeating behavior of background images.
+- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+  - : How SVG aspect ratio, SVG dimension values, and the CSS `background-size` property impact the scaling of SVG background images.
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Explains how to create CSS gradient background images.
+  - : Creating CSS gradients and using them as background images.
+- [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+  - : Learn how to implement decorative images using CSS background images.
+- [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
+  - : Learn how borders and other box model properties impact the CSS box model.
 
 ## Related concepts
 
@@ -189,9 +191,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 ## See also
 
-- Interactive tools that let you visually create borders images, rounded corners, and box shadows:
-  - [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [Box-shadow generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color), including for borders.
-- The [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function that applies a drop shadow effect to the input image. The function is used by the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
+- {{cssxref("filter")}}
+- {{cssxref("backdrop-filter")}}
+- [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow) filter function
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Border-image generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
+- [Border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
