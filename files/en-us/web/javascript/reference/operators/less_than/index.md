@@ -9,7 +9,7 @@ browser-compat: javascript.operators.less_than
 
 The **less than (`<`)** operator returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+{{InteractiveExample("JavaScript Demo: Less than (<) operator")}}
 
 ```js interactive-example
 console.log(5 < 3);

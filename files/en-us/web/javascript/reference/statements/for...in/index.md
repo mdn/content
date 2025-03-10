@@ -9,7 +9,7 @@ browser-compat: javascript.statements.for_in
 
 The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 
-{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+{{InteractiveExample("JavaScript Demo: for...in statement")}}
 
 ```js interactive-example
 const object = { a: 1, b: 2, c: 3 };

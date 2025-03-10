@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.getFloat16
 
 The **`getFloat16()`** method of {{jsxref("DataView")}} instances reads 2 bytes starting at the specified byte offset of this `DataView` and interprets them as a 16-bit floating point number. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat16()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getFloat16()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

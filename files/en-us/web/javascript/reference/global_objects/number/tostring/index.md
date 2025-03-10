@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Number.toString
 
 The **`toString()`** method of {{jsxref("Number")}} values returns a string representing this number value.
 
-{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.toString()")}}
 
 ```js interactive-example
 function hexColour(c) {

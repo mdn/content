@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Set.values
 
 The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this set in insertion order.
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.values()")}}
 
 ```js interactive-example
 const set1 = new Set();

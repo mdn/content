@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 
 The **`Intl.DateTimeFormat()`** constructor creates {{jsxref("Intl.DateTimeFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat() constructor", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));

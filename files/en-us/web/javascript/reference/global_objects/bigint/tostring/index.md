@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.BigInt.toString
 
 The **`toString()`** method of {{jsxref("BigInt")}} values returns a string representing the specified {{jsxref("BigInt")}} value. The trailing "n" is not part of the string.
 
-{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+{{InteractiveExample("JavaScript Demo: BigInt.prototype.toString()")}}
 
 ```js interactive-example
 console.log(1024n.toString());

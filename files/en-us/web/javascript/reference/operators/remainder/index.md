@@ -9,7 +9,7 @@ browser-compat: javascript.operators.remainder
 
 The **remainder (`%`)** operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+{{InteractiveExample("JavaScript Demo: Remainder (%) operator")}}
 
 ```js interactive-example
 console.log(13 % 5);

@@ -12,7 +12,7 @@ the elements of the array. The elements are converted to strings using their
 `toLocaleString` methods and these strings are separated by a locale-specific
 string (such as a comma ",").
 
-{{InteractiveExample("JavaScript Demo: Array.toLocaleString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.toLocaleString()", "shorter")}}
 
 ```js interactive-example
 const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];

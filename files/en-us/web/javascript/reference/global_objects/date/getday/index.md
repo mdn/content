@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getDay
 
 The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the week for this date according to local time, where 0 represents Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
-{{InteractiveExample("JavaScript Demo: Date.getDay()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getDay()", "shorter")}}
 
 ```js interactive-example
 const birthday = new Date("August 19, 1975 23:15:30");

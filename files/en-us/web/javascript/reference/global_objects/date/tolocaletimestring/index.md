@@ -11,7 +11,7 @@ The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a 
 
 Every time `toLocaleTimeString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method, because a `DateTimeFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
-{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toLocaleTimeString()")}}
 
 ```js interactive-example
 // Depending on timezone, your results will vary

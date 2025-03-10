@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.flat
 The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.flat()")}}
 
 ```js interactive-example
 const arr1 = [0, 1, 2, [3, 4]];

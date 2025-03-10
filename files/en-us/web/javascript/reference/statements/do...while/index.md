@@ -9,7 +9,7 @@ browser-compat: javascript.statements.do_while
 
 The **`do...while`** statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated after executing the statement, resulting in the specified statement executing at least once.
 
-{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+{{InteractiveExample("JavaScript Demo: do...while statement")}}
 
 ```js interactive-example
 let result = "";

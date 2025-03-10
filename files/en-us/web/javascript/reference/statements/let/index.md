@@ -9,7 +9,7 @@ browser-compat: javascript.statements.let
 
 The **`let`** declaration declares re-assignable, block-scoped local variables, optionally initializing each to a value.
 
-{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+{{InteractiveExample("JavaScript Demo: let declaration")}}
 
 ```js interactive-example
 let x = 1;

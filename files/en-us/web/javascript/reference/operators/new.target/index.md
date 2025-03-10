@@ -9,7 +9,7 @@ browser-compat: javascript.operators.new_target
 
 The **`new.target`** meta-property lets you detect whether a function or constructor was called using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. In constructors and functions invoked using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator, `new.target` returns a reference to the constructor or function that `new` was called upon. In normal function calls, `new.target` is {{jsxref("undefined")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+{{InteractiveExample("JavaScript Demo: new.target")}}
 
 ```js interactive-example
 function Foo() {

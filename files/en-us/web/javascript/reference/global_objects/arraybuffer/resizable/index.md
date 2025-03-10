@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.resizable
 
 The **`resizable`** accessor property of {{jsxref("ArrayBuffer")}} instances returns whether this array buffer can be resized or not.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.resizable")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.resizable")}}
 
 ```js interactive-example
 const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });

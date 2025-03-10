@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.buffer
 
 The **`buffer`** accessor property of {{jsxref("DataView")}} instances returns the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by this view at construction time.
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.buffer")}}
 
 ```js interactive-example
 // Create an ArrayBuffer
