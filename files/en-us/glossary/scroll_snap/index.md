@@ -10,16 +10,14 @@ page-type: glossary-definition
 
 Scroll snapping is a well-controlled scrolling experience, whereby developers define an element as a [scroll container](/en-US/docs/Glossary/Scroll_container) with boundaries for scroll operations. Scroll operations then finish at these snap position boundaries, with the scrolled to content snapping into place. In the above carousel example, as the user finishes scrolling the carousel, its visible image will snap into place.
 
-- `Scroll snap container`
-
+- Scroll snap container
   - : The **scroll snap container** is a scroll container with scroll snapping applied. For example, if a box has overflowing content and a {{CSSXref("scroll-snap-type")}} set to a value other than `none`, then the box captures snap positions. A box's scroll snap container is the element's nearest snap-position capturing scroll container ancestor. If a box has no scroll snap container, its snap positions, if any, will not trigger snapping.
-
-- `Snapport`
-
+- Snapport
   - : The **snapport** ​is the area of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) that is used as the alignment container for the scroll snap areas when calculating snap positions. By default, it is the same as the scroll container's visual viewport, but is the area of the scrollport defined by the {{CSSXref("scroll-padding")}} property. The [snap areas](#snap_area) are aligned to the scrollport.
-
-- `Snap area`
+- Snap area
   - : The **snap area** of an element in a scroll container is the area defined using {{CSSXref("scroll-margin")}} outsets specified on the element. The snap area is used to snap the element to its snapport.
+- Snap target
+  - : A descendant element inside a scroll snap container that is snapped to when the container scrolls. The {{CSSXref("scroll-snap-align")}} property defines the snap position of each snap target.
 
 ## See also
 

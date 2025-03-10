@@ -9,7 +9,12 @@ browser-compat: javascript.builtins.String.fromCodePoint
 
 The **`String.fromCodePoint()`** static method returns a string created from the specified sequence of code points.
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+// Expected output: "☃★♲你"
+```
 
 ## Syntax
 
@@ -92,6 +97,7 @@ String.fromCodePoint(0x1f303); // or 127747 in decimal
 ## See also
 
 - [Polyfill of `String.fromCodePoint` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.fromCodePoint`](https://www.npmjs.com/package/string.fromcodepoint)
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.codePointAt()")}}

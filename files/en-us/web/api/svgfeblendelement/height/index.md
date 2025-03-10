@@ -12,7 +12,7 @@ The **`height`** read-only property of the {{domxref("SVGFEBlendElement")}} inte
 
 It reflects the {{SVGElement("feBlend")}} element's {{SVGAttr("height")}} filter primitive attribute. The attribute is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage) relative to the height of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
 
-The `<feBlend>` SVG filter blends two input images together using commonly used imaging software {{cssxref("blend-mode", "blending modes")}}.
+The `<feBlend>` SVG filter blends two input images together using commonly used imaging software [blending modes](/en-US/docs/Web/CSS/blend-mode).
 
 ## Value
 

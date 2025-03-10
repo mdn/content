@@ -11,7 +11,47 @@ The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the col
 
 The color applies to decorations, such as underlines, overlines, strikethroughs, and wavy lines like those used to mark misspellings, in the scope of the property's value.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-color")}}
+
+```css interactive-example-choice
+text-decoration-color: red;
+```
+
+```css interactive-example-choice
+text-decoration-color: #21ff21;
+```
+
+```css interactive-example-choice
+text-decoration-color: rgb(255, 90, 255);
+```
+
+```css interactive-example-choice
+text-decoration-color: hsl(70, 100%, 40%);
+```
+
+```css interactive-example-choice
+text-decoration-color: currentColor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
 
@@ -45,7 +85,7 @@ It is important to ensure that the contrast ratio between the color of the text,
 Color alone should not be used to convey meaning. For example, change of text and text-decoration-color alone is not enough to indicate a link has focus.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Formal definition

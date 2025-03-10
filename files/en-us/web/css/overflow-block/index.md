@@ -135,7 +135,7 @@ div {
 #scroll {
   overflow-block: scroll;
 }
-#scroll {
+#clip {
   overflow-block: clip;
 }
 #visible {

@@ -11,7 +11,16 @@ The **`function`** keyword can be used to define a function inside an expression
 
 You can also define functions using the [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) or the [arrow syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function expression", "shorter")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+```
 
 ## Syntax
 

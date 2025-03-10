@@ -37,7 +37,7 @@ A new {{jsxref("Temporal.Instant")}} object representing subtracting `duration` 
 
 ## Description
 
-Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
+Subtracting a duration is equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
 
 ## Examples
 

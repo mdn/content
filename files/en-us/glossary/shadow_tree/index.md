@@ -21,5 +21,7 @@ The hidden DOM nodes of a shadow tree are generally not affected by anything app
 - {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - Related glossary terms:
   - {{Glossary("Accessibility tree")}}

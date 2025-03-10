@@ -25,7 +25,7 @@ The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/At
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>

@@ -32,7 +32,7 @@ console.log(date3.monthsInYear); // 13; 2023 is a Chinese leap year
 
 ### Changing to the second last month of the year
 
-You can use `monthsInYear` to change to the second last day of the month:
+You can use `monthsInYear` to change to the second last month of the year:
 
 ```js
 const date = Temporal.PlainDate.from("2021-07-01");

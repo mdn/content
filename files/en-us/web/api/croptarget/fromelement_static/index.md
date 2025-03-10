@@ -3,6 +3,8 @@ title: "CropTarget: fromElement() static method"
 short-title: fromElement()
 slug: Web/API/CropTarget/fromElement_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.CropTarget.fromElement_static
 ---
 

@@ -9,7 +9,46 @@ browser-compat: css.properties.border-top-right-radius
 
 The **`border-top-right-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the top-right corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
 
-{{EmbedInteractiveExample("pages/css/border-top-right-radius.html")}}
+{{InteractiveExample("CSS Demo: border-top-right-radius")}}
+
+```css interactive-example-choice
+border-top-right-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 250px 100px;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 50%;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 50%;
+border: black 10px double;
+background-clip: content-box;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a top right rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 The rounding can be a circle or an ellipse, or if one of the value is `0` no rounding is done and the corner is square.
 
@@ -18,7 +57,7 @@ The rounding can be a circle or an ellipse, or if one of the value is `0` no rou
 A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
 
 > [!NOTE]
-> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-right-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
+> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-right-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 ## Syntax
 

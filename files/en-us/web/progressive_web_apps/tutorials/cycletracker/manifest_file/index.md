@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While according to the spec, all of the manifest keys, or members, are optional, some browsers, operating systems, and app distributors have [require specific members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
+While, according to the spec, all of the manifest keys (or members) are optional, some browsers, operating systems, and app distributors have [specific required members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
@@ -35,14 +35,14 @@ Before saving the manifest file and linking to it from our HTML file, we can dev
 
 To identify your PWA, the JSON must include a `name` or `short_name` member, or both, to define the PWA name. It can also include a `description`.
 
-- [`name`](/en-US/docs/Web/Manifest/Reference/name)
+- [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name)
   - : The name of the PWA. This is the name used when the operating system lists applications, as the label next to the application icon, etc.
-- [`short_name`](/en-US/docs/Web/Manifest/Reference/short_name)
+- [`short_name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/short_name)
   - : The name of the PWA displayed to the user if there isn't enough space to display the `name`. It is used as the label for icons on phone screens, including in the "Add to Home Screen" dialog on iOS.
 
 When both the `name` and `short_name` are present, the `name` is used in most instances, with the `short_name` used when there is a limited space to display the application name.
 
-- [`description`](/en-US/docs/Web/Manifest/Reference/description)
+- [`description`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/description)
   - : Explanation of what the application does. It provides an {{glossary("accessible description")}} of the application's purpose and function.
 
 ### Task
@@ -63,20 +63,20 @@ Write the first few lines of your manifest file. You can use the text below, or 
 
 The appearance, or presentation, of a PWA's installed and offline experiences are defined in the manifest. Presentation manifest members include `start_url` and `display`, and members which can be used to [customize your app colors](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), including `theme_color` and `background_color`.
 
-- [`start_url`](/en-US/docs/Web/Manifest/Reference/start_url)
+- [`start_url`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
 
   - : The start page when a user launches the PWA.
 
-- [`display`](/en-US/docs/Web/Manifest/Reference/display)
+- [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)
   - : Controls the app's display mode including `fullscreen`, `standalone`, which displays the [PWA as a standalone application](/en-US/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app), `minimal-ui`, which is similar to a standalone view but with UI elements for controlling navigation, and `browser`, which opens the app in a regular browser view.
 
-There is also an [`orientation`](/en-US/docs/Web/Manifest/Reference/orientation) member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
+There is also an [`orientation`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/orientation) member that defines the PWA's default orientation as `portrait` or `landscape`. As our app works well in both orientations, we'll omit this member.
 
 ### Colors
 
-- [`theme_color`](/en-US/docs/Web/Manifest/Reference/theme_color)
+- [`theme_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/theme_color)
   - : The default [color of operating system and browser UI elements](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) such as the status bar on some mobile experiences and the application title bar on desktop operating systems.
-- [`background_color`](/en-US/docs/Web/Manifest/Reference/background_color)
+- [`background_color`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
   - : A placeholder color to be displayed as the [background of the app](/en-US/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) until the CSS is loaded. To create a smooth transition between app launch and load, it is recommended to use the [`<color>`](/en-US/docs/Web/CSS/color_value) declared as the app's [`background-color`](/en-US/docs/Web/CSS/background-color) color.
 
 ### Task

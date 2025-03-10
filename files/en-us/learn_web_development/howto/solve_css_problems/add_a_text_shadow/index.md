@@ -37,4 +37,4 @@ h1 {
 {{EmbedLiveSample("text-shadow")}}
 
 > [!NOTE]
-> It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for visitors who have difficulty with low-contrast text.
+> It can be quite easy to make text hard to read with text shadows. Make sure that the choices you make still leave your text readable and provide enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for visitors who have difficulty with low-contrast text.

@@ -106,9 +106,6 @@ If the mismatch in the number of animations and animation property values is inv
 
 ## Examples
 
-> [!NOTE]
-> Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
-
 ### Making text slide across the browser window
 
 This basic example styles a {{HTMLElement("p")}} element using the {{cssxref("translate")}} and {{cssxref("scale")}} transition properties so that the text slides in from off the right edge of the browser window.

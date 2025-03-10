@@ -253,6 +253,8 @@ const options = {
 const req = new Request("flowers.jpg", options);
 ```
 
+The [Using fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch) article provides more examples of using `fetch()`.
+
 ## Specifications
 
 {{Specifications}}

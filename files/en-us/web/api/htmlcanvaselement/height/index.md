@@ -50,9 +50,9 @@ console.log(canvas.height); // 300
 
 - {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.height` property
 - {{domxref("HTMLCanvasElement.width")}}: Other property used to control the size of the canvas
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLIFrameElement.width")}}
-- {{domxref("HTMLImageElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
-- {{domxref("HTMLVideoElement.width")}}
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
+- {{domxref("HTMLImageElement.height")}}
+- {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLSourceElement.height")}}
+- {{domxref("HTMLVideoElement.height")}}

@@ -24,13 +24,10 @@ A string identifying the platform on which the user's browser is running; for ex
 `navigator.platform` should almost always be avoided in favor of [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection). But there is one case where, among the options you could use, `navigator.platform` may be the least-bad option: When you need to show users advice about whether the modifier key for keyboard shortcuts is the `⌘` command key (found on Apple systems) rather than the `⌃` control key (on non-Apple systems):
 
 ```js
-let modifierKeyPrefix = "^"; // control key
-if (
-  navigator.platform.indexOf("Mac") === 0 ||
-  navigator.platform === "iPhone"
-) {
-  modifierKeyPrefix = "⌘"; // command key
-}
+const modifierKeyPrefix =
+  navigator.platform.startsWith("Mac") || navigator.platform === "iPhone"
+    ? "⌘" // command key
+    : "^"; // control key
 ```
 
 That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application's UI will advise users to press in keyboard shortcuts.

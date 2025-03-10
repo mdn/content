@@ -7,9 +7,53 @@ browser-compat: css.properties.padding-block
 
 {{CSSRef}}
 
-The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/padding-block.html")}}
+{{InteractiveExample("CSS Demo: padding-block")}}
+
+```css interactive-example-choice
+padding-block: 10px 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block: 20px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-block: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block: 2em 4em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Constituent properties
 

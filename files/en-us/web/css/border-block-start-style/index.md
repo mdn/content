@@ -9,7 +9,47 @@ browser-compat: css.properties.border-block-start-style
 
 The **`border-block-start-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical block start border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-block-start-style.html")}}
+{{InteractiveExample("CSS Demo: border-block-start-style")}}
+
+```css interactive-example-choice
+border-block-start-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-start-style: groove;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-start-style: dashed;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntax
 

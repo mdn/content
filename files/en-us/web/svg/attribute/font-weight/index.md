@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.font-weight
 The **`font-weight`** attribute refers to the boldness or lightness of the glyphs used to render the text, relative to other fonts in the same font family.
 
 > [!NOTE]
-> As a presentation attribute, `font-weight` can be used as a CSS property. See the CSS {{cssxref("font-weight")}} property for more information.
+> As a presentation attribute, `font-weight` also has a CSS property counterpart: {{cssxref("font-weight")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

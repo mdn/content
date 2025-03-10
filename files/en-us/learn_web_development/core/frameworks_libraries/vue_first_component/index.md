@@ -33,7 +33,7 @@ Now it's time to dive deeper into Vue, and create our own custom component — w
           more advanced features of Vue (like Single File Components or render
           functions), you'll need a terminal with
           <a
-            href="https://nodejs.org/en/download/package-manager"
+            href="https://nodejs.org/en/download"
             rel="noopener noreferrer"
             target="_blank"
             >Node</a

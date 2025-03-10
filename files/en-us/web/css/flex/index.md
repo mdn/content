@@ -7,9 +7,56 @@ browser-compat: css.properties.flex
 
 {{CSSRef}}
 
-The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
+The **`flex`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets how a {{glossary("flex item")}} will grow or shrink to fit the space available in its flex container.
 
-{{EmbedInteractiveExample("pages/css/flex.html")}}
+{{InteractiveExample("CSS Demo: flex")}}
+
+```css interactive-example-choice
+flex: 1;
+```
+
+```css interactive-example-choice
+flex: 2;
+```
+
+```css interactive-example-choice
+flex: 1 30px;
+```
+
+```css interactive-example-choice
+flex: 1 1 100px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change me</div>
+  <div>flex: 1</div>
+  <div>flex: 1</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Constituent properties
 

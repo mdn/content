@@ -9,6 +9,8 @@ browser-compat: svg.elements.feBlend
 
 The **`<feBlend>`** [SVG](/en-US/docs/Web/SVG) filter primitive composes two objects together ruled by a certain blending mode. This is similar to what is known from image editing software when blending two layers. The mode is defined by the {{SVGAttr("mode")}} attribute.
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}

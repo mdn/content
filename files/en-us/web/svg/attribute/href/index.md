@@ -32,6 +32,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
+- {{SVGElement("discard")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
@@ -100,7 +101,7 @@ If the `href` attribute or the deprecated {{SVGAttr("xlink:href")}} attribute is
 
 Refer to the descriptions of the individual animation elements for any restrictions on what types of elements can be targets of particular types of animations.
 
-Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#SpecifyingAnimationTarget).
+Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/smil-animation/#SpecifyingAnimationTarget).
 
 <table class="properties">
   <tbody>
@@ -144,6 +145,32 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
     <tr>
       <th scope="row">Animatable</th>
       <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### discard
+
+For {{SVGElement("discard")}}, `href` defines a URL referring to an element that will be discarded (removed from the DOM).
+If not specified, the immediate parent element of `<discard>` is discarded.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

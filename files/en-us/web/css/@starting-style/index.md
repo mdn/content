@@ -7,7 +7,7 @@ browser-compat: css.at-rules.starting-style
 
 {{CSSRef}}
 
-The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e. when an element is first displayed on a previously loaded page.
+The **`@starting-style`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to define starting values for properties set on an element that you want to transition from when the element receives its first style update, i.e. when an element is first displayed on a previously loaded page.
 
 ## Syntax
 
@@ -64,7 +64,7 @@ To specify the starting values of the popover's properties that will be animated
 ```
 
 > [!NOTE]
-> The `@starting-style` at-rule and the "original rule" have the same {{cssxref("specificity")}}. To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
+> The `@starting-style` at-rule and the "original rule" have the same [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). To ensure that starting styles get applied, include the `@starting-style` at-rule _after_ the "original rule". If you specify the `@starting-style` at-rule before the "original rule", the original styles will override the starting styles.
 
 To specify the starting style for the popover using the nested method, you can nest the `@starting-style` block inside the "original rule":
 

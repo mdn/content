@@ -11,7 +11,23 @@ The **`Generator`** object is returned by a {{jsxref("Statements/function*", "ge
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Constructor
 

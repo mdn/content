@@ -114,7 +114,7 @@ It is also possible to create a masonry layout with items loading into rows.
 }
 ```
 
-{{EmbedLiveSample("inline-axis", "", "350px")}}
+{{EmbedLiveSample("inline-axis", "", "450px")}}
 
 ## Controlling the grid axis
 
@@ -168,7 +168,7 @@ In this example two of the items span two tracks, and the masonry items work aro
 }
 ```
 
-{{EmbedLiveSample("spanners", "", "220px")}}
+{{EmbedLiveSample("spanners", "", "270px")}}
 
 This example includes an item which has positioning for columns. Items with definite placement are placed before the masonry layout happens.
 
@@ -225,11 +225,15 @@ body {
 }
 ```
 
-{{EmbedLiveSample("positioned", "", "260px")}}
+{{EmbedLiveSample("positioned", "", "290px")}}
 
 ## Fallbacks for masonry layout
 
 In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -238,4 +242,4 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 ## See also
 
 - {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) via Smashing Magazine (2020)

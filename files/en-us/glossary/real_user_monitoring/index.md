@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 ## See also
 
-- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Rum-vs-Synthetic)
+- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)
 - Related glossary terms:
   - {{Glossary("Synthetic monitoring")}}
   - {{Glossary("Beacon")}}

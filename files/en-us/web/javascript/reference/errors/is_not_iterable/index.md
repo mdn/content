@@ -9,7 +9,7 @@ page-type: javascript-error
 The JavaScript exception "is not iterable" occurs when the value which is [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) into an array or function call, given as the
 right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("Set/Set", "Set()")}},
-or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
+or as the right-hand side of an array [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). This error is also encountered when {{jsxref("Array.fromAsync()")}} or {{jsxref("Statements/for-await...of", "for await...of")}} is used with a [non-async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 ## Message
@@ -34,7 +34,7 @@ TypeError: Type error (Safari)
 
 The value which is [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) into an array or function call, given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
 or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("Set/Set", "Set()")}},
-or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
+or as the source of an array [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) pattern,
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or

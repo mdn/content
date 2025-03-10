@@ -8,37 +8,13 @@ browser-compat: api.Window.sessionStorage
 
 {{APIRef("Web Storage API")}}
 
-The read-only **`sessionStorage`**
-property accesses a session {{DOMxRef("Storage")}} object for the current
-{{glossary("origin")}}. `sessionStorage` is similar to
-{{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while data
-in `localStorage` doesn't expire, data in `sessionStorage` is
-cleared when the _page session_ ends.
+The read-only **`sessionStorage`** property accesses a session {{DOMxRef("Storage")}} object for the current {{glossary("origin")}}. `sessionStorage` is similar to {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while `localStorage` is partitioned by origin only, `sessionStorage` is partitioned by both origin and browser tabs (top-level browsing contexts). The data in `sessionStorage` is only kept for the duration of the page session.
 
-- Whenever a document is loaded in a particular tab in the browser, a unique page
-  session gets created and assigned to that particular tab. That page session is valid
-  only for that particular tab.
-- A page session lasts as long as the tab or the browser is open, and survives over
-  page reloads and restores.
-- **Opening a page in a new tab or window creates a new session with the value
-  of the top-level browsing context, which differs from how session cookies
-  work.**
-- Opening multiple tabs/windows with the same URL creates `sessionStorage`
-  for each tab/window.
-- Duplicating a tab copies the tab's `sessionStorage` into the new
-  tab.
-- Closing a tab/window ends the session and clears objects in
-  `sessionStorage`.
-
-Data stored in `sessionStorage` **is specific to the protocol of the
-page**. In particular, data stored by a script on a site accessed with HTTP
-(e.g., `http://example.com/`) is
-put in a different `sessionStorage` object from the same site accessed with
-HTTPS (e.g., `https://example.com/`).
-
-The keys and the values are _always_ in the UTF-16 string
-format, which uses two bytes per character. As with objects, integer keys are
-automatically converted to strings.
+- Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is accessible only in that particular tab. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area.
+- If the page has a {{domxref("Window.opener", "opener")}}, the `sessionStorage` is initially a copy of the opener's `sessionStorage` object. However, they are still separate and changes to one do not affect the other. To prevent the `sessionStorage` from being copied, use one of the techniques that remove `opener` (see {{domxref("Window.opener")}}).
+- A page session lasts as long as the tab or the browser is open, and survives over page reloads and restores.
+- Opening a page in a new tab or window creates a new session with the value of the top-level browsing context, which differs from how session cookies work.
+- Closing the tab/window ends the session and clears the data in `sessionStorage`.
 
 ## Value
 

@@ -63,7 +63,8 @@ For the composition the current mask layer is referred to as _source_, while all
   height: 100px;
   background-color: red;
 
-  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
+  mask-image:
+    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
     url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
   mask-size: 100% 100%;
   mask-composite: subtract;

@@ -24,9 +24,9 @@ rotate(rotX, rotY, rotZ)
 ### Parameters
 
 - `rotX`
-  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
+  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) is false.
 - `rotY` {{optional_inline}}
-  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) is false.
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation.
 

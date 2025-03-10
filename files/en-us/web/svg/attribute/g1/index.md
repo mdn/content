@@ -27,7 +27,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code
           >&#x3C;name><a
-            href="/en-US/docs/Web/CSS/Value_definition_syntax#hash_mark"
+            href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#hash_mark"
             >#</a
           ></code
         >

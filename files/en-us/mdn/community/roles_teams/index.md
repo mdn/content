@@ -36,8 +36,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 - Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
-- Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
-  If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
+- Submitting bug reports. Check out [the main repositories](/en-US/docs/MDN/Community/Our_repositories) for more information.
 - Commenting on issues to move conversations towards a fruitful resolution.
 - Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.

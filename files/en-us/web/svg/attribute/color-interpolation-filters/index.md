@@ -17,7 +17,7 @@ The **`color-interpolation-filters`** attribute specifies the color space for im
 > It has no affect on filter functions, which operate in the {{Glossary("RGB", "sRGB")}} color space.
 
 > [!NOTE]
-> As a presentation attribute, `color-interpolation-filters` can be used as a CSS property. See {{cssxref('color-interpolation-filters')}} for more.
+> As a presentation attribute, `color-interpolation-filters` also has a CSS property counterpart: {{cssxref("color-interpolation-filters")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

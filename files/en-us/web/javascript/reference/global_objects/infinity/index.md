@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Infinity
 
 The **`Infinity`** global property is a numeric value representing infinity.
 
-{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+
+```js interactive-example
+const maxNumber = Math.pow(10, 1000); // Max positive number
+
+if (maxNumber === Infinity) {
+  console.log("Let's call it Infinity!");
+  // Expected output: "Let's call it Infinity!"
+}
+
+console.log(1 / maxNumber);
+// Expected output: 0
+```
 
 ## Value
 

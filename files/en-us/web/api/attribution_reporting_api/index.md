@@ -93,7 +93,7 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 
 ## Enrollment and local testing
 
-To use the Attribution Reporting API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. the response headers are ignored and sources and triggers are not registered.
+To use the Attribution Reporting API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. the response headers are ignored and sources and triggers are not registered.
 
 You can still test your Attribution Reporting API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 

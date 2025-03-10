@@ -7,7 +7,7 @@ browser-compat: api.CSSCounterStyleRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSCounterStyleRule`** interface represents an {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSCounterStyleRule`** interface represents an {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 

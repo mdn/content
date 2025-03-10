@@ -266,7 +266,7 @@ It is also worth considering the use of HTML form input types such as the date o
 - Types `number`, `tel`, and `email` display suitable virtual keyboards for entering numbers/telephone numbers.
 - Types `time` and `date` display suitable pickers for selecting times and dates.
 
-If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See [input types](https://diveinto.html5doctor.com/detect.html#input-types) for raw information on detecting different input types, and also check out our [feature detection article](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) for much more information.
+If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. Check out our [feature detection article](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) for more information.
 
 ## Summary
 

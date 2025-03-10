@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.TypedArray.find
 
 The **`find()`** method of {{jsxref("TypedArray")}} instances returns the first element in the provided typed array that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned. This method has the same algorithm as {{jsxref("Array.prototype.find()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-find.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -10
+```
 
 ## Syntax
 

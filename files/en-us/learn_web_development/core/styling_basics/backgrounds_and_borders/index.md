@@ -342,8 +342,8 @@ When you do this you may end up with background images overlapping each other. T
 The other `background-*` properties can also have comma-separated values in the same way as `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image4.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -374,7 +374,8 @@ Let's play. The example below includes two background images. To demonstrate the
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+  background-image:
+    url(https://mdn.github.io/shared-assets/images/examples/star.png),
     url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```
@@ -430,7 +431,7 @@ Take a look at the MDN page for {{cssxref("background")}} to see all of the cons
 
 ## Accessibility considerations with backgrounds
 
-When placing text on top of a background image or color, you should take care that you have enough [contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
+When placing text on top of a background image or color, you should take care that you have enough [contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
 
 Screen readers cannot parse background images; therefore, they should be purely decoration. Any important content should be part of the HTML page and not contained in a background.
 
@@ -475,7 +476,7 @@ There are longhand properties for width, style, and color for each of the four s
 ```
 
 > [!NOTE]
-> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
+> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We will explore these in the lesson on [handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 There are a variety of styles that you can use for borders. In the example below, we have used two different border styles for the box and two different border styles for the heading. Play with the border style, width, and color to see how borders work.
 

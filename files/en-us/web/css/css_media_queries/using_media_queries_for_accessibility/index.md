@@ -21,7 +21,7 @@ The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion
 
 ### Example
 
-This example has an annoying animation unless you turn on Reduce Motion in [your accessibility preferences](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely).
+This example has an annoying animation unless you turn on Reduce Motion in [your accessibility preferences](/en-US/docs/Web/Accessibility/Guides/Browsing_safely).
 
 #### HTML
 

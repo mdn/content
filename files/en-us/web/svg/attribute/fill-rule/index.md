@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.fill-rule
 The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the _inside_ part of a shape.
 
 > [!NOTE]
-> As a presentation attribute, `fill-rule` can be used as a CSS property.
+> As a presentation attribute, `fill-rule` also has a CSS property counterpart: {{cssxref("fill-rule")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

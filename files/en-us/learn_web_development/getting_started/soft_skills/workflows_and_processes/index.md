@@ -55,7 +55,7 @@ TODO
 
 ## See also
 
-- [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/basics/technology-stack), mongodb.com
+- [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
 - [Website development team structure: roles and processes](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
 - [Waterfall vs. Agile vs. Kanban vs. Scrum: What's the difference?](https://asana.com/resources/waterfall-agile-kanban-scrum), Asana (2022)
 

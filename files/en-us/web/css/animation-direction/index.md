@@ -9,7 +9,88 @@ browser-compat: css.properties.animation-direction
 
 The **`animation-direction`** [CSS](/en-US/docs/Web/CSS) property sets whether an animation should play forward, backward, or alternate back and forth between playing the sequence forward and backward.
 
-{{EmbedInteractiveExample("pages/css/animation-direction.html")}}
+{{InteractiveExample("CSS Demo: animation-direction")}}
+
+```css interactive-example-choice
+animation-direction: normal;
+```
+
+```css interactive-example-choice
+animation-direction: reverse;
+```
+
+```css interactive-example-choice
+animation-direction: alternate;
+```
+
+```css interactive-example-choice
+animation-direction: alternate-reverse;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+  <button id="play-pause">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-play-state: paused;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#play-pause {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const button = document.getElementById("play-pause");
+
+  button.addEventListener("click", () => {
+    if (el.classList.contains("running")) {
+      el.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      el.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 

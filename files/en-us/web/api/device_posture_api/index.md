@@ -2,6 +2,8 @@
 title: Device Posture API
 slug: Web/API/Device_Posture_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.DevicePosture
 ---
 

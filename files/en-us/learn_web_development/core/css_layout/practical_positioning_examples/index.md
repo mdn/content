@@ -184,7 +184,7 @@ Next, we'll set the `:focus` and `:hover` states of the tabs to look different w
 }
 ```
 
-Then we'll set a rule that highlights one of the tabs when [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) property is set to `true` on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
+Then we'll set a rule that highlights one of the tabs when [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) property is set to `true` on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
 .info-box [role="tab"][aria-selected="true"] {
@@ -445,7 +445,7 @@ button.addEventListener("click", () => {
 ```
 
 The code adds a click event handler to the button. The click handler toggles the `open` class on the info-box panel which slides the panel in or out of the view.
-The event handler also sets [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) property on the button to improve accessibility.
+The event handler also sets [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) property on the button to improve accessibility.
 
 So there you have it — the easiest way to create a toggling info panel effect.
 

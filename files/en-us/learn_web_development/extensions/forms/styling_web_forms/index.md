@@ -195,7 +195,7 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
+1. [The postcard background](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — download this image and save it in the same directory as your working HTML file.
 2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
 3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 

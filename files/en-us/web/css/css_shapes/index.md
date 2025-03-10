@@ -17,9 +17,9 @@ Shapes define geometries that can be used as CSS values. This module provides fu
 
 ## CSS shapes in action
 
-The example below shows an image that has been floated left, and the `shape-outside` property applied with a value of `circle(50%)`. This creates a circle shape, and the content wrapping the float now wraps around that shape. This changes the length of the wrapping text's line boxes.
+The example below shows an image that has been floated left, and the `shape-outside` property applied with a value of `circle(50%)`. This creates a circle shape, and the content wrapping the float now wraps around that shape. This changes the length of the wrapping text's line boxes. You can click "Play" to edit the code in the MDN Playground.
 
-```html live-sample___circle
+```html live-sample___circle hidden
 <div class="box">
   <img
     alt="A hot air balloon"
@@ -38,7 +38,7 @@ The example below shows an image that has been floated left, and the `shape-outs
 </div>
 ```
 
-```css live-sample___circle
+```css live-sample___circle hidden
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -138,5 +138,5 @@ img {
 - [CSS Shapes 101](https://alistapart.com/article/css-shapes-101/) via alistapart.com (2014)
 - [Creating non-rectangular layouts with CSS Shapes](https://www.sarasoueidan.com/blog/css-shapes/) via sarasoueidan.com (2013)
 - [How to use CSS Shapes in your web design](https://webdesign.tutsplus.com/how-to-use-css-shapes-in-your-web-design--cms-27498t) via tutsplus.com (2016)
-- [How to get started with CSS Shapes](https://www.webdesignerdepot.com/2015/03/how-to-get-started-with-css-shapes/) via webdesignerdepot.com (2015)
+- [How to get started with CSS Shapes](https://www.webdesignerdepot.com/how-to-get-started-with-css-shapes/) via webdesignerdepot.com (2015)
 - [Edit CSS shapes with the shape path editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) via mozilla.org (2018) ([Video](https://www.youtube.com/watch?v=u9bDe3Bw0sA))

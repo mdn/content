@@ -10,7 +10,21 @@ browser-compat: javascript.builtins.WeakSet.has
 The **`has()`** method of {{jsxref("WeakSet")}} instances returns a boolean indicating whether an
 object exists in this `WeakSet` or not.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+console.log(weakset1.has(object2));
+// Expected output: false
+```
 
 ## Syntax
 

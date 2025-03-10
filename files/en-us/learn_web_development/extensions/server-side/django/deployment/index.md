@@ -34,7 +34,7 @@ Up to now you've been working in a development environment, using the Django dev
 - Choose an environment for hosting any static files.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.app/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Django app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.com/) cloud hosting service.
 
 ## What is a production environment?
 
@@ -67,7 +67,7 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -88,7 +88,7 @@ They are however great for testing low traffic sites in a hosted environment, an
 Popular choices in this category include [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), and so on.
 
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.com/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
@@ -680,7 +680,7 @@ If the environment variable has been loaded you'll get a "Not found" message rat
 
 ## Example: Hosting on Railway
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
+This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
 ### Why Railway?
 
@@ -692,10 +692,10 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
-- [Railway documentation](https://docs.railway.app/) is clear and complete.
+- [Railway documentation](https://docs.railway.com/) is clear and complete.
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
 You should take the time to determine if Railway is [suitable for your own website](#choosing_a_hosting_provider).
@@ -712,11 +712,11 @@ For Django apps we provide this information in a number of text files:
   For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/guides/variables).
 For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -792,10 +792,10 @@ We should now be ready to start deploying LocalLibrary on Railway.
 
 To start using Railway you will first need to create an account:
 
-- Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
+- Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
 - Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
-- You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
+- You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
 ### Deploy on Railway from GitHub
 
@@ -899,11 +899,11 @@ Note that you could also have opened the Postgres database, then its variable ta
 
 If you open the project now it should display just as it did locally.
 Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
-We'll do that using the [CLI](https://docs.railway.app/guides/cli) tool on our local computer.
+We'll do that using the [CLI](https://docs.railway.com/guides/cli) tool on our local computer.
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/guides/cli).
 
 After the client is installed you will be able to run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your Django project locally using the same settings as you have on the production server.
@@ -1003,7 +1003,7 @@ The next step is to read our last few articles, and then complete the assessment
 
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/guides/cli)
+  - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
 
@@ -1021,6 +1021,6 @@ The next step is to read our last few articles, and then complete the assessment
   - [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars) (Heroku docs)
   - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
   - [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) (Heroku docs)
-  - [Deploying Python and Django apps on Heroku](https://devcenter.heroku.com/articles/deploying-python) (Heroku docs)
+  - [Working with Django](https://devcenter.heroku.com/categories/working-with-django) (Heroku docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

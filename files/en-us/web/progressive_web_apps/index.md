@@ -63,7 +63,7 @@ Reference documentation for the web technologies you will use to build a PWA.
 
 ### Web app manifest
 
-- [Web app manifest members](/en-US/docs/Web/Manifest)
+- [Web app manifest members](/en-US/docs/Web/Progressive_web_apps/Manifest)
   - : Developers can use web app manifest members to describe a PWA, customize its appearance, and more deeply integrate it into the operating system.
 
 ### Service Worker APIs

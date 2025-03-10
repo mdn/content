@@ -9,7 +9,51 @@ browser-compat: css.properties.border-spacing
 
 The **`border-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the distance between the borders of adjacent cells in a {{htmlelement("table")}}. This property applies only when {{cssxref("border-collapse")}} is `separate`.
 
-{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
+{{InteractiveExample("CSS Demo: border-spacing")}}
+
+```css interactive-example-choice
+border-spacing: 0;
+```
+
+```css interactive-example-choice
+border-spacing: 5px;
+```
+
+```css interactive-example-choice
+border-spacing: 5px 1rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue;
+  padding: 0.75rem;
+}
+```
 
 The `border-spacing` value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) `border-spacing` and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.
 

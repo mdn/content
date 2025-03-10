@@ -73,7 +73,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
 
 ### Example: Web manifest with credentials
 
-The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
+The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

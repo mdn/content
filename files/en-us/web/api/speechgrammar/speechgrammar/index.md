@@ -4,12 +4,12 @@ short-title: SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
 page-type: web-api-constructor
 status:
-  - experimental
+  - deprecated
   - non-standard
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
 
-{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`SpeechGrammar()`** constructor of the
 {{domxref("SpeechGrammar")}} interface creates a new `SpeechGrammar` object

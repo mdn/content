@@ -2,9 +2,8 @@
 title: WebDriver
 slug: Web/WebDriver
 page-type: landing-page
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages}}
 
 WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.
 
@@ -24,8 +23,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
-
-
 
 with webdriver.Firefox() as driver:
 
@@ -47,32 +44,19 @@ This might produce output akin to this:
 
 ## Reference
 
-### Commands
+- [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 
-[Commands](/en-US/docs/Web/WebDriver/Commands)
+### [Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
-### Types
+### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
 
-[Types](/en-US/docs/Web/WebDriver/Types)
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
 
-- [Error object](/en-US/docs/Web/WebDriver/Errors#payload)
-- [Timeouts object](/en-US/docs/Web/WebDriver/Timeouts)
-- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
-- [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
+### [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 
-### Capabilities
-
-[Capabilities](/en-US/docs/Web/WebDriver/Capabilities)
-
-{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
-
-### Errors
-
-[Errors](/en-US/docs/Web/WebDriver/Errors)
-
-{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 ## Specifications
 

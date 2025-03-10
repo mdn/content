@@ -13,8 +13,6 @@ browser-compat: api.HTMLElement.anchorElement
 
 The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
-
 ## Value
 
 An {{domxref("HTMLElement")}} instance representing the element's anchor element, or `null` if it doesn't have one.
@@ -75,4 +73,3 @@ This attribute is not currently part of the HTML specification. Read the discuss
 - HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
 - CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

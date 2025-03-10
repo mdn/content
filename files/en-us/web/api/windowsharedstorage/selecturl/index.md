@@ -54,7 +54,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("FencedFrameConfig")}} ob
     - `urls` is empty or exceeds the maximum allowed length (which is browser-specific).
     - An object's `url` property contains an invalid URL.
     - Shared storage is disabled (for example, via a browser setting).
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 

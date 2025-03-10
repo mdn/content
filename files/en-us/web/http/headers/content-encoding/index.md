@@ -25,7 +25,7 @@ Content encoding differs to {{HTTPHeader("Transfer-Encoding")}} in that `Transfe
       <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

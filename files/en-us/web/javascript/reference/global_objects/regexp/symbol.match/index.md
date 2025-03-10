@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.RegExp.@@match
 
 The **`[Symbol.match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.match](str) {
+    const result = RegExp.prototype[Symbol.match].call(this, str);
+    if (result) {
+      return "VALID";
+    }
+    return "INVALID";
+  }
+}
+
+console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+// Expected output: "VALID"
+```
 
 ## Syntax
 

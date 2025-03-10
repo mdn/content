@@ -12,7 +12,45 @@ The **`flex-shrink`** [CSS](/en-US/docs/Web/CSS) property sets the flex shrink f
 > [!NOTE]
 > It is recommended to use the {{cssxref("flex")}} shorthand instead of separate `flex-shrink`, {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} declarations. We have separated them here as this document covers one of the `flex` shorthand components: the `flex-shrink` property.
 
-{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
+{{InteractiveExample("CSS Demo: flex-shrink")}}
+
+```css interactive-example-choice
+flex-shrink: 0;
+```
+
+```css interactive-example-choice
+flex-shrink: 1;
+```
+
+```css interactive-example-choice
+flex-shrink: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I shrink</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+```
 
 ## Syntax
 

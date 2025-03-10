@@ -39,11 +39,11 @@ The current date and time in the specified time zone, as a {{jsxref("Temporal.Zo
 ```js
 // The current date and time in the system's time zone
 const dateTime = Temporal.Now.zonedDateTimeISO();
-console.log(dateTime); // e.g.: 2021-10-01T06:12:34.567890123+03:00
+console.log(dateTime); // e.g.: 2021-10-01T06:12:34.567890123+03:00[Africa/Nairobi]
 
 // The current date and time in the "America/New_York" time zone
 const dateTimeInNewYork = Temporal.Now.zonedDateTimeISO("America/New_York");
-console.log(dateTimeInNewYork); // e.g.: 2021-09-30T23:12:34.567890123-04:00
+console.log(dateTimeInNewYork); // e.g.: 2021-09-30T23:12:34.567890123-04:00[America/New_York]
 ```
 
 ## Specifications

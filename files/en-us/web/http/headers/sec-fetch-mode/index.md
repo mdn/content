@@ -19,7 +19,7 @@ For example, this header would contain `navigate` for top level navigation reque
       <td>{{Glossary("Fetch Metadata Request Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>

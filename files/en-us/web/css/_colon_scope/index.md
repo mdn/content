@@ -164,7 +164,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Globa
 
 ## See also
 
-- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/At-rule)
+- The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}

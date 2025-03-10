@@ -227,7 +227,7 @@ The `browser_action` key is an object that may have any of the following propert
             ><a href="/en-US/docs/Web/HTML/Element/script"
               >&#x3C;script>
             </a></code
-          >must have
+          > must have
           <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code>
           attribute to load a file. Don't use
           <code

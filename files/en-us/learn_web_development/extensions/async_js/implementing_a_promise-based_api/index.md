@@ -78,6 +78,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -132,6 +133,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -190,6 +192,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);

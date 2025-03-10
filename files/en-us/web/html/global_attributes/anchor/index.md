@@ -121,4 +121,3 @@ This attribute is not currently part of the HTML specification. Read the discuss
 - CSS {{cssxref("anchor-name")}} property
 - CSS {{cssxref("position-anchor")}} property
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

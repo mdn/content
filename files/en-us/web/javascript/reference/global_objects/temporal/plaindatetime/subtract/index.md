@@ -44,7 +44,7 @@ A new `Temporal.PlainDateTime` object representing the date-time specified by th
 
 ## Description
 
-Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
+Subtracting a duration is equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/add) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
 
 ## Examples
 

@@ -24,5 +24,5 @@ The longer the delay, the worse the user experience. The [Long Animation Frames 
 - [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
 - [PerformanceEventTiming](/en-US/docs/Web/API/PerformanceEventTiming)
 - [INP](https://web.dev/articles/inp) on web.dev (2023)
-- [Optimizing INP](https://web.dev/articles/optimizing-inp) on web.dev (2023)
+- [Optimize Interaction to Next Paint](https://web.dev/articles/optimize-inp) on web.dev (2023)
 - [Interaction to Next Paint is officially a Core Web Vital](https://web.dev/blog/inp-cwv-launch) on web.dev (2024)

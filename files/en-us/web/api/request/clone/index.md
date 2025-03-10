@@ -11,7 +11,7 @@ browser-compat: api.Request.clone
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
 Like the underlying {{domxref("ReadableStream.tee")}} api,
-the {{domxref("Request.body", "body")}} of a cloned `Response`
+the {{domxref("Request.body", "body")}} of a cloned `Request`
 will signal backpressure at the rate of the _faster_ consumer of the two bodies,
 and unread data is enqueued internally on the slower consumed `body`
 without any limit or backpressure.

@@ -138,7 +138,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
+Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Guide/Data_structures):
 
 <table class="standard-table">
   <thead>

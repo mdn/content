@@ -9,7 +9,33 @@ browser-compat: css.selectors.autofill
 
 The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:is(:-webkit-autofill, :autofill) {
+  border: 3px solid darkorange;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Click on the text box and choose any option suggested by your browser.</p>
+
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" autocomplete="name" />
+
+  <label for="email">Email Address</label>
+  <input id="email" name="email" type="email" autocomplete="email" />
+
+  <label for="country">Country</label>
+  <input id="country" name="country" type="text" autocomplete="country-name" />
+</form>
+```
 
 > [!NOTE]
 > The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:

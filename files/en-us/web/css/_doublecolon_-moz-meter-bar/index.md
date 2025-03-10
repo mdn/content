@@ -19,10 +19,6 @@ The **`::-moz-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/do
 }
 ```
 
-## Specifications
-
-Not part of any standard.
-
 ## Examples
 
 ### HTML
@@ -54,6 +50,10 @@ meter {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

@@ -11,7 +11,17 @@ The **`map()`** method of {{jsxref("Array")}} instances creates
 a new array populated with the results of calling a provided function on
 every element in the calling array.
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Syntax
 
@@ -277,6 +287,7 @@ You can also use {{jsxref("Array.from()")}} to transform `elems` to an array, an
 ## See also
 
 - [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.map`](https://www.npmjs.com/package/array.prototype.map)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

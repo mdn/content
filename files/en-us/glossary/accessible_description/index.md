@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 An **accessible description** is the description of a user interface element that provides additional information to help users of assistive technology understand the UI element and its context. It's associated with an HTML or SVG element and gives users additional context about its purpose beyond what is provided by the element's {{glossary("accessible name")}}. This is particularly important for users who rely on assistive technologies like {{glossary("Screen_reader", "screen readers")}}. An element's accessible description is part of the {{glossary("accessibility tree")}}.
 
-For example, the accessible name of a {{htmlelement("table")}} is provided by its first {{htmlelement("caption")}}. In the case of complex data tables, a sentence or two describing the table can provide a description. This can be a paragraph right before or after the table, both visually and in source code order. If elsewhere in source order, or to make the associate explicit, the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute can be used to associate the table with its description.
+For example, the accessible name of a {{htmlelement("table")}} is provided by its first {{htmlelement("caption")}}. In the case of complex data tables, a sentence or two describing the table can provide a description. This can be a paragraph right before or after the table, both visually and in source code order. If elsewhere in source order, or to make the associate explicit, the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute can be used to associate the table with its description.
 
 Similarly, when a user is asked to create a password, the `<label>` for the {{htmlelement("input")}} of type `password` provides its accessible name. A good accessible description includes the requirements for the password is a way that is visible to all users. It can be explicitly associated with the input via it's `aria-describedby` attribute, which adds it to the accessibility tree as the 'description' for that node.
 
@@ -20,9 +20,9 @@ You can inspect the accessible description for any element on your page: look at
 
 For HTML elements, if an element doesn't have an accessible description, the description needs to be programmatically associated with the related element. The accessibility object model (AOM) computes the accessible description by checking this features, in order, until it is defined:
 
-1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute.
+1. [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute.
 
-2. [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute.
+2. [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute.
 
 3. Language-specific features that participate in the description computation if the feature is not already being used to define the {{glossary("accessible name")}}. For example:
 

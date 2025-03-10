@@ -34,7 +34,7 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
       <td>
         <ul>
           <li>The concept of permissive code, and what this means for HTML debugging.</li>
-          <li>Using the [HTML validator](https://validator.w3.org/) to detect markup errors.</li>
+          <li>Using the <a href="https://validator.w3.org/">HTML validator</a> to detect markup errors.</li>
           <li>Using the DOM inspector in your browser DevTools to dive deeper into your markup.</li>
         </ul>
       </td>

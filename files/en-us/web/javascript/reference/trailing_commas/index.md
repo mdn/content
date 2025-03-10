@@ -134,7 +134,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### Trailing commas in destructuring
 
-A trailing comma is also allowed on the left-hand side when using [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+A trailing comma is also allowed within a [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) pattern:
 
 ```js-nolint
 // array destructuring with trailing comma
@@ -148,7 +148,7 @@ const o = {
 const { p, q, } = o;
 ```
 
-Again, when using a rest element, a {{jsxref("SyntaxError")}} will be thrown:
+However, a trailing comma is not allowed after the rest element, if present
 
 ```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];

@@ -78,7 +78,7 @@ This example demonstrates how you can set the focus on a button element.
 
 First we define three buttons.
 Both the middle and right button will set focus on the left-most button.
-The right right-most button will also specify `focusVisible`.
+The right-most button will also specify `focusVisible`.
 
 ```html
 <button id="myButton">Button</button>

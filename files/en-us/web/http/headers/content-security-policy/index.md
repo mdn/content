@@ -20,7 +20,7 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide for deta
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -261,7 +261,7 @@ Paths that do not end in `/` are matched exactly. For example:
 
 ### \<scheme-source>
 
-A [scheme](/en-US/docs/Web/URI/Schemes), such as `https:`. The colon is required.
+A [scheme](/en-US/docs/Web/URI/Reference/Schemes), such as `https:`. The colon is required.
 
 Secure upgrades are allowed, so:
 

@@ -9,7 +9,46 @@ browser-compat: css.properties.border-top-width
 
 The **`border-top-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the top border of an element.
 
-{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
+{{InteractiveExample("CSS Demo: border-top-width")}}
+
+```css interactive-example-choice
+border-top-width: thick;
+```
+
+```css interactive-example-choice
+border-top-width: 2em;
+```
+
+```css interactive-example-choice
+border-top-width: 4px;
+```
+
+```css interactive-example-choice
+border-top-width: 2ex;
+```
+
+```css interactive-example-choice
+border-top-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 

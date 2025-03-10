@@ -9,7 +9,29 @@ browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 
 The **`formatToParts()`** method of {{jsxref("Intl.ListFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/ListFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.listformat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatterEn = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+
+const formatterFr = new Intl.ListFormat("fr", {
+  style: "long",
+  type: "conjunction",
+});
+
+const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
+const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
+
+console.log(partValuesEn);
+// Expected output: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+console.log(partValuesFr);
+// Expected output: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+```
 
 ## Syntax
 

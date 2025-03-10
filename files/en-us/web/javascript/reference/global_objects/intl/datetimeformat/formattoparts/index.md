@@ -9,7 +9,24 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 
 The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const date = new Date(2012, 5);
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const dateTimeFormat = new Intl.DateTimeFormat("en-US", options);
+
+const parts = dateTimeFormat.formatToParts(date);
+const partValues = parts.map((p) => p.value);
+
+console.log(partValues);
+// Expected output: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+```
 
 ## Syntax
 

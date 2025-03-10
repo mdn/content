@@ -57,7 +57,7 @@ For more examples, see the {{domxref("Window.btoa()")}} method.
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
+- [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}: the same method, but in worker scopes.
 - {{domxref("Window.btoa()")}}
 - {{jsxref("Uint8Array.fromBase64()")}}

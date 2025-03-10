@@ -228,7 +228,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ### HTML
 
-```html
+```html live-sample___photo-capture
 <div class="content-area">
   <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
   <p>
@@ -247,16 +247,14 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     Visit our article
     <a
       href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">
-      Taking still photos with WebRTC</a
-    >
+      Taking still photos with WebRTC
+    </a>
     to learn more about the technologies used here.
   </p>
 </div>
 ```
 
-### CSS
-
-```css
+```css hidden live-sample___photo-capture
 #video {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
@@ -301,31 +299,31 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 }
 
 .content-area {
-  font-size: 16px;
-  font-family: "Lucida Grande", "Arial", sans-serif;
+  font:
+    1.2rem "Lucida Grande",
+    "Arial",
+    sans-serif;
   width: 760px;
+  padding: 2rem;
 }
 ```
 
 ### JavaScript
 
-```js
+```js live-sample___photo-capture
 (() => {
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
-
   const width = 320; // We will scale the photo width to this
   let height = 0; // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
-
   let streaming = false;
 
   // The various HTML elements we need to configure or control. These
   // will be set by the startup() function.
-
   let video = null;
   let canvas = null;
   let photo = null;
@@ -338,9 +336,15 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       // won't be able to request permission for camera access.
       document.querySelector(".content-area").remove();
       const button = document.createElement("button");
-      button.textContent = "View live result of the example code above";
+      button.textContent = "Open example in new window";
       document.body.append(button);
-      button.addEventListener("click", () => window.open(location.href));
+      button.addEventListener("click", () =>
+        window.open(
+          location.href,
+          "MDN",
+          "width=850,height=700,left=150,top=150",
+        ),
+      );
       return true;
     }
     return false;
@@ -373,7 +377,6 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
           // Firefox currently has a bug where the height can't be read from
           // the video, so we will make assumptions if this happens.
-
           if (isNaN(height)) {
             height = width / (4 / 3);
           }
@@ -400,9 +403,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
     clearPhoto();
   }
 
-  // Fill the photo with an indication that none has been
-  // captured.
-
+  // Fill the photo with an indication that none has been captured.
   function clearPhoto() {
     const context = canvas.getContext("2d");
     context.fillStyle = "#AAA";
@@ -417,7 +418,6 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // format data URL. By drawing it on an offscreen canvas and then
   // drawing that to the screen, we can change its size and/or apply
   // other changes before drawing it.
-
   function takePicture() {
     const context = canvas.getContext("2d");
     if (width && height) {
@@ -438,9 +438,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 })();
 ```
 
-### Result
-
-{{EmbedLiveSample('Demo', '100%', 30)}}
+{{EmbedLiveSample('photo-capture', '100%', '30', , , , , 'allow-popups')}}
 
 ## Fun with filters
 
@@ -454,7 +452,7 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 
 ## See also
 
-- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
-- [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
+- [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)

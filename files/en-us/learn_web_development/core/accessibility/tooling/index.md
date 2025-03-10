@@ -69,7 +69,7 @@ Other auditing tools that are worth checking out:
 
 - [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)
 - [ANDI bookmarklet](https://www.ssa.gov/accessibility/andi/help/install.html)
-- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/)
+- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)
 
 > [!NOTE]
 > Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.

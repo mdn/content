@@ -9,6 +9,19 @@ browser-compat: javascript.builtins.RegExp.unicodeSets
 
 The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `v` flag is used with this regular expression.
 
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicodeSets")}}
+
+```js interactive-example
+const regex1 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]");
+const regex2 = new RegExp("[\\p{Lowercase}&&\\p{Script=Greek}]", "v");
+
+console.log(regex1.unicodeSets);
+// Expected output: false
+
+console.log(regex2.unicodeSets);
+// Expected output: true
+```
+
 ## Description
 
 `RegExp.prototype.unicodeSets` has the value `true` if the `v` flag was used; otherwise, `false`. The `v` flag is an "upgrade" to the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag that enables more Unicode-related features. ("v" is the next letter after "u" in the alphabet.) Because `u` and `v` interpret the same regex in incompatible ways, using both flags results in a {{jsxref("SyntaxError")}}. With the `v` flag, you get all features mentioned in the `u` flag description, plus:

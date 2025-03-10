@@ -33,7 +33,7 @@ Servers that opt-in will typically also specify it in the {{HTTPHeader("Vary")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

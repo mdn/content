@@ -44,7 +44,7 @@ A new `Temporal.PlainYearMonth` object representing the year-month specified by 
 
 ## Description
 
-Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply. Subtracting a positive duration starts from the end of the year-month and moves backward, so any increment smaller than the month's length is ignored.
+Subtracting a duration is equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/add) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply. Subtracting a positive duration starts from the end of the year-month and moves backward, so any increment smaller than the month's length is ignored.
 
 ## Examples
 

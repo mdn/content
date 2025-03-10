@@ -263,7 +263,7 @@ There are [many web browsers available](https://en.wikipedia.org/wiki/List_of_we
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 
-If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/browsers/opera-mini).
+If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/mini).
 
 Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
 
