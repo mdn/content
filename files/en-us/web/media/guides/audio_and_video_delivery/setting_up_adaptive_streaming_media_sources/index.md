@@ -273,7 +273,7 @@ Further resources on adaptive streaming.
 
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
 - [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
-- [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
+- [DASH.js](https://github.com/Dash-Industry-Forum/dash.js)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 
 Adaptive streaming examples
