@@ -2,7 +2,7 @@
 title: PUT
 slug: Web/HTTP/Methods/PUT
 page-type: http-method
-browser-compat: http.methods.PUT
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#PUT
 ---
 
 {{HTTPSidebar}}
@@ -90,7 +90,8 @@ Content-Location: /existing.html
 
 ## Browser compatibility
 
-{{Compat}}
+The browser doesn't use the `PUT` method for user-initiated actions, so "browser compatibility" doesn't apply.
+Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 
 ## See also
 
