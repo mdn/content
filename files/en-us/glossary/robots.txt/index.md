@@ -13,7 +13,7 @@ A restrictive `robots.txt` file can prevent bandwidth consumption by crawlers.
 A site owner can forbid crawlers to detect a certain path (and all files in that path) or a specific file.
 This is often done to prevent these resources from being indexed or served by search engines.
 
-If a crawler is allowed to access resources, you can define [indexing rules](/en-US/docs/Web/HTTP/Headers/X-Robots-Tag#directives) for those resources via `<meta name="robots">` elements and {{HTTPHeader("X-Robots-Tag")}} HTTP headers.
+If a crawler is allowed to access resources, you can define [indexing rules](/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#directives) for those resources via `<meta name="robots">` elements and {{HTTPHeader("X-Robots-Tag")}} HTTP headers.
 Search-related crawlers use these rules to determine how to index and serve resources in search results, or to adjust the crawl rate for specific resources over time.
 
 ## See also

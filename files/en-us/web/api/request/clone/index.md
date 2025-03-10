@@ -55,5 +55,5 @@ const newRequest = myRequest.clone(); // a copy of the request is now stored in 
 ## See also
 
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

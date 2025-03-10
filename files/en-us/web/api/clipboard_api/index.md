@@ -73,7 +73,7 @@ Chromium browsers:
   Transient activation is not required.
 - Writing requires either the `clipboard-write` permission or transient activation.
   If the permission is granted, it persists, and further transient activation is not required.
-- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
+- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
 - No persistent paste-prompt is displayed when a read operation is caused by a browser or OS "paste element".
 
 Firefox & Safari:

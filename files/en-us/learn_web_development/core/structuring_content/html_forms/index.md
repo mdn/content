@@ -145,7 +145,7 @@ Because of the way MDN works, you can enter text into the input fields, but you 
 As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included here, are as follows:
 
 - `action`: Contains a path to the page that we want to send the submitted form data to, to be processed. Later on, after you submit the form, you'll see `/submit_page` included in the URL. You'll also get a {{HTTPStatus("404")}} error response because the page doesn't actually exist, but that's fine for now.
-- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
+- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Reference/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
 
 > [!CALLOUT]
 >

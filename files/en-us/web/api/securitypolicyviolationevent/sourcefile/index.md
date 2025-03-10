@@ -8,7 +8,7 @@ browser-compat: api.SecurityPolicyViolationEvent.sourceFile
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`sourceFile`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URL of the script in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
+The **`sourceFile`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URL of the script in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation occurred.
 
 ## Value
 

@@ -91,8 +91,8 @@ _No change._
 - HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720) and [Firefox bug 1047594](https://bugzil.la/1047594)).
 - The HTTP/2 `alt-svc` header is now supported ([Firefox bug 1003448](https://bugzil.la/1003448)).
 - The Public Key Pinning Extension for HTTP (HPKP) has been implemented ([Firefox bug 787133](https://bugzil.la/787133)).
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
-- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
+- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/Guides/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
 
 ## Changes for add-on and Mozilla developers
 

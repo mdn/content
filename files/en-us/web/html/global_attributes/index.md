@@ -88,7 +88,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
   - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
+  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)

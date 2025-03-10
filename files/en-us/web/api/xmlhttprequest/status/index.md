@@ -8,7 +8,7 @@ browser-compat: api.XMLHttpRequest.status
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Status) of the `XMLHttpRequest`'s response.
+The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Reference/Status) of the `XMLHttpRequest`'s response.
 
 Before the request completes, the value of `status` is 0. Browsers also report a status of 0 in case of `XMLHttpRequest` errors.
 
@@ -55,5 +55,5 @@ xhr.send();
 
 ## See also
 
-- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Reference/Status)
 - [HTTP](/en-US/docs/Web/HTTP)

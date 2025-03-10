@@ -184,7 +184,7 @@ Here is a web app manifest example using the `share_target` member:
 
 When your app is selected by the user to handle another apps' shared content, your app is launched and the shared content is passed to it in a similar way to that in which {{htmlelement("form")}} elements are submitted.
 
-In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
+In the previous web app manifest code example, when the ChattyBox app is selected as a target, it is launched by making an HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request at the `/share-handler` URL, with the shared data passed as request parameters named `description` and `link`.
 
 The `GET` request will look like this: `/shared-handler?description=...&link=...`.
 
@@ -200,7 +200,7 @@ For more information, see the example [Receive share data using GET](/en-US/docs
 
 ### Handling shared files
 
-In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
+In the previous example, text data was handled as a `GET` request. However, handling files requires the use of a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request with a `multipart/form-data` [encoding type](/en-US/docs/Web/API/HTMLFormElement/enctype).
 
 The following code snippet shows how a PWA can be configured to accept different types of shared files:
 
@@ -240,7 +240,7 @@ The following code snippet shows how a PWA can be configured to accept different
 }
 ```
 
-As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/MIME_types) or file extensions.
+As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) or file extensions.
 
 When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
 

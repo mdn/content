@@ -99,7 +99,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
 - `referrerpolicy`
 
-  - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
+  - : How much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link.
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).

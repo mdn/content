@@ -35,7 +35,7 @@ javascript:<script>
 
 When a browser attempts to navigate to such a location, it parses and executes the script body. The script may have a _completion value_ (not a return value), which is the same value if the script were executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). If the last statement is an [expression](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), the completion value is the value of that expression. If this completion value is a string, that string is treated as an HTML document and the browser navigates to a new document with that content, using the same URL as the current page. No history entry is created. If the completion value is not a string, the browser only executes the code and does not navigate. Therefore, it's often recommended that if the script ends with a function call like `javascript:foo()`, you should prefix it with {{jsxref("Operators/void", "void")}} to prevent accidental navigation if the function happens to return a string.
 
-`javascript:` navigation may be blocked by [content security policy](/en-US/docs/Web/HTTP/CSP) settings, in particular {{CSP("script-src")}}.
+`javascript:` navigation may be blocked by [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) settings, in particular {{CSP("script-src")}}.
 
 ## Examples
 
@@ -138,5 +138,5 @@ document.body.textContent = "Hello, world!";
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

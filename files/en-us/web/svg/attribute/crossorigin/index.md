@@ -7,7 +7,7 @@ browser-compat: svg.elements.image.crossorigin
 
 {{SVGRef}}
 
-The crossorigin attribute, valid on the {{SVGElement("image")}} and {{SVGElement("feImage")}} elements, provides support for configuration of the Cross-Origin Resource Sharing ([CORS](/en-US/docs/Web/HTTP/CORS)) requests for the element's fetched data.
+The crossorigin attribute, valid on the {{SVGElement("image")}} and {{SVGElement("feImage")}} elements, provides support for configuration of the Cross-Origin Resource Sharing ([CORS](/en-US/docs/Web/HTTP/Guides/CORS)) requests for the element's fetched data.
 
 This table shows possible keywords and their meaning:
 
@@ -41,4 +41,4 @@ It follows the same processing rules as the HTML attribute [`crossorigin`](/en-U
 
 ## See also
 
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)

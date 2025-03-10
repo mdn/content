@@ -10,7 +10,7 @@ browser-compat: api.crossOriginIsolated
 
 The **`crossOriginIsolated`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a boolean value that indicates whether the document is cross-origin isolated.
 
-A cross-origin isolated document only shares its {{glossary("Browsing context", "browsing context group")}} with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via [CORS](/en-US/docs/Web/HTTP/CORS) (and [COEP](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) for `<iframe>`).
+A cross-origin isolated document only shares its {{glossary("Browsing context", "browsing context group")}} with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via [CORS](/en-US/docs/Web/HTTP/Guides/CORS) (and [COEP](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) for `<iframe>`).
 The relationship between a cross-origin opener of the document or any cross-origin popups that it opens are severed.
 The document may also be hosted in a separate OS process alongside other documents with which it can communicate by operating on shared memory.
 This mitigates the risk of side-channel attacks and cross-origin attacks referred to as [XS-Leaks](https://xsleaks.dev/).

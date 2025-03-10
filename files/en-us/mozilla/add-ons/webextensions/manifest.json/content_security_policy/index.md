@@ -39,15 +39,15 @@ browser-compat: webextensions.manifest.content_security_policy
 
 Extensions have a content security policy (CSP) applied to them by default. The default policy restricts the sources from which extensions can load code (such as [\<script>](/en-US/docs/Web/HTML/Element/script) resources) and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy) to learn more about the implications of this.
 
-You can use the `"content_security_policy"` manifest key to loosen or tighten the default policy. This key is specified in the same way as the Content-Security-Policy HTTP header. See [Using Content Security Policy](/en-US/docs/Web/HTTP/CSP) for a general description of CSP syntax.
+You can use the `"content_security_policy"` manifest key to loosen or tighten the default policy. This key is specified in the same way as the Content-Security-Policy HTTP header. See [Using Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) for a general description of CSP syntax.
 
 For example, you can use this key to:
 
-- Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate [policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
+- Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate [policy directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy).
 - Allow the extension to take advantage of [WebAssembly](/en-US/docs/WebAssembly) by including the `'wasm-unsafe-eval'` source in the `script-src` directive.
 - Loosen the default {{CSP("script-src")}} policies (Manifest V2 only):
   - Allow the extension to load scripts from outside its package by supplying their URL in the {{CSP("script-src")}} directive.
-  - Allow the extension to execute inline scripts by [supplying the hash of the script in the `script-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).
+  - Allow the extension to execute inline scripts by [supplying the hash of the script in the `script-src` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_inline_script).
   - Allow the extension to use `eval()` and similar features by including `'unsafe-eval'` in the {{CSP("script-src")}} directive.
 
 There are restrictions on the policy you can specify with this manifest key:
@@ -65,7 +65,7 @@ In Manifest V2, a source for a script directive is considered secure if it meets
 - Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so `*.co.uk` and `*.blogspot.com` are not allowed, although `*.foo.blogspot.com` is permitted).
 - All sources must specify a host.
 - The only permitted schemes for sources are `blob:`, `filesystem:`, `moz-extension:`, `https:`, and `wss:`.
-- The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax) are: `'none'`, `'self'`, `'unsafe-eval'`, and `'wasm-unsafe-eval'`.
+- The only permitted [keywords](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax) are: `'none'`, `'self'`, `'unsafe-eval'`, and `'wasm-unsafe-eval'`.
 
 ## object-src directive
 

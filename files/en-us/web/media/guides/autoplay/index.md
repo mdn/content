@@ -39,7 +39,7 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - The audio is muted or its volume is set to 0
 - The user has interacted with the site (by clicking, tapping, pressing keys, etc.)
 - If the site has been allowlisted; this may happen either automatically if the browser determines that the user engages with media frequently, or manually through preferences or other user interface features
-- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
+- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
 Otherwise, the playback will likely be blocked.
 The exact situations that result in blocking, and the specifics of how sites become allowlisted, vary from browser to browser, but the above are good guidelines to go by.

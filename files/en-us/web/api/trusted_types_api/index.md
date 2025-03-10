@@ -16,7 +16,7 @@ Client-side, or DOM-based, XSS attacks happen when data controlled by a user (su
 
 The Trusted Types API locks down risky injection sinks, requiring you to process the data before passing it to one of these functions. If you use a string, then the browser will throw a {{jsxref("TypeError")}} and prevent the use of the function.
 
-Trusted Types works alongside [Content-Security Policy](/en-US/docs/Web/HTTP/CSP) with the {{CSP("trusted-types")}} and {{CSP("require-trusted-types-for")}} directives.
+Trusted Types works alongside [Content-Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) with the {{CSP("trusted-types")}} and {{CSP("require-trusted-types-for")}} directives.
 
 ### Injection Sinks
 

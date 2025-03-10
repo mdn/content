@@ -13,7 +13,7 @@ The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface
 To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
 > [!NOTE]
-> Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics, or prompting the user for explicit permission.
+> Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Syntax
 
@@ -73,7 +73,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
     - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The document or the top-level document has a `null` origin.
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is denied by the user agent's permission request to use the API.

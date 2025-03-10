@@ -50,7 +50,7 @@ For further information on Geolocation usage, read [Using the Geolocation API](/
 
 The Geolocation API allows users to programmatically access location information in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts).
 
-Access may further be controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/geolocation","geolocation")}}.
+Access may further be controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/geolocation","geolocation")}}.
 The default allowlist for `geolocation` is `self`, which allows access to location information in same-origin nested frames only.
 Third party usage is enabled by setting a `Permissions-Policy` response header to grant permission to a particular third party origin:
 

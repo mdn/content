@@ -35,4 +35,4 @@ console.log(navigator.userAgentData.platform);
 
 ## See also
 
-- The {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)) contains the same information.
+- The {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)) contains the same information.

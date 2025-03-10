@@ -264,7 +264,7 @@ console.log(foo); // 4.555806215962888
 It is important to note the following:
 
 - You need to include this script in your HTML with a {{HTMLElement("script")}} element of `type="module"`, so that it gets recognized as a module and dealt with appropriately.
-- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/CORS) errors. You need to run it via an HTTP server.
+- You can't run JS modules via a `file://` URL — you'll get [CORS](/en-US/docs/Web/HTTP/Guides/CORS) errors. You need to run it via an HTTP server.
 
 ### Using the default export
 

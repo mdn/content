@@ -357,6 +357,6 @@ In this lesson, we've introduced you to using JSON in your programs, including h
 - [JSON reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [Fetch API overview](/en-US/docs/Web/API/Fetch_API)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

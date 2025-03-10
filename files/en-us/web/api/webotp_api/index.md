@@ -83,7 +83,7 @@ In this case, the last line must consist of:
 
 ## Controlling access to the API
 
-The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specifying a {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default, these methods can be used in top-level document contexts.
+The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) specifying a {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default, these methods can be used in top-level document contexts.
 
 You could specify a directive allowing the use of WebOTP in a specific cross-origin domain (i.e., inside an {{htmlelement("iframe")}}) like this:
 

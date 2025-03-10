@@ -20,9 +20,9 @@ The Set Window Rect command is blocking.
 
 ## Syntax
 
-| Method                                    | URI template                        |
-| ----------------------------------------- | ----------------------------------- |
-| [POST](/en-US/docs/Web/HTTP/Methods/POST) | `/session/{session id}/window/rect` |
+| Method                                              | URI template                        |
+| --------------------------------------------------- | ----------------------------------- |
+| [POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) | `/session/{session id}/window/rect` |
 
 ### URL parameters
 

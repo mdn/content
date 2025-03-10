@@ -139,7 +139,7 @@ Each `File` object contains the following information:
 - `size`
   - : The size of the file in bytes.
 - `type`
-  - : The file's [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+  - : The file's [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 

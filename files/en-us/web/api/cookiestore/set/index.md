@@ -44,7 +44,7 @@ Or
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
 
-      - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
+      - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values:
 
         - `"strict"`
           - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites. This is the default.

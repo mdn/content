@@ -39,9 +39,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow`
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
+    See [iframes](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
 
     > [!NOTE]
     > A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
@@ -70,7 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `csp` {{experimental_inline}}
 
-  - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
+  - : A [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
 - `height`
   - : The height of the frame in CSS pixels. Default is `150`.
@@ -354,5 +354,5 @@ Here's how to write escape sequences when using `srcdoc`:
 
 ## See also
 
-- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

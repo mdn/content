@@ -9,9 +9,9 @@ sidebar: performancesidebar
 
 ## Why use dns-prefetch?
 
-When a browser requests a resource from a (third party) server, that [cross-origin](/en-US/docs/Web/HTTP/CORS)'s domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.
+When a browser requests a resource from a (third party) server, that [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS)'s domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.
 
-`dns-prefetch` helps developers mask DNS resolution latency. The [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link) offers this functionality by way of a [`rel` attribute](/en-US/docs/Web/HTML/Attributes/rel) value of `dns-prefetch`. The [cross-origin](/en-US/docs/Web/HTTP/CORS) domain is then specified in the [href attribute](/en-US/docs/Web/HTML/Attributes):
+`dns-prefetch` helps developers mask DNS resolution latency. The [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link) offers this functionality by way of a [`rel` attribute](/en-US/docs/Web/HTML/Attributes/rel) value of `dns-prefetch`. The [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS) domain is then specified in the [href attribute](/en-US/docs/Web/HTML/Attributes):
 
 ## Syntax
 
@@ -41,15 +41,15 @@ You should place `dns-prefetch` hints in the [`<head>` element](/en-US/docs/Web/
 
 There are 3 main things to keep in mind:
 
-**For one**, `dns-prefetch` is only effective for DNS lookups on [cross-origin](/en-US/docs/Web/HTTP/CORS) domains, so avoid using it to point to your site or domain. This is because the IP behind your site's domain will have already been resolved by the time the browser sees the hint.
+**For one**, `dns-prefetch` is only effective for DNS lookups on [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS) domains, so avoid using it to point to your site or domain. This is because the IP behind your site's domain will have already been resolved by the time the browser sees the hint.
 
-**Second**, it's also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
+**Second**, it's also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Reference/Headers/Link):
 
 ```http
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 
-**Third**, while `dns-prefetch` only performs a DNS lookup, [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Using `preconnect` provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can use it as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
+**Third**, while `dns-prefetch` only performs a DNS lookup, [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Using `preconnect` provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/Guides/CORS). You can use it as an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Reference/Headers/Link):
 
 ```http
 Link: <https://fonts.googleapis.com/>; rel=preconnect
@@ -74,6 +74,6 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 - [HTML attribute: rel](/en-US/docs/Web/HTML/Attributes/rel)
 - [HTML rel attribute: preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect)
 - [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [HTTP header Link](/en-US/docs/Web/HTTP/Headers/Link)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
+- [HTTP header Link](/en-US/docs/Web/HTTP/Reference/Headers/Link)

@@ -30,7 +30,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 - The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
 - SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 - The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see `nsIDOMGeoPositionAddress`.
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/CORS).
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) now support [CORS](/en-US/docs/Web/HTTP/Guides/CORS).
 - In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new `navigator` object is created for the new page. This makes Firefox behave like all other browsers.
 
 ### CSS

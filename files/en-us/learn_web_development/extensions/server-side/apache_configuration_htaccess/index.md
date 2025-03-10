@@ -108,7 +108,7 @@ Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.c
 
 The [Resource Timing Level 1](https://www.w3.org/TR/resource-timing/) specification defines an interface for web applications to access the complete timing information for resources in a document.
 
-The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
+The [Timing-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) response header specifies origins that are allowed to see values of attributes retrieved via features of the Resource Timing API, which would otherwise be reported as zero due to cross-origin restrictions.
 
 If a resource isn't served with a `Timing-Allow-Origin` or if the header does not include the origin after making the request, some attributes of the `PerformanceResourceTiming` object will be set to zero.
 
@@ -474,7 +474,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 
    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 
 Some older browsers would try and guess the content type of a resource, even when it isn't properly set up on the server configuration. This reduces exposure to drive-by download attacks and cross-origin data leaks.
 
@@ -505,7 +505,7 @@ Use services like the ones below to check your `Referrer-Policy`:
 
 ## Disable `TRACE` HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
+The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 
@@ -622,7 +622,7 @@ Map the following filename extensions to the specified encoding type using [AddE
 
 ## Cache expiration
 
-Serve resources with a far-future expiration date using the [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html) module, and [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) and [Expires](/en-US/docs/Web/HTTP/Headers/Expires) headers.
+Serve resources with a far-future expiration date using the [mod_expires](https://httpd.apache.org/docs/current/mod/mod_expires.html) module, and [Cache-Control](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) and [Expires](/en-US/docs/Web/HTTP/Reference/Headers/Expires) headers.
 
 ```apacheconf
 <IfModule mod_expires.c>

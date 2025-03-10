@@ -104,7 +104,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 

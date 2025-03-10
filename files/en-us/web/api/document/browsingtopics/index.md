@@ -68,7 +68,7 @@ The exact property values may vary by browser implementation. An example object 
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Usage of the [Topics API](/en-US/docs/Web/API/Topics_API) is disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples

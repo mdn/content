@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.nonce
 
 {{APIRef("HTML DOM")}}
 
-The **`nonce`** property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
+The **`nonce`** property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 
 In later implementations, elements only expose their `nonce` attribute to scripts (and not to side-channels like CSS attribute selectors).
 
@@ -43,5 +43,5 @@ script[nonce~="whatever"] {
 ## See also
 
 - [`nonce` global attribute](/en-US/docs/Web/HTML/Global_attributes/nonce)
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

@@ -68,7 +68,7 @@ _No changes._
 
 ### HTTP
 
-- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
+- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
 
 ### Security
 

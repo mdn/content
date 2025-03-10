@@ -50,7 +50,7 @@ This request includes:
   - `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
   - Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their login status and permissions/accesses to resources.
 
-Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g., {{HTTPStatus("200", "200 OK")}} for success, {{HTTPStatus("404", "404 Not Found")}} if the resource cannot be found, {{HTTPStatus("403", "403 Forbidden")}} if the user isn't authorized to see the resource, etc.). The body of the response to a successful `GET` request contains the requested resource.
+Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Reference/Status) indicating whether or not the request succeeded (e.g., {{HTTPStatus("200", "200 OK")}} for success, {{HTTPStatus("404", "404 Not Found")}} if the resource cannot be found, {{HTTPStatus("403", "403 Forbidden")}} if the user isn't authorized to see the resource, etc.). The body of the response to a successful `GET` request contains the requested resource.
 
 When an HTML page is returned, it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
 
@@ -202,7 +202,7 @@ Let's recap on how this works, by looking again at the static site architecture 
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
-When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) of `200 OK` (indicating success). The server might return a different status code, for example `404 Not Found` if the file is not present on the server, or `301 Moved Permanently` if the file exists but has been redirected to a different location.
+When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Reference/Status) of `200 OK` (indicating success). The server might return a different status code, for example `404 Not Found` if the file is not present on the server, or `301 Moved Permanently` if the file exists but has been redirected to a different location.
 
 The server for a static site will only ever need to process GET requests, because the server doesn't store any modifiable data. It also doesn't change its responses based on HTTP Request data (e.g. URL parameters or cookies).
 

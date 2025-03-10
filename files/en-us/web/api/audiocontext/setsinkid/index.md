@@ -14,7 +14,7 @@ The **`setSinkId()`** method of the {{domxref("AudioContext")}} interface sets t
 
 To set the audio device to a device different than the default one, the developer needs permission to access to audio devices. If required, the user can be prompted to grant the required permission via a {{domxref("MediaDevices.getUserMedia()")}} call.
 
-In addition, this feature may be blocked by a [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+In addition, this feature may be blocked by a [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Syntax
 

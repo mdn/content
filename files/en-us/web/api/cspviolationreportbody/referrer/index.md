@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.referrer
 
 {{APIRef("Reporting API")}}
 
-The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) was violated.
+The **`referrer`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the referring page of the resource who's [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) was violated.
 
 The referrer is the page that caused the page with the CSP violation to be loaded. For example, if we followed a link to a page with a CSP violation, the `referrer` is the page that we navigated from.
 

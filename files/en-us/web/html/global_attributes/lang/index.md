@@ -169,5 +169,5 @@ If an element has no `lang` attribute, it will inherit the `lang` value set on i
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-- [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
+- [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Reference/Headers/Content-Language)
 - HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) attribute

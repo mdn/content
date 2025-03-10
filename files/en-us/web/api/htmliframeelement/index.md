@@ -18,7 +18,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : A string that specifies the alignment of the frame with respect to the surrounding context.
 - {{domxref("HTMLIFrameElement.allow")}}
-  - : A string that indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this `<iframe>`.
+  - : A string that indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) specified for this `<iframe>`.
 - {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
+  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}

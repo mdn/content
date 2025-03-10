@@ -9,7 +9,7 @@ browser-compat: api.HTMLScriptElement
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
 
-JavaScript files should be served with the `text/javascript` [MIME type](/en-US/docs/Web/HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("HTMLElement/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
+JavaScript files should be served with the `text/javascript` [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{domxref("HTMLElement/error_event", "error")}} event; otherwise, it receives a {{domxref("Window/load_event", "load")}} event.
 
 {{InheritanceDiagram}}
 
