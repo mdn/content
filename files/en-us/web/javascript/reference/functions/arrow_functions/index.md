@@ -264,9 +264,6 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> [!NOTE]
-> You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to comprehend.
-
 In most cases, using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 is a good alternative to using an `arguments` object.
 
