@@ -44,7 +44,7 @@ _No changes._
 - Closely associated with the above update, we've also removed most of the Firefox-specific `-moz-appearance` values ([Firefox bug 1496720](https://bugzil.la/1496720)).
 - {{cssxref("display")}}: `list-item` is now supported on {{htmlelement("legend")}} elements ([Firefox bug 1486602](https://bugzil.la/1486602)).
 - SVG `path()`s, as usable in {{cssxref("offset-path")}}, are now animatable ([Firefox bug 1486094](https://bugzil.la/1486094)).
-- If a selector chain or group includes a `-webkit-`prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
+- If a selector chain or group includes a `-webkit-`-prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
 
 #### Removals
 

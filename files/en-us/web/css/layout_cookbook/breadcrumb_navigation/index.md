@@ -74,9 +74,9 @@ To display list items inline, we use [flexbox layout](/en-US/docs/Learn_web_deve
 
 ## Accessibility concerns
 
-We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
+We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) will also prevent the image from being exposed to AT.
+Be aware that the separator arrows `→` added via the {{cssxref("content")}} CSS property in the example above are exposed to assistive technologies (AT), including screen readers and braille displays. For a quieter solution, use a decorative {{HTMLElement("img")}} in your HTML with an empty `alt` attribute. An ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) set to [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) or [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) will also prevent the image from being exposed to AT.
 
 Alternatively, silence the [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) by including an empty string as alternative text, preceded by a slash (`/`); for example, `content: url("arrow.png") / "";`.
 

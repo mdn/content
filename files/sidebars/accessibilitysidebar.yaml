@@ -3,7 +3,22 @@
 sidebar:
   - type: section
     link: /Web/Accessibility
-    title: Accessibility
+  - type: section
+    link: /Web/Accessibility/Guides
+  - /Web/Accessibility/Guides/Information_for_Web_authors
+  - /Web/Accessibility/Guides/Browsing_safely
+  - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
+  - /Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
+  - /Web/Accessibility/Guides/Mobile_accessibility_checklist
+  - /Web/Accessibility/Guides/Cognitive_accessibility
+  - /Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns
+  - /Web/Accessibility/Guides/Colors_and_Luminance
+  - /Web/Accessibility/Guides/Seizure_disorders
+  - type: listSubPages
+    path: /Web/Accessibility/Guides/Understanding_WCAG
+    link: /Web/Accessibility/Guides/Understanding_WCAG
+    title: Understanding WCAG
+    details: closed
   - link: /Learn_web_development/Core/Accessibility
     title: Beginners
     details: closed
@@ -16,66 +31,39 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-  - title: Guides
-    details: closed
-    children:
-      - /Web/Accessibility/Information_for_Web_authors
-      - /Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
-      - /Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-      - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-      - /Web/Accessibility/Mobile_accessibility_checklist
-      - /Web/Accessibility/Understanding_WCAG
-      - /Web/Accessibility/Cognitive_accessibility
-      - /Web/Accessibility/Accessibility_and_Spacial_Patterns
-      - /Web/Accessibility/Understanding_Colors_and_Luminance
-      - /Web/Accessibility/Seizure_disorders
-  - type: listSubPages
-    path: /Web/Accessibility/Understanding_WCAG
-    title: WCAG
-    details: closed
   - type: section
     link: /Web/Accessibility/ARIA
     title: ARIA
-  - title: ARIA_guides
+  - link: /Web/Accessibility/ARIA/Guides
+    title: ARIA_guides
     details: closed
     children:
-      - /Web/Accessibility/ARIA/ARIA_Guides
-      - /Web/Accessibility/ARIA/ARIA_Live_Regions
-      - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-      - /Web/Accessibility/ARIA/ARIA_Techniques
-      - /Web/Accessibility/ARIA/Multipart_labels
-      - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+      - /Web/Accessibility/ARIA/Guides/Live_regions
+      - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
+      - /Web/Accessibility/ARIA/Guides/Techniques
+      - /Web/Accessibility/ARIA/Guides/Multipart_labels
+  - type: section
+    link: /Web/Accessibility/ARIA/How_to
+  - /Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
+  - type: section
+    link: /Web/Accessibility/ARIA/Reference
+    title: ARIA reference
   - type: listSubPages
-    path: /Web/Accessibility/ARIA/Attributes
-    title: ARIA states and properties
+    path: /Web/Accessibility/ARIA/Reference/Attributes
+    link: /Web/Accessibility/ARIA/Reference/Attributes
     details: closed
   - type: listSubPages
-    path: /Web/Accessibility/ARIA/Roles
-    title: ARIA roles
+    path: /Web/Accessibility/ARIA/Reference/Roles
+    link: /Web/Accessibility/ARIA/Reference/Roles
     details: closed
 l10n:
   de:
-    Accessibility: Barrierefreiheit
-    Guides: Anleitungen
     ARIA: ARIA
     ARIA_guides: ARIA-Anleitungen
-    ARIA states and properties: ARIA-Zustände und -Eigenschaften
-    ARIA roles: ARIA-Rollen
-    WCAG: WCAG
   en-US:
-    Accessibility: Accessibility
-    Guides: Guides
-    Beginners: Beginner's tutorials
+    Beginners: Tutorials for beginners
     ARIA: ARIA
     ARIA_guides: ARIA guides
-    ARIA states and properties: ARIA states and properties
-    ARIA roles: ARIA roles
-    WCAG: WCAG
   zh-CN:
-    Accessibility: 无障碍
-    Guides: 指南
     ARIA: ARIA
     ARIA_guides: ARIA 指南
-    ARIA states and properties: ARIA 状态及属性
-    ARIA roles: ARIA 角色
-    WCAG: WCAG

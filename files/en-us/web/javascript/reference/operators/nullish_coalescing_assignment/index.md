@@ -67,7 +67,7 @@ x ??= console.log("y evaluated");
 
 ### Using nullish coalescing assignment
 
-You can use the nullish coalescing assignment operator to apply default values to object properties. Compared to using destructuring and [default values](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), `??=` also applies the default value if the property has value `null`.
+You can use the nullish coalescing assignment operator to apply default values to object properties. Compared to using destructuring and [default values](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value), `??=` also applies the default value if the property has value `null`.
 
 ```js
 function config(options) {

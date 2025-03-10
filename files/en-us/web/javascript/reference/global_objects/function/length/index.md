@@ -34,7 +34,7 @@ A number.
 A {{jsxref("Function")}} object's `length` property indicates how many arguments the function expects, i.e. the number of formal parameters:
 
 - Only parameters before the first one with a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) are counted.
-- A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) counts as a single parameter.
+- A [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) counts as a single parameter.
 - The [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) is excluded.
 
 By contrast, {{jsxref("Functions/arguments/length", "arguments.length")}} is local to a function and provides the number of arguments actually passed to the function.

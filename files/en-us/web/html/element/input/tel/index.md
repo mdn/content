@@ -333,7 +333,7 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 In this example, we present a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
+Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
 <form>
@@ -528,8 +528,8 @@ input:valid + span::after {
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>

@@ -8,7 +8,7 @@ browser-compat: css.properties.container-name
 {{CSSRef}}
 
 The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of query container names used by the [@container](/en-US/docs/Web/CSS/@container) at-rule in a [container query](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
-A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
+A container query will apply styles to elements based on the [size](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
 > [!NOTE]
@@ -153,6 +153,7 @@ This is useful if you want to target the same container with multiple container 
 
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-type")}} property

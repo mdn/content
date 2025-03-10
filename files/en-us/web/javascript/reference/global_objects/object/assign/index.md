@@ -262,5 +262,5 @@ console.log(copy);
 - [Polyfill of `Object.assign` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [es-shims polyfill of `Object.assign`](https://www.npmjs.com/package/object.assign)
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

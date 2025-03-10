@@ -90,7 +90,7 @@ pc.ontrack = ({ track, streams }) => {
 };
 ```
 
-When the `track` event occurs, this handler executes. Using [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into `addTrack()` earlier.
+When the `track` event occurs, this handler executes. Using [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), the {{domxref("RTCTrackEvent")}}'s {{domxref("RTCTrackEvent.track", "track")}} and {{domxref("RTCTrackEvent.streams", "streams")}} properties are extracted. The former is either the video track or the audio track being received. The latter is an array of {{domxref("MediaStream")}} objects, each representing a stream containing this track (a track may in rare cases belong to multiple streams at once). In our case, this will always contain one stream, at index 0, because we passed one stream into `addTrack()` earlier.
 
 We add an unmute event handler to the track, because the track will become unmuted once it starts receiving packets. We put the remainder of our reception code in there.
 

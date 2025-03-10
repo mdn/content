@@ -45,7 +45,7 @@ page-type: firefox-release-notes
 
 ### WebRTC
 
-- Instead of including usernames in the `RTCIceServer.url` property (such as stun:username\@stunserver.example.com), you now need to use the new `RTCIceServer.username` property.
+- Instead of including usernames in the `RTCIceServer.url` property (such as `stun:username@stunserver.example.com`), you now need to use the new `RTCIceServer.username` property.
 
 ### CSS
 

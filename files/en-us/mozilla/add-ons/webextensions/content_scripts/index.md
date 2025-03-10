@@ -10,7 +10,8 @@ A content script is a part of your extension that runs in the context of a web p
 
 Content scripts can access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system and thereby indirectly access the WebExtension APIs. [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) but can't directly access the content of web pages.
 
-> [!NOTE] Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
+> [!NOTE]
+> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
 
 ## Loading content scripts
 

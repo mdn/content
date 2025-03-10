@@ -1068,7 +1068,7 @@ tr:last-child td {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/table_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role"
             >table</a
           ></code
         >
