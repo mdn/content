@@ -106,12 +106,12 @@ The table below shows the result of this rule on whether documents are opened in
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#matching-coop -->
 
-| Opener (row) / Opened (col) | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
-| --------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
-| `unsafe-none`               | Same          | New                        | New                 | New                     |
-| `same-origin-allow-popups`  | New           | Same if same-origin        | New                 | New                     |
-| `same-origin`               | New           | New                        | Same if same-origin | New                     |
-| `noopener-allow-popups`     | New           | New                        | New                 | Same if same-origin     |
+| Opener (↓) / Opened (→)    | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
+| -------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
+| `unsafe-none`              | Same          | New                        | New                 | New                     |
+| `same-origin-allow-popups` | New           | Same if same-origin        | New                 | New                     |
+| `same-origin`              | New           | New                        | Same if same-origin | New                     |
+| `noopener-allow-popups`    | New           | New                        | New                 | Same if same-origin     |
 
 ### Opening with Window.open()
 
@@ -126,12 +126,12 @@ The table below shows the opener behaviour for the different directive values.
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#check-browsing-context-group-switch-coop-value-popup -->
 
-| Opener (row) / Opened (col) | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
-| --------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
-| `unsafe-none`               | Same          | New                        | New                 | New                     |
-| `same-origin-allow-popups`  | Same          | Same if same-origin        | New                 | New                     |
-| `same-origin`               | New           | New                        | Same if same-origin | New                     |
-| `noopener-allow-popups`     | Same          | New                        | New                 | New                     |
+| Opener (↓) / Opened (→)    | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
+| -------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
+| `unsafe-none`              | Same          | New                        | New                 | New                     |
+| `same-origin-allow-popups` | Same          | Same if same-origin        | New                 | New                     |
+| `same-origin`              | New           | New                        | Same if same-origin | New                     |
+| `noopener-allow-popups`    | Same          | New                        | New                 | New                     |
 
 ## Examples
 
