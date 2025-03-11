@@ -49,8 +49,8 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":future")}}
 - {{CSSXref(":has", ":has()")}}
 - {{CSSXref(":hover")}}
-- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":in-range")}}
+- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
 - {{CSSXref(":lang", ":lang()")}}
@@ -63,11 +63,14 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":muted")}}
 - {{CSSXref(":not", ":not()")}}
 - {{CSSXref(":nth-child", ":nth-child()")}}
+- `:nth-col()`
 - {{CSSXref(":nth-of-type", ":nth-of-type()")}}
 - {{CSSXref(":nth-last-child", ":nth-last-child()")}}
+- `:nth-last-col()`
 - {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
+- {{CSSXref(":open")}}
 - {{CSSXref(":optional")}}
 - {{CSSXref(":out-of-range")}}
 - {{CSSXref(":past")}}
@@ -75,6 +78,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":picture-in-picture")}}
 - {{CSSXref(":placeholder-shown")}}
 - {{CSSXref(":playing")}}
+- {{CSSXref(":popover-open")}}
 - {{CSSXref(":read-only")}}
 - {{CSSXref(":read-write")}}
 - {{CSSXref(":required")}}
