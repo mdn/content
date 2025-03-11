@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
 
 With the things you have learned in the last few articles, you should already be able to write relatively sophisticated MathML formulas. This challenge gives you a chance to do that.
 
@@ -114,4 +114,4 @@ To get this assessment started, you can rely on our usual HTML template. By defa
 - Use the [W3C validator](https://validator.w3.org/nu/) to catch unintended mistakes in your HTML/MathML markup.
 - If you are stuck, or realize how painful it is to write MathML by hand, feel free to use tools to help [write MathML](/en-US/docs/Web/MathML/Guides/Authoring) such as [TeXZilla](https://fred-wang.github.io/TeXZilla/).
 
-{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}

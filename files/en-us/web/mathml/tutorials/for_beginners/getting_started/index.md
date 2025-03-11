@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Tutorials")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}
 
 In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
 
@@ -180,4 +180,4 @@ In this article, we have taken a look at how to use the `<math>` element to inse
 - [The `math-style` property](/en-US/docs/Web/CSS/math-style)
 - [The `math-depth` property](/en-US/docs/Web/CSS/math-depth)
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

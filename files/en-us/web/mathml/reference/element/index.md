@@ -1,5 +1,6 @@
 ---
-title: MathML element reference
+title: MathML elements
+short-title: Elements
 slug: Web/MathML/Reference/Element
 page-type: landing-page
 sidebar: mathmlref

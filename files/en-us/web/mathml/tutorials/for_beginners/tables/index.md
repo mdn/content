@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}
 
 Once all basic math notations are known, it remains to consider tabular layout which can be used for matrix-like expressions and other advanced math layout.
 
@@ -285,4 +285,4 @@ You've nearly finished this module — we only have one more thing to do. In the
 - [The `<mtr>` element](/en-US/docs/Web/MathML/Reference/Element/mtr)
 - [The `<mtd>` element](/en-US/docs/Web/MathML/Reference/Element/mtd)
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}

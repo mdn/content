@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}
 
 Now that you have a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
 
@@ -446,4 +446,4 @@ In this article, we have learnt about a few _token_ elements that are used as te
 - [The `<mo>` element](/en-US/docs/Web/MathML/Reference/Element/mo)
 - [The `<mtext>` element](/en-US/docs/Web/MathML/Reference/Element/mtext)
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}

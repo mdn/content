@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}
 
 Relying on text containers, this article describes how to build more complex MathML expressions by nesting fractions and roots.
 
@@ -313,4 +313,4 @@ In this lesson, we've seen how to build fractions and roots using the `<mfrac>`,
 - [The `<msqrt>` element](/en-US/docs/Web/MathML/Reference/Element/msqrt)
 - [The `<mroot>` element](/en-US/docs/Web/MathML/Reference/Element/mroot)
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners")}}

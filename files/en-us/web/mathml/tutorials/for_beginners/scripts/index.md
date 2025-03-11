@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
 
 We continue the review of basic math notations and focus on building MathML elements with scripts.
 
@@ -465,4 +465,4 @@ In this article, we've finished reviewing basic layout introducing elements `<ms
 - [The `<mover>` element](/en-US/docs/Web/MathML/Reference/Element/mover)
 - [The `<munderover>` element](/en-US/docs/Web/MathML/Reference/Element/munderover)
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}

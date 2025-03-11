@@ -1,5 +1,6 @@
 ---
-title: Global attributes
+title: MathML global attributes
+short-title: Global attributes
 slug: Web/MathML/Reference/Global_attributes
 page-type: landing-page
 browser-compat: mathml.global_attributes
