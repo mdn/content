@@ -1,5 +1,5 @@
 ---
-title: SVG as an Image
+title: SVG as an image
 slug: Web/SVG/SVG_as_an_Image
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image

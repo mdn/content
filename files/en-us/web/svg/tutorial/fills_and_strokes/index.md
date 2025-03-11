@@ -1,5 +1,5 @@
 ---
-title: Fills and Strokes
+title: Fills and strokes
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 page-type: guide
 sidebar: svgref
