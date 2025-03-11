@@ -10,7 +10,33 @@ browser-compat: css.types.transform-function.matrix
 The **`matrix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a homogeneous 2D transformation matrix. Its result is
 a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
+{{InteractiveExample("CSS Demo: matrix()")}}
+
+```css interactive-example-choice
+transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+```
+
+```css interactive-example-choice
+transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+```
+
+```css interactive-example-choice
+transform: matrix(0, 1, 1, 0, 0, 0);
+```
+
+```css interactive-example-choice
+transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for
 > `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.

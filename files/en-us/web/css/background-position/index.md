@@ -9,7 +9,46 @@ browser-compat: css.properties.background-position
 
 The **`background-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
-{{EmbedInteractiveExample("pages/css/background-position.html")}}
+{{InteractiveExample("CSS Demo: background-position")}}
+
+```css interactive-example-choice
+background-position: top;
+```
+
+```css interactive-example-choice
+background-position: left;
+```
+
+```css interactive-example-choice
+background-position: center;
+```
+
+```css interactive-example-choice
+background-position: 25% 75%;
+```
+
+```css interactive-example-choice
+background-position: bottom 50px right 100px;
+```
+
+```css interactive-example-choice
+background-position: right 35% bottom 45%;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 ## Syntax
 

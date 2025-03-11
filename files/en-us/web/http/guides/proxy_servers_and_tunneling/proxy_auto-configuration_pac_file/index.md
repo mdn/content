@@ -306,14 +306,12 @@ myIpAddress()
 
 #### Return value
 
-Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
-
-> **Warning:** `myIpAddress()` returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
+Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format. In order to be more helpful, it will try several alternatives before falling back to the loopback address (like `127.0.0.1`).
 
 #### Example
 
 ```js-nolint
-myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+myIpAddress()
 ```
 
 ### dnsDomainLevels()
