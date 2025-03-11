@@ -66,7 +66,7 @@ Sometimes, during the lifetime of a WebRTC session, network conditions change. O
 > [!NOTE]
 > Different browsers support ICE restart under different sets of conditions. Not all browsers will perform ICE restart due to network congestion, for example.
 
-If you need to change the configuration of the connection in some way (such as changing to a different set of ICE servers), you can do so before restarting ICE by calling {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object before restarting ICE. The `failed` [ICE connection state](/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState) calls {{domxref("RTCPeerConnection.restartIce", "restartIce()")}}. `restartIce()` tells the ICE layer to automatically add the `iceRestart` flag to the next ICE message sent.
+The handling of the `failed` [ICE connection state](/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState) below shows how you might restart the connection.
 
 ```js
 pc.oniceconnectionstatechange = () => {
@@ -77,7 +77,9 @@ pc.oniceconnectionstatechange = () => {
 };
 ```
 
-This generates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection. The next `createOffer()` call will include the `iceRestart` flag, which will trigger ICE restart.
+The code first calls {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object. This should be done before restarting ICE if you need to change the connection configuration in some way (such as changing to a different set of ICE servers). 
+
+The handler then calls {{domxref("RTCPeerConnection.restartIce()")}}. This tells the ICE layer to automatically add the `iceRestart` flag to the next `createOffer()` call, which triggers an ICE restart. It also creates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection. 
 
 The answerer side of the connection will automatically begin ICE restart when new values are detected for the ICE ufrag and ICE password.
 
