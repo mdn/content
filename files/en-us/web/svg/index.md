@@ -22,9 +22,9 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial).
 
 ## Documentation
 
-- [SVG element reference](/en-US/docs/Web/SVG/Element)
+- [SVG element reference](/en-US/docs/Web/SVG/Reference/Element)
   - : Details about each SVG element.
-- [SVG attribute reference](/en-US/docs/Web/SVG/Attribute)
+- [SVG attribute reference](/en-US/docs/Web/SVG/Reference/Attribute)
   - : Details about each SVG attribute.
 - [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom)
   - : Details about the SVG DOM API, for interaction with JavaScript.

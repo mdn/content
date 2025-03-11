@@ -749,10 +749,10 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
 - [SVG](/en-US/docs/Web/SVG) concepts:
-  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate) element
-  - [`<animateTransform>`](/en-US/docs/Web/SVG/Element/animateTransform) element
-  - [`<set>`](/en-US/docs/Web/SVG/Element/set) element
-  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform) element
+  - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
+  - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element
+  - [`<set>`](/en-US/docs/Web/SVG/Reference/Element/set) element
+  - [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) element
 
 ## Specifications
 

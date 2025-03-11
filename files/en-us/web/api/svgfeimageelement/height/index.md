@@ -36,6 +36,6 @@ console.log(verticalSize.baseVal.value); // the `height` value
 
 - {{domxref("SVGFEImageElement.width")}}
 - [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
-- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
+- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property

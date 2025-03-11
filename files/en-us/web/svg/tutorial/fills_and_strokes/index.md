@@ -98,11 +98,11 @@ The `stroke-dasharray` attribute can take a series of comma and/or whitespace se
 
 The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.
 
-There are additional `stroke` and `fill` properties available, including `fill-rule`, which specifies how to color in shapes that overlap themselves; [`stroke-miterlimit`](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit), which determines if a stroke should draw miters; and [stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset), which specifies where to start a dasharray on a line.
+There are additional `stroke` and `fill` properties available, including `fill-rule`, which specifies how to color in shapes that overlap themselves; [`stroke-miterlimit`](/en-US/docs/Web/SVG/Reference/Attribute/stroke-miterlimit), which determines if a stroke should draw miters; and [stroke-dashoffset](/en-US/docs/Web/SVG/Reference/Attribute/stroke-dashoffset), which specifies where to start a dasharray on a line.
 
 ### Paint order
 
-The order in which fill and stroke are painted can be controlled using the [`paint-order`](/en-US/docs/Web/SVG/Attribute/paint-order) attribute.
+The order in which fill and stroke are painted can be controlled using the [`paint-order`](/en-US/docs/Web/SVG/Reference/Attribute/paint-order) attribute.
 
 ```html
 <?xml version="1.0" standalone="no"?>
