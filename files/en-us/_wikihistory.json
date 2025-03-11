@@ -125369,23 +125369,6 @@
     "modified": "2020-10-24T07:46:48.631Z",
     "contributors": ["chrisdavidmills", "amized", "teoli", "curacao"]
   },
-  "Web/SVG/Tutorial/SVG_Image_Tag": {
-    "modified": "2020-12-14T11:30:39.212Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "yoscheherazade",
-      "pamelahicks",
-      "rousan",
-      "sm1215",
-      "Delapouite",
-      "trevorh",
-      "chrisdoble",
-      "Jeremie",
-      "kscarfone",
-      "jswisher",
-      "kperch"
-    ]
-  },
   "Web/SVG/Tutorial/SVG_In_HTML_Introduction": {
     "modified": "2020-04-20T03:12:49.575Z",
     "contributors": [
@@ -125454,6 +125437,23 @@
       "Ecmanaut",
       "yyss",
       "Manuel_Strehl"
+    ]
+  },
+  "Web/SVG/Tutorial/SVG_image_element": {
+    "modified": "2020-12-14T11:30:39.212Z",
+    "contributors": [
+      "Zearin_Galaurum",
+      "yoscheherazade",
+      "pamelahicks",
+      "rousan",
+      "sm1215",
+      "Delapouite",
+      "trevorh",
+      "chrisdoble",
+      "Jeremie",
+      "kscarfone",
+      "jswisher",
+      "kperch"
     ]
   },
   "Web/SVG/Tutorial/Texts": {

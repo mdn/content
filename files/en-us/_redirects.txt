@@ -7135,7 +7135,7 @@
 /en-US/docs/SVG/Tutorial/Paths	/en-US/docs/Web/SVG/Tutorial/Paths
 /en-US/docs/SVG/Tutorial/Patterns	/en-US/docs/Web/SVG/Tutorial/Patterns
 /en-US/docs/SVG/Tutorial/Positions	/en-US/docs/Web/SVG/Tutorial/Positions
-/en-US/docs/SVG/Tutorial/SVG_Image_Tag	/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag
+/en-US/docs/SVG/Tutorial/SVG_Image_Tag	/en-US/docs/Web/SVG/Tutorial/SVG_image_element
 /en-US/docs/SVG/Tutorial/SVG_fonts	/en-US/docs/Web/SVG/Tutorial/SVG_fonts
 /en-US/docs/SVG/Tutorial/Texts	/en-US/docs/Web/SVG/Tutorial/Texts
 /en-US/docs/SVG/Tutorial/Tools_for_SVG	/en-US/docs/Web/SVG/Tutorial/Tools_for_SVG
@@ -14189,6 +14189,7 @@
 /en-US/docs/Web/SVG/Server-configuration	https://www.w3.org/services/svg-server/
 /en-US/docs/Web/SVG/Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
+/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag	/en-US/docs/Web/SVG/Tutorial/SVG_image_element
 /en-US/docs/Web/SVG/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/Web/SVG/ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/Web/SVG/filter	/en-US/docs/Web/CSS/filter

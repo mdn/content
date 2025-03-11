@@ -25,7 +25,7 @@ This tutorial aims to explain the internals of SVG and is packed with technical 
 - [Other content in SVG](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG)
 - [Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
 - [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
-- [SVG Image tag](/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag)
+- [SVG Image tag](/en-US/docs/Web/SVG/Tutorial/SVG_image_element)
 - [Tools for SVG](/en-US/docs/Web/SVG/Tutorial/Tools_for_SVG)
 - [SVG and CSS](/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
 
