@@ -6,7 +6,8 @@ sidebar:
   - type: section
     link: /Web/SVG/Tutorials
     title: Tutorials
-  - title: Introducing SVG from scratch
+  - link: /Web/SVG/Tutorials/SVG_from_scratch
+    title: Introducing SVG from scratch
     details: closed
     children:
       - /Web/SVG/Tutorials/SVG_from_scratch/Introduction
