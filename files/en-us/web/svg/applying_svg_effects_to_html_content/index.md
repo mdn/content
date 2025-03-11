@@ -1,5 +1,6 @@
 ---
 title: Applying SVG effects to HTML content
+short-title: SVG effects for HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 page-type: guide
 sidebar: svgref
