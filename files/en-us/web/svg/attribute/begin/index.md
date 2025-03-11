@@ -5,8 +5,6 @@ page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#BeginAttribute
 ---
 
-{{SVGRef}}
-
 The **`begin`** attribute defines when the associated element becomes active.
 For an animation element, this is the point at which the animation should begin.
 

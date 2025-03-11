@@ -3,9 +3,8 @@ title: patternTransform
 slug: Web/SVG/Attribute/patternTransform
 page-type: svg-attribute
 browser-compat: svg.elements.pattern.patternTransform
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`patternTransform`** attribute defines a list of [transform definitions](/en-US/docs/Web/SVG/Attribute/transform#transform_functions) that are applied to a pattern tile.
 

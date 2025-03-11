@@ -3,9 +3,8 @@ title: <path>
 slug: Web/SVG/Element/path
 page-type: svg-element
 browser-compat: svg.elements.path
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to define a shape. All the basic shapes can be created with a path element.
 

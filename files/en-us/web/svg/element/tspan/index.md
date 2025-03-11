@@ -3,9 +3,8 @@ title: <tspan>
 slug: Web/SVG/Element/tspan
 page-type: svg-element
 browser-compat: svg.elements.tspan
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<tspan>`** [SVG](/en-US/docs/Web/SVG) element defines a subtext within a {{SVGElement('text')}} element or another `<tspan>` element. It allows for adjustment of the style and/or position of that subtext as needed.
 

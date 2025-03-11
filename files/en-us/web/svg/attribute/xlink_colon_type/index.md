@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.global_attributes.xlink_type
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`xlink:type`** attribute identifies the type of {{Glossary("XLink")}} being used. In SVG, only simple links are available.
 

@@ -3,9 +3,8 @@ title: <linearGradient>
 slug: Web/SVG/Element/linearGradient
 page-type: svg-element
 browser-compat: svg.elements.linearGradient
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<linearGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors define linear gradients to apply to other SVG elements.
 

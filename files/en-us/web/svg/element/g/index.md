@@ -3,9 +3,8 @@ title: <g>
 slug: Web/SVG/Element/g
 page-type: svg-element
 browser-compat: svg.elements.g
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<g>`** [SVG](/en-US/docs/Web/SVG) element is a container used to group other SVG elements.
 

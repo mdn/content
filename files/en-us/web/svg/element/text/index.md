@@ -3,9 +3,8 @@ title: <text>
 slug: Web/SVG/Element/text
 page-type: svg-element
 browser-compat: svg.elements.text
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<text>`** [SVG](/en-US/docs/Web/SVG) element draws a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to `<text>`, like any other SVG graphics element.
 

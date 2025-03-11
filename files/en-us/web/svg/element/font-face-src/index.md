@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.font-face-src
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<font-face-src>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the {{cssxref("@font-face/src", "src")}} descriptor in CSS {{cssxref("@font-face")}} rules. It serves as container for {{SVGElement("font-face-name")}}, pointing to locally installed copies of this font, and {{SVGElement("font-face-uri")}}, utilizing remotely defined fonts.
 

@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.global_attributes.font-stretch
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`font-stretch`** attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text.
 

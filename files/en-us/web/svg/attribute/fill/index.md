@@ -13,9 +13,8 @@ browser-compat:
   - svg.elements.textPath.fill
   - svg.elements.tref.fill
   - svg.elements.tspan.fill
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`fill`** attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (_or any SVG paint servers like gradients or patterns_) used to paint the element; for animation it defines the final state of the animation.
 

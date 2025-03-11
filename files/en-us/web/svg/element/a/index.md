@@ -3,9 +3,8 @@ title: <a>
 slug: Web/SVG/Element/a
 page-type: svg-element
 browser-compat: svg.elements.a
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<a>`** [SVG](/en-US/docs/Web/SVG) element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
 

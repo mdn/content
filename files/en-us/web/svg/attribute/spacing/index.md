@@ -3,9 +3,8 @@ title: spacing
 slug: Web/SVG/Attribute/spacing
 page-type: svg-attribute
 browser-compat: svg.elements.textPath.spacing
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`spacing`** attribute indicates how the user agent should determine the spacing between typographic characters that are to be rendered along a path.
 

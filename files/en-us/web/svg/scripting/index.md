@@ -2,9 +2,8 @@
 title: Scripting
 slug: Web/SVG/Scripting
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 One can override default browser behaviors with the `evt.preventDefault()` method, add event listeners to objects with the syntax `element.addEventListener(event, function, useCapture)`, and set element properties with syntax like `svgElement.style.setProperty("fill-opacity", "0.0", "")`. Note the existence of all three arguments setting properties.
 

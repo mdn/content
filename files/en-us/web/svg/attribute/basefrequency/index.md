@@ -3,9 +3,8 @@ title: baseFrequency
 slug: Web/SVG/Attribute/baseFrequency
 page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.baseFrequency
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`baseFrequency`** attribute represents the base frequency parameter for the noise function of the {{SVGElement("feTurbulence")}} filter primitive.
 

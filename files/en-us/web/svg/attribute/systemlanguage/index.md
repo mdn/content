@@ -3,9 +3,8 @@ title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
 page-type: svg-attribute
 browser-compat: svg.global_attributes.systemLanguage
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`systemLanguage`** attribute represents a list of supported language tags. This list is matched against the language defined in the user preferences.
 

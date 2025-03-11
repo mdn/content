@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font.vert-adv-y
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`vert-adv-y`** attribute indicates the vertical advance after rendering a {{Glossary("glyph")}} in vertical orientation.
 

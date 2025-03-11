@@ -3,9 +3,8 @@ title: color
 slug: Web/SVG/Attribute/color
 page-type: svg-attribute
 browser-compat: svg.global_attributes.color
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
 

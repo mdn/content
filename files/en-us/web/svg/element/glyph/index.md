@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.glyph
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<glyph>`** [SVG](/en-US/docs/Web/SVG) element defines a single glyph in an SVG font.
 

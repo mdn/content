@@ -3,9 +3,8 @@ title: k4
 slug: Web/SVG/Attribute/k4
 page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k4
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`k4`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.
 

@@ -3,9 +3,8 @@ title: stitchTiles
 slug: Web/SVG/Attribute/stitchTiles
 page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.stitchTiles
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stitchTiles`** attribute defines how the Perlin Noise tiles behave at the border.
 

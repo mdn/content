@@ -3,9 +3,8 @@ title: specularConstant
 slug: Web/SVG/Attribute/specularConstant
 page-type: svg-attribute
 browser-compat: svg.elements.feSpecularLighting.specularConstant
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`specularConstant`** attribute controls the ratio of reflection of the specular lighting. It represents the k<sub>s</sub> value in [the Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). The bigger the value the stronger the reflection.
 

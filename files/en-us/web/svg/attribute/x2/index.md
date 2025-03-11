@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.line.x2
   - svg.elements.linearGradient.x2
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`x2`** attribute is used to specify the second x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
 

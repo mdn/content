@@ -3,9 +3,8 @@ title: SVG as an Image
 slug: Web/SVG/SVG_as_an_Image
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 SVG images can be used as an image format, in a number of contexts. Browsers support SVG images in:
 

@@ -3,9 +3,8 @@ title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 page-type: svg-attribute
 browser-compat: svg.global_attributes.fill-rule
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`fill-rule`** attribute is a presentation attribute defining the algorithm to use to determine the _inside_ part of a shape.
 

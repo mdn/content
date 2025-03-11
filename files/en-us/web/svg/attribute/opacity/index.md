@@ -3,9 +3,8 @@ title: opacity
 slug: Web/SVG/Attribute/opacity
 page-type: svg-attribute
 browser-compat: svg.global_attributes.opacity
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`opacity`** attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.
 

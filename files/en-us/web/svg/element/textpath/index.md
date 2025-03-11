@@ -3,9 +3,8 @@ title: <textPath>
 slug: Web/SVG/Element/textPath
 page-type: svg-element
 browser-compat: svg.elements.textPath
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<textPath>`** [SVG](/en-US/docs/Web/SVG) element is used to render text along the shape of a {{SVGElement("path")}} element.
 The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}} attribute is used to reference the desired `<path>`.

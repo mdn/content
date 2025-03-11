@@ -3,9 +3,8 @@ title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
 page-type: svg-attribute
 browser-compat: svg.global_attributes.text-rendering
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`text-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering text.
 

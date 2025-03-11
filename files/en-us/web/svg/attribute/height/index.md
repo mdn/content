@@ -8,9 +8,8 @@ spec-urls:
   - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
   - https://svgwg.org/svg2-draft/geometry.html#Sizing
   - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`height`** attribute defines the vertical length of an element in the user coordinate system.
 

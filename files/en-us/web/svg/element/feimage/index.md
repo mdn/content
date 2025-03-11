@@ -3,9 +3,8 @@ title: <feImage>
 slug: Web/SVG/Element/feImage
 page-type: svg-element
 browser-compat: svg.elements.feImage
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feImage>`** [SVG](/en-US/docs/Web/SVG) filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)
 

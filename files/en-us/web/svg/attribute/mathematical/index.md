@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font-face.mathematical
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`mathematical`** attribute indicates the alignment coordinate for {{Glossary("glyph", "glyphs")}} to achieve mathematical baseline alignment for horizontally oriented glyph layouts. The value is an offset in the font coordinate system.
 

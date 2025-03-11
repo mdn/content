@@ -3,9 +3,8 @@ title: order
 slug: Web/SVG/Attribute/order
 page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.order
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`order`** attribute indicates the size of the matrix to be used by a {{SVGElement("feConvolveMatrix")}} element.
 

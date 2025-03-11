@@ -3,9 +3,8 @@ title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-opacity
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to the stroke of a shape.
 

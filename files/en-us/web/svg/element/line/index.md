@@ -3,9 +3,8 @@ title: <line>
 slug: Web/SVG/Element/line
 page-type: svg-element
 browser-compat: svg.elements.line
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<line>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape used to create a line connecting two points.
 

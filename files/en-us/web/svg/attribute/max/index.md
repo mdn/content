@@ -3,9 +3,8 @@ title: max
 slug: Web/SVG/Attribute/max
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#MaxAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`max`** attribute specifies the maximum value of the active animation duration.
 

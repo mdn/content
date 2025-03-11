@@ -3,9 +3,8 @@ title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-dasharray
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-dasharray`** attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape.
 

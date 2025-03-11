@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.line.x1
   - svg.elements.linearGradient.x1
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`x1`** attribute is used to specify the first x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
 

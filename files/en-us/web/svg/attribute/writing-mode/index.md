@@ -3,9 +3,8 @@ title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
 page-type: svg-attribute
 browser-compat: svg.global_attributes.writing-mode
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`writing-mode`** attribute specifies whether the initial inline-progression-direction for a {{SVGElement("text")}} element shall be left-to-right, right-to-left, or top-to-bottom. The `writing-mode` attribute applies only to {{ SVGElement("text") }} elements; the attribute is ignored for {{ SVGElement("tspan") }}, {{ SVGElement("tref") }}, and {{ SVGElement("textPath") }} sub-elements. (Note that the inline-progression-direction can change within a {{ SVGElement("text") }} element due to the Unicode bidirectional algorithm and properties {{ SVGAttr("direction") }} and {{ SVGAttr("unicode-bidi") }}.)
 

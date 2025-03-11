@@ -3,9 +3,8 @@ title: calcMode
 slug: Web/SVG/Attribute/calcMode
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`calcMode`** attribute specifies the {{Glossary("interpolation")}} mode for the animation.
 

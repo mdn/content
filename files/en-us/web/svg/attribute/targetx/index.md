@@ -3,9 +3,8 @@ title: targetX
 slug: Web/SVG/Attribute/targetX
 page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.targetX
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`targetX`** attribute determines the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image. The leftmost column of the matrix is column number zero. The value must be such that: `0` <= `targetX` < {{SVGAttr("order")}} `X`.
 

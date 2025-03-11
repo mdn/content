@@ -3,9 +3,8 @@ title: from
 slug: Web/SVG/Attribute/From
 page-type: svg-attribute
 browser-compat: svg.elements.animate.from
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`from`** attribute indicates the initial value of the attribute that will be modified during the animation.
 

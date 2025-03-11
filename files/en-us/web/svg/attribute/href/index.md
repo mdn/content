@@ -17,9 +17,8 @@ browser-compat:
   - svg.elements.set.href
   - svg.elements.textPath.href
   - svg.elements.use.href
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#url). The exact meaning of that link depends on the context of each element using it.
 

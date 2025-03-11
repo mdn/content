@@ -3,9 +3,8 @@ title: <ellipse>
 slug: Web/SVG/Element/ellipse
 page-type: svg-element
 browser-compat: svg.elements.ellipse
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<ellipse>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
 

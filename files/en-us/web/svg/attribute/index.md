@@ -3,9 +3,8 @@ title: SVG Attribute reference
 short-title: Attributes
 slug: Web/SVG/Attribute
 page-type: landing-page
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 SVG elements can be modified using attributes that specify details about exactly how the element should be handled or rendered.
 

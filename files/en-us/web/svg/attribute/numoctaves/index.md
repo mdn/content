@@ -3,9 +3,8 @@ title: numOctaves
 slug: Web/SVG/Attribute/numOctaves
 page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.numOctaves
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`numOctaves`** attribute defines the number of octaves for the noise function of the {{SVGElement("feTurbulence")}} primitive.
 

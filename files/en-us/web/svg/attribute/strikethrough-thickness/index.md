@@ -2,9 +2,8 @@
 title: strikethrough-thickness
 slug: Web/SVG/Attribute/strikethrough-thickness
 page-type: svg-attribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The `strikethrough-thickness` attribute represents the ideal thickness of the strikethrough. The strikethrough thickness is expressed in the font's coordinate system.
 

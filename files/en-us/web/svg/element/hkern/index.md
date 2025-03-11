@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.hkern
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the horizontal distance between two glyphs. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
 

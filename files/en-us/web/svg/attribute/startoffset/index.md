@@ -3,9 +3,8 @@ title: startOffset
 slug: Web/SVG/Attribute/startOffset
 page-type: svg-attribute
 browser-compat: svg.elements.textPath.startOffset
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`startOffset`** attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the {{SVGElement("textPath")}} element's coordinate system.
 

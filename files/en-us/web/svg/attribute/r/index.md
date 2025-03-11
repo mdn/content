@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.circle.r
   - svg.elements.radialGradient.r
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`r`** attribute defines the radius of a circle.
 

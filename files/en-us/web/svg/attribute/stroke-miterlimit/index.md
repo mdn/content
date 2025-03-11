@@ -3,9 +3,8 @@ title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-miterlimit
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-miterlimit`** attribute is a presentation attribute defining a limit on the ratio of the miter length to the {{ SVGAttr("stroke-width") }} used to draw a miter join. When the limit is exceeded, the join is converted from a miter to a bevel.
 

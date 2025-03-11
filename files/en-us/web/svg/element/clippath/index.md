@@ -3,9 +3,8 @@ title: <clipPath>
 slug: Web/SVG/Element/clipPath
 page-type: svg-element
 browser-compat: svg.elements.clipPath
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<clipPath>`** [SVG](/en-US/docs/Web/SVG) element defines a clipping path, to be used by the {{SVGAttr("clip-path")}} property.
 

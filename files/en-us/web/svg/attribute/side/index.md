@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - experimental
 browser-compat: svg.elements.textPath.side
+sidebar: svgref
 ---
 
-{{SVGRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).
 

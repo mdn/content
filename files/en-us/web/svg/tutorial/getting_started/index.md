@@ -2,9 +2,8 @@
 title: Getting started
 slug: Web/SVG/Tutorial/Getting_Started
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 

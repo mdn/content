@@ -3,9 +3,8 @@ title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
 page-type: svg-attribute
 browser-compat: svg.global_attributes.image-rendering
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`image-rendering`** attribute provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.
 

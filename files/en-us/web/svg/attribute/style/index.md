@@ -3,9 +3,8 @@ title: style
 slug: Web/SVG/Attribute/style
 page-type: svg-attribute
 browser-compat: svg.global_attributes.style
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`style`** attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to [the `style` attribute in HTML](/en-US/docs/Web/HTML/Global_attributes/style).
 

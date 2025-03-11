@@ -3,9 +3,8 @@ title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`keyTimes`** attribute represents a list of time values used to control the pacing of the animation.
 

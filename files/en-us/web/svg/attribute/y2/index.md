@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.line.y2
   - svg.elements.linearGradient.y2
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`y2`** attribute is used to specify the second y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.
 

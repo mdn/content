@@ -3,9 +3,8 @@ title: <feFuncB>
 slug: Web/SVG/Element/feFuncB
 page-type: svg-element
 browser-compat: svg.elements.feFuncB
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feFuncB>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the transfer function for the blue component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.
 

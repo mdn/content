@@ -2,9 +2,8 @@
 title: Texts
 slug: Web/SVG/Tutorial/Texts
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
 

@@ -3,9 +3,8 @@ title: id
 slug: Web/SVG/Attribute/id
 page-type: svg-attribute
 browser-compat: svg.global_attributes.id
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`id`** attribute assigns a unique name to an element.
 

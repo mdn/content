@@ -3,9 +3,8 @@ title: <rect>
 slug: Web/SVG/Element/rect
 page-type: svg-element
 browser-compat: svg.elements.rect
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
 

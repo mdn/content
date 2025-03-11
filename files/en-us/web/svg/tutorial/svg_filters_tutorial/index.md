@@ -2,9 +2,8 @@
 title: SVG Filters Tutorial
 slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 ## Filters
 

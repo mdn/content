@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.csswg.org/css-transforms/#svg-transform
   - https://drafts.csswg.org/css-transforms/#svg-transform
   - https://svgwg.org/svg2-draft/coords.html#TransformProperty
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
 

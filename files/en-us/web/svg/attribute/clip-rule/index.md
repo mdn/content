@@ -3,9 +3,8 @@ title: clip-rule
 slug: Web/SVG/Attribute/clip-rule
 page-type: svg-attribute
 browser-compat: svg.global_attributes.clip-rule
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The `clip-rule` attribute only applies to graphics elements that are contained within a {{ SVGElement("clipPath") }} element. The `clip-rule` attribute basically works as the {{ SVGAttr("fill-rule") }} attribute, except that it applies to {{ SVGElement("clipPath") }} definitions.
 

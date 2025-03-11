@@ -3,9 +3,8 @@ title: data-*
 slug: Web/SVG/Attribute/data-*
 page-type: svg-attribute
 browser-compat: svg.global_attributes.data
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`data-*`** SVG attributes are called custom data attributes. They let SVG markup and its resulting DOM share information that standard attributes can't, usually for scripting purposes. Their custom data are available via the {{domxref("SVGElement")}} interface of the element the attributes belong to, with the {{domxref("SVGElement.dataset")}} property.
 

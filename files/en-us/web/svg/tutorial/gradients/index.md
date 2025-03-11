@@ -2,9 +2,8 @@
 title: Gradients in SVG
 slug: Web/SVG/Tutorial/Gradients
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 

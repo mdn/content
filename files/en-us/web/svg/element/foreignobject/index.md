@@ -3,9 +3,8 @@ title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
 page-type: svg-element
 browser-compat: svg.elements.foreignObject
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<foreignObject>`** [SVG](/en-US/docs/Web/SVG) element includes elements from a different XML namespace. In the context of a browser, it is most likely (X)HTML.
 

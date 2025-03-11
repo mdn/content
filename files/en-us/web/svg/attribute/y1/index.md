@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.line.y1
   - svg.elements.linearGradient.y1
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`y1`** attribute is used to specify the first y-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("y")}} attribute instead.
 

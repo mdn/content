@@ -5,9 +5,8 @@ page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
   - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given {{glossary("aspect ratio")}} must fit into a viewport with a different aspect ratio.
 

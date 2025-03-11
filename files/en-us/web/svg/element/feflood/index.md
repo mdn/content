@@ -3,9 +3,8 @@ title: <feFlood>
 slug: Web/SVG/Element/feFlood
 page-type: svg-element
 browser-compat: svg.elements.feFlood
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feFlood>`** [SVG](/en-US/docs/Web/SVG) filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.
 

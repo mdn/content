@@ -3,9 +3,8 @@ title: <desc>
 slug: Web/SVG/Element/desc
 page-type: svg-element
 browser-compat: svg.elements.desc
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<desc>`** [SVG](/en-US/docs/Web/SVG) element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 

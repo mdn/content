@@ -3,9 +3,8 @@ title: display
 slug: Web/SVG/Attribute/display
 page-type: svg-attribute
 browser-compat: svg.global_attributes.display
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`display`** attribute lets you control the rendering of graphical or container elements.
 

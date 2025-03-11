@@ -3,9 +3,8 @@ title: markerWidth
 slug: Web/SVG/Attribute/markerWidth
 page-type: svg-attribute
 browser-compat: svg.elements.marker.markerWidth
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`markerWidth`** attribute represents the width of the viewport into which the {{SVGElement("marker")}} is to be fitted when it is rendered according to the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 

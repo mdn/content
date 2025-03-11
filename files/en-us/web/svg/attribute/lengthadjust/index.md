@@ -3,9 +3,8 @@ title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
 page-type: svg-attribute
 browser-compat: svg.elements.text.lengthAdjust
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The lengthAdjust attribute controls how the text is stretched into the length defined by the {{SVGAttr("textLength")}} attribute.
 

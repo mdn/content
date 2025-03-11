@@ -3,9 +3,8 @@ title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
 page-type: svg-element
 browser-compat: svg.elements.feMergeNode
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
 

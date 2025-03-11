@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font-face.alphabetic
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`alphabetic`** attribute defines the lower baseline of a font. It has the same syntax and semantics as the {{cssxref("@font-face/baseline", "baseline")}} descriptor within an {{cssxref("@font-face")}}.
 

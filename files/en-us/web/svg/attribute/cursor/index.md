@@ -3,9 +3,8 @@ title: cursor
 slug: Web/SVG/Attribute/cursor
 page-type: svg-attribute
 browser-compat: svg.global_attributes.cursor
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The `cursor` attribute specifies the mouse cursor displayed when the mouse pointer is over an element.
 

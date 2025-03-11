@@ -3,9 +3,8 @@ title: <marker>
 slug: Web/SVG/Element/marker
 page-type: svg-element
 browser-compat: svg.elements.marker
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<marker>`** [SVG](/en-US/docs/Web/SVG) element defines a graphic used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
 

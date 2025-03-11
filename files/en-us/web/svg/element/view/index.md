@@ -3,9 +3,8 @@ title: <view>
 slug: Web/SVG/Element/view
 page-type: svg-element
 browser-compat: svg.elements.view
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of an SVG document. A specific view can be displayed by referencing the `<view>` element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) as the target fragment of a URL.
 

@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font.horiz-origin-y
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`horiz-origin-y`** attribute indicates the y-coordinate in the font coordinate system of the origin of a {{Glossary("glyph")}} to be used when drawing horizontally oriented text.
 

@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.font-face-name
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<font-face-name>`** [SVG](/en-US/docs/Web/SVG) element points to a locally installed copy of this font, identified by its name.
 

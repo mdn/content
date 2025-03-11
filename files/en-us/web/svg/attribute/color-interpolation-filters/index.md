@@ -3,9 +3,8 @@ title: color-interpolation-filters
 slug: Web/SVG/Attribute/color-interpolation-filters
 page-type: svg-attribute
 browser-compat: svg.global_attributes.color-interpolation-filters
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`color-interpolation-filters`** attribute specifies the color space for imaging operations performed via filter effects.
 

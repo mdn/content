@@ -3,9 +3,8 @@ title: <mpath>
 slug: Web/SVG/Element/mpath
 page-type: svg-element
 browser-compat: svg.elements.mpath
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<mpath>`** [SVG](/en-US/docs/Web/SVG) sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.
 

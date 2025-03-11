@@ -3,9 +3,8 @@ title: min
 slug: Web/SVG/Attribute/min
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#MinAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`min`** attribute specifies the minimum value of the active animation duration.
 

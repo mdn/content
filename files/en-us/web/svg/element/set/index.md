@@ -3,9 +3,8 @@ title: <set>
 slug: Web/SVG/Element/set
 page-type: svg-element
 browser-compat: svg.elements.set
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<set>`** [SVG](/en-US/docs/Web/SVG) element provides a method of setting the value of an attribute for a specified duration.
 

@@ -3,9 +3,8 @@ title: baseline-shift
 slug: Web/SVG/Attribute/baseline-shift
 page-type: svg-attribute
 browser-compat: svg.global_attributes.baseline-shift
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`baseline-shift`** attribute allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element. The shifted object might be a sub- or superscript.
 

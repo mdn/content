@@ -3,9 +3,8 @@ title: word-spacing
 slug: Web/SVG/Attribute/word-spacing
 page-type: svg-attribute
 browser-compat: svg.global_attributes.word-spacing
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`word-spacing`** attribute specifies spacing behavior between words.
 

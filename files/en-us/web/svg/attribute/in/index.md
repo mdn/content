@@ -3,9 +3,8 @@ title: in
 slug: Web/SVG/Attribute/in
 page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`in`** attribute identifies input for the given filter primitive.
 

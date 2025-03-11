@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.font-face-format
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<font-face-format>`** [SVG](/en-US/docs/Web/SVG) element describes the type of font referenced by its parent {{SVGElement("font-face-uri")}}.
 

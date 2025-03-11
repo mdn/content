@@ -3,9 +3,8 @@ title: restart
 slug: Web/SVG/Attribute/restart
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#RestartAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`restart`** attribute specifies whether or not an animation can restart.
 

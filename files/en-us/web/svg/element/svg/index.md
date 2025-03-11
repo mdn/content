@@ -3,9 +3,8 @@ title: <svg>
 slug: Web/SVG/Element/svg
 page-type: svg-element
 browser-compat: svg.elements.svg
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<svg>`** [SVG](/en-US/docs/Web/SVG) element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 

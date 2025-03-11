@@ -2,9 +2,8 @@
 title: SVG Tutorial
 slug: Web/SVG/Tutorial
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 Scalable Vector Graphics, [SVG](/en-US/docs/Web/SVG), is a W3C XML dialect to mark up graphics.
 

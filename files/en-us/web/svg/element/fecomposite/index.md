@@ -3,9 +3,8 @@ title: <feComposite>
 slug: Web/SVG/Element/feComposite
 page-type: svg-element
 browser-compat: svg.elements.feComposite
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feComposite>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: `over`, `in`, `atop`, `out`, `xor`, `lighter`, or `arithmetic`.
 

@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.
 

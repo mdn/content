@@ -3,9 +3,8 @@ title: overflow
 slug: Web/SVG/Attribute/overflow
 page-type: svg-attribute
 browser-compat: svg.global_attributes.overflow
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
 

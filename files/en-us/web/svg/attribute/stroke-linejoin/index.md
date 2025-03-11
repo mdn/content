@@ -3,9 +3,8 @@ title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-linejoin
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-linejoin`** attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.
 

@@ -3,9 +3,8 @@ title: dur
 slug: Web/SVG/Attribute/dur
 page-type: svg-attribute
 browser-compat: svg.elements.animate.dur
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`dur`** attribute indicates the simple duration of an animation.
 

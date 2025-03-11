@@ -3,9 +3,8 @@ title: end
 slug: Web/SVG/Attribute/end
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#EndAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`end`** attribute defines an end value for the animation that can constrain the active duration.
 

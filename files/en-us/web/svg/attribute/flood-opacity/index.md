@@ -3,9 +3,8 @@ title: flood-opacity
 slug: Web/SVG/Attribute/flood-opacity
 page-type: svg-attribute
 browser-compat: svg.global_attributes.flood-opacity
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`flood-opacity`** attribute indicates the opacity value to use across the current filter primitive subregion.
 

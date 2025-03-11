@@ -3,9 +3,8 @@ title: maskContentUnits
 slug: Web/SVG/Attribute/maskContentUnits
 page-type: svg-attribute
 browser-compat: svg.elements.mask.maskContentUnits
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`maskContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("mask") }} element.
 

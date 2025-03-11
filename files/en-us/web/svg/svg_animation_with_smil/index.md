@@ -2,9 +2,8 @@
 title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an XML-based language for writing interactive multimedia presentations.
 Authors can use SMIL syntax in other XML-based languages to define the timing and layout of elements for animation.

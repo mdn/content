@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.font-face-uri
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<font-face-uri>`** [SVG](/en-US/docs/Web/SVG) element points to a remote definition of the current font.
 

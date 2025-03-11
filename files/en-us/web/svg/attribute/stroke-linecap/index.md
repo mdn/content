@@ -3,9 +3,8 @@ title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-linecap
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-linecap`** attribute is a presentation attribute defining the shape to be used at the end of open subpaths when they are stroked.
 

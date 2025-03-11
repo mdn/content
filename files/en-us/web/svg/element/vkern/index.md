@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.vkern
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<vkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
 

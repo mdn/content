@@ -3,9 +3,8 @@ title: amplitude
 slug: Web/SVG/Attribute/amplitude
 page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-amplitude
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`amplitude`** attribute controls the amplitude of the gamma function of a component transfer element when its {{SVGAttr("type")}} attribute is `gamma`.
 

@@ -6,9 +6,8 @@ spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedisplacementmap-in2
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-in2
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-feblend-in2
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`in2`** attribute identifies the second input for the given filter primitive. It works exactly like the {{SVGAttr("in")}} attribute.
 

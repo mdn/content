@@ -3,9 +3,8 @@ title: d
 slug: Web/SVG/Attribute/d
 page-type: svg-attribute
 browser-compat: svg.elements.path.d
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.
 

@@ -3,9 +3,8 @@ title: font-family
 slug: Web/SVG/Attribute/font-family
 page-type: svg-attribute
 browser-compat: svg.global_attributes.font-family
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`font-family`** attribute indicates which font family will be used to render the text, specified as a prioritized list of font family names and/or generic family names.
 

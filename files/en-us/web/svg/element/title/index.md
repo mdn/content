@@ -3,9 +3,8 @@ title: <title> — the SVG accessible name element
 slug: Web/SVG/Element/title
 page-type: svg-element
 browser-compat: svg.elements.title
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<title>`** [SVG](/en-US/docs/Web/SVG) element provides an accessible, short-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 

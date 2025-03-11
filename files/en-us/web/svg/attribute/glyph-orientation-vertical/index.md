@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.global_attributes.glyph-orientation-vertical
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`glyph-orientation-vertical`** attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.
 

@@ -3,9 +3,8 @@ title: k1
 slug: Web/SVG/Attribute/k1
 page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k1
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`k1`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.
 

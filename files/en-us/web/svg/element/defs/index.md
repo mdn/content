@@ -3,9 +3,8 @@ title: <defs>
 slug: Web/SVG/Element/defs
 page-type: svg-element
 browser-compat: svg.elements.defs
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<defs>`** [SVG](/en-US/docs/Web/SVG) element is used to store graphical objects that will be used at a later time. Objects created inside a `<defs>` element are not rendered directly. To display them you have to reference them (with a {{SVGElement("use")}} element for example).
 
