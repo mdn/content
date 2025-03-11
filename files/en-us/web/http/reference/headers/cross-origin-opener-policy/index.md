@@ -115,7 +115,7 @@ The table below shows the result of this rule on whether documents are opened in
 
 ### Opening with Window.open()
 
-When opening a document using `Window.open()`, the new document is opened in the same BCG according to the following rules, which are evaluated in order:
+When opening a document using `Window.open()`, the new document is opened in a new BCG according to the following rules, which are evaluated in order:
 
 1. True: opened `noopener-allow-popups`
 2. False: (`opener same-origin-allow-popups` or `noopener-allow-popups`) and (opened document is `unsafe-none`)
