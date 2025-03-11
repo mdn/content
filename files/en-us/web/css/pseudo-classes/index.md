@@ -271,12 +271,15 @@ A
 
 B
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}} (input)
+- `:blank` (page)
+- {{CSSxRef(":buffering")}}
 
 C
 
 - {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}}
+- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":current", ":current()")}} {{Experimental_Inline}}
 
 D
 
@@ -299,20 +302,21 @@ F
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
 - {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{CSSxRef(":future")}}
 
 H
 
-- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
+- {{CSSxRef(":has-slotted")}}
+- {{CSSxRef(":has", ":has()")}}
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host_function", ":host()")}}
-- {{CSSxRef(":host-context", ":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host-context", ":host-context()")}}
 - {{CSSxRef(":hover")}}
 
 I
 
-- {{CSSxRef(":indeterminate")}}
 - {{CSSxRef(":in-range")}}
+- {{CSSxRef(":indeterminate")}}
 - {{CSSxRef(":invalid")}}
 - {{CSSxRef(":is", ":is()")}}
 
@@ -323,17 +327,20 @@ L
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
 - {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}}
+- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
 
 M
 
 - {{CSSxRef(":modal")}}
+- {{CSSxRef(":muted")}}
 
 N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
+- `:nth-col()` {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
+- `:nth-last-col()` {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -365,6 +372,8 @@ R
 S
 
 - {{CSSxRef(":scope")}}
+- {{CSSxRef(":seeking")}}
+- {{CSSxRef(":stalled")}}
 - {{CSSxRef(":state", ":state()")}}
 
 T
@@ -375,11 +384,13 @@ T
 U
 
 - {{CSSxRef(":user-invalid")}}
+- {{CSSxRef(":user-valid")}}
 
 V
 
 - {{CSSxRef(":valid")}}
 - {{CSSxRef(":visited")}}
+- {{CSSxRef(":volume-locked")}}
 
 W
 
