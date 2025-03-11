@@ -1,5 +1,6 @@
 ---
 title: Fonts for MathML
+short-title: Fonts
 slug: Web/MathML/Guides/Fonts
 page-type: guide
 sidebar: mathmlref

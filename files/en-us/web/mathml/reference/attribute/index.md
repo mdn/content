@@ -1,5 +1,6 @@
 ---
-title: Attributes
+title: MathML attributes
+short-title: Attributes
 slug: Web/MathML/Reference/Attribute
 page-type: landing-page
 sidebar: mathmlref

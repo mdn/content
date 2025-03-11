@@ -1,5 +1,6 @@
 ---
 title: MathML tables
+short-title: Tables
 slug: Web/MathML/Guides/Tables
 page-type: guide
 sidebar: mathmlref

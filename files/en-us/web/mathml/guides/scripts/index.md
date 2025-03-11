@@ -1,5 +1,6 @@
 ---
 title: MathML scripted elements
+short-title: Scripted elements
 slug: Web/MathML/Guides/Scripts
 page-type: guide
 sidebar: mathmlref

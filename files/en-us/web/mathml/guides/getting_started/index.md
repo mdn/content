@@ -1,5 +1,6 @@
 ---
 title: Getting started with MathML
+short-title: Getting started
 slug: Web/MathML/Guides/Getting_started
 page-type: guide
 sidebar: mathmlref

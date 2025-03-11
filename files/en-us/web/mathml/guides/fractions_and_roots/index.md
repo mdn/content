@@ -1,5 +1,6 @@
 ---
 title: MathML fractions and roots
+short-title: Fractions and roots
 slug: Web/MathML/Guides/Fractions_and_roots
 page-type: guide
 sidebar: mathmlref
