@@ -46,8 +46,6 @@ The response payload is an object:
 - [Unsupported Operation](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation)
   - : The driver or browser doesn't support the command for some reason (e.g., when it is not possible to create a new tab or window).
 
-## Example
-
 ## Specifications
 
 {{Specifications}}

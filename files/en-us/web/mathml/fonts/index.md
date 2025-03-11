@@ -128,7 +128,7 @@ configuration of fonts for MathML.
 
 ### Arabic mathematical alphabetic symbols
 
-Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the _XITS_ or [Amiri](https://www.amirifont.org/) fonts.
+Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Alphabetic Symbols. If you are likely to need these characters, we recommend to install the _XITS_ or [Amiri](https://aliftype.com/amiri/) fonts.
 
 ### Installation without administrator privilege
 

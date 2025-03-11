@@ -194,7 +194,7 @@ We also recommend taking a proper 15-minute break every hour to 90 minutes.
 
 While you are on your break, try discussing your issue with a colleague, friend, or family member. Even if they can't provide you with the answer, the chances are that you'll find a solution on your own by reasoning the problem in your own head. It even works when you explain the problem out loud, to yourself or to an inanimate object.
 
-This technique is known as [rubber duck debugging](https://rubberduckdebugging.com/) (or [rubber ducking](https://wikipedia.org/wiki/Rubber_duck_debugging)), named because traditionally the idea was that you explain your coding problem to a rubber duck.
+This technique is known as [rubber duck debugging](https://rubberduckdebugging.com/) (or [rubber ducking](https://en.wikipedia.org/wiki/Rubber_duck_debugging)), named because traditionally the idea was that you explain your coding problem to a rubber duck.
 
 ## Effective problem-solving
 

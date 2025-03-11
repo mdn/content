@@ -5,6 +5,9 @@ page-type: guide
 browser-compat:
   - api.CredentialsContainer.create.publicKey_option.extensions
   - api.CredentialsContainer.get.publicKey_option.extensions
+spec-urls:
+  - https://w3c.github.io/webauthn/#sctn-defined-extensions
+  - https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-defined-extensions
 ---
 
 {{DefaultAPISidebar("Web Authentication API")}}
@@ -379,10 +382,7 @@ None
 
 There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
 
-Places where extensions are specified:
-
-- [Web Authentication Level 3, Section 10: Defined extensions](https://w3c.github.io/webauthn/#sctn-defined-extensions)
-- [Client to Authenticator Protocol (CTAP) 2, Section 12: Defined Extensions](https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-defined-extensions)
+{{Specifications}}
 
 ## Browser compatibility
 

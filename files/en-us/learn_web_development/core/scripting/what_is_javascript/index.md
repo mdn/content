@@ -119,7 +119,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://developer.x.com/en/docs) allows you to do things like displaying your latest tweets on your website.
+- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]

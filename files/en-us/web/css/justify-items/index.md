@@ -9,7 +9,51 @@ browser-compat: css.properties.justify-items
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 
-{{EmbedInteractiveExample("pages/css/justify-items.html")}}
+{{InteractiveExample("CSS Demo: justify-items")}}
+
+```css interactive-example-choice
+justify-items: stretch;
+```
+
+```css interactive-example-choice
+justify-items: center;
+```
+
+```css interactive-example-choice
+justify-items: start;
+```
+
+```css interactive-example-choice
+justify-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 The effect of this property is dependent of the layout mode we are in:
 

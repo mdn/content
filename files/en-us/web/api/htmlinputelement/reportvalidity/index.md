@@ -109,7 +109,7 @@ We add a "Fix me" button to the HTML from the previous example.
 
 We expand on the JavaScript from the basic example above, adding a function that used the {{domxref("HTMLInputElement.setCustomValidity()")}} method to provide custom error messages. The `validateAge()` function only sets the error message to an empty string if the input is valid AND the `enableValidation` variable is `true`, with `enableValidation` being `false` until the "fix issues" button has been activated.
 
-```javascript
+```js
 const output = document.querySelector("#log");
 const reportButton = document.querySelector("#report");
 const ageInput = document.querySelector("#age");

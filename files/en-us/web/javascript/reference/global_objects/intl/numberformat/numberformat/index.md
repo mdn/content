@@ -159,11 +159,11 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
     - `"floor"`
       - : Round toward -∞. Positive values round down. Negative values round "more negative".
     - `"expand"`
-      - : round away from 0. The _magnitude_ of the value is always increased by rounding. Positive values round up. Negative values round "more negative".
+      - : Round away from 0. The _magnitude_ of the value is always increased by rounding. Positive values round up. Negative values round "more negative".
     - `"trunc"`
       - : Round toward 0. This _magnitude_ of the value is always reduced by rounding. Positive values round down. Negative values round "less negative".
     - `"halfCeil"`
-      - : ties toward +∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"ceil"`.
+      - : Ties toward +∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"ceil"`.
     - `"halfFloor"`
       - : Ties toward -∞. Values above the half-increment round like `"ceil"` (towards +∞), and below like `"floor"` (towards -∞). On the half-increment, values round like `"floor"`.
     - `"halfExpand"` (default)

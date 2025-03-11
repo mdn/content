@@ -12,7 +12,48 @@ The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whethe
 > [!NOTE]
 > The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
-{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+{{InteractiveExample("CSS Demo: content-visibility")}}
+
+```css interactive-example-choice
+content-visibility: visible;
+```
+
+```css interactive-example-choice
+content-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="container" id="example-element">
+    <div class="child">
+      <span>This is an inner div</span>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container {
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgb(64, 28, 163);
+  background-color: rgb(135, 136, 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child {
+  border: 3px solid rgb(64, 28, 163);
+  background-color: wheat;
+  color: black;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
 
 ## Syntax
 

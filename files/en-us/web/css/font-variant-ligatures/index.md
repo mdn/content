@@ -9,7 +9,44 @@ browser-compat: css.properties.font-variant-ligatures
 
 The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
-{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
+{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+
+```css interactive-example-choice
+font-variant-ligatures: normal;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: no-common-ligatures;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: common-ligatures;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## Syntax
 
