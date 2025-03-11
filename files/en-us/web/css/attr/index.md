@@ -94,6 +94,12 @@ The parameters are:
 
       For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
+      To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parse validly, and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
+
+      ```css
+      attr(data-content type(*))
+      ```
+
     - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
       ```css
