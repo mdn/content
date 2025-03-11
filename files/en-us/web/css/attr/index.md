@@ -46,7 +46,7 @@ attr(href)
 /* With type */
 attr(data-width px)
 attr(data-size rem)
-attr(data-name string)
+attr(data-name raw-string)
 attr(id type(<custom-ident>))
 attr(data-count type(<number>))
 attr(data-size type(<length> | <percentage>))
@@ -71,9 +71,9 @@ The parameters are:
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
 
-  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `string`.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `raw-string`.
 
-    - The `string` keyword parses the value into a CSS string.
+    - The `raw-string` keyword parses the value into a CSS string.
 
       ```css
       attr(data-name string, "stranger")
