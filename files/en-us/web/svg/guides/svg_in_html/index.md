@@ -124,4 +124,4 @@ In our example, we've included both the description and title in our `aria-label
 
 ## See also
 
-- [Getting started with SVG](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_)
+- [Getting started with SVG](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
