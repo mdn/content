@@ -13,8 +13,6 @@ browser-compat: api.GPUDevice.adapterInfo
 The **`adapterInfo`** read-only property of the
 {{domxref("GPUDevice")}} interface returns a {{domxref("GPUAdapterInfo")}} object containing identifying information about the device's originating adapter.
 
-Using `GPUDevice.adapterInfo` to retrieve an adapter's info is often preferred to accessing {{domxref("GPUAdapter.info")}} on the adapter itself, as it means the user has to share less information with the app.
-
 ## Value
 
 A {{domxref("GPUAdapterInfo")}} object instance.
