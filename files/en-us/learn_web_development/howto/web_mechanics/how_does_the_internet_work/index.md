@@ -56,7 +56,7 @@ Such a network is not limited to two computers. You can connect as many computer
 
 ![Ten computers all together](internet-schema-2.png)
 
-To solve this problem, each computer on a network is connected to a special tiny computer called a _network switch_ or _switch_ for short. This switch has only one job: like a signaler at a railway station, it makes sure that a message sent from a given computer arrives at the right destination computer. To send a message to computer B, computer A must send the message to the switch, which in turn forwards the message to computer B and makes sure the message is not delivered to computer C.
+To solve this problem, each computer on a network is connected to a special tiny computer called a _network switch_ (or _switch_ for short). This switch has only one job: like a signaler at a railway station, it makes sure that messages sent from a given computer arrive only at their target destination computer. To send a message to computer B, computer A sends the message to the switch, which in turn forwards the message to computer B — computer B doesn't get messages intended for other computers, and none of the messages for computer B reach other computers on the local area network.
 
 Once we add a switch to the system, our network of 10 computers only requires 10 cables: a single plug for each computer and a switch with 10 plugs.
 
@@ -74,7 +74,7 @@ You may imagine that we can connect switches together infinitely, to form a netw
 
 In reality, this leads to many enginering problems. The more switches a packet has to go through, the longer it takes to reach its destination. And you can't have just a tree of switches, because then a single switch failure may disconnect a large portion of devices. To solve this problem, we keep each local network as small as possible, and we connect these local networks using a separate device called a _router_. A router is a computer that knows how to forward messages between networks. The router is like a post office: when a packet arrives, it reads the recipient address and forwards the packet to the right recipient directly, without going through layers of relays.
 
-Such a network comes very close to what we call the Internet. We just need the physical medium (cables) to connect all these routers—luckily, such an infrastructure already exists prior to the Internet, and that's the telephone network. To connect our network to the telephone infrastructure, we need a special piece of equipment called a _modem_. This _modem_ turns the information from our network into information manageable by the telephone infrastructure and vice versa.
+Such a network comes very close to what we call the Internet. We just need the physical medium (cables) to connect all these routers. Luckily, such an infrastructure already existed prior to the Internet, and that's the telephone network. To connect our network to the telephone infrastructure, we need a special piece of equipment called a _modem_. This _modem_ turns the information from our network into information manageable by the telephone infrastructure and vice versa.
 
 ![A router linked to a modem](internet-schema-6.png)
 
