@@ -70,4 +70,4 @@ This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/Web/API/SVGFEM
 - {{ SVGElement("animate") }}
 - {{ SVGElement("set") }}
 - {{ SVGElement("feMerge") }}
-- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

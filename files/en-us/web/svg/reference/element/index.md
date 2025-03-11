@@ -235,5 +235,5 @@ SVG drawings and images are created using a wide array of elements which are ded
 ## See also
 
 - [SVG attribute reference](/en-US/docs/Web/SVG/Reference/Attribute)
-- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
+- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom)

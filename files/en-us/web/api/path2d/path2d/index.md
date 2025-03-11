@@ -10,7 +10,7 @@ browser-compat: api.Path2D.Path2D
 
 The **`Path2D()`** constructor returns a newly instantiated
 `Path2D` object, optionally with another path as an argument (creates a
-copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) data.
+copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ new Path2D(d)
   - : When invoked with another `Path2D` object, a copy of the
     `path` argument is created.
 - `d` {{optional_inline}}
-  - : When invoked with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) data, a new path is created
+  - : When invoked with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data, a new path is created
     from that description.
 
 ## Examples
@@ -57,7 +57,7 @@ ctx.stroke(path2);
 
 ### Using SVG paths
 
-This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorial/Paths). The path will move to
+This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths). The path will move to
 point (`M10 10`) and then move horizontally 80 points to the right
 (`h 80`), then 80 points down (`v 80`), then 80 points to the left
 (`h -80`), and then back to the start (`Z`).

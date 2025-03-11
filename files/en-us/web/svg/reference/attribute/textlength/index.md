@@ -173,6 +173,6 @@ Here's what the example looks like. Try dragging the slider around to get a feel
 
 ## See also
 
-- SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorial/Texts)
+- SVG Tutorial: [Texts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Texts)
 - {{domxref("SVGAnimatedLength")}} and {{domxref("SVGLength")}}
 - {{SVGElement("text")}}
