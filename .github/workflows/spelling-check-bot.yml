@@ -28,7 +28,7 @@ jobs:
       - name: Run scripts
         run: |
           echo Running spelling check...
-          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
+          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json --reporter cspell-group-by-file-reporter "**/*.md" || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')

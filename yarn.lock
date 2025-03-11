@@ -3010,6 +3010,11 @@ crypto-random-string@^4.0.0:
   dependencies:
     type-fest "^1.0.1"
 
+cspell-group-by-file-reporter@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cspell-group-by-file-reporter/-/cspell-group-by-file-reporter-1.0.1.tgz#b5ca39961557489834a1d54dcc53c559efbc5cff"
+  integrity sha512-s7N6Dq/IKUJcCPEwDrUndLCnxBWXSOz9TKvBFa7jx/Qyht18nLB4kHw1ZPzHjD5gqUEB8LRx65PmvwvUE04aYg==
+
 css-select@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-5.1.0.tgz#b8ebd6554c3637ccc76688804ad3f6a6fdaea8a6"
