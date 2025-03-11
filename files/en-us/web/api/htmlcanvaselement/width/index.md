@@ -14,7 +14,10 @@ attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. Wh
 attribute is not specified, or if it is set to an invalid value, like a negative, the
 default value of `300` is used.
 
-When the `width` property is set the drawing buffer is always reset to blank — this is true for all context types, and even when the width is set to the same value. If you need to restore the previous content, you can save it via {{domxref("CanvasRenderingContext2D.getImageData()")}} and restore it via {{domxref("CanvasRenderingContext2D.putImageData()")}}.
+Setting the `width` property resets the entire rendering context to its default state. This includes clearing the canvas (backing buffer), resetting the transformation matrix, compositing settings, clipping region, dash list, all style properties (like `fillStyle`, `strokeStyle`, `lineWidth`, `fontKerning`), shadows, filters, and the current path. This reset occurs for all context types, even when setting `width` to its current value. To restore the previous content after changing the width, use {{domxref("CanvasRenderingContext2D.getImageData()")}} and {{domxref("CanvasRenderingContext2D.putImageData()")}}.
+
+> [!NOTE]
+> Context properties must be separately tracked and restored.
 
 This is one of the two properties, the other being
 {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
