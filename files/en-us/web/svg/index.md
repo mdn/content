@@ -18,7 +18,7 @@ Compared to classic bitmapped image formats such as {{Glossary("JPEG")}} or {{Gl
 
 SVG has been developed by the [World Wide Web Consortium (W3C)](https://www.w3.org/) since 1999.
 
-See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial).
+See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch).
 
 ## Documentation
 

@@ -36,4 +36,4 @@ This element implements the {{domxref("SVGFEFuncGElement")}} interface.
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncR")}}
 - {{SVGElement("feFuncB")}}
-- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

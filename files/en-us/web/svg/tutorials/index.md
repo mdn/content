@@ -12,5 +12,5 @@ This page lists tutorials for SVG.
 
 ## See also
 
-- [SVG guides](/en-US/docs/Web/SVG/Reference)
+- [SVG guides](/en-US/docs/Web/SVG/Guides)
 - [SVG reference](/en-US/docs/Web/SVG/Reference)

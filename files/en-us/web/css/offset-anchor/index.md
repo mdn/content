@@ -232,4 +232,4 @@ section {
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG `<path>`](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [SVG `<path>`](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

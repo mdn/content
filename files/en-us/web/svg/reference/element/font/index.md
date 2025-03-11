@@ -42,4 +42,4 @@ This element implements the {{domxref("SVGFontElement")}} interface.
 - {{SVGElement("font-face")}}
 - {{SVGElement("glyph")}}
 - {{SVGElement("text")}}
-- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts)

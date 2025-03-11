@@ -6,7 +6,7 @@ browser-compat: svg.elements.circle
 sidebar: svgref
 ---
 
-The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes), used to draw circles based on a center point and a radius.
+The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes), used to draw circles based on a center point and a radius.
 
 ## Example
 

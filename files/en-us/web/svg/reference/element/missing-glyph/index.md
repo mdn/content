@@ -40,4 +40,4 @@ This element implements the {{domxref("SVGMissingGlyphElement")}} interface.
 
 - {{SVGElement("font")}}
 - {{SVGElement("glyph")}}
-- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts)

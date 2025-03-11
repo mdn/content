@@ -122336,6 +122336,36 @@
       "ethertank"
     ]
   },
+  "Web/SVG/Guides/SVG_filters": {
+    "modified": "2020-10-24T07:46:48.631Z",
+    "contributors": ["chrisdavidmills", "amized", "teoli", "curacao"]
+  },
+  "Web/SVG/Guides/SVG_in_HTML": {
+    "modified": "2020-04-20T03:12:49.575Z",
+    "contributors": [
+      "sideshowbarker",
+      "chrisdavidmills",
+      "stephaniehobson",
+      "Jeremie",
+      "vuldin",
+      "ethertank",
+      "Neformal.lviv",
+      "tomchen1989",
+      "Brettz9",
+      "Gfldex",
+      "Sheppy",
+      "Jonathan_Watt",
+      "Nickolay",
+      "Nickjohnson",
+      "Takenbot",
+      "NickolayBot",
+      "Chbok",
+      "Dria",
+      "Marcoos",
+      "Jeff Schiller",
+      "Roc"
+    ]
+  },
   "Web/SVG/Linking": {
     "modified": "2019-03-23T23:48:55.443Z",
     "contributors": ["ExE-Boss", "Jeremie", "Kohei", "Jonathan_Watt"]
@@ -125053,7 +125083,7 @@
       "NickolayBot"
     ]
   },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2019-03-18T20:53:00.828Z",
     "contributors": [
       "chrisdavidmills",
@@ -125077,7 +125107,7 @@
       "Jonathan_Watt"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Shapes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes": {
     "modified": "2020-04-30T18:35:44.969Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -125103,7 +125133,7 @@
       "Wjjohnst"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Transformations": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations": {
     "modified": "2019-03-24T00:17:16.153Z",
     "contributors": [
       "Baltasarq",
@@ -125121,7 +125151,7 @@
       "Sheppy"
     ]
   },
-  "Web/SVG/Tutorial/Clipping_and_masking": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking": {
     "modified": "2019-03-18T20:46:50.265Z",
     "contributors": [
       "jrmuizel",
@@ -125139,7 +125169,7 @@
       "Sheppy"
     ]
   },
-  "Web/SVG/Tutorial/Fills_and_Strokes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes": {
     "modified": "2020-04-30T18:40:29.453Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -125160,7 +125190,7 @@
       "Wjjohnst"
     ]
   },
-  "Web/SVG/Tutorial/Filter_effects": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects": {
     "modified": "2019-03-24T00:10:30.512Z",
     "contributors": [
       "rezof",
@@ -125173,7 +125203,7 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Tutorial/Getting_Started": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Getting_started": {
     "modified": "2020-03-26T05:28:01.340Z",
     "contributors": [
       "mfuji09",
@@ -125207,7 +125237,7 @@
       "Jonathan_Watt"
     ]
   },
-  "Web/SVG/Tutorial/Gradients": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Gradients": {
     "modified": "2019-05-10T08:57:19.114Z",
     "contributors": [
       "r-i-c-h",
@@ -125224,7 +125254,24 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Image_element": {
+    "modified": "2020-12-14T11:30:39.212Z",
+    "contributors": [
+      "Zearin_Galaurum",
+      "yoscheherazade",
+      "pamelahicks",
+      "rousan",
+      "sm1215",
+      "Delapouite",
+      "trevorh",
+      "chrisdoble",
+      "Jeremie",
+      "kscarfone",
+      "jswisher",
+      "kperch"
+    ]
+  },
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2019-03-18T20:53:00.633Z",
     "contributors": [
       "devinea2",
@@ -125257,7 +125304,7 @@
       "Jonathan_Watt"
     ]
   },
-  "Web/SVG/Tutorial/Other_content_in_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG": {
     "modified": "2019-03-28T17:25:42.724Z",
     "contributors": [
       "jwhitlock",
@@ -125268,7 +125315,7 @@
       "Sheppy"
     ]
   },
-  "Web/SVG/Tutorial/Paths": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Paths": {
     "modified": "2020-08-15T09:04:44.596Z",
     "contributors": [
       "chrisdavidmills",
@@ -125329,7 +125376,7 @@
       "Wjjohnst"
     ]
   },
-  "Web/SVG/Tutorial/Patterns": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Patterns": {
     "modified": "2020-04-30T18:44:44.601Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -125344,7 +125391,7 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Tutorial/Positions": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Positions": {
     "modified": "2019-08-22T10:03:43.320Z",
     "contributors": [
       "kmgreg",
@@ -125365,37 +125412,7 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Tutorial/SVG_Filters_Tutorial": {
-    "modified": "2020-10-24T07:46:48.631Z",
-    "contributors": ["chrisdavidmills", "amized", "teoli", "curacao"]
-  },
-  "Web/SVG/Tutorial/SVG_In_HTML_Introduction": {
-    "modified": "2020-04-20T03:12:49.575Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills",
-      "stephaniehobson",
-      "Jeremie",
-      "vuldin",
-      "ethertank",
-      "Neformal.lviv",
-      "tomchen1989",
-      "Brettz9",
-      "Gfldex",
-      "Sheppy",
-      "Jonathan_Watt",
-      "Nickolay",
-      "Nickjohnson",
-      "Takenbot",
-      "NickolayBot",
-      "Chbok",
-      "Dria",
-      "Marcoos",
-      "Jeff Schiller",
-      "Roc"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_and_CSS": {
+  "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS": {
     "modified": "2019-10-31T09:48:22.366Z",
     "contributors": [
       "leela52452",
@@ -125423,40 +125440,7 @@
       "Waldo"
     ]
   },
-  "Web/SVG/Tutorial/SVG_fonts": {
-    "modified": "2020-12-14T11:30:40.083Z",
-    "contributors": [
-      "stephaniehobson",
-      "chrisdavidmills",
-      "LC43",
-      "Bumxu",
-      "trevorh",
-      "chrisdoble",
-      "Jeremie",
-      "kperch",
-      "Ecmanaut",
-      "yyss",
-      "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_image_element": {
-    "modified": "2020-12-14T11:30:39.212Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "yoscheherazade",
-      "pamelahicks",
-      "rousan",
-      "sm1215",
-      "Delapouite",
-      "trevorh",
-      "chrisdoble",
-      "Jeremie",
-      "kscarfone",
-      "jswisher",
-      "kperch"
-    ]
-  },
-  "Web/SVG/Tutorial/Texts": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Texts": {
     "modified": "2020-04-30T18:47:40.940Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -125476,7 +125460,7 @@
       "Manuel_Strehl"
     ]
   },
-  "Web/SVG/Tutorial/Tools_for_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG": {
     "modified": "2019-05-23T11:54:38.315Z",
     "contributors": [
       "stephaniehobson",
@@ -125489,6 +125473,22 @@
       "janvas",
       "Manuel_Strehl",
       "Telanor"
+    ]
+  },
+  "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts": {
+    "modified": "2020-12-14T11:30:40.083Z",
+    "contributors": [
+      "stephaniehobson",
+      "chrisdavidmills",
+      "LC43",
+      "Bumxu",
+      "trevorh",
+      "chrisdoble",
+      "Jeremie",
+      "kperch",
+      "Ecmanaut",
+      "yyss",
+      "Manuel_Strehl"
     ]
   },
   "Web/Security": {

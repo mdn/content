@@ -532,5 +532,5 @@ Below is a list of all of the attributes available in SVG along with links to re
 ## See also
 
 - [SVG element reference](/en-US/docs/Web/SVG/Reference/Element)
-- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
+- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG interface reference](/en-US/docs/Web/API/SVG_API#interfaces)
