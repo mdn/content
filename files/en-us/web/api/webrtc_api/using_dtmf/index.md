@@ -281,7 +281,7 @@ Our call to `insertDTMF()` specifies not only the DTMF to send (`dialString`), b
 
 #### Negotiating the connection
 
-When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by callint methods for both the caller and receiver, as shown below.
+When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by calling methods for both the caller and receiver, as shown below.
 
 ```js
 // Offer to receive audio but not video
