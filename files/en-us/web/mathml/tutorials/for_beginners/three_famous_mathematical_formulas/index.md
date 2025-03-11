@@ -1,6 +1,6 @@
 ---
 title: "Challenge: Three famous mathematical formulas"
-short-title: A challenge
+short-title: Famous formulas
 slug: Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 page-type: tutorial-chapter
 sidebar: mathmlref
