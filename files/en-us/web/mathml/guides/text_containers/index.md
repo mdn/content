@@ -14,7 +14,7 @@ Now that you have a better idea of MathML, we move focus on text containers (var
 
 Mathematical formulas involve many special characters, for example greek letters (e.g. Δ), fraktur letters (e.g. 𝔄), double-struck letter (e.g. ℂ), binary operators (e.g. ≠), arrows (e.g. ⇒), integral symbols (e.g. ∮), summation symbols (e.g. ∑), logical symbols (e.g. ∀), fences (e.g. ⌊) and many more. Wikipedia's article [Mathematical operators and symbols in Unicode](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) provides a good overview of the characters used.
 
-Since most of these characters are not part of Basic Latin Unicode block, it is recommended to specify your [document's character encoding](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_documents_character_encoding) and to serve it with appropriate [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts). Here is a basic template to use UTF-8 encoding and the [Latin Modern Math](/en-US/docs/Web/MathML/Fonts#fonts_with_a_math_table) font:
+Since most of these characters are not part of Basic Latin Unicode block, it is recommended to specify your [document's character encoding](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_documents_character_encoding) and to serve it with appropriate [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts). Here is a basic template to use UTF-8 encoding and the [Latin Modern Math](/en-US/docs/Web/MathML/Guides/Fonts#fonts_with_a_math_table) font:
 
 ```html
 <!doctype html>
@@ -293,7 +293,7 @@ document.getElementById("showSolution").addEventListener(
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
 > [!NOTE]
-> An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page for more information.
+> An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring) page for more information.
 
 ### Active learning: stretchy operators
 
@@ -433,7 +433,7 @@ As usual, you are invited to read the source code when you are done:
 ```
 
 > [!WARNING]
-> Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
+> Special [math fonts](/en-US/docs/Web/MathML/Guides/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
 
 ## Summary
 
@@ -441,9 +441,9 @@ In this article, we have learnt about a few _token_ elements that are used as te
 
 ## See also
 
-- [The `<mi>` element](/en-US/docs/Web/MathML/Element/mi)
-- [The `<mn>` element](/en-US/docs/Web/MathML/Element/mn)
-- [The `<mo>` element](/en-US/docs/Web/MathML/Element/mo)
-- [The `<mtext>` element](/en-US/docs/Web/MathML/Element/mtext)
+- [The `<mi>` element](/en-US/docs/Web/MathML/Reference/Element/mi)
+- [The `<mn>` element](/en-US/docs/Web/MathML/Reference/Element/mn)
+- [The `<mo>` element](/en-US/docs/Web/MathML/Reference/Element/mo)
+- [The `<mtext>` element](/en-US/docs/Web/MathML/Reference/Element/mtext)
 
 {{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}

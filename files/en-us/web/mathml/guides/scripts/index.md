@@ -458,11 +458,11 @@ In this article, we've finished reviewing basic layout introducing elements `<ms
 
 ## See also
 
-- [The `<msub>` element](/en-US/docs/Web/MathML/Element/msub)
-- [The `<msup>` element](/en-US/docs/Web/MathML/Element/msup)
-- [The `<msubsup>` element](/en-US/docs/Web/MathML/Element/msubsup)
-- [The `<munder>` element](/en-US/docs/Web/MathML/Element/munder)
-- [The `<mover>` element](/en-US/docs/Web/MathML/Element/mover)
-- [The `<munderover>` element](/en-US/docs/Web/MathML/Element/munderover)
+- [The `<msub>` element](/en-US/docs/Web/MathML/Reference/Element/msub)
+- [The `<msup>` element](/en-US/docs/Web/MathML/Reference/Element/msup)
+- [The `<msubsup>` element](/en-US/docs/Web/MathML/Reference/Element/msubsup)
+- [The `<munder>` element](/en-US/docs/Web/MathML/Reference/Element/munder)
+- [The `<mover>` element](/en-US/docs/Web/MathML/Reference/Element/mover)
+- [The `<munderover>` element](/en-US/docs/Web/MathML/Reference/Element/munderover)
 
 {{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

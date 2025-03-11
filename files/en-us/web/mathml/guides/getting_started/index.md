@@ -40,7 +40,7 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
 > [!WARNING]
-> If you just see "1 3" instead of a fraction, then your browser may not support MathML. Check out the [browser compatibility table](/en-US/docs/Web/MathML/Element/math#browser_compatibility) for further details.
+> If you just see "1 3" instead of a fraction, then your browser may not support MathML. Check out the [browser compatibility table](/en-US/docs/Web/MathML/Reference/Element/math#browser_compatibility) for further details.
 
 ### The display attribute
 
@@ -173,10 +173,10 @@ In this article, we have taken a look at how to use the `<math>` element to inse
 
 ## See also
 
-- [Using MathML](/en-US/docs/Web/MathML/Authoring#using_mathml)
-- [The `<math>` element](/en-US/docs/Web/MathML/Element/math)
-- [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
-- [The `<mrow>` element](/en-US/docs/Web/MathML/Element/mrow)
+- [Using MathML](/en-US/docs/Web/MathML/Guides/Authoring#using_mathml)
+- [The `<math>` element](/en-US/docs/Web/MathML/Reference/Element/math)
+- [The `<mfrac>` element](/en-US/docs/Web/MathML/Reference/Element/mfrac)
+- [The `<mrow>` element](/en-US/docs/Web/MathML/Reference/Element/mrow)
 - [The `math-style` property](/en-US/docs/Web/CSS/math-style)
 - [The `math-depth` property](/en-US/docs/Web/CSS/math-depth)
 

@@ -35,20 +35,20 @@ Below you will find links to documentation, examples, and tools to work with Mat
 
 ## Guides
 
-- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
+- [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring)
   - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
-- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
+- [Fonts for MathML](/en-US/docs/Web/MathML/Guides/Fonts)
   - : How users can install such math fonts to properly display MathML in browsers.
 
 ## MathML reference
 
-- [MathML element reference](/en-US/docs/Web/MathML/Element)
+- [MathML element reference](/en-US/docs/Web/MathML/Reference/Element)
   - : Details about each MathML element and compatibility information for desktop and mobile browsers.
-- [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)
+- [MathML attribute reference](/en-US/docs/Web/MathML/Reference/Attribute)
   - : Information about MathML attributes that modify the appearance or behavior of elements.
-- [MathML attribute values](/en-US/docs/Web/MathML/Attribute)
+- [MathML attribute values](/en-US/docs/Web/MathML/Reference/Attribute)
   - : Further information about MathML attribute values.
-- [MathML examples](/en-US/docs/Web/MathML/Examples)
+- [MathML guides](/en-US/docs/Web/MathML/Guides)
   - : MathML samples and examples to help you understand how it works.
 
 ## Getting help from the community
