@@ -73,7 +73,7 @@ The parameters are:
 
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `raw-string`.
 
-    - The `raw-string` keyword causes the attribute’s literal value to be treated as the value of a CSS string, with no CSS parsing performed at all (including CSS escapes, whitespace removal, comments, etc). No value triggers fallback; only the lack of the attribute entirely does.
+    - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed at all (including CSS escapes, whitespace removal, comments, etc). No value triggers fallback; only the lack of the attribute entirely does.
 
       ```css
       attr(data-name string, "stranger")
