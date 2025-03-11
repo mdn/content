@@ -1,8 +1,8 @@
 ---
 title: MathML tables
 short-title: Tables
-slug: Web/MathML/Tutorials/Tables
-page-type: guide
+slug: Web/MathML/Tutorials/For_beginners/Tables
+page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
@@ -276,7 +276,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 
 In this article, we've reviewed the `<mtable>`, `<mtr>` and `<mtd>` elements which are the equivalent of HTML elements for tables. We have seen how to use them for representing matrix-like objects and how it is sometimes used for advanced layout.
 
-You've nearly finished this module — we only have one more thing to do. In the [three famous mathematical formulas assessment](/en-US/docs/Web/MathML/Tutorials/Three_famous_mathematical_formulas) you'll use your new knowledge to rewrite a small mathematical article using HTML and MathML.
+You've nearly finished this module — we only have one more thing to do. In the [three famous mathematical formulas assessment](/en-US/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas) you'll use your new knowledge to rewrite a small mathematical article using HTML and MathML.
 
 ## See also
 

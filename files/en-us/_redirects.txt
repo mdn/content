@@ -5570,12 +5570,12 @@
 /en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /en-US/docs/Learn/MathML	/en-US/docs/Web/MathML
 /en-US/docs/Learn/MathML/First_steps	/en-US/docs/Web/MathML/Guides
-/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots	/en-US/docs/Web/MathML/Tutorials/Fractions_and_roots
-/en-US/docs/Learn/MathML/First_steps/Getting_started	/en-US/docs/Web/MathML/Tutorials/Getting_started
-/en-US/docs/Learn/MathML/First_steps/Scripts	/en-US/docs/Web/MathML/Tutorials/Scripts
-/en-US/docs/Learn/MathML/First_steps/Tables	/en-US/docs/Web/MathML/Tutorials/Tables
-/en-US/docs/Learn/MathML/First_steps/Text_containers	/en-US/docs/Web/MathML/Tutorials/Text_containers
-/en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Tutorials/Three_famous_mathematical_formulas
+/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots	/en-US/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots
+/en-US/docs/Learn/MathML/First_steps/Getting_started	/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started
+/en-US/docs/Learn/MathML/First_steps/Scripts	/en-US/docs/Web/MathML/Tutorials/For_beginners/Scripts
+/en-US/docs/Learn/MathML/First_steps/Tables	/en-US/docs/Web/MathML/Tutorials/For_beginners/Tables
+/en-US/docs/Learn/MathML/First_steps/Text_containers	/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers
+/en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 /en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
@@ -13920,15 +13920,21 @@
 /en-US/docs/Web/MathML/Global_attributes/mathsize	/en-US/docs/Web/MathML/Reference/Global_attributes/mathsize
 /en-US/docs/Web/MathML/Global_attributes/mathvariant	/en-US/docs/Web/MathML/Reference/Element/mi#mathvariant
 /en-US/docs/Web/MathML/Global_attributes/scriptlevel	/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel
-/en-US/docs/Web/MathML/Guides/Fractions_and_roots	/en-US/docs/Web/MathML/Tutorials/Fractions_and_roots
-/en-US/docs/Web/MathML/Guides/Getting_started	/en-US/docs/Web/MathML/Tutorials/Getting_started
-/en-US/docs/Web/MathML/Guides/Scripts	/en-US/docs/Web/MathML/Tutorials/Scripts
-/en-US/docs/Web/MathML/Guides/Tables	/en-US/docs/Web/MathML/Tutorials/Tables
-/en-US/docs/Web/MathML/Guides/Text_containers	/en-US/docs/Web/MathML/Tutorials/Text_containers
-/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Tutorials/Three_famous_mathematical_formulas
+/en-US/docs/Web/MathML/Guides/Fractions_and_roots	/en-US/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots
+/en-US/docs/Web/MathML/Guides/Getting_started	/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started
+/en-US/docs/Web/MathML/Guides/Scripts	/en-US/docs/Web/MathML/Tutorials/For_beginners/Scripts
+/en-US/docs/Web/MathML/Guides/Tables	/en-US/docs/Web/MathML/Tutorials/For_beginners/Tables
+/en-US/docs/Web/MathML/Guides/Text_containers	/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers
+/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 /en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/MathML/Reference/Attributes	/en-US/docs/Web/MathML/Reference/Attribute
-/en-US/docs/Web/MathML/Tutorials/Getting started	/en-US/docs/Web/MathML/Tutorials/Getting_started
+/en-US/docs/Web/MathML/Tutorials/Fractions_and_roots	/en-US/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots
+/en-US/docs/Web/MathML/Tutorials/Getting started	/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started
+/en-US/docs/Web/MathML/Tutorials/Getting_started	/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started
+/en-US/docs/Web/MathML/Tutorials/Scripts	/en-US/docs/Web/MathML/Tutorials/For_beginners/Scripts
+/en-US/docs/Web/MathML/Tutorials/Tables	/en-US/docs/Web/MathML/Tutorials/For_beginners/Tables
+/en-US/docs/Web/MathML/Tutorials/Text_containers	/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers
+/en-US/docs/Web/MathML/Tutorials/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 /en-US/docs/Web/MathML/Values	/en-US/docs/Web/MathML/Reference/Values
 /en-US/docs/Web/Media/Audio_and_video_delivery	/en-US/docs/Web/Media/Guides/Audio_and_video_delivery
 /en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video

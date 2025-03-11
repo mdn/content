@@ -1,8 +1,8 @@
 ---
 title: MathML scripted elements
 short-title: Scripted elements
-slug: Web/MathML/Tutorials/Scripts
-page-type: guide
+slug: Web/MathML/Tutorials/For_beginners/Scripts
+page-type: tutorial-chapter
 sidebar: mathmlref
 ---
 
@@ -12,7 +12,7 @@ We continue the review of basic math notations and focus on building MathML elem
 
 ## Subscripts and superscripts
 
-Similarly to what we saw in the [previous article](/en-US/docs/Web/MathML/Tutorials/Fractions_and_roots), the `<msub>`, `<msup>` and `<msubsup>` have a special structure expecting exactly two elements (for `<msub>`, `<msup>`) or three elements (for `<msubsup>`):
+Similarly to what we saw in the [previous article](/en-US/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots), the `<msub>`, `<msup>` and `<msubsup>` have a special structure expecting exactly two elements (for `<msub>`, `<msup>`) or three elements (for `<msubsup>`):
 
 ```html
 <p>
@@ -233,7 +233,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## More operator properties
 
-We have previously seen some [properties of the `<mo>` element](/en-US/docs/Web/MathML/Tutorials/Text_containers#operator_properties_of_mo) namely stretching in the vertical direction and spacing. Now that scripted elements are available, we can extend that list. We will do that by tweaking our [previous example](#active_learning_recognize_scripted_elements).
+We have previously seen some [properties of the `<mo>` element](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#operator_properties_of_mo) namely stretching in the vertical direction and spacing. Now that scripted elements are available, we can extend that list. We will do that by tweaking our [previous example](#active_learning_recognize_scripted_elements).
 
 ### Stretching in horizontal direction
 
@@ -337,14 +337,14 @@ math {
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Web/MathML/Tutorials/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
+We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
 
 > [!NOTE]
 > Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
 
 ### Large operator and limits
 
-So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Web/MathML/Tutorials/Getting_started#the_display_attribute) attribute. Let's look at the same example, as rendered without that attribute:
+So far our example has actually been rendered with the [`display="block"`](/en-US/docs/Web/MathML/Tutorials/For_beginners/Getting_started#the_display_attribute) attribute. Let's look at the same example, as rendered without that attribute:
 
 ```html hidden
 <!doctype html>
@@ -454,7 +454,7 @@ As expected, the formula is no longer centered and the rendering is modified to 
 
 ## Summary
 
-In this article, we've finished reviewing basic layout introducing elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` for subscripts, superscripts, underscripts and overscripts. Using these elements, we were able to briefly introduce new properties of the `<mo>` element. In the next article, we will continue focus on [tabular layout](/en-US/docs/Web/MathML/Tutorials/Tables).
+In this article, we've finished reviewing basic layout introducing elements `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` for subscripts, superscripts, underscripts and overscripts. Using these elements, we were able to briefly introduce new properties of the `<mo>` element. In the next article, we will continue focus on [tabular layout](/en-US/docs/Web/MathML/Tutorials/For_beginners/Tables).
 
 ## See also
 
