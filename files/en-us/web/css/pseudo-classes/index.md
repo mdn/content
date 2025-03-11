@@ -27,14 +27,25 @@ Pseudo-classes let you apply a style to an element not only in relation to the c
 > [!NOTE]
 > In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can be used to style a _specific part_ of an element.
 
+## Elemental pseudo-classes
+
+These pseudo-classes relate to the core identity of elements.
+
+- {{CSSxRef(":defined")}}
+  - : Matches any element that is defined.
+
 ## Element display state pseudo-classes
 
 These pseudo-classes enable the selection of elements based on their display states.
 
-- {{CSSxRef(":fullscreen")}}
-  - : Matches an element that is currently in fullscreen mode.
+- {{CSSxRef(":open")}}
+  - : Matches an element that can either be open or closed that is currently open.
+- {{CSSxRef(":popover-open")}}
+  - : Matches a popover element that is currently in the showing state.
 - {{CSSxRef(":modal")}}
   - : Matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed.
+- {{CSSxRef(":fullscreen")}}
+  - : Matches an element that is currently in fullscreen mode.
 - {{CSSxRef(":picture-in-picture")}}
   - : Matches an element that is currently in picture-in-picture mode.
 
@@ -42,8 +53,6 @@ These pseudo-classes enable the selection of elements based on their display sta
 
 These pseudo-classes relate to form elements, and enable selecting elements based on HTML attributes and the state that the field is in before and after interaction.
 
-- {{CSSxRef(":autofill")}}
-  - : Matches when an {{htmlelement("input")}} has been autofilled by the browser.
 - {{CSSxRef(":enabled")}}
   - : Represents a user interface element that is in an enabled state.
 - {{CSSxRef(":disabled")}}
@@ -54,6 +63,8 @@ These pseudo-classes relate to form elements, and enable selecting elements base
   - : Represents any element that is user-editable.
 - {{CSSxRef(":placeholder-shown")}}
   - : Matches an input element that is displaying placeholder text. For example, it will match the `placeholder` attribute in the {{htmlelement("input")}} and {{htmlelement("textarea")}} elements.
+- {{CSSxRef(":autofill")}}
+  - : Matches when an {{htmlelement("input")}} has been autofilled by the browser.
 - {{CSSxRef(":default")}}
   - : Matches one or more UI elements that are the default among a set of elements.
 - {{CSSxRef(":checked")}}
@@ -112,9 +123,19 @@ These pseudo-classes relate to links, and to targeted elements within the curren
 These pseudo-classes apply to media that is capable of being in a state where it would be described as playing, such as a video.
 
 - {{CSSxRef(":playing")}}
-  - : Represents a media element that is capable of playing when that element is playing.
+  - : Represents a playable element that is playing.
 - {{CSSxRef(":paused")}}
-  - : Represents a media element that is capable of playing when that element is paused.
+  - : Represents a playable element that is paused.
+- {{CSSxRef(":seeking")}}
+  - : Represents a playable element that is currently seeking a playback position in the media resource.
+- {{CSSxRef(":buffering")}}
+  - : Represents a playable element that is playing but is temporarily stalled because it is downloading the media resource.
+- {{CSSxRef(":stalled")}}
+  - : Represents a playable element that is playing but is stalled because it cannot download the media resource.
+- {{CSSxRef(":muted")}}
+  - : Represents a sound-producing element that is muted.
+- {{CSSxRef(":volume-locked")}}
+  - : Represents a sound-producing element that has its volume level locked by the user agent.
 
 ## Time-dimensional pseudo-classes
 
@@ -122,6 +143,8 @@ These pseudo-classes apply when viewing something which has timing, such as a [W
 
 - {{CSSxRef(":current")}}
   - : Represents the element or ancestor of the element that is being displayed.
+- {{CSSxRef(":current", ":current()")}}
+  - : Represents the element or ancestor that matches {{CSSxRef(":current")}} and matches any of the selectors in the list provided.
 - {{CSSxRef(":past")}}
   - : Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.
 - {{CSSxRef(":future")}}
@@ -135,9 +158,9 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Represents an element that is the root of the document. In HTML this is usually the `<html>` element.
 - {{CSSxRef(":empty")}}
   - : Represents an element with no children other than white-space characters.
-- {{CSSxRef(":nth-child")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements.
-- {{CSSxRef(":nth-last-child")}}
+- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements, counting backwards from the end of the list.
 - {{CSSxRef(":first-child")}}
   - : Matches an element that is the first of its siblings.
@@ -145,9 +168,9 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Matches an element that is the last of its siblings.
 - {{CSSxRef(":only-child")}}
   - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
-- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
-- {{CSSxRef(":nth-last-of-type")}}
+- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
 - {{CSSxRef(":first-of-type")}}
   - : Matches an element that is the first of its siblings, and also matches a certain type selector.
@@ -155,6 +178,28 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Matches an element that is the last of its siblings, and also matches a certain type selector.
 - {{CSSxRef(":only-of-type")}}
   - : Matches an element that has no siblings of the chosen type selector.
+
+## Grid-structural pseudo-classes
+
+These pseudo-classes relate to the location of an element within a grid element such as a table.
+
+- `:nth-col()`
+  - : Uses `An+B` notation to select elements from a list of siblings in a column.
+- `:nth-last-col()`
+  - : Uses `An+B` notation to select elements from a list of siblings in a column, counting backwards from the end of the list.
+
+## Shadow-structural pseudo-classes
+
+These pseudo-classes relate to the shadow DOM.
+
+- {{CSSxRef(":host")}}
+  - : Matches the shadow tree's shadow host.
+- {{CSSxRef(":host_function", ":host()")}}
+  - : Matches an element that matches {{CSSxRef(":host")}} and matches any of the selectors in the list provided.
+- {{CSSxRef(":host-context", ":host-context()")}}
+  - : Selects elements outside of the shadow tree in the context of the shadow host.
+- {{CSSxRef(":has-slotted")}}
+  - : Matches slot elements that have been assigned content.
 
 ## User action pseudo-classes
 
@@ -175,14 +220,34 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
 
-- [`:is()`](/en-US/docs/Web/CSS/:is)
+- {{CSSxRef(":is", ":is()")}}
   - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
-- [`:not()`](/en-US/docs/Web/CSS/:not)
+- {{CSSxRef(":not", ":not()")}}
   - : The negation, or matches-none, pseudo-class represents any element that is not represented by its argument.
-- [`:where()`](/en-US/docs/Web/CSS/:where)
+- {{CSSxRef(":where", ":where()")}}
   - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight. The list is forgiving.
-- [`:has()`](/en-US/docs/Web/CSS/:has)
+- {{CSSxRef(":has", ":has()")}}
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
+
+## Custom element pseudo-classes
+
+These pseudo-classes apply to custom elements.
+
+- {{CSSxRef(":state", ":state()")}}
+  - : Matches custom elements that have the specified custom state.
+
+## Page pseudo-classes
+
+These pseudo-classes relate to pages in a printed document and are used with the {{CSSxRef("@page")}} at-rule.
+
+- {{CSSxRef(":left")}}
+  - : Represents all left-hand pages of a printed document.
+- {{CSSxRef(":right")}}
+  - : Represents all right-hand pages of a printed document.
+- {{CSSxRef(":first")}}
+  - : Represents the first page of a printed document.
+- `:blank`
+  - : Represents a blank page in a printed document.
 
 ## Syntax
 
