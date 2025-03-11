@@ -1,5 +1,5 @@
 ---
-title: Deriving the Quadratic Formula
+title: Deriving the quadratic formula
 slug: Web/MathML/Guides/Deriving_the_quadratic_formula
 page-type: guide
 sidebar: mathmlref
