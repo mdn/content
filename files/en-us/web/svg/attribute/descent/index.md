@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font-face.descent
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`descent`** attribute defines the maximum unaccented depth of the font.
 

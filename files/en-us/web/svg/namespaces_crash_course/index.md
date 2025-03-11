@@ -2,9 +2,8 @@
 title: Namespaces crash course
 slug: Web/SVG/Namespaces_Crash_Course
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 As an [XML](/en-US/docs/Glossary/XML) dialect, [SVG](/en-US/docs/Web/SVG) is namespaced. It is important to understand the concept of namespaces and how they are used if you plan to author SVG content. Namespaces are essential to user agents that support multiple XML dialects; browsers must be very strict. Taking the time to understand namespaces now will save you from future headaches.
 

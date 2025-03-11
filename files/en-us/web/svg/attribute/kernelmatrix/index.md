@@ -3,9 +3,8 @@ title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
 page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.
 

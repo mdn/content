@@ -3,9 +3,8 @@ title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-dashoffset
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-dashoffset`** attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
 

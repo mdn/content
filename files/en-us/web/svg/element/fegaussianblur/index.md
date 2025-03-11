@@ -3,9 +3,8 @@ title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
 page-type: svg-element
 browser-compat: svg.elements.feGaussianBlur
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the input image by the amount specified in {{SVGAttr("stdDeviation")}}, which defines the bell-curve.
 

@@ -3,9 +3,8 @@ title: mode
 slug: Web/SVG/Attribute/mode
 page-type: svg-attribute
 browser-compat: svg.elements.feBlend.mode
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`mode`** attribute defines the blending mode on the {{SVGElement("feBlend")}} filter primitive.
 

@@ -3,9 +3,8 @@ title: azimuth
 slug: Web/SVG/Attribute/azimuth
 page-type: svg-attribute
 browser-compat: svg.elements.feDistantLight.azimuth
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`azimuth`** attribute specifies the direction angle for the light source on the XY plane (clockwise), in degrees from the x axis.
 

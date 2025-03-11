@@ -3,9 +3,8 @@ title: font-size
 slug: Web/SVG/Attribute/font-size
 page-type: svg-attribute
 browser-compat: svg.global_attributes.font-size
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`font-size`** attribute refers to the size of the font from {{Glossary("baseline/typography", "baseline")}} to baseline when multiple lines of text are set solid in a multiline layout environment.
 

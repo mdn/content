@@ -3,9 +3,8 @@ title: unicode-bidi
 slug: Web/SVG/Attribute/unicode-bidi
 page-type: svg-attribute
 browser-compat: svg.global_attributes.unicode-bidi
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`unicode-bidi`** attribute specifies how the accumulation of the background image is managed.
 

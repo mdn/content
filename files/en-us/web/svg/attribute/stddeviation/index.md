@@ -3,9 +3,8 @@ title: stdDeviation
 slug: Web/SVG/Attribute/stdDeviation
 page-type: svg-attribute
 browser-compat: svg.elements.feGaussianBlur.stdDeviation
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stdDeviation`** attribute defines the standard deviation for the blur operation.
 

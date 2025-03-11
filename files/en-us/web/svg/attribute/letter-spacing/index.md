@@ -3,9 +3,8 @@ title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 page-type: svg-attribute
 browser-compat: svg.global_attributes.letter-spacing
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`letter-spacing`** attribute controls spacing between text characters.
 

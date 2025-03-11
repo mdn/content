@@ -3,9 +3,8 @@ title: by
 slug: Web/SVG/Attribute/by
 page-type: svg-attribute
 browser-compat: svg.elements.animateTransform.by
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`by`** attribute specifies a relative offset value for an attribute that will be modified during an animation.
 

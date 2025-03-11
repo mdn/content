@@ -3,9 +3,8 @@ title: fy
 slug: Web/SVG/Attribute/fy
 page-type: svg-attribute
 browser-compat: svg.elements.radialGradient.fy
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`fy`** attribute defines the y-axis coordinate of the focal point for a radial gradient.
 

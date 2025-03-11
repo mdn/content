@@ -3,9 +3,8 @@ title: additive
 slug: Web/SVG/Attribute/additive
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`additive`** attribute controls whether or not an animation is additive.
 

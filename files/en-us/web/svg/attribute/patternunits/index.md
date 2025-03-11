@@ -3,9 +3,8 @@ title: patternUnits
 slug: Web/SVG/Attribute/patternUnits
 page-type: svg-attribute
 browser-compat: svg.elements.pattern.patternUnits
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`patternUnits`** attribute indicates which coordinate system to use for the geometry properties of the {{ SVGElement("pattern") }} element.
 

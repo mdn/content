@@ -3,9 +3,8 @@ title: <animateTransform>
 slug: Web/SVG/Element/animateTransform
 page-type: svg-element
 browser-compat: svg.elements.animateTransform
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<animateTransform>`** [SVG](/en-US/docs/Web/SVG) element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
 

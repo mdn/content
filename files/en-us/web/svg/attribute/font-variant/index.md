@@ -3,9 +3,8 @@ title: font-variant
 slug: Web/SVG/Attribute/font-variant
 page-type: svg-attribute
 browser-compat: svg.global_attributes.font-variant
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`font-variant`** attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.
 

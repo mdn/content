@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font-face.stemh
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`stemh`** attribute indicates the horizontal stem width of the font.
 

@@ -3,9 +3,8 @@ title: flood-color
 slug: Web/SVG/Attribute/flood-color
 page-type: svg-attribute
 browser-compat: svg.global_attributes.flood-color
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`flood-color`** attribute indicates what color to use to flood the current filter primitive subregion.
 

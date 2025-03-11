@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.linearGradient.gradientUnits
   - svg.elements.radialGradient.gradientUnits
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`gradientUnits`** attribute defines the coordinate system used for attributes specified on the gradient elements.
 

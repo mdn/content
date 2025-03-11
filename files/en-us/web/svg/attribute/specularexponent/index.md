@@ -5,9 +5,8 @@ page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespecularlighting-specularexponent
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-specularexponent
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`specularExponent`** attribute controls the focus for the light source. The bigger the value the brighter the light.
 

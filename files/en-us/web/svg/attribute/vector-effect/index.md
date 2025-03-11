@@ -3,9 +3,8 @@ title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
 page-type: svg-attribute
 browser-compat: svg.global_attributes.vector-effect
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e. filters, masks and clips.
 

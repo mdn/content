@@ -5,9 +5,8 @@ page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefXAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefXAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`refX`** attribute defines the x coordinate of an element's reference point.
 

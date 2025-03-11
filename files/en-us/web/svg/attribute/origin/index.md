@@ -3,9 +3,8 @@ title: origin
 slug: Web/SVG/Attribute/origin
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#OriginAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`origin`** attribute specifies the origin of motion for an animation. It has no effect in SVG.
 

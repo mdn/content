@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.cursor
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > The CSS {{cssxref("cursor")}} property should be used instead of this element.

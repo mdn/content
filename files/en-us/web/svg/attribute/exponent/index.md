@@ -3,9 +3,8 @@ title: exponent
 slug: Web/SVG/Attribute/exponent
 page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-exponent
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`exponent`** attribute defines the exponent of the gamma function.
 

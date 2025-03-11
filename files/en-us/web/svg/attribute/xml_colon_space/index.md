@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.global_attributes.xml_space
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 SVG supports the built-in XML **`xml:space`** attribute to handle whitespace characters inside elements. Child elements inside an element may also have an `xml:space` attribute that overrides the parent's one.
 

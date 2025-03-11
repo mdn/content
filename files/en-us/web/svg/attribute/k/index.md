@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.hkern.k
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`k`** attribute specifies the amount for decreasing the spacing between the two glyphs in a kerning pair.
 

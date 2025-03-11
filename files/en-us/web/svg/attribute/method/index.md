@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - experimental
 spec-urls: https://svgwg.org/svg2-draft/text.html#TextPathElementMethodAttribute
+sidebar: svgref
 ---
 
-{{SVGRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`method`** attribute indicates the method by which text should be rendered along the path of a {{SVGElement("textPath")}} element.
 

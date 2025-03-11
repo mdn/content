@@ -3,9 +3,8 @@ title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
 page-type: svg-element
 browser-compat: svg.elements.feSpotLight
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feSpotLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a light source that can be used to create a spotlight effect.
 It is used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.

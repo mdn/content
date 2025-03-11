@@ -2,9 +2,8 @@
 title: Patterns
 slug: Web/SVG/Tutorial/Patterns
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 

@@ -3,9 +3,8 @@ title: attributeName
 slug: Web/SVG/Attribute/attributeName
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`attributeName`** attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.
 

@@ -3,9 +3,8 @@ title: mask
 slug: Web/SVG/Attribute/mask
 page-type: svg-attribute
 browser-compat: svg.global_attributes.mask
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`mask`** attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.
 

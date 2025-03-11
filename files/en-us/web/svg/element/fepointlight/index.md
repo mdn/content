@@ -3,9 +3,8 @@ title: <fePointLight>
 slug: Web/SVG/Element/fePointLight
 page-type: svg-element
 browser-compat: svg.elements.fePointLight
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<fePointLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a light source which allows to create a point light effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 

@@ -2,9 +2,8 @@
 title: Positions
 slug: Web/SVG/Tutorial/Positions
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 

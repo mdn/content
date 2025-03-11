@@ -3,9 +3,8 @@ title: media
 slug: Web/SVG/Attribute/media
 page-type: svg-attribute
 browser-compat: svg.elements.style.media
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`media`** attribute specifies a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that must be matched for a style sheet to apply.
 

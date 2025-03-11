@@ -6,9 +6,8 @@ browser-compat:
   - svg.elements.circle.cx
   - svg.elements.ellipse.cx
   - svg.elements.radialGradient.cx
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`cx`** attribute defines the x-axis coordinate of a center point.
 

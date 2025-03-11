@@ -3,9 +3,8 @@ title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
 page-type: svg-element
 browser-compat: svg.elements.radialGradient
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<radialGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors define radial gradients that can be applied to fill or stroke of graphical elements.
 

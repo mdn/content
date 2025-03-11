@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.linearGradient.gradientTransform
   - svg.elements.radialGradient.gradientTransform
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`gradientTransform`** attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i.e., userSpaceOnUse or objectBoundingBox). This allows for things such as skewing the gradient. This additional transformation matrix is post-multiplied to (i.e., inserted to the right of) any previously defined transformations, including the implicit transformation necessary to convert from object bounding box units to user space.
 

@@ -5,9 +5,8 @@ page-type: svg-attribute
 browser-compat:
   - svg.elements.linearGradient.spreadMethod
   - svg.elements.radialGradient.spreadMethod
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`spreadMethod`** attribute determines how a shape is filled beyond the defined edges of a gradient.
 

@@ -3,9 +3,8 @@ title: "SVG: Scalable Vector Graphics"
 short-title: SVG
 slug: Web/SVG
 page-type: landing-page
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 ## Getting Started with SVG
 

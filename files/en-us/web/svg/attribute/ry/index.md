@@ -3,9 +3,8 @@ title: ry
 slug: Web/SVG/Attribute/ry
 page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/geometry.html#RY
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`ry`** attribute defines a radius on the y-axis.
 

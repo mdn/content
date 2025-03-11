@@ -3,9 +3,8 @@ title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
 page-type: svg-attribute
 browser-compat: svg.elements.filter.filterUnits
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`filterUnits`** attribute defines the coordinate system for the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}}.
 

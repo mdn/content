@@ -3,9 +3,8 @@ title: filter
 slug: Web/SVG/Attribute/filter
 page-type: svg-attribute
 browser-compat: svg.global_attributes.filter
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.
 

@@ -3,9 +3,8 @@ title: <script>
 slug: Web/SVG/Element/script
 page-type: svg-element
 browser-compat: svg.elements.script
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to an SVG document.
 

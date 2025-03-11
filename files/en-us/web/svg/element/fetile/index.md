@@ -3,9 +3,8 @@ title: <feTile>
 slug: Web/SVG/Element/feTile
 page-type: svg-element
 browser-compat: svg.elements.feTile
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feTile>`** [SVG](/en-US/docs/Web/SVG) filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a {{SVGElement("pattern")}}.
 

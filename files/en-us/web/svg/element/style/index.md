@@ -3,9 +3,8 @@ title: <style>
 slug: Web/SVG/Element/style
 page-type: svg-element
 browser-compat: svg.elements.style
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<style>`** [SVG](/en-US/docs/Web/SVG) element allows style sheets to be embedded directly within SVG content.
 

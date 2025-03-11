@@ -3,9 +3,8 @@ title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
 page-type: svg-attribute
 browser-compat: svg.global_attributes.shape-rendering
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`shape-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.
 

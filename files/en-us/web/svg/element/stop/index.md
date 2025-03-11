@@ -3,9 +3,8 @@ title: <stop>
 slug: Web/SVG/Element/stop
 page-type: svg-element
 browser-compat: svg.elements.stop
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<stop>`** [SVG](/en-US/docs/Web/SVG) element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
 

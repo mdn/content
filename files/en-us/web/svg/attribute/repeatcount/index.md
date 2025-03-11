@@ -3,9 +3,8 @@ title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 page-type: svg-attribute
 browser-compat: svg.elements.animate.repeatCount
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`repeatCount`** attribute indicates the number of times an animation will take place.
 

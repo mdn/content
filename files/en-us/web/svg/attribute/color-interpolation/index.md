@@ -3,9 +3,8 @@ title: color-interpolation
 slug: Web/SVG/Attribute/color-interpolation
 page-type: svg-attribute
 browser-compat: svg.global_attributes.color-interpolation
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`color-interpolation`** attribute specifies the color space for gradient interpolations, color animations, and alpha compositing.
 

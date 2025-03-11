@@ -3,9 +3,8 @@ title: fx
 slug: Web/SVG/Attribute/fx
 page-type: svg-attribute
 browser-compat: svg.elements.radialGradient.fx
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`fx`** attribute defines the x-axis coordinate of the focal point for a radial gradient.
 

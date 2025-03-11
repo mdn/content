@@ -3,9 +3,8 @@ title: xChannelSelector
 slug: Web/SVG/Attribute/xChannelSelector
 page-type: svg-attribute
 browser-compat: svg.elements.feDisplacementMap.xChannelSelector
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`xChannelSelector`** attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the x-axis.
 

@@ -3,9 +3,8 @@ title: <polyline>
 slug: Web/SVG/Element/polyline
 page-type: svg-element
 browser-compat: svg.elements.polyline
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<polyline>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape that creates straight lines connecting several points. Typically a `polyline` is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the {{SVGElement("polygon")}} element.
 

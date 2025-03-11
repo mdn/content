@@ -3,9 +3,8 @@ title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke-width
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke-width`** attribute is a presentation attribute defining the width of the stroke to be applied to the shape. It applies to any SVG shape or text-content element (see {{SVGAttr("stroke-width")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
 

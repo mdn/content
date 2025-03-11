@@ -3,9 +3,8 @@ title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
 page-type: svg-attribute
 browser-compat: svg.global_attributes.marker-mid
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`marker-mid`** attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
 

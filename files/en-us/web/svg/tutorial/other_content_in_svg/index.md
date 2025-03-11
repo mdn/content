@@ -2,9 +2,8 @@
 title: Other content in SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 

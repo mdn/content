@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.font
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<font>`** [SVG](/en-US/docs/Web/SVG) element defines a font to be used for text layout.
 

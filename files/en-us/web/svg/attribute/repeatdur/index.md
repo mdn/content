@@ -3,9 +3,8 @@ title: repeatDur
 slug: Web/SVG/Attribute/repeatDur
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#RepeatDurAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`repeatDur`** attribute specifies the total duration for repeating an animation.
 

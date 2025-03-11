@@ -3,9 +3,8 @@ title: clip-path
 slug: Web/SVG/Attribute/clip-path
 page-type: svg-attribute
 browser-compat: svg.global_attributes.clip-path
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
 

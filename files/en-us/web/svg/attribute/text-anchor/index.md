@@ -3,9 +3,8 @@ title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
 page-type: svg-attribute
 browser-compat: svg.global_attributes.text-anchor
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{cssxref("inline-size")}} property relative to a given point.
 

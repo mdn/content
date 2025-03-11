@@ -3,9 +3,8 @@ title: targetY
 slug: Web/SVG/Attribute/targetY
 page-type: svg-attribute
 browser-compat: svg.elements.feConvolveMatrix.targetY
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`targetY`** attribute determines the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image. The topmost row of the matrix is row number zero. The value must be such that: `0` <= `targetY` < {{SVGAttr("order")}} `Y`.
 

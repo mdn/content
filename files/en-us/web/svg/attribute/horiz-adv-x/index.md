@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.font.horiz-adv-x
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering a {{Glossary("glyph")}} in horizontal orientation.
 

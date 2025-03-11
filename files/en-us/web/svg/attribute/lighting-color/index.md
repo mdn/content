@@ -3,9 +3,8 @@ title: lighting-color
 slug: Web/SVG/Attribute/lighting-color
 page-type: svg-attribute
 browser-compat: svg.global_attributes.lighting-color
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`lighting-color`** attribute defines the color of the light source for lighting filter primitives.
 

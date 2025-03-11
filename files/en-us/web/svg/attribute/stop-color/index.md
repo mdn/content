@@ -3,9 +3,8 @@ title: stop-color
 slug: Web/SVG/Attribute/stop-color
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stop-color
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stop-color`** attribute indicates what color to use at a gradient stop.
 

@@ -2,9 +2,8 @@
 title: Content type
 slug: Web/SVG/Content_type
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 SVG makes use of a number of data types. This article lists these types along with their syntax and descriptions of what they're used for.
 

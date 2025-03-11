@@ -2,9 +2,8 @@
 title: Using fonts in SVG
 slug: Web/SVG/Tutorial/SVG_fonts
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 

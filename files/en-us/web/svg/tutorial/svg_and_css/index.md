@@ -2,9 +2,8 @@
 title: SVG and CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 

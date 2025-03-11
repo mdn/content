@@ -6,9 +6,8 @@ browser-compat:
   - svg.elements.circle.cy
   - svg.elements.ellipse.cy
   - svg.elements.radialGradient.cy
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`cy`** attribute defines the y-axis coordinate of a center point.
 

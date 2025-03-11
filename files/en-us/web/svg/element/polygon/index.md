@@ -3,9 +3,8 @@ title: <polygon>
 slug: Web/SVG/Element/polygon
 page-type: svg-element
 browser-compat: svg.elements.polygon
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<polygon>`** [SVG](/en-US/docs/Web/SVG) element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.
 

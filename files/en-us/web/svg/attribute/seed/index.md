@@ -3,9 +3,8 @@ title: seed
 slug: Web/SVG/Attribute/seed
 page-type: svg-attribute
 browser-compat: svg.elements.feTurbulence.seed
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`seed`** attribute represents the starting number for the pseudo random number generator of the {{SVGElement("feTurbulence")}} filter primitive.
 

@@ -3,9 +3,8 @@ title: marker-start
 slug: Web/SVG/Attribute/marker-start
 page-type: svg-attribute
 browser-compat: svg.global_attributes.marker-start
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`marker-start`** attribute defines the arrowhead or polymarker that will be drawn at the first vertex of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
 

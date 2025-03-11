@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
 

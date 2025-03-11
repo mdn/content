@@ -3,9 +3,8 @@ title: stroke
 slug: Web/SVG/Attribute/stroke
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stroke
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stroke`** attribute is a presentation attribute defining the color (_or any SVG paint servers like gradients or patterns_) used to paint the outline of the shape.
 

@@ -3,9 +3,8 @@ title: font-style
 slug: Web/SVG/Attribute/font-style
 page-type: svg-attribute
 browser-compat: svg.global_attributes.font-style
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`font-style`** attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.
 

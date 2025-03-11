@@ -2,9 +2,8 @@
 title: Basic transformations
 slug: Web/SVG/Tutorial/Basic_Transformations
 page-type: guide
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 

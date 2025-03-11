@@ -3,9 +3,8 @@ title: <pattern>
 slug: Web/SVG/Element/pattern
 page-type: svg-element
 browser-compat: svg.elements.pattern
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<pattern>`** [SVG](/en-US/docs/Web/SVG) element defines a graphics object which can be redrawn at repeated x- and y-coordinate intervals ("tiled") to cover an area.
 

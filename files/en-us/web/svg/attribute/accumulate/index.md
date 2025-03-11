@@ -3,9 +3,8 @@ title: accumulate
 slug: Web/SVG/Attribute/accumulate
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#AccumulateAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`accumulate`** attribute controls whether or not an animation is cumulative.
 

@@ -3,9 +3,8 @@ title: radius
 slug: Web/SVG/Attribute/radius
 page-type: svg-attribute
 browser-compat: svg.elements.feMorphology.radius
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`radius`** attribute represents the radius (or radii) for the operation on a given {{SVGElement("feMorphology")}} filter primitive.
 

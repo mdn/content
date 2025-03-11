@@ -3,9 +3,8 @@ title: pointsAtX
 slug: Web/SVG/Attribute/pointsAtX
 page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.pointsAtX
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`pointsAtX`** attribute represents the x location in the coordinate system established by attribute {{SVGAttr("primitiveUnits")}} on the {{SVGElement("filter")}} element of the point at which the light source is pointing.
 

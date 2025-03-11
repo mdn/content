@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.glyph.orientation
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`orientation`** attribute indicates that the given {{Glossary("glyph")}} is only to be used for a particular text direction, i.e. horizontal or vertical.
 

@@ -3,9 +3,8 @@ title: k2
 slug: Web/SVG/Attribute/k2
 page-type: svg-attribute
 browser-compat: svg.elements.feComposite.k2
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`k2`** attribute defines one of the values to be used within the `arithmetic` operation of the {{SVGElement("feComposite")}} filter primitive.
 

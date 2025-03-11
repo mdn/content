@@ -5,9 +5,10 @@ page-type: svg-attribute
 status:
   - deprecated
 browser-compat: svg.elements.a.xlink_show
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`xlink:show`** attribute indicates how a linked resource should be opened and is meant for {{Glossary("XLink")}}-aware processors. In case of a conflict, the {{SVGAttr("target")}} attribute has priority, since it can express a wider range of values.
 

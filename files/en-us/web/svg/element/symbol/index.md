@@ -3,9 +3,8 @@ title: <symbol>
 slug: Web/SVG/Element/symbol
 page-type: svg-element
 browser-compat: svg.elements.symbol
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<symbol>`** [SVG](/en-US/docs/Web/SVG) element is used to define graphical template objects which can be instantiated by a {{SVGElement("use")}} element.
 

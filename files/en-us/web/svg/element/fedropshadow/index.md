@@ -3,9 +3,8 @@ title: <feDropShadow>
 slug: Web/SVG/Element/feDropShadow
 page-type: svg-element
 browser-compat: svg.elements.feDropShadow
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feDropShadow>`** [SVG](/en-US/docs/Web/SVG) filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.
 

@@ -3,9 +3,8 @@ title: direction
 slug: Web/SVG/Attribute/direction
 page-type: svg-attribute
 browser-compat: svg.global_attributes.direction
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`direction`** attribute specifies the inline-base direction of a {{SVGElement("text")}} or {{SVGElement("tspan")}} element. It defines the start and end points of a line of text as used by the {{SVGAttr("text-anchor")}} and {{SVGAttr("inline-size")}} properties. It also may affect the direction in which characters are positioned if the {{SVGAttr("unicode-bidi")}} property's value is either `embed` or `bidi-override`.
 

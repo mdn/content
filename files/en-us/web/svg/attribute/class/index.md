@@ -3,9 +3,8 @@ title: class
 slug: Web/SVG/Attribute/class
 page-type: svg-attribute
 browser-compat: svg.global_attributes.class
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
 

@@ -3,9 +3,8 @@ title: <feOffset>
 slug: Web/SVG/Element/feOffset
 page-type: svg-element
 browser-compat: svg.elements.feOffset
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<feOffset>`** [SVG](/en-US/docs/Web/SVG) filter primitive enables offsetting an input image relative to its current position. The input image as a whole is offset by the values specified in the {{SVGAttr("dx")}} and {{SVGAttr("dy")}} attributes.
 

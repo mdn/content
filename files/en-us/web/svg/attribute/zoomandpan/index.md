@@ -7,9 +7,10 @@ status:
 browser-compat:
   - svg.elements.svg.zoomAndPan
   - svg.elements.view.zoomAndPan
+sidebar: svgref
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`zoomAndPan`** attribute specifies whether the SVG document can be magnified and panned.
 

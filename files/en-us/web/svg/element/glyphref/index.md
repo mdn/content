@@ -5,9 +5,10 @@ page-type: svg-element
 status:
   - deprecated
 browser-compat: svg.elements.glyphRef
+sidebar: svgref
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 The **`<glyphRef>`** [SVG](/en-US/docs/Web/SVG) element provides a single possible glyph to the referencing `<altGlyph>` substitution.
 

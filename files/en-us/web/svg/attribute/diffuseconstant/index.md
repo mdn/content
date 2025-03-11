@@ -3,9 +3,8 @@ title: diffuseConstant
 slug: Web/SVG/Attribute/diffuseConstant
 page-type: svg-attribute
 browser-compat: svg.elements.feDiffuseLighting.diffuseConstant
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`diffuseConstant`** attribute represents the k<sub>d</sub> value in the [Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). In SVG, this can be any non-negative number.
 

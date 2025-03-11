@@ -3,9 +3,8 @@ title: keyPoints
 slug: Web/SVG/Attribute/keyPoints
 page-type: svg-attribute
 browser-compat: svg.elements.animateMotion.keyPoints
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`keyPoints`** attribute indicates the simple duration of an animation.
 

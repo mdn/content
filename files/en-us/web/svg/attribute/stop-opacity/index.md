@@ -3,9 +3,8 @@ title: stop-opacity
 slug: Web/SVG/Attribute/stop-opacity
 page-type: svg-attribute
 browser-compat: svg.global_attributes.stop-opacity
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`stop-opacity`** attribute defines the opacity of a given color gradient stop.
 

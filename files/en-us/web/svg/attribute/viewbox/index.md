@@ -3,9 +3,8 @@ title: viewBox
 slug: Web/SVG/Attribute/viewBox
 page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.
 

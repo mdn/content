@@ -4,9 +4,8 @@ slug: Web/SVG/Attribute/intercept
 page-type: svg-attribute
 browser-compat: svg.elements.feFuncR
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
 

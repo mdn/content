@@ -5,9 +5,8 @@ page-type: svg-attribute
 spec-urls:
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-femorphology-operator
   - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-operator
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`operator`** attribute has two meanings based on the context it's used in. Either it defines the compositing or morphing operation to be performed.
 

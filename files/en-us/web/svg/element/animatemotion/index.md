@@ -3,9 +3,8 @@ title: <animateMotion>
 slug: Web/SVG/Element/animateMotion
 page-type: svg-element
 browser-compat: svg.elements.animateMotion
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<animateMotion>`** [SVG](/en-US/docs/Web/SVG) element provides a way to define how an element moves along a motion path.
 

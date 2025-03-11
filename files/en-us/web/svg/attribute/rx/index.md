@@ -3,9 +3,8 @@ title: rx
 slug: Web/SVG/Attribute/rx
 page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/geometry.html#RX
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`rx`** attribute defines a radius on the x-axis.
 

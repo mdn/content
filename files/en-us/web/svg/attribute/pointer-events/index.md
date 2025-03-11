@@ -3,9 +3,8 @@ title: pointer-events
 slug: Web/SVG/Attribute/pointer-events
 page-type: svg-attribute
 browser-compat: svg.global_attributes.pointer-events
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
 

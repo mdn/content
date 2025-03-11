@@ -3,9 +3,8 @@ title: <image>
 slug: Web/SVG/Element/image
 page-type: svg-element
 browser-compat: svg.elements.image
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<image>`** [SVG](/en-US/docs/Web/SVG) element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.
 

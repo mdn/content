@@ -3,9 +3,8 @@ title: pathLength
 slug: Web/SVG/Attribute/pathLength
 page-type: svg-attribute
 spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`pathLength`** attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio `pathLength` / (_computed value of path length_).
 

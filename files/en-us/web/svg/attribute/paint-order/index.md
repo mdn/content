@@ -3,9 +3,8 @@ title: paint-order
 slug: Web/SVG/Attribute/paint-order
 page-type: svg-attribute
 browser-compat: svg.global_attributes.paint-order
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`paint-order`** attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.
 

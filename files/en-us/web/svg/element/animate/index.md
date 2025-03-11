@@ -3,9 +3,8 @@ title: <animate>
 slug: Web/SVG/Element/animate
 page-type: svg-element
 browser-compat: svg.elements.animate
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate an attribute of an element over time.
 

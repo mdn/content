@@ -3,9 +3,8 @@ title: lang
 slug: Web/SVG/Attribute/lang
 page-type: svg-attribute
 browser-compat: svg.global_attributes.lang
+sidebar: svgref
 ---
-
-{{SVGRef}}
 
 The **`lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.
 
