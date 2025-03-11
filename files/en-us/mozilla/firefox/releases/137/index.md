@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### CSS
 
+- The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
+
 #### Removals
 
 ### JavaScript
@@ -52,6 +54,8 @@ This article provides information about the changes in Firefox 137 that affect d
 - [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) is now hardware enabled on Android, and hardware and software enabled on Linux. This adds to existing hardware and software support on Windows and macOS. ([Firefox bug 1950032](https://bugzil.la/1950032)).
 
 #### Removals
+
+- The following non-standard events are now deprecated and proposed for removal: [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) in {{domxref("Document")}}, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event), and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) in {{domxref("Element")}}. A console warning is displayed when they are used. ([Firefox bug 1949373](https://bugzil.la/1949373)).
 
 ### WebAssembly
 

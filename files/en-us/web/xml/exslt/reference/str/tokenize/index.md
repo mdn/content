@@ -47,4 +47,4 @@ Returns a node set like this:
 
 ## See also
 
-- [`str:split()`](/en-US/docs/Web/XML/EXSLT/str/split)
+- [`str:split()`](/en-US/docs/Web/XML/EXSLT/Reference/str/split)

@@ -376,7 +376,7 @@ Prettier can:
 - Be installed on any operating system and even as a direct part of project tooling, ensuring that colleagues and friends who work on your code use the code style you're using.
 - Be configured to run upon save, as you type, or even before publishing your code (with additional tooling that we'll see later on in the module).
 
-For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/en/install.html).
+For this article, we will install Prettier locally, as suggested in the [Prettier installation guide](https://prettier.io/docs/install.html).
 
 Once you've installed node, open up the terminal and run the following command to install Prettier (we will explain what `--save-dev` does in the next article):
 
@@ -477,7 +477,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
 - As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
 
-Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/en/).
+Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 
 ## Other tools to play with
 

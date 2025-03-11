@@ -122,7 +122,7 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code>
-          <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents"
+          <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents"
             >blockquote</a
           ></code
         >

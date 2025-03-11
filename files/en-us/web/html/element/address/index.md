@@ -122,7 +122,7 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
             >group</a
           ></code
         >

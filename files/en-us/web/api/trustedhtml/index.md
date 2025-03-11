@@ -7,7 +7,7 @@ browser-compat: api.TrustedHTML
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`TrustedHTML`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
+The **`TrustedHTML`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
 
 The value of a `TrustedHTML` object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 

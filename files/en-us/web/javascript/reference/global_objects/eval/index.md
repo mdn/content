@@ -336,7 +336,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-[Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
+[Closures](/en-US/docs/Web/JavaScript/Guide/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
 
 #### Using JSON
 

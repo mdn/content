@@ -49,7 +49,7 @@ The allowed tokens are:
 
 ## Examples
 
-## A prefetch request
+### A prefetch request
 
 Consider the case where a browser loads a file with a [`<link>`](/en-US/docs/Web/HTML/Element/link) element that has the attribute `rel="prefetch"` and an `href` attribute containing the address of an image file.
 The resulting `fetch()` should result in an HTTP request where `Sec-Purpose: prefetch`, `Sec-Fetch-Dest: empty`, and an `Accept` value that is the same as the browser uses for page navigation.

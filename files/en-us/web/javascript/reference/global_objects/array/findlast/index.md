@@ -88,7 +88,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### Using arrow function and destructuring
 
-The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring):
+The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring):
 
 ```js
 const inventory = [

@@ -9,7 +9,44 @@ browser-compat: css.properties.outline-color
 
 The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
-{{EmbedInteractiveExample("pages/css/outline-color.html")}}
+{{InteractiveExample("CSS Demo: outline-color")}}
+
+```css interactive-example-choice
+outline-color: red;
+```
+
+```css interactive-example-choice
+outline-color: #32a1ce;
+```
+
+```css interactive-example-choice
+outline-color: rgba(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+outline-color: hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+outline-color: currentcolor;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 
@@ -49,7 +86,7 @@ Custom [focus styles](/en-US/docs/Web/CSS/:focus) commonly involve making adjust
 Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/en-US/docs/Web/CSS/font-weight) or larger, or 24px or larger.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Formal definition
