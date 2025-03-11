@@ -289,7 +289,7 @@ Both gradients also have an attribute named `gradientUnits`, which describes the
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Transformations) yet, we'll leave that for later.
+You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations) yet, we'll leave that for later.
 
 There are some other caveats for dealing with `gradientUnits="objectBoundingBox"` when the object bounding box isn't square, but they're fairly complex and will have to wait for someone more in-the-know to explain them.
 

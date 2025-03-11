@@ -1,5 +1,6 @@
 ---
-title: SVG Tutorial
+title: Introducing SVG from scratch
+short-title: SVG from scratch
 slug: Web/SVG/Tutorials/SVG_from_scratch
 page-type: guide
 sidebar: svgref

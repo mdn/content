@@ -11,7 +11,7 @@ When talking about text in SVG, we have to differentiate between two almost comp
 
 ## Basics
 
-We have seen in the [introducing example](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_) that the `text` element can be used to put arbitrary text in SVG documents:
+We have seen in the [introducing example](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) that the `text` element can be used to put arbitrary text in SVG documents:
 
 ```xml
 <text x="10" y="10">Hello World!</text>
