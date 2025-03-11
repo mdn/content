@@ -165,7 +165,7 @@ The term "autoplay" also refers to scenarios in which a script tries to trigger 
 
 #### Example: Playing video
 
-This simple example plays the first {{HTMLElement("video")}} element found in the document. `play()` won't let the playback begin unless the document has permission to automatically play media.
+This example plays the first {{HTMLElement("video")}} element found in the document. `play()` won't let the playback begin unless the document has permission to automatically play media.
 
 ```js
 document.querySelector("video").play();
