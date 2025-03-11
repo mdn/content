@@ -25,6 +25,12 @@ jobs:
           node-version-file: ".nvmrc"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Run scripts
         run: |
           echo Running spelling check...
