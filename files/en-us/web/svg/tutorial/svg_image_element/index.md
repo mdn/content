@@ -1,6 +1,6 @@
 ---
 title: SVG image element
-slug: Web/SVG/Tutorial/SVG_Image_Tag
+slug: Web/SVG/Tutorial/SVG_image_element
 page-type: guide
 sidebar: svgref
 ---
