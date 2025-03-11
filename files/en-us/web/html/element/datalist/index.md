@@ -169,7 +169,7 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"
           >listbox</a
         >
       </td>

@@ -9,7 +9,49 @@ browser-compat: css.properties.align-self
 
 The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In flexbox, it aligns the item on the {{glossary("cross axis")}}.
 
-{{EmbedInteractiveExample("pages/css/align-self.html")}}
+{{InteractiveExample("CSS Demo: align-self")}}
+
+```css interactive-example-choice
+align-self: stretch;
+```
+
+```css interactive-example-choice
+align-self: center;
+```
+
+```css interactive-example-choice
+align-self: start;
+```
+
+```css interactive-example-choice
+align-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 The property doesn't apply to block-level boxes, or to table cells. If a flexbox item's cross-axis margin is `auto`, then `align-self` is ignored.
 

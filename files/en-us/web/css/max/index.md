@@ -9,7 +9,30 @@ browser-compat: css.types.max
 
 The **`max()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The `max()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
 
-{{EmbedInteractiveExample("pages/css/function-max.html")}}
+{{InteractiveExample("CSS Demo: max()")}}
+
+```css interactive-example-choice
+width: max(20vw, 400px);
+```
+
+```css interactive-example-choice
+width: max(20vw, 100px);
+```
+
+```css interactive-example-choice
+width: max(5vw, 100px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <img
+      alt="Firefox logo"
+      class="logo"
+      src="/shared-assets/images/examples/firefox-logo.svg" />
+  </div>
+</section>
+```
 
 In the first example shown above, the width will be at least 400px, but will be wider if the viewport is more than 2000px wide (in which case 1vw would be 20px, so 20vw would be 400px). This technique uses an absolute unit to specify a fixed minimum value for the property, and a relative unit to allow the value to grow to suit larger viewports.
 
@@ -44,7 +67,7 @@ small {
 
 This ensures a minimum size of _1rem_, with a text size that scales if the page is zoomed.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Examples

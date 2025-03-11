@@ -7,9 +7,62 @@ browser-compat: css.properties.all
 
 {{CSSRef}}
 
-The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
+The **`all`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## Constituent properties
 

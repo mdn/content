@@ -2,7 +2,7 @@
 title: New Window
 slug: Web/WebDriver/Reference/Commands/NewWindow
 page-type: webdriver-command
-browser-compat: webdriver.commands.NewWindow
+browser-compat: webdriver.classic.NewWindow
 sidebar: webdriver
 ---
 
@@ -45,8 +45,6 @@ The response payload is an object:
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 - [Unsupported Operation](/en-US/docs/Web/WebDriver/Errors/UnsupportedOperation)
   - : The driver or browser doesn't support the command for some reason (e.g., when it is not possible to create a new tab or window).
-
-## Example
 
 ## Specifications
 

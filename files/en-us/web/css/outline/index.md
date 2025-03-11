@@ -7,9 +7,46 @@ browser-compat: css.properties.outline
 
 {{CSSRef}}
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets most of the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+{{InteractiveExample("CSS Demo: outline")}}
+
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Constituent properties
 

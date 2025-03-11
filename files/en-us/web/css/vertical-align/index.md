@@ -9,7 +9,49 @@ browser-compat: css.properties.vertical-align
 
 The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 The `vertical-align` property can be used in two contexts:
 

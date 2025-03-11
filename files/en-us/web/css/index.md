@@ -34,9 +34,9 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module, including [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types), [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types) and [functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - The [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
+- [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
-- [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [CSS shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [CSS flexible box](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout
 - [Animation](/en-US/docs/Web/CSS/CSS_animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
 

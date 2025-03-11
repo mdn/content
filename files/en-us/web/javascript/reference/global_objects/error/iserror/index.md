@@ -108,4 +108,5 @@ try {
 ## See also
 
 - [Polyfill of `Error.isError` in `core-js`](https://github.com/zloirock/core-js#erroriserror)
+- [es-shims polyfill of `Error.isError`](https://www.npmjs.com/package/error.iserror)
 - {{jsxref("Error")}}

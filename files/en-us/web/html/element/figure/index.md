@@ -178,7 +178,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role"
           >figure</a
         >
       </td>

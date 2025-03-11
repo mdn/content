@@ -7,9 +7,47 @@ browser-compat: css.properties.border-bottom
 
 {{CSSRef}}
 
-The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
+The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
+{{InteractiveExample("CSS Demo: border-bottom")}}
+
+```css interactive-example-choice
+border-bottom: solid;
+```
+
+```css interactive-example-choice
+border-bottom: dashed red;
+```
+
+```css interactive-example-choice
+border-bottom: 1rem solid;
+```
+
+```css interactive-example-choice
+border-bottom: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 

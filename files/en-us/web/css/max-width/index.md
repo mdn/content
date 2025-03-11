@@ -9,7 +9,42 @@ browser-compat: css.properties.max-width
 
 The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{InteractiveExample("CSS Demo: max-width")}}
+
+```css interactive-example-choice
+max-width: 150px;
+```
+
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-width` overrides {{cssxref("width")}}, but {{cssxref("min-width")}} overrides `max-width`.
 
@@ -67,7 +102,7 @@ max-width: unset;
 
 Ensure that elements set with a `max-width` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Formal definition

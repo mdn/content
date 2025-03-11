@@ -173,6 +173,7 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 ## See also
 
 - [Polyfill of `String.raw` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.raw`](https://www.npmjs.com/package/string.raw)
 - [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

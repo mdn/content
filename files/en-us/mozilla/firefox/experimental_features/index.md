@@ -226,7 +226,7 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 ### Scroll-driven animations
 
-Earlier called "scroll-linked animations", a scroll-driven animation depends on the scroll position of a scrollbar instead of time or some other dimension.
+Earlier called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
 The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
@@ -234,7 +234,9 @@ When using the {{cssxref('scroll-timeline')}} shorthand property, the order of t
 
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
 
-For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
+For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
+
+The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 <table>
   <thead>
@@ -247,8 +249,8 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>110</td>
-      <td>No</td>
+      <td>136</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -784,47 +786,7 @@ The parts that have been implemented include:
 
 ## SVG
 
-### `<discard>` element for SVG animations
-
-The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM.
-An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
-([Firefox bug 1069931](https://bugzil.la/1069931)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>svg.discard.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+None.
 
 ## JavaScript
 
@@ -1716,6 +1678,46 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### SVG path API methods
+
+The `SVGPathSegment` interface now supports the `getPathData()`, `setPathData()`, and `getPathSegmentAtLength()` methods. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.svg.pathSegment.enabled</code></td>
     </tr>
   </tbody>
 </table>

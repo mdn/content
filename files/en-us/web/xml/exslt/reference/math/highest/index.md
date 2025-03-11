@@ -5,7 +5,7 @@ page-type: exslt-function
 sidebar: xmlsidebar
 ---
 
-`math:highest()` returns the node in the specified node-set with the highest value (where the highest value calculated using [`math:max()`](/en-US/docs/Web/XML/EXSLT/math/max)).
+`math:highest()` returns the node in the specified node-set with the highest value (where the highest value calculated using [`math:max()`](/en-US/docs/Web/XML/EXSLT/Reference/math/max)).
 
 A node has this maximum value if converting its string value to a number equals the maximum value.
 
@@ -22,7 +22,7 @@ math:highest(nodeSet)
 
 ### Return value
 
-A result tree fragment consisting of copies of the nodes returned by [`math:max()`](/en-US/docs/Web/XML/EXSLT/math/max).
+A result tree fragment consisting of copies of the nodes returned by [`math:max()`](/en-US/docs/Web/XML/EXSLT/Reference/math/max).
 
 ## Specifications
 

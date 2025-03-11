@@ -9,7 +9,99 @@ browser-compat: css.properties.position
 
 The **`position`** [CSS](/en-US/docs/Web/CSS) property sets how an element is positioned in a document. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties determine the final location of positioned elements.
 
-{{EmbedInteractiveExample("pages/css/position.html")}}
+{{InteractiveExample("CSS Demo: position")}}
+
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ## Syntax
 
@@ -36,25 +128,25 @@ position: unset;
 
   - : The element is positioned according to the normal flow of the document, and then offset _relative to itself_ based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
 
-    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) when the value of `z-index` is not `auto`. Its effect on `table-*-group`, `table-row`, `table-column`, `table-cell`, and `table-caption` elements is undefined.
+    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. Its effect on `table-*-group`, `table-row`, `table-column`, `table-cell`, and `table-caption` elements is undefined.
 
 - `absolute`
 
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
-    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) with other margins.
+    This value creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) when the value of `z-index` is not `auto`. The margins of absolutely positioned boxes do not [collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) with other margins.
 
 - `fixed`
 
   - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block), which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
-    This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). In printed documents, the element is placed in the same position on _every page_.
+    This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). In printed documents, the element is placed in the same position on _every page_.
 
 - `sticky`
 
   - : The element is positioned according to the normal flow of the document, and then offset relative to its _nearest scrolling ancestor_ and [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) (nearest block-level ancestor), including table-related elements, based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements.
 
-    This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
+    This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
 
     > [!NOTE]
     > At least one [inset](/en-US/docs/Web/CSS/inset) property ({{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}}, etc.) needs to be set to a non-`auto` value for the axis on which the element needs to be made sticky. If both `inset` properties for an axis are set to `auto`, on that axis the `sticky` value will behave as `relative`.
@@ -79,7 +171,7 @@ Except for the case just described (of absolutely positioned elements filling th
 
 Ensure that elements positioned with an `absolute` or `fixed` value do not obscure other content when the page is zoomed to increase text size.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### Performance & Accessibility
@@ -452,3 +544,4 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 ## See also
 
 - [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)

@@ -76,6 +76,7 @@ console.log(str.endsWith("to be", 19)); // true
 ## See also
 
 - [Polyfill of `String.prototype.endsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.endsWith`](https://www.npmjs.com/package/string.prototype.endswith)
 - {{jsxref("String.prototype.startsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

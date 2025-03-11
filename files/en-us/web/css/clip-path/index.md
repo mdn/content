@@ -9,7 +9,68 @@ browser-compat: css.properties.clip-path
 
 The **`clip-path`** [CSS](/en-US/docs/Web/CSS) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## Syntax
 
@@ -101,7 +162,7 @@ The `clip-path` property is specified as one or a combination of the values list
   - : No clipping path is created.
 
 > [!NOTE]
-> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 

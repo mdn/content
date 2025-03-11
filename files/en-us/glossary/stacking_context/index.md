@@ -10,4 +10,4 @@ page-type: glossary-definition
 
 ## See also
 
-- [Explanation and example of the stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Explanation and example of the stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)

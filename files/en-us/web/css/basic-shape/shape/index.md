@@ -2,12 +2,10 @@
 title: shape()
 slug: Web/CSS/basic-shape/shape
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.basic-shape.shape
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`shape()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
 

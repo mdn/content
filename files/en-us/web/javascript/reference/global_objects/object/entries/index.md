@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Iterating through an Object
 
-Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring), you can iterate through objects easily.
+Using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring), you can iterate through objects easily.
 
 ```js
 // Using for...of loop
@@ -126,7 +126,8 @@ Object.entries(obj).forEach(([key, value]) => {
 ## See also
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [es-shims polyfill of `Object.entries`](https://www.npmjs.com/package/object.entries)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

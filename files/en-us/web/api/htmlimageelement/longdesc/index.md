@@ -66,4 +66,4 @@ With that, the image is a link to the HTML file describing the image in more det
 
 ## See also
 
-- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

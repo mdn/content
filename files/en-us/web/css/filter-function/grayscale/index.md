@@ -9,7 +9,33 @@ browser-compat: css.types.filter-function.grayscale
 
 The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) converts the input image to grayscale. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
+{{InteractiveExample("CSS Demo: grayscale()")}}
+
+```css interactive-example-choice
+filter: grayscale(0);
+```
+
+```css interactive-example-choice
+filter: grayscale(0.2);
+```
+
+```css interactive-example-choice
+filter: grayscale(60%);
+```
+
+```css interactive-example-choice
+filter: grayscale(1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 

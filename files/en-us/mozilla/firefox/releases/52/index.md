@@ -81,8 +81,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### Changes and removals
 
-- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
-- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1204024](https://bugzil.la/1204024)).
+- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
+- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1204024](https://bugzil.la/1204024)).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ([Firefox bug 1130636](https://bugzil.la/1130636)).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ([Firefox bug 1232266](https://bugzil.la/1232266)).
 - {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ([Firefox bug 1122396](https://bugzil.la/1122396)).

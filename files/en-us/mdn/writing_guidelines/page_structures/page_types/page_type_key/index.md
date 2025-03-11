@@ -50,8 +50,8 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 
 This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role).
-- `aria-attribute`: an ARIA [attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
+- `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/section_role).
+- `aria-attribute`: an ARIA [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort).
 
 ### CSS page types
 
@@ -68,7 +68,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
 - `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
-- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
+- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
 - `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
 ### Glossary page types
@@ -199,7 +199,7 @@ This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web
 
 This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/XML/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/exsl/node-set).
+- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/Reference/exsl/node-set).
 
 ### Firefox page types
 

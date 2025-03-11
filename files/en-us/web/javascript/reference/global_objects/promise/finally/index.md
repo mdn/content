@@ -120,6 +120,7 @@ fetch(myRequest)
 ## See also
 
 - [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [es-shims polyfill of `Promise.prototype.finally`](https://www.npmjs.com/package/promise.prototype.finally)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

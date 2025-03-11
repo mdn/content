@@ -2,7 +2,7 @@
 title: PUT
 slug: Web/HTTP/Methods/PUT
 page-type: http-method
-browser-compat: http.methods.PUT
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#PUT
 ---
 
 {{HTTPSidebar}}

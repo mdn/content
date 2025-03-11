@@ -115,10 +115,10 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
 - [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units/)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS functional notations](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
 ### Values
@@ -138,7 +138,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

@@ -10,7 +10,7 @@ JavaScript is a prototype-based language — an object's behaviors are specified
 
 In many other languages, _classes_, or constructors, are clearly distinguished from _objects_, or instances. In JavaScript, classes are mainly an abstraction over the existing prototypical inheritance mechanism — all patterns are convertible to prototype-based inheritance. Classes themselves are normal JavaScript values as well, and have their own prototype chains. In fact, most plain JavaScript functions can be used as constructors — you use the `new` operator with a constructor function to create a new object.
 
-We will be playing with the well-abstracted class model in this tutorial, and discuss what semantics classes offer. If you want to dive deep into the underlying prototype system, you can read the [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) guide.
+We will be playing with the well-abstracted class model in this tutorial, and discuss what semantics classes offer. If you want to dive deep into the underlying prototype system, you can read the [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) guide.
 
 This chapter assumes that you are already somewhat familiar with JavaScript and that you have used ordinary objects.
 
@@ -266,7 +266,7 @@ This also works. However, a problem is that this creates a new function every ti
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-In contrast, if you use a method, it will be shared between all instances. A function can be shared between all instances, but still have its behavior differ when different instances call it, because the value of `this` is different. If you are curious _where_ this method is stored in — it's defined on the prototype of all instances, or `Color.prototype`, which is explained in more detail in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+In contrast, if you use a method, it will be shared between all instances. A function can be shared between all instances, but still have its behavior differ when different instances call it, because the value of `this` is different. If you are curious _where_ this method is stored in — it's defined on the prototype of all instances, or `Color.prototype`, which is explained in more detail in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 Similarly, we can create a new method called `setRed`, which sets the red value of the color.
 

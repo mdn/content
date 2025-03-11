@@ -145,7 +145,7 @@ Java.
 - The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
   CSS property **_longhand_** names as well as shorthand names. For example, the returned object contains entries for
   {{cssxref("border-bottom-width")}} in addition to the {{cssxref("border-width")}} and
-  {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). You can query values with longhand names like
+  {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties). You can query values with longhand names like
   {{cssxref("font-size")}} as well as shorthand names like {{cssxref("font")}}.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object

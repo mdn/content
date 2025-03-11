@@ -182,7 +182,7 @@ _No changes._
 
 #### Search
 
-- The new {{WebExtAPIRef("search")}} AP[I](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search) enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
+- The new {{WebExtAPIRef("search")}} API enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
 - {{WebExtAPIRef("topSites.get()")}} now takes an `options` parameter enabling you to set various options for the list of sites returned ([Firefox bug 1445836](https://bugzil.la/1445836)).
 
 #### Tabs

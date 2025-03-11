@@ -9,7 +9,42 @@ browser-compat: css.properties.offset-distance
 
 The **`offset-distance`** [CSS](/en-US/docs/Web/CSS) property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
 
-{{EmbedInteractiveExample("pages/css/offset-distance.html")}}
+{{InteractiveExample("CSS Demo: offset-distance")}}
+
+```css interactive-example-choice
+offset-distance: 0%;
+```
+
+```css interactive-example-choice
+offset-distance: 80%;
+```
+
+```css interactive-example-choice
+offset-distance: 50px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+/* Provides a reference image of what path the element is following */
+#default-example {
+  background-position: calc(50% - 12px) calc(50% + 14px);
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -45 150 140" width="150" height="140"><path d="M-70,-40 C-70,70 70,70 70,-40" fill="none" stroke="lightgrey" stroke-width="2" stroke-dasharray="4.5"/></svg>');
+}
+```
 
 ## Syntax
 

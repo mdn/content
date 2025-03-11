@@ -94,7 +94,8 @@ console.log(uint8Array);
 
 ## See also
 
-- [Polyfill of `Uint8Array.setFromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.prototype.setFromHex` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.prototype.setFromHex`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromHex()")}}
 - {{jsxref("Uint8Array.prototype.toHex()")}}

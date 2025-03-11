@@ -80,7 +80,8 @@ console.log(view2[7]); // 4
 
 ## See also
 
-- [Polyfill of `ArrayBuffer.prototype.transferToFixedLength()` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [Polyfill of `ArrayBuffer.prototype.transferToFixedLength` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
+- [es-shims polyfill of `ArrayBuffer.prototype.transferToFixedLength`](https://www.npmjs.com/package/arraybuffer.prototype.transfertofixedlength)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.detached")}}
 - {{jsxref("ArrayBuffer.prototype.transfer()")}}
