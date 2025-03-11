@@ -13,9 +13,9 @@ The **`details`** read-only property of the
 provides a payment method specific message used by the merchant to process the
 transaction and determine a successful funds transfer.
 
-This data is returned by the payment app that satisfies the payment request. Developers need to consult whomever controls the URL for the expected shape of the details object.
-
 ## Value
+
+An object. This data is returned by the payment app that satisfies the payment request. Developers need to consult whomever controls the URL for the expected shape of the details object.
 
 ## Examples
 
