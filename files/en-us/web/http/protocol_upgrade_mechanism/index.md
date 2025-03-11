@@ -41,7 +41,7 @@ Here we look at the most common use cases for the {{HTTPHeader("Upgrade")}} head
 
 ### Upgrading to a WebSocket connection
 
-By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the [WebSocket API](/en-US/docs/Web/API/WebSocket), or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is as simple as:
+By far, the most common use case for upgrading an HTTP connection is to use WebSockets, which are always implemented by upgrading an HTTP or HTTPS connection. Keep in mind that if you're opening a new connection using the [WebSocket API](/en-US/docs/Web/API/WebSocket), or any library that does WebSockets, most or all of this is done for you. For example, opening a WebSocket connection is a single method:
 
 ```js
 webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");

@@ -61,7 +61,7 @@ A _simple request_ is one that **meets all the following conditions**:
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
-  - {{HTTPHeader("Range")}} (only with a [simple range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
+  - {{HTTPHeader("Range")}} (only with a [single range header value](https://fetch.spec.whatwg.org/#simple-range-header-value); e.g., `bytes=256-` or `bytes=127-255`)
 
 - The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 
@@ -287,7 +287,7 @@ To ask for a `fetch()` request to include credentials, set the [`credentials`](/
 
 To ask for an `XMLHttpRequest` request to include credentials, set the {{domxref("XMLHttpRequest.withCredentials")}} property to `true`.
 
-In this example, content originally loaded from `https://foo.example` makes a simple GET request to a resource on `https://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
+In this example, content originally loaded from `https://foo.example` makes a GET request to a resource on `https://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
 
 ```js
 const url = "https://bar.other/resources/credentialed-content/";
@@ -300,7 +300,7 @@ fetchPromise.then((response) => console.log(response));
 
 This code creates a {{domxref("Request")}} object, setting the `credentials` option to `"include"` in the constructor, then passes this request into `fetch()`. Since this is a simple `GET` request, it is not preflighted but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` header, and **not** make the response available to the invoking web content.
 
-![Diagram of a simple GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
+![Diagram of a GET request with Access-Control-Allow-Credentials](https://mdn.github.io/shared-assets/images/diagrams/http/cors/include-credentials.svg)
 
 Here is a sample exchange between client and server:
 

@@ -12,7 +12,7 @@ In this article we will explore the main uses of cookies, explain best practices
 
 ## What cookies are used for
 
-Typically, the server will use the contents of HTTP cookies to determine whether different requests come from the same browser/user and then issue a personalized or generic response as appropriate. The following describes a very simple user sign-in system:
+Typically, the server will use the contents of HTTP cookies to determine whether different requests come from the same browser/user and then issue a personalized or generic response as appropriate. The following describes a basic user sign-in system:
 
 1. The user sends sign-in credentials to the server, for example via a form submission.
 2. If the credentials are correct, the server updates the UI to indicate that the user is signed in, and responds with a cookie containing a session ID that records their sign-in status on the browser.
@@ -41,7 +41,7 @@ They are designed with storage in mind, never send data to the server, and don't
 
 ## Creating, removing, and updating cookies
 
-After receiving an HTTP request, a server can send one or more {{HTTPHeader("Set-Cookie")}} headers with the response, each one of which will set a separate cookie. A simple cookie is set by specifying a name-value pair like this:
+After receiving an HTTP request, a server can send one or more {{HTTPHeader("Set-Cookie")}} headers with the response, each one of which will set a separate cookie. A cookie is set by specifying a name-value pair like this:
 
 ```http
 Set-Cookie: <cookie-name>=<cookie-value>

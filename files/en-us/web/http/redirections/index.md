@@ -149,7 +149,7 @@ You don't want to break these links, as they bring valuable users and help your 
 
 {{Glossary("Safe/HTTP", "Unsafe")}} requests modify the state of the server and the user shouldn't resend them unintentionally.
 
-Typically, you don't want your users to resend {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} or {{HTTPMethod("DELETE")}} requests. If you serve the response as the result of this request, a simple press of the reload button will resend the request (possibly after a confirmation message).
+Typically, you don't want your users to resend {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} or {{HTTPMethod("DELETE")}} requests. If you serve the response as the result of this request, a press of the reload button will resend the request (possibly after a confirmation message).
 
 In this case, the server can send back a {{HTTPStatus("303")}} (See Other) response for a URL that will contain the right information. If the reload button is pressed, only that page is redisplayed, without replaying the unsafe requests.
 

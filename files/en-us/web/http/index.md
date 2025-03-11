@@ -29,7 +29,7 @@ The HTTP reference documentation contains detailed information about headers, re
 
 ## HTTP guides
 
-HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a simple message structure, and client-server communication model.
+HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a basic message structure, and client-server communication model.
 On top of these concepts, numerous extensions have been developed over the years that add functionality and updated semantics, including additional HTTP methods and headers.
 
 The guides below are listed in order from general overviews to specialized, use-case-driven topics.
