@@ -3,9 +3,10 @@ title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
 page-type: landing-page
 spec-urls:
-  - https://html.spec.whatwg.org/multipage/#pseudo-classes
+  - https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes
   - https://drafts.csswg.org/selectors/
-  - https://drafts.csswg.org/css-ui/
+  - https://drafts.csswg.org/css-scoping/
+  - https://drafts.csswg.org/css-page/
 ---
 
 {{CSSRef}}
