@@ -10,7 +10,7 @@ browser-compat: api.SVGStyleElement.disabled
 
 The **`SVGStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
 
-Note that there is no corresponding `disabled` attribute on the [SVG `<style>` element](/en-US/docs/Web/SVG/Element/style).
+Note that there is no corresponding `disabled` attribute on the [SVG `<style>` element](/en-US/docs/Web/SVG/Reference/Element/style).
 
 ## Value
 
@@ -28,7 +28,7 @@ This example demonstrates programmatically setting the disabled property on a st
 
 #### HTML
 
-The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element, along with a button that will be used to disable the style.
+The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Reference/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Reference/Element/style) element, along with a button that will be used to disable the style.
 
 ```html
 <button>Enable</button>

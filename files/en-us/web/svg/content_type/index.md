@@ -274,7 +274,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
     ```
 
-    The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
+    The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Reference/Element/marker) and [use](/en-US/docs/Web/SVG/Reference/Element/use) elements.
 
 ## Percentage
 

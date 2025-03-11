@@ -4,6 +4,7 @@ sidebar:
   - type: section
     link: /Web/SVG
   - type: section
+    link: /Web/SVG/Tutorials
     title: Tutorials
   - title: Introducing SVG from scratch
     details: closed
@@ -26,6 +27,7 @@ sidebar:
       - /Web/SVG/Tutorial/Tools_for_SVG
       - /Web/SVG/Tutorial/SVG_and_CSS
   - type: section
+    link: /Web/SVG/Guides
     title: Guides
   - children:
       - /Web/SVG/Applying_SVG_effects_to_HTML_content
@@ -34,14 +36,15 @@ sidebar:
       - /Web/SVG/SVG_animation_with_SMIL
       - /Web/SVG/SVG_as_an_Image
   - type: section
+    link: /Web/SVG/Reference
     title: Reference
   - type: listSubPages
-    path: /Web/SVG/Element
+    path: /Web/SVG/Reference/Element
     title: Elements
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/SVG/Attribute
+    path: /Web/SVG/Reference/Attribute
     title: Attributes
     details: closed
     code: true

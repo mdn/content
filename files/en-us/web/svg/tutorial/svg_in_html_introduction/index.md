@@ -41,21 +41,21 @@ The page is regular HTML and CSS with a single SVG. The only interesting part is
 
 There are three attributes and one nested element worth noting:
 
-1. The [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.
+1. The [`viewBox`](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.
 
-2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the {{glossary("aspect ratio")}} must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
+2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) attribute specifies that the {{glossary("aspect ratio")}} must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
 
 3. Including [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) ensures assistive technologies handle the SVG as an image.
 
-4. A [`<title>`](/en-US/docs/Web/SVG/Element/title) within an SVG provides the accessible, short-text description of the graphic. The title text is not rendered, but browsers may display it as a tooltip when the SVG is hovered. The `<title>` should be the first element after the `<svg>` opening tag.
+4. A [`<title>`](/en-US/docs/Web/SVG/Reference/Element/title) within an SVG provides the accessible, short-text description of the graphic. The title text is not rendered, but browsers may display it as a tooltip when the SVG is hovered. The `<title>` should be the first element after the `<svg>` opening tag.
 
 ## Best practices
 
 When an SVG is included via an {{HTMLElement('img')}} element, the `alt` attribute provides alternative text making the image accessible. Inline SVG does not support the `alt` attribute. But it does support several other ways of making it accessible. With inline SVGs, the source is available in the DOM, meaning all the markup within an inline SVG file is accessible to the Accessibility Object Model, or AOM. Including the `<title>` element provides that alternative text.
 
-If the image conveys more than a short title, include a longer description with the [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element. The `<desc>` element provides an accessible, long-text description. Similar to `<title>` text, the text within the `<desc>` is not rendered to the screen.
+If the image conveys more than a short title, include a longer description with the [`<desc>`](/en-US/docs/Web/SVG/Reference/Element/desc) element. The `<desc>` element provides an accessible, long-text description. Similar to `<title>` text, the text within the `<desc>` is not rendered to the screen.
 
-If the SVG can be labeled by visible text, reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute. Alternatively, include the `aria-labelledby` attribute with the [`id`](/en-US/docs/Web/SVG/Attribute/id) of the `<title>`.
+If the SVG can be labeled by visible text, reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute. Alternatively, include the `aria-labelledby` attribute with the [`id`](/en-US/docs/Web/SVG/Reference/Attribute/id) of the `<title>`.
 
 ```html
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">

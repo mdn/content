@@ -90,7 +90,7 @@ All the above transformations can be expressed by a 2x3 transformation matrix. T
 </math>
 <!-- prettier-ignore-end -->
 
-See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Attribute/transform#matrix). Detailed information about this property can be found in the [SVG Recommendation](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
+See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Reference/Attribute/transform#matrix). Detailed information about this property can be found in the [SVG Recommendation](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
 
 ## Effects on Coordinate Systems
 

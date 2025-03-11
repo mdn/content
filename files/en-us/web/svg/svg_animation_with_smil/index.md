@@ -9,16 +9,16 @@ sidebar: svgref
 Authors can use SMIL syntax in other XML-based languages to define the timing and layout of elements for animation.
 SMIL allows you to:
 
-- animate the numeric attributes of an element ([x](/en-US/docs/Web/SVG/Attribute/x), [y](/en-US/docs/Web/SVG/Attribute/y), etc.)
-- animate [transform](/en-US/docs/Web/SVG/Attribute/transform) attributes ([translation](/en-US/docs/Web/SVG/Attribute/transform#translate), [rotate](/en-US/docs/Web/SVG/Attribute/transform#rotate), etc.)
-- animate [color](/en-US/docs/Web/SVG/Attribute/color) attributes
-- follow a motion [path](/en-US/docs/Web/SVG/Element/path)
+- animate the numeric attributes of an element ([x](/en-US/docs/Web/SVG/Reference/Attribute/x), [y](/en-US/docs/Web/SVG/Reference/Attribute/y), etc.)
+- animate [transform](/en-US/docs/Web/SVG/Reference/Attribute/transform) attributes ([translation](/en-US/docs/Web/SVG/Reference/Attribute/transform#translate), [rotate](/en-US/docs/Web/SVG/Reference/Attribute/transform#rotate), etc.)
+- animate [color](/en-US/docs/Web/SVG/Reference/Attribute/color) attributes
+- follow a motion [path](/en-US/docs/Web/SVG/Reference/Element/path)
 
 The following sections show how to use SMIL in [SVG](/en-US/docs/Web/SVG) for these four use cases.
 
 ## Animating attributes of an element
 
-The following example animates the [`cx` attribute](/en-US/docs/Web/SVG/Attribute/cx) of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
+The following example animates the [`cx` attribute](/en-US/docs/Web/SVG/Reference/Attribute/cx) of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
 
 - `attributeName`
   - : The name of the attribute to animate.
@@ -50,7 +50,7 @@ If you want to animate more attributes inside the same element, you can add more
 
 ## Animating the transform attributes
 
-The {{ SVGElement("animateTransform") }} element let you animate [transform](/en-US/docs/Web/SVG/Attribute/transform) attributes. This element is necessary because we are not animating a single attribute like [x](/en-US/docs/Web/SVG/Attribute/x) which is a number. Rotation attributes look like this: `rotation(theta, x, y)`, where `theta` is the angle in degrees, and `x` and `y` are absolute positions. In the example below, we animate the center of the rotation and the angle.
+The {{ SVGElement("animateTransform") }} element let you animate [transform](/en-US/docs/Web/SVG/Reference/Attribute/transform) attributes. This element is necessary because we are not animating a single attribute like [x](/en-US/docs/Web/SVG/Reference/Attribute/x) which is a number. Rotation attributes look like this: `rotation(theta, x, y)`, where `theta` is the angle in degrees, and `x` and `y` are absolute positions. In the example below, we animate the center of the rotation and the angle.
 
 ```html
 <svg width="300" height="100">
