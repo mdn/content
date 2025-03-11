@@ -3,9 +3,8 @@ title: <msup>
 slug: Web/MathML/Reference/Element/msup
 page-type: mathml-element
 browser-compat: mathml.elements.msup
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<msup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach a superscript to an expression.
 

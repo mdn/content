@@ -3,9 +3,8 @@ title: <mstyle>
 slug: Web/MathML/Reference/Element/mstyle
 page-type: mathml-element
 browser-compat: mathml.elements.mstyle
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mstyle>`** [MathML](/en-US/docs/Web/MathML) element is used to change the style of its children.
 

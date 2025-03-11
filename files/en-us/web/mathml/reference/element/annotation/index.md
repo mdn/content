@@ -3,9 +3,8 @@ title: <annotation>
 slug: Web/MathML/Reference/Element/annotation
 page-type: mathml-element
 browser-compat: mathml.elements.annotation
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<annotation>`** [MathML](/en-US/docs/Web/MathML) element contains an annotation to the MathML expression in a textual format, for example [LaTeX](https://www.latex-project.org/).
 

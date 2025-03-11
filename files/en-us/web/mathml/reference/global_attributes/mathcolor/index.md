@@ -5,9 +5,10 @@ page-type: mathml-attribute
 status:
   - deprecated
 browser-compat: mathml.global_attributes.mathcolor
+sidebar: mathmlref
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [color](/en-US/docs/Web/CSS/color) of a MathML element.
 

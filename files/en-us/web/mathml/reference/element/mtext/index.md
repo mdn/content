@@ -3,9 +3,8 @@ title: <mtext>
 slug: Web/MathML/Reference/Element/mtext
 page-type: mathml-element
 browser-compat: mathml.elements.mtext
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mtext>`** [MathML](/en-US/docs/Web/MathML) element is used to render arbitrary text with _no_ notational meaning, such as comments or annotations.
 

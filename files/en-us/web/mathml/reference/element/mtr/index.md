@@ -3,9 +3,8 @@ title: <mtr>
 slug: Web/MathML/Reference/Element/mtr
 page-type: mathml-element
 browser-compat: mathml.elements.mtr
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mtr>`** [MathML](/en-US/docs/Web/MathML) element represents a row in a table or a matrix. It may only appear in a {{ MathMLElement("mtable") }} element and its children are {{ MathMLElement("mtd") }} elements representing cells. This element is similar to the {{ HTMLElement("tr") }} element of [HTML](/en-US/docs/Web/HTML).
 

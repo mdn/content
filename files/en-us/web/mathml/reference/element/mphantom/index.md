@@ -3,9 +3,8 @@ title: <mphantom>
 slug: Web/MathML/Reference/Element/mphantom
 page-type: mathml-element
 browser-compat: mathml.elements.mphantom
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mphantom>`** [MathML](/en-US/docs/Web/MathML) element is rendered invisibly, but dimensions (such as height, width, and baseline position) are still kept.
 

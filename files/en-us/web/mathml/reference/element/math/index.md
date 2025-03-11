@@ -3,9 +3,8 @@ title: <math>
 slug: Web/MathML/Reference/Element/math
 page-type: mathml-element
 browser-compat: mathml.elements.math
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Content_categories#flow_content) is permitted.
 

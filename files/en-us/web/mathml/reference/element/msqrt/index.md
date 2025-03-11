@@ -3,9 +3,8 @@ title: <msqrt>
 slug: Web/MathML/Reference/Element/msqrt
 page-type: mathml-element
 browser-compat: mathml.elements.msqrt
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<msqrt>`** [MathML](/en-US/docs/Web/MathML) element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: `<msqrt> base </msqrt>`.
 

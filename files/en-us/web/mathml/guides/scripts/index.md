@@ -2,9 +2,8 @@
 title: MathML scripted elements
 slug: Web/MathML/Guides/Scripts
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 

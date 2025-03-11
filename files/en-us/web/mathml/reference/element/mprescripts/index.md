@@ -3,9 +3,8 @@ title: <mprescripts>
 slug: Web/MathML/Reference/Element/mprescripts
 page-type: mathml-element
 browser-compat: mathml.elements.mprescripts
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mprescripts>`** [MathML](/en-US/docs/Web/MathML) element is used within an {{ MathMLElement("mmultiscripts") }} element to indicate the start of the pre-scripts elements (subscripts and superscripts that are placed **before** the base expression).
 

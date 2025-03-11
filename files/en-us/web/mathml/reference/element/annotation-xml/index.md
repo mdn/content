@@ -3,9 +3,8 @@ title: <annotation-xml>
 slug: Web/MathML/Reference/Element/annotation-xml
 page-type: mathml-element
 browser-compat: mathml.elements.annotation-xml
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<annotation-xml>`** [MathML](/en-US/docs/Web/MathML) element contains an annotation to the MathML expression in the {{glossary("XML")}} format, for example [Content MathML](https://en.wikipedia.org/wiki/MathML#Content_MathML) or {{glossary("SVG")}}.
 

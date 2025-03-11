@@ -3,9 +3,8 @@ title: <mroot>
 slug: Web/MathML/Reference/Element/mroot
 page-type: mathml-element
 browser-compat: mathml.elements.mroot
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
 

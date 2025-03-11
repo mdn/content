@@ -3,9 +3,8 @@ title: <mover>
 slug: Web/MathML/Reference/Element/mover
 page-type: mathml-element
 browser-compat: mathml.elements.mover
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
 

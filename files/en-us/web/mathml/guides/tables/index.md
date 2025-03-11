@@ -2,9 +2,8 @@
 title: MathML tables
 slug: Web/MathML/Guides/Tables
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 

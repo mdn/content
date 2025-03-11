@@ -3,9 +3,8 @@ title: <munder>
 slug: Web/MathML/Reference/Element/munder
 page-type: mathml-element
 browser-compat: mathml.elements.munder
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<munder>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an accent or a limit under an expression. It uses the following syntax: `<munder> base underscript </munder>`
 

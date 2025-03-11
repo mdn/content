@@ -2,9 +2,8 @@
 title: MathML element reference
 slug: Web/MathML/Reference/Element
 page-type: landing-page
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
 

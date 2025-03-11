@@ -3,9 +3,8 @@ title: MathML
 slug: Web/MathML
 page-type: landing-page
 browser-compat: mathml.elements.math
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** is an [XML](/en-US/docs/Web/XML)-based language for describing mathematical notation.
 

@@ -2,9 +2,8 @@
 title: "Challenge: Three famous mathematical formulas"
 slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 

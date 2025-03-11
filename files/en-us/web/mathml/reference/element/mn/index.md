@@ -3,9 +3,8 @@ title: <mn>
 slug: Web/MathML/Reference/Element/mn
 page-type: mathml-element
 browser-compat: mathml.elements.mn
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mn>`** [MathML](/en-US/docs/Web/MathML) element represents a **numeric** literal which is normally a sequence of digits with a possible separator (a dot or a comma). However, it is also allowed to have arbitrary text in it which is actually a numeric quantity, for example "eleven".
 

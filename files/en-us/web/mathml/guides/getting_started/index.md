@@ -2,9 +2,8 @@
 title: Getting started with MathML
 slug: Web/MathML/Guides/Getting_started
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
 

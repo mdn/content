@@ -3,9 +3,8 @@ title: <mtable>
 slug: Web/MathML/Reference/Element/mtable
 page-type: mathml-element
 browser-compat: mathml.elements.mtable
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mtable>`** [MathML](/en-US/docs/Web/MathML) element allows you to create tables or matrices. Its children are {{ MathMLElement("mtr") }} elements (representing rows), each of them having {{ MathMLElement("mtd") }} elements as its children (representing cells). These elements are similar to {{ HTMLElement("table") }}, {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
 

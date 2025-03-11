@@ -2,9 +2,8 @@
 title: Fonts for MathML
 slug: Web/MathML/Guides/Fonts
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 Fonts with appropriate Unicode coverage and Open Font Format features are required for good math rendering.
 This page describes how users can install such math fonts to properly display MathML in browsers.

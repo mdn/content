@@ -3,9 +3,8 @@ title: <munderover>
 slug: Web/MathML/Reference/Element/munderover
 page-type: mathml-element
 browser-compat: mathml.elements.munderover
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<munderover>`** [MathML](/en-US/docs/Web/MathML) element is used to attach accents or limits both under and over an expression.
 

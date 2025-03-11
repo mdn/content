@@ -2,9 +2,8 @@
 title: MathML fractions and roots
 slug: Web/MathML/Guides/Fractions_and_roots
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
 

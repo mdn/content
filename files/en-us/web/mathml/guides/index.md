@@ -3,9 +3,8 @@ title: MathML guides
 short-title: Guides
 slug: Web/MathML/Guides
 page-type: listing-page
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The following guides provide a gentle beginning to your path towards MathML mastery with the basics of how it works, what the syntax looks like, and how you can start using it inside HTML.
 

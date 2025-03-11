@@ -3,9 +3,8 @@ title: Global attributes
 slug: Web/MathML/Reference/Global_attributes
 page-type: landing-page
 browser-compat: mathml.global_attributes
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 **Global attributes** are attributes common to all MathML elements; they can be used on all elements, though they may have no effect on some elements.
 
