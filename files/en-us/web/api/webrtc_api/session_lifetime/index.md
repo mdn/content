@@ -77,9 +77,9 @@ pc.oniceconnectionstatechange = () => {
 };
 ```
 
-The code first calls {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object. This should be done before restarting ICE if you need to change the connection configuration in some way (such as changing to a different set of ICE servers). 
+The code first calls {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object. This should be done before restarting ICE if you need to change the connection configuration in some way (such as changing to a different set of ICE servers).
 
-The handler then calls {{domxref("RTCPeerConnection.restartIce()")}}. This tells the ICE layer to automatically add the `iceRestart` flag to the next `createOffer()` call, which triggers an ICE restart. It also creates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection. 
+The handler then calls {{domxref("RTCPeerConnection.restartIce()")}}. This tells the ICE layer to automatically add the `iceRestart` flag to the next `createOffer()` call, which triggers an ICE restart. It also creates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection.
 
 The answerer side of the connection will automatically begin ICE restart when new values are detected for the ICE ufrag and ICE password.
 

@@ -71,7 +71,7 @@ myPeerConnection.setConfiguration(restartConfig);
 myPeerConnection.restartIce();
 
 myPeerConnection
-  .createOffer()
+  .createOffer() // restartIce() causes iceRestart to be set true
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     // send the offer to the other peer using the signaling server
