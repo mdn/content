@@ -3,28 +3,27 @@
 sidebar:
   - type: section
     link: /Web/MathML
-  - children:
-      - link: /Web/MathML/Tutorials/For_beginners
-        title: Beginners
-        details: closed
-        children:
-          - /Web/MathML/Tutorials/For_beginners/Getting_started
-          - /Web/MathML/Tutorials/For_beginners/Text_containers
-          - /Web/MathML/Tutorials/For_beginners/Fractions_and_roots
-          - /Web/MathML/Tutorials/For_beginners/Scripts
-          - /Web/MathML/Tutorials/For_beginners/Tables
-          - /Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
-      - link: /Web/MathML/Guides
-        title: Guides
-        details: closed
-        children:
-          - /Web/MathML/Guides/Authoring
-          - /Web/MathML/Guides/Fonts
+  - type: section
+    link: /Web/MathML/Tutorials
+  - link: /Web/MathML/Tutorials/For_beginners
+    title: Beginners
+    details: closed
+    children:
+      - /Web/MathML/Tutorials/For_beginners/Getting_started
+      - /Web/MathML/Tutorials/For_beginners/Text_containers
+      - /Web/MathML/Tutorials/For_beginners/Fractions_and_roots
+      - /Web/MathML/Tutorials/For_beginners/Scripts
+      - /Web/MathML/Tutorials/For_beginners/Tables
+      - /Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
+  - type: section
+    link: /Web/MathML/Guides
+    title: Guides
+  - /Web/MathML/Guides/Authoring
+  - /Web/MathML/Guides/Fonts
   - type: section
     title: Examples
-  - children:
-      - link: /Web/MathML/Guides/Deriving_the_quadratic_formula
-      - link: /Web/MathML/Guides/Proving_the_Pythagorean_theorem
+  - /Web/MathML/Guides/Deriving_the_quadratic_formula
+  - /Web/MathML/Guides/Proving_the_Pythagorean_theorem
   - type: section
     link: /Web/MathML/Reference
     title: Reference
