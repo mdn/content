@@ -45,7 +45,7 @@ The **CSS positioned layout** module defines how to position elements on a web p
 - [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
   - : How to use `z-index` to change default stacking.
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-  - : Notes on the stacking context.
+  - : CSS stacking context, the CSS features that create new stacking contexts, and nested stacking contexts.
 
 ## Related concepts
 
