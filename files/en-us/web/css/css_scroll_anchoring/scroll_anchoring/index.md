@@ -9,7 +9,7 @@ browser-compat: css.properties.overflow-anchor
 
 As a user of the web, you are probably familiar with the problem that scroll anchoring solves. You browse to a long page on a slow connection and begin to scroll to read the content; while you are busy reading, the part of the page you are looking at suddenly jumps. This has happened because large images or some other elements have just loaded further up in the content.
 
-Scroll anchoring is a browser feature that aims to solve this problem of content jumping, which happens if content loads in after the user has already scrolled to a new part of the document.
+[Scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) is a browser feature that aims to solve this problem of content jumping, which happens if content loads in after the user has already scrolled to a new part of the document.
 
 ## How does it work?
 
