@@ -36,7 +36,7 @@
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
     "lint:typos": "cspell --no-progress --gitignore --config .vscode/cspell.json \"**/*.md\"",
-    "lint:typos-group-by-file": "cspell --no-progress --gitignore --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
+    "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky || true",

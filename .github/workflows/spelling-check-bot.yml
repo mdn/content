@@ -34,7 +34,7 @@ jobs:
       - name: Run scripts
         run: |
           echo Running spelling check...
-          output=$(yarn lint:typos-group-by-file || exit 0)
+          output=$(yarn --silent lint:typos-group-by-file || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
