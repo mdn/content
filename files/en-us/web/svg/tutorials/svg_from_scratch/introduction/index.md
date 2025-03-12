@@ -1,7 +1,7 @@
 ---
 title: Introduction
 slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

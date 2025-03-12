@@ -1,7 +1,7 @@
 ---
 title: Positions
 slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

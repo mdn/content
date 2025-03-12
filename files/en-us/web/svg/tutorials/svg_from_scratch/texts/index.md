@@ -1,7 +1,7 @@
 ---
 title: Texts
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

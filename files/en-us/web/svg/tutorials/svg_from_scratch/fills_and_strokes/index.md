@@ -1,7 +1,7 @@
 ---
 title: Fills and strokes
 slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

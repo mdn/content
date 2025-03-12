@@ -1,7 +1,7 @@
 ---
 title: Patterns
 slug: Web/SVG/Tutorials/SVG_from_scratch/Patterns
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

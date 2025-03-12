@@ -1,7 +1,7 @@
 ---
 title: Paths
 slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

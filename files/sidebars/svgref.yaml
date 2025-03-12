@@ -30,12 +30,8 @@ sidebar:
   - type: section
     link: /Web/SVG/Guides
     title: Guides
-  - children:
-      - /Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-      - /Web/SVG/Guides/Content_type
-      - /Web/SVG/Guides/Namespaces_crash_course
-      - /Web/SVG/Guides/SVG_animation_with_SMIL
-      - /Web/SVG/Guides/SVG_as_an_image
+  - type: listSubPages
+    path: /Web/SVG/Guides
   - type: section
     link: /Web/SVG/Reference
     title: Reference

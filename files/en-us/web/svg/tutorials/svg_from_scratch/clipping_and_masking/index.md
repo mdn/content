@@ -1,7 +1,7 @@
 ---
 title: Clipping and masking
 slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

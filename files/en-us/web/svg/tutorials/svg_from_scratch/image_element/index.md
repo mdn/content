@@ -1,7 +1,7 @@
 ---
 title: SVG image element
 slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 
