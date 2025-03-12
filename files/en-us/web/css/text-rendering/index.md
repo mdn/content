@@ -51,7 +51,7 @@ text-rendering: unset;
 
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
 
-    When displaying large forms of text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text. In addition, it could be used for high-quality professional typography such as essays and articles, but it's not recommended for large articles due to potential performance impact and bugs.
+    When displaying large forms of text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text. In addition, it could be used for high-quality professional typography such as essays and articles, but it's not recommended for large articles due to potential performance impact.
 
 - `geometricPrecision`
 
