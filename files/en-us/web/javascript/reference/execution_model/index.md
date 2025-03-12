@@ -30,11 +30,7 @@ In the JavaScript specification, each autonomous executor of JavaScript is calle
 - [**Queue** (of jobs)](#job_queue_and_event_loop): this is known in HTML (and also commonly) as the _event loop_ which enables asynchronous programming in JavaScript while being single-threaded. It's called a queue because it's generally first-in-first-out: earlier jobs are executed before later ones.
 - [**Stack** (of execution contexts)](#stack_and_execution_contexts): this is what's known as a _call stack_ and allows transferring control flow by entering and exiting execution contexts like functions. It's called a stack because it's last-in-first-out. Every job enters by pushing a new frame onto the (empty) stack, and exits by emptying the stack.
 
-These are three distinct data structures that keep track of different data. The diagram below illustrates these concepts:
-
-![A diagram consisting of two agents: one HTML page and one worker. Each has its own stack containing execution contexts, heap containing objects, and queue containing jobs.](runtime-environment-diagram.svg)
-
-We will introduce the queue and the stack in more detail in the following sections. To read more about how heap memory is allocated and freed, see [memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management).
+These are three distinct data structures that keep track of different data. We will introduce the queue and the stack in more detail in the following sections. To read more about how heap memory is allocated and freed, see [memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management).
 
 Each agent is analogous to a thread (note that the underlying implementation may or may not be an actual operating system thread). Each agent can own multiple [realms](#realms) (which 1-to-1 correlate with global objects) that can synchronously access each other, and thus needs to run in a single execution thread. An agent also has a single memory model, indicating whether it's little-endian, whether it can be [synchronously blocked](#concurrency_and_ensuring_forward_progress), whether atomic operations are [lock-free](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree), etc.
 
@@ -47,6 +43,10 @@ An agent on the web can be one of the following:
 - A _Worklet agent_ containing a single {{domxref("WorkletGlobalScope")}}.
 
 In other words, each worker creates its own agent, while one or more windows may be within the same agent—usually a main document and its similar-origin iframes. In Node.js, a similar concept called [worker threads](https://nodejs.org/api/worker_threads.html) is available.
+
+The diagram below illustrates th execution model of agents:
+
+![A diagram consisting of two agents: one HTML page and one worker. Each has its own stack containing execution contexts, heap containing objects, and queue containing jobs.](runtime-environment-diagram.svg)
 
 ## Realms
 
@@ -202,11 +202,13 @@ The following pairs of global objects are not within the same agent cluster, and
 - A `Window` object A and the `Window` object of an `iframe` element that A created that cannot be same origin-domain with A.
 - Any two `Window` objects with no opener or ancestor relationship. This holds even if the two `Window` objects are same origin.
 
+For the exact algorithm, check the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-agent-cluster-formalism).
+
 ### Cross-agent communication and memory model
 
-As aforementioned, agents communicate via memory sharing. On the web, this is done via the [`postMessage()`](/en-US/docs/Web/API/Window/postMessage) method. The [using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) guide provides an overview of this. Typically, data is passed by value only (via [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)), and therefore does not involve any concurrency complications. To share memory, one must post a {{jsxref("SharedArrayBuffer")}} object, which can be simultaneously accessed by multiple agents. Two agents that share access to the same memory can synchronize executions via the {{jsxref("Atomics")}} object.
+As aforementioned, agents communicate via memory sharing. On the web, memory is shared via the [`postMessage()`](/en-US/docs/Web/API/Window/postMessage) method. The [using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) guide provides an overview of this. Typically, data is passed by value only (via [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)), and therefore does not involve any concurrency complications. To share memory, one must post a {{jsxref("SharedArrayBuffer")}} object, which can be simultaneously accessed by multiple agents. Once two agents share access to the same memory via a `SharedArrayBuffer`, they can synchronize executions via the {{jsxref("Atomics")}} object.
 
-There are two ways to access shared memory: via normal memory access (which is not atomic) and via atomic memory access. The latter is sequentially consistent (which means there is a strict total ordering of events agreed upon by all agents in the cluster), while the former is unordered (which means no ordering exists); no other ordering guarantees are provided.
+There are two ways to access shared memory: via normal memory access (which is not atomic) and via atomic memory access. The latter is [sequentially consistent](https://en.wikipedia.org/wiki/Sequential_consistency) (which means there is a strict total ordering of events agreed upon by all agents in the cluster), while the former is unordered (which means no ordering exists); JavaScript does not provide operations with other ordering guarantees.
 
 The spec provides the following guidelines for programmers working with shared memory:
 
