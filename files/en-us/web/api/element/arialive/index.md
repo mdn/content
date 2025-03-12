@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaLive
 
 {{APIRef("DOM")}}
 
-The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
 
 ## Value
 
@@ -23,7 +23,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to `"polite"`. We then update the value to `"assertive"`.
+In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to `"polite"`. We then update the value to `"assertive"`.
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">

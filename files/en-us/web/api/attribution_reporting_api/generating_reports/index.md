@@ -301,7 +301,7 @@ There are two different types of debug report:
 - **Verbose debug reports** give you more visibility into the attribution source and attribution trigger events associated with an attribution report. They enable you to ensure that sources were registered successfully, or track missing reports and determine why they're missing (for example due to failure in source or trigger event registration or failure when sending or generating the report). Verbose debug reports are sent immediately upon source or trigger registration.
 
 > [!NOTE]
-> To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
+> To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Guides/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
 
 ### Using debug reports
 

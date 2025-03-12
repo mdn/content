@@ -32,7 +32,7 @@ console.log(d4.months); // 12
 
 // Balance d4
 const d4Balanced = d4.round({
-  largestUnit: "year",
+  largestUnit: "years",
   relativeTo: Temporal.PlainDate.from("2021-01-01"), // ISO 8601 calendar
 });
 console.log(d4Balanced.months); // 0

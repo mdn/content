@@ -1,6 +1,6 @@
 ---
 title: "SVGFEGaussianBlurElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEGaussianBlurElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEGaussianBlurElement.y

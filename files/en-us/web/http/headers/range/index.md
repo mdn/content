@@ -27,7 +27,7 @@ The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safel
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>
@@ -102,7 +102,7 @@ This example requests the first 500 and last 500 bytes of the file.
 The request may be rejected by the server if these ranges overlap (if the requested resource was less than 1000 bytes long, for instance).
 
 ```http
-Range: bytes=0-499, -499
+Range: bytes=0-499, -500
 ```
 
 ### Checking if a server supports range requests

@@ -19,4 +19,4 @@ page-type: glossary-definition
 
 ## See also
 
-- [Recommended Web Performance Timings: How long is too long](/en-US/docs/Web/Performance/How_long_is_too_long)
+- [Recommended Web Performance Timings: How long is too long](/en-US/docs/Web/Performance/Guides/How_long_is_too_long)

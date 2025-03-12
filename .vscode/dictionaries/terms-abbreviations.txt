@@ -132,6 +132,7 @@ coprime
 CORB
 credentialled
 credentialless
+cryptids
 cryptosystems
 CSSWG
 CSWH
@@ -278,6 +279,7 @@ HPKE
 HPKP
 HTCPCP
 HVXC
+IACVT
 ICANN
 ICNS
 iconset
@@ -447,6 +449,7 @@ overscript
 overscripts
 overscrolling
 packetizer
+packetizing
 pageload
 paintable
 pantherina
@@ -521,6 +524,7 @@ QCIF
 QCMS
 QPACK
 QTFF
+qtrs
 quantizer
 quarternion
 querysets
@@ -568,6 +572,7 @@ RFCOMM
 RGTC
 roadmaps
 Rockhopper
+romcoms
 roundoff
 RSAOAEP
 RSASSA
@@ -632,6 +637,7 @@ snapport
 snapshotted
 snapshotting
 SNES
+spammy
 spatialization
 spatializations
 spatialize
@@ -679,6 +685,7 @@ sublocality
 submatch
 submatches
 subminor
+subminute
 subpage
 subpages
 subpanels
@@ -777,6 +784,7 @@ TTSI
 tweens
 UAAG
 ufrag
+unabbreviate
 unbookmark
 uncacheable
 uncategorized

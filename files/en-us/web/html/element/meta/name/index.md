@@ -212,10 +212,12 @@ The CSS Device Adaptation specification defines the following metadata name:
   >
   > Disabling zooming capabilities by setting `user-scalable` to a value of `no` prevents people experiencing low vision conditions from being able to read and understand page content.
   >
-  > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+  > - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
   > - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### Other metadata names
+
+#### Names defined in the WHATWG MetaExtensions wiki
 
 The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions) contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:
 
@@ -246,7 +248,9 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
 
-<!-- ## Technical summary -->
+#### Other names
+
+- `application-title`: Used to customize an app's title bar for web applications installed as standalone apps on supporting desktop operating systems. While the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the application when it is running as a standalone installed app.
 
 ## Specifications
 

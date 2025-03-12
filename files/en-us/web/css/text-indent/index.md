@@ -9,7 +9,62 @@ browser-compat: css.properties.text-indent
 
 The **`text-indent`** [CSS](/en-US/docs/Web/CSS) property sets the length of empty space (indentation) that is put before lines of text in a block.
 
-{{EmbedInteractiveExample("pages/css/text-indent.html")}}
+{{InteractiveExample("CSS Demo: text-indent")}}
+
+```css interactive-example-choice
+text-indent: 0;
+```
+
+```css interactive-example-choice
+text-indent: 30%;
+```
+
+```css interactive-example-choice
+text-indent: -3em;
+```
+
+```css interactive-example-choice
+text-indent: 3em each-line;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging each-line;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      This text is contained within a single paragraph. This paragraph is two
+      sentences long.
+    </p>
+    <p>
+      This is a new paragraph. There is a line break element
+      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
+      it affects the indentation.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.25em;
+  background-color: #483d8b;
+  align-items: start;
+}
+
+#example-element {
+  text-align: left;
+  margin: 0 0 0 3em;
+  background-color: #6a5acd;
+  color: white;
+}
+```
 
 Horizontal spacing is with respect to the left (or right, for right-to-left layout) edge of the containing block-level element's content box.
 

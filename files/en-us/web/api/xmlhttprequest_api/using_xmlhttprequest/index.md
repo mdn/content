@@ -45,8 +45,8 @@ There are several types of [response attributes](https://xhr.spec.whatwg.org/) d
 
 If you use `XMLHttpRequest` to get the content of a remote XML document, the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property will be a DOM object containing a parsed XML document. This could prove difficult to manipulate and analyze. There are four primary ways of analyzing this XML document:
 
-1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of it.
-2. Manually [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML) to strings or objects.
+1. Using [XPath](/en-US/docs/Web/XML/XPath) to address (or point to) parts of it.
+2. Manually [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML) to strings or objects.
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document beforehand. You might want to remove line breaks, if you use `RegExp` to scan with regard to line breaks. However, this method is a "last resort" since if the XML code changes slightly, the method will likely fail.
 
@@ -227,7 +227,7 @@ And to test:
 ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });
@@ -265,7 +265,7 @@ The recommended way to enable cross-site scripting is to use the `Access-Control
 
 ### XMLHttpRequests being stopped
 
-If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
+If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the `XMLHttpRequest` origin (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Specifications
 

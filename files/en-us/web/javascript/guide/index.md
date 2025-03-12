@@ -59,8 +59,7 @@ Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
 - [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
 - [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
-- [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
-- [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+- [Function scopes and closures](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures)
 - [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
 - [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 

@@ -32,10 +32,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### At-rules and descriptors
 
-- {{cssxref("@color-profile")}}
-  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+> [!NOTE]
+> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule, along with its `components`, `rendering-intent` and `src` descriptors. These features have not yet been implemented in any browser.
 
 ### Functions
 
@@ -49,8 +47,10 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+
+> [!NOTE]
+> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions, which have not yet been implemented in any browser.
 
 ### Data types
 
@@ -73,7 +73,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### Interfaces
 
-- `CSSColorProfileRule`
+> [!NOTE]
+> The CSS color module introduces the `CSSColorProfileRule` interface, which has not been implemented in any browser.
 
 ## Guides
 
@@ -85,9 +86,9 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : Explanation of contrast requirements between background and foreground content to ensure legibility.
 
 ## Related concepts

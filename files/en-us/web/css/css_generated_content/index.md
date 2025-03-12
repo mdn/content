@@ -29,7 +29,8 @@ div {
   position: relative;
   width: 400px;
   height: 400px;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       115deg,
       transparent 48%,
       brown,

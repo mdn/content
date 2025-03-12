@@ -70,7 +70,7 @@ You should have most of the pieces of software already if you've been following 
 
 Besides the tools we're going to install that contribute to our toolchain, you will need to create an account with GitHub if you wish to complete the tutorial. However, you can still follow the local development part without it. As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases, and much more. In the next chapter, we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
 
-Signed up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
+Sign up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
 
 ### Installing git
 
@@ -162,7 +162,7 @@ npm install --save-dev prettier
 
 Note again that we are using `--save-dev` to add it as a dev dependency, because we only use it during development.
 
-Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/en/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
+Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/configuration.html)). This lets you get on with what's important: the creative work. For demonstration, we'll add a config file. Create a file in the root of your `npm-experiment` directory called `.prettierrc.json`. Add the following contents:
 
 ```json
 {
@@ -170,7 +170,7 @@ Like many tools made more recently Prettier comes with "sensible defaults". That
 }
 ```
 
-With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+With this setting, Prettier will print the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) opening tag at the end of the last line instead of being alone on the next line. This is the format the MDN itself uses. You can find more about [configuring Prettier](https://prettier.io/docs/configuration.html) in its documentation.
 
 By default, Prettier formats all files that you specify. However, again, we don't need to format generated files, or there may be certain legacy code that we don't want to touch. We can tell Prettier to always ignore these files by creating a `.prettierignore` file in the root of the project directory. Add the following contents to the file:
 

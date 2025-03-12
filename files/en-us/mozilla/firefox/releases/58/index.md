@@ -90,7 +90,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ([Firefox bug 1212648](https://bugzil.la/1212648)).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) and [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) [Firefox bug 1347644](https://bugzil.la/1347644).
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) and [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) [Firefox bug 1347644](https://bugzil.la/1347644).
 
 ## Removals from the web platform
 
@@ -173,15 +173,15 @@ _No changes._
 
 - tabs
 
-  - [tabs.discard](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
+  - [`tabs.discard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
   - isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)
-  - [toggleReaderMode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)() method implemented (Bug 1381992)
+  - [`toggleReaderMode()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) method implemented (Bug 1381992)
   - openInReaderMode option of tabs.created implemented (Bug 1408993)
   - tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)
 
 - theme
 
-  - [getCurrent](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent)() method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
+  - [`getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent) method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
   - onUpdated method to receive WebExtension theme updates (Bug [1349944](https://bugzil.la/1349944))
   - colors.bookmark_text now supported as alias of colors.toolbar_text (Bug [1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug [1347190)](https://bugzil.la/1347190)

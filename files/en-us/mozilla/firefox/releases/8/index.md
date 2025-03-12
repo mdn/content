@@ -34,7 +34,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
 - {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
-- The {{ domxref("HTMLMediaElement") }}`.preload` attribute now correctly reflects as an _enumerated value_.
+- The {{ domxref("HTMLMediaElement.preload") }} attribute now correctly reflects as an _enumerated value_.
 - [`crossOrigin` property](/en-US/docs/Web/HTML/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
 - {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
 
@@ -51,7 +51,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Handling of {{ cssxref("background-size") }} has been revised to more closely match the specification.
 - In the past, {{ cssxref("text-decoration") }} in quirks mode had line thickness and position adjusted on descendant text to match the descendant. Now standards mode and quirks mode rendering are more similar.
 - Horizontal positioning for elements has been brought more in line with the specification in many cases. Documentation for this is forthcoming, but for now, see [Firefox bug 682780](https://bugzil.la/682780), comment 23 for details.
-- [SVG images are now scaled properly](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds) when used as background images.
+- [SVG images are now scaled properly](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) when used as background images.
 
 ### Network
 

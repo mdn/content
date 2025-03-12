@@ -58,13 +58,13 @@ A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web
 const dur1 = Temporal.Duration.from({ years: 1 });
 const dur2 = Temporal.Duration.from({ months: 1 });
 
-dur1.add(dur2); // RangeError: can't compare durations when "relativeTo" is undefined
+dur1.add(dur2); // RangeError: for calendar duration arithmetic, use date arithmetic relative to a starting point
 
 const startingPoint = Temporal.PlainDate.from("2021-01-01"); // ISO 8601 calendar
 startingPoint.add(dur1).add(dur2).since(startingPoint); // "P396D"
 ```
 
-Other operations, including `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains time zone annotation) or {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}.
+Other operations, `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains time zone annotation) or {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}.
 
 Note that `days` to `hours` conversion is also technically ambiguous because the length of a day may vary due to offset changes, such as daylight saving time. You can provide a zoned `relativeTo` to account for these changes; otherwise 24-hour days are assumed.
 
@@ -148,7 +148,7 @@ These properties are defined on `Temporal.Duration.prototype` and shared by all 
 - {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}} {{experimental_inline}}
   - : Returns a number representing the total duration in the given unit.
 - {{jsxref("Temporal/Duration/valueOf", "Temporal.Duration.prototype.valueOf()")}} {{experimental_inline}}
-  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.Duration` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
+  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.Duration` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/Duration/with", "Temporal.Duration.prototype.with()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object representing this duration with some fields replaced by new values.
 

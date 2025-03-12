@@ -15,7 +15,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 ### HTML
 
-- The ARIA [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role has been implemented ([Firefox bug 1727616](https://bugzil.la/1727616)).
+- The ARIA [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role has been implemented ([Firefox bug 1727616](https://bugzil.la/1727616)).
 - The UI for [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) has been implemented. ([Firefox bug 1283388](https://bugzil.la/1283388)).
 
 ### CSS
@@ -31,7 +31,7 @@ This article provides information about the changes in Firefox 93 that will affe
 ### HTTP
 
 - The SHA-256 algorithm is now supported for [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication) using digests. This allows much more secure authentication than previously available using the MD5 algorithm ([Firefox bug 472823](https://bugzil.la/472823)).
-- The default HTTP {{HTTPHeader("ACCEPT")}} header for _images_ changed to: `image/avif,image/webp,*/*` (following addition of support for the [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) image format). ([Firefox bug 1682995](https://bugzil.la/1682995)).
+- The default HTTP {{HTTPHeader("ACCEPT")}} header for _images_ changed to: `image/avif,image/webp,*/*` (following addition of support for the [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) image format). ([Firefox bug 1682995](https://bugzil.la/1682995)).
 
 ### APIs
 
@@ -61,7 +61,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 ## Other
 
-- Support for [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images is now enabled by default ([Firefox bug 1682995](https://bugzil.la/1682995)).
+- Support for [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images is now enabled by default ([Firefox bug 1682995](https://bugzil.la/1682995)).
   This format has excellent compression and no patent restrictions (it was developed by the [Alliance for Open Media](https://aomedia.org/)).
   Firefox can display still images, with colorspace support for both full and limited range colors, and image transforms for mirroring and rotation.
   The preference [image.avif.compliance_strictness](/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) can be used to adjust the compliance strictness with the specification. Animated images are not supported.

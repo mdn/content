@@ -81,8 +81,8 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### Changes and removals
 
-- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
-- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1204024](https://bugzil.la/1204024)).
+- [Array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring) now throws a {{jsxref("SyntaxError")}} when using destructuring rest with trailing comma ([Firefox bug 1041341](https://bugzil.la/1041341)).
+- Duplicate `__proto__` properties are now allowed in [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1204024](https://bugzil.la/1204024)).
 - {{jsxref("Array.prototype.toLocaleString()")}} has been re-implemented to support the Intl API parameters "`locales`" and "`options`" ([Firefox bug 1130636](https://bugzil.la/1130636)).
 - {{jsxref("TypedArray")}} constructors now accept [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) to create new typed arrays ([Firefox bug 1232266](https://bugzil.la/1232266)).
 - {{jsxref("TypedArray.from()")}}, {{jsxref("TypedArray.of()")}}, {{jsxref("TypedArray.prototype.filter()")}}, {{jsxref("TypedArray.prototype.map()")}}, {{jsxref("TypedArray.prototype.slice()")}}, {{jsxref("TypedArray.prototype.subarray()")}} now require that their `this` values are valid Typed Array constructors ([Firefox bug 1122396](https://bugzil.la/1122396)).
@@ -102,7 +102,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been re-enabled on Windows desktop platforms — see [Firefox bug 1244402](https://bugzil.la/1244402). (They were disabled in Firefox 24 because they broke a number of major sites; see [Firefox bug 888304](https://bugzil.la/888304).)
 - The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ([Firefox bug 687787](https://bugzil.la/687787)).
 - The {{domxref("WorkerGlobalScope.isSecureContext")}} property has been implemented (see [Firefox bug 1269052](https://bugzil.la/1269052)).
-- The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed {{domxref("Window.appinstalled_event", "appinstalled")}} to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
+- The [Web App Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) install event has been renamed {{domxref("Window.appinstalled_event", "appinstalled")}} to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See [Firefox bug 1309099](https://bugzil.la/1309099) for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)

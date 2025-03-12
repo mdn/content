@@ -9,7 +9,24 @@ browser-compat: javascript.builtins.Function.bind
 
 The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -85,7 +102,7 @@ The bound function has the following properties:
 - [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : The `name` of the target function plus a `"bound "` prefix.
 
-The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
+The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
 
 ## Examples
 

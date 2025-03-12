@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/selectors/
 
 {{CSSRef}}
 
-The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their {{cssxref("specificity")}}. The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
+The **CSS selectors** module defines the patterns to select elements to which a set of CSS rules are then applied along with their [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity). The CSS selectors module provides us with more than 60 selectors and five combinators. [Other modules](#related_concepts) provide additional pseudo-class selectors and pseudo-elements.
 
 In CSS, selectors are patterns used to match, or select, the elements you want to style. Selectors are also used in JavaScript to enable selecting the DOM nodes to return as a [`NodeList`](/en-US/docs/Web/API/NodeList).
 
@@ -107,7 +107,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
 - [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## Guides
 
@@ -181,8 +181,8 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref("@namespace")}} at-rule
 
 - {{cssxref("important", "!important")}}
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 
 - {{domxref("Document.querySelector")}} method
 - {{domxref("Document.querySelectorAll")}} method
@@ -195,6 +195,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 ## See also
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
-- [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascading and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

@@ -55,5 +55,5 @@ The following diagram illustrates the prototype chain of an async generator func
 - [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - {{jsxref("AsyncGeneratorFunction")}}
 - {{jsxref("GeneratorFunction")}}
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

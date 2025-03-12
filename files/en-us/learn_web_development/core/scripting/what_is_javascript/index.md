@@ -44,7 +44,7 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html
+```html live-sample___string-concat-name
 <button type="button">Player 1: Chris</button>
 ```
 
@@ -52,7 +52,7 @@ The three layers build on top of one another nicely. Let's take a button as an e
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css
+```css live-sample___string-concat-name
 button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
@@ -71,20 +71,21 @@ button {
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
+```js live-sample___string-concat-name
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+You can click "Play" to see and edit the example in the MDN Playground.
+Try clicking on the text label to see what happens.
 
-Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
+{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -114,11 +115,11 @@ They generally fall into two categories.
   This is how [Google Maps](https://www.google.com/maps) is able to find your location and plot it on a map.
 - The [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs allow you to create animated 2D and 3D graphics.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
-- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
+- [Audio and Video APIs](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://developer.x.com/en/docs) allows you to do things like displaying your latest tweets on your website.
+- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -151,23 +152,23 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here, we first define a code block called `updateName()` (these types of reusable code blocks are called **functions**), which asks the user for a new name and inserts that name into the text of a button. We then store a reference to a button using `document.querySelector` and attach an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` function is run.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+If you were to swap the order of the `const button = ...` and `button.addEventListener(...)` lines, the code would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > [!NOTE]
-> This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
+> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a common source of errors.
 
 ### Interpreted versus compiled code
 

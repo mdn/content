@@ -1,6 +1,6 @@
 ---
 title: "SVGRectElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGRectElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGRectElement.y

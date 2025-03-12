@@ -192,7 +192,7 @@ class C {
 
 _Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
 
-Some keywords are _reserved_, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const` and `let` declarations.
+Some keywords are _reserved_, meaning that they cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, or `const` and `let` declarations.
 
 Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
 
@@ -317,7 +317,7 @@ null
 
 ### Boolean literal
 
-See also [boolean type](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) for more information.
+See also [boolean type](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type) for more information.
 
 ```js-nolint
 true
@@ -326,7 +326,7 @@ false
 
 ### Numeric literals
 
-The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) types use numeric literals.
+The [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) types use numeric literals.
 
 #### Decimal
 
@@ -387,7 +387,7 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 
 #### BigInt literal
 
-The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
+The [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js-nolint
 123456789123456789n     // 123456789123456789
@@ -408,7 +408,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n;
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#bigint_type).
+For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type).
 
 #### Numeric separators
 
@@ -438,7 +438,7 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
+A [string](/en-US/docs/Web/JavaScript/Guide/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
 - U+005C \ (backslash)
 - U+000D \<CR>

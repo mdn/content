@@ -21,13 +21,13 @@ The **`getInstalledRelatedApps()`** method returns a promise that resolves with 
 
 To associate the invoking web app with a platform-specific app or PWA, two things must be done:
 
-1. The invoking web app must be specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) member of its [manifest file](/en-US/docs/Web/Manifest).
+1. The invoking web app must be specified in the [`related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) member of its [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
 2. The platform-specific app or PWA must have its relationship with the invoking app defined.
 
 Defining the relationship is done in a different way depending on the type of app:
 
 - An Android app does this via the [Digital Asset Links system](https://developers.google.com/digital-asset-links/v1/getting-started).
-- A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/uwp/launch-resume/web-to-app-linking).
+- A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/apps/develop/launch/web-to-app-linking).
 - A PWA does this via:
   - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
   - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.
@@ -67,7 +67,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
 - `version` {{optional_inline}}
   - : A string representing the related app's version.
 
-The related app information must have been previously specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) member of the invoking web app's [manifest file](/en-US/docs/Web/Manifest).
+The related app information must have been previously specified in the [`related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) member of the invoking web app's [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
 
 ### Exceptions
 

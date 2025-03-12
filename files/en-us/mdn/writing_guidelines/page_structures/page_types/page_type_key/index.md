@@ -2,9 +2,8 @@
 title: The page-type front matter key
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The `page-type` front matter key describes the type of an MDN page.
 This allows MDN content tools to better automate content checking and sidebar organization.
@@ -26,11 +25,12 @@ Each main area of the site — JavaScript, CSS, and so on — has a set of domai
 
 These page types are not specific to a particular MDN technology area:
 
-- `guide`: a generic guide page with no specific structure.
-- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages.
-- `how-to`: a page that acts primarily as a goal-oriented how-to article.
-- `tutorial`: a page that is the overview page of a learning-oriented article.
-- `tutorial-chapter`: a page that is a part of a multipart tutorial.
+- `guide`: a generic guide with no specific structure.
+- `landing-page`: an overview of the topic, section introduction, and navigation to key areas.
+- `listing-page`: a brief description of the section and a list of subpages within that section.
+- `how-to`: a goal-oriented how-to article.
+- `tutorial`: an overview of a learning-oriented article.
+- `tutorial-chapter`: a part of a multipart tutorial.
 
 ## Domain-specific page types
 
@@ -50,17 +50,17 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 
 This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role).
-- `aria-attribute`: an ARIA [attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
+- `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/section_role).
+- `aria-attribute`: an ARIA [attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort).
 
 ### CSS page types
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@media")}}.
+- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like {{cssxref("@media")}}.
 - `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
+- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
 - `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
 - `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
@@ -68,8 +68,8 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
 - `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
-- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
-- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
+- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
+- `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
 ### Glossary page types
 
@@ -150,21 +150,21 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 
 This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs/WebAssembly). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
-- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
-- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception).
-- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError).
-- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
-- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/getArg).
-- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/exports_static).
+- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
+- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception).
+- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError).
+- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
+- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
+- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
 - `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
 
 ### WebDriver page types
 
 This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Commands/CloseWindow).
-- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts).
-- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Errors/InsecureCertificate).
+- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow).
+- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts).
+- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate).
 
 ### WebExtensions page types
 
@@ -179,27 +179,27 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 
 ### Web Manifest page types
 
-This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/description).
 
 ### XPath page types
 
-This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XML/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XML/XPath/Reference/Functions/ceiling)
 
 ### XSLT page types
 
-This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XML/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XML/XSLT/Reference/Element/message).
 
 ### EXSLT page types
 
-This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/XML/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set).
+- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/Reference/exsl/node-set).
 
 ### Firefox page types
 

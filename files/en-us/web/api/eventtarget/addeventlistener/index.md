@@ -277,7 +277,7 @@ myObject.register();
 Event listeners only take one argument,
 an {{domxref("Event")}} or a subclass of `Event`,
 which is automatically passed to the listener, and the return value is ignored.
-Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Closures) instead.
+Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Guide/Closures) instead.
 
 The functions passed as event listeners have access to all variables declared in the outer scopes that contain the function.
 
@@ -296,7 +296,7 @@ myButton.addEventListener("click", () => {
 console.log(someString); // Expected Value: 'Data' (will never output 'Data Again')
 ```
 
-Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope) for more information about function scopes.
+Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures) for more information about function scopes.
 
 ### Memory issues
 

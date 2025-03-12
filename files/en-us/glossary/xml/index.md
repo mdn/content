@@ -12,4 +12,4 @@ XML tags resemble HTML tags, but XML is much more flexible because it lets users
 
 ## See also
 
-- [XML introduction](/en-US/docs/Web/XML/XML_introduction)
+- [XML introduction](/en-US/docs/Web/XML/Guides/XML_introduction)

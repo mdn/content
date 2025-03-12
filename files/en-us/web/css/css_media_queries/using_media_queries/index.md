@@ -10,7 +10,7 @@ page-type: guide
 
 Media queries are used for the following:
 
-- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/At-rule).
+- To conditionally apply styles with the [CSS](/en-US/docs/Web/CSS) {{cssxref("@media")}} and {{cssxref("@import")}} [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 - To target specific media for the {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, and other [HTML](/en-US/docs/Web/HTML) elements with the `media=` or `sizes="` attributes.
 - To [test and monitor media states](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) using the {{domxref("Window.matchMedia()")}} and {{domxref("EventTarget.addEventListener()")}} methods.
 
@@ -36,6 +36,7 @@ Media queries are case-insensitive.
   - {{cssxref("@media/color-index", "color-index")}}
   - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
   - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-posture", "device-posture")}}
   - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - {{cssxref("@media/display-mode", "display-mode")}}
   - {{cssxref("@media/dynamic-range", "dynamic-range")}}
@@ -57,7 +58,7 @@ Media queries are case-insensitive.
   - {{cssxref("@media/scripting", "scripting")}}
   - {{cssxref("@media/update", "update")}}
   - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
-  - {{cssxref("@media/width", "width")}}.
+  - {{cssxref("@media/width", "width")}}
 
   For example, the {{cssxref("@media/hover", "hover")}} feature allows a query to check whether the device supports hovering over elements.
   Media feature expressions test for their presence or value, and are entirely optional.

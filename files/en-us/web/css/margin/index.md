@@ -9,7 +9,61 @@ browser-compat: css.properties.margin
 
 The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Constituent properties
 
@@ -68,7 +122,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
     - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
 
 - {{cssxref("percentage")}}
-  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 - `auto`
   - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 
@@ -98,7 +152,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -124,7 +178,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 }
 ```
 
-{{ EmbedLiveSample('Simple_example','100%',120) }}
+{{ EmbedLiveSample('Basic_example','100%',120) }}
 
 ### More examples
 

@@ -20,46 +20,6 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### Autocorrection of editable text elements
-
-The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute (and corresponding {{domxref("HTMLElement.autocorrect")}} property) allow autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>134</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>134</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>134</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>134</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.forms.autocorrect</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Layout for input type="search"
 
 Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
@@ -136,46 +96,6 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.forms.reveal-password-button.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Plaintext-only contenteditable mode
-
-The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. (See [Firefox bug 1922723](https://bugzil.la/1922723) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>133</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.element.contenteditable.plaintext-only.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -306,7 +226,7 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 ### Scroll-driven animations
 
-Earlier called "scroll-linked animations", a scroll-driven animation depends on the scroll position of a scrollbar instead of time or some other dimension.
+Earlier called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
 The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
@@ -314,7 +234,9 @@ When using the {{cssxref('scroll-timeline')}} shorthand property, the order of t
 
 You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
 
-For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), and [Firefox bug 1737918](https://bugzil.la/1737918).
+For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
+
+The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 <table>
   <thead>
@@ -327,8 +249,8 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>110</td>
-      <td>No</td>
+      <td>136</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -354,7 +276,7 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
 
 ### @scope at-rule
 
-The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 <table>
   <thead>
@@ -862,55 +784,29 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
-### :has-slotted pseudo-class
-
-The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1921747](https://bugzil.la/1921747)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.has-slotted-selector.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## SVG
 
 None.
 
 ## JavaScript
 
-### Intl.DurationFormat
+### Temporal API
 
-{{jsxref("Intl.DurationFormat")}} enables locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
+The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations ([Firefox bug 1912511](https://bugzil.la/1912511)).
+This includes:
+
+- A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
+- **Points in time**:
+  - As a unique instant in history:
+    - A timestamp: {{jsxref("Temporal.Instant")}}
+    - A date-time with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+  - **Time-zone-unaware date/time ("Plain")**:
+    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}}
+      - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
+        - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
+        - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
+      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+- **Now** (current time) as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
 
 <table>
   <thead>
@@ -923,34 +819,36 @@ None.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>134</td>
-      <td>Yes</td>
+      <td>135</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">NA</td>
+      <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
     </tr>
   </tbody>
 </table>
 
-### JSON.parse with source
+### Error.captureStackTrace
 
-The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) extends [`JSON.parse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) behavior to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text. ([Firefox bug 1913085](https://bugzil.la/1913085), [Firefox bug 1925334](https://bugzil.la/1925334)).
+The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
+Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
+([Firefox bug 1886820](https://bugzil.la/1886820)).
 
 <table>
   <thead>
@@ -963,77 +861,32 @@ The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.json_parse_with_source</code></td>
+      <td colspan="2"><code>javascript.options.experimental.error_capture_stack_trace</code></td>
     </tr>
   </tbody>
 </table>
 
 ## APIs
-
-### Cookie Store API
-
-The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxref("Promise")}}-based method of managing cookies that does not block the event loop and does not rely on {{domxref("Document")}} (it can therefore be made available to [service workers](/en-US/docs/Web/API/Service_Worker_API)). A subset of the Cookie Store API has been implemented ([Firefox bug 1800882](https://bugzil.la/1800882)). This includes:
-
-- The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, but `partitioned` is not included in return values.
-- The [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent) interface, excluding `partitioned` properties.
-- The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) property.
-- The [`ServiceWorkerGlobalScope.cookieStore`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) property.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>132</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.cookieStore.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ### CloseWatcher Interface
 
@@ -1090,6 +943,11 @@ This subset of the API has been implemented:
 
 - {{domxref("TrustedTypePolicyFactory")}}:
   - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
+- The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
+- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLScriptElement.innerText","innerText")}}, and {{domxref("HTMLScriptElement.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
+- The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
+- The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
+- The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
 
 <table>
   <thead>
@@ -1268,7 +1126,7 @@ This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", 
 
 #### AVIF compliance strictness
 
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
 This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
 
 Permitted values are:
@@ -2126,6 +1984,47 @@ For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>network.cors_preflight.authorization_covered_by_wildcard</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Clear-Site-Data: cache can clear the browser cache
+
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the local browser cache.
+For more details see [Firefox bug 1942272](https://bugzil.la/1942272).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>privacy.clearSiteDataHeader.cache.enabled</code></td>
     </tr>
   </tbody>
 </table>

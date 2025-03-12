@@ -13,7 +13,7 @@ The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface s
 ## Syntax
 
 ```js-nolint
-svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
+newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ```
 
 ### Parameters

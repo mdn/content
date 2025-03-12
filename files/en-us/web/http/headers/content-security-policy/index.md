@@ -20,7 +20,7 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide for deta
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -261,7 +261,7 @@ Paths that do not end in `/` are matched exactly. For example:
 
 ### \<scheme-source>
 
-A [scheme](/en-US/docs/Web/URI/Schemes), such as `https:`. The colon is required.
+A [scheme](/en-US/docs/Web/URI/Reference/Schemes), such as `https:`. The colon is required.
 
 Secure upgrades are allowed, so:
 
@@ -290,7 +290,7 @@ See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/CSP#eval_and_similar_apis) 
 
 ### 'wasm-unsafe-eval'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then a page won't be allowed to compile WebAssembly using functions like [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static).
+By default, if a CSP contains a `default-src` or a `script-src` directive, then a page won't be allowed to compile WebAssembly using functions like [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static).
 
 The `wasm-unsafe-eval` keyword can be used to undo this protection. This is a much safer alternative to `'unsafe-eval'`, since it does not enable general evaluation of JavaScript.
 

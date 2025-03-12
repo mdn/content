@@ -2,7 +2,7 @@
 title: "console: group() static method"
 short-title: group()
 slug: Web/API/console/group_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.group_static
 ---
 

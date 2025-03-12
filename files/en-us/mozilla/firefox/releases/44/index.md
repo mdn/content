@@ -99,7 +99,7 @@ Highlights:
 #### DOM & HTML DOM
 
 - For compatibility with specific existing sites, the property `Document.charset` has been implemented as an alias of {{domxref("Document.characterSet")}} ([Firefox bug 647621](https://bugzil.la/647621)).
-- Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
+- Support for the [`window.sidebar.addSearchEngine()`](/en-US/docs/Web/XML/Guides/OpenSearch#installing_sherlock_plugins) method, which allowed Web pages to invoke an installation of a Sherlock plugin, has been dropped and now it just logs a warning in the Web Console ([Firefox bug 862148](https://bugzil.la/862148)).
 - To fight unwanted pop-ups, prompts requested in {{domxref("Window/beforeunload_event", "beforeunload")}} events of pages that have not been interacted with are no more displayed ([Firefox bug 636905](https://bugzil.la/636905)).
 - The deprecated method {{domxref("MessageEvent.initMessageEvent()")}} has been reimplemented for backward compatibility ([Firefox bug 949376](https://bugzil.la/949376)).
 - The obsolete property `DocumentType.internalSubset` has been removed ([Firefox bug 801545](https://bugzil.la/801545)).
@@ -150,7 +150,7 @@ Highlights:
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
 - The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event and its event handler, have been implemented ([Firefox bug 1178091](https://bugzil.la/1178091)).
-- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()`} removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
+- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()` removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ([Firefox bug 1103188](https://bugzil.la/1103188)).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ([Firefox bug 1070216](https://bugzil.la/1070216)).
 - Support for the non-standard constraint style option list for `RTCOfferOptions` has been removed.

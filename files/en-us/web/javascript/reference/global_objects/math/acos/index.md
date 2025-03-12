@@ -15,7 +15,20 @@ The **`Math.acos()`** static method returns the inverse cosine (in radians) of a
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-acos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(adjacent, hypotenuse) {
+  return Math.acos(adjacent / hypotenuse);
+}
+
+console.log(calcAngle(8, 10));
+// Expected output: 0.6435011087932843
+
+console.log(calcAngle(5, 3));
+// Expected output: NaN
+```
 
 ## Syntax
 
