@@ -362,13 +362,13 @@ The form-associated elements are:
 This category contains several sub-categories:
 
 - listed
-  - : Elements that are listed in the {{domxref("HTMLFormElement.elements")}} and {{domxref("HTMLFieldSetElement.elements")}} collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that are listed in the {{domxref("HTMLFormElement.elements")}} and {{domxref("HTMLFieldSetElement.elements")}} collections. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - submittable
-  - : Elements that can be used for constructing the form data set when the form is submitted. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be used for constructing the form data set when the form is submitted. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - resettable
-  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be affected when a form is reset. Includes {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - autocapitalize-and-autocorrect-inheriting
-  - : Elements that inherit the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) and [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attributes from their form owner. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that inherit the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) and [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attributes from their form owner. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - labelable
   - : Elements that can be associated with {{HTMLElement("label")}} elements. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}} (all types other than `hidden`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
