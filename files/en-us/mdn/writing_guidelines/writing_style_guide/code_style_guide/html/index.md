@@ -27,8 +27,10 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
+> [!NOTE]  
+> The doctype declaration (`<!doctype html>`) is case-insensitive. While MDN follows the convention of using lowercase, it is also commonly written as `<!DOCTYPE html>`.  
 
 ### Document language
 
