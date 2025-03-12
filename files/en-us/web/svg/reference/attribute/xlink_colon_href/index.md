@@ -10,7 +10,7 @@ sidebar: svgref
 
 {{Deprecated_Header}}
 
-The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
+The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Guides/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
 
 > [!NOTE]
 > SVG 2 removed the need for the `xlink` namespace, so instead of `xlink:href` you should use {{SVGAttr("href")}}. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g. `<use href="some-id" xlink:href="some-id" x="5" y="5" />`.
@@ -67,7 +67,7 @@ For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced obj
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -100,7 +100,7 @@ Refer to the descriptions of the individual animation elements for any restricti
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -125,7 +125,7 @@ For {{SVGElement("cursor")}}, `xlink:href` defines the reference to the file or 
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#funciri"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#funciri"
             >&#x3C;FuncIRI></a
           ></code
         >
@@ -152,7 +152,7 @@ For {{SVGElement("feImage")}}, `xlink:href` defines the reference to the image s
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -177,7 +177,7 @@ For {{SVGElement("filter")}}, `xlink:href` defines the reference to another `<fi
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -202,7 +202,7 @@ For {{SVGElement("font-face-uri")}}, `xlink:href` defines the location of the re
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -227,7 +227,7 @@ For {{SVGElement("glyphRef")}}, `xlink:href` defines to a {{SVGElement("glyph")}
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -252,7 +252,7 @@ For {{SVGElement("image")}}, `xlink:href` defines the location of the referenced
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -277,7 +277,7 @@ For {{SVGElement("linearGradient")}}, `xlink:href` defines the reference to a di
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -302,7 +302,7 @@ For {{SVGElement("mpath")}}, `xlink:href` defines the reference to the {{SVGElem
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -327,7 +327,7 @@ For {{SVGElement("pattern")}}, `xlink:href` defines the reference to a different
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -352,7 +352,7 @@ For {{SVGElement("radialGradient")}}, `xlink:href` defines the to a different {{
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -377,7 +377,7 @@ For {{SVGElement("script")}}, `xlink:href` defines a reference to an external re
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -402,7 +402,7 @@ For {{SVGElement("textPath")}}, `xlink:href` defines a reference to the {{SVGEle
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -427,7 +427,7 @@ For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced o
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -452,7 +452,7 @@ For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>

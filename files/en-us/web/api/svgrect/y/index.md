@@ -10,7 +10,7 @@ browser-compat: api.SVGRect.y
 
 The **`y`** property of the {{domxref("SVGRect")}} interface is an alias for the {{DOMXref("DOMRect.y")}} property. It describes the vertical coordinate of the position of the element. It reflects the SVG element's {{SVGattr("y")}} attribute and the CSS {{cssxref("y")}} property.
 
-A `<coordinate>` is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the y-axis for Y coordinates, the x-axis for X coordinates). Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Content_type#length).
+A `<coordinate>` is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the y-axis for Y coordinates, the x-axis for X coordinates). Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length).
 
 ## Usage context
 
@@ -26,8 +26,8 @@ A `<coordinate>` is a length in the user coordinate system that is the given dis
       <td>Value</td>
       <td>
         <code>
-        <a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a
-        > | <a href="/en-US/docs/Web/SVG/Content_type#percentage"
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a
+        > | <a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
           >&#x3C;percentage></a
         >
         </code>

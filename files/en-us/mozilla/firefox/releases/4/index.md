@@ -232,7 +232,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
 - [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
 - Using SVG as images and as CSS backgrounds
   - : You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS {{cssxref("background-image")}}.

@@ -53,4 +53,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)

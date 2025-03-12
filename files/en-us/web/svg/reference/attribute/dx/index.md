@@ -65,7 +65,7 @@ For {{SVGElement('feDropShadow')}}, `dx` defines the x offset of the dropped sha
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -90,7 +90,7 @@ For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input gr
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -118,7 +118,7 @@ For {{SVGElement('glyphRef')}}, `dx` defines the x offset of the glyph, in the f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -145,13 +145,13 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)
@@ -222,13 +222,13 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)
@@ -257,13 +257,13 @@ If there are multiple values, `dx` defines a shift along the x-axis for each ind
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)

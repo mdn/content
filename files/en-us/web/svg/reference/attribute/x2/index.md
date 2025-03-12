@@ -24,19 +24,19 @@ For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -81,7 +81,7 @@ For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the endin
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >

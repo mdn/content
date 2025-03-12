@@ -20,7 +20,7 @@ browser-compat:
 sidebar: svgref
 ---
 
-The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Content_type#url). The exact meaning of that link depends on the context of each element using it.
+The **`href`** attribute defines a link to a resource as a reference [URL](/en-US/docs/Web/SVG/Guides/Content_type#url). The exact meaning of that link depends on the context of each element using it.
 
 > [!NOTE]
 > Specifications before SVG 2 defined an {{SVGAttr("xlink:href")}} attribute, which is now rendered obsolete by the `href` attribute. If you need to support earlier browser versions, the deprecated `xlink:href` attribute can be used as a fallback in addition to the `href` attribute, e.g. `<use href="some-id" xlink:href="some-id" x="5" y="5" />`.
@@ -75,7 +75,7 @@ For {{SVGElement("a")}}, `href` defines the location of the referenced object, e
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -108,7 +108,7 @@ Except for any SVG-specific rules explicitly mentioned in this specification, th
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -133,7 +133,7 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -159,7 +159,7 @@ If not specified, the immediate parent element of `<discard>` is discarded.
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -184,7 +184,7 @@ For {{SVGElement("image")}}, `href` defines a URL referring to the image to rend
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -225,7 +225,7 @@ For {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}}, `href`
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -250,7 +250,7 @@ For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement(
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -275,7 +275,7 @@ For {{SVGElement("pattern")}}, `href` defines a URL referring to a different `<p
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -300,7 +300,7 @@ For {{SVGElement("script")}}, `href` defines a URL referring to an external reso
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -325,7 +325,7 @@ For {{SVGElement("textPath")}}, `href` defines a URL referring to the {{SVGEleme
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>
@@ -352,7 +352,7 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#url">&#x3C;url></a></code
         >
       </td>
     </tr>

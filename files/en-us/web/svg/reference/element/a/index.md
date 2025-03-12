@@ -72,13 +72,13 @@ svg|a:active {
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 - [`hreflang`](/en-US/docs/Web/HTML/Element/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - [`ping`](/en-US/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
-    _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
 - [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy)
   - : Which [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
@@ -93,7 +93,7 @@ svg|a:active {
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
-    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 
 ## Usage context
 

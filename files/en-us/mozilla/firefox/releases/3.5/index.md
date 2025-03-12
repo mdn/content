@@ -131,7 +131,7 @@ page-type: firefox-release-notes
 
 #### New SVG features
 
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : You can now apply SVG effects to HTML and XHTML content; this article describes how.
 
 #### Miscellaneous new features

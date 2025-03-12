@@ -147,7 +147,7 @@
 /en-US/docs/Animation/reverse	/en-US/docs/Web/API/Animation/reverse
 /en-US/docs/Animation/startTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/AppLinks/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
-/en-US/docs/Applying_SVG_effects_to_HTML_content	/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
+/en-US/docs/Applying_SVG_effects_to_HTML_content	/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 /en-US/docs/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
 /en-US/docs/BeforeInstallPromptEvent.prompt	/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt
 /en-US/docs/BiquadFilterNode	/en-US/docs/Web/API/BiquadFilterNode
@@ -7113,12 +7113,12 @@
 /en-US/docs/SVG/Element/use	/en-US/docs/Web/SVG/Reference/Element/use
 /en-US/docs/SVG/Element/view	/en-US/docs/Web/SVG/Reference/Element/view
 /en-US/docs/SVG/Element/vkern	/en-US/docs/Web/SVG/Reference/Element/vkern
-/en-US/docs/SVG/Linking	/en-US/docs/Web/SVG/Linking
-/en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
-/en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
-/en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
-/en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
+/en-US/docs/SVG/Linking	/en-US/docs/Web/SVG/Guides/Linking
+/en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course
+/en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course/Example
+/en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL
+/en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/Guides/SVG_as_an_image
+/en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Guides/Scripting
 /en-US/docs/SVG/Server-configuration	https://www.w3.org/services/svg-server/
 /en-US/docs/SVG/Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Tutorial	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch
@@ -7147,10 +7147,10 @@
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Reference/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Reference/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Reference/Element/use
-/en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
-/en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
-/en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG:Scripting	/en-US/docs/Web/SVG/Scripting
+/en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Guides/Linking
+/en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course
+/en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course/Example
+/en-US/docs/SVG:Scripting	/en-US/docs/Web/SVG/Guides/Scripting
 /en-US/docs/SVG:Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/SVG:Tutorial	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch
 /en-US/docs/SVG:Tutorial:Basic_Shapes	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
@@ -7168,10 +7168,10 @@
 /en-US/docs/SVGFEBlendElement	/en-US/docs/Web/API/SVGFEBlendElement
 /en-US/docs/SVGFEComponentTransferElement	/en-US/docs/Web/API/SVGFEComponentTransferElement
 /en-US/docs/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/Guides/SVG_in_HTML
-/en-US/docs/SVG_Namespace_Tips_(external)	/en-US/docs/Web/SVG/Namespaces_Crash_Course
+/en-US/docs/SVG_Namespace_Tips_(external)	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course
 /en-US/docs/SVG_Reference	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch
-/en-US/docs/SVG_animation_(SMIL)_in_Firefox	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
+/en-US/docs/SVG_animation_(SMIL)_in_Firefox	/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL
 /en-US/docs/SVG_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
@@ -14176,6 +14176,7 @@
 /en-US/docs/Web/Reference/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/Reference/Functions_and classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Reference/Functions_and_classes_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content	/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 /en-US/docs/Web/SVG/Attribute	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Conditional_Processing	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Attribute/Core	/en-US/docs/Web/SVG/Reference/Attribute
@@ -14423,6 +14424,7 @@
 /en-US/docs/Web/SVG/Attribute/z	/en-US/docs/Web/SVG/Reference/Attribute/z
 /en-US/docs/Web/SVG/Attribute/zoomAndPan	/en-US/docs/Web/SVG/Reference/Attribute/zoomAndPan
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
+/en-US/docs/Web/SVG/Content_type	/en-US/docs/Web/SVG/Guides/Content_type
 /en-US/docs/Web/SVG/Element	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Element/a	/en-US/docs/Web/SVG/Reference/Element/a
 /en-US/docs/Web/SVG/Element/animate	/en-US/docs/Web/SVG/Reference/Element/animate
@@ -14503,6 +14505,12 @@
 /en-US/docs/Web/SVG/Element/view	/en-US/docs/Web/SVG/Reference/Element/view
 /en-US/docs/Web/SVG/Element/vkern	/en-US/docs/Web/SVG/Reference/Element/vkern
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
+/en-US/docs/Web/SVG/Linking	/en-US/docs/Web/SVG/Guides/Linking
+/en-US/docs/Web/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course
+/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course/Example
+/en-US/docs/Web/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL
+/en-US/docs/Web/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/Guides/SVG_as_an_image
+/en-US/docs/Web/SVG/Scripting	/en-US/docs/Web/SVG/Guides/Scripting
 /en-US/docs/Web/SVG/Server-configuration	https://www.w3.org/services/svg-server/
 /en-US/docs/Web/SVG/Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch

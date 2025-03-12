@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/SVG/Content_type#number-optional-number"
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number"
           >&#x3C;number-optional-number></a
         >
       </td>

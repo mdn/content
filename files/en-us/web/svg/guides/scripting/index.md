@@ -1,6 +1,6 @@
 ---
 title: Scripting
-slug: Web/SVG/Scripting
+slug: Web/SVG/Guides/Scripting
 page-type: guide
 sidebar: svgref
 ---

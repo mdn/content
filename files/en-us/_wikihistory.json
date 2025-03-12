@@ -122302,7 +122302,7 @@
       "Afri"
     ]
   },
-  "Web/SVG/Applying_SVG_effects_to_HTML_content": {
+  "Web/SVG/Guides/Applying_SVG_effects_to_HTML_content": {
     "modified": "2019-09-30T02:31:08.961Z",
     "contributors": [
       "kadfak",
@@ -122323,7 +122323,7 @@
       "brianblakely"
     ]
   },
-  "Web/SVG/Content_type": {
+  "Web/SVG/Guides/Content_type": {
     "modified": "2020-04-08T21:33:47.459Z",
     "contributors": [
       "Zearin_Galaurum",
@@ -122334,6 +122334,87 @@
       "kscarfone",
       "Jeremie",
       "ethertank"
+    ]
+  },
+  "Web/SVG/Guides/Linking": {
+    "modified": "2019-03-23T23:48:55.443Z",
+    "contributors": ["ExE-Boss", "Jeremie", "Kohei", "Jonathan_Watt"]
+  },
+  "Web/SVG/Guides/Namespaces_crash_course": {
+    "modified": "2019-11-27T04:18:41.153Z",
+    "contributors": [
+      "RicardsVeveris",
+      "somascope",
+      "octopusinvitro",
+      "Tigt",
+      "zabbarob",
+      "trevorh",
+      "Jeremie",
+      "Sheppy",
+      "Dholbert",
+      "Taken",
+      "Jonathan_Watt",
+      "Nickolay",
+      "Nickjohnson",
+      "Takenbot",
+      "NickolayBot",
+      "Darobin"
+    ]
+  },
+  "Web/SVG/Guides/Namespaces_crash_course/Example": {
+    "modified": "2019-03-23T23:41:20.286Z",
+    "contributors": [
+      "ethertank",
+      "Jeremie",
+      "Nickolay",
+      "Mgjbot",
+      "Taken",
+      "Jonathan_Watt"
+    ]
+  },
+  "Web/SVG/Guides/SVG_animation_with_SMIL": {
+    "modified": "2019-11-07T08:50:12.574Z",
+    "contributors": [
+      "hoang4",
+      "a-mt",
+      "fscholz",
+      "myf",
+      "SphinxKnight",
+      "pipcet",
+      "teropa",
+      "Longsonr",
+      "sanderd17",
+      "jpmedley",
+      "dbruenig",
+      "shakyjake",
+      "Jeremie",
+      "Sheppy",
+      "Nilam",
+      "yyss",
+      "Brettz9",
+      "jswisher",
+      "sebmozilla"
+    ]
+  },
+  "Web/SVG/Guides/SVG_as_an_image": {
+    "modified": "2019-03-24T00:12:58.786Z",
+    "contributors": [
+      "fscholz",
+      "Yukulele.",
+      "david_ross",
+      "pudymody",
+      "arai",
+      "elatllat",
+      "Zcorpan",
+      "Sebastianz",
+      "Barbrousse",
+      "Jeremie",
+      "ethertank",
+      "mtmotoki@gmail.com",
+      "fusionchess",
+      "jswisher",
+      "Sephr",
+      "Dholbert"
     ]
   },
   "Web/SVG/Guides/SVG_filters": {
@@ -122366,40 +122447,21 @@
       "Roc"
     ]
   },
-  "Web/SVG/Linking": {
-    "modified": "2019-03-23T23:48:55.443Z",
-    "contributors": ["ExE-Boss", "Jeremie", "Kohei", "Jonathan_Watt"]
-  },
-  "Web/SVG/Namespaces_Crash_Course": {
-    "modified": "2019-11-27T04:18:41.153Z",
+  "Web/SVG/Guides/Scripting": {
+    "modified": "2019-03-24T00:15:31.968Z",
     "contributors": [
-      "RicardsVeveris",
-      "somascope",
-      "octopusinvitro",
-      "Tigt",
-      "zabbarob",
-      "trevorh",
-      "Jeremie",
+      "ZiroKyl",
       "Sheppy",
-      "Dholbert",
-      "Taken",
-      "Jonathan_Watt",
-      "Nickolay",
-      "Nickjohnson",
-      "Takenbot",
-      "NickolayBot",
-      "Darobin"
-    ]
-  },
-  "Web/SVG/Namespaces_Crash_Course/Example": {
-    "modified": "2019-03-23T23:41:20.286Z",
-    "contributors": [
-      "ethertank",
+      "Gowan",
+      "Sole",
       "Jeremie",
-      "Nickolay",
-      "Mgjbot",
+      "bwm",
+      "Jonathan_Watt",
+      "Nobodyman",
+      "Ptak82",
       "Taken",
-      "Jonathan_Watt"
+      "Dria",
+      "NickolayBot"
     ]
   },
   "Web/SVG/Reference/Attribute": {
@@ -125019,68 +125081,6 @@
       "kscarfone",
       "Jeremie",
       "Manuel_Strehl"
-    ]
-  },
-  "Web/SVG/SVG_animation_with_SMIL": {
-    "modified": "2019-11-07T08:50:12.574Z",
-    "contributors": [
-      "hoang4",
-      "a-mt",
-      "fscholz",
-      "myf",
-      "SphinxKnight",
-      "pipcet",
-      "teropa",
-      "Longsonr",
-      "sanderd17",
-      "jpmedley",
-      "dbruenig",
-      "shakyjake",
-      "Jeremie",
-      "Sheppy",
-      "Nilam",
-      "yyss",
-      "Brettz9",
-      "jswisher",
-      "sebmozilla"
-    ]
-  },
-  "Web/SVG/SVG_as_an_Image": {
-    "modified": "2019-03-24T00:12:58.786Z",
-    "contributors": [
-      "fscholz",
-      "Yukulele.",
-      "david_ross",
-      "pudymody",
-      "arai",
-      "elatllat",
-      "Zcorpan",
-      "Sebastianz",
-      "Barbrousse",
-      "Jeremie",
-      "ethertank",
-      "mtmotoki@gmail.com",
-      "fusionchess",
-      "jswisher",
-      "Sephr",
-      "Dholbert"
-    ]
-  },
-  "Web/SVG/Scripting": {
-    "modified": "2019-03-24T00:15:31.968Z",
-    "contributors": [
-      "ZiroKyl",
-      "Sheppy",
-      "Gowan",
-      "Sole",
-      "Jeremie",
-      "bwm",
-      "Jonathan_Watt",
-      "Nobodyman",
-      "Ptak82",
-      "Taken",
-      "Dria",
-      "NickolayBot"
     ]
   },
   "Web/SVG/Tutorials/SVG_from_scratch": {

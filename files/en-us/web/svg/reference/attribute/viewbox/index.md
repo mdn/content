@@ -25,22 +25,22 @@ For {{SVGElement('marker')}}, `viewBox` defines the position and dimension for t
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -67,22 +67,22 @@ For {{SVGElement('pattern')}}, `viewBox` defines the position and dimension for 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -109,22 +109,22 @@ For {{SVGElement('svg')}}, `viewBox` defines the position and dimension for the 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -151,22 +151,22 @@ For {{SVGElement('symbol')}}, `viewBox` defines the position and dimension for t
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -193,22 +193,22 @@ For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >

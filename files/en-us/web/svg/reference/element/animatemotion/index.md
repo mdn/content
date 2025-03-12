@@ -50,13 +50,13 @@ svg {
 
 - {{SVGAttr("keyPoints")}}
   - : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("path")}}
   - : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.
     _Value type_: **\<string>**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("rotate")}}
   - : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
 > [!NOTE]
 > For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.

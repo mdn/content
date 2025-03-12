@@ -131,7 +131,7 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong>
       </td>
     </tr>
     <tr>
