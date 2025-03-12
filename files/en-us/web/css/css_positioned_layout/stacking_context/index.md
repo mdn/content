@@ -12,7 +12,7 @@ Elements within a stacking context are stacked independently from elements outsi
 
 Each stacking context is self-contained. After an element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context.
 
-Within a stacking context, child elements are stacked according to the `z-index` values of all the siblings, with child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context. Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts. 
+Within a stacking context, child elements are stacked according to the `z-index` values of all the siblings, with child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context. Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts.
 
 The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. We can say that elements that do not create their own stacking contexts are _assimilated_ by the parent stacking context.
 
