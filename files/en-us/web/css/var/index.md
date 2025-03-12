@@ -2,7 +2,7 @@
 title: var()
 slug: Web/CSS/var
 page-type: css-function
-browser-compat: css.properties.custom-property.var
+browser-compat: css.types.var
 ---
 
 {{CSSRef}}
