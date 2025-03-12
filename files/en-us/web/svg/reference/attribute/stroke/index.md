@@ -101,7 +101,7 @@ The output is as follows:
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#paint"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#paint"
             >&#x3C;paint></a
           ></strong
         >

@@ -1,6 +1,6 @@
 ---
 title: Example
-slug: Web/SVG/Namespaces_Crash_Course/Example
+slug: Web/SVG/Guides/Namespaces_crash_course/Example
 page-type: guide
 sidebar: svgref
 ---

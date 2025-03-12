@@ -101,13 +101,13 @@ svg {
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
@@ -124,7 +124,7 @@ svg {
   </tbody>
 </table>
 
-The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage) is used, the value is resolved as a percentage of the current viewport.
+The offset is usually expressed in user units resolved against the {{SVGAttr('pathLength')}} but if a [\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage) is used, the value is resolved as a percentage of the current viewport.
 
 ## Specifications
 

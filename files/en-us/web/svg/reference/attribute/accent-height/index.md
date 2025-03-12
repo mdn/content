@@ -25,7 +25,7 @@ For {{SVGElement("font-face")}}, `accent-height` defines the distance from the o
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a>
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a>
       </td>
     </tr>
     <tr>

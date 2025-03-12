@@ -1,6 +1,6 @@
 ---
 title: SVG as an image
-slug: Web/SVG/SVG_as_an_Image
+slug: Web/SVG/Guides/SVG_as_an_image
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-backgrounds/#the-background-image
 sidebar: svgref

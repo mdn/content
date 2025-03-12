@@ -10,7 +10,7 @@ sidebar: svgref
 
 **Scalable Vector Graphics (SVG)** is an [XML](/en-US/docs/Web/XML)-based markup language for describing two-dimensional based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics).
 
-As such, it's a text-based, open Web standard for describing images that can be rendered cleanly at any size and are designed specifically to work well with other web standards including [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL). SVG is, essentially, to graphics what [HTML](/en-US/docs/Web/HTML) is to text.
+As such, it's a text-based, open Web standard for describing images that can be rendered cleanly at any size and are designed specifically to work well with other web standards including [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript), and [SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL). SVG is, essentially, to graphics what [HTML](/en-US/docs/Web/HTML) is to text.
 
 SVG images and their related behaviors are defined in [XML](/en-US/docs/Web/XML) text files, which means they can be searched, indexed, scripted, and compressed. Additionally, this means they can be created and edited with any text editor or with drawing software.
 
@@ -28,7 +28,7 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch).
   - : Details about each SVG attribute.
 - [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom)
   - : Details about the SVG DOM API, for interaction with JavaScript.
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}.
 
 ## Tools
@@ -39,7 +39,7 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch).
 ## Examples
 
 - [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
-- [SVG as an image](/en-US/docs/Web/SVG/SVG_as_an_Image)
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG as an image](/en-US/docs/Web/SVG/Guides/SVG_as_an_image)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - [SVG Tutorial Advent Calendar](https://svg-tutorial.com/)
 - [D3](https://d3js.org/) (JavaScript library for visualizing data with HTML, SVG, and CSS)

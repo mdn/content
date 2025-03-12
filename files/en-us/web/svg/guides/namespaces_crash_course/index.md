@@ -1,6 +1,6 @@
 ---
 title: Namespaces crash course
-slug: Web/SVG/Namespaces_Crash_Course
+slug: Web/SVG/Guides/Namespaces_crash_course
 page-type: guide
 sidebar: svgref
 ---
@@ -314,4 +314,4 @@ Even if you don't use all those namespaces in a particular document, there's no 
 
 ### A full example
 
-For a full example see [SVG: Namespaces Crash Course: Example](/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example).
+For a full example see [SVG: Namespaces Crash Course: Example](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course/Example).

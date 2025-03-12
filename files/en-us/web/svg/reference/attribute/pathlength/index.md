@@ -70,7 +70,7 @@ For {{SVGElement('circle')}}, `pathLength` lets authors specify a total length f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -95,7 +95,7 @@ For {{SVGElement('ellipse')}}, `pathLength` lets authors specify a total length 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -120,7 +120,7 @@ For {{SVGElement('line')}}, `pathLength` lets authors specify a total length for
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -145,7 +145,7 @@ For {{SVGElement('path')}}, `pathLength` lets authors specify a total length for
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -170,7 +170,7 @@ For {{SVGElement('polygon')}}, `pathLength` lets authors specify a total length 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -195,7 +195,7 @@ For {{SVGElement('polyline')}}, `pathLength` lets authors specify a total length
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -220,7 +220,7 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a></strong
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>

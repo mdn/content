@@ -35,7 +35,7 @@ The rendering process involves the following:
 
    - A doctype declaration as known from (X)HTML should be left off because DTD based SVG validation leads to more problems than it solves.
    - Before SVG 2, to identify the version of the SVG for other types of validation the `version` and `baseProfile` attributes should always be used instead. Both `version` and `baseProfile` attributes are deprecated in SVG 2.
-   - As an XML dialect, SVG must always bind the namespaces correctly (in the xmlns attribute). See the [Namespaces Crash Course](/en-US/docs/Web/SVG/Namespaces_Crash_Course) page for more info.
+   - As an XML dialect, SVG must always bind the namespaces correctly (in the xmlns attribute). See the [Namespaces Crash Course](/en-US/docs/Web/SVG/Guides/Namespaces_crash_course) page for more info.
 
 2. The background is set to red by drawing a rectangle {{SVGElement("rect")}} that covers the complete image area.
 3. A green circle {{SVGElement("circle")}} with a radius of 80px is drawn atop the center of the red rectangle (center of circle offset 150px to the right, and 100px downward from the top left corner).

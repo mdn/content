@@ -28,7 +28,7 @@ For {{SVGElement("font")}} elements, `vert-adv-y` specifies the default vertical
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></code
         >
@@ -58,7 +58,7 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `vert-
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></code
         >

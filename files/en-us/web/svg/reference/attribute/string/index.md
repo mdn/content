@@ -24,7 +24,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#anything"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#anything"
             >&#x3C;anything></a
           ></code
         >

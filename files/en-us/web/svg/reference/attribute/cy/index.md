@@ -102,7 +102,7 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+        <strong><a href="/en-US/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a></strong>
       </td>
     </tr>
     <tr>

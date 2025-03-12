@@ -64,13 +64,13 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -102,7 +102,7 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >

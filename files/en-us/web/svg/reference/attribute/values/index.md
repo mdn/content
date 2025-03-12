@@ -27,7 +27,7 @@ For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, and {{SVGElement
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
             >&#x3C;list-of-values></a
           ></code
         >
@@ -57,7 +57,7 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
             >&#x3C;list-of-numbers></a
           ></code
         >

@@ -58,7 +58,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#number-optional-number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number"
             >&#x3C;number-optional-number></a
           ></code
         >

@@ -30,13 +30,13 @@ For {{SVGElement('feBlend')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -63,13 +63,13 @@ For {{SVGElement('feColorMatrix')}}, `y` defines the minimum y coordinate for th
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -96,13 +96,13 @@ For {{SVGElement('feComponentTransfer')}}, `y` defines the minimum y coordinate 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -129,13 +129,13 @@ For {{SVGElement('feComposite')}}, `y` defines the minimum y coordinate for the 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -162,13 +162,13 @@ For {{SVGElement('feConvolveMatrix')}}, `y` defines the minimum y coordinate for
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -195,13 +195,13 @@ For {{SVGElement('feDiffuseLighting')}}, `y` defines the minimum y coordinate fo
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -228,13 +228,13 @@ For {{SVGElement('feDisplacementMap')}}, `y` defines the minimum y coordinate fo
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -261,13 +261,13 @@ For {{SVGElement('feDropShadow')}}, `y` defines the minimum y coordinate for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -294,13 +294,13 @@ For {{SVGElement('feFlood')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -327,13 +327,13 @@ For {{SVGElement('feFuncA')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -360,13 +360,13 @@ For {{SVGElement('feFuncB')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -393,13 +393,13 @@ For {{SVGElement('feFuncG')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -426,13 +426,13 @@ For {{SVGElement('feFuncR')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -459,13 +459,13 @@ For {{SVGElement('feGaussianBlur')}}, `y` defines the minimum y coordinate for t
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -492,13 +492,13 @@ For {{SVGElement('feImage')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -525,13 +525,13 @@ For {{SVGElement('feMerge')}}, `y` defines the minimum y coordinate for the rend
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -558,13 +558,13 @@ For {{SVGElement('feMergeNode')}}, `y` defines the minimum y coordinate for the 
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -591,13 +591,13 @@ For {{SVGElement('feMorphology')}}, `y` defines the minimum y coordinate for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -624,13 +624,13 @@ For {{SVGElement('feOffset')}}, `y` defines the minimum y coordinate for the ren
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -657,7 +657,7 @@ For {{SVGElement('fePointLight')}}, `y` defines the y location for the light sou
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -684,13 +684,13 @@ For {{SVGElement('feSpecularLighting')}}, `y` defines the minimum y coordinate f
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -717,7 +717,7 @@ For {{SVGElement('feSpotLight')}}, `y` defines the y location for the light sour
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -744,13 +744,13 @@ For {{SVGElement('feTile')}}, `y` defines the minimum y coordinate for the rende
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -777,13 +777,13 @@ For {{SVGElement('feTurbulence')}}, `y` defines the minimum y coordinate for the
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -810,13 +810,13 @@ For {{SVGElement('filter')}}, `y` defines the y coordinate of the upper left cor
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -843,13 +843,13 @@ For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper l
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -882,7 +882,7 @@ For {{SVGElement('glyphRef')}}, `y` defines the y-axis coordinate of the glyph.
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -909,13 +909,13 @@ For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corn
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -945,13 +945,13 @@ For {{SVGElement('mask')}}, `y` defines the y coordinate of the upper left corne
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -978,7 +978,7 @@ For {{SVGElement('pattern')}}, `y` defines the y coordinate of the upper left co
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
@@ -1005,13 +1005,13 @@ For {{SVGElement('rect')}}, `y` defines the y coordinate of the upper left corne
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -1041,13 +1041,13 @@ For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -1079,13 +1079,13 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)
@@ -1159,13 +1159,13 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)
@@ -1194,13 +1194,13 @@ If it contains multiple values, `y` defines the y coordinate of each individual 
       <th scope="row">Value</th>
       <td>
         List of (<strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >)
@@ -1271,13 +1271,13 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >

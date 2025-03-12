@@ -1,6 +1,6 @@
 ---
 title: SVG animation with SMIL
-slug: Web/SVG/SVG_animation_with_SMIL
+slug: Web/SVG/Guides/SVG_animation_with_SMIL
 page-type: guide
 sidebar: svgref
 ---

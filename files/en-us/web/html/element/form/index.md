@@ -55,7 +55,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `accept` {{deprecated_inline}}
 
-  - : Comma-separated [content types](/en-US/docs/Web/SVG/Content_type) the server accepts.
+  - : Comma-separated [content types](/en-US/docs/Web/SVG/Guides/Content_type) the server accepts.
 
     > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute on `<input type=file>` elements.
 

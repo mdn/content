@@ -1,6 +1,6 @@
 ---
 title: Linking
-slug: Web/SVG/Linking
+slug: Web/SVG/Guides/Linking
 page-type: guide
 sidebar: svgref
 ---

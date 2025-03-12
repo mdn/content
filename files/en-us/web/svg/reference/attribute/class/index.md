@@ -26,7 +26,7 @@ You can use this class to style SVG content using CSS.
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+        <a href="/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts"
           >&#x3C;list-of-class-names></a
         >
       </td>

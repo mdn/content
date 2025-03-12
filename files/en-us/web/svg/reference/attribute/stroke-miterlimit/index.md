@@ -105,7 +105,7 @@ For example, a miter limit of 1.414 converts miters to bevels for theta less tha
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >

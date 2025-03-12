@@ -1,6 +1,6 @@
 ---
 title: Content type
-slug: Web/SVG/Content_type
+slug: Web/SVG/Guides/Content_type
 page-type: guide
 sidebar: svgref
 ---

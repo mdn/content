@@ -58,7 +58,7 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
       <th scope="row">Value</th>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#transform-list"
+          ><a href="/en-US/docs/Web/SVG/Guides/Content_type#transform-list"
             ><code>&#x3C;transform-list></code></a
           ></strong
         >
