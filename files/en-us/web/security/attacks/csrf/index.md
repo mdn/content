@@ -77,7 +77,7 @@ To take advantage of this protection you must understand all the places in your 
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/CORS#simple_requests) and other requests.
 
-Simple requests are the sorts of requests that a `<form>` element can make. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests, and this means that forms must defend against CSRF using some mechanism such as a CSRF token.
+Simple requests are the sorts of requests that a `<form>` element can make. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests, and this means that forms must defend against CSRF using a mechanism such as a CSRF token.
 
 However, other parts of the web platform, in particular JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}, can make different sorts of requests (for example, requests that set custom headers), and these requests are by default not allowed cross-origin, so a CSRF attack would not succeed.
 
