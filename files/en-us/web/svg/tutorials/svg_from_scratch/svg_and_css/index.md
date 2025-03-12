@@ -1,7 +1,7 @@
 ---
 title: SVG and CSS
 slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

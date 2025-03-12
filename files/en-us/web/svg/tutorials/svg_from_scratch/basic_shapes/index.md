@@ -1,7 +1,7 @@
 ---
 title: Basic shapes
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

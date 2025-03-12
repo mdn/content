@@ -1,7 +1,7 @@
 ---
 title: Using fonts in SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

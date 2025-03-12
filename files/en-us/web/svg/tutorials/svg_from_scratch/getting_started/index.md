@@ -1,7 +1,7 @@
 ---
 title: Getting started
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

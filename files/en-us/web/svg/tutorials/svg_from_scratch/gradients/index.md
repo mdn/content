@@ -1,7 +1,7 @@
 ---
 title: Gradients in SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

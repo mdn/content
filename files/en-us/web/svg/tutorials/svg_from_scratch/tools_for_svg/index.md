@@ -1,7 +1,7 @@
 ---
 title: Tools for SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

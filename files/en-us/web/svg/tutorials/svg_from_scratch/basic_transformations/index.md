@@ -1,7 +1,7 @@
 ---
 title: Basic transformations
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Filter effects
 slug: Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 

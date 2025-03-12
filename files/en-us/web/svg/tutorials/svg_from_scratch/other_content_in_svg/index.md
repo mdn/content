@@ -1,7 +1,7 @@
 ---
 title: Other content in SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
-page-type: guide
+page-type: tutorial-chapter
 sidebar: svgref
 ---
 
