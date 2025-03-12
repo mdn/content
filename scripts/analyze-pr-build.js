@@ -538,7 +538,7 @@ yargs(hideBin(process.argv))
           default: false,
         });
     },
-    (argv) => {
+    async (argv) => {
       const directory = argv._.shift();
       const {
         prefix,
@@ -575,7 +575,7 @@ yargs(hideBin(process.argv))
       }
 
       // Call your analysis function with the directory and options
-      const combinedComment = analyzePR(directory, options);
+      const combinedComment = await analyzePR(directory, options);
 
       if (argv.verbose) {
         console.log("_".repeat(80));
