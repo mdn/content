@@ -405,7 +405,7 @@ h1 {
   margin-left: 16px;
 }
 
-/* Simple form styling */
+/* Basic form styling */
 
 #color-picker {
   margin-left: 16px;
@@ -562,7 +562,7 @@ fieldset {
 
 In the example CSS you'll notice {{cssxref("@supports")}} blocks being used to provide different {{cssxref("background-color")}} values to browsers that support a previous draft specification of the relative color syntax. These are required because Safari's initial implementation was based on an older version of the spec in which origin color channel values resolved to {{cssxref("&lt;number&gt;")}}s or other unit types depending on the context. This meant that values sometimes required units when performing additions and subtractions, which created confusion. In newer implementations, origin color channel values always resolve to an equivalent {{cssxref("&lt;number&gt;")}} value, which means calculations are always done with unitless values.
 
-Note how the support test in each case is done using a simple declaration — `color: lch(from red l c calc(h + 90deg))` for example — rather than the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
+Note how the support test in each case is done using any color declaration — `color: lch(from red l c calc(h + 90deg))` for example — not necessarily the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
 
 Including a custom property in the `@supports` test doesn't work — the test always comes back as positive regardless of what value the custom property is given. This is because a custom property value only becomes invalid when assigned to be an invalid value (or part of an invalid value) of a regular CSS property. To work around this, in each test we have replaced `var(--base-color)` with the `red` keyword.
 

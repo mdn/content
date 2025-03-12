@@ -133,7 +133,7 @@ place-self: unset;
 
 ### Basic demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
+In the following example we have a 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
 
 The second, third, and fourth grid items are then given different values of `place-self`, to show how these override the default placements. These values cause the grid items to span only as wide/tall as their content width/height, and align in different positions across their cells, in the block and inline directions.
 
