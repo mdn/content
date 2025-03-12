@@ -522,6 +522,11 @@ yargs(hideBin(process.argv))
             return filePath;
           },
         })
+        .option("dry-run", {
+          describe: "Enable dry-run (no comment)",
+          type: "boolean",
+          default: false,
+        })
         .option("verbose", {
           describe: "Enable verbose logging",
           type: "boolean",
@@ -531,17 +536,43 @@ yargs(hideBin(process.argv))
     (argv) => {
       console.log(`Deployer (version x.x.x)`); // Replace with actual version if needed
 
+      const directory = argv._.shift();
+      const {
+        prefix,
+        repo,
+        prNumber: pr_number,
+        githubToken: github_token,
+        analyzeFlaws: analyze_flaws,
+        analyzeDangerousContent: analyze_dangerous_content,
+        diffFile: diff_file,
+        dryRun: dry_run,
+        verbose,
+      } = argv;
+
+      const options = {
+        directory,
+        prefix,
+        repo,
+        pr_number,
+        github_token,
+        analyze_flaws,
+        analyze_dangerous_content,
+        diff_file,
+        dry_run,
+        verbose,
+      };
+
       // Check that at least one actionable option was provided
       if (
-        !argv.prefix &&
-        !argv["analyze-flaws"] &&
-        !argv["analyze-dangerous-content"]
+        !options.prefix &&
+        !options.analyze_flaws &&
+        !options.analyze_dangerous_content
       ) {
         throw new Error("No actionable option used.");
       }
 
       // Call your analysis function with the directory and options
-      const combinedComment = analyzePR(argv.directory, argv);
+      const combinedComment = analyzePR(directory, options);
 
       if (argv.verbose) {
         console.log("_".repeat(80));
