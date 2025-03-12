@@ -36,17 +36,23 @@ text-rendering: unset;
 ### Values
 
 - `auto`
+
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
 
     For extended body of text on a web page, the `auto` value is generally a good option for balancing both quality and performance.
+
 - `optimizeSpeed`
+
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
 
     To ensure fast loading and to extend battery life for mobile users, the `optimizeSpeed` value is preferred.
+
 - `optimizeLegibility`
+
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
 
     When displaying large forms of text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text. In addition, it could be used for high-quality professional typography such as essays and articles, but it's not recommended for large articles due to potential performance impact and bugs.
+
 - `geometricPrecision`
 
   - : The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts — such as kerning — don't scale linearly. So this value can make text using those fonts look good.
