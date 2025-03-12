@@ -534,8 +534,6 @@ yargs(hideBin(process.argv))
         });
     },
     (argv) => {
-      console.log(`Deployer (version x.x.x)`); // Replace with actual version if needed
-
       const directory = argv._.shift();
       const {
         prefix,
