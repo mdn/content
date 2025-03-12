@@ -320,25 +320,25 @@ This export statement makes our `App()` function available to other modules. We'
 Let's open `src/main.jsx`, because that's where the `<App />` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
-);
+  </StrictMode>,
+)
 ```
 
-As with `App.jsx`, the file starts by importing all the JS modules and other assets it needs to run.
+As with `App.jsx`, the file starts by importing all the JavaScript modules and other assets it needs to run.
 
-The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
+The first two statements import `StrictMode` and `createRoot` from the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
 We then import our `App()` function and `index.css`, which holds global styles that are applied to our whole app.
 
-We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_ which renders the `App` _component_ inside the root node.
+We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
 > **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
@@ -395,9 +395,11 @@ Some attributes are different than their HTML counterparts. For example, the `cl
 
 ### JavaScript expressions as content
 
-Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App()` function:
+Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App()` function in your `App.jsx` file:
 
 ```jsx
+import "./App.css";
+
 const subject = "React";
 function App() {
   // code omitted for brevity
@@ -500,6 +502,6 @@ In React:
 ## See also
 
 - [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
+- [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
