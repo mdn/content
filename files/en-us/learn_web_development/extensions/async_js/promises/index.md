@@ -24,7 +24,7 @@ page-type: learn-module-chapter
         <ul>
           <li>The concepts and fundamentals of using promises in JavaScript.</li>
           <li>Chaining and combining promises.</li>
-          <li>Handing errors in promises.</li>
+          <li>Handling errors in promises.</li>
           <li><code>async</code> and <code>await</code>: how they relate to promises, and why they are useful.</li>
         </ul>
       </td>
