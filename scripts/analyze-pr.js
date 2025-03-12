@@ -9,6 +9,8 @@ import parseDiff from "parse-diff";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
+const natCompare = new Intl.Collator("en", { numeric: true }).compare;
+
 const DEFAULT_REPO = "mdn/content"; // adjust as needed
 const DEFAULT_GITHUB_TOKEN = "your_default_github_token"; // adjust as needed
 
@@ -403,6 +405,9 @@ async function getBuiltDocs(buildDirectory) {
     }
   }
   await walk(buildDirectory);
+
+  docs.sort((a, b) => natCompare(a.mdn_url, b.mdn_url));
+
   return docs;
 }
 
