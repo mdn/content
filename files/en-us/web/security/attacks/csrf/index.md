@@ -63,7 +63,7 @@ Finally, we'll discuss [the `SameSite` cookie attribute](#defense_in_depth_sames
 
 ### CSRF tokens
 
-In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the browser sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The browser checks the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery. Even if the attacker does discover a token after it has been used, the request can't be replayed if the token changes every time.
+In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the legitimate page sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The server can then check the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery. Even if the attacker does discover a token after it has been used, the request can't be replayed if the token changes every time.
 
 For form submissions, the CSRF token is usually included in a hidden form field, so that on form submission it is automatically sent back to the server for checking.
 
