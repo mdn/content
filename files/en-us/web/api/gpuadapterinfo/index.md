@@ -11,7 +11,7 @@ browser-compat: api.GPUAdapterInfo
 
 The **`GPUAdapterInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} contains identifying information about a {{domxref("GPUAdapter")}}.
 
-An adapter's `GPUAdapterInfo` can retrieved using the {{domxref("GPUAdapter.info")}} property of the adapter itself, or the {{domxref("GPUDevice.adapterInfo")}} property of a device that originated from the adapter.
+An adapter's `GPUAdapterInfo` can be retrieved using the {{domxref("GPUAdapter.info")}} property of the adapter itself, or the {{domxref("GPUDevice.adapterInfo")}} property of a device that originated from the adapter.
 
 This object allows developers to access specific details about the user's GPU so that they can preemptively apply workarounds for GPU-specific bugs, or provide different codepaths to better suit different GPU architectures. Providing such information does present a security risk — it could be used for fingerprinting — therefore the information shared is kept at a minimum, and different browser vendors are likely to share different information types and granularities.
 
