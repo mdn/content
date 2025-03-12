@@ -63,7 +63,7 @@ async function analyzePR(buildDirectory, config) {
   const buildHash = await getBuildHash(buildDirectory);
   const now = new Date().toISOString();
   const hiddenComment = `<!-- build_hash: ${buildHash} date: ${now} -->`;
-  const fullComment = `${hiddenComment}\n\n${combinedComment}`;
+  const fullComment = truncateComment(`${hiddenComment}\n\n${combinedComment}`);
 
   if (!config.repo) {
     console.warn("Warning! No 'repo' config");
@@ -109,7 +109,7 @@ async function analyzePR(buildDirectory, config) {
               owner,
               repo: repoName,
               comment_id: comment.id,
-              body: truncateComment(newComment),
+              body: newComment,
             });
             console.log(`Updating existing comment (${comment.id})`);
             updated = true;
@@ -122,7 +122,7 @@ async function analyzePR(buildDirectory, config) {
           owner,
           repo: repoName,
           issue_number: Number(config.pr_number),
-          body: truncateComment(fullComment),
+          body: fullComment,
         });
       }
     }
