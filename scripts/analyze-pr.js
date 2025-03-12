@@ -1,10 +1,16 @@
 import { readFile, readdir } from "node:fs/promises";
+import { existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 
 import { Octokit } from "@octokit/rest";
 import { parse } from "node-html-parser";
 import parseDiff from "parse-diff";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+const DEFAULT_REPO = "mdn/content"; // adjust as needed
+const DEFAULT_GITHUB_TOKEN = "your_default_github_token"; // adjust as needed
 
 const MAX_COMMENT_BODY_LENGTH = 65000;
 const hiddenCommentRegex =
@@ -457,14 +463,93 @@ function getPatchLines(patches) {
   return patchLines;
 }
 
-export default {
-  analyzePR,
-  truncateComment,
-  postAboutDeployment,
-  mdnUrlToDevUrl,
-  postAboutDangerousContent,
-  postAboutFlaws,
-  getBuiltDocs,
-  getBuildHash,
-  getPatchLines,
-};
+yargs(hideBin(process.argv))
+  .command(
+    "$0",
+    "Analyze the PR build",
+    (yargs) => {
+      return yargs
+        .positional("directory", {
+          describe: "Directory path",
+          type: "string",
+          coerce: (dirPath) => {
+            if (!existsSync(dirPath) || !statSync(dirPath).isDirectory()) {
+              throw new Error(`Directory "${dirPath}" is not valid.`);
+            }
+            return dirPath;
+          },
+        })
+        .option("prefix", {
+          describe: "What prefix was it uploaded as",
+          type: "string",
+          default: null,
+        })
+        .option("repo", {
+          describe: "Name of the repo (e.g. mdn/content)",
+          type: "string",
+          default: DEFAULT_REPO,
+        })
+        .option("pr-number", {
+          describe: "Number for the PR",
+          type: "number",
+          default: null,
+        })
+        .option("github-token", {
+          describe: "Token used to post PR comments",
+          type: "string",
+          default: DEFAULT_GITHUB_TOKEN,
+        })
+        .option("analyze-flaws", {
+          describe: "Analyze the .doc.flaws keys in the index.json files",
+          type: "boolean",
+          default: false,
+        })
+        .option("analyze-dangerous-content", {
+          describe:
+            'Look through the built content and list "dangerous things"',
+          type: "boolean",
+          default: false,
+        })
+        .option("diff-file", {
+          describe:
+            "The path to the file that is a diff output. (Only relevant in conjunction with --analyze-dangerous-content)",
+          type: "string",
+          default: null,
+          coerce: (filePath) => {
+            if (filePath && !existsSync(filePath)) {
+              throw new Error(`File "${filePath}" does not exist.`);
+            }
+            return filePath;
+          },
+        })
+        .option("verbose", {
+          describe: "Enable verbose logging",
+          type: "boolean",
+          default: false,
+        });
+    },
+    (argv) => {
+      console.log(`Deployer (version x.x.x)`); // Replace with actual version if needed
+
+      // Check that at least one actionable option was provided
+      if (
+        !argv.prefix &&
+        !argv["analyze-flaws"] &&
+        !argv["analyze-dangerous-content"]
+      ) {
+        throw new Error("No actionable option used.");
+      }
+
+      // Call your analysis function with the directory and options
+      const combinedComment = analyzePR(argv.directory, argv);
+
+      if (argv.verbose) {
+        console.log("_".repeat(80));
+        console.log("POST");
+        console.log(combinedComment);
+        console.log("END POST".padStart(80, "_"));
+      }
+    },
+  )
+  .demandCommand(1, "You need to specify a command.")
+  .help().argv;
