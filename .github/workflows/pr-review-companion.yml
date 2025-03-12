@@ -164,7 +164,7 @@ jobs:
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
-          node scripts/analyze-pr.js \
+          node scripts/analyze-pr-build.js \
             --prefix="pr$PR_NUMBER" \
             --analyze-flaws \
             --analyze-dangerous-content \
