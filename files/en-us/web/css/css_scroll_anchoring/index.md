@@ -26,7 +26,7 @@ For scroll containers that are [snapped](/en-US/docs/Glossary/Scroll_snap) to an
 
 ## Guides
 
-- [Guide to scroll anchoring](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [Guide to scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
   - : How to enable and disable scroll anchoring and suppression triggers, and when and why you should use them.
 
 ## Related concepts
