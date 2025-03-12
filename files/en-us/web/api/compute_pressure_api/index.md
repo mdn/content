@@ -40,7 +40,7 @@ The Compute Pressure API is available in the following contexts:
 - {{domxref("Window")}} (main thread)
 - {{domxref("Worker")}}
 - {{domxref("SharedWorker")}}
-- {{HTMLElement("iFrame")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure) is provided)
+- {{HTMLElement("iframe")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure) is provided)
 
 ### Pressure states
 
