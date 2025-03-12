@@ -37,10 +37,16 @@ text-rendering: unset;
 
 - `auto`
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
+
+    For extended body of text on a web page, the `auto` value is generally a good option for balancing both quality and performance.
 - `optimizeSpeed`
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
+
+    To ensure fast loading and to extend battery life for mobile users, the `optimizeSpeed` value is preferred.
 - `optimizeLegibility`
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
+
+    When displaying large forms of text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text. In addition, it could be used for high-quality professional typography such as essays and articles, but it's not recommended for large articles due to potential performance impact and bugs.
 - `geometricPrecision`
 
   - : The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts — such as kerning — don't scale linearly. So this value can make text using those fonts look good.
@@ -49,31 +55,10 @@ text-rendering: unset;
 
     But the `geometricPrecision` property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.
 
+    When working with bold text and variable fonts, especially headers and banners, the `geometricPrecision` value ensures that the text is accurately rendered and scaled.
+
     > [!NOTE]
     > WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
-
-### Recommended Use Cases
-
-The `text-rendering` [CSS](/en-US/docs/Web/CSS) property values are useful in different cases depending on the text's content and context. Here are some useful guidelines on which values to use based on common use cases:
-
-- `Large Banners, Headings or Logos:`
-  - : Recommended value: `optimizeLegibility`.
-  - : When displaying large text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text by enabling various advanced typography technologies, such as kerning and ligatures.
-- `Large-form text (articles, paragraph)`
-  - : Recommended value: `auto` (default) or `optimizeLegibility`.
-  - : For extended body of text on a web page, the `auto` value is generally preferred for performance. However, `optimizeLegibility` could be used for high-quality professional typography.
-- `Bold Text with Variable Fonts`
-  - : Recommended value: `geometricPrecision`.
-  - : When working with bold text in variable fonts, especially headers and banners, the `geometricPrecision` value ensures that the text is accurately rendered and scaled.
-- `Performance-Critical-Devices (Mobile)`
-  - : Recommended value: `optimizeSpeed`.
-  - : To ensure fast loading and to extend battery life for mobile users, the `optimizeSpeed` value is preferred.
-
-### Key Consideration
-
-- : Avoid overriding `auto` unless necessary, as browsers optimize effectively.
-- : `optimizeLegibility` has a minor performance impact on very low-end devices.
-- : `geometricPrecision` is rarely needed nowadays--most browsers handle fonts effectively without it.
 
 ## Formal definition
 
