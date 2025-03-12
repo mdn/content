@@ -6,7 +6,7 @@ page-type: guide
 
 {{HTMLSidebar}}
 
-Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules. It's also possible for elements to not be a member of _any_ of these categories.
+Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules. It's possible for elements (such as {{HTMLElement("track")}}) to not be a member of _any_ of these categories.
 
 The content categories are used to define the _content model_ of elements, in other words what each element can take as descendants. For example, a `<p>` element can only contain _phrasing content_, while a `<div>` element can contain _flow content_.
 
@@ -120,7 +120,7 @@ The flow elements are:
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
 - [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- plain text
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -207,7 +207,7 @@ The phrasing elements are:
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
 - [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- plain text
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -261,7 +261,7 @@ Some elements belong to this category only under specific conditions:
 
 ## Palpable content
 
-Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Palpable content is not used to define content models, but is used to define a general rule: elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the `hidden` attribute specified.
+**Palpable content** is content that is neither empty nor hidden; it is content that is rendered and substantive. Palpable content is not used to define content models but is used to define a general rule: Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the `hidden` attribute specified.
 
 The palpable elements are:
 
@@ -325,7 +325,7 @@ The palpable elements are:
 - {{HtmlElement("var")}}
 - {{HtmlElement("video")}}
 - [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- plain text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
+- Plain text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
 
 Some elements belong to this category only under specific conditions:
 
@@ -346,7 +346,7 @@ The script-supporting elements are:
 
 ## Form-associated content
 
-Form-associated content is a subset of flow content comprising elements that have a form owner, exposed by a `form` attribute, and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the `form` attribute.
+Form-associated content is a subset of flow content comprising elements that have a form owner and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the `<form>` whose `id` is specified in the element's `form` attribute.
 
 The form-associated elements are:
 
