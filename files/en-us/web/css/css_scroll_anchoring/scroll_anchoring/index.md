@@ -1,5 +1,5 @@
 ---
-title: Guide to scroll anchoring
+title: Understanding scroll anchoring
 slug: Web/CSS/CSS_scroll_anchoring/Scroll_anchoring
 page-type: guide
 browser-compat: css.properties.overflow-anchor
@@ -9,7 +9,7 @@ browser-compat: css.properties.overflow-anchor
 
 As a user of the web, you are probably familiar with the problem that scroll anchoring solves. You browse to a long page on a slow connection and begin to scroll to read the content; while you are busy reading, the part of the page you are looking at suddenly jumps. This has happened because large images or some other elements have just loaded further up in the content.
 
-[Scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) is a browser feature that aims to solve this problem of content jumping, which happens if content loads in after the user has already scrolled to a new part of the document.
+Scroll anchoring is a browser feature that aims to solve this problem of content jumping, which happens if content loads in after the user has already scrolled to a new part of the document.
 
 ## How does it work?
 
@@ -21,21 +21,19 @@ You don't! The feature is enabled by default in supporting browsers. In most cas
 
 ## What if I need to debug it?
 
-If your page is not behaving well with scroll anchoring enabled, it is probably because some `scroll` event listener is not handling well the extra scrolling to compensate for the anchor node movement.
+If your page is not behaving well with scroll anchoring enabled, it is probably because some `scroll` event listener is not handling the extra scrolling to compensate for the anchor node movement.
 
-You can check whether disabling scroll anchoring fixes the issue in Firefox by changing `layout.css.scroll-anchoring.enabled` to `false` in `about:config`.
+You can check whether disabling scroll anchoring fixes the issue in Firefox by changing `layout.css.scroll-anchoring.enabled` to `false` in `about:config`. If it does, you can check what node is Firefox using as the anchor using the `layout.css.scroll-anchoring.highlight` switch. That will show a purple overlay on top of the anchor node.
 
-If it does, you can check what node is Firefox using as the anchor using the `layout.css.scroll-anchoring.highlight` switch. That will show a purple overlay on top of the anchor node.
-
-If one node doesn't seem appropriate to be an anchor, you can exclude it using {{cssxref("overflow-anchor")}}, as described below.
+If a node doesn't seem to be an appropriate anchor, you can exclude it using {{cssxref("overflow-anchor")}}, as described below.
 
 ## What if I need to disable it?
 
-The specification provides a new property, {{cssxref("overflow-anchor")}}, which can be used to disable scroll anchoring on all or part of the document. It's essentially a way to opt out of the new behavior.
+The [CSS scroll anchoring module](/en-US/docs/Web/CSS/CSS_scroll_anchoring) provides the {{cssxref("overflow-anchor")}} property which can be used to disable scroll anchoring on all or part of the document. It's essentially a way to opt out of the behavior.
 
 The only possible values are `auto` or `none`:
 
-- `auto` is the initial value; as long as the user has a supported browser the scroll anchoring behavior will happen, and they should see fewer content jumps.
+- `auto` is the initial value; as long as the user's browser supports scroll anchoring, the behavior will happen, and they should see fewer content jumps.
 - `none` means that you have explicitly opted the document, or part of the document, out of scroll anchoring.
 
 To opt out the entire document, you can set it on the {{htmlelement("body")}} element:
@@ -46,7 +44,7 @@ body {
 }
 ```
 
-To opt out a certain part of the document use `overflow-anchor: none` on its container element:
+To opt out section of the document, set `overflow-anchor: none` on the section's container element:
 
 ```css
 .container {
@@ -54,12 +52,11 @@ To opt out a certain part of the document use `overflow-anchor: none` on its con
 }
 ```
 
-> [!NOTE]
-> The specification details that once scroll anchoring has been opted out of, you cannot opt back into it from a child element. For example, if you opt out for the entire document, you will not be able to set `overflow-anchor: auto` elsewhere in the document to turn it back on for a subsection.
+If opting out of scroll anchoring on the document or a section thereof, a descendent of an opted-out area can not be opted back in. For example, if you opt out for the entire document, you will not be able to set `overflow-anchor: auto` elsewhere in the document to turn it back on for a subsection.
 
 ### Suppression triggers
 
-The specification also details some _suppression triggers_, which will disable scroll anchoring in places where it might be problematic. If any of the triggers happen on the anchor node, or an ancestor of it, anchoring is suppressed.
+There are some _suppression triggers_, which disable scroll anchoring in places where it might be problematic. If any of the triggers happen on the anchor node, or an ancestor of it, anchoring is suppressed.
 
 These suppression triggers are changes to the computed value of any of the following properties:
 
@@ -68,15 +65,7 @@ These suppression triggers are changes to the computed value of any of the follo
 - Any {{cssxref("width")}} or {{cssxref("height")}}-related properties
 - {{cssxref("transform")}} and the individual transform properties {{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}
 
-Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box also disable scroll anchoring.
-
-> [!NOTE]
-> In [Firefox bug 1584285](https://bugzil.la/1584285) the `layout.css.scroll-anchoring.suppressions.enabled` flag was added to Firefox Nightly in order to allow the disabling of these triggers.
-
-## Further reading
-
-- [Explainer document on the WICG site](https://github.com/WICG/ScrollAnchoring/blob/master/explainer.md)
-- [Scroll anchoring for web developers on the Chromium blog](https://blog.chromium.org/2017/04/scroll-anchoring-for-web-developers.html)
+Additionally, {{cssxref("position")}} changes anywhere inside the {{glossary("scroll container")}} also disable scroll anchoring.
 
 ## Specifications
 
@@ -86,6 +75,9 @@ Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box 
 
 {{Compat}}
 
-### Compatibility notes
+To conditionally apply styles based on whether scroll anchoring can be disabled, use [`@supports` feature queries](/en-US/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
 
-If you need to test whether scroll anchoring is available in a browser, use [Feature Queries](/en-US/docs/Web/CSS/@supports) to test support for the `overflow-anchor` property.
+## See also
+
+- [Original scroll anchoring explainer](https://github.com/WICG/ScrollAnchoring/blob/master/explainer.md) via WICG (2016)
+- [Scroll anchoring for web developers](https://blog.chromium.org/2017/04/scroll-anchoring-for-web-developers.html) via Chromium (2017)
