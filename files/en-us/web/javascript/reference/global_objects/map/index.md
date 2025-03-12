@@ -497,8 +497,7 @@ console.log(original === clone); // false (useful for shallow comparison)
 ```
 
 > [!NOTE]
-> Keep in mind that _the data itself_ is not cloned.
-> For more info check out [Shallow copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy)
+> Keep in mind that _the data itself_ is not cloned. In other words, it is only a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the `Map`.
 
 Maps can be merged, maintaining key uniqueness:
 
