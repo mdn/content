@@ -498,26 +498,7 @@ console.log(original === clone); // false (useful for shallow comparison)
 
 > [!NOTE]
 > Keep in mind that _the data itself_ is not cloned.
-
-Perform a deep copy:
-```js
-const original_map = new Map();
-original_map.set('key_1', { 'value_1': 1 });
-
-const copy_of_original_map = new Map(original_map);
-
-original_map.forEach((value, key) => {
-    // Create a deep copy of each object
-    copy_of_original_map.set(key, JSON.parse(JSON.stringify(value)));
-});
-
-copy_of_original_map.forEach((value, key) => {
-    value.value_1 = 2;
-});
-
-console.log('copy_of_original_map', copy_of_original_map); // copy_of_original_map Map(1) { 'key_1' => { value_1: 2 } }
-console.log('original_map', original_map); // original_map Map(1) { 'key_1' => { value_1: 1 } }
-```
+> For more info check out [Shallow copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy)
 
 Maps can be merged, maintaining key uniqueness:
 
