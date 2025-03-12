@@ -26,7 +26,7 @@ While we focus primarily on the mechanisms defined in ECMAScript in this referen
 
 In the JavaScript specification, each autonomous executor of JavaScript is called an **agent**, which maintains its facilities for code execution:
 
-- **Heap** (of objects): this is just a name to denote a large (mostly unstructured) region of memory. It gets populated as objects get created in the program. Note that in the case of shared memory, each agent has its own heap with its own version of a `SharedArrayBuffer` object, but the underlying memory represented by the buffer is shared.
+- **Heap** (of objects): this is just a name to denote a large (mostly unstructured) region of memory. It gets populated as objects get created in the program. Note that in the case of shared memory, each agent has its own heap with its own version of a {{jsxref("SharedArrayBuffer")}} object, but the underlying memory represented by the buffer is shared.
 - [**Queue** (of jobs)](#job_queue_and_event_loop): this is known in HTML (and also commonly) as the _event loop_ which enables asynchronous programming in JavaScript while being single-threaded. It's called a queue because it's generally first-in-first-out: earlier jobs are executed before later ones.
 - [**Stack** (of execution contexts)](#stack_and_execution_contexts): this is what's known as a _call stack_ and allows transferring control flow by entering and exiting execution contexts like functions. It's called a stack because it's last-in-first-out. Every job enters by pushing a new frame onto the (empty) stack, and exits by emptying the stack.
 
