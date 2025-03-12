@@ -301,7 +301,7 @@ async function postAboutFlaws(buildDirectory, config) {
   let totalFlaws = 0;
 
   for (const doc of docs) {
-    if (!doc.flaws) {
+    if (!doc.flaws || Object.keys(doc.flaws).length === 0) {
       docsWithZeroFlaws++;
       continue;
     }
