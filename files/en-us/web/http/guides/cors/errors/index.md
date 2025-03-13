@@ -10,7 +10,7 @@ page-type: landing-page
 
 If the CORS configuration isn't set up correctly, the browser console will present an error like `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at [some site]"` indicating that the request was blocked due to violating the CORS security rules. This might not necessarily be a set-up mistake, though. It's possible that the request is in fact intentionally being disallowed by the user's web application and remote external service. However, If the endpoint is meant to be available, some debugging is needed to succeed.
 
-## Identifying the issue
+## Identifying a CORS issue
 
 To understand the underlying issue with the CORS configuration, you need to find out which request is at fault and why. These steps may help you do so:
 

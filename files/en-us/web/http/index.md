@@ -27,6 +27,15 @@ The HTTP reference documentation contains detailed information about headers, re
 - [HTTP resources and specifications](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
   - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
 
+The following subsections are also notable:
+
+- [CSP directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives)
+  - : The {{HTTPHeader("Content-Security-Policy")}} (CSP) response header allows website administrators to specify which resources the user agent is allowed to load for a given page.
+    This section lists directives that can be used in a CSP header, with individual documentation pages that describe how the directives work and how to use them.
+- [Permissions-Policy directives](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
+  - : The {{HTTPHeader("Permissions-Policy")}} response header provides a mechanism to allow or deny the use of browser features in a document or within any {{HTMLElement("iframe")}} element in the document.
+    This section lists directives that can be used in a Permissions-Policy header, with individual documentation pages that describe how the directives work and how to use them.
+
 ## HTTP guides
 
 HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a simple message structure, and client-server communication model.

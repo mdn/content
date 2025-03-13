@@ -31,8 +31,14 @@ sidebar:
         title: HTTP Observatory
       - /Web/HTTP/Guides/Permissions_Policy
       - /Web/HTTP/Guides/CSP
-      - /Web/HTTP/Guides/CORS
       - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
+      - /Web/HTTP/Guides/CORS
+      - type: listSubPages
+        path: /Web/HTTP/Guides/CORS/Errors
+        link: /Web/HTTP/Guides/CORS/Errors
+        title: CORS_errors
+        details: closed
+        code: true
   - type: section
     link: /Web/HTTP/Reference
     title: Reference
@@ -56,19 +62,13 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/HTTP/Reference/Headers/Content-Security-Policy
-    link: /Web/HTTP/Reference/Headers/Content-Security-Policy
+    link: /Web/HTTP/Reference/Headers/Content-Security-Policy#directives
     title: CSPDirectives
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/Guides/CORS/Errors
-    link: /Web/HTTP/Guides/CORS/Errors
-    title: CORS_errors
-    details: closed
-    code: true
-  - type: listSubPages
     path: /Web/HTTP/Reference/Headers/Permissions-Policy
-    link: /Web/HTTP/Reference/Headers/Permissions-Policy
+    link: /Web/HTTP/Reference/Headers/Permissions-Policy#directives
     title: PermissionsPolicyDirectives
     details: closed
     code: true
