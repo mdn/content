@@ -36,7 +36,7 @@ jobs:
 
           # Check actor.
           ACTOR="${{ github.actor }}"
-          if [ "$ACTOR" !== "$AUTHOR" ]; then
+          if [ "$ACTOR" != "$AUTHOR" ]; then
             ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
 
             if [ "$ACTOR_PERMISSION" != "admin"]; then
