@@ -27,9 +27,9 @@ These articles cover some of the HTML elements and CSS properties that are used 
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a [replaced element](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties), such as an [`<img>`](/en-US/docs/Web/HTML/Element/img) or [`<video>`](/en-US/docs/Web/HTML/Element/video), should be resized to fit its container.
+  - : The **`object-fit`** [CSS](/en-US/docs/Web/CSS) property sets how the content of a {{ glossary("replaced elements", "replaced element") }}, such as an [`<img>`](/en-US/docs/Web/HTML/Element/img) or [`<video>`](/en-US/docs/Web/HTML/Element/video), should be resized to fit its container.
 - {{cssxref("object-position")}}
-  - : The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of content in a selected [replaced element](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties) within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
+  - : The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of content in a selected {{ glossary("replaced elements", "replaced element") }} within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
 - {{cssxref("background-image")}}
   - : The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images for an element.
 

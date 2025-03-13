@@ -60,7 +60,7 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 
 ## Positioning and scaling
 
-Being a [replaced element](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties), the `<fencedframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+Being a {{ glossary("replaced elements", "replaced element") }}, the `<fencedframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
 
 > [!NOTE]
 > The {{cssxref("object-fit")}} property has no effect on `<fencedframe>` elements.
