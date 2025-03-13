@@ -153,7 +153,7 @@ That `charset` parameter isn't valid for JavaScript content, and in most cases w
 
 ### application/json
 
-JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.
+{{glossary("JSON","JavaScript Object Notation (JSON)")}} is a standard text-based format for representing structured data based on JavaScript object syntax.
 It is commonly used for transmitting data in web applications.
 
 #### Legacy JavaScript MIME types
