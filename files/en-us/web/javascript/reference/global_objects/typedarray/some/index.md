@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.some
 
 The **`some()`** method of {{jsxref("TypedArray")}} instances tests whether at least one element in the typed array passes the test implemented by the provided function. It returns true if, in the typed array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the typed array. This method has the same algorithm as {{jsxref("Array.prototype.some()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.some()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

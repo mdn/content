@@ -9,7 +9,7 @@ browser-compat: javascript.statements.for
 
 The **`for`** statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
 
-{{InteractiveExample("JavaScript Demo: Statement - For")}}
+{{InteractiveExample("JavaScript Demo: for statement")}}
 
 ```js interactive-example
 let str = "";
