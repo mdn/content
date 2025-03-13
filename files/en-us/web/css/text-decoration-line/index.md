@@ -62,6 +62,8 @@ text-decoration-line: underline;
 text-decoration-line: overline;
 text-decoration-line: line-through;
 text-decoration-line: blink;
+text-decoration-line: spelling-error;
+text-decoration-line: grammar-error;
 
 /* Multiple keywords */
 text-decoration-line: underline overline; /* Two decoration lines */
@@ -89,6 +91,13 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - : Each line of text has a decorative line going through its middle.
 - `blink`
   - : The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is **deprecated** in favor of [CSS animations](/en-US/docs/Web/CSS/animation).
+- `spelling-error`
+  - : The text decoration use the user agents method of highlighting spelling mistakes, this is a dotted red line in most browsers.
+- `grammar-error`
+  - : The text decoration use the user agents method of highlighting grammar mistakes, this is a dotted green line in most browsers.
+
+> [!NOTE]
+> When using `spelling-error`, and `grammar-error` values for `text-decoration-line`, the user agent disregards the other sub-properties of {{cssxref("text-decoration")}} (such as {{cssxref("text-underline-position")}}, `color`, or `stroke`).
 
 ## Formal definition
 
@@ -136,3 +145,5 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-decoration-thickness")}}
 - {{cssxref("text-underline-offset")}}
+- {{cssxref("::spelling-error")}}
+- {{cssxref("::grammar-error")}}
