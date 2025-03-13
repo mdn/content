@@ -115,7 +115,7 @@ There are several other color functions and color spaces. The last three example
 
 As we saw, one color within the same color space may be expressed in many ways. Looking at how the RGB color space is used to describe the color "magenta", you can see that the same color may be expressed in a shorthand, three-digit hex number that converts to an rgb value as a six-digit hex number that also converts to the same rgb value, or as a rgba value, expressed in percentages.
 
-RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Converting from RGB to HSL is not a simple equation. Fortunately, browsers do it automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
+RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
 In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
@@ -202,7 +202,7 @@ Another essential point to consider is the color or luminance that is surroundin
 
 The yellow dots in this image are identical colors on your monitor, but they appear different due to context. (Image D.Lyon)
 
-Our contrast, lightness, and color perception are affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is not as simple as a mathematical ratio between two colors.
+Our contrast, lightness, and color perception are affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is not merely a mathematical ratio between two colors.
 
 To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 

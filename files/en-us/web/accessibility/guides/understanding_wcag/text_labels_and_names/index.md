@@ -46,7 +46,7 @@ A dialog box is generally denoted by an ARIA [`role="dialog"`](/en-US/docs/Web/A
 
 ### Examples
 
-The following example shows a simple dialog box, defined as such using `role="dialog"` and labelled using `aria-labelledby`.
+The following example shows a dialog box, defined as such using `role="dialog"` and labelled using `aria-labelledby`.
 
 ```html
 <div
@@ -119,7 +119,7 @@ Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/G
 
 ## Figures with optional captions should be labeled
 
-For best accessibility, include a {{HTMLElement("figcaption")}} within a {{HTMLElement("figure")}} element, even though doing so is technically optional. The caption is in addition to any alternative text on images within the figure. The caption describes the purpose of the figure in the document, which may be different from a simple description of a visual item, as provided by the alternative text.
+For best accessibility, include a {{HTMLElement("figcaption")}} within a {{HTMLElement("figure")}} element, even though doing so is technically optional. The caption is in addition to any alternative text on images within the figure. The caption describes the purpose of the figure in the document, which may be different from a description of a visual item, as provided by the alternative text.
 
 ### Example
 
