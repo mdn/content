@@ -43,4 +43,4 @@ The {{glossary("user agent")}} performs four steps to calculate a property's act
     - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)

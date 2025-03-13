@@ -120,4 +120,4 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)

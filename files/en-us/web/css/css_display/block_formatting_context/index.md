@@ -236,4 +236,4 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)

@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 In CSS, content that participates in inline layout is called **inline-level content**. Most text sequences, replaced elements, and generated content are inline-level by default.
 
-In inline layout, a mixed stream of text, [replaced elements](/en-US/docs/Web/CSS/Replaced_element), and other inline boxes are laid out by fragmenting them into a stack of line boxes. Within each line box, inline-level boxes are aligned to each other vertically or horizontally, depending on the writing mode. Typically, they are aligned by the baselines of their text. This can be changed with CSS.
+In inline layout, a mixed stream of text, [replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties), and other inline boxes are laid out by fragmenting them into a stack of line boxes. Within each line box, inline-level boxes are aligned to each other vertically or horizontally, depending on the writing mode. Typically, they are aligned by the baselines of their text. This can be changed with CSS.
 
 ![inline layout](inline_layout.png)
 

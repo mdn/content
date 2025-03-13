@@ -139,7 +139,7 @@ If `usemap` is specified, it must be the name of an image map element, {{HTMLEle
 
 ## Using image inputs
 
-The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
+The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
 
 ### Essential image input features
 

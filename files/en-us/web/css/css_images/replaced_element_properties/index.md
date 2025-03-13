@@ -1,6 +1,6 @@
 ---
 title: Replaced elements
-slug: Web/CSS/Replaced_element
+slug: Web/CSS/CSS_images/Replaced_element_properties
 page-type: guide
 ---
 
