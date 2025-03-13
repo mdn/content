@@ -9,6 +9,7 @@ on:
       - "scripts/**"
       - package.json
       - yarn.lock
+  pull_request:
 
 # No GITHUB_TOKEN permissions, as we don't use it.
 permissions: {}
