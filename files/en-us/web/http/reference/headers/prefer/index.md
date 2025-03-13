@@ -1,6 +1,6 @@
 ---
 title: Prefer
-slug: Web/HTTP/Headers/Prefer
+slug: Web/HTTP/Reference/Headers/Prefer
 page-type: http-header
 spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-2
 ---
