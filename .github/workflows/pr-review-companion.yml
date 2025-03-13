@@ -156,7 +156,7 @@ jobs:
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
 
-      - name: Analyze built content
+      - name: Analyze PR build
         if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
         run: |
           PR_NUMBER=`cat build/NR`
