@@ -151,6 +151,11 @@ No other MIME types are considered valid for JavaScript, and using any MIME type
 You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
 That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
 
+### application/json
+
+JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.
+It is commonly used for transmitting data in web applications.
+
 #### Legacy JavaScript MIME types
 
 In addition to the `text/javascript` MIME type, for historical reasons, the [MIME Sniffing Standard](https://mimesniff.spec.whatwg.org/)
