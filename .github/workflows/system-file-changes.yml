@@ -39,7 +39,7 @@ jobs:
           if [ "$ACTOR" != "$AUTHOR" ]; then
             ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
 
-            if [ "$ACTOR_PERMISSION" != "admin"]; then
+            if [ "$ACTOR_PERMISSION" != "admin" ]; then
               echo "PR actor ($ACTOR) is not an admin, please ping someone for a review."
               exit 1
             fi
