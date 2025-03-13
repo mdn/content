@@ -6,24 +6,15 @@ page-type: guide
 
 {{CSSRef}}
 
-In the most basic cases, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional, when text, images, and other elements are arranged on the page without overlapping. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. But CSS isn't that simple. CSS positioning, transformation, containment, and other features can cause elements to overlap or otherwise create their own [stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). In this guide, we look at the {{cssxref("z-index")}} attribute and how this property lets you adjust the placement of content in a third dimension.
-
-## Elements exist in three dimensions
-
-The elements rendered on a page are comprised of a series of boxes. Each box has a position in three dimensions. In addition to their inline and block positions, boxes lie along the third dimension known as the _z-axis_.
-
-three dorder of the layering of objects when rendering content.
-
-Controlling an element's z-axis position becomes especially relevant when element boxes overlap visually. Several property values can cause elements to overlap. The {{cssxref("z-index")}} property enables controlling how they overlap!
-
-Using `z-index` may appear simple at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict. The stacking order follows a series of complex stacking rules. These rules may not seem intuitive at first, or ever, but they do ensure that all browsers stack the same content in the same manner providing consistency and predictability.
+In the most basic cases, when text, images, and other elements are arranged on the page without overlapping, [HTML](/en-US/docs/Web/HTML) pages can be considered two-dimensional. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. CSS isn't that simple. CSS positioning, transformation, containment, and other features can cause elements to overlap. In this guide, we introduce the {{cssxref("z-index")}} property, which lets you place elements in front or behind other elements in the same [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
 ## Layers on the z-axis
 
-CSS style rules allow you to position boxes on layers in addition to the default rendering layer (layer 0). The position on an imaginary z-axis of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. Control the position on this z-axis with the CSS `z-index` property.
-If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/position#types_of_positioning) element.
+The elements rendered on a page are comprised of a series of boxes. Each box has a position in three dimensions. In addition to their inline and block positions, boxes lie along the third dimension known as the _z-axis_. Controlling an element's z-axis position becomes especially relevant when element boxes overlap visually. Several property values can cause elements to overlap. The {{cssxref("z-index")}} property enables controlling how they overlap!
 
-The `z-index` property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along an imaginary z-axis. If you are not familiar with the term 'z-axis', imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers (_X_ represents an arbitrary positive integer):
+The `z-index` property allows you to position boxes on layers in addition to the default rendering layer (layer 0). The position on the imaginary z-axis of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer.
+
+The `z-index` property is specified with an integer value. The value, which represents the position of the element along an imaginary z-axis, can be positive or negative. If you are not familiar with the term 'z-axis', imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers (_X_ represents an arbitrary positive integer):
 
 | Layer        | Description                           |
 | ------------ | ------------------------------------- |
@@ -33,109 +24,127 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 | Layer X      | Layers with positive `z-index` values |
 | Top layer    | Closest to the observer               |
 
-> [!NOTE]
->
-> - When no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
-> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) apply.
+### Normal flow
 
-## Example
+By default, when no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
 
-In this example, the layers' stacking order is rearranged using `z-index`. The `z-index` of DIV #5 has no effect since it is not a positioned element.
+Given three elements:
 
-### HTML
-
-```html
-<div id="abs1">
-  <strong>DIV #1</strong>
-  <br />position: absolute; <br />z-index: 5;
-</div>
-
-<div id="rel1">
-  <strong>DIV #2</strong>
-  <br />position: relative; <br />z-index: 3;
-</div>
-
-<div id="rel2">
-  <strong>DIV #3</strong>
-  <br />position: relative; <br />z-index: 2;
-</div>
-
-<div id="abs2">
-  <strong>DIV #4</strong>
-  <br />position: absolute; <br />z-index: 1;
-</div>
-
-<div id="sta1">
-  <strong>DIV #5</strong>
-  <br />no positioning <br />z-index: 8;
-</div>
+```html live-sample___example1 live-sample___example2 live-sample___example3
+<div id="div1">#1</div>
+<div id="div2">#2</div>
+<div id="div3">#3</div>
 ```
 
-### CSS
+Without any positioning, they flow normally, one after another
 
-```css
+```css live-sample___example1 live-sample___example2 live-sample___example3 live-sample___example4
 div {
-  padding: 10px;
-  opacity: 0.7;
+  height: 100px;
+  width: 100px;
+  outline: 1px dotted;
+  line-height: 100px;
+  font-size: 40px;
   text-align: center;
+  font-family: arial, helvetica, sans-serif;
 }
 
-strong {
-  font-family: sans-serif;
+#div1 {
+  background-color: lightpink;
 }
 
-#abs1 {
-  z-index: 5;
+#div2 {
+  background-color: lightyellow;
+}
+
+#div3 {
+  background-color: lightgreen;
+}
+```
+
+{{EmbedLiveSample("Example1", 600, 340)}}
+
+## Default layering
+
+To stack the items, we can [position](/en-US/docs/Web/CSS/position#types_of_positioning) them.
+If we use absolute positioning to place them in (almost) the same spot, by default, the first element in the source order will be on the bottom and the last will be on the top.
+
+```css live-sample___example2 live-sample___example3 live-sample___example4
+div {
   position: absolute;
-  width: 150px;
-  height: 350px;
+}
+
+#div1 {
+  top: 0;
+  left: 0;
+}
+
+#div2 {
   top: 10px;
   left: 10px;
-  border: 1px dashed #900;
-  background-color: #fdd;
 }
 
-#rel1 {
-  z-index: 3;
-  height: 100px;
-  position: relative;
-  top: 30px;
-  border: 1px dashed #696;
-  background-color: #cfc;
-  margin: 0px 50px 0px 50px;
-}
-
-#rel2 {
-  z-index: 2;
-  height: 100px;
-  position: relative;
-  top: 15px;
+#div3 {
+  top: 20px;
   left: 20px;
-  border: 1px dashed #696;
-  background-color: #cfc;
-  margin: 0px 50px 0px 50px;
-}
-
-#abs2 {
-  z-index: 1;
-  position: absolute;
-  width: 150px;
-  height: 350px;
-  top: 10px;
-  right: 10px;
-  border: 1px dashed #900;
-  background-color: #fdd;
-}
-
-#sta1 {
-  z-index: 8;
-  height: 70px;
-  border: 1px dashed #996;
-  background-color: #ffc;
-  margin: 0px 50px 0px 50px;
 }
 ```
 
-## Result
+{{EmbedLiveSample("Example2", 600, 130)}}
 
-{{EmbedLiveSample("Example", 600, 400)}}
+### Rearranging layers
+
+We can use the CSS `z-index` property to position each element along the z-axis, effectively rearranging the stacking order.
+
+By adding `z-index` values, we change the layer order:
+
+```css live-sample___example3 live-sample___example4
+#div1 {
+  z-index: 5;
+}
+
+#div2 {
+  z-index: -9;
+}
+
+#div3 {
+  z-index: 0;
+}
+```
+
+{{EmbedLiveSample("Example3", 600, 130)}}
+
+The bottom layer is the element with the lowest `z-index` value. The top layer is the element with the highest value. In this case, `-9` is the lowest value, so `#div2` is behind all the others. The first in the source order, `#div1`, has the greatest value, so is on top of all the others.
+
+### Stacking context
+
+Using `z-index` may appear fairly straightforward at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict.
+
+If the elements are not siblings, things can get more complicated.
+
+```html live-sample___example4
+<section>
+  <div id="div1">#1</div>
+  <div id="div2">#2</div>
+</section>
+<div id="div3">#3</div>
+```
+
+```css live-sample___example4
+section {
+  position: absolute;
+  z-index: 2;
+}
+```
+
+{{EmbedLiveSample("Example4", 600, 130)}}
+
+This effect happens because #1 and #2 are nested in a separate [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) from #3.
+
+## Conclusion
+
+This guide is an introduction to `z-index`. You learned how the integer values of the `z-index` property can be used to alter stacking order. However, as demonstrated in the last example, stacking orders can be complicated. Stacking orders follow a series of complex stacking rules to ensure that all browsers stack the same content in the same manner providing consistency and predictability.
+
+Understanding the [features that create stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#features_creating_stacking_contexts) and how [nested stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#nested_stacking_contexts) effect layer order.
+
+## See also
