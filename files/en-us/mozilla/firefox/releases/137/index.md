@@ -19,6 +19,7 @@ This article provides information about the changes in Firefox 137 that affect d
 ### CSS
 
 - The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
+- The {{cssxref("text-decoration-line")}} CSS property now accepts the values `spelling-error`, and `grammar-error`. These values use the user agents styling for spelling and grammar errors and disregard the other sub-properties of {{cssxref("text-decoration")}}. ([Firefox bug 1950844](https://bugzil.la/1950844)).
 
 #### Removals
 
