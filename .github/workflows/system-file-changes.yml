@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Block if author/actor is not an admin
         run: |
-          // Check author.
+          # Check author.
           AUTHOR="${{ github.event.pull_request.user.login }}"
           AUTHOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$AUTHOR/permission --jq .permission)
 
@@ -32,7 +32,7 @@ jobs:
             exit 1
           fi
 
-          // Check actor.
+          # Check actor.
           ACTOR="${{ github.actor }}"
           if [ "$ACTOR" !== "$AUTHOR" ]; then
             ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
