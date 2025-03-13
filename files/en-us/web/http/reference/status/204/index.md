@@ -18,6 +18,8 @@ A `204 No Content` in response to these request methods has the following meanin
 A `204` response can be used when implementing "save and continue editing" functionality for applications like wiki sites.
 In this case, a {{HTTPMethod("PUT")}} request could be used to save the page contents, and a `204 No Content` response indicates to the browser that the editor should not be replaced by other content.
 
+Note that the response must not include any content or the {{HTTPHeader("Content-Length")}} header (browsers may reject responses that include content).
+
 ## Status
 
 ```http
