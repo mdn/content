@@ -42,11 +42,11 @@ For more information on the options see [Database integration](https://expressjs
 There are two common approaches for interacting with a database:
 
 - Using the databases' native query language, such as SQL.
-- Using an Object Relational Mapper ("ORM"). An ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
+- Using an Object Relational Mapper ("ORM") or Object Document Mapper ("ODM"). These represent the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs and ODMs are tied to a specific database, while others provide a database-agnostic backend.
 
-The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
+The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. Object mappers are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the mapper supports different database backends, and must make greater compromises in terms of what database features are supported).
 
-The benefit of using an ORM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.
+The benefit of using an ORM/ODM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform data validation.
 
 > [!NOTE]
 > Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
@@ -582,7 +582,7 @@ For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.co
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
-> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.com/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 

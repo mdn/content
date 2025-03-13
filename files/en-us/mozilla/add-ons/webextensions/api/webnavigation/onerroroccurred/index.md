@@ -22,12 +22,8 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(listener)`
-
-  `addListener(listener, filter)`
-
+- `addListener(listener)`, `addListener(listener, filter)`
   - : Adds a listener to this event.
-
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`

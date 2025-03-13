@@ -16,7 +16,7 @@ The **CSS animations** module lets you animate the values of CSS properties, suc
 To view the animation in the box below, click the checkbox 'Play the animation' or hover the cursor over the box. When the animating is active, the cloud at the top changes shape, snowflakes fall, and the snow level at the bottom rises. To pause the animation, uncheck the checkbox or move your cursor away from the box.
 
 ```html hidden live-sample___animation
-<!-- See aria-label: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label -->
+<!-- See aria-label: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label -->
 <input
   type="checkbox"
   id="animate"
@@ -41,12 +41,8 @@ i {
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
   /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
-  background-image: linear-gradient(
-      180deg,
-      transparent 40%,
-      white 40% 60%,
-      transparent 60%
-    ),
+  background-image:
+    linear-gradient(180deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(90deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(45deg, transparent 43%, white 43% 57%, transparent 57%),
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);
@@ -246,8 +242,11 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
 - {{cssxref("animation-play-state")}}
-- {{cssxref("animation-timing-function")}}
 - {{cssxref("animation-timeline")}}
+- {{cssxref("animation-timing-function")}}
+
+> [!NOTE]
+> The CSS Animations Module Level 2 introduces the `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline`, and `animation-trigger-type` properties. These have not yet been implemented.
 
 ### At-rules
 
@@ -266,6 +265,7 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("AnimationEvent")}}
+- {{domxref("CSSAnimation")}}
 - {{domxref("CSSKeyframeRule")}}
 - {{domxref("CSSKeyframesRule")}}
 
@@ -289,8 +289,8 @@ All animations, even those with 0 seconds duration, throw animation events.
 
 ## See also
 
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- Properties in the [transitions](/en-US/docs/Web/CSS/CSS_transitions) CSS module to trigger animations based on user actions
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module.
+- Properties in the [transitions](/en-US/docs/Web/CSS/CSS_transitions) CSS module to trigger animations based on user actions.
 - The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size).
-- The {{htmlelement("canvas")}} HTML element along with [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations
-- The {{domxref("SVGAnimationElement")}} interface for all the animation-related element interfaces, including {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, and {{domxref("SVGAnimateTransformElement")}}
+- The {{htmlelement("canvas")}} HTML element along with [canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
+- The {{domxref("SVGAnimationElement")}} interface for all the animation-related element interfaces, including {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}}, and {{domxref("SVGAnimateTransformElement")}}.

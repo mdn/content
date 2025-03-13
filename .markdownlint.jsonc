@@ -208,7 +208,7 @@
       {
         "name": "un-closed-md-link",
         "message": "Missing closing bracket ')'",
-        "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
+        "searchPattern": "/\\[.*?\\]\\([^ )\\n\"]+(?:[\\n\"]| [^\"']| [\"'].+?[\"'][^)])/gm",
         "searchScope": "text",
       },
       {

@@ -19,7 +19,7 @@ If a page needs to make connections to many third-party domains, preconnecting t
 <link rel="preconnect" href="https://example.com" />
 ```
 
-You can also implement preconnect as an HTTP [Link](/en-US/docs/Web/HTTP/Headers/Link) header, for example:
+You can also implement preconnect as an HTTP [Link](/en-US/docs/Web/HTTP/Reference/Headers/Link) header, for example:
 
 ```http
 Link: <https://example.com>; rel="preconnect"
@@ -35,4 +35,4 @@ Link: <https://example.com>; rel="preconnect"
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="preconnect">` and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of `<link rel="preconnect">` and other similar performance improvement features.

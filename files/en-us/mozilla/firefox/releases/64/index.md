@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 64 that will affe
 
 - The [Accessibility info-bar](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) has been enhanced to include information about the color contrast ratio of text or images on the page ([Firefox bug 1473037](https://bugzil.la/1473037)).
 - [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) device selection is now saved between sessions ([Firefox bug 1248619](https://bugzil.la/1248619)).
-- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
+- Resources that are potentially affected by [Tracking Protection](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) are now indicated in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ([Firefox bug 1333994](https://bugzil.la/1333994)).
 - The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) got improvements around entering and evaluating code:
 
   - [Autocomplete](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) for Console expressions is now case-insensitive ([Firefox bug 672733](https://bugzil.la/672733)).
@@ -44,7 +44,7 @@ _No changes._
 - Closely associated with the above update, we've also removed most of the Firefox-specific `-moz-appearance` values ([Firefox bug 1496720](https://bugzil.la/1496720)).
 - {{cssxref("display")}}: `list-item` is now supported on {{htmlelement("legend")}} elements ([Firefox bug 1486602](https://bugzil.la/1486602)).
 - SVG `path()`s, as usable in {{cssxref("offset-path")}}, are now animatable ([Firefox bug 1486094](https://bugzil.la/1486094)).
-- If a selector chain or group includes a `-webkit-`prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
+- If a selector chain or group includes a `-webkit-`-prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
 
 #### Removals
 
@@ -61,7 +61,7 @@ _No changes._
 
 - The TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) proposal has been implemented, to prevent {{jsxref("JSON.stringify")}} from returning ill-formed Unicode strings ([Firefox bug 1469021](https://bugzil.la/1469021)).
 - Proxied functions can now be passed to {{jsxref("Function.prototype.toString")}}`.call()` ([Firefox bug 1440468](https://bugzil.la/1440468)).
-- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
+- In the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) constructor, if no value is specified a typed 0 value is used. This is specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue) ([Firefox bug 1490286](https://bugzil.la/1490286)).
 
 ### APIs
 
@@ -104,7 +104,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 

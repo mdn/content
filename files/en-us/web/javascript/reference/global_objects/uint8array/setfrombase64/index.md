@@ -133,7 +133,8 @@ console.log(decoder.decode(""));
 
 ## See also
 
-- [Polyfill of `Uint8Array.setFromBase64` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [Polyfill of `Uint8Array.prototype.setFromBase64` in `core-js`](https://github.com/zloirock/core-js#uint8array-to--from-base64-and-hex)
+- [es-shims polyfill of `Uint8Array.prototype.setFromBase64`](https://www.npmjs.com/package/es-arraybuffer-base64)
 - {{jsxref("Uint8Array")}}
 - {{jsxref("Uint8Array.fromBase64()")}}
 - {{jsxref("Uint8Array.prototype.toBase64()")}}

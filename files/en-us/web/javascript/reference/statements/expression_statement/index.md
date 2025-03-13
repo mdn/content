@@ -32,7 +32,7 @@ Because the expression is evaluated and then discarded, the result of the expres
 - [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
 
-Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Data_structures#type_coercion).
+Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion).
 
 ### Forbidden expressions
 
@@ -41,7 +41,7 @@ In order for an expression to be used as a statement, it must not be ambiguous w
 - `function`: which would be a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function) or [`function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function*), not a [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`: which would be an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) or [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*), not an [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) or [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*)
 - `class`: which would be a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class), not a [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- `let[`: which would be a [`let` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/let) with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) on a variable called `let` (`let` can only be an identifier in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words))
+- `let[`: which would be a [`let` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/let) with [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), not a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) on a variable called `let` (`let` can only be an identifier in [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words))
 - `{`: which would be a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block), not an [object literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 Therefore, all of the following are invalid:

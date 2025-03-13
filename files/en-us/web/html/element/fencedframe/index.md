@@ -24,7 +24,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow` {{experimental_inline}}
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<fencedframe>`, which defines what features are available to the `<fencedframe>` based on the origin of the request. See [Permissions policies available to fenced frames](#permissions_policies_available_to_fenced_frames) for more details of which features can be controlled via a policy set on a fenced frame.
 
 - `height` {{experimental_inline}}
 
@@ -35,7 +35,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Permissions policies available to fenced frames
 
-Permissions delegated from the top-level context to a fenced frame for allowing and denying features could be used as a communication channel, so constitute a privacy threat. As a result, standard web features that can have their availability controlled via [Permissions Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) (for example, [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera) or [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)) are **not available** within fenced frames.
+Permissions delegated from the top-level context to a fenced frame for allowing and denying features could be used as a communication channel, so constitute a privacy threat. As a result, standard web features that can have their availability controlled via [Permissions Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) (for example, [`camera`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera) or [`geolocation`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)) are **not available** within fenced frames.
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
@@ -144,9 +144,9 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

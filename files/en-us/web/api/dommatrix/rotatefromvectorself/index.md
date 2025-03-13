@@ -15,9 +15,9 @@ To rotate a matrix from a vector without mutating it, see {{domxref("DOMMatrixRe
 ## Syntax
 
 ```js-nolint
-DOMMatrix.rotateFromVectorSelf()
-DOMMatrix.rotateFromVectorSelf(rotX)
-DOMMatrix.rotateFromVectorSelf(rotX, rotY)
+rotateFromVectorSelf()
+rotateFromVectorSelf(rotX)
+rotateFromVectorSelf(rotX, rotY)
 ```
 
 ### Parameters
@@ -54,8 +54,8 @@ console.log(matrix.toString());
 ## See also
 
 - {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
-- {{domxref("DOMMatrixRead.rotateSelf()")}}
-- {{domxref("DOMMatrixRead.rotateAxisAngleSelf()")}}
+- {{domxref("DOMMatrix.rotateSelf()")}}
+- {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
 - CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module

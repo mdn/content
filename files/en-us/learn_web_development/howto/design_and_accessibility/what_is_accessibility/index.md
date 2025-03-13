@@ -27,7 +27,7 @@ Because of physical or technical limitations, maybe your visitors can't experien
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 

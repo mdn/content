@@ -359,6 +359,7 @@ keywordsearch
 khmr
 KIND_NONHEAP
 knda
+Kore
 krai
 lanatham
 laoo
@@ -399,6 +400,7 @@ mathsans
 mathtt
 max-smbps
 maxplaybackrate
+mdnsidebar
 media.autoplay.block-webaudio
 media.getusermedia
 media.mediasource
@@ -790,6 +792,7 @@ wcho
 wdth
 weba
 webappmanifest
+webassemblysidebar
 webauthn
 webbundle
 webcal

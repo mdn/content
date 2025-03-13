@@ -22,7 +22,7 @@ A string which may be either an empty string (indicating that no long
 description is available) or the URL of a file containing a long form description of the
 image's contents.
 
-For example, if the image is a [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) of a flowchart.
+For example, if the image is a [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) of a flowchart.
 The `longDesc` property could be used to provide an explanation of the flow
 of control represented by the chart, using only text. This can be used by readers both
 as an explanation, but also as a substitute for visually-impaired users.
@@ -66,4 +66,4 @@ With that, the image is a link to the HTML file describing the image in more det
 
 ## See also
 
-- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

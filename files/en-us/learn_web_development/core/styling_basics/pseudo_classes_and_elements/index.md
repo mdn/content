@@ -18,7 +18,7 @@ The next set of selectors we will look at are referred to as **pseudo-classes** 
         HTML basics (study
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Basic HTML syntax</a
-        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors<a>.
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Basic CSS selectors</a>.
       </td>
     </tr>
     <tr>

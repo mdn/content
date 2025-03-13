@@ -9,7 +9,35 @@ browser-compat: html.elements.input.type_url
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
 
-{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<form>
+  <label for="url">Enter an https:// URL:</label>
+  <input
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
@@ -377,8 +405,8 @@ You can also find our [pattern validation example on GitHub](https://github.com/
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>

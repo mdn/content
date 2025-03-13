@@ -317,9 +317,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from {{domxref("Node", "nodes", "", "nocode")}} contained in the document tree.
 
-- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
-- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
   - : Fired on a prerendered document when it is activated (i.e. the user views the page).
@@ -373,6 +373,82 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
+
+### Bubbled events
+
+Not all events that bubble can reach the `Document` object. Only the following do and can be listened for on the `Document` object:
+
+- `abort`
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
+- {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}}
+- {{domxref("Element/blur_event", "blur")}}
+- `cancel`
+- {{domxref("HTMLMediaElement/canplay_event", "canplay")}}
+- {{domxref("HTMLMediaElement/canplaythrough_event", "canplaythrough")}}
+- {{domxref("HTMLElement/change_event", "change")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("HTMLDialogElement/close_event", "close")}}
+- {{domxref("HTMLCanvasElement/contextlost_event", "contextlost")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("HTMLCanvasElement/contextrestored_event", "contextrestored")}}
+- {{domxref("Element/copy_event", "copy")}}
+- {{domxref("HTMLTrackElement/cuechange_event", "cuechange")}}
+- {{domxref("Element/cut_event", "cut")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("HTMLElement/drag_event", "drag")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
+- {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
+- {{domxref("HTMLMediaElement/ended_event", "ended")}}
+- {{domxref("Element/error_event", "error")}}
+- {{domxref("Element/focus_event", "focus")}}
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}}
+- {{domxref("Element/input_event", "input")}}
+- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("HTMLElement/load_event", "load")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}}
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}}
+- {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/paste_event", "paste")}}
+- {{domxref("HTMLMediaElement/pause_event", "pause")}}
+- {{domxref("HTMLMediaElement/play_event", "play")}}
+- {{domxref("HTMLMediaElement/playing_event", "playing")}}
+- {{domxref("HTMLMediaElement/progress_event", "progress")}}
+- {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
+- {{domxref("HTMLFormElement/reset_event", "reset")}}
+- {{domxref("HTMLElement/resize_event", "resize")}}
+- {{domxref("Element/scroll_event", "scroll")}}
+- {{domxref("Element/scrollend_event", "scrollend")}}
+- {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
+- {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
+- {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
+- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
+- {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
+- {{domxref("HTMLFormElement/submit_event", "submit")}}
+- {{domxref("HTMLMediaElement/suspend_event", "suspend")}}
+- {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}}
+- {{domxref("HTMLElement/toggle_event", "toggle")}}
+- {{domxref("HTMLMediaElement/volumechange_event", "volumechange")}}
+- {{domxref("HTMLMediaElement/waiting_event", "waiting")}}
+- {{domxref("Element/wheel_event", "wheel")}}
 
 ## Specifications
 

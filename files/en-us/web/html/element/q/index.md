@@ -9,7 +9,23 @@ browser-compat: html.elements.q
 
 The **`<q>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the {{HTMLElement("blockquote")}} element.
 
-{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  When Dave asks HAL to open the pod bay door, HAL answers:
+  <q
+    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+    I'm sorry, Dave. I'm afraid I can't do that.
+  </q>
+</p>
+```
+
+```css interactive-example
+q {
+  font-style: italic;
+}
+```
 
 ## Attributes
 
@@ -77,7 +93,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

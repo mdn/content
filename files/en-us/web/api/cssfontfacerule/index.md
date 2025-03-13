@@ -7,7 +7,7 @@ browser-compat: api.CSSFontFaceRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
 {{InheritanceDiagram}}
 
@@ -29,7 +29,8 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }

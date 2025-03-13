@@ -60,7 +60,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Indicates an alternate representation of the current document. Valid for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the meaning depends on the values of the other attributes.
 
-    - With the [`stylesheet`](#stylesheet) keyword on a `<link>`, it creates an [alternate stylesheet](/en-US/docs/Web/CSS/Alternative_style_sheets).
+    - With the [`stylesheet`](#stylesheet) keyword on a `<link>`, it creates an [alternate stylesheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
 
       ```html
       <!-- a persistent style sheet -->
@@ -121,7 +121,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `canonical`
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which helps search engines reduce duplicate content.
 - `dns-prefetch`
-  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
+  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
 - `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
 - `expect` {{experimental_inline}}
@@ -167,7 +167,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     > Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
 - `manifest`
-  - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
+  - : [Web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
 - `modulepreload`
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 - `next`
@@ -209,7 +209,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
 - `stylesheet`
 

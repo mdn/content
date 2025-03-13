@@ -40,7 +40,7 @@ In the modern world of web development, learning about server-side development i
 
 Web browsers communicate with [web servers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) using the **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). When you click a link on a web page, submit a form, or run a search, an **HTTP request** is sent from your browser to the target server.
 
-The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
+The request includes a URL identifying the affected resource, a method that defines the required action (for example to get, delete, or post the resource), and may include additional information encoded in URL parameters (the field-value pairs sent via a [query string](https://en.wikipedia.org/wiki/Query_string)), as POST data (data sent by the [HTTP POST method](/en-US/docs/Web/HTTP/Reference/Methods/POST)), or in associated {{glossary("Cookie", "cookies")}}.
 
 Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an **HTTP response** message. The response contains a status line indicating whether or not the request succeeded (e.g. "HTTP/1.1 200 OK" for success).
 
@@ -50,7 +50,7 @@ The body of a successful response to a request would contain the requested resou
 
 The diagram below shows a basic web server architecture for a _static site_ (a static site is one that returns the same hard-coded content from the server whenever a particular resource is requested). When a user wants to navigate to a page, the browser sends an HTTP "GET" request specifying its URL.
 
-The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Status#server_error_responses)).
+The server retrieves the requested document from its file system and returns an HTTP response containing the document and a [success status](/en-US/docs/Web/HTTP/Reference/Status#successful_responses) (usually 200 OK). If the file cannot be retrieved for some reason, an error status is returned (see [client error responses](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) and [server error responses](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 

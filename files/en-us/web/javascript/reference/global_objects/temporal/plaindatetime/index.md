@@ -116,7 +116,7 @@ These properties are defined on `Temporal.PlainDateTime.prototype` and shared by
 - {{jsxref("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}} {{experimental_inline}}
   - : Returns a new `Temporal.PlainDateTime` object representing this date-time moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainDateTime/equals", "Temporal.PlainDateTime.prototype.equals()")}} {{experimental_inline}}
-  - : Returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date and time values and their calendars, so two date-times from different calendars may be considered equal by {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}} but not by `equals()`.
+  - : Returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}), and `false` otherwise. They are compared both by their date and time values and their calendars, so two date-times from different calendars may be considered equal by {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}} but not by `equals()`.
 - {{jsxref("Temporal/PlainDateTime/round", "Temporal.PlainDateTime.prototype.round()")}} {{experimental_inline}}
   - : Returns a new `Temporal.PlainDateTime` object representing this date-time rounded to the given unit.
 - {{jsxref("Temporal/PlainDateTime/since", "Temporal.PlainDateTime.prototype.since()")}} {{experimental_inline}}
@@ -138,7 +138,7 @@ These properties are defined on `Temporal.PlainDateTime.prototype` and shared by
 - {{jsxref("Temporal/PlainDateTime/until", "Temporal.PlainDateTime.prototype.until()")}} {{experimental_inline}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date-time to another date-time (in a form convertible by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}). The duration is positive if the other date-time is after this date-time, and negative if before.
 - {{jsxref("Temporal/PlainDateTime/valueOf", "Temporal.PlainDateTime.prototype.valueOf()")}} {{experimental_inline}}
-  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
+  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}} {{experimental_inline}}
   - : Returns a new `Temporal.PlainDateTime` object representing this date-time with some fields replaced by new values.
 - {{jsxref("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}} {{experimental_inline}}

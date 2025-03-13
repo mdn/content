@@ -3,11 +3,12 @@ title: SpeechGrammar
 slug: Web/API/SpeechGrammar
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechGrammar
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a set of words or patterns of words that we want the recognition service to recognize.
 
@@ -15,14 +16,14 @@ Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (
 
 ## Constructor
 
-- {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Creates a new `SpeechGrammar` object.
 
 ## Instance properties
 
-- {{domxref("SpeechGrammar.src")}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammar.src")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Sets and returns a string containing the grammar from within in the `SpeechGrammar` object instance.
-- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{Experimental_Inline}}
+- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Sets and returns the weight of the `SpeechGrammar` object.
 
 ## Examples

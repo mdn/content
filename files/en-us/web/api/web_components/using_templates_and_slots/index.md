@@ -117,11 +117,43 @@ or
 > [!NOTE]
 > Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
 
-> [!NOTE]
-> An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute. This includes text nodes.
-
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
+
+The `name` attribute should be unique per shadow root: if you have two slots with the same name, all of the elements with a matching `slot` attribute will be assigned to the first slot with that name. But the `slot` attribute does not need to be unique: a `<slot>` can be filled by multiple elements that all have a matching `slot` attribute.
+
+The `name` and `slot` attributes both default to the empty string, so elements with no `slot` attributes are assigned to the `<slot>` with no `name` attribute (the unnamed slot, or default slot). Here's an example:
+
+```html
+<template id="custom-paragraph">
+  <style>
+    p {
+      color: white;
+      background-color: #666;
+      padding: 5px;
+    }
+  </style>
+  <p>
+    <slot name="my-text">My default text</slot>
+    <slot></slot>
+  </p>
+</template>
+```
+
+You can then use it like this:
+
+```html
+<my-paragraph>
+  <span slot="my-text">Let's have some different text!</span>
+  <span>This will go into the unnamed slot</span>
+  <span>This will also go into the unnamed slot</span>
+</my-paragraph>
+```
+
+In this example:
+
+- Content with `slot="my-text"` goes into the named slot.
+- All other content automatically goes into the unnamed slot.
 
 ## A more involved example
 

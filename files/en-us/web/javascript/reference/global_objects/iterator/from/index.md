@@ -120,5 +120,6 @@ console.log(obj2.next()); // { value: 1, done: false }
 ## See also
 
 - [Polyfill of `Iterator.from` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.from`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Array.from()")}}

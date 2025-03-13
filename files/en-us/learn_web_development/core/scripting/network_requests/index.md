@@ -180,10 +180,10 @@ The `fetch()` function returns a promise. If this completes successfully, the fu
 
 Inside this function we:
 
-- check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404)). If it did, we throw the error.
+- check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Reference/Status/404)). If it did, we throw the error.
 - call {{domxref("Response.json","json()")}} on the response. This will retrieve the data as a [JSON object](/en-US/docs/Learn_web_development/Core/Scripting/JSON). We return the promise returned by `response.json()`.
 
-Next we pass a function into the `then()` method of that returned promise. This function will be passed an object containing the response data as JSON, which we pass into the `initialize()` function. This function which starts the process of displaying all the products in the user interface.
+Next we pass a function into the `then()` method of that returned promise. This function will be passed an object containing the response data as JSON, which we pass into the `initialize()` function. It is `initialize()` which starts the process of displaying all the products in the user interface.
 
 To handle errors, we chain a `.catch()` block onto the end of the chain. This runs if the promise fails for some reason. Inside it, we include a function that is passed as a parameter, an `err` object. This `err` object can be used to report the nature of the error that has occurred, in this case we do it with a simple `console.error()`.
 
@@ -260,7 +260,7 @@ There are however a lot of different subjects discussed in this article, which h
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
-- [An overview of HTTP](/en-US/docs/Web/HTTP/Overview)
+- [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
 - [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

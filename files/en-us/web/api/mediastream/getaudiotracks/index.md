@@ -11,7 +11,7 @@ browser-compat: api.MediaStream.getAudioTracks
 The **`getAudioTracks()`** method of the
 {{domxref("MediaStream")}} interface returns a sequence that represents all the
 {{domxref("MediaStreamTrack")}} objects in this
-stream's [track set](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
+stream's [track set](https://www.w3.org/TR/mediacapture-streams/#dfn-track-set) where {{domxref("MediaStreamTrack.kind")}}
 is `audio`.
 
 ## Syntax

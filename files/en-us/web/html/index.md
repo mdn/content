@@ -31,7 +31,7 @@ The articles below can help you learn more about HTML.
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
   - : The [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
-  - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
+  - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/Guides/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
 - [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 - [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
@@ -51,7 +51,7 @@ The articles below can help you learn more about HTML.
   - : HTML elements are usually "inline-level" or "block-level" elements. An inline-level element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block box".
 - [HTML comments](/en-US/docs/Web/HTML/Comments)
   - : HTML comments are used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 - [HTML content categories](/en-US/docs/Web/HTML/Content_categories)
   - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.

@@ -9,7 +9,43 @@ browser-compat: html.elements.form
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
 
@@ -155,15 +191,15 @@ The following attributes control behavior during form submission.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-         or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+         or <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -186,5 +222,5 @@ The following attributes control behavior during form submission.
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 - Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
-- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
-- [ARIA: Search role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
+- [ARIA: Search role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

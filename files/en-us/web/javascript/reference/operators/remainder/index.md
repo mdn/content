@@ -9,7 +9,21 @@ browser-compat: javascript.operators.remainder
 
 The **remainder (`%`)** operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+```
 
 ## Syntax
 
@@ -19,7 +33,7 @@ x % y
 
 ## Description
 
-The `%` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt remainder if both operands become BigInts; otherwise, it performs number remainder. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `%` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt remainder if both operands become BigInts; otherwise, it performs number remainder. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 For the operation `n % d`, `n` is called the dividend and `d` is called the divisor. The operation returns `NaN` if one of the operands is `NaN`, `n` is ±Infinity, or if `d` is ±0. Otherwise, if `d` is ±Infinity or if `n` is ±0, the dividend `n` is returned.
 

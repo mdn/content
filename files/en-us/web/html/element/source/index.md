@@ -7,9 +7,21 @@ browser-compat: html.elements.source
 
 {{HTMLSidebar}}
 
-The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Formats).
+The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more media resources for the {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, and {{HTMLElement("video")}} elements. It is a {{glossary("void element")}}, which means that it has no content and does not require a closing tag. This element is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for [image file formats](/en-US/docs/Web/Media/Guides/Formats/Image_types) and [media file formats](/en-US/docs/Web/Media/Guides/Formats).
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 ## Attributes
 
@@ -17,7 +29,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `type`
 
-  - : Specifies the [MIME media type of the image](/en-US/docs/Web/Media/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Formats/Containers), optionally including a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+  - : Specifies the [MIME media type of the image](/en-US/docs/Web/Media/Guides/Formats/Image_types) or [other media type](/en-US/docs/Web/Media/Guides/Formats/Containers), optionally including a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
 
 - `src`
 
@@ -71,13 +83,13 @@ If none of the `<source>` elements provide a usable source:
 - In the case of a `<picture>` element, the browser will fall back to using the image specified in the `<picture>` element's {{HTMLElement("img")}} child.
 - In the case of an `<audio>` or `<video>` element, the browser will fall back to displaying the content included between the element's opening and closing tags.
 
-For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types). For details on the video and audio media types you can use, see the [Media type and format guide](/en-US/docs/Web/Media/Formats).
+For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types). For details on the video and audio media types you can use, see the [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
 
 ## Examples
 
 ### Using the `type` attribute with `<video>`
 
-This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Formats).
+This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
 
 ```html
 <video controls>
@@ -215,6 +227,6 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 - {{HTMLElement("audio")}} element
 - {{HTMLElement("picture")}} element
 - {{HTMLElement("video")}} element
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
-- [Media type and format guide](/en-US/docs/Web/Media/Formats)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+- [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats)
 - [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

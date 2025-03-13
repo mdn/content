@@ -68,7 +68,7 @@ These are rules of thumb you can draw on. There are complex designs and exceptio
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 
@@ -76,7 +76,7 @@ Let's study some more concrete examples taken from well-known websites.
 
 ### One-column layout
 
-**[Invision application](https://www.invisionapp.com/)**. A typical one-column layout providing all the information linearly on one page.
+A typical one-column layout providing all the information linearly on one page.
 
 ![Example of a 1 column layout in the wild](screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 

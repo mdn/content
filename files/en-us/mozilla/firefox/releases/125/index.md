@@ -53,7 +53,7 @@ No notable changes.
 - The {{domxref("RTCIceTransport")}} properties {{domxref("RTCIceTransport/state","state")}} and {{domxref("RTCIceTransport/gatheringState","gatheringState")}}, and their associated events {{domxref("RTCIceTransport/statechange_event","statechange")}} and {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}}, are now supported, along with the {{domxref("RTCDtlsTransport.iceTransport")}} property (which returns the underlying `RTCIceTransport` for a {{domxref("RTCDtlsTransport")}}).
   These allow much finer-grained monitoring than provided by the {{domxref("RTCPeerConnection")}} properties {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} and {{domxref("RTCPeerConnection.connectionState","connectionState")}}.
   ([Firefox bug 1811912](https://bugzil.la/1811912))
-- {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
+- {{domxref("Element.ariaBrailleLabel")}} and {{domxref("Element.ariaBrailleRoleDescription")}} are now supported, respectively reflecting the global ARIA HTML attributes [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) and [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription). ([Firefox bug 1861201](https://bugzil.la/1861201)).
 
 - Added support to allow web applications to gracefully recover if a canvas temporarily loses its 2D context, which might happen if the canvas is running hardware-accelerated on a GPU, and its driver crashes ([Firefox bug 1887729](https://bugzil.la/1887729)).
   Here are some additional details on the events for lost and restored canvas contexts:
@@ -71,7 +71,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
+- The [AV1](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
 
 #### Removals
 
@@ -84,7 +84,7 @@ No notable changes.
   The memory can be created in JavaScript and imported into the Wasm module, or created in the Wasm module and exported.
   Each new linear memory in a Wasm instance is given a sequential index, starting from zero.
   WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
-  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
+  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
   ([Firefox bug 1860816](https://bugzil.la/1860816)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
@@ -104,7 +104,7 @@ No notable changes.
 
 ## Changes for add-on developers
 
-- The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
+- The content of the {{WebExtAPIRef("proxy.ProxyInfo")}} property `proxyAuthorization` is now passed to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies (in addition to the existing support for HTTPS proxies) as part of a [CONNECT](/en-US/docs/Web/HTTP/Reference/Methods/CONNECT) request ([Firefox bug 1794464](https://bugzil.la/1794464)).
 
 ## Experimental web features
 

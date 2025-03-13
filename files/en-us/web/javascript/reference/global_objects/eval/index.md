@@ -12,7 +12,21 @@ browser-compat: javascript.builtins.eval
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -242,7 +256,7 @@ function runCodeWithAddFunction(obj) {
 console.log(runCodeWithAddFunction("add(5, 7)")); // 12
 ```
 
-Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
+Both `eval()` and `Function()` implicitly evaluate arbitrary code, and are forbidden in strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings. There are also additional safer (and faster!) alternatives to `eval()` or `Function()` for common use-cases.
 
 #### Using bracket accessors
 
@@ -322,7 +336,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-[Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
+[Closures](/en-US/docs/Web/JavaScript/Guide/Closures) are also helpful as a way to create parameterized functions without concatenating strings.
 
 #### Using JSON
 
@@ -330,7 +344,7 @@ If the string you're calling `eval()` on contains data (for example, an array: `
 
 Note that since JSON syntax is limited compared to JavaScript syntax, many valid JavaScript literals will not parse as JSON. For example, trailing commas are not allowed in JSON, and property names (keys) in object literals must be enclosed in quotes. Be sure to use a JSON serializer to generate strings that will be later parsed as JSON.
 
-Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XPath) instead of JavaScript code.
+Passing carefully constrained data instead of arbitrary code is a good idea in general. For example, an extension designed to scrape contents of web-pages could have the scraping rules defined in [XPath](/en-US/docs/Web/XML/XPath) instead of JavaScript code.
 
 ## Examples
 

@@ -14,14 +14,12 @@ To 3D-scale a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.scale
 
 ## Syntax
 
-The `scale3dSelf()` method is specified with zero to four values.
-
-```js
-DOMMatrix.scale3dSelf();
-DOMMatrix.scale3dSelf(scale);
-DOMMatrix.scale3dSelf(scale, originX);
-DOMMatrix.scale3dSelf(scale, originX, originY);
-DOMMatrix.scale3dSelf(scale, originX, originY, originZ);
+```js-nolint
+scale3dSelf()
+scale3dSelf(scale)
+scale3dSelf(scale, originX)
+scale3dSelf(scale, originX, originY)
+scale3dSelf(scale, originX, originY, originZ)
 ```
 
 ### Parameters

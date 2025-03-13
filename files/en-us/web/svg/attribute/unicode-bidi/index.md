@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.unicode-bidi
 The **`unicode-bidi`** attribute specifies how the accumulation of the background image is managed.
 
 > [!NOTE]
-> As a presentation attribute, `unicode-bidi` can be used as a CSS property. See the [CSS `unicode-bidi`](/en-US/docs/Web/CSS/unicode-bidi) property for more information.
+> As a presentation attribute, `unicode-bidi` also has a CSS property counterpart: {{cssxref("unicode-bidi")}}. When both are specified, the CSS property takes priority.
 
 ## Elements
 
@@ -49,3 +49,7 @@ For a description of the values, please refer to the CSS {{cssxref("unicode-bidi
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("unicode-bidi")}} property

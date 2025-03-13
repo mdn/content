@@ -9,7 +9,80 @@ browser-compat: css.properties.scroll-snap-stop
 
 The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
 
-{{EmbedInteractiveExample("pages/css/scroll-snap-stop.html")}}
+{{InteractiveExample("CSS Demo: scroll-snap-stop")}}
+
+```css interactive-example-choice
+scroll-snap-stop: normal;
+```
+
+```css interactive-example-choice
+scroll-snap-stop: always;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="explanation">
+    The effect of this property can be noticed on devices with a touchpad. Try
+    to scroll through all items with a single swing. Value
+    <b class="keyword">'normal'</b> should pass through all pages, while
+    <b class="keyword">'always'</b> will stop at the second page.
+  </p>
+  <div class="snap-container">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-direction: column;
+}
+
+.explanation {
+  margin-top: 0;
+}
+
+.keyword {
+  color: darkorange;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.snap-container {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.snap-container > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.snap-container > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## Syntax
 

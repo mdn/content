@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 page-type: guide
 ---
 
+{{CSSRef}}
+
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this guide aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## align-content and justify-content

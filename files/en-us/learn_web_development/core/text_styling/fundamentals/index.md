@@ -792,7 +792,7 @@ We hope you enjoyed playing with text in this article! The next article will pro
 
 ## See also
 
-- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
+- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

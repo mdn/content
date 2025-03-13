@@ -35,7 +35,7 @@ Up to now, you've been working in a [development environment](/en-US/docs/Learn_
 - Make a few changes to your project settings.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.app/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Railway](https://railway.com/) cloud hosting service.
 
 ## What is a production environment?
 
@@ -86,7 +86,7 @@ They are however great for testing low-traffic sites in a hosted environment, an
 Popular choices in this category include [Glitch](https://glitch.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), etc.
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.com/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion.
@@ -262,7 +262,7 @@ app.use(
 
 We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
 However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
-These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), which does not allow loading of cross-site scripts.
 To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
 For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 
@@ -604,7 +604,7 @@ Some of the things you can do are:
 
 ## Example: Hosting on Railway
 
-This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
+This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.com/).
 
 ### Why Railway?
 
@@ -616,10 +616,10 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.com/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
-- [Railway documentation](https://docs.railway.app/) is clear and complete.
+- [Railway documentation](https://docs.railway.com/) is clear and complete.
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
 You should take the time to determine if Railway is [suitable for your own website](#choosing_a_hosting_provider).
@@ -638,11 +638,11 @@ Having installed all the dependencies, Railway will look for scripts named "buil
 > Railway uses [Nixpacks](https://nixpacks.com/docs) to recognize various web application frameworks written in different programming languages.
 > You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.com/guides/variables).
 For example, an application that uses a database must get the address using a variable.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.com/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -653,10 +653,10 @@ Next we will set up a Railway account, install our website and a database, and t
 
 To start using Railway you will first need to create an account:
 
-- Go to [railway.app](https://railway.app/) and click the **Login** link in the top toolbar.
+- Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
 - Select GitHub in the popup to login using your GitHub credentials
 - You may then need to go to your email and verify your account.
-- You'll then be logged in to the Railway.app dashboard: <https://railway.app/dashboard>.
+- You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
 ### Deploy on Railway from GitHub
 
@@ -759,7 +759,7 @@ You can add data through the website interface and it should work in the same wa
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.com/guides/cli).
 
 After the client is installed you will be able run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
@@ -788,7 +788,7 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/guides/cli)
+  - [CLI](https://docs.railway.com/guides/cli)
 
 - DigitalOcean
 

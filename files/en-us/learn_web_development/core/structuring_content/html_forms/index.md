@@ -61,7 +61,7 @@ Buttons are usually created using HTML {{htmlelement("button")}} elements (they 
 
 Forms are created using elements such as {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}}, and {{htmlelement("select")}}. Form elements can be used to create more complex controls than simple buttons allow — for example a drop-down menu containing multiple options that allow you choose between different themes for a user interface element.
 
-However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about ecommerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
+However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about e-commerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
 
 We'll be concentrating mainly on this — more traditional — use of form elements in this article. Note that buttons are also commonly used inside forms, to submit the entered data to the server.
 
@@ -145,7 +145,7 @@ Because of the way MDN works, you can enter text into the input fields, but you 
 As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included here, are as follows:
 
 - `action`: Contains a path to the page that we want to send the submitted form data to, to be processed. Later on, after you submit the form, you'll see `/submit_page` included in the URL. You'll also get a {{HTTPStatus("404")}} error response because the page doesn't actually exist, but that's fine for now.
-- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
+- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Reference/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
 
 > [!CALLOUT]
 >
@@ -315,7 +315,7 @@ There are many other control types you can use to collect data in a form. Let's 
       <option value="walk">Walk</option>
       <option value="bus">Bus</option>
       <option value="train">Train</option>
-      <option value="jetpack">Jetpack</option>
+      <option value="jetPack">Jet pack</option>
     </select>
   </p>
   <p>
@@ -431,7 +431,7 @@ Drop-down menus, for example the "How are you getting here" selection control in
   <option value="walk">Walk</option>
   <option value="bus">Bus</option>
   <option value="train">Train</option>
-  <option value="jetpack">Jetpack</option>
+  <option value="jetPack">Jet pack</option>
 </select>
 ```
 

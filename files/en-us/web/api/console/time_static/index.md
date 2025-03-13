@@ -2,7 +2,7 @@
 title: "console: time() static method"
 short-title: time()
 slug: Web/API/console/time_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.time_static
 ---
 

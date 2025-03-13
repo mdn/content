@@ -9,7 +9,24 @@ browser-compat: html.elements.iframe
 
 The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 Each embedded browsing context has its own [document](/en-US/docs/Web/API/Document) and allows URL navigations. The navigations of each embedded browsing context are linearized into the [session history](/en-US/docs/Web/API/History) of the _topmost_ browsing context. The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
 
@@ -22,9 +39,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow`
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
+    See [iframes](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
 
     > [!NOTE]
     > A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
@@ -53,7 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `csp` {{experimental_inline}}
 
-  - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
+  - : A [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
 - `height`
   - : The height of the frame in CSS pixels. Default is `150`.
@@ -315,9 +332,9 @@ Here's how to write escape sequences when using `srcdoc`:
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -337,5 +354,5 @@ Here's how to write escape sequences when using `srcdoc`:
 
 ## See also
 
-- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

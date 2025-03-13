@@ -12,29 +12,29 @@ This guide describes the standard coordinate systems used by the CSS object mode
 
 ## Dimensions
 
-In the coordinate systems used by web technologies, convention dictates that the horizontal offset is called the _x-coordinate_, where a negative value indicates a position to the left of the origin and a positive value is to the right of the origin. The _y-coordinate_ specifies the vertical offset, with a negative value being above the origin and a positive value being below the origin.
+In the coordinate systems used by web technologies, the horizontal offset is called the _x-coordinate_, where a negative value indicates a position to the left of the origin and a positive value is to the right of the origin. The _y-coordinate_ specifies the vertical offset, with a negative value being above the origin and a positive value being below the origin.
 
 On the web, the default origin is the _top_-left corner of a given context (with positive y-coordinate values being below the origin). Note that this is unlike most mathematical models, where the origin is at the _bottom_-left corner, with positive y-coordinate values being above the origin.
 
-When using the third dimension to layer objects from front to back, we use the z-axis. The z-axis runs from the viewer to the screen's surface. The CSS z-index attribute affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
+When using the third dimension to layer objects from front to back, we use the **z-axis**. The z-axis runs from the viewer to the screen's surface. The CSS {{cssxref("z-index")}} property value affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
 
 > [!NOTE]
-> It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
+> It's possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
 
 ## Standard CSSOM coordinate systems
 
 There are four standard coordinate systems used by the CSS object model.
-To help visualize the main systems, the following diagram shows a monitor with a browser window that contains content scrolled outside of the viewport.
+To help visualize the main systems, the following diagram shows a monitor with a browser window that contains content scrolled outside of the {{glossary("viewport")}}.
 Page content that is scrolled outside of the viewport is shown as semi-transparent above the browser window to indicate where the origin for "page" coordinates would be.
 The origin of the "client", "page", and "viewport" coordinates systems are highlighted.
 
-![Diagram of a computer monitor with a browser window containing content outside of the viewport. Labels show the origin for page, screen, and viewport coordinates.](css-coords.svg)
+![A large screen with a smaller browser window rendering a web page's bottom half; the top half is shown as scrolled outside the browser viewport. The top-left corners of the screen, page, and viewport are all labeled with coordinates of 0,0.](css-coords.svg)
 
 ### Offset
 
 Coordinates specified using the "offset" model use the top-left corner of the element being examined, or on which an event has occurred.
 
-For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by `padding-edge` which is the edge between the padding area and the border area.
+For example, when a [mouse event](/en-US/docs/Web/API/MouseEvent) occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the _padding edge_, the edge between the padding area and the border area.
 
 ### Viewport
 
@@ -43,7 +43,7 @@ The "viewport" (or "client") coordinate system uses as its origin the top-left c
 On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the {{domxref("window")}}.
 When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} coordinates in a [touch event](/en-US/docs/Web/API/TouchEvent) are relative to the same origin.
 
-The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
+The top-left corner of the window is always `(0, 0)`, regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
 
 ### Page
 
@@ -139,6 +139,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a {{domxref("MouseEvent")}}:
 

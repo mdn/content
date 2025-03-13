@@ -12,7 +12,7 @@ The **`mimeType`** read-only property of the {{domxref("MediaRecorder")}} interf
 This is the file format of the file that would result from writing all of the recorded data to disk.
 
 Keep in mind that not all codecs are supported by a given container; if you write media using a codec that is not supported by a given media container, the resulting file may not work reliably if at all when you try to play it back.
-See our [media type and format guide](/en-US/docs/Web/Media/Formats) for information about container and codec support across browsers.
+See our [media type and format guide](/en-US/docs/Web/Media/Guides/Formats) for information about container and codec support across browsers.
 
 > [!NOTE]
 > The term "MIME type" is officially considered to be historical; these strings are now officially known as **media types**.
@@ -21,11 +21,11 @@ See our [media type and format guide](/en-US/docs/Web/Media/Formats) for informa
 ## Value
 
 The MIME media type which describes the format of the recorded media, as a string.
-This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by the media recorder.
+This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by the media recorder.
 
 The media type strings are standardized by the Internet Assigned Numbers Authority (IANA).
 For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) on the IANA site.
-See also [media types](/en-US/docs/Web/HTTP/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
+See also [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
 
 ## Examples
 
@@ -73,7 +73,7 @@ by `m.mimeType` would then be
 ## See also
 
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Codecs in common media types](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("MediaDevices.getUserMedia()")}}

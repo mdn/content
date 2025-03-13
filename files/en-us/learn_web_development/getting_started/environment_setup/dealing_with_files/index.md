@@ -99,7 +99,7 @@ You should see your `web-projects` folder open in the VS Code _EXPLORER_ pane, a
 
 #### An aside on keyboard navigation in VS Code
 
-VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
+VS Code, while not perfect by any means, has an extensive set of keyboard shortcuts. Throughout this article we've tried to include useful ones where possible, but you can find more comprehensive lists at the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/editor/keybindings).
 
 In general, if you want to navigate VS Code via the keyboard, you can press the <kbd>Tab</kbd> key to move around different areas of the UI (<kbd>Shift</kbd> + <kbd>Tab</kbd> will move you to a previous tab focus position). If there are multiple buttons in a tab focus position, you can use the cursor keys to move between them.
 

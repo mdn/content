@@ -230,7 +230,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The developing WebGL standard is now supported by Firefox.
 - [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
-- [Support for WebM video](/en-US/docs/Web/Media/Formats#webm)
+- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
@@ -284,7 +284,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("Element.setCapture()")}} and {{domxref("Document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
+- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Guides/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
 - The {{domxref("XMLHttpRequest")}} object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
@@ -299,13 +299,13 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 
 ### Security
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their websites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
-- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security is a security feature that lets a website tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
-- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
-- [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes
+- [User Agent string](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox) changes
   - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see [Firefox bug 572650](https://bugzil.la/572650)), the crypto strength and language tokens have been removed from the user agent string.
 
 ### JavaScript
@@ -473,7 +473,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/XML/Guides/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
 - You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes

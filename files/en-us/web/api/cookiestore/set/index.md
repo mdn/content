@@ -39,12 +39,12 @@ Or
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
     - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
 
-      - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
+      - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values:
 
         - `"strict"`
           - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites. This is the default.

@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-Cross-Origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) and related headers. `Access-Control-Allow-Origin` defines the non-same origins that are allowed to make requests to pages on your domain (i.e., via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [`fetch()`](/en-US/docs/Web/API/Window/fetch)).
+Cross-Origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) and related headers. `Access-Control-Allow-Origin` defines the non-same origins that are allowed to make requests to pages on your domain (i.e., via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [`fetch()`](/en-US/docs/Web/API/Window/fetch)).
 
 ## Problem
 
@@ -20,7 +20,7 @@ If present, `Access-Control-Allow-Origin` should specify the minimum possible nu
 
 Failure to set `Access-Control-Allow-Origin` appropriately will allow unauthorized origins to read the contents of any page on your site. This can be especially dangerous if those sites are able to send credentials, potentially exposing your site to [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) attacks.
 
-If credentialed access is required from specific origins, ensure `Access-Control-Allow-Origin` is set only to those origins, rather than reflecting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) header. If public non-credentialed access is required, set `Access-Control-Allow-Origin` to `*` and omit the `Access-Control-Allow-Credentials` header. Otherwise, omit both headers.
+If credentialed access is required from specific origins, ensure `Access-Control-Allow-Origin` is set only to those origins, rather than reflecting the [`Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Origin) header. If public non-credentialed access is required, set `Access-Control-Allow-Origin` to `*` and omit the `Access-Control-Allow-Credentials` header. Otherwise, omit both headers.
 
 ## Examples
 
@@ -41,14 +41,14 @@ Access-Control-Allow-Origin: https://random-dashboard.example.org
 
 ## See also
 
-- [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-- [`Access-Control-Allow-Credentials`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-- [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-- [`Access-Control-Allow-Methods`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-- [`Access-Control-Expose-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-- [`Access-Control-Max-Age`](/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-- [`Access-Control-Request-Headers`](/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers)
-- [`Access-Control-Request-Method`](/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Method)
-- [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin)
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
+- [`Access-Control-Allow-Credentials`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials)
+- [`Access-Control-Allow-Headers`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Headers)
+- [`Access-Control-Allow-Methods`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Methods)
+- [`Access-Control-Expose-Headers`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Expose-Headers)
+- [`Access-Control-Max-Age`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)
+- [`Access-Control-Request-Headers`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Request-Headers)
+- [`Access-Control-Request-Method`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Request-Method)
+- [`Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Origin)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [CORS for Developers](https://w3c.github.io/webappsec-cors-for-developers/) from W3C (2016)

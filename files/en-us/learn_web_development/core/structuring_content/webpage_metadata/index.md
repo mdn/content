@@ -249,7 +249,7 @@ The comments explain what each icon is used for — these elements cover things 
 Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
 
 > [!NOTE]
-> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
+> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 
 ## Applying CSS and JavaScript to HTML
 
@@ -261,7 +261,7 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- The {{htmlelement("script")}} element should also go into the head, and should include a `src` attribute containing the path to the JavaScript you want to load, and `defer`, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most reliable one to use for modern browsers (for others, read [Script loading strategies](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies)).
+- The {{htmlelement("script")}} element should also go into the head, and should include a `src` attribute containing the path to the JavaScript you want to load, and `defer` (a [boolean attribute](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#boolean_attributes)), which instructs the browser to load the JavaScript after the page has finished parsing the HTML. The `defer` attribute is useful as it guarantees the HTML is all loaded before the JavaScript runs so that you don't get errors due to JavaScript trying to access an HTML element that doesn't exist on the page yet. There are [several ways](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies) to handle loading JavaScript on your page, but this is the most reliable one to use for modern browsers.
 
   ```html
   <script src="my-js-file.js" defer></script>
