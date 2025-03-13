@@ -48,8 +48,9 @@ jobs:
           PR_NUMBER=`cat build/NR`
           echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v4
-        if: env.HAS_ARTIFACT
+      - name: Checkout (mdn/yari)
+        uses: actions/checkout@v4
+        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
         with:
           repository: mdn/yari
           path: yari
@@ -156,10 +157,25 @@ jobs:
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
 
+      - name: Checkout (mdn/content)
+        uses: actions/checkout@v4
+        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        with:
+          path: content
+
+      - name: Install (mdn/content)
+        uses: actions/setup-node@v4
+        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        with:
+          node-version-file: "content/.nvmrc"
+
       - name: Analyze PR build
         if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+        working-directory: content
         run: |
-          PR_NUMBER=`cat build/NR`
+          PR_NUMBER=`cat "$BUILD_OUT_ROOT/NR"`
 
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
