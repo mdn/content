@@ -154,7 +154,7 @@ async function postAboutDeployment(buildDirectory, config) {
   let links = [];
   for (const doc of docs) {
     if (doc.mdn_url) {
-      const url = mdnUrlToDevUrl(config.prefix, doc.mdn_url);
+      const url = mdnUrlToDevUrl(config.prefix, config.host, doc.mdn_url);
       const mdnUrl = doc.mdn_url;
       links.push(`- [\`${mdnUrl}\`](${url})`);
     }
@@ -176,10 +176,11 @@ async function postAboutDeployment(buildDirectory, config) {
 /**
  * Transforms an MDN URL into a developer preview URL.
  * @param {string} prefix - The preview prefix.
+ * @param {string} host - The preview environment host.
  * @param {string} mdnUrl - The MDN URL.
  */
-function mdnUrlToDevUrl(prefix, mdnUrl) {
-  return `https://${prefix}.review.mdn.allizom.net${mdnUrl}`;
+function mdnUrlToDevUrl(prefix, host, mdnUrl) {
+  return `https://${prefix}.${host}${mdnUrl}`;
 }
 
 /**
@@ -273,7 +274,7 @@ async function postAboutDangerousContent(buildDirectory, patch, config) {
     for (const { doc, comment } of comments) {
       const lines = [];
       if (config.prefix && doc.mdn_url) {
-        const url = mdnUrlToDevUrl(config.prefix, doc.mdn_url);
+        const url = mdnUrlToDevUrl(config.prefix, config.host, doc.mdn_url);
         lines.push(`URL: [\`${doc.mdn_url}\`](${url})`);
       } else if (doc.mdn_url) {
         lines.push(`URL: \`${doc.mdn_url}\``);
@@ -348,7 +349,7 @@ async function postAboutFlaws(buildDirectory, config) {
     for (const { doc, comment } of comments) {
       const lines = [];
       if (config.prefix && doc.mdn_url) {
-        const url = mdnUrlToDevUrl(config.prefix, doc.mdn_url);
+        const url = mdnUrlToDevUrl(config.prefix, config.host, doc.mdn_url);
         lines.push(`URL: [\`${doc.mdn_url}\`](${url})`);
       } else if (doc.mdn_url) {
         lines.push(`URL: \`${doc.mdn_url}\``);
@@ -489,6 +490,11 @@ yargs(hideBin(process.argv))
           type: "string",
           default: null,
         })
+        .option("host", {
+          describe: "Host of the review environment",
+          type: "string",
+          default: "review.mdn.allizom.net",
+        })
         .option("repo", {
           describe: "Name of the repo (e.g. mdn/content)",
           type: "string",
@@ -542,6 +548,7 @@ yargs(hideBin(process.argv))
       const directory = argv._.shift();
       const {
         prefix,
+        host,
         repo,
         prNumber: pr_number,
         githubToken: github_token,
@@ -555,6 +562,7 @@ yargs(hideBin(process.argv))
       const options = {
         directory,
         prefix,
+        host,
         repo,
         pr_number,
         github_token,
