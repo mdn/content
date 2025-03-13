@@ -109,14 +109,14 @@ The context in which an icon can be used is determined by the browser and the op
 
 ## Security considerations
 
-The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
+The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
 
 For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/low-res` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
 
 ## Performance considerations
 
 Specifying the `type` property can significantly improve performance because it allows browsers to ignore images with unsupported formats more easily.
-If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) the file for a signature.
+If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) the file for a signature.
 
 At a minimum, if you omit the `type` property, use appropriate and unambiguous file extensions for your icon images.
 

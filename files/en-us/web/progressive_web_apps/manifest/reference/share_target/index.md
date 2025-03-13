@@ -23,9 +23,9 @@ The value of the `share_target` member is an object that defines how an applicat
 - `action`
   - : The URL for the web share target.
 - `enctype` {{Optional_Inline}}
-  - : The encoding of the share data when a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request is used. Ignored with [`GET`](/en-US/docs/Web/HTTP/Methods/GET) requests.
+  - : The encoding of the share data when a [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request is used. Ignored with [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) requests.
 - `method` {{Optional_Inline}}
-  - : The [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use. Either [`GET`](/en-US/docs/Web/HTTP/Methods/GET) or [`POST`](/en-US/docs/Web/HTTP/Methods/POST). Use `POST` if the shared data includes binary data like image(s), or if it changes the target app, for example, if it creates a data point like a bookmark.
+  - : The [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) to use. Either [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) or [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST). Use `POST` if the shared data includes binary data like image(s), or if it changes the target app, for example, if it creates a data point like a bookmark.
 - `params`
   - : An object to configure the share parameters. The object keys correspond to the [`data` object in `navigator.share()`](/en-US/docs/Web/API/Navigator/share#parameters). The object values can be specified and will be used as query parameters:
     - `title` {{Optional_Inline}}: Name of the query parameter to use for the title of the document being shared.
@@ -67,7 +67,7 @@ const sharedLink = url.searchParams.get("link");
 
 ### Receiving share data using POST
 
-If the share request includes one or multiple files or causes a side effect in your application, the HTTP [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method should be used. For example, if your application receives images for further processing or wants to save a shared link as a bookmark in your database.
+If the share request includes one or multiple files or causes a side effect in your application, the HTTP [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method should be used. For example, if your application receives images for further processing or wants to save a shared link as a bookmark in your database.
 
 ```json
 {
@@ -107,7 +107,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-The `POST` request is then ideally replied with an HTTP [303 See Other](/en-US/docs/Web/HTTP/Status/303) redirect to avoid multiple `POST` requests from being submitted if a page refresh was initiated by the user, for example.
+The `POST` request is then ideally replied with an HTTP [303 See Other](/en-US/docs/Web/HTTP/Reference/Status/303) redirect to avoid multiple `POST` requests from being submitted if a page refresh was initiated by the user, for example.
 
 ### Receiving shared files
 

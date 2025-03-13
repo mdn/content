@@ -14,7 +14,7 @@ The read-only
 available.
 
 Picture-in-Picture mode is available by default unless specified
-otherwise by a [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture).
+otherwise by a [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture).
 
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and will be ignored.

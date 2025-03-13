@@ -73,7 +73,7 @@ audio track.
     not fully active or does not focused. Or if the `controller` options has been already used in creating
     another {{domxref("MediaStream")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
+  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}

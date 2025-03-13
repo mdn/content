@@ -119,7 +119,7 @@ _No change._
 
 ## Networking
 
-- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
+- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
 
 ## Security
 

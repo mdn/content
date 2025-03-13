@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-The [`X-Content-Type-Options`](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) header informs browsers not to load scripts and stylesheets unless the server indicates the correct [MIME type](/en-US/docs/Glossary/MIME_type).
+The [`X-Content-Type-Options`](/en-US/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options) header informs browsers not to load scripts and stylesheets unless the server indicates the correct [MIME type](/en-US/docs/Glossary/MIME_type).
 
 ## Problem
 
@@ -14,12 +14,12 @@ Without proper MIME type verification, browsers might incorrectly detect non-scr
 
 ## Solution
 
-All sites must set the `X-Content-Type-Options` header with a value of `nosniff`, and set appropriate MIME types for the files they serve (i.e., via the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header).
+All sites must set the `X-Content-Type-Options` header with a value of `nosniff`, and set appropriate MIME types for the files they serve (i.e., via the [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) header).
 
 `nosniff` blocks a request if the request destination:
 
 - is of type `style` and the MIME type is not `text/css`.
-- is of type `script` and the MIME type is not a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+- is of type `script` and the MIME type is not a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
 
 ## Examples
 
@@ -31,5 +31,5 @@ X-Content-Type-Options: nosniff
 
 ## See also
 
-- [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing)
+- [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing)
 - [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
