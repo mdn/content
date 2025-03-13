@@ -86,7 +86,7 @@ The `border-top-color` property is specified as a single value.
 
 ## Examples
 
-### A simple div with a border
+### A div with a border
 
 #### HTML
 
@@ -115,7 +115,7 @@ The `border-top-color` property is specified as a single value.
 
 #### Result
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('A_div_with_a_border')}}
 
 ## Specifications
 

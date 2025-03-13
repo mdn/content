@@ -208,7 +208,12 @@ The `fragment` object contains an array of objects, each of which can contain th
         > For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
 
     - `format`
+
       - : An enumerated value specifying the required format for output colors. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
+
+        > [!NOTE]
+        > For the `r32float`, `rg32float`, and `rgba32float` formats to be used with [blending](#blend), the `float32-blendable` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) must be available in the device.
+
     - `writeMask` {{optional_inline}}
 
       - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:

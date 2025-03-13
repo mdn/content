@@ -106,7 +106,7 @@ Developers should use ARIA states to indicate the state of UI widget elements an
 
 When content visibility is changed (i.e., an element is hidden or shown), developers should change the **`aria-hidden`** property value. The techniques described above should be used to declare CSS to visually hide an element using `display:none`.
 
-Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
+Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a web form with tooltips containing instructions associated with the entry fields.
 
 ```html
 <div class="text">
