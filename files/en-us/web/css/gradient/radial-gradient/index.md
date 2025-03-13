@@ -111,7 +111,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ## Examples
 
-### Simple gradient
+### Basic gradient
 
 ```html hidden
 <div class="radial-gradient"></div>
@@ -130,7 +130,7 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('Basic_gradient', 120, 120)}}
 
 ### Non-centered gradient
 

@@ -15,7 +15,7 @@ Each event is fired at a particular stage of the request. The sequence of events
 
 However, not all of these events might be observed by an extension. For example, `onBeforeRedirect` might not be followed by `onBeforeRequest` when the redirect target doesn't match the event `filter.urls`. This can be because the URLs in the filter are narrowly defined, or the redirect target can't be observed by an extension, such as when it redirects to a `data:` URL.
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can fire at any time during the request. Also, note that sometimes the sequence of events may differ from this. For example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event is triggered immediately after `onBeforeRequest`. `onErrorOccurred` is also fired if [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) blocks a request.
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can fire at any time during the request. Also, note that sometimes the sequence of events may differ from this. For example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event is triggered immediately after `onBeforeRequest`. `onErrorOccurred` is also fired if [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) blocks a request.
 
 All events – _except_ `onErrorOccurred` – can take three arguments to `addListener()`:
 

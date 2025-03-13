@@ -79,7 +79,7 @@ The following snippet shows a simplified version of two form fields with a valid
 
 Note that it is not necessary to validate the fields immediately on blur; the application could wait until the form is submitted (though this is not necessarily recommended).
 
-The snippet below shows a very simple validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
+The snippet below shows a validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
 
 ```js
 function checkValidity(id, searchTerm, msg) {

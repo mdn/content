@@ -88,7 +88,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : Fired on handled {{jsxref("Promise")}} rejection events.
 - {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : Fired on unhandled {{jsxref("Promise")}} rejection events.
 

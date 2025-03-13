@@ -23,39 +23,39 @@ Given that different browsers will handle this differently and the tier values m
 
 The following limits are represented by properties in a `GPUSupportedLimits` object. See the [Limits](https://gpuweb.github.io/gpuweb/#limits) section of the specification for detailed descriptions of what the limits relate to.
 
-| Limit name                                  | Default value            |
-| ------------------------------------------- | ------------------------ |
-| `maxTextureDimension1D`                     | 8192                     |
-| `maxTextureDimension2D`                     | 8192                     |
-| `maxTextureDimension3D`                     | 2048                     |
-| `maxTextureArrayLayers`                     | 256                      |
-| `maxBindGroups`                             | 4                        |
-| `maxBindingsPerBindGroup`                   | 640                      |
-| `maxDynamicUniformBuffersPerPipelineLayout` | 8                        |
-| `maxDynamicStorageBuffersPerPipelineLayout` | 4                        |
-| `maxSampledTexturesPerShaderStage`          | 16                       |
-| `maxSamplersPerShaderStage`                 | 16                       |
-| `maxStorageBuffersPerShaderStage`           | 8                        |
-| `maxStorageTexturesPerShaderStage`          | 4                        |
-| `maxUniformBuffersPerShaderStage`           | 12                       |
-| `maxUniformBufferBindingSize`               | 65536 bytes              |
-| `maxStorageBufferBindingSize`               | 134217728 bytes (128 MB) |
-| `minUniformBufferOffsetAlignment`           | 256 bytes                |
-| `minStorageBufferOffsetAlignment`           | 256 bytes                |
-| `maxVertexBuffers`                          | 8                        |
-| `maxBufferSize`                             | 268435456 bytes (256 MB) |
-| `maxVertexAttributes`                       | 16                       |
-| `maxVertexBufferArrayStride`                | 2048 bytes               |
-| `maxInterStageShaderComponents`             | 60                       |
-| `maxInterStageShaderVariables`              | 16                       |
-| `maxColorAttachments`                       | 8                        |
-| `maxColorAttachmentBytesPerSample`          | 32                       |
-| `maxComputeWorkgroupStorageSize`            | 16384 bytes              |
-| `maxComputeInvocationsPerWorkgroup`         | 256                      |
-| `maxComputeWorkgroupSizeX`                  | 256                      |
-| `maxComputeWorkgroupSizeY`                  | 256                      |
-| `maxComputeWorkgroupSizeZ`                  | 64                       |
-| `maxComputeWorkgroupsPerDimension`          | 65535                    |
+| Limit name                                                                                                                                                                                                                                                            | Default value            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `maxTextureDimension1D`                                                                                                                                                                                                                                               | 8192                     |
+| `maxTextureDimension2D`                                                                                                                                                                                                                                               | 8192                     |
+| `maxTextureDimension3D`                                                                                                                                                                                                                                               | 2048                     |
+| `maxTextureArrayLayers`                                                                                                                                                                                                                                               | 256                      |
+| `maxBindGroups`                                                                                                                                                                                                                                                       | 4                        |
+| `maxBindingsPerBindGroup`                                                                                                                                                                                                                                             | 640                      |
+| `maxDynamicUniformBuffersPerPipelineLayout`                                                                                                                                                                                                                           | 8                        |
+| `maxDynamicStorageBuffersPerPipelineLayout`                                                                                                                                                                                                                           | 4                        |
+| `maxSampledTexturesPerShaderStage`                                                                                                                                                                                                                                    | 16                       |
+| `maxSamplersPerShaderStage`                                                                                                                                                                                                                                           | 16                       |
+| `maxStorageBuffersPerShaderStage`                                                                                                                                                                                                                                     | 8                        |
+| `maxStorageTexturesPerShaderStage`                                                                                                                                                                                                                                    | 4                        |
+| `maxUniformBuffersPerShaderStage`                                                                                                                                                                                                                                     | 12                       |
+| `maxUniformBufferBindingSize`                                                                                                                                                                                                                                         | 65536 bytes              |
+| `maxStorageBufferBindingSize`                                                                                                                                                                                                                                         | 134217728 bytes (128 MB) |
+| `minUniformBufferOffsetAlignment`                                                                                                                                                                                                                                     | 256 bytes                |
+| `minStorageBufferOffsetAlignment`                                                                                                                                                                                                                                     | 256 bytes                |
+| `maxVertexBuffers`                                                                                                                                                                                                                                                    | 8                        |
+| `maxBufferSize`                                                                                                                                                                                                                                                       | 268435456 bytes (256 MB) |
+| `maxVertexAttributes`                                                                                                                                                                                                                                                 | 16                       |
+| `maxVertexBufferArrayStride`                                                                                                                                                                                                                                          | 2048 bytes               |
+| `maxInterStageShaderComponents` {{deprecated_inline}} {{non-standard_inline}} (use `maxInterStageShaderVariables` instead, see [deprecation notice](https://developer.chrome.com/blog/new-in-webgpu-133#deprecate_maxinterstageshadercomponents_limit) for more info) | 60                       |
+| `maxInterStageShaderVariables`                                                                                                                                                                                                                                        | 16                       |
+| `maxColorAttachments`                                                                                                                                                                                                                                                 | 8                        |
+| `maxColorAttachmentBytesPerSample`                                                                                                                                                                                                                                    | 32                       |
+| `maxComputeWorkgroupStorageSize`                                                                                                                                                                                                                                      | 16384 bytes              |
+| `maxComputeInvocationsPerWorkgroup`                                                                                                                                                                                                                                   | 256                      |
+| `maxComputeWorkgroupSizeX`                                                                                                                                                                                                                                            | 256                      |
+| `maxComputeWorkgroupSizeY`                                                                                                                                                                                                                                            | 256                      |
+| `maxComputeWorkgroupSizeZ`                                                                                                                                                                                                                                            | 64                       |
+| `maxComputeWorkgroupsPerDimension`                                                                                                                                                                                                                                    | 65535                    |
 
 ## Examples
 

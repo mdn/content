@@ -183,7 +183,7 @@ _No change._
 
 ## HTTP
 
-- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
+- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
 - Incorrect support of HTTP/2 headers containing line breaks (`'/n'`) have been removed as the spec doesn't allow it, unlike HTTP/1 ([Firefox bug 1197847](https://bugzil.la/1197847)).
 
 ## Networking

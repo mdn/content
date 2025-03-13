@@ -53,7 +53,7 @@ Here we preload our CSS and JavaScript files so they will be available as soon a
 `preload` has other advantages too. Using `as` to specify the type of content to be preloaded allows the browser to:
 
 - Store in the cache for future requests, reusing the resource if appropriate.
-- Apply the correct [content security policy](/en-US/docs/Web/HTTP/CSP) to the resource.
+- Apply the correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) to the resource.
 - Set the correct {{HTTPHeader("Accept")}} request headers for it.
 
 ### What types of content can be preloaded?
@@ -102,7 +102,7 @@ However, the lack of preloading doesn't prevent the `image/webp` image from actu
 
 ## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 

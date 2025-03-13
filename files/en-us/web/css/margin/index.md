@@ -152,7 +152,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -178,7 +178,7 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 }
 ```
 
-{{ EmbedLiveSample('Simple_example','100%',120) }}
+{{ EmbedLiveSample('Basic_example','100%',120) }}
 
 ### More examples
 
