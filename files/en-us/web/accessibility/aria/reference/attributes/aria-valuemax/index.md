@@ -21,7 +21,7 @@ Declaring the minimum and maximum values allows assistive technologies to convey
 
 ## Example
 
-The code below shows a basic slider with a maximum value of 9.
+The code below shows a slider with a maximum value of 9.
 
 ```html
 <div id="dimesLabel">Dimes</div>

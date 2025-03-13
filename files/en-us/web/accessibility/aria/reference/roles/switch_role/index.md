@@ -94,7 +94,7 @@ This example creates a widget and assigns the ARIA `switch` role to it. The butt
 
 #### HTML
 
-A switch is implemented as a {{HTMLElement("button")}} element which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
+A switch is implemented as a {{HTMLElement("button")}} element, which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
 
 ```html
 <button role="switch" aria-checked="true" id="speakerPower" class="switch">

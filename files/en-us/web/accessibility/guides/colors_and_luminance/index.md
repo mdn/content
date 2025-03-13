@@ -202,7 +202,7 @@ Another essential point to consider is the color or luminance that is surroundin
 
 The yellow dots in this image are identical colors on your monitor, but they appear different due to context. (Image D.Lyon)
 
-Our contrast, lightness, and color perception are affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is not just a mathematical ratio between two colors.
+Our contrast, lightness, and color perception are affected by the context of the nearby colors and other features of a design or image. This makes predicting contrast challenging. It is not merely a mathematical ratio between two colors.
 
 To summarize, color is as much about human physiology and perception in the brain as it is about measuring light from a computer screen. It's also important to understand that the ambient light environment affects the ability to perceive color and contrast. Light and its measurements are linear, but human vision and perception are not.
 
