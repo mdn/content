@@ -83,13 +83,6 @@ async function analyzePR(buildDirectory, config) {
       const octokit = new Octokit({ auth: config.github_token });
       const [owner, repoName] = config.repo.split("/");
 
-      // Get the PR (GitHub treats PRs as issues)
-      const { data: issue } = await octokit.issues.get({
-        owner,
-        repo: repoName,
-        issue_number: Number(config.pr_number),
-      });
-
       // List existing comments
       const { data: comments } = await octokit.issues.listComments({
         owner,
