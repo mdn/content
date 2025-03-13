@@ -51,9 +51,9 @@ Often client-side and server-side storage are used together. For example, you co
 
 ### Old school: Cookies
 
-The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used [cookies](/en-US/docs/Web/HTTP/Cookies) to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
+The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
 
-These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies) article.
+These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) article.
 
 ### New school: Web Storage and IndexedDB
 
@@ -767,7 +767,7 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 
 - [Web storage API](/en-US/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API)
-- [Cookies](/en-US/docs/Web/HTTP/Cookies)
+- [Cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

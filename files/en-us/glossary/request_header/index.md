@@ -31,5 +31,5 @@ Cache-Control: max-age=0
 
 ## See also
 
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - [RFC 9110, section 6.3: Header Fields](https://httpwg.org/specs/rfc9110.html#header.fields)
