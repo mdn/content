@@ -59,7 +59,7 @@
     "fdir": "^6.4.3",
     "gray-matter": "^4.0.3",
     "husky": "9.1.7",
-    "lint-staged": "15.4.3",
+    "lint-staged": "15.5.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
