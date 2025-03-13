@@ -20,7 +20,7 @@ Examples include:
 - Row and column headers in a spreadsheet.
 - The total value in a shopping cart.
 
-If the non-changeable value shouldn't be able to receive focus, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) instead.
+If the non-changeable value shouldn't be able to receive focus, use [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) instead.
 
 > [!NOTE]
 > When using semantic HTML form controls, if you set the `readonly` attribute, you don't need to include `aria-readonly="true"`.
