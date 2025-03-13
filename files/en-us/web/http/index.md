@@ -42,8 +42,6 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [HTTP messages](/en-US/docs/Web/HTTP/Guides/Messages)
   - : HTTP messages transmitted as requests and responses have a defined structure.
     This article describes this general structure, its purpose, and the different types of messages.
-- [URIs](/en-US/docs/Web/URI)
-  - : Uniform Resource Identifiers (URIs) are used to describe and locate resources on the web and are an essential component in HTTP requests.
 - [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types)
   - : Since HTTP/1.0, different types of content can be transmitted.
     This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.
@@ -93,9 +91,6 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
   - : It's very rarely a good idea to use user agent sniffing to detect a browser, but there are edge cases that require it.
     This document will guide you in doing this as correctly as possible when this is necessary, with an emphasis on considerations to make before embarking on this route.
-- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media)
-  - : This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.
-    This information may also be useful if you encounter other media types your server isn't already configured to recognize.
 
 ### Security and privacy
 
@@ -113,6 +108,14 @@ Beginners are encouraged to start with the foundational guides before exploring 
     The CSP guide describes the overall Content Security Policy mechanism which helps detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.
 - [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
   - : CORP lets websites and applications opt in to protection against specific requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks.
+
+### Related resources
+
+- [URIs](/en-US/docs/Web/URI)
+  - : Uniform Resource Identifiers (URIs) are used to describe and locate resources on the web and are an essential component in HTTP requests.
+- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media)
+  - : This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.
+    This information may also be useful if you encounter other media types your server isn't already configured to recognize.
 
 ## Tools & resources
 
