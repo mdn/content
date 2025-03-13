@@ -174,6 +174,7 @@ jobs:
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: content
         run: yarn --frozen-lockfile
 
       - name: Analyze PR build
