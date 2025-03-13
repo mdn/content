@@ -222,4 +222,4 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 - [Web forms — working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - Related HTML elements: [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), {{HTMLElement("select")}}, and {{HTMLElement("option")}}
-- {{ glossary("replaced elements") }}
+- {{ glossary("Replaced elements") }}

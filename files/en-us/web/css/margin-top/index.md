@@ -61,7 +61,7 @@ margin-top: 0;
 }
 ```
 
-This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+This property has no effect on _non-[replaced](/en-US/docs/glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Syntax
 

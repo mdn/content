@@ -73,7 +73,7 @@ If the element is not a replaced element, then the given `ratio` is used.
 
 - `auto`
 
-  - : {{ glossary("replaced elements") }} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
+  - : {{ glossary("Replaced elements") }} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 
 - {{cssxref("&lt;ratio&gt;")}}
 
