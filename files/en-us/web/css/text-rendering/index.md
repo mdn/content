@@ -39,19 +39,19 @@ text-rendering: unset;
 
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
 
-    For extended body of text on a web page, the `auto` value is generally a good option for balancing both quality and performance.
+    The `auto` value is a good default for balancing quality and performance, especially for extended bodies of plain text.
 
 - `optimizeSpeed`
 
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
 
-    To ensure fast loading and to extend battery life for mobile users, the `optimizeSpeed` value is preferred.
+    The `optimizeSpeed` value is preferable in resource-constrained rendering scenarios, such as slow processors or low battery.
 
 - `optimizeLegibility`
 
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
 
-    When displaying large forms of text such as headers or banners, using the `optimizeLegibility` value enhances the readability of such text. In addition, it could be used for high-quality professional typography such as essays and articles, but it's not recommended for large articles due to potential performance impact.
+    The `optimizeLegibility` value is preferable for texts that are large in size but short in content, such as headers or banners, to enhance their readability. It could also be used for high-quality professional typography such as published articles. It's not recommended for typical articles due to potential performance impacts.
 
 - `geometricPrecision`
 
@@ -61,7 +61,7 @@ text-rendering: unset;
 
     But the `geometricPrecision` property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.
 
-    When working with bold text and variable fonts, especially headers and banners, the `geometricPrecision` value ensures that the text is accurately rendered and scaled.
+    The `geometricPrecision` value optimizes neither readability nor performance. It usually makes sense in SVG, where you want your graphic to scale faithfully without distorting the text dimensions.
 
     > [!NOTE]
     > WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
