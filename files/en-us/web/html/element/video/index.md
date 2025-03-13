@@ -25,7 +25,7 @@ The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player whi
 </video>
 ```
 
-The above example shows usage of the `<video>` element. Similarly to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, etc.
+The above example shows how to use the `<video>` element. Similar to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, and so on.
 
 The content inside the opening and closing `<video></video>` tags is shown as a fallback in browsers that don't support the element.
 
