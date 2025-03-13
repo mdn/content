@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Block if author/actor is not an admin
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # Check author.
           AUTHOR="${{ github.event.pull_request.user.login }}"
