@@ -50,7 +50,7 @@ input:checked {
 The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
 
 > [!NOTE]
-> Because browsers often treat `<option>`s as [replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties), the extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser.
+> Because browsers often treat `<option>`s as {{ glossary("replaced elements") }}, the extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser.
 
 ## Syntax
 
@@ -222,4 +222,4 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 - [Web forms — working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - Related HTML elements: [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), {{HTMLElement("select")}}, and {{HTMLElement("option")}}
-- [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{ glossary("replaced elements") }}

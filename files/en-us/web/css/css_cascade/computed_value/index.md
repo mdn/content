@@ -45,4 +45,4 @@ However, for some properties (those where percentages are relative to something 
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - {{ glossary("replaced elements") }}

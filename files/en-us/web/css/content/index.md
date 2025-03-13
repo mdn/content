@@ -9,7 +9,7 @@ browser-compat: css.properties.content
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 
-Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)**.
+Objects inserted using the `content` property are **anonymous {{ glossary("replaced elements") }}**.
 
 {{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
 
@@ -483,7 +483,7 @@ div {
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Replaced elements](/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{ glossary("replaced elements") }}
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
