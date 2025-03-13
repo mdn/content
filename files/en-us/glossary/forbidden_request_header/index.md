@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **forbidden request header** is an [HTTP header](/en-US/docs/Web/HTTP/Headers) name-value pair that cannot be set or modified programmatically in a request. For headers forbidden to be modified in responses, see {{Glossary("forbidden response header name")}}.
+A **forbidden request header** is an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name-value pair that cannot be set or modified programmatically in a request. For headers forbidden to be modified in responses, see {{Glossary("forbidden response header name")}}.
 
 Modifying such headers is forbidden because the user agent retains full control over them.
 For example, the {{HTTPHeader("Date")}} header is a forbidden request header, so this code cannot set the message `Date` field:

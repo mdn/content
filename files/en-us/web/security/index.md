@@ -36,7 +36,7 @@ Web browsers follow a strict security model that enforces strong security for co
 
 In general, documents from one origin cannot make requests to other origins. This makes sense because you don't want sites to be able to interfere with one another and access unauthorized data.
 
-However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/Window/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
+However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/Window/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
 ### HTTP model for communication
 
@@ -50,7 +50,7 @@ Related topics:
 
 - [Transport layer security](/en-US/docs/Web/Security/Transport_Layer_Security) (TLS)
   - : The TLS protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data.
-- [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : The `Strict-Transport-Security` [HTTP](/en-US/docs/Web/HTTP) header lets a website specify that it may only be accessed using HTTPS.
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
   - : Certificate Transparency (CT) is an open framework designed to protect against and monitor for certificate misissuance. Newly issued certificates are 'logged' to publicly run, often independent CT logs. These provide append-only, cryptographically assured records of issued TLS certificates.
@@ -116,7 +116,7 @@ Use `POST` requests rather than `GET` requests to avoid these issues. Our articl
 
 ### Enforce usage policies
 
-Consider using web platform features like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature and resource usage rules on your website that make it harder to introduce vulnerabilities.
+Consider using web platform features like [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) to enforce a set of feature and resource usage rules on your website that make it harder to introduce vulnerabilities.
 
 CSP allows you to add a layer of security by, for example, allowing images or scripts to be loaded only from specific trusted origins. This helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and data injection attacks. These attacks involve a range of malicious activities, including data theft, site defacement, and distribution of malware.
 
@@ -133,10 +133,10 @@ Related topics:
 
 - [Subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
   - : **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a {{Glossary("CDN")}}) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
-- [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
-- [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
+- [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
+  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
 
 ### Sanitize form input
 
@@ -157,9 +157,9 @@ In a [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attack, a use
 
 The following features can help guard against clickjacking:
 
-- [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+- [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
-- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
 ## Practical security implementation guides

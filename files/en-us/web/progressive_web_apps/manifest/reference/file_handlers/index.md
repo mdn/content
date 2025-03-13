@@ -13,7 +13,7 @@ The `file_handlers` member specifies an array of objects representing the types 
 
 The `file_handlers` member is read by the browser when the PWA is installed and used to associate the application with a given set of file types at the operating system level.
 
-For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/MIME_types/Common_types). Once this PWA is installed, the operating system is able to use it to handle text files, opening the PWA when the user opens a file of this type. Note that other applications may also be registered as text file handlers, and the way operating systems manage the association between file types and applications, and the way they let users choose an application to handle a given file can vary from one device to another.
+For example, a PWA can be registered to handle files that match the `text/plain` [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types). Once this PWA is installed, the operating system is able to use it to handle text files, opening the PWA when the user opens a file of this type. Note that other applications may also be registered as text file handlers, and the way operating systems manage the association between file types and applications, and the way they let users choose an application to handle a given file can vary from one device to another.
 
 > [!NOTE]
 > While the `file_handlers` member is used to register a PWA with a given set of file types, this only results in the operating system launching the PWA when a matching file is opened. The PWA then needs to actually handle the file using JavaScript code. See [Handling the files](#handling_the_files) for more information.

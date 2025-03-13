@@ -106,7 +106,7 @@ Basically, when data is sent across the web, it is sent in thousands of small ch
 
 ## HTTP basics
 
-HTTP uses a simple language of verbs to perform actions such as making requests (see [HTTP request methods](/en-US/docs/Web/HTTP/Methods)). The HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method is the one normally used to make HTTP requests of the type described above. For example, a request for the MDN home page might look like this:
+HTTP uses a simple language of verbs to perform actions such as making requests (see [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)). The HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) method is the one normally used to make HTTP requests of the type described above. For example, a request for the MDN home page might look like this:
 
 ```http
 GET /en-US/ HTTP/2
@@ -133,18 +133,18 @@ content-type: text/html
 The full response is more complex than this, but we have omitted most of it for brevity. The main parts are as follows:
 
 - `HTTP/2 200`
-  - : The version of HTTP that the server is using to send the response, in this case HTTP/2, followed by a [status code](/en-US/docs/Web/HTTP/Status) indicating whether the request was successful. `200` indicates success.
+  - : The version of HTTP that the server is using to send the response, in this case HTTP/2, followed by a [status code](/en-US/docs/Web/HTTP/Reference/Status) indicating whether the request was successful. `200` indicates success.
 - `date`, `expires`, etc.
-  - : [HTTP headers](/en-US/docs/Web/HTTP/Headers) containing additional information about the response (note that requests can have headers too), which provide extra information and/or modify its behavior.
+  - : [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) containing additional information about the response (note that requests can have headers too), which provide extra information and/or modify its behavior.
 - `<!doctype html>`, etc.
   - : The response body, which in this case contains the MDN homepage's HTML document.
 
 > [!NOTE]
-> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Overview) is a good place to start.
+> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview) is a good place to start.
 
 ### Other status codes
 
-Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indicates that the HTTP request was successful. There are many HTTP status codes with specific meanings and uses, but you will only commonly see a few:
+Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Reference/Status), which indicates that the HTTP request was successful. There are many HTTP status codes with specific meanings and uses, but you will only commonly see a few:
 
 - `301`
   - : The requested resource has been permanently moved to a new location, which is provided in the response. This is used for redirecting content when it's moved.

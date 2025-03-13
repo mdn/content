@@ -8,7 +8,7 @@ page-type: guide
 
 A subdomain takeover occurs when an attacker gains control over a subdomain of a target domain. Typically, this happens when the subdomain has a canonical name ([CNAME](https://en.wikipedia.org/wiki/CNAME_record)) in the Domain Name System ([DNS](/en-US/docs/Glossary/DNS)), but no host is providing content for it. This can happen because either a virtual host hasn't been published yet or a virtual host has been removed. An attacker can take over that subdomain by providing their own virtual host and then hosting their own content for it.
 
-If an attacker can do this, they can potentially read [cookies](/en-US/docs/Web/HTTP/Cookies) set from the main domain, perform [cross-site scripting](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), or circumvent [content security policies](/en-US/docs/Web/HTTP/CSP), thereby enabling them to capture protected information (including logins) or send malicious content to unsuspecting users.
+If an attacker can do this, they can potentially read [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) set from the main domain, perform [cross-site scripting](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), or circumvent [content security policies](/en-US/docs/Web/HTTP/Guides/CSP), thereby enabling them to capture protected information (including logins) or send malicious content to unsuspecting users.
 
 A subdomain is like an electrical outlet. If you have your own appliance (host) plugged into it, everything is fine. However, if you remove your appliance from the outlet (or haven't plugged one in yet), someone can plug in a different one. You must cut power at the breaker or fuse box (DNS) to prevent the outlet from being used by someone else.
 

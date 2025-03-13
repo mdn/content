@@ -92,7 +92,7 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
   ([Firefox bug 1886820](https://bugzil.la/1886820)).
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`.
-  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
+  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
 - **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
   The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.

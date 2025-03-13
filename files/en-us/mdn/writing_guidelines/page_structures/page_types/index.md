@@ -192,7 +192,7 @@ It also provides examples, browser compatibility information, and other importan
 
 #### Example
 
-- [Cache-Control header](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 #### Templates
 
