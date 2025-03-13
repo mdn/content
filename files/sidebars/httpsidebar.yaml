@@ -7,6 +7,7 @@ sidebar:
     link: /Web/HTTP/Guides
     title: Guides
   - /Web/HTTP/Guides/Overview
+  - /Web/HTTP/Guides/Evolution_of_HTTP
   - /Web/HTTP/Guides/Session
   - /Web/HTTP/Guides/Messages
   - /Web/HTTP/Guides/MIME_types
@@ -19,7 +20,6 @@ sidebar:
   - /Web/HTTP/Guides/Range_requests
   - /Web/HTTP/Guides/Content_negotiation
   - /Web/HTTP/Guides/Connection_management_in_HTTP_1.x
-  - /Web/HTTP/Guides/Evolution_of_HTTP
   - /Web/HTTP/Guides/Protocol_upgrade_mechanism
   - /Web/HTTP/Guides/Proxy_servers_and_tunneling
   - /Web/HTTP/Guides/Client_hints
