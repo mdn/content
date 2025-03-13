@@ -37,6 +37,9 @@ Beginners are encouraged to start with the foundational guides before exploring 
 
 - [Overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
   - : The basic features of HTTP, what it can do, its intended use in web architecture, and its position in the protocol stack.
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP)
+  - : HTTP was created in the early 1990s and has been extended several times.
+    This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
 - [A typical HTTP session](/en-US/docs/Web/HTTP/Guides/Session)
   - : Describes the flow of an HTTP session, from establishing a connection, sending a request, to receiving a response.
 - [HTTP messages](/en-US/docs/Web/HTTP/Guides/Messages)
@@ -73,9 +76,6 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
     This article explains both concepts, including the pros and cons of each.
-- [Evolution of HTTP](/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP)
-  - : HTTP was created in the early 1990s and has been extended several times.
-    This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
 - [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
   - : HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the {{HTTPHeader("Upgrade")}} header.
     A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a [WebSocket](/en-US/docs/Web/API/WebSocket) (`ws` / `wss`).
@@ -94,8 +94,6 @@ Beginners are encouraged to start with the foundational guides before exploring 
 
 ### Security and privacy
 
-- [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
-  - : A collection of tips to help operational teams with creating secure web applications.
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
   - : Permissions Policy provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website.
     You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features.
@@ -108,6 +106,8 @@ Beginners are encouraged to start with the foundational guides before exploring 
     The CSP guide describes the overall Content Security Policy mechanism which helps detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.
 - [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
   - : CORP lets websites and applications opt in to protection against specific requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks.
+- [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
+  - : A collection of tips to help operational teams with creating secure web applications.
 
 ### Related resources
 
