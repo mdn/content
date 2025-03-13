@@ -12,5 +12,5 @@ page-type: glossary-definition
 
 - [MathML](https://en.wikipedia.org/wiki/MathML) on Wikipedia
 - [MathML](/en-US/docs/Web/MathML)
-- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
+- [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring)
 - [What is MathML](https://www.w3.org/Math/whatIsMathML.html)
