@@ -320,16 +320,16 @@ This export statement makes our `App()` function available to other modules. We'
 Let's open `src/main.jsx`, because that's where the `<App />` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```jsx
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);
 ```
 
 As with `App.jsx`, the file starts by importing all the JavaScript modules and other assets it needs to run.
