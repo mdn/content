@@ -163,11 +163,18 @@ jobs:
         with:
           path: content
 
-      - name: Install (mdn/content)
+      - name: Setup (mdn/content)
         uses: actions/setup-node@v4
         if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
         with:
           node-version-file: "content/.nvmrc"
+
+      - name: Install (mdn/content)
+        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn --frozen-lockfile
 
       - name: Analyze PR build
         if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
