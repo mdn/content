@@ -9,7 +9,7 @@ browser-compat: javascript.operators.typeof
 
 The **`typeof`** operator returns a string indicating the type of the operand's value.
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{InteractiveExample("JavaScript Demo: typeof operator")}}
 
 ```js interactive-example
 console.log(typeof 42);

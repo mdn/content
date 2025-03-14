@@ -9,7 +9,7 @@ browser-compat: javascript.operators.increment
 
 The **increment (`++`)** operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{InteractiveExample("JavaScript Demo: Increment (++) operator")}}
 
 ```js interactive-example
 let x = 3;

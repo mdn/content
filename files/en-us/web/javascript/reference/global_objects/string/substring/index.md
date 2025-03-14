@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.substring
 
 The **`substring()`** method of {{jsxref("String")}} values returns the part of this string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
-{{InteractiveExample("JavaScript Demo: String.substring()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.substring()")}}
 
 ```js interactive-example
 const str = "Mozilla";

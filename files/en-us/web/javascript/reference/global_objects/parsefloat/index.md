@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.parseFloat
 
 The **`parseFloat()`** function parses a string argument and returns a floating point number.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+{{InteractiveExample("JavaScript Demo: parseFloat()")}}
 
 ```js interactive-example
 function circumference(r) {

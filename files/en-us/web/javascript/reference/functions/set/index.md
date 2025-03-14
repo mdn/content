@@ -9,7 +9,7 @@ browser-compat: javascript.functions.set
 
 The **`set`** syntax binds an object property to a function to be called when there is an attempt to set that property. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{InteractiveExample("JavaScript Demo: Setter declaration")}}
 
 ```js interactive-example
 const language = {

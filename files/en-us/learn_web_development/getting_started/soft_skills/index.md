@@ -23,6 +23,6 @@ This module is mainly theoretical, and assumes no specific practical knowledge o
 - [Workflows and processes](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes)
   - : Beginners often focus on specific individual aspects of technology, but miss out on the bigger picture of an overall project. This article provides some of that high-level context.
 - [Succeeding in job interviews](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews)
-  - : Technical job interviews can be very demanding, and some have quite specific requirements. Finding the right jobs to apply for in the first place can be challenging! This job provides some tips and resources to help.
+  - : Technical job interviews can be very demanding, and some have quite specific requirements. Finding the right jobs to apply for in the first place can be challenging! This article provides some tips and resources to help.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}
