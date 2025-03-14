@@ -55,7 +55,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
       <td>
-        Good choice for simple images and animations.
+        Good choice for basic images and animations.
         Prefer PNG for lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
         <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
@@ -991,7 +991,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     <tr>
       <th scope="row">Compression</th>
       <td>
-        SVG source may be compressed during transit using <a href="/en-US/docs/Web/HTTP/Compression">HTTP compression</a> techniques, or on disk as an <code>.svgz</code> file.
+        SVG source may be compressed during transit using <a href="/en-US/docs/Web/HTTP/Guides/Compression">HTTP compression</a> techniques, or on disk as an <code>.svgz</code> file.
       </td>
     </tr>
     <tr>

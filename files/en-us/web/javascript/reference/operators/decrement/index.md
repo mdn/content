@@ -9,7 +9,7 @@ browser-compat: javascript.operators.decrement
 
 The **decrement (`--`)** operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+{{InteractiveExample("JavaScript Demo: Decrement (--) operator")}}
 
 ```js interactive-example
 let x = 3;

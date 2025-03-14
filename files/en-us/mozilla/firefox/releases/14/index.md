@@ -47,7 +47,7 @@ _No change._
 
 ### HTTP
 
-- Gecko now supports the new [HTTP](/en-US/docs/Web/HTTP) [`308 Permanent Redirect`](/en-US/docs/Web/HTTP/Status#308) status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the [`307 Temporary Redirect`](/en-US/docs/Web/HTTP/Status#307) status code, as it forbids the user agent from changing the HTTP method used between the two requests (`POST` will stay `POST`, `GET` will stay `GET`).
+- Gecko now supports the new [HTTP](/en-US/docs/Web/HTTP) [`308 Permanent Redirect`](/en-US/docs/Web/HTTP/Reference/Status#308) status code. As Gecko doesn't make a distinction between permanent and temporary redirects, it behaves like the [`307 Temporary Redirect`](/en-US/docs/Web/HTTP/Reference/Status#307) status code, as it forbids the user agent from changing the HTTP method used between the two requests (`POST` will stay `POST`, `GET` will stay `GET`).
 
 ## Changes for Mozilla and add-on developers
 

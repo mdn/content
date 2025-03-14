@@ -53,7 +53,7 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 ### Network
 
 - Quality factors ("q-values") are now clamped to 2 digits (e.g. in HTTP {{HTTPHeader("Accept-Language")}} headers) ([Firefox bug 672448](https://bugzil.la/672448)).
-- The `ALLOW-FROM` syntax of the [`X-FRAME-OPTIONS`](/en-US/docs/Web/HTTP/Headers/X-Frame-Options) HTTP Response header is now supported ([Firefox bug 690168](https://bugzil.la/690168)).
+- The `ALLOW-FROM` syntax of the [`X-FRAME-OPTIONS`](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) HTTP Response header is now supported ([Firefox bug 690168](https://bugzil.la/690168)).
 
 ### Developer tools
 

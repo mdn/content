@@ -11,7 +11,7 @@ The **`padEnd()`** method of {{jsxref("String")}} values pads this string with a
 string (repeated, if needed) so that the resulting string reaches a given length. The
 padding is applied from the end of this string.
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.padEnd()")}}
 
 ```js interactive-example
 const str1 = "Breaded Mushrooms";

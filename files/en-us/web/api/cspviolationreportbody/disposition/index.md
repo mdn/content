@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.disposition
 
 {{APIRef("Reporting API")}}
 
-The **`disposition`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates whether the user agent is configured to enforce [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violations or only report them.
+The **`disposition`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates whether the user agent is configured to enforce [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations or only report them.
 
 ## Value
 

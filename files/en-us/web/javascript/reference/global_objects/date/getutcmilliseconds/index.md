@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getUTCMilliseconds
 
 The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCMilliseconds()", "shorter")}}
 
 ```js interactive-example
 const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)

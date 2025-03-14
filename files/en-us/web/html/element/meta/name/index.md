@@ -18,7 +18,7 @@ The HTML specification defines the following set of standard metadata names:
   > [!NOTE]
   >
   > - Browsers may use this to identify the application. It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status.
-  > - Simple web pages shouldn't define an application-name.
+  > - Individual web pages shouldn't define an `application-name`.
 
 - `author`: the name of the document's author.
 - `description`: a short and accurate summary of the content of the page. Search engines like [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) may use this field to control the appearance of the webpage in the search result.

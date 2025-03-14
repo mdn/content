@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.valueOf
 
 The **`valueOf()`** method of {{jsxref("String")}} values returns this string value.
 
-{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.valueOf()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");
