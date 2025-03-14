@@ -153,15 +153,15 @@ In terms of how to actually publish your portfolio:
 
 [LinkedIn](https://www.linkedin.com/) is one of the most popular sites in the world for people to find jobs, and for employers to find employees. It is a great place to host an online account of your work experience and skills, which is similar to your CV/resumé, but also different.
 
-LinkedIn has many useful advantages that allow your profile to work well alongside your CV/resumé:
+LinkedIn has many useful advantages that allow your profile to work well alongside your CV/resumé. You can:
 
-- You can list your full set of experience and skills on there without making your profile look too long.
-- You can get people to post recommendations.
-- You can link to the profiles of all your past employers, educational institutions, etc.
-- You can write posts on it and use it as a blog.
-- You can actively search for and apply for jobs on it, and get it to send you new job updates based on your skillset and interests.
-- You can connect with contacts to build a network that you can share skills and leads with, which will ultimately help you find jobs.
-- You can take training courses.
+- List your full set of experience and skills on there without making your profile look too long.
+- Get people to post recommendations.
+- Link to the profiles of all your past employers, educational institutions, etc.
+- Write posts on it and use it as a blog.
+- Actively search for and apply for jobs on it, and get it to send you new job updates based on your skills and interests.
+- Connect with contacts to build a network that you can share skills and leads with, which will ultimately help you find jobs.
+- Take training courses.
 
 For these reasons, you should create a profile. Make it look good and sound professional. [Create a good LinkedIn profile](https://www.linkedin.com/help/linkedin/answer/a554351/how-do-i-create-a-good-linkedin-profile-?lang=en) provides some useful tips.
 
