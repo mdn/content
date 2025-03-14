@@ -458,4 +458,4 @@ Here are some more examples:
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - **Value definition syntax**
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{ glossary("Replaced elements") }}
+  - {{glossary("Replaced elements")}}

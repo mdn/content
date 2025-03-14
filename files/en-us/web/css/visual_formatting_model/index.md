@@ -258,6 +258,6 @@ A block box is a block-level box that is also a block container. As described in
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- {{ glossary("Replaced elements") }}
+- {{glossary("Replaced elements")}}
 - {{DOMxRef("VisualViewport")}} interface
 - {{glossary("Scroll container")}}

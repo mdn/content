@@ -208,7 +208,7 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 
 ## Positioning and scaling
 
-Being a {{ glossary("replaced elements", "replaced element") }}, the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+Being a {{ glossary("replaced elements", "replaced element")}}, the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
 
 > [!NOTE]
 > The {{cssxref("object-fit")}} property has no effect on `<iframe>` elements.

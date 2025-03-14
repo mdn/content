@@ -111,7 +111,7 @@ video,
 }
 ```
 
-Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a {{ glossary("replaced elements", "replaced element") }}, after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
+Finally, we give the `<video>` element a {{cssxref("max-width")}} of `50%` and a fixed {{cssxref("aspect-ratio")}} of `4/3`. This is to keep the video at a consistent size and avoid too much layout upheaval when the screen capture starts to be broadcast. If we didn't do this, the `<video>` element would grow to the same width as the entire captured area (window or screen), which would affect the layout. It is a {{ glossary("replaced elements", "replaced element")}}, after all, so its [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) depends on that of its content.
 
 ```css
 video {
