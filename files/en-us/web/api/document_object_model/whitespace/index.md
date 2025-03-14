@@ -91,7 +91,7 @@ The `<h1>` element contains only inline elements. In fact it contains:
 - An inline element (the `<span>`, which contains a space, and the word "World!").
 - Another text node (consisting only of tabs and spaces).
 
-Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
+Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
 
 Inside this context, whitespace character processing can be summarized as follows:
 

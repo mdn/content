@@ -35,7 +35,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{glossary("Flex")}}
 - [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
 - {{glossary("Grid")}}
-- [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
+- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
 - {{glossary("Inline-level content")}}
 - {{glossary("Replaced elements")}}
 - {{glossary("Ruby")}}
