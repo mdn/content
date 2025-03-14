@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.TypedArray.set
 The **`set()`** method of {{jsxref("TypedArray")}} instances stores multiple values in the typed
 array, reading input values from a specified array.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.set()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 
 The **`Intl.Segmenter.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in segmentation without having to fall back to the runtime's default locale.
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

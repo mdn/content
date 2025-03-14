@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.ArrayBuffer.byteLength
 
 The **`byteLength`** accessor property of {{jsxref("ArrayBuffer")}} instances returns the length (in bytes) of this array buffer.
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.prototype.byteLength")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

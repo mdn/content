@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Number.valueOf
 
 The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of this number.
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{InteractiveExample("JavaScript Demo: Number.prototype.valueOf()")}}
 
 ```js interactive-example
 const numObj = new Number(42);

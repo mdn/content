@@ -12,7 +12,7 @@ on the same {{jsxref("ArrayBuffer")}} store and with the same element types as f
 typed array. The begin offset is **inclusive** and the end
 offset is **exclusive**.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.subarray()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getUTCDate
 
 The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCDate()")}}
 
 ```js interactive-example
 const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");

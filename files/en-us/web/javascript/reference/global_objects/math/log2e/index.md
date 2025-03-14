@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Math.LOG2E
 
 The **`Math.LOG2E`** static data property represents the base 2 logarithm of [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E), approximately 1.443.
 
-{{InteractiveExample("JavaScript Demo: Math.log2e()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.LOG2E", "shorter")}}
 
 ```js interactive-example
 function getLog2e() {

@@ -32,8 +32,8 @@ No notable changes.
 
 ### MathML
 
-- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
-- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
+- The [`<semantics>`](/en-US/docs/Web/MathML/Reference/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Reference/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
+- All values of the [`mathvariant`](/en-US/docs/Web/MathML/Reference/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
 ### APIs
 

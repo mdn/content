@@ -16,7 +16,7 @@ const DEFAULT_GITHUB_TOKEN = "your_default_github_token"; // adjust as needed
 
 const MAX_COMMENT_BODY_LENGTH = 65000;
 const hiddenCommentRegex =
-  /<!-- build_hash: ([a-f0-9]+) date: ([\d:\.\- ]+) -->/;
+  /<!-- build_hash: ([a-f0-9]+) date: ([\d:.\-TZ]+) -->/;
 
 /**
  * Main function to analyze a PR build directory and post (or print) a comment.
