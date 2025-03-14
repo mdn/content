@@ -334,11 +334,11 @@ createRoot(document.getElementById("root")).render(
 
 As with `App.jsx`, the file starts by importing all the JavaScript modules and other assets it needs to run.
 
-The first two statements import `StrictMode` and `createRoot` from the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
+The first two statements import `StrictMode` and `createRoot` from the `react` and `react-dom` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
 We then import our `App()` function and `index.css`, which holds global styles that are applied to our whole app.
 
-We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
+We then call the `createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_, which renders the `App` _component_ inside the root node.
 
 > **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
@@ -398,8 +398,6 @@ Some attributes are different than their HTML counterparts. For example, the `cl
 Unlike HTML, JSX allows us to write variables and other JavaScript expressions right alongside our other content. Let's declare a variable called `subject` just above the `App()` function in your `App.jsx` file:
 
 ```jsx
-import "./App.css";
-
 const subject = "React";
 function App() {
   // code omitted for brevity
