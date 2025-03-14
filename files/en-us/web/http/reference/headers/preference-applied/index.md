@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-3
 
 {{HTTPSidebar}}
 
-The HTTP **`Preference-Applied`** header informs the client about which preferences from the `Prefer` request header were applied by the server.
+The HTTP **`Preference-Applied`** header informs the client about which preferences from the {{httpheader("Prefer"}} request header were applied by the server.
 
 <table class="properties">
   <tbody>
