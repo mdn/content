@@ -88,7 +88,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
 Other resources should be cross-origin isolated in their own group.
 
-The following sections show whether documents will be opened in the same BCG or a new BCD following a navigation or opening a window programmatically.
+The following sections show whether documents will be opened in the same BCG or a new BCG following a navigation or opening a window programmatically.
 
 > [!NOTE]
 > The specification uses the term "popup" to refer to any document opened using {{domxref("Window.open()")}}, whether it is a popup, tab, window, or other context.
