@@ -7,10 +7,10 @@ sidebar: jssidebar
 
 {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Internationalization")}}
 
-This guide talks about how to do _resource management_ in JavaScript. Resource management is not exactly the same as [memory management](/en-US/docs/Web/JavaScript/Memory_management), which is a more advanced topic and usually handled automatically by JavaScript. Resource management is about managing resources that are _not_ automatically cleaned up by JavaScript. Sometimes, it's okay to have some unused objects in memory, as they don't interfere with application logic, but resource leaks often lead to things not working, or a lot of excess memory usage.
+This guide talks about how to do _resource management_ in JavaScript. Resource management is not exactly the same as [memory management](/en-US/docs/Web/JavaScript/Memory_management), which is a more advanced topic and usually handled automatically by JavaScript. Resource management is about managing resources that are _not_ automatically cleaned up by JavaScript. Sometimes, it's okay to have some unused objects in memory, because they don't interfere with application logic, but resource leaks often lead to things not working, or a lot of excess memory usage. Therefore, this is not an optional feature about optimization, but a core feature to write correct programs!
 
 > [!NOTE]
-> While memory management and resource management are two separate topics, sometimes you can hook into the memory management system to do resource management, as a last resort. For example, if you have a JavaScript object representing a handle of an external resource, you can create a {{jsxref("FinalizationRegistry")}} to clean up the resource when the handler is garbage collected. However, there is no guarantee that the finalizer will run, so it's not a good idea to rely on it for critical resources.
+> While memory management and resource management are two separate topics, sometimes you can hook into the memory management system to do resource management, as a last resort. For example, if you have a JavaScript object representing a handle of an external resource, you can create a {{jsxref("FinalizationRegistry")}} to clean up the resource when the handle is garbage collected, because there is definitely no way to access the resource afterwards. However, there is no guarantee that the finalizer will run, so it's not a good idea to rely on it for critical resources.
 
 ## Problem
 
@@ -35,38 +35,38 @@ const stream = new ReadableStream({
   },
 });
 
-async function readUntilB(stream) {
+async function readUntil(stream, text) {
   const reader = stream.getReader();
   let chunk = await reader.read();
 
-  while (!chunk.done && chunk.value !== "b") {
+  while (!chunk.done && chunk.value !== text) {
     console.log(chunk);
     chunk = await reader.read();
   }
   // We forgot to release the lock here
 }
 
-readUntilB(stream).then(() => {
+readUntil(stream, "b").then(() => {
   const anotherReader = stream.getReader();
   // TypeError: ReadableStreamDefaultReader constructor can only
   // accept readable streams that are not yet locked to a reader
 });
 ```
 
-Here, we have a stream that emits three chunks of data. We read from the stream until we find the letter "b". When `readUntilB` returns, the stream is only partially consumed, so we should be able to continue to read from it using another reader. However, we forgot to release the lock, so although `reader` is no longer available, the stream is still locked and we cannot create another reader.
+Here, we have a stream that emits three chunks of data. We read from the stream until we find the letter "b". When `readUntil` returns, the stream is only partially consumed, so we should be able to continue to read from it using another reader. However, we forgot to release the lock, so although `reader` is no longer available, the stream is still locked and we cannot create another reader.
 
-The solution in this case is straightforward: call `reader.releaseLock()` at the end of `readUntilB`. But, a few issues still remain:
+The solution in this case is straightforward: call `reader.releaseLock()` at the end of `readUntil`. But, a few issues still remain:
 
-- Inconsistency: different resources have different ways to release them. For example, we have `close()`, `releaseLock()`, `disconnect()`, etc.
-- Error handling: what happens if the `reader.read()` call fails? Then `readUntilB` would terminate and never get to the `reader.releaseLock()` call. We can fix this using {{jsxref("Statements/try...catch", "try...finally")}}:
+- Inconsistency: different resources have different ways to release them. For example, we have `close()`, `releaseLock()`, `disconnect()`, etc. The pattern does not generalize.
+- Error handling: what happens if the `reader.read()` call fails? Then `readUntil` would terminate and never get to the `reader.releaseLock()` call. We can fix this using {{jsxref("Statements/try...catch", "try...finally")}}:
 
   ```js
-  async function readUntilB(stream) {
+  async function readUntil(stream, text) {
     const reader = stream.getReader();
     try {
       let chunk = await reader.read();
 
-      while (!chunk.done && chunk.value !== "b") {
+      while (!chunk.done && chunk.value !== text) {
         console.log(chunk);
         chunk = await reader.read();
       }
@@ -125,7 +125,10 @@ The solution we have is two special kinds of variable declaration: {{jsxref("Sta
 }
 ```
 
-First, notice the extra braces around the code. This creates a new [block scope](/en-US/docs/Web/JavaScript/Reference/Statements/block) for the `using` declarations. Resources declared with `using` are automatically freed when they go out of the scope of `using`, which, in this case, is whenever we are exiting the block, because all statements have executed, or because an error was encountered somewhere.
+> [!NOTE]
+> At the time of writing, {{domxref("ReadableStreamDefaultReader")}} does not implement the disposable protocol. This is a hypothetical example.
+
+First, notice the extra braces around the code. This creates a new [block scope](/en-US/docs/Web/JavaScript/Reference/Statements/block) for the `using` declarations. Resources declared with `using` are automatically freed when they go out of the scope of `using`, which, in this case, is whenever we are exiting the block, either because all statements have executed, or because an error was encountered somewhere.
 
 This means `using` can only be used in a scope that has a clear lifetime—namely, it cannot be used at the top level of a script, because the lifetime of the script is the lifetime of the page, which practically means the resource can never be freed if the page never unloads (and unloading a page causes all remaining resources to be collected anyway). However, you can use it at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules), because the module scope ends when the module finishes executing.
 
@@ -149,9 +152,9 @@ MyReader.prototype[Symbol.dispose] = MyReader.prototype.releaseLock;
 
 Through the disposable protocol, `using` can dispose all resources in a consistent fashion without understanding what type of resource it is.
 
-Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method.
+Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method. For example, in the example above, `reader1` is declared before `reader2`, so `reader2` is disposed first, then `reader1`. This is consistent with the `try...finally` pattern, and respects possible dependencies between resources.
 
-`await using` is very similar to `using`. The name tells you that an `await` happens somewhere—not exactly when the resource is declared, but actually when it's disposed. To be clear, `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `filehandle.close()`, in which case the result of the disposal can only be known asynchronously.
+`await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `filehandle.close()`, in which case the result of the disposal can only be known asynchronously.
 
 ```js
 {
@@ -242,18 +245,115 @@ Yet another use case is when you have a disposal action to perform but it's not 
 }
 ```
 
+The reference for {{jsxref("DisposableStack")}} contains more examples and details.
+
 ## Error handling
 
-TODO
+A major use case of the resource management feature is to ensure that resources are always disposed, even when an error occurs. Let us investigate some complex error handling scenarios.
+
+We start with the following code, which, by using `using`, is robust against errors:
+
+```js
+async function readUntil(stream, text) {
+  // Use `using` instead of `await using` because `releaseLock` is synchronous
+  using reader = stream.getReader();
+  let chunk = await reader.read();
+
+  while (!chunk.done && chunk.value !== text) {
+    console.log(chunk.toUpperCase());
+    chunk = await reader.read();
+  }
+}
+```
+
+Suppose that `chunk` turns out to be `null`. Then `toUpperCase()` will throw a `TypeError`, causing the function to terminate. Before the function exits, `stream[Symbol.dispose]()` is called, which releases the lock on the stream.
+
+```js
+const stream = new ReadableStream({
+  start(controller) {
+    controller.enqueue("a");
+    controller.enqueue(null);
+    controller.enqueue("b");
+    controller.enqueue("c");
+    controller.close();
+  },
+});
+
+readUntil(stream, "b")
+  .catch((e) => console.error(e)) // TypeError: chunk.toUpperCase is not a function
+  .then(() => {
+    const anotherReader = stream.getReader();
+    // Successfully creates another reader
+  });
+```
+
+So, `using` does not swallow an errors: all errors that occur are still thrown out, but the resources get closed right before that. Now, what happens if the resource cleanup itself also throws an error? Let's use a more contrived example:
+
+```js
+class MyReader {
+  [Symbol.dispose]() {
+    throw new Error("Failed to release lock");
+  }
+}
+
+function doSomething() {
+  using reader = new MyReader();
+  throw new Error("Failed to read");
+}
+
+try {
+  doSomething();
+} catch (e) {
+  console.error(e); // SuppressedError: An error was suppressed during disposal
+}
+```
+
+There are two errors generated in the `doSomething()` call: an error thrown during `doSomething`, and an error thrown during disposal of `reader` because of the first error. Both errors are thrown together, so what you caught is a {{jsxref("SuppressedError")}}. This is a special error that wraps two errors: the {{jsxref("SuppressedError/error", "error")}} property contains the later error, and the {{jsxref("SuppressedError/suppressed", "suppressed")}} property contains the earlier error, which gets "suppressed" by the later error.
+
+If we have more than one resource, and _both_ of them throw an error during disposal (this should be exceedingly rare–it's already rare for disposal to fail!), then each earlier error is suppressed by the later error, forming a chain of suppressed errors.
+
+```js
+class MyReader {
+  [Symbol.dispose]() {
+    throw new Error("Failed to release lock on reader");
+  }
+}
+
+class MyWriter {
+  [Symbol.dispose]() {
+    throw new Error("Failed to release lock on writer");
+  }
+}
+
+function doSomething() {
+  using reader = new MyReader();
+  using writer = new MyWriter();
+  throw new Error("Failed to read");
+}
+
+try {
+  doSomething();
+} catch (e) {
+  console.error(e); // SuppressedError: An error was suppressed during disposal
+  console.error(e.suppressed); // SuppressedError: An error was suppressed during disposal
+  console.error(e.error); // Error: Failed to release lock on reader
+  console.error(e.suppressed.suppressed); // Error: Failed to read
+  console.error(e.suppressed.error); // Error: Failed to release lock on writer
+}
+```
+
+- The `reader` is released last, so its error is the latest and therefore suppresses everything else: it shows up as `e.error`.
+- The `writer` is released first, so its error is later than the original exiting error, but earlier than the `reader` error: it shows up as `e.suppressed.error`.
+- The original error about "Failed to read" is the earliest error, so it shows up as `e.suppressed.suppressed`.
 
 ## Pitfalls
 
 The resource disposal syntax offers a lot of strong error handling guarantees that ensure the resources are always cleaned up no matter what happens, but there are some pitfalls you may still encounter:
 
-- Forgetting to use `using` or `await using`
-- Use-after-free
+- Forgetting to use `using` or `await using`. The resource management syntax is only there to help you when you know you need it, but there's nothing to yell at you if you forget to use it! Unfortunately, there's no good way to prevent this before-the-fact, because there are no syntactic clues that something is a disposable resource, and even for disposable resources, you may want to declare them without automatic disposal. You probably need a type checker combined with a linter to catch these issues, such as [typescript-eslint](https://typescript-eslint.io/) ([which is still planning to work on this feature](https://github.com/typescript-eslint/typescript-eslint/issues/8255)).
+- Use-after-free. Generally, the `using` syntax ensures that a resource is freed when it goes out of scope, but there are many ways to persist a value beyond its binding variable. JavaScript does not have an ownership mechanism like Rust, so you can declare an alias that does't use `using`, or preserve the resource in a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), etc. The {{jsxref("Statements/using", "using")}} reference contains many examples of such pitfalls. Again, there's no good way to properly detect this in a complicated control flow, so you need to be careful.
 
-## Examples
+The resource management feature is not a silver bullet. It is definitely an improvement over manually invoking the disposal methods, but it is not smart enough to prevent all resource management bugs. You still need to be careful and understand the semantics of the resources you are using.
 
 ## Conclusion
 
@@ -263,6 +363,6 @@ Here are the key components of the resource management system:
 - The _disposable_ and _async disposable_ protocols, using the {{jsxref("Symbol.dispose")}} and {{jsxref("Symbol.asyncDispose")}} respectively, for resources to implement.
 - The {{jsxref("DisposableStack")}} and {{jsxref("AsyncDisposableStack")}} objects for cases where `using` and `await using` are not suitable.
 
-With proper usage of these APIs, you can create systems that are strong and robust against all error conditions without lots of boilerplate code.
+With proper usage of these APIs, you can create systems interacting with external resources that remain strong and robust against all error conditions without lots of boilerplate code.
 
 {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Internationalization")}}

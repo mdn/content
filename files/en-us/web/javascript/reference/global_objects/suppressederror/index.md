@@ -72,6 +72,17 @@ try {
 }
 ```
 
+The chain looks like this:
+
+```plain
+       SuppressedError --suppressed--> SuppressedError --suppressed--> Original error
+              |                               |
+            error                           error
+              v                               v
+Error while disposing resource1   Error while disposing resource2
+    (Disposal happens later)        (Disposal happens earlier)
+```
+
 ### Creating an SuppressedError
 
 ```js
