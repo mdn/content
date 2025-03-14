@@ -11,7 +11,7 @@ The **`map()`** method of {{jsxref("Array")}} instances creates
 a new array populated with the results of calling a provided function on
 every element in the calling array.
 
-{{InteractiveExample("JavaScript Demo: Array.map()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.map()")}}
 
 ```js interactive-example
 const array1 = [1, 4, 9, 16];

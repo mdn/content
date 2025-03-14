@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.NaN
 
 The **`NaN`** global property is a value representing Not-A-Number.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+{{InteractiveExample("JavaScript Demo: NaN")}}
 
 ```js interactive-example
 function sanitize(x) {

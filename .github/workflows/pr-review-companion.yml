@@ -48,59 +48,6 @@ jobs:
           PR_NUMBER=`cat build/NR`
           echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_ENV"
 
-      - name: Checkout (mdn/yari)
-        uses: actions/checkout@v4
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        with:
-          repository: mdn/yari
-          path: yari
-
-      - name: Install Python
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        id: setup-python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
-      - name: Load cached ~/.local
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        uses: actions/cache@v4
-        with:
-          path: ~/.local
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
-
-      - name: Install Python poetry
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a # v1.4.1
-        with:
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-
-      - name: Load cached venv
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: yari/deployer/.venv
-          # the trailing number is used to increase for getting
-          # a different cache key when this file changes
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
-
-      - name: Install poetry dependencies
-        if: env.HAS_ARTIFACT && steps.cached-poetry-dependencies.outputs.cache-hit != 'true' && vars.USE_DEPLOYER
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction --no-root
-
-      - name: Install Deployer
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        run: |
-          cd yari/deployer
-          poetry install --no-interaction
-
       - name: Authenticate with GCP
         if: env.HAS_ARTIFACT
         uses: google-github-actions/auth@v2
@@ -124,53 +71,20 @@ jobs:
           parent: false
           process_gcloudignore: false
 
-      - name: Deploy and analyze built content
-        if: env.HAS_ARTIFACT && vars.USE_DEPLOYER
-        env:
-          BUILD_OUT_ROOT: ${{ github.workspace }}/build
-
-          DEPLOYER_BUCKET_NAME: mdn-content-dev
-          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
-          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
-
-        run: |
-          PR_NUMBER=`cat build/NR`
-
-          echo "Pull request:"
-          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
-
-          cd yari/deployer
-
-          poetry run deployer upload \
-            --prefix="pr$PR_NUMBER" \
-            --default-cache-control 0 \
-            "$BUILD_OUT_ROOT"
-
-          poetry run deployer analyze-pr-build \
-            --prefix="pr$PR_NUMBER" \
-            --analyze-flaws \
-            --analyze-dangerous-content \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
-            --repo=$GITHUB_REPOSITORY \
-            --pr-number="$PR_NUMBER" \
-            --diff-file=$BUILD_OUT_ROOT/DIFF \
-            $BUILD_OUT_ROOT
-
       - name: Checkout (mdn/content)
         uses: actions/checkout@v4
-        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        if: env.HAS_ARTIFACT
         with:
           path: content
 
       - name: Setup (mdn/content)
         uses: actions/setup-node@v4
-        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        if: env.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
 
       - name: Install (mdn/content)
-        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        if: env.HAS_ARTIFACT
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -178,7 +92,7 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Analyze PR build
-        if: env.HAS_ARTIFACT && ! vars.USE_DEPLOYER
+        if: env.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
         working-directory: content

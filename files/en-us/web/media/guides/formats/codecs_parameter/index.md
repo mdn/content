@@ -5,7 +5,7 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-At a fundamental level, you can specify the type of a media file using a simple {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
+At a fundamental level, you can specify the type of a media file using a basic {{Glossary("MIME")}} type, such as `video/mp4` or `audio/mpeg`. However, many media types—especially those that support video tracks—can benefit from the ability to more precisely describe the format of the data within them. For instance, just describing a video in an [MPEG-4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) file with the MIME type `video/mp4` doesn't say anything about what format the actual media within takes.
 
 For that reason, the `codecs` parameter can be added to the MIME type describing media content. With it, container-specific information can be provided. This information may include things like the profile of the video codec, the type used for the audio tracks, and so forth.
 

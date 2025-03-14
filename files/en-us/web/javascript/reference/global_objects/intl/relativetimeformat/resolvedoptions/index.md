@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `RelativeTimeFormat` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
 const rtf1 = new Intl.RelativeTimeFormat("en", { style: "narrow" });

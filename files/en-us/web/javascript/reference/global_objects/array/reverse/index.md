@@ -11,7 +11,7 @@ The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[
 
 To reverse the elements in an array without mutating the original array, use {{jsxref("Array/toReversed", "toReversed()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
 
 ```js interactive-example
 const array1 = ["one", "two", "three"];

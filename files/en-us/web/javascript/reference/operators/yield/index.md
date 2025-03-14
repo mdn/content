@@ -9,7 +9,7 @@ browser-compat: javascript.operators.yield
 
 The **`yield`** operator is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+{{InteractiveExample("JavaScript Demo: yield operator", "taller")}}
 
 ```js interactive-example
 function* foo(index) {

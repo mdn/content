@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.toString
 
 The **`toString()`** method of {{jsxref("Function")}} instances returns a string representing the source code of this function.
 
-{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.toString()")}}
 
 ```js interactive-example
 function sum(a, b) {

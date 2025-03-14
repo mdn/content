@@ -36,7 +36,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : The button number that was pressed (if applicable) when the mouse event was fired.
+  - : The button number that was pressed or released (if applicable) when the mouse event was fired.
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}

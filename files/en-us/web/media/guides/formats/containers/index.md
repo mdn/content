@@ -282,7 +282,7 @@ Firefox support for AAC relies upon the operating system's media infrastructure,
 
 ### FLAC
 
-The **Free Lossless Audio Codec** (**FLAC**) is a lossless audio codec; there is also an associated simple container format, also called FLAC, that can contain this audio.
+The **Free Lossless Audio Codec** (**FLAC**) is a lossless audio codec; there is also an associated container format, also called FLAC, that can contain this audio.
 The format is not encumbered by any patents, so its use is safe from interference.
 FLAC files can only contain FLAC audio data.
 

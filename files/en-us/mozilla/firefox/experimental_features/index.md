@@ -819,8 +819,8 @@ This includes:
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>135</td>
-      <td>No</td>
+      <td>137</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
