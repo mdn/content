@@ -9,7 +9,7 @@ browser-compat: javascript.operators.division
 
 The **division (`/`)** operator produces the quotient of its operands where the left operand is the dividend and the right operand is the divisor.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+{{InteractiveExample("JavaScript Demo: Division (/) operator")}}
 
 ```js interactive-example
 console.log(12 / 2);
