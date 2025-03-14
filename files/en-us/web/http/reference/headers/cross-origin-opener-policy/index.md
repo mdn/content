@@ -114,12 +114,12 @@ The table below shows how this rule affects whether documents are opened in the 
 
 When opening a document using `Window.open()`, the new document is opened in a new BCG according to the following rules, which are evaluated in order:
 
-1. True: opened `noopener-allow-popups`
-2. False: (`opener same-origin-allow-popups` or `noopener-allow-popups`) and (opened document is `unsafe-none`)
-3. False: Matching COOP policies (as outlined above for navigations)
-4. True: Otherwise!
+1. If the new document has COOP set to `noopener-allow-popups` => open the new document in a new BCG
+2. If the new document has COOP set to `unsafe-none` and the opener document has COOP set to either `same-origin-allow-popups` or `noopener-allow-popups` => open the new document in the same BCG
+3. If the new document and the opening document have [matching COOP policies](#navigations) => open the new document in the same BCG
+4. Otherwise, open the new document in a new BCG
 
-The table below shows the opener behaviour for the different directive values.
+The table below shows how these rules affect whether documents are opened in the same or a new BCG for the different directive values.
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#check-browsing-context-group-switch-coop-value-popup -->
 
