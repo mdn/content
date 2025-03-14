@@ -6,11 +6,26 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In web development, **replaced elements** are HTML elements whose content are replaced by external resources or content defined outside of the document structure, and are not considered in the CSS rendering model. They are external objects whose representation is independent of the CSS formatting model. Examples of replaced elements include {{HTMLElement("img")}}, {{HTMLElement("video")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("fencedframe")}}.
+In web development, **replaced elements** are HTML elements whose content are replaced by external resources or content defined outside of the document structure, and are not considered in the CSS rendering model. They are external objects whose representation is independent of the CSS formatting model.
+
+The following can be replaced elements:
+
+- {{HTMLElement("img")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fencedframe")}} {{experimental_inline}}
+
+The following are treated as replaced elements only in specific cases:
+
+- {{HTMLElement("audio")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("input")}} (`image` input types only)
 
 Replaced elements often have an {{glossary("intrinsic size", "intrinsic dimensions")}} and {{glossary("aspect ratio", "intrinsic ratio")}}. For example, the content of an `<img>` element is generally replaced by the image defined by its `src` attribute. That image has an intrinsic width and an intrinsic height specified in absolute units, which determines the aspect ratio.
 
-Some elements, including {{HTMLElement("option")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, and {{HTMLElement("object")}}, are treated as replaced elements only in specific cases. Form controls are generally non-replaced _widgets_, except for `<input type="image">`, which is replaced with an image. Objects inserted using the CSS {{cssxref("content")}} property are _anonymous replaced elements_. They are "anonymous" because they don't exist in the HTML markup.
+Form controls are generally non-replaced _widgets_, except for `<input type="image">`, which is replaced with an image. Objects inserted using the CSS {{cssxref("content")}} property are _anonymous replaced elements_. They are "anonymous" because they don't exist in the HTML markup.
 
 ## See also
 
