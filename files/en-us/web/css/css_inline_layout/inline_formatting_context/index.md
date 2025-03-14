@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-This article explains the inline formatting context.
+This guide explains the inline formatting context.
 
 ## Core concepts
 
