@@ -128,7 +128,28 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('basic_example',,90)}}
+
+### Errors example
+
+In this example the first paragraph contains a spelling mistake and uses the browsers styling for spelling errors is used on the misspelled word. The second paragraph uses the browsers styling for grammar errors. Browser that do not support these there is no line.
+
+```html
+<p>This text contains a <span class="spelling">speling</span> mistake.</p>
+<p class="grammar">This text contain grammatical errors.</p>
+```
+
+```css
+.spelling {
+  text-decoration-line: spelling-error;
+}
+
+.grammar {
+  text-decoration-line: grammar-error;
+}
+```
+
+{{EmbedLiveSample('errors_example',,90)}}
 
 ## Specifications
 
