@@ -1,5 +1,6 @@
 ---
 title: Strategies for carrying out testing
+short-title: Testing strategies
 slug: Learn_web_development/Extensions/Testing/Testing_strategies
 page-type: learn-module-chapter
 ---

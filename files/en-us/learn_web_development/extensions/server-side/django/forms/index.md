@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 9: Working with forms"
+short-title: "9: Working with forms"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
 page-type: learn-module-chapter
 ---

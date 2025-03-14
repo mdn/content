@@ -1,5 +1,6 @@
 ---
 title: Server-side web frameworks
+short-title: Server-side frameworks
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 page-type: learn-module-chapter
 ---

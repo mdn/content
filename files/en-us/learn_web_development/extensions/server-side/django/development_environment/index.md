@@ -1,5 +1,6 @@
 ---
 title: Setting up a Django development environment
+short-title: Setup
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
 page-type: learn-module-chapter
 ---

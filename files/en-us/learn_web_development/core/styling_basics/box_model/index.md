@@ -1,5 +1,6 @@
 ---
 title: The box model
+short-title: Box model
 slug: Learn_web_development/Core/Styling_basics/Box_model
 page-type: learn-module-chapter
 ---

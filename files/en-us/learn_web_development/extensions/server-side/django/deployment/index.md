@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 11: Deploying Django to production"
+short-title: "11: Deployment"
 slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 page-type: learn-module-chapter
 ---

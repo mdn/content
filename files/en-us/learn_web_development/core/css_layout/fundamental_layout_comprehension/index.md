@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Fundamental layout comprehension"
+short-title: "Challenge: Layout fundamentals"
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
 page-type: learn-module-assessment
 ---
