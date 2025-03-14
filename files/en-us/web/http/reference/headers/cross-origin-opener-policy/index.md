@@ -97,12 +97,9 @@ The following sections show whether documents will be opened in the same BCG or 
 
 When navigating between documents, the new document is opened in the same BCG if the two documents have "matching coop policies", and otherwise into a new BCG.
 
-The policies match if:
+The policies match if either both documents have the policy `unsafe-none`, or if the policies are the same and the documents are same-origin.
 
-- both documents are `unsafe-none`, or
-- neither document is `unsafe-none`, their policy values are the same, and they are same-origin.
-
-The table below shows the result of this rule on whether documents are opened in the same or a new BCG for the different directive values.
+The table below shows how this rule affects whether documents are opened in the same or a new BCG for the different directive values.
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#matching-coop -->
 
