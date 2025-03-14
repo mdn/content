@@ -516,7 +516,7 @@
 /en-US/docs/CSS/Multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
-/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
+/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
@@ -12165,6 +12165,7 @@
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_motion_path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
+/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/WebKit_Extensions
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
