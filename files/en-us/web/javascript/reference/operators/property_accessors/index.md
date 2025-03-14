@@ -9,7 +9,7 @@ browser-compat: javascript.operators.property_accessors
 
 **Property accessors** provide access to an object's properties by using the dot notation or the bracket notation.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+{{InteractiveExample("JavaScript Demo: Property accessors", "taller")}}
 
 ```js interactive-example
 const person1 = {};

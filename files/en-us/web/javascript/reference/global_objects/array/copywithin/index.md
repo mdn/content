@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.copyWithin
 
 The **`copyWithin()`** method of {{jsxref("Array")}} instances shallow copies part of this array to another location in the same array and returns this array without modifying its length.
 
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.copyWithin()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c", "d", "e"];

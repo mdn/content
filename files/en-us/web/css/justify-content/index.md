@@ -82,7 +82,7 @@ justify-content: space-around;
 justify-content: space-evenly;
 justify-content: stretch;
 
-/* Overflow alignment */
+/* Overflow alignment (for positional alignment only)*/
 justify-content: safe center;
 justify-content: unsafe center;
 

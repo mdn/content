@@ -16,7 +16,7 @@ set (e.g., `/foo/g` or `/foo/y`). They store a
 internally, `test()` can be used to iterate over multiple matches in a string
 of text (with capture groups).
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test()", "taller")}}
 
 ```js interactive-example
 const str = "table football";

@@ -121172,17 +121172,7 @@
       "Sheppy"
     ]
   },
-  "Web/MathML/Attribute": {
-    "modified": "2020-10-23T04:07:29.622Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "doersino",
-      "Draussenduscher",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Authoring": {
+  "Web/MathML/Guides/Authoring": {
     "modified": "2020-11-28T13:32:39.862Z",
     "contributors": [
       "mfuji09",
@@ -121206,327 +121196,7 @@
       "christianlerch"
     ]
   },
-  "Web/MathML/Element": {
-    "modified": "2020-08-24T00:21:20.916Z",
-    "contributors": [
-      "fscholz",
-      "ExE-Boss",
-      "splewako",
-      "mirekczechxmm",
-      "Sheppy",
-      "teoli"
-    ]
-  },
-  "Web/MathML/Element/maction": {
-    "modified": "2020-12-08T06:14:58.548Z",
-    "contributors": ["rachelandrew", "lucian95", "Yaffle", "fscholz", "Sheppy"]
-  },
-  "Web/MathML/Element/math": {
-    "modified": "2020-10-15T21:07:40.546Z",
-    "contributors": [
-      "LucasLarson",
-      "fscholz",
-      "momdo",
-      "Sheppy",
-      "fred.wang",
-      "jswisher",
-      "teoli"
-    ]
-  },
-  "Web/MathML/Element/menclose": {
-    "modified": "2020-10-23T04:20:01.310Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "lucian95",
-      "Yaffle",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/merror": {
-    "modified": "2020-12-08T06:39:00.520Z",
-    "contributors": ["rachelandrew", "lucian95", "fscholz", "Sheppy"]
-  },
-  "Web/MathML/Element/mfenced": {
-    "modified": "2020-10-15T21:07:18.297Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "lucian95",
-      "Yaffle",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mfrac": {
-    "modified": "2020-12-08T06:57:45.695Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "lucian95",
-      "Yaffle",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mi": {
-    "modified": "2020-12-08T06:58:12.774Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "lucian95",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mmultiscripts": {
-    "modified": "2020-12-08T06:58:29.201Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "ExE-Boss",
-      "fred.wang",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Element/mn": {
-    "modified": "2020-12-08T06:58:45.386Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "Draussenduscher",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mo": {
-    "modified": "2020-12-08T06:58:55.815Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "Draussenduscher",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mover": {
-    "modified": "2020-12-08T06:59:16.606Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "evilpie",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mpadded": {
-    "modified": "2020-12-08T06:59:27.492Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "Yaffle",
-      "Sheppy",
-      "Jon972",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mphantom": {
-    "modified": "2020-12-08T06:59:46.396Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "teoli",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mroot": {
-    "modified": "2020-12-08T06:59:59.854Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "jumpball",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mrow": {
-    "modified": "2020-12-08T07:00:13.818Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "Yaffle",
-      "Sheppy",
-      "fred.wang",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/ms": {
-    "modified": "2020-12-08T07:00:30.106Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mspace": {
-    "modified": "2020-12-08T07:00:44.851Z",
-    "contributors": ["rachelandrew", "fscholz", "Sheppy", "jswisher"]
-  },
-  "Web/MathML/Element/msqrt": {
-    "modified": "2020-12-08T07:00:57.848Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mstyle": {
-    "modified": "2020-12-08T07:01:10.016Z",
-    "contributors": [
-      "rachelandrew",
-      "bershanskiy",
-      "fscholz",
-      "ExE-Boss",
-      "Draussenduscher",
-      "fred.wang",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Element/msub": {
-    "modified": "2020-12-08T07:01:23.829Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/msubsup": {
-    "modified": "2020-12-08T07:01:50.272Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "Draussenduscher",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/msup": {
-    "modified": "2020-12-08T07:02:01.978Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mtable": {
-    "modified": "2020-12-08T07:04:03.214Z",
-    "contributors": [
-      "rachelandrew",
-      "ExE-Boss",
-      "Draussenduscher",
-      "fscholz",
-      "teoli",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Element/mtd": {
-    "modified": "2020-12-08T07:04:36.899Z",
-    "contributors": [
-      "rachelandrew",
-      "ExE-Boss",
-      "Yaffle",
-      "Draussenduscher",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Element/mtext": {
-    "modified": "2020-12-08T07:05:09.077Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "fred.wang",
-      "Sheppy",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/mtr": {
-    "modified": "2020-12-08T07:05:31.494Z",
-    "contributors": [
-      "rachelandrew",
-      "ExE-Boss",
-      "Draussenduscher",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/MathML/Element/munder": {
-    "modified": "2020-12-08T07:05:44.621Z",
-    "contributors": [
-      "rachelandrew",
-      "fscholz",
-      "ExE-Boss",
-      "fred.wang",
-      "Sheppy",
-      "evilpie",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/munderover": {
-    "modified": "2020-12-08T07:05:56.617Z",
-    "contributors": [
-      "rachelandrew",
-      "sideshowbarker",
-      "fscholz",
-      "camoy",
-      "fred.wang",
-      "Sheppy",
-      "evilpie",
-      "jswisher"
-    ]
-  },
-  "Web/MathML/Element/semantics": {
-    "modified": "2020-12-08T07:06:26.029Z",
-    "contributors": ["rachelandrew", "fscholz", "Sheppy", "jswisher"]
-  },
-  "Web/MathML/Examples": {
-    "modified": "2019-03-23T23:33:29.196Z",
-    "contributors": [
-      "maryannetpdx",
-      "SphinxKnight",
-      "nielsdg",
-      "ethertank",
-      "ChaitanyaGSNR",
-      "Sheppy",
-      "fscholz"
-    ]
-  },
-  "Web/MathML/Examples/Deriving_the_Quadratic_Formula": {
+  "Web/MathML/Guides/Deriving_the_quadratic_formula": {
     "modified": "2019-11-21T15:09:18.981Z",
     "contributors": [
       "NewtSalamander",
@@ -121541,7 +121211,7 @@
       "Paul_Mollomo"
     ]
   },
-  "Web/MathML/Examples/MathML_Pythagorean_Theorem": {
+  "Web/MathML/Guides/Proving_the_Pythagorean_theorem": {
     "modified": "2019-04-19T17:22:32.633Z",
     "contributors": [
       "asmeurer",
@@ -121560,7 +121230,325 @@
       "ethertank"
     ]
   },
-  "Web/MathML/Values": {
+  "Web/MathML/Reference/Attribute": {
+    "modified": "2020-10-23T04:07:29.622Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "doersino",
+      "Draussenduscher",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element": {
+    "modified": "2020-08-24T00:21:20.916Z",
+    "contributors": [
+      "fscholz",
+      "ExE-Boss",
+      "splewako",
+      "mirekczechxmm",
+      "Sheppy",
+      "teoli"
+    ]
+  },
+  "Web/MathML/Reference/Element/maction": {
+    "modified": "2020-12-08T06:14:58.548Z",
+    "contributors": ["rachelandrew", "lucian95", "Yaffle", "fscholz", "Sheppy"]
+  },
+  "Web/MathML/Reference/Element/math": {
+    "modified": "2020-10-15T21:07:40.546Z",
+    "contributors": [
+      "LucasLarson",
+      "fscholz",
+      "momdo",
+      "Sheppy",
+      "fred.wang",
+      "jswisher",
+      "teoli"
+    ]
+  },
+  "Web/MathML/Reference/Element/menclose": {
+    "modified": "2020-10-23T04:20:01.310Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "lucian95",
+      "Yaffle",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/merror": {
+    "modified": "2020-12-08T06:39:00.520Z",
+    "contributors": ["rachelandrew", "lucian95", "fscholz", "Sheppy"]
+  },
+  "Web/MathML/Reference/Element/mfenced": {
+    "modified": "2020-10-15T21:07:18.297Z",
+    "contributors": [
+      "fscholz",
+      "sideshowbarker",
+      "lucian95",
+      "Yaffle",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mfrac": {
+    "modified": "2020-12-08T06:57:45.695Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "lucian95",
+      "Yaffle",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mi": {
+    "modified": "2020-12-08T06:58:12.774Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "lucian95",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mmultiscripts": {
+    "modified": "2020-12-08T06:58:29.201Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "ExE-Boss",
+      "fred.wang",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element/mn": {
+    "modified": "2020-12-08T06:58:45.386Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "Draussenduscher",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mo": {
+    "modified": "2020-12-08T06:58:55.815Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "Draussenduscher",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mover": {
+    "modified": "2020-12-08T06:59:16.606Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "evilpie",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mpadded": {
+    "modified": "2020-12-08T06:59:27.492Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "Yaffle",
+      "Sheppy",
+      "Jon972",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mphantom": {
+    "modified": "2020-12-08T06:59:46.396Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "teoli",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mroot": {
+    "modified": "2020-12-08T06:59:59.854Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "jumpball",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mrow": {
+    "modified": "2020-12-08T07:00:13.818Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "Yaffle",
+      "Sheppy",
+      "fred.wang",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/ms": {
+    "modified": "2020-12-08T07:00:30.106Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mspace": {
+    "modified": "2020-12-08T07:00:44.851Z",
+    "contributors": ["rachelandrew", "fscholz", "Sheppy", "jswisher"]
+  },
+  "Web/MathML/Reference/Element/msqrt": {
+    "modified": "2020-12-08T07:00:57.848Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mstyle": {
+    "modified": "2020-12-08T07:01:10.016Z",
+    "contributors": [
+      "rachelandrew",
+      "bershanskiy",
+      "fscholz",
+      "ExE-Boss",
+      "Draussenduscher",
+      "fred.wang",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element/msub": {
+    "modified": "2020-12-08T07:01:23.829Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/msubsup": {
+    "modified": "2020-12-08T07:01:50.272Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "Draussenduscher",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/msup": {
+    "modified": "2020-12-08T07:02:01.978Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mtable": {
+    "modified": "2020-12-08T07:04:03.214Z",
+    "contributors": [
+      "rachelandrew",
+      "ExE-Boss",
+      "Draussenduscher",
+      "fscholz",
+      "teoli",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element/mtd": {
+    "modified": "2020-12-08T07:04:36.899Z",
+    "contributors": [
+      "rachelandrew",
+      "ExE-Boss",
+      "Yaffle",
+      "Draussenduscher",
+      "fscholz",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element/mtext": {
+    "modified": "2020-12-08T07:05:09.077Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "fred.wang",
+      "Sheppy",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/mtr": {
+    "modified": "2020-12-08T07:05:31.494Z",
+    "contributors": [
+      "rachelandrew",
+      "ExE-Boss",
+      "Draussenduscher",
+      "fscholz",
+      "Sheppy"
+    ]
+  },
+  "Web/MathML/Reference/Element/munder": {
+    "modified": "2020-12-08T07:05:44.621Z",
+    "contributors": [
+      "rachelandrew",
+      "fscholz",
+      "ExE-Boss",
+      "fred.wang",
+      "Sheppy",
+      "evilpie",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/munderover": {
+    "modified": "2020-12-08T07:05:56.617Z",
+    "contributors": [
+      "rachelandrew",
+      "sideshowbarker",
+      "fscholz",
+      "camoy",
+      "fred.wang",
+      "Sheppy",
+      "evilpie",
+      "jswisher"
+    ]
+  },
+  "Web/MathML/Reference/Element/semantics": {
+    "modified": "2020-12-08T07:06:26.029Z",
+    "contributors": ["rachelandrew", "fscholz", "Sheppy", "jswisher"]
+  },
+  "Web/MathML/Reference/Values": {
     "modified": "2019-10-25T11:46:38.660Z",
     "contributors": ["fscholz", "maryannetpdx", "Sheppy"]
   },
