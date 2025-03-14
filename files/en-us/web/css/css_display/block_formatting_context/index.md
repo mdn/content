@@ -231,7 +231,7 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
