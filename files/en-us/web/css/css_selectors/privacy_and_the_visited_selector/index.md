@@ -6,16 +6,16 @@ page-type: guide
 
 {{CSSRef}}
 
-Before about 2010, the [CSS](/en-US/docs/Web/CSS) {{ cssxref(":visited") }} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. This was done through {{domxref("window.getComputedStyle")}} and other techniques. This process was quick to execute, and made it possible not only to determine where the user had been on the web, but could also be used to guess a lot of information about the user's identity.
+Originally, the [CSS](/en-US/docs/Web/CSS) {{ cssxref(":visited") }} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. This was done through {{domxref("window.getComputedStyle")}} and other techniques. This process was quick to execute, and made it possible not only to determine where the user had been on the web, but could also be used to guess a lot of information about the user's identity.
 
-To mitigate this problem, browsers have limited the amount of information that can be obtained from visited links.
+To mitigate this problem, browsers limit the amount of information that can be obtained from visited links.
 
 ## Little white lies
 
-To preserve users' privacy, Firefox and other browsers will lie to web applications under certain circumstances:
+To preserve users' privacy, browsers lie to web applications under certain circumstances:
 
-- The `window.getComputedStyle` method, and similar functions such as {{ domxref("element.querySelector") }}, will always return values indicating that a user has never visited any of the links on a page.
-- If you use a sibling selector such as `:visited + span`, the adjacent element (`span` in this example) will be styled as if the link were unvisited.
+- The `window.getComputedStyle` method, and similar functions such as {{ domxref("element.querySelector") }}, always return values indicating that a user has never visited any of the links on a page.
+- When using a sibling selector, such as `:visited + span`, the adjacent element (`span` in this example) is styled as if the link were unvisited.
 - In rare scenarios, if you're using nested link elements and the element being matched is different from the link whose presence in history is being tested, the element will be rendered as if the link were unvisited, as well.
 
 ## Limits to visited link styles
@@ -31,7 +31,7 @@ You can style visited links, but there are limits to which styles you can use. O
 - {{ cssxref("text-emphasis-color") }}
 - The color parts of the {{SVGAttr("fill")}} and {{SVGAttr("stroke")}} attributes
 
-In addition, even for the above styles, you won't be able to change the transparency between unvisited and visited links, as you otherwise would be able to using the `alpha` parameter to [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) or [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), or the [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) keyword.
+In addition, even for the above styles, transparency differences between unvisited and visited links are not applied, as you otherwise would be able to using the `alpha` parameter of the various {{cssxref("color_value")", "&lt;color&gt;")}} functions or the [`transparent`](/en-US/docs/Web/CSS/named-color#transparent) keyword.
 
 Here is an example of how to use styles with the aforementioned restrictions:
 
@@ -52,13 +52,11 @@ Here is an example of how to use styles with the aforementioned restrictions:
 
 ## Impact on web developers
 
-Overall, these restrictions shouldn't affect web developers too significantly. They may, however, require the following changes to existing sites:
+You may want to consider the following when developing sites:
 
-- Using background images to style links based on whether they've been visited will no longer work, since only colors can be used to style visited links.
-- Colors that are otherwise transparent will fail to appear if styled in a `:visited` selector.
+- Changing {{cssxxref("background-image")}} values based on a link's visited state will not work since only colors can be used to style visited links.
+- Colors that are otherwise transparent will not apply when styled via a `:visited` selector.
 
 ## See also
 
-- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
-- [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
-- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy)
+- [Preventing attacks on a user's history through CSS `:visited` selectors](https://dbaron.org/mozilla/visited-privacy) (2010)
