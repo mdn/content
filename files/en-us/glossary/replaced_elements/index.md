@@ -30,6 +30,6 @@ Form controls are generally non-replaced _widgets_, except for `<input type="ima
 ## See also
 
 - {{glossary("void element", "Void elements")}}
-- {{glossary("Inline level content")}}
+- {{glossary("Inline-level content")}}
 - [Replaced elements in CSS display specification](https://drafts.csswg.org/css-display/#replaced-element)
-- [Replaced elements in HTML specification](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
+- [Replaced elements in HTML specification](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)s
