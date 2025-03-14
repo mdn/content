@@ -533,7 +533,7 @@ Logs the message in the browser console.
 
 ```js-nolint
 alert(`${host} = ${dnsResolve(host)}`) // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.") // log a simple message
+alert("Error: shouldn't reach this clause.") // log a message
 ```
 
 ## Example 1

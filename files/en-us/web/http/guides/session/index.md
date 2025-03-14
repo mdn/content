@@ -98,10 +98,10 @@ Age: 7
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>A simple webpage</title>
+  <title>A basic webpage</title>
 </head>
 <body>
-  <h1>Simple HTML webpage</h1>
+  <h1>Basic HTML webpage</h1>
   <p>Hello, world!</p>
 </body>
 </html>

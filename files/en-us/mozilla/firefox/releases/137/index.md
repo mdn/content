@@ -85,6 +85,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 These features are newly shipped in Firefox 137 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Temporal API** (Nightly release): is now enabled in Firefox Nightly by default. The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations. ([Firefox bug 1946823](https://bugzil.la/1946823)).
+
 ## Older versions
 
 {{Firefox_for_developers}}

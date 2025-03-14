@@ -11,7 +11,7 @@ The **`class`** keyword can be used to define a class inside an expression.
 
 You can also define classes using the [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class).
 
-{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+{{InteractiveExample("JavaScript Demo: class expression")}}
 
 ```js interactive-example
 const Rectangle = class {

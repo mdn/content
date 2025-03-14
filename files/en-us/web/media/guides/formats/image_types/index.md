@@ -55,7 +55,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
       <td>
-        Good choice for simple images and animations.
+        Good choice for basic images and animations.
         Prefer PNG for lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
         <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
