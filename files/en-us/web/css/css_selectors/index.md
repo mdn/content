@@ -23,6 +23,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
+- `,` ([Selector list](/en-US/docs/Web/CSS/Selector_list))
 
 ### Selectors
 
@@ -106,7 +107,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
 - [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
 - [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
-- [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## Guides
