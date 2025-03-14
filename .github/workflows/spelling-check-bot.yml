@@ -25,10 +25,16 @@ jobs:
           node-version-file: ".nvmrc"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Run scripts
         run: |
           echo Running spelling check...
-          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
+          output=$(yarn --silent lint:typos-group-by-file || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
