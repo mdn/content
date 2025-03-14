@@ -88,7 +88,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
 Other resources should be cross-origin isolated in their own group.
 
-The following sections show whether documents will be opened in the same BCG or a new BCD following a navigation or opening a window programmatically.
+The following sections show whether documents will be opened in the same BCG or a new BCG following a navigation or opening a window programmatically.
 
 > [!NOTE]
 > The specification uses the term "popup" to refer to any document opened using {{domxref("Window.open()")}}, whether it is a popup, tab, window, or other context.
@@ -97,41 +97,38 @@ The following sections show whether documents will be opened in the same BCG or 
 
 When navigating between documents, the new document is opened in the same BCG if the two documents have "matching coop policies", and otherwise into a new BCG.
 
-The policies match if:
+The policies match if either both documents have the policy `unsafe-none`, or if the policies are the same and the documents are same-origin.
 
-- both documents are `unsafe-none`, or
-- neither document is `unsafe-none`, their policy values are the same, and they are same-origin.
-
-The table below shows the result of this rule on whether documents are opened in the same or a new BCG for the different directive values.
+The table below shows how this rule affects whether documents are opened in the same or a new BCG for the different directive values.
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#matching-coop -->
 
-| Opener (row) / Opened (col) | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
-| --------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
-| `unsafe-none`               | Same          | New                        | New                 | New                     |
-| `same-origin-allow-popups`  | New           | Same if same-origin        | New                 | New                     |
-| `same-origin`               | New           | New                        | Same if same-origin | New                     |
-| `noopener-allow-popups`     | New           | New                        | New                 | Same if same-origin     |
+| Opener (↓) / Opened (→)    | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
+| -------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
+| `unsafe-none`              | Same          | New                        | New                 | New                     |
+| `same-origin-allow-popups` | New           | Same if same-origin        | New                 | New                     |
+| `same-origin`              | New           | New                        | Same if same-origin | New                     |
+| `noopener-allow-popups`    | New           | New                        | New                 | Same if same-origin     |
 
 ### Opening with Window.open()
 
-When opening a document using `Window.open()`, the new document is opened in the same BCG according to the following rules, which are evaluated in order:
+When opening a document using `Window.open()`, the new document is opened in a new BCG according to the following rules, which are evaluated in order:
 
-1. True: opened `noopener-allow-popups`
-2. False: (`opener same-origin-allow-popups` or `noopener-allow-popups`) and (opened document is `unsafe-none`)
-3. False: Matching COOP policies (as outlined above for navigations)
-4. True: Otherwise!
+1. If the new document has COOP set to `noopener-allow-popups` => open the new document in a new BCG
+2. If the new document has COOP set to `unsafe-none` and the opener document has COOP set to either `same-origin-allow-popups` or `noopener-allow-popups` => open the new document in the same BCG
+3. If the new document and the opening document have [matching COOP policies](#navigations) => open the new document in the same BCG
+4. Otherwise, open the new document in a new BCG
 
-The table below shows the opener behaviour for the different directive values.
+The table below shows how these rules affect whether documents are opened in the same or a new BCG for the different directive values.
 
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#check-browsing-context-group-switch-coop-value-popup -->
 
-| Opener (row) / Opened (col) | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
-| --------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
-| `unsafe-none`               | Same          | New                        | New                 | New                     |
-| `same-origin-allow-popups`  | Same          | Same if same-origin        | New                 | New                     |
-| `same-origin`               | New           | New                        | Same if same-origin | New                     |
-| `noopener-allow-popups`     | Same          | New                        | New                 | New                     |
+| Opener (↓) / Opened (→)    | `unsafe-none` | `same-origin-allow-popups` | `same-origin`       | `noopener-allow-popups` |
+| -------------------------- | ------------- | -------------------------- | ------------------- | ----------------------- |
+| `unsafe-none`              | Same          | New                        | New                 | New                     |
+| `same-origin-allow-popups` | Same          | Same if same-origin        | New                 | New                     |
+| `same-origin`              | New           | New                        | Same if same-origin | New                     |
+| `noopener-allow-popups`    | Same          | New                        | New                 | New                     |
 
 ## Examples
 

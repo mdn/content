@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.fill
 
 The **`fill()`** method of {{jsxref("Array")}} instances changes all elements within a range of indices in an array to a static value. It returns the modified array.
 
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.fill()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];
