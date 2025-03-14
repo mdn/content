@@ -99,7 +99,7 @@ You should create a CV/resumé, which communicates your worth to an employer. Th
   - A date range specifying when you worked there — for example 06/2023–10/2024, or 06/2023–present if you still work there.
   - Company and job title.
   - A short paragraph or bulleted list describing what you did in that job/internship/etc. Don't describe _everything_, just what you think are useful experiences for selling yourself.
-- An education summary, which lists the different qualifications you have, the school you did them at, and the grade you achieved. Definitely include degrees and other higher education, certificates and suchlike that are directly relevant to your field (for example, a web development certification or summer school), and perhaps also regular school qualifications that employers often look for (such as English, other languages, and Math).
+- An education summary, which lists the different qualifications you have, the school you did them at, and the grade you achieved. Include degrees and other higher education, certificates and achievements that are directly relevant to your field (for example, a web development certification or summer school), and perhaps also regular school qualifications that employers often look for (such as English, other languages, and Math).
 - A section containing supporting information, such as:
   - Links to your [portfolio](#create_a_portfolio).
   - Descriptions of any other relevant experience that doesn't fit into the above sections.
