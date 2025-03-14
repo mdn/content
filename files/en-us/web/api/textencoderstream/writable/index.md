@@ -19,7 +19,7 @@ A {{domxref("WritableStream")}}.
 The following example demonstrates how to return a `WritableStream` from a `TextEncoderStream` object.
 
 ```js
-stream = new TextEncoderStream();
+const stream = new TextEncoderStream();
 console.log(stream.writable); // A WritableStream
 ```
 
