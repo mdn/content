@@ -29,7 +29,7 @@
     "fix:js": "prettier -w \"**/*.(m)?js\"",
     "fix:json": "prettier -w \"**/*.json(c)?\"",
     "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
-    "fix:pre-commit": "git add . && lefthook run pre-commit",
+    "fix:pre-commit": "lefthook run pre-commit",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:fm": "node scripts/front-matter_linter.js",
     "lint:js": "prettier -c \"**/*.(m)?js\"",
