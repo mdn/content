@@ -5779,6 +5779,7 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/The_box_model	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
 /en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
+/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
