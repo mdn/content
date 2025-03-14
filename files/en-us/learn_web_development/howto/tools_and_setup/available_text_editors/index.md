@@ -407,7 +407,6 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 
 - [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
-- [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
 - [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)

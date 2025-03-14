@@ -9,7 +9,7 @@ browser-compat: api.OrientationSensor
 
 The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.
 
-This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 

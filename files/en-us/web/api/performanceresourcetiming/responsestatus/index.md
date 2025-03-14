@@ -16,8 +16,8 @@ This property maps to {{domxref("Response.status")}} from the [Fetch API](/en-US
 
 The `responseStatus` property can have the following values:
 
-- A number indicating the [HTTP response status code](/en-US/docs/Web/HTTP/Status) returned when fetching the resource.
-- `0` if the [CORS](/en-US/docs/Web/HTTP/CORS) check fails.
+- A number indicating the [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status) returned when fetching the resource.
+- `0` if the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check fails.
 - `0` for cross-origin {{HTMLElement("iframe")}} objects.
 
 ## Examples
@@ -55,7 +55,7 @@ Alternatively, if `responseStatus` is not available, you can check if the {{domx
 
 ### Cross-origin response status codes
 
-If the value of the `responseStatus` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin response status codes, the [CORS](/en-US/docs/Web/HTTP/CORS) {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP response header needs to be set.
+If the value of the `responseStatus` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin response status codes, the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP response header needs to be set.
 
 For example, to allow `https://developer.mozilla.org` to see response status codes, the cross-origin resource should send:
 
@@ -73,6 +73,6 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 
 ## See also
 
-- [HTTP response status code](/en-US/docs/Web/HTTP/Status)
+- [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status)
 - {{domxref("Response.status")}}
-- [CORS](/en-US/docs/Web/HTTP/CORS)
+- [CORS](/en-US/docs/Web/HTTP/Guides/CORS)

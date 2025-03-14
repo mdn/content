@@ -267,7 +267,7 @@ body {
 
 ## The order of auto placed items
 
-A grid can contain a mixture of item placements. Some of the items may have a specifically defined position on the grid while others may be auto-placed. If you have a document order that reflects the order in which items sit on the grid you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the [Grid item placement algorithm](https://drafts.csswg.org/css-grid/#auto-placement-algo), however for most of us we just need to remember a few simple rules for our items.
+A grid can contain a mixture of item placements. Some of the items may have a specifically defined position on the grid, while others may be auto-placed. If you have a document order that reflects the order in which items sit on the grid, you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the [Grid item placement algorithm](https://drafts.csswg.org/css-grid/#auto-placement-algo); however, for most of us, we just need to remember a few rules for our items.
 
 ### Order modified document order
 

@@ -4,13 +4,13 @@ export default {
     `yarn content validate-redirects en-US`,
   ],
   "!*.md": (filenames) => [
-    `prettier --ignore-unknown --write ${filenames.join(" ")}`,
+    `prettier --ignore-unknown --write --cache ${filenames.join(" ")}`,
   ],
   "*.md": (filenames) => [
     `markdownlint-cli2 --fix ${filenames.join(" ")}`,
     `node scripts/front-matter_linter.js --fix true  ${filenames.join(" ")}`,
     `node scripts/update-moved-file-links.js --check`,
-    `prettier --write ${filenames.join(" ")}`,
+    `prettier --write --cache ${filenames.join(" ")}`,
   ],
   "tests/**/*.*": (filenames) => [`yarn test:front-matter-linter`],
   "*.{svg,png,jpeg,jpg,gif}": (filenames) => [

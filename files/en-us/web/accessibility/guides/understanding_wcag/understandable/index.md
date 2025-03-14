@@ -356,7 +356,7 @@ This guideline centers around helping users enter correct information when requi
       <td>
         <p>
           Clear instructions should be provided when data input is required.
-          When a simple instruction or prompt is required, you can use
+          When a short instruction or prompt is required, you can use
           {{htmlelement("label")}} elements for single inputs like name
           or age, a combination or {{htmlelement("label")}}s and
           {{htmlelement("fieldset")}}s/{{htmlelement("legend")}}s

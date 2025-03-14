@@ -179,7 +179,7 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 
 ##### Unregistered custom properties
 
-When CSS variables are introduced via a simple CSS custom property value assignment, valueless custom property queries always return true.
+When CSS variables are introduced via a CSS custom property value assignment, valueless custom property queries always return true.
 
 ```css
 :root {

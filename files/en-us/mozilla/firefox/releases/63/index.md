@@ -123,7 +123,7 @@ _No changes._
 
 ### Security
 
-- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
+- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
 - CSP `script-src` directive's `'report-sample'` expression now recognized when generating violation reports. This directive indicates that a short sample of where the violation occurred should be included in the report. Previously, Firefox always included this sample ([Firefox bug 1473218](https://bugzil.la/1473218)).
 - Firefox now uses NSS 3.39 ([Firefox bug 1470914](https://bugzil.la/1470914)).
 
@@ -182,7 +182,7 @@ _No changes._
 
 #### Search
 
-- The new {{WebExtAPIRef("search")}} AP[I](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search) enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
+- The new {{WebExtAPIRef("search")}} API enables you to retrieve the list of installed search engines and perform searches with them ([Firefox bug 1352598](https://bugzil.la/1352598)).
 - {{WebExtAPIRef("topSites.get()")}} now takes an `options` parameter enabling you to set various options for the list of sites returned ([Firefox bug 1445836](https://bugzil.la/1445836)).
 
 #### Tabs

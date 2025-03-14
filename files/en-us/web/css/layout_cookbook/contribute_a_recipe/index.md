@@ -59,7 +59,7 @@ The important parts of this template are as follows:
 
 - The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
 
-A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you've forked the repo and have our CSS and JavaScript files with your example, opening your live example in a browser should display everything working exactly as it would appear on an MDN page.
 

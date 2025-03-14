@@ -9,7 +9,44 @@ browser-compat: css.properties.min-inline-size
 
 The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
 
-{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
+{{InteractiveExample("CSS Demo: min-inline-size")}}
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change min-inline-size</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 

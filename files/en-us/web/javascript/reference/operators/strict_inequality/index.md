@@ -12,7 +12,7 @@ not equal, returning a Boolean result. Unlike the [inequality](/en-US/docs/Web/J
 operator, the strict inequality operator always considers operands of different types to
 be different.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+{{InteractiveExample("JavaScript Demo: Strict inequality (!==) operator")}}
 
 ```js interactive-example
 console.log(1 !== 1);

@@ -287,7 +287,7 @@ Let's look at some of our form code again:
 ```
 
 In our example, the form will send 3 pieces of data named `user_name`, `user_email`, and `user_message`.
-That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method.
 
 On the server side, the script at the URL `/my-handling-form-page` will receive the data as a list of 3 key/value items contained in the HTTP request.
 The way this script will handle that data is up to you.

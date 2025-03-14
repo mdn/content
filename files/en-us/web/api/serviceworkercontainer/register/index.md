@@ -35,7 +35,7 @@ register(scriptURL, options)
 
 - `scriptURL`
   - : The URL of the service worker script.
-    The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+    The registered service worker file needs to have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
 - `options` {{optional_inline}}
 
   - : An object containing registration options. Currently available options are:

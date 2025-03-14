@@ -24,7 +24,7 @@ page-type: learn-module-chapter
         <ul>
           <li>The concepts and fundamentals of using promises in JavaScript.</li>
           <li>Chaining and combining promises.</li>
-          <li>Handing errors in promises.</li>
+          <li>Handling errors in promises.</li>
           <li><code>async</code> and <code>await</code>: how they relate to promises, and why they are useful.</li>
         </ul>
       </td>
@@ -80,7 +80,7 @@ Started request…
 Received response: 200
 ```
 
-Note that `Started request…` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Status), meaning that our request succeeded.
+Note that `Started request…` is logged before we receive the response. Unlike a synchronous function, `fetch()` returns while the request is still going on, enabling our program to stay responsive. The response shows the `200` (OK) [status code](/en-US/docs/Web/HTTP/Reference/Status), meaning that our request succeeded.
 
 This probably seems a lot like the example in the last article, where we added event handlers to the {{domxref("XMLHttpRequest")}} object. Instead of that, we're passing a handler into the `then()` method of the returned promise.
 
@@ -188,7 +188,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
-Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404).
+Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Reference/Status/404).
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 

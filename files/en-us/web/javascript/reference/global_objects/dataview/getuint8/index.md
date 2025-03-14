@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.getUint8
 
 The **`getUint8()`** method of {{jsxref("DataView")}} instances reads 1 byte at the specified byte offset of this `DataView` and interprets it as an 8-bit unsigned integer.
 
-{{InteractiveExample("JavaScript Demo: DataView.getUint8()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getUint8()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes
