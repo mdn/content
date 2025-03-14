@@ -123,13 +123,17 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
-- [Learn: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
-  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators), [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), and [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
-
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
+
+- [Privacy and the `:visited` selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
+
+  - : Explores the style limitations set on the `:visited` class for user privacy.
+
+- [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+
+  - : Tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
 
 - [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
