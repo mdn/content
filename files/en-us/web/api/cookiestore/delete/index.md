@@ -105,7 +105,7 @@ async function cookieTest() {
   }
 
   // Log cookie names again (to show cookie1 deleted)
-  cookieNames = (await cookieStore.getAll())
+  const cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
   console.log(`Cookies after deleting cookie1: ${cookieNames}`);
