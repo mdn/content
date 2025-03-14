@@ -159,17 +159,25 @@ async function cookieTest() {
     console.log(`Error setting cookie2: ${error}`);
   }
 
-  // Log cookies
-  console.log("Initial cookies");
-  console.log(await cookieStore.getAll());
+  // Log cookie names
+  let cookieNames = (await cookieStore.getAll())
+    .map((cookie) => cookie.name)
+    .join(" ");
+  console.log(`Initial cookies: ${cookieNames}`);
 
   // Delete cookie1
   await cookieStore.delete("cookie1");
 
   // Log cookies again (to show cookie1 deleted)
-  console.log("Cookies after deleting cookie1");
-  console.log(await cookieStore.getAll());
+  cookieNames = (await cookieStore.getAll())
+    .map((cookie) => cookie.name)
+    .join(" ");
+  console.log(
+    `Cookies remaining after attempted deletions (cookie1 should be deleted): ${cookieNames}`,
+  );
 }
+
+cookieTest();
 ```
 
 ## Specifications

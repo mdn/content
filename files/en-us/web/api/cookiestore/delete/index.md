@@ -108,7 +108,9 @@ async function cookieTest() {
   const cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  console.log(`Cookies after deleting cookie1: ${cookieNames}`);
+  console.log(
+    `Cookies remaining after attempting to delete cookie1: ${cookieNames}`,
+  );
 }
 
 cookieTest();
@@ -184,7 +186,9 @@ async function cookieTest() {
   cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  console.log(`Cookies remaining after deleting cookie1: ${cookieNames}`);
+  console.log(
+    `Cookies remaining after attempted deletions (cookie2 should be deleted): ${cookieNames}`,
+  );
 }
 
 cookieTest();
@@ -211,11 +215,11 @@ The code then deletes both cookies without specifying a `path` match option, and
 async function cookieTest() {
   // Create doc_cookie1 with path /some_path
   document.cookie =
-    "doc_cookie1=doc_cookie1_name; SameSite=None; Secure; path=/some_path";
+    "doc_cookie1=doc_cookie1_name; SameSite=None; Secure; max-age=10; path='/some_path'";
 
   // Create doc_cookie2 with path / (the CookieStore.set() default)
   document.cookie =
-    "doc_cookie2=doc_cookie2_name; SameSite=None; Secure; path=/";
+    "doc_cookie2=doc_cookie2_name; SameSite=None; Secure; max-age=10; path=/";
 
   // Log cookie names
   let cookieNames = (await cookieStore.getAll())
@@ -241,7 +245,9 @@ async function cookieTest() {
   cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  console.log(`Cookies remaining: ${cookieNames}`);
+  console.log(
+    `Cookies remaining after attempted deletions (doc_cookie2 should be deleted): ${cookieNames}`,
+  );
 }
 
 cookieTest();
