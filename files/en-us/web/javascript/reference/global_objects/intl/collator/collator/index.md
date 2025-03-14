@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Collator.Collator
 
 The **`Intl.Collator()`** constructor creates {{jsxref("Intl.Collator")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator() constructor")}}
 
 ```js interactive-example
 console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));

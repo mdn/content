@@ -12,7 +12,7 @@ falsity and vice versa. It is typically used with boolean (logical)
 values. When used with non-Boolean values, it returns `false` if its single
 operand can be converted to `true`; otherwise, returns `true`.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical NOT (!) operator", "shorter")}}
 
 ```js interactive-example
 const a = 3;

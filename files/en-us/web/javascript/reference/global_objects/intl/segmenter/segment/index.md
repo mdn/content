@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.segment
 
 The **`segment()`** method of {{jsxref("Intl.Segmenter")}} instances segments a string according to the locale and granularity of this `Intl.Segmenter` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment()")}}
 
 ```js interactive-example
 const string1 = "Que ma joie demeure";
