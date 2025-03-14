@@ -92,7 +92,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 - `blink`
   - : The text blinks (alternates between visible and invisible). Conforming user agents may not blink the text. This value is **deprecated** in favor of [CSS animations](/en-US/docs/Web/CSS/animation).
 - `spelling-error`
-  - : The text decoration use the user agents method of highlighting spelling mistakes, this is a dotted red line in most browsers.
+  - : Each line of text uses the user agents' method of highlighting spelling mistakes, which is a dotted red line in most browsers.
 - `grammar-error`
   - : The text decoration use the user agents method of highlighting grammar mistakes, this is a dotted green line in most browsers.
 
