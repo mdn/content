@@ -26,3 +26,4 @@ Boundary default actions can be local or non-local.
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
