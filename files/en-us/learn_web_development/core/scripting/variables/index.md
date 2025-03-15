@@ -426,7 +426,10 @@ This means that if you can initialize a variable when you declare it, and don't 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
+You've reached the end of this article, but can you remember the most important information? Test whether you've retained the essentials with the following challenges:
+
+- [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables): Our page of interactive variables challenges.
+- [Practice time - Part 3: let and const](https://scrimba.com/learn-javascript-c0v/~059?via=mdn) <sup>_MDN learning partner_</sup> from Scrimba: An interactive challenge providing multiple tests concerning `let` and `const`.
 
 ## Summary
 
