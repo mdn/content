@@ -16,7 +16,7 @@ The following table provides a complete list of JavaScript falsy values:
 
 | Value                       | Type      | Description                                                                                                                                         |
 | --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("null")}}        | Null      | The keyword [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) — the absence of any value.                                               |
+| {{Glossary("null")}}        | Object      | The keyword [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) — the absence of any value.                                               |
 | {{Glossary("undefined")}}   | Undefined | [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) — the primitive value.                                                 |
 | `false`                     | Boolean   | The keyword [`false`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).                                                         |
 | {{Glossary("NaN")}}         | Number    | [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) — not a number.                                                                    |
