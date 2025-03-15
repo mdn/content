@@ -1,5 +1,6 @@
 ---
 title: Setting up your own test automation environment
+short-title: Automation environment setup
 slug: Learn_web_development/Extensions/Testing/Your_own_automation_environment
 page-type: learn-module-chapter
 ---

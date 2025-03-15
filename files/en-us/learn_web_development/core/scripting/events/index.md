@@ -1,5 +1,6 @@
 ---
 title: Introduction to events
+short-title: Events
 slug: Learn_web_development/Core/Scripting/Events
 page-type: learn-module-chapter
 ---

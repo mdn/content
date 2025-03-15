@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 6: Working with forms"
+short-title: "6: Working with forms"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 page-type: learn-module-chapter
 ---

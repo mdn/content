@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 2: Creating a skeleton website"
+short-title: "2: Skeleton website"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 page-type: learn-module-chapter
 ---

@@ -1,5 +1,6 @@
 ---
 title: Setting up a Node development environment
+short-title: Setup
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 page-type: learn-module-chapter
 ---

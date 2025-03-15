@@ -1,5 +1,6 @@
 ---
 title: Forms and buttons in HTML
+short-title: Forms and buttons
 slug: Learn_web_development/Core/Structuring_content/HTML_forms
 page-type: tutorial-chapter
 ---

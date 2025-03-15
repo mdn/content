@@ -1,5 +1,6 @@
 ---
 title: Storing the information you need — Variables
+short-title: Variables
 slug: Learn_web_development/Core/Scripting/Variables
 page-type: learn-module-chapter
 ---

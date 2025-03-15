@@ -1,5 +1,6 @@
 ---
 title: Componentizing our React app
+short-title: React components
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
 page-type: learn-module-chapter
 ---

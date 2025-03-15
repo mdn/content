@@ -1,5 +1,6 @@
 ---
 title: JavaScript performance optimization
+short-title: Performant JavaScript
 slug: Learn_web_development/Extensions/Performance/JavaScript
 page-type: learn-module-chapter
 ---

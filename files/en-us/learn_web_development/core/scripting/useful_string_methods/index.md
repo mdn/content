@@ -1,5 +1,6 @@
 ---
 title: Useful string methods
+short-title: String methods
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
 page-type: learn-module-chapter
 ---

@@ -1,5 +1,6 @@
 ---
 title: Introduction to the server side
+short-title: Introduction
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 page-type: learn-module-chapter
 ---

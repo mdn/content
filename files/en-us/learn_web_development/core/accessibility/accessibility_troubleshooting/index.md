@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Accessibility troubleshooting"
+short-title: A11y troubleshooting
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 page-type: learn-module-assessment
 ---

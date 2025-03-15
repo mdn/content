@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
+short-title: "7: Deployment"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
 page-type: learn-module-chapter
 ---
