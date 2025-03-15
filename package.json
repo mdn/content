@@ -20,7 +20,6 @@
   "scripts": {
     "info:deprecated": "node -e \"process.stderr.write('\\n🗑️  This command is deprecated, and will be removed soon.\\n\\n')\"",
     "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
-    "postinstall": "node scripts/update-history.js",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
     "build:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
@@ -30,6 +29,7 @@
     "fix:js": "prettier -w \"**/*.(m)?js\"",
     "fix:json": "prettier -w \"**/*.json(c)?\"",
     "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
+    "fix:pre-commit": "lefthook run pre-commit",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:fm": "node scripts/front-matter_linter.js",
     "lint:js": "prettier -c \"**/*.(m)?js\"",
@@ -39,7 +39,6 @@
     "lint:typos-group-by-file": "cspell --no-progress --gitignore --quiet --reporter cspell-group-by-file-reporter --config .vscode/cspell.json \"**/*.md\"",
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky || true",
     "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
     "start:rari": "yarn -s info:deprecated && yarn start",
@@ -66,8 +65,8 @@
   "devDependencies": {
     "cspell": "8.17.5",
     "cspell-group-by-file-reporter": "^1.0.1",
-    "husky": "9.1.7",
     "jest": "^29.7.0",
+    "lefthook": "^1.10.10",
     "lint-staged": "15.5.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
