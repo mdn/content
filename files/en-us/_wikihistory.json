@@ -77908,6 +77908,20 @@
       "ExE-Boss"
     ]
   },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2020-05-05T20:20:41.094Z",
+    "contributors": [
+      "jswisher",
+      "wbamberg",
+      "mfluehr",
+      "una",
+      "Sheppy",
+      "DBaron",
+      "Dholbert",
+      "gavenkoa",
+      "fscholz"
+    ]
+  },
   "Web/CSS/CSS_shapes": {
     "modified": "2020-07-07T12:26:26.279Z",
     "contributors": [
@@ -78494,20 +78508,6 @@
       "BYK",
       "miken32",
       "Wjjohnst"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2020-05-05T20:20:41.094Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "mfluehr",
-      "una",
-      "Sheppy",
-      "DBaron",
-      "Dholbert",
-      "gavenkoa",
-      "fscholz"
     ]
   },
   "Web/CSS/Pseudo-classes": {
