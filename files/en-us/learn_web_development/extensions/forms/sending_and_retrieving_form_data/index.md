@@ -338,8 +338,3 @@ If you want to learn more about securing a web application, you can dig into the
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

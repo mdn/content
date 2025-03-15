@@ -38,6 +38,8 @@ To recap what we said in the previous article, we have:
 **The ugly**: Some elements can't be styled thoroughly using CSS. These include:
 
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+  > [!NOTE]
+  > Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
@@ -367,9 +369,11 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 ### Selects and datalists
 
-In modern browsers, selects and datalists are generally not too bad to style provided you don't want to vary the look and feel too much from the defaults.
+Selects and datalists are generally not too bad to style.
 
-We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
+Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
+
+Even in non-supporting browsers and codebases, you can get a reasonable level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
 Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
 
@@ -518,7 +522,7 @@ In the next article of this module, we will explore the different [UI pseudo-cla
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
-### Advanced Topics
+## See also
 
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements.
