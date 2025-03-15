@@ -582,7 +582,7 @@ For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.co
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
-> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.com/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 

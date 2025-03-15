@@ -12,7 +12,7 @@ browser-compat: api.Window.queryLocalFonts
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 
-To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} o
 - `NotAllowedError` {{domxref("DOMException")}}
   - : The user chose to deny permission to use this feature when presented with the browser's permission prompt after the method was first invoked.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), or it was not called via a user interaction such as a button press, or current {{glossary("origin")}} is an opaque origin.
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), or it was not called via a user interaction such as a button press, or current {{glossary("origin")}} is an opaque origin.
 
 ## Examples
 

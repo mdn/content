@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
   - : Thrown when wake lock is not available, which can happen because:
 
-    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The document is not fully active.
     - The document's visibility state is `hidden`.
     - The {{Glossary("User Agent")}} could not acquire platform's wake lock.

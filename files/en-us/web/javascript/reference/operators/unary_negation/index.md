@@ -9,7 +9,7 @@ browser-compat: javascript.operators.unary_negation
 
 The **unary negation (`-`)** operator precedes its operand and negates it.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{InteractiveExample("JavaScript Demo: Unary negation (-) operator")}}
 
 ```js interactive-example
 const x = 4;

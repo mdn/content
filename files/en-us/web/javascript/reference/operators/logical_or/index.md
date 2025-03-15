@@ -14,7 +14,7 @@ the `||` operator actually returns the value of one of the specified
 operands, so if this operator is used with non-Boolean values, it will return a
 non-Boolean value.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical OR (||) operator", "shorter")}}
 
 ```js interactive-example
 const a = 3;

@@ -9,7 +9,51 @@ browser-compat: css.properties.column-span
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
 
-{{EmbedInteractiveExample("pages/css/column-span.html")}}
+{{InteractiveExample("CSS Demo: column-span")}}
+
+```css interactive-example-choice
+column-span: none;
+```
+
+```css interactive-example-choice
+column-span: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="multicol-element">
+    <p>
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <div id="example-element">Spanner?</div>
+    <p>
+      Implacable November weather. As much mud in the streets as if the waters
+      had but newly retired from the face of the earth, and it would not be
+      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
+      elephantine lizard up Holborn Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.multicol-element {
+  width: 100%;
+  text-align: left;
+  column-count: 3;
+}
+
+.multicol-element p {
+  margin: 0;
+}
+
+#example-element {
+  background-color: rebeccapurple;
+  padding: 10px;
+  color: #fff;
+}
+```
 
 An element that spans more than one column is called a **spanning element**.
 

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.call
 
 The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
-{{InteractiveExample("JavaScript Demo: Function.call()")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.call()")}}
 
 ```js interactive-example
 function Product(name, price) {

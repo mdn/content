@@ -9,7 +9,52 @@ browser-compat: css.properties.border-radius
 
 The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 
-{{EmbedInteractiveExample("pages/css/border-radius.html")}}
+{{InteractiveExample("CSS Demo: border-radius")}}
+
+```css interactive-example-choice
+border-radius: 30px;
+```
+
+```css interactive-example-choice
+border-radius: 25% 10%;
+```
+
+```css interactive-example-choice
+border-radius: 10% 30% 50% 70%;
+```
+
+```css interactive-example-choice
+border-radius: 10% / 50%;
+```
+
+```css interactive-example-choice
+border-radius: 10px 100px / 120px;
+```
+
+```css interactive-example-choice
+border-radius: 50% 20% / 10% 40%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with rounded corners.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 The radius applies to the whole {{cssxref("background")}}, even if the element has no border; the exact position of the clipping is defined by the {{cssxref("background-clip")}} property.
 

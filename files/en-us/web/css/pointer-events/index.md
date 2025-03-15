@@ -9,7 +9,62 @@ browser-compat: css.properties.pointer-events
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
 
-{{EmbedInteractiveExample("pages/css/pointer-events.html")}}
+{{InteractiveExample("CSS Demo: pointer-events")}}
+
+```css interactive-example-choice
+pointer-events: auto;
+```
+
+```css interactive-example-choice
+pointer-events: none;
+```
+
+```css interactive-example-choice
+pointer-events: stroke; /* SVG-only */
+```
+
+```css interactive-example-choice
+pointer-events: fill; /* SVG-only */
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element">
+    <p>
+      <a href="#">example link</a>
+    </p>
+    <p>
+      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <a xlink:href="#">
+          <circle
+            cx="50"
+            cy="50"
+            fill="#3E6E84"
+            r="40"
+            stroke="#ffb500"
+            stroke-width="5"></circle>
+          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+        </a>
+      </svg>
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-weight: bold;
+}
+
+#example-element a {
+  color: #009e5f;
+}
+
+#example-element svg {
+  width: 10em;
+  height: 10em;
+}
+```
 
 ## Syntax
 

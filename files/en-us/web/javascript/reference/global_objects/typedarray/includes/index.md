@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.includes
 
 The **`includes()`** method of {{jsxref("TypedArray")}} instances determines whether a typed array includes a certain value among its entries, returning `true` or `false` as appropriate. This method has the same algorithm as {{jsxref("Array.prototype.includes()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.includes()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.includes()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

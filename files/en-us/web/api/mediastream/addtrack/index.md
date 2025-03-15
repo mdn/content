@@ -30,8 +30,6 @@ addTrack(track)
 
 None ({{jsxref("undefined")}}).
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

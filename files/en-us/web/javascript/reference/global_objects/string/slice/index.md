@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.String.slice
 The **`slice()`** method of {{jsxref("String")}} values extracts a section of this string and
 returns it as a new string, without modifying the original string.
 
-{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.slice()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";

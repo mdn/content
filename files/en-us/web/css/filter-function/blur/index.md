@@ -9,7 +9,29 @@ browser-compat: css.types.filter-function.blur
 
 The **`blur()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a [Gaussian blur](https://en.wikipedia.org/wiki/Gaussian_blur) to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-blur.html")}}
+{{InteractiveExample("CSS Demo: blur()")}}
+
+```css interactive-example-choice
+filter: blur(0);
+```
+
+```css interactive-example-choice
+filter: blur(4px);
+```
+
+```css interactive-example-choice
+filter: blur(1.5rem);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 

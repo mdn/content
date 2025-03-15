@@ -9,7 +9,45 @@ browser-compat: css.types.basic-shape.circle
 
 The **`circle()`** CSS [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a circle using a radius and a position. It is one of the {{cssxref("&lt;basic-shape&gt;")}} data types.
 
-{{EmbedInteractiveExample("pages/css/function-circle.html")}}
+{{InteractiveExample("CSS Demo: circle()")}}
+
+```css interactive-example-choice
+clip-path: circle(50px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at right center);
+```
+
+```css interactive-example-choice
+clip-path: circle(10% at 2rem 90%);
+```
+
+```css interactive-example-choice
+clip-path: circle(closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: circle(farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 

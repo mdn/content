@@ -15,7 +15,58 @@ browser-compat: css.properties.font-stretch
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
-{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
+{{InteractiveExample("CSS Demo: font-stretch")}}
+
+```css interactive-example-choice
+font-stretch: condensed;
+```
+
+```css interactive-example-choice
+font-stretch: expanded;
+```
+
+```css interactive-example-choice
+font-stretch: ultra-expanded;
+```
+
+```css interactive-example-choice
+font-stretch: 50%;
+```
+
+```css interactive-example-choice
+font-stretch: 100%;
+```
+
+```css interactive-example-choice
+font-stretch: 150%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p class="transition-all" id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
+  font-family: League;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+}
+
+section {
+  font-size: 1.2em;
+  font-family: League, sans-serif;
+}
+```
 
 ## Syntax
 

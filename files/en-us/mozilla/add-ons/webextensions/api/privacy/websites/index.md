@@ -43,7 +43,7 @@ Default values for these properties tend to vary across browsers.
 - `protectedContentEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. Available on Windows only. If `true`, the browser provides a unique ID to plugins in order to run protected content.
 - `referrersEnabled`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends [referer](/en-US/docs/Web/HTTP/Headers/Referer) headers with your requests.
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends [referer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) headers with your requests.
 - `resistFingerprinting`
 
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.

@@ -11,7 +11,74 @@ The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for a
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
-{{EmbedInteractiveExample("pages/css/offset-path.html")}}
+{{InteractiveExample("CSS Demo: offset-path")}}
+
+```css interactive-example-choice
+offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+```
+
+```css interactive-example-choice
+offset-path: path("M0,0 L60,70 L-60,30z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  animation: distance 8000ms infinite linear;
+  animation-play-state: paused;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#default-example {
+  position: relative;
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 ## Syntax
 

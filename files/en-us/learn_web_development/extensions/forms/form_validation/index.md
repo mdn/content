@@ -699,7 +699,7 @@ To validate a form, ask yourself a few questions:
     You should offer up-front suggestions so they know what's expected, as well as clear error messages.
     If you want to dig into form validation UI requirements, here are some useful articles you should read:
 
-    - [Help users enter the right data in forms](https://web.dev/Learn_web_development/Extensions/Forms/validation/)
+    - [Help users enter the right data in forms](https://web.dev/learn/forms/form-fields)
     - [Validating input](https://www.w3.org/WAI/tutorials/forms/validation/)
     - [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 
