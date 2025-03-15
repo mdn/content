@@ -260,7 +260,7 @@ p {
 - [Learn: sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
-- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Layout modes](/en-US/docs/Glossary/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
