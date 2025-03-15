@@ -35,7 +35,7 @@ No notable changes.
 
 ### SVG
 
-- The [`crossorigin`](/en-US/docs/Web/SVG/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
+- The [`crossorigin`](/en-US/docs/Web/SVG/Reference/Attribute/crossorigin) attribute is now supported in [`image`](/en-US/docs/Web/SVG/Reference/Element/image) and [`feImage`](/en-US/docs/Web/SVG/Reference/Element/feImage) elements ([Firefox bug 1240357](https://bugzil.la/1240357)).
 
 ### APIs
 

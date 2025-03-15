@@ -6,7 +6,7 @@ page-type: web-api-interface
 
 {{APIRef("SVG")}}
 
-The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) animation, provides specific contextual information associated with Time events.
+The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL) animation, provides specific contextual information associated with Time events.
 
 {{InheritanceDiagram}}
 

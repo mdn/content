@@ -127,7 +127,7 @@ In an [SVG](/en-US/docs/Web/SVG) document, the viewport is the visible area of t
 
 In this example, the viewport has an {{glossary("aspect ratio")}} of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
-SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 

@@ -167,4 +167,4 @@ p {
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
 
 - The [SVG](/en-US/docs/Web/SVG) {{SVGAttr("text-rendering")}} attribute
-- [SVG and CSS](/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
+- [SVG and CSS](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS)

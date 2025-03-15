@@ -10,7 +10,7 @@ browser-compat: api.SVGTextPositioningElement.dx
 
 The **`dx`** read-only property of the {{domxref("SVGTextPositioningElement")}} interface describes the x-axis coordinate of the {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, or {{domxref("SVGTRefElement")}} as an {{domxref("SVGAnimatedLengthList")}}. It reflects the {{SVGAttr("dx")}} attribute's horizontal displacement of the individual text glyphs in the user coordinate system.
 
-The attribute value is a list of [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric values in the {{domxref("SVGAnimatedLengthList.baseVal")}} reflect the horizontal displacements in the user coordinate system.
+The attribute value is a list of [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric values in the {{domxref("SVGAnimatedLengthList.baseVal")}} reflect the horizontal displacements in the user coordinate system.
 
 ## Value
 

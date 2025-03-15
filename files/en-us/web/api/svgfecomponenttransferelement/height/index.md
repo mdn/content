@@ -12,7 +12,7 @@ The **`height`** read-only property of the {{domxref("SVGFEComponentTransferElem
 
 It reflects the {{SVGElement("feComponentTransfer")}} element's {{SVGAttr("height")}} filter primitive attribute. The `<feComponentTransfer>` filter performs component-wise color and alpha transparency remapping, allowing for brightness, contrast, color balance and threshold adjustments.
 
-The attribute is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage) relative to the height of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
+The attribute is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage) relative to the height of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
 
 ## Value
 
