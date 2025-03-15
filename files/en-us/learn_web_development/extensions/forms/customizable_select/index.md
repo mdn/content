@@ -63,10 +63,10 @@ Our example is a typical {{htmlelement("select")}} menu that allows you to choos
       <option value="dog">
         <span class="icon">🐶</span><span class="option-label">Dog</span>
       </option>
-      <option value="tortoise">
+      <option value="hamster">
         <span class="icon">🐹</span><span class="option-label">Hamster</span>
       </option>
-      <option value="parrot">
+      <option value="chicken">
         <span class="icon">🐔</span><span class="option-label">Chicken</span>
       </option>
       <option value="fish">
@@ -371,9 +371,9 @@ After the last two section, the final updated state of our `<select>` is rendere
 The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they work alongside customizable selects:
 
 - [`<select multiple>`](/en-US/docs/Web/HTML/Attributes/multiple)
-  - : When the `multiple` attribute is set on customizable `<select>` elements, the styling works pretty much how you would expect — the styling applied to the `<option>` elements is presented as-is in the multiple select box, and the outer box itself is giving the same styling as the select `<button>` in the single select. Any styling related to the showing and hiding of the picker is ignored.
+  - : There isn't currently any official support specified for the `multiple` attribute on customizable `<select>` elements, however the styling works generally OK. The `<option>` elements are displayed as-is inside the multiple select box, and the outer box itself is given the same styling as the select `<button>` in the single select.
 - {{htmlelement("optgroup")}}
-  - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventioal HTML.
+  - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
 ## See also
 
