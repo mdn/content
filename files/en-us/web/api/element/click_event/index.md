@@ -16,7 +16,7 @@ An element receives a **`click`** event when any of the following occurs:
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
-`click` fires after both the {{domxref("Element/mousedown_event", "mousedown")}} and {{domxref("Element/mouseup_event", "mouseup")}} events have fired, in that order.
+`click` fires after both the {{domxref("Element/mousedown_event", "mousedown")}} and {{domxref("Element/mouseup_event", "mouseup")}} events have fired, in that order. The user can move the mouse off the element that the "mousedown" event fired on, as long as the "mouseup" event fires on the same element. Technically, a "click" event will always fire on some element as long as the user has their mouse on the webpage when the "mouseup" event triggers. So pressing down the mouse on some button, and moving to some random part of the page will cause a click event to fire on the first element of the page that is a parent of both the starting and ending element. Using a touchscreen, the user's finger is treated like a mouse and the same events occur, since {{domxref("Touch_events", "touch events")}} are automatically converted into mouse events.
 
 The event is a device-independent event — meaning it can be activated by touch, keyboard, mouse, and any other mechanism provided by assistive technology.
 
