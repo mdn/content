@@ -7,20 +7,29 @@ sidebar: xmlsidebar
 
 The **[OpenSearch description format](https://github.com/dewitt/opensearch)** can be used to describe the web interface of a search engine. This allows a website to describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
 
-Firefox also supports additional features not in the OpenSearch standard, such as search suggestions. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
+Firefox also supports additional features not in the OpenSearch standard, such as search suggestions. This article focuses on creating OpenSearch-compatible search engines that support these additional Firefox features.
 
-OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
+## Overview
 
-> [!WARNING]
-> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org/) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
+Browsers have an address bar which is dual-purpose: you can type a URL and go there directly, or you can type a search term, which is sent as a query to a search engine. The search engine then returns a list of results which you can navigate to, or you can open up the search engine's web interface to see more results.
+
+By default, browsers can connect to a few popular search engines such as Google, Bing, or Yandex. The OpenSearch protocol allows websites to define their own search engines, so that users can search that website directly from the browser's address bar. For example, the MDN website has a site-wide search engine, so if MDN registers itself as a search engine, users can search MDN directly from the address bar.
+
+Browsers query a search engine by requesting a URL. The site defines a template for the URL to be requested, and the browser will fill the search terms inside the placeholders. For example, if the search engine is at `https://example.com/search?q={searchTerms}`, then the browser will request `https://example.com/search?q=foo` when the user types "foo" into the address bar. The search engine then generates a response, either as a list of search results or as a search results page.
+
+A site defines its search engine by linking to an XML file in its HTML. When the user first visits the site, the browser recognizes the description file and registers the search engine. The browser then uses the search engine to handle searches from the address bar.
+
+> [!NOTE]
+> Chrome registers site search engines as "inactive" by default. Users must manually activate each site in the search engine settings.
 
 ## OpenSearch description file
 
-The XML file that describes a search engine follows the basic template below. Sections in _\[square brackets]_ should be customized for the specific plugin you're writing.
+The XML file that describes a search engine follows the basic template below. Sections in _\[square brackets]_ should be customized for the specific engine you're writing.
 
 ```xml
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<OpenSearchDescription
+  xmlns="http://a9.com/-/spec/opensearch/1.1/"
+  xmlns:moz="http://www.mozilla.org/2006/browser/search/">
   <ShortName>[SNK]</ShortName>
   <Description>[Search engine full name and summary]</Description>
   <InputEncoding>[UTF-8]</InputEncoding>
@@ -69,28 +78,26 @@ The XML file that describes a search engine follows the basic template below. Se
 
     For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format.
 
-## Autodiscovery of search plugins
+## Linking to the OpenSearch description file
 
-Websites with search plugins can advertise them so Firefox users can easily install the plugins.
-
-To support autodiscovery, add a `<link>` element for each plugin to the `<head>` of your web page:
+To support autodiscovery, add a `<link>` element for each search engine to the `<head>` of your web page:
 
 ```html
 <link
   rel="search"
   type="application/opensearchdescription+xml"
   title="[searchTitle]"
-  href="[pluginURL]" />
+  href="[descriptionURL]" />
 ```
 
 Replace the items in _\[square brackets\]_ as explained below:
 
 - searchTitle
   - : The name of the search to perform, such as "Search MDC" or "Yahoo! Search". This must match your plugin file's `<ShortName>`.
-- pluginURL
-  - : The URL to the XML search plugin, so the browser can download it.
+- descriptionURL
+  - : The URL to the XML search description file, so the browser can download it.
 
-If your site offers multiple search plugins, you can support autodiscovery for them all. For example:
+If your site offers multiple search engines, you can support autodiscovery for them all. For example:
 
 ```html
 <link
@@ -106,35 +113,34 @@ If your site offers multiple search plugins, you can support autodiscovery for t
   href="http://example.com/mysitetitle.xml" />
 ```
 
-This way, your site can offer plugins to search by author, or by title.
+This way, your site can offer two engines to search by author, or by title.
 
 > [!NOTE]
 > In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive _no_ indication. _In general, behavior varies among browsers_.
 
-## Supporting automatic updates for OpenSearch plugins
+## Supporting automatic updates for OpenSearch description
 
-OpenSearch plugins can automatically update. To support this, include an extra `Url` element with `type="application/opensearchdescription+xml"` and `rel="self"`. The `template` attribute should be the URL of the OpenSearch document to automatically update to.
+OpenSearch description can automatically update. To support this, include an extra `Url` element with `type="application/opensearchdescription+xml"` and `rel="self"`. The `template` attribute should be the URL of the OpenSearch document to automatically update to.
 
 For example:
 
 ```xml
-<Url type="application/opensearchdescription+xml"
-     rel="self"
-     template="https://example.com/mysearchdescription.xml" />
+<Url
+  type="application/opensearchdescription+xml"
+  rel="self"
+  template="https://example.com/mysearchdescription.xml" />
 ```
-
-> [!NOTE]
-> At this time, [addons.mozilla.org](https://addons.mozilla.org/) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
 
 ## Troubleshooting Tips
 
-If there is a mistake in your Search Plugin XML, you could run into errors when adding a discovered plugin. If the error message isn't be helpful, the following tips could help you find the problem.
+If there is a mistake in your search description XML, you could run into errors when adding the search engine. If the error message isn't be helpful, the following tips could help you find the problem.
 
-- Your server should serve OpenSearch plugins using `Content-Type: application/opensearchdescription+xml`.
-- Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&) in the `template` URL must be escaped as `&amp;`, and tags must be closed with a trailing slash or matching end tag.
+- Your server should serve OpenSearch descriptions using `Content-Type: application/opensearchdescription+xml`.
+- Be sure that your search description XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&) in the `template` URL must be escaped as `&amp;`, and tags must be closed with a trailing slash or matching end tag.
 - The `xmlns` attribute is important — without it you could get the error message "Firefox could not download the search plugin".
-- You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
+- You **must** include a `text/html` URL — search engines including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
 - Remotely fetched favicons must not be larger than 10KB (see [Firefox bug 361923](https://bugzil.la/361923)).
+- As aforementioned, browsers may not activate site search shortcuts by default. Check the browser's settings and make sure the search engine is activated.
 
 In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref `browser.search.log` to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) (Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 
