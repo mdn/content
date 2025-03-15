@@ -24,13 +24,13 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ### Doctype
 
-You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
+You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 
 ```html example-good
 <!doctype html>
 ```
 > [!NOTE]  
-> The doctype declaration (`<!doctype html>`) is case-insensitive. While MDN follows the convention of using lowercase, it is also commonly written as `<!DOCTYPE html>`.  
+> The <!doctype html> declaration is case-insensitive and is commonly written as <!DOCTYPE html>.
 
 ### Document language
 
@@ -92,9 +92,9 @@ This is perfectly understandable and works fine. If a boolean HTML attribute is 
 <input required="required" />
 ```
 
-## Case
+## Casing convention on MDN
 
-Use lowercase for all element names and attribute names/values because it looks neater and means you can write markup faster. For example:
+Use lowercase for all HTML tags, including the doctype declaration, element names, and attribute names/values, which are case-insensitive. This creates a consistent appearance and allows for faster markup writing. This convention applies to all case-insensitive contexts.
 
 ```html example-good
 <p class="nice">This looks nice and neat</p>
