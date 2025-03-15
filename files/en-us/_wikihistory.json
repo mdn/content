@@ -77272,6 +77272,10 @@
       "BenoitL"
     ]
   },
+  "Web/CSS/CSS_inline_layout/Inline_formatting_context": {
+    "modified": "2020-04-27T22:33:13.546Z",
+    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
+  },
   "Web/CSS/CSS_lists": {
     "modified": "2020-07-07T12:20:22.683Z",
     "contributors": [
@@ -78317,10 +78321,6 @@
       "teoli",
       "miken32"
     ]
-  },
-  "Web/CSS/Inline_formatting_context": {
-    "modified": "2020-04-27T22:33:13.546Z",
-    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/Layout_cookbook": {
     "modified": "2020-07-07T12:18:05.178Z",
