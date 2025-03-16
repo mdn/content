@@ -444,7 +444,7 @@ You can mix and match color models, but it's usually best if your entire project
 
 ### Color keywords
 
-You will see the color keywords (or 'named colors') used in many MDN code examples. As the [`<named-color>`](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, these are not commonly used on production websites. As the keyword represents the color as a human-readable text value, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
+You will see the color keywords (or "named colors") used in many MDN code examples. Because the [`<named-color>`](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, they are not commonly used on production websites with a sophisticated design language. On the other hand, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
 Try playing with different color values in the live examples below, to get more of an idea how they work:
 
