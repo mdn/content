@@ -12,15 +12,7 @@ The **`buttons`** property of the {{domxref("Gamepad")}} interface returns an ar
 
 Each entry in the array is `0` if the button is not pressed, and non-zero (typically `1.0`) if the button is pressed.
 
-Each {{domxref("gamepadButton")}} object has two properties:
-
-- `pressed`
-
-  - : A boolean indicating whether the button is currently pressed (`true`) or unpressed (`false`).
-
-- `value`
-
-  - : A floating point value used to enable representing analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0 – 1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
+For details about the properties available on each button object (such as `pressed`, `touched`, and `value`), see the {{domxref("GamepadButton")}} interface.
 
 ## Value
 
