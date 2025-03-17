@@ -17,8 +17,6 @@ You should note that, rather than reporting the exact limits of each GPU, browse
 
 Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
 
-If a limit is unknown, it will return a value of `undefined`.
-
 {{InheritanceDiagram}}
 
 ## Instance properties
