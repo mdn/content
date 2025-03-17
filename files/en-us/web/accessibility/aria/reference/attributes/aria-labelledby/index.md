@@ -122,3 +122,4 @@ The `aria-labelledby` attribute is **NOT** supported in:
 - HTML {{HTMLElement('caption')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
+- {{domxref("Element.ariaLabelledByElements")}} and {{domxref("ElementInternals.ariaLabelledByElements")}}

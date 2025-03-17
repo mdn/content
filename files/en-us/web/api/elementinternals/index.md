@@ -71,9 +71,9 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaHidden")}}
   - : A string reflecting the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, which indicates whether the element is exposed to an accessibility API.
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
-  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an ElementInternals.
+  - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an object.
 - {{domxref("ElementInternals.ariaLabel")}}
-  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current ElementInternals.
+  - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current object.
 - {{domxref("ElementInternals.ariaLevel")}}
   - : A string reflecting the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
 - {{domxref("ElementInternals.ariaLive")}}
@@ -124,6 +124,36 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("ElementInternals.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+
+#### Instance properties reflected from aria element references
+
+The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
+
+- {{domxref("ElementInternals.ariaActiveDescendantElement")}}
+  - : An element that represents the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    Reflects the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute.
+- {{domxref("ElementInternals.ariaControlsElements")}}
+  - : An array of elements whose contents or presence are controlled by the element it is applied to.
+    Reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
+- {{domxref("ElementInternals.ariaDescribedByElements")}}
+  - : An array of elements that contain the accessible description for the element it is applied to.
+    Reflects the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute.
+- {{domxref("ElementInternals.ariaDetailsElements")}}
+  - : An array of elements that provide accessible details for the element it is applied to.
+    Reflects the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute.
+- {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : An array of elements that provide an error message for the element it is applied to.
+    Reflects the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute.
+- {{domxref("ElementInternals.ariaFlowToElements")}}
+  - : An array of elements that identify the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
+    Reflects the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute.
+- {{domxref("ElementInternals.ariaLabelledByElements")}}
+  - : An array of elements that provide the accessible name for the element it is applied to.
+    Reflects the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
+- {{domxref("ElementInternals.ariaOwnsElements")}}
+  - : An array of elements owned by the element this is applied to.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
+    Reflects the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute.
 
 ## Instance methods
 

@@ -57,4 +57,5 @@ Used in **all** roles. Usable in all HTML elements as well.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
+- {{domxref("Element.ariaDescribedByElements")}} and {{domxref("ElementInternals.ariaDescribedByElements")}}
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)

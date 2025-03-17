@@ -74,5 +74,6 @@ Used in **ALL** roles.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
+- {{domxref("Element.ariaDetailsElements")}} and {{domxref("ElementInternals.ariaDetailsElements")}}
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
 - HTML [title](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute

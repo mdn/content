@@ -171,11 +171,39 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaValueNow")}}
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
-
-  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
-
+  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of `aria-valuenow` for a range widget.
 - {{domxref("Element.role")}}
   - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute, which provides the semantic role of the element.
+
+#### Instance properties reflected from aria element references
+
+The properties reflect the elements specified by `id` reference in the corresponding attributes, but with some caveats. See [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide for more information.
+
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : An element that represents the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    Reflects the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute.
+- {{domxref("Element.ariaControlsElements")}}
+  - : An array of elements whose contents or presence are controlled by the element it is applied to.
+    Reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute.
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : An array of elements that contain the accessible description for the element it is applied to.
+    Reflects the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute.
+- {{domxref("Element.ariaDetailsElements")}}
+  - : An array of elements that provide accessible details for the element it is applied to.
+    Reflects the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute.
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : An array of elements that provide an error message for the element it is applied to.
+    Reflects the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute.
+- {{domxref("Element.ariaFlowToElements")}}
+  - : An array of elements that identify the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
+    Reflects the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute.
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : An array of elements that provide the accessible name for the element it is applied to.
+    Reflects the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute.
+- {{domxref("Element.ariaOwnsElements")}}
+  - : An array of elements owned by the element this is applied to.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
+    Reflects the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute.
 
 ## Instance methods
 
