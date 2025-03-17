@@ -40,6 +40,17 @@ A pseudo-element can be selected based on the current state of the originating e
 > [!NOTE]
 > When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
+## Nested pseudo-elements
+
+Some pseudo-element selectors can be chained together to enable styling pseudo-elements that are nested inside other pseudo-elements. The following nested pseudo-elements currently have styling support:
+
+- {{CSSxRef("::after")}}
+  - `::after::marker`: Selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item` (no other elements generate `::marker` pseudo-elements).
+- {{CSSxRef("::before")}}
+  - `::before::marker`: Selects the list {{CSSxRef("::marker")}} of a `::before` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
+
+Check out the individual pseudo-element reference pages to find examples and specific browser compatibility information.
+
 ## Typographic pseudo-elements
 
 - {{CSSxRef("::first-line")}}

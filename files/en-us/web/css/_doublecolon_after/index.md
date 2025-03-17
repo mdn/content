@@ -180,6 +180,48 @@ span[data-descr]:focus::after {
 
 {{EmbedLiveSample('Tooltips', 450, 120)}}
 
+### Styling `::after::marker` nested pseudo-elements
+
+The `::after::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nested_pseudo-elements) selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item` (no other elements generate `::marker` pseudo-elements).
+
+#### HTML
+
+```html
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul::before {
+  content: "Before";
+  display: list-item;
+}
+
+ul::after {
+  content: "After";
+  display: list-item;
+}
+
+::before::marker,
+::after::marker {
+  color: orange;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Styling `::after::marker` nested pseudo-elements', 450, 200)}}
+
 ## Specifications
 
 {{Specifications}}
