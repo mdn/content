@@ -121,8 +121,9 @@ Try the example by adding a name to the text box. The button will cause the name
   tabindex="0"
   onclick="handleCommand(event)"
   onKeyDown="handleCommand(event)"
-  >Add Name</span
 >
+  Add Name
+</span>
 ```
 
 #### CSS
@@ -191,7 +192,8 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 <button
   type="button"
   onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
+  onKeyDown="handleBtnKeyDown(event)"
+>
   Mute Audio
 </button>
 
@@ -200,13 +202,15 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
   tabindex="0"
   aria-pressed="false"
   onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
+  onKeyDown="handleBtnKeyDown(event)"
+>
   Mute Audio
 </span>
 
 <audio
   id="audio"
-  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
+  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3"
+>
   Your browser does not support the `audio` element.
 </audio>
 ```
