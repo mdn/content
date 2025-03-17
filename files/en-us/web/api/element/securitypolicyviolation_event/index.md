@@ -12,12 +12,12 @@ The **`securitypolicyviolation`** event is fired when a [Content Security Policy
 
 The event is fired on the element when there is a violation of the CSP policy.
 
-This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed).
-It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
-> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
+> You should generally add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
+> While the event may originate from HTML elements, JavaScript that assigns a handler to the element usually executes after the element has been loaded, by which time this event has already fired.
+> You can only successfully listen to this event if the loading starts after the listener is attached, usually by dynamically modifying the fetch target via JavaScript.
 
 ## Syntax
 
@@ -37,11 +37,9 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 
 ## Examples
 
-The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
+### Listening for securitypolicyviolation on Window
 
-> [!NOTE]
-> The example doesn't assign the handler directly to an element because, as noted above, for elements defined in HTML, the event would fired before this code could run.
-> You might however add the event listener directly to an element that is dynamically constructed!
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
 
 ```js
 window.onsecuritypolicyviolation = (e) => {
@@ -51,6 +49,31 @@ window.onsecuritypolicyviolation = (e) => {
 window.addEventListener("securitypolicyviolation", (e) => {
   // Handle SecurityPolicyViolationEvent e here
 });
+```
+
+### Listening for securitypolicyviolation on an element
+
+Generally, it is not possible to listen for the `securitypolicyviolation` event on an element. For example, if you have the code below:
+
+```html example-bad
+<img src="https://example.com/image.png" />
+<script>
+  document
+    .querySelector("img")
+    .addEventListener("securitypolicyviolation", (e) => {
+      // Handle SecurityPolicyViolationEvent e here
+    });
+</script>
+```
+
+Then the image loads as soon as the `<img>` element is parsed, and the `securitypolicyviolation` event has already fired by the time the script runs. You can only successfully listen to this event if the loading starts after the listener is attached, usually by dynamically modifying the fetch target via JavaScript.
+
+```js example-good
+const img = document.createElement("img");
+img.addEventListener("securitypolicyviolation", (e) => {
+  // Handle SecurityPolicyViolationEvent e here
+});
+img.src = "https://example.com/image.png"; // Loading starts here
 ```
 
 ## Specifications

@@ -15,8 +15,9 @@ The event is fired on the document when there is a violation of the document CSP
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
-> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
+> You should generally add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
+> While the event may originate from HTML elements, JavaScript that assigns a handler to the element usually executes after the element has been loaded, by which time this event has already fired.
+> You can only successfully listen to this event if the loading starts after the listener is attached, usually by dynamically modifying the fetch target via JavaScript.
 
 ## Syntax
 
