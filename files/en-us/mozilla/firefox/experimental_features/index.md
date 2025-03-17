@@ -289,8 +289,8 @@ The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/e
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>128</td>
-      <td>No</td>
+      <td>137</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
