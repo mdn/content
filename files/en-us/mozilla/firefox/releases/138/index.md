@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ## Changes for add-on developers
 
+- Support provided for `page_action` as a {{WebExtAPIRef("menus.ContextType")}} in the {{WebExtAPIRef("menus")}} API for Manifest V3 extensions. This enables Manifest V3 extensions to make full use of `page_action`. ([Firefox bug 1951166](https://bugzil.la/1951166))
+
 ### Removals
 
 ### Other
