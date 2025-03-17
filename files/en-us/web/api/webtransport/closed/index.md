@@ -10,7 +10,7 @@ browser-compat: api.WebTransport.closed
 
 The **`closed`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is closed.
 
-This promise is created when the `WebTransport` object is created and is resolved when the transport is closed in any way, such as by calling the {{domxref("WebTransport.close", "close()")}} method, when connection failed, or when the connection is closed by the server. Accessing or awaiting this promise does not trigger any action; it only allows actions to be taken when the transport is closed, similar to listening to an event.
+This promise is created when the `WebTransport` object is created and is resolved when the transport is closed in any way, such as by calling the {{domxref("WebTransport.close", "close()")}} method, when the connection failed, or when the connection is closed by the server. Accessing or awaiting this promise does not trigger any action; it only allows actions to be taken when the transport is closed, similar to listening to an event.
 
 ## Value
 
