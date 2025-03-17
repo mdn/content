@@ -15,9 +15,6 @@ The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific 
 /* Keywords */
 vector-effect: none;
 vector-effect: non-scaling-stroke;
-vector-effect: non-scaling-size;
-vector-effect: non-rotation;
-vector-effect: fixed-position;
 
 /* Global values */
 vector-effect: inherit;
