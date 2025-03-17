@@ -57,12 +57,9 @@ You can use this attribute with the following SVG elements:
   - : This value specifies that no vector effect shall be applied, i.e. the default rendering behavior is used which is to first fill the geometry of a shape with a specified paint, then stroke the outline with a specified paint.
 - `non-scaling-stroke`
   - : This value modifies the way an object is stroked. Normally stroking involves calculating stroke outline of the shape's path in current user coordinate system and filling that outline with the stroke paint (color or gradient). The resulting visual effect of this value is that the stroke width is not dependent on the transformations of the element (including non-uniform scaling and shear transformations) and zoom level.
-- `non-scaling-size`
-  - : This value specifies a special user coordinate system used by the element and its descendants. The scale of that user coordinate system does not change in spite of any transformation changes from a host coordinate space. However, it does not specify the suppression of rotation and skew. Also, it does not specify the origin of the user coordinate system. Since this value suppresses scaling of the user coordinate system, it also has the characteristics of `non-scaling-stroke`.
-- `non-rotation`
-  - : This value specifies a special user coordinate system used by the element and its descendants. The rotation and skew of that user coordinate system is suppressed in spite of any transformation changes from a host coordinate space. However, it does not specify the suppression of scaling. Also, it does not specify the origin of user coordinate system.
-- `fixed-position`
-  - : This value specifies a special user coordinate system used by the element and its descendants. The position of user coordinate system is fixed in spite of any transformation changes from a host coordinate space. However, it does not specify the suppression of rotation, skew and scaling. When this vector effect and the {{SVGAttr("transform")}} property are defined at the same time, that property is consumed for this effect.
+
+> [!NOTE]
+> The spec defines three other values, `non-scaling-size`, `non-rotation`, and `fixed-position`, but these have no implementations and are considered at-risk.
 
 ## Examples
 

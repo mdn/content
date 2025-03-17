@@ -519,7 +519,7 @@
 /en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
-/en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/Replaced_element
+/en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties
@@ -5779,6 +5779,7 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/The_box_model	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
 /en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
+/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
@@ -12167,6 +12168,7 @@
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/WebKit_Extensions
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
+/en-US/docs/Web/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
 /en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_selectors
