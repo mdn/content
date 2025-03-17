@@ -28,7 +28,7 @@ btoa(stringToEncode)
 ### Parameters
 
 - `stringToEncode`
-  - : The _binary string_ to encode.
+  - : The _binary string_ to encode. Strings in JavaScript are encoded as UTF-16, so this means each character must have a code point less than 256, representing one byte of data.
 
 ### Return value
 

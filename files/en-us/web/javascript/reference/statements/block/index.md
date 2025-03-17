@@ -9,7 +9,7 @@ browser-compat: javascript.statements.block
 
 A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
 
-{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+{{InteractiveExample("JavaScript Demo: Block statement", "taller")}}
 
 ```js interactive-example
 var x = 1;

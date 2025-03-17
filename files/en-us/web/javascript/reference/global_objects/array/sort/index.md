@@ -14,7 +14,7 @@ implementation.
 
 To sort the elements in an array without mutating the original array, use {{jsxref("Array/toSorted", "toSorted()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.sort()")}}
 
 ```js interactive-example
 const months = ["March", "Jan", "Feb", "Dec"];

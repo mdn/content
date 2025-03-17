@@ -15,7 +15,37 @@ spec-urls:
 
 The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Defining _complementary colors_ with `hsl()` can be done by adding or subtracting 180 degrees from the hue value, as they are positioned on the same diameter of the {{glossary("color wheel")}}. For example, if the hue angle of a color is `10deg`, its complementary has `190deg` as its hue angle.
 

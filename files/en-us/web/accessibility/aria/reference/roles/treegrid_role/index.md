@@ -151,5 +151,3 @@ It is important for all cells to be able to receive or contain keyboard focus be
 ## Specifications
 
 {{Specifications}}
-
-## See also

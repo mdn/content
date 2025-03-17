@@ -12,7 +12,7 @@ equal, returning a Boolean result. Unlike the [equality](/en-US/docs/Web/JavaScr
 the strict equality operator always considers operands of different types to be
 different.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+{{InteractiveExample("JavaScript Demo: Strict equality (===) operator")}}
 
 ```js interactive-example
 console.log(1 === 1);

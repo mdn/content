@@ -8,7 +8,7 @@ browser-compat: css.at-rules.property.syntax
 {{CSSRef}}
 
 The **`syntax`** descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) defines the allowed value types for the registered [CSS custom property](/en-US/docs/Web/CSS/--*).
-It controls how the property's specified value is processed to derive the {{cssxref("computed_value","computed value")}}.
+It controls how the property's specified value is processed to derive the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value).
 It is a required descriptor; if missing or invalid, the entire `@property` rule is invalid and ignored.
 
 ## Syntax

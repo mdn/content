@@ -91,10 +91,10 @@ Supports-Loading-Mode: fenced-frame
 
 Other effects of fenced frames on HTTP headers are as follows:
 
-- [User-agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
-- Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside fenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
-- [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) has been added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
-- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, you need to specify no `sandbox` CSP (which implies the below values), or specify the following sandbox values:
+- [User-agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) are not available inside fenced frames because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
+- Strict [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) settings are enforced on new browsing contexts opened from inside fenced frames, otherwise they could be used to leak information to other origins. Any new window opened from inside a fenced frame will have [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) and `Cross-Origin-Opener-Policy: same-origin` set to ensure that {{domxref("Window.opener")}} returns `null` and place it in its own browsing context group.
+- [`Content-Security-Policy: fenced-frame-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) has been added for specifying valid sources for nested browsing contexts loaded into `<fencedframe>` elements.
+- [`Content-Security-Policy: sandbox`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) custom settings cannot be inherited by fenced frames, to mitigate privacy issues. For a fenced frame to load, you need to specify no `sandbox` CSP (which implies the below values), or specify the following sandbox values:
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`

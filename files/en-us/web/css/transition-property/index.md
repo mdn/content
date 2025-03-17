@@ -9,7 +9,47 @@ browser-compat: css.properties.transition-property
 
 The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
 
-{{EmbedInteractiveExample("pages/css/transition-property.html")}}
+{{InteractiveExample("CSS Demo: transition-property")}}
+
+```css interactive-example-choice
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-property: all;
+```
+
+```css interactive-example-choice
+transition-property: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 If you specify a shorthand property (e.g., {{cssxref("background")}}), all of its longhand sub-properties that can be animated will be.
 

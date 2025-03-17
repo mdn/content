@@ -36,7 +36,7 @@ None
 
 ## Examples
 
-Here's a fake simple banner with a skip to navigation link, a logo, a title and a subtitle. As this is the main header for the site, we've added the `banner` landmark role to the container element.
+Here's a fake banner with a skip to navigation link, a logo, a title and a subtitle. As this is the main header for the site, we've added the `banner` landmark role to the container element.
 
 ```html
 <div role="banner">

@@ -71,7 +71,7 @@ Let's try out grid layouts, here is an example with a container, which has some 
 
 ```css live-sample___simple-grid_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -99,7 +99,7 @@ Similar to how you define flexbox, you define a grid layout by setting the value
 
 ```css hidden live-sample___simple-grid_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -135,7 +135,7 @@ To see something that looks more grid-like, we'll need to add some columns to th
 
 ```css hidden live-sample___simple-grid_2
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -174,7 +174,7 @@ In addition to creating grids using lengths and percentages, we can use [`fr`](/
 
 ```css hidden live-sample___grid-fr-unit_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -211,7 +211,7 @@ You now have flexible tracks. The `fr` unit distributes space proportionally. Yo
 
 ```css hidden live-sample___grid-fr-unit_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -259,7 +259,7 @@ To create gaps between tracks, we use the properties:
 
 ```css hidden live-sample___grid-gap
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -302,7 +302,7 @@ Here we change the track listing to the following:
 
 ```css hidden live-sample___grid-repeat
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -348,7 +348,7 @@ By default, tracks created in the implicit grid are `auto` sized, which in gener
 
 ```css hidden live-sample___grid-auto
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -389,7 +389,7 @@ The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum
 
 ```css hidden live-sample___grid-minmax_0
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;
@@ -430,7 +430,7 @@ We can combine some of the lessons we've learned about track listing, repeat not
 
 ```css hidden live-sample___grid-minmax_1
 body {
-  font: sans-serif;
+  font-family: sans-serif;
 }
 .container > div {
   border-radius: 5px;

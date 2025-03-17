@@ -9,7 +9,66 @@ browser-compat: css.properties.table-layout
 
 The **`table-layout`** [CSS](/en-US/docs/Web/CSS) property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
 
-{{EmbedInteractiveExample("pages/css/table-layout.html")}}
+{{InteractiveExample("CSS Demo: table-layout")}}
+
+```css interactive-example-choice
+table-layout: auto;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 150px;
+```
+
+```css interactive-example-choice
+table-layout: auto;
+width: 100%;
+```
+
+```css interactive-example-choice
+table-layout: fixed;
+width: 100%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Lion</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Norwegian Lemming</td>
+      <td>Europe</td>
+    </tr>
+    <tr>
+      <td>Seal</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  border: 1px solid #139;
+}
+
+th,
+td {
+  border: 2px solid #a19;
+  padding: 0.25rem 0.5rem;
+}
+```
 
 ## Syntax
 

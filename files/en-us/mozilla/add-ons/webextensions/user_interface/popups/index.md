@@ -12,7 +12,7 @@ A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozill
 
 When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript; it can be opened only in response to a user action.
 
-You can define a keyboard shortcut that opens the popup using the `"_execute_browser_action"` and `"_execute_page_action"` shortcuts in Manifest V2 and `"_execute_action"`and, where supported, `"_execute_page_action"` shortcuts in Manifest V3. See the documentation for the special shortcuts in manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts).
+You can define a keyboard shortcut that opens the popup using the `"_execute_browser_action"` and `"_execute_page_action"` shortcuts in Manifest V2 and `"_execute_action"` and, where supported, `"_execute_page_action"` shortcuts in Manifest V3. See the documentation for the special shortcuts in manifest.json key [`commands`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts).
 
 ## Specifying a popup
 

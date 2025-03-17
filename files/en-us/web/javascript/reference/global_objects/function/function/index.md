@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.Function
 
 The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
 
-{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Function() constructor", "shorter")}}
 
 ```js interactive-example
 const sum = new Function("a", "b", "return a + b");
@@ -38,7 +38,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 
 - `arg1`, …, `argN` {{optional_inline}}
 
-  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
+  - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
 
     As the parameters are parsed in the same way as function expressions, whitespace and comments are accepted. For example: `"x", "theValue = 42", "[a, b] /* numbers */"` — or `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` is also correct, though very confusing to read.)
 

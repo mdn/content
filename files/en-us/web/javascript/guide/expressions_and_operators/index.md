@@ -120,7 +120,7 @@ It is an error to assign values to unmodifiable properties or to properties of a
 
 ### Destructuring
 
-For more complex assignments, the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
+For more complex assignments, the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
 object literals.
 
 Without destructuring, it takes multiple statements to extract values from arrays and objects:

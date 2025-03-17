@@ -172,7 +172,7 @@ new WeakSet(
 
 ### Syntaxes expecting iterables
 
-Some statements and expressions expect iterables, for example the {{jsxref("Statements/for...of", "for...of")}} loops, [array and parameter spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), {{jsxref("Operators/yield*", "yield*")}}, and [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the {{jsxref("Statements/for...of", "for...of")}} loops, [array and parameter spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), {{jsxref("Operators/yield*", "yield*")}}, and [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js
 for (const value of ["a", "b", "c"]) {

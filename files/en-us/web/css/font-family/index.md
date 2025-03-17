@@ -9,7 +9,49 @@ browser-compat: css.properties.font-family
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
 

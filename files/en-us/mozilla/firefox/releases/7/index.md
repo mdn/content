@@ -45,7 +45,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](</en-US/docs/Web/MathML/Reference/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 

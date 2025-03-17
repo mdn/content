@@ -8,7 +8,7 @@ page-type: guide
 
 A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an algorithm that determines the position and size of boxes based on the way they interact with their sibling and ancestor boxes. There are several of them:
 
-- _[Normal flow](/en-US/docs/Web/CSS/CSS_display/flow_layout)_ — all elements are part of normal flow until you do something to take them out of it. Normal flow includes _block layout_, designed for laying out boxes such as paragraphs and _inline layout_, which lays out inline items such as text.
+- _[Normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)_ — all elements are part of normal flow until you do something to take them out of it. Normal flow includes _block layout_, designed for laying out boxes such as paragraphs and _inline layout_, which lays out inline items such as text.
 - [_Table layout_](/en-US/docs/Web/CSS/CSS_table), designed for laying out tables.
 - _Float layout_, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
 - [_Positioned layout_](/en-US/docs/Web/CSS/CSS_positioned_layout), designed for positioning elements without much interaction with other elements.
@@ -37,4 +37,4 @@ A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an a
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - {{glossary("Replaced elements")}}

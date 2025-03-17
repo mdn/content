@@ -9,7 +9,42 @@ browser-compat: css.properties.columns
 
 The **`columns`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
 
-{{EmbedInteractiveExample("pages/css/columns.html")}}
+{{InteractiveExample("CSS Demo: columns")}}
+
+```css interactive-example-choice
+columns: 2;
+```
+
+```css interactive-example-choice
+columns: 6rem auto;
+```
+
+```css interactive-example-choice
+columns: 12em;
+```
+
+```css interactive-example-choice
+columns: 3;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 21rem;
+  text-align: left;
+}
+```
 
 ## Constituent properties
 

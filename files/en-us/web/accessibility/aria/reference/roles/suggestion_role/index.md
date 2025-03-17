@@ -49,5 +49,3 @@ Using the [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
-
-## See also

@@ -9,7 +9,55 @@ browser-compat: css.properties.margin-left
 
 The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
-{{EmbedInteractiveExample("pages/css/margin-left.html")}}
+{{InteractiveExample("CSS Demo: margin-left")}}
+
+```css interactive-example-choice
+margin-left: 1em;
+```
+
+```css interactive-example-choice
+margin-left: 10%;
+```
+
+```css interactive-example-choice
+margin-left: 10px;
+```
+
+```css interactive-example-choice
+margin-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
 
 The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 

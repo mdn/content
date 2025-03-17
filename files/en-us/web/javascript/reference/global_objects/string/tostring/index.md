@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.toString
 
 The **`toString()`** method of {{jsxref("String")}} values returns this string value.
 
-{{InteractiveExample("JavaScript Demo: String.toString()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toString()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.encodeURIComponent
 
 The **`encodeURIComponent()`** function encodes a {{Glossary("URI")}} by replacing each instance of certain characters by one, two, three, or four escape sequences representing the {{Glossary("UTF-8")}} encoding of the character (will only be four escape sequences for characters composed of two surrogate characters). Compared to {{jsxref("encodeURI()")}}, this function encodes more characters, including those that are part of the URI syntax.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: encodeURIComponent()", "shorter")}}
 
 ```js interactive-example
 // Encodes characters such as ?,=,/,&,:
