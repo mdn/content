@@ -37,6 +37,7 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/SVG/Reference/Element
+    link: /Web/SVG/Reference/Element
     title: Elements
     details: closed
     code: true
