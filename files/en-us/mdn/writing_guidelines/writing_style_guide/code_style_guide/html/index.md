@@ -29,8 +29,6 @@ You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 ```html example-good
 <!doctype html>
 ```
-> [!NOTE]  
-> The <!doctype html> declaration is case-insensitive and is commonly written as <!DOCTYPE html>.
 
 ### Document language
 
