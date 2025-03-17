@@ -48,8 +48,8 @@ When the user loads the page, the browser tries to fetch the image resource, whi
 In general, a CSRF attack is possible if your website:
 
 - Uses HTTP requests to change some state on the server.
-- Uses cookies to validate that the request came from an authenticated user.
-- Uses parameters in the request that an attacker can predict.
+- Uses only cookies to validate that the request came from an authenticated user.
+- Uses only parameters in the request that an attacker can predict.
 
 ## Defenses against CSRF
 
@@ -115,12 +115,10 @@ The server can then check for the existence of the header: if it exists, then th
 
 We've said that non-simple requests are _by default_ not sent cross-origin. The catch is that the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) protocol allows a website to relax this restriction.
 
-When a site issues a non-simple request cross-origin, the browser sends a {{glossary("Preflight request", "preflight request")}}. This asks the server if it is prepared to accept the request.
+Specifically, your website will be vulnerable to a CSRF attack from a particular origin if its response to a state-changing request includes:
 
-- If the server responds with an {{httpheader("Access-Control-Allow-Origin")}} response header which matches the sender's origin, then the browser will send the real request.
-- If the server also sends an {{httpheader("Access-Control-Allow-Credentials")}} response header, then the real request is allowed to include the site's credentials.
-
-This is obviously useful in cases where you want to accept requests from some other origins. However, it means that if your server sends an `Access-Control-Allow-Origin` response header including the sender's origin, and an `Access-Control-Allow-Credentials` response header, then the server is vulnerable to a CSRF attack from that origin.
+- The {{httpheader("Access-Control-Allow-Origin")}} response header, and the header lists the sender's origin
+- The {{httpheader("Access-Control-Allow-Credentials")}} response header.
 
 ### Defense in depth: SameSite cookies
 
