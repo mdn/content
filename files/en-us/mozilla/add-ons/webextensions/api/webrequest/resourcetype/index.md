@@ -26,7 +26,7 @@ Values of this type are strings. Possible values are:
 - `imageset`
   - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute.
 - `json`
-  - : JSON modules loaded through an import statement.
+  - : JSON modules loaded through an [import statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `main_frame`
   - : Top-level documents loaded into a tab.
 - `media`
