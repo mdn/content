@@ -132,7 +132,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 
 ### Errors example
 
-In this example the first paragraph contains a spelling mistake and uses the browsers styling for spelling errors is used on the misspelled word. The second paragraph uses the browsers styling for grammar errors. Browser that do not support these there is no line.
+In this example, the first paragraph contains a spelling mistake and uses the browser's styling for spelling errors on the misspelled word. The second paragraph uses the browser's styling for grammar errors. There is no styling change in browsers that do not support these `text-decoration-line` values.
 
 ```html
 <p>This text contains a <span class="spelling">speling</span> mistake.</p>
