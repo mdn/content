@@ -23,13 +23,13 @@ You don't! The feature is enabled by default in supporting browsers. In most cas
 
 If your page is not behaving well with scroll anchoring enabled, it is probably because some `scroll` event listener is not handling the extra scrolling to compensate for the anchor node movement.
 
-You can check whether disabling scroll anchoring fixes the issue in Firefox by changing `layout.css.scroll-anchoring.enabled` to `false` in `about:config`. If it does, you can check what node is Firefox using as the anchor using the `layout.css.scroll-anchoring.highlight` switch. That will show a purple overlay on top of the anchor node.
+You can check whether disabling scroll anchoring fixes the issue in Firefox by changing `layout.css.scroll-anchoring.enabled` to `false` in `about:config`. You can also check what node Firefox is using as the anchor using the `layout.css.scroll-anchoring.highlight` switch. That will show a purple overlay on top of the anchor node.
 
 If a node doesn't seem to be an appropriate anchor, you can exclude it using {{cssxref("overflow-anchor")}}, as described below.
 
 ## What if I need to disable it?
 
-The [CSS scroll anchoring module](/en-US/docs/Web/CSS/CSS_scroll_anchoring) provides the {{cssxref("overflow-anchor")}} property which can be used to disable scroll anchoring on all or part of the document. It's essentially a way to opt out of the behavior.
+The [CSS scroll anchoring module](/en-US/docs/Web/CSS/CSS_scroll_anchoring) provides the {{cssxref("overflow-anchor")}} property, which can be used to disable scroll anchoring on all or part of the document. It's essentially a way to opt out of the behavior.
 
 The only possible values are `auto` or `none`:
 
@@ -44,7 +44,7 @@ body {
 }
 ```
 
-To opt out section of the document, set `overflow-anchor: none` on the section's container element:
+To opt out a section of the document, set `overflow-anchor: none` on the section's container element:
 
 ```css
 .container {
@@ -52,7 +52,7 @@ To opt out section of the document, set `overflow-anchor: none` on the section's
 }
 ```
 
-If opting out of scroll anchoring on the document or a section thereof, a descendent of an opted-out area can not be opted back in. For example, if you opt out for the entire document, you will not be able to set `overflow-anchor: auto` elsewhere in the document to turn it back on for a subsection.
+If opting out of scroll anchoring on the document or a section thereof, a descendent of an opted-out area cannot be opted back in. For example, if you opt out the entire document, you can't set `overflow-anchor: auto` on a descendant node to turn scroll anchoring back on for a subsection.
 
 ### Suppression triggers
 
