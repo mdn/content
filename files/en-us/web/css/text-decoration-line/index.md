@@ -97,7 +97,7 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
   - : Each line of text uses the user agents' method of highlighting grammar mistakes, which is a dotted green line in most browsers.
 
 > [!NOTE]
-> When using `spelling-error`, and `grammar-error` values for `text-decoration-line`, the user agent disregards the other sub-properties of {{cssxref("text-decoration")}} (such as {{cssxref("text-underline-position")}}, `color`, or `stroke`).
+> When using `spelling-error` and `grammar-error` values, the browser disregards the other properties in the {{cssxref("text-decoration")}} shorthand (such as {{cssxref("text-underline-position")}}, `color`, or `stroke`).
 
 ## Formal definition
 
