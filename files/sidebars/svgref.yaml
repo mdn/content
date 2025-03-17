@@ -42,6 +42,7 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/SVG/Reference/Attribute
+    link: /Web/SVG/Reference/Attribute
     title: Attributes
     details: closed
     code: true
