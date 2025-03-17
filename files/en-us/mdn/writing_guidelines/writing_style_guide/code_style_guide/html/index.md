@@ -94,7 +94,7 @@ This is perfectly understandable and works fine. If a boolean HTML attribute is 
 
 ## Casing convention on MDN
 
-Use lowercase for all HTML tags, including the doctype declaration, element names, and attribute names/values, which are case-insensitive. This creates a consistent appearance and allows for faster markup writing. This convention applies to all case-insensitive contexts.
+Use lowercase for all case-insensitive constructs, including the doctype declaration, element names, and attribute names/values. This creates a consistent appearance and allows for faster markup writing.
 
 ```html example-good
 <p class="nice">This looks nice and neat</p>
