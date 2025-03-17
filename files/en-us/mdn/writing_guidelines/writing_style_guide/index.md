@@ -381,6 +381,8 @@ yarn lint:typos
 
 In the repository, we maintain several word lists, located at [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries), that contain sanctioned words not in the default dictionaries. You can add more words to these lists if they are valid but reported by the spell checker. Read [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) to understand what each dictionary contains and the details of our spell-checking configuration.
 
+Use the filler lorem-ipsum text from [`www.lipsum.com`](https://www.lipsum.com) or [`lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VSCode pluging.
+
 ### Terminology
 
 These are our recommendations for using certain technical terms:
