@@ -265,6 +265,6 @@ p {
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual-value) values
 - {{glossary("Replaced elements")}}
 - {{glossary("Intrinsic size")}}

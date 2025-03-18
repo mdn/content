@@ -13,7 +13,7 @@ The **specified value** of a [CSS](/en-US/docs/Web/CSS) property is the value it
 
 1. If the document's style sheet explicitly specifies a value for the property, the given value will be used.
 2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
-3. If none of the above apply, the element's [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) will be used.
+3. If none of the above apply, the element's [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value) will be used.
 
 ## Examples
 
@@ -67,7 +67,7 @@ p {
 - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value), [used](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual-value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - {{glossary("Replaced elements")}}

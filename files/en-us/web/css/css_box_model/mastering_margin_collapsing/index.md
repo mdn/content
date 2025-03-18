@@ -81,11 +81,7 @@ p {
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+  - [Property values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

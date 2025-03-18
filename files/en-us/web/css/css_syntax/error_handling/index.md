@@ -171,7 +171,7 @@ Custom properties are generally considered valid when declared, but may create i
 
 Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 
-When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
+When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
 
 Let's look at an example to illustrate this behavior:
 
