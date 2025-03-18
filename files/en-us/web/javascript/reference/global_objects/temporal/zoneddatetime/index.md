@@ -160,7 +160,7 @@ When constructing a `ZonedDateTime` with {{jsxref("Temporal/ZonedDateTime/from",
 - `prefer`
   - : Use the offset if it's valid, otherwise calculate the offset from the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} (see the method for more details). This is different from `ignore` because in the case of local time ambiguity, the offset is used to resolve it rather than the `disambiguation` option.
 
-Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time. In other words, `Z` enforces the same behavior as the `ignore` option and its results can never be ambiguous.
+Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time.
 
 > [!NOTE]
 > Although {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} also takes an [RFC 9557](#rfc_9557_format) string in the same form, there is no ambiguity because it always ignores the time zone identifier and reads the offset only.
