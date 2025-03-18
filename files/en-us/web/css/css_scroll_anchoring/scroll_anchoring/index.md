@@ -44,7 +44,7 @@ body {
 }
 ```
 
-To opt out a section of the document, set `overflow-anchor: none` on the section's container element:
+To opt out of scroll anchoring for a section of the document, set `overflow-anchor: none` on the section's container element:
 
 ```css
 .container {
