@@ -6,13 +6,13 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, checkbox to indicate which item is currently selected, each individual {{htmlelement("option")}} element, and more besides.
+This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 
 ## Background
 
 Traditionally it has been difficult to customize the look and feel of `<select>` elements because they contain internals that are styled at the operating system level, which can't be targeted using CSS. This includes the drop-down picker, arrow icon, etc.
 
-Previously, the best available option aside from using a custom JavaScript library was to set an {{cssxref("appearance")}} value of `none` on the `<select>` element to strip away some of the OS-level styling, and then use CSS to customize the bits that cna be styled. This technique is explained in [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
+Previously, the best available option aside from using a custom JavaScript library was to set an {{cssxref("appearance")}} value of `none` on the `<select>` element to strip away some of the OS-level styling, and then use CSS to customize the bits that can be styled. This technique is explained in [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS:
 
@@ -24,9 +24,12 @@ You'll find out how to build this example in the sections below.
 
 You can build customizable `<select>` elements using the following HTML and CSS features:
 
-- Plain old {{htmlelement("select")}}, {{htmlelement("option")}}, and {{htmlelement("optgroup")}} elements. The new features are built on top of existing select functionality as progressive enhancements, meaning that customizable selects can be easily designed to fall back to classic selects in non-supporting browsers.
-- The {{htmlelement("selectedcontent")}} element, which contains a clone of the currently-selected `<option>` element's content (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This is the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}** (as it is the button you need to press to open the drop-down menu).
-- The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the select drop-down menu, otherwise known as the **picker**. The picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`.
+- Plain old {{htmlelement("select")}}, {{htmlelement("option")}}, and {{htmlelement("optgroup")}} elements. These work just the same as in "classic" selects, except that they have additional permitted content types. The new features are built on top of existing select functionality as progressive enhancements, meaning that customizable selects can be designed to fall back to "classic" selects in non-supporting browsers.
+- A {{htmlelement("button")}} element included as the first child inside the `<select>` element, which wasn't previously allowed in "classic" selects. When this is included, it replaces the default "button" rendering of the closed `<select>` element. You can then include arbitary content inside the `<button>`, to render whatever you want inside the closed `<select>`. This is comonly known as the **select {{htmlelement("button")}}** (as it is the button you need to press to open the drop-down menu).
+  > [!NOTE]
+  > The select `<button>` is {{glossary("inert")}} by default, to avoid any strange behavior caused by interactive children.
+- The {{htmlelement("selectedcontent")}} element, which can be included inside the `<select>` element's first child `<button>` element. This contains a clone of the currently-selected `<option>` element's content (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). In effect, this allows you to display the currently selected value inside the closed `<select>` element.
+- The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the select drop-down menu, otherwise known as the **picker**. The browser puts all of the `<select>` element's content that isn't the first child `<button>` inside the picker.
 - The {{cssxref("appearance")}} property value `base-select`, which opts the `<select>` element and the `::picker(select)` pseudo-element into the browser-defined default styles and behavior for customizable select.
 - The {{cssxref(":open")}} pseudo-class, which targets the select `<button>` when the picker (`::picker(select)`) is open.
 - The {{cssxref("::picker-icon")}} pseudo-element, which targets the picker icon inside the select `<button>` — the down-facing arrow on the inline-end side.
@@ -82,7 +85,7 @@ Our example is a typical {{htmlelement("select")}} menu that allows you to choos
 
 This is nearly the same as "classic" `<select>` markup, with the following differences:
 
-- The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element contains a clone of the currently-selected {{htmlelement("option")}} (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will place the selected option content inside the select button implicitly, but you won't be able to select it using CSS.
+- The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element contains a clone of the currently-selected {{htmlelement("option")}} (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will fall back to rendering the selected option's text inside the default button, and you won't be able to style it as easily.
 - The rest of the `<select>` contents represents the picker (the `<select>` drop-down menu). This obviously includes the `<option>` elements representing the different choices in the picker, but you can also include other content if desired.
 - Traditionally, `<option>` elements could only contain text, but in a customizable select you can include markup structures including images and more besides. In our example, each `<option>` contains two {{htmlelement("span")}} elements containing an icon and a text label respectively, allowing each one to be styled and positioned independently.
 
@@ -137,7 +140,7 @@ select {
 }
 ```
 
-You can choose to opt-in one or the other, but in most cases you'll want to opt-in both.
+You can choose to opt-in just the `<select>` element to the new functionality, leaving the picker with the default OS styling, but in most cases, you'll want to opt-in both. You can't opt-in the picker without opting in the `<select>` element.
 
 Once this is done, the result is a very plain rendering of a `<select>` element:
 
@@ -228,7 +231,7 @@ option:not(option:last-of-type) {
 }
 ```
 
-Next a different `background` color is set on the odd-numbered `<options>` using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<options>` on focus and hover, to provide a useful visual highlight during selection:
+Next a different `background` color is set on the odd-numbered `<option>` elements using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and a different `background` color is set on the `<option>` elements on focus and hover, to provide a useful visual highlight during selection:
 
 ```css live-sample___third-render live-sample___fourth-render live-sample___full-render
 option:nth-of-type(odd) {
@@ -318,7 +321,7 @@ The list of transitioned properties features `opacity`, however it also includes
 - {{cssxref("display")}}
   - : The `display` values changes from `none` to `block` when the popover changes state from hidden to shown. This needs to be animated to ensure that other transitions are visible.
 - {{cssxref("overlay")}}
-  - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the {{glossary("top layer")}}, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, again ensuring the transition is visible.
+  - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the {{glossary("top layer")}}, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, ensuring the transition is visible.
 
 > [!NOTE]
 > The [`allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete) value is needed to enable discrete property animations.
