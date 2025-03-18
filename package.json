@@ -18,12 +18,9 @@
   },
   "type": "module",
   "scripts": {
-    "info:deprecated": "node -e \"process.stderr.write('\\n🗑️  This command is deprecated, and will be removed soon.\\n\\n')\"",
     "info:rari": "node -e \"process.stderr.write('\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n')\"",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
-    "build:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
     "content": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files rari-tool",
-    "content:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files yari-tool",
     "filecheck": "env-cmd --silent cross-env CONTENT_ROOT=files yari-filecheck --cwd=.",
     "fix:fm": "node scripts/front-matter_linter.js --fix true",
     "fix:js": "prettier -w \"**/*.(m)?js\"",
@@ -40,8 +37,6 @@
     "lint:typos-words-only": "cspell --no-progress --gitignore --words-only --unique --config .vscode/cspell.json \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "start": "yarn -s info:rari && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
-    "start:legacy": "yarn -s info:deprecated && yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
-    "start:rari": "yarn -s info:deprecated && yarn start",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
