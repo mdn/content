@@ -11,7 +11,7 @@ The **`lastIndexOf()`** method of {{jsxref("Array")}} instances returns the last
 a given element can be found in the array, or -1 if it is not present. The array is
 searched backwards, starting at `fromIndex`.
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.lastIndexOf()")}}
 
 ```js interactive-example
 const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];

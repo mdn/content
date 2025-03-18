@@ -41,17 +41,17 @@ No notable changes
 
 #### WebDriver BiDi
 
-- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzilla.mozilla.org/show_bug.cgi?id=1855025))
-- Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzilla.mozilla.org/show_bug.cgi?id=1904892) and [Firefox bug 1933331](https://bugzilla.mozilla.org/show_bug.cgi?id=1933331)). They allow to understand why and how the request was created.
-- The `browsingContext.navigationStarted` event is no longer emitted when the initial about:blank page is loaded for a new top-level browsing context ([Firefox bug 1922014](https://bugzilla.mozilla.org/show_bug.cgi?id=1922014))
-- We fixed a bug where the `requestTime` of network events would sometimes be set to 0 ([Firefox bug 1930849](https://bugzilla.mozilla.org/show_bug.cgi?id=1930849))
-- The `browsingContext.traverseHistory` command can now only be used with top-level browsing contexts ([Firefox bug 1924859](https://bugzilla.mozilla.org/show_bug.cgi?id=1924859))
-- Improved the reliability of commands sent during a navigation, for instance when a browsing context is being replaced ([Firefox bug 1927073](https://bugzilla.mozilla.org/show_bug.cgi?id=1927073)).
+- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzil.la/1855025))
+- Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzil.la/1904892) and [Firefox bug 1933331](https://bugzil.la/1933331)). They allow to understand why and how the request was created.
+- The `browsingContext.navigationStarted` event is no longer emitted when the initial about:blank page is loaded for a new top-level browsing context ([Firefox bug 1922014](https://bugzil.la/1922014))
+- We fixed a bug where the `requestTime` of network events would sometimes be set to 0 ([Firefox bug 1930849](https://bugzil.la/1930849))
+- The `browsingContext.traverseHistory` command can now only be used with top-level browsing contexts ([Firefox bug 1924859](https://bugzil.la/1924859))
+- Improved the reliability of commands sent during a navigation, for instance when a browsing context is being replaced ([Firefox bug 1927073](https://bugzil.la/1927073)).
 
 #### Marionette
 
-- The `Addon:Install` and `Addon:Uninstall` commands are now available for GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzilla.mozilla.org/show_bug.cgi?id=1806135)).
-- The `Addon:Install` command can now be used to install extensions enabled in Private Browsing mode ([Firefox bug 1810718](https://bugzilla.mozilla.org/show_bug.cgi?id=1810718))
+- The `Addon:Install` and `Addon:Uninstall` commands are now available for GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzil.la/1806135)).
+- The `Addon:Install` command can now be used to install extensions enabled in Private Browsing mode ([Firefox bug 1810718](https://bugzil.la/1810718))
 
 ## Experimental web features
 

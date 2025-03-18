@@ -142,7 +142,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 #### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
 #### Templates
 
@@ -192,7 +192,7 @@ It also provides examples, browser compatibility information, and other importan
 
 #### Example
 
-- [Cache-Control header](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control header](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 #### Templates
 

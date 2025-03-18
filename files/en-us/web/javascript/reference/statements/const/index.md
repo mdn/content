@@ -7,9 +7,9 @@ browser-compat: javascript.statements.const
 
 {{jsSidebar("Statements")}}
 
-The **`const`** declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), but if a constant is an [object](/en-US/docs/Web/JavaScript/Data_structures#objects), its properties can be added, updated, or removed.
+The **`const`** declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), but if a constant is an [object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects), its properties can be added, updated, or removed.
 
-{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+{{InteractiveExample("JavaScript Demo: const declaration")}}
 
 ```js interactive-example
 const number = 42;
@@ -35,7 +35,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valueN`
   - : Initial value of the variable. It can be any legal expression.
 
@@ -147,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+For more information, see [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ## Specifications
 

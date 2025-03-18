@@ -9,7 +9,41 @@ browser-compat: css.types.angle
 
 The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
 
-{{EmbedInteractiveExample("pages/css/type-angle.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+
+```css interactive-example-choice
+transform: rotate(45deg);
+```
+
+```css interactive-example-choice
+transform: rotate(3.1416rad);
+```
+
+```css interactive-example-choice
+transform: rotate(-50grad);
+```
+
+```css interactive-example-choice
+transform: rotate(1.75turn);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This box can rotate to different angles.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #0118f3;
+  padding: 0.75em;
+  width: 180px;
+  height: 120px;
+  color: white;
+}
+```
 
 ## Syntax
 

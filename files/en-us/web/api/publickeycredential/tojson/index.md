@@ -52,6 +52,11 @@ The object properties are:
 
     - When authenticating a user the returned value will be a JSON-type representation version of {{domxref("AuthenticatorAssertionResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
+
 ## Examples
 
 When registering a new user, a relying party server will supply information about the expected credentials to the web app.

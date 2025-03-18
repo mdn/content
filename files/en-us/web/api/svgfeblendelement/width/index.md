@@ -10,9 +10,9 @@ browser-compat: api.SVGFEBlendElement.width
 
 The **`width`** read-only property of the {{domxref("SVGFEBlendElement")}} interface describes the horizontal size of an SVG filter primitive as a {{domxref("SVGAnimatedLength")}}.
 
-It reflects the {{SVGElement("feBlend")}} element's {{SVGAttr("width")}} filter primitive attribute. The attribute is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage) relative to the width of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
+It reflects the {{SVGElement("feBlend")}} element's {{SVGAttr("width")}} filter primitive attribute. The attribute is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage) relative to the width of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
 
-The `<feBlend>` SVG filter blends two input images together using commonly used imaging software {{cssxref("blend-mode", "blending modes")}}.
+The `<feBlend>` SVG filter blends two input images together using commonly used imaging software [blending modes](/en-US/docs/Web/CSS/blend-mode).
 
 ## Value
 

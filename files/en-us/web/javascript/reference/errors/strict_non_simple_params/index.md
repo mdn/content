@@ -10,7 +10,7 @@ The JavaScript exception "`"use strict"` not allowed in function" occurs
 when a `"use strict"` directive is used at the top of a function with
 {{jsxref("Functions/Default_parameters", "default parameters", "", 1)}},
 {{jsxref("Functions/rest_parameters", "rest parameters", "", 1)}}, or
-{{jsxref("Operators/Destructuring_assignment", "destructuring parameters", "", 1)}}.
+{{jsxref("Operators/Destructuring", "destructuring parameters", "", 1)}}.
 
 ## Message
 
@@ -33,7 +33,7 @@ of the following parameters:
 
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}
 
 A `"use strict"` directive is not allowed at the top of such functions per
 the ECMAScript specification.
@@ -118,4 +118,4 @@ const callback = (() => {
 - {{jsxref("Operators/function", "function expression", "", 1)}}
 - {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring", "Destructuring parameters", "", 1)}}

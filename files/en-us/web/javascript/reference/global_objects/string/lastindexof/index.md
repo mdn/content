@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.lastIndexOf
 
 The **`lastIndexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 
-{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.lastIndexOf()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";

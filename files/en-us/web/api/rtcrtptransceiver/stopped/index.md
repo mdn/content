@@ -24,8 +24,6 @@ A Boolean value which is `true` if the transceiver's
 {{domxref("RTCRtpTransceiver.receiver", "receiver")}} will no longer receive data. If
 either or both are still at work, the result is `false`.
 
-## Usage notes
-
 ## Specifications
 
 This feature is not part of any current specification. It is no longer on track to become a standard.

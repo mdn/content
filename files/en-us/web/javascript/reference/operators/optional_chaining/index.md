@@ -9,7 +9,7 @@ browser-compat: javascript.operators.optional_chaining
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+{{InteractiveExample("JavaScript Demo: Optional chaining (?.) operator", "taller")}}
 
 ```js interactive-example
 const adventurer = {
@@ -220,8 +220,8 @@ const nameBar = myMap.get("CSS")?.name;
 
 ### Dealing with optional callbacks or event handlers
 
-If you use callbacks or fetch methods from an object with
-[a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
+If you use callbacks or fetch methods from an object with a
+[destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring) pattern, you may have non-existent values that you cannot call as
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js

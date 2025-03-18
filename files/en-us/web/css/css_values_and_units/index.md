@@ -64,7 +64,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident)
 - [`<dimension>`](/en-US/docs/Web/CSS/dimension)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
-- [`<first-valid()>`](/en-US/docs/Web/CSS/)
+- [`<first-valid()>`](/en-US/docs/Web/CSS)
 - [`<frequency>`](/en-US/docs/Web/CSS/frequency)
 - [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage)
 - [`<ident>`](/en-US/docs/Web/CSS/ident)
@@ -81,7 +81,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<syntax>`](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [`<time-percentage>`](/en-US/docs/Web/CSS/time-percentage)
 - [`<time>`](/en-US/docs/Web/CSS/time)
-- [`<url>`](/en-US/docs/Web/CSS/url)
+- [`<url>`](/en-US/docs/Web/CSS/url_value)
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
 
@@ -104,10 +104,10 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`em`](/en-US/docs/Web/CSS/length#em)
 - [`ex`](/en-US/docs/Web/CSS/length#ex)
 - [`grad`](/en-US/docs/Web/CSS/length#grad)
-- [`Hz`](/en-US/docs/Web/CSS/length#Hz)
+- [`Hz`](/en-US/docs/Web/CSS/length#hz)
 - [`ic`](/en-US/docs/Web/CSS/length#ic)
 - [`in`](/en-US/docs/Web/CSS/length#in)
-- [`kHz`](/en-US/docs/Web/CSS/length#kHz)
+- [`kHz`](/en-US/docs/Web/CSS/length#khz)
 - [`left`](/en-US/docs/Web/CSS/length#left)
 - [`lh`](/en-US/docs/Web/CSS/length#lh)
 - [`lvb`](/en-US/docs/Web/CSS/length#lvb)
@@ -122,7 +122,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`pi`](/en-US/docs/Web/CSS/length#pi)
 - [`pt`](/en-US/docs/Web/CSS/length#pt)
 - [`px`](/en-US/docs/Web/CSS/length#px)
-- [`Q`](/en-US/docs/Web/CSS/length#Q)
+- [`Q`](/en-US/docs/Web/CSS/length#q)
 - [`rad`](/en-US/docs/Web/CSS/length#rad)
 - [`rcap`](/en-US/docs/Web/CSS/length#rcap)
 - [`rch`](/en-US/docs/Web/CSS/length#rch)
@@ -205,7 +205,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
-- [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_Math_Functions)
+- [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
 
   - : The CSS math functions that allow a property value to be written as a mathematical expression.
 

@@ -40,7 +40,7 @@ This article provides information about the changes in Firefox 130 that affect d
 
 - Added support for the `browsingContext.navigationFailed` event, which is triggered when a navigation attempt fails to complete ([Firefox bug 1846601](https://bugzil.la/1846601)).
 - The `network.setCacheBehavior` command now allows defining the network cache behavior both globally and for individual navigables simultaneously ([Firefox bug 1905307](https://bugzil.la/1905307)).
-- The `network.responseCompleted` and `network.fetchError`events are now emitted when the actual request stops, eliminating a race condition where `browsingContext.domContentLoaded` and `browsingContext.load` events were emitted before the `network.responseCompleted` event ([Firefox bug 1882803](https://bugzil.la/1882803)).
+- The `network.responseCompleted` and `network.fetchError` events are now emitted when the actual request stops, eliminating a race condition where `browsingContext.domContentLoaded` and `browsingContext.load` events were emitted before the `network.responseCompleted` event ([Firefox bug 1882803](https://bugzil.la/1882803)).
 - Data URLs (e.g., for background images or fetch requests) are now fully supported across all network events ([Firefox bug 1904343](https://bugzil.la/1904343)).
 - Fixed an issue where the `network.authRequired` event was sent out multiple times with each call to the `network.continueWithAuth` command ([Firefox bug 1899711](https://bugzil.la/1899711)).
 
@@ -64,7 +64,7 @@ These features are newly shipped in Firefox 130 but are disabled by default. To 
 
 - **CSP violation reports using the Reporting API:** `dom.reporting.enabled`.
 
-  The [Reporting API](/en-US/docs/Web/API/Reporting_API) can be used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violations.
+  The [Reporting API](/en-US/docs/Web/API/Reporting_API) can be used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
   This includes support for {{domxref('Report')}} objects that have a `type` property with the value `"csp-violation"` and `body` property that is an instance of the {{domxref('CSPViolationReportBody')}} interface, the {{CSP("report-to")}} directive of the {{httpheader('Content-Security-Policy')}} HTTP response header, and the {{httpheader('Reporting-Endpoints')}} and {{httpheader('Report-To')}} HTTP response headers.
   This feature is disabled by default.
   ([Firefox bug 1391243](https://bugzil.la/1391243)).

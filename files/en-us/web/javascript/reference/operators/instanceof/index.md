@@ -9,7 +9,7 @@ browser-compat: javascript.operators.instanceof
 
 The **`instanceof`** operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. The return value is a boolean value. Its behavior can be customized with [`Symbol.hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance).
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{InteractiveExample("JavaScript Demo: instanceof operator")}}
 
 ```js interactive-example
 function Car(make, model, year) {

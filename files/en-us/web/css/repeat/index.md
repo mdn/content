@@ -9,7 +9,52 @@ browser-compat: css.properties.grid-template-columns.repeat
 
 The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
 
-{{EmbedInteractiveExample("pages/css/function-repeat.html")}}
+{{InteractiveExample("CSS Demo: repeat()")}}
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 20px 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(auto-fill, 40px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 This function can be used in the CSS grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
 

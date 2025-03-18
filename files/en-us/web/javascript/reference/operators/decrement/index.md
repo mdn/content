@@ -9,7 +9,7 @@ browser-compat: javascript.operators.decrement
 
 The **decrement (`--`)** operator decrements (subtracts one from) its operand and returns the value before or after the decrement, depending on where the operator is placed.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+{{InteractiveExample("JavaScript Demo: Decrement (--) operator")}}
 
 ```js interactive-example
 let x = 3;
@@ -34,7 +34,7 @@ x--
 
 ## Description
 
-The `--` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt decrement if the operand becomes a BigInt; otherwise, it performs number decrement.
+The `--` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt decrement if the operand becomes a BigInt; otherwise, it performs number decrement.
 
 If used postfix, with operator after operand (for example, `x--`), the decrement operator decrements and returns the value before decrementing.
 

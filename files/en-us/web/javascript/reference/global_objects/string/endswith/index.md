@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.endsWith
 
 The **`endsWith()`** method of {{jsxref("String")}} values determines whether a string ends with the characters of this string, returning `true` or `false` as appropriate.
 
-{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.endsWith()")}}
 
 ```js interactive-example
 const str1 = "Cats are the best!";

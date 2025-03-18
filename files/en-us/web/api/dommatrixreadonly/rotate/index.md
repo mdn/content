@@ -24,9 +24,9 @@ rotate(rotX, rotY, rotZ)
 ### Parameters
 
 - `rotX`
-  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
+  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) is false.
 - `rotY` {{optional_inline}}
-  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) is false.
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation.
 
@@ -66,5 +66,5 @@ console.log(rotated.toString());
 - CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface and {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method

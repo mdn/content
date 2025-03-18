@@ -34,7 +34,7 @@ requestDevice(options)
 
       - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
-        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-15) document
+        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-16) document
 
     - `usage` {{optional_inline}}
       - : An integer representing the usage ID component of the HID usage of the requested device.

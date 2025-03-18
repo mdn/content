@@ -13,7 +13,7 @@ The following guidelines cover how to write HTML example code for MDN Web Docs.
 
 Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
 
-On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/en/index.html).
+On MDN Web Docs, we use [Prettier](https://prettier.io/) as a code formatter to keep the code style consistent (and to avoid off-topic discussions). You can consult our [configuration file](https://github.com/mdn/content/blob/main/.prettierrc.json) to learn about the current rules, and read the [Prettier documentation](https://prettier.io/docs/index.html).
 
 Prettier formats all the code and keeps the style consistent. Nevertheless, there are a few additional rules that you need to follow.
 
@@ -24,7 +24,7 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ### Doctype
 
-You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
+You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 
 ```html example-good
 <!doctype html>
@@ -90,9 +90,9 @@ This is perfectly understandable and works fine. If a boolean HTML attribute is 
 <input required="required" />
 ```
 
-## Case
+## Casing convention on MDN
 
-Use lowercase for all element names and attribute names/values because it looks neater and means you can write markup faster. For example:
+Use lowercase for all case-insensitive constructs, including the doctype declaration, element names, and attribute names/values. This creates a consistent appearance and allows for faster markup writing.
 
 ```html example-good
 <p class="nice">This looks nice and neat</p>

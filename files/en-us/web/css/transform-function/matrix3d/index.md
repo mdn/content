@@ -10,7 +10,59 @@ browser-compat: css.types.transform-function.matrix3d
 The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
+{{InteractiveExample("CSS Demo: matrix3d()")}}
+
+```css interactive-example-choice
+transform: matrix3d(
+  -0.6,
+  1.34788,
+  0,
+  0,
+  -2.34788,
+  -0.6,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  10,
+  1
+);
+```
+
+```css interactive-example-choice
+transform: matrix3d(
+  0.5,
+  0,
+  -0.866025,
+  0,
+  0.595877,
+  1.2,
+  -1.03209,
+  0,
+  0.866025,
+  0,
+  0.5,
+  0,
+  25.9808,
+  0,
+  15,
+  1
+);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 

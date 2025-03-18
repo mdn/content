@@ -74,10 +74,10 @@ _No changes._
 
 ### HTTP
 
-- [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
+- [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) is no longer ignored in {{httpheader("Content-Security-Policy-Report-Only")}} ([Firefox bug 1380755](https://bugzil.la/1380755)).
 - Firefox now implements a TLS handshake timeout with a default value of 30 seconds. The timeout value can be varied by editing the `network.http.tls-handshake-timeout` pref in about:config ([Firefox bug 1393691](https://bugzil.la/1393691)).
-- The [`worker-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
-- The [425: Too Early](/en-US/docs/Web/HTTP/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
+- The [`worker-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) CSP directive has been implemented ([Firefox bug 1302667](https://bugzil.la/1302667)).
+- The [425: Too Early](/en-US/docs/Web/HTTP/Reference/Status/425) status code and related {{httpheader("Early-Data")}} request header are now supported ([Firefox bug 1406908](https://bugzil.la/1406908)).
 
 ### Security
 
@@ -173,15 +173,15 @@ _No changes._
 
 - tabs
 
-  - [tabs.discard](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
+  - [`tabs.discard`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) has been implemented (Bug 1322485)
   - isArticle, isInReaderMode properties of Tab implemented (Bug 1381992)
-  - [toggleReaderMode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)() method implemented (Bug 1381992)
+  - [`toggleReaderMode()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode) method implemented (Bug 1381992)
   - openInReaderMode option of tabs.created implemented (Bug 1408993)
   - tabs.onUpdated now notifies when entering/exiting reader mode (Bug 1402921)
 
 - theme
 
-  - [getCurrent](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent)() method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
+  - [`getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent) method to obtain current theme properties (Bug [1349944](https://bugzil.la/1349944))
   - onUpdated method to receive WebExtension theme updates (Bug [1349944](https://bugzil.la/1349944))
   - colors.bookmark_text now supported as alias of colors.toolbar_text (Bug [1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator, colors.toolbar_bottom_separator and colors.toolbar_vertical_separator implemented (Bug [1347190)](https://bugzil.la/1347190)

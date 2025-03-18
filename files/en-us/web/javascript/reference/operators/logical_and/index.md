@@ -11,7 +11,7 @@ The **logical AND (`&&`)** (logical conjunction) operator for a set of boolean o
 
 More generally, the operator returns the value of the first {{Glossary("falsy")}} operand encountered when evaluating from left to right, or the value of the last operand if they are all {{Glossary("truthy")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical AND (&&) operator", "shorter")}}
 
 ```js interactive-example
 const a = 3;
@@ -51,7 +51,7 @@ result = "foo" && 4; // result is assigned 4
 ```
 
 Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be
-converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
+converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ### Short-circuit evaluation

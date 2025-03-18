@@ -18,11 +18,15 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### CSS
 
+- The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
+- The {{cssxref("text-decoration-line")}} CSS property now accepts the values `spelling-error` and `grammar-error`. These values use the browser's styling for spelling and grammar errors and disregard the other properties in the {{cssxref("text-decoration")}} shorthand. ([Firefox bug 1950844](https://bugzil.la/1950844)).
+
 #### Removals
 
 ### JavaScript
 
 - The {{jsxref("Math.sumPrecise()")}} static method is now supported. This takes an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of numbers and returns their sum. It is more precise than summing the numbers in a loop because it avoids floating point precision loss in intermediate results. ([Firefox bug 1943120](https://bugzil.la/1943120)).
+- The {{jsxref("Atomics.pause()")}} static method is now supported. This method provides a hint to the CPU that the current thread is in a spinlock while waiting on access to a shared resource. The system can then reduce the resources allocated to the core (such as power) or thread, without yielding the current thread. ([Firefox bug 1937805](https://bugzil.la/1937805)).
 
 #### Removals
 
@@ -45,6 +49,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### APIs
 
+- The {{domxref("SVGPathSegment/getPathData","getPathData()")}}, {{domxref("SVGPathSegment/setPathData","setPathData()")}}, and {{domxref("SVGPathSegment/getPathSegmentAtLength","getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathSegment")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1945312](https://bugzil.la/1945312)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
@@ -52,6 +58,8 @@ This article provides information about the changes in Firefox 137 that affect d
 - [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) is now hardware enabled on Android, and hardware and software enabled on Linux. This adds to existing hardware and software support on Windows and macOS. ([Firefox bug 1950032](https://bugzil.la/1950032)).
 
 #### Removals
+
+- The following non-standard events are now deprecated and proposed for removal: [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) in {{domxref("Document")}}, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event), and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) in {{domxref("Element")}}. A console warning is displayed when they are used. ([Firefox bug 1949373](https://bugzil.la/1949373)).
 
 ### WebAssembly
 
@@ -77,6 +85,8 @@ This article provides information about the changes in Firefox 137 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 137 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Temporal API** (Nightly release): is now enabled in Firefox Nightly by default. The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations. ([Firefox bug 1946823](https://bugzil.la/1946823)).
 
 ## Older versions
 

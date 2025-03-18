@@ -64,19 +64,31 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `"show-modal"`
       - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method on the dialog element.
     - `"close"`
       - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method on the dialog element.
+    - `"request-close"`
+      - : The button will request to close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) method on the dialog element.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"show"`.
+      - : This is a declarative equivalent of calling the [`.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover) method on the popover element.
     - `"hide-popover"`
       - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"hide"`.
+      - : This is a declarative equivalent of calling the [`.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover) method on the popover element.
     - `"toggle-popover"`
       - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"toggle"`.
+      - : This is a declarative equivalent of calling the [`.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) method on the popover element.
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor` {{experimental_inline}}
-  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : This is a more general version of [`popovertarget`](#popovertarget).
+  - : Turns a {{htmlelement("button")}} element into a command button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
@@ -99,7 +111,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `formmethod`
 
-  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
+  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) used to submit the form. Possible values:
 
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
