@@ -8,7 +8,7 @@ browser-compat: api.SVGRectElement.rx
 
 {{APIRef("SVG")}}
 
-The **`rx`** read-only property of the {{domxref("SVGRectElement")}} interface describes the horizontal curve of the corners of an SVG rectangle as a {{domxref("SVGAnimatedLength")}}. The length is in user coordinate system units along the x-axis. Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Content_type#length).
+The **`rx`** read-only property of the {{domxref("SVGRectElement")}} interface describes the horizontal curve of the corners of an SVG rectangle as a {{domxref("SVGAnimatedLength")}}. The length is in user coordinate system units along the x-axis. Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length).
 
 It reflects the {{SVGElement("rect")}} element's {{SVGAttr("rx")}} presentational attribute. The CSS {{cssxref("rx")}} property takes precedence over the SVG `rx` presentational attribute, so the value may not reflect the actual size of the rounded corners. The default value is `0`, which draws a rectangle with square corners.
 

@@ -302,7 +302,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
 - **PNG, APNG (Raster)**: Portable Network Graphics and Animated Portable Network Graphics may both be animated.
-- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using a svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_dom) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content).
+- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using a svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_dom) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content).
 - **Voxel (Raster)**: Three-dimensional [voxel](https://en.wikipedia.org/wiki/Voxel) raster graphics are employed in video games, as well as in medical imaging.
 
 #### Text can also be animated
@@ -572,7 +572,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Guides/Browsing_safely)
 - [Accessibility: Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
-- [Applying SVG effects to HTML Content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML Content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [CanvasRenderingContext2D.drawImage()](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
