@@ -10,11 +10,10 @@ browser-compat: api.Element.ariaActiveDescendantElement
 
 The **`ariaActiveDescendantElement`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, which identifies the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
 
-The property initially takes the value of the element referenced by the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, if it is set and in scope, or `null` otherwise.
+The property is initially `null`, but will take the value of the element referenced by the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, if it is set and in scope.
 
 Its value can be set to an element in the current scope, or to an ancestor scope, but not to a descendant scope.
 In other words, a shadow root can set an active descendant from within its own shadow DOM or the parent DOM, but a DOM element can't set an active descendent defined in a shadow root.
-Note that if the property is set, the corresponding [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) is set to the empty string (`""`).
 
 Unlike `aria-activedescendant`, the element assigned to this property does not have to have an `id`: it can be selected using any available mechanism, such as its position in their hierarchy, or some other attribute.
 This can be convenient as it avoids having to unnecessarily create ids for elements in order to assign them as the active descendent.
@@ -24,6 +23,9 @@ The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attri
 ## Value
 
 An element that is the active descendant, or `null` if there is no active descendant.
+
+Note that when the property is set, the corresponding [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute is set to the empty string (`""`), and this will be returned by {{domxref("Element.getAttribute()")}}.
+The attribute can subsequently be set using {{domxref("Element.setAttribute()")}}, in which case the referenced element will replace the property value if it is in scope.
 
 ## Examples
 
