@@ -139,7 +139,7 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_#a_word_on_web_servers_for_.svgz_files).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_web_servers_for_.svgz_files).
 
 ### How to include SVG code inside your HTML
 
@@ -331,7 +331,7 @@ This article has provided you with a quick tour of what vector graphics and SVG 
 
 ## See also
 
-- [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_) on MDN
+- [SVG tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) on MDN
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
