@@ -80,12 +80,14 @@ jobs:
       - name: Lint and format markdown files
         id: lint
         if: steps.check.outputs.DIFF_DOCUMENTS
+        env:
+          DIFF_DOCUMENTS: ${{ steps.check.outputs.DIFF_DOCUMENTS }}
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
-          files_to_lint="${{ steps.check.outputs.DIFF_DOCUMENTS }}"
+          files_to_lint="$DIFF_DOCUMENTS"
 
           echo "crlf line ending check"
           CRLF_FAILED=true
@@ -132,13 +134,13 @@ jobs:
           git diff
 
       - name: Setup reviewdog
-        if: steps.check.outputs.FILES_MODIFIED == 'true' || steps.check.outputs.MD_LINT_FAILED == 'true'
+        if: steps.lint.outputs.FILES_MODIFIED == 'true' || steps.lint.outputs.MD_LINT_FAILED == 'true'
         uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: steps.check.outputs.FILES_MODIFIED == 'true'
+        if: steps.lint.outputs.FILES_MODIFIED == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -155,6 +157,7 @@ jobs:
       - name: Add reviews for markdownlint errors
         if: steps.lint.outputs.MD_LINT_FAILED == 'true'
         env:
+          MD_LINT_LOG: ${{ steps.lint.outputs.MD_LINT_LOG }}
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "${MD_LINT_LOG}" | \

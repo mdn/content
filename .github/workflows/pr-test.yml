@@ -67,6 +67,8 @@ jobs:
         id: build-content
         if: steps.check.outputs.GIT_DIFF_CONTENT
         env:
+          GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
+
           CONTENT_ROOT: ${{ github.workspace }}/files
 
           # This is so that if there's a single 'unsafe_html' flaw, it
@@ -135,6 +137,8 @@ jobs:
 
       - name: Check changed files
         if: steps.check.outputs.GIT_DIFF_FILES
+        env:
+          GIT_DIFF_FILES: ${{ steps.check.outputs.GIT_DIFF_FILES }}
         run: |
           echo $GIT_DIFF_FILES
 
