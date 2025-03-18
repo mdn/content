@@ -53,11 +53,13 @@ In general, a CSRF attack is possible if your website:
 
 ## Defenses against CSRF
 
-In this section we'll outline two alternative defenses against CSRF and a third practice which can be used to provide defense in depth for either of the other two.
+In this section we'll outline three alternative defenses against CSRF and a fourth practice which can be used to provide defense in depth for either of the others.
 
 - The first primary defense is to [use _CSRF tokens_](#csrf_tokens) embedded in the page. This is the most common method if you're issuing state-changing requests from form elements, as in our example above.
 
-- The alternative defense is to ensure that state-changing requests are [not _simple requests_](#avoiding_simple_requests), so that cross-origin requests are blocked by default. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
+- The second is to [use _Fetch metadata_](fetch_metadata) HTTP headers to check whether the start-changing request is being issued cross-site or not.
+
+- The third is to ensure that state-changing requests are [not _simple requests_](#avoiding_simple_requests), so that cross-origin requests are blocked by default. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
 
 Finally, we'll discuss [the `SameSite` cookie attribute](#defense_in_depth_samesite_cookies), which can be used to provide defense in depth alongside either of the previous methods.
 
@@ -72,6 +74,27 @@ For a JavaScript API like `fetch()`, the token might be placed in a cookie or em
 Modern web frameworks usually have built-in support for CSRF tokens: for example, [Django](https://www.djangoproject.com/) enables you to protect forms using the [`csrf_token`](https://docs.djangoproject.com/en/5.1/ref/csrf/) tag. This generates an additional hidden form field containing the token, which the framework then checks on the server.
 
 To take advantage of this protection you must understand all the places in your website where you are using state-changing HTTP requests, and ensure you're using the defense provided by your chosen framework.
+
+### Fetch metadata
+
+Fetch metadata is a collection of HTTP request headers, added by the browser, that provide extra information about the context of an HTTP request. The server can use these headers to decide whether to allow a request or not.
+
+Most relevant for CSRF is the {{httpheader("Sec-Fetch-Site")}} header, which tells the server whether this request is same-origin, same-site, cross-site, or initiated directly by the user. For example, this [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code allows only same-site and same-origin requests:
+
+```js
+app.post("/transfer", (req, res) => {
+  const secFetchSite = req.headers["sec-fetch-site"];
+  if (secFetchSite === "same-origin" || secFetchSite === "same-site") {
+    console.log("allowed");
+    // Update state
+  } else {
+    console.log("denied");
+    // Don't update state
+  }
+});
+```
+
+See {{glossary("Fetch metadata request header")}} for the complete list of Fetch metadata headers, and [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) for a guide to using this feature.
 
 ### Avoiding simple requests
 
@@ -152,9 +175,11 @@ See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-securit
 We can summarize the defenses above as follows:
 
 - Understand where in your website you are implementing state-changing requests that use session cookies to check which user issued the request.
-- If you are using `<form>` elements to issue these requests, ensure you are using a web framework with support for CSRF tokens, and use it.
-- If you are using JavaScript APIs like `fetch()` or `XMLHttpRequest` to issue these requests, ensure that they are not simple requests: for example, by adding a custom header and checking for its existence in the server.
-- In either case, avoid using the `GET` method to issue state-changing requests.
+- Implement at least one of the primary defenses described in this document:
+  - If you are using `<form>` elements to issue these requests, ensure you are using a web framework with support for CSRF tokens, and use it.
+  - If you are using JavaScript APIs like `fetch()` or `XMLHttpRequest` to issue state-changing requests, ensure that they are not simple requests.
+  - Whichever mechanism you use to issue requests, consider using Fetch metadata to disallow cross-site requests.
+- Avoid using the `GET` method to issue state-changing requests.
 - Set the `SameSite` attribute for session cookies to `Strict` if you can, or `Lax` if you have to.
 
 ## See also
