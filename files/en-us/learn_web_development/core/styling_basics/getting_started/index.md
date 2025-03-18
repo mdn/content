@@ -1,6 +1,6 @@
 ---
 title: Getting started with CSS
-short-title: Getting started
+short-title: CSS getting started
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 page-type: learn-module-chapter
 ---

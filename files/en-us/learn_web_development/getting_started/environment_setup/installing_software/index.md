@@ -1,6 +1,6 @@
 ---
 title: Installing basic software
-short-title: Basic software
+short-title: Installing software
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 page-type: tutorial-chapter
 ---

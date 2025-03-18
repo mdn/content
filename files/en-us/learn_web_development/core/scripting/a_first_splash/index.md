@@ -1,6 +1,6 @@
 ---
 title: A first splash into JavaScript
-short-title: JavaScript first splash
+short-title: JavaScript walkthrough
 slug: Learn_web_development/Core/Scripting/A_first_splash
 page-type: learn-module-chapter
 ---

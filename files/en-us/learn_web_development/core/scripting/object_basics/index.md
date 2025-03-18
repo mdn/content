@@ -1,6 +1,6 @@
 ---
 title: JavaScript object basics
-short-title: Object basics
+short-title: Objects
 slug: Learn_web_development/Core/Scripting/Object_basics
 page-type: learn-module-chapter
 ---

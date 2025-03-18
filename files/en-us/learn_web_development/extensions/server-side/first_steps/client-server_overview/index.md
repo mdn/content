@@ -1,5 +1,5 @@
 ---
-title: Client-Server overview
+title: Client-server overview
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
 page-type: learn-module-chapter
 ---

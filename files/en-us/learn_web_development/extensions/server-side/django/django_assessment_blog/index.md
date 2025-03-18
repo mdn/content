@@ -7,14 +7,14 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this challenge you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
+In this challenge, you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this challenge you should have already worked through all the articles in this module.
+        Before attempting this challenge, you should have already worked through all the articles in this module.
       </td>
     </tr>
     <tr>

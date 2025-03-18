@@ -1,6 +1,6 @@
 ---
 title: Beginning our React todo list
-short-title: A React todo list
+short-title: React Todo app
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 page-type: learn-module-chapter
 ---
