@@ -12,7 +12,7 @@ The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow facto
 When the flex-container's main size is larger than the combined main sizes of its flex items, this positive free space can be distributed among the flex items, with each item's growth being their growth factor value as a proportion of the sum total of all the flex items' flex grow factors.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of this longhand.
+> It is recommended to use the {{cssxref("flex")}} shorthand instead of this longhand, as the shorthand correctly resets any unspecified components to accommodate common uses.
 
 {{InteractiveExample("CSS Demo: flex-grow")}}
 
