@@ -24,6 +24,7 @@ sidebar:
     details: closed
     children:
       - /MDN/Writing_guidelines/What_we_write
+      - /MDN/Writing_guidelines/Criteria_for_inclusion
       - /MDN/Writing_guidelines/Writing_style_guide
       - type: listSubPages
         path: /MDN/Writing_guidelines/Code_style_guide
@@ -43,7 +44,6 @@ sidebar:
         title: learning_guidelines
       - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
       - /MDN/Writing_guidelines/Attrib_copyright_license
-      - /MDN/Writing_guidelines/Criteria_for_inclusion
 l10n:
   de:
     community_resources: Gemeinschaftsrichtlinien
