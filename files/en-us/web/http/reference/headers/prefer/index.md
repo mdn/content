@@ -10,8 +10,11 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-2
 The HTTP **`Prefer`** header allows clients to indicate preferences for specific server behaviors during request processing.
 
 > [!NOTE]
-> The `Prefer` header is often used in custom client-server implementations. Ensure both client and server support this header before relying on it in production.
-> The `Prefer` header does not cause the server to return an error if it does not support or apply the specified preferences. Instead, the server processes the request as if the header was not present.
+> Browsers have no handling for the `Prefer` and {{HTTPHeader("Preference-Applied")}} headers: they are used in custom, implementation-specific clients.
+> Ensure both client and server support this header before relying on it in production.
+>
+> The `Prefer` header does not cause the server to return an error if it does not support or apply the specified preferences.
+> Instead, the server processes the request as if the header was not present.
 
 <table class="properties">
   <tbody>
@@ -37,32 +40,84 @@ Prefer: <preference>
 ## Directives
 
 - `respond-async`
-  - : Indicates that the client prefers asynchronous processing.
+  - : The client prefers asynchronous processing.
 - `return=minimal`
-  - : Requests that the server return minimal content.
+  - : Requests that the server return minimal content (a headers-only response).
 - `return=representation`
   - : Requests a full resource representation in the response.
 - `wait=<seconds>`
-  - : Suggests how long the server should wait for the request to complete before timing out.
-- Custom preferences
-  - : Vendors or applications may define their own preferences to suit specific needs. For example, `custom-feature-enabled=true`.
+  - : The maximum time the client expects it will take for the server to process the request once it's been received.
+    For example, if `respond-async` preference is also provided, the client requests that the service respond asynchronously after the specified length of time.
+    Otherwise, a server may interpret the wait time as a request to timeout after the specified period of time.
+- `handling=lenient`
+  - : The client wishes the server to apply lenient validation and error handling to the processing of the request.
+- `handling=strict`
+  - : The client wishes the server to apply strict validation and error handling to the processing of the request.
+- Custom preference
+  - : Vendors or applications may define their own preferences to suit specific needs.
+    For example, `Prefer: timezone=America/Los_Angeles`.
 
 ## Examples
 
 ### Requesting minimal response
 
+The following request asks for a minimal response.
+This is typically a headers-only response (as opposed to `return=representation` where a representation is included in the response body):
+
 ```http
-GET /resource HTTP/1.1
+POST /resource HTTP/1.1
 Host: example.com
+Content-Type: application/json
 Prefer: return=minimal
+
+{"id":123, "name": "abc"}
+```
+
+The server responds with a {{httpstatus("201")}}, but does not include any response body.
+The {{httpheader("Location")}} header contains a URL with the location of the newly-created resource.
+There's no need to include a `Preference-Applied` header because the absence of a response body is readily apparent:
+
+```http
+HTTP/1.1 201 Created
+Location: /resource?id=123
 ```
 
 ### Requesting asynchronous processing
+
+This example requests the server start an async processing task:
 
 ```http
 POST /process HTTP/1.1
 Host: example.com
 Prefer: respond-async
+
+{
+  "task": "check-broken-links"
+}
+```
+
+The server responds with a {{httpstatus("202", "202 (Accepted)")}} response indicated the request has been accepted and has not yet completed executing asynchronously.
+A `Location` header points to a status monitor that represents the state of the processing:
+
+```http
+HTTP/1.1 202 Accepted
+Location: http://example.com/tasks/123/status
+```
+
+### Providing multiple preferences
+
+The following request includes two preferences; `timezone=Jupiter/Red_Spot` indicating a time zone preference for the client, and `handling=strict` for strict validation:
+
+```http
+GET /events HTTP/1.1
+Host: example.com
+Prefer: handling=strict, timezone=Jupiter/Red_Spot
+```
+
+In this implementation, an invalid time zone will throw an error:
+
+```http
+HTTP/1.1 400 Bad Request
 ```
 
 ## Specifications
@@ -72,3 +127,5 @@ Prefer: respond-async
 ## See also
 
 - {{HTTPHeader("Preference-Applied")}}
+- [Prefer header](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31358871) on docs.oasis-open.org
+- [Prefer header](https://docs.postgrest.org/en/v12/references/api/preferences.html) on docs.postgrest.org

@@ -167,7 +167,11 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 - {{HTTPHeader("Content-Location")}}
   - : Indicates an alternate location for the returned data.
 
-## Preference
+## Preferences
+
+Preferences can be sent by clients in requests to indicate optional behaviors for requests and responses.
+The server may indicate if a preference is applied to a response if it would otherwise be ambiguous for the client.
+Browsers have no native handling for sending preferences via these headers; they are used in custom, implementation-specific clients.
 
 - {{HTTPHeader("Prefer")}}
   - : Indicates preferences for specific server behaviors during request processing. For example, it can request minimal response content (`return=minimal`) or asynchronous processing (`respond-async`). The server processes the request normally if the header is unsupported.
