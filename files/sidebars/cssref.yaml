@@ -129,7 +129,7 @@ sidebar:
     children:
       - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
       - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
-  - title: Cascade and inheritance
+  - title: Cascade_and_inheritance
     details: closed
     children:
       - /Web/CSS/CSS_cascade/Cascade
@@ -346,10 +346,11 @@ l10n:
     CSS_layout: CSS layout
     Guides: Guides
     Animations: Animations
-    Backgrounds_and_Borders: Backgrounds and Borders
+    Backgrounds_and_Borders: Backgrounds and borders
     Resizing_background_images: Resizing background images
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
+    Cascade_and_inheritance: Cascade and inheritance
     Colors: Colors
     Color_contrast: "Accessibility: Color contrast"
     Columns: Columns
