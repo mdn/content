@@ -129,6 +129,14 @@ sidebar:
     children:
       - /Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
       - /Web/CSS/CSS_box_model/Mastering_margin_collapsing
+  - title: Cascade and inheritance
+    details: closed
+    children:
+      - /Web/CSS/CSS_cascade/Cascade
+      - /Web/CSS/CSS_cascade/Inheritance
+      - /Web/CSS/CSS_cascade/Shorthand_properties
+      - /Web/CSS/CSS_cascade/Specificity
+      - /Web/CSS/CSS_cascade/Value_processing
   - title: Colors
     details: closed
     children:
