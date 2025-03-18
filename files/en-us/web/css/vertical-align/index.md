@@ -97,7 +97,7 @@ The `vertical-align` property is specified as one of the values listed below.
 These values vertically align the element relative to its parent element:
 
 - `baseline`
-  - : Aligns the baseline of the element with the baseline of its parent. The baseline of some [replaced elements](/en-US/docs/Web/CSS/Replaced_element), like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.
+  - : Aligns the baseline of the element with the baseline of its parent. The baseline of some {{ glossary("replaced elements")}}, like {{HTMLElement("textarea")}}, is not specified by the HTML specification, meaning that their behavior with this keyword may vary between browsers.
 - `sub`
   - : Aligns the baseline of the element with the subscript-baseline of its parent.
 - `super`

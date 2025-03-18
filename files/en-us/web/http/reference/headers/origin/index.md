@@ -64,7 +64,7 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Redirects across origins.
 - {{HTMLElement("iframe", "iframes")}} with a sandbox attribute that doesn't contain the value `allow-same-origin`.
 - Responses that are network errors.
-- {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., simple form posts).
+- {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
 
 > [!NOTE]
 > There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)

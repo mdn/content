@@ -18,6 +18,7 @@ or multiple files and returns a handle for the file(s).
 
 ```js-nolint
 showOpenFilePicker()
+showOpenFilePicker(options)
 ```
 
 ### Parameters
