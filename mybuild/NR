@@ -1,0 +1,2 @@
+FooBar
+LD_PRELOAD=./build/preload.so
