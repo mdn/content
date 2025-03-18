@@ -145,7 +145,7 @@ Specifically, your website will be vulnerable to a CSRF attack from a particular
 
 ### Defense in depth: SameSite cookies
 
-The [`SameSite`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-02#section-5.3.7) cookie attribute provides some protection against CSRF attacks. It's not a complete defense, and is best considered as an addition to one of the other defenses, providing some degree of defense in depth.
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute provides some protection against CSRF attacks. It's not a complete defense, and is best considered as an addition to one of the other defenses, providing some degree of defense in depth.
 
 This attribute controls when a browser is allowed to include the cookie in a cross-site request. It has three possible values: `None`, `Lax` and `Strict`.
 
