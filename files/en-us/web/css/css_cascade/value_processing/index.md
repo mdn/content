@@ -1,5 +1,5 @@
 ---
-title: "CSS property value processing"
+title: CSS property value processing
 slug: Web/CSS/CSS_cascade/Value_processing
 page-type: guide
 ---
