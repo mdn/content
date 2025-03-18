@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get changed files
-        id: changes
+        id: check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -41,14 +41,14 @@ jobs:
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout HEAD
-        if: steps.changes.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.DIFF_DOCUMENTS
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
 
       - name: Get changed content from HEAD
-        if: steps.changes.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.DIFF_DOCUMENTS
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
@@ -64,14 +64,14 @@ jobs:
           git commit -m "Code from PR head"
 
       - name: Setup Node.js environment
-        if: steps.changes.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.DIFF_DOCUMENTS
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: steps.changes.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.DIFF_DOCUMENTS
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
@@ -79,13 +79,13 @@ jobs:
 
       - name: Lint and format markdown files
         id: lint
-        if: steps.changes.outputs.DIFF_DOCUMENTS
+        if: steps.check.outputs.DIFF_DOCUMENTS
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
-          files_to_lint="${{ steps.changes.outputs.DIFF_DOCUMENTS }}"
+          files_to_lint="${{ steps.check.outputs.DIFF_DOCUMENTS }}"
 
           echo "crlf line ending check"
           CRLF_FAILED=true
@@ -132,13 +132,13 @@ jobs:
           git diff
 
       - name: Setup reviewdog
-        if: steps.changes.outputs.FILES_MODIFIED == 'true' || steps.changes.outputs.MD_LINT_FAILED == 'true'
+        if: steps.check.outputs.FILES_MODIFIED == 'true' || steps.check.outputs.MD_LINT_FAILED == 'true'
         uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893 # v1.3.2
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: steps.changes.outputs.FILES_MODIFIED == 'true'
+        if: steps.check.outputs.FILES_MODIFIED == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
