@@ -292,7 +292,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-`<img>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element); it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
+`<img>` is a {{ glossary("replaced elements", "replaced element")}}; it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
 
 `<img>` has no baseline, so when images are used in an inline formatting context with {{cssxref("vertical-align", "vertical-align: baseline")}}, the bottom of the image will be placed on the text baseline.
 

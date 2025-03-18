@@ -18,6 +18,7 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ```js-nolint
 showSaveFilePicker()
+showSaveFilePicker(options)
 ```
 
 ### Parameters

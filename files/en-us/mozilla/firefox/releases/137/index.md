@@ -19,12 +19,14 @@ This article provides information about the changes in Firefox 137 that affect d
 ### CSS
 
 - The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
+- The {{cssxref("text-decoration-line")}} CSS property now accepts the values `spelling-error` and `grammar-error`. These values use the browser's styling for spelling and grammar errors and disregard the other properties in the {{cssxref("text-decoration")}} shorthand. ([Firefox bug 1950844](https://bugzil.la/1950844)).
 
 #### Removals
 
 ### JavaScript
 
 - The {{jsxref("Math.sumPrecise()")}} static method is now supported. This takes an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of numbers and returns their sum. It is more precise than summing the numbers in a loop because it avoids floating point precision loss in intermediate results. ([Firefox bug 1943120](https://bugzil.la/1943120)).
+- The {{jsxref("Atomics.pause()")}} static method is now supported. This method provides a hint to the CPU that the current thread is in a spinlock while waiting on access to a shared resource. The system can then reduce the resources allocated to the core (such as power) or thread, without yielding the current thread. ([Firefox bug 1937805](https://bugzil.la/1937805)).
 
 #### Removals
 
