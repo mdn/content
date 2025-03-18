@@ -138,11 +138,14 @@ However, `Lax` offers significantly weaker protection than `Strict`:
 - An attacker can trigger a top-level navigation. For example, at the start of this article we show a CSRF attack in which the attacker submits a form to the target: this is considered a top-level navigation. If the form were submitted using `GET`, then the request would still include cookies with `SameSite=Lax`.
 - Even if the server does check that the request was not sent using `GET`, some web frameworks support "method override": this enables an attacker to send a request using `GET` but have it appear to the server as if it used `POST`.
 
-So although `Lax` is a reasonable defense in depth against CSRF, as long as you avoid making state-changing requests that use `GET`, it should not be the only defense. It should be deployed alongside one of the previous defenses.
+As a general guide, then, you should try to use `Strict` for some cookies and `Lax` for others:
+
+- `Lax` for cookies that you will use to decide if a logged-in user should be shown a page
+- `Strict` for cookies that you will use for state-changing requests that you don't want to allow cross-site.
 
 Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("Site", "site")}}, not a different {{glossary("Origin", "origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
 
-See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details.
+See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details on the limitations of `SameSite`.
 
 ### Defense summary checklist
 
