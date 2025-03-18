@@ -10,7 +10,7 @@ browser-compat: css.properties.flex-basis
 The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main size of a {{glossary("flex item")}}. It sets the size of the content box unless otherwise set with {{Cssxref("box-sizing")}}.
 
 > [!NOTE]
-> It is recommended to use the {{cssxref("flex")}} shorthand instead of separate declarations({{cssxref("flex-shrink")}} / {{cssxref("flex-grow")}} / {{cssxref("flex-basis")}}).
+> It is recommended to use the {{cssxref("flex")}} shorthand instead of this longhand.
 
 {{InteractiveExample("CSS Demo: flex-basis")}}
 
