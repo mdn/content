@@ -76346,114 +76346,6 @@
       "jwalker"
     ]
   },
-  "Web/CSS/CSS_cascade/actual_value": {
-    "modified": "2020-07-14T09:14:02.638Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mfluehr",
-      "sergio-vb",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "FredB",
-      "ziyunfei",
-      "McGurk"
-    ]
-  },
-  "Web/CSS/CSS_cascade/computed_value": {
-    "modified": "2020-08-10T14:01:43.680Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "hinell",
-      "mfluehr",
-      "Cath_kb",
-      "Sebastianz",
-      "Sheppy",
-      "Urgot",
-      "Dholbert",
-      "kscarfone",
-      "ethertank",
-      "trevorh",
-      "mmjyu",
-      "FredB",
-      "teoli",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "Marsf",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/CSS_cascade/initial_value": {
-    "modified": "2020-07-07T12:36:02.958Z",
-    "contributors": [
-      "wbamberg",
-      "gerfolder",
-      "mfluehr",
-      "CannedYerins",
-      "kscarfone",
-      "Sheppy",
-      "FredB",
-      "teoli",
-      "ethertank",
-      "kyleb",
-      "Marsf",
-      "Mgjbot",
-      "Kohei",
-      "Pastelgrim",
-      "Killerowski",
-      "Bedi",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
-  "Web/CSS/CSS_cascade/specified_value": {
-    "modified": "2020-08-10T14:28:31.353Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "hinell",
-      "mfluehr",
-      "asteroidb612",
-      "Sheppy",
-      "BychekRU",
-      "Sebastianz",
-      "McGurk"
-    ]
-  },
-  "Web/CSS/CSS_cascade/used_value": {
-    "modified": "2020-07-07T12:48:07.054Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "myf",
-      "hinell",
-      "FumiyaShibusawa",
-      "Tuman",
-      "shogunsea",
-      "mfluehr",
-      "Loadmaster",
-      "Mori",
-      "david_ross",
-      "DecadeCode",
-      "azoorob3",
-      "fcard",
-      "Syle91",
-      "kscarfone",
-      "phil_nist",
-      "Kritz",
-      "Dholbert",
-      "teoli",
-      "ethertank",
-      "Sheppy",
-      "FredB",
-      "yonathan"
-    ]
-  },
   "Web/CSS/CSS_cascading_variables": {
     "modified": "2020-07-07T12:03:44.891Z",
     "contributors": ["wbamberg", "mfluehr"]
@@ -88115,16 +88007,6 @@
       "mnoorenberghe",
       "Marsf",
       "Jürgen Jeka"
-    ]
-  },
-  "Web/CSS/resolved_value": {
-    "modified": "2020-07-07T12:38:43.332Z",
-    "contributors": [
-      "wbamberg",
-      "mfluehr",
-      "BychekRU",
-      "Sebastianz",
-      "Dholbert"
     ]
   },
   "Web/CSS/revert": {
