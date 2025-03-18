@@ -195,7 +195,9 @@ Here we change the track listing to the following definition, creating three `1f
 
 {{EmbedLiveSample('grid-fr-unit_0', '100%', "130") }}
 
-You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
+You now have flexible tracks.
+The `fr` unit distributes space proportionally, so you can specify different positive values for your tracks.
+Change your track listing to the following definition, creating one `2fr` track and two `1fr` tracks:
 
 ```html hidden live-sample___grid-fr-unit_1
 <div class="container">
@@ -220,8 +222,6 @@ body {
   border: 2px solid rgb(79 185 227);
 }
 ```
-
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
 
 ```css live-sample___grid-fr-unit_1
 .container {
@@ -269,7 +269,7 @@ body {
 }
 ```
 
-Here we add the `gap` property to create gaps between the tracks with a value of `20px:
+Here we add the `gap` property to create gaps between the tracks with a value of `20px`:
 
 ```css live-sample___grid-gap
 .container {
