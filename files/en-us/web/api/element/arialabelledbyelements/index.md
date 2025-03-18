@@ -175,4 +175,6 @@ if ("ariaLabelledByElements" in Element.prototype) {
 
 {{Compat}}
 
-https://wicg.github.io/aom/aria-reflection-explainer.html#reflecting-element-references
+## See also
+
+- {{domxref("ElementInternals.ariaLabelledByElements")}}
