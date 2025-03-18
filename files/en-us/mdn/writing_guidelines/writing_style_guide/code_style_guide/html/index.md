@@ -24,7 +24,7 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ### Doctype
 
-You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
+You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 
 ```html example-good
 <!doctype html>
@@ -90,9 +90,9 @@ This is perfectly understandable and works fine. If a boolean HTML attribute is 
 <input required="required" />
 ```
 
-## Case
+## Casing convention on MDN
 
-Use lowercase for all element names and attribute names/values because it looks neater and means you can write markup faster. For example:
+Use lowercase for all case-insensitive constructs, including the doctype declaration, element names, and attribute names/values. This creates a consistent appearance and allows for faster markup writing.
 
 ```html example-good
 <p class="nice">This looks nice and neat</p>
