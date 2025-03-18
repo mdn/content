@@ -25,7 +25,7 @@ The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attri
 An element that is the active descendant, or `null` if there is no active descendant.
 
 Note that when the property is set, the corresponding [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute is set to the empty string (`""`), and this will be returned by {{domxref("Element.getAttribute()")}}.
-The attribute can subsequently be set using {{domxref("Element.setAttribute()")}}, in which case the referenced element will replace the property value if it is in scope.
+The attribute can subsequently be set using {{domxref("Element.setAttribute()")}}, in which case the referenced element will replace the property value if it is in scope, or be set to `null` if it is not in scope/invalid.
 
 ## Examples
 
