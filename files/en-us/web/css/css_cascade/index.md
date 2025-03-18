@@ -48,19 +48,19 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ### Glossary and definitions
 
-- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual-value)
 - [Anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
 - [Author origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#author_stylesheets)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value)
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value)
 - [Named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-- [Resolved value](/en-US/docs/Web/CSS/resolved_value)
+- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved-value)
 - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value)
+- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified-value)
 - {{glossary("style origin")}}
-- [Used value](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+- [Used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value)
 - [User origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user_stylesheets)
 - [User-agent origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets)
 
@@ -74,13 +74,17 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
   - : A guide to CSS inheritance.
 
+- [Value processing: CSS property value stages](/en-US/docs/Web/CSS/CSS_cascade/Value_processing)
+
+  - : The different stages of CSS property values, from specified to rendering.
+
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
-  - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
+  - : The cascade, specificity, and inheritance, which together control how CSS is applied to HTML and how conflicts are resolved.
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
-  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+  - : Introduction to cascade layers.
 
 ## Related concepts
 
