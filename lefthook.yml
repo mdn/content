@@ -13,7 +13,7 @@ pre-commit:
 
     - name: Format non-markdown
       glob: "*.{js,json,yml,yaml,css,html}"
-      run: yarn prettier --ignore-unknown --write --cache {staged_files}
+      run: yarn prettier --write --cache {staged_files}
       stage_fixed: true
 
     - name: Sort cSpell dictionaries
