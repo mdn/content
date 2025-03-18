@@ -177,8 +177,8 @@
 /en-US/docs/CSS-2_Quick_Reference/Units	/en-US/docs/Web/CSS/length
 /en-US/docs/CSS-2_Quick_Reference/User_interface	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS-2_Quick_Reference/Visual_effects	/en-US/docs/Web/CSS/Reference
-/en-US/docs/CSS-2_Quick_Reference/Visual_formatting_details	/en-US/docs/Web/CSS/Visual_formatting_model
-/en-US/docs/CSS-2_Quick_Reference/Visual_formatting_model	/en-US/docs/Web/CSS/Visual_formatting_model
+/en-US/docs/CSS-2_Quick_Reference/Visual_formatting_details	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
+/en-US/docs/CSS-2_Quick_Reference/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/CSS-2_Quick_Reference:All_in_a_page	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS-2_Quick_Reference:Box_model	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/CSS-2_Quick_Reference:Color_and_Background	/en-US/docs/Web/CSS/Reference
@@ -190,8 +190,8 @@
 /en-US/docs/CSS-2_Quick_Reference:Units	/en-US/docs/Web/CSS/length
 /en-US/docs/CSS-2_Quick_Reference:User_interface	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS-2_Quick_Reference:Visual_effects	/en-US/docs/Web/CSS/Reference
-/en-US/docs/CSS-2_Quick_Reference:Visual_formatting_details	/en-US/docs/Web/CSS/Visual_formatting_model
-/en-US/docs/CSS-2_Quick_Reference:Visual_formatting_model	/en-US/docs/Web/CSS/Visual_formatting_model
+/en-US/docs/CSS-2_Quick_Reference:Visual_formatting_details	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
+/en-US/docs/CSS-2_Quick_Reference:Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/CSS-redirect-1	/en-US/docs/Web/CSS
 /en-US/docs/CSS-redirect-2	/en-US/docs/Web/CSS
 /en-US/docs/CSS/-epub-caption-side	/en-US/docs/Web/CSS/caption-side
@@ -565,7 +565,7 @@
 /en-US/docs/CSS/Using_media_queries_from_code	/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/en-US/docs/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/Visual_formatting_model
+/en-US/docs/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/actual_value
 /en-US/docs/CSS/align-content	/en-US/docs/Web/CSS/align-content
 /en-US/docs/CSS/align-items	/en-US/docs/Web/CSS/align-items
@@ -12197,6 +12197,7 @@
 /en-US/docs/Web/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /en-US/docs/Web/CSS/Viewport_concepts	/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts
+/en-US/docs/Web/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/abs()	/en-US/docs/Web/CSS/abs
 /en-US/docs/Web/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/actual_value
@@ -12746,7 +12747,7 @@
 /en-US/docs/Web/Guide/CSS/Using_multi-column_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/Guide/CSS/Using_multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/Web/Guide/CSS/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
-/en-US/docs/Web/Guide/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/Visual_formatting_model
+/en-US/docs/Web/Guide/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/Web/Guide/DOM	/en-US/docs/Web/API/Document_Object_Model
 /en-US/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/Web/Guide/DOM/Events/Event_dispatching_example	/en-US/docs/Web/Events/Creating_and_triggering_events

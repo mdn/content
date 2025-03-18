@@ -95,4 +95,4 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
