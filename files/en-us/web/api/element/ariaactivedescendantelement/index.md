@@ -10,31 +10,37 @@ browser-compat: api.Element.ariaActiveDescendantElement
 
 The **`ariaActiveDescendantElement`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, which identifies the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
 
-Note that the value can be set to a descendent value selected using its child position (or any other mechanism) so it does not require that the element has an id.
-This can be useful when there are a lot of elements that might be the active descendent, or if the elements are created programmatically.
+The property initially takes the value of the element referenced by the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, if it is set and in scope, or `null` otherwise.
+
+Its value can be set to an element in the current scope, or to an ancestor scope, but not to a descendant scope.
+In other words, a shadow root can set an active descendant from within its own shadow DOM or the parent DOM, but a DOM element can't set an active descendent defined in a shadow root.
+Note that if the property is set, the corresponding [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) is set to the empty string (`""`).
+
+Unlike `aria-activedescendant`, the element assigned to this property does not have to have an `id`: it can be selected using any available mechanism, such as its position in their hierarchy, or some other attribute.
+This can be convenient as it avoids having to unnecessarily create ids for elements in order to assign them as the active descendent.
 
 The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) topic contains additional information about when the property can and should be set.
 
 ## Value
 
-An element that is the active descendant.
+An element that is the active descendant, or `null` if there is no active descendant.
 
 ## Examples
 
 ### Get the active descendent
 
-This example shows how `ariaActiveDescendantElement` can be used to programmatically get the current active descendant (set using `aria-activedescendant`).
+This example shows how `ariaActiveDescendantElement` can be used to programmatically get and set the current active descendant.
 
 #### HTML
 
 The HTML defines a listbox for selecting different kinds of streets, consisting of a {{htmlelement("div")}} element with the [`listbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) and nested `<div>` items for each of the options.
-The active descendent is set using `aria-activedescendant`.
+The active descendent is initially set to the element with `id` of `avenue` using `aria-activedescendant`.
 
 ```html
 <div id="streetType" role="listbox" aria-activedescendant="avenue">
-  <div id="street">Street</div>
+  <div>Street</div>
   <div id="avenue">Avenue</div>
-  <div id="lane">Lane</div>
+  <div>Lane</div>
 </div>
 ```
 
@@ -54,7 +60,7 @@ The active descendent is set using `aria-activedescendant`.
 #### JavaScript
 
 The code below first checks whether the `ariaActiveDescendantElement` is supported.
-It then logs the value of the `id` reference from the attribute, and then the property element and its text content.
+It if it is, it then logs the value of the `id` reference from `aria-activedescendant`, the property element, and its text content.
 
 ```js hidden
 const logElement = document.querySelector("#log");
@@ -67,17 +73,18 @@ function log(text) {
 ```js
 // Feature test for ariaActiveDescendantElement
 if ("ariaActiveDescendantElement" in Element.prototype) {
-  // Log id for active descendant relationship through the content attribute.
+  // Log initial ariaActiveDescendantElement from aria-activedescendant
   log(
-    `aria-activedescendant (id): ${streetType.getAttribute("aria-activedescendant")}`,
+    `aria-activedescendant: '${streetType.getAttribute("aria-activedescendant")}', el: ${streetType.ariaActiveDescendantElement}, txt: ${streetType.ariaActiveDescendantElement?.textContent.trim()}`,
   );
-  // Log element for active descendant through property
+
+  // Select the avenue div by position and assign as ariaActiveDescendantElement
+  const avenueDiv = document.querySelector("#streetType div:nth-child(3)");
+  streetType.ariaActiveDescendantElement = avenueDiv;
+
+  // Log again, showing that aria-activedescendant is "" and the ariaActiveDescendantElement has new value
   log(
-    `ariaActiveDescendantElement (element): ${streetType.ariaActiveDescendantElement}`,
-  );
-  // Log inner text of element.
-  log(
-    `Element text: ${streetType.ariaActiveDescendantElement.textContent.trim()}`,
+    `aria-activedescendant: '${streetType.getAttribute("aria-activedescendant")}', el: ${streetType.ariaActiveDescendantElement}, txt: ${streetType.ariaActiveDescendantElement?.textContent.trim()}`,
   );
 } else {
   log("ariaActiveDescendantElement not supported by browser");
@@ -87,95 +94,13 @@ if ("ariaActiveDescendantElement" in Element.prototype) {
 #### Result
 
 The log below shows the output of the above code.
-The first line is the original reference id (`avenue`), the second is the associated element obtained using `ariaActiveDescendantElement`, and the third is the text content of that element.
+The first line is the original reference id in `aria-activedescendant` (`avenue`), the associated element obtained from `ariaActiveDescendantElement`, and the text in that element.
+The second line shows the new element that was selected and assigned. Note that the value of the `aria-activedescendant` attribute is now `""`.
 
 {{EmbedLiveSample("Get the active descendent","100%","190px")}}
 
-### Set the active descendent programmatically
-
-This example shows how the active descendant can be set using `ariaActiveDescendantElement`.
-
-#### HTML
-
-The HTML defines a listbox for selecting different kinds of streets, consisting of a {{htmlelement("div")}} element with the [`listbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) and nested `<div>` items for each of the options.
-Unlike the previous example we choose not to set a default active descendent.
-
-```html
-<div id="streetType" role="listbox">
-  <div>Street</div>
-  <div>Avenue</div>
-  <div id="lane">Lane</div>
-</div>
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-#### JavaScript
-
-The code first checks whether the `ariaActiveDescendantElement` is supported.
-If it is then we get the element with `id` of "lane" and set that element to be the `ariaActiveDescendantElement`.
-We then log the element, element text from `ariaActiveDescendantElement`, and also the value of the `id` using `Element.getAttribute()` and `aria-activedescendant`.
-
-The second part of the code does the same thing, but selects the element to make the active descendant using its child position.
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js
-// Feature test for ariaActiveDescendantElement
-if ("ariaActiveDescendantElement" in Element.prototype) {
-  const laneElement = document.querySelector("#lane");
-  streetType.ariaActiveDescendantElement = laneElement;
-  log(
-    `ariaActiveDescendantElement (element): ${streetType.ariaActiveDescendantElement}`,
-  );
-  log(
-    `Element text: ${streetType.ariaActiveDescendantElement.textContent.trim()}`,
-  );
-  log(
-    `aria-activedescendant (id): ${streetType.getAttribute("aria-activedescendant")}`,
-  );
-
-  // Repeat, but select the avenue div by position
-  const avenueDiv = document.querySelector("#streetType div:nth-child(2)");
-  streetType.ariaActiveDescendantElement = avenueDiv;
-  log(
-    `ariaActiveDescendantElement (element): ${streetType.ariaActiveDescendantElement}`,
-  );
-  log(
-    `Element text: ${streetType.ariaActiveDescendantElement.textContent.trim()}`,
-  );
-  log(
-    `aria-activedescendant (id): ${streetType.getAttribute("aria-activedescendant")}`,
-  );
-} else {
-  log("ariaActiveDescendantElement not supported by browser");
-}
-```
-
-#### Result
-
-The log below shows the output of the above code.
-What this demonstrates is that we can select and assign elements to be the active descendant, even if they don't have an id.
-Note also that the corresponding attribute `aria-activedescendant` is not set (no id is shown below).
-
-{{EmbedLiveSample("Set the active descendent programmatically","100%","200px")}}
+<!-- Come back to this. Show shadow root can't be selected, and also this, that you can move in and out of scope -->
+<!--
 
 ### Relationships are maintained when descendant out of scope
 
@@ -258,6 +183,8 @@ if ("ariaActiveDescendantElement" in Element.prototype) {
 The log below shows the output of the above code.
 The first line shows the element when it is first assigned as the active descendent, the second shows the result after moving it into the shadow root, and the last line shows the result after returning the element to the DOM.
 What we see is that the element is not found when it is out of scope in the DOM, but it is restored as the active descendant when it is returned to the DOM.
+
+-->
 
 {{EmbedLiveSample("Set the active descendent programmatically2","100%","250px")}}
 
