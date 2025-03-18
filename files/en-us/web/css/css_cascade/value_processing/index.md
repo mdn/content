@@ -1,5 +1,5 @@
 ---
-title: "Value processing: CSS property value stages"
+title: "CSS property value processing"
 slug: Web/CSS/CSS_cascade/Value_processing
 page-type: guide
 ---
@@ -22,7 +22,7 @@ The [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which value sh
 
 After applying the cascading rules and resolving values step by step, the browser ensures the visual presentation matches the processed CSS.
 
-## Value stages in CSS
+## Processing stages
 
 All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS "`p { font-size: 1.25em; }`" and your HTML includes "`<p>CSS is fun!</p>`", what size will the paragraph be? The {{cssxref("font-size")}} value goes through a few stages to go from the `em` specified value to the rendered `px` value.
 
@@ -157,7 +157,7 @@ The calculation includes these steps:
 3. Then, layout is calculated, resulting in the [used value](#used-value).
 4. Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.
 
-## Resolved value
+### Resolved value
 
 The **resolved value** of a property is the value after applying active stylesheets and resolving any basic computation those values may contain. The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} method returns a live {{domxref("CSSStyleDeclaration")}} object containing the resolved values of all CSS properties applied to a specified element. Each resolved value is either the [computed value](#computed-value) or the [used value](#used-value), depending on the property.
 

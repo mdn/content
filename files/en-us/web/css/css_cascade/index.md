@@ -74,9 +74,9 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
   - : A guide to CSS inheritance.
 
-- [Value processing: CSS property value stages](/en-US/docs/Web/CSS/CSS_cascade/Value_processing)
+- [CSS property value processing](/en-US/docs/Web/CSS/CSS_cascade/Value_processing)
 
-  - : The different stages of CSS property values, from specified to rendering.
+  - : Value processing in CSS, including the different stages of CSS property values, from specifying to rendered values.
 
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
