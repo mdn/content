@@ -142,7 +142,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 #### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
 #### Templates
 

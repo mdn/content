@@ -143,10 +143,10 @@ In addition to regular multimedia content, HTML can include a variety of other c
 
 You can embed [SVG](/en-US/docs/Web/SVG) and [MathML](/en-US/docs/Web/MathML) content directly into HTML documents, using the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements.
 
-| Element                   | Description                                                                                                                                                                                                                              |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SVGElement("svg")}}     | Container defining a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document. |
-| {{MathMLElement("math")}} | The top-level element in MathML. Every valid MathML instance must be wrapped in it. In addition, you must not nest a second `<math>` element in another, but you can have an arbitrary number of other child elements in it.             |
+| Element                   | Description                                                                                                                                                                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SVGElement("svg")}}     | Container defining a new coordinate system and [viewport](/en-US/docs/Web/SVG/Reference/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document. |
+| {{MathMLElement("math")}} | The top-level element in MathML. Every valid MathML instance must be wrapped in it. In addition, you must not nest a second `<math>` element in another, but you can have an arbitrary number of other child elements in it.                       |
 
 ## Scripting
 
