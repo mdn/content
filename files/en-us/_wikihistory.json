@@ -77200,6 +77200,30 @@
       "Luke314"
     ]
   },
+  "Web/CSS/CSS_images/Replaced_element_properties": {
+    "modified": "2020-07-07T12:38:37.398Z",
+    "contributors": [
+      "wbamberg",
+      "Sheppy",
+      "SelenIT",
+      "Nisarg-Shah",
+      "TotalAMD",
+      "Konrud",
+      "yisibl",
+      "mfluehr",
+      "Dholbert",
+      "AdrianSandu",
+      "josketres",
+      "cris-luz-07",
+      "RosevearDev",
+      "Alrashel",
+      "atesgoral",
+      "FredB",
+      "peb",
+      "ethertank",
+      "teoli"
+    ]
+  },
   "Web/CSS/CSS_images/Using_CSS_gradients": {
     "modified": "2020-11-09T14:36:47.079Z",
     "contributors": [
@@ -78640,30 +78664,6 @@
       "Nickolay",
       "Ptak82",
       "Dria"
-    ]
-  },
-  "Web/CSS/Replaced_element": {
-    "modified": "2020-07-07T12:38:37.398Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "SelenIT",
-      "Nisarg-Shah",
-      "TotalAMD",
-      "Konrud",
-      "yisibl",
-      "mfluehr",
-      "Dholbert",
-      "AdrianSandu",
-      "josketres",
-      "cris-luz-07",
-      "RosevearDev",
-      "Alrashel",
-      "atesgoral",
-      "FredB",
-      "peb",
-      "ethertank",
-      "teoli"
     ]
   },
   "Web/CSS/Selector_list": {

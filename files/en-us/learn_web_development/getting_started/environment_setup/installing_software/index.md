@@ -71,7 +71,7 @@ One of the easiest options we've found to make a local server available is to us
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
 
-The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
+The above option is simple, but not that flexible. In the future, you may want to have a more flexible local server option that can be used to load examples in any browser you have. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Graphics editors
 

@@ -1001,7 +1001,7 @@ This property is typically used to create form fields that shrinkwrap their cont
 
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a {{ glossary("replaced elements", "replaced element")}}. When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
 ### Styling
 
