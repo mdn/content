@@ -11,7 +11,7 @@ pre-commit:
       run: yarn content fix-redirects en-US && yarn content validate-redirects en-US
       stage_fixed: true
 
-    - name: Format non-md
+    - name: Format non-markdown
       glob: "*.{js,json,yml,yaml,css,html}"
       run: yarn prettier --ignore-unknown --write --cache {staged_files}
       stage_fixed: true
@@ -26,7 +26,7 @@ pre-commit:
       run: yarn filecheck {staged_files}
 
     - name: Check URL issues
-      glob: "*"
+      glob: "files/**/*.md"
       run: node scripts/log-url-issues.js
 
     - name: Front matter tests
