@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### APIs
 
-- The {{domxref("SVGPathSegment/getPathData","getPathData()")}}, {{domxref("SVGPathSegment/setPathData","setPathData()")}}, and {{domxref("SVGPathSegment/getPathSegmentAtLength","getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathSegment")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1945312](https://bugzil.la/1945312)).
+- The {{domxref("SVGPathElement/getPathData","getPathData()")}} and {{domxref("SVGPathElement/setPathData","setPathData()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1945312](https://bugzil.la/1945312)).
 
 #### DOM
 
