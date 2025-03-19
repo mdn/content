@@ -1,5 +1,6 @@
 ---
 title: Introduction to automated testing
+short-title: Automated testing
 slug: Learn_web_development/Extensions/Testing/Automated_testing
 page-type: learn-module-chapter
 ---

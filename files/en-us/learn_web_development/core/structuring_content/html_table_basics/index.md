@@ -1,5 +1,6 @@
 ---
 title: HTML table basics
+short-title: Table basics
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 page-type: learn-module-chapter
 ---
