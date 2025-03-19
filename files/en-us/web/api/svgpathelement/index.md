@@ -22,6 +22,13 @@ _This interface inherits properties from its parent, {{domxref("SVGGeometryEleme
 
 _This interface also inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
+- {{domxref("SVGPathElement.getPathData()")}}
+  - : Returns the sequence of path segments that corresponds to the path data, optionally normalizing the values and segment types.
+- {{domxref("SVGPathElement.setPathData()")}}
+  - : Sets the sequence of path segments as the new path data.
+
+### Deprecated methods
+
 - {{domxref("SVGPathElement.getPathSegAtLength()")}} {{deprecated_inline}}
   - : Returns an unsigned long representing the index within the {{domxref("SVGAnimatedPathData.pathSegList", "pathSegList")}} utilizing the user agent's distance-along-a-path algorithm.
 - {{domxref("SVGPathElement.createSVGPathSegClosePath()")}} {{deprecated_inline}}
