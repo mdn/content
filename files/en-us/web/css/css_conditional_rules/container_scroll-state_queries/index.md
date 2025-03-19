@@ -127,7 +127,7 @@ We have hidden most of the HTML for brevity.
     <header>
       <h2>This one, not so much</h2>
 
-      <p>Suspendisse varius est ac turpis mollis cursus..</p>
+      <p>Suspendisse varius est ac turpis mollis cursus.</p>
     </header>
 
     <p>
