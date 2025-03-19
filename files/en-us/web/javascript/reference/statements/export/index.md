@@ -268,10 +268,10 @@ It is important to note the following:
 
 ### Using the default export
 
-If we want to export a single value or to have a fallback value for your module, you could use a default export:
+If we want to export a single value representing an entire module, we could use a default export:
 
 ```js
-// module "my-module.js"
+// module "cube.js"
 
 export default function cube(x) {
   return x * x * x;
@@ -281,7 +281,7 @@ export default function cube(x) {
 Then, in another script, it is straightforward to import the default export:
 
 ```js
-import cube from "./my-module.js";
+import cube from "./cube.js";
 console.log(cube(3)); // 27
 ```
 

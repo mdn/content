@@ -80,7 +80,7 @@ Proxies may perform numerous functions:
 
 ### HTTP is simple
 
-HTTP is generally designed to be simple and human-readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
+HTTP is generally designed to be human-readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
 HTTP messages can be read and understood by humans, providing easier testing for developers, and reduced complexity for newcomers.
 
 ### HTTP is extensible
@@ -150,7 +150,7 @@ When a client wants to communicate with a server, either the final server or an 
    The client may open a new connection, reuse an existing connection, or open several TCP connections to the servers.
 
 2. Send an HTTP message: HTTP messages (before HTTP/2) are human-readable.
-   With HTTP/2, these simple messages are encapsulated in frames, making them impossible to read directly, but the principle remains the same.
+   With HTTP/2, these messages are encapsulated in frames, making them impossible to read directly, but the principle remains the same.
    For example:
 
    ```http

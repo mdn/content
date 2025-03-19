@@ -90,7 +90,7 @@ When creating a CSP, you can start with `default-src 'none'` to lock down all re
 Content-Security-Policy: default-src 'none'; img-src 'self'
 ```
 
-However, there is a problem here. If you are embedding SVG sprites defined in external files via the [`<use>`](/en-US/docs/Web/SVG/Element/use) element, for example:
+However, there is a problem here. If you are embedding SVG sprites defined in external files via the [`<use>`](/en-US/docs/Web/SVG/Reference/Element/use) element, for example:
 
 ```svg
 <svg>
