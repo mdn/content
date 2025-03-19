@@ -201,10 +201,10 @@ Root
 ├── SECTION #1
 ├── SECTION #2
 └── SECTION #3
-    │
-    ├── ARTICLE #4
-    ├── ARTICLE #5
-    └── ARTICLE #6
+│
+├── ARTICLE #4
+├── ARTICLE #5
+└── ARTICLE #6
 
 The three articles are children of SECTION #3, so stacking of those elements is completely resolved within SECTION #3. Once stacking and rendering within SECTION #3 is completed, the whole SECTION #3 element is passed for stacking in the root element with respect to its sibling sections.
 
