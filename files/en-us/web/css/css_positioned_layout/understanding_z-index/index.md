@@ -120,7 +120,7 @@ The element with the lowest `z-index` value appears on the bottom layer. The ele
 
 Using `z-index` may appear fairly straightforward at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict.
 
-If the elements are not siblings, the stacking behavior can get more complicated.
+If the elements are not siblings, the stacking behavior can get more complicated as they have different [stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
 ```html live-sample___example4
 <section>
