@@ -12,7 +12,7 @@ There are several layout modes:
 
 - **[Flow layout or normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)** — all elements are part of normal flow until you do something to take them out of it. Normal flow includes:
   - **Block layout** — designed for laying out boxes such as paragraphs.
-  - **Inline layout** — designed for laying out inline items such as text.
+  - **[Inline layout](/en-US/docs/Web/CSS/CSS_inline_layout)** — designed for laying out inline items such as text.
 - **[Table layout](/en-US/docs/Web/CSS/CSS_table)** — designed for laying out tables.
 - **Float layout**, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
 - **[Positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout)**, designed for positioning elements without much interaction with other elements.
