@@ -190,3 +190,7 @@ These will be rendered as:
 ```html example-bad
 <p class="brush: js example-bad"></p>
 ```
+
+## placeholder text
+
+Use the placeholder lorem-ipsum text generated from [`www.lipsum.com`](https://www.lipsum.com) or [`lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VSCode pluging.
