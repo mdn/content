@@ -229,7 +229,7 @@ These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list)
 - {{CSSxRef(":has", ":has()")}}
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
 
-## Custom element pseudo-classes
+## Custom state pseudo-classes
 
 These pseudo-classes apply to custom elements.
 
