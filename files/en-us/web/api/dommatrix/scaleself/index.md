@@ -26,7 +26,7 @@ scaleSelf(scaleX, scaleY, scaleZ, originX, originY, originZ)
 
 ### Parameters
 
-- `scaleX`  {{optional_inline}}
+- `scaleX` {{optional_inline}}
   - : A multiplier for the scale value on the x-axis. If not supplied, this defaults to `1`.
 - `scaleY` {{optional_inline}}
   - : A multiplier for the scale value on the y-axis. If not supplied, this defaults to the value of `scaleX`.
