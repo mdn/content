@@ -1,5 +1,5 @@
 ---
-title: Headings and paragraphs in HTML
+title: Headings and paragraphs
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 page-type: tutorial-chapter
 ---

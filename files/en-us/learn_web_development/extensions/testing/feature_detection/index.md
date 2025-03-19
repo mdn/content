@@ -1,5 +1,6 @@
 ---
 title: Implementing feature detection
+short-title: Feature detection
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 page-type: learn-module-chapter
 ---

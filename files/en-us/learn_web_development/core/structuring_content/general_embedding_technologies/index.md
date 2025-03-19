@@ -1,5 +1,6 @@
 ---
 title: From object to iframe — general embedding technologies
+short-title: Embedding technologies
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 page-type: learn-module-chapter
 ---

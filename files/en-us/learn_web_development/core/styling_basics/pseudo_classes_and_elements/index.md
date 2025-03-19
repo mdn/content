@@ -1,5 +1,6 @@
 ---
 title: Pseudo-classes and pseudo-elements
+short-title: Pseudo-classes and elements
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 page-type: learn-module-chapter
 ---

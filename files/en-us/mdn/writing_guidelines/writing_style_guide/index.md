@@ -1,6 +1,6 @@
 ---
 title: Writing style guide
-short-title: Style guide
+short-title: Writing style
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
@@ -152,7 +152,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Review page structure**: Review the page to ensure that it's structured properly for its [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Check to make sure that all sections are present and have appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
-  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
+  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > [!NOTE]
@@ -435,7 +435,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
 - When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the sample's code blocks that have the same type (HTML, CSS, and JavaScript) are concatenated together before running the example. This lets you break the code into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ### Cross-references (linking)
 
@@ -666,11 +666,11 @@ Keep the following guidelines in mind when writing titles:
 
 ## See also
 
-- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
-- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)
+- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## Further reading
 

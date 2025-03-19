@@ -1,5 +1,6 @@
 ---
 title: Including vector graphics in HTML
+short-title: Vector graphics
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 page-type: learn-module-chapter
 ---

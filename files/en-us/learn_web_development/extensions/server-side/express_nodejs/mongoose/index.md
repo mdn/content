@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
+short-title: "3: Using databases with Mongoose"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 page-type: learn-module-chapter
 ---

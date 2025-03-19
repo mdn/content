@@ -1,5 +1,6 @@
 ---
 title: Command line crash course
+short-title: Command line
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 page-type: tutorial-chapter
 ---

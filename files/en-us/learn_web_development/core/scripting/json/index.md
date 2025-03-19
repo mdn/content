@@ -1,5 +1,6 @@
 ---
 title: Working with JSON
+short-title: JSON
 slug: Learn_web_development/Core/Scripting/JSON
 page-type: learn-module-chapter
 ---
