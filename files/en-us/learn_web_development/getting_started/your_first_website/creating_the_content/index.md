@@ -1,5 +1,6 @@
 ---
 title: "HTML: Creating the content"
+short-title: Creating the content
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 page-type: tutorial-chapter
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Marking up a letter"
+short-title: "Challenge: Letter markup"
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 page-type: learn-module-assessment
 ---

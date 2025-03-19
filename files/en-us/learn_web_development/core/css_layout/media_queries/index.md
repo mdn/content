@@ -1,5 +1,6 @@
 ---
 title: Media query fundamentals
+short-title: Media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 page-type: learn-module-chapter
 ---

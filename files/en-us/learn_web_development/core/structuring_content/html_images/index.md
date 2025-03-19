@@ -1,5 +1,6 @@
 ---
 title: HTML images
+short-title: Images
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 page-type: tutorial-chapter
 ---

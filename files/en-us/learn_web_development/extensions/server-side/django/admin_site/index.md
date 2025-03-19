@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 4: Django admin site"
+short-title: "4: Django admin site"
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 page-type: learn-module-chapter
 ---

@@ -1,5 +1,6 @@
 ---
 title: The business case for web performance
+short-title: Performance business case
 slug: Learn_web_development/Extensions/Performance/business_case_for_performance
 page-type: learn-module-chapter
 ---
