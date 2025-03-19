@@ -194,4 +194,4 @@ These will be rendered as:
 
 ## Placeholder text
 
-Use the placeholder lorem-ipsum text generated from [`www.lipsum.com`](https://www.lipsum.com) or [`lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VSCode plugin.
+Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin.
