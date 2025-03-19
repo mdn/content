@@ -369,11 +369,11 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 ### Selects and datalists
 
-Selects and datalists are generally not too bad to style.
+Selects are generally not too bad to style. Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
 
-Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
+Datalist styling is still limited.
 
-Even in non-supporting browsers and codebases, you can get a reasonable level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
+For datalists, and for selects in browsers that don't support customizable selects, you can get an OK level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The `datalist` invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
 Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
 

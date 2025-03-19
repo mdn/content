@@ -54,6 +54,9 @@ option::checkmark {
 }
 ```
 
+> [!NOTE]
+> When changing the icon like this, you should make sure to change it to something that will be announced as a checkmark (or similar) by assistive technologies so it makes sense to their users.
+
 See [Styling the current selection checkmark](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#styling_the_current_selection_checkmark) for a full example that uses this code, along with a live example rendering.
 
 ## Specifications

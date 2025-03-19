@@ -36,7 +36,7 @@ This allows you to target all of the picker contents as a single entity, for exa
 
 The select control `<button>` and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which brings several advantages such as accessibility semantics, tabbing order adjustments, and the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class.
 
-See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_drop-down_using_popover_states) for a typical usae case allowed by the implicit popover association.
+See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) for a typical usae case allowed by the implicit popover association.
 
 ### Picker anchor positioning
 

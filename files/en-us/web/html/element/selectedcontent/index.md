@@ -11,7 +11,11 @@ The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element contains a clon
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but has no other attributes defined on it.
+The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select `<button>`, the element is rendered {{glossary("inert")}}.
+
+The select `<button>` and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
+
+No other attributes are defined on `<selectedcontent>`.
 
 ## Description
 
