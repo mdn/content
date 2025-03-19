@@ -135,7 +135,7 @@ These pseudo-classes apply to media that is capable of being in a state where it
 - {{CSSxRef(":muted")}}
   - : Represents a sound-producing element that is muted.
 - {{CSSxRef(":volume-locked")}}
-  - : Represents a sound-producing element that has its volume level locked by the user agent.
+  - : Represents a sound-producing element that has its volume level locked by the browser.
 
 ## Time-dimensional pseudo-classes
 
