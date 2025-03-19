@@ -192,6 +192,6 @@ These will be rendered as:
 <p class="brush: js example-bad"></p>
 ```
 
-## placeholder text
+## Placeholder text
 
-Use the placeholder lorem-ipsum text generated from [`www.lipsum.com`](https://www.lipsum.com) or [`lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VSCode pluging.
+Use the placeholder lorem-ipsum text generated from [`www.lipsum.com`](https://www.lipsum.com) or [`lorem ipsum`](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VSCode plugin.
