@@ -6,12 +6,14 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **layout mode**, sometimes called _layout_, is a [CSS](/en-US/docs/Web/CSS) algorithm that determines the position and size of boxes based on the way they interact with their sibling and ancestor boxes.
+A **layout mode**, sometimes called _layout_, is a [CSS](/en-US/docs/Web/CSS) algorithm that determines the position and size of element boxes based on the way they interact with their sibling and ancestor boxes.
 
 There are several layout modes:
 
-- _[Normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)_ — all elements are part of normal flow until you do something to take them out of it. Normal flow includes _block layout_, designed for laying out boxes such as paragraphs and _inline layout_, which lays out inline items such as text.
-- [_Table layout_](/en-US/docs/Web/CSS/CSS_table), designed for laying out tables.
+- **[Flow layout or normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)** — all elements are part of normal flow until you do something to take them out of it. Normal flow includes:
+  - **Block layout** — designed for laying out boxes such as paragraphs.
+  - **Inline layout** — designed for laying out inline items such as text.
+- **[Table layout](/en-US/docs/Web/CSS/CSS_table)** — designed for laying out tables.
 - _Float layout_, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
 - [_Positioned layout_](/en-US/docs/Web/CSS/CSS_positioned_layout), designed for positioning elements without much interaction with other elements.
 - [_Multi-column layout_](/en-US/docs/Web/CSS/CSS_multicol_layout), designed for laying content out in columns as in a newspaper.
