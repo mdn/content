@@ -270,7 +270,7 @@ If you need the entered URL to be restricted further than just "any string that 
 
 ### URL validation
 
-In this example we want to make sure that the URL is filled in using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute and that the URL is from a **Mozilla** site using the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute.
+In this example we want to make sure that the URL is filled in using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute and that the URL is something on `https://developer.mozilla.org` using the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute.
 
 #### HTML
 
