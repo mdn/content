@@ -1,6 +1,6 @@
 ---
 title: "Challenge: Structuring a page of content"
-short-title: "Challenge: Content structure"
+short-title: "Challenge: Bird watching site"
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 page-type: learn-module-assessment
 ---
