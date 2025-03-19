@@ -12,9 +12,9 @@ In order to determine whether or not a particular interaction with the browser o
 
 ## Syntax
 
-| Method                                    | URI template                           |
-| ----------------------------------------- | -------------------------------------- |
-| [`GET`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/window/handles` |
+| Method                                              | URI template                           |
+| --------------------------------------------------- | -------------------------------------- |
+| [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) | `/session/{session id}/window/handles` |
 
 ### URL parameters
 

@@ -8,9 +8,9 @@ browser-compat: api.SecurityPolicyViolationEvent.sample
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`sample`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing a sample of the resource that caused the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation.
+The **`sample`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing a sample of the resource that caused the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
-This is only [`script-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample) keyword.
+This is only [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
 In addition, this will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
 
 > [!NOTE] Violation reports should be considered attacker-controlled data.

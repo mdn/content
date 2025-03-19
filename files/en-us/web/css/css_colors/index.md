@@ -110,12 +110,12 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - SVG color properties that are part of other specifications:
-  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/en-US/docs/Web/SVG/Attribute/color) attribute
+  - [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/en-US/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/en-US/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/en-US/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/en-US/docs/Web/SVG/Reference/Attribute/color) attribute
 - {{glossary("Color wheel")}} glossary term
 - {{glossary("Interpolation")}} glossary term
 - The [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) descriptor
@@ -132,5 +132,5 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) module and the {{cssxref("print-color-adjust")}} property.
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module, which is where CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) images are defined.
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
-- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
+- The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)

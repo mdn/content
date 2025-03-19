@@ -103,7 +103,7 @@ _No changes._
 
 ### HTTP
 
-- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
+- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) ([Firefox bug 795346](https://bugzil.la/795346)).
 
 ### Networking
 

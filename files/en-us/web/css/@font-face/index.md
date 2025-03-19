@@ -78,7 +78,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 ### Notes
 
-- Web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless [HTTP access controls](/en-US/docs/Web/HTTP/CORS) are used to relax this restriction.
+- Web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless [HTTP access controls](/en-US/docs/Web/HTTP/Guides/CORS) are used to relax this restriction.
 - `@font-face` cannot be declared within a CSS selector. For example, the following will not work:
 
   ```css example-bad

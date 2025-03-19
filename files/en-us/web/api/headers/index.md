@@ -7,12 +7,12 @@ browser-compat: api.Headers
 
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
+The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Reference/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
 
 You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {{domxref("Response.headers")}} properties, and create a new `Headers` object using the {{domxref("Headers.Headers", "Headers()")}} constructor. Compared to using plain objects, using `Headers` objects to send requests provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set.
 
 > [!NOTE]
-> You can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
+> You can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) reference.
 
 ## Description
 
@@ -103,5 +103,5 @@ myHeaders.get("Content-Type"); // should return 'text/xml'
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

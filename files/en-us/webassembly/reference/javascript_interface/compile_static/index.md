@@ -10,8 +10,8 @@ The **`WebAssembly.compile()`** static method compiles WebAssembly binary code i
 This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) function should be used).
 
 > [!NOTE]
-> Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
-> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 

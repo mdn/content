@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 73 that will affe
 
 ### Developer tools
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ([Firefox bug 1602093](https://bugzil.la/1602093)).
+- [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors) now appear as errors in the console (and no longer as warnings) giving them the appropriate visibility ([Firefox bug 1602093](https://bugzil.la/1602093)).
 - Text and regular expression searches in the web console [can now be negated by prefixing them with '-'](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering-and-searching) ([Firefox bug 1291192](https://bugzil.la/1291192)).
 
 ### HTML

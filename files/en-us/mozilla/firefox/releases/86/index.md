@@ -25,7 +25,7 @@ _No changes._
 
 ### SVG
 
-- SVG filters can now use the {{SVGElement("feComposite")}} element with the [`lighter` operator](/en-US/docs/Web/SVG/Attribute/operator#fecomposite) ([Firefox bug 1518099](https://bugzil.la/1518099)). This operator sums the pixels of two source graphics.
+- SVG filters can now use the {{SVGElement("feComposite")}} element with the [`lighter` operator](/en-US/docs/Web/SVG/Reference/Attribute/operator#fecomposite) ([Firefox bug 1518099](https://bugzil.la/1518099)). This operator sums the pixels of two source graphics.
 
 ### CSS
 

@@ -67,7 +67,7 @@ object when the requested media has successfully been obtained.
     rather than HTTPS). It also happens if the user has specified that the current
     browsing instance is not permitted access to the device, the user has denied access
     for the current session, or the user has denied all access to user media devices
-    globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), this error is
+    globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), this error is
     returned if Permissions Policy is not configured to allow access to the input source(s).
 
     > [!NOTE]
@@ -119,7 +119,7 @@ using HTTPS or the `file:///` URL scheme, or a page loaded from
 In addition, user permission is always required to access the user's audio and video
 inputs. Only a window's top-level document context for a valid origin can even request
 permission to use `getUserMedia()`, unless the top-level context expressly
-grants permission for a given {{HTMLElement("iframe")}} to do so using [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). Otherwise, the user
+grants permission for a given {{HTMLElement("iframe")}} to do so using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). Otherwise, the user
 will never even be asked for permission to use the input devices.
 
 For additional details on these requirements and rules, how they are reflected in the
@@ -156,7 +156,7 @@ There are a number of ways security management and controls in a {{Glossary("use
 
 #### Permissions Policy
 
-The two [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
+The two [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
 and `microphone`.
 
 For example, this HTTP header will enable use of a camera by the document

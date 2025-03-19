@@ -8,7 +8,7 @@ browser-compat: api.SVGLength.value
 
 {{APIRef("SVG")}}
 
-The `value` property of the {{domxref("SVGLength")}} interface represents the floating point value of the [\<length>](/en-US/docs/Web/SVG/Content_type#length) in user units.
+The `value` property of the {{domxref("SVGLength")}} interface represents the floating point value of the [\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length) in user units.
 
 Setting this attribute will cause {{domxref("SVGLength.valueInSpecifiedUnits")}} and {{domxref("SVGLength.valueAsString")}} to be updated automatically to reflect this setting.
 

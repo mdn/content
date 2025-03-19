@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-The [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) header provides fine-grained control over how and when browsers transmit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header.
+The [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) header provides fine-grained control over how and when browsers transmit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header.
 
 ## Problem
 
@@ -32,7 +32,7 @@ Other cases could result in the browser transmitting internal-use-only URLs, whi
 
 ## Solution
 
-Use [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) to limit the information available in the `Referer` header or to stop the `Referer` header from being sent altogether.
+Use [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) to limit the information available in the `Referer` header or to stop the `Referer` header from being sent altogether.
 
 The most useful directives available for `Referrer-Policy` are listed below, in decreasing order of strictness. Choose the strictest one that still allows your site to function properly:
 

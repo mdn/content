@@ -58,6 +58,6 @@ xhr.send(null);
 
 ## See also
 
-- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Reference/Status)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

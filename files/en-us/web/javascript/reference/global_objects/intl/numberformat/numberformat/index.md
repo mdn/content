@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat() constructor", "taller")}}
 
 ```js interactive-example
 const number = 123456.789;

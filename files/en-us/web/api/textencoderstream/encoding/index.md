@@ -20,7 +20,7 @@ A string containing `utf-8` encoded data.
 The following example demonstrates how to return `encoding` from a `TextEncoderStream` object.
 
 ```js
-stream = new TextEncoderStream();
+const stream = new TextEncoderStream();
 console.log(stream.encoding);
 ```
 

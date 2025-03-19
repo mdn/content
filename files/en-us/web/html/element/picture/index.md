@@ -116,7 +116,7 @@ For more information on using `srcset`, see the [Responsive images](/en-US/docs/
 
 ### The type attribute
 
-The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
+The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
 
 ```html
 <picture>

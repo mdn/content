@@ -13,7 +13,7 @@ browser-compat: api.Navigator.hid
 The **`Navigator.hid`**
 read-only property returns an {{domxref("HID")}} object providing methods for accessing HID device connections and events that fire when the user agent connects to or disconnects from a device.
 
-Where a defined [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks WebHID usage, the `Navigator.hid` property will not be available.
+Where a defined [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) blocks WebHID usage, the `Navigator.hid` property will not be available.
 
 ## Value
 

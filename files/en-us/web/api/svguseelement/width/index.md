@@ -10,7 +10,7 @@ browser-compat: api.SVGUseElement.width
 
 The **`width`** read-only property of the {{domxref("SVGUseElement")}} interface describes the width of the referenced element as an {{domxref("SVGAnimatedLength")}}. It reflects the computed value of the {{SVGAttr("width")}} attribute on the {{SVGElement("use")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the width of the referenced element in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the width of the referenced element in the user coordinate system.
 
 ## Value
 

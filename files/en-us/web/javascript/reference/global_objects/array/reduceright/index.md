@@ -11,7 +11,7 @@ The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a functi
 
 See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
-{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
 
 ```js interactive-example
 const array1 = [
