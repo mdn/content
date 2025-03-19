@@ -15,6 +15,7 @@ To scale a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.scale()"
 ## Syntax
 
 ```js-nolint
+scaleSelf()
 scaleSelf(scaleX)
 scaleSelf(scaleX, scaleY)
 scaleSelf(scaleX, scaleY, scaleZ)
