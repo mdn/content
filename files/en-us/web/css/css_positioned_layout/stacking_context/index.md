@@ -196,6 +196,7 @@ The CSS properties for colors, fonts, alignment, and [box-model](/en-US/docs/Web
 
 The hierarchy of stacking contexts in the above example is as follows:
 
+```plain no-lint
 Root
 │
 ├── SECTION #1
@@ -205,6 +206,7 @@ Root
   ├── ARTICLE #4
   ├── ARTICLE #5
   └── ARTICLE #6
+```
 
 The three `<article>` elements are children of SECTION #3. Therefore, the stacking of the article elements is completely resolved within SECTION #3. Once stacking and rendering within SECTION #3 is completed, the whole SECTION #3 element is passed for stacking in the root element with respect to its sibling `<section>` elements.
 
