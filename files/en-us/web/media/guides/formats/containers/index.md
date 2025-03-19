@@ -4,6 +4,7 @@ slug: Web/Media/Guides/Formats/Containers
 page-type: guide
 sidebar: mediasidebar
 ---
+
 A **media container** is a file format that encapsulates one or more media streams (such as audio or video) along with metadata, enabling them to be stored and played back together.
 The format of audio and video media files is defined by multiple components, including the audio and/or video codecs used, the media container format (or file type), and optionally other elements such as subtitle codecs or metadata.
 In this guide, we'll look at the container formats used most commonly on the web, covering basics about their specifications as well as their benefits, limitations, and ideal use cases.
