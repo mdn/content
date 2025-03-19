@@ -8,9 +8,9 @@ browser-compat: api.SVGAnimatedNumberList.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the current animated value of an animatable attribute that accepts a list of [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the current animated value of an animatable attribute that accepts a list of [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number) values.
 
-This property reflects the [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute of the [`<svg>`](/en-US/docs/Web/SVG/Element/svg) element, the [`values`](/en-US/docs/Web/SVG/Attribute/values#fecolormatrix) attribute of the [`feColorMatrix`](/en-US/docs/Web/SVG/Element/feColorMatrix) element and the {{SVGAttr("points")}} attribute of the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or {{SVGElement("polyline")}} element as a readonly {{domxref("SVGNumberList")}}, providing access to a dynamically updated list of points defined by the {{SVGAttr("points")}} attribute.
+This property reflects the [`viewBox`](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute of the [`<svg>`](/en-US/docs/Web/SVG/Reference/Element/svg) element, the [`values`](/en-US/docs/Web/SVG/Reference/Attribute/values#fecolormatrix) attribute of the [`feColorMatrix`](/en-US/docs/Web/SVG/Reference/Element/feColorMatrix) element and the {{SVGAttr("points")}} attribute of the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or {{SVGElement("polyline")}} element as a readonly {{domxref("SVGNumberList")}}, providing access to a dynamically updated list of points defined by the {{SVGAttr("points")}} attribute.
 
 ## Value
 

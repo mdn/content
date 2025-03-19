@@ -33,7 +33,7 @@ In a vertical writing mode then would lay out horizontally.
 
 In this guide, we will be working in English and therefore a horizontal writing mode. However, everything described should work in the same way if your document is in a vertical writing mode.
 
-As defined in the specification, the margins between two block boxes are what creates separation between the elements. We see this with a very simple layout of two paragraphs, to which I have added a border. The default browser stylesheet adds spacing between the paragraphs by way of adding a margin to the top and bottom.
+As defined in the specification, the margins between two block boxes are what creates separation between the elements. We can see this with the layout of two paragraphs, to which I have added a border. The default browser stylesheet adds spacing between the paragraphs by way of adding a margin to the top and bottom.
 
 ```html live-sample___normal-flow
 <div class="box">
@@ -195,7 +195,7 @@ strong {
 
 {{EmbedLiveSample("line-box")}}
 
-Find out more about how Block and Inline Boxes behave in our Guide to the [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model).
+Find out more about how block and inline boxes behave in our guide to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
 ## The display property and flow layout
 

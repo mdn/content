@@ -1,0 +1,18 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Privacy
+    title: Privacy
+  - type: section
+    link: /Web/Privacy/Guides
+  - link: /Web/Privacy/Guides/Firefox_tracking_protection
+  - type: listSubPages
+    path: /Web/Privacy/Guides/Privacy_sandbox
+    link: /Web/Privacy/Guides/Privacy_sandbox
+  - link: /Web/Privacy/Guides/Redirect_tracking_protection
+  - link: /Web/Privacy/Guides/State_Partitioning
+  - type: listSubPages
+    path: /Web/Privacy/Guides/Storage_Access_Policy
+    link: /Web/Privacy/Guides/Storage_Access_Policy
+  - link: /Web/Privacy/Guides/Third-party_cookies

@@ -1,5 +1,6 @@
 ---
 title: Solve common CSS problems
+short-title: Common CSS problems
 slug: Learn_web_development/Howto/Solve_CSS_problems
 page-type: landing-page
 ---

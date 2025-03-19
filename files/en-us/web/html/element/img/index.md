@@ -9,7 +9,20 @@ browser-compat: html.elements.img
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 The above example shows usage of the `<img>` element:
 
@@ -18,7 +31,7 @@ The above example shows usage of the `<img>` element:
 
 There are many other attributes to achieve various purposes:
 
-- [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
+- [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
 - Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial).
 
@@ -211,7 +224,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
-    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
+    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
 
     Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image.
 
@@ -279,7 +292,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-`<img>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element); it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
+`<img>` is a {{ glossary("replaced elements", "replaced element")}}; it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
 
 `<img>` has no baseline, so when images are used in an inline formatting context with {{cssxref("vertical-align", "vertical-align: baseline")}}, the bottom of the image will be placed on the text baseline.
 
@@ -314,12 +327,12 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 - [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
 - [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
 <img src="mdn.svg" alt="MDN" role="img" />
@@ -436,14 +449,14 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"
                 ><code>img</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -460,7 +473,7 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -468,41 +481,41 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"
                     >tab</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

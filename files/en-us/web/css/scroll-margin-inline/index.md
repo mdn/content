@@ -7,9 +7,76 @@ browser-compat: css.properties.scroll-margin-inline
 
 {{CSSRef}}
 
-The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
+The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
 
-{{EmbedInteractiveExample("pages/css/scroll-margin-inline.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin-inline")}}
+
+```css interactive-example-choice
+scroll-margin-inline: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 40px 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 4em 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline: 0px 3em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.scroller {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## Constituent properties
 

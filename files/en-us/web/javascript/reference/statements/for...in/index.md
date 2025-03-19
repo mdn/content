@@ -7,9 +7,9 @@ browser-compat: javascript.statements.for_in
 
 {{jsSidebar("Statements")}}
 
-The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
+The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 
-{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+{{InteractiveExample("JavaScript Demo: for...in statement")}}
 
 ```js interactive-example
 const object = { a: 1, b: 2, c: 3 };
@@ -34,7 +34,7 @@ for (variable in object)
 ### Parameters
 
 - `variable`
-  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...in` loop is in.
+  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...in` loop is in.
 - `object`
   - : Object whose non-symbol enumerable properties are iterated over.
 - `statement`
@@ -53,7 +53,7 @@ A `for...in` loop only iterates over enumerable, non-symbol properties. Objects 
 
 The traversal order, as of modern ECMAScript specification, is well-defined and consistent across implementations. Within each component of the prototype chain, all non-negative integer keys (those that can be array indices) will be traversed first in ascending order by value, then other string keys in ascending chronological order of property creation.
 
-The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple local variables, or use a property accessor like `for (x.y in iterable)` to assign the value to an object property.
+The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y in iterable)` to assign the value to an object property.
 
 A [legacy syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) allows `var` declarations of the loop variable to have an initializer. This throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode and is ignored in non–strict mode.
 
@@ -249,7 +249,7 @@ for (const prop in obj) {
 
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for", "for")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

@@ -7,7 +7,27 @@ sidebar: webassemblysidebar
 
 The **`max`** instructions, are used for getting the higher of two numbers.
 
-{{EmbedInteractiveExample("pages/wat/max.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: max", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    f32.const 10
+    f32.const 2
+
+    f32.max ;; calculate the higher number
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

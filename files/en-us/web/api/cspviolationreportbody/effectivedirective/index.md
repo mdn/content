@@ -8,13 +8,13 @@ browser-compat: api.CSPViolationReportBody.effectiveDirective
 
 {{APIRef("Reporting API")}}
 
-The **`effectiveDirective`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the effective [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) directive that was violated.
+The **`effectiveDirective`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the effective [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) directive that was violated.
 
-Note that this contains the specific directive that was effectively violated, such as [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) for violations related to script elements, and not the policy that was specified, which may have been the (more general) [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src).
+Note that this contains the specific directive that was effectively violated, such as [`script-src-elem`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) for violations related to script elements, and not the policy that was specified, which may have been the (more general) [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src).
 
 ## Value
 
-A string representing the effective [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives) that was violated.
+A string representing the effective [`Content-Security-Policy` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) that was violated.
 
 ## Examples
 

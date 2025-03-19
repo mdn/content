@@ -75,5 +75,6 @@ Math.cbrt(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.cbrt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.cbrt`](https://www.npmjs.com/package/math.cbrt)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

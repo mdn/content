@@ -19,4 +19,4 @@ Unlike {{Glossary("Real User Monitoring", "RUM")}}, synthetic monitoring provide
 - Related glossary terms:
   - {{Glossary("Real User Monitoring")}} (RUM)
   - {{Glossary("Beacon")}}
-- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Rum-vs-Synthetic)
+- [Real User Monitoring (RUM) versus Synthetic Monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)

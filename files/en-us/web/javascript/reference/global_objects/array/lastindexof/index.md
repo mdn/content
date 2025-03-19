@@ -11,7 +11,7 @@ The **`lastIndexOf()`** method of {{jsxref("Array")}} instances returns the last
 a given element can be found in the array, or -1 if it is not present. The array is
 searched backwards, starting at `fromIndex`.
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.lastIndexOf()")}}
 
 ```js interactive-example
 const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
@@ -137,6 +137,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.lastIndexOf`](https://www.npmjs.com/package/array.prototype.lastindexof)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

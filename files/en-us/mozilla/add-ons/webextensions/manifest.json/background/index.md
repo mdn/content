@@ -52,7 +52,7 @@ The `background` key is an object that must have one of these properties (for mo
         <p>
           If you need specific content in the background page, you can define a
           page using the <code>page</code> property. This is a
-          <code>String</code> representing a path relative to the manifest.json
+          <code>string</code> representing a path relative to the manifest.json
           file to an HTML document included in your extension bundle.
         </p>
         <p>
@@ -66,10 +66,10 @@ The `background` key is an object that must have one of these properties (for mo
       <td><code>scripts</code></td>
       <td>
         <p>
-          An <code>Array</code> of <code>Strings</code>, each of which is a path
+          An <code>array</code> of <code>string</code>, each of which is a path
           to a JavaScript source. The path is relative to the manifest.json file
           itself. These are the scripts that are executed in the
-          extension's background page.
+          extension's background context.
         </p>
         <p>The scripts share the same <code>window</code> global context.</p>
         <p>The scripts are loaded in the order they appear in the array.</p>
@@ -114,7 +114,7 @@ The `background` key can also contain this optional property:
     <tr>
       <td><code>persistent</code></td>
       <td>
-        <p>A <code>Boolean</code> value.</p>
+        <p>A <code>boolean</code> value.</p>
         <p>If omitted, this property defaults to <code>true</code> in Manifest V2 and <code>false</code> in Manifest V3. Setting to <code>true</code> in Manifest V3 results in an error.</p>
         <ul>
           <li>
@@ -140,10 +140,26 @@ The `background` key can also contain this optional property:
       </td>
     </tr>
     <tr>
+      <td><code>preferred_environment</code></td>
+      <td>
+        <p>An <code>array</code> of <code>string</code> listing the preferred environments in order of precedence.</p>
+        <p>If <code>background</code> specifies a <code>service_worker</code> and a <code>page</code> or <code>scripts</code>, this property enables the extension to tell the browser which background context to use if available. See <a href="#browser_support">Browser support</a> for details of the environments supported in the major browsers.</p>
+        <ul>
+          <li>
+            <code>document</code> requests that the browser use the extension's background scripts as documents, if supported.
+          </li>
+          <li>
+            <code>service_worker</code> requests that the the browser run the extension's background scripts as service workers, if supported.
+          </li>
+        </ul>
+        <p>Chrome only supports service workers, so it ignores this key. If omitted, Firefox and Safari run background scripts as documents. Safari uses a service worker context if the extension specifies <code>scripts</code> and <code>preferred_environment</code> is set to <code>service_worker</code>.</p>
+      </td>
+    </tr>
+    <tr>
       <td><code>type</code></td>
       <td>
-        <p>A <code>String</code> value.</p>
-        <p>Determines whether the scripts specified in <code>"scripts"</code> are loaded as ES modules.</p>
+        <p>A <code>string</code> value.</p>
+        <p>Determines whether the scripts specified in <code>scripts</code> are loaded as ES modules.</p>
         <ul>
           <li>
             <code>classic</code> indicates the background scripts or service workers are not included as an ES Module.

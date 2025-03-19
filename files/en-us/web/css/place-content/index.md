@@ -7,9 +7,57 @@ browser-compat: css.properties.place-content
 
 {{CSSRef}}
 
-The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
+The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
-{{EmbedInteractiveExample("pages/css/place-content.html")}}
+{{InteractiveExample("CSS Demo: place-content")}}
+
+```css interactive-example-choice
+place-content: end space-between;
+```
+
+```css interactive-example-choice
+place-content: space-around start;
+```
+
+```css interactive-example-choice
+place-content: start space-evenly;
+```
+
+```css interactive-example-choice
+place-content: end center;
+```
+
+```css interactive-example-choice
+place-content: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  height: 180px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Constituent properties
 

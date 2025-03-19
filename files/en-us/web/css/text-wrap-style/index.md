@@ -9,7 +9,51 @@ browser-compat: css.properties.text-wrap-style
 
 The **`text-wrap-style`** [CSS](/en-US/docs/Web/CSS) property controls how text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
 
-{{EmbedInteractiveExample("pages/css/text-wrap-style.html")}}
+{{InteractiveExample("CSS Demo: text-wrap-style")}}
+
+```css interactive-example-choice
+text-wrap-style: auto;
+```
+
+```css interactive-example-choice
+text-wrap-style: balance;
+```
+
+```css interactive-example-choice
+text-wrap-style: pretty;
+```
+
+```css interactive-example-choice
+text-wrap-style: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## Syntax
 

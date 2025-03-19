@@ -218,8 +218,8 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Logical OR assignment.
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : Nullish coalescing assignment.
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-  - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
+  - : Destructuring allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
 ### Yield operators
 

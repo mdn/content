@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 7: Sessions framework"
+short-title: "7: Sessions framework"
 slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 page-type: learn-module-chapter
 ---

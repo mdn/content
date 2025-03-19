@@ -563,7 +563,7 @@ That means that even though the browser doesn't automatically check the validity
 Our input to validate is an [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), which is `required`, and has a `minlength` of 8 characters. Let's check these using our own code, and show a custom error message for each one.
 
 We are aiming to show the error messages inside a `<span>` element.
-The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screen reader users.
+The [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) attribute is set on that `<span>` to make sure that our custom error message will be presented to everyone, including it being read out to screen reader users.
 
 Now onto some basic CSS to improve the look of the form slightly, and provide some visual feedback when the input data is invalid:
 
@@ -699,7 +699,7 @@ To validate a form, ask yourself a few questions:
     You should offer up-front suggestions so they know what's expected, as well as clear error messages.
     If you want to dig into form validation UI requirements, here are some useful articles you should read:
 
-    - [Help users enter the right data in forms](https://web.dev/Learn_web_development/Extensions/Forms/validation/)
+    - [Help users enter the right data in forms](https://web.dev/learn/forms/form-fields)
     - [Validating input](https://www.w3.org/WAI/tutorials/forms/validation/)
     - [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 

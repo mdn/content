@@ -9,7 +9,34 @@ browser-compat: html.elements.legend
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## Attributes
 
@@ -82,4 +109,4 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## See also
 
-- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)

@@ -19,7 +19,7 @@ This section lists APIs that specifications make available only in secure contex
 - {{domxref("Badging API", "", "", "nocode")}}
 - {{domxref("Barcode Detection API", "", "", "nocode")}}
 - {{domxref("Battery Status API", "", "", "nocode")}}
-- [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - {{domxref("Contact Picker API", "", "", "nocode")}}
 - {{domxref("Content Index API", "", "", "nocode")}}
 - {{domxref("Cookie Store API", "", "", "nocode")}}

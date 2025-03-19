@@ -9,7 +9,60 @@ browser-compat: css.properties.scroll-behavior
 
 The **`scroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
 
-{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
+{{InteractiveExample("CSS Demo: scroll-behavior")}}
+
+```css interactive-example-choice
+scroll-behavior: auto;
+```
+
+```css interactive-example-choice
+scroll-behavior: smooth;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="container">
+    <p class="nav">
+      Scroll to:
+      <a href="#pageA">A</a>
+      <a href="#pageB">B</a>
+      <a href="#pageC">C</a>
+    </p>
+    <scroll-container id="example-element">
+      <scroll-page id="pageA">A</scroll-page>
+      <scroll-page id="pageB">B</scroll-page>
+      <scroll-page id="pageC">C</scroll-page>
+    </scroll-container>
+  </div>
+</section>
+```
+
+```css interactive-example
+/* stylelint-disable selector-type-no-unknown */
+.container {
+  flex-direction: column;
+}
+
+.nav a {
+  color: #009e5f;
+}
+
+scroll-container {
+  border: 1px solid black;
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+  width: 200px;
+}
+
+scroll-page {
+  align-items: center;
+  display: flex;
+  font-size: 5em;
+  height: 100%;
+  justify-content: center;
+}
+```
 
 Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
 

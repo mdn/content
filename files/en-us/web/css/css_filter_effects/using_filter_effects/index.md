@@ -225,7 +225,7 @@ No filter effect is applied to the third line to show the original effect as a c
 
 ## Using SVG filters
 
-In addition to the 10 defined {{cssxref("filter-function")}}s, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an internal or external SVG file.
+In addition to the 10 defined {{cssxref("filter-function")}}s, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter), which may be embedded in an internal or external SVG file.
 
 A single SVG can be used to define several filters, each with an `id`:
 
@@ -258,7 +258,7 @@ Just like the {{cssxref("filter-function/blur", "blur()")}} filter function appl
 
 In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&gt;")}} in CSS and as a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function. In other words, it defines the number of pixels on the screen that blend into each other; a larger value creates more blur.
 
-The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
+The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html hidden
 <table cellpadding="5">
@@ -304,7 +304,7 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
 </svg>
 ```
 
-The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Reference/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
 
 ```css
 .filter {
@@ -323,4 +323,4 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
 - SVG {{SVGElement("filter")}} element, SVG {{SVGAttr("filter")}} attribute in [SVG](/en-US/docs/Web/SVG)
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

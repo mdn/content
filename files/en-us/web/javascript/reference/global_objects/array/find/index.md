@@ -18,7 +18,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 - If you need to find all elements that satisfy the provided testing function, use {{jsxref("Array/filter", "filter()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.find()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
@@ -199,6 +199,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## See also
 
 - [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.find`](https://www.npmjs.com/package/array.prototype.find)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

@@ -11,7 +11,7 @@ The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[
 
 To reverse the elements in an array without mutating the original array, use {{jsxref("Array/toReversed", "toReversed()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reverse()")}}
 
 ```js interactive-example
 const array1 = ["one", "two", "three"];
@@ -125,6 +125,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.reverse`](https://www.npmjs.com/package/array.prototype.reverse)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}

@@ -12,7 +12,7 @@ browser-compat: api.IdentityProvider.getUserInfo_static
 
 The **`getUserInfo()`** static method of the {{domxref("IdentityProvider")}} interface returns information about a user that has signed in, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a user has been signed in to a relying party (RP) site.
 
-This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
 ## Usage notes
 
@@ -21,7 +21,7 @@ When `getUserInfo()` is called, the browser will make a request to the IdP [acco
 - The user has previously signed in to the RP with the IdP via FedCM on the same browser instance, and the data hasn't been cleared.
 - The user is signed in to the IdP on the same browser instance.
 
-`getUserInfo()` must be called from within an embedded `<iframe>`, and the embedded site's origin must match the `configURL` of the IdP. In addition, the embedding HTML must explicitly allow its use via the {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy):
+`getUserInfo()` must be called from within an embedded `<iframe>`, and the embedded site's origin must match the `configURL` of the IdP. In addition, the embedding HTML must explicitly allow its use via the {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy):
 
 ```html
 <iframe
@@ -64,7 +64,7 @@ A {{jsxref("Promise")}} that fulfills with an array of objects, each containing 
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the browser is unable to connect to the IdP or if `getUserInfo()` is invoked from the top-level document.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the embedding `<iframe>` does not have a {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set to allow the use of `getUserInfo()` or if the FedCM API is disabled globally by a policy set on the top-level document.
+  - : Thrown if the embedding `<iframe>` does not have a {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set to allow the use of `getUserInfo()` or if the FedCM API is disabled globally by a policy set on the top-level document.
 
 ## Examples
 

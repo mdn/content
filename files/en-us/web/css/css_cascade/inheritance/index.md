@@ -94,6 +94,10 @@ em {
 
 We can see here another border around the word "emphasized text".
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
@@ -106,5 +110,5 @@ We can see here another border around the word "emphasized text".
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

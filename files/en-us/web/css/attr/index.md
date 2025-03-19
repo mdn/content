@@ -10,9 +10,31 @@ browser-compat: css.types.attr
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
-{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+
+```css interactive-example
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote::after {
+  display: block;
+  content: " (source: " attr(cite) ") ";
+  color: hotpink;
+}
+```
+
+```html interactive-example
+<blockquote cite="https://mozilla.org/en-US/about/">
+  Mozilla makes browsers, apps, code and tools that put people before profit.
+</blockquote>
+
+<blockquote cite="https://web.dev/about/">
+  Google believes in an open, accessible, private, and secure web.
+</blockquote>
+```
 
 ## Syntax
 
@@ -107,7 +129,7 @@ The `attr()` function can reference attributes that were never intended by the p
 </style>
 ```
 
-Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
+Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
@@ -130,7 +152,7 @@ div::before {
 }
 ```
 
-In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 To prevent this kind of situation, [feature detection](#feature_detection) is recommended.
 
@@ -151,7 +173,7 @@ A second edge case is the following:
 
 Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
-This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
+This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://www.bram.us/2024/02/26/css-what-is-iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
 To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 

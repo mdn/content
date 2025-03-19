@@ -7,7 +7,7 @@ browser-compat: css.types.url
 
 {{CSSRef}}
 
-The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS function, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
+The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS function, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
 > [!NOTE]
 > There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
@@ -19,7 +19,7 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 url("https://example.com/images/myImg.jpg");
 url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
-url("data:image/jpg;base64,iRxVB0…");
+url("data:image/jpeg;base64,iRxVB0…");
 url(myImg.jpg);
 url(#IDofSVGpath);
 
@@ -80,7 +80,7 @@ The **`url()`** function can be included as a value for
         If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
 
     - path
-      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) or an [SVG filter](/en-US/docs/Web/SVG/Element/filter).
+      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes) or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter).
 
 - `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.

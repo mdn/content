@@ -64,7 +64,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident)
 - [`<dimension>`](/en-US/docs/Web/CSS/dimension)
 - [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
-- [`<first-valid()>`](/en-US/docs/Web/CSS/)
+- [`<first-valid()>`](/en-US/docs/Web/CSS)
 - [`<frequency>`](/en-US/docs/Web/CSS/frequency)
 - [`<frequency-percentage>`](/en-US/docs/Web/CSS/frequency-percentage)
 - [`<ident>`](/en-US/docs/Web/CSS/ident)
@@ -81,7 +81,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<syntax>`](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [`<time-percentage>`](/en-US/docs/Web/CSS/time-percentage)
 - [`<time>`](/en-US/docs/Web/CSS/time)
-- [`<url>`](/en-US/docs/Web/CSS/url)
+- [`<url>`](/en-US/docs/Web/CSS/url_value)
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
 
@@ -104,10 +104,10 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`em`](/en-US/docs/Web/CSS/length#em)
 - [`ex`](/en-US/docs/Web/CSS/length#ex)
 - [`grad`](/en-US/docs/Web/CSS/length#grad)
-- [`Hz`](/en-US/docs/Web/CSS/length#Hz)
+- [`Hz`](/en-US/docs/Web/CSS/length#hz)
 - [`ic`](/en-US/docs/Web/CSS/length#ic)
 - [`in`](/en-US/docs/Web/CSS/length#in)
-- [`kHz`](/en-US/docs/Web/CSS/length#kHz)
+- [`kHz`](/en-US/docs/Web/CSS/length#khz)
 - [`left`](/en-US/docs/Web/CSS/length#left)
 - [`lh`](/en-US/docs/Web/CSS/length#lh)
 - [`lvb`](/en-US/docs/Web/CSS/length#lvb)
@@ -122,7 +122,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`pi`](/en-US/docs/Web/CSS/length#pi)
 - [`pt`](/en-US/docs/Web/CSS/length#pt)
 - [`px`](/en-US/docs/Web/CSS/length#px)
-- [`Q`](/en-US/docs/Web/CSS/length#Q)
+- [`Q`](/en-US/docs/Web/CSS/length#q)
 - [`rad`](/en-US/docs/Web/CSS/length#rad)
 - [`rcap`](/en-US/docs/Web/CSS/length#rcap)
 - [`rch`](/en-US/docs/Web/CSS/length#rch)
@@ -148,7 +148,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
 - [`x`](/en-US/docs/Web/CSS/length#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -170,22 +170,22 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 ### Key concepts
 
-- {{glossary("advance measure")}}
-- [bracketed range notation](/en-US/docs/Web/CSS/Value_definition_syntax#bracketed_range_notation_minmax)
-- [Component value combinators](/en-US/docs/Web/CSS/Value_definition_syntax#component_value_combinators)
+- {{glossary("Advance measure")}}
+- [Bracketed range notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#bracketed_range_notation_minmax)
+- [Component value combinators](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
-- {{glossary("device pixel")}}
-- [functional notation](/en-US/docs/Web/CSS/CSS_Functions)
-- {{glossary("identifier")}}
-- {{glossary("interpolation")}}
-- {{glossary("keyword")}}
-- [math function](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions)
-- [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- {{glossary("origin")}}
-- {{glossary("pixel")}}
-- [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- {{glossary("Device pixel")}}
+- [Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- {{glossary("Identifier")}}
+- {{glossary("Interpolation")}}
+- {{glossary("Keyword")}}
+- [Math function](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- {{glossary("Origin")}}
+- {{glossary("Pixel")}}
+- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
-- [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
 ## Guides
 
@@ -201,11 +201,15 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+
+  - : The CSS math functions that allow a property value to be written as a mathematical expression.
+
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
@@ -224,7 +228,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
   - {{cssxref("unset")}}
   - {{cssxref("all")}}
 
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`)

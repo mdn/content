@@ -16,8 +16,6 @@ originator of the event.
 
 An {{domxref("XRReferenceSpace")}} indicating the source of the event.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

@@ -9,7 +9,34 @@ browser-compat: html.elements.select
 
 The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control that provides a menu of options.
 
-{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
@@ -250,16 +277,16 @@ You'll see that:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> with <strong>no</strong>
         <code>multiple</code> attribute and <strong>no</strong>
         <code>size</code> attribute greater than 1, otherwise no
         <code>role</code> permitted

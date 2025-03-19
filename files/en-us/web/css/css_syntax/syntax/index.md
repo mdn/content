@@ -81,10 +81,10 @@ There is another group of statements – the **nested statements**. These are st
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - Values
   - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
   - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
   - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
   - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)

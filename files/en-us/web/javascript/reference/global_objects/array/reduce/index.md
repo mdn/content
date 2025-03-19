@@ -11,7 +11,7 @@ The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-suppl
 
 The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
-{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.reduce()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];
@@ -405,6 +405,7 @@ In cases where `reduce()` is the best choice, documentation and semantic variabl
 ## See also
 
 - [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.reduce`](https://www.npmjs.com/package/array.prototype.reduce)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}

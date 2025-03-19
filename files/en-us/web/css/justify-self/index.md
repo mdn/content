@@ -9,7 +9,49 @@ browser-compat: css.properties.justify-self
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}
+{{InteractiveExample("CSS Demo: justify-self")}}
+
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 The effect of this property is dependent of the layout mode we are in:
 
@@ -121,7 +163,7 @@ This property can take one of three different forms:
 
 ### Basic demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
+In the following example we have a 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
 
 The second, third, and fourth grid items are then given different values of `justify-self`, to show how these override the `justify-items` value. These values cause the grid items to span only as wide as their content width, and align in different positions across their cells.
 

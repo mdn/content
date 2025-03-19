@@ -7,9 +7,57 @@ browser-compat: css.properties.gap
 
 {{CSSRef}}
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns. This property applies to [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout), [flex](/en-US/docs/Web/CSS/CSS_flexible_box_layout), and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) containers.
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Constituent properties
 

@@ -70,6 +70,7 @@ Object.getPrototypeOf("foo");
 ## See also
 
 - [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.getPrototypeOf`](https://www.npmjs.com/package/object.getprototypeof)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

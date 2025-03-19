@@ -11,7 +11,37 @@ The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure wi
 
 A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate open/closed state, with a label next to the triangle. The contents of the `<summary>` element are used as the label for the disclosure widget. The contents of the `<details>` provide the {{glossary("accessible description")}} for the `<summary>`.
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
 
@@ -235,7 +265,7 @@ See the {{htmlelement("summary")}} page for an [example of customizing the discl
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -1,5 +1,6 @@
 ---
 title: Learn web development writing guidelines
+short-title: Learning content
 slug: MDN/Writing_guidelines/Learning_content
 page-type: mdn-writing-guide
 ---
@@ -28,7 +29,7 @@ If you do not see a topic covered in Learn and you think it should be covered, d
 
 ## Approach
 
-To create and update MDN Learn web development content, you should follow the same approach as for the rest of MDN, in many ways. You should follow the same general [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), [code style](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide), and [techniques](/en-US/docs/MDN/Writing_guidelines/Howto).
+To create and update MDN Learn web development content, you should follow the same approach as for the rest of MDN, in many ways. You should follow the same general [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), [code style](/en-US/docs/MDN/Writing_guidelines/Code_style_guide), and [techniques](/en-US/docs/MDN/Writing_guidelines/Howto).
 
 There are a few differences, however:
 

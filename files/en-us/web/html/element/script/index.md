@@ -100,7 +100,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
-  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `referrerpolicy`
 
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
@@ -127,7 +127,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
-        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
     - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
         The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
@@ -163,13 +163,13 @@ If the script is blocked, an {{domxref("HTMLElement/error_event", "error")}} eve
 
 ### Basic usage
 
-These examples show how to import (an external) script using the `<script>` element.
+This example shows how to import (an external) script using the `<script>` element:
 
 ```html
 <script src="javascript.js"></script>
 ```
 
-And the following examples show how to put (an inline) script inside the `<script>` element.
+The following example shows how to put (an inline) script inside the `<script>` element:
 
 ```html
 <script>

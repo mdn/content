@@ -365,7 +365,7 @@ function handleFiles() {
 
 This starts by fetching the URL of the {{HTMLElement("div")}} with the ID `fileList`. This is the block into which we'll insert our file list, including thumbnails.
 
-If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is `null`, we set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:
+If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is empty, we set the inner HTML of the block to display "No files selected!". Otherwise, we start building our file list, as follows:
 
 1. A new unordered list ({{HTMLElement("ul")}}) element is created.
 2. The new list element is inserted into the {{HTMLElement("div")}} block by calling its {{DOMxRef("Node.appendChild()")}} method.

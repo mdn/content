@@ -8,10 +8,10 @@ browser-compat: api.Element.ariaBrailleLabel
 
 {{APIRef("DOM")}}
 
-The **`ariaBrailleLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) attribute, which defines the ARIA braille label of the element.
+The **`ariaBrailleLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) attribute, which defines the ARIA braille label of the element.
 
 This element label may be used by assistive technologies that can present content in braille, but should only be set if a braille-specific label would improve the user experience.
-The [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) contains additional information about when the property should be set.
+The [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) contains additional information about when the property should be set.
 
 ## Value
 

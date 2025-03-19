@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.toString
 
 {{JSRef}}
 
-The **`toString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for custom [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
+The **`toString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for custom [type coercion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) logic.
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
 
@@ -42,9 +42,9 @@ A string representing the object.
 
 ## Description
 
-JavaScript calls the `toString` method to [convert an object to a primitive value](/en-US/docs/Web/JavaScript/Data_structures#type_coercion). You rarely need to invoke the `toString` method yourself; JavaScript automatically invokes it when encountering an object where a primitive value is expected.
+JavaScript calls the `toString` method to [convert an object to a primitive value](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion). You rarely need to invoke the `toString` method yourself; JavaScript automatically invokes it when encountering an object where a primitive value is expected.
 
-This method is called in priority by [string conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), but [numeric conversion](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and [primitive conversion](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) call `valueOf()` in priority. However, because the base [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method returns an object, the `toString()` method is usually called in the end, unless the object overrides `valueOf()`. For example, `+[1]` returns `1`, because its [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) method returns `"1"`, which is then converted to a number.
+This method is called in priority by [string conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), but [numeric conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and [primitive conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) call `valueOf()` in priority. However, because the base [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method returns an object, the `toString()` method is usually called in the end, unless the object overrides `valueOf()`. For example, `+[1]` returns `1`, because its [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) method returns `"1"`, which is then converted to a number.
 
 All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `toString()` method. When you create a custom object, you can override `toString()` to call a custom method, so that your custom object can be converted to a string value. Alternatively, you can add a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, which allows even more control over the conversion process, and will always be preferred over `valueOf` or `toString` for any type conversion.
 
@@ -76,7 +76,7 @@ The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) obje
 
 ### Overriding toString for custom objects
 
-You can create a function to be called in place of the default `toString()` method. The `toString()` function you create should return a string value. If it returns an object and the method is called implicitly during [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion), then its result is ignored and the value of a related method, {{jsxref("Object/valueOf", "valueOf()")}}, is used instead, or a `TypeError` is thrown if none of these methods return a primitive.
+You can create a function to be called in place of the default `toString()` method. The `toString()` function you create should return a string value. If it returns an object and the method is called implicitly during [type conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion), then its result is ignored and the value of a related method, {{jsxref("Object/valueOf", "valueOf()")}}, is used instead, or a `TypeError` is thrown if none of these methods return a primitive.
 
 The following code defines a `Dog` class.
 

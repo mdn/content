@@ -20,13 +20,13 @@ This guide will try to explain those rules, with some simplification and several
 
 ## Articles
 
-1. [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-2. [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): How floating elements are handled with stacking.
-3. [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): How to use `z-index` to change default stacking.
-4. [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): Notes on the stacking context.
+1. [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+2. [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): How floating elements are handled with stacking.
+3. [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index): How to use `z-index` to change default stacking.
+4. [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context): Notes on the stacking context.
 
 ## Examples
 
-1. [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
-2. [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
-3. [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level
+1. [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
+2. [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
+3. [Stacking context example 3](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3-level HTML hierarchy, `z-index` on the second level

@@ -45,7 +45,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 - [Getting started with React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
-- [Beginning our React todo list](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
+- [Beginning our React ToDo app](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
   - : Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
 - [Componentizing our React app](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_components)
   - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article, we will show you a sensible way to break our app up into components.

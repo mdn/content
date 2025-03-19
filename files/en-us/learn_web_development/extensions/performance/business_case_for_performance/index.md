@@ -1,5 +1,6 @@
 ---
 title: The business case for web performance
+short-title: Performance business case
 slug: Learn_web_development/Extensions/Performance/business_case_for_performance
 page-type: learn-module-chapter
 ---
@@ -38,7 +39,7 @@ We've discussed how prioritizing performance can improve user experience and the
 
 Setting a web performance budget can help you make sure the team stays on track in keeping the site and help prevent regressions. A performance budget is a set of limits that are set to specify limits, such as the maximum number of HTTP requests allowed, the maximum total size of all the assets combined, the minimum allowable FPS on a specific device, etc., that must be maintained. The budget can be applied to a single file, a file type, all files loaded on a page, a specific metric, or a threshold over a period of time. The budget reflects reachable goals; whether they are time, quantity, or rule-based.
 
-Defining and promoting a budget helps performance proponents advocate for good user experience against competing interests, such as marketing, sales, or even other developers that may want to add videos, 3rd party scripts, or even frameworks. [Performance budgets](/en-US/docs/Web/Performance/Performance_budgets) help developer teams protect optimal performance for users while enabling the business to tap into new markets and deliver custom experiences.
+Defining and promoting a budget helps performance proponents advocate for good user experience against competing interests, such as marketing, sales, or even other developers that may want to add videos, 3rd party scripts, or even frameworks. [Performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets) help developer teams protect optimal performance for users while enabling the business to tap into new markets and deliver custom experiences.
 
 ### Key Performance Indicators
 
