@@ -39,6 +39,8 @@ Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: br
 Content-Encoding: zstd
+Content-Encoding: cdb
+Content-Encoding: cdz
 
 // Multiple, in the order in which they were applied
 Content-Encoding: deflate, gzip
@@ -60,6 +62,10 @@ Content-Encoding: deflate, gzip
   - : A format using the {{glossary("Brotli compression","Brotli")}} algorithm structure (defined in {{rfc(7932)}}).
 - `zstd`
   - : A format using the {{glossary("Zstandard compression","Zstandard")}} algorithm structure (defined in {{rfc(8878)}}).
+- `dcb`
+  - : A {{glossary("Compression Dictionary Transport")}} format using the {{glossary("Brotli compression","Brotli")}} algorithm structure with a custom dictionary.
+- `dcz`
+  - : A {{glossary("Compression Dictionary Transport")}} format using the {{glossary("Zstandard compression","Zstandard")}} algorithm structure with a custom dictionary.
 
 ## Examples
 
@@ -94,3 +100,4 @@ Whether a server uses compression methods requested by the client depends on ser
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
+- {{Glossary("Compression Dictionary Transport")}}

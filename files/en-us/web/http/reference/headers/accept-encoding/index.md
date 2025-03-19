@@ -46,6 +46,8 @@ Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
 Accept-Encoding: zstd
+Accept-Encoding: cdb
+Accept-Encoding: cdz
 Accept-Encoding: identity
 Accept-Encoding: *
 
@@ -65,6 +67,10 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : A compression format that uses the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
 - `zstd`
   - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
+- `dcb`
+  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm with a custom dictionary.
+- `dcz`
+  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm with a custom dictionary.
 - `identity`
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
 - `*` (wildcard)
@@ -110,3 +116,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
+- {{Glossary("Compression Dictionary Transport")}}
