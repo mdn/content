@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial: The Local Library website"
+short-title: "1: Local library tutorial"
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
 page-type: learn-module-chapter
 ---

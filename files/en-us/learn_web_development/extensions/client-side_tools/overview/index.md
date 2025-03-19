@@ -1,5 +1,6 @@
 ---
 title: Client-side tooling overview
+short-title: Overview
 slug: Learn_web_development/Extensions/Client-side_tools/Overview
 page-type: learn-module-chapter
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Typesetting a community school homepage"
+short-title: "Challenge: Community school homepage"
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 page-type: learn-module-assessment
 ---

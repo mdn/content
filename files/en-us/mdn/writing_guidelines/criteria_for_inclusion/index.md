@@ -1,6 +1,7 @@
 ---
 title: Criteria for inclusion on MDN Web Docs
-slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
+short-title: Criteria for inclusion
+slug: MDN/Writing_guidelines/Criteria_for_inclusion
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
@@ -138,22 +139,23 @@ In terms of standards, you are expected to maintain a reasonable level of writin
 
 If you went through the proposal submission process, then you should already have a rough outline of what you are going to write for this technology. At this point, you should refine that into a site structure plan: think about what the document hierarchy will be and where everything will fit and link together.
 
-Each project is different, but we'd roughly recommend something like this:
+Each project is different, but we recommend the following directory tree:
 
 ```plain
-Landing page
-|
-------Reference
-      |
-      --------Elements
-      |
-      --------Methods
-      |
-      --------Other reference page type(s)?
-|
-------Guides/tutorials
-|
-------Examples
+├── Guides
+│   ├── guide_one
+│   ├── guide_two
+│   └── index.md
+├── index.md
+├── Reference
+│   ├── Elements
+│   ├── Methods
+│   ├── Others ?
+│   └── index.md
+└── Tutorials
+    ├── tutorial_one
+    ├── tutorial_two
+    └── index.md
 ```
 
 Each page type that you will use in your project should have a page template for others to copy the structure from. You should decide on these early on.

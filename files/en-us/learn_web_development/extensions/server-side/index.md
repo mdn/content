@@ -1,5 +1,6 @@
 ---
 title: Server-side website programming
+short-title: Server-side websites
 slug: Learn_web_development/Extensions/Server-side
 page-type: learn-topic
 ---

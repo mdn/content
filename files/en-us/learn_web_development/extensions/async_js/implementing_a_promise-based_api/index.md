@@ -1,5 +1,6 @@
 ---
 title: How to implement a promise-based API
+short-title: Implementing promise-based APIs
 slug: Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
 page-type: learn-module-chapter
 ---

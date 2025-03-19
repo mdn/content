@@ -1,5 +1,6 @@
 ---
 title: Introduction to cross-browser testing
+short-title: Introduction
 slug: Learn_web_development/Extensions/Testing/Introduction
 page-type: learn-module-chapter
 ---
