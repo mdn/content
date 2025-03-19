@@ -14,11 +14,11 @@ There are several layout modes:
   - **Block layout** — designed for laying out boxes such as paragraphs.
   - **Inline layout** — designed for laying out inline items such as text.
 - **[Table layout](/en-US/docs/Web/CSS/CSS_table)** — designed for laying out tables.
-- _Float layout_, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
-- [_Positioned layout_](/en-US/docs/Web/CSS/CSS_positioned_layout), designed for positioning elements without much interaction with other elements.
-- [_Multi-column layout_](/en-US/docs/Web/CSS/CSS_multicol_layout), designed for laying content out in columns as in a newspaper.
-- [_Flexible box layout_](/en-US/docs/Web/CSS/CSS_flexible_box_layout), designed for laying out complex pages that can be resized smoothly.
-- [_Grid layout_](/en-US/docs/Web/CSS/CSS_grid_layout), designed for laying out elements relative to a fixed grid.
+- **Float layout**, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
+- **[Positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout)**, designed for positioning elements without much interaction with other elements.
+- **[Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)**, designed for laying content out in columns as in a newspaper.
+- **[Flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)**, designed for laying out complex pages that can be resized smoothly.
+- **[Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)**, designed for laying out elements relative to a fixed grid.
 
 > [!NOTE]
 > Not all [CSS properties](/en-US/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
