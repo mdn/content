@@ -83,7 +83,7 @@ document
 
 ## See also
 
-- {{domxref("DOMMatrixReadOnly.scaleSelf()")}}
+- {{domxref("DOMMatrixReadOnly.scale()")}}
 - {{domxref("DOMMatrix.scale3dSelf()")}}
 - CSS {{cssxref("transform")}} property and the {{cssxref("transform-function/scale", "scaleSelf()")}} and {{cssxref("transform-function/matrix", "matrix()")}} functions
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
