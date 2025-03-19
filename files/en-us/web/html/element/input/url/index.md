@@ -287,7 +287,7 @@ The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute also descr
       name="myURL"
       type="url"
       required
-      pattern=".*\.mozilla\..*"
+      pattern="https://developer\.mozilla\.org.*"
       title="URL should be in a mozilla domain" />
     <span class="validity"></span>
   </label>
