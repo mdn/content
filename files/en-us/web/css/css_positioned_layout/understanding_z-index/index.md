@@ -24,7 +24,7 @@ If you are not familiar with the term 'z-axis', imagine the page as a stack of l
 | Layer X      | Layers with positive `z-index` values |
 | Top layer    | Closest to the observer               |
 
-### Normal flow
+## Normal flow
 
 By default, when no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
 
@@ -92,7 +92,7 @@ div {
 
 {{EmbedLiveSample("Example2", 600, 130)}}
 
-### Rearranging layers
+## Rearranging layers
 
 We can use the CSS {{cssxref("z-index")}} property to position each element along the z-axis, effectively rearranging the stacking order.
 
@@ -116,7 +116,7 @@ By adding `z-index` values, we change the default layer order:
 
 The element with the lowest `z-index` value appears on the bottom layer. The element with the highest `z-index` value appears on the top layer. In this example, `-9` is the lowest value, so `#div2` is behind all the others. The first element in the source order, `#div1`, has the greatest value, so it appears on top of all the others.
 
-### Stacking context
+## Stacking context
 
 Using `z-index` may appear fairly straightforward at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict.
 

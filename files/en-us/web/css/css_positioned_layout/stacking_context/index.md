@@ -12,7 +12,7 @@ Elements within a stacking context are stacked independently from elements outsi
 
 Each stacking context is self-contained. After an element's contents are stacked, the entire element is considered as a single unit in the stacking order of its parent stacking context.
 
-Within a stacking context, child elements are stacked according to the `z-index` values of all the siblings, with child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context. Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts.
+Within a stacking context, child elements are stacked according to the `z-index` values of all the siblings. The stacking contexts of these nested elements only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context. Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts.
 
 The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. Elements that don't create their own stacking contexts are _assimilated_ by the parent stacking context.
 
@@ -52,9 +52,9 @@ Stacking contexts can be contained in other stacking contexts, and they can toge
 
 The root element of a document is a stacking context which, in most cases, contains nested stacking contexts, many of which will contain additional stacking contexts. Within each stacking context, child elements are stacked according to the same rules explained in [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index). Importantly, the `z-index` values of its child stacking contexts only have meaning within its parent's stacking context. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
-To figure out the _rendering order_ of stacked elements along the z-axis think of the it as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers.
+To figure out the _rendering order_ of stacked elements along the z-axis think of each index value as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers.
 
-To demonstrate how elements with their own stacking content participate in the stacking order of their ancestor stacking contexts, let's look at an example page with six container elements. There are three sibling {{htmlelement("section")}} elements. The last `<section>` contains three sibling {{htmlelement("article")}} elements, with the {{htmlelement("heading_elements", "&lt;h1&gt;")}} and {{htmlelement("code")}} of that third section appearing between the after the first `<article>`.
+To demonstrate how the stacking order of each element participates in the stacking order of their ancestor stacking contexts, let's look at an example page with six container elements. There are three sibling {{htmlelement("section")}} elements. The last `<section>` contains three sibling {{htmlelement("article")}} elements, with the {{htmlelement("heading_elements", "&lt;h1&gt;")}} and {{htmlelement("code")}} of that third section appearing between the after the first `<article>`.
 
 ```html
 <article id="container1">
@@ -201,12 +201,12 @@ Root
 ├── SECTION #1
 ├── SECTION #2
 └── SECTION #3
-│
-├── ARTICLE #4
-├── ARTICLE #5
-└── ARTICLE #6
+  │
+  ├── ARTICLE #4
+  ├── ARTICLE #5
+  └── ARTICLE #6
 
-The three articles are children of SECTION #3, so stacking of those elements is completely resolved within SECTION #3. Once stacking and rendering within SECTION #3 is completed, the whole SECTION #3 element is passed for stacking in the root element with respect to its sibling sections.
+The three `<article>` elements are children of SECTION #3. Therefore, the stacking of the article elements is completely resolved within SECTION #3. Once stacking and rendering within SECTION #3 is completed, the whole SECTION #3 element is passed for stacking in the root element with respect to its sibling `<section>` elements.
 
 ARTICLE #4 is rendered under SECTION #1 because SECTION #1's z-index (`5`) is valid within the stacking context of the root element, while ARTICLE #4's z-index (`6`) is valid within the stacking context of SECTION #3 (`z-index: 4`). So ARTICLE #4 is under SECTION #1 because ARTICLE #4 belongs to SECTION #3, which has a lower z-index value (`4-6` is less than `5-0`).
 
