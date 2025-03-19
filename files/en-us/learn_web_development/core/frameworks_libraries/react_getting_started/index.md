@@ -1,5 +1,6 @@
 ---
 title: Getting started with React
+short-title: React getting started
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 page-type: learn-module-chapter
 ---

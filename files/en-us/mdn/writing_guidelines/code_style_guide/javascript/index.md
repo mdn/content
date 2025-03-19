@@ -1,6 +1,7 @@
 ---
 title: Guidelines for writing JavaScript code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+short-title: JavaScript examples
+slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---

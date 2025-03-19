@@ -1,6 +1,7 @@
 ---
 title: Guidelines for writing HTML code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+short-title: HTML examples
+slug: MDN/Writing_guidelines/Code_style_guide/HTML
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---

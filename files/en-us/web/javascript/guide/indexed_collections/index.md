@@ -90,7 +90,7 @@ If your code needs to create arrays with single elements of an arbitrary data ty
 You can also use the {{jsxref("Array.of")}} static method to create arrays with single element.
 
 ```js
-const wisenArray = Array.of(9.3); // wisenArray contains only one element 9.3
+const arr = Array.of(9.3); // arr contains only one element 9.3
 ```
 
 ## Referring to array elements

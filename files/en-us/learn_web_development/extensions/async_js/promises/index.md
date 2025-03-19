@@ -1,5 +1,6 @@
 ---
 title: How to use promises
+short-title: Using promises
 slug: Learn_web_development/Extensions/Async_JS/Promises
 page-type: learn-module-chapter
 ---

@@ -287,15 +287,6 @@ This can also be specified using the legacy single value:
 
 For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) guide.
 
-### Global
-
-```css
-/* Global values */
-display: inherit;
-display: initial;
-display: unset;
-```
-
 ## Description
 
 The individual pages for the different types of value that `display` can have set on it feature multiple examples of those values in action — see the [Syntax](#syntax) section. In addition, see the following material, which covers the various values of display in depth.

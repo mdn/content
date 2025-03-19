@@ -1,5 +1,6 @@
 ---
 title: Introduction to client-side frameworks
+short-title: Introduction
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 page-type: learn-module-chapter
 ---
