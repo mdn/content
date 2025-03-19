@@ -271,7 +271,7 @@ A
 
 B
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}} (input)
+- {{CSSxRef(":blank")}} (input) {{Experimental_Inline}}
 - `:blank` (page)
 - {{CSSxRef(":buffering")}}
 
