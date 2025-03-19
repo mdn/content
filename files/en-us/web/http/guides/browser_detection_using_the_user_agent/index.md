@@ -26,11 +26,42 @@ When considering using the user agent string to detect which browser is being us
 
 ## Avoiding user agent detection
 
-If you want to avoid using user agent detection, you have options!
+If you want to avoid using user agent detection, you have options.
 
-- Feature detection
+### Client Hints
 
-  - : Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
+For Blink-based browsers (Chromium, Edge, Brave, Vivaldi, etc.), the recommended alternative is [User agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints).
+In client hints, the server proactively requests device information from a client through HTTP headers or via [JavaScript API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
+For example, in the HTTP mechanism, the server includes a {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
+Let's assume the server sends this response to the client:
+
+```http
+Accept-CH: Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA
+```
+
+This asks for the following headers from the client in subsequent requests:
+
+- {{httpheader("Sec-CH-UA-Mobile")}}: a boolean to indicate if the client is a mobile device.
+- {{httpheader("Sec-CH-UA-Platform")}}: the platform the client is operating on ("Windows", "Android", etc.).
+- {{httpheader("Sec-CH-UA")}}: the user-agent's branding and significant version information.
+
+Assuming the client supports client hints, the user agent client hints may appear in subsequent requests:
+
+```http
+GET /my/page HTTP/1.1
+Host: example.site
+
+Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
+Sec-CH-UA-Mobile: ?1
+Sec-CH-UA-Platform: "Android"
+```
+
+To learn more about client hints, see [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints).
+Be sure to check the [Browser Compatibility](/en-US/docs/Web/HTTP/Reference/Headers/Accept-CH#browser_compatibility) details for more information before using this feature.
+
+### Feature detection
+
+Feature detection is where you don't try to figure out which browser is rendering your page, but instead, you check to see if the specific feature you need is available. If it's not, you use a fallback. In those rare cases where behavior differs between browsers, instead of checking the user agent string, you should instead implement a test to detect how the browser implements the API and determine how to use it from that. An example of feature detection is as follows. In 2017, Chrome [unflagged experimental lookbehind support in regular expressions](https://chromestatus.com/feature/5668726032564224), but no other browser supported it. So, you might have thought to do this:
 
 ```js
 // This code snippet splits a string in a special notation
@@ -133,6 +164,7 @@ Or, there might be some weird flip-phone-like device thing in the future where f
 Do not be the developer having a headache over how to deal with the flip-phone-like device thing.
 Never be satisfied with your webpage until you can open up the dev tools side panel and resize the screen while the webpage looks smooth, fluid, and dynamically resized.
 The simplest way to do this is to separate all the code that moves content around based on screen size to a single function that is called when the page is loaded and at each [resize](/en-US/docs/Web/API/Window/resize_event) event thereafter. If there is a lot calculated by this layout function before it determines the new layout of the page, then consider {{glossary("debounce", "debouncing")}} the event listener such that it is not called as often.
+
 Also note that there is a huge difference between the media queries `(max-width: 25em)`, `not all and (min-width: 25em)`, and `(max-width: 24.99em)`: `(max-width: 25em)` excludes `(max-width: 25em)`, whereas `not all and (min-width: 25em)` includes `(max-width: 25em)`.
 `(max-width: 24.99em)` is a poor man's version of `not all and (min-width: 25em)`: do not use `(max-width: 24.99em)` because the layout _might_ break on very high font sizes on very high definition devices in the future.
 Always be very deliberate about choosing the right media query and choosing the right `>=`, `<=`, `>`, or `<` in any corresponding JavaScript because it is very easy to get these mixed up, resulting in the website looking wonky right at the screen size where the layout changes.
@@ -280,3 +312,4 @@ In summary, we recommend looking for the string `Mobi` anywhere in the User Agen
 - [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [Implementing feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)
+- [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch#strategy_legacy_support) on web.dev (2021)
