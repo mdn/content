@@ -1,40 +1,41 @@
 ---
 title: Layout mode
 slug: Glossary/Layout_mode
-page-type: guide
+page-type: glossary-definition
 ---
 
-{{CSSRef}}
+{{GlossarySidebar}}
 
-A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an algorithm that determines the position and size of boxes based on the way they interact with their sibling and ancestor boxes. There are several of them:
+A **layout mode**, sometimes called _layout_, is a [CSS](/en-US/docs/Web/CSS) algorithm that determines the position and size of element boxes based on the way they interact with their sibling and ancestor boxes.
 
-- _[Normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)_ — all elements are part of normal flow until you do something to take them out of it. Normal flow includes _block layout_, designed for laying out boxes such as paragraphs and _inline layout_, which lays out inline items such as text.
-- [_Table layout_](/en-US/docs/Web/CSS/CSS_table), designed for laying out tables.
-- _Float layout_, designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
-- [_Positioned layout_](/en-US/docs/Web/CSS/CSS_positioned_layout), designed for positioning elements without much interaction with other elements.
-- [_Multi-column layout_](/en-US/docs/Web/CSS/CSS_multicol_layout), designed for laying content out in columns as in a newspaper.
-- [_Flexible box layout_](/en-US/docs/Web/CSS/CSS_flexible_box_layout), designed for laying out complex pages that can be resized smoothly.
-- [_Grid layout_](/en-US/docs/Web/CSS/CSS_grid_layout), designed for laying out elements relative to a fixed grid.
+There are several layout modes:
+
+- **[Flow layout or normal flow](/en-US/docs/Web/CSS/CSS_display/Flow_layout)**
+
+  - : All elements are part of normal flow until you do something to take them out of it.Normal flow includes:
+
+    - **[Block layout](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)**
+      - : Designed for laying out boxes such as paragraphs.
+    - **[Inline layout](/en-US/docs/Web/CSS/CSS_inline_layout)**
+      - : Designed for laying out inline items such as text.
+
+- **[Table layout](/en-US/docs/Web/CSS/CSS_table)**
+  - : Designed for laying out tables.
+- **Float layout**
+  - : Designed to cause an item to position itself left or right with the rest of the content in normal flow wrapping around it.
+- **[Positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout)**
+  - : Designed for positioning elements without much interaction with other elements.
+- **[Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout)**
+  - : Designed for laying content out in columns as in a newspaper.
+- **[Flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)**
+  - : Designed for laying out complex pages that can be resized smoothly.
+- **[Grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)**
+  - : Designed for laying out elements relative to a fixed grid.
 
 > [!NOTE]
 > Not all [CSS properties](/en-US/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
 
 ## See also
 
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{glossary("Replaced elements")}}
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
