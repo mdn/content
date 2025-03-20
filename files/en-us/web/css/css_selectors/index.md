@@ -34,7 +34,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
 - {{CSSXref(":current")}}
-- {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
 - {{CSSXref(":dir", ":dir()")}}
@@ -50,8 +49,8 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":future")}}
 - {{CSSXref(":has", ":has()")}}
 - {{CSSXref(":hover")}}
-- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":in-range")}}
+- {{CSSXref(":indeterminate")}}
 - {{CSSXref(":invalid")}}
 - {{CSSXref(":is", ":is()")}}
 - {{CSSXref(":lang", ":lang()")}}
@@ -69,6 +68,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
+- {{CSSXref(":open")}}
 - {{CSSXref(":optional")}}
 - {{CSSXref(":out-of-range")}}
 - {{CSSXref(":past")}}
@@ -76,6 +76,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":picture-in-picture")}}
 - {{CSSXref(":placeholder-shown")}}
 - {{CSSXref(":playing")}}
+- {{CSSXref(":popover-open")}}
 - {{CSSXref(":read-only")}}
 - {{CSSXref(":read-write")}}
 - {{CSSXref(":required")}}
@@ -145,7 +146,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ## Related concepts
 
-- {{CSSXref(":popover-open")}} pseudo-class
 - {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
@@ -153,8 +153,16 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
-  - {{cssxref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref(":host-context", ":host-context()")}} pseudo-class
+  - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
+
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+
+  - {{CSSXref(":left")}} pseudo-class
+  - {{CSSXref(":right")}} pseudo-class
+  - {{CSSXref(":first")}} pseudo-class
+  - `:blank` pseudo-class
 
 - [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
 

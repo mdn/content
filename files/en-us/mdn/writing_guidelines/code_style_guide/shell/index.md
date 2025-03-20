@@ -1,6 +1,7 @@
 ---
 title: Guidelines for writing shell prompt code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+short-title: Shell script examples
+slug: MDN/Writing_guidelines/Code_style_guide/Shell
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---

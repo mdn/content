@@ -1,6 +1,7 @@
 ---
 title: Guidelines for writing code examples
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+short-title: Code style
+slug: MDN/Writing_guidelines/Code_style_guide
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
@@ -9,10 +10,10 @@ The guidelines described in this article apply to the styling and formatting of 
 
 For technology-specific guidelines, see the following articles:
 
-- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [HTML guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [CSS guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [JavaScript guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Shell prompt guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## General best practices
 
@@ -190,3 +191,7 @@ These will be rendered as:
 ```html example-bad
 <p class="brush: js example-bad"></p>
 ```
+
+## Placeholder text
+
+Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin.

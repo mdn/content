@@ -1,5 +1,6 @@
 ---
 title: What went wrong? Troubleshooting JavaScript
+short-title: Troubleshooting
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 page-type: learn-module-chapter
 ---
