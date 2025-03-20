@@ -61,16 +61,16 @@ otherRange.setEnd(text, 4);
 // otherRange start  ^-----^ otherRange end
 
 // this start is *same as* other start
-thisRange.compareBoundaryPoints(Range.START_TO_START, otherRange); // 9
+thisRange.compareBoundaryPoints(Range.START_TO_START, otherRange); // 0
 
 // this end is *after* other start
 thisRange.compareBoundaryPoints(Range.START_TO_END, otherRange); // 1
 
-// this end is *after* other start
-thisRange.compareBoundaryPoints(Range.END_TO_START, otherRange); // 1
+// this start is *after* other end
+thisRange.compareBoundaryPoints(Range.END_TO_START, otherRange); // -1
 
-// this end is *before* other end
-thisRange.compareBoundaryPoints(Range.END_TO_END, otherRange); // -1
+// this end is *after* other end
+thisRange.compareBoundaryPoints(Range.END_TO_END, otherRange); // 1
 ```
 
 ## Specifications

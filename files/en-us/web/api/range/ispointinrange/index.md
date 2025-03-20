@@ -21,7 +21,7 @@ isPointInRange(referenceNode, offset)
 - `referenceNode`
   - : The {{domxref("Node")}} that the `offset` is relative to.
 - `offset`
-  - : An integer greater than or equal to zero representing the offset of the compared point inside the `referenceNode`. If the `referenceNode` is a {{domxref("Node")}} of type {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then offset is the number of characters from the start of `referenceNode`. For other {{domxref("Node")}} types, offset is the number of child nodes between the start of the `referenceNode`.
+  - : An integer greater than or equal to zero describing the position inside `referenceNode` of the point to be checked. If `referenceNode` is a {{domxref("Node")}} of type {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then `offset` is the number of characters from the start of `referenceNode`. For other {{domxref("Node")}} types, `offset` is the number of child nodes from the start of the `referenceNode`.
 
 ### Return value
 
