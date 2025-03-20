@@ -52,9 +52,9 @@ Stacking contexts can be contained in other stacking contexts, and they can toge
 
 The root element of a document is a stacking context which, in most cases, contains nested stacking contexts, many of which will contain additional stacking contexts. Within each stacking context, child elements are stacked according to the same rules explained in [Using `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index). Importantly, the `z-index` values of its child stacking contexts only have meaning within its parent's stacking context. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
-To figure out the _rendering order_ of stacked elements along the z-axis think of each index value as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers.
+To figure out the _rendering order_ of stacked elements along the z-axis, think of each index value as a "version number" of sorts, where child elements represent minor version numbers underneath their parent's major version number.
 
-To demonstrate how the stacking order of each element participates in the stacking order of their ancestor stacking contexts, let's look at an example page with six container elements. There are three sibling {{htmlelement("section")}} elements. The last `<section>` contains three sibling {{htmlelement("article")}} elements, with the {{htmlelement("heading_elements", "&lt;h1&gt;")}} and {{htmlelement("code")}} of that third section appearing between the after the first `<article>`.
+To demonstrate how the stacking order of each element participates in the stacking order of their ancestor stacking contexts, let's look at an example page with six container elements. There are three sibling {{htmlelement("article")}} elements. The last `<article>` contains three sibling {{htmlelement("section")}} elements, with the {{htmlelement("heading_elements", "&lt;h1&gt;")}} and {{htmlelement("code")}} of that third article appearing between the first and second sibling `<article>` elements.
 
 ```html
 <article id="container1">
@@ -204,6 +204,7 @@ Root
 └── SECTION #3
   │
   ├── ARTICLE #4
+  ├────  SECTION #3 content 
   ├── ARTICLE #5
   └── ARTICLE #6
 ```
