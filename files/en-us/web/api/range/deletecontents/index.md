@@ -46,15 +46,21 @@ Select some text, possibly spanning multiple paragraphs, and then click the butt
 <p>paragraph 2</p>
 <p>paragraph 3</p>
 <button id="delete">Delete selected text</button>
+<button id="reset">Reset</button>
 ```
 
 ```js
 const button = document.getElementById("delete");
+const reset = document.getElementById("reset");
 const output = document.getElementById("output");
 
 button.addEventListener("click", () => {
   const range = document.getSelection().getRangeAt(0);
   range.deleteContents();
+});
+
+reset.addEventListener("click", () => {
+  window.location.reload();
 });
 ```
 
