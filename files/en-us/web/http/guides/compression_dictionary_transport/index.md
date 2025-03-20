@@ -14,20 +14,20 @@ Compression Dictionary Transport allows the use of specifying a resource which c
 
 ## Existing resource as a dictionary
 
-To use a resource as a dictionary the resource will include the {{HTTPHeader("Use-As-Dictionary")}} HTTP Header:
+To use a resource as a dictionary the resource will include the {{HTTPHeader("Use-As-Dictionary")}} HTTP response Header:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js"
 ```
 
-When a resource is requested (for example, `app.v2.js`) that matches this header, the request will include a SHA-356 hash of the available disctionary in the {{HTTPHeader("Available-Dictionary")}} HTTP Header, along with a `dcb` or `dcz` {{HTTPHeader("Accept-Encoding")}} HTTP Header (for delta compression brotli or zstd as appropriate):
+When a subsequent resource is requested (for example, `app.v2.js`) that matches the specified pattern, the request will include a SHA-256 hash of the available disctionary in the {{HTTPHeader("Available-Dictionary")}} HTTP Header, along with `dcb` and/or `dcz` values in the {{HTTPHeader("Accept-Encoding")}} HTTP Header (for delta compression brotli or zstd as appropriate):
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz
 Available-Dictionary: :pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=:
 ```
 
-The server can then respond {{HTTPHeader("Content-Encoding")}} HTTP Header:
+The server can then respond with an appropriately-encoded response and content encoding in the {{HTTPHeader("Content-Encoding")}} HTTP Header:
 
 ```http
 Content-Encoding: dcb
@@ -45,7 +45,7 @@ An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}}
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
 ```
 
-In which case it will be used in the future requests along with the SHA-256 hash of the dictionary enclosed in colons:
+In which case the value will be sent in future requests in the {{HTTPHeader("Dictionary-ID")}} header:
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz

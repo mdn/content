@@ -46,8 +46,8 @@ Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
 Accept-Encoding: zstd
-Accept-Encoding: cdb
-Accept-Encoding: cdz
+Accept-Encoding: dcb
+Accept-Encoding: dcz
 Accept-Encoding: identity
 Accept-Encoding: *
 

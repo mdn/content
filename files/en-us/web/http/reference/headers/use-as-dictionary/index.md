@@ -12,7 +12,7 @@ The HTTP **`Use-As-Dictionary`** header lists the matching criteria that the {{g
 ## Directives
 
 - `match`
-  - : A string value that provides the {{domxref("URL Pattern API", "URL Pattern")}} to use for future request matching.
+  - : A string value that provides the {{domxref("URL Pattern API", "URL Pattern")}} to use for future request matching (regex patterns are not supported).
 - `match-dest`
   - : An [Inner List of String values](https://www.rfc-editor.org/rfc/rfc8941#name-inner-lists) that provides a list of [Fetch request destinations](/docs/Web/API/Request/destination) for the dictionary to match.
 - `id`

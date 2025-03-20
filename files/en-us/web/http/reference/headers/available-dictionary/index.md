@@ -14,7 +14,7 @@ The HTTP **`Available-Dictionary`** header allows the browser to specify the bes
 > [!NOTE]
 > See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
-Clients can send an `Available-Dictionary` HTTP Header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded SHA-256 {{glossary("Hash")}} of the dictionary contents:
+Clients can send an `Available-Dictionary` HTTP Header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded base-64 encoded SHA-256 {{glossary("Hash")}} of the dictionary contents:
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz

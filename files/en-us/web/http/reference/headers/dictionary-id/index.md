@@ -20,7 +20,7 @@ An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}}
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
 ```
 
-In which case the `id` will be used in the {{HTTPHeader("Dictionary-ID")}} HTTP Header of future requests, along with the SHA-256 hash of the dictionary enclosed in colons in the {{HTTPHeader("Available-Dictionary")}} HTTP Header:
+In which case the `id` will be used in the {{HTTPHeader("Dictionary-ID")}} HTTP Header of future requests:
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz
