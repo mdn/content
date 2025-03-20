@@ -227,5 +227,4 @@ body {
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
