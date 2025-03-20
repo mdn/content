@@ -37,11 +37,28 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.deleteContents();
+### Using deleteContents()
+
+Select some text, possibly spanning multiple paragraphs, and then click the button to delete the selected text. Open your DOM inspector to check the updated DOM structure.
+
+```html
+<p>paragraph 1</p>
+<p>paragraph 2</p>
+<p>paragraph 3</p>
+<button id="delete">Delete selected text</button>
 ```
+
+```js
+const button = document.getElementById("delete");
+const output = document.getElementById("output");
+
+button.addEventListener("click", () => {
+  const range = document.getSelection().getRangeAt(0);
+  range.deleteContents();
+});
+```
+
+{{EmbedLiveSample("using_deletecontents", "", "150")}}
 
 ## Specifications
 
