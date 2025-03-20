@@ -50,12 +50,12 @@ The value of the {{cssxref("content")}} property could also be set to a differen
 option::checkmark {
   order: 1;
   margin-left: auto;
-  content: "☑️";
+  content: "☑️" / "";
 }
 ```
 
 > [!NOTE]
-> When changing the icon like this, you should make sure to change it to something that will be announced as a checkmark (or similar) by assistive technologies so it makes sense to their users.
+> When changing the icon like this, you should mark it as decorative by including an empty alt text string after the slash in the `content` property value, as shown above. This causes assistive technology (AT) to not announce anything for it, so it will make more sense to users of those tools. In general, AT and the underlying platform will handle announcing whether an option is selected or not, so you don't need to do it a second time.
 
 See [Styling the current selection checkmark](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#styling_the_current_selection_checkmark) for a full example that uses this code, along with a live example rendering.
 

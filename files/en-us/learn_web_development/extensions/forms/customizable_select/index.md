@@ -97,7 +97,7 @@ The example markup is nearly the same as "classic" `<select>` markup, with the f
 - The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element contains a clone of the currently-selected {{htmlelement("option")}} (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood). This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will fall back to rendering the selected option's text inside the default button, and you won't be able to style it as easily.
   > [!NOTE]
   > You _can_ include arbitrary content inside the `<button>` to render whatever you want inside the closed `<select>`, but be careful when doing this. What you render can alter the `<select>` element's accessible value exposed to assistive technology.
-- The rest of the `<select>` contents represents the drop-down picker, which is usually limited to the `<option>` elements representing the different choices in the picker. You could include other arbitrary content in the picker, but it is not recommended.
+- The rest of the `<select>` contents represents the drop-down picker, which is usually limited to the `<option>` elements representing the different choices in the picker. You can include other content in the picker, but it is not recommended.
 - Traditionally, `<option>` elements could only contain text, but in a customizable select you can include other markup structures like images, other non-interactive text-level semantic elements, and more. In our example, each `<option>` contains two {{htmlelement("span")}} elements containing an icon and a text label respectively, allowing each one to be styled and positioned independently.
 
   > [!NOTE]
@@ -304,12 +304,12 @@ Finally, the value of the {{cssxref("content")}} property is set to a different 
 option::checkmark {
   order: 1;
   margin-left: auto;
-  content: "☑️";
+  content: "☑️" / "";
 }
 ```
 
 > [!NOTE]
-> When changing the icon like this, you should make sure to change it to something that will be announced as a checkmark (or similar) by assistive technologies so it makes sense to their users.
+> When changing the icon like this, you should mark it as decorative by including an empty alt text string after the slash in the `content` property value, as shown above. This causes assistive technology (AT) to not announce anything for it, so it will make more sense to users of those tools. In general, AT and the underlying platform will handle announcing whether an option is selected or not, so you don't need to do it a second time.
 
 Let's check in again on how the example is rendering. The updated state after the last three sections is as follows:
 
@@ -385,10 +385,10 @@ After the last two section, the final updated state of our `<select>` is rendere
 
 ## Customizing other classic select features
 
-The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they work alongside customizable selects:
+The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they currently work alongside customizable selects:
 
 - [`<select multiple>`](/en-US/docs/Web/HTML/Attributes/multiple)
-  - : There isn't currently any official support specified for the `multiple` attribute on customizable `<select>` elements, however the styling works generally OK. The `<option>` elements are displayed as-is inside the multiple select box, and the outer box itself is given the same styling as the select `<button>` in the single select.
+  - : There isn't currently any support specified for the `multiple` attribute on customizable `<select>` elements, but this will be worked on in the future.
 - {{htmlelement("optgroup")}}
   - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
