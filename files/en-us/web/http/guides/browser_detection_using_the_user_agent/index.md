@@ -1,13 +1,14 @@
 ---
-title: Browser detection using the user agent
+title: Browser detection using the user agent string (UA sniffing)
+short-title: Browser detection using the UA string
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-Along with every request to a server, browsers include a {{HTTPHeader("User-Agent")}} {{Glossary("HTTP")}} header called a {{glossary("user agent")}} (UA) string.
-This string typically identifies the browser, its version number, and its host operating system.
+Along with every request to a server, browsers include a {{HTTPHeader("User-Agent")}} {{Glossary("HTTP")}} header with a value called a {{glossary("user agent")}} (UA) string.
+This string is intended to identify the browser, its version number, and its host operating system.
 
 ```http
 User-Agent: <product> / <product-version> <comment>
@@ -20,8 +21,8 @@ console.log(window.navigator.userAgent);
 // Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-It may be tempting for developers to change how sites behave based on the UA string (sometimes called "UA sniffing"), but doing this reliably is very hard to do in reality.
-This document describes alternatives to browser detection and guides you through doing UA detection as correctly as possible if absolutely necessary.
+It may be tempting for developers to parse the UA string (sometimes called "UA sniffing") and then change how their sites behave based on the values in the UA string, but doing this reliably and with confidence that it's correct is very hard to do.
+This document describes common pitfalls to browser detection, the recommended alternatives, and provides some hints for UA detection if it's absolutely necessary.
 
 ## Problems with browser detection
 
@@ -46,10 +47,10 @@ console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
-This code makes several bad assumptions:
+This code mistakenly makes several assumptions:
 
-1. All user agent strings that include the substring `Chrome` are Chrome browsers.
-2. The lookbehind feature is always available if the browser was Chrome.
+1. All user agent strings that include the substring `Chrome` indicate a Chrome browser.
+2. The lookbehind feature is always available if the browser is Chrome.
    In reality, the browser might be an older version of Chrome before support was added, or it could be a later version of Chrome that removes it.
 3. Most importantly, it assumes no other browsers support the feature, when it could be added to any other browser at any time.
    All non-matching browsers will be stuck using an inefficient fallback.
@@ -64,23 +65,22 @@ Try to identify why you want to do browser detection:
   - : Look or ask in specialized forums: you're unlikely to be the first person to encounter it.
     Experts or people with another point of view may give you hints to avoid or work around the bug.
     If the problem is uncommon, it's worth checking if this bug has been reported to the browser vendor via bug tracking systems ([Mozilla](https://bugzilla.mozilla.org/); [WebKit](https://bugs.webkit.org/); [Blink](https://www.chromium.org/issue-tracking/); [Opera](https://bugs.opera.com/)).
-    Browser makers do pay attention to bug reports, and yours may help fix or provide workarounds for a problem.
+    Browser makers do pay attention to bug reports, and yours may help fix or provide more reliable workarounds for a problem.
 - **Do you want to provide different HTML depending on which browser is being used?**
   - : This is usually a bad idea, but there are rare cases where this is necessary.
     Can you prevent it by adding non-semantic {{ HTMLElement("div") }} or {{ HTMLElement("span") }} elements?
-    The tradeoff of successfully using user agent detection for this purpose is worth reworking your HTML.
+    The tradeoff of successfully using UA detection for this purpose is worth reworking your HTML.
     Consider if there's actually a problem with your design: can you use progressive enhancement or fluid layouts to help remove the need to do this?
 - **Are you trying to check for the existence of a specific feature?**
-  - : Your site needs to use a specific Web feature that some browsers don't yet support, and you want to send users with incompatible browsers to an older website with fewer features you know will work.
-    This is the worst reason to use user agent detection because eventually all browsers will catch up.
+  - : Your site needs to use a specific feature that some browsers don't yet support, and you want users with incompatible browsers to be served an older website with fewer features you know will work.
+    This is the worst reason to use UA detection because all browsers will likely catch up, eventually.
     In addition, it's not practical to test each browser for different features in this way.
-    In this case, you should use feature detection instead.
 
 The following sections describe common alternatives to browser detection.
 
 ### Feature detection
 
-Feature detection is where you check to see if the specific feature you need is available to the client instead of figuring out which browser is rendering your page.
+Feature detection is where you check to see if a specific feature is available to the client instead of figuring out which browser is rendering your page.
 For cases where a feature is not supported, you use a fallback instead.
 The following feature detection example checks if the client supports the {{domxref("Geolocation_API", "Geolocation API", "", "nocode")}} .
 You can do this by checking for a `geolocation` property available on the global {{domxref("Navigator")}} object.
@@ -158,8 +158,8 @@ Be sure to check the [Browser Compatibility](/en-US/docs/Web/HTTP/Reference/Head
 
 ### Mobile device detection
 
-Arguably the most common use (and misuse) of UA sniffing is to detect if the client device is a mobile device.
-However, people are often motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website accordingly.
+Arguably the most common use (and misuse) of UA sniffing is to detect if the client is a mobile device.
+However, people are actually often motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website accordingly.
 
 Instead, you should detect features using modern APIs.
 For example, to check for touch support, try the [maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) property in the {{domxref("Navigator")}} interface:
@@ -184,22 +184,29 @@ For foldable devices, there are newer APIs such as the [Device Posture API](/en-
 - {{glossary("Graceful degradation")}}
   - : This is a top-down approach in which you build the best possible site using all the features you want, then tweak it to make it work on older browsers. This can be harder to do, and less effective, than progressive enhancement, but may be useful in some cases.
 
-## Which part of the user agent contains relevant information?
+## Extracting relevant UA string parts
 
-There is no uniformity of the different part of the user agent string, so we've come to the tricky part.
+If you've explored all of the options above, and you still need to parse the UA string as a last resort, there are some hints in this section that will help.
+Unfortunately, there is no uniformity of the different part of the user agent string, so we've come to the tricky part.
 
-## Rendering engine
+### Rendering engine
 
-Browsers sharing a common rendering engine will display a page in the same way: it's often a fair assumption that what will work in one will work in the other.
-There are three active major rendering engines: Blink, Gecko, and WebKit.
-The rendering engine is the string `Gecko/20100101` in the following example, indicating the rendering engine is `Gecko`, and the gecko-Trail is the fixed string `20100101`, which means "desktop":
+Browsers sharing a common {{glossary("rendering engine")}} will display a page in the same way: it's often a fair assumption that what will work in one browser will work in the other.
+There are three active major rendering engines: {{glossary("Blink")}}, {{glossary("Gecko")}}, and {{glossary("WebKit")}}.
+
+The rendering engine is the string `Gecko/20100101` in the following example, indicating the rendering engine is `Gecko`, and the "gecko-Trail" is the fixed string `20100101`, which means "desktop":
 
 ```http
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-Detecting the rendering engine names is common, a lot of user agents added other rendering names to trigger detection.
-It's therefore important to pay attention not to trigger false-positives when detecting the rendering engine.
+Detecting rendering engine names is common in websites, and a lot of user agents historically added other rendering names to avoid websites shutting them out based on rendering engine name alone.
+It's therefore important to pay attention not to trigger false-positives when detecting the rendering engine, as this method is particularly unreliable.
+Consider the following UA string sent in Chrome 134 on macOS:
+
+```http
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+```
 
 | Engine   | Must contain      | Details                                                                                                                        |
 | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -209,7 +216,7 @@ It's therefore important to pay attention not to trigger false-positives when de
 | Presto   | `Opera/xyz`       | Obsolete; Presto is no longer used in Opera browser builds >= version 15 (see 'Blink')                                         |
 | EdgeHTML | `Edge/xyz`        | Obsolete; EdgeHTML is no longer used in Edge browser builds >= version 79 (see 'Blink').                                       |
 
-## Rendering engine version
+### Rendering engine version
 
 Most rendering engines put the version number in the `RenderingEngine/VersionNumber` token, with the notable exception of Gecko.
 It's the string `rv:138.0` in the following example, meaning the rendering engine version number is `138.0`, which is the same as the Firefox version:
@@ -234,7 +241,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/201001
 Some browsers send conflicting information: Chrome, for example, reports both Chrome and Safari.
 So to detect Safari you have to check for the Safari string and the absence of the Chrome string, Chromium often reports itself as Chrome too and SeaMonkey reports itself as Firefox.
 
-Be careful when using regular expressions on the `BrowserName` part as user agents also contain strings outside the Keyword/Value syntax.
+Be careful when using regular expressions on the `BrowserName` part as user agents also contain strings around the Keyword/Value syntax.
 Safari & Chrome contain the string 'like Gecko', for instance.
 
 | Browser name                    | Must contain    | Must not contain               |
@@ -243,35 +250,33 @@ Safari & Chrome contain the string 'like Gecko', for instance.
 | Seamonkey                       | `Seamonkey/xyz` |                                |
 | Chrome                          | `Chrome/xyz`    | `Chromium/xyz` or `Edg.*/xyz`  |
 | Chromium                        | `Chromium/xyz`  |                                |
-| Safari                          | `Safari/xyz`    | `Chrome/xyz` or `Chromium/xyz` |
+| Safari                          | `Safari/xyz`\*  | `Chrome/xyz` or `Chromium/xyz` |
 | Opera 15+ (Blink-based engine)  | `OPR/xyz`       |                                |
 | Opera 12- (Presto-based engine) | `Opera/xyz`     |                                |
 
-\[1] Safari gives two version numbers: one technical in the `Safari/xyz` token, and one user-friendly in a `Version/xyz` token.
+\* Safari gives two version numbers: one technical in the `Safari/xyz` token, and one user-friendly in a `Version/xyz` token.
 
 Of course, there is absolutely no guarantee that another browser will not spoof these in certain cases.
 That's why browser detection using the user agent string is unreliable and should be done only with the check of the version number (spoofing past versions is less likely).
 
-## OS
+### Operating system detection
 
-The Operating System is given in most UA strings (although not web-focused platforms), but the format varies a lot.
-It's a fixed string between two semicolons, in the comment part of the User Agent.
-These strings are specific for each browser.
+The Operating System is sent in most UA strings (although not web-focused platforms), but the format varies.
+It's a fixed string between two semicolons, in the comment part of the User Agent and these strings are specific for each browser.
 
-They indicate the OS, but also often its version and information on the relying hardware (32 or 64 bits, Intel/PPC for Mac, or x86/ARM CPU architecture for Windows PCs).
+They indicate the OS, and often its version and information on the relying hardware (32 or 64 bits, Intel/PPC for Mac, or x86/ARM CPU architecture for Windows PCs).
 It's the string `Intel Mac OS X 10.15` in the following example:
 
 ```http
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-In all cases, these strings may change in the future, you should use them only in conjunction with the detection of already released browsers.
-Consider a technological survey to adapt your code when new browser versions are released.
+In all cases, these strings may change, so you should use them only in conjunction with the detection of already-released browsers so patterns are known ahead of time.
+Consider a visitor or UA string survey to adapt your code when new browser versions are released.
 
 ### Mobile, Tablet or Desktop
 
 The most common reason to perform user agent sniffing is to determine which type of device the browser runs on.
-The goal is to serve different HTML to different device types.
 
 - Never assume that a browser or a rendering engine only runs on one type of device.
   In particular, don't rely on different defaults for different browsers or rendering engines.
@@ -282,15 +287,13 @@ The following table summarizes the way common browser vendors indicate that thei
 
 | Browser                                                           | Rule                                                 | Example                                                                                                                                                          |
 | ----------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                                          | `Mobile` or `Tablet` inside the comment.             | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
+| Mozilla (Gecko, Firefox)                                          | `Mobile` or `Tablet` inside the comment.             | `Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0`                                                                                           |
 | WebKit-based (Android, Safari)                                    | `Mobile Safari` token outside the comment.           | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
 | Blink-based (Chromium, Google Chrome, Opera 15+, Edge on Android) | `Mobile Safari` token outside the comment.           | `Mozilla/5.0 (Linux; Android 4.4.2; Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047`  |
 | Edge on Windows 10 Mobile                                         | `Mobile/xyz` and `Edge/` tokens outside the comment. | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
 
-In summary, look for the string `Mobi` anywhere in the UA string to detect a mobile device.
-
-> [!NOTE]
-> If the device is large enough that it's not marked with `Mobi`, you should serve your desktop site (which, as a best practice, should support touch input anyway, as desktop devices may have touchscreens).
+In short, you can look for the string `Mobi` anywhere in the UA string.
+If the device is large enough that it's not marked with `Mobi`, you should serve your desktop site (which, as a best practice, should support touch input anyway, as desktop devices may have touchscreens).
 
 ## See also
 
