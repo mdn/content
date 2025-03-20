@@ -8,8 +8,7 @@ browser-compat: api.SVGPathElement.getPointAtLength
 
 {{APIRef("SVG")}}
 
-The
-**`getPointAtLength()`** method of the {{domxref("SVGPathElement")}}interface returns the point at a given distance along the path.
+The **`getPointAtLength()`** method of the {{domxref("SVGPathElement")}} interface returns the point at a given distance along the path.
 
 ## Syntax
 

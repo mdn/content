@@ -8,7 +8,7 @@ browser-compat: api.SVGPathElement.getTotalLength
 
 {{APIRef("SVG")}}
 
-The **`getTotalLength()`** method of the {{domxref("SVGPathElement")}}interface returns the user agent's computed value for the total length of the path in user units.
+The **`getTotalLength()`** method of the {{domxref("SVGPathElement")}} interface returns the user agent's computed value for the total length of the path in user units.
 
 ## Syntax
 
