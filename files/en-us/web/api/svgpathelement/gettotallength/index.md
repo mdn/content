@@ -44,6 +44,27 @@ In this example, we get the total length of two paths: a basic line and a heart 
 </svg>
 ```
 
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 70px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
 ```js
 const complexPath = document.getElementById("heart");
 const basicPath = document.getElementById("line");
@@ -53,11 +74,11 @@ const complexPathLength = complexPath.getTotalLength();
 const basicPathLength = basicPath.getTotalLength();
 
 // The base value of the pathLength attribute
-console.log(complexPathLength); // Output: 275.119
-console.log(basicPathLength); // Output: 100
+log(`complexPathLength: ${complexPathLength}`);
+log(`basicPathLength: ${basicPathLength}`);
 ```
 
-{{EmbedLiveSample('examples')}}
+{{EmbedLiveSample('Getting the total length of a `<path>`',"100%","220px")}}
 
 ## Specifications
 
