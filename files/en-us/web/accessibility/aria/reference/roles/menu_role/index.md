@@ -130,7 +130,7 @@ The following snippet of code is a popup menu nested in a menubar. It is display
     aria-controls="colormenu"
     tabindex="0"
     aria-label="Text Color: purple">
-    <span>Purple</span>
+    Purple
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
     <li
