@@ -3183,6 +3183,23 @@
     "modified": "2019-05-31T08:14:09.470Z",
     "contributors": ["Sheppy", "chrisdavidmills", "andystevensname", "estelle"]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2020-07-07T12:36:23.002Z",
+    "contributors": [
+      "wbamberg",
+      "lcchueri",
+      "chrisdavidmills",
+      "rachelandrew",
+      "mfluehr",
+      "Sebastianz",
+      "markg",
+      "evalica",
+      "velvel53",
+      "Sheppy",
+      "FredB",
+      "teoli"
+    ]
+  },
   "Glossary/Layout_viewport": {
     "modified": "2020-03-27T15:15:46.041Z",
     "contributors": ["RafeyIqbalRahman", "Sheppy"]
@@ -78429,23 +78446,6 @@
   "Web/CSS/Layout_cookbook/Sticky_footers": {
     "modified": "2020-10-15T22:08:03.870Z",
     "contributors": ["wbamberg", "chrisdavidmills", "rachelandrew"]
-  },
-  "Web/CSS/Layout_mode": {
-    "modified": "2020-07-07T12:36:23.002Z",
-    "contributors": [
-      "wbamberg",
-      "lcchueri",
-      "chrisdavidmills",
-      "rachelandrew",
-      "mfluehr",
-      "Sebastianz",
-      "markg",
-      "evalica",
-      "velvel53",
-      "Sheppy",
-      "FredB",
-      "teoli"
-    ]
   },
   "Web/CSS/Mozilla_Extensions": {
     "modified": "2020-08-09T13:09:17.030Z",

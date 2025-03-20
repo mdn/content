@@ -1,6 +1,6 @@
 ---
 title: Layout mode
-slug: Web/CSS/Layout_mode
+slug: Glossary/Layout_mode
 page-type: guide
 ---
 
