@@ -33,7 +33,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":buffering")}}
 - {{CSSXref(":checked")}}
 - {{CSSXref(":current")}}
-- {{CSSXref(":current", ":current()")}}
 - {{CSSXref(":default")}}
 - {{CSSXref(":defined")}}
 - {{CSSXref(":dir", ":dir()")}}
