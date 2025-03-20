@@ -139,7 +139,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{glossary("Replaced elements")}}
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

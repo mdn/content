@@ -1,6 +1,6 @@
 ---
 title: Visual formatting model
-slug: Web/CSS/Visual_formatting_model
+slug: Web/CSS/CSS_display/Visual_formatting_model
 page-type: guide
 ---
 
