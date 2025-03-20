@@ -452,10 +452,10 @@ Here are some more examples:
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual-value)
   - **Value definition syntax**
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}
