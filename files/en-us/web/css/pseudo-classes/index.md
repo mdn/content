@@ -177,7 +177,6 @@ These pseudo-classes relate to the location of an element within the document tr
 - {{CSSxRef(":only-of-type")}}
   - : Matches an element that has no siblings of the chosen type selector.
 
-
 ## Shadow-structural pseudo-classes
 
 These pseudo-classes relate to the shadow DOM.
