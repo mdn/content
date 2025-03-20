@@ -12161,6 +12161,7 @@
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
+/en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
 /en-US/docs/Web/CSS/Layout_mode	/en-US/docs/Glossary/Layout_mode
