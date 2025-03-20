@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-Originally, the [CSS](/en-US/docs/Web/CSS) {{ cssxref(":visited") }} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. This was done using methods like {{domxref("window.getComputedStyle")}} and other techniques. This process was quick, enabling websites to not only determine where the user had been on the web, but also to guess a lot of information about the user's identity.
+Originally, the [CSS](/en-US/docs/Web/CSS) {{ cssxref(":visited") }} selector was a privacy and security risk. With a little bit of JavaScript, websites could uncover a user's browsing history and figure out what sites the user had visited. This was done using methods like {{domxref("window.getComputedStyle")}} and other techniques. This process was quick, enabling websites to not only determine where the user had been on the web, but also to guess a lot of information about the user's identity.
 
 To mitigate this privacy concern, browsers limit the amount of information that can be obtained from visited links.
 
