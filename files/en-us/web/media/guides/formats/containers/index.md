@@ -5,7 +5,8 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.
+A **media container** is a file format that encapsulates one or more media streams (such as audio or video) along with metadata, enabling them to be stored and played back together.
+The format of audio and video media files is defined by multiple components, including the audio and/or video codecs used, the media container format (or file type), and optionally other elements such as subtitle codecs or metadata.
 In this guide, we'll look at the container formats used most commonly on the web, covering basics about their specifications as well as their benefits, limitations, and ideal use cases.
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) does not use a container at all.
@@ -16,8 +17,8 @@ See [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) 
 
 While there are a vast number of media container formats, the ones listed below are the ones you are most likely to encounter.
 Some support only audio while others support both audio and video.
-The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), Web Media File (WEBM), and MPEG Audio Layer III (MP3).
-However, you may also encounter MP3, Ogg, WAV, AVI, MOV, and other formats.
+The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), Web Media File (WEBM), and MP3 format.
+However, you may also encounter Ogg, WAV, AVI, MOV, and other formats.
 Not all of these are broadly supported by browsers, however; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
 For example, an Ogg file with only an Opus audio track is sometimes referred to as an Opus file, and might even have the extension `.opus`.
 But it's still actually just an Ogg file.
