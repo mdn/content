@@ -109,6 +109,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## See also
 
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
 - {{HTTPStatus("415", "415 Unsupported Media Type")}}
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}
@@ -116,4 +117,3 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
-- {{Glossary("Compression Dictionary Transport")}}

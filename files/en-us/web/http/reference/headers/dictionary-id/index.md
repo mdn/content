@@ -7,9 +7,12 @@ browser-compat: http.headers.Dictionary-id
 
 {{HTTPSidebar}}
 
-The HTTP **`Dictionary-ID`** header
+The HTTP **`Dictionary-ID`** header used in {{glossary("Compression Dictionary Transport")}} to reference a dictionary in later requests.
 
 ## Examples
+
+> [!NOTE]
+> See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
 An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header:
 
@@ -35,6 +38,6 @@ Dictionary-ID: "dictionary-12345"
 
 ## See also
 
-- {{Glossary("Compression Dictionary Transport")}}
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Use-As-Dictionary")}}

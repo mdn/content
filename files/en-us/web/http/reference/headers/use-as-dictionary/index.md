@@ -22,6 +22,9 @@ The HTTP **`Use-As-Dictionary`** header lists the matching criteria that the {{g
 
 ## Examples
 
+> [!NOTE]
+> See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
+
 ### Path prefix
 
 ```http
@@ -87,6 +90,6 @@ Currently, only `raw` is supported (which is the default) so this is more for fu
 
 ## See also
 
-- {{Glossary("Compression Dictionary Transport")}}
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}

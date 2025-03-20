@@ -100,4 +100,4 @@ Whether a server uses compression methods requested by the client depends on ser
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
-- {{Glossary("Compression Dictionary Transport")}}
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
