@@ -1,12 +1,12 @@
 ---
 title: Inline formatting context
-slug: Web/CSS/Inline_formatting_context
+slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 page-type: guide
 ---
 
 {{CSSRef}}
 
-This article explains the inline formatting context.
+This guide explains the inline formatting context.
 
 ## Core concepts
 
@@ -228,4 +228,4 @@ body {
 ## See also
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
