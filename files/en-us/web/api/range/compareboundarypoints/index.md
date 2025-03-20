@@ -35,7 +35,7 @@ A number.
 - `0` if the specified boundary-point of this `Range` is the same as the specified boundary-point of `otherRange`.
 - `1` if the specified boundary-point of this `Range` is after the specified boundary-point of `otherRange`.
 
-This API is consistent with the general convention that, when comparing A to B, a negative number means A comes before B and vice versa (see for example {{jsxref("Array.prototype.sort()")}}). The ranges are compared in the direction of `this` to `other`, the same as {{jsxref("String.prototype.localeCompare()")}}. However, the boundary points are specified in the reverse order for thw `how` parameter: `END_TO_START` compares the _start_ of `this` to the _end_ of `other`.
+This API is consistent with the general convention that, when comparing A to B, a negative number means A comes before B and vice versa (see for example {{jsxref("Array.prototype.sort()")}}). The ranges are compared in the direction of `this` to `other`, the same as {{jsxref("String.prototype.localeCompare()")}}. However, the boundary points are specified in the reverse order for the `how` parameter: `END_TO_START` compares the _start_ of `this` to the _end_ of `other`.
 
 ### Exceptions
 
