@@ -24,7 +24,7 @@ If you are not familiar with the term 'z-axis', imagine the page as a stack of l
 | Layer X      | Layers with positive `z-index` values |
 | Top layer    | Closest to the observer               |
 
-## Normal flow
+## Elements in normal flow
 
 By default, when no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
 
@@ -64,7 +64,7 @@ div {
 
 {{EmbedLiveSample("Example1", 600, 340)}}
 
-## Default layering
+## Default layering behavior
 
 To stack the elements, we can [position](/en-US/docs/Web/CSS/position#types_of_positioning) them.
 If we use absolute positioning to place them in (almost) the same spot, the default stacking order follows the source order: the first element in the HTML appears at the bottom layer and the last element appears at the top layer.
@@ -120,7 +120,7 @@ The element with the lowest `z-index` value appears on the bottom layer. The ele
 
 Using `z-index` may appear fairly straightforward at first: a single property assigned a single integer number with a seemingly understandable behavior. When `z-index` is applied to complex hierarchies of HTML elements, many find the resulting behavior hard to understand or predict.
 
-If the elements are not siblings, the stacking behavior can get more complicated as they have different [stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
+If the elements are not siblings, the stacking behavior can become more complicated because each element may belong to a different [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context). This is shown in the example below.
 
 ```html live-sample___example4
 <section>
@@ -139,11 +139,11 @@ section {
 
 {{EmbedLiveSample("Example4", 600, 130)}}
 
-Even though the `z-index` value of #3 (`0`) is greater than that of #2 (`-9`), #2 appears above #3 because #1 and #2 are nested in a separate [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) from #3. #1 and #2 are within the `<section>`. The `<section>` and #3 are siblings and the `<section>` element's z-index is greater than that of #3 (`2` versus `0`), placing #3 behind the `<section>` and all of the `<section>`'s contents.
+Even though the `z-index` value of `#div3` (`0`) is greater than that of `#div2` (`-9`), `#div2` appears above `#div3` because `#div1` and `#div2` are nested in a separate stacking context created by `<section>`. The `<section>` element and `#div3` are siblings, and since the `<section>` element's z-index is greater than that of `#div3` (`2` versus `0`), `#div3` is placed behind `<section>` and all of `<section>`'s contents. For more in-depth details about the topic, see our [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) guide.
 
 ## Conclusion
 
-As we've seen in this guide, `z-index` provides a way to control how elements stack along z-axis. You learned how the integer values of the `z-index` property can be used to alter the stacking order. However, as demonstrated in the last example, stacking orders can be complicated. Stacking orders follow a series of complex stacking rules to ensure that all browsers stack the same content in the same manner providing consistency and predictability. It's important to understand the [features that create stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#features_creating_stacking_contexts) and how [nested stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#nested_stacking_contexts) effect layer order.
+As we've seen in this guide, `z-index` provides a way to control how elements stack along z-axis. You learned how the integer values of the `z-index` property can be used to alter the stacking order. However, as demonstrated in the last example, stacking orders can be complicated. Stacking orders follow a series of complex stacking rules to ensure that all browsers stack the same content in the same manner providing consistency and predictability. It's important to understand the [features that create stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#features_creating_stacking_contexts) and how [nested stacking contexts](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context#nested_stacking_contexts) affect layer order.
 
 ## See also
 
