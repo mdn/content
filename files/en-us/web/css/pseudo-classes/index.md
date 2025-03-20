@@ -269,7 +269,6 @@ C
 
 - {{CSSxRef(":checked")}}
 - {{CSSxRef(":current")}} {{Experimental_Inline}}
-- {{CSSxRef(":current", ":current()")}} {{Experimental_Inline}}
 
 D
 
