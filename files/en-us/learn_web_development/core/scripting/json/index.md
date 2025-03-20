@@ -35,7 +35,7 @@ JavaScript Object Notation (JSON) is a standard text-based format for representi
 
 {{glossary("JSON")}} is a text-based data format following JavaScript object syntax.
 It represents structured data as a string, which is useful when you want to transmit data across a network.
-Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.
+Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript. Many programming environments feature the ability to read (parse) and generate JSON.
 In JavaScript, the methods for parsing and generating JSON are provided by the [`JSON`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 
 > [!NOTE]
@@ -47,7 +47,7 @@ A JSON string can be stored in its own file, which is basically just a text file
 
 As described above, JSON is a string whose format very much resembles JavaScript object literal format.
 The following is a valid JSON string representing an object.
-Note how it is also a valid JavaScript object literal — just with some more syntax [restrictions](#restrictions).
+Note how it is also a valid JavaScript object literal — just with some more [syntax restrictions](#json_syntax_restrictions).
 
 ```json
 {
@@ -89,7 +89,7 @@ Note how it is also a valid JavaScript object literal — just with some more sy
 }
 ```
 
-If this JSON is loaded in your JavaScript program as a string, you can parse it into a normal object, and then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
+If you load this JSON in your JavaScript program as a string, you can parse it into a normal object and then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 For example:
 
 ```js
@@ -103,7 +103,7 @@ superHeroes.members[1].powers[2];
 4. Inside this object, we want to access the `powers` property, so we use `.powers`.
 5. Inside the `powers` property is an array containing the selected hero's superpowers. We want the third one, so we use `[2]`.
 
-The key takeaway is that there's really nothing special about working with JSON — after you parsed it into a JavaScript object, you work with it just like you would with an object declared using the same object literal syntax.
+The key takeaway is that there's really nothing special about working with JSON; after you've parsed it into a JavaScript object, you work with it just like you would with an object declared using the same object literal syntax.
 
 > [!NOTE]
 > We've made the JSON seen above available inside a variable in our [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)).
@@ -139,20 +139,20 @@ You have to access array items (in its parsed version) by starting with an array
 
 The JSON can also contain a single primitive. For example, `29`, `"Dan Jukes"`, or `true` are all valid JSON.
 
-### Restrictions
+### JSON syntax restrictions
 
-As aforementioned, any JSON is a valid JavaScript object literal/array literal/number literal/etc. The converse is not true, though — not all JavaScript object literals are valid JSON.
+As mentioned earlier, any JSON is a valid JavaScript literal (object, array, number, etc.). The converse is not true, though—not all JavaScript object literals are valid JSON.
 
 - JSON can only contain _serializable_ data types. This means:
   - For primitives, JSON can contain string literals, number literals, `true`, `false`, and `null`. Notably, it cannot contain `undefined`, `NaN`, or `Infinity`.
-  - For non-primitives, JSON can contain object literals and arrays, but not functions or any other object types, such as `Date`, `Set`, `Map`, etc. The objects and arrays inside JSON need to further contain valid JSON data types.
-- Strings must also be enclosed in double quotes, not single quotes.
+  - For non-primitives, JSON can contain object literals and arrays, but not functions or any other object types, such as `Date`, `Set`, and `Map`. The objects and arrays inside JSON need to further contain valid JSON data types.
+- Strings must be enclosed in double quotes, not single quotes.
 - Numbers must be written in decimal notation.
-- Each property of an object must be in the form of `"key": value`. The property names must be string literals, enclosed in double quotes. Special JavaScript syntax like methods are not allowed, because methods are functions, and functions are not valid JSON data types.
+- Each property of an object must be in the form of `"key": value`. Property names must be string literals enclosed in double quotes. Special JavaScript syntax, such as methods, is not allowed because methods are functions, and functions are not valid JSON data types.
 - Objects and arrays cannot contain [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas).
 - Comments are not allowed in JSON.
 
-Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work.
+Even a single misplaced comma or colon can make a JSON file invalid and cause it to fail.
 You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).
 You can validate JSON using an application like [JSONLint](https://jsonlint.com/).
 
