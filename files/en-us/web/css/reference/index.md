@@ -135,11 +135,11 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
-- [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
+- [Layout mode](/en-US/docs/Glossary/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{glossary("Replaced elements")}}
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

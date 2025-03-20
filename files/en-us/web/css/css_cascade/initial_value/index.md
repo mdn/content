@@ -33,8 +33,8 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Layout modes](/en-US/docs/Glossary/Layout_mode)
+  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
