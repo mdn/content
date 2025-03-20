@@ -143,8 +143,6 @@ These pseudo-classes apply when viewing something which has timing, such as a [W
 
 - {{CSSxRef(":current")}}
   - : Represents the element or ancestor of the element that is being displayed.
-- {{CSSxRef(":current", ":current()")}}
-  - : Represents the element or ancestor that matches {{CSSxRef(":current")}} and matches any of the selectors in the list provided.
 - {{CSSxRef(":past")}}
   - : Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.
 - {{CSSxRef(":future")}}
