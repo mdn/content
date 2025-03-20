@@ -32,7 +32,7 @@ console.log(adventurer.someNonExistentMethod?.());
 ```js-nolint
 obj?.prop
 obj?.[expr]
-obj?.func(args)
+func?.(args)
 ```
 
 ## Description
