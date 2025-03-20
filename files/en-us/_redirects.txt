@@ -12326,6 +12326,7 @@
 /en-US/docs/Web/CSS/offset-inline-start	/en-US/docs/Web/CSS/inset-inline-start
 /en-US/docs/Web/CSS/offset-rotation	/en-US/docs/Web/CSS/offset-rotate
 /en-US/docs/Web/CSS/orient	/en-US/docs/Web/CSS/-moz-orient
+/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring	/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring
 /en-US/docs/Web/CSS/overflow-x2	/en-US/docs/Web/CSS/overflow-x
 /en-US/docs/Web/CSS/pad	/en-US/docs/Web/CSS/@counter-style/pad
 /en-US/docs/Web/CSS/paint	/en-US/docs/Web/CSS/image/paint

@@ -77929,6 +77929,18 @@
       "teoli"
     ]
   },
+  "Web/CSS/CSS_scroll_anchoring/Scroll_anchoring": {
+    "modified": "2020-10-15T22:15:56.258Z",
+    "contributors": [
+      "mfuji09",
+      "rachelandrew",
+      "emilio_",
+      "mfluehr",
+      "steveluscher",
+      "bensoibj",
+      "chrisdavidmills"
+    ]
+  },
   "Web/CSS/CSS_scroll_snap": {
     "modified": "2020-12-06T20:56:34.162Z",
     "contributors": [
@@ -87170,18 +87182,6 @@
       "rachelandrew",
       "Aiman_Alkhamisi",
       "krosylight"
-    ]
-  },
-  "Web/CSS/overflow-anchor/Guide_to_scroll_anchoring": {
-    "modified": "2020-10-15T22:15:56.258Z",
-    "contributors": [
-      "mfuji09",
-      "rachelandrew",
-      "emilio_",
-      "mfluehr",
-      "steveluscher",
-      "bensoibj",
-      "chrisdavidmills"
     ]
   },
   "Web/CSS/overflow-block": {
