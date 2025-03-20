@@ -177,14 +177,6 @@ These pseudo-classes relate to the location of an element within the document tr
 - {{CSSxRef(":only-of-type")}}
   - : Matches an element that has no siblings of the chosen type selector.
 
-## Grid-structural pseudo-classes
-
-These pseudo-classes relate to the location of an element within a grid element such as a table.
-
-- `:nth-col()`
-  - : Uses `An+B` notation to select elements from a list of siblings in a column.
-- `:nth-last-col()`
-  - : Uses `An+B` notation to select elements from a list of siblings in a column, counting backwards from the end of the list.
 
 ## Shadow-structural pseudo-classes
 
