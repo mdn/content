@@ -134,7 +134,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - [CSS building blocks: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-  - : Tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
+  - : Introduction to basic CSS selectors, including tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), and [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators).
 
 - [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
