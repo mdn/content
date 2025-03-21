@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.parseInt
 
 The **`parseInt()`** function parses a string argument and returns an integer of the specified [radix](https://en.wikipedia.org/wiki/Radix) (the base in mathematical numeral systems).
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{InteractiveExample("JavaScript Demo: parseInt()")}}
 
 ```js interactive-example
 console.log(parseInt("123"));
@@ -77,7 +77,7 @@ For radices above `10`, letters of the English alphabet indicate numerals greate
 
 `parseInt` understands exactly two signs: `+` for positive, and `-` for negative. It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.
 
-If `parseInt` encounters a character that is not a numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
+If `parseInt` encounters a character in the input string that is not a valid numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, `parseInt("2", 2)` returns `NaN` because `2` is not a valid numeral in the binary number system. Likewise, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
 
 If the first character cannot be converted to a number with the radix in use, `parseInt` returns `NaN`. Leading whitespace is allowed.
 

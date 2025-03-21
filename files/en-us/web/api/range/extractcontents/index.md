@@ -8,17 +8,7 @@ browser-compat: api.Range.extractContents
 
 {{ApiRef("DOM")}}
 
-The **`Range.extractContents()`** method moves contents of the
-{{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.
-
-Event listeners added using DOM Events are not retained during extraction. HTML
-attribute events are retained or duplicated as they are for the
-{{domxref("Node.cloneNode()")}} method. HTML `id` attributes are also cloned,
-which can lead to an invalid document if a partially-selected node is extracted and
-appended to the document.
-
-Partially selected nodes are cloned to include the parent tags necessary to make the
-document fragment valid.
+The **`extractContents()`** method of the {{domxref("Range")}} interface is similar to a combination of {{domxref("Range.cloneContents()")}} and {{domxref("Range.deleteContents()")}}. It removes the child {{domxref("Node")}}s of the range from the document, clones them, and returns them as a new {{domxref("DocumentFragment")}} object. For partially selected nodes, only the selected text is deleted, but all containing parent nodes up to the common ancestor are cloned as well, resulting in two copies of these nodes, one in the original document and one in the extracted fragment.
 
 ## Syntax
 

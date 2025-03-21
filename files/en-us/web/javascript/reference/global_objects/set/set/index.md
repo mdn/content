@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Set.Set
 
 The **`Set()`** constructor creates {{jsxref("Set")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{InteractiveExample("JavaScript Demo: Set() constructor")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);
@@ -73,4 +73,5 @@ mySet.add(o);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Set")}}

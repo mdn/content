@@ -11,7 +11,7 @@ The **`function*`** declaration creates a {{Glossary("binding")}} of a new gener
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{InteractiveExample("JavaScript Demo: function* declaration")}}
 
 ```js interactive-example
 function* generator(i) {

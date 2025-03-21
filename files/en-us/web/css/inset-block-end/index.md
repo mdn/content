@@ -11,7 +11,59 @@ The **`inset-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logica
 
 This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/inset-block-end.html")}}
+{{InteractiveExample("CSS Demo: inset-block-end")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">I am absolutely positioned with inset-block-end: 20px</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-block-end: 20px;
+  inline-size: 140px;
+  min-block-size: 200px;
+}
+```
 
 ## Syntax
 

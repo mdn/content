@@ -1,5 +1,6 @@
 ---
 title: Basic CSS selectors
+short-title: Basic selectors
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 page-type: learn-module-chapter
 ---

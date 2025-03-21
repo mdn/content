@@ -9,7 +9,33 @@ browser-compat: css.types.filter-function.brightness
 
 The **`brightness()`** [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;filter-function&gt;")}} applies a linear multiplier value on an element or an input image, making the image appear brighter or darker.
 
-{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
+{{InteractiveExample("CSS Demo: brightness()")}}
+
+```css interactive-example-choice
+filter: brightness(1);
+```
+
+```css interactive-example-choice
+filter: brightness(1.75);
+```
+
+```css interactive-example-choice
+filter: brightness(50%);
+```
+
+```css interactive-example-choice
+filter: brightness(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 

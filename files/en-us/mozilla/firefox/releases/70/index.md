@@ -106,7 +106,7 @@ This article provides information about the changes in Firefox 70 that will affe
 
 - The default referrer policy for third-party tracking resources is now `strict-origin-when-cross-origin` when [Enhanced Tracking Protection](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) is turned on ([Firefox bug 1569996](https://bugzil.la/1569996)).
 - The size of the {{httpheader("Referer")}} request header is now limited to 4 KB (4,096 bytes). If an overly long referer exceeds the defined limit, only the origin part will be sent ([Firefox bug 1557346](https://bugzil.la/1557346)).
-- The [HTTP cache](/en-US/docs/Web/HTTP/Caching) is now partitioned per the top-level document's origin ([Firefox bug 1536058](https://bugzil.la/1536058)).
+- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching) is now partitioned per the top-level document's origin ([Firefox bug 1536058](https://bugzil.la/1536058)).
 
 #### Removals
 

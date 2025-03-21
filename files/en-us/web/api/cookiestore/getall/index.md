@@ -8,11 +8,13 @@ browser-compat: api.CookieStore.getAll
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the `name` or `options` passed to it. Passing no parameters will return all cookies for the current context.
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves as an array of cookies that match the `name` or `options` passed to it.
+Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
 ```js-nolint
+getAll()
 getAll(name)
 getAll(options)
 ```
@@ -64,14 +66,7 @@ Each object contains the following properties:
 
 - `sameSite`
 
-  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
-
-    - `"strict"`
-      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
-    - `"lax"`
-      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
-    - `"none"`
-      - : Cookies will be sent in all contexts.
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values: [`"strict"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#strict), [`"lax"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#lax), or [`"none"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none).
 
 - `secure`
 
@@ -86,21 +81,56 @@ Each object contains the following properties:
   - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
-    - The `url` option is present and is not equal with the creation URL, if in main thread.
-    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - The method is called in the main thread, and the `url` option is specified but does not match the URL of the current window.
+    - The method is called in a worker and the `url` option is specified, but does not match the origin of the worker.
     - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
-In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+<!-- The examples don't work as live examples in MDN environment (due to unknown errors) -->
+
+### Get all cookies for this context
+
+This example shows how to get all cookies in the current context.
+
+First we define `setTestCookies()` which creates the test cookies "cookie1" and "cookie2", logging any errors.
 
 ```js
-const cookies = await cookieStore.getAll();
+async function setTestCookies() {
+  // Set two cookies
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    console.log(`Error setting cookie1: ${error}`);
+  }
 
-if (cookies.length > 0) {
-  console.log(cookies);
-} else {
-  console.log("Cookie not found");
+  try {
+    await cookieStore.set("cookie2", "cookie2-value");
+  } catch (error) {
+    console.log(`Error setting cookie2: ${error}`);
+  }
+}
+```
+
+The `cookieTest()` method calls `setTestCookies()` and then waits on `getAll()`.
+This returns a {{jsxref("Promise")}} that resolves with all of the cookies for this context as an array of objects, or an empty array if there are no cookies.
+If the returned promise resolves with array containing cookie information we iterate the array and log each cookie ("cookie1" and "cookie2").
+
+```js
+async function cookieTest() {
+  // Set our test cookies
+  await setTestCookies();
+
+  // Get all cookies
+  const cookies = await cookieStore.getAll();
+
+  // Iterate the cookies, or log that none were found
+  if (cookies.length > 0) {
+    console.log(`Found cookies: ${cookies.length}:`);
+    cookies.forEach((cookie) => console.log(cookie));
+  } else {
+    console.log("Cookies not found");
+  }
 }
 ```
 

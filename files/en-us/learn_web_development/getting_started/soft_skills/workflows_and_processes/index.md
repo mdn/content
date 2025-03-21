@@ -6,7 +6,7 @@ page-type: tutorial-chapter
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}
 
 > [!NOTE]
 > The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
@@ -55,8 +55,8 @@ TODO
 
 ## See also
 
-- [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/basics/technology-stack), mongodb.com
+- [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
 - [Website development team structure: roles and processes](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
 - [Waterfall vs. Agile vs. Kanban vs. Scrum: What's the difference?](https://asana.com/resources/waterfall-agile-kanban-scrum), Asana (2022)
 
-{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}

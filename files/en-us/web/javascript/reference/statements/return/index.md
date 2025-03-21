@@ -9,7 +9,7 @@ browser-compat: javascript.statements.return
 
 The **`return`** statement ends function execution and specifies a value to be returned to the function caller.
 
-{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+{{InteractiveExample("JavaScript Demo: return statement")}}
 
 ```js interactive-example
 function getRectArea(width, height) {
@@ -108,7 +108,7 @@ counter();
 
 ### Returning a function
 
-See also the article about [Closures](/en-US/docs/Web/JavaScript/Closures).
+See also the article about [Closures](/en-US/docs/Web/JavaScript/Guide/Closures).
 
 ```js
 function magic() {
@@ -132,4 +132,4 @@ answer(1337); // 56154
 ## See also
 
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)

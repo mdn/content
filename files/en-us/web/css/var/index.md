@@ -2,14 +2,48 @@
 title: var()
 slug: Web/CSS/var
 page-type: css-function
-browser-compat: css.properties.custom-property.var
+browser-compat: css.types.var
 ---
 
 {{CSSRef}}
 
 The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
 
-{{EmbedInteractiveExample("pages/css/var.html")}}
+{{InteractiveExample("CSS Demo: var()")}}
+
+```css interactive-example-choice
+border-color: var(--color-a);
+```
+
+```css interactive-example-choice
+border-color: var(--color-b);
+```
+
+```css interactive-example-choice
+border-color: var(--color-c);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    Three color options have been set on the :root use these to change the
+    border color.
+  </div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --color-a: pink;
+  --color-b: green;
+  --color-c: rebeccapurple;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 The `var()` function cannot be used in property names, selectors or anything else besides property values. (Doing so usually produces invalid syntax, or else a value whose meaning has no connection to the variable.)
 

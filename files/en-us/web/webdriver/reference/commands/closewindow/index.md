@@ -2,7 +2,7 @@
 title: Close Window
 slug: Web/WebDriver/Reference/Commands/CloseWindow
 page-type: webdriver-command
-browser-compat: webdriver.commands.CloseWindow
+browser-compat: webdriver.classic.CloseWindow
 sidebar: webdriver
 ---
 
@@ -10,9 +10,9 @@ The _Close Window_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDrive
 
 ## Syntax
 
-| Method                                          | URI template                   |
-| ----------------------------------------------- | ------------------------------ |
-| [`DELETE`](/en-US/docs/Web/HTTP/Methods/DELETE) | `/session/{session id}/window` |
+| Method                                                    | URI template                   |
+| --------------------------------------------------------- | ------------------------------ |
+| [`DELETE`](/en-US/docs/Web/HTTP/Reference/Methods/DELETE) | `/session/{session id}/window` |
 
 ### URL parameters
 

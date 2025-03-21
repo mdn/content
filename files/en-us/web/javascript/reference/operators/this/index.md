@@ -13,7 +13,7 @@ The value of `this` in JavaScript depends on how a function is invoked (runtime 
 
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) differ in their handling of `this`: they inherit `this` from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own `this` binding. Therefore, their `this` value cannot be set by `bind()`, `apply()` or `call()` methods, nor does it point to the current object in object methods.
 
-{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+{{InteractiveExample("JavaScript Demo: this expression")}}
 
 ```js interactive-example
 const test = {
@@ -64,7 +64,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 Note how the function is the same, but based on how it's invoked, the value of `this` is different. This is analogous to how function parameters work.
 
-The value of `this` is not the object that has the function as an own property, but the object that is used to call the function. You can prove this by calling a method of an object up in the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+The value of `this` is not the object that has the function as an own property, but the object that is used to call the function. You can prove this by calling a method of an object up in the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```js
 const obj3 = {
@@ -162,7 +162,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-Arrow functions create a [closure](/en-US/docs/Web/JavaScript/Closures) over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, `this` is bound to what it was when the function was created (in the example above, the global object). The same applies to arrow functions created inside other functions: their `this` remains that of the enclosing lexical context. [See example below](#this_in_arrow_functions).
+Arrow functions create a [closure](/en-US/docs/Web/JavaScript/Guide/Closures) over the `this` value of its surrounding scope, which means arrow functions behave as if they are "auto-bound" — no matter how it's invoked, `this` is bound to what it was when the function was created (in the example above, the global object). The same applies to arrow functions created inside other functions: their `this` remains that of the enclosing lexical context. [See example below](#this_in_arrow_functions).
 
 Furthermore, when invoking arrow functions using `call()`, `bind()`, or `apply()`, the `thisArg` parameter is ignored. You can still pass other arguments using these methods, though.
 

@@ -10,7 +10,33 @@ browser-compat: css.types.transform-function.skewY
 The **`skewY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the vertical
 direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-skewY.html")}}
+{{InteractiveExample("CSS Demo: skewY()")}}
+
+```css interactive-example-choice
+transform: skewY(0);
+```
+
+```css interactive-example-choice
+transform: skewY(35deg);
+```
+
+```css interactive-example-choice
+transform: skewY(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewY(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the vertical direction. The ordinate (vertical, y-coordinate) of each point is

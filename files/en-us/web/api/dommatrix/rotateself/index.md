@@ -30,7 +30,7 @@ rotateSelf(rotX, rotY, rotZ)
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation
 
-If only one parameter is passed, `rotZ` is the value of `rotX`, and both `rotX` and `rotY` are `0`, and the rotation is a 2D rotation. If `rotX` and `rotY` are non-zero, the [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is `false`.
+If only one parameter is passed, `rotZ` is the value of `rotX`, and both `rotX` and `rotY` are `0`, and the rotation is a 2D rotation. If `rotX` and `rotY` are non-zero, the [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) is `false`.
 
 ### Return value
 
@@ -66,7 +66,7 @@ console.log(matrix); // output: "matrix(0.866, 0.5, -0.5, 0.866, 0, 0)"
   - {{cssxref("transform-function/rotateY", "rotateY()")}}
   - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface methods
   - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - {{domxref("CanvasRenderingContext2D.transform()")}}

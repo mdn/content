@@ -2,6 +2,7 @@ Accessibilità
 Allons
 Ashita
 Assemblée
+Aéro
 bezje
 canadien
 Català
@@ -10,6 +11,7 @@ communiqué
 Congrès
 contenido
 couleur
+czaszką
 dans
 demeure
 Deutsch
@@ -42,6 +44,7 @@ ijsland
 indomable
 İstanbul
 JOURS
+lepiej
 Mais
 Majestatis
 minuto
@@ -49,6 +52,8 @@ minutos
 Moin
 Montag
 Musée
+napisem
+narysowaną
 nicht
 Nordamerikanische
 Normalzeit
@@ -88,9 +93,13 @@ tslí
 uisce
 Umgebung
 warum
+wchodzić
 Westküsten
 Westküstenzeit
+widzimy
 Zitat
+znak
+środka
 ˈbraːˈvo
 ˈdeltɑ
 ˈtʃɑːli

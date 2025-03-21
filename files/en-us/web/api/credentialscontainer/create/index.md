@@ -45,7 +45,7 @@ create(options)
       - : A {{domxref("PublicKeyCredentialCreationOptions")}} object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
 
         > [!NOTE]
-        > Usage of `create()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+        > Usage of `create()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 ### Return value
 
@@ -63,7 +63,7 @@ If no credential object can be created, the promise resolves with `null`.
   - : In the case of a {{domxref("PasswordCredential")}} creation request, `id`, `origin`, or `password` were not provided (empty).
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Possible causes include:
-    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
     - An attempt is made to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have a security key that supports discoverable credentials, and cancels the operation.

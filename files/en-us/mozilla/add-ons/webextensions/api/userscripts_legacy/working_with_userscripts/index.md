@@ -108,4 +108,4 @@ Once the script has been registered, navigate to a page whose domain name ends i
 
 - {{WebExtAPIRef("userScripts_legacy","userScripts")}}
 - {{WebExtAPIRef("userScripts_legacy.register()", "userScripts.register()")}}
-- {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}}
+- {{WebExtAPIRef("userScripts_legacy.onBeforeScript", "userScripts.onBeforeScript")}}

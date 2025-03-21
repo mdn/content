@@ -76,7 +76,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ## Examples
 
-### Simple text fragment with textStart
+### Text fragment with textStart
 
 - [https://example.com#:~:text=for](https://example.com#:~:text=for) scrolls to and highlights the first instance of the text `for` in the document.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human](/en-US/docs/Web/HTML/Element/a#:~:text=human) scrolls to and highlights the first instance of the text `human` in the document.

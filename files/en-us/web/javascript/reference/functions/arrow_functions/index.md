@@ -13,7 +13,7 @@ An **arrow function expression** is a compact alternative to a traditional [func
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{InteractiveExample("JavaScript Demo: Arrow function expressions")}}
 
 ```js interactive-example
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
@@ -46,7 +46,7 @@ param => {
 }
 ```
 
-[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) within params are supported, and always require parentheses:
+[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) within params are supported, and always require parentheses:
 
 ```js-nolint
 (a, b, ...r) => expression
@@ -215,7 +215,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-Because a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body has a `this` context, arrow functions as [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) close over the class's `this` context, and the `this` inside the arrow function's body will correctly point to the instance (or the class itself, for [static fields](/en-US/docs/Web/JavaScript/Reference/Classes/static)). However, because it is a [closure](/en-US/docs/Web/JavaScript/Closures), not the function's own binding, the value of `this` will not change based on the execution context.
+Because a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body has a `this` context, arrow functions as [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) close over the class's `this` context, and the `this` inside the arrow function's body will correctly point to the instance (or the class itself, for [static fields](/en-US/docs/Web/JavaScript/Reference/Classes/static)). However, because it is a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), not the function's own binding, the value of `this` will not change based on the execution context.
 
 ```js
 class C {
@@ -263,9 +263,6 @@ function foo(n) {
 
 foo(3); // 3 + 3 = 6
 ```
-
-> [!NOTE]
-> You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to comprehend.
 
 In most cases, using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 is a good alternative to using an `arguments` object.

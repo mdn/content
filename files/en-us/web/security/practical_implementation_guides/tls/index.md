@@ -100,7 +100,7 @@ To prevent [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks
 
 ### Solution
 
-HTTP [`Strict-Transport-Security`](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS) is an HTTP header that notifies browsers to connect to a given site only over HTTPS, even if the originally specified scheme was HTTP. Browsers with HSTS set for a given site will automatically upgrade all requests to HTTPS for that site. HSTS also tells browsers to treat TLS and certificate-related errors more strictly by disabling the ability to bypass the certificate error page.
+HTTP [`Strict-Transport-Security`](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) (HSTS) is an HTTP header that notifies browsers to connect to a given site only over HTTPS, even if the originally specified scheme was HTTP. Browsers with HSTS set for a given site will automatically upgrade all requests to HTTPS for that site. HSTS also tells browsers to treat TLS and certificate-related errors more strictly by disabling the ability to bypass the certificate error page.
 
 `Strict-Transport-Security` supports the following directives:
 
@@ -117,7 +117,7 @@ Follow these steps to correctly implement HSTS on your website:
 2. If possible, set `includeSubDomains` to improve security on all subdomains. Careful testing is needed when setting this directive because it could disable sites on subdomains that don't yet have HTTPS enabled.
 3. If possible, set `preload` to make it possible to include your website in the HSTS preload list. To add it to the list, visit https://hstspreload.org/ and enter your site URL into the form at the top of the page, fixing any issues that it mentions. Web browsers will perform HTTPS upgrades to preloaded sites before receiving the initial `Strict-Transport-Security` header. This prevents [downgrade attacks](https://en.wikipedia.org/wiki/Downgrade_attack) upon first use and is recommended for all high-risk websites. Note that being included in the HSTS preload list also requires `includeSubDomains` to be set and `max-age` to be set to a minimum of 1 year (`31536000`).
 
-Along with `Strict-Transport-Security`, you should also set the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) directive in your {{httpheader("Content-Security-Policy")}}. This instructs browsers to treat all of a site's insecure URLs (those served over HTTP) as though they have been served over HTTPS. `upgrade-insecure-requests` is intended for websites with large numbers of insecure legacy URLs that need to be rewritten.
+Along with `Strict-Transport-Security`, you should also set the [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive in your {{httpheader("Content-Security-Policy")}}. This instructs browsers to treat all of a site's insecure URLs (those served over HTTP) as though they have been served over HTTPS. `upgrade-insecure-requests` is intended for websites with large numbers of insecure legacy URLs that need to be rewritten.
 
 ### Examples
 

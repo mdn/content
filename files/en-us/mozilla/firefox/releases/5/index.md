@@ -46,7 +46,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - Similarly, the {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} method now clamps to no more than one interval per second in inactive tabs.
 - [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
 - The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named `mozSlice()` for now.
-- The value of {{ domxref("Navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
+- The value of {{ domxref("Navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers).
 - The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
 - The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.
 

@@ -320,16 +320,16 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 
 {{AvailableInWorkers}}
 
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 <!---->
 

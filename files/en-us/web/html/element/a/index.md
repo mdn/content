@@ -99,7 +99,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
 - `referrerpolicy`
 
-  - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
+  - : How much of the [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) to send when following the link.
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
@@ -247,7 +247,7 @@ If an icon is used to signify link behavior, make sure it has an [`alt` attribut
 {{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -287,7 +287,7 @@ Skip links are especially useful for people who navigate with the aid of assisti
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN / Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### Size and proximity
@@ -531,9 +531,9 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <code>href</code> attribute is
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> when <code>href</code> attribute is
         present, otherwise
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
@@ -541,16 +541,16 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
       <td>
         <p>When <code>href</code> attribute is present:</p>
         <ul>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
-          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p>When <code>href</code> attribute is not present:</p>
         <ul>

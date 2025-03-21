@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Map.values
 
 The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this map in insertion order.
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.values()")}}
 
 ```js interactive-example
 const map1 = new Map();

@@ -16,12 +16,12 @@ The standards for JavaScript are the [ECMAScript Language Specification](https:/
 
 Do not confuse JavaScript with the [Java programming language](<https://en.wikipedia.org/wiki/Java_(programming_language)>) — **JavaScript is _not_ "Interpreted Java"**. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.
 
-JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview), for the most part) includes the following:
+JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), for the most part) includes the following:
 
 - The [JavaScript guide](/en-US/docs/Web/JavaScript/Guide)
 - The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 
-For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Beginner's tutorials
 
@@ -49,25 +49,23 @@ Learn how to program in JavaScript from the ground up with our beginner's tutori
   - : In this module, we take a look at {{Glossary("asynchronous")}} JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
-- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Guide/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
-- [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
   - : Overview of available data structures in JavaScript.
-- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript provides three different value comparison operations: strict equality using `===`, loose equality using `==`, and the {{jsxref("Object.is()")}} method.
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : How different methods that visit a group of object properties one-by-one handle the enumerability and ownership of properties.
-- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
   - : A closure is the combination of a function and the lexical environment within which that function was declared.
 
 ### Advanced
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
-- [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
+- [Memory Management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
-- [The event loop](/en-US/docs/Web/JavaScript/Event_loop)
-  - : JavaScript has a runtime model based on an "event loop".
 
 ## Reference
 

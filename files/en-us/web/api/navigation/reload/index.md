@@ -16,6 +16,7 @@ The **`reload()`** method of the
 ## Syntax
 
 ```js-nolint
+reload()
 reload(options)
 ```
 

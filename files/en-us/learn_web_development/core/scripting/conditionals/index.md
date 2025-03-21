@@ -1,5 +1,6 @@
 ---
 title: Making decisions in your code — conditionals
+short-title: Conditionals
 slug: Learn_web_development/Core/Scripting/Conditionals
 page-type: learn-module-chapter
 ---

@@ -14,7 +14,7 @@ In the early days of the web (the early- to mid-90s), there were not many featur
 
 The `<blink>` element was apparently created after a conversation in a bar in Mountain View between Netscape engineer [Lou Montulli](https://en.wikipedia.org/wiki/Lou_Montulli) and colleagues. When he went into the office the next morning, he found that one of his fellow engineers had stayed up all night and implemented it ([read the story here](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)).
 
-While initially popular, `<blink>` became much maligned because of overuse; many people found it annoying. More importantly, it degrades readability and can be particularly problematic for users with visual impairments or [cognitive disorders](/en-US/docs/Web/Accessibility/Cognitive_accessibility) such as epilepsy or ADHD. It can be disorienting or, in the worst cases, even [trigger seizures](/en-US/docs/Web/Accessibility/Seizure_disorders).
+While initially popular, `<blink>` became much maligned because of overuse; many people found it annoying. More importantly, it degrades readability and can be particularly problematic for users with visual impairments or [cognitive disorders](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility) such as epilepsy or ADHD. It can be disorienting or, in the worst cases, even [trigger seizures](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders).
 
 `<blink>` was never properly specified and never achieved significant cross-browser support. It can be considered a piece of web history.
 

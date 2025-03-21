@@ -4,6 +4,7 @@ Academind
 Acrosync
 Addy
 Adham
+Adhemar
 Adilah
 Akhgari
 alastairc
@@ -57,6 +58,7 @@ bitsies
 Bitsov
 Bixa
 Blackmoon
+Blankers
 Bloggs
 Bocoup
 Bodmin
@@ -68,6 +70,7 @@ Browserleaks
 Browsershots
 Browsersync
 Bruant
+Bubka
 BugZilla
 Bundlesize
 Bunyakovsky
@@ -125,6 +128,7 @@ Cyberduck
 Cylon
 Célestes
 Dahlkemper
+Dahlström
 Dailymotion
 Danilo
 Dannaway
@@ -135,6 +139,7 @@ Dedalium
 Dedreux
 Deepti
 Degit
+Deke
 DekiWiki
 Delaville
 Denicola
@@ -154,10 +159,12 @@ Domenic
 dorey
 Dotclear
 Dottoro
+Downey
 Dragomir
 Drasner
 Dreamweaver
 Dutton
+Dwyane
 dynamis
 Dyno
 Dynos
@@ -185,6 +192,7 @@ Esben
 ethertank
 Eventbrite
 Exljbris
+Exocoetidae
 Fairchild
 FDCP
 ffconf
@@ -206,23 +214,28 @@ Fujisawa
 Galinski
 Gandi
 Gayatri
+Gebrselassie
 geckodriver
 Gedit
 Gerd
+Giancarlo
 gifplayer
 Gillenwater
 Gitbash
 Golightly
 Googlebot
+Gordo
 Grahl
 Granado
 Grande-Dixence
 Graywolf9
 Grigsby
+Grissom
 Groff
 groovecoder
 GSAP
 Guildford
+Haile
 Hamish
 hamishwillee
 Haml
@@ -255,10 +268,12 @@ Icecast
 idb-keyval
 Igalia
 Imagify
+Iniesta
 Inkscape
 intercooler
 Invision
 Ionos
+Irena
 Isac
 ITCSS
 ITEC
@@ -286,6 +301,7 @@ Joyo
 jpmedley
 JSCAMP
 jswebm
+Junxia
 Jérémie
 Júnior
 Kadir
@@ -302,6 +318,7 @@ Kazam
 Kearney
 kenji-yamasaki
 Kerckhoffs
+Kersee
 Kesteren
 Kettner
 Kinlan
@@ -317,6 +334,7 @@ Kneeland
 Knocky
 Knowbility
 Kobabe
+Koen
 Kokoro
 Komodo
 Konva
@@ -328,6 +346,7 @@ Lagerblad
 Lanyrd
 Laravel
 Lauke
+LeBron
 Leidel
 Leithead
 Leitura
@@ -366,6 +385,7 @@ Massieux
 Mathoid
 Matomo
 Matroska
+Matuzovic
 Maxability
 Maximiliano
 Mayank
@@ -447,6 +467,7 @@ OptiPNG
 Orendorff
 Osmani
 Owlman
+Paavo
 Paciello
 Pacman
 Pagella
@@ -498,6 +519,7 @@ Resig
 Rhiana
 Riazhskikh
 Rigby
+Robison
 Rocher
 Rohini
 Ronaldo
@@ -516,7 +538,9 @@ Sandrina
 sashasushko
 Saurabh
 Scarfone
+Scarlett
 Schiff
+Schirra
 Schmarsow
 Schola
 Scholz
@@ -542,6 +566,7 @@ Sivonen
 Skeletor
 Skywalker
 Slaght
+Slayton
 SlimerJS
 Snackbars.jsm
 Softgames
@@ -569,6 +594,7 @@ sveltesociety
 SVGOMG
 Swooop
 Symfony
+Szewinska
 Tabliss
 Tamaran
 Tanx
@@ -602,6 +628,7 @@ tristantheb
 Trustwave
 twgl
 Updown
+Usain
 usrsctp
 Vallejoanderson
 Vanderheiden
@@ -638,6 +665,7 @@ wisedog
 Wolenetz
 Wrox
 XAMPP
+Xavi
 Xiluodu
 Xiowan
 XITS
@@ -659,6 +687,7 @@ zantroke
 zantrokeregular
 Zaptec
 Zartner
+Zatopek
 Zehe
 Zenevich
 Zepto

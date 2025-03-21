@@ -150,9 +150,9 @@ For all the cross-origin `<iframe>`s, no blocking reasons are reported; for the 
 
 ## Blocking reasons
 
-There are many different reasons why blocking could occur, and browsers can choose to implement their own specific reasons for blocking, based on how they operate. Developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
+There are many different reasons why blocking could occur. Although the reasons are standardized, developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
 
-The initial values listed in the specification are:
+The values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
 
 - `"fetch"`
   - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
@@ -169,14 +169,92 @@ The initial values listed in the specification are:
 - `"websocket"`
   - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
 
-Additional blocking reasons may be used by some browsers, for example:
+### User-agent specific blocking reasons
 
-- `"unload-listener"`
-  - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [usage notes](/en-US/docs/Web/API/Window/unload_event#usage_notes) for more information.
+Additional blocking reasons that may be used by some browsers are also specified:
+
+- `"audio-capture"`
+  - : The Document requested audio capture permission by using Media Capture and Streams's [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) with audio.
+- `"background-work"`
+  - : The Document requested background work by calling [`SyncManager`](/en-US/docs/Web/API/SyncManager)'s [`register()`](/en-US/docs/Web/API/SyncManager/register) method, [`PeriodicSyncManager`](/en-US/docs/Web/API/PeriodicSyncManager)'s [`register()`](/en-US/docs/Web/API/PeriodicSyncManager/register) method, or [`BackgroundFetchManager`](/en-US/docs/Web/API/BackgroundFetchManager)'s [`fetch()`](/en-US/docs/Web/API/BackgroundFetchManager/fetch) method.
+- `"broadcastchannel-message"`
+  - : While the page was stored in back/forward cache, a [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel) connection on the page received a message and message event was fired.
+- `"idbversionchangeevent"`
+  - : The Document had a pending [`IDBVersionChangeEvent`](/en-US/docs/Web/API/IDBVersionChangeEvent) while unloading.
+- `"idledetector"`
+  - : The Document had an active [`IdleDetector`](/en-US/docs/Web/API/IdleDetector) while unloading.
+- `"keyboardlock"`
+  - : While unloading, keyboard lock was still active because [`Keyboard`](/en-US/docs/Web/API/Keyboard)'s [`lock()`](/en-US/docs/Web/API/Keyboard/lock) method was called.
+- `"mediastream"`
+  - : A [MediaStreamTrack](/en-US/docs/Web/API/MediaStreamTrack) was in the live state upon unloading.
+- `"midi"`
+  - : The Document requested a MIDI permission by calling [`navigator.requestMIDIAccess()`](/en-US/docs/Web/API/Navigator/requestMIDIAccess).
+- `"modals"`
+  - : User prompts were shown while unloading.
+- `"navigating"`
+  - : While unloading, loading was still ongoing, and so the Document was not in a state that could be stored in back/forward cache.
+- `"navigation-canceled"`
+  - : The navigation request was canceled by calling [`window.stop()`](/en-US/docs/Web/API/Window/stop) and the page was not in a state to be stored in back/forward cache.
+- `"non-trivial-browsing-context-group"`
+  - : The browsing context group of this Document had more than one top-level browsing context.
+- `"otpcredential"`
+  - : The Document created an [`OTPCredential`](/en-US/docs/Web/API/OTPCredential).
+- `"outstanding-network-request"`
+  - : While unloading, the Document had outstanding network requests and was not in a state that could be stored in back/forward cache.
+- `"paymentrequest"`
+  - : The Document had an active [`PaymentRequest`](/en-US/docs/Web/API/PaymentRequest) while unloading.
+- `"pictureinpicturewindow"`
+  - : The Document had an active [`PictureInPictureWindow`](/en-US/docs/Web/API/PictureInPictureWindow) while unloading.
+- `"plugins"`
+  - : The Document contained plugins.
+- `"request-method-not-get"`
+  - : The Document was created from an HTTP request whose method was not {{httpmethod("GET")}}.
+- `"response-auth-required"`
+  - : The Document was created from an HTTP response that required HTTP authentication.
 - `"response-cache-control-no-store"`
-  - : The page uses `no-store` as a {{httpheader("Cache-Control")}} header value.
-- `"related-active-contents"`
-  - : The page was opened from another page that still has a reference to this page, for example using "duplicate tab" functionality.
+  - : The Document was created from an HTTP response whose {{httpheader("Cache-Control")}} header included the "no-store" token.
+- `"response-cache-control-no-cache"`
+  - : The Document was created from an HTTP response whose {{httpheader("Cache-Control")}} header included the "no-cache" token.
+- `"response-keep-alive"`
+  - : The Document was created from an HTTP response that contained a {{httpheader("Keep-Alive")}} header.
+- `"response-scheme-not-http-or-https"`
+  - : The Document was created from a response whose URL's scheme was not an HTTP(S) scheme.
+- `"response-status-not-ok"`
+  - : The Document was created from an HTTP response whose status was not an ok status.
+- `"rtc"`
+  - : While unloading, a [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) or [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel) was shut down, so the page was not in a state that could be stored in the back/forward cache.
+- `"sensors"`
+  - : The Document requested sensor access.
+- `"serviceworker-added"`
+  - : The Document's service worker client started to be controlled by a [service worker](/en-US/docs/Web/API/Service_Worker_API) while the page was in back/forward cache.
+- `"serviceworker-claimed"`
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API) was claimed while the page was in back/forward cache.
+- `"serviceworker-postmessage"`
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API) received a message while the page was in back/forward cache.
+- `"serviceworker-version-activated"`
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API)'s version was activated while the page was in back/forward cache.
+- `"serviceworker-unregistered"`
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API)'s service worker registration was unregistered while the page was in back/forward cache.
+- `"sharedworker"`
+  - : This Document was in the owner set of a [`SharedWorkerGlobalScope`](/en-US/docs/Web/API/SharedWorkerGlobalScope).
+- `"smartcardconnection"`
+  - : The Document had an active `SmartCardConnection` while unloading.
+- `"speechrecognition"`
+  - : The Document had an active [`SpeechRecognition`](/en-US/docs/Web/API/SpeechRecognition) while unloading.
+- `"storageaccess"`
+  - : The Document requested storage access permission by using the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+- `"unload-listener"`
+  - : The Document registered an event listener for the [`unload` event](/en-US/docs/Web/API/Window/unload_event).
+- `"video-capture"`
+  - : The Document requested video capture permission by using Media Capture and Streams's [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) with video.
+- `"webhid"`
+  - : The Document called the [WebHID API](/en-US/docs/Web/API/WebHID_API)'s [`requestDevice()`](/en-US/docs/Web/API/HID/requestDevice) method.
+- `"webshare"`
+  - : The Document used the [Web Share API](/en-US/docs/Web/API/Web_Share_API)'s [`navigator.share()`](/en-US/docs/Web/API/Navigator/share) method.
+- `"webtransport"`
+  - : While unloading, an open [`WebTransport`](/en-US/docs/Web/API/WebTransport) connection was shut down, so the page was not in a state that could be stored in the back/forward cache.
+- `"webxrdevice"`
+  - : The Document created a [XRSystem](/en-US/docs/Web/API/XRSystem).
 
 ## Browser compatibility
 

@@ -71,7 +71,7 @@ To use the module:
    npx -v
    ```
 
-2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/package-manager) in the Node.js docs, then run the above commands again to check if the installation is successful.
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download) in the Node.js docs, then run the above commands again to check if the installation is successful.
 
 3. Let's assume the directory is `/path/to/project`. Run the following command to start the server:
 

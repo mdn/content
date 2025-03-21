@@ -9,7 +9,7 @@ browser-compat: javascript.statements.for_of
 
 The **`for...of`** statement executes a loop that operates on a sequence of values sourced from an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Iterable objects include instances of built-ins such as {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (and other DOM collections), as well as the {{jsxref("Functions/arguments", "arguments")}} object, [generators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) produced by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*), and user-defined iterables.
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{InteractiveExample("JavaScript Demo: for...of statement")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...of` loop is in.
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...of` loop is in.
 - `iterable`
   - : An iterable object. The source of the sequence of values on which the loop operates.
 - `statement`
@@ -67,7 +67,7 @@ for (let value of iterable) {
 > [!NOTE]
 > Each iteration creates a new variable. Reassigning the variable inside the loop body does not affect the original value in the iterable (an array, in this case).
 
-You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
+You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y of iterable)` to assign the value to an object property.
 
 However, a special rule forbids using `async` as the variable name. This is invalid syntax:
 
@@ -341,7 +341,7 @@ for (const value of generator) {
 
 Both `for...in` and `for...of` statements iterate over something. The main difference between them is in what they iterate over.
 
-The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object, while the `for...of` statement iterates over values that the [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) defines to be iterated over.
+The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object, while the `for...of` statement iterates over values that the [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) defines to be iterated over.
 
 The following example shows the difference between a `for...of` loop and a `for...in` loop when used with an {{jsxref("Array")}}.
 
@@ -370,9 +370,9 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+The object `iterable` inherits the properties `objCustom` and `arrCustom` because it contains both `Object.prototype` and `Array.prototype` in its [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log array _elements_ `3`, `5`, `7` or `"hello"` because those are not _properties_ — they are _values_. It logs array _indexes_ as well as `arrCustom` and `objCustom`, which are actual properties. If you're not sure why these properties are iterated over, there's a more thorough explanation of how [array iteration and `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in) work.
+The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log array _elements_ `3`, `5`, `7` or `"hello"` because those are not _properties_ — they are _values_. It logs array _indexes_ as well as `arrCustom` and `objCustom`, which are actual properties. If you're not sure why these properties are iterated over, there's a more thorough explanation of how [array iteration and `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in) work.
 
 The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e. not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
 

@@ -9,7 +9,28 @@ browser-compat: css.types.clamp
 
 The **`clamp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.
 
-{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
+{{InteractiveExample("CSS Demo: clamp()")}}
+
+```css interactive-example-choice
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1.5rem, 2.5vw, 4rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1rem, 10vw, 2rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    The font-size of this text varies depending on the base font of the page,
+    and the size of the viewport.
+  </div>
+</section>
+```
 
 Note that using `clamp()` for font sizes, as in these examples, allows you to set a font-size that grows with the size of the viewport, but doesn't go below a minimum font-size or above a maximum font-size. It has the same effect as the code in [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) but in one line, and without the use of media queries.
 
@@ -48,7 +69,7 @@ You can use different units for each value in your expressions and different uni
 Keep the following aspects in mind while working with the function:
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
-- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
+- It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as basic parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
 - The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 - Oftentimes you will want to use {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} within a `clamp()` function.
 
@@ -92,7 +113,7 @@ This prevents the heading text from getting too small in a very narrow window, o
 #### HTML
 
 ```html
-<h1>Simple responsive test</h1>
+<h1>Basic responsive test</h1>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
   eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat

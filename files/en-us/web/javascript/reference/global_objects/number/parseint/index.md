@@ -79,5 +79,6 @@ Its purpose is modularization of globals. Please see
 ## See also
 
 - [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.parseInt`](https://www.npmjs.com/package/number.parseInt)
 - {{jsxref("Number")}}
 - {{jsxref("parseInt()")}}

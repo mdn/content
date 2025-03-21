@@ -21,7 +21,7 @@ Refer to the documentation for {{Cssxref("length")}} and {{Cssxref("percentage")
 
 ### length-percentage examples
 
-The following simple example demonstrates several properties that use `<length-percentage>` values.
+This example demonstrates several properties that use `<length-percentage>` values.
 
 #### HTML
 

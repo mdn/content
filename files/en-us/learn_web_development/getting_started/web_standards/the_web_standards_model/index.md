@@ -104,7 +104,7 @@ Let's look at each of these in a little more detail.
 
 ### "Open" standards
 
-One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of of money, and those costs would then be passed onto the browser users.
+One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be **open**. This means they are free to both contribute to and use, and not encumbered by patents/licensing. This is important — if a web technology relies on patented/licensed technologies to function, the patent/owner can then charge implementing browser vendors potentially large amounts of money, and those costs would then be passed on to the browser users.
 
 In addition, because web technologies are created openly, in collaboration between many different companies, it means that no one company gets to control them, which is a really good thing. You wouldn't want a single company suddenly deciding to put the entire web behind a paywall, or releasing a new version of HTML that everyone has to buy to continue making websites, or worse still, deciding they aren't interested any more and just turning it off.
 

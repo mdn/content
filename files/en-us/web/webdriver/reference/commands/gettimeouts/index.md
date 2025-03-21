@@ -2,7 +2,7 @@
 title: Get Timeouts
 slug: Web/WebDriver/Reference/Commands/GetTimeouts
 page-type: webdriver-command
-browser-compat: webdriver.commands.GetTimeouts
+browser-compat: webdriver.classic.GetTimeouts
 sidebar: webdriver
 ---
 
@@ -10,9 +10,9 @@ The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of th
 
 ## Syntax
 
-| Method                                    | URI template                     |
-| ----------------------------------------- | -------------------------------- |
-| [`GET`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/timeouts` |
+| Method                                              | URI template                     |
+| --------------------------------------------------- | -------------------------------- |
+| [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) | `/session/{session id}/timeouts` |
 
 ### URL parameters
 

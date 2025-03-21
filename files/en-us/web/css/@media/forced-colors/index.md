@@ -36,8 +36,8 @@ These browser-specified values are selected from the set of system colors — th
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill attribute](/en-US/docs/Web/SVG/Attribute/fill)
-- [SVG stroke attribute](/en-US/docs/Web/SVG/Attribute/stroke)
+- [SVG fill attribute](/en-US/docs/Web/SVG/Reference/Attribute/fill)
+- [SVG stroke attribute](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
 
 Additionally the following properties have special behavior in forced colors mode:
 

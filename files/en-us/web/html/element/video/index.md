@@ -25,7 +25,7 @@ The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player whi
 </video>
 ```
 
-The above example shows simple usage of the `<video>` element. Similarly to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, etc.
+The above example shows how to use the `<video>` element. Similar to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, and so on.
 
 The content inside the opening and closing `<video></video>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -411,7 +411,7 @@ Captions should not obstruct the main subject of the video. They can be position
 
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -481,7 +481,7 @@ This example builds on the last one, offering three different sources for the me
 
 First AVI is tried. If that can't be played, [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
-Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) for audio.
+Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) parameter as part of the file's type string. For example, `video/webm; codecs="vp8, vorbis"` says that the file is a [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) for audio.
 
 ## Technical summary
 
@@ -525,7 +525,7 @@ Some media file types let you provide more specific information using the [`code
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

@@ -6,22 +6,18 @@ page-type: guide
 
 {{HTMLSidebar}}
 
-Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
+Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules. It's possible for elements (such as {{HTMLElement("track")}}) to not be a member of _any_ of these categories.
 
-There are three types of content categories:
+The content categories are used to define the _content model_ of elements, in other words what each element can take as descendants. For example, a `<p>` element can only contain _phrasing content_, while a `<div>` element can contain _flow content_.
 
-- Main content categories, which describe common rules shared by many elements.
-- Form-related content categories, which describe rules common to form-related elements.
-- Specific content categories, which describe rare categories shared only by a few elements, sometimes only in a specific context.
+There are seven main content categories, which can be summarized with the Venn diagram below:
+
+![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)
 
 > [!NOTE]
 > A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)
-
-## Main content categories
-
-### Metadata content
+## Metadata content
 
 Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information. Everything in the {{htmlelement("head")}}, including the `<title>`, `<link>`, `<script>`, `<style>`, and the lesser used `<base>`, is metadata content. There is a `<meta>` element for metadata that cannot be represented by these other elements.
 
@@ -33,11 +29,12 @@ The metadata elements are:
 - {{HTMLElement("noscript")}}
 - {{HTMLElement("script")}}
 - {{HTMLElement("style")}}
+- {{HTMLElement("template")}}
 - {{HTMLElement("title")}}
 
 Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata content, phrasing content, or script-supporting elements are expected.
 
-### Flow content
+## Flow content
 
 Flow content is a broad category that encompasses most elements that can go inside the {{HTMLElement("body")}} element, including heading elements, sectioning elements, phrasing elements, embedding elements, interactive elements, and form-related elements. It also includes text nodes (but not those that only consist of white space characters).
 
@@ -50,8 +47,8 @@ The flow elements are:
 - {{HTMLElement("aside")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("b")}}
-- {{HTMLElement("bdo")}}
 - {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
 - {{HTMLElement("blockquote")}}
 - {{HTMLElement("br")}}
 - {{HTMLElement("button")}}
@@ -102,8 +99,8 @@ The flow elements are:
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("s")}}
 - {{HTMLElement("samp")}}
-- {{HTMLElement("search")}}
 - {{HTMLElement("script")}}
+- {{HTMLElement("search")}}
 - {{HTMLElement("section")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("slot")}}
@@ -122,15 +119,16 @@ The flow elements are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- plain text
+- [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
-- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
-- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 
-### Sectioning content
+## Sectioning content
 
 Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
@@ -141,7 +139,7 @@ The sectioning elements are:
 - {{HTMLElement("nav")}}
 - {{HTMLElement("section")}}
 
-### Heading content
+## Heading content
 
 Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
@@ -153,7 +151,7 @@ The heading elements are:
 > [!NOTE]
 > Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
-### Phrasing content
+## Phrasing content
 
 Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.
 
@@ -208,7 +206,8 @@ The phrasing elements are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- plain text (including more than just whitespace characters)
+- [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- Plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -216,11 +215,11 @@ A few other elements belong to this category, but only if a specific condition i
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("del")}}, if it contains only phrasing content
 - {{HTMLElement("ins")}}, if it contains only phrasing content
-- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("map")}}, if it contains only phrasing content
-- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 
-### Embedded content
+## Embedded content
 
 Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document.
 
@@ -237,7 +236,7 @@ The embedded content elements are:
 - {{SVGElement("svg")}}
 - {{HTMLElement("video")}}
 
-### Interactive content
+## Interactive content
 
 Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction.
 
@@ -256,13 +255,13 @@ Some elements belong to this category only under specific conditions:
 - {{HTMLElement("a")}}, if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present
 - {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
 - {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
-- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
+- {{HTMLElement("input")}}, if the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
 - {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) attribute is present
 - {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) attribute is present
 
-### Palpable content
+## Palpable content
 
-Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
+**Palpable content** is content that is neither empty nor hidden; it is content that is rendered and substantive. Palpable content is not used to define content models but is used to define a general rule: Elements whose content model allows any flow content or phrasing content should have at least one node in its contents that is palpable content and that does not have the `hidden` attribute specified.
 
 The palpable elements are:
 
@@ -298,7 +297,7 @@ The palpable elements are:
 - {{HtmlElement("main")}}
 - {{HtmlElement("map")}}
 - {{HtmlElement("mark")}}
-- {{MathMLElement("math")}} from [MathML](/en-US/docs/Web/MathML)
+- {{MathMLElement("math")}}
 - {{HtmlElement("meter")}}
 - {{HtmlElement("nav")}}
 - {{HtmlElement("object")}}
@@ -318,7 +317,7 @@ The palpable elements are:
 - {{HtmlElement("strong")}}
 - {{HtmlElement("sub")}}
 - {{HtmlElement("sup")}}
-- {{SVGElement("svg")}} from [SVG](/en-US/docs/Web/SVG)
+- {{SVGElement("svg")}}
 - {{HtmlElement("table")}}
 - {{HtmlElement("textarea")}}
 - {{HtmlElement("time")}}
@@ -326,7 +325,7 @@ The palpable elements are:
 - {{HtmlElement("var")}}
 - {{HtmlElement("video")}}
 - [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
-- text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
+- Plain text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
 
 Some elements belong to this category only under specific conditions:
 
@@ -336,46 +335,42 @@ Some elements belong to this category only under specific conditions:
 - {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
 - {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
 
-### Form-associated content
+## Script-supporting elements
 
-Form-associated content is a subset of flow content comprising elements that have a form owner, exposed by a **form** attribute, and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the **form** attribute.
+**Script-supporting elements** are elements that don't directly contribute to a document's rendered output. Instead, they serve to support scripts, either by containing or specifying script code directly or by specifying data that will be used by scripts. Nearly all elements, including those that only take specific elements (such as {{HTMLElement("ul")}}, which takes {{HTMLElement("li")}} elements), can contain script-supporting elements.
+
+The script-supporting elements are:
+
+- {{HTMLElement("script")}}
+- {{HTMLElement("template")}}
+
+## Form-associated content
+
+Form-associated content is a subset of flow content comprising elements that have a form owner and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the `<form>` whose `id` is specified in the element's `form` attribute.
 
 The form-associated elements are:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("label")}}
-- {{HTMLElement("meter")}}
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
-- {{HTMLElement("progress")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
+- {{HTMLElement("img")}}
 
 This category contains several sub-categories:
 
 - listed
-  - : Elements that are listed in the {{domxref("HTMLFormElement.elements", "form.elements")}} and `fieldset.elements` collections. Contains {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
-- labelable
-  - : Elements that can be associated with {{HTMLElement("label")}} elements. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that are listed in the {{domxref("HTMLFormElement.elements")}} and {{domxref("HTMLFieldSetElement.elements")}} collections. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - submittable
-  - : Elements that can be used for constructing the form data set when the form is submitted. Contains {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that can be used for constructing the form data set when the form is submitted. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - resettable
-  - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
-
-## Secondary content categories
-
-There are some secondary classifications of elements that can be useful to be aware of as well.
-
-### Script-supporting elements
-
-**Script-supporting elements** are elements that don't directly contribute to a document's rendered output. Instead, they serve to support scripts, either by containing or specifying script code directly or by specifying data that will be used by scripts.
-
-The script-supporting elements are:
-
-- {{HTMLElement("script")}}
-- {{HTMLElement("template")}}
+  - : Elements that can be affected when a form is reset. Includes {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- autocapitalize-and-autocorrect-inheriting
+  - : Elements that inherit the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) and [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attributes from their form owner. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- labelable
+  - : Elements that can be associated with {{HTMLElement("label")}} elements. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}} (all types other than `hidden`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
 ## Transparent content model
 

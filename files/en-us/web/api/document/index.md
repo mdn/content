@@ -317,9 +317,9 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from {{domxref("Node", "nodes", "", "nocode")}} contained in the document tree.
 
-- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
-- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
   - : Fired on a prerendered document when it is activated (i.e. the user views the page).

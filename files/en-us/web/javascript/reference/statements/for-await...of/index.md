@@ -9,7 +9,7 @@ browser-compat: javascript.statements.for_await_of
 
 The **`for await...of`** statement creates a loop iterating over [async iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) as well as [sync iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). This statement can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
-{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+{{InteractiveExample("JavaScript Demo: for await...of statement", "taller")}}
 
 ```js interactive-example
 async function* foo() {
@@ -35,7 +35,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for await...of` loop is in.
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for await...of` loop is in.
 - `iterable`
   - : An async iterable or sync iterable. The source of the sequence of values on which the loop operates.
 - `statement`

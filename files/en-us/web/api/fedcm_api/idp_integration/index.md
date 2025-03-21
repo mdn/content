@@ -20,7 +20,7 @@ To integrate with FedCM, an IdP needs to do the following:
 
 There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
@@ -40,7 +40,7 @@ All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-
 
 The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. The endpoints need to be same-origin with the config.
 
-The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) method, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -150,7 +150,7 @@ This includes the following information:
   - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#providers_2) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
 > [!NOTE]
-> If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
+> If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Reference/Status/401).
 
 ### The client metadata endpoint
 
@@ -177,7 +177,7 @@ The response to a successful request includes URLs pointing to the RP's metadata
 
 ### The ID assertion endpoint
 
-The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
+The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method, with a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
 
 It should look something like this:
 

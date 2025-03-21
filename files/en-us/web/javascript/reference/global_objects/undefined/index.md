@@ -8,10 +8,10 @@ browser-compat: javascript.builtins.undefined
 {{jsSidebar("Objects")}}
 
 The **`undefined`** global property represents the primitive
-value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type). It is one of JavaScript's
+value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type). It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+{{InteractiveExample("JavaScript Demo: undefined")}}
 
 ```js interactive-example
 function test(t) {
@@ -29,7 +29,7 @@ console.log(test(x));
 
 ## Value
 
-The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type).
+The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type).
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -84,7 +84,7 @@ if (x === undefined) {
 > while strict equality doesn't. This is because `null` is not equivalent to
 > `undefined`.
 >
-> See [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for details.
+> See [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) for details.
 
 ### typeof operator and undefined
 
@@ -153,5 +153,5 @@ if (y === void 0) {
 
 ## See also
 
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

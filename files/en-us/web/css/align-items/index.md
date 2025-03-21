@@ -9,7 +9,51 @@ browser-compat: css.properties.align-items
 
 The [CSS](/en-US/docs/Web/CSS) **`align-items`** property sets the {{cssxref("align-self")}} value on all direct children as a group. In flexbox, it controls the alignment of items on the {{glossary("cross axis")}}. In grid layout, it controls the alignment of items on the block axis within their {{glossary("grid areas")}}.
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 The interactive example below demonstrates some of the values for `align-items` using grid and flex layout.
 
@@ -34,7 +78,9 @@ align-items: anchor-center;
 /* Baseline alignment */
 align-items: baseline;
 align-items: first baseline;
-align-items: last baseline; /* Overflow alignment (for positional alignment only) */
+align-items: last baseline;
+
+/* Overflow alignment (for positional alignment only) */
 align-items: safe center;
 align-items: unsafe center;
 

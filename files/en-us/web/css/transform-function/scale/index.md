@@ -11,7 +11,33 @@ The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 plane. Because the amount of scaling is defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at
 different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-scale.html")}}
+{{InteractiveExample("CSS Demo: scale()")}}
+
+```css interactive-example-choice
+transform: scale(1);
+```
+
+```css interactive-example-choice
+transform: scale(0.7);
+```
+
+```css interactive-example-choice
+transform: scale(1.3, 0.4);
+```
+
+```css interactive-example-choice
+transform: scale(-0.5, 1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
 done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
@@ -98,7 +124,7 @@ user has reduced animation specified in their system preferences.
 
 Find out more:
 
-- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Examples

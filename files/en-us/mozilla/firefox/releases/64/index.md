@@ -44,7 +44,7 @@ _No changes._
 - Closely associated with the above update, we've also removed most of the Firefox-specific `-moz-appearance` values ([Firefox bug 1496720](https://bugzil.la/1496720)).
 - {{cssxref("display")}}: `list-item` is now supported on {{htmlelement("legend")}} elements ([Firefox bug 1486602](https://bugzil.la/1486602)).
 - SVG `path()`s, as usable in {{cssxref("offset-path")}}, are now animatable ([Firefox bug 1486094](https://bugzil.la/1486094)).
-- If a selector chain or group includes a `-webkit-`prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
+- If a selector chain or group includes a `-webkit-`-prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
 
 #### Removals
 
@@ -104,7 +104,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 

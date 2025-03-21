@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.split
 
 The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.split()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";
@@ -312,6 +312,7 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 ## See also
 
 - [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.split`](https://www.npmjs.com/package/string.prototype.split)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}

@@ -172,7 +172,7 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

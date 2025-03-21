@@ -969,6 +969,13 @@
       ],
       "events": ["HTMLElement: command"]
     },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
+    },
     "Keyboard API": {
       "overview": ["Keyboard API"],
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
@@ -1037,6 +1044,10 @@
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
+      "guides": [
+        "/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE",
+        "/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming"
+      ],
       "interfaces": [
         "MediaSource",
         "MediaSourceHandle",
@@ -1562,6 +1573,7 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
+        "SVGDiscardElement",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",

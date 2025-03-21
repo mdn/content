@@ -350,7 +350,7 @@ browser.pkcs11.installModule("my_module");
 
 On Linux and macOS, you need to store the manifest in a particular place. On Windows, you need to create a registry key that points to the manifest's location.
 
-The detailed rules are the same for all the manifest types, except that the penultimate component of the path identifies the type of manifest. The examples below show the form for each of the three different types. In all the examples, `<name>` is the value of the `name` property in the manifest.
+The detailed rules are the same for all the manifest types, except that the penultimate component of the path identifies the type of manifest. The examples below show the form for each of the three different types. In all the examples, `<name>` is the value of the name property in the native manifest.
 
 ### Windows
 

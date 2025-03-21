@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.map
 
 The **`map()`** method of {{jsxref("TypedArray")}} instances creates a new typed array populated with the results of calling a provided function on every element in the calling typed array. This method has the same algorithm as {{jsxref("Array.prototype.map()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.map()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.map()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([25, 36, 49]);

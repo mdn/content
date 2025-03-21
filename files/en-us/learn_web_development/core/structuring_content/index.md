@@ -21,7 +21,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 
 - [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
   - : Covers the absolute basics of {{glossary("HTML")}}, to get you started — we define elements, attributes, and other important terms, and show where they fit in the language. We also show how a typical HTML page is structured and how an HTML element is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!
-- [What's in the head? Webpage metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- [What's in the head? Web page metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
   - : The {{Glossary("Head","head")}} of an HTML document is the part that **is not** displayed in the web browser when the page is loaded. It contains metadata information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you want to style your HTML content with CSS), links to custom favicons, and metadata (data about the HTML, such as who wrote it, and important keywords that describe the document).
 - [Headings and paragraphs](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
   - : One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains how HTML can be used to provide fundamental page structure by defining headings and paragraphs.

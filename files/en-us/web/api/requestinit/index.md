@@ -56,8 +56,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
-        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
+        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `no-store`
@@ -68,7 +68,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `force-cache`
@@ -136,7 +136,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     This enables a {{domxref('Window.fetch','fetch()')}} request to send analytics at the end of a session even if the user navigates away from or closes the page.
 
     This has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose.
-    For example, you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment.
+    For example, you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment.
     It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
     The body size for `keepalive` requests is limited to 64 kibibytes.
@@ -145,7 +145,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `method` {{optional_inline}}
 
-  - : The [request method](/en-US/docs/Web/HTTP/Methods).
+  - : The [request method](/en-US/docs/Web/HTTP/Reference/Methods).
 
     Defaults to {{httpmethod("GET")}}.
 
@@ -159,7 +159,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     - `cors`
 
-      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
+      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism. Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
 
     - `no-cors`
 
@@ -194,7 +194,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `redirect` {{optional_inline}}
 
-  - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Status#redirection_messages). One of the following values:
+  - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages). One of the following values:
 
     - `follow`
       - : Automatically follow redirects.
@@ -301,5 +301,5 @@ In this case the request will be sent with the following options:
 
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

@@ -62,7 +62,7 @@ var {
 Here's a basic example, using `<var>` to denote variable names in a mathematical equation.
 
 ```html
-<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
+<p>An algebraic equation: <var>x</var> = <var>y</var> + 2</p>
 ```
 
 #### Result

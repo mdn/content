@@ -13,7 +13,7 @@ The **`substr()`** method of {{jsxref("String")}} values returns a portion of th
 
 > **Note:** `substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) and [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods instead to make their code maximally cross-platform friendly. The [`String.prototype.substring()` page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) has some comparisons between the three methods.
 
-{{InteractiveExample("JavaScript Demo: String.substr()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.substr()")}}
 
 ```js interactive-example
 const str = "Mozilla";
@@ -86,5 +86,6 @@ console.log(aString.substr(20, 2)); // ''
 ## See also
 
 - [Polyfill of `String.prototype.substr` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.substr`](https://www.npmjs.com/package/string.prototype.substr)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

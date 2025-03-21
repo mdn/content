@@ -1,5 +1,6 @@
 ---
 title: Fundamental text and font styling
+short-title: Text and font fundamentals
 slug: Learn_web_development/Core/Text_styling/Fundamentals
 page-type: learn-module-chapter
 ---

@@ -9,7 +9,7 @@ browser-compat: javascript.operators.left_shift
 
 The **left shift (`<<`)** operator returns a number or BigInt whose binary representation is the first operand shifted by the specified number of bits to the left. Excess bits shifted off to the left are discarded, and zero bits are shifted in from the right.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Left shift (<<) operator", "shorter")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101
@@ -27,7 +27,7 @@ x << y
 
 ## Description
 
-The `<<` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt left shift if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number left shift. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `<<` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt left shift if both operands become BigInts; otherwise, it converts both operands to [32-bit integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number left shift. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 The operator operates on the left operand's bit representation in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). For example, `9 << 2` yields 36:
 

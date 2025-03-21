@@ -57,4 +57,4 @@ if (window.isSecureContext) {
 - [Platform features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — a list of the features available only in secure contexts
 - {{domxref("Window.isSecureContext")}} and {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site> — A site that allows you to check what API permission checks your browser employs, over HTTP and HTTPS
-- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
+- [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP header

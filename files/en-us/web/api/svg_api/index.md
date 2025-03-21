@@ -32,6 +32,7 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGCursorElement")}}
 - {{DOMxRef("SVGDefsElement")}}
 - {{DOMxRef("SVGDescElement")}}
+- {{DOMxRef("SVGDiscardElement")}}
 - {{DOMxRef("SVGElement")}}
 - {{DOMxRef("SVGEllipseElement")}}
 - {{DOMxRef("SVGFEBlendElement")}}

@@ -14,7 +14,6 @@ The **CSS writing modes** module defines various international writing modes, su
 ### Properties
 
 - {{cssxref("direction")}}
-- {{cssxref("glyph-orientation-horizontal")}}
 - {{cssxref("text-combine-upright")}}
 - {{cssxref("text-orientation")}}
 - {{cssxref("unicode-bidi")}}
@@ -28,3 +27,7 @@ The **CSS writing modes** module defines various international writing modes, su
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

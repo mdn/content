@@ -43,7 +43,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Labelling
 
-In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
+In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
 
 > [!NOTE]
 > Text placed between the element's tags is not an accessible label, it is only recommended as a fallback for old browsers that do not support this element.
@@ -68,7 +68,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Examples
 
@@ -130,7 +130,7 @@ If the `<progress>` element is describing the loading progress of a section of a
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

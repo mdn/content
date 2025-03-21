@@ -163,7 +163,7 @@ The signup and login workflows can be customized based on the capabilities of th
 This can be used, for example, to check:
 
 - Client support for various authenticators such as passkeys or biometric user verification.
-- Whether the client [supports methods to keep relying party and authenticator credentials in sync](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credential_synchronization_methods).
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync](#discoverable_credential_synchronization_methods).
 - Whether the client allows a single passkey to be used on different websites with the same origin.
 
 The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
@@ -184,15 +184,15 @@ async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
 
 ## Controlling access to the API
 
-The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:
+The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), specifying two directives in particular:
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
 Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
 In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
-`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
-For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
 > [!NOTE]
 > Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.

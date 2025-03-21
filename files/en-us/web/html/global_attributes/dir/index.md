@@ -68,3 +68,4 @@ Browsers might allow users to change the directionality of {{ HTMLElement("input
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.dir")}} that reflects this attribute.
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

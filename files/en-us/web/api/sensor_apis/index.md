@@ -60,7 +60,7 @@ As stated in Feature Detection, checking for a particular sensor API is insuffic
 
 The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It listens for {{domxref('Sensor.error_event', 'error')}} events to catch errors thrown during use. The only time anything is shown to the user is when [permissions](/en-US/docs/Web/API/Permissions_API) need to be requested and when the sensor type isn't supported by the device.
 
-In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 
 ```js
 let accelerometer = null;

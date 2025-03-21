@@ -68,8 +68,10 @@ const restartConfig = {
 
 myPeerConnection.setConfiguration(restartConfig);
 
+myPeerConnection.restartIce();
+
 myPeerConnection
-  .createOffer({ iceRestart: true })
+  .createOffer() // restartIce() causes iceRestart to be set true
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     // send the offer to the other peer using the signaling server
@@ -79,7 +81,7 @@ myPeerConnection
 
 First, a new object is created, `restartConfig`, specifying the new ICE server and its credentials.
 This is then passed into `setConfiguration()`.
-ICE negotiation is restarted by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}, specifying `true` as the value of the `iceRestart` option.
+ICE negotiation is restarted by calling {{domxref("RTCPeerConnection.restartIce()", "restartIce()")}}, which causes the next offer created to include the new ICE server information.
 From there, we handle the process as usual, by setting the local description to the returned offer and then sending that offer to the other peer.
 
 ## Specifications

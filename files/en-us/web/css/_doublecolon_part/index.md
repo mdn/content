@@ -23,7 +23,7 @@ Part names are similar to CSS classes: multiple elements can have the same part 
 
 The `::part()` pseudo-element is only visible to the parent DOM. This means that when a shadow tree is nested, the parts are not visible to any ancestors other than the direct parent. The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) attribute solves this limitation by explicitly exporting already defined `part` names, making them globally stylable.
 
-[Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (such as `::part(label):hover`) can be appended to the `::part()` selector, but [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) that match based on tree information (such as `:empty`), rather than local element information (such as `:last-child`), cannot be appended.
+[Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (such as `::part(label):hover`) can be appended to the `::part()` selector, but [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) that match based on tree information, such as `:empty` and `:last-child`, cannot be appended.
 
 Additional pseudo-elements, such as `::before`, can be appended to the `::part()` selector, but additional `::part()` element can't be appended. For example, `::part(confirm-button)::part(active)` never matches anything, i.e, it is not the same as `::part(confirm-button active)`. This is because doing so would expose more structural information than is intended.
 

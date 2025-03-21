@@ -12,7 +12,7 @@ browser-compat: api.FeaturePolicy.allowedFeatures
 
 The **`allowedFeatures()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface returns a list of directive names of all
-features allowed by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). This enables introspection of individual directives
+features allowed by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). This enables introspection of individual directives
 of the Permissions Policy it is run on. As such, `allowedFeatures()` method
 returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features", "features()")}}.
 

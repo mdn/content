@@ -11,7 +11,7 @@ The **`padEnd()`** method of {{jsxref("String")}} values pads this string with a
 string (repeated, if needed) so that the resulting string reaches a given length. The
 padding is applied from the end of this string.
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.padEnd()")}}
 
 ```js interactive-example
 const str1 = "Breaded Mushrooms";
@@ -74,4 +74,5 @@ A {{jsxref("String")}} of the specified `targetLength` with the
 ## See also
 
 - [Polyfill of `String.prototype.padEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.padEnd`](https://www.npmjs.com/package/string.prototype.padend)
 - {{jsxref("String.prototype.padStart()")}}

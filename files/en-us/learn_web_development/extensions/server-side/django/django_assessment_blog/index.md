@@ -1,19 +1,20 @@
 ---
-title: "Assessment: DIY Django mini blog"
+title: "Challenge: DIY Django mini blog"
+short-title: "Challenge: Django blog"
 slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this assessment you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
+In this challenge, you'll use the Django knowledge you've picked up in the [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) module to create a very basic blog.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Before attempting this assessment you should have already worked through all the articles in this module.
+        Before attempting this challenge, you should have already worked through all the articles in this module.
       </td>
     </tr>
     <tr>
@@ -307,7 +308,7 @@ class SomeView(generic.ListView):
 
 ## Assessment
 
-The assessment for this task is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts of the assessment that check your code uses appropriate models, and that you have written at least some test code.
+The assessment for this challenge is [available on GitHub here](https://github.com/mdn/django-diy-blog/blob/main/MarkingGuide.md). This assessment is primarily based on how well your application meets the requirements we listed above, though there are some parts that check your code uses appropriate models, and that you have written at least some test code.
 When you're done, you can check out [the finished example](https://github.com/mdn/django-diy-blog) which reflects a "full marks" project.
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!

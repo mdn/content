@@ -35,7 +35,7 @@ A {{JSxRef("Promise")}} that fulfills with a {{DOMxRef("BatteryManager")}} objec
 
 - `NotAllowedError` {{domxref("DOMException")}}
 
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The User Agent does not expose battery information to insecure contexts and this method was called from an insecure context.

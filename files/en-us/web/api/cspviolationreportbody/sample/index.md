@@ -8,13 +8,13 @@ browser-compat: api.CSPViolationReportBody.sample
 
 {{APIRef("Reporting API")}}
 
-The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP).
 
 This sample is usually the first 40 characters of the inline script, event handler, or style that violated a CSP restriction.
 If not populated it is the empty string `""`.
 
-Note that this is only populated when attempting to load _inline_ scripts, event handlers, or styles that violate CSP [`script-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#style-src) rules — external resources that violate the CSP will not generate a sample.
-In addition, a sample is only included if the `Content-Security-Policy` directive that was violated also contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample) keyword.
+Note that this is only populated when attempting to load _inline_ scripts, event handlers, or styles that violate CSP [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#style-src) rules — external resources that violate the CSP will not generate a sample.
+In addition, a sample is only included if the `Content-Security-Policy` directive that was violated also contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
 
 > [!NOTE] Violation reports should be considered attacker-controlled data.
 > The content of this field _in particular_ should be sanitized before storing or rendering.

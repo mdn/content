@@ -36,7 +36,7 @@ The promise will reject if:
 - `restrictionTarget` was created in a tab other than the one being captured.
 
 > [!NOTE]
-> In Chromium, if a track has clones, `restrictTo()` will reject (see [Chrome issue 41482026](https://issues.chromium.org/issues/41482026)).
+> In Chromium, if a track has clones, `restrictTo()` will reject (see [Chrome issue 41482026](https://crbug.com/41482026)).
 
 ## Examples
 

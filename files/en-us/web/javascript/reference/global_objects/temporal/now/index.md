@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.Now
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`Temporal.Now`** object provides methods for getting the current time in various formats.
+The **`Temporal.Now`** namespace object contains static methods for getting the current time in various formats.
 
 ## Description
 

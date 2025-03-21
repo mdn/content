@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_button
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`button`** are rendered as simple push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
+{{HTMLElement("input")}} elements of type **`button`** are rendered as push buttons, which can be programmed to control custom functionality anywhere on a webpage as required when assigned an event handler function (typically for the {{domxref("Element/click_event", "click")}} event).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -217,7 +217,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+The below example shows a very basic drawing app created using a {{htmlelement("canvas")}} element and some CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
 
 ```html
 <div class="toolbar">
@@ -372,7 +372,7 @@ draw();
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

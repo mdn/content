@@ -20,7 +20,7 @@ WCAG 2 uses three levels of conformance:
 
 ## See also
 
-- [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
 - [WCAG](https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines) on Wikipedia
 - [Web Content Accessibility Guidelines (WCAG) 2.2: Recommendation](https://www.w3.org/TR/WCAG22/)
 - [W3C Accessibility Guidelines (WCAG) 3.0: Working Draft](https://www.w3.org/TR/wcag-3.0/)

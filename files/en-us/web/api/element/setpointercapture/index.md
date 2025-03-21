@@ -60,6 +60,7 @@ div {
   align-items: center;
   justify-content: center;
   background: #fbe;
+  touch-action: none;
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: Basic math in JavaScript — numbers and operators
+short-title: Numbers and operators
 slug: Learn_web_development/Core/Scripting/Math
 page-type: learn-module-chapter
 ---

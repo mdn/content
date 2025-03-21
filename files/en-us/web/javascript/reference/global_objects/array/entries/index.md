@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.entries
 
 The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.entries()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -117,6 +117,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.entries`](https://www.npmjs.com/package/array.prototype.entries)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}

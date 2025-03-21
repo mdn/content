@@ -40,7 +40,7 @@ The Compute Pressure API is available in the following contexts:
 - {{domxref("Window")}} (main thread)
 - {{domxref("Worker")}}
 - {{domxref("SharedWorker")}}
-- {{HTMLElement("iFrame")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/compute-pressure) is provided)
+- {{HTMLElement("iframe")}} (if a suitable [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/compute-pressure) is provided)
 
 ### Pressure states
 
@@ -55,7 +55,7 @@ The contributing factors (that is, the underlying system metrics) for the pressu
 
 ### Security and privacy considerations
 
-The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions_Policy) by the `"compute-pressure"` directive. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
+The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) by the `"compute-pressure"` directive. Its default allowlist is `'self'` which allows usage in same-origin nested frames but prevents third-party content from using the feature.
 
 ## Reference
 

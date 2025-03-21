@@ -4,11 +4,12 @@ short-title: src
 slug: Web/API/SpeechGrammar/src
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechGrammar.src
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`src`** property of the {{domxref("SpeechGrammar")}} interface
 is used to get or set a string that contains the grammar within the `SpeechGrammar` object.

@@ -27,7 +27,7 @@ The **`FileSystemObserver`** interface of the {{domxref("File System API", "File
 ## Examples
 
 > [!NOTE]
-> For a complete working example, check out [File System Observer Demo](https://file-system-observer.glitch.me/) ([source code](https://glitch.com/edit/#!/file-system-observer)).
+> For a complete working example, check out [File System Observer Demo](https://mdn.github.io/dom-examples/filesystemobserver/) ([source code](https://github.com/mdn/dom-examples/tree/main/filesystemobserver)).
 
 ### Initialize a `FileSystemObserver`
 

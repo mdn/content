@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaSort
 
 {{APIRef("DOM")}}
 
-The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
 ## Value
 
@@ -94,4 +94,4 @@ console.log(el.ariaSort); // ascending
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

@@ -61,7 +61,7 @@ Highlights:
 - The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also can not be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
 
   - `{const a=1}; a;` now throws a {{jsxref("ReferenceError")}} and does not return `1` anymore due to block-scoping.
-  - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration`"`): An initializer is required.
+  - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration"): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
 
 - The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ([Firefox bug 1069063](https://bugzil.la/1069063)).
@@ -111,8 +111,8 @@ _No change._
 
 - RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ([Firefox bug 1093595](https://bugzil.la/1093595)).
 - Also, RC4 is no longer offered in the initial handshake of TLS ([Firefox bug 1088915](https://bugzil.la/1088915)).
-- The [`form-action`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
-- In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Headers/DNT) selection widget is again an on/off switch ([Firefox bug 1071747](https://bugzil.la/1071747)).
+- The [`form-action`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
+- In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Reference/Headers/DNT) selection widget is again an on/off switch ([Firefox bug 1071747](https://bugzil.la/1071747)).
 
 ## Changes for add-on and Mozilla developers
 

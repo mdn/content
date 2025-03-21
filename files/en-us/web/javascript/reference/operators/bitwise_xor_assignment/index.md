@@ -9,7 +9,7 @@ browser-compat: javascript.operators.bitwise_xor_assignment
 
 The **bitwise XOR assignment (`^=`)** operator performs [bitwise XOR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Bitwise XOR assignment (^=) operator", "shorter")}}
 
 ```js interactive-example
 let a = 5; // 00000000000000000000000000000101

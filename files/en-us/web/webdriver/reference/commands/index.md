@@ -3,7 +3,7 @@ title: WebDriver commands
 short-title: Commands
 slug: Web/WebDriver/Reference/Commands
 page-type: landing-page
-browser-compat: webdriver.commands
+browser-compat: webdriver.classic
 sidebar: webdriver
 ---
 

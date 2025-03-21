@@ -20,14 +20,26 @@ jobs:
     if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
-      # - uses: hmarr/debug-action@v2
-      - name: Stop anything and everything
+      - name: Block if author/actor is not an admin
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          # It would be nice if we could disable this workflow if the PR
-          # was made from a branch within the origin repo. But it seems you
-          # can't do that :(
-          # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
+          # Check author.
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          AUTHOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$AUTHOR/permission --jq .permission)
 
-          echo "If you're an admin, you have to use your admin privileges to override."
-          echo "If you're not an admin, please ping someone for a review."
-          exit 1
+          if [ "$AUTHOR_PERMISSION" != "admin" ]; then
+            echo "PR author ($AUTHOR) is not an admin, please ping someone for a review."
+            exit 1
+          fi
+
+          # Check actor.
+          ACTOR="${{ github.actor }}"
+          if [ "$ACTOR" != "$AUTHOR" ]; then
+            ACTOR_PERMISSION=$(gh api https://api.github.com/repos/${{ github.repository }}/collaborators/$ACTOR/permission --jq .permission)  
+
+            if [ "$ACTOR_PERMISSION" != "admin" ]; then
+              echo "PR actor ($ACTOR) is not an admin, please ping someone for a review."
+              exit 1
+            fi
+          fi

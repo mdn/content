@@ -59,7 +59,7 @@ You can set a default value for the input by including a date and time inside th
 One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDTHH:mm`. When the above value is submitted to the server, for example, it will look like `party-date=2024-06-01T08:30`.
 
 > [!NOTE]
-> Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `party-date=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
+> Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `party-date=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
 
 You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 

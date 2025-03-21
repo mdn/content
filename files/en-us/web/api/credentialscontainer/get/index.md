@@ -128,13 +128,13 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
     - The user canceled the request.
 
-    - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
+    - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy):
 
       - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}
       - {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}
       - {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}}
 
-    - The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Headers/Origin#null).
+    - The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Reference/Headers/Origin#null).
 
 - `SecurityError` {{domxref("DOMException")}}
 

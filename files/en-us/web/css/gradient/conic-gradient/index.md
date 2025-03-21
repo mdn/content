@@ -9,11 +9,56 @@ browser-compat: css.types.gradient.conic-gradient
 
 The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and {{glossary("color wheel", "color wheels")}}. The result of the `conic-gradient()` function is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: conic-gradient()")}}
+
+```css interactive-example-choice
+background: conic-gradient(red, orange, yellow, green, blue);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  from 0.25turn at 50% 30%,
+  #f69d3c,
+  10deg,
+  #3f87a6,
+  350deg,
+  #ebf8e1
+);
+```
+
+```css interactive-example-choice
+background: conic-gradient(from 3.1416rad at 10% 50%, #e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  red 6deg,
+  orange 6deg 18deg,
+  yellow 18deg 45deg,
+  green 45deg 110deg,
+  blue 110deg 200deg,
+  purple 200deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Syntax
 
 ```css
+/* A gradient with a single color of red */
+conic-gradient(red)
+
 /* A conic gradient rotated 45 degrees,
    starting blue and finishing red */
 conic-gradient(from 45deg, blue, red)
@@ -123,7 +168,7 @@ And, yes, you can mix and match different angle units, but don't. The above is h
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Examples

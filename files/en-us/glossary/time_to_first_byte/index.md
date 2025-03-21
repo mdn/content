@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 TTFB is the time it takes between the start of the request and the start of the response, in milliseconds. This can be measured using the `{{domxref("PerformanceResourceTiming.requestStart", "requestStart")}}` attribute of {{domxref("PerformanceNavigationTiming")}}:
 
-```javascript
+```js
 const ttfb = performance.getEntriesByType("navigation")[0].responseStart;
 ```
 
@@ -19,6 +19,6 @@ const ttfb = performance.getEntriesByType("navigation")[0].responseStart;
 
 ## See also
 
-- [A typical HTTP session](/en-US/docs/Web/HTTP/Session)
+- [A typical HTTP session](/en-US/docs/Web/HTTP/Guides/Session)
 - [PerformanceResourceTiming](/en-US/docs/Web/API/PerformanceResourceTiming)
 - [PerformanceNavigationTiming](/en-US/docs/Web/API/PerformanceNavigationTiming)

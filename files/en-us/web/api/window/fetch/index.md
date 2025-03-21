@@ -16,7 +16,7 @@ A `fetch()` promise only rejects when the request fails, for example, because of
 A `fetch()` promise _does not_ reject if the server responds with HTTP status codes that indicate errors (`404`, `504`, etc.).
 Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
 
-The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
+The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
 > [!NOTE]
 > The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
@@ -51,7 +51,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
+  - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
   - : Can occur for the following reasons:
 
@@ -65,7 +65,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   <tbody>
     <tr>
       <td>Blocked by a permissions policy</td>
-      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
+      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
     </tr>
     <tr>
       <td>Invalid header name.</td>
@@ -268,5 +268,5 @@ The [Using fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch) article provides mo
 - {{domxref("WorkerGlobalScope.fetch()")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

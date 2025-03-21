@@ -27,7 +27,7 @@ To associate the invoking web app with a platform-specific app or PWA, two thing
 Defining the relationship is done in a different way depending on the type of app:
 
 - An Android app does this via the [Digital Asset Links system](https://developers.google.com/digital-asset-links/v1/getting-started).
-- A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/uwp/launch-resume/web-to-app-linking).
+- A Windows UWP app does this via [URI Handlers](https://learn.microsoft.com/en-us/windows/apps/develop/launch/web-to-app-linking).
 - A PWA does this via:
   - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
   - An `assetlinks.json` file in its [`/.well-known/`](https://datatracker.ietf.org/doc/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.

@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 5: Creating our home page"
+short-title: "5: Home page"
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 page-type: learn-module-chapter
 ---

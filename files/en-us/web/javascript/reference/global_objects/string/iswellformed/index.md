@@ -89,5 +89,6 @@ if (illFormed.isWellFormed()) {
 ## See also
 
 - [Polyfill of `String.prototype.isWellFormed` in `core-js`](https://github.com/zloirock/core-js#well-formed-unicode-strings)
+- [es-shims polyfill of `String.prototype.isWellFormed`](https://www.npmjs.com/package/string.prototype.iswellformed)
 - {{jsxref("String.prototype.toWellFormed()")}}
 - {{jsxref("String.prototype.normalize()")}}

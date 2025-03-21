@@ -97,6 +97,7 @@ String.fromCodePoint(0x1f303); // or 127747 in decimal
 ## See also
 
 - [Polyfill of `String.fromCodePoint` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.fromCodePoint`](https://www.npmjs.com/package/string.fromcodepoint)
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.codePointAt()")}}

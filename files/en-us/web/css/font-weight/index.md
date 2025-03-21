@@ -9,7 +9,49 @@ browser-compat: css.properties.font-weight
 
 The **`font-weight`** [CSS](/en-US/docs/Web/CSS) property sets the weight (or boldness) of the font. The weights available depend on the {{cssxref("font-family")}} that is currently set.
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS Demo: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## Syntax
 
@@ -199,7 +241,7 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 
 People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Formal definition

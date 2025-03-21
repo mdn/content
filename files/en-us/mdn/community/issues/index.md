@@ -34,7 +34,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
 
 ### Reporting an issue
 
-Depending on the type of problem you've discovered, you can report it by filing an issue on one of the main [MDN GitHub repositories](MDN/Community/Our_repositories).
+Depending on the type of problem you've discovered, you can report it by filing an issue on one of the main [MDN GitHub repositories](/en-US/docs/MDN/Community/Our_repositories).
 If the information you provide in the issue is incomplete, you might be asked to provide more details during the [issue triaging process](#review_the_issue_for_completeness_of_information).
 
 Here are some hints for opening issues:

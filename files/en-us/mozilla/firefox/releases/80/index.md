@@ -31,7 +31,7 @@ _No changes._
 
 ### HTTP
 
-- Previously, when the [fullscreen](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen) directive was applied to an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) (i.e. via the `allow` attribute), it didn't work unless the `allowfullscreen` attribute was also present This has now been fixed ([Firefox bug 1608358](https://bugzil.la/1608358)).
+- Previously, when the [fullscreen](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen) directive was applied to an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) (i.e. via the `allow` attribute), it didn't work unless the `allowfullscreen` attribute was also present This has now been fixed ([Firefox bug 1608358](https://bugzil.la/1608358)).
 
 ### APIs
 

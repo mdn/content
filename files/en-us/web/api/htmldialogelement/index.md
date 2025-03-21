@@ -29,7 +29,7 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
   - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
-- {{domxref("HTMLDialogElement.requestClose()")}} {{experimental_inline}}
+- {{domxref("HTMLDialogElement.requestClose()")}}
   - : Requests to close the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.

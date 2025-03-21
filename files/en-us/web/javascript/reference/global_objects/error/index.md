@@ -225,6 +225,7 @@ try {
 ## See also
 
 - [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- [es-shims polyfill of Error `cause`](https://www.npmjs.com/package/error-cause)
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}
 - [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

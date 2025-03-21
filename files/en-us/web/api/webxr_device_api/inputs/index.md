@@ -172,7 +172,7 @@ The `inputsourceschange` event is also fired once when the session's creation ca
 
 Each input source has a {{domxref("XRInputSource.profiles", "profiles")}} property, which contains a live list of the WebXR input profiles which apply to the input source, in order of specificity from most-specific to least.
 
-In order to do anything meaningful involving scanning of profiles beyond basic identification of features, you may need to import the JSON profile database from the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry).
+In order to do anything meaningful involving scanning of profiles beyond basic identification of features, you may need to import the JSON profile database from the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/main/packages/registry).
 
 See [Input profiles](#input_profiles) for more specific details on working with input profiles.
 

@@ -9,7 +9,7 @@ browser-compat: javascript.classes.static_initialization_blocks
 
 **Static initialization blocks** are declared within a {{jsxref("Statements/class", "class")}}. It contains statements to be evaluated during class initialization. This permits more flexible initialization logic than {{jsxref("Classes/static", "static")}} properties, such as using `try...catch` or setting multiple fields from a single value. Initialization is performed in the context of the current class declaration, with access to private state, which allows the class to share information of its private properties with other classes or functions declared in the same scope (analogous to "friend" classes in C++).
 
-{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+{{InteractiveExample("JavaScript Demo: Class static initialization blocks")}}
 
 ```js interactive-example
 class ClassWithStaticInitializationBlock {

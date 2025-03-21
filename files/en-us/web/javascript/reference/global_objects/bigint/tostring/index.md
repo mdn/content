@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.BigInt.toString
 
 The **`toString()`** method of {{jsxref("BigInt")}} values returns a string representing the specified {{jsxref("BigInt")}} value. The trailing "n" is not part of the string.
 
-{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+{{InteractiveExample("JavaScript Demo: BigInt.prototype.toString()")}}
 
 ```js interactive-example
 console.log(1024n.toString());
@@ -76,7 +76,7 @@ console.log(`${Object(1n)}`); // "Overridden"
 
 ### Negative-zero BigInt
 
-There is no negative-zero `BigInt` as there are no negative zeros in integers. `-0.0` is an IEEE floating-point concept that only appears in the JavaScript [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type) type.
+There is no negative-zero `BigInt` as there are no negative zeros in integers. `-0.0` is an IEEE floating-point concept that only appears in the JavaScript [`Number`](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type) type.
 
 ```js
 (-0n).toString(); // "0"

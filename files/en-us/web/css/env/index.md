@@ -2,7 +2,7 @@
 title: env()
 slug: Web/CSS/env
 page-type: css-function
-browser-compat: css.properties.custom-property.env
+browser-compat: css.types.env
 ---
 
 {{CSSRef}}

@@ -218,7 +218,7 @@ console.log(o.a); // 37; the assignment didn't work
 
 #### Enumerable attribute
 
-The `enumerable` property attribute defines whether the property is considered by {{jsxref("Object.assign()")}} or the [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+The `enumerable` property attribute defines whether the property is considered by {{jsxref("Object.assign()")}} or the [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator. For non-{{jsxref("Symbol")}} properties, it also defines whether it shows up in a {{jsxref("Statements/for...in", "for...in")}} loop and {{jsxref("Object.keys()")}} or not. For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ```js
 const o = {};
@@ -516,7 +516,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## See also
 
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

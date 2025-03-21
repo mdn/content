@@ -32,7 +32,7 @@ addRoutes(routerRules)
         - `or` {{optional_inline}}
           - : An array of `condition` objects. One set of these defined conditions must be met to match the rule. Conditions defined inside an `or` condition are mutually exclusive with other conditions.
         - `requestMethod` {{optional_inline}}
-          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Methods) a request should be sent by for it to match the rule, such as `"get"`, `"put"`, or `"head"`.
+          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) a request should be sent by for it to match the rule, such as `"get"`, `"put"`, or `"head"`.
         - `requestMode` {{optional_inline}}
           - : A string representing the [mode](/en-US/docs/Web/API/Request/mode) a request should have for it to match the rule, for example `"same-origin"`, `"no-cors"`, or `"cors"`.
         - `requestDestination` {{optional_inline}}
@@ -86,7 +86,7 @@ addEventListener("install", (event) => {
 
 ### Route form post requests to the network
 
-In the following example, [`POST`](/en-US/docs/Web/HTTP/Methods/POST) requests to a form are sent directly to the network and bypass the service worker:
+In the following example, [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests to a form are sent directly to the network and bypass the service worker:
 
 ```js
 addEventListener("install", (event) => {

@@ -1,5 +1,6 @@
 ---
 title: Introduction to web APIs
+short-title: Introduction
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 page-type: learn-module-chapter
 ---

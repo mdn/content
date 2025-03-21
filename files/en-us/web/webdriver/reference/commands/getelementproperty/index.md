@@ -2,7 +2,7 @@
 title: Get Element Property
 slug: Web/WebDriver/Reference/Commands/GetElementProperty
 page-type: webdriver-command
-browser-compat: webdriver.commands.GetElementProperty
+browser-compat: webdriver.classic.GetElementProperty
 sidebar: webdriver
 ---
 

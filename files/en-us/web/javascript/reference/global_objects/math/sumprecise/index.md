@@ -2,10 +2,12 @@
 title: Math.sumPrecise()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sumPrecise
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Math.sumPrecise
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Math.sumPrecise()`** static method takes an iterable of numbers and returns the sum of them. It is more precise than summing them up in a loop, because it avoids floating point precision loss in intermediate results.
 
@@ -84,4 +86,5 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20])); // 0.1
 ## See also
 
 - [Polyfill of `Math.sumPrecise` in `core-js`](https://github.com/zloirock/core-js#mathsumprecise)
+- [es-shims polyfill of `Math.sumPrecise`](https://www.npmjs.com/package/math.sumprecise)
 - {{jsxref("Array.prototype.reduce()")}}

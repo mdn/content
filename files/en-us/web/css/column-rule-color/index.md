@@ -9,7 +9,43 @@ browser-compat: css.properties.column-rule-color
 
 The **`column-rule-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the line drawn between columns in a multi-column layout.
 
-{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
+{{InteractiveExample("CSS Demo: column-rule-color")}}
+
+```css interactive-example-choice
+column-rule-color: red;
+```
+
+```css interactive-example-choice
+column-rule-color: rgb(48, 125, 222);
+```
+
+```css interactive-example-choice
+column-rule-color: hsla(120, 80%, 40%, 0.6);
+```
+
+```css interactive-example-choice
+column-rule-color: currentcolor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## Syntax
 

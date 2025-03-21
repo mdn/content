@@ -1,5 +1,6 @@
 ---
 title: Server-side website programming first steps
+short-title: First steps
 slug: Learn_web_development/Extensions/Server-side/First_steps
 page-type: learn-module
 ---

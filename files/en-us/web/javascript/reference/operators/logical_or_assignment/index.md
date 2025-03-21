@@ -9,7 +9,7 @@ browser-compat: javascript.operators.logical_or_assignment
 
 The **logical OR assignment (`||=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("falsy")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+{{InteractiveExample("JavaScript Demo: Logical OR assignment (||=) operator")}}
 
 ```js interactive-example
 const a = { duration: 50, title: "" };

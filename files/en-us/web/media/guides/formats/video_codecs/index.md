@@ -1049,7 +1049,14 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
           <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">HEVC video extensions from the Microsoft Store</a>
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
-        <p>Firefox 120 initially supported HEVC decoding in Nightly only. Support was enabled by default in Firefox 134 on Windows, Windows and macOS in Firefox 136, and Windows, macOS, and Linux in Firefox 137. HEVC support is provided only on devices with hardware support (the range is the same as Edge).</p>
+        <p>Firefox enables HEVC on:
+          <ul>
+            <li>Windows from Firefox 134 using either hardware (on devices that support it, where the range is the same as Edge) or software (on Windows the user must pay for and install an extension)</li>
+            <li>macOS from Firefox 136 using either hardware or software.</li>
+            <li>Linux from Firefox 137 using either hardware or software (via the system ffmpeg).</li>
+            <li>Android from Firefox 137 using hardware only.</li>
+          </ul>
+        </p>
         <p>Opera and other Chromium based browsers have the same support status as Chrome.</p>
         <p>Safari supports HEVC for all devices on macOS High Sierra or later.</p>
       </td>

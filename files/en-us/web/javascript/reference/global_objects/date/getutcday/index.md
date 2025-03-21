@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.getUTCDay
 
 The **`getUTCDay()`** method of {{jsxref("Date")}} instances returns the day of the week for this date according to universal time, where 0 represents Sunday.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getUTCDay()")}}
 
 ```js interactive-example
 const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");

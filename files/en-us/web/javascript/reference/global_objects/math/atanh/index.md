@@ -75,6 +75,7 @@ Math.atanh(2); // NaN
 ## See also
 
 - [Polyfill of `Math.atanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.atanh`](https://www.npmjs.com/package/math.atanh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}

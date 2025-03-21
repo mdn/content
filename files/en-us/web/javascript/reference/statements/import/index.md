@@ -191,7 +191,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
 
 - [HTTP URLs](/en-US/docs/Web/HTTP) are always supported on the web since most scripts already have HTTP URLs. It's supported natively by Deno (which initially predicated its entire module system on HTTP URLs), but it only has experimental support in Node via [custom HTTPS loaders](https://nodejs.org/api/module.html#import-from-https).
 - `file:` URLs are supported by many non-browser runtimes such as Node, since scripts there already have `file:` URLs, but they are not supported by browsers due to security reasons.
-- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
 
   ```js
   // HTTP URLs

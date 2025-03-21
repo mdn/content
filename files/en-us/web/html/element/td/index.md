@@ -382,17 +382,17 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role"
             >cell</a
           ></code
         >
         if a descendant of a {{HTMLElement("table")}} element, or <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role"
             >gridcell</a
           ></code
         >
         if a descendant of an element with <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role"
             >grid</a
           ></code
         > role

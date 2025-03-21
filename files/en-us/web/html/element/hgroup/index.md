@@ -118,7 +118,7 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
             >group</a
           ></code
         >

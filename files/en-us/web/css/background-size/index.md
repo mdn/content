@@ -10,7 +10,42 @@ browser-compat: css.properties.background-size
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.
 The image can be left to its natural size, stretched, or constrained to fit the available space.
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 Spaces not covered by a background image are filled with the {{cssxref("background-color")}} property, and the background color will be visible behind background images that have transparency/translucency.
 
@@ -105,7 +140,7 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
   - If the image has only one intrinsic dimension but has no intrinsic proportions, it's rendered using the specified dimension and the other dimension of the background positioning area.
 
   > [!NOTE]
-  > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
+  > SVG images have a [`preserveAspectRatio`](/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) attribute that defaults to the equivalent of `contain`; an explicit `background-size` causes `preserveAspectRatio` to be ignored.
 
 - **If the `background-size` has one `auto` component and one non-`auto` component:**
 
@@ -170,5 +205,5 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 ## See also
 
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

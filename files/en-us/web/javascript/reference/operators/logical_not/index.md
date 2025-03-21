@@ -12,7 +12,7 @@ falsity and vice versa. It is typically used with boolean (logical)
 values. When used with non-Boolean values, it returns `false` if its single
 operand can be converted to `true`; otherwise, returns `true`.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Logical NOT (!) operator", "shorter")}}
 
 ```js interactive-example
 const a = 3;
@@ -45,7 +45,7 @@ Examples of expressions that can be converted to false are:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-Even though the `!` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double NOT operator (`!!`) or the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
+Even though the `!` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double NOT operator (`!!`) or the {{jsxref("Boolean/Boolean", "Boolean")}} constructor.
 
 ## Examples
 
@@ -63,7 +63,7 @@ The following code shows examples of the `!` (logical NOT) operator.
 ### Double NOT (`!!`)
 
 It is possible to use a couple of NOT operators in series to explicitly force the
-conversion of any value to the corresponding [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
+conversion of any value to the corresponding [boolean primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 The conversion is based on the "truthiness" or "falsiness" of the value (see
 {{Glossary("truthy")}} and {{Glossary("falsy")}}).
 

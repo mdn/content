@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.getFloat32
 
 The **`getFloat32()`** method of {{jsxref("DataView")}} instances reads 4 bytes starting at the specified byte offset of this `DataView` and interprets them as a 32-bit floating point number. There is no alignment constraint; multi-byte values may be fetched from any offset within bounds.
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.getFloat32()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

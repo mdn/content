@@ -91,6 +91,7 @@ Reflect.getPrototypeOf(Object("foo")); // String.prototype
 ## See also
 
 - [Polyfill of `Reflect.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [es-shims polyfill of `Reflect.getPrototypeOf`](https://www.npmjs.com/package/reflect.getprototypeof)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`handler.getPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf)

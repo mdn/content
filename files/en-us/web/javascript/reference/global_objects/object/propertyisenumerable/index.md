@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.propertyIsEnumerable
 
 {{JSRef}}
 
-The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) property.
+The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) property.
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
 
@@ -108,7 +108,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### Testing symbol properties
 
-{{jsxref("Symbol")}} properties are also supported by `propertyIsEnumerable()`. Note that most enumeration methods only visit string properties; enumerability of symbol properties is only useful when using {{jsxref("Object.assign()")}} or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+{{jsxref("Symbol")}} properties are also supported by `propertyIsEnumerable()`. Note that most enumeration methods only visit string properties; enumerability of symbol properties is only useful when using {{jsxref("Object.assign()")}} or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). For more information, see [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties).
 
 ```js
 const sym = Symbol("enumerable");
@@ -161,7 +161,7 @@ Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 
 ## See also
 
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

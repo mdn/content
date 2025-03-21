@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Math.LOG10E
 
 The **`Math.LOG10E`** static data property represents the base 10 logarithm of [e](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E), approximately 0.434.
 
-{{InteractiveExample("JavaScript Demo: Math.log10e()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.LOG10E", "shorter")}}
 
 ```js interactive-example
 function getLog10e() {

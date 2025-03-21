@@ -24,7 +24,7 @@ SyntaxError: Unexpected token '...'. Expected a parameter pattern or a ')' in pa
 
 ## What went wrong?
 
-The [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set) property syntax looks like a function, but it is stricter and not all function syntax is allowed. A setter is always invoked with exactly one argument, so defining it with any other number of parameters is likely an error. This parameter can be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) or have a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), but it cannot be a [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+The [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set) property syntax looks like a function, but it is stricter and not all function syntax is allowed. A setter is always invoked with exactly one argument, so defining it with any other number of parameters is likely an error. This parameter can be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) or have a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), but it cannot be a [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
 Note that this error only applies to property setters using the `set` syntax. If you define the setter using {{jsxref("Object.defineProperty()")}}, etc., the setter is defined as a normal function, although it's likely still an error if the setter expects any other number of arguments, as it will be called with exactly one.
 

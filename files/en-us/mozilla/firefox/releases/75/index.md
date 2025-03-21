@@ -33,8 +33,8 @@ This article provides information about the changes in Firefox 75 that will affe
 New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screen readers start to support them):
 
 - `aria-description` ([Firefox bug 1608961](https://bugzil.la/1608961)).
-- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
-- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
+- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role) ([Firefox bug 1608965](https://bugzil.la/1608965)).
+- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
 - Multiple IDs on `aria-details` ([Firefox bug 1608883](https://bugzil.la/1608883)).
 
 > [!NOTE]
@@ -78,7 +78,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
 
 ### Plugins
 

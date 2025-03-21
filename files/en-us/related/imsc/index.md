@@ -120,7 +120,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 
 - imscJS polyfill
   - : IMSC documents can be rendered in browsers using the [imscJS](https://github.com/sandflow/imscJS) polyfill.
-- [dash.js](https://github.com/Dash-Industry-Forum/dash.js/wiki)
+- [dash.js](https://github.com/Dash-Industry-Forum/dash.js)
   - : The reference player of the DASH Industry Forum with IMSC support.
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 3: Using models"
+short-title: "3: Models"
 slug: Learn_web_development/Extensions/Server-side/Django/Models
 page-type: learn-module-chapter
 ---

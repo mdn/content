@@ -66,16 +66,16 @@ DOM Cache:
 
 Browser caches:
 
-- The [HTTP cache](/en-US/docs/Web/HTTP/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
+- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
 
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
 
 HTTP Referrers
 
-- The default [Referrer Policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
+- The default [Referrer Policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
 
 ### What is not blocked by the policy?
 

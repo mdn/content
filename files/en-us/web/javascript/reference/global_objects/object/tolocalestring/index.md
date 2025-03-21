@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Object.toLocaleString
 
 The **`toLocaleString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for locale-specific purposes.
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toLocaleString()")}}
 
 ```js interactive-example
 const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

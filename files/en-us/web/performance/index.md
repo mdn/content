@@ -142,7 +142,7 @@ The following APIs are also useful for measuring and influencing page performanc
 - [`<picture>`](/en-US/docs/Web/HTML/Element/picture) element
 - [`<video>`](/en-US/docs/Web/HTML/Element/video) element
 - [`<source>`](/en-US/docs/Web/HTML/Element/source) element
-- [`<img> srcset`](/en-US/docs/Web/HTML/Element/img#attributes) attribute for responsive images
+- [`<img>`](/en-US/docs/Web/HTML/Element/img#attributes) attributes (like `srcset`) for responsive images
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) attribute for preloading content via HTML
 
 ### CSS
@@ -157,18 +157,18 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### HTTP
 
-- [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
-- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
-- [HTTP/2](/en-US/docs/Web/HTTP/Messages#http2_messages)
-- [Client Hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Content-encoding](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding)
+- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
+- [HTTP/2](/en-US/docs/Web/HTTP/Guides/Messages#http2_messages)
+- [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 
 ## See also
 
 - [Responsive images](/en-US/docs/Web/HTML/Responsive_images) HTML guide
 - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API), including [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) and [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
-- [Caching](/en-US/docs/Web/HTTP/Caching)
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Caching](/en-US/docs/Web/HTTP/Guides/Caching)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - Glossary terms:
   - {{glossary('Beacon')}}
   - {{glossary('Brotli compression')}}

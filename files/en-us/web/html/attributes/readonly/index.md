@@ -41,14 +41,37 @@ textarea:read-only {
 
 If the `readonly` attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.
 
-The `readonly` attribute is supported by `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, and `{{HTMLElement("input/number","number")}}` {{HTMLElement("input")}} types and the {{HTMLElement("textarea")}} form control elements. If present on any of these input types and elements, the {{cssxref(':read-only')}} pseudo class will match. If the attribute is not included, the {{cssxref(':read-write')}} pseudo class will match.
+The `readonly` attribute is supported by textual form controls, including:
 
-The attribute is not supported or relevant to {{HTMLElement("select")}} or input types that are already not mutable, such as `{{HTMLElement("input/checkbox","checkbox")}}` and `{{HTMLElement("input/radio","radio")}}` or cannot, by definition, start with a value, such as the `{{HTMLElement("input/file","file")}}` input type. `{{HTMLElement("input/range","range")}}` and `{{HTMLElement("input/color","color")}}`, as both have default values. It is also not supported on `{{HTMLElement("input/hidden","hidden")}}` as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
+- {{HTMLElement("input")}} elements of type:
+  - `{{HTMLElement("input/text","text")}}`
+  - `{{HTMLElement("input/search","search")}}`
+  - `{{HTMLElement("input/tel","tel")}}`
+  - `{{HTMLElement("input/url","url")}}`
+  - `{{HTMLElement("input/email","email")}}`
+  - `{{HTMLElement("input/password","password")}}`
+  - `{{HTMLElement("input/date","date")}}`
+  - `{{HTMLElement("input/month","month")}}`
+  - `{{HTMLElement("input/week","week")}}`
+  - `{{HTMLElement("input/time","time")}}`
+  - `{{HTMLElement("input/datetime-local","datetime-local")}}`
+  - `{{HTMLElement("input/number","number")}}`
+- {{HTMLElement("textarea")}}
 
-> [!NOTE]
-> Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only and being disabled, so the `readonly` attribute does not apply.
+The attribute is not relevant to all other elements, including {{HTMLElement("select")}} and {{HTMLElement("button")}}. It also does not apply to non-textual input elements, including:
 
-When an input has the `readonly` attribute, the {{cssxref(":read-only")}} pseudo-class also applies to it. Conversely, inputs that support the `readonly` attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class.
+- `{{HTMLElement("input/hidden","hidden")}}`
+- `{{HTMLElement("input/range","range")}}`
+- `{{HTMLElement("input/color","color")}}`
+- `{{HTMLElement("input/checkbox","checkbox")}}`
+- `{{HTMLElement("input/radio","radio")}}`
+- `{{HTMLElement("input/file","file")}}`
+- `{{HTMLElement("input/submit","submit")}}`
+- `{{HTMLElement("input/image","image")}}`
+- `{{HTMLElement("input/reset","reset")}}`
+- `{{HTMLElement("input/button","button")}}`
+
+Inputs that support the `readonly` attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class. All other elements match the {{cssxref(":read-only")}} pseudo-class.
 
 ### Attribute interactions
 

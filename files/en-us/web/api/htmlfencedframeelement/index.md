@@ -18,7 +18,7 @@ The **`HTMLFencedFrameElement`** interface represents a {{htmlelement("fencedfra
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFencedFrameElement.allow")}} {{experimental_inline}}
-  - : Gets and sets the value of the corresponding `<fencedframe>` `allow` attribute, which represents a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) applied to the content when it is first embedded.
+  - : Gets and sets the value of the corresponding `<fencedframe>` `allow` attribute, which represents a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to the content when it is first embedded.
 - {{domxref("HTMLFencedFrameElement.config")}} {{experimental_inline}}
   - : a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
 - {{domxref("HTMLFencedFrameElement.height")}} {{experimental_inline}}

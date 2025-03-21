@@ -39,7 +39,7 @@ Values of this type are objects. They contain the following properties:
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
 - `hsts` {{optional_inline}}
-  - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
+  - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security), `false` otherwise.
 - `isDomainMismatch` {{optional_inline}}
   - : `Boolean`. `true` if the server's domain name does not match the domain name in its certificate, `false` otherwise.
 - `isExtendedValidation` {{optional_inline}}

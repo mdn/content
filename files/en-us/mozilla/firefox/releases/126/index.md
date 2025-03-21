@@ -34,7 +34,7 @@ No notable changes.
 
 ### HTTP
 
-- The [`zstd`](/en-US/docs/Web/HTTP/Headers/Content-Encoding#zstd) directive of the `Content-Encoding` HTTP header is now supported, allowing decoding of server-sent content encoded with the {{glossary("Zstandard compression")}} algorithm ([Firefox bug 1871963](https://bugzil.la/1871963)).
+- The [`zstd`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding#zstd) directive of the `Content-Encoding` HTTP header is now supported, allowing decoding of server-sent content encoded with the {{glossary("Zstandard compression")}} algorithm ([Firefox bug 1871963](https://bugzil.la/1871963)).
 
 ### APIs
 

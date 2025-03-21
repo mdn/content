@@ -1,5 +1,6 @@
 ---
-title: Video and Audio APIs
+title: Video and audio APIs
+short-title: Video and audio
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 page-type: learn-module-chapter
 ---

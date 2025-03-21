@@ -88,7 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
 - `src`
-  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
+  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/Guides/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 ## Events
 
@@ -381,7 +381,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -473,7 +473,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

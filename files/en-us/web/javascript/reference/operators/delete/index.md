@@ -9,7 +9,7 @@ browser-compat: javascript.operators.delete
 
 The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 
-{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+{{InteractiveExample("JavaScript Demo: delete operator")}}
 
 ```js interactive-example
 const Employee = {
@@ -72,7 +72,7 @@ delete console.log(1);
 // Logs 1, returns true, but nothing deleted
 ```
 
-The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://learn.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Memory_management) page for more details.
+The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://learn.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Guide/Memory_management) page for more details.
 
 It is important to consider the following scenarios:
 

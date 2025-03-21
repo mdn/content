@@ -95,7 +95,7 @@ _No change._
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
 
 ## Changes for add-on and Mozilla developers
 

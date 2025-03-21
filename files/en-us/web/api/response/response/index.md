@@ -46,7 +46,7 @@ new Response(body, options)
       - : The status message associated with the status code, such as `"OK"`.
         The default value is `""`.
     - `headers`
-      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
+      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) for a reference).
         By default this is empty.
 
 ## Examples
@@ -71,5 +71,5 @@ const myResponse = new Response(myBlob, myOptions);
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

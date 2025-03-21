@@ -9,7 +9,40 @@ browser-compat: css.properties.outline-width
 
 The [CSS](/en-US/docs/Web/CSS) **`outline-width`** property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the {{cssxref("border")}}.
 
-{{EmbedInteractiveExample("pages/css/outline-width.html")}}
+{{InteractiveExample("CSS Demo: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 

@@ -80,6 +80,7 @@ Number.isSafeInteger(3.0); // true
 ## See also
 
 - [Polyfill of `Number.isSafeInteger` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.isSafeInteger`](https://www.npmjs.com/package/number.issafeinteger)
 - {{jsxref("Number")}}
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.MAX_SAFE_INTEGER")}}

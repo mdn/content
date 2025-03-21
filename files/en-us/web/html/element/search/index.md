@@ -19,13 +19,13 @@ The `<search>` element is not for presenting search results. Rather, search or f
 
 ## Accessibility
 
-The `<search>` element defines a [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) landmark. This removes the need for adding `role=search` to a {{HTMLElement('form')}} element.
+The `<search>` element defines a [`search`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) landmark. This removes the need for adding `role=search` to a {{HTMLElement('form')}} element.
 
 ## Examples
 
 ### Header search form
 
-This example demonstrates the use of `<search>` as the container for a search within a website header to perform a simple site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
+This example demonstrates the use of `<search>` as the container for a search within a website header to perform a site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
 
 #### HTML
 
@@ -136,13 +136,13 @@ This example demonstrates a page with two search features. The first is a global
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role"><code>form</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -163,4 +163,4 @@ This example demonstrates a page with two search features. The first is a global
 ## See also
 
 - Other search-related elements: {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("form")}}
-- [ARIA: Search role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA: Search role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

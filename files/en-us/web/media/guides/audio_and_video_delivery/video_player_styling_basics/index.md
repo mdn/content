@@ -141,7 +141,7 @@ Each button has some basic styling:
 
 By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.
 
-Simple `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
+The `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
 
 ```css
 .controls button:hover,

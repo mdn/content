@@ -56,7 +56,7 @@ li::before {
 ## Syntax
 
 ```css
-/* Simple usage  - style defaults to decimal */
+/* Basic usage  - style defaults to decimal */
 counters(counter-name, '.');
 
 /* changing the counter display */
@@ -74,7 +74,7 @@ The `counters()` function accepts two or three parameters. The first parameter i
 - {{cssxref("&lt;string&gt;")}}
   - : Any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
 - `<counter-style>`
-  - : A counter style name or a [`symbols()`](/en-US/docs/Web/CSS/symbols) function. The counter style name can be a simple predefined style such as numeric, alphabetic, or symbolic, a complex longhand predefined style such as East Asian or Ethiopic, or another [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to decimal.
+  - : A counter style name or a [`symbols()`](/en-US/docs/Web/CSS/symbols) function. The counter style name can be a predefined style such as numeric, alphabetic, or symbolic, a complex longhand predefined style such as East Asian or Ethiopic, or another [predefined counter style](/en-US/docs/Web/CSS/CSS_counter_styles). If omitted, the counter-style defaults to decimal.
 
 The return value is a string containing all the values of all the counters in the element's CSS counters set named `<counter-name>` in the counter style defined by `<counter-style>` (or decimal, if omitted). The return string is sorted in outermost-first to innermost-last order, joined by the `<string>` specified.
 

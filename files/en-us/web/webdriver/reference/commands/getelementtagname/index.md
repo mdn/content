@@ -2,7 +2,7 @@
 title: Get Element Tag Name
 slug: Web/WebDriver/Reference/Commands/GetElementTagName
 page-type: webdriver-command
-browser-compat: webdriver.commands.GetElementTagName
+browser-compat: webdriver.classic.GetElementTagName
 sidebar: webdriver
 ---
 

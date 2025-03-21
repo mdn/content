@@ -5,7 +5,7 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-This article describes a simple HTML video player that uses the Media and Fullscreen APIs. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
+This article describes a basic HTML video player that uses the Media and Fullscreen APIs. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
 
@@ -134,7 +134,7 @@ const progress = document.getElementById("progress");
 const fullscreen = document.getElementById("fs");
 ```
 
-Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a simple `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
+Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
 
 ### Play/Pause
 
@@ -170,7 +170,7 @@ mute.addEventListener("click", (e) => {
 });
 ```
 
-The mute button is a simple toggle button that uses the Media API's `muted` attribute to mute the video: this is a Boolean indicating whether the video is muted or not. To get it to toggle, we set it to the inverse of itself.
+The mute button is a toggle button that uses the Media API's `muted` attribute to mute the video: this is a Boolean indicating whether the video is muted or not. To get it to toggle, we set it to the inverse of itself.
 
 ### Volume
 
@@ -237,7 +237,7 @@ video.addEventListener("timeupdate", () => {
 
 ### Skip Ahead
 
-Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a simple `click` event listener to the `progress` element:
+Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a `click` event listener to the `progress` element:
 
 ```js
 progress.addEventListener("click", (e) => {

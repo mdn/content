@@ -17,7 +17,7 @@ To send an HTTP request:
 2. Open a URL
 3. Send the request.
 
-After the transaction completes, the `XMLHttpRequest` object will contain useful information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Status) of the result.
+After the transaction completes, the `XMLHttpRequest` object will contain useful information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Reference/Status) of the result.
 
 ```js
 function reqListener() {
@@ -227,7 +227,7 @@ And to test:
 ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });
@@ -237,7 +237,7 @@ If you want to know if the current page has changed, refer to the article about 
 
 ## Cross-site XMLHttpRequest
 
-Modern browsers support cross-site requests by implementing the [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/CORS) (CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
+Modern browsers support cross-site requests by implementing the [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS) (CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
 
 ## Bypassing the cache
 
@@ -279,6 +279,6 @@ If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null
 
 - [Using the Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control](/en-US/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

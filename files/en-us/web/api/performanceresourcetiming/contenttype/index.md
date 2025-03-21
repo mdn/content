@@ -32,7 +32,7 @@ This may be one of the following values:
 - MIME type/subtype
   - : Any other MIME type/subtype supported by the user agent.
 - `""` (empty string)
-  - : Returned for MIME types that are not supported by the browser, or if the resource fetch failed due to [CORS](/en-US/docs/Web/HTTP/CORS) checks.
+  - : Returned for MIME types that are not supported by the browser, or if the resource fetch failed due to [CORS](/en-US/docs/Web/HTTP/Guides/CORS) checks.
 
 ## Examples
 

@@ -22,7 +22,7 @@ A value of this type is an object containing these properties for the commands:
 - `shortcut` {{optional_inline}}
   - : `string`. Keys used to execute the command, specified as a string. See the [shortcut values](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#shortcut_values) section of the `commands` manifest key documentation for more details.
 
-`description` and `shortcut` reflect the values given in the `commands` manifest.json key unless they have been updated with {{WebExtAPIRef('commands.update()')}}` or, in the case of the shortcut, customized by the user.
+`description` and `shortcut` reflect the values given in the `commands` manifest.json key unless they have been updated with {{WebExtAPIRef('commands.update()')}} or, in the case of the shortcut, customized by the user.
 
 ## Browser compatibility
 

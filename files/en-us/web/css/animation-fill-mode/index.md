@@ -9,7 +9,111 @@ browser-compat: css.properties.animation-fill-mode
 
 The **`animation-fill-mode`** [CSS](/en-US/docs/Web/CSS) property sets how a CSS animation applies styles to its target before and after its execution.
 
-{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
+{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+
+```css interactive-example-choice
+animation-fill-mode: none;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: forwards;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: backwards;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: both;
+animation-delay: 1s;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a mode to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation: slide 1s ease-in 1;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 

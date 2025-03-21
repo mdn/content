@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.keys
 
 The **`keys()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the array.
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.keys()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -85,6 +85,7 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.keys`](https://www.npmjs.com/package/array.prototype.keys)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}

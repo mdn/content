@@ -121,6 +121,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ## See also
 
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

@@ -1,5 +1,6 @@
 ---
 title: "JavaScript: Adding interactivity"
+short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
 ---
@@ -138,7 +139,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
+Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Guide/Data_structures):
 
 <table class="standard-table">
   <thead>

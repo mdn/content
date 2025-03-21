@@ -9,7 +9,33 @@ browser-compat: css.types.filter-function.contrast
 
 The **`contrast()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) adjusts the contrast of the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-contrast.html")}}
+{{InteractiveExample("CSS Demo: contrast()")}}
+
+```css interactive-example-choice
+filter: contrast(1);
+```
+
+```css interactive-example-choice
+filter: contrast(1.75);
+```
+
+```css interactive-example-choice
+filter: contrast(50%);
+```
+
+```css interactive-example-choice
+filter: contrast(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 

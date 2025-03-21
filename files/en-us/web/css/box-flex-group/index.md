@@ -47,7 +47,7 @@ box-flex-group =
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 In the original flexbox spec, `box-flex-group` could be used to assign flex children to different groups to distribute flexible space between:
 
