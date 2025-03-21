@@ -79,7 +79,9 @@ To take advantage of this protection you must understand all the places in your 
 
 Fetch metadata is a collection of HTTP request headers, added by the browser, that provide extra information about the context of an HTTP request. The server can use these headers to decide whether to allow a request or not.
 
-Most relevant for CSRF is the {{httpheader("Sec-Fetch-Site")}} header, which tells the server whether this request is same-origin, same-site, cross-site, or initiated directly by the user. For example, this [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code allows only same-site and same-origin requests:
+Most relevant for CSRF is the {{httpheader("Sec-Fetch-Site")}} header, which tells the server whether this request is same-origin, same-site, cross-site, or initiated directly by the user. The server can use this information to allow cross-origin requests, or block them as potential CSRF attacks.
+
+For example, this [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code allows only same-site and same-origin requests:
 
 ```js
 app.post("/transfer", (req, res) => {
