@@ -21,14 +21,14 @@ console.log(window.navigator.userAgent);
 // Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-While it may be tempting to parse the UA string (sometimes called "UA sniffing") and change how a site behaves based on the values in the UA string, this is very hard to do reliably.
+It may be tempting to parse the UA string (sometimes called "UA sniffing") and change how your site behaves based on the values in the UA string, but this is very hard to do reliably, and is usually a cause of bugs.
+
 This document describes common pitfalls of using the UA string for browser detection and the recommended alternatives.
-At the end we provide some hints for UA detection using the string, but only if it's absolutely necessary!
+At the end we provide some hints for UA detection using the string, but you should do this only if it's absolutely necessary!
 
-## Problems with browser detection
+## Why feature detection is better than browser detection
 
-The Web is meant to be accessible to everyone, regardless of the browser or device they're using.
-To illustrate why changing site functionality based on UA strings introduces complexity and possible bugs, consider the following example.
+To illustrate why trying to adapt site functionality per browser introduces complexity and possible bugs, consider the following example.
 An application wants to make use of a `splitUpString()` function in JavaScript using [lookbehind assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) (`?<=…`):
 
 ```js example-bad
@@ -48,7 +48,7 @@ console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
-This code makes several assumptions that may not be true, and which can break this code if it is run on the wrong browser:
+This code makes several assumptions that may be wrong, and which will break the code if the wrong browser runs it:
 
 1. All user agent strings that include the substring `Chrome` indicate a Chrome browser.
 2. The lookbehind feature is always available if the browser is Chrome.
@@ -56,10 +56,13 @@ This code makes several assumptions that may not be true, and which can break th
 3. Most importantly, it assumes no other browsers support the feature, when it could be added to any other browser at any time.
    All non-matching browsers will be stuck using an inefficient fallback.
 
-## Invalid reason to use browser sniffing
+It's important to note that these problems will exist regardless of the browser detection method; UA sniffing, client hints, the presence, absence or contents of other HTTP headers, and so on.
+Knowing what browser is used is irrelevant, what we're actually looking for in this case is feature detection, which is described in more detail below.
+
+## Invalid reasons to use browser detection
 
 There are ways to develop your website so that it's progressively enhanced based on the availability of features in a client rather than targeting specific browsers.
-For this reason, the first avenue to explore before starting to detect browsers via UA string is **how to avoid this**, if possible.
+For this reason, the first avenue to explore before starting to detect browsers via UA string is **how to avoid UA sniffing**, if possible.
 Try to identify why you want to do browser detection:
 
 - **Are you trying to work around a specific bug in a certain browser version?**
@@ -70,20 +73,25 @@ Try to identify why you want to do browser detection:
 - **Do you want to provide different HTML depending on which browser is being used?**
   - : This is usually a bad idea, but there are rare cases where this is necessary.
     Can you prevent it by adding non-semantic {{ HTMLElement("div") }} or {{ HTMLElement("span") }} elements?
-    The tradeoff of successfully using UA detection for this purpose is worth reworking your HTML.
-    Consider if there's actually a problem with your design: can you use progressive enhancement or fluid layouts to help remove the need to do this?
+    Consider if there's actually a problem with your design: can you use progressive enhancement or fluid layouts to help remove your need to do this?
+    The effort in applying accurate UA detection compared to reworking your HTML should be a deciding factor.
 - **Are you trying to check for the existence of a specific feature?**
   - : Your site needs to use a specific feature that some browsers don't yet support, and you want users with incompatible browsers to be served an older website with fewer features you know will work.
     This is the worst reason to use UA detection because all browsers will likely catch up, eventually.
     In addition, it's not practical to test each browser for different features in this way.
 
-The following sections describe common alternatives to browser detection.
+## Alternatives to UA sniffing
+
+Aside from variants in how different browsers identify themselves, the biggest problem in browser detection is that clients can easily spoof indicators like UA strings or other HTTP headers.
+A browser can pretend to be another browser, or include information based on multiple browsers.
+
+The following sections describe alternatives to browser detection which are applicable to more situations than UA sniffing.
 
 ### Feature detection
 
 Feature detection is where you check to see if a specific feature is available to the client instead of figuring out which browser is rendering your page.
 For cases where a feature is not supported, you use a fallback instead.
-The following feature detection example checks if the client supports the {{domxref("Geolocation_API", "Geolocation API", "", "nocode")}} .
+The following feature detection example checks if the client supports the {{domxref("Geolocation_API", "Geolocation API", "", "nocode")}}.
 You can do this by checking for a `geolocation` property available on the global {{domxref("Navigator")}} object.
 
 ```js
@@ -130,6 +138,10 @@ To learn more, see the [Implementing feature detection](/en-US/docs/Learn_web_de
 
 For Blink-based browsers (Chromium, Edge, Brave, Vivaldi, etc.), an alternative is [User agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints).
 In client hints, the server proactively requests device information from a client through HTTP headers or via [JavaScript API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
+
+Client hints are better than UA sniffing for detecting Blink-based browsers in that they're not as commonly-spoofed, and they provide smaller, more reliable pieces of information that are easier to parse.
+Changing site functionality based on client hints is still a bad idea, and you should consider feature detection and progressive enhancement for your use case [as described above](#why_feature_detection_is_better_than_browser_detection).
+
 For example, in the HTTP mechanism, the server includes a {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
 Let's assume the server sends this response to the client:
 
@@ -143,7 +155,7 @@ This asks for the following headers from the client in subsequent requests:
 - {{httpheader("Sec-CH-UA-Platform")}}: the platform the client is operating on ("Windows", "Android", etc.).
 - {{httpheader("Sec-CH-UA")}}: the user-agent's branding and significant version information.
 
-Assuming the client supports client hints, the user agent client hints may appear in subsequent requests:
+Assuming the client supports client hints, the UA client hints may appear in subsequent requests:
 
 ```http
 GET /my/page HTTP/1.1
@@ -159,8 +171,8 @@ Be sure to check the [Browser Compatibility](/en-US/docs/Web/HTTP/Reference/Head
 
 ### Mobile device detection
 
-Arguably the most common use (and misuse) of UA sniffing is to detect if the client is a mobile device.
-However, people are actually often motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website accordingly.
+A common misuse of UA sniffing is to detect if the client is a mobile device.
+Usually people are motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website by adding extra padding to buttons, for example.
 
 Instead, you should detect features using modern APIs.
 For example, to check for touch support, try the [maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) property in the {{domxref("Navigator")}} interface:
@@ -243,7 +255,7 @@ Some browsers send conflicting information: Chrome, for example, reports both Ch
 So to detect Safari you have to check for the Safari string and the absence of the Chrome string, Chromium often reports itself as Chrome too and SeaMonkey reports itself as Firefox.
 
 Be careful when using regular expressions on the `BrowserName` part as user agents also contain strings around the Keyword/Value syntax.
-Safari & Chrome contain the string 'like Gecko', for instance.
+Safari & Chrome contain the string `like Gecko`, for instance.
 
 | Browser name                    | Must contain    | Must not contain               |
 | ------------------------------- | --------------- | ------------------------------ |
