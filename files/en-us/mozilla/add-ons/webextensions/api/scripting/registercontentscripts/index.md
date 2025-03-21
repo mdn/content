@@ -29,9 +29,15 @@ await browser.scripting.registerContentScripts(
 - `scripts`
   - : `array` of {{WebExtAPIRef("scripting.RegisteredContentScript")}}. A list of scripts to register.
 
-### Return value
+## Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with no arguments or rejected when there are errors. Errors can occur during script parsing and file validation or if the IDs specified exist. When an error occurs, no scripts are registered.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is fulfilled with no arguments or rejected when there are errors. Errors can occur during script parsing and file validation or if the IDs specified exist. When an error occurs, no scripts are registered.
+
+> [!NOTE]
+> **Persistence of Registered Scripts:**
+> - In **Firefox**, registered scripts are **removed** when the extension is **unloaded or reloaded**.
+> - In **Chrome**, registered scripts **persist across restarts** if `persistAcrossSessions: true`, but they **are unregistered when the extension is updated**.
+> - The `persistAcrossSessions` property controls whether scripts remain registered across browser sessions.
 
 ## Examples
 
