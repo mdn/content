@@ -99,7 +99,7 @@ For example:
 
 There are some special cases. For example, for some types of audio, a codec's data is often stored without a container, or with a simplified container. One such instance is the FLAC codec, which is stored most commonly in FLAC files, which are just raw FLAC tracks.
 
-Another such situation is the always-popular MP3 file. An MP3 file is an audio file encoded using MPEG-1 Audio Layer III compression. Although it may include metadata, it is not stored within a separate MPEG or MPEG-2 container. This is particularly interesting because while most browsers don't support using MPEG media in the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, they still support MP3 due to its popularity.
+Another such situation is the always-popular "MP3 file". An "MP3 file" is an audio file encoded using MPEG-1 Audio Layer III compression. Although it may include metadata, it is not stored within a separate MPEG or MPEG-2 container. Most browsers support MP3 due to its popularity in the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 
 An audio player will tend to play an audio track directly, e.g. an MP3 or Ogg file. These don't need containers.
 
