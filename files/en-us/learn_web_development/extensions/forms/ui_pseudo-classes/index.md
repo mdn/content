@@ -57,9 +57,10 @@ There are many others, but the ones listed above are the most obviously useful. 
 
 One of the most basic concepts regarding client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
 
-{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:
+{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit.
+For example, the first name and last name are required in the form below, but the email address is optional:
 
-```html
+```html live-sample__forms1
 <form>
   <fieldset>
     <legend>Feedback form</legend>
@@ -82,23 +83,74 @@ One of the most basic concepts regarding client-side form validation is whether 
 </form>
 ```
 
-Here, the first name and last name are required, but the email address is optional.
-
 You can match these two states using the {{cssxref(':required')}} and {{cssxref(':optional')}} pseudo-classes. For example, if we apply the following CSS to the above HTML:
 
-```css
-input:required {
-  border: 1px solid black;
+```css hidden live-sample__forms1
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 60%;
 }
 
-input:optional {
-  border: 1px solid silver;
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eee;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
 }
 ```
 
-The required controls would have a black border, and the optional control will have a silver border, like so:
+```css live-sample__forms1
+input:required {
+  border: 2px solid red;
+}
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/basic-required-optional.html", '100%', 400)}}
+input:optional {
+  border: 2px dashed blue;
+}
+```
+
+The required controls would have a solid red border, and the optional control will have a dashed, blue border, like so:
+
+{{EmbedLiveSample("forms1", , "400px", , , , , "allow-forms")}}
 
 You can also try submitting the form without filling it in, to see the client-side validation error messages browsers give you by default.
 
