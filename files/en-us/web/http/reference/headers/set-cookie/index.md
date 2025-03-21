@@ -133,7 +133,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - : Controls whether or not a cookie is sent with cross-site requests: that is, requests originating from a different {{glossary("site")}} from the site that set the cookie. This provides some protection against certain cross-site attacks, including {{Glossary("CSRF", "cross-site request forgery (CSRF)")}} attacks.
+  - : Controls whether or not a cookie is sent with cross-site requests: that is, requests originating from a different {{glossary("site")}}, including the scheme, from the site that set the cookie. This provides some protection against certain cross-site attacks, including {{Glossary("CSRF", "cross-site request forgery (CSRF)")}} attacks.
 
     The possible attribute values are:
 
