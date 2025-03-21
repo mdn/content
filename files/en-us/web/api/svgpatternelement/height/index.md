@@ -10,7 +10,7 @@ browser-compat: api.SVGPatternElement.height
 
 The **`height`** read-only property of the {{domxref("SVGPatternElement")}} interface describes the height of the pattern as an {{domxref("SVGAnimatedLength")}}. It reflects the computed value of the {{SVGAttr("height")}} attribute on the {{SVGElement("pattern")}} element.
 
-The attribute value can be a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} represents the height of the pattern in the user coordinate system.
+The attribute value can be a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} represents the height of the pattern in the user coordinate system.
 
 ## Value
 

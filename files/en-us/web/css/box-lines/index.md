@@ -60,7 +60,7 @@ box-lines =
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 In the original version of the spec, `box-lines` allowed you to specify that you wanted your flex container's children to wrap onto multiple lines. This was only supported in WebKit-based browsers, with a prefix.
 

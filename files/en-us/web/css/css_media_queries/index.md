@@ -131,7 +131,7 @@ When designing reusable HTML components, you may also use [container queries](/e
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
   - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- SVG [`media`](/en-US/docs/Web/SVG/Attribute/media) attribute
+- SVG [`media`](/en-US/docs/Web/SVG/Reference/Attribute/media) attribute
 
 ## Specifications
 

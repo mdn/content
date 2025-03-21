@@ -9,7 +9,49 @@ browser-compat: css.properties.animation
 
 The **`animation`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}, and {{cssxref("animation-timeline")}}.
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slide-in;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slide-in;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slide-in;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slide-in;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slide-in {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## Constituent properties
 

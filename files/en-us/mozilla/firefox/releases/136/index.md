@@ -34,7 +34,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### APIs
 
-- The maximum size of [Data URLs](/en-US/docs/Web/URI/Schemes/data) has been increased from 32MB to 512MB, matching the limit for Chromium browsers ([Firefox bug 1911300](https://bugzil.la/1911300)).
+- The maximum size of [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) has been increased from 32MB to 512MB, matching the limit for Chromium browsers ([Firefox bug 1911300](https://bugzil.la/1911300)).
 - The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{glossary("asynchronous")}} {{jsxref("Promise")}}-based method of managing cookies, which can be used in both the main thread and in [service workers](/en-US/docs/Web/API/Service_Worker_API).
   A subset of the Cookie Store API has been implemented ([Firefox bug 1937477](https://bugzil.la/1937477)). This includes:
 
@@ -61,24 +61,25 @@ This article provides information about the changes in Firefox 136 that affect d
 
 #### General
 
-- Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzilla.mozilla.org/show_bug.cgi?id=1927721)).
+- Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzil.la/1927721)).
 
-- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzilla.mozilla.org/show_bug.cgi?id=1943551)).
+- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzil.la/1943551)).
 
 #### WebDriver BiDi
 
-- The `session.subscribe` command now returns a subscription ID, which can be used with `session.unsubscribe` to precisely target the same previously subscribed events and contexts as the original subscription. This helps prevent unintended side effects when multiple subscriptions exist, such as those limited to a specific tab ([Firefox bug 1938576](https://bugzilla.mozilla.org/show_bug.cgi?id=1938576)).
+- The `session.subscribe` command now returns a subscription ID, which can be used with `session.unsubscribe` to precisely target the same previously subscribed events and contexts as the original subscription. This helps prevent unintended side effects when multiple subscriptions exist, such as those limited to a specific tab ([Firefox bug 1938576](https://bugzil.la/1938576)).
 
   Note: The previous logic for removing events by name and context has been deprecated and will be removed in a future release.
 
-- Added support for the `userContexts` field in the `script.addPreloadScript` command, allowing clients to specify in which user contexts (containers) the script should always be loaded automatically, including any new browsing contexts opened within such specified user contexts ([Firefox bug 1940927](https://bugzilla.mozilla.org/show_bug.cgi?id=1940927)).
+- Added support for the `userContexts` field in the `script.addPreloadScript` command, allowing clients to specify in which user contexts (containers) the script should always be loaded automatically, including any new browsing contexts opened within such specified user contexts ([Firefox bug 1940927](https://bugzil.la/1940927)).
 
-- The `browsingContext.contextDestroyed` event now returns a fully serialized browsing context tree when a context is closed, including all its child contexts ([Firefox bug 1860955](https://bugzilla.mozilla.org/show_bug.cgi?id=1860955)).
+- The `browsingContext.contextDestroyed` event now returns a fully serialized browsing context tree when a context is closed, including all its child contexts ([Firefox bug 1860955](https://bugzil.la/1860955)).
 
 ## Changes for add-on developers
 
+- Adds the `preferred_environment` property to the [`background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background), enabling extensions to request that the browser run their background scripts as a document or service worker ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
-- A new version of the {{WebExtAPIRef("userScripts")}} API is available. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
+- A new version of the {{WebExtAPIRef("userScripts")}} API is available on desktop Firefox. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
 
 ## Experimental web features
 
@@ -91,7 +92,7 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
   ([Firefox bug 1886820](https://bugzil.la/1886820)).
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`.
-  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
+  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
 - **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
   The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.

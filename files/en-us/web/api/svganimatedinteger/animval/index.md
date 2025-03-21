@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedInteger.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer). If no animation is applied, `animVal` equals `baseVal`.
+The **`animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an [`<integer>`](/en-US/docs/Web/SVG/Guides/Content_type#integer). If no animation is applied, `animVal` equals `baseVal`.
 
 Some attributes, like the {{SVGAttr("numOctaves")}} attribute of the {{SVGElement("feTurbulence")}} element or the {{SVGAttr("order")}} attribute of the {{SVGElement("feConvolveMatrix")}} accept a `long` integer as a value. This property provides access to the current animated state of the attribute as a number.
 
@@ -41,6 +41,6 @@ console.log(animatedInteger.animVal); // Output: 4 (the current animated value)
 
 ## See also
 
-- [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer)
+- [`<integer>`](/en-US/docs/Web/SVG/Guides/Content_type#integer)
 - {{SVGAttr("numOctaves")}}
 - {{SVGAttr("order")}}

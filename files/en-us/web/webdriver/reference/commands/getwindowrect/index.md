@@ -12,9 +12,9 @@ The command operates on the currently selected window, and returns size and posi
 
 ## Syntax
 
-| Method                                    | URI template                        |
-| ----------------------------------------- | ----------------------------------- |
-| [`GET`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/window/rect` |
+| Method                                              | URI template                        |
+| --------------------------------------------------- | ----------------------------------- |
+| [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) | `/session/{session id}/window/rect` |
 
 ### URL parameters
 

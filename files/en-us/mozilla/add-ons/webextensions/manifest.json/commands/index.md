@@ -63,7 +63,7 @@ The `suggested_key` property is an object with any or none of these properties (
 - `"android"`
 - `"ios"`
 
-The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "`+`". The value for `"default"` is used on all platforms that aren't explicitly listed. If `"default"`` isn't included, the command doesn't have a keyboard shortcut on any platform not included, unless a shortcut is configured by the user or through the {{WebExtAPIRef("commands.update")}} API.
+The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "`+`". The value for `"default"` is used on all platforms that aren't explicitly listed. If `"default"` isn't included, the command doesn't have a keyboard shortcut on any platform not included, unless a shortcut is configured by the user or through the {{WebExtAPIRef("commands.update")}} API.
 
 For example:
 

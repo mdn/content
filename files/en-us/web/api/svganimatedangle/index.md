@@ -9,7 +9,7 @@ browser-compat: api.SVGAnimatedAngle
 
 ## SVG animated angle interface
 
-The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>](/en-US/docs/Web/SVG/Content_type#angle) which can be animated.
+The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>](/en-US/docs/Web/SVG/Guides/Content_type#angle) which can be animated.
 
 ### Interface overview
 

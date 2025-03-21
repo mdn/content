@@ -17,7 +17,7 @@ The sounds a person hears every day are, then, actually vibrations in the air wh
 
 The higher the amplitude (height) of the wave, the louder the sound is at that instant. The shorter the wavelength (the closer together the crests of the wave are), the higher the frequency (or pitch) of the sound that's produced.
 
-![A simple sound waveform](audio-waveform.svg)
+![A sound waveform](audio-waveform.svg)
 
 Computers, however, are digital. In order to represent a sound wave in a way computers can manipulate and work with (let alone transmit over a network), the sound has to be converted into a digital form. This process is called **analog to digital conversion** (**A/D** for short).
 
@@ -183,7 +183,7 @@ These parameters vary depending on the codec, but can include:
 
 Most codecs have input values you can tune to optimize the compression in various ways, either for size or for quality. When using a lossy encoder, the higher the quality, the larger the encoded audio will be. Because of this, most options affect both quality and size in some manner.
 
-You will need to refer to the documentation for the encoding software you use to determine which options are available, which will depend on the codec and the encoding software itself. Some codecs have a number of values you can adjust (some of which may require a deep understanding of both psychoacoustics and of the codec's algorithms), and others offer a simple "quality" parameter you can set, which automatically adjusts various properties of the algorithm.
+You will need to refer to the documentation for the encoding software you use to determine which options are available, which will depend on the codec and the encoding software itself. Some codecs have a number of values you can adjust (some of which may require a deep understanding of both psychoacoustics and of the codec's algorithms), and others offer a "quality" parameter you can set, which automatically adjusts various properties of the algorithm.
 
 ### Bit rate
 

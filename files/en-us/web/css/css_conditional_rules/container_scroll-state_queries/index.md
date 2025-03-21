@@ -92,126 +92,136 @@ We have hidden most of the HTML for brevity.
     </header>
 
     <p>
-      Nunc vides, quid faciat. Quonam, inquit, modo? Nam quid possumus facere
-      melius? Duo Reges: constructio interrete. Cur iustitia laudatur? Videmus
-      igitur ut conquiescere ne infantes quidem possint.
+      Mauris non malesuada est, sed vestibulum nibh. Duis vestibulum iaculis
+      lectus, eu sagittis dolor dignissim iaculis. Nunc et orci sed sapien
+      eleifend placerat. Curabitur dapibus risus eget odio sollicitudin, sit
+      amet luctus justo pellentesque.
     </p>
 
     <p>
-      <strong>Nihil enim hoc differt.</strong> Neutrum vero, inquit ille.
-      <em>Huius ego nunc auctoritatem sequens idem faciam.</em> Prioris generis
-      est docilitas, memoria; Quae sequuntur igitur?
+      <strong>Morbi non pharetra quam.</strong> Fusce vestibulum sem diam, ac
+      consequat augue consectetur ut. Donec at augue viverra, tempus urna sit
+      amet, porta augue.
+      <em>Phasellus fringilla tincidunt sem ullamcorper varius.</em> Aenean
+      gravida feugiat sem nec ultricies.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Ne discipulum abducam, times. Quis enim redargueret?
-      <a href="#">Rationis enim perfectio est virtus;</a>
-      Erat enim Polemonis.
+      Sed pellentesque placerat mi sed maximus. Sed vitae dui vitae mi pulvinar
+      gravida sed et libero.
+      <a href="#">Duis nec venenatis dolor, sed tristique felis.</a>
+      Integer dapibus facilisis leo elementum vulputate. Curabitur a urna quis
+      nulla vulputate tincidunt quis ac enim.
     </p>
 
     <p>
-      Qua tu etiam inprudens utebare non numquam. Sed erat aequius Triarium
-      aliquid de dissensione nostra iudicare.
-      <strong
-        >Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;</strong
-      >
-      Omnes enim iucundum motum, quo sensus hilaretur.
+      Cras non elit vel leo dignissim convallis. Duis eros urna, varius sit amet
+      lorem vel, feugiat euismod est.
+      <strong>Aliquam ornare eu elit ut iaculis.</strong>
+      Suspendisse vulputate tempor leo, non rhoncus risus aliquam vel.
     </p>
   </section>
   <section>
     <header>
       <h2>This one, not so much</h2>
 
-      <p>Confecta res esset.</p>
+      <p>Suspendisse varius est ac turpis mollis cursus.</p>
     </header>
 
     <p>
-      <strong>Nam quid possumus facere melius?</strong> Tu quidem reddes; Omnia
-      peccata paria dicitis.
+      <strong
+        >Curabitur faucibus condimentum eros, ut auctor felis lacinia
+        sed.</strong
+      >
+      Praesent vitae scelerisque eros.
     </p>
 
     <p>
-      <em>Scrupulum, inquam, abeunti;</em> Quae cum dixisset, finem ille. Hoc
-      sic expositum dissimile est superiori.
+      <em>Ut vitae suscipit augue.</em> Cras et orci condimentum ante dignissim
+      iaculis. Sed consectetur quis est sed dignissim. Nulla egestas orci erat,
+      et commodo arcu feugiat ut.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Quid, de quo nulla dissensio est?
-      <a href="#">Nunc agendum est subtilius.</a>
-      Praeteritis, inquit, gaudeo. Iam in altera philosophiae parte.
+      Sed non tempor massa, at accumsan ante. Pellentesque habitant morbi
+      <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis
+      egestas.
     </p>
 
     <p>
-      Itaque ad tempus ad Pisonem omnes. Quantum Aristoxeni ingenium consumptum
-      videmus in musicis? Quis non odit sordidos, vanos, leves, futtiles? Atqui
-      reperies, inquit, in hoc quidem pertinacem; Duarum enim vitarum nobis
-      erunt instituta capienda.
+      Pellentesque placerat luctus tempor. Nunc congue dapibus eros, at
+      vulputate nulla. Sed rutrum eleifend magna vel porta. Integer cursus orci
+      faucibus turpis scelerisque, nec pharetra arcu molestie.
     </p>
   </section>
   <section>
     <header>
       <h2>Hopefully this section provides some clarity?</h2>
 
-      <p>Quid ad utilitatem tantae pecuniae?</p>
+      <p>Curabitur facilisis ornare lorem et eleifend.</p>
     </header>
 
     <p>
-      <strong>Memini me adesse P.</strong> Omnes enim iucundum motum, quo sensus
-      hilaretur. Optime, inquam.
+      <strong>Aenean mollis non neque sed finibus.</strong> Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Suspendisse sagittis viverra urna.
+      In hac habitasse platea dictumst. Vestibulum neque orci, mollis sagittis
+      augue et, pharetra vehicula diam.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      <a href="#">Sint modo partes vitae beatae.</a>
-      Sic enim censent, oportunitatis esse beate vivere.
-      <strong>Sed hoc sane concedamus.</strong> Aliter homines, aliter
-      philosophos loqui putas oportere? Non laboro, inquit, de nomine. Bork
+      <a href="#">Pellentesque sollicitudin</a> nunc quis nisl condimentum, ac
+      iaculis libero feugiat.
+      <strong>Nullam ultrices purus a nulla dignissim hendrerit.</strong> In
+      molestie consectetur est quis pulvinar.
     </p>
 
     <p>
-      Quo tandem modo? Ut pulsi recurrant? Quid ad utilitatem tantae pecuniae?
-      <strong>Sed in rebus apertissimis nimium longi sumus.</strong>
-      Rationis enim perfectio est virtus; Beatus autem esse in maximarum rerum
-      timore nemo potest.
+      Vivamus ac erat eu est lobortis commodo. Orci varius natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus. In nulla turpis,
+      <strong>mollis et est tempor</strong>, dignissim aliquam metus. Proin eu
+      arcu quis erat mollis pulvinar. Vivamus at facilisis neque.
     </p>
 
     <p>
-      Nulla erit controversia. Quae in controversiam veniunt, de iis, si placet,
-      disseramus. Sed potestne rerum maior esse dissensio? Tria genera bonorum;
-      Memini vero, inquam; Quam ob rem tandem, inquit, non satisfacit?
+      Integer bibendum laoreet erat, quis vulputate mauris bibendum nec. Class
+      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Nam ut est in arcu interdum hendrerit.
     </p>
   </section>
   <section>
     <header>
       <h2>A summary of sorts</h2>
 
-      <p>Quae est igitur causa istarum angustiarum?</p>
+      <p>Nunc facilisis augue quis ex porta aliquam.</p>
     </header>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      <strong>An eiusdem modi?</strong>
-      <strong>Et ille ridens: Video, inquit, quid agas;</strong> Conferam tecum,
-      quam cuique verso rem subicias; Putabam equidem satis, inquit, me dixisse.
-      Sed haec quidem liberius ab eo dicuntur et saepius.
+      <strong
+        >Fusce nisi enim, venenatis a est vel, varius placerat lacus.</strong
+      >
+      Nunc tempus rutrum nisl bibendum aliquet. Pellentesque vitae nunc sed nisl
+      tincidunt elementum a sit amet nisi. Morbi pretium at dolor in pulvinar.
+      Curabitur dapibus eleifend accumsan.
     </p>
 
     <p>
-      Non laboro, inquit, de nomine. <em>Falli igitur possumus.</em>
-      <a href="#">Praeteritis, inquit, gaudeo.</a>
-      Nescio quo modo praetervolavit oratio. Huius, Lyco, oratione locuples,
-      rebus ipsis ielunior. Quod ea non occurrentia fingunt, vincunt Aristonem;
+      Donec rhoncus, leo vitae mollis maximus, tellus lorem interdum arcu, eu
+      <em>tempor lectus libero in risus</em>. Ut sit amet magna vitae mauris
+      tempor bibendum. <a href="#">Integer id mauris ut ex mattis finibus.</a>
     </p>
 
     <p>
-      Cur deinde Metrodori liberos commendas? Quo modo? Ergo hoc quidem apparet,
-      nos ad agendum esse natos. Scrupulum, inquam, abeunti;
+      Curabitur dui felis, elementum et tellus id, blandit facilisis lorem.
+      Aliquam sed posuere ligula, at auctor ipsum. Morbi dignissim accumsan
+      tellus pretium iaculis.
     </p>
   </section>
 </article>
@@ -818,4 +828,4 @@ Try scrolling the document down and up, and note how the `<h2>` and `<p>` elemen
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-- [CSS positioning](/en-US/docs/Web/CSS/CSS_positioning) module
+- [CSS positioning](/en-US/docs/Web/CSS/CSS_positioned_layout) module

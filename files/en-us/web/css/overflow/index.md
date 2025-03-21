@@ -9,7 +9,47 @@ browser-compat: css.properties.overflow
 
 The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
 
-{{EmbedInteractiveExample("pages/css/overflow.html")}}
+{{InteractiveExample("CSS Demo: overflow")}}
+
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## Constituent properties
 

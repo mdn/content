@@ -851,7 +851,7 @@ body {
 - [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)
+- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a drag-and-drop inspection interface)
 - [Axis Praxis](https://www.axis-praxis.org/) (the original variable fonts playground site)
 - [V-Fonts.com](https://v-fonts.com/) (a catalog of variable fonts and where to get them)
 - [Font Playground](https://play.typedetail.com/) (another playground for variable fonts with some very unique approaches to user interface)

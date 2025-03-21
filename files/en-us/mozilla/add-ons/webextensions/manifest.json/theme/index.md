@@ -151,7 +151,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
     </tr>
     <tr>
       <td><code>additional_backgrounds</code></td>
-      <td><code>Array </code>of <code>String</code></td>
+      <td><code>Array</code> of <code>String</code></td>
       <td>
         <div class="warning">
           <p>
@@ -237,7 +237,7 @@ All these properties can be specified as either a string containing any valid [C
           </p>
           <p>
             Where <code>icons</code> isn't defined, also ensure good contrast
-            with<code> button_background_active</code> and
+            with <code>button_background_active</code> and
             <code>button_background_hover</code>.
           </p>
         </div>

@@ -9,7 +9,30 @@ browser-compat: css.properties.image-orientation
 
 The **`image-orientation`** [CSS](/en-US/docs/Web/CSS) property specifies a layout-independent correction to the orientation of an image.
 
-{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+{{InteractiveExample("CSS Demo: image-orientation")}}
+
+```css interactive-example-choice
+image-orientation: none;
+```
+
+```css interactive-example-choice
+image-orientation: from-image;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/hummingbird.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: inherit;
+}
+```
 
 ## Syntax
 

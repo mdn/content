@@ -49,8 +49,8 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Layout modes](/en-US/docs/Glossary/Layout_mode)
+  - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
@@ -59,4 +59,4 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+  - {{glossary("Replaced elements")}}

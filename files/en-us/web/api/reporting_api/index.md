@@ -13,14 +13,14 @@ spec-urls:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
 
-The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
+The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
 ## Concepts and usage
 
 There are several different features and problems on the web platform that generate information useful to web developers when they are trying to fix bugs or improve their websites in other ways. Such information can include:
 
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violations.
-- [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) violations.
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) violations.
+- [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) violations.
 - Deprecated feature usage (when you are using something that will stop working soon in browsers).
 - Occurrence of crashes.
 - Occurrence of user-agent interventions (when the browser blocks something your code is trying to do because it is deemed a security risk for example, or just plain annoying, like auto-playing audio).
@@ -87,7 +87,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ### Related interfaces
 
-These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) specifications:
+These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) specifications:
 
 - {{domxref("CSPViolationReportBody")}}
   - : Contains details of a CSP violation.
@@ -162,5 +162,5 @@ See the specific interfaces for more detailed support information.
 
 ## See also
 
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
-- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
+- [`Permissions-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy)

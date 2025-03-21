@@ -11,7 +11,7 @@ The **spread (`...`)** syntax allows an iterable, such as an array or string, to
 
 Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{InteractiveExample("JavaScript Demo: Spread syntax (...)")}}
 
 ```js interactive-example
 function sum(x, y, z) {

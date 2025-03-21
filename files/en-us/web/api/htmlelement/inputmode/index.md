@@ -41,8 +41,6 @@ This attribute may have one of the following values:
 
 For details on the usage of this attribute, see the page for the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) HTML attribute that this property reflects.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

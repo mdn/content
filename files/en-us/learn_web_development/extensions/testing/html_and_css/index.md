@@ -1,5 +1,6 @@
 ---
 title: Handling common HTML and CSS problems
+short-title: Common HTML and CSS problems
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 page-type: learn-module-chapter
 ---

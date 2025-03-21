@@ -27,8 +27,6 @@ The projection matrix for each eye's view is used to ensure that the correct are
 scene is presented to each eye in order to create a believable 3D scene without
 introducing discomfort for the user.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

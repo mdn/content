@@ -1,5 +1,6 @@
 ---
 title: "JavaScript: Adding interactivity"
+short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
 ---

@@ -102,8 +102,6 @@ The following properties are common to all WebRTC statistics objects.
 - {{domxref("RTCInboundRtpStreamStats.type", "type")}}
   - : A string with the value `"inbound-rtp"`, indicating the type of statistics that the object contains.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}
