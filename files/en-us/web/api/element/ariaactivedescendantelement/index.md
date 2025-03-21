@@ -24,8 +24,12 @@ The property can be set to an element in the current scope, or to an ancestor sc
 In other words, a shadow root can set an active descendant from within its own shadow DOM or the parent DOM, but a DOM element can't set an active descendent defined in a shadow root.
 Setting the `ariaActiveDescendantElement` to an element that is not in scope will fail, and the property will be set to `null`.
 
-The property also reflects the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, provided it is set with a valid reference `id` for an element in the current scope or an ancestor scope.
-If the attribute is set to an invalid reference (in HTML or with {{domxref("Element.setAttribute()")}}) then `ariaActiveDescendantElement` is set to `null`.
+If the `ariaActiveDescendantElement` property is set to an element that is subsequently moved out of scope the property will return `null` but the relationship is not severed!
+If the associated element is moved back into scope the relationship will be restored (provided it has not been replaced).
+
+The property also reflects the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, which can be set in HTML or with {{domxref("Element.setAttribute()")}}, provided it is set with a valid reference `id` for an element in the current scope or an ancestor scope.
+If the attribute is set to an invalid reference then `ariaActiveDescendantElement` is set to `null`.
+
 Note that when the property is set, the corresponding [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute is set to the empty string (`""`).
 
 ## Examples
@@ -186,94 +190,6 @@ The log below shows the output of the above code.
 The output demonstrates that `ariaActiveDescendantElement` property can be set using either the property or a valid reference in the `aria-activedescendant` attribute, and that setting the `ariaActiveDescendantElement` property sets the `aria-activedescendant` attribute to `""`.
 
 {{EmbedLiveSample("Set the active descendent2","100%","250px")}}
-
-<!-- Come back to this. Show shadow root can't be selected, and also this, that you can move in and out of scope -->
-<!--
-
-### Relationships are maintained when descendant out of scope
-
-This example shows that the relationship with `ariaActiveDescendantElement` is maintained when the descendent is out of scope in a shadow DOM, but restored when the element returns to the DOM.
-
-#### HTML
-
-The HTML defines a listbox for selecting different kinds of streets, consisting of a {{htmlelement("div")}} element with the [`listbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) and nested `<div>` items for each of the options.
-Noe active descendent is initially set.
-
-```html
-<div id="streetType" role="listbox">
-  <div id="street">Street</div>
-  <div id="avenue">Avenue</div>
-  <div id="lane">Lane</div>
-</div>
-<div id="shadowElement"></div>
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 150px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-#### JavaScript
-
-The code below first checks whether the `ariaActiveDescendantElement` is supported, and then logs the value of the active descendant's text content, the element, and the `id` reference from the attribute.
-The element is then moved in and then out of a shadow root, logging the same information again each time.
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js
-// Feature test for ariaActiveDescendantElement
-if ("ariaActiveDescendantElement" in Element.prototype) {
-  const laneElement = document.getElementById("lane");
-  const shadowRoot = shadowElement.attachShadow({ mode: "open" });
-
-  // We make the active descendant of the streetType the lane.
-  streetType.ariaActiveDescendantElement = laneElement;
-  log(
-    `txt: ${streetType.ariaActiveDescendantElement?.textContent.trim()}, el: ${streetType.ariaActiveDescendantElement}, id: ${streetType.getAttribute("aria-activedescendant")}`,
-  );
-
-  // We then move the referenced element (lane) into shadow DOM (fridge).
-  shadowRoot.appendChild(laneElement);
-  // The active descendant relationship is now non-observable.
-  //element should be null - referenced element out of scope
-  // but the referenced element id should still be here
-  log(
-    `txt: ${streetType.ariaActiveDescendantElement?.textContent.trim()}, el: ${streetType.ariaActiveDescendantElement}, id: ${streetType.getAttribute("aria-activedescendant")}`,
-  );
-
-  // Move the referenced element (lane) back into the DOM
-  streetType.appendChild(laneElement);
-  // Our active descendant relationship remained intact!
-  log(
-    `txt: ${streetType.ariaActiveDescendantElement?.textContent.trim()}, el: ${streetType.ariaActiveDescendantElement}, id: ${streetType.getAttribute("aria-activedescendant")}`,
-  );
-} else {
-  log("ariaActiveDescendantElement not supported by browser");
-}
-```
-
-#### Result
-
-The log below shows the output of the above code.
-The first line shows the element when it is first assigned as the active descendent, the second shows the result after moving it into the shadow root, and the last line shows the result after returning the element to the DOM.
-What we see is that the element is not found when it is out of scope in the DOM, but it is restored as the active descendant when it is returned to the DOM.
-
-{{EmbedLiveSample("Set the active descendent programmatically2","100%","250px")}}
--->
 
 ## Specifications
 
