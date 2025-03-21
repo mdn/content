@@ -1,5 +1,5 @@
 ---
-title: scripting.registerContentScripts()
+title: scripting.registerContentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/registerContentScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.registerContentScripts
