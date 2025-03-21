@@ -112,7 +112,7 @@ See [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feat
 ```css
 @supports (display: grid) {
   .box {
-    display: grid
+    display: grid;
     gap: 2rem;
   }
 }
