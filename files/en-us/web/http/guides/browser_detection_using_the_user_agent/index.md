@@ -21,8 +21,9 @@ console.log(window.navigator.userAgent);
 // Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-It may be tempting for developers to parse the UA string (sometimes called "UA sniffing") and then change how their sites behave based on the values in the UA string, but doing this reliably and with confidence that it's correct is very hard to do.
-This document describes common pitfalls to browser detection, the recommended alternatives, and provides some hints for UA detection if it's absolutely necessary.
+While it may be tempting to parse the UA string (sometimes called "UA sniffing") and change how a site behaves based on the values in the UA string, this is very hard to do reliably.
+This document describes common pitfalls of using the UA string for browser detection and the recommended alternatives.
+At the end we provide some hints for UA detection using the string, but only if it's absolutely necessary!
 
 ## Problems with browser detection
 
@@ -47,7 +48,7 @@ console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
-This code mistakenly makes several assumptions:
+This code makes several assumptions that may not be true, and which can break this code if it is run on the wrong browser:
 
 1. All user agent strings that include the substring `Chrome` indicate a Chrome browser.
 2. The lookbehind feature is always available if the browser is Chrome.
@@ -55,7 +56,7 @@ This code mistakenly makes several assumptions:
 3. Most importantly, it assumes no other browsers support the feature, when it could be added to any other browser at any time.
    All non-matching browsers will be stuck using an inefficient fallback.
 
-## How to avoid browser detection
+## Invalid reason to use browser sniffing
 
 There are ways to develop your website so that it's progressively enhanced based on the availability of features in a client rather than targeting specific browsers.
 For this reason, the first avenue to explore before starting to detect browsers via UA string is **how to avoid this**, if possible.
