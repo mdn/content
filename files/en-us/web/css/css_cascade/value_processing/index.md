@@ -6,32 +6,32 @@ page-type: guide
 
 {{CSSRef}}
 
-For every element in a document tree, the browser assigns a value to every CSS property that applies to that element. The rendered value of each CSS property for a given element or box is the result of a calculation based on stylesheet definitions, inheritance, the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade), dependencies, unit conversion, and the display environment. This guide provides an overview of the processing steps applied to define each CSS value is ultimately rendered by exploring key concepts like specified, computed, used, and actual values.
+For every element in a document tree, the browser assigns a value to every CSS property that applies to that element. The rendered value of each CSS property for a given element or box is the result of a calculation based on stylesheet definitions, inheritance, the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade), dependencies, unit conversion, and the display environment. This guide provides an overview of the processing steps applied to define how each CSS value is ultimately rendered by exploring key concepts like specified, computed, used, and actual values.
 
 ## Property values
 
-Every CSS property's value comes from the declaration with the greatest {{cssxref("specificity")}}. If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Every CSS property's value comes from the declaration with the greatest {{cssxref("specificity")}}. If two or more declarations with the same specificity provide different property values for the same element, the declaration value whose selector has the greatest algorithmic weight gets applied.
 
 Each property value comes from a single property-value pair; is single value is applied from each property. Even if the value is a comma separated list of values, that list of values came from a single declaration.
 
-To determine which specified value is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, internal and external stylesheets.
+To determine which specified value is applied, the user agent gathers and processes all the styles from different sources, such as inline styles, and internal and external stylesheets.
 
-Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for an element for a specific property. If the property is inherited properties, the value is set to the [computed value](#computed-value) of the parent element. If the property is non-inherited properties, it is set to the [initial value](#initial-value) of the property
+Certain properties inherit values from their parent elements unless explicitly overridden. [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) occurs when no style information exists for a specific property on an element. If the property is inherited, the value is set to the [computed value](#computed-value) of the parent element. If the property is not inherited, its value is set to the [initial value](#initial-value) for that element.
 
-The [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which value should be applied when multiple conflicting styles target the same element. The cascade is an algorithm that defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [specified value](#specified-value) from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
+The [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) determines which value should be applied when multiple conflicting styles target the same element. The cascade algorithm defines how user agents combine property values originating from different sources, scopes, and/or layers. When a selector matches an element, the property's [specified value](#specified-value) from the origin with the highest precedence gets applied, even if a selector from a lower precedence origin or layer has greater {{cssxref("specificity")}}.
 
 After applying the cascading rules and resolving values step by step, the browser ensures the visual presentation matches the processed CSS.
 
 ## Processing stages
 
-All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS "`p { font-size: 1.25em; }`" and your HTML includes "`<p>CSS is fun!</p>`", what size will the paragraph be? The {{cssxref("font-size")}} value goes through a few stages to go from the `em` specified value to the rendered `px` value.
+All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS "`p { font-size: 1.25em; }`" and your HTML includes "`<p>CSS is fun!</p>`", what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
 
 - [Initial value](#initial-value)
 - [Specified value](#specified-value)
 - [Computed value](#computed-value)
 - [Used Value](#used-value)
 
-These value are then used to determine the [rendered values](#rendered-values).
+These values are used to determine the final [rendered value](#rendered-values).
 
 ### Initial value
 
@@ -41,24 +41,24 @@ For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited
 
 - For [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no specified value is supplied.
 
-You can explicitly specify the initial value by using the {{cssxref("initial")}} keyword.
+You can explicitly set the initial value by using the {{cssxref("initial")}} keyword.
 
 > [!NOTE]
 > The initial value for can be found in the formal syntax section of each CSS property reference page. For example, the [initial value of `font-size` is `medium`](/en-US/docs/Web/CSS/font-size#formal_definition). The initial value should not be confused with the value specified by the browser's style sheet.
 
 ### Specified value
 
-The **specified value** is the value initially assigned in the CSS file or by the style attribute. The specified value for a given property is determined according to the following rules:
+The **specified value** is the value initially assigned in the CSS file or by the `style` attribute. The specified value for a given property is determined according to the following rules:
 
 1. If the document's style sheet explicitly specifies a value for the property, the given value will be used.
 2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
 3. If none of the above apply, the element's [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value) will be used.
 
-In the example, "`p { font-size: 1.25em; }`", the specified value is `1.2em`, unless the codebase includes a `font-size` declaration with greater {{cssxref("specificity")}}.
+In the example, "`p { font-size: 1.25em; }`", the specified value is `1.25em`, unless the codebase includes a `font-size` declaration with greater {{cssxref("specificity")}}.
 
 ### Computed value
 
-The **computed value** of a property is the value that is transferred from parent to child during inheritance. It is the result after resolving things like relative units and custom properties into absolute values, but still before considering layout-specific information.
+The **computed value** of a property is the value transferred from parent to child during inheritance. It is the result after resolving things like relative units and custom properties into absolute values, but before considering layout-specific information.
 
 The computed value is calculated from the [specified value](#specified-value) by:
 
@@ -73,11 +73,11 @@ Given "`p { font-size: 1.25em; }`", if `em` is `16px`, the computed font size fo
 
 ### Used value
 
-The **used value** is the property's value after all calculations have been performed on the [computed value](#computed-value); the computed value refined with layout-specific details (e.g., percentages resolved to actual pixel values)
+The **used value** is the property's value after all calculations have been performed on the [computed value](#computed-value) and it has been refined with layout-specific details (e.g., percentages resolved to actual pixel values).
 
-Every CSS property has a used value. The used values of dimensions (e.g., {{cssxref("width")}}, {{cssxref("line-height")}}) are in pixels. The used values of shorthand properties (e.g., {{cssxref("background")}}) are consistent with those of their component properties (e.g., {{cssxref("background-color")}} or {{cssxref("background-size")}}) and with {{cssxref("position")}} and {{cssxref("float")}}.
+Every CSS property has a used value. The used values of dimensions (e.g., {{cssxref("width")}} or {{cssxref("line-height")}}) are in pixels. The used values of shorthand properties (e.g., {{cssxref("background")}}) are consistent with those of their component properties (e.g., {{cssxref("background-color")}} or {{cssxref("background-size")}}) and with {{cssxref("position")}} and {{cssxref("float")}}.
 
-The used value for the {{cssxref("width")}} or "{{cssxref("inline-size")}} of an element is a pixel value even if the specified value of the property was set with percents or keyword values.
+The used value for the {{cssxref("width")}} or {{cssxref("inline-size")}} of an element is a pixel value even if the specified value of the property was set with percentages or keyword values.
 
 If we have three container elements with their width set as `auto`, `50%`, and `inherit`:
 
@@ -136,7 +136,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-While the three specified values, `auto`, `50%`, and `inherit`, were keyword and {{cssxref("percentage")}} values, retrieving the `width` using `window.getComputedStyle(el)["width"];` returns an [absolute length](/en-US/docs/Web/CSS/length#absolute_length_units) `px` value:
+While the three specified values, `auto`, `50%`, and `inherit`, are keyword and {{cssxref("percentage")}} values, retrieving the `width` using `window.getComputedStyle(el)["width"];` returns an [absolute length](/en-US/docs/Web/CSS/length#absolute_length_units) `px` value:
 
 {{ EmbedLiveSample('Example', '80%', 372) }}
 
@@ -144,7 +144,7 @@ Change the window size or rotate your mobile device to change the size and the u
 
 ## Rendered values
 
-The rendered values is called the [actual value](#actual-value), while the values that are retrieved via scripts are called the [resolved values](#resolved-value).
+The rendered value is called the [actual value](#actual-value), while the value retrieved via script is called the [resolved value](#resolved-value).
 
 ### Actual Value
 
@@ -165,7 +165,7 @@ Historically, `getComputedStyle()` returned the computed value of an element or 
 
 For most properties, the resolved value is the computed value, but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is the used value. The [CSSOM specification](https://drafts.csswg.org/cssom/#resolved-values) provides per-property details.
 
-CSS 2.0 defined _computed value_ as the last step in a property's calculation. CSS 2.1 introduced the distinct definition of "used value". An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q21.36)):
+CSS 2.0 defined _computed value_ as the last step in a property's calculation. CSS 2.1 introduced the distinct definition of "used value". An element could then explicitly inherit the width/height of its parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following list contains the CSS 2.1 properties that _do_ depend on layout, and therefore have a different computed value and used value (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q21.36)):
 
 - {{cssxref("background-position")}}
 - {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("top")}}
