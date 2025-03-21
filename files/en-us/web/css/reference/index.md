@@ -123,12 +123,12 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Values
 
-- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
+- [Actual value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual-value)
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value)
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value)
 - [Resolved value](/en-US/docs/Web/CSS/resolved_value)
-- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value)
-- [Used value](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+- [Specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified-value)
+- [Used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value)
 
 ### Layout
 

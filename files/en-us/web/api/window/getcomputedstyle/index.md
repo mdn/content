@@ -152,9 +152,9 @@ Java.
   using array or [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
 - The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value).
   These are usually the same as CSS 2.1's
-  [computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value), but for some older properties
+  [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed-value), but for some older properties
   like `width`, `height`, or `padding`, they are
-  instead the same as [used values](/en-US/docs/Web/CSS/CSS_cascade/used_value). Originally, CSS
+  instead the same as [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used-value). Originally, CSS
   2.0 defined the _computed values_ as the "ready to be used" final values of
   properties after cascading and inheritance, but CSS 2.1 redefined them as pre-layout,
   and _used values_ as post-layout. For CSS 2.0 properties,
