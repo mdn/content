@@ -27,7 +27,7 @@ None.
 
 A {{domxref("StylePropertyMapReadOnly")}} object.
 
-Unlike {{domxref("Window.getComputedStyle")}}, the return value contains [computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value), not [resolved values](/en-US/docs/Web/CSS/resolved_value). For most properties, they are the same, except a few layout-related properties, where the resolved value is the [used value](/en-US/docs/Web/CSS/used_value) instead of the computed value. See the [difference with `getComputedStyle()`](#difference_with_getcomputedstyle) example for details.
+Unlike {{domxref("Window.getComputedStyle")}}, the return value contains [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), not [resolved values](/en-US/docs/Web/CSS/Value_processing#resolved_value). For most properties, they are the same, except a few layout-related properties, where the resolved value is the [used value](/en-US/docs/Web/CSS/Value_processing#used_value) instead of the computed value. See the [difference with `getComputedStyle()`](#difference_with_getcomputedstyle) example for details.
 
 ## Examples
 
