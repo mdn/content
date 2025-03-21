@@ -494,4 +494,4 @@ document.querySelector("button").addEventListener("click", (e) => {
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [HTML `data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Attribute/data-*)
+- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*)
