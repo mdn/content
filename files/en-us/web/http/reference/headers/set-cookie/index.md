@@ -161,7 +161,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     - `None`
 
       - : Send the cookie with both cross-site and same-site requests.
-        The `Secure` attribute must also be set when setting this value.
+        The `Secure` attribute must also be set when using this value.
 
 - `Secure` {{optional_inline}}
 
