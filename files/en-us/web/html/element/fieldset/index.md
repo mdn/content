@@ -130,7 +130,7 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
         <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root"
           >sectioning root</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
         <a

@@ -99,7 +99,7 @@ Tables are typically used for matrix-like expressions (including vectors). Here 
 
 ## Allowing cells to span multiple rows and columns
 
-This is again similar to [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
+This is again similar to [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
 
 ```html hidden
 <!doctype html>

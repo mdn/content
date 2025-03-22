@@ -100,7 +100,7 @@ See {{glossary("Fetch metadata request header")}} for the complete list of Fetch
 
 ### Avoiding simple requests
 
-Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/CORS#simple_requests) and other requests.
+Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/Guides/CORS#simple_requests) and other requests.
 
 Simple requests, which are the sort of request that result from a `<form>` element submission, can be made cross-origin without being blocked. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests. This is why we need to implement other strategies to defend forms against CRSF, such as using a CSRF token.
 
@@ -138,7 +138,7 @@ The server can then check for the existence of the header: if it exists, then th
 
 #### Non-simple requests and CORS
 
-We've said that non-simple requests are _by default_ not sent cross-origin. The catch is that the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) protocol allows a website to relax this restriction.
+We've said that non-simple requests are _by default_ not sent cross-origin. The catch is that the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) protocol allows a website to relax this restriction.
 
 Specifically, your website will be vulnerable to a CSRF attack from a particular origin if its response to a state-changing request includes:
 
@@ -147,7 +147,7 @@ Specifically, your website will be vulnerable to a CSRF attack from a particular
 
 ### Defense in depth: SameSite cookies
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute provides some protection against CSRF attacks. It's not a complete defense, and is best considered as an addition to one of the other defenses, providing some degree of defense in depth.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute provides some protection against CSRF attacks. It's not a complete defense, and is best considered as an addition to one of the other defenses, providing some degree of defense in depth.
 
 This attribute controls when a browser is allowed to include the cookie in a cross-site request. It has three possible values: `None`, `Lax` and `Strict`.
 

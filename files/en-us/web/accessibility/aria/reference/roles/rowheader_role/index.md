@@ -148,7 +148,7 @@ none
 
 - [The HTML `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
-- [HTML table tutorial](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics/Basics)
+- [HTML table tutorial](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 - [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)

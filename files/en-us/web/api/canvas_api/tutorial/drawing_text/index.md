@@ -80,50 +80,38 @@ The following diagram from the [HTML spec](https://html.spec.whatwg.org/multipag
 
 ![The em-over baseline is roughly at the top of the glyphs in a font, the hanging baseline is where some glyphs like आ are anchored, the middle is half-way between the em-over and em-under baselines, the alphabetic baseline is where characters like Á, ÿ, f, and Ω are anchored, the ideographic-under baseline is where glyphs like 私 and 達 are anchored, and the em-under baseline is roughly at the bottom of the glyphs in a font. The top and bottom of the bounding box can be far from these baselines, due to glyphs extending far outside em-over and em-under baselines.](baselines.png)
 
-### A textBaseline example
+### A `textBaseline` example
 
-Edit the code below and see your changes update live in the canvas:
+This example demonstrates the various `textBaseline` property values.
+See the [`CanvasRenderingContext2D.textBaseline`](/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline) page for more information and detailed examples.
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);
-</textarea>
+```html hidden live-sample___textBaseline
+<canvas id="canvas" width="400" height="100"></canvas>
 ```
 
-```js hidden
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
+```js live-sample___textBaseline
+function draw() {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+  ctx.textBaseline = "hanging";
+  ctx.strokeText("hanging", 10, 50);
+
+  ctx.textBaseline = "middle";
+  ctx.strokeText("middle", 250, 50);
+
+  ctx.beginPath();
+  ctx.moveTo(10, 50);
+  ctx.lineTo(300, 50);
+  ctx.stroke();
 }
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-});
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('A_textBaseline_example', 700, 400) }}
+```js hidden live-sample___textBaseline
+draw();
+```
+
+{{EmbedLiveSample('textBaseline', 310, 110)}}
 
 ## Advanced text measurements
 

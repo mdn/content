@@ -52,7 +52,7 @@ The **specified value** is the value initially assigned in the CSS file or by th
 
 1. If the document's style sheet explicitly specifies a value for the property, the given value will be used.
 2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
-3. If none of the above apply, the element's [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value) will be used.
+3. If none of the above apply, the element's [initial value](#initial_value) will be used.
 
 In the example, "`p { font-size: 1.25em; }`", the specified value is `1.25em`, unless the codebase includes a `font-size` declaration with greater {{cssxref("specificity")}}.
 
@@ -152,7 +152,7 @@ The **actual value** of a property is the [used value](#used-value) of that prop
 
 The calculation includes these steps:
 
-1. First, the [specified value](#specified-valuespecified_value) is determined based on the result of [cascading](/en-US/docs/Web/CSS/CSS_cascade/Cascade), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), or using the [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial-value).
+1. First, the [specified value](#specified-valuespecified_value) is determined based on the result of [cascading](/en-US/docs/Web/CSS/CSS_cascade/Cascade), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), or using the [initial value](#initial_value).
 2. Next, the [computed value](#computed-value) is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
 3. Then, layout is calculated, resulting in the [used value](#used-value).
 4. Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.

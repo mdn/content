@@ -280,7 +280,6 @@ Content-Security-Policy: script-src 'inline-speculation-rules'
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("Sources")}}
 - {{HTMLElement("script")}}
 - {{CSP("script-src-elem")}}
 - {{CSP("script-src-attr")}}
