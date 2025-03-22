@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.JSON.parse
 
 The **`JSON.parse()`** static method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -139,7 +150,7 @@ console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
 const map2 = JSON.parse(jsonText, (key, value) =>
-  Array.isArray(value) ? new Map(value) : value,
+  Array.isArray(value) && value.every(Array.isArray) ? new Map(value) : value,
 );
 
 console.log(map2);
@@ -152,19 +163,35 @@ Because JSON has no syntax space for annotating type metadata, in order to reviv
 - "Guess" based on the structure of the data (for example, an array of two-member arrays)
 - If the shape of the payload is fixed, based on the property name (for example, all properties called `registry` hold `Map` objects).
 
-### JSON.parse() does not allow trailing commas
+### Illegal JSON
+
+When `JSON.parse` receives a string that does not conform to the JSON grammar, it throws a `SyntaxError`.
+
+Arrays and objects cannot have [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in JSON:
 
 ```js example-bad
-// both will throw a SyntaxError
 JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
+// SyntaxError: Unexpected token ] in JSON at position 13
+
+JSON.parse('{"foo": 1, }');
+// SyntaxError: Unexpected token } in JSON at position 12
 ```
 
-### JSON.parse() does not allow single quotes
+JSON strings must be delimited by double (not single) quotes:
 
 ```js example-bad
-// will throw a SyntaxError
 JSON.parse("{'foo': 1}");
+// SyntaxError: Unexpected token ' in JSON at position 1
+
+JSON.parse("'string'");
+// SyntaxError: Unexpected token ' in JSON at position 0
+```
+
+If you are writing JSON inside a JavaScript string literal, you should either use single quotes to delimit the JavaScript string literal, or escape the double quotes that delimit the JSON string:
+
+```js-nolint example-good
+JSON.parse('{"foo": 1}'); // OK
+JSON.parse("{\"foo\": 1}"); // OK
 ```
 
 ## Specifications

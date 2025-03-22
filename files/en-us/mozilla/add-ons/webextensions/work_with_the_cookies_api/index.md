@@ -8,7 +8,8 @@ page-type: guide
 
 With the Cookies API your extensions have access to capabilities similar to those used by websites to store and read cookies. The API's features give extensions the ability to store information on a site-by-site basis. So, as we shall see in the example, you could store details of a user's choice of background color for a site. Then, when the user revisits the site, your extension can use the API's ability to get details about cookies and read them to recover the user's choice and apply it to the website.
 
-> **Note:** The behavior of cookies can be controlled using the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property. This property controls whether and how cookies are accepted or whether all cookies are treated as session cookies.
+> [!NOTE]
+> The behavior of cookies can be controlled using the {{WebExtAPIRef("privacy.websites")}} `cookieConfig` property. This property controls whether and how cookies are accepted or whether all cookies are treated as session cookies.
 
 ## Permissions
 
@@ -88,7 +89,7 @@ Firefox provides three types of cookie store:
 - The default store, which stores cookies from normal browsing.
 - Private browsing mode stores, which stores cookies created during a private browsing session. These stores and any cookies they contain are removed when the related private browsing window closes.
 
-  > **Note:**
+  > [!NOTE]
   > Only visible if {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}} returns true. Safari doesn't support access to private cookies.
 
 - Container tabs stores, which stores cookies for each contextual identity in Firefox. Contextual identities enable a user to maintain multiple identities within one browser window. This is useful if, for example, you've a company and personal email account on Gmail. With contextual identities, you can open one tab against a personal identity and a second tab against a business identity. Each tab can then sign into Google mail with a different username, and the two accounts can be used side-by-side. For more information, see [Security/Contextual Identity Project/Containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) in the Mozilla wiki.

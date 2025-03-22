@@ -9,7 +9,7 @@ browser-compat: webextensions.api.cookies.set
 
 The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
 
-The call succeeds only if you include the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, as well as [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the given URL specified in its manifest. The given URL also needs the necessary permissions to create a cookie with the given parameters.
+To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -25,16 +25,16 @@ let setting = browser.cookies.set(
 
 - `details`
 
-  - : An `object` containing the details of the cookie you wish to set. It can have the following properties:
+  - : An `object` containing the details of the cookie you wish to set. It can have these properties:
 
     - `domain` {{optional_inline}}
       - : A `string` representing the domain of the cookie. If omitted, the cookie becomes a host-only cookie.
     - `expirationDate` {{optional_inline}}
       - : A `number` that represents the expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
     - `firstPartyDomain` {{optional_inline}}
-      - : A `string` representing the first-party domain with which the cookie will be associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
+      - : A `string` representing the first-party domain with which the cookie is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
     - `httpOnly` {{optional_inline}}
-      - : A `boolean` that specifies whether the cookie should be marked as HttpOnly (`true`), or not (false). If omitted, it defaults to false.
+      - : A `boolean` that specifies whether the cookie is marked as HttpOnly (`true`), or not (false). If omitted, it defaults to false.
     - `name` {{optional_inline}}
       - : A `string` representing the name of the cookie. If omitted, this is empty by default.
     - `partitionKey` {{optional_inline}}
@@ -49,25 +49,28 @@ let setting = browser.cookies.set(
     - `sameSite` {{optional_inline}}
       - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie. If omitted, it defaults to 0, 'no_restriction'.
     - `secure` {{optional_inline}}
-      - : A `boolean` that specifies whether the cookie should be marked as secure (`true`), or not (false). If omitted, it defaults to false.
+      - : A `boolean` that specifies whether the cookie is marked as secure (`true`), or not (false). If omitted, it defaults to false.
     - `storeId` {{optional_inline}}
-      - : A `string` representing the ID of the cookie store in which to set the cookie. If omitted, the cookie is set in the current execution context's cookie store by default.
+      - : A `string` representing the ID of the cookie store in which to set the cookie. If omitted, the cookie is set in the current execution context's cookie store.
     - `url`
-      - : A `string` representing the request-URI to associate with the cookie. This value can affect the default domain and path values of the created cookie. If host permissions for this URL are not specified in the manifest file, the method call will fail.
+      - : A `string` representing the request-URI to associate with the cookie. This value can affect the default domain and path values of the created cookie. If host permissions for this URL are not specified in the manifest file, the method call fails.
     - `value` {{optional_inline}}
       - : A `string` representing the value of the cookie. If omitted, this is empty by default.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been set. If the call fails for any reason, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been set.
 
-## Browser compatibility
+If there is more than one cookie with the same name for a URL, the cookie with the longest path is returned. For cookies with the same path length, the cookie with the earliest creation time is returned.
 
-{{Compat}}
+> [!NOTE]
+> Before Firefox 133, when there was more than one cookie with the same name, Firefox returned the cookie with the earliest creation time.
+
+If the call fails, the promise is rejected with an error message.
 
 ## Examples
 
-This example sets a cookie for the document hosted by the currently active tab:
+This example sets a cookie for the document hosted by the active tab:
 
 ```js
 let getActive = browser.tabs.query({ active: true, currentWindow: true });
@@ -84,7 +87,12 @@ function setCookie(tabs) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#method-set) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

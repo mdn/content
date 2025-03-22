@@ -77,7 +77,7 @@ The asterisk is optional with simple selectors. For instance, `*.warning` and `.
 In this example the selector will only match elements in the example namespace.
 
 ```css
-@namespace example url(http://www.example.com);
+@namespace example url(http://www.example.com/);
 example|* {
   color: blue;
 }
@@ -94,4 +94,4 @@ example|* {
 ## See also
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

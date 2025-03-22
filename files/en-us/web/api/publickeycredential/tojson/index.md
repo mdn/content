@@ -3,12 +3,10 @@ title: "PublicKeyCredential: toJSON() method"
 short-title: toJSON()
 slug: Web/API/PublicKeyCredential/toJSON
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.toJSON
 ---
 
-{{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`toJSON()`** method of the {{domxref("PublicKeyCredential")}} interface returns a {{glossary("JSON type representation")}} of a {{domxref("PublicKeyCredential")}}.
 
@@ -45,7 +43,7 @@ The object properties are:
 - `type`
   - : The string `"public-key"`.
 - `clientExtensionResults`
-  - : An array contaning [base64url](/en-US/docs/Glossary/Base64)-encoded versions of the values returned by {{domxref("PublicKeyCredential.getClientExtensionResults()")}}.
+  - : An array containing [base64url](/en-US/docs/Glossary/Base64)-encoded versions of the values returned by {{domxref("PublicKeyCredential.getClientExtensionResults()")}}.
 - `response`
 
   - : The response property object depends on whether the credentials are returned following a registration or authentication operation.
@@ -53,6 +51,11 @@ The object properties are:
     - When registering a new user `response` will be a JSON-type representation of {{domxref("AuthenticatorAttestationResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
 
     - When authenticating a user the returned value will be a JSON-type representation version of {{domxref("AuthenticatorAssertionResponse")}} where buffer values have been [base64url](/en-US/docs/Glossary/Base64) encoded.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Examples
 

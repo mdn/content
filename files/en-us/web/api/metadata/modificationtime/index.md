@@ -25,14 +25,14 @@ A {{jsxref("Date")}} timestamp indicating when the file system entry was last ch
 
 ## Examples
 
-This example tries to get a particular working file at `tmp/workfile.json`.
+This example tries to get a particular working file at `tmp/work-file.json`.
 Once that file has been found, its metadata is obtained and the file's modification
 timestamp year is compared to the current year. If it was last modified in a year at
 least five prior to the current year, the file is removed and a new one is created.
 
 ```js
 workingDirectory.getFile(
-  "tmp/workfile.json",
+  "tmp/work-file.json",
   { create: true },
   (fileEntry) => {
     fileEntry.getMetadata((metadata) => {
@@ -42,7 +42,7 @@ workingDirectory.getFile(
       ) {
         fileEntry.remove(() => {
           workingDirectory.getFile(
-            "tmp/workfile.json",
+            "tmp/work-file.json",
             { create: true },
             (newEntry) => {
               fileEntry = newEntry;
@@ -67,7 +67,6 @@ This feature has been removed from all specification and is not in the process o
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("Metadata")}}
 - {{domxref("FileSystemEntry.getMetadata()")}}
 - {{domxref("FileSystemFileEntry")}}

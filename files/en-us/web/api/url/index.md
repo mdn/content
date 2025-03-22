@@ -11,12 +11,11 @@ The **`URL`** interface is used to parse, construct, normalize, and encode {{glo
 
 You normally create a new `URL` object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.
 
-If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.
-
 ## Constructor
 
 - {{domxref("URL.URL", "URL()")}}
-  - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
+  - : Creates and returns a `URL` object from a URL string and optional base URL string.
+    Throws if the passed arguments don't define a valid URL.
 
 ## Instance properties
 
@@ -51,6 +50,8 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
   - : Returns a boolean indicating whether or not a URL defined from a URL string and optional base URL string is parsable and valid.
 - {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+- {{domxref("URL.parse_static", "parse()")}}
+  - : Creates and returns a `URL` object from a URL string and optional base URL string, or returns `null` if the passed parameters define an invalid `URL`.
 - {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
@@ -128,6 +129,5 @@ const response = await fetch(
 
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- Property to obtain a `URL` object: {{domxref("URL")}}.
+- [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{domxref("URLSearchParams")}}.

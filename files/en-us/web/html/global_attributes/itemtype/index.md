@@ -13,7 +13,8 @@ The [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemtype`** sp
 
 Google and other major search engines support the [schema.org](https://schema.org/) vocabulary for structured data. This vocabulary defines a standard set of type names and property names. For example, `MusicEvent` indicates a concert performance, with [`startDate`](https://schema.org/startDate) and [`location`](https://schema.org/location) properties specifying the concert's key details. In this case, [`MusicEvent`](https://schema.org/MusicEvent) would be the URL used by `itemtype`, with `startDate` and location as `itemprop`'s which [`MusicEvent`](https://schema.org/MusicEvent) defines.
 
-> **Note:** More about `itemtype` attributes can be found at <https://schema.org/Thing>
+> [!NOTE]
+> More about `itemtype` attributes can be found at <https://schema.org/Thing>
 
 - The **itemtype** attribute must have a value that is an unordered set of unique tokens which are case-sensitive, each is a valid and absolute URL, and all defined to use the same vocabulary. The attribute's value must have at least one token.
 - The item types must all be types defined in applicable specifications (such as [schema.org](https://schema.org/)), and must all be defined to use the same vocabulary.
@@ -129,7 +130,8 @@ This example uses microdata attributes to represent structured data for a produc
   </tbody>
 </table>
 
-> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data). Try it on the HTML shown here.
+> [!NOTE]
+> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data). Try it on the HTML shown here.
 
 #### HTML
 

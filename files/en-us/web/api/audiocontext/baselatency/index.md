@@ -14,7 +14,8 @@ seconds of processing latency incurred by the `AudioContext` passing an audio
 buffer from the {{domxref("AudioDestinationNode")}} — i.e. the end of the audio graph —
 into the host system's audio subsystem ready for playing.
 
-> **Note:** You can request a certain latency during
+> [!NOTE]
+> You can request a certain latency during
 > {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the
 > `latencyHint` option, but the browser may ignore the option.
 

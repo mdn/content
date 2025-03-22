@@ -12,15 +12,9 @@ The {{domxref("RTCIceCandidateStats")}} interface's
 **`candidateType`** property is a string that indicates the
 type of {{Glossary("ICE")}} candidate the object represents.
 
-## Syntax
+## Value
 
-```js-nolint
-rtcIceCandidateStats.candidateType
-```
-
-### Value
-
-A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
+A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value).
 
 ## Specifications
 

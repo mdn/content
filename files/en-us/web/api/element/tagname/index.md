@@ -15,7 +15,7 @@ it's called.
 For example, if the element is an {{HTMLElement("img")}}, its
 `tagName` property is `IMG` (for HTML documents; it may be cased
 differently for XML/XHTML documents). Note: You can use the {{domxref("Element.localName", "localName")}} property
-to access the Element's local name — which for the case in the example is `img` (lowercase) .
+to access the Element's local name — which for the case in the example is `img` (lowercase).
 
 ## Value
 

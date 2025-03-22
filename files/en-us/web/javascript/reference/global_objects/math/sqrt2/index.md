@@ -9,11 +9,24 @@ browser-compat: javascript.builtins.Math.SQRT2
 
 The **`Math.SQRT2`** static data property represents the square root of 2, approximately 1.414.
 
-{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}
+
+```js interactive-example
+function getRoot2() {
+  return Math.SQRT2;
+}
+
+console.log(getRoot2());
+// Expected output: 1.4142135623730951
+```
 
 ## Value
 
-<math display="block"><semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝚂𝚀𝚁𝚃𝟸</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{Math.SQRT2} = \sqrt{2} \approx 1.414</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 {{js_property_attributes(0, 0, 0)}}
 

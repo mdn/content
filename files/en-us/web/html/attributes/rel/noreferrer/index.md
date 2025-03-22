@@ -2,7 +2,9 @@
 title: rel=noreferrer
 slug: Web/HTML/Attributes/rel/noreferrer
 page-type: html-attribute-value
-browser-compat: html.elements.a.rel.noreferrer
+browser-compat:
+  - html.elements.a.rel.noreferrer
+  - html.elements.area.rel.noreferrer
 ---
 
 {{HTMLSidebar}}

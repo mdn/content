@@ -43,7 +43,7 @@ new ImageData(dataArray, width, height, settings)
 
 A new {{domxref('ImageData')}} object.
 
-### Errors thrown
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `array` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.

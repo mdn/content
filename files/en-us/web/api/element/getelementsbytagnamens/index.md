@@ -21,13 +21,15 @@ getElementsByTagNameNS(namespaceURI, localName)
 
 ### Parameters
 
-- `namespaceURI` is the namespace URI of elements to look for (see
-  {{domxref("Element.namespaceURI")}} and {{domxref("Attr.namespaceURI")}}). For
-  example, if you need to look for XHTML elements, use the XHTML namespace URI,
-  `http://www.w3.org/1999/xhtml`.
-- `localName` is either the local name of elements to look for or the
-  special value `"*"`, which matches all elements (see
-  {{domxref("Element.localName")}} and {{domxref("Attr.localName")}}).
+- `namespaceURI`
+  - : The namespace URI of elements to look for (see
+    {{domxref("Element.namespaceURI")}} and {{domxref("Attr.namespaceURI")}}). For
+    example, if you need to look for XHTML elements, use the XHTML namespace URI,
+    `http://www.w3.org/1999/xhtml`.
+- `localName`
+  - : Either the local name of elements to look for or the
+    special value `"*"`, which matches all elements (see
+    {{domxref("Element.localName")}} and {{domxref("Attr.localName")}}).
 
 ### Return value
 

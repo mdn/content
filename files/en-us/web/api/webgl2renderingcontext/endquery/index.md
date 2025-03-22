@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.endQuery
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.endQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) marks the end of a given query
 target.

@@ -22,7 +22,8 @@ setAttributeNodeNS(attributeNode)
 
 ### Parameters
 
-- `attributeNode` is an `Attr` node.
+- `attributeNode`
+  - : The {{domxref("Attr")}} node to add to the element.
 
 ### Return value
 

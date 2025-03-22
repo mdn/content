@@ -16,7 +16,8 @@ Each time you call `stop()` on the same node, the specified time replaces
 any previously-scheduled stop time that hasn't occurred yet. If the node has already
 stopped, this method has no effect.
 
-> **Note:** If a scheduled stop time occurs before the node's scheduled
+> [!NOTE]
+> If a scheduled stop time occurs before the node's scheduled
 > start time, the node never starts to play.
 
 ## Syntax

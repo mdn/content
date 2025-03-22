@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}
 
 This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.
 
@@ -12,7 +12,7 @@ This example demonstrates how to combine user interaction with WebGL graphics op
 
 {{EmbedLiveSample("Clearing_the_rendering_context_with_random_colors",660,425)}}
 
-This example provides a simple illustration of how to combine {{Glossary("WebGL")}} and user interaction. Every time the user clicks the canvas or the button, the canvas is cleared with a new randomly chosen color.
+This example provides an illustration of how to combine {{Glossary("WebGL")}} and user interaction. Every time the user clicks the canvas or the button, the canvas is cleared with a new randomly chosen color.
 
 Note how we embed the {{Glossary("WebGL")}} function calls inside the event handler function.
 
@@ -108,4 +108,4 @@ window.addEventListener(
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}

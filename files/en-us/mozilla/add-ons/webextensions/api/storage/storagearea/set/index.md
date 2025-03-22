@@ -23,7 +23,7 @@ let settingItem = browser.storage.<storageType>.set(
 )
 ```
 
-`<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
+Where `<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 
@@ -35,7 +35,8 @@ let settingItem = browser.storage.<storageType>.set(
 
     It's generally not possible to store other types, such as `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer`, and so on. Some unsupported types restore as an empty object, while others cause `set()` to throw an error. The behavior is browser-specific.
 
-> **Note:** If you want to remove keys from storage, use {{WebExtAPIRef("storage.storageArea.remove")}}. If you want to overwrite a value with a void value, use `null`, i.e., `key: null`.
+> [!NOTE]
+> If you want to remove keys from storage, use {{WebExtAPIRef("storage.storageArea.remove")}}. If you want to overwrite a value with a void value, use `null`, i.e., `key: null`.
 
 ### Return value
 
@@ -86,4 +87,5 @@ browser.storage.local.get("monster").then(gotMonster, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

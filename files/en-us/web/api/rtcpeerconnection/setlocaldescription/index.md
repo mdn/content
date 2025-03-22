@@ -28,46 +28,17 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 ### Parameters
 
 - `sessionDescription` {{optional_inline}}
-  - : An {{domxref("RTCSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}} which specifies the configuration to be applied to the local end of the connection.
+
+  - : An object which specifies the configuration to be applied to the local end of the connection. It should contain the following properties:
+
+    - `type` {{optional_inline}}
+      - : A string indicating the type of the session description. If you don't explicitly provide a session description, the WebRTC runtime will try to handle it correctly. If the signaling state is one of `stable`, `have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime automatically creates a new offer and sets that as the new local description. Otherwise, `setLocalDescription()` creates an answer, which becomes the new local description.
+    - `sdp` {{optional_inline}}
+      - : A string containing the SDP describing the session. If sdp is not provided, it defaults to an empty string. If `type` is `"rollback"`, `sdp` must be null or an empty string.
+
     If the description is omitted, the WebRTC runtime tries to automatically do the right thing.
 
-### Return value
-
-A {{jsxref("Promise")}} which is fulfilled once the value of {{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).
-The promise's fulfillment handler receives no input parameters.
-
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
-> See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
-
-#### Implicit description
-
-If you don't explicitly provide a session description, the WebRTC runtime will try to handle it correctly.
-If the signaling state is one of `stable`, `have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime automatically creates a new offer and sets that as the new local description.
-Otherwise, `setLocalDescription()` creates an answer, which becomes the new local description.
-
-#### Type of the description parameter
-
-The description is of type `RTCSessionDescriptionInit`, which is a serialized version of a {{domxref("RTCSessionDescription")}} browser object. They're interchangeable:
-
-```js
-myPeerConnection
-  .createOffer()
-  .then((offer) => myPeerConnection.setLocalDescription(offer));
-```
-
-This is equivalent to:
-
-```js
-myPeerConnection
-  .createOffer()
-  .then((offer) =>
-    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)),
-  );
-```
-
-For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
-
-### Deprecated parameters
+    You can also pass an actual {{domxref("RTCSessionDescription")}} instance, but there's no difference. For this reason, the `RTCSessionDescription` constructor is deprecated.
 
 In older code and documentation, you may see a callback-based version of this function used.
 This has been deprecated and its use is **strongly** discouraged, as it will be removed in the future.
@@ -83,6 +54,15 @@ The parameters for the older form of `setLocalDescription()` are described below
 
 This deprecated form of the method returns instantaneously without waiting for the actual setting to be done: in case of success, the `successCallback` will be called; in case of failure, the `errorCallback` will be called.
 
+### Return value
+
+A {{jsxref("Promise")}} which is fulfilled once the value of {{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).
+The promise's fulfillment handler receives no input parameters.
+
+> [!NOTE]
+> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
+> See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
+
 ### Deprecated exceptions
 
 When using the deprecated callback-based version of `setLocalDescription()`, the following exceptions may occur:
@@ -90,7 +70,7 @@ When using the deprecated callback-based version of `setLocalDescription()`, the
 - `InvalidStateError` {{domxref("DOMException")}} {{deprecated_inline}}
   - : Thrown if the connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
 - `InvalidSessionDescriptionError` {{domxref("DOMException")}} {{deprecated_inline}}
-  - : Thrown if the {{domxref("RTCSessionDescription")}} specified by the `sessionDescription` parameter is invalid.
+  - : Thrown if the `sessionDescription` parameter is invalid.
 
 ## Examples
 
@@ -120,7 +100,7 @@ async function handleNegotiationNeededEvent() {
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
   } catch (err) {
-    reportError(err);
+    window.reportError(err);
   }
 }
 ```
@@ -140,3 +120,4 @@ called `signalRemotePeer()`.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCSessionDescription")}}

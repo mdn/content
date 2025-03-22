@@ -9,7 +9,20 @@ browser-compat: javascript.operators.exponentiation_assignment
 
 The **exponentiation assignment (`**=`)** operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Exponentiation assignment (**=) operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a **= 2));
+// Expected output: 9
+
+console.log((a **= 0));
+// Expected output: 1
+
+console.log((a **= 'hello'));
+// Expected output: NaN
+```
 
 ## Syntax
 

@@ -2,12 +2,10 @@
 title: Intl.DurationFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.format
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.DurationFormat")}} instances formats a duration according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
 
@@ -20,11 +18,14 @@ format(duration)
 ### Parameters
 
 - `duration`
-  - : The duration object to be formatted. It should include some or all of the following properties: `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Each property's value should be an integer, and their signs should be consistent. This can be a {{jsxref("Temporal.Duration")}} object; see the {{jsxref("Temporal.Duration")}} documentation for more information about these properties.
 
 ### Return value
 
 A string representing the given `duration` formatted according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
+
+> [!NOTE]
+> Most of the time, the formatting returned by `format()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `format()` to hardcoded constants.
 
 ## Examples
 
@@ -127,5 +128,4 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
 ## See also
 
 - {{jsxref("Intl.DurationFormat")}}
-- {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Intl")}}
+- {{jsxref("Temporal.Duration")}}

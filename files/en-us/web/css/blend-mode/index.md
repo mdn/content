@@ -7,7 +7,7 @@ browser-compat: css.types.blend-mode
 
 {{CSSRef}}
 
-The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
+The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 
 ## Syntax
 
@@ -48,7 +48,7 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `soft-light`
   - : The final color is similar to `hard-light`, but softer.
     This blend mode behaves similar to `hard-light`.
-    The effect is similar to shining a _diffused_ spotlight on the backdrop*.*
+    The effect is similar to shining a _diffused_ spotlight on the backdrop.
 - `difference`
   - : The final color is the result of subtracting the darker of the two colors from the lighter one.
     A black layer has no effect, while a white layer inverts the other layer's color.

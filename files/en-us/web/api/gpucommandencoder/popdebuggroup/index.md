@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -40,7 +40,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 ```js
 // ...
 
-commandEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+commandEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 

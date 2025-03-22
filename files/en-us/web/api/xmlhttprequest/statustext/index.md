@@ -12,7 +12,8 @@ The read-only **`XMLHttpRequest.statusText`** property returns a string containi
 
 If the server response doesn't explicitly specify a status text, `statusText` will assume the default value "OK".
 
-> **Note:** Responses over an HTTP/2 connection will always have an empty string as status message as HTTP/2 does not support them.
+> [!NOTE]
+> Responses over an HTTP/2 connection will always have an empty string as status message as HTTP/2 does not support them.
 
 ## Value
 
@@ -57,6 +58,6 @@ xhr.send(null);
 
 ## See also
 
-- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Reference/Status)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

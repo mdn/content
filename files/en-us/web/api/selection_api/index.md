@@ -7,7 +7,8 @@ spec-urls: https://w3c.github.io/selection-api/#selection-interface
 
 {{DefaultAPISidebar("Selection API")}}
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 The **Selection API** enables developers to access and manipulate the portion of a document selected by the user.
 

@@ -12,8 +12,6 @@ The read-only **`systemId`** property of the {{domxref("DocumentType")}} returns
 
 For synthetic `DocumentType`, this property reflects the value given in parameter to {{domxref("DOMImplementation.createDocumentType()")}}.
 
-For HTML documents, browsers always set it up to `html`, whatever the actual `DOCTYPE` in the source code is. For SVG documents, for example, it can be `"http://www.w3.org/2000/svg"`.
-
 ## Value
 
 A string.

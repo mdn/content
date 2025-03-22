@@ -10,7 +10,8 @@ status:
 
 {{APIRef("UI Events")}}
 
-> **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
+> [!WARNING]
+> Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
 >
 > The method has been removed from the DOM specification and is not supported by any current browser.
 > Firefox hides this method behind the preference (`dom.keyboardevent.init_key_event.enabled`) from version 93 and plans to remove it shortly afterwards.
@@ -27,7 +28,7 @@ this way must have been created with the
 ## Syntax
 
 ```js-nolint
-initKeyEvent (type, bubbles, cancelable, view,
+initKeyEvent(type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
 ```

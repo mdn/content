@@ -10,7 +10,7 @@ browser-compat: api.HTMLMediaElement.playbackRate
 
 The **`HTMLMediaElement.playbackRate`** property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.
 
-A negative `playbackRate` value indicates that the media should be played backwards, but support for this is not yet widespread.[1](#see-also)
+A negative `playbackRate` value indicates that the media should be played backwards, but support for this is not yet widespread. (See [browser compatibility](#browser_compatibility) for details.)
 
 The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range `0.25` to `4.0`).
 
@@ -38,5 +38,5 @@ console.log(obj.playbackRate); // Expected Output: 1
 ## See also
 
 - {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.playbackRate` property
-- Browser bug reports to support negative `playbackRate` in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1468019) and [Blink](https://issues.chromium.org/issues/40410591) (Chrome, etc.)
+- Browser bug reports to support negative `playbackRate` in [Firefox](https://bugzil.la/1468019) and [Blink](https://crbug.com/40410591) (Chrome, etc.)
 - The Web Hypertext Application Technology Working Group (WHATWG) [issue to require support for negative `playbackRate`](https://github.com/whatwg/html/issues/3754)

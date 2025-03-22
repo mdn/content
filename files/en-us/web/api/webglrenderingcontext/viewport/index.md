@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.viewport
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.viewport()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the viewport, which specifies
 the affine transformation of x and y from normalized device coordinates to window
@@ -37,7 +37,7 @@ viewport(x, y, width, height)
 
 None ({{jsxref("undefined")}}).
 
-### Errors thrown
+### Exceptions
 
 If either _width_ or _height_ is a negative value, a
 `gl.INVALID_VALUE` error is thrown.

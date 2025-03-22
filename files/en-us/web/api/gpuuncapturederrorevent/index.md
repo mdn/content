@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUUncapturedErrorEvent
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUUncapturedErrorEvent`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the event object type for the {{domxref("GPUDevice")}} {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} event, used for telemetry and to report unexpected errors.
 

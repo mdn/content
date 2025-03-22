@@ -10,7 +10,8 @@ browser-compat: api.Window.online_event
 
 The **`online`** event of the {{domxref("Window")}} interface is fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to `true`.
 
-> **Note:** This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.
+> [!NOTE]
+> This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.
 
 ## Syntax
 

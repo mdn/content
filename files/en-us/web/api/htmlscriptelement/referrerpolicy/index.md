@@ -46,7 +46,8 @@ A string; one of the following:
     will leak origins and paths from TLS-protected resources to insecure origins.
     Carefully consider the impact of this setting.
 
-> **Note:** An empty string value (`""`) is both the default
+> [!NOTE]
+> An empty string value (`""`) is both the default
 > value, and a fallback value if `referrerpolicy` is not supported. If
 > `referrerpolicy` is not explicitly specified on the
 > `<script>` element, it will adopt a higher-level referrer policy,

@@ -32,7 +32,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 ### DOM
 
 - The {{domxref("Node.cloneNode()")}} method's `deep` argument is now optional, as specified in DOM4.
-- The {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} methods no longer pass an additional "lateness" argument to the callback routine.
+- The {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} methods no longer pass an additional "lateness" argument to the callback routine.
 - The {{domxref("Blob","Blob.mozSlice()")}} method has been unprefixed.
 - Support for the {{domxref("Blob")}} constructor has been added.
 - Support for `globalStorage` has been removed.

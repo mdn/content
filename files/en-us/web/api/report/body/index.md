@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Report.body
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`body`** read-only property of the {{domxref("Report")}}
 interface returns the body of the report, which is a `ReportBody` object
@@ -17,8 +17,8 @@ containing the detailed report information.
 A `ReportBody` object containing the detailed report information. Depending
 on what `type` the {{domxref("Report")}} is, the object returned will
 actually be a
-{{domxref("DeprecationReportBody")}}, {{domxref("InterventionReportBody")}},
-{{domxref("CSPViolationReportBody")}}, or {{domxref("FeaturePolicyViolationReportBody")}}.
+{{domxref("DeprecationReportBody")}}, {{domxref("InterventionReportBody")}}, or
+{{domxref("CSPViolationReportBody")}}.
 These all inherit from the base `ReportBody` class — study their reference
 pages for more information on what the particular report body types contain.
 

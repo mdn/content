@@ -14,7 +14,8 @@ browser-compat: api.PushManager.unregister
 The **`unregister()`** method was used to ask the system to
 unregister and delete the specified endpoint.
 
-> **Note:** In the updated API, a subscription can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.
+> [!NOTE]
+> In the updated API, a subscription can be unregistered via the {{domxref("PushSubscription.unsubscribe()")}} method.
 
 ## Syntax
 

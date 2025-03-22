@@ -1,5 +1,6 @@
 {
   "css_ref_title": {
+    "de": "CSS-Referenz",
     "en-US": "CSS Reference",
     "es": "Referencia CSS",
     "fr": "Référence CSS",
@@ -11,6 +12,7 @@
     "zh-TW": "CSS 參考"
   },
   "at_rules": {
+    "de": "@-Regeln",
     "en-US": "At-Rules",
     "es": "Reglas",
     "fr": "Règles @",
@@ -22,6 +24,7 @@
     "zh-TW": "@ 規則"
   },
   "types": {
+    "de": "Datentypen",
     "en-US": "Data types",
     "es": "Tipos de datos",
     "fr": "Types de donnée",
@@ -33,6 +36,7 @@
     "zh-TW": "資料型態"
   },
   "missing": {
+    "de": "Wert in der Datenbank nicht gefunden!",
     "en-US": "Value not found in DB!",
     "es": "¡Valor no encontrado en la base de datos!",
     "fr": "Valeur introuvable dans la base de données",
@@ -44,6 +48,7 @@
     "zh-TW": "在資料庫中找不到該值！"
   },
   "info_in_preview_not_available": {
+    "de": "CSS-Info in der Vorschau nicht verfügbar",
     "en-US": "CSS info in preview not available",
     "es": "La información de CSS en la vista previa no está disponible",
     "fr": "CSS-Info n'est pas disponible en aperçu",
@@ -55,6 +60,7 @@
     "zh-TW": "CSS info 在預覽中不可用"
   },
   "tag_selectors": {
+    "de": "Selektoren",
     "en-US": "Selectors",
     "es": "Selectores",
     "fr": "Sélecteurs",
@@ -66,6 +72,7 @@
     "zh-TW": "選擇器"
   },
   "Basic Selectors": {
+    "de": "Basis-Selektoren",
     "en-US": "Basic Selectors",
     "es": "Selectores básicos",
     "fr": "Sélecteurs simples",
@@ -77,6 +84,7 @@
     "zh-TW": "基本選擇器"
   },
   "Combinators": {
+    "de": "Kombinatoren",
     "en-US": "Combinators",
     "es": "Combinadores",
     "fr": "Combinateurs",
@@ -88,6 +96,7 @@
     "zh-TW": "組合符"
   },
   "Pseudo-classes": {
+    "de": "Pseudoklassen",
     "en-US": "Pseudo-classes",
     "es": "Pseudo-clases",
     "fr": "Pseudo-classes",
@@ -99,6 +108,7 @@
     "zh-TW": "虛擬類別"
   },
   "Pseudo-elements": {
+    "de": "Pseudoelemente",
     "en-US": "Pseudo-elements",
     "es": "Pseudo-elementos",
     "fr": "Pseudo-éléments",

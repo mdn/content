@@ -858,7 +858,7 @@ when using it.
       <td><code>"Help"</code> (⚠️ Not the same on Firefox)</td>
     </tr>
     <tr>
-      <th scope="row"><code>0xE03C</code>～ <code>0xE044</code></th>
+      <th scope="row"><code>0xE03C</code> ～ <code>0xE044</code></th>
       <td><code>"Unidentified"</code></td>
       <td><code>""</code></td>
     </tr>
@@ -1336,7 +1336,7 @@ In the cells,
     </tr>
     <tr>
       <th scope="row">Enter key on keypad of PowerBook (<code>0x34</code>)</th>
-      <td><code>"NumpadEnter"</code>(⚠️ Same string for <code>0x4C</code>) (⚠️ Not the same on Chromium)</td>
+      <td><code>"NumpadEnter"</code> (⚠️ Same string for <code>0x4C</code>) (⚠️ Not the same on Chromium)</td>
       <td><code>""</code> (❌ Missing)</td>
     </tr>
     <tr>
@@ -1423,7 +1423,7 @@ In the cells,
       <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
       <td><code>"VolumeUp"</code> (⚠️ Not the same on Chromium)</td>
       <td>
-        <code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> prior to Chromium
+        <code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> prior to Chromium
         1) (⚠️ Not the same on Firefox)
       </td>
     </tr>

@@ -13,7 +13,8 @@ Background scripts or a page are:
 - Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
 - Non-persistent (which are also known as event pages) – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing.
 
-> **Note:** In Firefox, if the extension process crashes:
+> [!NOTE]
+> In Firefox, if the extension process crashes:
 >
 > - persistent background scripts running at the time of the crash are reloaded automatically.
 > - non-persistent background scripts (also known as "Event Pages") running at the time of the crash are not reloaded. However, they are restarted automatically when Firefox calls one of their WebExtensions API events listeners.
@@ -31,7 +32,8 @@ If you have persistent background scripts or a page in Manifest V2 and want to p
 
 Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
 
-> **Warning:** In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
+> [!WARNING]
+> In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
 
 ### WebExtension APIs
 
@@ -322,7 +324,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 ### Change timers into alarms
 
-DOM-based timers, such as {{domxref("setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
+DOM-based timers, such as {{domxref("Window.setTimeout", "setTimeout()")}}, do not remain active after an event page has idled. Instead, use the {{WebExtAPIRef("alarms")}} API if you need a timer to wake an event page.
 
 ```js
 browser.alarms.create({ delayInMinutes: 3.0 });
@@ -344,7 +346,8 @@ The method returns `null` when:
 - extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
 - the background page is not running. This is uncommon with persistent background pages but very likely when using an Event Page, as an Event Page can be suspended.
 
-> **Note:** The recommended way to invoke functionality in the background script is to communicate with it through {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
+> [!NOTE]
+> The recommended way to invoke functionality in the background script is to communicate with it through {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
 > The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
 
 If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.

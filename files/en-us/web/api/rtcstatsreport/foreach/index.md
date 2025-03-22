@@ -46,7 +46,7 @@ forEach(callbackFn, thisArg)
 ## Examples
 
 Given a variable `myPeerConnection`, which is an instance of `RTCPeerConnection`, the code calls [`getStats()`](/en-US/docs/Web/API/RTCRtpReceiver/getStats) with `await` to wait for the statistics report.
-It then iterates the report using {{domxref("RTCStatsReport.forEach()")}}, and filters the dictionaries for just those reports that have the `type` of `inbound-rtp` and `kind` of `video`.
+It then iterates the report using `RTCStatsReport.forEach()`, and filters the dictionaries for just those reports that have the `type` of `inbound-rtp` and `kind` of `video`.
 For matching dictionaries it logs the `framesPerSecond` property of the inbound video.
 
 ```js

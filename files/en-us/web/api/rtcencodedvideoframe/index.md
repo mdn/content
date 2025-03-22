@@ -9,13 +9,11 @@ browser-compat: api.RTCEncodedVideoFrame
 
 The **`RTCEncodedVideoFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an encoded video frame in the WebRTC receiver or sender pipeline, which may be modified using a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
-> **Note:** This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
-
 ## Instance properties
 
 - {{domxref("RTCEncodedVideoFrame.type")}} {{ReadOnlyInline}}
   - : Returns whether the current frame is a key frame, delta frame, or empty frame.
-- {{domxref("RTCEncodedVideoFrame.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("RTCEncodedVideoFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the timestamp at which sampling of the frame started.
 - {{domxref("RTCEncodedVideoFrame.data")}}
   - : Return a buffer containing the encoded frame data.
@@ -41,8 +39,8 @@ The {{domxref("RTCEncodedVideoFrame.data", "data")}} property provides access to
 
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 
-If the tranformer is inserted into a video stream, the `transform()` method is called with a `RTCEncodedVideoFrame` whenever a new frame is enqueued on `event.transformer.readable`.
-The `transform()` method shows how this might be read, modified by inverting the bits, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipline).
+If the transformer is inserted into a video stream, the `transform()` method is called with a `RTCEncodedVideoFrame` whenever a new frame is enqueued on `event.transformer.readable`.
+The `transform()` method shows how this might be read, modified by inverting the bits, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipeline).
 
 ```js
 addEventListener("rtctransform", (event) => {

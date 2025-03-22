@@ -21,7 +21,8 @@ The **`returnValue`** property of the
 
 Setting it to just about any [truthy](/en-US/docs/Glossary/Truthy) value will cause the dialog to be triggered on page close/reload, however note that it also requires [sticky activation](/en-US/docs/Glossary/Sticky_activation). In other words, the browser will only show the dialog if the frame or any embedded frame receives a user gesture or user interaction. If the user has never interacted with the page, then there is no user data to save, so no legitimate use case for the dialog.
 
-> **Note:** A generic browser-specified string is displayed in the dialog. This cannot be controlled by the webpage code.
+> [!NOTE]
+> A generic browser-specified string is displayed in the dialog. This cannot be controlled by the webpage code.
 
 ## Examples
 

@@ -14,7 +14,8 @@ The **`elapsedTime`** read-only property of the {{domxref("SpeechSynthesisEvent"
 
 A float containing the elapsed time, in seconds.
 
-> **Note:** Early versions of the specification required the elapsed time in milliseconds.
+> [!NOTE]
+> Early versions of the specification required the elapsed time in milliseconds.
 > Check the [compatibility table](#browser_compatibility) below for your browser.
 
 ## Examples

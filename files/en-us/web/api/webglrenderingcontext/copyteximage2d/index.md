@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current

@@ -14,7 +14,8 @@ The **`rowSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} 
 
 A positive number representing the number of rows. If it is `0`, it means all remaining rows in the column.
 
-> **Note:** When setting a new value, a value different from 0 is _clamped_ to the nearest strictly positive number.
+> [!NOTE]
+> When setting a new value, a value different from 0 is _clamped_ to the nearest strictly positive number.
 
 ## Examples
 
@@ -70,7 +71,7 @@ button {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 // Obtain relevant interface elements

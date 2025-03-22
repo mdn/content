@@ -30,7 +30,8 @@ animation-composition: revert-layer;
 animation-composition: unset;
 ```
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> [!NOTE]
+> When you specify multiple comma-separated values on an `animation-*` property, they will be applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. If the number of animations and compositions differ, the values listed in the `animation-composition` property will cycle from the first to the last `animation-name`, looping until all the animations have an assigned `animation-composition` value. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Values
 
@@ -70,7 +71,8 @@ Consider different values for the `animation-composition` property in the above 
 - With `add`, the composite effect value in the `0%` keyframe will be `blur(5px) blur(10px)`.
 - With `accumulate`, the composite effect value in `0%` keyframe will be `blur(15px)`.
 
-> **Note:** A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
+> [!NOTE]
+> A composite operation can also be specified in a keyframe. In that case, the specified composite operation is used for each property first within that keyframe and then on each property in the next keyframe.
 
 ## Formal definition
 
@@ -161,9 +163,9 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(30px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 0% mark. This is the default behavior.
-- With `add`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(30px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `30px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
-- With `accumulate`, the final effect value in the `0%, 20%` keyframe is `translateX(130px) rotate(45deg)`. This means that the two X-axis translation values of `30px` and `100px` are combined or "accumulated".
+- With `replace`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(30px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 20% mark. This is the default behavior.
+- With `add`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(30px) rotate(45deg) translateX(100px)`. So the element is first moved 100px to the right, rotated 45deg around the origin, then moved to the right by 30px.
+- With `accumulate`, the final effect value in the `20%, 40%` keyframe is `translateX(130px) rotate(45deg)`. This means that the two X-axis translation values of `30px` and `100px` are combined or "accumulated".
 
 ## Specifications
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TextDecoderStream
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoderStream`** interface of the {{domxref('Encoding API','','',' ')}} converts a stream of text in a binary encoding, such as UTF-8 etc., to a stream of strings.
 It is the streaming equivalent of {{domxref("TextDecoder")}}.

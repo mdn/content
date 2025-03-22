@@ -26,7 +26,7 @@ Instances of `IntersectionObserverEntry` are delivered to an {{domxref("Intersec
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
   - : The {{domxref("Element")}} whose intersection with the root changed.
 - {{domxref("IntersectionObserverEntry.time")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
 ## Instance methods
 

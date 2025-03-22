@@ -15,7 +15,8 @@ That stream can include, for example, a video track (produced by either a hardwa
 It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} object.
 If the user denies permission, or matching media is not available, then the promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}} respectively.
 
-> **Note:** It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
+> [!NOTE]
+> It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
 
 ## Syntax
 
@@ -66,10 +67,11 @@ object when the requested media has successfully been obtained.
     rather than HTTPS). It also happens if the user has specified that the current
     browsing instance is not permitted access to the device, the user has denied access
     for the current session, or the user has denied all access to user media devices
-    globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), this error is
+    globally. On browsers that support managing media permissions with [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), this error is
     returned if Permissions Policy is not configured to allow access to the input source(s).
 
-    > **Note:** Older versions of the specification used `SecurityError`
+    > [!NOTE]
+    > Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
 
 - `NotFoundError` {{domxref("DOMException")}}
@@ -86,7 +88,8 @@ object when the requested media has successfully been obtained.
     was impossible to meet, and a `message` property containing a
     human-readable string explaining the problem.
 
-    > **Note:** Because this error can occur even when the user has not yet granted
+    > [!NOTE]
+    > Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
@@ -116,7 +119,7 @@ using HTTPS or the `file:///` URL scheme, or a page loaded from
 In addition, user permission is always required to access the user's audio and video
 inputs. Only a window's top-level document context for a valid origin can even request
 permission to use `getUserMedia()`, unless the top-level context expressly
-grants permission for a given {{HTMLElement("iframe")}} to do so using [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). Otherwise, the user
+grants permission for a given {{HTMLElement("iframe")}} to do so using [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy). Otherwise, the user
 will never even be asked for permission to use the input devices.
 
 For additional details on these requirements and rules, how they are reflected in the
@@ -153,7 +156,7 @@ There are a number of ways security management and controls in a {{Glossary("use
 
 #### Permissions Policy
 
-The two [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
+The two [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directives that apply to `getUserMedia()` are `camera`
 and `microphone`.
 
 For example, this HTTP header will enable use of a camera by the document
@@ -243,7 +246,8 @@ navigator.mediaDevices
   });
 ```
 
-> **Note:** If the current document isn't loaded securely,
+> [!NOTE]
+> If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
 > `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
@@ -423,7 +427,8 @@ const constraints = {
 };
 ```
 
-> **Note:** In certain cases, it may be necessary to release the current camera facing mode before you can switch to a different one. To ensure the camera switch, it is advisable to free up the media resources by invoking the "stop()" method on the track before requesting a different facing mode.
+> [!NOTE]
+> In certain cases, it may be necessary to release the current camera facing mode before you can switch to a different one. To ensure the camera switch, it is advisable to free up the media resources by invoking the "stop()" method on the track before requesting a different facing mode.
 
 ## Specifications
 

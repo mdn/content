@@ -56,7 +56,7 @@ const linearRampMinus = document.querySelector(".linear-ramp-minus");
 // Feed the HTMLMediaElement into it
 const source = audioCtx.createMediaElementSource(myAudio);
 
-// Create a gain node and set it's gain value to 0.5
+// Create a gain node and set its gain value to 0.5
 const gainNode = audioCtx.createGain();
 
 // connect the AudioBufferSourceNode to the gainNode

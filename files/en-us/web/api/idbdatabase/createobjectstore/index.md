@@ -16,7 +16,7 @@ define important optional properties. You can use the property to uniquely ident
 individual objects in the store. As the property is an identifier, it should be unique
 to every object, and every object should have that property.
 
-This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
+This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 transaction.
 
 ## Syntax
@@ -54,20 +54,20 @@ A new {{domxref("IDBObjectStore")}}.
 This method may raise a {{domxref("DOMException")}} with a `name` of
 one of the following types:
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the method was not called from a
-    `versionchange` transaction callback.
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if a request is made on a source database that does not exist
-    (for example, when the database has been deleted or removed). In Firefox previous to version 41,
-    an `InvalidStateError` was raised in this case as well, which
-    was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165)).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
     already exists in the connected database.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if `autoIncrement` is set to true and `keyPath` is
-    either an empty string or an array containing an empty string.
+    either an empty string or an array.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the method was not called from a
+    `versionchange` transaction callback.
+- `SyntaxError`
+  - : Thrown if the `keyPath` option contains an invalid key path.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if a request is made on a source database that does not exist
+    (for example, when the database has been deleted or removed), or if the associated upgrade transaction has completed or is processing a request.
 
 ## Examples
 
@@ -84,7 +84,8 @@ request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
@@ -103,7 +104,8 @@ request.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += "<li>Object store created.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Object store created.";
 };
 ```
 

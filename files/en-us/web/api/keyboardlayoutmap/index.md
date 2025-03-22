@@ -22,7 +22,7 @@ A list of valid keys is found in the [UI Events KeyboardEvent code Values](https
 
 ## Instance methods
 
-- `KeyboardLayoutMap.[@@iterator]()` {{experimental_inline}}
+- `KeyboardLayoutMap[Symbol.iterator]()` {{experimental_inline}}
   - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the key/value pairs.
 - {{domxref('KeyboardLayoutMap.entries()')}} {{experimental_inline}}
   - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the key/value pairs.

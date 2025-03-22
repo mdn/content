@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TaskController.setPriority
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`setPriority()`** method of the {{domxref("TaskController")}} interface can be called to set a new [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) for this controller's [`signal`](/en-US/docs/Web/API/TaskController#taskcontroller.signal).
 If a prioritized task is [configured](/en-US/docs/Web/API/Scheduler/postTask#signal) to use the signal, this will also change the task priority.

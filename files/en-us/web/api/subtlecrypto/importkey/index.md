@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.importKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`importKey()`** method of the {{domxref("SubtleCrypto")}}
 interface imports a key: that is, it takes as input a key in an external, portable
@@ -36,29 +36,30 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
   - : An object defining the type of key to import and providing extra algorithm-specific parameters.
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
       or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
-      Pass an [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams) object.
+      pass an [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams) object.
     - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
-      Pass an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams) object.
+      pass an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams) object.
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac):
-      Pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
+      pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
-      Pass the string identifying the algorithm or an object of the form `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
-    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): Pass the string `PBKDF2`.
-    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the string `HKDF`.
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), and [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
+      pass the string identifying the algorithm or an object of the form `{ name: ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
+    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): pass the string `PBKDF2` or an object of the form `{ name: "PBKDF2" }`.
+    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): pass the string `HKDF` or an object of the form `{ name: "HKDF" }`.
+    - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
+    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
 - `extractable`
-  - : A boolean value indicating whether it will be possible to export the key
-    using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
+  - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
   - : An {{jsxref("Array")}} indicating what can be done with the key. Possible array values are:
-    - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.
-    - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.
-    - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.
-    - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.
-    - `deriveKey`: The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
-    - `deriveBits`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
-    - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.
-    - `unwrapKey`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
+    - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
+    - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
+    - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
+    - `verify`: The key may be used to [verify](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
+    - `deriveKey`: The key may be used in [deriving a new key](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
+    - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+    - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+    - `unwrapKey`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
 
 ### Return value
 
@@ -128,10 +129,8 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 To get this into a format you can give to `importKey()` you need to do two
 things:
 
-- base64-decode the part between header and footer, using
-  [`window.atob()`](/en-US/docs/Web/API/atob).
-- convert the resulting string into an
-  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
+- convert the resulting string into an {{jsxref("ArrayBuffer")}}.
 
 See the [Examples](#examples) section for more concrete guidance.
 
@@ -172,10 +171,8 @@ gQIDAQAB
 Just as with [PKCS #8](#pkcs_8), to get this into a format you can give to
 `importKey()` you need to do two things:
 
-- base64-decode the part between header and footer, using
-  [`window.atob()`](/en-US/docs/Web/API/atob).
-- convert the resulting string into an
-  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+- base64-decode the part between header and footer, using {{domxref("Window.atob()")}}.
+- convert the resulting string into an {{jsxref("ArrayBuffer")}}.
 
 See the [Examples](#examples) section for more concrete guidance.
 
@@ -203,7 +200,8 @@ A JSON Web Key looks something like this (this is an EC private key):
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
 
 ### Raw import
 

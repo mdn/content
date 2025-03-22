@@ -24,7 +24,8 @@ corresponding {{domxref("AudioWorkletNode")}}. In other words, every time a new 
 audio is ready for your processor to manipulate, your `process()` function is
 invoked to do so.
 
-> **Note:** Currently, audio data blocks are always 128 frames
+> [!NOTE]
+> Currently, audio data blocks are always 128 frames
 > long—that is, they contain 128 32-bit floating-point samples for each of the inputs'
 > channels. However, plans are already in place to revise the specification to allow the
 > size of the audio blocks to be changed depending on circumstances (for example, if the
@@ -130,7 +131,8 @@ The 3 most common types of audio node are:
    _tail-time_ equal to its {{domxref("DelayNode.delayTime", "delayTime")}}
    property.
 
-> **Note:** An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
+> [!NOTE]
+> An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
 > Omitting an explicit `return` statement may cause hard-to-detect problems for your nodes.
 
 ### Exceptions

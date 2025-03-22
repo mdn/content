@@ -18,7 +18,7 @@ This can happen for any of the following reasons:
 - An I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure).
 - Quota exceeded.
 
-This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_and_capturing_explained) to the associated {{domxref("IDBDatabase")}} object.
+This non-cancelable event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the associated {{domxref("IDBDatabase")}} object.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("IDBDatabase")}}. The `event.target` property refers to the {{domxref('IDBTransaction')}} object that bubbles up.
 
-For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Examples
 
@@ -83,7 +83,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.abort_event", "onabort")}} property:
+The same example, but assigning the event handler to the `onabort` property:
 
 ```js
 // Open the database
@@ -124,6 +124,10 @@ DBOpenRequest.onsuccess = (event) => {
   transaction.abort();
 };
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

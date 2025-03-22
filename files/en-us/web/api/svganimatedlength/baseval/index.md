@@ -3,7 +3,7 @@ title: "SVGAnimatedLength: baseVal property"
 short-title: baseVal
 slug: Web/API/SVGAnimatedLength/baseVal
 page-type: web-api-instance-property
-browser-compat: api.SVGAnimatedEnumeration.baseVal
+browser-compat: api.SVGAnimatedLength.baseVal
 ---
 
 {{APIRef("SVG")}}
@@ -12,7 +12,7 @@ The **`baseVal`** property of the {{domxref("SVGAnimatedLength")}} interface con
 
 ## Value
 
-A {{domxref("SVGLength")}} containing the initial value of the length.
+An {{domxref("SVGLength")}} containing the initial value of the length.
 
 ## Examples
 

@@ -14,7 +14,7 @@ creates a new {{domxref("MediaRecorder")}} object that will record a specified
 
 The object can optionally be configured to record
 using a specific media container (file type), and, further, can specify the exact codec
-and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
 
 ## Syntax
 
@@ -36,7 +36,7 @@ new MediaRecorder(stream, options)
     - `mimeType` {{optional_inline}}
       - : A MIME type specifying the format for the resulting
         media; you may specify the container format (the browser will select its preferred
-        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+        codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) and/or the `profiles` parameter to
         provide detailed information about which codecs to use and how to configure them.
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling
@@ -64,11 +64,13 @@ new MediaRecorder(stream, options)
     - `videoKeyFrameIntervalCount` {{optional_inline}}
       - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
-    > **Note:** If bits per second values are not specified for video and/or audio, the default
+    > [!NOTE]
+    > If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
     > the sample rate and the number of channels.
 
-    > **Note:** Video resolution, frame rate and similar settings are specified as constraints
+    > [!NOTE]
+    > Video resolution, frame rate and similar settings are specified as constraints
     > when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
     > not here in the MediaStream Recording API.
 

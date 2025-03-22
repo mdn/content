@@ -15,7 +15,8 @@ The **`availLeft`** read-only property of the
 
 This is equal to the {{domxref("ScreenDetailed.left")}} property, plus the width of any OS UI element drawn on the left of the screen. Windows cannot be placed in those areas, so `availLeft` is useful for giving you the left boundary of the actual area available to open or place windows.
 
-> **Note:** A non-standard implementation of the `availLeft` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+> [!NOTE]
+> A non-standard implementation of the `availLeft` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
 
 ## Value
 

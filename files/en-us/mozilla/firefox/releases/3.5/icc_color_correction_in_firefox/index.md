@@ -109,7 +109,8 @@ The following table lists the possible values.
   </tbody>
 </table>
 
-> **Note:** In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
+> [!NOTE]
+> In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
 
 ### Caveats
 

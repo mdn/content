@@ -3,8 +3,18 @@ title: <display-internal>
 slug: Web/CSS/display-internal
 page-type: css-type
 browser-compat:
-  - css.properties.display.table_values
-  - css.properties.display.ruby_values
+  - css.properties.display.table-row-group
+  - css.properties.display.table-header-group
+  - css.properties.display.table-footer-group
+  - css.properties.display.table-row
+  - css.properties.display.table-cell
+  - css.properties.display.table-column-group
+  - css.properties.display.table-column
+  - css.properties.display.table-caption
+  - css.properties.display.ruby-base
+  - css.properties.display.ruby-text
+  - css.properties.display.ruby-base-container
+  - css.properties.display.ruby-text-container
 ---
 
 {{CSSRef}}
@@ -48,7 +58,7 @@ Valid `<display-internal>` values:
 
 ### CSS tables example
 
-The following example demonstrates laying out a simple form using CSS table layout.
+The following example demonstrates laying out a form using CSS table layout.
 
 #### HTML
 

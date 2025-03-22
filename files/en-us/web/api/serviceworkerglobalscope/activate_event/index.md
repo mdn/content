@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.activate_event
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 
@@ -41,10 +41,14 @@ self.addEventListener("activate", (event) => {
   const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.forEach((cache, cacheName) => {
-      if (!cacheAllowlist.includes(cacheName)) {
-        return caches.delete(cacheName);
-      }
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheAllowlist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        }),
+      );
     }),
   );
 });

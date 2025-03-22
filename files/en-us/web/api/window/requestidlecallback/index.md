@@ -20,7 +20,8 @@ You can call `requestIdleCallback()` within an idle callback function to
 schedule another callback to take place no sooner than the next pass through the event
 loop.
 
-> **Note:** A `timeout` option is strongly recommended for required work,
+> [!NOTE]
+> A `timeout` option is strongly recommended for required work,
 > as otherwise it's possible multiple seconds will elapse before the callback is fired.
 
 ## Syntax
@@ -64,8 +65,8 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 
 ## See also
 
-- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

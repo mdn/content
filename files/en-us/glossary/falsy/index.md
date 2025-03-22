@@ -6,6 +6,8 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
+<!-- cSpell:ignore falsey -->
+
 A **falsy** (sometimes written **falsey**) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.
 
 {{Glossary("JavaScript")}} uses {{Glossary("Type_Conversion", "type conversion")}} to coerce any value to a Boolean in contexts that require it, such as {{Glossary("Conditional", "conditionals")}} and {{Glossary("Loop", "loops")}}.
@@ -24,7 +26,7 @@ The following table provides a complete list of JavaScript falsy values:
 | `""`                        | String    | Empty [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) value, also including `''` and ` `` `.                                   |
 | {{domxref("document.all")}} | Object    | The only falsy object in JavaScript is the built-in {{domxref("document.all")}}.                                                                    |
 
-The values `null` and `undefined` are also [nullish](/en-US/docs/Glossary/Nullish).
+The values `null` and `undefined` are also {{Glossary("nullish")}}.
 
 ## Examples
 
@@ -78,7 +80,8 @@ console.log(0 && "dog");
 
 ## See also
 
-- {{Glossary("Truthy")}}
-- {{Glossary("Type_coercion", "Coercion")}}
-- {{Glossary("Boolean")}}
+- Related glossary terms:
+  - {{Glossary("Truthy")}}
+  - {{Glossary("Type_coercion", "Coercion")}}
+  - {{Glossary("Boolean")}}
 - [Boolean coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)

@@ -28,7 +28,8 @@ set(name, value, filename)
 - `filename` {{optional_inline}}
   - : The filename reported to the server (a string), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
-> **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
+> [!NOTE]
+> If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
 ### Return value
 
@@ -43,7 +44,7 @@ formData.set("username", "Chris");
 When the value is a {{domxref("Blob")}} (or a {{domxref("File")}}), you can specify its name with the `filename` parameter:
 
 ```js
-formData.set("userpic", myFileInput.files[0], "chris.jpg");
+formData.set("user-pic", myFileInput.files[0], "chris.jpg");
 ```
 
 If the value is not a string or a `Blob`, `set()` will convert it to a string automatically:

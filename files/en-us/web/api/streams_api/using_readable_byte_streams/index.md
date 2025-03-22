@@ -11,7 +11,8 @@ They are intended for use cases where data might be supplied or requested in arb
 
 This article explains how readable byte streams compare to normal "default" streams, and how you create and consume them.
 
-> **Note:** Readable byte streams are almost identical to "normal" readable streams and almost all of the concepts are the same.
+> [!NOTE]
+> Readable byte streams are almost identical to "normal" readable streams and almost all of the concepts are the same.
 > This article assumes that you already understand those concepts and will only be covering them superficially (if at all).
 > If you're not familiar with the relevant concepts, please first read: [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Streams concepts and usage overview](/en-US/docs/Web/API/Streams_API#concepts_and_usage), and [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts).
 
@@ -66,7 +67,8 @@ It uses a mocked "hypothetical socket" source that supplies data of arbitrary si
 The reader is deliberately delayed at various points to allow the underlying source to use both transfer and enqueuing to send data to the stream.
 Backpressure support is not demonstrated.
 
-> **Note:** An underlying byte source can also be used with a default reader.
+> [!NOTE]
+> An underlying byte source can also be used with a default reader.
 > If automatic buffer allocation is enabled the controller will supply fixed-size buffers for zero-copy transfers when there is an outstanding request from a reader and the stream's internal queues are empty.
 > If automatic buffer allocation is not enabled then all data from the byte stream will always be enqueued.
 > This is similar to the behavior shown in the "pull: underlying byte source examples.
@@ -91,19 +93,19 @@ class MockHypotheticalSocket {
     this.max_per_read = 100; // max data per read
     this.min_per_read = 40; // min data per read
     this.data_read = 0; // total data read so far (capped is maxdata)
-    this.socketdata = null;
+    this.socketData = null;
   }
 
   // Method returning promise when this socket is readable.
   select2() {
     // Object used to resolve promise
-    const resultobj = {};
-    resultobj["bytesRead"] = 0;
+    const resultObj = {};
+    resultObj["bytesRead"] = 0;
 
     return new Promise((resolve /*, reject*/) => {
       if (this.data_read >= this.max_data) {
         //out of data
-        resolve(resultobj);
+        resolve(resultObj);
         return;
       }
 
@@ -111,27 +113,27 @@ class MockHypotheticalSocket {
       setTimeout(() => {
         const numberBytesReceived = this.getNumberRandomBytesSocket();
         this.data_read += numberBytesReceived;
-        this.socketdata = this.randomByteArray(numberBytesReceived);
-        resultobj["bytesRead"] = numberBytesReceived;
-        resolve(resultobj);
+        this.socketData = this.randomByteArray(numberBytesReceived);
+        resultObj["bytesRead"] = numberBytesReceived;
+        resolve(resultObj);
       }, 500);
     });
   }
 
   /* Read data into specified buffer offset */
   readInto(buffer, offset, length) {
-    let length_data = 0;
-    if (this.socketdata) {
-      length_data = this.socketdata.length;
-      const myview = new Uint8Array(buffer, offset, length);
+    let dataLength = 0;
+    if (this.socketData) {
+      dataLength = this.socketData.length;
+      const myView = new Uint8Array(buffer, offset, length);
       // Write the length of data specified into buffer
       // Code assumes buffer always bigger than incoming data
-      for (let i = 0; i < length_data; i++) {
-        myview[i] = this.socketdata[i];
+      for (let i = 0; i < dataLength; i++) {
+        myView[i] = this.socketData[i];
       }
-      this.socketdata = null; // Clear "socket" data after reading
+      this.socketData = null; // Clear "socket" data after reading
     }
-    return length_data;
+    return dataLength;
   }
 
   // Dummy close function
@@ -417,7 +419,8 @@ The class generates random data to represent a file.
 The `read()` method reads a "semi-random" sized block of random data into a provided buffer from the specified position.
 The `close()` method does nothing: it is only provided to show where you might close the source when defining the constructor for the stream.
 
-> **Note:** A similar class is used for all the "pull source" examples.
+> [!NOTE]
+> A similar class is used for all the "pull source" examples.
 > It is shown here for information only (so that it is obvious that it is a mock).
 
 ```js
@@ -433,14 +436,14 @@ class MockUnderlyingFileHandle {
   // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
-    const resultobj = {};
-    resultobj["buffer"] = buffer;
-    resultobj["bytesRead"] = 0;
+    const resultObj = {};
+    resultObj["buffer"] = buffer;
+    resultObj["bytesRead"] = 0;
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
         //out of data
-        resolve(resultobj);
+        resolve(resultObj);
         return;
       }
 
@@ -453,18 +456,18 @@ class MockUnderlyingFileHandle {
       readLength = length > readLength ? readLength : length;
 
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, readLength);
+      const myView = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
       for (let i = 0; i < readLength; i++) {
-        myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i + 1;
+        myView[i] = this.filedata[position + i];
+        resultObj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
       // Emulate slow read of data
       setTimeout(() => {
-        resolve(resultobj);
+        resolve(resultObj);
       }, 1000);
     });
   }
@@ -694,14 +697,14 @@ class MockUnderlyingFileHandle {
   // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
-    const resultobj = {};
-    resultobj["buffer"] = buffer;
-    resultobj["bytesRead"] = 0;
+    const resultObj = {};
+    resultObj["buffer"] = buffer;
+    resultObj["bytesRead"] = 0;
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
         //out of data
-        resolve(resultobj);
+        resolve(resultObj);
         return;
       }
 
@@ -714,18 +717,18 @@ class MockUnderlyingFileHandle {
       readLength = length > readLength ? readLength : length;
 
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, readLength);
+      const myView = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
       for (let i = 0; i < readLength; i++) {
-        myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i + 1;
+        myView[i] = this.filedata[position + i];
+        resultObj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
       // Emulate slow read of data
       setTimeout(() => {
-        resolve(resultobj);
+        resolve(resultObj);
       }, 1000);
     });
   }
@@ -934,14 +937,14 @@ class MockUnderlyingFileHandle {
   // Read data from "file" at position/length into specified buffer offset
   read(buffer, offset, length, position) {
     // Object used to resolve promise
-    const resultobj = {};
-    resultobj["buffer"] = buffer;
-    resultobj["bytesRead"] = 0;
+    const resultObj = {};
+    resultObj["buffer"] = buffer;
+    resultObj["bytesRead"] = 0;
 
     return new Promise((resolve /*, reject*/) => {
       if (position >= this.maxdata) {
         //out of data
-        resolve(resultobj);
+        resolve(resultObj);
         return;
       }
 
@@ -954,18 +957,18 @@ class MockUnderlyingFileHandle {
       readLength = length > readLength ? readLength : length;
 
       // Read random data into supplied buffer
-      const myview = new Uint8Array(buffer, offset, readLength);
+      const myView = new Uint8Array(buffer, offset, readLength);
       // Write the length of data specified
       for (let i = 0; i < readLength; i++) {
-        myview[i] = this.filedata[position + i];
-        resultobj["bytesRead"] = i + 1;
+        myView[i] = this.filedata[position + i];
+        resultObj["bytesRead"] = i + 1;
         if (position + i + 1 >= this.maxdata) {
           break;
         }
       }
       // Emulate slow read of data
       setTimeout(() => {
-        resolve(resultobj);
+        resolve(resultObj);
       }, 1000);
     });
   }
@@ -1094,23 +1097,23 @@ function makeReadableByteFileStream(filename) {
       } else {
         // No BYOBRequest so enqueue data to stream
         // NOTE, this branch would only execute for a default reader if autoAllocateChunkSize is not defined.
-        const mynewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
+        const myNewBuffer = new Uint8Array(DEFAULT_CHUNK_SIZE);
         const { bytesRead, buffer } = await fileHandle.read(
-          mynewBuffer.buffer,
-          mynewBuffer.byteOffset,
-          mynewBuffer.byteLength,
+          myNewBuffer.buffer,
+          myNewBuffer.byteOffset,
+          myNewBuffer.byteLength,
           position,
         );
         if (bytesRead === 0) {
           await fileHandle.close();
           controller.close();
-          controller.enqueue(mynewBuffer);
+          controller.enqueue(myNewBuffer);
           logSource(
             `pull() with no byobRequest. Close controller (read bytes: ${bytesRead})`,
           );
         } else {
           position += bytesRead;
-          controller.enqueue(mynewBuffer);
+          controller.enqueue(myNewBuffer);
           logSource(`pull() with no byobRequest. enqueue() ${bytesRead} bytes`);
         }
       }

@@ -44,5 +44,5 @@ if (document.currentScript.async) {
 
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.afterscriptexecute_event")}}
-- {{DOMxRef("document.beforescriptexecute_event")}}
+- {{DOMxRef("document.afterscriptexecute_event", "afterscriptexecute")}} event of `Document`
+- {{DOMxRef("document.beforescriptexecute_event", "beforescriptexecute")}} event of `Document`

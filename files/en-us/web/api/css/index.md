@@ -28,12 +28,12 @@ _The CSS interface is a utility interface and no object of this type can be crea
 _No inherited static methods_.
 
 - {{DOMxRef("CSS/registerProperty_static", "CSS.registerProperty()")}}
-  - : Registers {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
+  - : Registers [custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default values, and properties that do or do not inherit their value.
 - {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
   - : Returns a boolean value indicating if the pair _property-value_, or the condition, given in parameter is supported.
 - {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
   - : Can be used to escape a string mostly for use as part of a CSS selector.
-- {{DOMxRef("CSS/factory_functions_static", 'CSS factory functions')}}
+- [CSS factory functions](/en-US/docs/Web/API/CSS/factory_functions_static)
 
   - : Can be used to return a new [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) with a value of the parameter number of the units of the name of the factory function method used.
 

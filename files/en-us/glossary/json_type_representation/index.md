@@ -11,7 +11,7 @@ page-type: glossary-definition
 
 The _JSON type representation_ of a JSON-incompatible object is an equivalent JavaScript object with properties encoded such that the information _can_ be serialized to JSON.
 This typically has the same properties as the original object for compatible data types, while incompatible properties are converted/serialized to compatible types.
-For example, buffer properties in the original object might be [base64url](/en-US/docs/Glossary/Base64)-encoded to strings in the JSON-type representation.
+For example, buffer properties in the original object might be {{Glossary("base64", "base64url")}}-encoded to strings in the JSON-type representation.
 
 An object that cannot automatically be serialized to JSON using the [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method can define an instance method named `toJSON()` that returns the _JSON-type representation_ of the original object.
 [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) will then use `toJSON()` to get the object to stringify, instead of the original object.

@@ -11,7 +11,8 @@ The **`VisualViewport`** interface of the {{domxref("Visual Viewport API", "", "
 
 You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
 
-> **Note:** Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
+> [!NOTE]
+> Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
 
 {{InheritanceDiagram}}
 
@@ -48,15 +49,18 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("VisualViewport/scroll_event", "scroll")}}
   - : Fired when the visual viewport is scrolled.
     Also available via the `onscroll` property.
+- {{domxref("VisualViewport/scrollend_event", "scrollend")}}
+  - : Fired when a scrolling operation on the visual viewport ends.
+    Also available via the `onscrollend` property.
 
 ## Examples
 
 ### Hiding an overlaid box on zoom
 
-This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) is also available.
+This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) is also available.
 
 ```js
-const bottomBar = document.getElementById("bottombar");
+const bottomBar = document.getElementById("bottom-bar");
 const viewport = window.visualViewport;
 
 function resizeHandler() {
@@ -71,7 +75,7 @@ window.visualViewport.addEventListener("resize", resizeHandler);
 This example, also taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to use this API to simulate `position: device-fixed`, which fixes elements to the visual viewport. A [live sample](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html) is also available.
 
 ```js
-const bottomBar = document.getElementById("bottombar");
+const bottomBar = document.getElementById("bottom-bar");
 const viewport = window.visualViewport;
 function viewportHandler() {
   const layoutViewport = document.getElementById("layoutViewport");
@@ -94,7 +98,8 @@ window.visualViewport.addEventListener("scroll", viewportHandler);
 window.visualViewport.addEventListener("resize", viewportHandler);
 ```
 
-> **Note:** This technique should be used with care; emulating `position: device-fixed` in this way can result in the fixed element flickering during scrolling.
+> [!NOTE]
+> This technique should be used with care; emulating `position: device-fixed` in this way can result in the fixed element flickering during scrolling.
 
 ## Specifications
 

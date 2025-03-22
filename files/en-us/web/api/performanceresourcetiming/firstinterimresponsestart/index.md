@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceResourceTiming.firstInterimResponseStart
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`firstInterimResponseStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the interim 1xx response (for example, 100 Continue or 103 Early Hints) from the server.
 
@@ -19,16 +19,19 @@ There is no _end_ property for `firstInterimResponseStart`.
 The `firstInterimResponseStart` property can have the following values:
 
 - A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first interim bytes of the response from the server.
-- `0` if the resource sent no interim response
+- `0` if the resource sent no interim response.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
-**Note:** As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a `0` typically indicates Early Hints were **not** used.
+> [!NOTE]
+> As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a `0` typically indicates Early Hints were **not** used.
+
+When the `firstInterimResponseStart` is non-zero, that indicates it should be the same value as {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} for [supporting browsers](#browser_compatibility).
 
 ## Examples
 
 ### Measuring request time
 
-The `firstInterimResponseStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes to the browser to receive an interim response after the sending the request.
+The `firstInterimResponseStart` and `requestStart` properties can be used to measure how long it takes to the browser to receive an interim response after the sending the request.
 
 ```js
 const request = entry.firstInterimResponseStart - entry.requestStart;
@@ -82,3 +85,4 @@ Timing-Allow-Origin: https://developer.mozilla.org
 ## See also
 
 - {{HTTPHeader("Timing-Allow-Origin")}}
+- {{domxref("PerformanceResourceTiming.finalResponseHeadersStart", "finalResponseHeadersStart")}}

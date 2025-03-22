@@ -23,7 +23,7 @@ div {
 }
 ```
 
-The {{cssxref("display")}} property accepts both legacy single value and [multi-keyword syntax](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display). Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. If a user has an old browser, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid.
+The {{cssxref("display")}} property accepts both legacy single value and [multi-keyword syntax](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display). Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. If a user has an old browser, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid.
 
 The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some common error situations are listed below:
 
@@ -39,16 +39,16 @@ After parsing each declaration, style rule, at-rule, and so on, the browser chec
 
 The `@` symbol, known in CSS specifications as an `<at-keyword-token>`, indicates the beginning of a CSS {{cssxref("at-rule")}}. Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint. Everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The content of each at-rule is interpreted according to the grammar rules for that particular at-rule.
 
-Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for [regular at-rules](/en-US/docs/Web/CSS/At-rule#regular). If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
+Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for [statement at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#statement_at-rules). If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
 
 ```css
 @import "assets/fonts.css" layer(fonts);
 @namespace svg url(http://www.w3.org/2000/svg);
 ```
 
-If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. Block at-rules, also called [nested at-rules](/en-US/docs/Web/CSS/At-rule#nested), like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
+If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. [Block at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule#block_at-rules) like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by any other curly braces: this closes the body of the at-rule.
 
-Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for [each at-rule](/en-US/docs/Web/CSS/At-rule) and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
+Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for [each at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
 
 For example, the `@font-face` rule requires both a [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) and [`src`](/en-US/docs/Web/CSS/@font-face/src) descriptor. If either of these is omitted or invalid, the entire `@font-face` rule is invalid. Including an unrelated descriptor, any other valid font descriptor with an invalid value, or a property style declaration within the `@font-face` nested block will not invalidate the font declaration. As long as the font name and font source are included and valid, any invalid CSS within the at-rule is ignored, but the `@font-face` block is still parsed.
 
@@ -118,15 +118,17 @@ You may come across legacy CSS that looks like the following:
 }
 ```
 
-In this example, the last declaration in each block is valid in all browsers — `display: flex;` and `border-radius: 50%;`. Because of the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order) [order of appearance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) rule, browsers will apply any prefixed declarations they understand, and then override those values with the standard unprefixed version.
+In this example, the last declaration in each block is valid in all browsers — `display: flex;` and `border-radius: 50%;`. Because of the [cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order) [order of appearance](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) rule, browsers will apply any prefixed declarations they understand, and then override those values with the standard unprefixed version.
 
-> **Note:** Avoid including prefixed properties or property values where possible. If you must use them, declare the prefixed versions before the non-prefixed version as shown above.
+> [!NOTE]
+> Avoid including prefixed properties or property values where possible. If you must use them, declare the prefixed versions before the non-prefixed version as shown above.
 
 ### Errors with auto-closed endings
 
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
-> **Note:** This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> [!NOTE]
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframe` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
@@ -134,7 +136,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 <style>
 @keyframes move {
   100% {
-    transform: translatex(100vw)
+    transform: translateX(100vw)
 </style>
 ```
 
@@ -148,8 +150,8 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
 <style>
   /* this comment is not closed
   @keyframes move {
-    0% {transform: translatex(0);}
-    100% {transform: translatex(100vw);}
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100vw);}
   }
 </style>
 <p style="/* another unclosed comment">Parsed as HTML.</p>
@@ -169,7 +171,7 @@ Custom properties are generally considered valid when declared, but may create i
 
 Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 
-When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
+When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value) or [inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
 
 Let's look at an example to illustrate this behavior:
 
@@ -182,7 +184,7 @@ body {
 }
 ```
 
-In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg` as a value of the `background-color` property, the grammar is invalid. An {{cssxref("angle")}} is not a valid `background-color` value. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong type, if the property is inheritable, the value is inherited from its parent. If the property is not inheritable, the default initial value is used. In the case of `background-color`, the property value is not an inherited value, so the inital value of `transparent` is used.
+In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg` as a value of the `background-color` property, the grammar is invalid. An {{cssxref("angle")}} is not a valid `background-color` value. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong type, if the property is inheritable, the value is inherited from its parent. If the property is not inheritable, the default initial value is used. In the case of `background-color`, the property value is not an inherited value, so the initial value of `transparent` is used.
 
 To better control the way custom properties fall back, use the {{cssxref("@property")}} at-rule to define the initial value of the property:
 
@@ -197,5 +199,5 @@ To better control the way custom properties fall back, use the {{cssxref("@prope
 ## See also
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [Syntax](/en-US/docs/Web/CSS/Syntax) guide
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

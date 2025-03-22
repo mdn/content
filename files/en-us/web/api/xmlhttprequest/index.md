@@ -37,12 +37,13 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 - {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} containing the response to the request, or `null` if the request was unsuccessful, has not yet been sent, or cannot be parsed as XML or HTML. Not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
-  - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Status) of the request.
+  - : Returns the [HTTP response status code](/en-US/docs/Web/HTTP/Reference/Status) of the request.
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
 
-  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
+  - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message (`"OK"`, for example).
 
-    > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+    > [!NOTE]
+    > According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : The time in milliseconds a request can take before automatically being terminated.
@@ -53,13 +54,13 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
 ### Non-standard properties
 
-- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.channel")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : The channel used by the object when performing the request.
-- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A boolean. If true, the request will be sent without cookie and authentication headers.
-- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A boolean. If true, the same origin policy will not be enforced on the request.
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
+- {{domxref("XMLHttpRequest.mozBackgroundRequest")}} {{Non-standard_Inline}}
   - : A boolean. It indicates whether or not the object represents a background service request.
 
 ## Instance methods
@@ -76,6 +77,8 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - : Overrides the MIME type returned by the server.
 - {{domxref("XMLHttpRequest.send()")}}
   - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Indicates that you want the request's response to be able to register an attribution source or trigger event.
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
 

@@ -6,13 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntriesByType()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline for a given _type_.
 
 If you are interested in performance entries of certain name, see {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}. For all performance entries, see {{domxref("Performance.getEntries", "getEntries()")}}.
 
-> **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
+> [!NOTE]
+> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
 > To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
 
 The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:
@@ -34,7 +35,7 @@ getEntriesByType(type)
 ### Parameters
 
 - `type`
-  - : The type of entry to retrieve such as "`mark`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
+  - : The type of entry to retrieve such as `"mark"`. The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ### Return value
 
@@ -44,7 +45,7 @@ An {{jsxref("Array")}} of {{domxref("PerformanceEntry")}} objects that have the 
 
 ### Logging resource entries
 
-The following example logs all entries with the type "`resource`".
+The following example logs all entries with the type `"resource"`.
 
 ```js
 const resources = performance.getEntriesByType("resource");

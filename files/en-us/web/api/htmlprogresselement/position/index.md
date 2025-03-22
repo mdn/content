@@ -12,7 +12,7 @@ The **`position`** read-only property of the {{DOMxRef("HTMLProgressElement")}} 
 
 ## Value
 
-For determinate progress bar returns the result of current value decided by max value, i.e., a fraction between `0.0` and `1.0`.
+For determinate progress bar returns the result of current value divided by max value, i.e., a fraction between `0.0` and `1.0`.
 
 For indeterminate progress bar the value is always `-1`.
 

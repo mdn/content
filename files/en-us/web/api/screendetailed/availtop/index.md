@@ -15,7 +15,8 @@ The **`availTop`** read-only property of the
 
 This is equal to the {{domxref("ScreenDetailed.top")}} property, plus the height of any OS UI element drawn at the top of the screen. Windows cannot be placed in those areas, so `availTop` is useful for giving you the top boundary of the actual area available to open or place windows.
 
-> **Note:** A non-standard implementation of the `availTop` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+> [!NOTE]
+> A non-standard implementation of the `availTop` property is available on the `Screen` interface in all browsers. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
 
 ## Value
 

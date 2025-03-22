@@ -35,7 +35,7 @@ A generic {{domxref("Event")}}.
 This example creates an event handler for `selectedcandidatepairchange` that updates a display providing the user information about the progress of the ICE negotiation for an {{domxref("RTCPeerConnection")}} called `pc`.
 
 ```js
-let iceTransport = pc.getSenders[0].transport.iceTransport;
+let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
@@ -53,7 +53,7 @@ iceTransport.addEventListener(
 This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.
 
 ```js
-let iceTransport = pc.getSenders[0].transport.iceTransport;
+let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 

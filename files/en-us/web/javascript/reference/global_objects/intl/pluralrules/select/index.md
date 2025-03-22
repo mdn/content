@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Intl.PluralRules.select
 
 The **`select()`** method of {{jsxref("Intl.PluralRules")}} instances returns a string indicating which plural rule to use for locale-aware formatting of a number.
 
-{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.prototype.select()")}}
+
+```js interactive-example
+console.log(new Intl.PluralRules("ar-EG").select(0));
+// Expected output: "zero"
+
+console.log(new Intl.PluralRules("ar-EG").select(5));
+// Expected output: "few"
+
+console.log(new Intl.PluralRules("ar-EG").select(55));
+// Expected output: "many"
+
+console.log(new Intl.PluralRules("en").select(0));
+// Expected output: "other"
+```
 
 ## Syntax
 

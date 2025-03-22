@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### HTML
 
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) of `<iframe>` elements is now supported, allowing developers to hint that particular `<iframe>` elements should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframe>` elements may not need to be fetched at all).
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) of `<iframe>` elements is now supported, allowing developers to hint that particular `<iframe>` elements should only be loaded when (and if) they become visible. This can speed up initial load time by reducing the resources that need to be fetched on page load (some `<iframe>` elements may not need to be fetched at all).
   The hint can be provided via the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on the [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element, or in JavaScript using {{domxref("HTMLIFrameElement.loading")}}.
   ([Firefox bug 1622090](https://bugzil.la/1622090)).
 
@@ -78,7 +78,7 @@ This article provides information about the changes in Firefox 121 that affect d
 These features are newly shipped in Firefox 121 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 - Custom element state pseudo-class: `dom.element.customstateset.enabled`
-  - : Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state. ([Firefox bug 1861466](https://bugzil.la/1861466))
+  - : Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--some-state` can match that element's state. ([Firefox bug 1861466](https://bugzil.la/1861466))
 - `showPicker()` method for HTML select elements: `dom.select.showPicker.enabled`
   - : The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction. ([Firefox bug 1854112](https://bugzil.la/1854112))
 
@@ -86,7 +86,8 @@ These features are newly shipped in Firefox 121 but are disabled by default. To 
 
 - Fixed a bug that resulted in background pages not starting when a manifest.json `background` key contains `service_worker` and `scripts` declarations ([Firefox bug 1860304](https://bugzil.la/1860304)).
 
-  > **Note:** Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
+  > [!NOTE]
+  > Incidentally, a change in Chrome 121 sees the `scripts` property ignored when specified with the `service_worker` property. Previously, Chrome refused to load extensions containing both properties ([Chromium bug 1418934](https://crbug.com/1418934)).
   > For more information, see [Browser support of the `background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support).
 
 ## Older versions

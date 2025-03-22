@@ -7,7 +7,7 @@ browser-compat: api.CSSMathValue
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.
+The **`CSSMathValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) a base class for classes representing complex numeric values.
 
 {{InheritanceDiagram}}
 
@@ -63,7 +63,7 @@ console.log(styleMap.get("width").values[1].value); // -20
 
 {{EmbedLiveSample("Examples", 120, 300)}}
 
-The `CSSMathValue.operator` returns '`sum`' because `styleMap.get('width').values[1].value );` is `-20`: adding a negative number.
+The `CSSMathValue.operator` returns `"sum"` because `styleMap.get("width").values[1].value );` is `-20`: adding a negative number.
 
 ## Specifications
 

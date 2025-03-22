@@ -8,13 +8,9 @@ browser-compat: api.HTMLAreaElement.hash
 
 {{ APIRef("HTML DOM") }}
 
-The
-**`HTMLAreaElement.hash`** property returns a
-string containing a `'#'` followed by the fragment
-identifier of the URL.
+The **`hash`** property of the {{domxref("HTMLAreaElement")}} interface is a string containing a `"#"` followed by the fragment identifier of the `<area>` element's `href`. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 
-The fragment is not [URL decoded](https://en.wikipedia.org/wiki/URL_encoding). If the URL does not
-have a fragment identifier, this property contains an empty string, `""`.
+See {{domxref("URL.hash")}} for more information.
 
 ## Value
 
@@ -46,7 +42,7 @@ you can get the hash of the area link like this:
 
 ```js
 const area = document.getElementById("mdn-circle");
-area.hash; // returns '#ExampleSection'
+area.hash; // '#ExampleSection'
 ```
 
 ## Specifications

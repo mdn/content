@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setBlendConstant
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBlendConstant()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
@@ -37,7 +37,8 @@ setBlendConstant(color)
     const color = [0.0, 0.5, 1.0, 1.0];
     ```
 
-> **Note:** If a `setBlendConstant()` call is not made, the blend constant color value defaults to `(0, 0, 0, 0)` for each render pass.
+> [!NOTE]
+> If a `setBlendConstant()` call is not made, the blend constant color value defaults to `(0, 0, 0, 0)` for each render pass.
 
 ### Return value
 

@@ -38,55 +38,39 @@ None ({{jsxref("undefined")}}).
 
 This example shows how to delete all query parameters (and values) that have a particular name.
 
-```html hidden
-<pre id="log"></pre>
-```
-
-```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += `${text}\n`;
-}
-```
-
 ```js
 const url = new URL("https://example.com?foo=1&bar=2&foo=3");
 const params = new URLSearchParams(url.search);
-log(`Query string (before):\t ${params}`);
+console.log(`Query string (before):\t ${params}`);
 params.delete("foo");
-log(`Query string (after):\t ${params}`);
+console.log(`Query string (after):\t ${params}`);
 ```
 
 The log below shows that all parameters that have the name of `foo` are deleted.
 
-{{EmbedLiveSample('Delete all parameters with specified name', '100%', '50')}}
+```plain
+Query string (before):  foo=1&bar=2&foo=3
+Query string (after):   bar=2
+```
 
 ### Delete parameters with specified name and value
 
 This example shows how to delete query parameters that match a particular name and value.
 
-```html hidden
-<pre id="log"></pre>
-```
-
-```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += `${text}\n`;
-}
-```
-
 ```js
 const url = new URL("https://example.com?foo=1&bar=2&foo=3&foo=1");
 const params = new URLSearchParams(url.search);
-log(`Query string (before):\t ${params}`);
+console.log(`Query string (before):\t ${params}`);
 params.delete("foo", "1");
-log(`Query string (after):\t ${params}`);
+console.log(`Query string (after):\t ${params}`);
 ```
 
 All parameters that match both the parameter `name` and `value` should be deleted (there is no reason to specify two parameters with the same name and value as shown above).
 
-{{EmbedLiveSample('Delete parameters with specified name and value', '100%', '50')}}
+```plain
+Query string (before):  foo=1&bar=2&foo=3&foo=1
+Query string (after):   bar=2&foo=3
+```
 
 If your browser supports the `value` option, the "after" string should be `bar=2&foo=3`.
 Otherwise the result will be the same as in the previous example (`bar=2`).

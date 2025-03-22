@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bufferSubData()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer
@@ -52,7 +52,7 @@ bufferSubData(target, offset, srcData)
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
     will start.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("DataView")}}, or a {{jsxref("TypedArray")}}
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
     that will be copied into the data store.
 - `srcOffset`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading
@@ -79,6 +79,7 @@ None ({{jsxref("undefined")}}).
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
+const data = new Float32Array([1, 2, 3, 4]);
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
 gl.bufferSubData(gl.ARRAY_BUFFER, 512, data);

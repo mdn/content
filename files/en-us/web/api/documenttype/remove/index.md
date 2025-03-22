@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Using `remove()`
 
 ```js
-document.doctype; // "<!DOCTYPE html>'
+document.doctype; // "<!doctype html>'
 document.doctype.remove();
 document.doctype; // null
 ```
@@ -45,3 +45,5 @@ document.doctype; // null
 ## See also
 
 - {{domxref("Document.doctype")}}
+- {{domxref("CharacterData.remove()")}}
+- {{domxref("Element.remove()")}}

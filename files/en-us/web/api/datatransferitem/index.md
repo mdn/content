@@ -7,7 +7,9 @@ browser-compat: api.DataTransferItem
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransferItem`** object represents one drag data item. During a _drag operation_, each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property which contains a {{domxref("DataTransferItemList","list")}} of drag data items. Each item in the list is a `DataTransferItem` object.
+The **`DataTransferItem`** object represents one drag data item. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property which contains a {{domxref("DataTransferItemList","list")}} of drag data items. Each item in the list is a `DataTransferItem` object.
+
+`DataTransferItem` was primarily designed for the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as {{domxref("ClipboardEvent.clipboardData")}} and {{domxref("InputEvent.dataTransfer")}}. Documentation of `DataTransferItem` will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs' documentation for usage of `DataTransferItem` in those contexts.
 
 This interface has no constructor.
 
@@ -23,7 +25,7 @@ This interface has no constructor.
 - {{domxref("DataTransferItem.getAsFile()")}}
   - : Returns the {{domxref("File")}} object associated with the drag data item (or null if the drag item is not a file).
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}} {{Experimental_Inline}}
-  - : Returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
+  - : Returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 - {{domxref("DataTransferItem.getAsString()")}}
   - : Invokes the specified callback with the drag data item string as its argument.
 - {{domxref("DataTransferItem.webkitGetAsEntry()")}}

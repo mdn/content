@@ -11,7 +11,8 @@ browser-compat: api.MutationObserver.observe
 The {{domxref("MutationObserver")}} method **`observe()`** configures the `MutationObserver`
 callback to begin receiving notifications of changes to the DOM that match the given options.
 
-Depending on the configuration, the observer may watch a single {{domxref("Node")}} in the DOM tree, or that node and some or all of its descendant nodes.
+Depending on the configuration, the observer may watch a single {{domxref("Node")}} in the DOM tree, or that node and some or all of its descendant nodes. The same node can be observed by multiple observers, and the same `MutationObserver` can watch for changes to different parts of the DOM tree and/or different types of changes by calling `observe()` multiple times on the same
+`MutationObserver`.
 
 To stop the `MutationObserver` (so that none of its callbacks will be triggered any longer), call {{domxref("MutationObserver.disconnect()")}}.
 
@@ -29,14 +30,14 @@ observe(target, options)
 - `options`
 
   - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`'s `callback`.
-    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}.
+    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call `observe()`.
     Otherwise, a `TypeError` exception will be thrown.
 
     Options are as follows:
 
     - `subtree` {{optional_inline}}
       - : Set to `true` to extend monitoring to the entire subtree of nodes rooted at `target`.
-        All of the other properties are then extended to all of the nodes in the subtree instead of applying solely to the `target` node. The default value is `false`.
+        All of the other properties are then extended to all of the nodes in the subtree instead of applying solely to the `target` node. The default value is `false`. Note that if a descendant of `target` is removed, changes in that descendant subtree will continue to be observed, until the notification about the removal itself has been delivered.
     - `childList` {{optional_inline}}
       - : Set to `true` to monitor the target node (and, if `subtree` is `true`, its descendants) for the addition of new child nodes or removal of existing child nodes.
         The default value is `false`.
@@ -72,32 +73,6 @@ None ({{jsxref("undefined")}}).
       `attributeFilter` is present.
     - The `characterDataOldValue` option is `true` but `characterData` is `false` (indicating that character changes are not to be monitored).
 
-## Usage notes
-
-### Reusing MutationObservers
-
-You can call `observe()` multiple times on the same
-`MutationObserver` to watch for changes to different parts of the DOM tree
-and/or different types of changes. There are some caveats to note:
-
-- If you call `observe()` on a node that's already being observed by the same `MutationObserver`, all existing observers are automatically removed from all targets being observed before the new observer is activated.
-- If the same `MutationObserver` is not already in use on the target, then the existing observers are left alone and the new one is added.
-
-### Observation follows nodes when disconnected
-
-Mutation observers are intended to let you be able to watch the desired set of nodes
-over time, even if the direct connections between those nodes are severed. If you begin
-watching a subtree of nodes, and a portion of that subtree is detached and moved
-elsewhere in the DOM, you continue to watch the detached segment of nodes, receiving the
-same callbacks as before the nodes were detached from the original subtree.
-
-In other words, until you've been notified that nodes are being split off from your monitored subtree, you'll get notifications of changes to that split-off subtree and its nodes.
-This prevents you from missing changes that occur after the connection is severed
-and before you have a chance to specifically begin monitoring the moved node or subtree for changes.
-
-Theoretically, this means that if you keep track of the {{domxref("MutationRecord")}} objects describing the changes that occur, you should be able to "undo" the changes,
-rewinding the DOM back to its initial state.
-
 ## Examples
 
 ### Basic usage
@@ -117,6 +92,52 @@ observer.observe(document.querySelector("#element-to-observe"), {
   subtree: true,
   childList: true,
 });
+```
+
+### Removed descendants when using `subtree`
+
+If you watch a node using the `subtree` option, you will continue to receive notifications of changes to the descendants of the node, even after a part of the subtree is removed. However, once the notification about the removal is delivered, further changes to the detached subtree will no longer trigger the observer.
+
+This prevents you from missing changes that occur after the connection is severed and before you have a chance to specifically begin monitoring the moved node or subtree for changes. Theoretically, this means that if you keep track of the {{domxref("MutationRecord")}} objects describing the changes that occur, you should be able to "undo" the changes,
+rewinding the DOM back to its initial state.
+
+```html
+<div id="target">
+  <div id="child"></div>
+</div>
+```
+
+```js
+const target = document.getElementById("target");
+const child = document.getElementById("child");
+
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    console.log(mutation.type, mutation.target.id, mutation.attributeName);
+
+    if (mutation.type === "childList" && mutation.target.id === "target") {
+      // After receiving the notification that the child was removed,
+      // further modifications to the detached subtree no longer trigger the observer.
+      child.setAttribute("data-bar", "");
+    }
+  });
+});
+
+observer.observe(target, {
+  attributes: true,
+  childList: true,
+  subtree: true,
+});
+
+target.removeChild(child);
+// This change happens before the "childList target" notification is delivered,
+// so it will also trigger the observer.
+child.setAttribute("data-foo", "");
+
+// Output:
+// childList target null
+// attributes child data-foo
+// There is no "attributes child data-bar" notification.
 ```
 
 ### Using `attributeFilter`
@@ -145,7 +166,7 @@ function callback(mutationList) {
   });
 }
 
-const userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#user-list");
 
 const observer = new MutationObserver(callback);
 observer.observe(userListElement, {

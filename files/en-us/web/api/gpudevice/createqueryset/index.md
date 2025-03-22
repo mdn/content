@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createQuerySet()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUQuerySet")}} that can be used to record the results of queries on passes, such as occlusion or timestamp queries.
@@ -39,7 +39,8 @@ createQuerySet(descriptor)
 
           - : Timestamp queries allow applications to write timestamps to a {{domxref("GPUQuerySet")}}. To run a timestamp query, appropriate {{domxref("GPUQuerySet")}}s must be provided inside the value of the `timestampWrites` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run a render pass, or {{domxref("GPUCommandEncoder.beginComputePass()")}} to run a compute pass. Alternatively, you can run a single timestamp query at any time by invoking {{domxref("GPUCommandEncoder.writeTimeStamp()")}} with an appropriate {{domxref("GPUQuerySet")}} as a parameter.
 
-            To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+            > [!NOTE]
+            > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ### Return value
 

@@ -158,4 +158,3 @@ If so ensure they are safe and that no better alternatives are available.
 - [Web Security Verification](https://wiki.mozilla.org/WebAppSec/Web_Security_Verification)
 - [Mozilla Security Review and Best Practices](https://www-archive.mozilla.org/projects/security/components/reviewguide.html)
 - [Security tips for Mozilla and extension developers](https://www.squarefree.com/securitytips/mozilla-developers.html)
-- [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)

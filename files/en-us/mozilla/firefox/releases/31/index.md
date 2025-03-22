@@ -64,7 +64,7 @@ New ECMAScript 2015 features implemented:
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test).
 - The `::-moz-math-stretchy` pseudo-element has been removed ([Firefox bug 1000879](https://bugzil.la/1000879)).
 - When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ([Firefox bug 930504](https://bugzil.la/930504)).
 

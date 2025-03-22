@@ -12,7 +12,8 @@ The **`ReadableStreamDefaultReader()`**
 constructor creates and returns a `ReadableStreamDefaultReader` object
 instance.
 
-> **Note:** You generally wouldn't use this constructor manually; instead,
+> [!NOTE]
+> You generally wouldn't use this constructor manually; instead,
 > you'd use the {{domxref("ReadableStream.getReader()")}} method.
 
 ## Syntax

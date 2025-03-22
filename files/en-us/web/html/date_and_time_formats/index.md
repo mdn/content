@@ -10,7 +10,7 @@ Certain HTML elements use date and/or time values. The formats of the strings th
 
 Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the values of [`type`](/en-US/docs/Web/HTML/Element/input#type) that return a [`value`](/en-US/docs/Web/HTML/Global_attributes#value) which contains a string representing a date and/or time are:
+For `<input>`, the [`type`](/en-US/docs/Web/HTML/Element/input#type) values of inputs whose [`value`](/en-US/docs/Web/HTML/Element/input#value) contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -119,7 +119,7 @@ In order to simplify the basic format used for date strings in HTML, the specifi
 
 While the Gregorian calendar wasn't created until the year 1582 (replacing the similar Julian calendar), for HTML's purposes, the Gregorian calendar is extended back to the year 1 C.E. Make sure any older dates account for this.
 
-For the purposes of HTML dates, years are always at least four digits long; years prior to the year 1000 are padded with leading zeroes ("`0`"), so the year 72 is written as `0072`. Years prior to the year 1 C.E. are not supported, so HTML doesn't support years 1 B.C.E. (1 B.C.) or earlier.
+For the purposes of HTML dates, years are always at least four digits long; years prior to the year 1000 are padded with leading zeroes (`0`), so the year 72 is written as `0072`. Years prior to the year 1 C.E. are not supported, so HTML doesn't support years 1 B.C.E. (1 B.C.) or earlier.
 
 A year is normally 365 days long, except during **[leap years](#leap_years)**.
 
@@ -216,7 +216,7 @@ Month numbers 1, 3, 5, 7, 8, 10, and 12 are 31 days long. Months 4, 6, 9, and 11
 
 ## Week strings
 
-A week string specifies a week within a particular year. A **valid week string** consists of a valid [year number](#year_numbers), followed by a hyphen character ("`-`", or U+002D), then the capital letter "`W`" (U+0057), followed by a two-digit week of the year value.
+A week string specifies a week within a particular year. A **valid week string** consists of a valid [year number](#year_numbers), followed by a hyphen character (`-`, or U+002D), then the capital letter `W` (U+0057), followed by a two-digit week of the year value.
 
 The week of the year is a two-digit string between `01` and `53`. Each week begins on Monday and ends on Sunday. That means it's possible for the first few days of January to be considered part of the previous week-year, and for the last few days of December to be considered part of the following week-year. The first week of the year is the week that contains the _first Thursday of the year_. For example, the first Thursday of 1953 was on January 1, so that week—beginning on Monday, December 29—is considered the first week of the year. Therefore, December 30, 1952 occurs during the week `1953-W01`.
 
@@ -242,7 +242,7 @@ Note that both the year and week numbers are padded with leading zeroes, with th
 
 A month string represents a specific month in time, rather than a generic month of the year. That is, rather than representing "January," an HTML month string represents a month and year paired, like "January 1972."
 
-A **valid month string** consists of a valid [year number](#year_numbers) (a string of at least four digits), followed by a hyphen character ("`-`", or U+002D), followed by a two-digit numeric [month number](#months_of_the_year), where `01` represents January and `12` represents December.
+A **valid month string** consists of a valid [year number](#year_numbers) (a string of at least four digits), followed by a hyphen character (`-`, or U+002D), followed by a two-digit numeric [month number](#months_of_the_year), where `01` represents January and `12` represents December.
 
 | Month string | Month and year   |
 | ------------ | ---------------- |
@@ -256,7 +256,7 @@ Notice that all years are at least four characters long; years that are fewer th
 
 ## Date strings
 
-A valid date string consists of a [month string](#month_strings), followed by a hyphen character ("`-`", or U+002D), followed by a two-digit [day of the month](#days_of_the_month).
+A valid date string consists of a [month string](#month_strings), followed by a hyphen character (`-`, or U+002D), followed by a two-digit [day of the month](#days_of_the_month).
 
 | Date string  | Full date        |
 | ------------ | ---------------- |
@@ -267,7 +267,7 @@ A valid date string consists of a [month string](#month_strings), followed by a 
 
 ## Time strings
 
-A time string can specify a time with precision to the minute, second, or to the millisecond. Specifying only the hour or minute isn't permitted. A **valid time string** minimally consists of a two-digit hour followed by a colon ("`:`", U+003A), then a two-digit minute. The minute may optionally be followed by another colon and a two-digit number of seconds. Milliseconds may be specified, optionally, by adding a decimal point character ("`.`", U+002E) followed by one, two, or three digits.
+A time string can specify a time with precision to the minute, second, or to the millisecond. Specifying only the hour or minute isn't permitted. A **valid time string** minimally consists of a two-digit hour followed by a colon (`:`, U+003A), then a two-digit minute. The minute may optionally be followed by another colon and a two-digit number of seconds. Milliseconds may be specified, optionally, by adding a decimal point character (`.`, U+002E) followed by one, two, or three digits.
 
 There are some additional basic rules:
 
@@ -286,9 +286,9 @@ There are some additional basic rules:
 
 ## Local date and time strings
 
-A valid [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter "`T`" or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
+A valid [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter `T` or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter `T` to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 <table class="standard-table">
   <caption>
@@ -316,7 +316,7 @@ When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datet
         <p>
           Note that after normalization, this is the same string as the previous
           <code>datetime-local</code> string. The space has been replaced with
-          the "<code>T</code>" character and the trailing zero in the fraction
+          the <code>T</code> character and the trailing zero in the fraction
           of a second has been removed to make the string as short as possible.
         </p>
       </td>
@@ -328,7 +328,7 @@ When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datet
         <p><code>0170-07-31T22:00</code></p>
         <p>
           Note that the normalized form of this date drops the
-          "<code>:00</code>" indicating the number of seconds to be zero,
+          <code>:00</code> indicating the number of seconds to be zero,
           because the seconds are optional when zero, and the normalized string
           minimizes the length of the string.
         </p>
@@ -349,11 +349,11 @@ A time zone offset string specifies the offset in either a positive or a negativ
 - For dates after the establishment of [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
 - For dates prior to UTC, the time base is instead expressed in terms of [UT1](https://en.wikipedia.org/wiki/UT1), which is the contemporary Earth solar time at the prime meridian.
 
-The time zone string is appended immediately following the time in the date and time string. You can specify "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
+The time zone string is appended immediately following the time in the date and time string. You can specify `Z` as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 
-1. A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
+1. A character indicating the sign of the offset: the plus character (`+`, or U+002B) for time zones to the east of the prime meridian or the minus character (`-`, or U+002D) for time zones to the west of the prime meridian.
 2. A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
-3. An optional colon ("`:`") character.
+3. An optional colon (`:`) character.
 4. A two-digit number of minutes past the hour; this value must be between `00` and `59`.
 
 While this format allows for time zones between -23:59 and +23:59, the current range of time zone offsets is -12:00 to +14:00, and no time zones are currently offset from the hour by anything other than `00`, `30`, or `45` minutes. This may change at more or less anytime, since countries are free to tamper with their time zones at any time and in any way they wish to do so.
@@ -401,7 +401,7 @@ Because of data storage and precision issues, you may want to be aware of a few 
 
 JavaScript uses double precision floating points to store dates, as with all numbers, meaning that JavaScript code will not suffer from the Y2K38 problem unless integer coercion/bit-hacks are used because all JavaScript bit operators use 32-bit signed 2s-complement integers.
 
-The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
+The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may require upgrading your PHP to a more recent version, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
 
 ### The Y10k Problem (often client-side)
 
@@ -414,7 +414,7 @@ The problem is with the client side of things: parsing of dates with more than 4
 <input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
-It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
+We need to prepare our code for any number of digits — not just 5. The following JavaScript function programmatically sets the value:
 
 ```js
 function setValue(element, date) {
@@ -430,6 +430,6 @@ Why worry about the Y10K problem if it is going to happen many centuries after y
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} and {{HTMLElement("del")}}: see the `datetime` attribute, which specifies either a date or a local date and time at which the content was inserted or deleted
 - [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [Numbers and Dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - The JavaScript {{jsxref("Date")}} object
 - The [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object for formatting dates and times for a given locale

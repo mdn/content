@@ -24,7 +24,7 @@ The example below will loop through the files you choose, and print whether each
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" multiple />
+<input type="file" id="file-picker" name="fileList" multiple />
 <output id="output"></output>
 ```
 
@@ -39,9 +39,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
   output.textContent = "";
@@ -64,7 +64,7 @@ filepicker.addEventListener("change", (event) => {
 ### Dynamically created files
 
 If a File is created dynamically, the last modified time can be supplied in the
-{{domxref("File.File()", "new File()")}} constructor function. If it is missing,
+{{domxref("File.File()", "File()")}} constructor function. If it is missing,
 `lastModified` inherits the current time from {{jsxref("Date.now()")}} at the
 moment the `File` object gets created.
 
@@ -80,14 +80,14 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 ## Reduced time precision
 
-To offer protection against timing attacks and {{glossary("fingerprinting")}}, the precision of
-`someFile.lastModified` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
-default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModified` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, with reduced time precision, the result of `someFile.lastModified` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
 someFile.lastModified;
+// Might be:
 // 1519211809934
 // 1519211810362
 // 1519211811670
@@ -95,16 +95,12 @@ someFile.lastModified;
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModified;
+// Might be:
 // 1519129853500
 // 1519129858900
 // 1519129864400
 // …
 ```
-
-In Firefox, if you enable `privacy.resistFingerprinting`, the
-precision will be 100ms or the value of
-`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
-is larger.
 
 ## Specifications
 

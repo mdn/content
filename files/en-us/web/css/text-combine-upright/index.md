@@ -11,7 +11,33 @@ The **`text-combine-upright`** [CSS](/en-US/docs/Web/CSS) property sets the comb
 
 This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">縦中横</q> in Japanese, or as <q lang="zh-Hant">橫向文字</q> in Chinese.
 
-{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+{{InteractiveExample("CSS Demo: text-combine-upright")}}
+
+```css interactive-example-choice
+text-combine-upright: none;
+```
+
+```css interactive-example-choice
+text-combine-upright: all;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>
+      <span class="transition-all" id="example-element"
+        >2022<span>年</span>12<span>月</span>8</span
+      >日から楽しい
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+p {
+  writing-mode: vertical-rl;
+}
+```
 
 ## Syntax
 
@@ -19,10 +45,6 @@ This is used to produce an effect that is known as tate-chū-yoko <q lang="ja">�
 /* Keyword values */
 text-combine-upright: none;
 text-combine-upright: all;
-
-/* Digits values */
-text-combine-upright: digits; /* fits 2 consecutive digits horizontally inside vertical text */
-text-combine-upright: digits 4; /* fits up to 4 consecutive digits horizontally inside vertical text */
 
 /* Global values */
 text-combine-upright: inherit;
@@ -38,8 +60,9 @@ text-combine-upright: unset;
   - : There is no special processing.
 - `all`
   - : Attempts to typeset all consecutive characters within the box horizontally, such that they take up the space of a single character within the vertical line of the box.
-- `digits <integer>?`
-  - : Attempts to display a sequence of consecutive {{Glossary("ASCII")}} digits (U+0030–U+0039) that has as many or fewer characters than the specified integer, such that it takes up the space of a single character within the vertical line box. If the integer is omitted, it computes to 2. Integers outside the range of 2-4 are invalid.
+
+> [!NOTE]
+> The [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module defines a `digits <integer>` value for the `text-combine-upright` property to display two to four consecutive {{Glossary("ASCII")}} digits (U+0030–U+0039) such that it takes up the space of a single character within the vertical line box, however, this is not supported in any browsers.
 
 ## Formal definition
 

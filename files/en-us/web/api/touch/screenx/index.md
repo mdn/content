@@ -16,9 +16,9 @@ A number.
 
 ## Examples
 
-This example illustrates how to access the {{domxref("Touch")}} object's {{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} properties. The {{domxref("Touch.screenX")}} property is the horizontal (x) coordinate of a touch point relative to the screen in CSS pixels. The {{domxref("Touch.screenY")}} property is the vertical coordinate of a touch point relative to the screen in CSS pixels.
+This example illustrates how to access the {{domxref("Touch")}} object's `Touch.screenX` and {{domxref("Touch.screenY")}} properties. The `Touch.screenX` property is the horizontal (x) coordinate of a touch point relative to the screen in CSS pixels. The {{domxref("Touch.screenY")}} property is the vertical coordinate of a touch point relative to the screen in CSS pixels.
 
-In following simple code snippet, we assume the user initiates multiple touch contacts on an element with an id of `source` and then releases contacts with the surface. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler is invoked, each touch point's {{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} coordinates are accessed.
+In following simple code snippet, we assume the user initiates multiple touch contacts on an element with an id of `source` and then releases contacts with the surface. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler is invoked, each touch point's `Touch.screenX` and {{domxref("Touch.screenY")}} coordinates are accessed.
 
 ```js
 // Register a touchstart listeners for the 'source' element

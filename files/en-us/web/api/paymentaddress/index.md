@@ -37,7 +37,8 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 - {{domxref('PaymentAddress.sortingCode')}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A string providing a postal sorting code such as is used in France.
 
-> **Note:** Properties for which values were not specified contain empty strings.
+> [!NOTE]
+> Properties for which values were not specified contain empty strings.
 
 ## Instance methods
 

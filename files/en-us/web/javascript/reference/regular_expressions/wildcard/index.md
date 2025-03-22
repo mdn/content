@@ -81,7 +81,8 @@ catch (e)
 `); // "try\n  doSomething();\ncatch (e)\n  console.log(e);"
 ````
 
-> **Warning:** These examples are for demonstration only. If you want to parse Markdown, use a dedicated Markdown parser because there are many edge cases to consider.
+> [!WARNING]
+> These examples are for demonstration only. If you want to parse Markdown, use a dedicated Markdown parser because there are many edge cases to consider.
 
 ## Specifications
 

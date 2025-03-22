@@ -31,9 +31,11 @@ The escaped string.
 
 ### Basic results
 
+<!-- Note: the {} need to be triple-escaped, once for Yari -->
+
 ```js-nolint
 CSS.escape(".foo#bar"); // "\\.foo\\#bar"
-CSS.escape("()[]{}"); // "\\(\\)\\[\\]\\{\\}"
+CSS.escape("()[]{}"); // "\\(\\)\\[\\]\\\{\\\}"
 CSS.escape('--a'); // "--a"
 CSS.escape(0); // "\\30 ", the Unicode code point of '0' is 30
 CSS.escape('\0'); // "\ufffd", the Unicode REPLACEMENT CHARACTER

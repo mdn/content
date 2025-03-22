@@ -19,6 +19,8 @@ See the {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event",
 
 A {{domxref("DataTransfer")}} object.
 
+The property can be `null` when the event is created using the constructor. It is never `null` when dispatched by the browser.
+
 ## Specifications
 
 {{Specifications}}

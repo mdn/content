@@ -7,7 +7,7 @@ browser-compat: css.types.abs
 
 {{CSSRef}}
 
-The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
+The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns the absolute value of the argument, as the same type as the input.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ The absolute value of `x`.
 - if `x`'s numeric value is positive or `0⁺`, return `x`.
 - Otherwise, returns `-1 * x`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

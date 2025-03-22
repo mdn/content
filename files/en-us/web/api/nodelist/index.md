@@ -9,7 +9,11 @@ browser-compat: api.NodeList
 
 **`NodeList`** objects are collections of [nodes](/en-US/docs/Web/API/Node), usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.
 
-> **Note:** Although `NodeList` is not an `Array`, it is possible to iterate over it with `forEach()`. It can also be converted to a real `Array` using {{jsxref("Array.from()")}}.
+This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs represent list structures using types based on JavaScript [arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), thus making many array methods available, and at the same time imposing additional semantics on their usage (such as making their items read-only).
+
+These historical reasons do not mean that you as a developer should avoid `NodeList`. You don't create `NodeList` objects yourself, but you get them from APIs such as {{domxref("Document.querySelectorAll()")}}, and these APIs are not deprecated. However, be careful of the semantic differences from a real array.
+
+Although `NodeList` is not an `Array`, it is possible to iterate over it with `forEach()`. It can also be converted to a real `Array` using {{jsxref("Array.from()")}}.
 
 ## Live vs. Static NodeLists
 

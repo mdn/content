@@ -13,8 +13,7 @@ page-type: glossary-definition
 - [HTTPS](https://en.wikipedia.org/wiki/HTTPS) on Wikipedia
 - [Moving to HTTPS community guide](https://movingtohttps.com/)
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("HTTP")}}
   - {{glossary("TLS")}}
   - {{glossary("SSL")}}

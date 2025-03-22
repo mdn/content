@@ -1,5 +1,5 @@
 ---
-title: ":first"
+title: :first
 slug: Web/CSS/:first
 page-type: css-pseudo-class
 browser-compat: css.selectors.first
@@ -7,7 +7,7 @@ browser-compat: css.selectors.first
 
 {{CSSRef}}
 
-The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
+The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents the first page of a printed document. (See {{cssxref(":first-child")}} for general first element of a node.)
 
 ```css
 /* Selects the first page when printing */
@@ -17,7 +17,8 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 }
 ```
 
-> **Note:** You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
+> [!NOTE]
+> You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
 
 ## Syntax
 
@@ -29,40 +30,36 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Examples
 
-### HTML
+### Using `:first` for page print styles
 
-```html
+Press the "Print!" button to print the example. The words on the first page should be somewhere around the center, while other pages will have their contents at the default position:
+
+```html live-sample___colon-first
 <p>First Page.</p>
 <p>Second Page.</p>
 <button>Print!</button>
 ```
 
-### CSS
-
-```css
+```css live-sample___colon-first
 @page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+  size: 8.5in 11in;
+  margin-left: 3in;
+  margin-top: 5in;
 }
 
 p {
   page-break-after: always;
+  font: 1.2em sans-serif;
 }
 ```
 
-### JavaScript
-
-```js
+```js live-sample___colon-first
 document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```
 
-### Result
-
-Press the "Print!" button to print the example. The words on the first page should be somewhere around the center, while other pages will have their contents at the default position.
-
-{{ EmbedLiveSample('Examples', '80%', '150px') }}
+{{EmbedLiveSample('colon-first', '100%', , , , , , "allow-modals")}}
 
 ## Specifications
 

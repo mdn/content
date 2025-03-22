@@ -29,7 +29,10 @@ No notable changes
 #### DOM
 
 - {{domxref("HTMLElement.outerText")}} is now supported ([Firefox bug 1709790](https://bugzil.la/1709790)).
-- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
+- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
+- {{domxref("ElementInternals")}} now has new form-associated custom element methods and properties that allow custom elements to interact with a form.
+  These include the {{domxref("ElementInternals.form","form")}}, {{domxref("ElementInternals.labels","labels")}} and {{domxref("ElementInternals.willValidate", "willValidate")}} properties, and the {{domxref("ElementInternals.setFormValue()","setFormValue()")}} method.
+  ([Firefox bug 1556362](https://bugzil.la/1556362), [Firefox bug 1556373](https://bugzil.la/1556373), [Firefox bug 1556365](https://bugzil.la/1556365), [Firefox bug 1556449](https://bugzil.la/1556449)).
 
 #### Removals
 

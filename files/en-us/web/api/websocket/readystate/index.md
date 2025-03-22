@@ -6,21 +6,23 @@ page-type: web-api-instance-property
 browser-compat: api.WebSocket.readyState
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.readyState`** read-only property returns the
 current state of the {{domxref("WebSocket")}} connection.
 
 ## Value
 
-One of the following `unsigned short` values:
+A number which is one of the four possible state constants defined on the {{domxref("WebSocket")}} interface:
 
-| Value | State        | Description                                              |
-| ----- | ------------ | -------------------------------------------------------- |
-| `0`   | `CONNECTING` | Socket has been created. The connection is not yet open. |
-| `1`   | `OPEN`       | The connection is open and ready to communicate.         |
-| `2`   | `CLOSING`    | The connection is in the process of closing.             |
-| `3`   | `CLOSED`     | The connection is closed or couldn't be opened.          |
+- `WebSocket.CONNECTING` (0)
+  - : Socket has been created. The connection is not yet open.
+- `WebSocket.OPEN` (1)
+  - : The connection is open and ready to communicate.
+- `WebSocket.CLOSING` (2)
+  - : The connection is in the process of closing.
+- `WebSocket.CLOSED` (3)
+  - : The connection is closed or couldn't be opened.
 
 ## Specifications
 

@@ -50,6 +50,10 @@ None ({{jsxref("undefined")}}).
 document.enableStyleSheetsForSet("Some style sheet set name");
 ```
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}
@@ -61,4 +65,3 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 - {{domxref("document.lastStyleSheetSet")}}
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}

@@ -37,6 +37,14 @@ The following is a list of elements you _can_ attach a shadow root to:
 - {{htmlelement("section")}}
 - {{htmlelement("span")}}
 
+## Calling this method on an element that is already a shadow host
+
+The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
+In this case the {{domxref("ShadowRoot")}} that was already present will be cleared and returned.
+This allows for cases where, for example, server-side rendering has already declaratively created a shadow root, and then client-side code attempts to attach the root again.
+
+Otherwise calling `attachShadow()` on an element that already has a shadow root will throw an exception.
+
 ## Syntax
 
 ```js-nolint
@@ -76,12 +84,18 @@ attachShadow(options)
 
     - `clonable` {{Optional_Inline}}
 
-      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`, unless the shadow root is created via declarative shadow DOM.
+      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
 
     - `delegatesFocus` {{Optional_Inline}}
 
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling. Its default value is `false`.
+
+    - `serializable` {{Optional_Inline}}
+
+      - : A boolean that, when set to `true`, indicates that the shadow root is serializable.
+        If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
+        Its default value is `false`.
 
     - `slotAssignment` {{Optional_inline}}
 
@@ -99,11 +113,14 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : The element you are trying to attach to is already a shadow host.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it,
-    or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
+
+  - : This error may be thrown when you try to attach a shadow root to an element:
+
+    - outside the HTML namespace or that can't have a shadow attached to it.
+    - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
+    - that already has a shadow root that was not created declaratively.
+    - that has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
 
 ## Examples
 
@@ -143,10 +160,9 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(() => {
-      const count = `Words: ${countWords(wcParent)}`;
-      text.textContent = count;
-    }, 200);
+    this.parentNode.addEventListener("input", () => {
+      text.textContent = `Words: ${countWords(wcParent)}`;
+    });
   }
 }
 
@@ -193,3 +209,5 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
+- Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Element/template)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

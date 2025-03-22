@@ -15,9 +15,14 @@ The aim is to allow users to know what's playing and to control it, without need
 
 ## Media Session concepts and usage
 
-The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
+The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), artwork, and chapter information. The platform can show this metadata in media centers, notifications, device lock screens, and so on. For example, different devices might present the Media Session API data like so:
 
-The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers action handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors, when no page-defined behavior is available.
+![Media Session data for the Sintel trailer title and artwork presented on a desktop browser, mobile phone, and smartwatch](media-session-ui.jpg)
+
+> [!CALLOUT]
+> Original image source: [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
+
+The {{domxref("MediaSession")}} interface lets users control the playback of media through user-agent-defined interface elements. Interaction with these elements triggers action handlers on the web page playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors when no page-defined behavior is available.
 
 ## Accessing the Media Session API
 
@@ -29,6 +34,8 @@ navigator.mediaSession.playbackState = "playing";
 
 ## Interfaces
 
+- {{domxref("ChapterInformation")}}
+  - : Represents the metadata for an individual chapter of a media resource (i.e., a video or audio file).
 - {{domxref("MediaMetadata")}}
   - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}
@@ -172,3 +179,7 @@ See [Presenting Slides / Media Session Sample](https://googlechrome.github.io/sa
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)

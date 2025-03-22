@@ -10,7 +10,7 @@ A **caret** (sometimes called a "text cursor") is an indicator displayed on the 
 
 Most user interfaces represent the caret using a thin vertical line or a character-sized box that flashes, but this can vary. This point in the text is called the **insertion point**. The word "caret" differentiates the text insertion point from the mouse cursor.
 
-On the web, a caret is used to represent the insertion point in {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements, as well as any elements whose [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute is set, thereby allowing the contents of the element to be edited by the user.
+On the web, a caret is used to represent the insertion point in {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements, as well as any elements whose [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is set, thereby allowing the contents of the element to be edited by the user.
 
 ## See also
 
@@ -31,4 +31,4 @@ These elements provide text entry fields or boxes and therefore make use of the 
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number), [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}
-- Any element with its [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set
+- Any element with its [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set

@@ -13,7 +13,7 @@ There are two main benefits to caching resources locally: **offline operation** 
 - **Offline operation**: Caching enables a PWA to function to a greater or lesser extent while the device does not have network connectivity.
 - **Responsiveness**: Even if the device is online, a PWA will usually be much more responsive if its user interface is fetched from the cache, rather than the network.
 
-The main drawback, of course, is **freshness**: caching is less appropriate for resources which need to be up to date. Also, for some types of requests, such as [POST](/en-US/docs/Web/HTTP/Methods/POST) requests, caching is never appropriate.
+The main drawback, of course, is **freshness**: caching is less appropriate for resources which need to be up to date. Also, for some types of requests, such as [POST](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests, caching is never appropriate.
 
 This means that whether and when you should cache a resource is very dependent on the resource in question, and a PWA will typically adopt different strategies for different resources. In this guide we'll look at some common caching strategies for PWAs, and see which strategies make sense for which resources.
 
@@ -23,7 +23,7 @@ The main technologies on which a PWA can build a caching strategy are the [Fetch
 
 ### Fetch API
 
-The Fetch API defines a global function {{domxref("fetch()")}} for fetching a network resource, and {{domxref("Request")}} and {{domxref("Response")}} interfaces that represent network requests and responses. The `fetch()` function takes a `Request` or a URL as an argument, and returns a {{jsxref("Promise")}} that resolves to a `Response`.
+The Fetch API defines a global function {{domxref("WorkerGlobalScope/fetch", "fetch()")}} for fetching a network resource, and {{domxref("Request")}} and {{domxref("Response")}} interfaces that represent network requests and responses. The `fetch()` function takes a `Request` or a URL as an argument, and returns a {{jsxref("Promise")}} that resolves to a `Response`.
 
 The `fetch()` function is available to service workers as well as to the main app thread.
 
@@ -47,7 +47,8 @@ A PWA can cache resources at any time, but in practice there are a few times whe
 
 - **In the service worker's `install` event handler (precaching)**: When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache.
 
-  > **Note:** Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
+  > [!NOTE]
+  > Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
   >
   > Even if the user never installs your site as a PWA, its service worker will be installed and activated.
 

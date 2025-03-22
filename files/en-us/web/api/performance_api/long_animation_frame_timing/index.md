@@ -104,18 +104,19 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
     - {{domxref("PerformanceScriptTiming.windowAttribution", "script.windowAttribution")}} an {{domxref("PerformanceScriptTiming.window", "script.window")}}
       - : An enumerated value describing the relationship of the container (i.e. either the top-level document or and {{htmlelement("iframe")}}) this script was executed in to the top-level document, and a reference to its {{domxref("Window")}} object.
 
-    > **Note:** Script attribution is provided only for scripts running in the main thread of a page, including same-origin `<iframe>`s. However, cross-origin `<iframe>`s, [web workers](/en-US/docs/Web/API/Web_Workers_API), [service workers](/en-US/docs/Web/API/Service_Worker_API), and [extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) code will not have script attribution in long animation frames, even if they impact the duration of one.
+    > [!NOTE]
+    > Script attribution is provided only for scripts running in the main thread of a page, including same-origin `<iframe>`s. However, cross-origin `<iframe>`s, [web workers](/en-US/docs/Web/API/Web_Workers_API), [service workers](/en-US/docs/Web/API/Service_Worker_API), and [extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) code will not have script attribution in long animation frames, even if they impact the duration of one.
 
 ## Calculating timestamps
 
-The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}} class allow several further useful timings to be calculated for the the long animation frame:
+The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}} class allow several further useful timings to be calculated for the long animation frame:
 
 | Timing                            | Calculation                                                              |
 | --------------------------------- | ------------------------------------------------------------------------ |
 | Start time                        | `startTime`                                                              |
 | End time                          | `startTime + duration`                                                   |
 | Work duration                     | `renderStart ? renderStart - startTime : duration`                       |
-| Render duration                   | `renderStart ? (startTime + duration) - renderStart: 0`                  |
+| Render duration                   | `renderStart ? (startTime + duration) - renderStart : 0`                 |
 | Render: Pre-layout duration       | `styleAndLayoutStart ? styleAndLayoutStart - renderStart : 0`            |
 | Render: Style and Layout duration | `styleAndLayoutStart ? (startTime + duration) - styleAndLayoutStart : 0` |
 

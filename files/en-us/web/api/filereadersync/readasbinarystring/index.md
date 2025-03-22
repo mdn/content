@@ -10,15 +10,15 @@ browser-compat: api.FileReaderSync.readAsBinaryString
 
 {{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers("worker_except_service")}}
 
-> **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
+> [!NOTE]
+> This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
 
 The **`readAsBinaryString()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
 ```js-nolint
-readAsBinaryString(File)
-readAsBinaryString(Blob)
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ readAsBinaryString(Blob)
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.

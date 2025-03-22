@@ -9,7 +9,33 @@ browser-compat: javascript.builtins.Proxy.handler.set
 
 The **`handler.set()`** method is a trap for the `[[Set]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as using [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to set a property's value.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+
+```js interactive-example
+const monster1 = { eyeCount: 4 };
+
+const handler1 = {
+  set(obj, prop, value) {
+    if (prop === "eyeCount" && value % 2 !== 0) {
+      console.log("Monsters must have an even number of eyes");
+    } else {
+      return Reflect.set(...arguments);
+    }
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+proxy1.eyeCount = 1;
+// Expected output: "Monsters must have an even number of eyes"
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+proxy1.eyeCount = 2;
+console.log(proxy1.eyeCount);
+// Expected output: 2
+```
 
 ## Syntax
 
@@ -17,39 +43,27 @@ The **`handler.set()`** method is a trap for the `[[Set]]` [object internal meth
 new Proxy(target, {
   set(target, property, value, receiver) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameters are passed to the `set()` method. `this`
-is bound to the handler.
+The following parameters are passed to the `set()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to set.
+  - : A string or {{jsxref("Symbol")}} representing the property name.
 - `value`
   - : The new value of the property to set.
 - `receiver`
-
-  - : The object to which the assignment was originally directed. This is usually the
-    proxy itself. But a `set()` handler can also be called indirectly, via
-    the prototype chain or various other ways.
-
-    For example, suppose a script does
-    `obj.name = "jen"`, and `obj` is not a
-    proxy, and has no own property `.name`, but it has a proxy on its
-    prototype chain. That proxy's `set()` handler will be called, and
-    `obj` will be passed as the receiver.
+  - : The `this` value for setters; see {{jsxref("Reflect.set()")}}. This is usually either the proxy itself or an object that inherits from the proxy.
 
 ### Return value
 
-The `set()` method should return a boolean value.
+The `set()` method must return a {{jsxref("Boolean")}} indicating whether or not the assignment succeeded. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
 
-- Return `true` to indicate that assignment succeeded.
-- If the `set()` method returns `false`, and the assignment
-  happened in strict-mode code, a {{jsxref("TypeError")}} will be thrown.
+Many operations, including using property accessors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throw a {{jsxref("TypeError")}} if the `[[Set]]` internal method returns `false`.
 
 ## Description
 
@@ -64,16 +78,10 @@ Or any other operation that invokes the `[[Set]]` [internal method](/en-US/docs/
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Set]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- Cannot change the value of a property to be different from the value of the
-  corresponding target object property if the corresponding target object property is a
-  non-writable, non-configurable data property.
-- Cannot set the value of a property if the corresponding target object property is a
-  non-configurable accessor property that has `undefined` as its
-  `[[Set]]` attribute.
-- In strict mode, a `false` return value from the `set()`
-  handler will throw a {{jsxref("TypeError")}} exception.
+- Cannot change the value of a property to be different from the value of the corresponding target object property, if the corresponding target object property is a non-writable, non-configurable own data property. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false, writable: false` for the property on `target`, and `value` is different from the `value` attribute in the `target`'s property descriptor, then the trap must return a falsy value.
+- Cannot set the value of a property if the corresponding target object property is a non-configurable own accessor property that has an undefined setter. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false, set: undefined` for the property on `target`, then the trap must return a falsy value.
 
 ## Examples
 

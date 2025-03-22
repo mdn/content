@@ -10,7 +10,7 @@ browser-compat: api.TextUpdateEvent.selectionStart
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The **`TextUpdateEvent.selectionStart`** read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
+The **`TextUpdateEvent.selectionStart`** read-only property indicates the position of the start of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
 
 ## Value
 
@@ -50,7 +50,7 @@ editorEl.editContext = editContext;
 
 editContext.addEventListener("textupdate", (e) => {
   // Clear the current content.
-  editorEl.innerHTML = "";
+  editorEl.textContent = "";
 
   const text = editContext.text;
   const { selectionStart, selectionEnd } = e;

@@ -36,6 +36,8 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 
 ### Exceptions
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the object store has been deleted.
 - `ReadOnlyError` {{domxref("DOMException")}}
   - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction/mode).
 - `TransactionInactiveError` {{domxref("DOMException")}}
@@ -53,7 +55,8 @@ full working example, see our [To-do Notifications](https://github.com/mdn/dom-e
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -69,11 +72,13 @@ function clearData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>Transaction completed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
+    note.appendChild(document.createElement("li")).textContent =
+      `Transaction not opened due to error: ${transaction.error}`;
   };
 
   // create an object store on the transaction
@@ -84,7 +89,8 @@ function clearData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 }
 ```

@@ -22,7 +22,8 @@ The Content Index API is an extension to [service workers](/en-US/docs/Web/API/S
 
 Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.
 
-> **Note:** The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.
+> [!NOTE]
+> The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.
 
 ## Interfaces
 
@@ -61,7 +62,7 @@ if ("index" in registration) {
 
 ### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the content index.
 
 ```js
 // our content
@@ -195,5 +196,4 @@ The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete")}}
 ## See also
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`navigator.hardwareConcurrency`** read-only property
 returns the number of logical processors available to run threads on the user's
@@ -42,7 +42,7 @@ let workerList = [];
 
 for (let i = 0; i < navigator.hardwareConcurrency; i++) {
   let newWorker = {
-    worker: new Worker("cpuworker.js"),
+    worker: new Worker("cpu-worker.js"),
     inUse: false,
   };
   workerList.push(newWorker);

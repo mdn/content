@@ -33,10 +33,6 @@ getElementsByTagName(name)
 
 A live {{domxref("HTMLCollection")}} of found elements in the order they appear in the tree.
 
-> **Note:** [The latest W3C specification](https://dom.spec.whatwg.org/#interface-document) says returned value is an
-> `HTMLCollection`; however, this method returns a {{domxref("NodeList")}} in
-> WebKit browsers. See [Firefox bug 14869](https://bugzil.la/14869) for details.
-
 ## Examples
 
 In the following example, `getElementsByTagName()` starts from a particular
@@ -52,7 +48,7 @@ paragraph elements of a particular parent (either the document itself or one of 
 nested {{HTMLElement("div")}} elements).
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

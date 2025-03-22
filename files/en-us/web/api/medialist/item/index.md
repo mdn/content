@@ -17,7 +17,8 @@ item(index)
 [index]
 ```
 
-> **Note:** The bracket (`[]`) syntax can be used instead of the `item()` syntax.
+> [!NOTE]
+> The bracket (`[]`) syntax can be used instead of the `item()` syntax.
 
 ### Parameters
 

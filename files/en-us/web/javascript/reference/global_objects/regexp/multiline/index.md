@@ -9,7 +9,24 @@ browser-compat: javascript.builtins.RegExp.multiline
 
 The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("^football");
+const regex2 = new RegExp("^football", "m");
+
+console.log(regex1.multiline);
+// Expected output: false
+
+console.log(regex2.multiline);
+// Expected output: true
+
+console.log(regex1.test("rugby\nfootball"));
+// Expected output: false
+
+console.log(regex2.test("rugby\nfootball"));
+// Expected output: true
+```
 
 ## Description
 

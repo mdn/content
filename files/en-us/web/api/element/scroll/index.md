@@ -15,23 +15,20 @@ element.
 ## Syntax
 
 ```js-nolint
-scroll(x-coord, y-coord)
+scroll(xCoord, yCoord)
 scroll(options)
 ```
 
 ### Parameters
 
-- `x-coord`
+- `xCoord`
   - : The pixel along the horizontal axis of the element that you want displayed in the
     upper left.
-- `y-coord`
+- `yCoord`
   - : The pixel along the vertical axis of the element that you want displayed in the
     upper left.
-
-\- or -
-
 - `options`
-  - : A dictionary containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`

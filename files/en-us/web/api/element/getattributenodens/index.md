@@ -23,8 +23,10 @@ getAttributeNodeNS(namespace, nodeName)
 
 ### Parameters
 
-- `namespace` is a string specifying the namespace of the attribute.
-- `nodeName` is a string specifying the name of the attribute.
+- `namespace`
+  - : A string specifying the namespace of the attribute.
+- `nodeName`
+  - : A string specifying the name of the attribute.
 
 ### Return value
 

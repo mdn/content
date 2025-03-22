@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
 
-> **Note:** See also [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) on Mozilla Hacks.
+> [!NOTE]
+> See also [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) on Mozilla Hacks.
 
 ## Changes for web developers
 

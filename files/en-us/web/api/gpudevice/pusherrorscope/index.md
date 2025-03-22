@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.pushErrorScope
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`pushErrorScope()`** method of the
 {{domxref("GPUDevice")}} interface pushes a new GPU error scope onto the device's error scope stack, allowing you to capture errors of a particular type.

@@ -14,7 +14,8 @@ The `gain` property of the {{ domxref("GainNode") }} interface is an [a-rate](/e
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

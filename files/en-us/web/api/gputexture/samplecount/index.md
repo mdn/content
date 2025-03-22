@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.sampleCount
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`sampleCount`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the sample count of the `GPUTexture`.

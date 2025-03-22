@@ -26,11 +26,12 @@ item(index)
 
 ### Parameters
 
-- `index` is an `unsigned long`.
+- `index`
+  - : A non-negative integer representing the position of the option in the list.
 
 ### Return value
 
-- `item` is a {{domxref("HTMLOptionElement")}}.
+An {{domxref("HTMLOptionElement")}} or `null`.
 
 ## Examples
 

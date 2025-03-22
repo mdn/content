@@ -21,10 +21,6 @@ new InputDeviceCapabilities()
 new InputDeviceCapabilities(InputDeviceCapabilitiesInit)
 ```
 
-### Returns
-
-An instance of the {{domxref("InputDeviceCapabilities")}} interface.
-
 ### Parameters
 
 - `InputDeviceCapabilitiesInit` {{optional_inline}}
@@ -34,6 +30,10 @@ An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
     - `fireTouchEvents`: A boolean value that indicates
       whether the device dispatches touch events.
+
+### Return value
+
+An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
 ## Specifications
 

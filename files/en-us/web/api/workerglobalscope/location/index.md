@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerGlobalScope.location
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`location`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
@@ -40,7 +40,8 @@ WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", host
 
 You could use this location object to return more information about the document's location, as you might do with a normal {{domxref("Location")}} object.
 
-> **Note:** Firefox has a bug with using `console.log` inside shared/service workers (see [Firefox bug 1058644](https://bugzil.la/1058644)), which may return strange results, but this should be fixed soon.
+> [!NOTE]
+> Firefox has a bug with using `console.log` inside shared/service workers (see [Firefox bug 1058644](https://bugzil.la/1058644)), which may return strange results, but this should be fixed soon.
 
 ## Specifications
 

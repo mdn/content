@@ -53,744 +53,131 @@ Constants passed to {{domxref("WebGLRenderingContext.clear()")}} to clear buffer
 
 Constants passed to {{domxref("WebGLRenderingContext.drawElements()")}} or {{domxref("WebGLRenderingContext.drawArrays()")}} to specify what kind of primitive to render.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>POINTS</code></td>
-      <td>0x0000</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw
-        single points.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LINES</code></td>
-      <td>0x0001</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw
-        lines. Each vertex connects to the one after it.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LINE_LOOP</code></td>
-      <td>0x0002</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw
-        lines. Each set of two vertices is treated as a separate line segment.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LINE_STRIP</code></td>
-      <td>0x0003</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw a
-        connected group of line segments from the first vertex to the last.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TRIANGLES</code></td>
-      <td>0x0004</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw
-        triangles. Each set of three vertices creates a separate triangle.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TRIANGLE_STRIP</code></td>
-      <td>0x0005</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw a
-        connected group of triangles.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TRIANGLE_FAN</code></td>
-      <td>0x0006</td>
-      <td>
-        Passed to <code>drawElements</code> or <code>drawArrays</code> to draw a
-        connected group of triangles. Each vertex connects to the previous and
-        the first vertex in the fan.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name    | Value  | Description                                                                                                                                            |
+| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `POINTS`         | 0x0000 | Passed to `drawElements` or `drawArrays` to draw single points.                                                                                        |
+| `LINES`          | 0x0001 | Passed to `drawElements` or `drawArrays` to draw lines. Each vertex connects to the one after it.                                                      |
+| `LINE_LOOP`      | 0x0002 | Passed to `drawElements` or `drawArrays` to draw lines. Each set of two vertices is treated as a separate line segment.                                |
+| `LINE_STRIP`     | 0x0003 | Passed to `drawElements` or `drawArrays` to draw a connected group of line segments from the first vertex to the last.                                 |
+| `TRIANGLES`      | 0x0004 | Passed to `drawElements` or `drawArrays` to draw triangles. Each set of three vertices creates a separate triangle.                                    |
+| `TRIANGLE_STRIP` | 0x0005 | Passed to `drawElements` or `drawArrays` to draw a connected group of triangles.                                                                       |
+| `TRIANGLE_FAN`   | 0x0006 | Passed to `drawElements` or `drawArrays` to draw a connected group of triangles. Each vertex connects to the previous and the first vertex in the fan. |
 
 ### Blending modes
 
 Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RGB and alpha, or separately).
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>ZERO</code></td>
-      <td>0</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        turn off a component.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE</code></td>
-      <td>1</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        turn on a component.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SRC_COLOR</code></td>
-      <td>0x0300</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by the source elements color.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_SRC_COLOR</code></td>
-      <td>0x0301</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by one minus the source elements color.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SRC_ALPHA</code></td>
-      <td>0x0302</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by the source's alpha.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_SRC_ALPHA</code></td>
-      <td>0x0303</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by one minus the source's alpha.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DST_ALPHA</code></td>
-      <td>0x0304</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by the destination's alpha.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_DST_ALPHA</code></td>
-      <td>0x0305</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by one minus the destination's alpha.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DST_COLOR</code></td>
-      <td>0x0306</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by the destination's color.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_DST_COLOR</code></td>
-      <td>0x0307</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by one minus the destination's color.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SRC_ALPHA_SATURATE</code></td>
-      <td>0x0308</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        multiply a component by the minimum of source's alpha or one minus the
-        destination's alpha.
-      </td>
-    </tr>
-    <tr>
-      <td><code>CONSTANT_COLOR</code></td>
-      <td>0x8001</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        specify a constant color blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_CONSTANT_COLOR</code></td>
-      <td>0x8002</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        specify one minus a constant color blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>CONSTANT_ALPHA</code></td>
-      <td>0x8003</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        specify a constant alpha blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ONE_MINUS_CONSTANT_ALPHA</code></td>
-      <td>0x8004</td>
-      <td>
-        Passed to <code>blendFunc</code> or <code>blendFuncSeparate</code> to
-        specify one minus a constant alpha blend function.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name              | Value  | Description                                                                                                                                 |
+| -------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ZERO`                     | 0      | Passed to `blendFunc` or `blendFuncSeparate` to turn off a component.                                                                       |
+| `ONE`                      | 1      | Passed to `blendFunc` or `blendFuncSeparate` to turn on a component.                                                                        |
+| `SRC_COLOR`                | 0x0300 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the source element's color.                                         |
+| `ONE_MINUS_SRC_COLOR`      | 0x0301 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the source element's color.                               |
+| `SRC_ALPHA`                | 0x0302 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the source's alpha.                                                 |
+| `ONE_MINUS_SRC_ALPHA`      | 0x0303 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the source's alpha.                                       |
+| `DST_ALPHA`                | 0x0304 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the destination's alpha.                                            |
+| `ONE_MINUS_DST_ALPHA`      | 0x0305 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the destination's alpha.                                  |
+| `DST_COLOR`                | 0x0306 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the destination's color.                                            |
+| `ONE_MINUS_DST_COLOR`      | 0x0307 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the destination's color.                                  |
+| `SRC_ALPHA_SATURATE`       | 0x0308 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the minimum of source's alpha or one minus the destination's alpha. |
+| `CONSTANT_COLOR`           | 0x8001 | Passed to `blendFunc` or `blendFuncSeparate` to specify a constant color blend function.                                                    |
+| `ONE_MINUS_CONSTANT_COLOR` | 0x8002 | Passed to `blendFunc` or `blendFuncSeparate` to specify one minus a constant color blend function.                                          |
+| `CONSTANT_ALPHA`           | 0x8003 | Passed to `blendFunc` or `blendFuncSeparate` to specify a constant alpha blend function.                                                    |
+| `ONE_MINUS_CONSTANT_ALPHA` | 0x8004 | Passed to `blendFunc` or `blendFuncSeparate` to specify one minus a constant alpha blend function.                                          |
 
 ### Blending equations
 
 Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RGB and alpha, or separately).
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>FUNC_ADD</code></td>
-      <td>0x8006</td>
-      <td>
-        Passed to <code>blendEquation</code> or
-        <code>blendEquationSeparate</code> to set an addition blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>FUNC_SUBTRACT</code></td>
-      <td>0x800A</td>
-      <td>
-        Passed to <code>blendEquation</code> or
-        <code>blendEquationSeparate</code> to specify a subtraction blend
-        function (source - destination).
-      </td>
-    </tr>
-    <tr>
-      <td><code>FUNC_REVERSE_SUBTRACT</code></td>
-      <td>0x800B</td>
-      <td>
-        Passed to <code>blendEquation</code> or
-        <code>blendEquationSeparate</code> to specify a reverse subtraction
-        blend function (destination - source).
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name           | Value  | Description                                                                                                                  |
+| ----------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `FUNC_ADD`              | 0x8006 | Passed to `blendEquation` or `blendEquationSeparate` to set an addition blend function.                                      |
+| `FUNC_SUBTRACT`         | 0x800A | Passed to `blendEquation` or `blendEquationSeparate` to specify a subtraction blend function (source - destination).         |
+| `FUNC_REVERSE_SUBTRACT` | 0x800B | Passed to `blendEquation` or `blendEquationSeparate` to specify a reverse subtraction blend function (destination - source). |
 
 ### Getting GL parameter information
 
 Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to specify what information to return.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>BLEND_EQUATION</code></td>
-      <td>0x8009</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current RGB blend
-        function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_EQUATION_RGB</code></td>
-      <td>0x8009</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current RGB blend
-        function. Same as BLEND_EQUATION
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_EQUATION_ALPHA</code></td>
-      <td>0x883D</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current alpha blend
-        function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_DST_RGB</code></td>
-      <td>0x80C8</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current destination RGB
-        blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_SRC_RGB</code></td>
-      <td>0x80C9</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current destination RGB
-        blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_DST_ALPHA</code></td>
-      <td>0x80CA</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current destination alpha
-        blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_SRC_ALPHA</code></td>
-      <td>0x80CB</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current source alpha
-        blend function.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BLEND_COLOR</code></td>
-      <td>0x8005</td>
-      <td>
-        Passed to <code>getParameter</code> to return a the current blend color.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ARRAY_BUFFER_BINDING</code></td>
-      <td>0x8894</td>
-      <td>
-        Passed to <code>getParameter</code> to get the array buffer binding.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ELEMENT_ARRAY_BUFFER_BINDING</code></td>
-      <td>0x8895</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current element array
-        buffer.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LINE_WIDTH</code></td>
-      <td>0x0B21</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current
-        <code>lineWidth</code> (set by the <code>lineWidth</code> method).
-      </td>
-    </tr>
-    <tr>
-      <td><code>ALIASED_POINT_SIZE_RANGE</code></td>
-      <td>0x846D</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current size of a point
-        drawn with <code>gl.POINTS</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>ALIASED_LINE_WIDTH_RANGE</code></td>
-      <td>0x846E</td>
-      <td>
-        Passed to <code>getParameter</code> to get the range of available widths for a line.
-        The <code>getParameter</code> method then returns an array with two elements: the first element is the minimum width value and the second element is the maximum width value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>CULL_FACE_MODE</code></td>
-      <td>0x0B45</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current value of
-        <code>cullFace</code>. Should return <code>FRONT</code>,
-        <code>BACK</code>, or <code>FRONT_AND_BACK</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>FRONT_FACE</code></td>
-      <td>0x0B46</td>
-      <td>
-        Passed to <code>getParameter</code> to determine the current value of
-        <code>frontFace</code>. Should return <code>CW</code> or
-        <code>CCW</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_RANGE</code></td>
-      <td>0x0B70</td>
-      <td>
-        Passed to <code>getParameter</code> to return a length-2 array of floats
-        giving the current depth range.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_WRITEMASK</code></td>
-      <td>0x0B72</td>
-      <td>
-        Passed to <code>getParameter</code> to determine if the depth write mask
-        is enabled.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_CLEAR_VALUE</code></td>
-      <td>0x0B73</td>
-      <td>
-        Passed to <code>getParameter</code> to determine the current depth clear
-        value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_FUNC</code></td>
-      <td>0x0B74</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current depth function.
-        Returns <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>,
-        <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>,
-        <code>GEQUAL</code>, or <code>NOTEQUAL</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_CLEAR_VALUE</code></td>
-      <td>0x0B91</td>
-      <td>
-        Passed to <code>getParameter</code> to get the value the stencil will be
-        cleared to.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_FUNC</code></td>
-      <td>0x0B92</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current stencil function.
-        Returns <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>,
-        <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>,
-        <code>GEQUAL</code>, or <code>NOTEQUAL</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_FAIL</code></td>
-      <td>0x0B94</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current stencil fail
-        function. Should return <code>KEEP</code>, <code>REPLACE</code>,
-        <code>INCR</code>, <code>DECR</code>, <code>INVERT</code>,
-        <code>INCR_WRAP</code>, or <code>DECR_WRAP</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_PASS_DEPTH_FAIL</code></td>
-      <td>0x0B95</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current stencil fail
-        function should the depth buffer test fail. Should return
-        <code>KEEP</code>, <code>REPLACE</code>, <code>INCR</code>,
-        <code>DECR</code>, <code>INVERT</code>, <code>INCR_WRAP</code>, or
-        <code>DECR_WRAP</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_PASS_DEPTH_PASS</code></td>
-      <td>0x0B96</td>
-      <td>
-        Passed to <code>getParameter</code> to get the current stencil fail
-        function should the depth buffer test pass. Should return KEEP, REPLACE,
-        INCR, DECR, INVERT, INCR_WRAP, or DECR_WRAP.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_REF</code></td>
-      <td>0x0B97</td>
-      <td>
-        Passed to <code>getParameter</code> to get the reference value used for
-        stencil tests.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_VALUE_MASK</code></td>
-      <td>0x0B93</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_WRITEMASK</code></td>
-      <td>0x0B98</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_FUNC</code></td>
-      <td>0x8800</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_FAIL</code></td>
-      <td>0x8801</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_PASS_DEPTH_FAIL</code></td>
-      <td>0x8802</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_PASS_DEPTH_PASS</code></td>
-      <td>0x8803</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_REF</code></td>
-      <td>0x8CA3</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_VALUE_MASK</code></td>
-      <td>0x8CA4</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BACK_WRITEMASK</code></td>
-      <td>0x8CA5</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>VIEWPORT</code></td>
-      <td>0x0BA2</td>
-      <td>
-        Returns an {{jsxref("Int32Array")}} with four elements for the
-        current viewport dimensions.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SCISSOR_BOX</code></td>
-      <td>0x0C10</td>
-      <td>
-        Returns an {{jsxref("Int32Array")}} with four elements for the
-        current scissor box dimensions.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COLOR_CLEAR_VALUE</code></td>
-      <td>0x0C22</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>COLOR_WRITEMASK</code></td>
-      <td>0x0C23</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>UNPACK_ALIGNMENT</code></td>
-      <td>0x0CF5</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>PACK_ALIGNMENT</code></td>
-      <td>0x0D05</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_TEXTURE_SIZE</code></td>
-      <td>0x0D33</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_VIEWPORT_DIMS</code></td>
-      <td>0x0D3A</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SUBPIXEL_BITS</code></td>
-      <td>0x0D50</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>RED_BITS</code></td>
-      <td>0x0D52</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>GREEN_BITS</code></td>
-      <td>0x0D53</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>BLUE_BITS</code></td>
-      <td>0x0D54</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>ALPHA_BITS</code></td>
-      <td>0x0D55</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_BITS</code></td>
-      <td>0x0D56</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_BITS</code></td>
-      <td>0x0D57</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>POLYGON_OFFSET_UNITS</code></td>
-      <td>0x2A00</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>POLYGON_OFFSET_FACTOR</code></td>
-      <td>0x8038</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>TEXTURE_BINDING_2D</code></td>
-      <td>0x8069</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SAMPLE_BUFFERS</code></td>
-      <td>0x80A8</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SAMPLES</code></td>
-      <td>0x80A9</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SAMPLE_COVERAGE_VALUE</code></td>
-      <td>0x80AA</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SAMPLE_COVERAGE_INVERT</code></td>
-      <td>0x80AB</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_TEXTURE_FORMATS</code></td>
-      <td>0x86A3</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>VENDOR</code></td>
-      <td>0x1F00</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>RENDERER</code></td>
-      <td>0x1F01</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>VERSION</code></td>
-      <td>0x1F02</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>IMPLEMENTATION_COLOR_READ_TYPE</code></td>
-      <td>0x8B9A</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>IMPLEMENTATION_COLOR_READ_FORMAT</code></td>
-      <td>0x8B9B</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>BROWSER_DEFAULT_WEBGL</code></td>
-      <td>0x9244</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Constant name                      | Value  | Description                                                                                                                                                                                                                                  |
+| ---------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BLEND_EQUATION`                   | 0x8009 | Passed to `getParameter` to get the current RGB blend function.                                                                                                                                                                              |
+| `BLEND_EQUATION_RGB`               | 0x8009 | Passed to `getParameter` to get the current RGB blend function. Same as `BLEND_EQUATION`                                                                                                                                                     |
+| `BLEND_EQUATION_ALPHA`             | 0x883D | Passed to `getParameter` to get the current alpha blend function.                                                                                                                                                                            |
+| `BLEND_DST_RGB`                    | 0x80C8 | Passed to `getParameter` to get the current destination RGB blend function.                                                                                                                                                                  |
+| `BLEND_SRC_RGB`                    | 0x80C9 | Passed to `getParameter` to get the current destination RGB blend function.                                                                                                                                                                  |
+| `BLEND_DST_ALPHA`                  | 0x80CA | Passed to `getParameter` to get the current destination alpha blend function.                                                                                                                                                                |
+| `BLEND_SRC_ALPHA`                  | 0x80CB | Passed to `getParameter` to get the current source alpha blend function.                                                                                                                                                                     |
+| `BLEND_COLOR`                      | 0x8005 | Passed to `getParameter` to return the current blend color.                                                                                                                                                                                  |
+| `ARRAY_BUFFER_BINDING`             | 0x8894 | Passed to `getParameter` to get the array buffer binding.                                                                                                                                                                                    |
+| `ELEMENT_ARRAY_BUFFER_BINDING`     | 0x8895 | Passed to `getParameter` to get the current element array buffer.                                                                                                                                                                            |
+| `LINE_WIDTH`                       | 0x0B21 | Passed to `getParameter` to get the current `lineWidth` (set by the `lineWidth` method).                                                                                                                                                     |
+| `ALIASED_POINT_SIZE_RANGE`         | 0x846D | Passed to `getParameter` to get the current size of a point drawn with `gl.POINTS`                                                                                                                                                           |
+| `ALIASED_LINE_WIDTH_RANGE`         | 0x846E | Passed to `getParameter` to get the range of available widths for a line. The `getParameter` method then returns an array with two elements: the first element is the minimum width value and the second element is the maximum width value. |
+| `CULL_FACE_MODE`                   | 0x0B45 | Passed to `getParameter` to get the current value of `cullFace`. Should return `FRONT`, `BACK`, or `FRONT_AND_BACK`                                                                                                                          |
+| `FRONT_FACE`                       | 0x0B46 | Passed to `getParameter` to determine the current value of `frontFace`. Should return `CW` or `CCW`.                                                                                                                                         |
+| `DEPTH_RANGE`                      | 0x0B70 | Passed to `getParameter` to return a length-2 array of floats giving the current depth range.                                                                                                                                                |
+| `DEPTH_WRITEMASK`                  | 0x0B72 | Passed to `getParameter` to determine if the depth write mask is enabled.                                                                                                                                                                    |
+| `DEPTH_CLEAR_VALUE`                | 0x0B73 | Passed to `getParameter` to determine the current depth clear value.                                                                                                                                                                         |
+| `DEPTH_FUNC`                       | 0x0B74 | Passed to `getParameter` to get the current depth function. Returns `NEVER`, `ALWAYS`, `LESS`, `EQUAL`, `LEQUAL`, `GREATER`, `GEQUAL`, or `NOTEQUAL`.                                                                                        |
+| `STENCIL_CLEAR_VALUE`              | 0x0B91 | Passed to `getParameter` to get the value the stencil will be cleared to.                                                                                                                                                                    |
+| `STENCIL_FUNC`                     | 0x0B92 | Passed to `getParameter` to get the current stencil function. Returns `NEVER`, `ALWAYS`, `LESS`, `EQUAL`, `LEQUAL`, `GREATER`, `GEQUAL`, or `NOTEQUAL`.                                                                                      |
+| `STENCIL_FAIL`                     | 0x0B94 | Passed to `getParameter` to get the current stencil fail function. Should return `KEEP`, `REPLACE`, `INCR`, `DECR`, `INVERT`, `INCR_WRAP`, or `DECR_WRAP`.                                                                                   |
+| `STENCIL_PASS_DEPTH_FAIL`          | 0x0B95 | Passed to `getParameter` to get the current stencil fail function should the depth buffer test fail. Should return `KEEP`, `REPLACE`, `INCR`, `DECR`, `INVERT`, `INCR_WRAP`, or `DECR_WRAP`.                                                 |
+| `STENCIL_PASS_DEPTH_PASS`          | 0x0B96 | Passed to `getParameter` to get the current stencil fail function should the depth buffer test pass. Should return `KEEP`, `REPLACE`, `INCR`, `DECR`, `INVERT`, `INCR_WRAP`, or `DECR_WRAP`.                                                 |
+| `STENCIL_REF`                      | 0x0B97 | Passed to `getParameter` to get the reference value used for stencil tests.                                                                                                                                                                  |
+| `STENCIL_VALUE_MASK`               | 0x0B93 |                                                                                                                                                                                                                                              |
+| `STENCIL_WRITEMASK`                | 0x0B98 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_FUNC`                | 0x8800 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_FAIL`                | 0x8801 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_PASS_DEPTH_FAIL`     | 0x8802 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_PASS_DEPTH_PASS`     | 0x8803 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_REF`                 | 0x8CA3 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_VALUE_MASK`          | 0x8CA4 |                                                                                                                                                                                                                                              |
+| `STENCIL_BACK_WRITEMASK`           | 0x8CA5 |                                                                                                                                                                                                                                              |
+| `VIEWPORT`                         | 0x0BA2 | Returns an {{jsxref("Int32Array")}} with four elements for the current viewport dimensions.                                                                                                                                                  |
+| `SCISSOR_BOX`                      | 0x0C10 | Returns an {{jsxref("Int32Array")}} with four elements for the current scissor box dimensions.                                                                                                                                               |
+| `COLOR_CLEAR_VALUE`                | 0x0C22 |                                                                                                                                                                                                                                              |
+| `COLOR_WRITEMASK`                  | 0x0C23 |                                                                                                                                                                                                                                              |
+| `UNPACK_ALIGNMENT`                 | 0x0CF5 |                                                                                                                                                                                                                                              |
+| `PACK_ALIGNMENT`                   | 0x0D05 |                                                                                                                                                                                                                                              |
+| `MAX_TEXTURE_SIZE`                 | 0x0D33 |                                                                                                                                                                                                                                              |
+| `MAX_VIEWPORT_DIMS`                | 0x0D3A |                                                                                                                                                                                                                                              |
+| `SUBPIXEL_BITS`                    | 0x0D50 |                                                                                                                                                                                                                                              |
+| `RED_BITS`                         | 0x0D52 |                                                                                                                                                                                                                                              |
+| `GREEN_BITS`                       | 0x0D53 |                                                                                                                                                                                                                                              |
+| `BLUE_BITS`                        | 0x0D54 |                                                                                                                                                                                                                                              |
+| `ALPHA_BITS`                       | 0x0D55 |                                                                                                                                                                                                                                              |
+| `DEPTH_BITS`                       | 0x0D56 |                                                                                                                                                                                                                                              |
+| `STENCIL_BITS`                     | 0x0D57 |                                                                                                                                                                                                                                              |
+| `POLYGON_OFFSET_UNITS`             | 0x2A00 |                                                                                                                                                                                                                                              |
+| `POLYGON_OFFSET_FACTOR`            | 0x8038 |                                                                                                                                                                                                                                              |
+| `TEXTURE_BINDING_2D`               | 0x8069 |                                                                                                                                                                                                                                              |
+| `SAMPLE_BUFFERS`                   | 0x80A8 |                                                                                                                                                                                                                                              |
+| `SAMPLES`                          | 0x80A9 |                                                                                                                                                                                                                                              |
+| `SAMPLE_COVERAGE_VALUE`            | 0x80AA |                                                                                                                                                                                                                                              |
+| `SAMPLE_COVERAGE_INVERT`           | 0x80AB |                                                                                                                                                                                                                                              |
+| `COMPRESSED_TEXTURE_FORMATS`       | 0x86A3 |                                                                                                                                                                                                                                              |
+| `VENDOR`                           | 0x1F00 |                                                                                                                                                                                                                                              |
+| `RENDERER`                         | 0x1F01 |                                                                                                                                                                                                                                              |
+| `VERSION`                          | 0x1F02 |                                                                                                                                                                                                                                              |
+| `IMPLEMENTATION_COLOR_READ_TYPE`   | 0x8B9A |                                                                                                                                                                                                                                              |
+| `IMPLEMENTATION_COLOR_READ_FORMAT` | 0x8B9B |                                                                                                                                                                                                                                              |
+| `BROWSER_DEFAULT_WEBGL`            | 0x9244 |                                                                                                                                                                                                                                              |
 
 ### Buffers
 
 Constants passed to {{domxref("WebGLRenderingContext.bufferData()")}}, {{domxref("WebGLRenderingContext.bufferSubData()")}}, {{domxref("WebGLRenderingContext.bindBuffer()")}}, or {{domxref("WebGLRenderingContext.getBufferParameter()")}}.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>STATIC_DRAW</code></td>
-      <td>0x88E4</td>
-      <td>
-        Passed to <code>bufferData</code> as a hint about whether the contents
-        of the buffer are likely to be used often and not change often.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STREAM_DRAW</code></td>
-      <td>0x88E0</td>
-      <td>
-        Passed to <code>bufferData</code> as a hint about whether the contents
-        of the buffer are likely to not be used often.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DYNAMIC_DRAW</code></td>
-      <td>0x88E8</td>
-      <td>
-        Passed to <code>bufferData</code> as a hint about whether the contents
-        of the buffer are likely to be used often and change often.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ARRAY_BUFFER</code></td>
-      <td>0x8892</td>
-      <td>
-        Passed to <code>bindBuffer</code> or <code>bufferData</code> to specify
-        the type of buffer being used.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ELEMENT_ARRAY_BUFFER</code></td>
-      <td>0x8893</td>
-      <td>
-        Passed to <code>bindBuffer</code> or <code>bufferData</code> to specify
-        the type of buffer being used.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BUFFER_SIZE</code></td>
-      <td>0x8764</td>
-      <td>Passed to <code>getBufferParameter</code> to get a buffer's size.</td>
-    </tr>
-    <tr>
-      <td><code>BUFFER_USAGE</code></td>
-      <td>0x8765</td>
-      <td>
-        Passed to <code>getBufferParameter</code> to get the hint for the buffer
-        passed in when it was created.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name          | Value  | Description                                                                                                                 |
+| ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `STATIC_DRAW`          | 0x88E4 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to be used often and not change often. |
+| `STREAM_DRAW`          | 0x88E0 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to not be used often.                  |
+| `DYNAMIC_DRAW`         | 0x88E8 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to be used often and change often.     |
+| `ARRAY_BUFFER`         | 0x8892 | Passed to `bindBuffer` or `bufferData` to specify the type of buffer being used.                                            |
+| `ELEMENT_ARRAY_BUFFER` | 0x8893 | Passed to `bindBuffer` or `bufferData` to specify the type of buffer being used.                                            |
+| `BUFFER_SIZE`          | 0x8764 | Passed to `getBufferParameter` to get a buffer's size.                                                                      |
+| `BUFFER_USAGE`         | 0x8765 | Passed to `getBufferParameter` to get the hint for the buffer passed in when it was created.                                |
 
 ### Vertex attributes
 
@@ -811,137 +198,27 @@ Constants passed to {{domxref("WebGLRenderingContext.getVertexAttrib()")}}.
 
 Constants passed to {{domxref("WebGLRenderingContext.cullFace()")}}.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>CULL_FACE</code></td>
-      <td>0x0B44</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off
-        culling. Can also be used with <code>getParameter</code> to find the
-        current culling method.
-      </td>
-    </tr>
-    <tr>
-      <td><code>FRONT</code></td>
-      <td>0x0404</td>
-      <td>
-        Passed to <code>cullFace</code> to specify that only front faces should
-        be culled.
-      </td>
-    </tr>
-    <tr>
-      <td><code>BACK</code></td>
-      <td>0x0405</td>
-      <td>
-        Passed to <code>cullFace</code> to specify that only back faces should
-        be culled.
-      </td>
-    </tr>
-    <tr>
-      <td><code>FRONT_AND_BACK</code></td>
-      <td>0x0408</td>
-      <td>
-        Passed to <code>cullFace</code> to specify that front and back faces
-        should be culled.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name    | Value  | Description                                                                                                                   |
+| ---------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `CULL_FACE`      | 0x0B44 | Passed to `enable`/`disable` to turn on/off culling. Can also be used with `getParameter` to find the current culling method. |
+| `FRONT`          | 0x0404 | Passed to `cullFace` to specify that only front faces should be culled.                                                       |
+| `BACK`           | 0x0405 | Passed to `cullFace` to specify that only back faces should be culled.                                                        |
+| `FRONT_AND_BACK` | 0x0408 | Passed to `cullFace` to specify that front and back faces should be culled.                                                   |
 
 ### Enabling and disabling
 
 Constants passed to {{domxref("WebGLRenderingContext.enable()")}} or {{domxref("WebGLRenderingContext.disable()")}}.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>BLEND</code></td>
-      <td>0x0BE2</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off
-        blending. Can also be used with <code>getParameter</code> to find the
-        current blending method.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DEPTH_TEST</code></td>
-      <td>0x0B71</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        depth test. Can also be used with <code>getParameter</code> to query the
-        depth test.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DITHER</code></td>
-      <td>0x0BD0</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off
-        dithering. Can also be used with <code>getParameter</code> to find the
-        current dithering method.
-      </td>
-    </tr>
-    <tr>
-      <td><code>POLYGON_OFFSET_FILL</code></td>
-      <td>0x8037</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        polygon offset. Useful for rendering hidden-line images, decals, and or
-        solids with highlighted edges. Can also be used with
-        <code>getParameter</code> to query the scissor test.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SAMPLE_ALPHA_TO_COVERAGE</code></td>
-      <td>0x809E</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        alpha to coverage. Used in multi-sampling alpha channels.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SAMPLE_COVERAGE</code></td>
-      <td>0x80A0</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        sample coverage. Used in multi-sampling.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SCISSOR_TEST</code></td>
-      <td>0x0C11</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        scissor test. Can also be used with <code>getParameter</code> to query
-        the scissor test.
-      </td>
-    </tr>
-    <tr>
-      <td><code>STENCIL_TEST</code></td>
-      <td>0x0B90</td>
-      <td>
-        Passed to <code>enable</code>/<code>disable</code> to turn on/off the
-        stencil test. Can also be used with <code>getParameter</code> to query
-        the stencil test.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name              | Value  | Description                                                                                                                                                                                                         |
+| -------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BLEND`                    | 0x0BE2 | Passed to `enable`/`disable` to turn on/off blending. Can also be used with `getParameter` to find the current blending method.                                                                                     |
+| `DEPTH_TEST`               | 0x0B71 | Passed to `enable`/`disable` to turn on/off the depth test. Can also be used with `getParameter` to query the depth test.                                                                                           |
+| `DITHER`                   | 0x0BD0 | Passed to `enable`/`disable` to turn on/off dithering. Can also be used with `getParameter` to find the current dithering method.                                                                                   |
+| `POLYGON_OFFSET_FILL`      | 0x8037 | Passed to `enable`/`disable` to turn on/off the polygon offset. Useful for rendering hidden-line images, decals, and solids with highlighted edges. Can also be used with `getParameter` to query the scissor test. |
+| `SAMPLE_ALPHA_TO_COVERAGE` | 0x809E | Passed to `enable`/`disable` to turn on/off the alpha to coverage. Used in multi-sampling alpha channels.                                                                                                           |
+| `SAMPLE_COVERAGE`          | 0x80A0 | Passed to `enable`/`disable` to turn on/off the sample coverage. Used in multi-sampling.                                                                                                                            |
+| `SCISSOR_TEST`             | 0x0C11 | Passed to `enable`/`disable` to turn on/off the scissor test. Can also be used with `getParameter` to query the scissor test.                                                                                       |
+| `STENCIL_TEST`             | 0x0B90 | Passed to `enable`/`disable` to turn on/off the stencil test. Can also be used with `getParameter` to query the stencil test.                                                                                       |
 
 ### Errors
 
@@ -969,40 +246,12 @@ Constants passed to {{domxref("WebGLRenderingContext.frontFace()")}}.
 
 Constants passed to {{domxref("WebGLRenderingContext.hint()")}}
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DONT_CARE</code></td>
-      <td>0x1100</td>
-      <td>There is no preference for this behavior.</td>
-    </tr>
-    <tr>
-      <td><code>FASTEST</code></td>
-      <td>0x1101</td>
-      <td>The most efficient behavior should be used.</td>
-    </tr>
-    <tr>
-      <td><code>NICEST</code></td>
-      <td>0x1102</td>
-      <td>The most correct or the highest quality option should be used.</td>
-    </tr>
-    <tr>
-      <td><code>GENERATE_MIPMAP_HINT</code></td>
-      <td>0x8192</td>
-      <td>
-        Hint for the quality of filtering when generating mipmap images with
-        {{domxref("WebGLRenderingContext.generateMipmap()")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name          | Value  | Description                                                                                                                 |
+| ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                   |
+| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                 |
+| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                              |
+| `GENERATE_MIPMAP_HINT` | 0x8192 | Hint for the quality of filtering when generating mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}. |
 
 ### Data types
 
@@ -1040,231 +289,42 @@ Constants passed to {{domxref("WebGLRenderingContext.hint()")}}
 
 Constants passed to {{domxref("WebGLRenderingContext.createShader()")}} or {{domxref("WebGLRenderingContext.getShaderParameter()")}}
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>FRAGMENT_SHADER</code></td>
-      <td>0x8B30</td>
-      <td>Passed to <code>createShader</code> to define a fragment shader.</td>
-    </tr>
-    <tr>
-      <td><code>VERTEX_SHADER</code></td>
-      <td>0x8B31</td>
-      <td>Passed to <code>createShader</code> to define a vertex shader</td>
-    </tr>
-    <tr>
-      <td><code>COMPILE_STATUS</code></td>
-      <td>0x8B81</td>
-      <td>
-        Passed to <code>getShaderParameter</code> to get the status of the
-        compilation. Returns false if the shader was not compiled. You can then
-        query <code>getShaderInfoLog</code> to find the exact error
-      </td>
-    </tr>
-    <tr>
-      <td><code>DELETE_STATUS</code></td>
-      <td>0x8B80</td>
-      <td>
-        Passed to <code>getShaderParameter</code> to determine if a shader was
-        deleted via <code>deleteShader</code>. Returns true if it was, false
-        otherwise.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LINK_STATUS</code></td>
-      <td>0x8B82</td>
-      <td>
-        Passed to <code>getProgramParameter</code> after calling
-        <code>linkProgram</code> to determine if a program was linked correctly.
-        Returns false if there were errors. Use
-        <code>getProgramInfoLog</code> to find the exact error.
-      </td>
-    </tr>
-    <tr>
-      <td><code>VALIDATE_STATUS</code></td>
-      <td>0x8B83</td>
-      <td>
-        Passed to <code>getProgramParameter</code> after calling
-        <code>validateProgram</code> to determine if it is valid. Returns false
-        if errors were found.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ATTACHED_SHADERS</code></td>
-      <td>0x8B85</td>
-      <td>
-        Passed to <code>getProgramParameter</code> after calling
-        <code>attachShader</code> to determine if the shader was attached
-        correctly. Returns false if errors occurred.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ACTIVE_ATTRIBUTES</code></td>
-      <td>0x8B89</td>
-      <td>
-        Passed to <code>getProgramParameter</code> to get the number of
-        attributes active in a program.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ACTIVE_UNIFORMS</code></td>
-      <td>0x8B86</td>
-      <td>
-        Passed to <code>getProgramParameter</code> to get the number of uniforms
-        active in a program.
-      </td>
-    </tr>
-    <tr>
-      <td><code>MAX_VERTEX_ATTRIBS</code></td>
-      <td>0x8869</td>
-      <td>
-        The maximum number of entries possible in the vertex attribute list.
-      </td>
-    </tr>
-    <tr>
-      <td><code>MAX_VERTEX_UNIFORM_VECTORS</code></td>
-      <td>0x8DFB</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_VARYING_VECTORS</code></td>
-      <td>0x8DFC</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code></td>
-      <td>0x8B4D</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_VERTEX_TEXTURE_IMAGE_UNITS</code></td>
-      <td>0x8B4C</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>MAX_TEXTURE_IMAGE_UNITS</code></td>
-      <td>0x8872</td>
-      <td>
-        Implementation dependent number of maximum texture units. At least 8.
-      </td>
-    </tr>
-    <tr>
-      <td><code>MAX_FRAGMENT_UNIFORM_VECTORS</code></td>
-      <td>0x8DFD</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SHADER_TYPE</code></td>
-      <td>0x8B4F</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>SHADING_LANGUAGE_VERSION</code></td>
-      <td>0x8B8C</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>CURRENT_PROGRAM</code></td>
-      <td>0x8B8D</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Constant name                      | Value  | Description                                                                                                                                                                                      |
+| ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `FRAGMENT_SHADER`                  | 0x8B30 | Passed to `createShader` to define a fragment shader.                                                                                                                                            |
+| `VERTEX_SHADER`                    | 0x8B31 | Passed to `createShader` to define a vertex shader                                                                                                                                               |
+| `COMPILE_STATUS`                   | 0x8B81 | Passed to `getShaderParameter` to get the status of the compilation. Returns false if the shader was not compiled. You can then query `getShaderInfoLog` to find the exact error                 |
+| `DELETE_STATUS`                    | 0x8B80 | Passed to `getShaderParameter` to determine if a shader was deleted via `deleteShader`. Returns true if it was, false otherwise.                                                                 |
+| `LINK_STATUS`                      | 0x8B82 | Passed to `getProgramParameter` after calling `linkProgram` to determine if a program was linked correctly. Returns false if there were errors. Use `getProgramInfoLog` to find the exact error. |
+| `VALIDATE_STATUS`                  | 0x8B83 | Passed to `getProgramParameter` after calling `validateProgram` to determine if it is valid. Returns false if errors were found.                                                                 |
+| `ATTACHED_SHADERS`                 | 0x8B85 | Passed to `getProgramParameter` after calling `attachShader` to determine if the shader was attached correctly. Returns false if errors occurred.                                                |
+| `ACTIVE_ATTRIBUTES`                | 0x8B89 | Passed to `getProgramParameter` to get the number of attributes active in a program.                                                                                                             |
+| `ACTIVE_UNIFORMS`                  | 0x8B86 | Passed to `getProgramParameter` to get the number of uniforms active in a program.                                                                                                               |
+| `MAX_VERTEX_ATTRIBS`               | 0x8869 | The maximum number of entries possible in the vertex attribute list.                                                                                                                             |
+| `MAX_VERTEX_UNIFORM_VECTORS`       | 0x8DFB |                                                                                                                                                                                                  |
+| `MAX_VARYING_VECTORS`              | 0x8DFC |                                                                                                                                                                                                  |
+| `MAX_COMBINED_TEXTURE_IMAGE_UNITS` | 0x8B4D |                                                                                                                                                                                                  |
+| `MAX_VERTEX_TEXTURE_IMAGE_UNITS`   | 0x8B4C |                                                                                                                                                                                                  |
+| `MAX_TEXTURE_IMAGE_UNITS`          | 0x8872 | Implementation-dependent number of maximum texture units. At least 8.                                                                                                                            |
+| `MAX_FRAGMENT_UNIFORM_VECTORS`     | 0x8DFD |                                                                                                                                                                                                  |
+| `SHADER_TYPE`                      | 0x8B4F |                                                                                                                                                                                                  |
+| `SHADING_LANGUAGE_VERSION`         | 0x8B8C |                                                                                                                                                                                                  |
+| `CURRENT_PROGRAM`                  | 0x8B8D |                                                                                                                                                                                                  |
 
 ### Depth or stencil tests
 
 Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxref("WebGLRenderingContext.stencilFunc()")}}.
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>NEVER</code></td>
-      <td>0x0200</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will never pass, i.e., nothing will be
-        drawn.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LESS</code></td>
-      <td>0x0201</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is less
-        than the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>EQUAL</code></td>
-      <td>0x0202</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is
-        equals to the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>LEQUAL</code></td>
-      <td>0x0203</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is less
-        than or equal to the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>GREATER</code></td>
-      <td>0x0204</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is
-        greater than the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>NOTEQUAL</code></td>
-      <td>0x0205</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is not
-        equal to the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>GEQUAL</code></td>
-      <td>0x0206</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will pass if the new depth value is
-        greater than or equal to the stored value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ALWAYS</code></td>
-      <td>0x0207</td>
-      <td>
-        Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will always pass, i.e., pixels will be
-        drawn in the order they are drawn.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name | Value  | Description                                                                                                                                                     |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass, i.e., nothing will be drawn.                                  |
+| `LESS`        | 0x0201 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than the stored value.                |
+| `EQUAL`       | 0x0202 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is equals to the stored value.                |
+| `LEQUAL`      | 0x0203 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than or equal to the stored value.    |
+| `GREATER`     | 0x0204 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than the stored value.             |
+| `NOTEQUAL`    | 0x0205 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is not equal to the stored value.             |
+| `GEQUAL`      | 0x0206 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than or equal to the stored value. |
+| `ALWAYS`      | 0x0207 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will always pass, i.e., pixels will be drawn in the order they are drawn.      |
 
 ### Stencil actions
 
@@ -1767,125 +827,29 @@ For more information, see {{domxref("EXT_texture_filter_anisotropic")}}.
 
 ### WEBGL_compressed_texture_s3tc
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>COMPRESSED_RGB_S3TC_DXT1_EXT</code></td>
-      <td>0x83F0</td>
-      <td>A DXT1-compressed image in an RGB image format.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGBA_S3TC_DXT1_EXT</code></td>
-      <td>0x83F1</td>
-      <td>
-        A DXT1-compressed image in an RGB image format with a simple on/off
-        alpha value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGBA_S3TC_DXT3_EXT</code></td>
-      <td>0x83F2</td>
-      <td>
-        A DXT3-compressed image in an RGBA image format. Compared to a 32-bit
-        RGBA texture, it offers 4:1 compression.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGBA_S3TC_DXT5_EXT</code></td>
-      <td>0x83F3</td>
-      <td>
-        A DXT5-compressed image in an RGBA image format. It also provides a 4:1
-        compression, but differs to the DXT3 compression in how the alpha
-        compression is done.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name                   | Value  | Description                                                                                                                                                    |
+| ------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `COMPRESSED_RGB_S3TC_DXT1_EXT`  | 0x83F0 | A DXT1-compressed image in an RGB image format.                                                                                                                |
+| `COMPRESSED_RGBA_S3TC_DXT1_EXT` | 0x83F1 | A DXT1-compressed image in an RGB image format with an on/off alpha value.                                                                                     |
+| `COMPRESSED_RGBA_S3TC_DXT3_EXT` | 0x83F2 | A DXT3-compressed image in an RGBA image format. Compared to a 32-bit RGBA texture, it offers 4:1 compression.                                                 |
+| `COMPRESSED_RGBA_S3TC_DXT5_EXT` | 0x83F3 | A DXT5-compressed image in an RGBA image format. It also provides a 4:1 compression, but differs to the DXT3 compression in how the alpha compression is done. |
 
 For more information, see {{domxref("WEBGL_compressed_texture_s3tc")}}.
 
 ### WEBGL_compressed_texture_etc
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>COMPRESSED_R11_EAC</code></td>
-      <td>0x9270</td>
-      <td>One-channel (red) unsigned format compression.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_SIGNED_R11_EAC</code></td>
-      <td>0x9271</td>
-      <td>One-channel (red) signed format compression.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RG11_EAC</code></td>
-      <td>0x9272</td>
-      <td>Two-channel (red and green) unsigned format compression.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_SIGNED_RG11_EAC</code></td>
-      <td>0x9273</td>
-      <td>Two-channel (red and green) signed format compression.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGB8_ETC2</code></td>
-      <td>0x9274</td>
-      <td>Compresses RGB8 data with no alpha channel.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGBA8_ETC2_EAC</code></td>
-      <td>0x9275</td>
-      <td>
-        Compresses RGBA8 data. The RGB part is encoded the same as
-        <code>RGB_ETC2</code>, but the alpha part is encoded separately.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_SRGB8_ETC2</code></td>
-      <td>0x9276</td>
-      <td>Compresses sRGB8 data with no alpha channel.</td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></td>
-      <td>0x9277</td>
-      <td>
-        Compresses sRGBA8 data. The sRGB part is encoded the same as
-        <code>SRGB_ETC2</code>, but the alpha part is encoded separately.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></td>
-      <td>0x9278</td>
-      <td>
-        Similar to <code>RGB8_ETC</code>, but with ability to punch through the
-        alpha channel, which means to make it completely opaque or transparent.
-      </td>
-    </tr>
-    <tr>
-      <td><code>COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></td>
-      <td>0x9279</td>
-      <td>
-        Similar to <code>SRGB8_ETC</code>, but with ability to punch through the
-        alpha channel, which means to make it completely opaque or transparent.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name                               | Value  | Description                                                                                                                           |
+| ------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `COMPRESSED_R11_EAC`                        | 0x9270 | One-channel (red) unsigned format compression.                                                                                        |
+| `COMPRESSED_SIGNED_R11_EAC`                 | 0x9271 | One-channel (red) signed format compression.                                                                                          |
+| `COMPRESSED_RG11_EAC`                       | 0x9272 | Two-channel (red and green) unsigned format compression.                                                                              |
+| `COMPRESSED_SIGNED_RG11_EAC`                | 0x9273 | Two-channel (red and green) signed format compression.                                                                                |
+| `COMPRESSED_RGB8_ETC2`                      | 0x9274 | Compresses RGB8 data with no alpha channel.                                                                                           |
+| `COMPRESSED_RGBA8_ETC2_EAC`                 | 0x9275 | Compresses RGBA8 data. The RGB part is encoded the same as `RGB_ETC2`, but the alpha part is encoded separately.                      |
+| `COMPRESSED_SRGB8_ETC2`                     | 0x9276 | Compresses sRGB8 data with no alpha channel.                                                                                          |
+| `COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`          | 0x9277 | Compresses sRGBA8 data. The sRGB part is encoded the same as `SRGB_ETC2`, but the alpha part is encoded separately.                   |
+| `COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`  | 0x9278 | Similar to `RGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.  |
+| `COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2` | 0x9279 | Similar to `SRGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent. |
 
 For more information, see {{domxref("WEBGL_compressed_texture_etc")}}.
 
@@ -1957,26 +921,9 @@ For more information, see {{domxref("EXT_sRGB")}}.
 
 ### OES_standard_derivatives
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Constant name</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>FRAGMENT_SHADER_DERIVATIVE_HINT_OES</code></td>
-      <td>0x8B8B</td>
-      <td>
-        Indicates the accuracy of the derivative calculation for the GLSL
-        built-in functions: <code>dFdx</code>, <code>dFdy</code>, and
-        <code>fwidth</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Constant name                         | Value  | Description                                                                                                         |
+| ------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| `FRAGMENT_SHADER_DERIVATIVE_HINT_OES` | 0x8B8B | Indicates the accuracy of the derivative calculation for the GLSL built-in functions: `dFdx`, `dFdy`, and `fwidth`. |
 
 For more information, see {{domxref("OES_standard_derivatives")}}.
 

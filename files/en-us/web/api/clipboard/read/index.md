@@ -11,7 +11,7 @@ browser-compat: api.Clipboard.read
 The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
 
 The method can in theory return arbitrary data (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
-Browsers commonly support reading text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
+Browsers commonly support reading text, HTML, and PNG image data.
 
 ## Syntax
 
@@ -127,9 +127,10 @@ Copy the butterfly image on the left by right-clicking the image and selecting "
 Then click on the empty frame on the right.
 The example will fetch the image data from the clipboard and display the image in the empty frame.
 
-{{EmbedLiveSample("Reading image data from clipboard", "100%", "200")}}
+{{EmbedLiveSample("Reading image data from clipboard", "100%", "250", "", "", "", "clipboard-read")}}
 
-> **Note:** If prompted, grant permission in order to paste the image.
+> [!NOTE]
+> If prompted, grant permission in order to paste the image.
 
 ### Reading data from the clipboard
 
@@ -241,13 +242,13 @@ async function pasteData() {
 Copy some text or the butterfly (JPG) image below (to copy images right-click on them and then select "Copy image" from the context menu).
 Select the indicated frame below to paste this information from the clipboard into the frame.
 
-{{EmbedLiveSample("Reading data from the clipboard", "100%", "450")}}
+{{EmbedLiveSample("Reading data from the clipboard", "100%", "500", "", "", "", "clipboard-read")}}
 
 Notes:
 
 - Even though the butterfly image is a JPG file, when read from the clipboard it is a PNG.
 - If prompted, you will need to grant permission in order to paste the image.
-- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
+- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
 ### Reading unsanitized HTML from the clipboard
 
@@ -345,7 +346,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 
 First click the "Copy HTML" button to write the HTML code from the first textarea to the clipboard. Then either click the "Paste HTML" button or the "Paste unsanitized HTML" button to paste the sanitized or unsanitized HTML code into the second textarea.
 
-{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "220")}}
+{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "250", "", "", "", "clipboard-read; clipboard-write")}}
 
 ## Specifications
 

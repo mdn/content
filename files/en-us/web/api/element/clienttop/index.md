@@ -20,7 +20,8 @@ starts immediately below the border, (client area includes padding.) Therefore, 
 Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
 then **`clientTop`** is also zero.
 
-> **Note:** This property will round the value to an integer. If you
+> [!NOTE]
+> This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value

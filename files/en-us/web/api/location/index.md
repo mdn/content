@@ -42,7 +42,7 @@ body {
   text-align: center;
   vertical-align: middle;
   font-family: Georgia;
-  font-size: 175%;
+  font-size: 200%;
   line-height: 1em;
   white-space: nowrap;
 }
@@ -64,7 +64,7 @@ body {
   width: 100%;
   left: 50%;
   margin-left: -50%;
-  font-size: 60%;
+  font-size: 50%;
   line-height: 1.5;
   background: black;
 }
@@ -124,7 +124,7 @@ document.body.addEventListener("click", (event) => {
 - {{domxref("Location.pathname")}}
   - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("Location.search")}}
-  - : A string containing a `'?'` followed by the parameters or "querystring" of the URL. Modern browsers provide [URLSearchParams](/en-US/docs/Web/API/URLSearchParams/get#examples) and [URL.searchParams](/en-US/docs/Web/API/URL/searchParams#examples) to make it easy to parse out the parameters from the querystring.
+  - : A string containing a `'?'` followed by the parameters or "query string" of the URL. Modern browsers provide [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get) and [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams) to make it easy to parse out the parameters from the query string.
 - {{domxref("Location.hash")}}
   - : A string containing a `'#'` followed by the fragment identifier of the URL.
 - {{domxref("Location.origin")}} {{ReadOnlyInline}}

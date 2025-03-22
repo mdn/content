@@ -13,7 +13,7 @@ The **`CSSStyleRule`** interface represents a single CSS style rule.
 
 ## Instance properties
 
-_Inherits properties from its ancestor {{domxref("CSSRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 - {{domxref("CSSStyleRule.selectorText")}}
   - : Returns the textual representation of the selector for this rule, e.g. `"h1, h2"`.
@@ -24,12 +24,12 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 ## Instance methods
 
-_No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Examples
 
 The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` therefore returns a {{domxref("CSSStyleRule")}} object representing the rule defined for `h1`.
+`myRules[0]` therefore returns a `CSSStyleRule` object representing the rule defined for `h1`.
 
 ```css
 h1 {

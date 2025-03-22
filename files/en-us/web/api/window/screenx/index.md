@@ -12,7 +12,8 @@ The **`Window.screenX`** read-only property returns the
 horizontal distance, in CSS pixels, of the left border of the user's browser viewport to
 the left side of the screen.
 
-> **Note:** An alias of `screenX` was implemented across modern
+> [!NOTE]
+> An alias of `screenX` was implemented across modern
 > browsers in more recent times — {{domxref("Window.screenLeft")}}. This was originally
 > supported only in IE but was introduced everywhere due to popularity.
 

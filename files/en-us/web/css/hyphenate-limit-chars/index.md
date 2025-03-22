@@ -41,11 +41,11 @@ The `hyphenate-limit-chars` property takes 1–3 values that can be numeric or `
 
 ### Values
 
-- `x y z`
+- `<number> <number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.
-- `x y`
+- `<number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The minimum number of characters after the hyphen will be set equal to the second value.
-- `x`
+- `<number>`
   - : The value is the minimum word length before words should be hyphenated. The minimum number of characters before and after the hyphen will be set to `auto`.
 
 If `auto` is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
@@ -118,9 +118,13 @@ In the first box, we don't set `hyphenate-limit-chars`, allowing the browser to 
 
 In the second box, we prevent the browser from hyphenating words unless they are at least 14 characters long by setting `hyphenate-limit-chars: 14`. As a result, "juxtaposition" is not hyphenated in the second box because it is only 13 characters long.
 
+<!-- cSpell:ignore acknowled gement acknowl edgement ment -->
+
 In the third box, we constrain the browser to include at least 9 characters before the hyphen by setting `hyphenate-limit-chars: 5 9 2`. The effect is that "acknowledgement" is now hyphenated as "acknowledge-ment" rather than the default version "acknowl-edgement", as shown in the first box.
 
 Note that the browser does not have to include exactly 9 characters before the hyphen: as long as the constraints given in `hyphenate-limit-chars` are satisfied, the browser can break the word in the place it considers best. So in this case, for example, it chooses "acknowledge-ment" rather than the less readable "acknowled-gement".
+
+<!-- cSpell:ignore juxtaposi tion -->
 
 In the fourth box, we make the browser include at least 7 characters after the hyphen by setting
 `hyphenate-limit-chars: 5 2 7`. The effect is that "juxtaposition" is hyphenated as "juxta-position" rather than the default "juxtaposi-tion".

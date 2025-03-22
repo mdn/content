@@ -9,7 +9,47 @@ browser-compat: html.elements.nav
 
 The **`<nav>`** [HTML](/en-US/docs/Web/HTML) element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
 
-{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<nav class="crumbs">
+  <ol>
+    <li class="crumb"><a href="#">Bikes</a></li>
+    <li class="crumb"><a href="#">BMX</a></li>
+    <li class="crumb">Jump Bike 3000</li>
+  </ol>
+</nav>
+
+<h1>Jump Bike 3000</h1>
+<p>
+  This BMX bike is a solid step into the pro world. It looks as legit as it
+  rides and is built to polish your skills.
+</p>
+```
+
+```css interactive-example
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+```
 
 ## Attributes
 
@@ -17,15 +57,15 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-- It's not necessary for all links to be contained in a `<nav>` element. `<nav>` is intended only for a major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a {{HTMLElement("nav")}} element.
-- A document may have several {{HTMLElement("nav")}} elements, for example, one for site navigation and one for intra-page navigation. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) can be used in such case to promote accessibility, see [example](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
+- It's not necessary for all links to be contained in a `<nav>` element. `<nav>` is intended only for a major block of navigation links; typically the {{HTMLElement("footer")}} element often has a list of links that don't need to be in a `<nav>` element.
+- A document may have several `<nav>` elements, for example, one for site navigation and one for intra-page navigation. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) can be used in such case to promote accessibility, see [example](/en-US/docs/Web/HTML/Element/Heading_Elements#labeling_section_content).
 - User agents, such as screen readers targeting disabled users, can use this element to determine whether to omit the initial rendering of navigation-only content.
 
 ## Examples
 
 In this example, a `<nav>` block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.
 
-```html
+```html live-sample___unordered-list
 <nav class="menu">
   <ul>
     <li><a href="#">Home</a></li>
@@ -35,9 +75,11 @@ In this example, a `<nav>` block is used to contain an unordered list ({{HTMLEle
 </nav>
 ```
 
+{{EmbedLiveSample('unordered-list')}}
+
 The semantics of the `nav` element is that of providing links. However a `nav` element doesn't have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
 
-```html
+```html live-sample___prose
 <nav>
   <h2>Navigation</h2>
   <p>
@@ -60,9 +102,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 </nav>
 ```
 
-### Result
-
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('prose')}}
 
 ## Technical summary
 
@@ -109,7 +149,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >
@@ -138,4 +178,4 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).
-- [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)

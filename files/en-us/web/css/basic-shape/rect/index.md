@@ -7,7 +7,7 @@ browser-compat: css.types.basic-shape.rect
 
 {{CSSRef}}
 
-The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
+The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
 ## Syntax
 
@@ -30,6 +30,10 @@ The inset rectangle is defined by specifying four offset values, starting with t
 
 - `round <'border-radius'>`
   - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -111,8 +115,8 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 ## See also
 
-- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
-- [`xywh()`](/en-US/docs/Web/CSS/basic-shape#xywh) function
+- {{cssxref("basic-shape/inset","inset()")}} function
+- {{cssxref("basic-shape/xywh","xywh()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type

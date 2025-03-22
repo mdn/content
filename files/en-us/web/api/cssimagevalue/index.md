@@ -9,7 +9,7 @@ browser-compat: api.CSSImageValue
 
 The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.
 
-The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](/en-US/docs/Web/CSS/url) or [`image()`](/en-US/docs/Web/CSS/image), but not [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) or [`element()`](/en-US/docs/Web/CSS/element).
+The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves a URL, such as [`url()`](/en-US/docs/Web/CSS/url_function) or [`image()`](/en-US/docs/Web/CSS/image), but not [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) or [`element()`](/en-US/docs/Web/CSS/element).
 
 {{InheritanceDiagram}}
 
@@ -36,11 +36,11 @@ button {
   display: inline-block;
   min-height: 100px;
   min-width: 100px;
-  background: no-repeat 5% center url(magicwand.png) aqua;
+  background: no-repeat 5% center url(magic-wand.png) aqua;
 }
 ```
 
-We get the element's style map. We then get() the background-image from the stylemap and stringify it:
+We get the element's style map. We then get() the background-image from the style map and stringify it:
 
 ```js
 // get the element

@@ -15,7 +15,7 @@ Only the current document is included in the performance timeline, so there is o
 
 The following diagram shows all of the timestamp properties defined in `PerformanceNavigationTiming`.
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 ## Instance properties
 
@@ -25,8 +25,9 @@ This interface extends the following {{domxref('PerformanceEntry')}} properties 
   - : Returns `"navigation"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the [document's URL](/en-US/docs/Web/API/Document/URL).
+    Note that [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments), and any other fragment directives, are stripped from the URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} with a value of "`0`".
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} with a value of `0`.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceNavigationTiming.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties.
 

@@ -25,11 +25,12 @@ String(thing)
 
 ### Return value
 
-When `String` is called as a constructor (with `new`), it creates a {{jsxref("String")}} object, which is **not** a primitive.
+When `String()` is called as a function (without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it returns `value` [coerced to a string primitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Specially, [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) values are converted to `"Symbol(description)"`, where `description` is the [description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) of the Symbol, instead of throwing.
 
-When `String` is called as a function, it coerces the parameter to a string primitive. [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) values would be converted to `"Symbol(description)"`, where `description` is the [description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) of the Symbol, instead of throwing.
+When `String()` is called as a constructor (with `new`), it coerces `value` to a string primitive (without special symbol handling) and returns a wrapping {{jsxref("String")}} object, which is **not** a primitive.
 
-> **Warning:** You should rarely find yourself using `String` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `String` as a constructor.
 
 ## Examples
 
@@ -76,4 +77,4 @@ String(sym); // "Symbol(example)"
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings) guide

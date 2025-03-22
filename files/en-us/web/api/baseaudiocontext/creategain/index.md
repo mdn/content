@@ -12,7 +12,8 @@ The `createGain()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("GainNode") }}, which can be used to control the
 overall gain (or volume) of the audio graph.
 
-> **Note:** The {{domxref("GainNode.GainNode", "GainNode()")}}
+> [!NOTE]
+> The {{domxref("GainNode.GainNode", "GainNode()")}}
 > constructor is the recommended way to create a {{domxref("GainNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -40,7 +41,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to cre
 button is clicked by changing the `gain` property value.
 
 The below snippet wouldn't work as is — for a complete working example, check out our
-[Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo ([view source](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js).)
+[Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo ([view source](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js).)
 
 ```html
 <div>

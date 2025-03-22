@@ -13,7 +13,8 @@ The **`plugins`** read-only property of the
 containing one or more {{domxref("HTMLEmbedElement")}}s representing the
 {{HTMLElement("embed")}} elements in the current document.
 
-> **Note:** For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
+> [!NOTE]
+> For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
 > instead.
 
 ## Value

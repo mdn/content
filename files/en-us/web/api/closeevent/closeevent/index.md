@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CloseEvent.CloseEvent
 ---
 
-{{APIRef("Websockets API")}}
+{{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
 The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} object.
 
@@ -31,7 +31,7 @@ new CloseEvent(type, options)
     - `reason` {{optional_inline}}
       - : A string containing a human-readable reason describing why the server closed the connection. It defaults to `''`
 
-## Return value
+### Return value
 
 A new {{domxref("CloseEvent")}} object.
 

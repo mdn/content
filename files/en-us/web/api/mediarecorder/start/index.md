@@ -31,7 +31,8 @@ When the source stream ends, `state` is set to `inactive` and
 data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the
 `MediaRecorder`, followed by a {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
-> **Note:** If the browser is unable to start recording or continue
+> [!NOTE]
+> If the browser is unable to start recording or continue
 > recording, it will raise an {{domxref("MediaRecorder.error_event", "error")}} event, followed by a
 > {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the `Blob` it
 > has gathered, followed by the {{domxref("MediaRecorder/stop_event", "stop")}} event.
@@ -46,11 +47,15 @@ start(timeslice)
 ### Parameters
 
 - `timeslice` {{optional_inline}}
+
   - : The number of milliseconds to record into each {{domxref("Blob")}}. If this
     parameter isn't included, the entire media duration is recorded into a single
     `Blob` unless the {{domxref("MediaRecorder.requestData", "requestData()")}}
     method is called to obtain the `Blob` and trigger the creation of a new
     `Blob` into which the media continues to be recorded.
+
+    > [!NOTE]
+    > Like other time values in web APIs, `timeslice` is not exact and the real intervals may be slightly longer due to other pending tasks before the creation of the next blob.
 
 ### Return value
 
@@ -71,7 +76,7 @@ handler to respond to these errors.
   - : Thrown if:
     - The media stream you are attempting to record is inactive.
     - One or more of the stream's tracks is in a format that cannot be recorded using the current configuration
-    - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specificed when creating the `MediaRecorder`.
+    - The `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specified when creating the `MediaRecorder`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} when the user denies permission to use an input device. This

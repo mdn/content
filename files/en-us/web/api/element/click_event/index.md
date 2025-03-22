@@ -10,9 +10,9 @@ browser-compat: api.Element.click_event
 
 An element receives a **`click`** event when any of the following occurs:
 
-- a pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
-- a touch gesture is performed on the element
-- the <kbd>Space</kbd> key or <kbd>Enter</kbd> key is pressed while the element is focused
+- A pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
+- A touch gesture is performed on the element.
+- Any user interaction that is equivalent to a click, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key while the element is focused. Note that this only applies to elements with a default key event handler, and therefore, excludes other elements that have been made focusable by setting the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
@@ -36,7 +36,8 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 
-> **Note:** In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
+> [!NOTE]
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}. Check [browser compatibility](#browser_compatibility) for more information.
 
 ## Event properties
 
@@ -107,7 +108,7 @@ Try making rapid, repeated clicks on the button to increase the click count. If 
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

@@ -8,20 +8,21 @@ browser-compat: api.ShadowRoot.mode
 
 {{APIRef("Shadow DOM")}}
 
-The **`mode`** read-only property of the {{domxref("ShadowRoot")}}
-specifies its mode — either `open` or `closed`. This defines
-whether or not the shadow root's internal features are accessible from JavaScript.
+The **`mode`** read-only property of the {{domxref("ShadowRoot")}} specifies its mode — either `open` or `closed`.
+This defines whether or not the shadow root's internal features are accessible from JavaScript.
 
-When the `mode` of a shadow root is "`closed`", the shadow root's
-implementation internals are inaccessible and unchangeable from JavaScript—in the same
-way the implementation internals of, for example, the {{HTMLElement("video")}} element
-are inaccessible and unchangeable from JavaScript.
+When the `mode` of a shadow root is `"closed"`, the shadow root's implementation internals are inaccessible and unchangeable from JavaScript—in the same way the implementation internals of, for example, the {{HTMLElement("video")}} element are inaccessible and unchangeable from JavaScript.
+
+The property value is set using the `options.mode` property of the object passed to {{domxref("Element.attachShadow()")}}, or using the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>`](/en-US/docs/Web/HTML/Element/template) element when a shadow root is created declaratively.
 
 ## Value
 
-A value defined in the
-[`ShadowRootMode`](https://dom.spec.whatwg.org/#enumdef-shadowrootmode)
-enum — either `open` or `closed`.
+A string value that can have either of the values:
+
+- `open`
+  - : Elements of the shadow root are accessible from JavaScript outside the root.
+- `closed`
+  - : Nodes inside the closed shadow tree cannot be accessed by JavaScript outside of the root.
 
 ## Examples
 

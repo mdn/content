@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.unhandledrejection_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers("worker")}}
 
 The **`unhandledrejection`** event is sent to the global scope (typically {{domxref("WorkerGlobalScope")}}) of a script when a {{jsxref("Promise")}} that has no rejection handler is rejected.
 

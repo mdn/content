@@ -8,9 +8,11 @@ browser-compat: api.HTMLAreaElement.port
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLAreaElement.port`** property is a
-string containing the port number of the URL. If the URL does not
-contain an explicit port number, it will be set to `''`.
+The **`port`** property of the {{domxref("HTMLAreaElement")}} interface is a string containing the port number of the `<area>` element's `href`. If the port is the default for the protocol (`80` for `ws:` and `http:`, `443` for `wss:` and `https:`, and `21` for `ftp:`), this property contains an empty string, `""`.
+
+This property can be set to change the port of the URL. If the URL has no {{domxref("HTMLAnchorElement.host", "host")}} or its scheme is `file:`, then setting this property has no effect. It also silently ignores invalid port numbers.
+
+See {{domxref("URL.port")}} for more information.
 
 ## Value
 
@@ -23,7 +25,13 @@ A string.
 ```js
 // An <area id="myArea" href="https://developer.mozilla.org:443/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementByID("myArea");
-area.port; // returns '443'
+area.port; // Returns ''
+```
+
+```js
+// Another <area id="myArea" href="https://developer.mozilla.org:8888/en-US/docs/HTMLAreaElement"> element is in the document
+const area = document.getElementByID("myArea");
+area.port; // Returns:'8888'
 ```
 
 ## Specifications

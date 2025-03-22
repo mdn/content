@@ -15,7 +15,8 @@ from {{domxref("Credential")}}, which represents the identifier of the current
 
 This property is a [base64url encoded](/en-US/docs/Glossary/Base64) version of {{domxref("PublicKeyCredential.rawId")}}.
 
-> **Note:** This property may only be used in top-level contexts and will
+> [!NOTE]
+> This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Value

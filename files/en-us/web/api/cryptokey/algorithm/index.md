@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CryptoKey.algorithm
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The read-only **`algorithm`** property of the {{DOMxRef("CryptoKey")}} interface returns an object describing the algorithm for which this key can be used, and any associated extra parameters.
 
@@ -20,6 +20,8 @@ An object matching:
 - [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams) if the algorithm is any of the RSA variants.
 - [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams) if the algorithm is any of the EC variants.
 - [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) if the algorithm is HMAC.
+
+For `RsaHashedKeyGenParams` and `HmacKeyGenParams`, the `hash` property is always in the object form (with a property called `name`), not the string form.
 
 ## Examples
 

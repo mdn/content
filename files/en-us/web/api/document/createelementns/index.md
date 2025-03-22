@@ -23,9 +23,13 @@ createElementNS(namespaceURI, qualifiedName, options)
 ### Parameters
 
 - `namespaceURI`
-  - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the element.
-    The {{DOMxRef("element.namespaceURI", "namespaceURI")}} property of the created element is initialized with the value of _namespaceURI_.
-    See [Valid Namespace URIs](#important_namespace_uris).
+  - : A string that specifies the {{DOMxRef("element.namespaceURI", "namespaceURI")}} to associate with the element. Some important namespace URIs are:
+    - [HTML](/en-US/docs/Web/HTML)
+      - : `http://www.w3.org/1999/xhtml`
+    - [SVG](/en-US/docs/Web/SVG)
+      - : `http://www.w3.org/2000/svg`
+    - [MathML](/en-US/docs/Web/MathML)
+      - : `http://www.w3.org/1998/Math/MathML`
 - `qualifiedName`
   - : A string that specifies the type of element to be created.
     The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with the value of _qualifiedName_.
@@ -45,18 +49,9 @@ The new {{DOMxRef("Element")}}.
 ### Exceptions
 
 - `NamespaceError` {{domxref("DOMException")}}
-  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI).
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid namespace URI.
 - `InvalidCharacterError` {{domxref("DOMException")}}
   - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
-
-## Important Namespace URIs
-
-- [HTML](/en-US/docs/Web/HTML)
-  - : `http://www.w3.org/1999/xhtml`
-- [SVG](/en-US/docs/Web/SVG)
-  - : `http://www.w3.org/2000/svg`
-- [MathML](/en-US/docs/Web/MathML)
-  - : `http://www.w3.org/1998/Math/MathML`
 
 ## Examples
 
@@ -73,15 +68,15 @@ elements from two different namespaces within a single document:
 
 <script type="application/javascript"><![CDATA[
  let container;
- let newdiv;
- let txtnode;
+ let newDiv;
+ let textNode;
 
  function init(){
    container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   txtnode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newdiv.appendChild(txtnode);
-   container.appendChild(newdiv);
+   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
+   newDiv.appendChild(textNode);
+   container.appendChild(newDiv);
  }
 
 ]]></script>
@@ -95,7 +90,8 @@ elements from two different namespaces within a single document:
 </page>
 ```
 
-> **Note:** The example given above uses inline script which is not recommended in XHTML
+> [!NOTE]
+> The example given above uses inline script which is not recommended in XHTML
 > documents. This particular example is actually an XUL document with embedded XHTML,
 > however, the recommendation still applies.
 
@@ -112,4 +108,3 @@ elements from two different namespaces within a single document:
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}
 - {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

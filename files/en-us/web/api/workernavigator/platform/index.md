@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkerNavigator.platform
 ---
 
-{{ APIRef("HTML DOM") }} {{Deprecated_Header}}
+{{ APIRef("HTML DOM") }} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
 Returns a string representing the platform of the browser. The specification allows
 browsers to always return the empty string, so don't rely on this property to get a
@@ -21,7 +21,7 @@ an empty string if the browser declines to (or is unable to) identify the platfo
 `platform` is a string that must be an empty string or a string representing
 the platform on which the browser is executing.
 
-For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`".
+For example: `"MacIntel"`, `"Win32"`, `"FreeBSD i386"`, `"WebTV OS"`.
 
 ## Examples
 

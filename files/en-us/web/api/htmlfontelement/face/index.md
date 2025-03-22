@@ -40,8 +40,7 @@ f.face = "arial";
 
 ## Specifications
 
-The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
-`<font>.face`.
+{{Specifications}}
 
 ## Browser compatibility
 

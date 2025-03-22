@@ -9,7 +9,40 @@ browser-compat: css.properties.background-blend-mode
 
 The **`background-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's background images should blend with each other and with the element's background color.
 
-{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: background-blend-mode")}}
+
+```css interactive-example-choice
+background-blend-mode: normal;
+```
+
+```css interactive-example-choice
+background-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+background-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+background-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: green;
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  width: 250px;
+  height: 305px;
+}
+```
 
 Blending modes should be defined in the same order as the {{cssxref("background-image")}} property. If the blending modes' and background images' list lengths are not equal, it will be repeated and/or truncated until lengths match.
 

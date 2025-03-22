@@ -9,9 +9,10 @@ browser-compat: css.at-rules.media.device-aspect-ratio
 
 {{CSSRef}} {{deprecated_header}}
 
-> **Note:** To query for the {{glossary("aspect ratio")}} of the viewport, developers should use the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature instead.
+> [!NOTE]
+> To query for the {{glossary("aspect ratio")}} of the viewport, developers should use the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature instead.
 
-The **`device-aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the width-to-height aspect ratio of an output device.
+The **`device-aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the width-to-height {{glossary("aspect ratio")}} of an output device.
 
 ## Syntax
 

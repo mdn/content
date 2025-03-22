@@ -7,15 +7,17 @@ browser-compat: webextensions.api.permissions.request
 
 {{AddonSidebar}}
 
-Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
+Asks the user for the permissions listed in the {{WebExtAPIRef("permissions.Permissions")}} object.
 
-The `Permissions` argument may contain either an `origins` property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both. Permissions must come from the set of permissions defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property may include permissions that match a subset of the hosts matched by an optional permission: for example, if optional_permissions include "\*://mozilla.org/", then `permissions.origins` may include "https\://developer.mozilla.org/".
+The `Permissions` argument can contain an `origins` property, an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), a `permissions` property, an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
 
-The request can only be made inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+Requested permissions must be defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property can include permissions matching a subset of the hosts matched by an optional permission. For example, if `optional_permissions` include `"*://mozilla.org/"`, then `permissions.origins` can include `"https://developer.mozilla.org/"`.
 
-Depending on a circumstances, the browser will probably handle the request by asking the user whether to grant the requested permissions. Only a single request is made for all requested permissions: thus either all permissions are granted or none of them are.
+Requests for [optional-only permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) can't include any other optional permissions.
 
-Any permissions granted are retained by the extension, even over upgrade and disable/enable cycling.
+The request can only be made inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). Unless all the permissions requested are ones granted silently, the browser asks the user whether to grant the requested permissions. One request is made for all requested permissions: either all permissions are granted or none are.
+
+The extension retains any permissions granted, even over upgrade and disable and enable cycling.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -34,7 +36,7 @@ let requesting = browser.permissions.request(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is now granted all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is granted the permissions listed in the `permissions` argument, or `false` otherwise.
 
 ## Browser compatibility
 
@@ -42,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completed.
+This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completes.
 
 ```js
 const permissionsToRequest = {
@@ -73,6 +75,5 @@ document
 
 {{WebExtExamples}}
 
-> **Note:** Currently has a [bug with requesting origins](https://bugzil.la/1411873) and [requesting permissions on the about:addons page](https://bugzil.la/1382953).
-
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

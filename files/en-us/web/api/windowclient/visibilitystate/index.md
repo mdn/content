@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WindowClient.visibilityState
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`visibilityState`** read-only property of the
 {{domxref("WindowClient")}} interface indicates the visibility of the current client.

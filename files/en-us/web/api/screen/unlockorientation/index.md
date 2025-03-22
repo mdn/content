@@ -14,9 +14,11 @@ The **`Screen.unlockOrientation()`** method removes all the
 previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
 method should be used instead.
 
-> **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
+> [!WARNING]
+> This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
 
-> **Note:** This method only works for installed Web apps or for Web pages
+> [!NOTE]
+> This method only works for installed Web apps or for Web pages
 > in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ## Syntax

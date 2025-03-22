@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerRegistration.backgroundFetch
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`backgroundFetch`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to a

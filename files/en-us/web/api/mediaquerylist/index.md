@@ -42,7 +42,7 @@ _The following events are delivered to `MediaQueryList` objects:_
 
 ## Examples
 
-This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
+This example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
 ```js
 const para = document.querySelector("p");
@@ -63,7 +63,8 @@ function screenTest(e) {
 mql.addEventListener("change", screenTest);
 ```
 
-> **Note:** You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
+> [!NOTE]
+> You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
 You can find other examples on the individual property and method pages.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceResourceTiming.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceResourceTiming")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
 

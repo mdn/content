@@ -35,7 +35,7 @@ const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
 ```
 
-Note that `import.meta.resolve()` only performs resolution and does not attempt to load or import the resulting path. (The [explainer for the specification](https://gist.github.com/domenic/f2a0a9cb62d499bcc4d12aebd1c255ab#sync-vs-async) describes the reasoning for this behavior.) Therefore, its return value is the same _regardless of whether the returned path corresponds to a file that exists, and regardless of whether that file contains valid code for a module_.
+Note that `import.meta.resolve()` only performs resolution and does not attempt to load or import the resulting path. Therefore, its return value is the same _regardless of whether the returned path corresponds to a file that exists, and regardless of whether that file contains valid code for a module_. This allows `import.meta.resolve()` to be a _synchronous_ operation.
 
 It is different from [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), because although both accept a module specifier as the first argument, `import.meta.resolve()` returns the path that _would be imported_ without making any attempt to access that path. Therefore, the following two are effectively the same code:
 
@@ -90,11 +90,11 @@ Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dep
 
 ### Not an ECMAScript feature
 
-`import.meta.resolve()` is not specified or documented as part of the [ECMAScript specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) for JavaScript modules. Instead, the specification defines [the `import.meta` object](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta) but [leaves all its properties as "host-defined"](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties). The WHATWG HTML standard picks up where the ECMAScript standard leaves off, and [defines `import.meta.resolve`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) using its [module specifier resolution](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier).
+`import.meta.resolve()` is not specified or documented as part of the [ECMAScript specification](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) for JavaScript modules. Instead, the specification defines [the `import.meta` object](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta) but [leaves all its properties as "host-defined"](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties). The WHATWG HTML standard picks up where the ECMAScript standard leaves off, and [defines `import.meta.resolve`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) using its [module specifier resolution](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier).
 
 This means that `import.meta.resolve()` is not required to be implemented by all conformant JavaScript implementations. However, `import.meta.resolve()` may also be available in non-browser environments:
 
-- Deno implements [compatibility with browser behavior](https://deno.land/manual/runtime/import_meta_api).
+- Deno implements [compatibility with browser behavior](https://docs.deno.com/runtime/reference/deno_namespace_apis/#import.meta).
 - Node.js also implements [the `import.meta.resolve()` function](https://nodejs.org/docs/latest/api/esm.html#importmetaresolvespecifier), but adds an additional `parent` parameter if you use the `--experimental-import-meta-resolve` flag.
 
 ## Examples

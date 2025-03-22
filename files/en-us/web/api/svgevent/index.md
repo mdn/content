@@ -6,7 +6,7 @@ page-type: web-api-interface
 
 {{deprecated_header}}{{APIRef("SVG")}}
 
-The {{domxref("SVGEvent")}} interface represents the event object for most SVG-related events.
+The **`SVGEvent`** interface represents the event object for most SVG-related events.
 
 ## Instance properties
 

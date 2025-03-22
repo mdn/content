@@ -11,7 +11,8 @@ browser-compat: html.elements.font
 
 The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, color and face for its content.
 
-> **Warning:** Do not use this element. Use the CSS [Fonts](/en-US/docs/Web/CSS/CSS_fonts) properties to style text.
+> [!WARNING]
+> Do not use this element. Use the CSS [Fonts](/en-US/docs/Web/CSS/CSS_fonts) properties to style text.
 
 ## Attributes
 

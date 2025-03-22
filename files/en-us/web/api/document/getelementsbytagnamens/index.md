@@ -20,28 +20,22 @@ getElementsByTagNameNS(namespace, name)
 ### Parameters
 
 - `namespace`
-  - : The namespace URI of elements to look for (see
-    {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
+  - : The namespace URI of elements to look for (see {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
 - `name`
-  - : Either the local name of elements to look for or the special
-    value `*`, which matches all elements (see {{domxref("Element.localName", "element.localName")}}).
+
+  - : Either the local name of elements to look for or the special value `*`, which matches all elements (see {{domxref("Element.localName", "element.localName")}}).
+
+    > [!NOTE]
+    > Unlike {{domxref("document.getElementsByTagName()")}}, the parameters for `getElementsByTagNameNS()` are case-sensitive.
 
 ### Return value
 
-A live {{DOMxRef("NodeList")}} (but see the note below) of
-found elements in the order they appear in the tree.
-
-> **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} in Firefox.
-> Opera returns a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers is the returned value a pure `NodeList`.
-> See [bug 14869](https://bugzil.la/14869) for details.
-
-> **Note:** Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
-> See the [developer release note for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in {{domxref("Element.getElementsByTagNameNS")}} for details.
+A live {{DOMxRef("HTMLCollection")}} of found elements in the order they appear in the tree.
 
 ## Examples
 
 In the following example `getElementsByTagNameNS` starts from a particular
-parent element, and searches topdown recursively through the DOM from that parent
+parent element, and searches top-down recursively through the DOM from that parent
 element, looking for child elements matching the tag `name` parameter.
 
 Note that when the node on which `getElementsByTagName` is invoked is not

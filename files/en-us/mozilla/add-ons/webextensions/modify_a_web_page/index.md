@@ -42,9 +42,11 @@ First of all, create a new directory called "modify-page". In that directory, cr
 
 The [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key is how you load scripts into pages that match URL patterns. In this case, `content_scripts` instructs the browser to load a script called "page-eater.js" into all pages under [https://developer.mozilla.org/](/).
 
-> **Note:** Since the `"js"` property of `content_scripts` is an array, you can use it to inject more than one script into matching pages. If you do this the pages share the same scope, just like multiple scripts loaded by a page, and they are loaded in the order that they are listed in the array.
+> [!NOTE]
+> Since the `"js"` property of `content_scripts` is an array, you can use it to inject more than one script into matching pages. If you do this the pages share the same scope, just like multiple scripts loaded by a page, and they are loaded in the order that they are listed in the array.
 
-> **Note:** The `content_scripts` key also has a `"css"` property that you can use to inject CSS stylesheets.
+> [!NOTE]
+> The `content_scripts` key also has a `"css"` property that you can use to inject CSS stylesheets.
 
 Next, create a file called "page-eater.js" inside the "modify-page" directory, and give it the following contents:
 
@@ -169,7 +171,8 @@ Content scripts and background scripts can't directly access each other's state.
   </thead>
 </table>
 
-> **Note:** In addition to this method of communication, which sends one-off messages, you can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging). For advice on choosing between the options, see [Choosing between one-off messages and connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
+> [!NOTE]
+> In addition to this method of communication, which sends one-off messages, you can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging). For advice on choosing between the options, see [Choosing between one-off messages and connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
 
 Let's update our example to show how to send a message from the background script.
 
@@ -223,7 +226,8 @@ Now, instead of just eating the page right away, the content script listens for 
 
 Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
 
-> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
+> [!NOTE]
+> Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
 > Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 
@@ -235,7 +239,8 @@ browser.runtime.sendMessage({
 });
 ```
 
-> **Note:** These examples all inject JavaScript; you can also inject CSS programmatically using the [`tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) function.
+> [!NOTE]
+> These examples all inject JavaScript; you can also inject CSS programmatically using the [`tabs.insertCSS()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) function.
 
 ## Learn more
 

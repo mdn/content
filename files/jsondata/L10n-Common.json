@@ -1,5 +1,6 @@
 {
   "Constructor": {
+    "de": "Konstruktor",
     "en-US": "Constructor",
     "es": "Constructor",
     "fr": "Constructeur",
@@ -11,6 +12,7 @@
     "zh-TW": "建構子"
   },
   "Event_handlers": {
+    "de": "Event-Handler",
     "en-US": "Event handlers",
     "es": "Manejador de eventos",
     "fr": "Gestionnaires d'évènements",
@@ -22,6 +24,7 @@
     "zh-TW": "事件處理器"
   },
   "Events": {
+    "de": "Events",
     "en-US": "Events",
     "es": "Eventos",
     "fr": "Évènements",
@@ -33,6 +36,7 @@
     "zh-TW": "事件"
   },
   "Guides": {
+    "de": "Anleitungen",
     "en-US": "Guides",
     "es": "Guías",
     "fr": "Guides",
@@ -44,6 +48,7 @@
     "zh-TW": "指南"
   },
   "Implemented_by": {
+    "de": "Implementiert von",
     "en-US": "Implemented by",
     "es": "Implementado por",
     "fr": "Implémenté(e) par",
@@ -55,6 +60,7 @@
     "zh-TW": "實現於"
   },
   "Inheritance": {
+    "de": "Vererbung",
     "en-US": "Inheritance",
     "es": "Herencia",
     "fr": "Héritage",
@@ -66,6 +72,7 @@
     "zh-TW": "繼承"
   },
   "Instance_methods": {
+    "de": "Instanzmethoden",
     "en-US": "Instance methods",
     "es": "Métodos de instancia",
     "fr": "Méthodes d'instance",
@@ -77,6 +84,7 @@
     "zh-TW": "實體方法"
   },
   "Instance_properties": {
+    "de": "Instanzeigenschaften",
     "en-US": "Instance properties",
     "es": "Propiedades de instancia",
     "fr": "Propriétés d'instance",
@@ -88,6 +96,7 @@
     "zh-TW": "實體屬性"
   },
   "Interfaces": {
+    "de": "Interfaces",
     "en-US": "Interfaces",
     "es": "Interfaces",
     "fr": "Interfaces",
@@ -99,6 +108,7 @@
     "zh-TW": "介面"
   },
   "Methods": {
+    "de": "Methoden",
     "en-US": "Methods",
     "es": "Métodos",
     "fr": "Méthodes",
@@ -110,6 +120,7 @@
     "zh-TW": "方法"
   },
   "MissingPage": {
+    "de": "[Seite noch nicht geschrieben]",
     "en-US": "[Page not yet written]",
     "es": "[Página aún no escrita]",
     "fr": "[Page qui reste à écrire]",
@@ -121,6 +132,7 @@
     "zh-TW": "[頁面尚未被撰寫]"
   },
   "Properties": {
+    "de": "Eigenschaften",
     "en-US": "Properties",
     "es": "Propiedades",
     "fr": "Propriétés",
@@ -132,6 +144,7 @@
     "zh-TW": "屬性"
   },
   "Reference": {
+    "de": "Referenz",
     "en-US": "Reference",
     "es": "Referencia",
     "fr": "Référence",
@@ -143,6 +156,7 @@
     "zh-TW": "參考"
   },
   "Related_pages": {
+    "de": "Verwandte Seiten für $1",
     "en-US": "Related pages for $1",
     "es": "Páginas relacionadas a $1",
     "fr": "Pages liées à $1",
@@ -154,6 +168,7 @@
     "zh-TW": "$1 的相關頁面"
   },
   "Related_pages_wo_group": {
+    "de": "Verwandte Seiten",
     "en-US": "Related pages",
     "es": "Páginas relacionadas",
     "fr": "Pages similaires",
@@ -165,6 +180,7 @@
     "zh-TW": "相關頁面"
   },
   "Static_methods": {
+    "de": "Statische Methoden",
     "en-US": "Static methods",
     "es": "Métodos estáticos",
     "fr": "Méthodes statiques",
@@ -176,6 +192,7 @@
     "zh-TW": "靜態方法"
   },
   "Static_properties": {
+    "de": "Statische Eigenschaften",
     "en-US": "Static properties",
     "es": "Propiedades estáticas",
     "fr": "Propriétés statiques",
@@ -187,6 +204,7 @@
     "zh-TW": "靜態屬性"
   },
   "TranslationCTA": {
+    "de": "Unsere Community hat diesen Artikel noch nicht übersetzt. Mach mit und hilf uns dabei!",
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
     "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire!",
@@ -198,6 +216,7 @@
     "zh-TW": "此頁面仍未被本地化，期待你的翻譯！"
   },
   "[Translate]": {
+    "de": "[Übersetzen]",
     "en-US": "[Translate]",
     "es": "[Traducir]",
     "fr": "[Traduire]",
@@ -209,6 +228,7 @@
     "zh-TW": "[我來譯！]"
   },
   "Tutorial": {
+    "de": "Anleitung",
     "en-US": "Tutorial",
     "es": "Tutorial",
     "fr": "Tutoriel",
@@ -218,7 +238,11 @@
     "zh-CN": "教程",
     "zh-TW": "教學"
   },
+  "Types": {
+    "en-US": "Types"
+  },
   "listSeparator": {
+    "de": ", ",
     "en-US": ", ",
     "es": ", ",
     "fr": ", ",
@@ -230,6 +254,7 @@
     "zh-TW": "、"
   },
   "section": {
+    "de": "Abschnitt",
     "en-US": "section",
     "es": "sección",
     "fr": "section",
@@ -239,6 +264,7 @@
     "ru": "раздел"
   },
   "summary": {
+    "de": "Die Dokumentation zu diesem Thema wurde noch nicht verfasst. Hilf uns dabei!",
     "en-US": "The documentation about this has not yet been written; please consider contributing!",
     "es": "La documentación acerca de este tema no ha sido escrita todavía. ¡Por favor considera contribuir!",
     "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant!",

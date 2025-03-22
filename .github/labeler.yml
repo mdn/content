@@ -57,62 +57,53 @@ Content:JS:
 Content:Learn:
   - changed-files:
       - all-globs-to-any-file:
-          - files/en-us/learn/**
-          - "!files/en-us/learn/accessibility/**"
-          - "!files/en-us/learn/tools_and_testing/client-side_javascript_frameworks/**"
-          - "!files/en-us/learn/tools_and_testing/understanding_client-side_tools/**"
-          - "!files/en-us/learn/tools_and_testing/cross_browser_testing/**"
-          - "!files/en-us/learn/css/**"
-          - "!files/en-us/learn/server-side/django/**"
-          - "!files/en-us/learn/server-side/express_nodejs/**"
-          - "!files/en-us/learn/forms/**"
-          - "!files/en-us/learn/tools_and_testing/github/**"
-          - "!files/en-us/learn/html/**"
-          - "!files/en-us/learn/javascript/**"
+          - files/en-us/learn_web_development/**
   - changed-files:
       - any-glob-to-any-file:
           - files/en-us/web/tutorials/**
-Content:Learn:Accessibility:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/accessibility/**
-Content:Learn:Client-side:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/tools_and_testing/client-side_javascript_frameworks/**
-          - files/en-us/learn/tools_and_testing/understanding_client-side_tools/**
-Content:Learn:Cross-Browser-Testing:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/tools_and_testing/cross_browser_testing/**
-Content:Learn:CSS:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/css/**
-Content:Learn:Django:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/server-side/django/**
-Content:Learn:Express:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/server-side/express_nodejs/**
-Content:Learn:Forms:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/forms/**
-Content:Learn:GitHub:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/tools_and_testing/github/**
-Content:Learn:HTML:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/html/**
-Content:Learn:JavaScript:
-  - changed-files:
-      - any-glob-to-any-file:
-          - files/en-us/learn/javascript/**
+# Mapping for old directories, see https://github.com/mdn/content/pull/36967
+#
+# Content:Learn:Accessibility:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/accessibility/**
+# Content:Learn:Client-side:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/client-side_javascript_frameworks/**
+#           - files/en-us/learn/tools_and_testing/understanding_client-side_tools/**
+# Content:Learn:Cross-Browser-Testing:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/cross_browser_testing/**
+# Content:Learn:CSS:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/css/**
+# Content:Learn:Django:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/server-side/django/**
+# Content:Learn:Express:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/server-side/express_nodejs/**
+# Content:Learn:Forms:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/forms/**
+# Content:Learn:GitHub:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/github/**
+# Content:Learn:HTML:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/html/**
+# Content:Learn:JavaScript:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/javascript/**
 Content:Manifest:
   - changed-files:
       - any-glob-to-any-file:
@@ -170,11 +161,10 @@ Content:Other:
   - changed-files:
       - any-glob-to-any-file:
           - files/en-us/related/**
-          - files/en-us/web/demos/**
           - files/en-us/web/exslt/**
           - files/en-us/web/opensearch/**
           - files/en-us/web/privacy/**
-          - files/en-us/web/text_fragments/**
+          - files/en-us/web/uri/**
           - files/en-us/web/xml/**
           - files/en-us/web/xpath/**
           - files/en-us/web/xslt/**

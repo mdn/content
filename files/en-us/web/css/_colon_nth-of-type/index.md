@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type()"
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type
@@ -9,7 +9,35 @@ browser-compat: css.selectors.nth-of-type
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-of-type(even) {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntax
 
@@ -18,7 +46,7 @@ The `nth-of-type` pseudo-class is specified with a single argument, which repres
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
 ```css-nolint
-:nth-of-type(<an-plus-b> | even | odd) {
+:nth-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```
@@ -69,7 +97,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **Note:** There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
+> [!NOTE]
+> There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
 
 ## Specifications
 

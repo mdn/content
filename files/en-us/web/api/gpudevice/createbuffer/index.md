@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBuffer()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBuffer")}} in which to store raw data to use in GPU operations.
@@ -58,7 +58,8 @@ The following criteria must be met when calling **`createBuffer()`**, otherwise 
 - `GPUBufferUsage.MAP_WRITE` is specified, and no additional flags are specified other than `GPUBufferUsage.COPY_SRC`.
 - `mappedAtCreation: true` is specified, and the specified `size` is a multiple of 4.
 
-> **Note:** If the buffer allocation fails without any specific side-effects, a {{domxref("GPUOutOfMemoryError")}} object is generated.
+> [!NOTE]
+> If the buffer allocation fails without any specific side-effects, a {{domxref("GPUOutOfMemoryError")}} object is generated.
 
 ## Examples
 

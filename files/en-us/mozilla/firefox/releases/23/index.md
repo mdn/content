@@ -11,7 +11,7 @@ page-type: firefox-release-notes
 ### Security
 
 - Mixed content blocking. Firefox will no longer load non-secure (http) resources on secure (https) pages ([Firefox bug 834836](https://bugzil.la/834836)).
-- The standard syntax of [CSP](/en-US/docs/Web/HTTP/CSP) 1.0 policies are now implemented and enforced by default.
+- The standard syntax of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.0 policies are now implemented and enforced by default.
 
 ### Developer Tools
 
@@ -45,7 +45,7 @@ page-type: firefox-release-notes
 
 ### WebRTC
 
-- Instead of including usernames in the `RTCIceServer.url` property (such as stun:username\@stunserver.example.com), you now need to use the new `RTCIceServer.username` property.
+- Instead of including usernames in the `RTCIceServer.url` property (such as `stun:username@stunserver.example.com`), you now need to use the new `RTCIceServer.username` property.
 
 ### CSS
 

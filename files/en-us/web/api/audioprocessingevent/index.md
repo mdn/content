@@ -13,7 +13,8 @@ The `AudioProcessingEvent` interface of the [Web Audio API](/en-US/docs/Web/API/
 
 An `audioprocess` event with this interface is fired on a {{domxref("ScriptProcessorNode")}} when audio processing is required. During audio processing, the input buffer is read and processed to produce output audio data, which is then written to the output buffer.
 
-> **Warning:** This feature has been deprecated and should be replaced by an [`AudioWorklet`](/en-US/docs/Web/API/AudioWorklet).
+> [!WARNING]
+> This feature has been deprecated and should be replaced by an [`AudioWorklet`](/en-US/docs/Web/API/AudioWorklet).
 
 {{InheritanceDiagram}}
 
@@ -53,7 +54,8 @@ of white noise to each audio sample of the input track (buffer) and play it thro
 buffer, and each sample in each channel, and add a small amount of white noise, before
 setting that result to be the output sample in each case.
 
-> **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
+> [!NOTE]
+> For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
 > GitHub repo. (You can also access the [source code](https://github.com/mdn/webaudio-examples/tree/main/script-processor-node).)
 
 ```js

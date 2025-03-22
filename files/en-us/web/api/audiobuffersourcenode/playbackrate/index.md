@@ -41,7 +41,8 @@ The example then sets the `loop` property to `true`, so the track loops, and pla
 
 The user can set the `playbackRate` property using a [range control](/en-US/docs/Web/HTML/Element/input/range).
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/playbackrate/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/playbackrate).)
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/playbackrate/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/playbackrate).)
 
 ```js
 let audioCtx;

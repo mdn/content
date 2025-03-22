@@ -11,7 +11,22 @@ The **`function*`** declaration creates a {{Glossary("binding")}} of a new gener
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: function* declaration")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## Syntax
 
@@ -27,7 +42,8 @@ function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **Note:** Generator functions do not have arrow function counterparts.
+> [!NOTE]
+> Generator functions do not have arrow function counterparts.
 
 > **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space).
 
@@ -74,7 +90,7 @@ of that generator's code, they will just return an object of this form:
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```js
 function* idMaker() {

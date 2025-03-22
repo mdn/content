@@ -24,7 +24,7 @@ No notable changes
 
 ### APIs
 
-- The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ([Firefox bug 1722576](https://bugzil.la/1722576)).
+- The {{DOMxRef("Window.structuredClone()")}} and {{DOMxRef("WorkerGlobalScope.structuredClone()")}} function is now supported for copying complex JavaScript objects ([Firefox bug 1722576](https://bugzil.la/1722576)).
 
 #### DOM
 
@@ -38,7 +38,7 @@ No notable changes
 
 ### HTTP
 
-- The `cache` directive of the [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) response header has been disabled by default.
+- The `cache` directive of the [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) response header has been disabled by default.
   It can be enabled using the preference `privacy.clearsitedata.cache.enabled` ([Firefox bug 1729291](https://bugzil.la/1729291)).
 
 ## Changes for add-on developers

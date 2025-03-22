@@ -15,9 +15,9 @@ The box-edge keywords are the components of, but not limited to, the data types 
 
 ```plain
 <visual-box> = content-box | padding-box | border-box /* the three <box> values */
-<layout-box> = <box> | margin-box /* the <shape-box> values */
-<paint-box> = <box> | fill-box | stroke-box
-<coord-box> = <box> | fill-box | stroke-box | view-box
+<layout-box> = <visual-box> | margin-box /* the <shape-box> values */
+<paint-box> = <visual-box> | fill-box | stroke-box
+<coord-box> = <paint-box> | fill-box | stroke-box | view-box
 <geometry-box> = <shape-box> | fill-box | stroke-box | view-box
 ```
 
@@ -50,7 +50,7 @@ The `<box-edge>` keywords are defined as follows:
 
 - `content-box`
 
-  - : Refers to the outer edge of the box's content area. . The content box is the innermost box. The content area contains the actual content, such as text, images, or other HTML elements. In SVG, this value is treated as `fill-box`.
+  - : Refers to the outer edge of the box's content area. The content box is the innermost box. The content area contains the actual content, such as text, images, or other HTML elements. In SVG, this value is treated as `fill-box`.
 
 - `padding-box`
 
@@ -75,7 +75,8 @@ The `<box-edge>` keywords are defined as follows:
 - `view-box`
 
   - : Refers to the nearest SVG viewport element's origin box. The origin box is a rectangle with the width and height of the initial SVG user coordinate system established by the {{svgattr("viewBox")}} attribute for that element. The origin box is positioned such that its top left corner is anchored at the [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) origin. In CSS, `view-box` is treated as `border-box`.
-    > **Note:** When the SVG viewport is not anchored at the origin, the origin box does not correspond to the SVG viewport.
+    > [!NOTE]
+    > When the SVG viewport is not anchored at the origin, the origin box does not correspond to the SVG viewport.
 
 ## Specifications
 

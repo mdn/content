@@ -12,7 +12,8 @@ The **`dischargingTime`** read-only property of the {{domxref("BatteryManager")}
 or {{jsxref("Infinity")}} if the battery is currently charging rather than discharging or the user agent is unable to report the battery status information.
 When its value changes, the {{domxref("BatteryManager/dischargingtimechange_event", "dischargingtimechange")}} event is fired.
 
-> **Note:** Even if the time returned is precise to the second, browsers round them to a higher
+> [!NOTE]
+> Even if the time returned is precise to the second, browsers round them to a higher
 > interval (typically to the closest 15 minutes) for privacy reasons.
 
 ## Value

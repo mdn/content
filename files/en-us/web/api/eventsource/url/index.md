@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.EventSource.url
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`url`** read-only property of the
 {{domxref("EventSource")}} interface returns a string representing the
@@ -23,7 +23,8 @@ const evtSource = new EventSource("sse.php");
 console.log(evtSource.url);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
+> [!NOTE]
+> You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

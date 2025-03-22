@@ -8,7 +8,8 @@ page-type: guide
 
 Extensions that use WebExtension APIs are provided with several user interface options so that their functionality can be made available to the user. A summary of those options is provided below, with a more detailed introduction to each user interface option in this section.
 
-> **Note:** For advice on using these UI components to create a great user experience in your extension, please see the [User experience best practices](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) article.
+> [!NOTE]
+> For advice on using these UI components to create a great user experience in your extension, please see the [User experience best practices](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) article.
 
 <table class="standard-table">
   <thead>
@@ -221,7 +222,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
       </td>
       <td>
         <img
-          alt="Example showing the result of the firefox_code_search WebExtension&#x27;s customization of the address bar suggestions."
+          alt="Example of a custom panel on developer tools."
           src="developer_panel_tab.png"
         />
       </td>

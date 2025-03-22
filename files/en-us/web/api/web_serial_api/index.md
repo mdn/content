@@ -13,7 +13,7 @@ The **Web Serial API** provides a way for websites to read from and write to ser
 
 ## Concepts and Usage
 
-The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the {{domxref("WebUSB API")}}, or input devices that can be accessed via {{domxref("WebHID API")}}.
+The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), or input devices that can be accessed via [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
 Examples of serial devices include 3D printers, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
 
@@ -27,9 +27,14 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 ## Extensions to other interfaces
 
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
+
+## HTTP headers
+
+- {{httpheader("Permissions-Policy")}} {{httpheader('Permissions-Policy/serial','serial')}} directive
+  - : Controls whether the current document is allowed to use the Web Serial API to communicate with serial devices, either directly connected via a serial port, or via USB or Bluetooth devices emulating a serial port.
 
 ## Examples
 

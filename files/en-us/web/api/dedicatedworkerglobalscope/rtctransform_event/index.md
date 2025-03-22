@@ -62,7 +62,7 @@ addEventListener("rtctransform", (event) => {
 The `rtctransform` event is fired when an encoded frame is enqueued on the {{domxref("RTCRtpScriptTransformer")}} and just once when the transformer's corresponding {{domxref("RTCRtpScriptTransformer")}} is constructed.
 The code first determines what transform to apply using `name` value passed in the options (this allows {{domxref("RTCRtpScriptTransform")}} instances added to the incoming and outgoing WebRTC pipelines to share a single worker).
 Encoded frames are then piped from the readable, through the selected transform {{domxref("TransformStream")}}, to a writeable.
-The actual tranforming code is not shown.
+The actual transforming code is not shown.
 
 Note that this code is part of a more complete example provided in {{domxref("WebRTC API/Using Encoded Transforms", "Using WebRTC Encoded Transforms", "", "nocode")}}.
 

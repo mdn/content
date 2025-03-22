@@ -3,12 +3,11 @@ title: <display-inside>
 slug: Web/CSS/display-inside
 page-type: css-type
 browser-compat:
-  - css.properties.display.multi-keyword_values
   - css.properties.display.flow-root
-  - css.properties.display.table_values
-  - css.properties.display.grid
+  - css.properties.display.table
   - css.properties.display.flex
-  - css.properties.display.ruby_values
+  - css.properties.display.grid
+  - css.properties.display.ruby
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 ---
 
@@ -24,7 +23,7 @@ Valid `<display-inside>` values:
 
   - : The element lays out its contents using flow layout (block-and-inline layout).
 
-    If its outer display type is `inline` or `run-in`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
+    If its outer display type is `inline`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
 
     Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
@@ -39,7 +38,8 @@ Valid `<display-inside>` values:
 - `ruby`
   - : The element behaves like an inline element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** Browsers that support the two value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`. This will result in expected behavior; for example if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block level box.
+> [!NOTE]
+> Browsers that support the two value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`. This will result in expected behavior; for example if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block level box.
 
 ## Formal syntax
 
@@ -62,7 +62,7 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
   display: flow-root;
 }
@@ -99,5 +99,5 @@ In this example the parent box has been given `display: flow-root` and so establ
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Basic Concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

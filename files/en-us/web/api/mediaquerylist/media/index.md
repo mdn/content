@@ -32,7 +32,7 @@ document.querySelector(".mq-value").innerText = mql.media;
 
 The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s
 {{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
-{{DOMxRef("MediaQueryList.media", "media")}} property.
+`media` property.
 
 ### HTML
 
@@ -40,7 +40,7 @@ The JavaScript code passes the media query to match into {{DOMxRef("Window.match
 <span class="mq-value"></span>
 ```
 
-A simple `<span>` to receive the output.
+A `<span>` to receive the output.
 
 ```css hidden
 .mq-value {

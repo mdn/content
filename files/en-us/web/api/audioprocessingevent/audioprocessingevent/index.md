@@ -12,7 +12,8 @@ browser-compat: api.AudioProcessingEvent.AudioProcessingEvent
 
 The **`AudioProcessingEvent()`** constructor creates a new {{domxref("AudioProcessingEvent")}} object.
 
-> **Note:** Usually, this constructor is not directly called by your code, as the browser creates these objects itself and provides them to the event handler.
+> [!NOTE]
+> Usually, this constructor is not directly called by your code, as the browser creates these objects itself and provides them to the event handler.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilOpSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilOpSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or
@@ -19,9 +19,6 @@ stencilOpSeparate(face, fail, zfail, zpass)
 ```
 
 ### Parameters
-
-The `fail`, `zfail` and `zpass` parameters accept all
-constants listed below.
 
 - `face`
 

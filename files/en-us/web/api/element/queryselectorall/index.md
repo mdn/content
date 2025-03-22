@@ -23,25 +23,21 @@ querySelectorAll(selectors)
 
 - `selectors`
 
-  - : A string containing one or more selectors to match against. This
-    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
-    string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
-    identify elements. Multiple selectors may be specified by separating them using
-    commas.
+  - : A string containing one or more selectors to match. This string
+    must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
+    is thrown.
 
-    Note that the selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
-> **Note:** Characters which are not part of standard CSS syntax must be
-> escaped using a backslash character. Since JavaScript also uses backslash escaping,
-> special care must be taken when writing string literals using these characters. See
-> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more information.
+    The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
 
 ### Return value
 
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
-each descendant node that matches at least one of the specified selectors.
+each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
-> **Note:** If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> [!NOTE]
+> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
 > is always empty.
 
 ### Exceptions
@@ -51,40 +47,35 @@ each descendant node that matches at least one of the specified selectors.
 
 ## Examples
 
-### dataset selector & attribute selectors
+### Getting all elements with a custom data value
+
+This example uses the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
 
 ```html
 <section class="box" id="sect1">
-  <div class="funnel-chart-percent1">10.900%</div>
-  <div class="funnel-chart-percent2">3700.00%</div>
-  <div class="funnel-chart-percent3">0.00%</div>
+  <div data-name="funnel-chart-percent1">10.900%</div>
+  <div data-name="funnel-chart-percent2">3700.00%</div>
+  <div data-name="funnel-chart-percent3">0.00%</div>
 </section>
 ```
 
 ```js
-// dataset selectors
 const refs = [
   ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
 ];
-
-// attribute selectors
-// const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class^="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class$="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 ```
 
 ### Obtaining a list of matches
 
 To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements
-contained within the element `"myBox"`:
+contained within the element `myBox`:
 
 ```js
 const matches = myBox.querySelectorAll("p");
 ```
 
 This example returns a list of all {{HTMLElement("div")}} elements within
-`"myBox"` with a class of either "`note`" or "`alert`":
+`myBox` with a class of either `note` or `alert`:
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");
@@ -107,11 +98,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `"userlist"` which have a `"data-active"`
+a list whose ID is `"user-list"` which have a `"data-active"`
 attribute whose value is `"1"`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 
@@ -145,7 +136,7 @@ The `querySelectorAll()` method applies its selectors to the whole document: the
 In this example the HTML contains:
 
 - two buttons: `#select` and `#select-scope`
-- three nested `<div>` elements:`#outer`, `#subject`, and `#inner`
+- three nested `<div>` elements: `#outer`, `#subject`, and `#inner`
 - a `<pre>` element which the example uses for output.
 
 ```html
@@ -153,10 +144,10 @@ In this example the HTML contains:
 <button id="select-scope">Select with :scope</button>
 
 <div id="outer">
-  .outer
+  #outer
   <div id="subject">
-    .subject
-    <div id="inner">.inner</div>
+    #subject
+    <div id="inner">#inner</div>
   </div>
 </div>
 
@@ -211,6 +202,86 @@ When we press "Select", the selector selects all elements with an ID of `inner` 
 
 When we press "Select with :scope", the `:scope` pseudo-class restricts the selector scope to `#subject`, so `#outer` is not used in selector matching, and we don't find the `#inner` element.
 
+### Escaping attribute values
+
+This example shows that if an HTML document contains an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) which is not a valid [CSS identifier](/en-US/docs/Web/CSS/ident), then we must escape the attribute value before using it in `querySelectorAll()`.
+
+#### HTML
+
+In the following code, a {{htmlelement("div")}} element has an `id` of `"this?element"`, which is not a valid CSS identifier, because the `"?"` character is not allowed in CSS identifiers.
+
+We also have three buttons, and a {{htmlelement("pre")}} element for logging errors.
+
+```html
+<div id="container">
+  <div id="this?element"></div>
+</div>
+
+<button id="no-escape">No escape</button>
+<button id="css-escape">CSS.escape()</button>
+<button id="manual-escape">Manual escape</button>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+div {
+  background-color: blue;
+  margin: 1rem 0;
+  height: 100px;
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+All three buttons, when clicked, try to select the `<div>`, and then set its background color to a random value.
+
+- The first button uses the `"this?element"` value directly.
+- The second button escapes the value using {{domxref("CSS.escape_static", "CSS.escape()")}}.
+- The third button explicitly escapes the `"?"` character using a backslash. Note that we must also escape the backslash itself, using another backslash, like: `"\\?"`.
+
+```js
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function setBackgroundColor(id) {
+  log.textContent = "";
+
+  try {
+    const elements = container.querySelectorAll(`#${id}`);
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    elements[0].style.backgroundColor = randomColor;
+  } catch (e) {
+    log.textContent = e;
+  }
+}
+
+document.querySelector("#no-escape").addEventListener("click", () => {
+  setBackgroundColor("this?element");
+});
+
+document.querySelector("#css-escape").addEventListener("click", () => {
+  setBackgroundColor(CSS.escape("this?element"));
+});
+
+document.querySelector("#manual-escape").addEventListener("click", () => {
+  setBackgroundColor("this\\?element");
+});
+```
+
+#### Result
+
+Clicking the first button gives an error, while the second and third buttons work properly.
+
+{{embedlivesample("escaping_attribute_values", "", 200)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -221,10 +292,10 @@ When we press "Select with :scope", the `:scope` pseudo-class restricts the sele
 
 ## See also
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} and
   {{domxref("Document.querySelectorAll()")}}

@@ -36,5 +36,3 @@ A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

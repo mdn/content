@@ -6,22 +6,32 @@ page-type: guide
 
 {{GamesSidebar}}
 
-[Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
+[Babylon.js](https://www.babylonjs.com/) is one of the most popular 3D game engines used by developers. As with any other 3D library it provides built-in functions to help you implement common 3D functionality more quickly. In this article we'll take you through the basics of using Babylon.js, including setting up a development environment, structuring the necessary HTML, and writing the JavaScript code.
 
-We will try to create a simple demo first — a cube rendered on the screen. If you have already worked through our _Building up a basic demo_ [series](/en-US/docs/Games/Techniques/3D_on_the_web) with [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) (or you are familiar with other 3D libraries) you'll notice that Babylon.js works on similar concepts: camera, light and objects.
+We will create a basic demo first — a cube rendered on the screen. If you have already worked through our _Building up a basic demo_ [series](/en-US/docs/Games/Techniques/3D_on_the_web) with [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) (or you are familiar with other 3D libraries) you'll notice that Babylon.js works using similar concepts: camera, light and objects.
 
-## Environment setup
+> [!NOTE]
+> This guide was last updated in November 2024, and is compatible with Babylon.js version `7.34.1`.
 
-To start developing with Babylon.js, you don't need much. You should start off by:
+## Development setup
 
-- Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Creating a directory to store your experiments in.
-- Saving a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/babylon.js) inside your directory.
-- Opening the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab — it is useful to refer to.
+To start developing with Babylon.js, you don't need much.
+Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support.
+It's useful to keep the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab while you're working.
 
-## HTML structure
+If you're developing locally in an IDE, make a directory to store your experiments in and save a copy of the [latest Babylon.js engine](https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers/) inside that directory.
+Alternatively, you can load Babylon.js from a CDN:
 
-Here's the HTML structure we will use:
+```html
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
+```
+
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+With these editors, you can add `https://cdn.babylonjs.com/v7.34.1/babylon.js` as a JavaScript source so it's available in your code.
+
+### HTML starter for Babylon.js
+
+If you're building your project locally in an IDE, here's the HTML structure to get started:
 
 ```html
 <!doctype html>
@@ -42,19 +52,24 @@ Here's the HTML structure we will use:
     </style>
   </head>
   <body>
+    <!--  The local copy of Babylon.js -->
     <script src="babylon.js"></script>
+    <!--  or loaded via CDN: -->
+    <!-- <script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script> -->
+
     <canvas id="render-canvas"></canvas>
+
     <script>
       const canvas = document.getElementById("render-canvas");
-      /* all our JavaScript code goes here */
+      /* All of our JavaScript code goes here */
     </script>
   </body>
 </html>
 ```
 
-It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (which Babylon.js will use to render the content on) to fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Babylon.js library in the page; we will write our example code in the second one. There is one helper variable already included, which will store a reference to the `<canvas>` element.
+It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (which Babylon.js will use to render the content on) to fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Babylon.js library in the page; we will write our example code in the second one. There is one variable already included, which will store a reference to the `<canvas>` element.
 
-Before reading on, copy this code to a new text file and save it in your working directory as `index.html`.
+If you're developing in an IDE, copy this code to a new text file and save it in your working directory as `index.html`.
 
 ## Initializing the Babylon.js engine
 
@@ -75,7 +90,7 @@ const scene = new BABYLON.Scene(engine);
 scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 ```
 
-Thus, the scene is created and the second line sets the background color to light gray.
+The scene is created and the second line sets the background color to light gray.
 
 ## Creating a rendering loop
 
@@ -102,13 +117,13 @@ const camera = new BABYLON.FreeCamera(
 );
 ```
 
-There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
+There are many [cameras](https://doc.babylonjs.com/features/featuresDeepDive/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
-> **Note:** You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
+You may have noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 
 ## Let there be light
 
-There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
+There are various [light sources](https://doc.babylonjs.com/features/featuresDeepDive/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
 const light = new BABYLON.PointLight(
@@ -122,15 +137,15 @@ The parameters are very similar to the previously defined camera: the name of th
 
 ## Geometry
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of [predefined primitives](https://doc.babylonjs.com/divingDeeper/mesh/creation/set) that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:
+Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of [predefined primitives](https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set) that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:
 
 ```js
 const box = BABYLON.Mesh.CreateBox("box", 2, scene);
 ```
 
-A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
+A mesh is a way the engine creates geometric shapes, so material (textures) can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
 
-> **Note:** The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+The size or position values (e.g., for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little rotation to the box, so we can see more than one face — again, add these lines below the previous one:
 
@@ -153,15 +168,61 @@ box.material = boxMaterial;
 
 The `StandardMaterial` takes two parameters: a name, and the scene you want to add it to. The second line defines an `emissiveColor` — the one that will be visible for us. We can use the built-in `Color3` function to define it. The third line assigns the newly created material to our box.
 
-Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right? Here's how it should look:
+## Babylon.js shapes example
 
-![Blue Babylon.js 3D box on the gray background.](cube.png)
+Congratulations, you've created your first object in a 3D environment using Babylon.js! It was easier than you thought, right?
+Here's what we have created so far in a live sample.
+You can click "Play" to edit the code in the MDN Playground:
 
-And here's the code we have created so far:
+```html hidden live-sample___babylon-js-intro
+<canvas id="render-canvas"></canvas>
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
+```
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/9zoeo5sy/","","350")}}
+```js hidden live-sample___babylon-js-intro
+const canvas = document.getElementById("render-canvas");
+const engine = new BABYLON.Engine(canvas);
+const scene = new BABYLON.Scene(engine);
+scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 
-You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/cube.html).
+const camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene,
+);
+
+const light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene,
+);
+
+const box = BABYLON.Mesh.CreateBox("box", 2, scene);
+box.rotation.x = -0.2;
+box.rotation.y = -0.4;
+
+const boxMaterial = new BABYLON.StandardMaterial("material", scene);
+boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
+box.material = boxMaterial;
+
+const renderLoop = function () {
+  scene.render();
+};
+
+engine.runRenderLoop(renderLoop);
+```
+
+```css hidden live-sample___babylon-js-intro
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{embedlivesample("babylon-js-intro", "", "400px")}}
 
 ## More shapes
 
@@ -195,6 +256,7 @@ Creating a cylinder and its material is done in almost exactly the same way as w
 const cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
 cylinder.position.x = 5;
 cylinder.rotation.x = -0.2;
+
 const cylinderMaterial = new BABYLON.StandardMaterial("material", scene);
 cylinderMaterial.emissiveColor = new BABYLON.Color3(1, 0.58, 0);
 cylinder.material = cylinderMaterial;
@@ -202,11 +264,7 @@ cylinder.material = cylinderMaterial;
 
 The cylinder parameters are: name, height, diameter at the top, diameter at the bottom, tessellation, height subdivisions and the scene to add it to. It is then positioned to the right of the cube, rotated a bit so its 3D shape can be seen, and given a yellow material.
 
-Here's how the scene should look right now:
-
-![Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background.](shapes.png)
-
-This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
+This is good progress, but we can make it more exciting! In a game, something is usually happening — we can see animations and such — so let's try to breathe some life into those shapes by animating them.
 
 ## Animation
 
@@ -254,10 +312,80 @@ cylinder.position.y = Math.sin(t * 3);
 
 The cylinder will float up and down on the `y` axis thanks to the `Math.sin()` function.
 
-## Conclusion
+## Babylon.js example with animation
 
-Here's the final code listing, along with a viewable live example:
+Here's the final code with animated shapes.
+You can click "Play" to edit the example in the MDN Playground:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}
+```html hidden live-sample___babylon-js-animation
+<canvas id="render-canvas"></canvas>
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
+```
 
-You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Babylon.js engine; happy experimentation!
+```js live-sample___babylon-js-animation
+const canvas = document.getElementById("render-canvas");
+const engine = new BABYLON.Engine(canvas, true, {
+  preserveDrawingBuffer: false,
+  alpha: true,
+});
+
+const scene = new BABYLON.Scene(engine);
+scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
+const camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene,
+);
+const light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene,
+);
+
+const box = BABYLON.Mesh.CreateBox("box", 2, scene);
+box.rotation.x = -0.2;
+box.rotation.y = -0.4;
+
+const boxMaterial = new BABYLON.StandardMaterial("material", scene);
+boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
+box.material = boxMaterial;
+
+const torus = BABYLON.Mesh.CreateTorus("torus", 2, 0.5, 15, scene);
+torus.position.x = -5;
+torus.rotation.x = 1.5;
+
+const torusMaterial = new BABYLON.StandardMaterial("material", scene);
+torusMaterial.emissiveColor = new BABYLON.Color3(0.4, 0.4, 0.4);
+torus.material = torusMaterial;
+
+const cylinder = BABYLON.Mesh.CreateCylinder("cylinder", 2, 2, 2, 12, 1, scene);
+cylinder.position.x = 5;
+cylinder.rotation.x = -0.2;
+
+const cylinderMaterial = new BABYLON.StandardMaterial("material", scene);
+cylinderMaterial.emissiveColor = new BABYLON.Color3(1, 0.58, 0);
+cylinder.material = cylinderMaterial;
+
+let t = 0;
+const renderLoop = function () {
+  scene.render();
+  t -= 0.01;
+  box.rotation.y = t * 2;
+  torus.scaling.z = Math.abs(Math.sin(t * 2)) + 0.5;
+  cylinder.position.y = Math.sin(t * 3);
+};
+engine.runRenderLoop(renderLoop);
+```
+
+```css hidden live-sample___babylon-js-animation
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  color: rgba(204, 204, 204, 1);
+}
+```
+
+{{embedlivesample("babylon-js-animation", "", "400px")}}

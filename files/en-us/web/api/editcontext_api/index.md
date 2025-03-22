@@ -96,3 +96,7 @@ You can then render the text and selection in the view, using the information pr
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using the EditContext API](/en-US/docs/Web/API/EditContext_API/Guide)

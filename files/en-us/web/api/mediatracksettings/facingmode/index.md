@@ -3,7 +3,7 @@ title: "MediaTrackSettings: facingMode property"
 short-title: facingMode
 slug: Web/API/MediaTrackSettings/facingMode
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.facingMode
+browser-compat: api.MediaStreamTrack.applyConstraints.facingMode_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

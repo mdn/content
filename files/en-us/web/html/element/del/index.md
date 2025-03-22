@@ -9,7 +9,33 @@ browser-compat: html.elements.del
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 This element is often (but need not be) rendered by applying a strike-through style to the text.
 
@@ -22,18 +48,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `datetime`
   - : This attribute indicates the time and date of the change and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated timestamp. For the format of the string without a time, see [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings). The format of the string if it includes both date and time is covered in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
 
-## Examples
-
-```html
-<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
-<del><p>This paragraph has been deleted.</p></del>
-```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
-
-## Accessibility concerns
+## Accessibility
 
 The presence of the `del` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
 
@@ -62,6 +77,17 @@ Some people who use screen readers deliberately disable announcing content that 
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Examples
+
+```html
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+<del><p>This paragraph has been deleted.</p></del>
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
 
 ## Technical summary
 
@@ -108,7 +134,7 @@ Some people who use screen readers deliberately disable announcing content that 
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
           ></code
         >
       </td>

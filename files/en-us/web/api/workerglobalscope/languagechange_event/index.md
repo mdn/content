@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.languagechange_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers("worker")}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
 

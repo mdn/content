@@ -13,15 +13,12 @@ This therefore allows users to use websites without loading whole new pages from
 ## See also
 
 - [Single-page application](https://en.wikipedia.org/wiki/Single-page_application) (Wikipedia)
-- [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-- [Glossary](/en-US/docs/Glossary)
-
+- [Understanding client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
+- Related glossary terms:
   - {{Glossary("API")}}
   - {{Glossary("AJAX")}}
   - {{Glossary("JavaScript")}}
-
 - Popular SPA frameworks:
-
   - [React](https://react.dev/)
-  - [Angular](https://angular.io/)
+  - [Angular](https://angular.dev/)
   - [Vue.JS](https://vuejs.org/)

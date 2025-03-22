@@ -62,16 +62,17 @@ article {
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts).
 
 In addition:
 
 - {{cssxref("float")}} layout will be performed independently inside the specified element.
 - Margins won't collapse across a layout containment boundary.
-- The layout container is a [containing block](/en-US/docs/Web/CSS/Containing_block) for `absolute`- and `fixed`-positioned descendants.
-- The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), therefore {{cssxref("z-index")}} can be used.
+- The layout container is a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for `absolute`- and `fixed`-positioned descendants.
+- The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
-> **Note:** The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
+> [!NOTE]
+> The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
 
 #### Paint containment
 
@@ -81,7 +82,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 
@@ -117,7 +118,7 @@ The main use case for the `style` value is to prevent situations where a [CSS co
 
 Using `contain: style` ensures the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties create new counters scoped to that subtree only.
 
-You can include more than one containment type by including multiple space-separated values, such as `contain: layout paint` or by using one of the two [special values](#special-values).
+You can include more than one containment type by including multiple space-separated values, such as `contain: layout paint` or by using one of the two [special values](#special_values).
 
 #### Special values
 
@@ -157,7 +158,7 @@ The {{cssxref("content-visibility")}} property controls whether or not an elemen
 Its possible values are:
 
 - `visible`: The default behavior — an element's contents are laid out and rendered as normal.
-- `hidden`: The element [skips its contents](#skips-its-contents). The skipped contents will not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
+- `hidden`: The element [skips its contents](#skips_its_contents). The skipped contents will not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
 - `auto`: The element turns on layout containment, style containment, and paint containment, as if `contain: content` was set. If the element is not [relevant to the user](#relevant_to_the_user), it also skips its contents. Unlike `hidden`, the skipped content is still available for user interactions, remaining focusable, selectable, in regular tab order, and available to in-content search.
 
 ### Relevant to the user
@@ -185,12 +186,13 @@ When an element skips its contents:
 
 This happens in both the cases mentioned above, but with `content-visibility: auto` the content can be searched, receive focus, and otherwise move from not relevant to relevant. This is not the case for `content-visibility: hidden`.
 
-> **Note:** To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
+> [!NOTE]
+> To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
 
 ## See also
 
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Learn: CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
+- [Learn: CSS performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event

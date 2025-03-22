@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedScript.toJSON
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("TrustedScript")}} interface returns a JSON representation of the stored data.
 

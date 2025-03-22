@@ -2,12 +2,10 @@
 title: Intl.DurationFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.DurationFormat()`** constructor creates {{jsxref("Intl.DurationFormat")}} objects.
 
@@ -41,9 +39,9 @@ new Intl.DurationFormat(locales, options)
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `numberingSystem`
-      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `style`
-      - : The style of the formatted duration. Possible values are:
+      - : The style of the formatted duration. This value is used as the default for all other unit options, and also corresponds to the `style` option of {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} when concatenating the list of duration units. Possible values are:
         - `"long"`
           - : E.g., 1 hour and 50 minutes
         - `"short"` (default)

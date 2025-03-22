@@ -49,7 +49,7 @@ function setNewWebGLLayer(gl) {
 ```
 
 Here, the canvas obtained in the first line is the canvas into which WebGL is going to
-draw. That context is passed into {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}} to create an `XRWebGLLayer` which uses the contents of the
+draw. That context is passed into {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}} to create an `XRWebGLLayer` which uses the contents of the
 WebGL context `gl` as the source of the world's image during presentation.
 
 ## Specifications

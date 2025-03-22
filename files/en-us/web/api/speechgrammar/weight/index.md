@@ -4,11 +4,12 @@ short-title: weight
 slug: Web/API/SpeechGrammar/weight
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechGrammar.weight
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
 The optional **`weight`** property of the
 {{domxref("SpeechGrammar")}} interface sets and returns the weight of the
@@ -29,7 +30,7 @@ speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // should return the same as the contents of the grammar variable
-console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in line 4.
+console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in addFromString.
 ```
 
 ## Specifications

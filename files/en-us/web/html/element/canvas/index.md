@@ -28,7 +28,7 @@ You should provide alternate content inside the `<canvas>` block. That content w
 
 ### Closing `</canvas>` tag
 
-Unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`).
+Unlike the {{HTMLElement("img")}} element, the `<canvas>` element **requires** the closing tag (`</canvas>`).
 
 ### Sizing the canvas using CSS versus HTML
 
@@ -40,7 +40,8 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
 
-> **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
+> [!NOTE]
+> Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
 
 ### Using an offscreen canvas
 
@@ -48,6 +49,17 @@ A canvas can be rendered using the {{domxref("OffscreenCanvas")}} API where the 
 The benefit is that a [worker thread](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) can handle canvas rendering and the main thread of your web application is not blocked by canvas operations.
 By parallelizing work, other UI elements of your web application will remain responsive even if you are running complex graphics on an offscreen canvas.
 For more information, see the {{domxref("OffscreenCanvas")}} API documentation.
+
+## Accessibility
+
+### Alternative content
+
+The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
+
+- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
+- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
+- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
+- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Examples
 
@@ -76,17 +88,6 @@ ctx.fillRect(10, 10, 100, 100);
 ### Result
 
 {{EmbedLiveSample('Examples', 600, 150)}}
-
-## Accessibility concerns
-
-### Alternative content
-
-The `<canvas>` element on its own is just a bitmap and does not provide information about any drawn objects. Canvas content is not exposed to accessibility tools as semantic HTML is. In general, you should avoid using canvas in an accessible website or app. The following guides can help to make it more accessible.
-
-- [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
-- [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
-- [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Technical summary
 
@@ -177,4 +178,4 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - [WebGL](/en-US/docs/Web/API/WebGL_API) API
 - {{HTMLElement("img")}}
 - [SVG](/en-US/docs/Web/SVG)
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

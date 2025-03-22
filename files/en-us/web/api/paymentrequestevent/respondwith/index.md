@@ -10,7 +10,7 @@ browser-compat: api.PaymentRequestEvent.respondWith
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The **`respondWith()`** method of the {{domxref("PaymentRequestEvent")}} interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}} object yourself.
+The **`respondWith()`** method of the {{domxref("PaymentRequestEvent")}} interface prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a payment handler response object yourself.
 
 ## Syntax
 
@@ -21,25 +21,23 @@ respondWith(promise)
 ### Parameters
 
 - `promise`
-  - : A {{jsxref('Promise')}} that resolves with a `PaymentHandlerResponse` object.
+  - : A payment handler response object or a {{jsxref('Promise')}} that resolves to one. This object should contain the following properties:
+    - `methodName`
+      - : The payment method identifier for the payment method that the user selected to fulfill the transaction.
+    - `details`
+      - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [7.1.2 details attribute](https://w3c.github.io/payment-handler/#details-attribute) for more details.
 
 ### Return value
 
-A `PaymentHandlerResponse` object. This contains the following properties:
-
-- `methodName`
-  - : The payment method identifier for the payment method that the user selected to fulfill the transaction.
-- `details`
-  - : A JSON-serializable object that provides a payment method-specific message used by the merchant to process the transaction and determine a successful fund transfer. See [7.1.2 details attribute](https://w3c.github.io/payment-handler/#details-attribute) for more details.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
+The example below is taken from [Open the payment handler window to display the web-based payment app frontend](https://web.dev/articles/orchestrating-payment-transactions#open-payment-handler-window). Read the article to understand the context of the code.
+
 ```js
-…
-self.addEventListener('paymentrequest', async e => {
-…
+self.addEventListener("paymentrequest", async (e) => {
   // Retain a promise for future resolution
-  // Polyfill for PromiseResolver at link below.
   resolver = new PromiseResolver();
 
   // Pass a promise that resolves when payment is done.
@@ -50,17 +48,14 @@ self.addEventListener('paymentrequest', async e => {
     client = await e.openWindow(checkoutURL);
     if (!client) {
       // Reject if the window fails to open
-      throw 'Failed to open window';
+      throw "Failed to open window";
     }
   } catch (err) {
     // Reject the promise on failure
     resolver.reject(err);
-  };
+  }
 });
-…
 ```
-
-See [Open the payment handler window to display the web-based payment app frontend](https://web.dev/articles/orchestrating-payment-transactions#open-payment-handler-window) for more details about how this would be used.
 
 ## Specifications
 

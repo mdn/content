@@ -14,5 +14,6 @@ Many programming commands are also synchronous — for example when you type in 
 
 ## See also
 
-- {{glossary("Asynchronous")}}
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- Related glossary terms:
+  - {{glossary("Asynchronous")}}
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)

@@ -31,11 +31,13 @@ needs both:
   {{domxref("PublicKeyCredential.getClientExtensionResults()")}}) to validate the
   demand.
 
-> **Note:** When validating the fetching of existing credentials, the
+> [!NOTE]
+> When validating the fetching of existing credentials, the
 > whole `PublicKeyCredential` object and the client extensions are necessary
 > for the relying party's server.
 
-> **Note:** This property may only be used in top-level contexts and will
+> [!NOTE]
+> This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Value

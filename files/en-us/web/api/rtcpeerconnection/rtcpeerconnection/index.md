@@ -42,13 +42,15 @@ new RTCPeerConnection(configuration)
 
       - : An {{jsxref("Array")}} of objects of type {{domxref("RTCCertificate")}} which are used by the connection for authentication. If this property isn't specified, a set of certificates is generated automatically for each {{domxref("RTCPeerConnection")}} instance. Although only one certificate is used by a given connection, providing certificates for multiple algorithms may improve the odds of successfully connecting in some circumstances. See [Using certificates](#using_certificates) for further information.
 
-        > **Note:** This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.
+        > [!NOTE]
+        > This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
       - : An unsigned 16-bit integer value which specifies the size of the prefetched ICE candidate pool. The default value is 0 (meaning no candidate prefetching will occur). You may find in some cases that connections can be established more quickly by allowing the ICE agent to start fetching ICE candidates before you start trying to connect, so that they're already available for inspection when {{domxref("RTCPeerConnection.setLocalDescription()")}} is called.
 
-        > **Note:** Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.
+        > [!NOTE]
+        > Changing the size of the ICE candidate pool may trigger the beginning of ICE gathering.
 
     - `iceServers` {{optional_inline}}
 

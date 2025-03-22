@@ -11,7 +11,21 @@ The **`Number.MAX_SAFE_INTEGER`** static data property represents the maximum sa
 
 For larger integers, consider using {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## Value
 
@@ -52,6 +66,7 @@ Number.MAX_SAFE_INTEGER * Number.EPSILON; // 1.9999999999999998
 ## See also
 
 - [Polyfill of `Number.MAX_SAFE_INTEGER` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- [es-shims polyfill of `Number.MAX_SAFE_INTEGER`](https://www.npmjs.com/package/es-constants)
 - {{jsxref("Number.MIN_SAFE_INTEGER")}}
 - {{jsxref("Number.isSafeInteger()")}}
 - {{jsxref("BigInt")}}

@@ -23,7 +23,8 @@ property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> [!NOTE]
+> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -132,11 +133,13 @@ the URL selected by the browser from the `srcset`.
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "Image: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```
@@ -150,7 +153,7 @@ reloading the page to see the results change.
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Responsive_images).
 
 ## Specifications
 
@@ -162,6 +165,6 @@ For additional examples, see our guide to [responsive images](/en-US/docs/Learn/
 
 ## See also
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

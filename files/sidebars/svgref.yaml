@@ -1,0 +1,99 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/SVG
+  - type: section
+    link: /Web/SVG/Tutorials
+    title: Tutorials
+  - link: /Web/SVG/Tutorials/SVG_from_scratch
+    title: Introducing SVG from scratch
+    details: closed
+    children:
+      - /Web/SVG/Tutorials/SVG_from_scratch/Introduction
+      - /Web/SVG/Tutorials/SVG_from_scratch/Getting_started
+      - /Web/SVG/Tutorials/SVG_from_scratch/Positions
+      - /Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
+      - /Web/SVG/Tutorials/SVG_from_scratch/Paths
+      - /Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
+      - /Web/SVG/Tutorials/SVG_from_scratch/Gradients
+      - /Web/SVG/Tutorials/SVG_from_scratch/Patterns
+      - /Web/SVG/Tutorials/SVG_from_scratch/Texts
+      - /Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
+      - /Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
+      - /Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
+      - /Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
+      - /Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
+      - /Web/SVG/Tutorials/SVG_from_scratch/Image_element
+      - /Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
+      - /Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
+  - type: section
+    link: /Web/SVG/Guides
+    title: Guides
+  - type: listSubPages
+    path: /Web/SVG/Guides
+  - type: section
+    link: /Web/SVG/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/SVG/Reference/Element
+    link: /Web/SVG/Reference/Element
+    title: Elements
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/SVG/Reference/Attribute
+    link: /Web/SVG/Reference/Attribute
+    title: Attributes
+    details: closed
+    code: true
+l10n:
+  de:
+    Tutorials: Tutorials
+    Reference: Referenz
+    Elements: Elemente
+    Attributes: Attribute
+    Guides: Leitfäden
+    Introducing SVG from scratch: Einführung in SVG von Anfang an
+  en-US:
+    Tutorials: Tutorials
+    Reference: Reference
+    Elements: Elements
+    Attributes: Attributes
+    Guides: Guides
+    Introducing SVG from scratch: Introducing SVG from scratch
+  fr:
+    Tutorials: Tutoriels
+    Reference: Références
+    Elements: Éléments
+    Attributes: Attributs
+    Guides: Guides
+  ja:
+    Tutorials: チュートリアル
+    Reference: リファレンス
+    Elements: 要素
+  ko:
+    Tutorials: "자습서:"
+    Reference: "참고서:"
+    Elements: 요소
+    Attributes: 속성
+    Guides: "안내서:"
+  pt-BR:
+    Tutorials: Tutoriais
+    Reference: Referências
+    Elements: Elementos
+    Attributes: Atributos
+    Guides: Guides
+  ru:
+    Tutorials: Уроки
+    Reference: Справочники
+    Elements: Элементы
+    Attributes: Aтрибуты
+    Guides: Путеводитель
+  zh-CN:
+    Tutorials: 教程
+    Reference: 参考
+    Elements: 元素
+    Attributes: 属性
+    Guides: 指南
+    Introducing SVG from scratch: 从零开始介绍 SVG

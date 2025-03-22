@@ -1,5 +1,5 @@
 ---
-title: "::highlight()"
+title: ::highlight()
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
 browser-compat: css.selectors.highlight
@@ -122,3 +122,8 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)
+- [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module

@@ -34,7 +34,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 ## Instance methods
 
 - {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}}
-  - : A list of {{domxref("RTCRtpCodecParameters")}} objects which override the default preferences used by the {{Glossary("user agent")}} for the transceiver's codecs.
+  - : Configures the transceiver's preferred list of codecs, overriding {{Glossary("user agent")}} settings.
 - {{domxref("RTCRtpTransceiver.stop", "stop()")}}
   - : Permanently stops the `RTCRtpTransceiver`.
     The associated sender stops sending data, and the associated receiver likewise stops receiving and decoding incoming data.

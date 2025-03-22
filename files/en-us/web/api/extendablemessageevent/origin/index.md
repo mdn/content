@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.origin
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`origin`** read-only property of the
 {{domxref("ExtendableMessageEvent")}} interface returns the origin of the

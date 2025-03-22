@@ -32,5 +32,5 @@ If the submit button is an `{{HtmlElement('input/image', '&lt;input type="image"
 
 ## See also
 
-- [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

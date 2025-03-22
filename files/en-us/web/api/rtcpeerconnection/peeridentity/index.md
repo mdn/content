@@ -18,7 +18,8 @@ A JavaScript {{jsxref("Promise")}} which resolves to an {{domxref("RTCIdentityAs
 If an error occurs while attempting to validate an incoming identity assertion (that is, the information describing a peer's identity), the promise is rejected.
 If there isn't already a target peer identity, `peerIdentity` is set to a newly created promise and the process begins again, until the process succeeds or no further attempts to authenticate occur.
 
-> **Note:** The promise returned by {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} cannot resolve until any target peer identity that's been set is validated.
+> [!NOTE]
+> The promise returned by {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} cannot resolve until any target peer identity that's been set is validated.
 > If the identity hasn't been validated yet, the promise returned by `setRemoteDescription()` will be rejected.
 > If there's no target peer identity, `setRemoteDescription()` doesn't need to wait for validation to occur before it resolves.
 

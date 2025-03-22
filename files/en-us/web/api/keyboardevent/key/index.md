@@ -16,14 +16,13 @@ A string.
 
 Its value is determined as follows:
 
-- If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
-- If the pressed key is a <kbd>Space</kbd> key, the returned value is a single space.
+- If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key. For example: if the pressed key is the <kbd>Space</kbd> key, the returned value is a single space (`" "`). If the pressed key is the <kbd>B</kbd> key, the returned value is the string `"b"`. However, if the <kbd>Shift</kbd> key is pressed at the same time (so {{domxref("KeyboardEvent/shiftKey", "shiftKey")}} is `true`), the returned value is the string `"B"`.
 - If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
-- If the `KeyboardEvent` represents the press of a [dead key](https://en.wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
+- If the `KeyboardEvent` represents the press of a [dead key](https://en.wikipedia.org/wiki/Dead_key), the key value must be `"Dead"`.
 - Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
 - If the key cannot be identified, the returned value is `Unidentified`.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [See a full list of key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 
@@ -43,37 +42,8 @@ Consider the event sequence generated when we interact with the <kbd>Shift</kbd>
 
 Try experimenting using the following two test cases:
 
-1. Press and hold the
-
-   <kbd>Shift</kbd>
-
-   key, then press
-
-   <kbd>2</kbd>
-
-   and release it. Next, release the
-
-   <kbd>Shift</kbd>
-
-   key.
-
-2. Press and hold the
-
-   <kbd>Shift</kbd>
-
-   key, then press and hold
-
-   <kbd>2</kbd>
-
-   . Release the
-
-   <kbd>Shift</kbd>
-
-   key. Finally, release
-
-   <kbd>2</kbd>
-
-   .
+1. Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.
+2. Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.
 
 ### HTML
 
@@ -123,12 +93,12 @@ Try experimenting using the following two test cases:
 ### JavaScript
 
 ```js
-let textarea = document.getElementById("test-target"),
-  consoleLog = document.getElementById("console-log"),
-  btnReset = document.getElementById("btn-reset");
+const textarea = document.getElementById("test-target");
+const consoleLog = document.getElementById("console-log");
+const btnReset = document.getElementById("btn-reset");
 
 function logMessage(message) {
-  consoleLog.innerHTML += `${message}<br>`;
+  consoleLog.innerText += `${message}\n`;
 }
 
 textarea.addEventListener("keydown", (e) => {
@@ -165,7 +135,8 @@ btnReset.addEventListener("click", (e) => {
 
 {{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-> **Note:** On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, you may get incorrect output on those lines of the log output.
+> [!NOTE]
+> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, you may get incorrect output on those lines of the log output.
 
 ### Case 1
 
@@ -179,7 +150,7 @@ As we finally release the `shift` key, another {{domxref("Element/keyup_event", 
 
 ### Case 2
 
-When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.
+When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it produced no character key.
 
 When `key 2` is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the `key` property value for the event is set to be the string `@` for the U.S keyboard type and `"` for the UK keyboard type, because of the active modifier `shift` key. The {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{domxref("Element/keydown_event", "keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}} property is set to `true`. The {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events are fired repeatedly as well.
 

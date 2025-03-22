@@ -12,7 +12,21 @@ returning a Boolean result.
 Unlike the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator,
 it attempts to convert and compare operands that are of different types.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -22,7 +36,7 @@ x == y
 
 ## Description
 
-The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#loose_equality_using) semantic. This can be roughly summarized as follows:
+The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#loose_equality_using) semantic. This can be roughly summarized as follows:
 
 1. If the operands have the same type, they are compared as follows:
    - Object: return `true` only if both operands reference the same object.
@@ -32,13 +46,13 @@ The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/
    - BigInt: return `true` only if both operands have the same value.
    - Symbol: return `true` only if both operands reference the same symbol.
 2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
-3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion).
+3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion).
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
    - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
    - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
-   - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
+   - Number to BigInt: compare by their mathematical value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
 Loose equality is _symmetric_: `A == B` always has identical semantics to `B == A` for any values of `A` and `B` (except for the order of applied conversions).

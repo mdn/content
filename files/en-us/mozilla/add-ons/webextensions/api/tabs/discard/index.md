@@ -74,7 +74,8 @@ discarding.then(onDiscarded, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-discard) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

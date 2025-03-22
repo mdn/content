@@ -10,6 +10,9 @@ on:
       - "**/*.yml"
       - .github/workflows/pr-check_yml.yml
 
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
 jobs:
   lint-yml:
     runs-on: ubuntu-latest

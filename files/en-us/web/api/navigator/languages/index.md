@@ -20,9 +20,7 @@ first element of the returned array.
 When its value changes, as the user's preferred languages are changed a
 {{domxref("Window.languagechange_event", "languagechange")}} event is fired on the {{domxref("Window")}} object.
 
-The `Accept-Language` HTTP header in every HTTP request from the user's
-browser uses the same value for the `navigator.languages` property except for
-the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
+The {{HTTPHeader("Accept-Language")}} HTTP header in every HTTP request from the user's browser generally lists the same locales as the `navigator.languages` property, with decreasing `q` values (quality values). Some browsers (Chrome and Safari) add language-only fallback tags in `Accept-Language`—for example, `en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7` when `navigator.languages` is `["en-US", "zh-CN"]`. For privacy purposes (reducing {{Glossary("fingerprinting")}}), both `Accept-Language` and `navigator.languages` may not include the full list of user preferences, such as in Safari (always) and Chrome's incognito mode, where only one language is listed.
 
 ## Value
 

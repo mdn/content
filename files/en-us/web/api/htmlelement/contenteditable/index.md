@@ -14,9 +14,9 @@ editable.
 
 This enumerated attribute can have the following values:
 
-- '`true`' indicates that the element is `contenteditable`.
-- '`false`' indicates that the element cannot be edited.
-- '`plaintext-only`' indicates that the element's raw text is editable, but rich text formatting is disabled.
+- `"true"` indicates that the element is `contenteditable`.
+- `"false"` indicates that the element cannot be edited.
+- `"plaintext-only"` indicates that the element's raw text is editable, but rich text formatting is disabled.
 
 You can use the {{domxref("HTMLElement.isContentEditable")}} property to test the
 computed boolean value of this property.
@@ -39,4 +39,4 @@ A string.
 ## See also
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) global attribute.
+- The [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute.

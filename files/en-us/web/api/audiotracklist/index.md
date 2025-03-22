@@ -44,7 +44,7 @@ In addition to being able to obtain direct access to the audio tracks present on
 
 ### Getting a media element's audio track list
 
-To get a media element's {{domxref("AudioTrackList")}}, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
+To get a media element's `AudioTrackList`, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
 
 ```js
 const audioTracks = document.querySelector("video").audioTracks;

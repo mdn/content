@@ -14,8 +14,10 @@ For example, an {{jsxref("ArrayBuffer")}} is a transferable object that owns a b
 When such a buffer is transferred between threads, the associated memory resource is detached from the original buffer and attached to the buffer object created in the new thread.
 The buffer object in the original thread is no longer usable because it no longer owns a memory resource.
 
-Transferring may also be used when creating deep copies of objects with {{domxref("structuredClone()")}}.
+Transferring may also be used when creating deep copies of objects with {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}.
 Following the cloning operation, the transferred resources are moved rather than copied to the cloned object.
+
+For both `postMessage()` and `structuredClone()`, transferred resources have to be attached to the data object, otherwise they would not be available on the receiving end, because the transferable array only indicates how certain resources should be sent, but does not actually send them (although they would always be detached).
 
 The mechanism used to transfer an object's resources depends on the object.
 For example, when an {{jsxref("ArrayBuffer")}} is transferred between threads, the memory resource that it points to is _literally_ moved between contexts in a fast and efficient zero-copy operation.
@@ -44,9 +46,9 @@ console.log(uInt8Array.byteLength); // 0
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
-### Transferring during a cloning operation
+## Transferring during a cloning operation
 
-The code below shows a {{domxref("structuredClone()")}} operation where the underlying buffer is copied from the original object to the clone.
+The code below shows a `structuredClone()` operation where the underlying buffer is copied from the original object to the clone.
 
 ```js
 const original = new Uint8Array(1024);
@@ -71,7 +73,9 @@ console.log(original.byteLength); // 0
 
 ## Supported objects
 
-The items that various specifications indicate can be _transferred_ are:
+Interfaces that can be transferred should include this information in their introduction.
+
+Some of the items that various specifications indicate can be _transferred_ are listed below (this list may not be exhaustive!):
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
@@ -85,11 +89,12 @@ The items that various specifications indicate can be _transferred_ are:
 - {{domxref("VideoFrame")}}
 - {{domxref("OffscreenCanvas")}}
 - {{domxref("RTCDataChannel")}}
+- {{domxref("MediaSourceHandle")}}
+- {{domxref("MIDIAccess")}}
 
-Browser support should be indicated in the respective object's compatibility information by the `transferable` subfeature (see [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel#browser_compatibility) for an example).
-At time of writing, not all transferable objects have been updated with this information.
-
-> **Note:** Transferable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferable]`.
+> [!NOTE]
+> Transferable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferable]`.
+> Browser support may be indicated in the respective object's compatibility information by the `transferable` subfeature (see [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel#browser_compatibility) for an example).
 
 ## See also
 

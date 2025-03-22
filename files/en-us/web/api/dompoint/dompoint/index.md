@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMPoint.DOMPoint
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPoint()`** constructor
 creates and returns a new {{domxref("DOMPoint")}} object, given the values for some or

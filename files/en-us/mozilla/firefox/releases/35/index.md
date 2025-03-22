@@ -68,7 +68,7 @@ Highlights:
 - The constructor of {{domxref("File")}} has been extended to match the specification ([Firefox bug 1047483](https://bugzil.la/1047483)).
 - An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([Firefox bug 1035060](https://bugzil.la/1035060)).
 - The non-standard `Navigator.mozIsLocallyAvailable` property has been removed ([Firefox bug 1066826](https://bugzil.la/1066826)).
-- The preference `network.websocket.enabled`, `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ([Firefox bug 1091016](https://bugzil.la/1091016)).
+- The preference `network.websocket.enabled`, `true` by default, has been removed; [WebSocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ([Firefox bug 1091016](https://bugzil.la/1091016)).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ([Firefox bug 1030963](https://bugzil.la/1030963)). Only methods and properties defined in the standard WebCrypto API are left.
 - Our experimental implementation of WebGL 2.0 is going forward!
 
@@ -91,8 +91,8 @@ _No change._
 - HTTP/2 has been implemented and activated, with AEAD ciphers only ([Firefox bug 1027720](https://bugzil.la/1027720) and [Firefox bug 1047594](https://bugzil.la/1047594)).
 - The HTTP/2 `alt-svc` header is now supported ([Firefox bug 1003448](https://bugzil.la/1003448)).
 - The Public Key Pinning Extension for HTTP (HPKP) has been implemented ([Firefox bug 787133](https://bugzil.la/787133)).
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
-- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `base-uri` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1045897](https://bugzil.la/1045897)).
+- Path of the source is now considered too when host-source matching happens in [CSP](/en-US/docs/Web/HTTP/Guides/CSP) ([Firefox bug 808292](https://bugzil.la/808292)).
 
 ## Changes for add-on and Mozilla developers
 

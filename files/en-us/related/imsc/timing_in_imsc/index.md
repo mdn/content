@@ -76,7 +76,8 @@ Now that a frame rate of 23.98 is declared, you are able to describe time expres
 
 The advantage of using this method is that the time expression frame number is the same as the frame number of the media asset. A value of 86400f is frame number 86400 in the video file.
 
-> **Note:** You can find an additional explanation of these values in [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC).
+> [!NOTE]
+> You can find an additional explanation of these values in [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC).
 
 <section id="Quick_links">
   <ol>

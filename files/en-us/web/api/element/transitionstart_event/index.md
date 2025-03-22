@@ -82,7 +82,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 }
 ```
 
-To this, we'll add some JavaScript to indicate where the {{domxref("Element/transitionstart_event", "transitionstart")}} and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
+To this, we'll add some JavaScript to indicate where the `transitionstart` and {{domxref("Element/transitionrun_event", "transitionrun")}} events fire.
 
 ```js
 const transition = document.querySelector(".transition");

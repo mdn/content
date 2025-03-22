@@ -32,7 +32,7 @@ browser.theme.update(
 Sets the browser theme to use a sun graphic with a complementary background color:
 
 ```js
-const suntheme = {
+const sunTheme = {
   images: {
     theme_frame: "sun.jpg",
   },
@@ -42,7 +42,7 @@ const suntheme = {
   },
 };
 
-browser.theme.update(suntheme);
+browser.theme.update(sunTheme);
 ```
 
 Set the theme for the focused window only:

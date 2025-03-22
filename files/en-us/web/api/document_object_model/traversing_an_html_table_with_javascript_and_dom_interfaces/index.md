@@ -8,7 +8,8 @@ page-type: guide
 
 This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser.
 
-> **Note:** The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).
+> [!NOTE]
+> The DOM methods presented here are part of the Document Object Model (Core) level 1 specification. DOM level 1 includes both methods for generic document access and manipulation (DOM 1 Core) as well as methods specific to HTML documents (DOM 1 HTML).
 
 ## Creating an HTML table dynamically
 
@@ -272,7 +273,8 @@ The basic steps to create the table in sample1.html are:
 - Create all the elements.
 - Finally, append each child according to the table structure (as in the above figure). The following source code is a commented version for the sample1.html.
 
-> **Note:** At the end of the `start` function, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
+> [!NOTE]
+> At the end of the `start` function, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
 
 ```html
 <html lang="en">
@@ -335,7 +337,8 @@ Once you have the returned list, use `[x]` method to retrieve the desired child 
 
 Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
 
-> **Note:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
+> [!NOTE]
+> If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 
 ```js
 myBody = document.getElementsByTagName("body")[0];

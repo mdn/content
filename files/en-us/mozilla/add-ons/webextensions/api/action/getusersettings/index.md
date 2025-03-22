@@ -9,7 +9,8 @@ browser-compat: webextensions.api.action.getUserSettings
 
 Gets the user-specified settings for the browser action.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -57,7 +58,8 @@ gettingUserSettings.then(gotSettings);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-getUserSettings) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -44,7 +44,8 @@ Support for XForms has been [**removed**](https://www.philipp-wagner.com/blog/20
 
 ## Changes for add-on and Mozilla developers
 
-> **Note:** A key change in Firefox 19 is that `nsresult` is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
+> [!NOTE]
+> A key change in Firefox 19 is that `nsresult` is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
 
 - `getBrowserSelection()` now returns the selected text in a text input field. As a result, `gContextMenu.isTextSelected` will be `true` when the user selects text in a text input field that is not a password field. ([Firefox bug 565717](https://bugzil.la/565717))
 - Dict.jsm: `Dict()` now takes a JSON String. `Dict.toJSON()` was added, and it returns a JSON String. ([Firefox bug 727967](https://bugzil.la/727967))

@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.
 
@@ -42,7 +42,7 @@ new TextDecoderStream(label, options)
 
 ## Examples
 
-The following example demonstrates how to decode binary data retrieved from a {{domxref("fetch()")}} call.
+The following example demonstrates how to decode binary data retrieved from a {{domxref("Window/fetch", "fetch()")}} call.
 The data will be interpreted as UTF-8, as no `label` has been passed.
 
 ```js

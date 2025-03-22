@@ -12,7 +12,8 @@ The **`EXT_color_buffer_float`** extension is part of [WebGL](/en-US/docs/Web/AP
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts only.
+> [!NOTE]
+> This extension is available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts only.
 >
 > For {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, see the {{domxref("EXT_color_buffer_half_float")}} and {{domxref("WEBGL_color_buffer_float")}} extensions.
 

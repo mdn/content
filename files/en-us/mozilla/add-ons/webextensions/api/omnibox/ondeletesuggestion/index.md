@@ -8,7 +8,7 @@ browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 {{AddonSidebar}}
 
 Fired whenever the user deletes a suggestion.
-A suggestion can be deleted when {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}}`.deletable` is set to true.
+A suggestion can be deleted when the property `deletable` of a {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} is set to true.
 
 ## Syntax
 
@@ -52,6 +52,5 @@ browser.omnibox.onDeleteSuggestion.addListener(logDeletedSuggestion);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

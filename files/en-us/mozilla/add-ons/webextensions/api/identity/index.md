@@ -12,7 +12,7 @@ Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code
 OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:
 
 - [Google](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
-- [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
+- [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 
 The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.
 
@@ -34,7 +34,8 @@ You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}
 
 However, loopback addresses are an accepted alternative that do not require domain validation (based on [RFC 8252, section 7.3](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3)). Starting from Firefox 86, a loopback address with the format `http://127.0.0.1/mozoauth2/[subdomain of URL returned by identity.getRedirectURL()]` is permitted as a value for the redirect URL.
 
-> **Note:** Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}. Earlier versions allowed you to supply any redirect URL.
+> [!NOTE]
+> Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}. Earlier versions allowed you to supply any redirect URL.
 >
 > Starting with Firefox 86, the special loopback address described above can be used too.
 
@@ -62,7 +63,8 @@ This will tend to be specific to the service provider, but in general it means c
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.
 
-> **Note:** See also [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -34,7 +35,7 @@ This article provides information about the changes in Firefox 82 that will affe
 
 ### HTTP
 
-- The [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) header's `inline` directive will now be ignored if the HTML [`<a>`](/en-US/docs/Web/HTML/Element/a) element's `download` attribute is specified (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Note that if specified the `Content-Disposition` header `filename` will be used in preference to a filename specified in the `download` attribute ([Firefox bug 1658877](https://bugzil.la/1658877)).
+- The [`Content-Disposition`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) header's `inline` directive will now be ignored if the HTML [`<a>`](/en-US/docs/Web/HTML/Element/a) element's `download` attribute is specified (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Note that if specified the `Content-Disposition` header `filename` will be used in preference to a filename specified in the `download` attribute ([Firefox bug 1658877](https://bugzil.la/1658877)).
 
 ### APIs
 

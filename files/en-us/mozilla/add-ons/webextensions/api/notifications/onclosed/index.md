@@ -45,7 +45,7 @@ Events have three functions:
 
 ## Examples
 
-In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClosed")}} event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
+In this simple example we add a listener to the `notifications.onClosed` event to listen for system notifications being closed. When this occurs, we log an appropriate message to the console.
 
 ```js
 browser.notifications.onClosed.addListener((notificationId) => {
@@ -55,4 +55,5 @@ browser.notifications.onClosed.addListener((notificationId) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

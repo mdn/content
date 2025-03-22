@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Event.composedPath
 ---
 
-{{APIRef("Shadow DOM")}}
+{{APIRef("Shadow DOM")}}{{AvailableInWorkers}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}
 interface returns the event's path which is an array of the objects on which listeners
@@ -16,7 +16,7 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 ## Syntax
 
 ```js-nolint
-const composed = Event.composedPath()
+composedPath()
 ```
 
 ### Parameters

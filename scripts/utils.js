@@ -83,6 +83,7 @@ export function getLocations(content, searchValue) {
  * Convert Markdown header into URL slug.
  */
 export function stringToFragment(text) {
+  if (!text) return text;
   return text
     .trim()
     .replace(/["#$%&+,/:;=?@[\]^`{|}~')(\\]/g, "")

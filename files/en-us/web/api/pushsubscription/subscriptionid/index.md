@@ -15,7 +15,8 @@ The **`subscriptionId`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing
 the subscription ID associated with the push subscription.
 
-> **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endpoint")}} property on the same interface.
+> [!WARNING]
+> Instead of this feature, use the {{domxref("PushSubscription.endpoint")}} property on the same interface.
 
 ## Value
 

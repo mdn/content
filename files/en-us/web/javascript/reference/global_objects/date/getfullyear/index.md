@@ -11,7 +11,14 @@ The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year 
 
 Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getFullYear()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## Syntax
 

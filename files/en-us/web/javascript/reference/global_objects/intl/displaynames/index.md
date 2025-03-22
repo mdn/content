@@ -9,7 +9,20 @@ browser-compat: javascript.builtins.Intl.DisplayNames
 
 The **`Intl.DisplayNames`** object enables the consistent translation of language, region and script display names.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## Constructor
 
@@ -27,8 +40,8 @@ These properties are defined on `Intl.DisplayNames.prototype` and shared by all 
 
 - {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.DisplayNames` instances, the initial value is the {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}} constructor.
-- `Intl.DisplayNames.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DisplayNames"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.DisplayNames.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DisplayNames"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -132,4 +145,5 @@ currencyNames.of("CNY"); // "人民幣"
 
 ## See also
 
+- [Polyfill of `Intl.DisplayNames` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-displaynames/)
 - {{jsxref("Intl")}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createSampler
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createSampler()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUSampler")}}, which controls how shaders transform and filter texture resource data.
@@ -82,6 +82,9 @@ createSampler(descriptor)
 
         If omitted, `magFilter` defaults to `"nearest"`.
 
+        > [!NOTE]
+        > The `float32-filterable` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for `r32float`-, `rg32float`-, and `rgba32float`-[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}s to be filterable.
+
     - `minFilter` {{optional_inline}}
       - : An enumerated value specifying the sampling behavior when the sample footprint is larger than one texel. Possible and default values are the same as for `magFilter`.
     - `mipmapFilter` {{optional_inline}}
@@ -116,7 +119,7 @@ const sampler = device.createSampler({
 });
 ```
 
-The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping) uses comparison samplers to sample from a depth texture to render shadows.
+The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) uses comparison samplers to sample from a depth texture to render shadows.
 
 ## Specifications
 

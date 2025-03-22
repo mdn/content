@@ -13,7 +13,8 @@ indicates the scope of a {{HTMLElement("th")}} cell.
 
 Header cells can be configured, using the `scope` attribute, to apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element). If no value is specified for `scope`, the header is not associated directly with cells in this way. Permitted values for `scope` are:
 
-> **Note:** this property doesn't have a visual effect in browsers. It adds semantic information to help assistive technology like screenreaders to present the table in a more coherent way.
+> [!NOTE]
+> This property doesn't have a visual effect in browsers. It adds semantic information to help assistive technology like screen readers to present the table in a more coherent way.
 
 ## Value
 

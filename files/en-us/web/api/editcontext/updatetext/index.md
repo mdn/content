@@ -34,7 +34,6 @@ updateText(rangeStart, rangeEnd, text)
 ### Exceptions
 
 - If less than three arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- if `rangeStart` is greater than `rangeEnd`, a {{domxref("DOMException")}} is thrown.
 
 ## Examples
 

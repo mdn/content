@@ -15,7 +15,8 @@ The obsolete {{domxref("CSSStyleSheet")}} method
 object. It is functionally identical to the standard, preferred method
 {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}.
 
-> **Note:** This is a _legacy method_ which has been replaced by
+> [!NOTE]
+> This is a _legacy method_ which has been replaced by
 > the standard method {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}. You
 > should use that instead.
 

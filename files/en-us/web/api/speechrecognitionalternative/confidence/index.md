@@ -12,7 +12,8 @@ The **`confidence`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns a numeric estimate of how
 confident the speech recognition system is that the recognition is correct.
 
-> **Note:** Mozilla's implementation of `confidence` is still
+> [!NOTE]
+> Mozilla's implementation of `confidence` is still
 > being worked on — at the moment, it always seems to return 1.
 
 ## Value

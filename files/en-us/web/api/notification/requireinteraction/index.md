@@ -10,7 +10,8 @@ browser-compat: api.Notification.requireInteraction
 
 The **`requireInteraction`** read-only property of the {{domxref("Notification")}} interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 
-> **Note:** This can be set when the notification is first created by setting the `requireInteraction` option to `true` in the options object of the {{domxref("Notification.Notification", "Notification()")}} constructor.
+> [!NOTE]
+> This can be set when the notification is first created by setting the `requireInteraction` option to `true` in the options object of the {{domxref("Notification.Notification", "Notification()")}} constructor.
 
 ## Value
 

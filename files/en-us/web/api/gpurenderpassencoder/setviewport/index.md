@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setViewport
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setViewport()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the viewport used during the rasterization stage to linearly map from normalized device coordinates to viewport coordinates.
@@ -34,7 +34,8 @@ setViewport(x, y, width, height, minDepth, maxDepth)
 - `maxDepth`
   - : A number representing the maximum depth value of the viewport.
 
-> **Note:** If a `setViewport()` call is not made, the default values are `(0, 0, attachment width, attachment height, 0, 1)` for each render pass.
+> [!NOTE]
+> If a `setViewport()` call is not made, the default values are `(0, 0, attachment width, attachment height, 0, 1)` for each render pass.
 
 ### Return value
 
@@ -50,7 +51,8 @@ The following criteria must be met when calling **`setViewport()`**, otherwise a
 - `minDepth` and `maxDepth` are both inside the range 0.0–1.0 inclusive.
 - `minDepth` is less than `maxDepth`.
 
-> **Note:** See the color and depth/stencil attachments specified in the descriptor of {{domxref("GPUCommandEncoder.beginRenderPass()")}}; the width and height are based on that of the {{domxref("GPUTexture")}} that their `view`s originate from.
+> [!NOTE]
+> See the color and depth/stencil attachments specified in the descriptor of {{domxref("GPUCommandEncoder.beginRenderPass()")}}; the width and height are based on that of the {{domxref("GPUTexture")}} that their `view`s originate from.
 
 ## Examples
 
@@ -64,7 +66,7 @@ passEncoder.setViewport(0, 0, canvas.width / 2, canvas.height / 2, 0, 1);
 
 ### In context
 
-In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-samples/samples/reversedZ), `setViewport` is used several times to set the viewport for the different render passes. Study the example code listing for the full context.
+In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-samples/samples/reversedZ/), `setViewport` is used several times to set the viewport for the different render passes. Study the example code listing for the full context.
 
 For example:
 

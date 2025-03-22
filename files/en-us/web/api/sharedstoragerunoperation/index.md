@@ -59,7 +59,8 @@ class ReachMeasurementOperation {
 register("reach-measurement", ReachMeasurementOperation);
 ```
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names. See {{domxref("SharedStorageOperation")}} for an example.
+> [!NOTE]
+> It is possible to define and register multiple operations in the same shared storage worklet module script with different names. See {{domxref("SharedStorageOperation")}} for an example.
 
 In the main browsing context, the `reach-measurement` operation is invoked using the {{domxref("WindowSharedStorage.run()")}} method:
 
@@ -77,7 +78,7 @@ async function measureUniqueReach() {
 measureUniqueReach();
 ```
 
-For more details about this example, see [Unique reach measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/). See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
+For more details about this example, see [Unique reach measurement](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/unique-reach). See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
 
 ## Specifications
 

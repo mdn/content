@@ -12,7 +12,13 @@ Modifies the set of dynamic rules for the extension. The rules with IDs listed i
 - This update happens as an atomic operation: either all specified rules are added and removed, or an error is returned.
 - These rules are persisted across browser sessions and across extension updates.
 - Static rules specified as part of the extension package can not be removed using this function.
-- {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} is the maximum number of dynamic and session rules an extension can add.
+- The number of dynamic rules that can be added is limited:
+  - In Safari and up to Chrome 119, to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}} for the combined total of dynamic and session-scoped rules.
+  - Up to Firefox 127 to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
+  - From Chrome 120 and Firefox 128, to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}}.
+
+> [!NOTE]
+> In Firefox 132 and earlier, dynamic rules are sometimes not applied after a browser restart, and calls to this API are rejected with an error ([Firefox bug 1921353](https://bugzil.la/1921353)). A workaround is to specify an enabled static ruleset in the [`declarative_net_request`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key. The ruleset file can be an empty list.
 
 ## Syntax
 

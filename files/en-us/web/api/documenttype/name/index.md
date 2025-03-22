@@ -12,7 +12,7 @@ The read-only **`name`** property of the {{domxref("DocumentType")}} returns the
 
 For synthetic `DocumentType`, this property reflects the value given in parameter to {{domxref("DOMImplementation.createDocumentType()")}}.
 
-For HTML documents, browsers always set it up to `html`, whatever the actual `DOCTYPE` in the source code is.
+For HTML documents, browsers always set it up to `html`, whatever the actual `doctype` in the source code is.
 
 ## Value
 

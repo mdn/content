@@ -9,7 +9,8 @@ browser-compat: api.RTCRtpScriptTransformer
 
 The **`RTCRtpScriptTransformer`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides a worker-side [Stream API](/en-US/docs/Web/API/Streams_API) interface that a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms) can use to modify encoded media frames in the incoming and outgoing WebRTC pipelines.
 
-> **Note:** This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
+> [!NOTE]
+> This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
 
 ## Instance properties
 

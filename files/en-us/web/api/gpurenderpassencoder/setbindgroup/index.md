@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
@@ -22,12 +22,12 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
              dynamicOffsetsLength)
 ```
 
-#### Parameters
+### Parameters
 
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent render commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
   - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
@@ -63,7 +63,9 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 
 ## Examples
 
-In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
+### Set bind group
+
+In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
 
 ```js
 // ...
@@ -80,7 +82,18 @@ device.queue.submit([commandEncoder.finish()]);
 // ...
 ```
 
-> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
+> [!NOTE]
+> Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples/) for more examples of `setBindGroup()` usage.
+
+### Unset bind group
+
+```js
+// Set bind group in slot 0
+passEncoder.setBindGroup(0, uniformBindGroup);
+
+// Later, unset bind group in slot 0
+passEncoder.setBindGroup(0, null);
+```
 
 ## Specifications
 

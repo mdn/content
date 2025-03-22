@@ -2,14 +2,12 @@
 title: Intl.DurationFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instances returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this {{jsxref("Intl.DurationFormat")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `DurationFormat` object.
 
 ## Syntax
 
@@ -23,60 +21,18 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the locale and date and time formatting options computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}} object.
-
-## Description
-
-The resulting object has the following properties:
+A new object with properties reflecting the options computed during the initialization of this `DurationFormat` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646) for the locale used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in `locale`.
-- `style`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"digital"` identifying the duration formatting style used.
-- `years`
-  - : One of the strings `"long"`, `"short"`, or `"narrow"` identifying the formatting style used for the `years` field.
-- `yearsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `years` field.
-- `months`
-  - : One of the strings `"long"`, `"short"`, `and "narrow"` identifying the formatting style used for the `months` field.
-- `monthsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `months` field.
-- `weeks`
-  - : One of the strings `"long"`, `"short"`, `and "narrow"` identifying the formatting style used for the `weeks` field.
-- `weeksDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `weeks` field.
-- `days`
-  - : One of the strings `"long"`, `"short"`, and `"narrow"` identifying the formatting style used for the `days` field.
-- `daysDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `days` field.
-- `hours`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `hours` field.
-- `hoursDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `hours` field.
-- `minutes`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `minutes` field.
-- `minutesDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `minutes` field.
-- `seconds`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, `"2-digit"`, or `"numeric"` identifying the formatting style used for the `seconds` field.
-- `secondsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `seconds` field.
-- `milliseconds`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `milliseconds` field.
-- `millisecondsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `millisecondsDisplay` field.
-- `microseconds`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `microseconds` field.
-- `microsecondsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `microsecondsDisplay` field.
-- `nanoseconds`
-  - : One of the strings `"long"`, `"short"`, `"narrow"`, or `"numeric"` identifying the formatting style used for the `nanoseconds` field.
-- `nanosecondsDisplay`
-  - : One of the strings `"auto"` or `"always"` identifying when to display the `nanosecondsDisplay` field.
-- `fractionalDigits`
-  - : A number, identifying the number of fractional digits used with numeric styles.
+  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
 - `numberingSystem`
-  - : The value provided for this property in the options argument, if present, or the value requested using the Unicode extension key `nu` or filled in as a default.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
+- `style`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"long"`, `"short"`, `"narrow"`, or `"digital"`. The default is `"short"`.
+- `years`, `yearsDisplay`, `months`, `monthsDisplay`, `weeks`, `weeksDisplay`, `days`, `daysDisplay`, `hours`, `hoursDisplay`, `minutes`, `minutesDisplay`, `seconds`, `secondsDisplay`, `milliseconds`, `millisecondsDisplay`, `nanoseconds`, `nanosecondsDisplay`
+  - : The values provided for these properties in the `options` argument, with defaults filled in as needed. For the valid values and defaults for each, see the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#options) argument of the constructor.
+- `fractionalDigits` {{optional_inline}}
+  - : The value provided for this property in the `options` argument. It is only present if specified in `options`. It is an integer from 0 to 9, inclusive.
 
 ## Examples
 

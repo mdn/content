@@ -83,17 +83,13 @@ For more complicated cases, such as holding the lock for an arbitrary amount of 
 
 ```js
 // Capture promise control functions:
-let resolve, reject;
-const p = new Promise((res, rej) => {
-  resolve = res;
-  reject = rej;
-});
+const { promise, resolve, reject } = Promise.withResolvers();
 
 // Request the lock:
 navigator.locks.request(
   "my_resource",
   // Lock is acquired.
-  (lock) => p, // Now lock will be held until either resolve() or reject() is called.
+  (lock) => promise, // Now lock will be held until either resolve() or reject() is called.
 );
 ```
 

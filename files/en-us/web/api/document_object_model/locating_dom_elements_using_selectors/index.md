@@ -1,6 +1,6 @@
 ---
 title: Locating DOM elements using selectors
-slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 page-type: guide
 ---
 
@@ -17,7 +17,8 @@ This specification adds two new methods to any objects implementing the {{domxre
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : Returns a {{domxref("NodeList")}} containing all matching `Element` nodes within the node's subtree, or an empty `NodeList` if no matches are found.
 
-> **Note:** The {{domxref("NodeList")}} returned by {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
+> [!NOTE]
+> The {{domxref("NodeList")}} returned by {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
 
 You may find examples and details by reading the documentation for the {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}} methods.
 

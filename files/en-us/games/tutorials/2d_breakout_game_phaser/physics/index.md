@@ -78,7 +78,7 @@ Try reloading `index.html` again — The ball should now be moving constantly in
 
 You can do much more with physics, for example by adding `ball.body.gravity.y = 100;` you will set the vertical gravity of the ball. As a result it will be launched upwards, but then fall due to the effects of gravity pulling it down.
 
-This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://phaser.io/docs#physics) and see the huge collection of examples using the [Arcade](https://phaser.io/examples/v2/category/arcade-physics) and [P2](https://phaser.io/examples/v2/category/p2-physics) physics systems.
+This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://phaser.io/docs/#physics) and see the [huge collection of examples](https://samme.github.io/phaser-examples-mirror/) using the Arcade and P2 physics systems.
 
 ## Compare your code
 

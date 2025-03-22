@@ -21,7 +21,7 @@ An enumerated value. Possible values are:
 - `"show"`
   - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
 - `"toggle"`
-  - : The button will toggle a popover between showing and hidden. if the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popoverTargetAction` is not set, `"toggle"` is the default action that will be performed by the control button.
+  - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popoverTargetAction` is not set, `"toggle"` is the default action that will be performed by the control button.
 
 ## Examples
 
@@ -70,7 +70,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note:** A popover element is hidden by default, but if the API is not supported your element will display "as usual".
+> [!NOTE]
+> A popover element is hidden by default, but if the API is not supported your element will display "as usual".
 
 You can try out the example below.
 Show and hide the popover by toggling the button.

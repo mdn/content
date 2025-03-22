@@ -3,17 +3,15 @@ title: "ViewTransition: ready property"
 short-title: ready
 slug: Web/API/ViewTransition/ready
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ViewTransition.ready
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transition API")}}
 
 The **`ready`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
 
-`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to {{domxref("Document.startViewTransition()")}} throws or returns a promise that rejects.
+`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example, duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to {{domxref("Document.startViewTransition()")}} throws or returns a promise that rejects.
 
 ## Value
 
@@ -29,7 +27,7 @@ let lastClick;
 addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
-  // Fallback for browsers that don’t support this API:
+  // Fallback for browsers that don't support this API:
   if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
@@ -51,7 +49,7 @@ function spaNavigate(data) {
 
   // Wait for the pseudo-elements to be created:
   transition.ready.then(() => {
-    // Animate the root’s new view
+    // Animate the root's new view
     document.documentElement.animate(
       {
         clipPath: [
@@ -95,4 +93,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

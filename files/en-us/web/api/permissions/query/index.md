@@ -10,6 +10,11 @@ browser-compat: api.Permissions.query
 
 The **`query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
+The user permission names are defined in the respective specifications for each feature.
+The permissions supported by different browser versions are listed in the [compatibility data of the `Permissions` interface](/en-US/docs/Web/API/Permissions#browser_compatibility) (see also the relevant source code for [Firefox values](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), [Chromium values](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and [WebKit values](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)).
+
+The APIs that are gated by each permission are listed in [Permission-aware APIs](/en-US/docs/Web/API/Permissions_API#permission-aware_apis) in the [Permissions API](/en-US/docs/Web/API/Permissions_API) overview topic.
+
 ## Syntax
 
 ```js-nolint
@@ -20,18 +25,26 @@ query(permissionDescriptor)
 
 - `permissionDescriptor`
 
-  - : An object that sets options for the `query` operation consisting of a comma-separated list of name-value pairs. The available options are:
+  - : An object that sets options for the `query` operation.
+    The available options for this descriptor depend on the permission type.
+
+    All permissions have a name:
 
     - `name`
-      - : The name of the API whose permissions you want to query. Each browser supports a different set of values. You'll find Firefox values [there](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), Chromium values [there](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and WebKit values [there](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl).
-    - `userVisibleOnly`
-      - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
-    - `sysex` (MIDI only)
-      - : Indicates whether you need and/or receive system exclusive messages. The default is `false`.
+      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `microphone`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
+        The returned {{jsxref("Promise")}} will reject with a {{jsxref("TypeError")}} if the permission name is not supported by the browser.
 
-> **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is granted (e.g. by the user, in the relevant permissions dialog), `navigator.permissions.query()` will return `true` for both `notifications` and `push`.
+    For the `push` permissions you can also specify:
 
-> **Note:** The `persistent-storage` permission allows an origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
+    - `userVisibleOnly` {{optional_inline}}
+      - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications.
+        The default is `false`.
+
+    For the `midi` permission you can also specify:
+
+    - `sysex` {{optional_inline}}
+      - : Indicates whether you need and/or receive system exclusive messages.
+        The default is `false`.
 
 ### Return value
 
@@ -128,7 +141,15 @@ async function processPermissions() {
 // Query a single permission in a try...catch block and return result
 async function getPermission(permission) {
   try {
-    const result = await navigator.permissions.query({ name: permission });
+    let result;
+    if (permission === "top-level-storage-access") {
+      result = await navigator.permissions.query({
+        name: permission,
+        requestedOrigin: window.location.origin,
+      });
+    } else {
+      result = await navigator.permissions.query({ name: permission });
+    }
     return `${permission}: ${result.state}`;
   } catch (error) {
     return `${permission} (not supported)`;

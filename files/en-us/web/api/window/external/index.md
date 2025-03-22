@@ -24,11 +24,11 @@ The `External` object has the following methods:
     </tr>
     <tr>
       <td>
-        <code>AddSearchProvider(<em>descriptionURL)</em></code>
+        <code>AddSearchProvider(descriptionURL)</code>
       </td>
       <td>
         Dummy function; does nothing. See
-        <a href="/en-US/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
+        <a href="/en-US/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
           >Autodiscovery of search plugins</a
         >.
       </td>
@@ -36,6 +36,10 @@ The `External` object has the following methods:
     <tr>
       <td><code>IsSearchProviderInstalled()</code></td>
       <td>Dummy function; does nothing.</td>
+    </tr>
+    <tr>
+      <td><code>getHostEnvironmentValue(name)</code> {{non-standard_inline}}</td>
+      <td>Microsoft Edge proprietary API. See <a href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/mt795399(v=vs.85)">Microsoft docs</a> for more information.</td>
     </tr>
   </tbody>
 </table>

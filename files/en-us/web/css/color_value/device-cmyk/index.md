@@ -2,7 +2,6 @@
 title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 page-type: css-function
-browser-compat: css.types.color.device-cmyk
 spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk
 ---
 
@@ -36,9 +35,9 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
   - : An optional fallback {{CSSXref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Specifications
 

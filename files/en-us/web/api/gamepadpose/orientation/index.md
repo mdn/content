@@ -29,7 +29,8 @@ A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide 
 
 TBD
 
-> **Note:** An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".
+> [!NOTE]
+> An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".
 
 ## Specifications
 

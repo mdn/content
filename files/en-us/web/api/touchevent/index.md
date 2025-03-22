@@ -76,7 +76,8 @@ There are several types of event that can be fired to indicate that touch-relate
     This event is also sent
     if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-    > **Note:** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
+    > [!NOTE]
+    > The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQuerySet.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUQuerySet")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -29,9 +29,9 @@ const querySet = device.createQuerySet({
   count: 32,
 });
 
-querySet.label = "myqueryset";
+querySet.label = "my_query_set";
 
-console.log(querySet.label); // "myqueryset"
+console.log(querySet.label); // "my_query_set"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createQuerySet()")}} call, and then getting it via `GPUQuerySet.label`:
@@ -40,10 +40,10 @@ Setting a label via the originating {{domxref("GPUDevice.createQuerySet()")}} ca
 const querySet = device.createQuerySet({
   type: "occlusion",
   count: 32,
-  label: "myqueryset",
+  label: "my_query_set",
 });
 
-console.log(querySet.label); // "myqueryset"
+console.log(querySet.label); // "my_query_set"
 ```
 
 ## Specifications

@@ -19,8 +19,8 @@ alternate code paths can be triggered during automation.
 The `navigator.webdriver` property is true when in:
 
 - Chrome
-  - : The `--enable-automation` or the `--headless` flag or the
-    `--remote-debugging-port` is used.
+  - : The `--enable-automation` or `--headless` flag is used, or the
+    `--remote-debugging-port` flag specifying port 0 is used.
 - Firefox
   - : The `marionette.enabled` preference or `--marionette` flag is
     passed.

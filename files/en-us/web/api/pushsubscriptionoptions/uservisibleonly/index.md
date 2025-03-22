@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PushSubscriptionOptions.userVisibleOnly
 ---
 
-{{DefaultAPISidebar("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`userVisibleOnly`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface indicates if the returned push subscription will only be used for messages whose effect is made visible to the user.
 

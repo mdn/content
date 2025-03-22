@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Object.defineSetter
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **Note:** This feature is deprecated in favor of defining [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) using the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
+> [!NOTE]
+> This feature is deprecated in favor of defining [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) using the [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) or the {{jsxref("Object.defineProperty()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
 The **`__defineSetter__()`** method of {{jsxref("Object")}} instances binds an object's property to a function to be called when an attempt is made to set that property.
 

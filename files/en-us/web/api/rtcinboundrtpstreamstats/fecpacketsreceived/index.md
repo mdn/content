@@ -17,13 +17,7 @@ An FEC packet provides parity information which can
 be used to attempt to reconstruct RTP data packets which have been corrupted in
 transit.
 
-## Syntax
-
-```js-nolint
-const fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived
-```
-
-### Value
+## Value
 
 An unsigned integer value which indicates the total number of FEC packets which have
 been received from the remote peer during this RTP session. Forward Error Correction
@@ -33,7 +27,8 @@ By using the FEC parity information to attempt to reconstruct damaged packets, i
 possible to avoid the need to retransmit damaged packets, which in turn helps to
 reduce lag, or the need to skip damaged frames entirely.
 
-> **Note:** This counter may also be incremented when FEC packets arrive
+> [!NOTE]
+> This counter may also be incremented when FEC packets arrive
 > in-band along with media content; this can happen with Opus, for example.
 
 ## Usage notes

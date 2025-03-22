@@ -10,7 +10,7 @@ A **request header** is an {{glossary("HTTP header")}} that can be used in an HT
 
 Not all headers that can appear in a request are referred to as _request headers_ by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.
 
-In addition, [CORS](/en-US/docs/Glossary/CORS) defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.
+In addition, {{Glossary("CORS")}} defines a subset of request headers as {{glossary('CORS-safelisted request header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.
 
 The HTTP message below shows a few request headers after a {{HTTPMethod("GET")}} request:
 
@@ -31,5 +31,5 @@ Cache-Control: max-age=0
 
 ## See also
 
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - [RFC 9110, section 6.3: Header Fields](https://httpwg.org/specs/rfc9110.html#header.fields)

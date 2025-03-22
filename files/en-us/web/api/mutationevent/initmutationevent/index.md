@@ -5,17 +5,19 @@ slug: Web/API/MutationEvent/initMutationEvent
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.MutationEvent.initMutationEvent
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`initMutationEvent()`** method of the {{domxref("MutationEvent")}} interface initializes the
 value of a mutation event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).
 
 This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
-> **Note:** In general, you won't create these events yourself; they are created by the browser.
+> [!NOTE]
+> In general, you won't create these events yourself; they are created by the browser.
 
 ## Syntax
 
@@ -28,7 +30,7 @@ initMutationEvent(type, canBubble, cancelable, relatedNode,
 
 - `type`
   - : A string to set the event's {{domxref("Event.type", "type")}} to. Browsers set the following values for {{domxref("MutationEvent")}}:
-    `DOMAttrModified`, `DOMAttributeNameChanged`, `DOMCharacterDataModified`, `DOMElementNameChanged`, `DOMNodeInserted`, `DOMNodeInsertedIntoDocument`, `DOMNodeRemoved`, `DOMNodeRemovedFromDocument`,`DOMSubtreeModified`.
+    `DOMAttrModified`, `DOMAttributeNameChanged`, `DOMCharacterDataModified`, `DOMElementNameChanged`, `DOMNodeInserted`, `DOMNodeInsertedIntoDocument`, `DOMNodeRemoved`, `DOMNodeRemovedFromDocument`, `DOMSubtreeModified`.
 - `canBubble`
   - : A boolean indicating whether or not the event can bubble. Sets the value of {{domxref("Event.bubbles")}}.
 - `cancelable`

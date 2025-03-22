@@ -57,4 +57,4 @@ tabs.forEach((tab) => {
 ## See also
 
 - {{cssxref("::part")}}
-- [part](/en-US/docs/Web/HTML/Global_attributes#part)
+- [part](/en-US/docs/Web/HTML/Global_attributes/part)

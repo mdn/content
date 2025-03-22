@@ -20,7 +20,7 @@ _Inherits properties from its parent {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAreaElement.coords")}}
   - : A string that reflects the [`coords`](/en-US/docs/Web/HTML/Element/area#coords) HTML attribute, containing coordinates to define the hot-spot region.
 - {{domxref("HTMLAreaElement.download")}}
-  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
+  - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adjust it accordingly.
 - {{domxref("HTMLAreaElement.hash")}}
   - : A string containing the fragment identifier (including the leading hash mark (#)), if any, in the referenced URL.
 - {{domxref("HTMLAreaElement.host")}}

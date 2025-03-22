@@ -22,11 +22,153 @@ Media Object pattern needs some or all of the following characteristics:
 
 ## The recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-> **Callout:**
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
+```html live-sample___media-objects-example
+<div class="media">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Balloons" />
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer">An optional footer goes here.</div>
+</div>
+
+<div class="media">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/sharp-account_box-24px.svg"
+      width="80px"
+      alt="Account" />
+  </div>
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer"></div>
+</div>
+```
+
+```html hidden live-sample___media-objects-example
+<div class="media media-flip">
+  <div class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Balloons" />
+  </div>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+  <div class="footer">An optional footer goes here.</div>
+</div>
+
+<div class="media">
+  <a class="img">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+      alt="Balloons" />
+  </a>
+
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+      vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit
+      lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque
+      porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis
+      condimentum.
+    </p>
+  </div>
+
+  <div class="footer"></div>
+
+  <div class="media">
+    <a class="img">
+      <img
+        src="https://mdn.github.io/shared-assets/images/examples/balloons_square.jpg"
+        alt="Balloons" />
+    </a>
+
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula
+        vitae ligula sit amet maximus.
+      </p>
+    </div>
+
+    <div class="footer"></div>
+  </div>
+</div>
+```
+
+```css live-sample___media-objects-example
+body {
+  font: 1.2em sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+@media (min-width: 500px) {
+  .media {
+    display: grid;
+    grid-template-columns: fit-content(200px) 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "image content"
+      "image footer";
+    grid-gap: 20px;
+    margin-bottom: 4em;
+  }
+
+  .media-flip {
+    grid-template-columns: 1fr fit-content(250px);
+    grid-template-areas:
+      "content image"
+      "footer image";
+  }
+
+  .img {
+    grid-area: image;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
+```
+
+{{EmbedLiveSample("media-objects-example", "", "1500px")}}
 
 ## Choices made
 

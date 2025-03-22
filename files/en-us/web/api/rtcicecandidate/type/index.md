@@ -36,7 +36,7 @@ If `type` is `null`, that information was missing from the
 
 ## Examples
 
-In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
+In this example, the candidate's `type` is used to
 present a modified user interface for host candidates (those where the
 {{domxref("RTCIceCandidate/address", "ip")}} refers directly to the remote peer, rather than
 an intermediary).

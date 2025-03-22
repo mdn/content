@@ -28,7 +28,7 @@ document.body.appendChild(script);
 
 ## When is async not async?
 
-Two common situations in which a script is \*not\* async (as [defined by the HTML spec](https://html.spec.whatwg.org/multipage/scripting.html)) are:
+Two common situations in which a script is _not_ async (as [defined by the HTML spec](https://html.spec.whatwg.org/multipage/scripting.html)) are:
 
 ```html
 <script async>

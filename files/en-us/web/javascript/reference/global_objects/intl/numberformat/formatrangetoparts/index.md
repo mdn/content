@@ -18,76 +18,35 @@ formatRangeToParts(startRange, endRange)
 ### Parameters
 
 - `startRange`
-
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRangeToParts()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
 
 ### Return value
 
-An {{jsxref("Array")}} of objects containing the formatted range of numbers in parts.
-
-The structure of the returned looks like this:
-
-```js
-[
-  { type: "integer", value: "3", source: "startRange" },
-  { type: "literal", value: "-", source: "shared" },
-  { type: "integer", value: "5", source: "endRange" },
-  { type: "literal", value: " ", source: "shared" },
-  { type: "currency", value: "€", source: "shared" },
-];
-```
-
-Possible values for the `type` property include:
-
-- `currency`
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
-- `decimal`
-  - : The decimal separator string (".").
-- `fraction`
-  - : The fraction number.
-- `group`
-  - : The group separator string (",").
-- `infinity`
-  - : The {{jsxref("Infinity")}} string ("∞").
-- `integer`
-  - : The integer number.
-- `literal`
-  - : Any literal strings or whitespace in the formatted number.
-- `minusSign`
-  - : The minus sign string ("-").
-- `nan`
-  - : The {{jsxref("NaN")}} string ("NaN").
-- `plusSign`
-  - : The plus sign string ("+").
-- `percentSign`
-  - : The percent sign string ("%").
-- `unit`
-  - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
-
-Possible values for the `source` property include:
+An {{jsxref("Array")}} of objects containing the formatted range in parts. Each object has three properties, `type`, `value`, and `source`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}. The `type` may have the same values as {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}}. The `source` can be one of the following:
 
 - `startRange`
-  - : The object is the start part of the range.
+  - : The token is a part of the start number.
 - `endRange`
-  - : The object is the end part of the range.
+  - : The token is a part of the end number.
 - `shared`
-  - : The object is a "shared" part of the range, such as a separator or currency.
+  - : The token is shared between the start and end; for example, the currency symbol. All literals that are part of the range pattern itself, such as the `"–"` separator, are also marked as `shared`.
+
+If the start and end numbers are equivalent, then the output has the same list of tokens as calling {{jsxref("Intl/NumberFormat/formatToParts", "formatToParts()")}} on the start number, with all tokens marked as `source: "shared"`.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+  - : Thrown if either `startRange` or `endRange` is `NaN` or an inconvertible string.
 - {{jsxref("TypeError")}}
   - : Thrown if either `startRange` or `endRange` is undefined.
 
 ## Examples
 
-### Comparing formatRange and formatRangeToParts
+### Using formatRangeToParts()
 
-`NumberFormat` outputs localized, opaque strings that cannot be manipulated directly:
+The `formatRange()` method outputs localized, opaque strings that cannot be manipulated directly:
 
 ```js
 const startRange = 3500;
@@ -102,8 +61,7 @@ console.log(formatter.formatRange(startRange, endRange));
 // "3.500,00–9.500,00 €"
 ```
 
-However, for many user interfaces there is a need to customize the formatting of this string.
-The `formatRangeToParts` method enables locale-aware formatting of strings produced by `NumberFormat` formatters by providing you the string in parts:
+However, in many user interfaces you may want to customize the formatting of this string, or interleave it with other texts. The `formatRangeToParts()` method produces the same information in parts:
 
 ```js
 console.log(formatter.formatRangeToParts(startRange, endRange));
@@ -138,4 +96,3 @@ console.log(formatter.formatRangeToParts(startRange, endRange));
 
 - {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}

@@ -12,7 +12,8 @@ The **`type`** property of the {{domxref("HTMLOListElement")}} interface indicat
 
 It reflects the [`type`](/en-US/docs/Web/HTML/Element/ol#type) attribute of the {{HTMLElement("ol")}} element.
 
-> **Note:** The `type` can be defined in CSS with the {{CSSxRef("list-style-type")}} property. The `list-style-type` property provides many more values.
+> [!NOTE]
+> The `type` can be defined in CSS with the {{CSSxRef("list-style-type")}} property. The `list-style-type` property provides many more values.
 
 ## Value
 

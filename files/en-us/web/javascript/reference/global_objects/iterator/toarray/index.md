@@ -2,12 +2,10 @@
 title: Iterator.prototype.toArray()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/toArray
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.toArray
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`toArray()`** method of {{jsxref("Iterator")}} instances creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 
@@ -62,5 +60,6 @@ Note that it's a good idea to call `toArray()` as a last step of your processing
 ## See also
 
 - [Polyfill of `Iterator.prototype.toArray` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.toArray`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Array.from()")}}

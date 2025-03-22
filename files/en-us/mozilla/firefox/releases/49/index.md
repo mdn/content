@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -69,7 +69,7 @@ page-type: firefox-release-notes
 ### JavaScript
 
 - The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ([Firefox bug 888969](https://bugzil.la/888969)).
-- The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ([Firefox bug 887016](https://bugzil.la/887016)).
+- The ES2015 [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match), [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search), and [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) methods, and [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) getter have been implemented ([Firefox bug 887016](https://bugzil.la/887016)).
 - The deprecated, non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ([Firefox bug 1108382](https://bugzil.la/1108382)).
 - The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ([Firefox bug 1265136](https://bugzil.la/1265136)).
 
@@ -148,7 +148,7 @@ page-type: firefox-release-notes
 - To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a `PositionAlign` enum instead of an `Align` enum ([Firefox bug 1276129](https://bugzil.la/1276129)).
 - The speech synthesis part of [Web Speech API](/en-US/docs/Web/API/Web_Speech_API#speech_synthesis) is now activated by default ([Firefox bug 1268633](https://bugzil.la/1268633)).
 - The [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline) is now available by default in Nightly (though not in Aurora, Beta or Release).
-- The {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ([Firefox bug 1265279](https://bugzil.la/1265279)).
+- The {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} event, and the {{domxref("Window.appinstalled_event", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) ([Firefox bug 1265279](https://bugzil.la/1265279)).
 - When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — `{disableNormalization: true}` ([Firefox bug 1265405](https://bugzil.la/1265405)).
 - In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a `PositionAlignSetting` enum as per spec; previously it returned an `AlignSetting` enum ([Firefox bug 1276129](https://bugzil.la/1276129)).
 - The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ([Firefox bug 1268633](https://bugzil.la/1268633)).
@@ -175,7 +175,7 @@ This marks the next step in the journey toward a plugin-free future. HTML is ver
 
 ## HTTP
 
-- The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control) directive has been implemented ([Firefox bug 1267474](https://bugzil.la/1267474)). See also this [blog post](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) for more information.
+- The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) directive has been implemented ([Firefox bug 1267474](https://bugzil.la/1267474)). See also this [blog post](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) for more information.
 - The {{CSP("require-sri-for")}} {{HTTPHeader("Content-Security-Policy")}} has been implemented ([Firefox bug 1265318](https://bugzil.la/1265318)).
 
 ## Networking

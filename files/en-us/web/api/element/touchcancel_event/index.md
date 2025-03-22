@@ -68,7 +68,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- This event on [`Document`](/en-US/docs/Web/API/Document) targets: [`touchcancel`](/en-US/docs/Web/API/Element/touchcancel_event)

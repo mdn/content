@@ -13,7 +13,40 @@ If a named counter in the list of space-separated counters and values doesn't ex
 
 The counter's value can be reset to any integer value with the {{cssxref("counter-reset")}} CSS property.
 
-{{EmbedInteractiveExample("pages/css/counter-increment.html")}}
+{{InteractiveExample("CSS Demo: counter-increment")}}
+
+```css interactive-example-choice
+counter-increment: example-counter;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 0;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 5;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Counter value:</div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-reset: example-counter;
+}
+
+#example-element::after {
+  content: counter(example-counter);
+}
+```
 
 ## Syntax
 
@@ -52,7 +85,8 @@ The `counter-increment` property takes as its value either a list of space-separ
 - `none`
   - : Indicates that no counter must be increased or decreased. This value can also be used to cancel all counters from being increased or decreased in more specific rules. This is the default value of the property.
 
-> **Note:** Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the `integer` value as `0` on the relevant counter(s).
+> [!NOTE]
+> Using the `none` value prevents all counters from being increased or decreased for the selected elements where this rule applies. To prevent only specific counters from being increased or decreased, set the `integer` value as `0` on the relevant counter(s).
 
 ## Formal definition
 

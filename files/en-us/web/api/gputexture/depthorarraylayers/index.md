@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.depthOrArrayLayers
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`depthOrArrayLayers`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the depth or layer count of the `GPUTexture`.

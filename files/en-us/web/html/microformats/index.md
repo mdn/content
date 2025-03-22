@@ -6,14 +6,14 @@ page-type: guide
 
 {{HTMLSidebar}}
 
-[_Microformats_](https://microformats.org/) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
+[_Microformats_](https://microformats.org/wiki/Main_Page) are standards used to embed semantics and structured data in HTML, and provide an API to be used by social web applications, search engines, aggregators, and other tools. These minimal patterns of HTML are used for marking up entities that range from fundamental to domain-specific information, such as people, organizations, events, and locations.
 
-- To create a microformats object, h-\* class names are used in the class attribute.
-- To add a property to an object, the p-\*, u-\*, dt-\*, e-\* class names are used on one of the object's descendants.
+- To create a microformats object, `h-*` class names are used in the class attribute.
+- To add a property to an object, the `p-*`, `u-*`, `dt-*`, `e-*` class names are used on one of the object's descendants.
 
 Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes.
 
-Microformats2 (sometimes referred to as mf2) is an update to microformats that provides a simpler way of annotating HTML structured syntax and vocabularies than previous approaches of using RDFa and microdata. These previous approaches require learning new attributes.
+Microformats2 (sometimes referred to as mf2) is an update to microformats that provides a method of annotating HTML structured syntax and vocabularies than previous approaches of using RDFa and microdata. These previous approaches require learning new attributes.
 
 There are [open source parsing libraries for most languages](https://microformats.org/wiki/microformats2#Parsers) for microformats2.
 
@@ -472,6 +472,6 @@ Supported in all browsers' support for the class attribute and its DOM API.
 
 - [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
 - [Microformat](https://en.wikipedia.org/wiki/Microformat) on Wikipedia
-- [Microformats official website](https://microformats.org/)
+- [Microformats official website](https://microformats.org/wiki/Main_Page)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website
 - [Microformats on IndieWebCamp](https://indieweb.org/microformats)

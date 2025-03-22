@@ -10,7 +10,8 @@ browser-compat: api.HashChangeEvent.HashChangeEvent
 
 The **`HashChangeEvent()`** constructor creates a new {{domxref("HashChangeEvent")}} object, that is used by the {{domxref("Window/hashchange_event", "hashchange")}} event fired at the {{domxref("window")}} object when the fragment of the URL changes.
 
-> **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/hashchange_event", "hashchange")}} events.
+> [!NOTE]
+> A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/hashchange_event", "hashchange")}} events.
 
 ## Syntax
 
@@ -27,7 +28,7 @@ new HashChangeEvent(type, options)
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `oldURL` {{optional_inline}}
       - : A string containing the old URL. Its default value is the empty string (`""`).
-    - `newURL`{{optional_inline}}
+    - `newURL` {{optional_inline}}
       - : A string containing the new URL. Its default value is the empty string (`""`).
 
 ### Return value

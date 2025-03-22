@@ -40,6 +40,10 @@ const nodeContext = document.querySelector("nav");
 const otherResult = xpathExpr.evaluate(nodeContext); // returns an XPathResult object
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

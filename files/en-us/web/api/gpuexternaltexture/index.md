@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUExternalTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUExternalTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a wrapper object containing an {{domxref("HTMLVideoElement")}} snapshot that can be used as a texture in GPU rendering operations.
 
@@ -22,7 +22,7 @@ A `GPUExternalTexture` object instance is created using {{domxref("GPUDevice.imp
 
 ## Examples
 
-In the WebGPU samples [Video Uploading sample](https://webgpu.github.io/webgpu-samples/samples/videoUploading), a `GPUExternalTexture` object (created via a {{domxref("GPUDevice.importExternalTexture()")}} call) is used as the value of a bind group entry `resource`, specified when creating a {{domxref("GPUBindGroup")}} via a {{domxref("GPUDevice.createBindGroup()")}} call:
+In the WebGPU samples [Video Uploading sample](https://webgpu.github.io/webgpu-samples/samples/videoUploading/), a `GPUExternalTexture` object (created via a {{domxref("GPUDevice.importExternalTexture()")}} call) is used as the value of a bind group entry `resource`, specified when creating a {{domxref("GPUBindGroup")}} via a {{domxref("GPUDevice.createBindGroup()")}} call:
 
 ```js
 //...

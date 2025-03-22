@@ -7,7 +7,9 @@ browser-compat: css.properties.width.max-content
 
 {{CSSRef}}
 
-The `max-content` sizing keyword represents the {{glossary("intrinsic size", "intrinsic")}} maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+The `max-content` sizing keyword represents the maximum {{glossary("intrinsic size")}} of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+
+The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `max-content`.
 
 ## Syntax
 

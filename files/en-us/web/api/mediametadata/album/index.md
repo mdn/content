@@ -9,7 +9,7 @@ browser-compat: api.MediaMetadata.album
 {{APIRef("Media Session API")}}
 
 The **`album`** property of the
-{{domxref("MediaMetaData")}} interface returns or sets the name of the album or
+{{domxref("MediaMetadata")}} interface returns or sets the name of the album or
 collection containing the media to be played.
 
 ## Value

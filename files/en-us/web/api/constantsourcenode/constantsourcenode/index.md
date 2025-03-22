@@ -45,7 +45,8 @@ let audioContext = new AudioContext();
 let myConstantSource = new ConstantSourceNode(audioContext, { offset: 0.5 });
 ```
 
-> **Note:** The new `ConstantSourceNode` created by the
+> [!NOTE]
+> The new `ConstantSourceNode` created by the
 > constructor has a
 > [`channelCount`](/en-US/docs/Web/API/AudioNode/channelCount) of
 > 2\.

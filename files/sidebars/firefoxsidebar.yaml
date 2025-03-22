@@ -1,0 +1,100 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - title: Firefox_releases
+    details: closed
+    children:
+      - link: /Mozilla/Firefox/Releases
+        title: Firefox_release_notes_developer
+      - link: /Mozilla/Firefox/Experimental_features
+        title: Experimental_features_firefox
+  - title: Add-ons
+    details: closed
+    children:
+      - link: /Mozilla/Add-ons/WebExtensions
+        title: Browser_extensions
+      - link: https://extensionworkshop.com/documentation/themes
+        title: Themes
+  - link: https://firefox-source-docs.mozilla.org/
+    title: Firefox_documentation
+l10n:
+  de:
+    Firefox_releases: Firefox-Veröffentlichungen
+    Firefox_release_notes_developer: Firefox-Hinweise für Entwickler
+    Experimental_features_firefox: Experimentelle Funktionen in Firefox
+    Add-ons: Add-ons
+    Browser_extensions: Browser-Erweiterungen
+    Themes: Themen
+    Firefox_documentation: Firefox-Dokumentation
+  en-US:
+    Firefox_releases: Firefox releases
+    Firefox_release_notes_developer: Firefox release notes for developers
+    Experimental_features_firefox: Experimental features in Firefox
+    Add-ons: Add-ons
+    Browser_extensions: Browser extensions
+    Themes: Themes
+    Firefox_documentation: Firefox documentation
+  es:
+    Firefox_releases: Lanzamientos de Firefox
+    Firefox_release_notes_developer: Notas de lanzamiento de Firefox, para desarrolladores
+    Experimental_features_firefox: Caracteristicas experimentales en Firefox
+    Add-ons: Complementos
+    Browser_extensions: Extensiones del navegador
+    Themes: Temas
+    Firefox_documentation: Documentación de Firefox
+  fr:
+    Firefox_releases: Versions de Firefox
+    Firefox_release_notes_developer: Notes de version Firefox pour le développement
+    Experimental_features_firefox: Fonctionnalités expérimentales dans Firefox
+    Add-ons: Modules complémentaires
+    Browser_extensions: WebExtensions
+    Themes: Thèmes
+    Firefox_documentation: Documentation de Firefox
+  ja:
+    Firefox_releases: Firefox リリース
+    Firefox_release_notes_developer: Firefox 開発者向けリリースノート
+    Experimental_features_firefox: Firefox の実験的な機能
+    Add-ons: アドオン
+    Browser_extensions: ブラウザー拡張機能
+    Themes: テーマ
+    Firefox_documentation: Firefox ドキュメント
+  ko:
+    Firefox_releases: Firefox 릴리즈
+    Firefox_release_notes_developer: 개발자를 위한 Firefox 릴리즈 노트
+    Experimental_features_firefox: Firefox의 실험적인 기능
+    Add-ons: Add-ons
+    Browser_extensions: 브라우저 확장 프로그램
+    Themes: 테마
+    Firefox_documentation: Firefox 문서
+  pt-BR:
+    Firefox_releases: Lançamentos do Firefox
+    Firefox_release_notes_developer: Notas de lançamento do Firefox para desenvolvedores
+    Experimental_features_firefox: Funcionalidades experimentais no Firefox
+    Add-ons: Complementos
+    Browser_extensions: Extensões do navegador
+    Themes: Temas
+    Firefox_documentation: Documentação do Firefox
+  ru:
+    Firefox_releases: Выпуски Firefox
+    Firefox_release_notes_developer: Примечания к выпускам Firefox для разработчиков
+    Experimental_features_firefox: Экспериментальные функции Firefox
+    Add-ons: Дополнения
+    Browser_extensions: Расширения браузера
+    Themes: Темы
+    Firefox_documentation: Документация Firefox
+  zh-CN:
+    Firefox_releases: Firefox 发行说明
+    Firefox_release_notes_developer: 面向开发者的 Firefox 发行说明
+    Experimental_features_firefox: Firefox 中的实验性功能
+    Add-ons: 附加组件
+    Browser_extensions: 浏览器扩展
+    Themes: 主题
+    Firefox_documentation: Firefox 文档
+  zh-TW:
+    Firefox_releases: Firefox 版本資訊
+    Firefox_release_notes_developer: 開發者的 Firefox 版本資訊
+    Experimental_features_firefox: Firefox 中的實驗性功能
+    Add-ons: 附加元件
+    Browser_extensions: 擴充套件
+    Themes: 佈景主題
+    Firefox_documentation: Firefox 文件

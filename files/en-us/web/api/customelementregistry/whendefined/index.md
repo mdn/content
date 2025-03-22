@@ -54,9 +54,11 @@ const placeholder = container.querySelector(".menu-placeholder");
 const undefinedElements = container.querySelectorAll(":not(:defined)");
 
 async function removePlaceholder() {
-  const promises = [...undefinedElements].map((button) =>
-    customElements.whenDefined(button.localName),
+  // Filter the elements down to unique localNames
+  const tags = new Set(
+    [...undefinedElements].map((button) => button.localName),
   );
+  const promises = [...tags].map((tag) => customElements.whenDefined(tag));
 
   // Wait for all the children to be upgraded
   await Promise.all(promises);

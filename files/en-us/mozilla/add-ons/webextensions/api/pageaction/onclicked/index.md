@@ -56,11 +56,11 @@ Events have three functions:
 When the user clicks the page action, hide it, and navigate the active tab to "<https://giphy.com/explore/cat>":
 
 ```js
-let CATGIFS = "https://giphy.com/explore/cat";
+let catGifs = "https://giphy.com/explore/cat";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({ url: CATGIFS });
+  browser.tabs.update({ url: catGifs });
 });
 
 browser.pageAction.onClicked.addListener(() => {});
@@ -68,9 +68,8 @@ browser.pageAction.onClicked.addListener(() => {});
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

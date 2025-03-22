@@ -26,7 +26,8 @@ The process of recording a stream is simple:
 6. Recording stops automatically when the source media stops playing.
 7. You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
 
-> **Note:** Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
+> [!NOTE]
+> Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
 
 If anything goes wrong during recording, an {{domxref("MediaRecorder/error_event", "error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
 
@@ -92,7 +93,7 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 ```js
 navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
-    const menu = document.getElementById("inputdevices");
+    const menu = document.getElementById("input-devices");
     if (device.kind === "audioinput") {
       const item = document.createElement("option");
       item.textContent = device.label;

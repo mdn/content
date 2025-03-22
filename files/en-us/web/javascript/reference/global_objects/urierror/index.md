@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.URIError
 
 The **`URIError`** object represents an error when a global URI handling function was used in a wrong way.
 
-`URIError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`URIError` is a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 `URIError` is a subclass of {{jsxref("Error")}}.
 

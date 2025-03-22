@@ -12,7 +12,10 @@ browser-compat: api.Scheduling.isInputPending
 
 The **`isInputPending()`** method of the {{domxref("Scheduling")}} interface allows you to check whether there are pending input events in the event queue, indicating that the user is attempting to interact with the page.
 
-This feature is useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. `isInputPending()` allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.
+This feature can be useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. `isInputPending()` allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.
+
+> [!WARNING]
+> The `isInputPending()` method has been superseded by features available on the {{domxref("Scheduler")}} interface such as {{domxref("Scheduler.yield()", "yield()")}}, which are better designed for addressing scheduling tasks. See [Don't use `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending) for more details.
 
 `isInputPending()` is called using `navigator.scheduling.isInputPending()`.
 
@@ -76,6 +79,8 @@ This allows you to avoid blocking the main thread when the user is actively inte
 
 ## See also
 
+- {{domxref("Scheduler")}} interface
+- {{domxref("Prioritized_task_scheduling_api", "Prioritized Task Scheduling API", "", "nocode")}}
 - [Faster input events with Facebook's first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/) on engineering.fb.com (2019)
 - [Better JS scheduling with isInputPending()](https://developer.chrome.com/docs/capabilities/web-apis/isinputpending) on developer.chrome.com (2020)
 - [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary) on web.dev (2022)

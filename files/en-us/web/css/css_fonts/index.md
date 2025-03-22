@@ -33,6 +33,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-weight")}}
 
 - {{cssxref("font-synthesis")}} shorthand
+- {{cssxref("font-synthesis-position")}}
 - {{cssxref("font-synthesis-small-caps")}}
 - {{cssxref("font-synthesis-style")}}
 - {{cssxref("font-synthesis-weight")}}
@@ -46,6 +47,8 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-variant-numeric")}}
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
+
+The specification also defines the `font-width` property, which is not yet supported by any browser.
 
 ### At-rules and descriptors
 
@@ -65,6 +68,8 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
     - {{cssxref("@font-face/size-adjust", "size-adjust")}}
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
+
+The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors, which are not yet supported by any browser.
 
 - At-rule: {{cssxref("@font-feature-values")}}
 
@@ -137,11 +142,11 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 
 ## Guides
 
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
   - : This beginner's learning article covers the basic fundamentals of text and font styling. It covers how to set the font weight, family, and style by using the {{cssxref("font")}} shorthand and how to align text and manage line and letter spacing.
 
-- [Learn: Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Learn: Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 
   - : This beginner's learning article explains how to use custom fonts on your web page to allow for more varied and custom text styling.
 
@@ -153,7 +158,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 
   - : This article will help you get started with using variable fonts.
 
-- [Improving font performance](/en-US/docs/Learn/Performance/CSS#improving_font_performance)
+- [Improving font performance](/en-US/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
 
   - : This article, part of the CSS performance guide, discusses font loading, loading only the required glyphs, and defining font display behavior with the `font-display` descriptor.
 

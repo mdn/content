@@ -15,7 +15,8 @@ By default, a named timeline (i.e. declared using {{cssxref("scroll-timeline-nam
 
 `timeline-scope` is given the name of a timeline defined on a descendant element; this causes the scope of the timeline to be increased to the element that `timeline-scope` is set on and any of its descendants. In other words, that element and any of its descendant elements can now be controlled using that timeline.
 
-> **Note:** If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created.
+> [!NOTE]
+> If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created.
 
 ## Syntax
 

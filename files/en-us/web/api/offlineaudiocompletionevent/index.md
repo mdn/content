@@ -9,7 +9,8 @@ browser-compat: api.OfflineAudioCompletionEvent
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `OfflineAudioCompletionEvent` interface represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{domxref("OfflineAudioContext/complete_event", "complete")}} event uses this interface.
 
-> **Note:** This interface is marked as deprecated; it is still supported for legacy reasons, but it will soon be superseded when the promise version of {{domxref("OfflineAudioContext.startRendering")}} is supported in browsers, which will no longer need it.
+> [!NOTE]
+> This interface is marked as deprecated; it is still supported for legacy reasons, but it will soon be superseded when the promise version of {{domxref("OfflineAudioContext.startRendering")}} is supported in browsers, which will no longer need it.
 
 {{InheritanceDiagram}}
 

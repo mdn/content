@@ -18,6 +18,8 @@ Permitted values are:
 | `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
 | `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
 
+You must check the `deltaMode` property to determine the unit of the `deltaX`, `deltaY`, and `deltaZ` values. Do not assume that those values are specified in pixels. Some browsers, for compatibility reasons, may return different units for the `delta*` values depending on whether `deltaMode` has been accessed, to accommodate for websites not explicitly checking the `deltaMode` property.
+
 ## Value
 
 An `unsigned long`.

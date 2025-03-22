@@ -4,19 +4,19 @@ slug: Web/API/WebGL_API/By_example/Basic_scissoring
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}
 
-In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
+In this example, we see how to draw rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
 
 ## Clearing the drawing buffer when scissoring applies
 
 {{EmbedLiveSample("Clearing_the_drawing_buffer_when_scissoring_applies",660,425)}}
 
-This is a simple demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.
+This is a demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.
 
 Although the {{domxref("WebGLRenderingContext.clear","clear()")}} drawing command writes the clear color (set by {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) to all pixels in the drawing buffer, {{domxref("WebGLRenderingContext.scissor","scissor()")}} defines a mask that only allows pixels inside the specified rectangular area to be updated.
 
-This is a good opportunity to talk about the difference between pixels and _fragments_. A pixel is a picture element (in practice, a point) on the screen, or a single element of the drawing buffer, that area in memory that holds your pixel data (such as {{Glossary("RGBA")}} color components). A _fragment_ refers to the pixel while it is being handled by the {{Glossary("WebGL")}} pipeline.
+This is a good opportunity to talk about the difference between pixels and _fragments_. A pixel is a picture element (in practice, a point) on the screen, or a single element of the drawing buffer, that area in memory that holds your pixel data (such as {{Glossary("RGB")}} color components). A _fragment_ refers to the pixel while it is being handled by the {{Glossary("WebGL")}} pipeline.
 
 The reason for this distinction is that fragment color (and other fragment values, such as depth) may be manipulated and changed several times during graphics operations before finally being written to the screen. We have already seen how fragment color changes during graphics operations, by applying {{domxref("WebGLRenderingContext.colorMask()","color masking", "", 1)}}. In other cases, the fragments may be discarded altogether (so the pixel value is not updated), or it may interact with the already existing pixel value (such as when doing color blending for non-opaque elements in the scene).
 
@@ -62,9 +62,8 @@ window.addEventListener(
     const gl =
       canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
     if (!gl) {
-      paragraph.innerHTML =
-        "Failed to get WebGL context. " +
-        "Your browser or device may not support WebGL.";
+      paragraph.textContent =
+        "Failed to get WebGL context. Your browser or device may not support WebGL.";
       return;
     }
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
@@ -84,4 +83,4 @@ window.addEventListener(
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/basic-scissoring).
 
-{{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Color_masking","Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}

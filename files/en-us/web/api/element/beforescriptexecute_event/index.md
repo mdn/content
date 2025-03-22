@@ -4,13 +4,15 @@ short-title: beforescriptexecute
 slug: Web/API/Element/beforescriptexecute_event
 page-type: web-api-event
 status:
+  - deprecated
   - non-standard
 browser-compat: api.Element.beforescriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
 
-> **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.
+> [!WARNING]
+> This event was a proposal in an early version of the specification. Do not rely on it.
 
 The **`beforescriptexecute`** event is fired when a script is about to be executed. Cancelling the event prevents the script from executing.
 

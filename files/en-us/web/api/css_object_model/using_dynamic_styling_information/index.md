@@ -16,32 +16,27 @@ To get to the `style` objects from the `document`, you can use the {{domxref("Do
 
 ## Modify a stylesheet rule with CSSOM
 
-In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.
+In this example the background of the page is set to `red` using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to `cornflowerblue`.
 
-```html
-<html lang="en">
-  <head>
-    <title>Modifying a stylesheet rule with CSSOM</title>
-    <style>
-      body {
-        background-color: red;
-      }
-    </style>
-    <script>
-      const stylesheet = document.styleSheets[0];
-      stylesheet.cssRules[0].style.backgroundColor = "aqua";
-    </script>
-  </head>
-  <body>
-    The stylesheet declaration for the body's background color is modified via
-    JavaScript.
-  </body>
-</html>
+```html live-sample___modify-rule
+<p>The stylesheet declaration for the body is modified via JavaScript.</p>
 ```
 
-### Result
+```css live-sample___modify-rule
+body {
+  background-color: red;
+  font: 1.2em / 1.5 sans-serif;
+  color: white;
+  padding: 1em;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/cssom/modify-rule.html", '100%', 120)}}
+```js live-sample___modify-rule
+const stylesheet = document.styleSheets[1];
+stylesheet.cssRules[0].style.backgroundColor = "cornflowerblue";
+```
+
+{{EmbedLiveSample("modify-rule")}}
 
 The list of properties available in the DOM from the `style` property is given on the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference) page.
 
@@ -49,7 +44,7 @@ To modify styles to a document using CSS syntax, one can insert rules or insert 
 
 ## Modify an element's style
 
-The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
+The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., accessing `element.style.color` on an element defined as `<td style="background-color: lightblue">` returns the string `""`, even though the element may have a `color` declared via a stylesheet).
 
 Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the `border` property, for example, will override settings made elsewhere for that element's `border` property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.
 

@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Color_masking
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Simple_color_animation","Learn/WebGL/By_example/Basic_scissoring")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}
 
 This WebGL example modifies random colors by applying color masking to limit the range of displayed colors to specific shades.
 
@@ -83,17 +83,17 @@ window.addEventListener(
     const timer = setInterval(drawAnimation, 1000);
 
     const mask = [true, true, true];
-    const redtoggle = document.querySelector("#red-toggle");
-    const greentoggle = document.querySelector("#green-toggle");
-    const bluetoggle = document.querySelector("#blue-toggle");
-    redtoggle.addEventListener("click", setColorMask, false);
-    greentoggle.addEventListener("click", setColorMask, false);
-    bluetoggle.addEventListener("click", setColorMask, false);
+    const redToggle = document.querySelector("#red-toggle");
+    const greenToggle = document.querySelector("#green-toggle");
+    const blueToggle = document.querySelector("#blue-toggle");
+    redToggle.addEventListener("click", setColorMask, false);
+    greenToggle.addEventListener("click", setColorMask, false);
+    blueToggle.addEventListener("click", setColorMask, false);
 
     function setColorMask(evt) {
       const index =
-        (evt.target === greentoggle && 1) ||
-        (evt.target === bluetoggle && 2) ||
+        (evt.target === greenToggle && 1) ||
+        (evt.target === blueToggle && 2) ||
         0;
       mask[index] = !mask[index];
       evt.target.textContent = mask[index] ? "On" : "Off";
@@ -117,4 +117,4 @@ window.addEventListener(
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/color-masking).
 
-{{PreviousNext("Learn/WebGL/By_example/Simple_color_animation","Learn/WebGL/By_example/Basic_scissoring")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}

@@ -113,7 +113,7 @@ The `loadDictionaryForLanguage()` function starts by using
 `getDirectory()` to obtain the {{domxref("FileSystemDirectoryEntry")}} object
 representing a subfolder named "Dictionaries" located inside the specified app data
 directory. The success callback for this takes the resulting directory entry object and
-calls {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}} to get a
+calls `getFile()` to get a
 {{domxref("FileSystemFileEntry")}} object representing the dictionary file; the success
 callback for this, in turn, creates a new {{domxref("FileReader")}} and uses it to load
 the contents of the file. When that is loaded successfully (as indicated by the
@@ -131,5 +131,4 @@ the contents of the file. When that is loaded successfully (as indicated by the
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemFileEntry")}}

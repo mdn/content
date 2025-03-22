@@ -2,7 +2,7 @@
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 page-type: web-api-interface
-browser-compat: api.DOMHighResTimestamp
+spec-urls: https://w3c.github.io/hr-time/#dom-domhighrestimestamp
 ---
 
 {{APIRef("Performance API")}}
@@ -34,6 +34,10 @@ These headers ensure a top-level document does not share a browsing context grou
 cross-origin documents. COOP process-isolates your document and potential attackers
 can't access to your global object if they were opening it in a popup, preventing a set
 of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 

@@ -10,7 +10,8 @@ browser-compat: api.AnimationEffect.getTiming
 
 The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} interface returns an object containing the timing properties for the Animation Effect.
 
-> **Note:** Several of the timing properties returned by `getTiming()` may take on the placeholder value `"auto"`. To obtain resolved values for use in timing computations, instead use {{domxref("AnimationEffect.getComputedTiming()")}}.
+> [!NOTE]
+> Several of the timing properties returned by `getTiming()` may take on the placeholder value `"auto"`. To obtain resolved values for use in timing computations, instead use {{domxref("AnimationEffect.getComputedTiming()")}}.
 >
 > In the future, `"auto"` or similar values might be added to the types of more timing properties, and new types of {{domxref("AnimationEffect")}} might resolve `"auto"` to different values.
 
@@ -68,7 +69,7 @@ An object containing the following properties:
 
 - `fill`
 
-  - : `"none"`, `"forwards"`, `"backwards"`, "`both`", or `"auto"`.
+  - : `"none"`, `"forwards"`, `"backwards"`, `"both"`, or `"auto"`.
 
     Indicates whether the effect is reflected by its target(s) prior to playing
     (`"backwards"`), retained after the effect has completed (`"forwards"`), `"both"`, or

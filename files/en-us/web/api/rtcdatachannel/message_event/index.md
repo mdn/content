@@ -8,9 +8,10 @@ browser-compat: api.RTCDataChannel.message_event
 
 {{APIRef("WebRTC")}}
 
-The WebRTC **`message`** event is sent to the {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.
+The WebRTC **`message`** event is sent to the `onmessage` event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.
 
-> **Note:** The `message` event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.
+> [!NOTE]
+> The `message` event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.
 
 This event is not cancelable and does not bubble.
 
@@ -63,9 +64,9 @@ dc.addEventListener(
 );
 ```
 
-Lines 2-4 create the new paragraph element and add the message data to it as a new text node. Line 6 appends the new paragraph to the end of the document's body.
+We first create the new paragraph element and add the message data to it as a new text node. Then we append the new paragraph to the end of the document's body.
 
-You can also use an `RTCDataChannel` object's {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler property to set the event handler:
+You can also use an `RTCDataChannel` object's `onmessage` event handler property to set the event handler:
 
 ```js
 dc.onmessage = (event) => {

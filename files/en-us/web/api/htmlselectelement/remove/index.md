@@ -19,8 +19,9 @@ remove(index)
 
 ### Parameters
 
-- `index` is a zero-based long for the index of the {{ domxref("HTMLOptionElement") }}
-  to remove from the collection. If the index is not found the method has no effect.
+- `index`
+  - : A zero-based integer for the index of the {{ domxref("HTMLOptionElement") }}
+    to remove from the collection. If the index is not found the method has no effect.
 
 ### Return value
 

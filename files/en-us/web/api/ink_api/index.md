@@ -19,15 +19,16 @@ Pointers events are usually sent first to the browser process, which then forwar
 
 The Ink API significantly reduces this latency by allowing browsers to bypass the JavaScript event loop entirely. Where possible, browsers will pass such rendering instructions directly to OS-level compositors. If the underlying operating system does not have a specialized OS-level compositor to use for this purpose, browsers will use their own optimized rendering code. This is not as powerful as a compositor, but it still confers some improvements.
 
-> **Note:** Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
+> [!NOTE]
+> Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
 
-The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
+The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with a {{domxref("DelegatedInkTrailPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
 
 ## Interfaces
 
-- {{domxref("Ink")}}
-  - : Provides access to {{domxref("InkPresenter")}} objects for the application to use to render the strokes.
-- {{domxref("InkPresenter")}}
+- {{domxref("Ink")}} {{Experimental_Inline}}
+  - : Provides access to {{domxref("DelegatedInkTrailPresenter")}} objects for the application to use to render the strokes.
+- {{domxref("DelegatedInkTrailPresenter")}} {{Experimental_Inline}}
   - : Instructs the OS-level compositor to render ink strokes between pointer event dispatches.
 
 ### Extensions to other interfaces
@@ -41,7 +42,7 @@ The entry point is the {{domxref("Navigator.ink")}} property, which returns an {
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("DelegatedInkTrailPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("DelegatedInkTrailPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
@@ -95,7 +96,7 @@ canvas.addEventListener("pointermove", async (evt) => {
       `rgb(${r} ${g} ${b} / 60%)`;
   }
   move_cnt += 1;
-  await presenter.updateInkTrailStartPoint(evt, style);
+  (await presenter).updateInkTrailStartPoint(evt, style);
 });
 
 window.addEventListener("pointerdown", () => {

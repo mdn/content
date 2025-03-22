@@ -20,7 +20,8 @@ The larger this value is, the more preferable the remote peer considers this can
 
 `priority` is initialized to `null` if it is not specified in the `candidate`, or if the `candidate` string can't be parsed properly.
 
-> **Note:** If `priority` is `null`, passing the
+> [!NOTE]
+> If `priority` is `null`, passing the
 > candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
 > will fail, throwing an `OperationError` exception. This applies only if the
 > candidate implements the `priority` property.

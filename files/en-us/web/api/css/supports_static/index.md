@@ -40,17 +40,19 @@ The second syntax takes one parameter matching the condition of
 
 ## Examples
 
+In the following examples, `result` is a boolean value indicating if the browser supports the given CSS feature.
+
 ```js
 result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
-
+result = CSS.supports("selector(:has(a))");
 result = CSS.supports(
   "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)",
 );
-
-// result is true or false
 ```
+
+For more examples and syntax features, see the {{cssxref("@supports")}} at-rule.
 
 ## Specifications
 

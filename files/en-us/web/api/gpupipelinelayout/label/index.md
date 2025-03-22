@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUPipelineLayout.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUPipelineLayout")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -30,9 +30,9 @@ const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
 });
 
-pipelineLayout.label = "mypipelinelayout";
+pipelineLayout.label = "my_pipeline_layout";
 
-console.log(pipelineLayout.label); // "mypipelinelayout";
+console.log(pipelineLayout.label); // "my_pipeline_layout"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createPipelineLayout()")}} call, and then getting it via `GPUPipelineLayout.label`:
@@ -42,10 +42,10 @@ Setting a label via the originating {{domxref("GPUDevice.createPipelineLayout()"
 
 const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
-  label: "mypipelinelayout",
+  label: "my_pipeline_layout",
 });
 
-console.log(pipelineLayout.label); // "mypipelinelayout";
+console.log(pipelineLayout.label); // "my_pipeline_layout"
 ```
 
 ## Specifications

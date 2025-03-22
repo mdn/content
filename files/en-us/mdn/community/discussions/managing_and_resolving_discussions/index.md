@@ -2,9 +2,8 @@
 title: Managing and resolving discussions
 slug: MDN/Community/Discussions/Managing_and_resolving_discussions
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The MDN community is encouraged to [initiate and engage in discussions](/en-US/docs/MDN/Community/Discussions) related to the MDN Web Docs documentation. Some discussions don't need a resolution or agreement, but if they do, it is natural for those starting the discussion to expect their proposed ideas to reach a logical conclusion. Most of these discussions reach a broad agreement quickly. However, some discussions risk becoming stalled due to an unclear path to a resolution, often because of differing opinions. This document offers guidelines; suggesting processes and strategies to help you move toward a resolution within a reasonable timeframe without the conversation getting stalled.
 
@@ -49,7 +48,7 @@ Every discussion will have a different timeline depending on the complexity of t
 8. During the second month, keep reaching out the community for feedback on the proposed plan, making updates to the plan in light of any new feedback. Rinse. Repeat.
 9. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements (as captured in the discussion thread).
 10. Keep the discussion threads alive during the second month as you work with the community towards the resolution.
-11. [Create the issue](/en-US/docs/MDN/Community/Issues) for the resolution implementation plan and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue?))
+11. [Create the issue](/en-US/docs/MDN/Community/Issues) for the resolution implementation plan and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue))
 12. Close the discussion.
 
 If the discussion involves reaching out to and receiving feedback from experts, the timeline above can be extended as needed.

@@ -67,4 +67,4 @@ console.log(
 ## See also
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)

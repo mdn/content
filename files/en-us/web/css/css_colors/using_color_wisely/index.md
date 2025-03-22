@@ -32,7 +32,8 @@ Many of these tools can also apply filters to your palette so you can see what t
 
 When designing your palette, you'll probably also need to supplement it with some core neutral colors such as white (or nearly white), black (or nearly black), and one or more shades of gray.
 
-> **Note:** Usually, you are better off using the smallest number of colors possible. Using color to highlight important content rather than adding color to everything will have more impact and your content will be more readable.
+> [!NOTE]
+> Usually, you are better off using the smallest number of colors possible. Using color to highlight important content rather than adding color to everything will have more impact and your content will be more readable.
 
 ## Color theory resources
 
@@ -47,17 +48,17 @@ A full review of color theory is beyond the scope of this article, however, ther
 
 Make sure your content is [accessible](/en-US/docs/Web/Accessibility). There are several ways color can create an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem or a lawsuit. So it's important to consider your use of color carefully.
 
-It's important to [understand color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) and to always consider [color blindness](https://medlineplus.gov/colorblindness.html) and [vestibular disorders](/en-US/docs/Web/Accessibility/Seizure_disorders). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from an inability to tell the difference between certain colors to the total inability to see color at all. There are even color and animation combinations that can lead your photosensitive users to experience [seizures](/en-US/docs/Web/Accessibility/Seizure_disorders#colors).
+It's important to [understand color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance) and to always consider [color blindness](https://medlineplus.gov/colorblindness.html) and [vestibular disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from an inability to tell the difference between certain colors to the total inability to see color at all. There are even color and animation combinations that can lead your photosensitive users to experience [seizures](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#colors).
 
-While higher [color contrast](https://digital.gov/guides/accessibility-for-teams/visual-design/#color-and-contrast) is often a good thing when it comes to accessibility, when animating, especially rapidly, [reducing color contrast](/en-US/docs/Web/Accessibility/Seizure_disorders#reduce_contrast) on animating elements reduces seizure risk. If you include animations, use the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) {{cssxref("@media")}} query feature to reduce animations for users who have selected that preference.
+While higher [color contrast](https://digital.gov/guides/accessibility-for-teams/visual-design/#color-and-contrast) is often a good thing when it comes to accessibility, when animating, especially rapidly, [reducing color contrast](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#reduce_contrast) on animating elements reduces seizure risk. If you include animations, use the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) {{cssxref("@media")}} query feature to reduce animations for users who have selected that preference.
 
-That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) between your background and foreground content to ensure legibility. Also, never use color as the only way to convey information. If, for example, you indicate the success of an operation with a green border around the associated UI element, and failure with a red border, users with red-green color blindness won't be able to use your site properly. Instead, use text and color indicators together to include those users. For example, a green check mark and a red cross mark would be better.
+That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) between your background and foreground content to ensure legibility. Also, never use color as the only way to convey information. If, for example, you indicate the success of an operation with a green border around the associated UI element, and failure with a red border, users with red-green color blindness won't be able to use your site properly. Instead, use text and color indicators together to include those users. For example, a green check mark and a red cross mark would be better.
 
 ## Palette design example
 
 In this example, we will create an appropriate color palette for a website for a game that takes place on the planet Mars. A [Google search for photos of Mars](https://www.google.com/search?q=Mars&tbm=isch) will output several color photos.
 
-Use a color picker tool to select a color sample for the base color. For this example, we've selected `#D79C7A`, which is a rusty orange-red color. We can use [Paletton](https://www.paletton.com/) to come up with the other colors for our palette. . Upon opening Paletton, we see:
+Use a color picker tool to select a color sample for the base color. For this example, we've selected `#D79C7A`, which is a rusty orange-red color. We can use [Paletton](https://www.paletton.com/) to come up with the other colors for our palette. Upon opening Paletton, we see:
 
 ![Right after loading Paletton.](paletton1.png)
 
@@ -69,7 +70,7 @@ We now see a monochromatic palette based on the color we picked from the Mars ph
 
 ![Now with complementary colors included.](paletton3.png)
 
-If the proposed color doesn't work for your needs, you can change the color scheme. For example, if the proposed greenish-blue color doesn't work, select the Triad color scheme icon, which results in the the following:
+If the proposed color doesn't work for your needs, you can change the color scheme. For example, if the proposed greenish-blue color doesn't work, select the Triad color scheme icon, which results in the following:
 
 ![Triad color scheme selected](paletton4.png)
 
@@ -77,7 +78,7 @@ Click on the greyish blue in the top-right. The color is `#556E8D`. This can be 
 
 ![Triad color scheme selected](paletton-color-detail.png)
 
-Now we have our base color and our accent. We also have a few complementary shades of both, which can be used to create gradients gradients or as an accent color to indicate focus, such as for link hover states. The colors can be exported in several formats for you to use.
+Now we have our base color and our accent. We also have a few complementary shades of both, which can be used to create gradients or as an accent color to indicate focus, such as for link hover states. The colors can be exported in several formats for you to use.
 
 You should also select neutral colors. Find a color that provides enough contrast for your text to be crisp and readable while ensuring it isn't harsh for the eyes. If the contrast is too low, your text will be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.
 
@@ -93,7 +94,8 @@ The default value of `print-color-adjust: economy`, indicates that the browser i
 You can set `print-color-adjust: exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are.
 With this set, the browser won't tamper with the appearance of the element on which this value is applied, and will draw it as indicated by your CSS.
 
-> **Note:** There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
+> [!NOTE]
+> There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
 > If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `print-color-adjust`.
 
 ## See also
@@ -102,6 +104,6 @@ With this set, the browser won't tamper with the appearance of the element on wh
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Paletton](https://paletton.com/)

@@ -17,7 +17,8 @@ attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whet
 not translucency will be a factor. If the canvas knows there's no translucency, painting
 performance can be optimized.
 
-> **Note:** This has been standardized as setting the `alpha` option to
+> [!NOTE]
+> This has been standardized as setting the `alpha` option to
 > `false` when creating a drawing context with
 > {{domxref("HTMLCanvasElement.getContext()")}}. Use of `mozOpaque` should be
 > avoided. Firefox will stop supporting it in the future.

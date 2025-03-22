@@ -33,7 +33,7 @@ A {{jsxref('Promise')}} that resolves with an instance of
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the call is blocked by a [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if the call is blocked by a [permission policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Examples
 
@@ -55,3 +55,7 @@ keyboard.getLayoutMap().then((keyboardLayoutMap) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Intl")}}

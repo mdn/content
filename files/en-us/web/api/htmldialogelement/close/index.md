@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
-From there you can click the _X_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit button.
+From there you can click the _X_ button to close the dialog (via the `HTMLDialogElement.close()` method), or submit the form via the submit button.
 
 ```html
 <!-- Simple pop-up dialog box, containing a form -->

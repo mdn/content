@@ -104,6 +104,7 @@ resolve("hello");
 ## See also
 
 - [Polyfill of `Promise.withResolvers` in `core-js`](https://github.com/zloirock/core-js#promisewithresolvers)
+- [es-shims polyfill of `Promise.withResolvers`](https://www.npmjs.com/package/promise.withresolvers)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - {{jsxref("Promise")}}
 - [`Promise()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)

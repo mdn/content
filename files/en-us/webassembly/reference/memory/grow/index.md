@@ -7,16 +7,37 @@ browser-compat:
   - webassembly.api.Memory.grow
   - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`grow`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) increases the size of the memory instance by a specified number of pages.
 
 The instruction adds the previous size of memory (in pages) to the top of the stack if the operation was successful, or `-1` if the operation failed.
 Currently each page is 64KiB.
 
-{{EmbedInteractiveExample("pages/wat/grow.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: grow", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (memory 1 2) ;; start with one memory page, and max of 2 pages
+  (func $main
+
+    ;; grow memory by 1 page
+    ;; grow returns in 1 for success and -1 for failure
+    ;; will fail if you change to more more than 1 page
+    (memory.grow (i32.const 1))
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
@@ -159,7 +180,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** `grow` support in Wasm modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/grow) API.
+> **Note:** `grow` support in Wasm modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `grow` can be used with a specified memory.
 
 {{Compat}}

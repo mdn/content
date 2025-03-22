@@ -19,7 +19,8 @@ When this extension is enabled:
   (see method list below).
 - The `gl_DrawID` built-in is added to the shading language.
 
-> **Note:** This extension is available to both,
+> [!NOTE]
+> This extension is available to both,
 > {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} and
 > {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
 >

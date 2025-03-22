@@ -84,5 +84,5 @@ editor.oncut = preventCut;
 ## See also
 
 - Related events
-  - {{domxref("HTMLElement.copy_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxref("HTMLElement.copy_event", "copy")}} event
+  - {{domxref("HTMLElement.paste_event", "paste")}} event

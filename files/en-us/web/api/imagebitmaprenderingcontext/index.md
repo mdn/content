@@ -11,6 +11,11 @@ The **`ImageBitmapRenderingContext`** interface is a canvas rendering context th
 
 This interface is available in both the window and the [worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
+## Instance properties
+
+- {{domxref("ImageBitmapRenderingContext.canvas")}} {{ReadOnlyInline}}
+  - : A read-only reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object that is associated with the given context.
+
 ## Instance methods
 
 - {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}

@@ -33,10 +33,12 @@ None.
 
 ## Examples
 
-In this example, we pass the ID of an input element, and set different error messages
-depending on whether the value is missing, too low or too high. Additionally you
-_must_ call the [reportValidity](/en-US/docs/Web/API/HTMLFormElement/reportValidity)
-method on the same element or nothing will happen.
+In this example, we pass the ID of an input element and set different error
+messages depending on whether the value is missing, too low, or too high. Note
+that the message will not be displayed immediately. Attempting to submit the
+form will display the message, or you can call the
+[`reportValidity()`](/en-US/docs/Web/API/HTMLInputElement/reportValidity) method
+on the element.
 
 ```js
 function validate(inputID) {

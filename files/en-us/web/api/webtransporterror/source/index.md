@@ -17,7 +17,7 @@ An enumerated value; can be either `stream` or `session`.
 ## Examples
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

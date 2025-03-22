@@ -7,13 +7,14 @@ browser-compat: css.types.time
 
 {{CSSRef}}
 
-The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
+The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
 
 ## Syntax
 
 The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. Optionally, it may be preceded by a single `+` or `-` sign. As with all dimensions, there is no space between the unit literal and the number.
 
-> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0s` or `0ms`.
+> [!NOTE]
+> Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0s` or `0ms`.
 
 ### Units
 
@@ -22,7 +23,8 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 - `ms`
   - : Represents a time in milliseconds. Examples: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Note:** Conversion between `s` and `ms` follows the logical `1s` = `1000ms`.
+> [!NOTE]
+> Conversion between `s` and `ms` follows the logical `1s` = `1000ms`.
 
 ## Examples
 
@@ -56,4 +58,4 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 ## See also
 
 - {{cssxref("&lt;time-percentage&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

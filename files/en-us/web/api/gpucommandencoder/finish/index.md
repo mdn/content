@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.finish
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`finish()`** method of the
 {{domxref("GPUCommandEncoder")}} interface completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
@@ -37,7 +37,7 @@ The following criteria must be met when calling **`finish()`**, otherwise a {{do
 
 - There are no active debug groups (i.e. started via {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 - The {{domxref("GPUCommandEncoder")}} is in an open state — this means that:
-  - There are no child {{domxref("GPUComputePassEncoder")}} or {{domxref("GPURenderPassEncoder")}}s active that have not been `end()`ed.
+  - There are no child {{domxref("GPUComputePassEncoder")}} or {{domxref("GPURenderPassEncoder")}}s active that have not been ended (by calling `end()`).
   - The {{domxref("GPUCommandEncoder")}} has not already had `finish()` called on it (in which case it cannot be used to encode any more commands).
 
 ## Examples

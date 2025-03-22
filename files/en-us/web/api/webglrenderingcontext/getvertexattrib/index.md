@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getVertexAttrib
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getVertexAttrib()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about a vertex

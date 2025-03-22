@@ -62,7 +62,8 @@ let erasing = browser.downloads.erase({
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onErased) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onErased) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

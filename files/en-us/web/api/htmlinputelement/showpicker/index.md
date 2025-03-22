@@ -60,7 +60,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 This example shows how this feature can be used for `color` and `file` input pickers.
 
-> **Note:** Pickers for `date`, `datetime-local`, `month`, `time`, `week` are launched in the same way.
+> [!NOTE]
+> Pickers for `date`, `datetime-local`, `month`, `time`, `week` are launched in the same way.
 > They cannot be shown here because live examples run in a cross-origin frame, and would cause a [`SecurityError`](#securityerror)
 
 #### HTML
@@ -88,7 +89,7 @@ document.querySelectorAll("button").forEach((button) => {
     try {
       input.showPicker();
     } catch (error) {
-      window.alert(error);
+      console.log(error);
     }
   });
 });

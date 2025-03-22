@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getShaderInfoLog
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLRenderingContext.getShaderInfoLog** returns the information log
 for the specified {{domxref("WebGLShader")}} object. It contains warnings, debugging and

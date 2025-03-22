@@ -13,7 +13,9 @@ operation's data (as a {{domxref("DataTransfer")}} object).
 
 ## Value
 
-A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data")}}.
+A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data", "", 1)}}.
+
+The property can be `null` when the event is created using the constructor. It is never `null` when dispatched by the browser.
 
 ## Examples
 

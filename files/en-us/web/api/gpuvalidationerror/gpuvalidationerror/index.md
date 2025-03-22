@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUValidationError.GPUValidationError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUValidationError()`** constructor creates a new
 {{domxref("GPUValidationError")}} object instance.

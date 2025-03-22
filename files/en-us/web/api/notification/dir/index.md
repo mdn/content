@@ -21,7 +21,8 @@ A string specifying the text direction. Possible values are:
 - `rtl`
   - : right to left.
 
-> **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
+> [!NOTE]
+> Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 
 ## Examples
 

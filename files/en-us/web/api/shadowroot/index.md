@@ -21,9 +21,9 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Add an array of constructed stylesheets to be used by the shadow DOM subtree.
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
-  - : Returns a boolean that indicates whether the shadow root is clonable, which can be set via the {{domxref("Element.attachShadow()")}} `clonable` option.
+  - : A boolean that indicates whether the shadow root is clonable.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
-  - : Returns a boolean that indicates whether `delegatesFocus` was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
+  - : A boolean that indicates whether the shadow root delegates focus if a non-focusable node is selected.
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this shadow tree.
 - {{domxref("ShadowRoot.host")}} {{ReadOnlyInline}}
@@ -38,6 +38,10 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
+  - : A boolean that indicates whether the shadow root is serializable.
+    A serializable shadow root inside an element will be serialized by {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} when its [`options.serializableShadowRoots`](/en-US/docs/Web/API/Element/getHTML#serializableshadowroots) parameter is set `true`.
+    This is set when the shadow root is created.
 - {{DOMxRef("ShadowRoot.slotAssignment")}} {{ReadOnlyInline}}
   - : Returns a string containing the type of slot assignment, either `manual` or `named`.
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
@@ -53,6 +57,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
+- {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](#shadowroot.innerhtml).
 
 ## Events
 

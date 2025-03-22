@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextEncoder.encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextEncoder.encoding`** read-only property returns a string containing the name of the encoding algorithm used by the specific encoder.
 

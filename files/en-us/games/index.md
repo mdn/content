@@ -14,7 +14,8 @@ Welcome to the MDN game development center! In this area of the site, we provide
 
 We've also included a reference section so you can easily find information about all the most common APIs used in game development.
 
-> **Note:** Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learning Area](/en-US/docs/Learn) is a good place to go to get started with the basics.
+> [!NOTE]
+> Creating games on the web draws on a number of core web technologies such as HTML, CSS, and JavaScript. The [Learn web development](/en-US/docs/Learn_web_development) section is a good place to go to get started with the basics.
 
 ## Port native games to the Web
 

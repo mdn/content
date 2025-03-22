@@ -8,10 +8,7 @@ browser-compat: api.IDBDatabase.transaction
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately
-returns a transaction object ({{domxref("IDBTransaction")}}) containing the
-{{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
-object store.
+The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately returns a transaction object ({{domxref("IDBTransaction")}}) containing the {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your object store.
 
 ## Syntax
 
@@ -25,8 +22,7 @@ transaction(storeNames, mode, options)
 
 - `storeNames`
 
-  - : The names of object stores that are in the scope of the new transaction, declared as
-    an array of strings. Specify only the object stores that you need to access.
+  - : The names of object stores that are in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access.
     If you need to access only one object store, you can specify its name as a string.
     Therefore the following lines are equivalent:
 
@@ -35,8 +31,7 @@ transaction(storeNames, mode, options)
     db.transaction("my-store-name");
     ```
 
-    If you need to access all object stores in the database, you can use the property
-    {{domxref("IDBDatabase.objectStoreNames")}}:
+    If you need to access all object stores in the database, you can use the property {{domxref("IDBDatabase.objectStoreNames")}}:
 
     ```js
     const transaction = db.transaction(db.objectStoreNames);
@@ -46,53 +41,35 @@ transaction(storeNames, mode, options)
 
 - `mode` {{optional_inline}}
 
-  - : The types of access that can be performed in the transaction. Transactions are
-    opened in one of three modes: `readonly`, `readwrite` and
-    `readwriteflush` (non-standard, Firefox-only.) `versionchange`
-    mode can't be specified here. If you don't provide the parameter, the default access
-    mode is `readonly`. To avoid slowing things down, don't open a
-    `readwrite` transaction unless you actually need to write into the
-    database.
+  - : The types of access that can be performed in the transaction.
+    Transactions are opened in one of three modes:
 
-    If you need to open the object store in `readwrite` mode to change data,
-    you would use the following:
-
-    ```js
-    const transaction = db.transaction("my-store-name", "readwrite");
-    ```
-
-    As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
-    increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702)), which is the same behavior as other
-    IndexedDB-supporting browsers. Previously in a `readwrite` transaction, a
-    {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed
-    to have been flushed to disk. In Firefox 40+ the `complete` event is
-    fired after the OS has been told to write the data but potentially before that data
-    has actually been flushed to disk. The `complete` event may thus be
-    delivered quicker than before, however, there exists a small chance that the entire
-    transaction will be lost if the OS crashes or there is a loss of system power before
-    the data is flushed to disk. Since such catastrophic events are rare most consumers
-    should not need to concern themselves further.
-
-    > **Note:** In Firefox, if you wish to ensure durability for some
-    > reason (e.g. you're storing critical data that cannot be recomputed later) you can
-    > force a transaction to flush to disk before delivering the `complete`
-    > event by creating a transaction using the experimental (non-standard)
-    > `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.)
-    > This is currently experimental, and can only be used if the
-    > `dom.indexedDB.experimental` pref is set to `true` in
-    > `about:config`.
+    - `readonly`
+      - : Open a transaction for reading from an object store. This is the default mode.
+    - `readwrite`
+      - : Open a transaction for both reading and writing from an object store.
+        This should only be used if need to write into the database.
+    - `readwriteflush` {{non-standard_inline}} {{experimental_inline}}
+      - : Force a transaction to flush to disk before delivering the `complete` event.
+        This might be used for storing critical data that cannot be recomputed later.
 
 - `options` {{optional_inline}}
 
-  - : Dictionary of other options. Available options are:
+  - : Object defining additional options, including:
 
     - `durability`
-      - : `"default"`, `"strict"`, or
-        `"relaxed"`. The default is `"default"`. Using
-        `"relaxed"` provides better performance, but with fewer guarantees. Web
-        applications are encouraged to use `"relaxed"` for ephemeral data such
-        as caches or quickly changing records, and `"strict"` in cases where
-        reducing the risk of data loss outweighs the impact to performance and power.
+
+      - : One of the three string-literal values below:
+
+        - `"strict"`
+          - : The user agent may consider that the transaction has successfully committed only after verifying that all outstanding changes have been successfully written to a persistent storage medium.
+            This is recommended where the risk of data loss outweighs the impact of its use on performance and power (compared to `relaxed`).
+        - `"relaxed"`
+          - : The user agent may consider that the transaction has successfully committed as soon as all outstanding changes have been written to the operating system, without subsequent verification.
+            This offers better performance than `strict`, and is recommended for ephemeral data such as caches or quickly changing records.
+        - `"default"`
+          - : The user agent should use its default durability behavior for the storage bucket.
+            This is the default for transactions if not otherwise specified.
 
 ### Return value
 
@@ -111,9 +88,8 @@ An {{domxref("IDBTransaction")}} object.
 
 ## Examples
 
-In this example we open a database connection, then use transaction() to open a
-transaction on the database. For a complete example, see our
-[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+In this example we open a database connection, then use transaction() to open a transaction on the database.
+For a complete example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 let db;
@@ -122,7 +98,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -138,13 +115,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = (event) => {
-  note.innerHTML +=
-    "<li>Transaction completed: database modification finished.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction completed: database modification finished.";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML +=
-    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction not opened due to error. Duplicate items not allowed.";
 };
 
 // you would then go on to do something to this database

@@ -30,7 +30,7 @@ _No changes._
 
 #### Removals
 
-- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
+- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
 
 ### SVG
 
@@ -68,7 +68,7 @@ _No changes._
 
 ### HTTP
 
-- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
+- The [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) header is now enabled by default ([bug 1602363](https://bugzil.la/1602363)).
 
 ### Security
 
@@ -90,7 +90,7 @@ _No changes._
 ### API changes
 
 - Shortcut keys can now be unassigned in {{WebExtAPIRef("Commands.update")}} by passing an empty value of `shortcut` [Firefox bug 1475043](https://bugzil.la/1475043).
-- `urlclassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webrequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
+- `urlClassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webRequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
 
 ### Manifest changes
 

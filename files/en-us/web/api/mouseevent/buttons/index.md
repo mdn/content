@@ -14,8 +14,9 @@ Each button that can be pressed is represented by a given number (see below).
 If more than one button is pressed, the button values are added together to produce a new number.
 For example, if the secondary (`2`) and auxiliary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
 
-> **Note:** Do not confuse this property with the {{domxref("MouseEvent.button")}} property.
-> The {{domxref("MouseEvent.buttons")}} property indicates the state of buttons pressed during any kind of mouse event,
+> [!NOTE]
+> Do not confuse this property with the {{domxref("MouseEvent.button")}} property.
+> The `MouseEvent.buttons` property indicates the state of buttons pressed during any kind of mouse event,
 > while the {{domxref("MouseEvent.button")}} property only guarantees the correct value for mouse events caused by pressing or releasing one or multiple buttons.
 
 ## Value
@@ -39,23 +40,34 @@ This example logs the `buttons` property when you trigger a {{domxref("Element/m
 
 ```html
 <p>Click anywhere with one or more mouse buttons.</p>
-<pre id="log">buttons: </pre>
+<pre id="log">[No clicks yet]</pre>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.createTextNode("?"); // let log = new Text('?');
+const buttonNames = ["left", "right", "wheel", "back", "forward"];
+function mouseButtonPressed(event, buttonName) {
+  // Use binary `&` with the relevant power of 2 to check if a given button is pressed
+  return Boolean(event.buttons & (1 << buttonNames.indexOf(buttonName)));
+}
 
-function logButtons(e) {
-  log.data = `${e.buttons} (${e.type})`; // log.nodeValue= `${e.buttons} (${e.type})`;
+function format(event) {
+  const { type, buttons } = event;
+  const obj = { type, buttons };
+  for (const buttonName of buttonNames) {
+    obj[buttonName] = mouseButtonPressed(event, buttonName);
+  }
+  return JSON.stringify(obj, null, 2);
+}
+
+const log = document.getElementById("log");
+function logButtons(event) {
+  log.textContent = format(event);
 }
 
 document.addEventListener("mouseup", logButtons);
 document.addEventListener("mousedown", logButtons);
-// document.addEventListener('mousemove', logButtons);
-
-document.querySelector("#log").appendChild(log);
 ```
 
 ### Result

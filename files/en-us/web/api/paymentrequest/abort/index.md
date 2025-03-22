@@ -60,7 +60,3 @@ const paymentTimeout = setTimeout(
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref('PaymentRequest.abort','PaymentRequest.abort()')}}

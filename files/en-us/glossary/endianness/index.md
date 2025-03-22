@@ -26,4 +26,5 @@ The typed arrays guide provides an example that [converts any number to its bina
 - {{jsxref("DataView")}}
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Endianness](https://en.wikipedia.org/wiki/Endianness) (Wikipedia)
-- {{Glossary("Data structure")}} (Glossary)
+- Related glossary terms:
+  - {{Glossary("Data structure")}}

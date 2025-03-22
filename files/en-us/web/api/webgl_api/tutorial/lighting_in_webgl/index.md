@@ -33,7 +33,8 @@ Then we update the vertex shader to adjust the color of each vertex, taking into
 
 The first thing we need to do is generate the array of normals for all the vertices that comprise our cube. Since a cube is a very simple object, this is easy to do; obviously for more complex objects, calculating the normals will be more involved.
 
-> **Note:** Add this function to your "init-buffer.js" module:
+> [!NOTE]
+> Add this function to your "init-buffer.js" module:
 
 ```js
 function initNormalBuffer(gl) {
@@ -74,7 +75,8 @@ This should look pretty familiar by now; we create a new buffer, bind it to be t
 
 As before, we have updated `initBuffers()` to call our new function, and to return the buffer it created.
 
-> **Note:** At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
+> [!NOTE]
+> At the end of your `initBuffers()` function, add the following code, replacing the existing `return` statement:
 
 ```js
 const normalBuffer = initNormalBuffer(gl);
@@ -89,7 +91,8 @@ return {
 
 Then we add the code to the "draw-scene.js" module to bind the normals array to a shader attribute so the shader code can get access to it.
 
-> **Note:** Add this function to your "draw-scene.js" module:
+> [!NOTE]
+> Add this function to your "draw-scene.js" module:
 
 ```js
 // Tell WebGL how to pull out the normals from
@@ -113,7 +116,8 @@ function setNormalAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **Note:** Add this line to the `drawScene()` function of your "draw-scene.js" module, just before the `gl.useProgram()` line:
+> [!NOTE]
+> Add this line to the `drawScene()` function of your "draw-scene.js" module, just before the `gl.useProgram()` line:
 
 ```js
 setNormalAttribute(gl, buffers, programInfo);
@@ -121,7 +125,8 @@ setNormalAttribute(gl, buffers, programInfo);
 
 Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a **normal matrix**, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source.
 
-> **Note:** Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the three `mat4.rotate()` calls:
+> [!NOTE]
+> Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the three `mat4.rotate()` calls:
 
 ```js
 const normalMatrix = mat4.create();
@@ -129,7 +134,8 @@ mat4.invert(normalMatrix, modelViewMatrix);
 mat4.transpose(normalMatrix, normalMatrix);
 ```
 
-> **Note:** Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the two previous `gl.uniformMatrix4fv()` calls:
+> [!NOTE]
+> Add the following code to the `drawScene()` function of your "draw-scene.js" module, just after the two previous `gl.uniformMatrix4fv()` calls:
 
 ```js
 gl.uniformMatrix4fv(
@@ -147,7 +153,8 @@ Now that all the data the shaders need is available to them, we need to update t
 
 The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting.
 
-> **Note:** Update the `vsSource` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `vsSource` declaration in your `main()` function like this:
 
 ```js
 const vsSource = `
@@ -190,7 +197,8 @@ Once the amount of directional lighting is computed, we can generate the lightin
 
 The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader.
 
-> **Note:** Update the `fsSource` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `fsSource` declaration in your `main()` function like this:
 
 ```js
 const fsSource = `
@@ -211,7 +219,8 @@ Here we fetch the color of the texel, just like we did in the previous example, 
 
 The only thing left is to look up the location of the `aVertexNormal` attribute and the `uNormalMatrix` uniform.
 
-> **Note:** Update the `programInfo` declaration in your `main()` function like this:
+> [!NOTE]
+> Update the `programInfo` declaration in your `main()` function like this:
 
 ```js
 const programInfo = {

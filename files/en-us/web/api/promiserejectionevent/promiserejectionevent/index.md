@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`PromiseRejectionEvent()`**
 constructor returns a new {{domxref("PromiseRejectionEvent")}} object, which
@@ -18,7 +18,7 @@ for errors.
 
 There are two types of `PromiseRejectionEvent`:
 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} is sent by the JavaScript runtime when a promise is
-rejected but the rejection goes unhandled. A {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}event is
+rejected but the rejection goes unhandled. A {{domxref("Window.rejectionhandled_event", "rejectionhandled")}} event is
 emitted if a promise is rejected but the rejection is caught by a rejection handler.
 
 ## Syntax

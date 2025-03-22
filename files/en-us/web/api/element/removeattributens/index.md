@@ -21,9 +21,11 @@ removeAttributeNS(namespace, attrName)
 
 ### Parameters
 
-- `namespace` is a string that contains the namespace of the attribute.
-- `attrName` is a string that names the attribute to be removed from the
-  current node.
+- `namespace`
+  - : A string that contains the namespace of the attribute.
+- `attrName`
+  - : A string that names the attribute to be removed from the
+    current node.
 
 ### Return value
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.end
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`end()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface completes recording of the current compute pass command sequence.

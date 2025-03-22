@@ -38,7 +38,8 @@ class SelectURLOperation {
 register("ab-testing", SelectURLOperation);
 ```
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+> [!NOTE]
+> It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
 In the main browsing context, the `ab-testing` operation is invoked using the {{domxref("WindowSharedStorage.selectURL()")}} method:
 

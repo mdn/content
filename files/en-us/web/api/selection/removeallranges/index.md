@@ -10,7 +10,8 @@ browser-compat: api.Selection.removeAllRanges
 
 The **`Selection.removeAllRanges()`** method removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected. When this method is called, a {{domxref("Document/selectionchange_event", "selectionchange")}} event is fired at the document.
 
-> **Note:** This method is an alias for the {{domxref("Selection.empty()")}} method.
+> [!NOTE]
+> This method is an alias for the {{domxref("Selection.empty()")}} method.
 
 ## Syntax
 

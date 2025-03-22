@@ -8,17 +8,11 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.remoteCandidateId
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidatePairStats")}} property
-**`remoteCandidateId`** is a string that uniquely identifies
-the remote {{Glossary("ICE")}} candidate which was analyzed to generate the
-{{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
-candidates.
+The **`remoteCandidateId`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary uniquely identifies the remote {{Glossary("ICE")}} candidate which was analyzed to generate the {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of candidates.
 
 ## Value
 
-A string uniquely identifies the remote {{Glossary("ICE")}}
-candidate—that is, the candidate describing a configuration for the remote peer—which is
-represented by the remote end of these statistics.
+A string uniquely identifying the remote {{Glossary("ICE")}} candidate—that is, the candidate describing a configuration for the remote peer—which is represented by the remote end of these statistics.
 
 ## Specifications
 

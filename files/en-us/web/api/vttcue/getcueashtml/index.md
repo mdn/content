@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{domxref("DocumentFragment")}} .
+A {{domxref("DocumentFragment")}}.
 
 ## Examples
 

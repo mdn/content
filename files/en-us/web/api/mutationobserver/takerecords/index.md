@@ -33,7 +33,8 @@ None.
 An array of {{domxref("MutationRecord")}} objects, each describing one change applied to
 the observed portion of the document's DOM tree.
 
-> **Note:** The queue of mutations which have occurred, but not been
+> [!NOTE]
+> The queue of mutations which have occurred, but not been
 > delivered to the observer's callback is left empty after calling
 > `takeRecords()`.
 
@@ -66,7 +67,7 @@ if (mutations.length > 0) {
 }
 ```
 
-The code in lines 12–17 fetches any unprocessed mutation records, then invokes the
+The code fetches any unprocessed mutation records, then invokes the
 callback with the records so that they can be processed. This is done immediately prior
 to calling {{domxref("MutationObserver.disconnect", "disconnect()")}} to stop observing
 the DOM.

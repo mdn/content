@@ -10,7 +10,7 @@ browser-compat: api.Element.compositionstart_event
 
 The **`compositionstart`** event is fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
 
-For example, this event could be fired after a user starts entering a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) {{glossary("IME")}}.
+For example, this event could be fired after a user starts entering a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) {{glossary("Input method editor")}}.
 
 ## Syntax
 
@@ -54,11 +54,7 @@ inputElement.addEventListener("compositionstart", (event) => {
 ```html
 <div class="control">
   <label for="example">
-    First select textbox, then to open IME:
-    <ul>
-      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
-      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
-    </ul>
+    Focus the text-input control, then open your IME and begin typing.
   </label>
   <input type="text" id="example" name="example" />
 </div>

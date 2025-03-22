@@ -40,7 +40,7 @@ The HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute acc
 
 In this example we have:
 
-- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"`and `id="until-found-box"` attributes.
+- Two {{HTMLElement("div")}} elements. The first is not hidden, while the second has `hidden="until-found"` and `id="until-found-box"` attributes.
 - A link whose target is the `"until-found-box"` fragment.
 
 We also have some JavaScript that listens for the `beforematch` event firing on the hidden until found element. The event handler changes the text content of the box.

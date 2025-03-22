@@ -38,7 +38,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when the user selects a context menu item.
 
-> **Note:** You'll need the `contextMenus` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to create context menu items.
+> [!NOTE]
+> You'll need the `contextMenus` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to create context menu items.
 
 ```js
 browser.contextMenus.create({
@@ -55,7 +56,8 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

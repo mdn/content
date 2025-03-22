@@ -88,9 +88,9 @@ drawRect();
 
 // Toggle between circle and rectangle using button
 let toggle = true;
-const mybutton = document.getElementById("toggle-reset");
+const myButton = document.getElementById("toggle-reset");
 
-mybutton.addEventListener("click", () => {
+myButton.addEventListener("click", () => {
   ctx.reset(); // Clear the context!
   if (toggle) {
     drawCircle();

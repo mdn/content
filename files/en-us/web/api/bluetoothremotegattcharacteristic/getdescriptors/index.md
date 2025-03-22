@@ -36,5 +36,3 @@ of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

@@ -33,7 +33,7 @@ Using a `ChannelMergerNode`, it is possible to create outputs with more channels
     </tr>
     <tr>
       <th scope="row">Channel count</th>
-      <td><code>2 </code>(not used in the default count mode)</td>
+      <td><code>2</code> (not used in the default count mode)</td>
     </tr>
     <tr>
       <th scope="row">Channel interpretation</th>

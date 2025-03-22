@@ -9,7 +9,7 @@ browser-compat: api.HTMLVideoElement
 
 Implemented by the {{HTMLElement("video")}} element, the **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
 
-The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.
+The list of [supported media formats](/en-US/docs/Web/Media/Guides/Formats) varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.
 
 {{InheritanceDiagram}}
 
@@ -30,7 +30,7 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 - {{domxref("HTMLVideoElement.width")}}
   - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
 
-### Gecko-specific properties
+### Firefox-specific properties
 
 - {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of video frames that have been parsed from the media resource.
@@ -82,4 +82,4 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 ## See also
 
 - HTML element implementing this interface: {{HTMLElement("video")}}.
-- [Supported media formats](/en-US/docs/Web/Media/Formats)
+- [Supported media formats](/en-US/docs/Web/Media/Guides/Formats)

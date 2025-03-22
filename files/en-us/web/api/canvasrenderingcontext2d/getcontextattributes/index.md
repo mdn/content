@@ -37,7 +37,7 @@ It has the following members:
 - `desynchronized` {{optional_inline}}
   - : A Boolean indicating the user agent reduced the latency by desynchronizing the canvas paint cycle from the event loop.
 - `willReadFrequently` {{optional_inline}}
-  - : A Boolean indicating whether or not this canvas uses software acceleration (instead of hardware acceleration) to support frequent read-back operations via{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}.
+  - : A Boolean indicating whether or not this canvas uses software acceleration (instead of hardware acceleration) to support frequent read-back operations via {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}.
 
 ## Examples
 

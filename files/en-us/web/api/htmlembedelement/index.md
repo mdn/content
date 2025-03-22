@@ -9,7 +9,8 @@ browser-compat: api.HTMLEmbedElement
 
 The **`HTMLEmbedElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("embed")}} elements.
 
-> **Note:** This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
+> [!NOTE]
+> This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
 
 {{InheritanceDiagram}}
 
@@ -32,7 +33,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Instance methods
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+_Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
+
+- {{domxref("HTMLEmbedElement.getSVGDocument()")}}
+  - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications
 

@@ -10,17 +10,17 @@ browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.kind
 
 The **`kind`** property of the {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary is a string indicating whether the described {{Glossary("RTP")}} stream contains audio or video media.
 
+This string will always be the same as the {{domxref("MediaStreamTrack.kind", "kind")}} of the {{domxref("MediaStreamTrack")}} object carried by the stream.
+It will also match the statistics object's {{domxref("RTCCodecStats.codec")}} property's media type.
+
 ## Value
 
 The kinds is always one of:
 
 - `"audio"`
-  - : The track contains audio media.
+  - : The stream contains audio media.
 - `"video"`
-  - : The track contains video media.
-
-This string will always be the same as the one provided by the associated {{domxref("MediaStreamTrack")}} object's {{domxref("MediaStreamTrack.kind", "kind")}} property.
-It will also match the statistics object's {{domxref("RTCCodecStats.codec")}} property's media type.
+  - : The stream contains video media.
 
 ## Specifications
 

@@ -17,7 +17,7 @@ The method returns `false` if the data cannot be _validated_. Reasons the data m
 - Files are specified but the implementation does not support file sharing.
 - Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy.
 The `canShare()` method will return `false` if the permission is supported but has not been granted.
 
 ## Syntax

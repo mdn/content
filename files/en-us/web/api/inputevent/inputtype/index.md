@@ -63,7 +63,8 @@ Try editing the text inside the `<div>` and see what happens.
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **Note:** See also [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) for a more detailed example.
+> [!NOTE]
+> See also [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) for a more detailed example.
 
 ## Specifications
 

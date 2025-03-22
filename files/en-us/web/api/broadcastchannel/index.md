@@ -34,10 +34,12 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 
 ## Events
 
-- [`message`](/en-US/docs/Web/API/BroadcastChannel/message_event)
+_This interface also inherits events from its parent, {{domxref("EventTarget")}}._
+
+- {{domxref("BroadcastChannel/message_event", "message")}}
   - : Fired when a message arrives on the channel.
     Also available via the `onmessage` property.
-- [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event)
+- {{domxref("BroadcastChannel/messageerror_event", "messageerror")}}
   - : Fired when a message arrives that can't be deserialized.
     Also available via the `onmessageerror` property.
 

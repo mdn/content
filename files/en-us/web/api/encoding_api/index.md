@@ -9,7 +9,7 @@ browser-compat:
   - api.TextDecoderStream
 ---
 
-{{DefaultAPISidebar("Encoding API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Encoding API")}}{{AvailableInWorkers}}
 
 The **Encoding API** provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.
 

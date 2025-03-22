@@ -32,7 +32,7 @@ When two or more pointer device types are being used concurrently, multiple poin
 primary. For example, a touch contact and a mouse cursor moved simultaneously will
 produce pointers that are both considered primary. If there are multiple primary
 pointers, these pointers will all produce _compatibility mouse events_ (see
-{{domxref("Pointer_events")}} for more information about pointer, mouse and touch
+[Pointer events](/en-US/docs/Web/API/Pointer_events) for more information about pointer, mouse and touch
 interaction).
 
 ## Value

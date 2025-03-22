@@ -10,6 +10,9 @@ browser-compat: api.DOMParser.parseFromString
 
 The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface parses a string containing either HTML or XML, returning an {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}.
 
+> [!NOTE]
+> The [`Document.parseHTMLUnsafe()`](/en-US/docs/Web/API/Document/parseHTMLUnsafe_static) static method provides an ergonomic alternative for parsing HTML strings into a {{domxref("Document")}}.
+
 ## Syntax
 
 ```js-nolint

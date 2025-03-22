@@ -17,7 +17,8 @@ Recent versions of the specification hard-code the returned list.
 If inline viewing of PDF files is supported the property lists five standard plugins.
 If inline PDF viewing is not supported then an empty list is returned.
 
-> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
+> [!NOTE]
+> Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
 >
 > The "five standard plugins" are those that developers have most commonly used to feature detect inline PDF viewing.
 > Returning these ensures that legacy code can more reliably determine whether inline viewing is supported.

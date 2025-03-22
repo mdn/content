@@ -2,12 +2,10 @@
 title: Iterator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.Iterator
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Iterator()`** constructor is intended to be used as the [superclass](/en-US/docs/Web/JavaScript/Reference/Classes/extends) of other classes that create iterators. It throws an error when constructed by itself.
 
@@ -42,7 +40,7 @@ You can also use {{jsxref("Iterator.from()")}} to create an `Iterator` instance 
 
 ### Subclassing Iterator
 
-The following example defines a custom data structure, `Range`, which allows iteration. The simplest way to make an object iterable is to provide an [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
+The following example defines a custom data structure, `Range`, which allows iteration. To make an object iterable, we can provide an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
 
 ```js
 class Range {
@@ -74,7 +72,7 @@ This works, but it isn't as nice as how built-in iterators work. There are two p
 - The returned iterator inherits from {{jsxref("Generator")}}, which means modifications to `Generator.prototype` are going to affect the returned iterator, which is a leak of abstraction.
 - The returned iterator does not inherit from a custom prototype, which makes it harder if we intend to add extra methods to the iterator.
 
-We can mimic the implementation of built-in iterators, such as [map iterators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator), by subclassing `Iterator`. This enables us to define extra properties, such as [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), while making the iterator helper methods available on the returned iterator.
+We can mimic the implementation of built-in iterators, such as [map iterators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator), by subclassing `Iterator`. This enables us to define extra properties, such as [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), while making the iterator helper methods available on the returned iterator.
 
 ```js
 class Range {
@@ -143,5 +141,6 @@ The subclassing pattern is useful if you want to create many custom iterators. I
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.from()")}}

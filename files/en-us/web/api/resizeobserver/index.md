@@ -9,7 +9,8 @@ browser-compat: api.ResizeObserver
 
 The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
 
-> **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
+> [!NOTE]
+> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) for further explanation.
 
 ## Constructor
 
@@ -102,12 +103,61 @@ const resizeObserver = new ResizeObserver((entries) => {
   }
 });
 
-window.addEventListener("error", function (e) {
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
   console.error(e.message);
 });
 ```
 
 As long as the error event does not fire indefinitely, resize observer will settle and produce a stable, likely correct, layout. However, visitors may see a flash of broken layout, as a sequence of changes expected to happen in a single frame is instead happening over multiple frames.
+
+If you want to prevent these errors, the solution depends on what your intended effect is. If you actually intend to have an infinite loop, you just need to defer the resizing code in your `ResizeObserver` callback to after the browser repaints. You can put it into a [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) callback.
+
+```js
+const divElem = document.querySelector("body > div");
+
+const resizeObserver = new ResizeObserver((entries) => {
+  requestAnimationFrame(() => {
+    for (const entry of entries) {
+      entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+    }
+  });
+});
+
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
+  console.error(e.message);
+});
+```
+
+If you don't intend to have an infinite loop, you should make sure your resizing code does not trigger the resize observer callback. There are many ways to do this, such as by setting an "expected size" and not resizing if the size is already at that value.
+
+```js
+const divElem = document.querySelector("body > div");
+const expectedSizes = new WeakMap();
+
+const resizeObserver = new ResizeObserver((entries) => {
+  requestAnimationFrame(() => {
+    for (const entry of entries) {
+      const expectedSize = expectedSizes.get(entry.target);
+      if (entry.contentBoxSize[0].inlineSize === expectedSize) {
+        continue;
+      }
+      const newSize = entry.contentBoxSize[0].inlineSize + 10;
+      entry.target.style.width = `${newSize}px`;
+      expectedSizes.set(entry.target, newSize);
+    }
+  });
+});
+
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
+  console.error(e.message);
+});
+```
 
 ## Specifications
 
@@ -119,7 +169,7 @@ As long as the error event does not fire indefinitely, resize observer will sett
 
 ## See also
 
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Learn: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
 - Upcoming [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) may be a viable alternative for implementing responsive design.

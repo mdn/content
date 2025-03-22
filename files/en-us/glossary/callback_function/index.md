@@ -26,7 +26,7 @@ console.log(value);
 
 If `doSomething` calls the callback synchronously, then the last statement would log `2` because `value = 2` is synchronously executed; otherwise, if the callback is asynchronous, the last statement would log `1` because `value = 2` is only executed after the `console.log` statement.
 
-Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and {{jsxref("Promise.prototype.then()")}}.
+Examples of synchronous callbacks include the callbacks passed to {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}, etc. Examples of asynchronous callbacks include the callbacks passed to {{domxref("Window.setTimeout", "setTimeout()")}} and {{jsxref("Promise.prototype.then()")}}.
 
 The [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing) guide has more information on the timing of asynchronous callbacks.
 

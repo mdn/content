@@ -82,7 +82,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 300)}}
+{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 550)}}
 
 ### Applying filter effects to other elements
 
@@ -143,14 +143,14 @@ p {
 ```html hidden
 <div
   class="container"
-  style="background-image: url(listen_to_black_women.jpg);">
+  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
 </div>
 ```
 
-{{EmbedLiveSample('Applying_multiple_filters','100%','280')}}
+{{EmbedLiveSample('Applying_multiple_filters','100%','300')}}
 
 ### Applying repeated filters
 
@@ -167,14 +167,12 @@ img {
 }
 ```
 
-```css nolint
+```css
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(210deg 100% 50%)
-    )
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%)) drop-shadow(
-      -2px -2px 0 hsl(30deg 100% 50%)
-    );
+  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
+    drop-shadow(2px 2px 0 hsl(120deg 100% 50%))
+    drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
 }
 img + img {
   filter: none;
@@ -222,11 +220,12 @@ The same filters are applied to both the lines of text but in a different order.
 
 No filter effect is applied to the third line to show the original effect as a comparison. So the third line stays as `midnightblue` or `#191970`. The `hue-rotate(180deg)` filter changes the text in the first two lines to `#252500`.
 
-> **Note:** The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)`, while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
+> [!NOTE]
+> The hexadecimal rgb color `#191970` is equal to `hsl(240deg 63.5% 26.9%)`, while `#252500` is `hsl(60deg 100% 7.3%)`. The [color rotation takes place in the sRGB color space](/en-US/docs/Web/CSS/color_value#interpolation), which is why the hue has been changed as expected while not maintaining the same values for saturation and lightness.
 
 ## Using SVG filters
 
-In addition to the 10 defined {{cssxref("filter-function")}}s, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Element/filter), which may be embedded in an internal or external SVG file.
+In addition to the 10 defined {{cssxref("filter-function")}}s, the CSS filter effects support `url()`, with the parameter being an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter), which may be embedded in an internal or external SVG file.
 
 A single SVG can be used to define several filters, each with an `id`:
 
@@ -259,7 +258,7 @@ Just like the {{cssxref("filter-function/blur", "blur()")}} filter function appl
 
 In both the cases, the blur radius value, specified as a {{cssxref("&lt;length&gt;")}} in CSS and as a pixel equivalent {{cssxref("&lt;number&gt;")}} in SVG, defines the value of the standard deviation to the Gaussian function. In other words, it defines the number of pixels on the screen that blend into each other; a larger value creates more blur.
 
-The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
+The [`<filter>`](/en-US/docs/Web/SVG/Reference/Element/filter)'s {{SVGAttr("stdDeviation")}} attribute accepts up to two values enabling creating more complex blur values. To create an equivalent blur, we include one value for `stdDeviation`:
 
 ```html hidden
 <table cellpadding="5">
@@ -273,13 +272,21 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <tbody>
     <tr>
       <td>
-        <img class="filter" src="flag.jpg" alt="Pride flag" />
+        <img
+          class="filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" class="svgFilter" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag"
+          class="svgFilter" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>
@@ -291,11 +298,13 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+  <image
+    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    filter="url(#blur)" />
 </svg>
 ```
 
-The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
+The SVG `url()` filter value can be included as the value of the SVG [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) element's [`filter`](/en-US/docs/Web/SVG/Reference/Attribute/filter) attribute or as part of the value of the CSS `filter` and `backdrop-filter` properties.
 
 ```css
 .filter {
@@ -306,7 +315,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','280')}}
+{{EmbedLiveSample('blur_example','100%','550')}}
 
 ## See also
 
@@ -314,4 +323,4 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
 - SVG {{SVGElement("filter")}} element, SVG {{SVGAttr("filter")}} attribute in [SVG](/en-US/docs/Web/SVG)
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

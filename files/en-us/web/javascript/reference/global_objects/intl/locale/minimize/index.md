@@ -11,7 +11,22 @@ The **`minimize()`** method of {{jsxref("Intl.Locale")}} instances attempts to
 remove information about this locale that would be added by calling
 {{jsxref("Intl/Locale/maximize", "maximize()")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.minimize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en-Latn-US");
+const korean = new Intl.Locale("ko-Kore-KR");
+const arabic = new Intl.Locale("ar-Arab-EG");
+
+console.log(english.minimize().baseName);
+// Expected output: "en"
+
+console.log(korean.minimize().baseName);
+// Expected output: "ko"
+
+console.log(arabic.minimize().baseName);
+// Expected output: "ar"
+```
 
 ## Syntax
 

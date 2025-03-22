@@ -14,7 +14,7 @@ The limited-quirks and no-quirks modes used to be called "almost-standards" mode
 
 ## How do browsers determine which mode to use?
 
-For [HTML](/en-US/docs/Web/HTML) documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:
+For [HTML](/en-US/docs/Web/HTML) documents, browsers use a doctype in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a doctype like in this example:
 
 ```html
 <!doctype html>
@@ -27,19 +27,19 @@ For [HTML](/en-US/docs/Web/HTML) documents, browsers use a DOCTYPE in the beginn
 </html>
 ```
 
-The DOCTYPE shown in the example, `<!DOCTYPE html>`, is the simplest possible, and the one recommended by current HTML standards. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use full standards mode for this DOCTYPE. There are no valid reasons to use a more complicated DOCTYPE. If you do use another DOCTYPE, you may risk choosing one which triggers almost standards mode or quirks mode.
+The doctype shown in the example, `<!doctype html>`, is the simplest possible, and the one recommended by current HTML standards. Earlier versions of the HTML standard recommended other variants, but all existing browsers today will use full standards mode for this doctype. There are no valid reasons to use a more complicated doctype. If you do use another doctype, you may risk choosing one which triggers almost standards mode or quirks mode.
 
-Put the DOCTYPE right at the beginning of your HTML document, before any other content.
+Put the doctype right at the beginning of your HTML document, before any other content.
 
-The only purpose of `<!DOCTYPE html>` is to activate no-quirks mode. Older versions of HTML standard DOCTYPEs provided additional meaning, but no browser ever used the DOCTYPE for anything other than switching between render modes.
+The only purpose of `<!doctype html>` is to activate no-quirks mode. Older versions of HTML standard doctypes provided additional meaning, but no browser ever used the doctype for anything other than switching between render modes.
 
 See also a detailed description of [when different browsers choose various modes](https://hsivonen.fi/doctype/).
 
 ### XHTML
 
-If you serve your page as [XHTML](/en-US/docs/Glossary/XHTML) using the `application/xhtml+xml` MIME type in the `Content-Type` HTTP header, you do not need a DOCTYPE to enable standards mode, as such documents always use 'full standards mode'.
+If you serve your page as [XHTML](/en-US/docs/Glossary/XHTML) using the `application/xhtml+xml` MIME type in the `Content-Type` HTTP header, you do not need a doctype to enable standards mode, as such documents always use 'full standards mode'.
 
-If you serve XHTML-like content using the `text/html` MIME type, browsers will read it as HTML, and you will need the DOCTYPE to use standards mode.
+If you serve XHTML-like content using the `text/html` MIME type, browsers will read it as HTML, and you will need the doctype to use standards mode.
 
 ## How do I see which mode is used?
 

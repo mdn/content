@@ -15,7 +15,7 @@ The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", 
 
 Unlike a regular {{domxref("Worklet")}}:
 
-- If the calling site has not included the Shared Storage API in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), calls to `sharedStorageWorklet.addModule()` will be rejected.
+- If the calling site has not included the Shared Storage API in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment), calls to `sharedStorageWorklet.addModule()` will be rejected.
 - `SharedStorageWorklet` allows only a single module to be added, for privacy reasons. Even with a successful enrollment, repeated calls to `addModule()` on the same shared storage worklet will be rejected.
 
 `SharedStorageWorklet` is accessed via {{domxref("WindowSharedStorage.worklet")}}.

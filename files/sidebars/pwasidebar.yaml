@@ -1,0 +1,45 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Progressive_web_apps
+  - type: section
+    link: /Web/Progressive_web_apps/Guides
+  - /Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
+  - /Web/Progressive_web_apps/Guides/Installing
+  - /Web/Progressive_web_apps/Guides/Making_PWAs_installable
+  - /Web/Progressive_web_apps/Guides/Offline_and_background_operation
+  - /Web/Progressive_web_apps/Guides/Caching
+  - /Web/Progressive_web_apps/Guides/Best_practices
+  - type: section
+    link: /Web/Progressive_web_apps/Tutorials
+  - link: /Web/Progressive_web_apps/Tutorials/CycleTracker
+    details: closed
+    children:
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
+      - /Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
+  - link: /Web/Progressive_web_apps/Tutorials/js13kGames
+    details: closed
+    children:
+      - /Web/Progressive_web_apps/Tutorials/js13kGames
+      - /Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+      - /Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
+      - /Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+      - /Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
+      - /Web/Progressive_web_apps/Tutorials/js13kGames/Loading
+  - type: section
+    link: /Web/Progressive_web_apps/How_to
+  - /Web/Progressive_web_apps/How_to/Trigger_install_prompt
+  - /Web/Progressive_web_apps/How_to/Define_app_icons
+  - /Web/Progressive_web_apps/How_to/Create_a_standalone_app
+  - /Web/Progressive_web_apps/How_to/Customize_your_app_colors
+  - /Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
+  - /Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
+  - /Web/Progressive_web_apps/How_to/Share_data_between_apps
+  - /Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
+  - type: section
+    link: /Web/Progressive_web_apps/Reference

@@ -7,11 +7,12 @@ browser-compat: css.properties.text-rendering
 
 {{CSSRef}}
 
-The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
+The **`text-rendering`** [CSS](/en-US/docs/Web/CSS) property provides information to the rendering engine about what to optimize for when rendering text.
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 
-> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
+> [!NOTE]
+> The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
 
 One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
 
@@ -35,11 +36,23 @@ text-rendering: unset;
 ### Values
 
 - `auto`
+
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
+
+    The `auto` value is a good default for balancing quality and performance, especially for extended bodies of plain text.
+
 - `optimizeSpeed`
+
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
+
+    The `optimizeSpeed` value is preferable in resource-constrained rendering scenarios, such as slow processors or low battery.
+
 - `optimizeLegibility`
+
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
+
+    The `optimizeLegibility` value is preferable for texts that are large in size but short in content, such as headers or banners, to enhance their readability. It could also be used for high-quality professional typography such as published articles. It's not recommended for typical articles due to potential performance impacts.
+
 - `geometricPrecision`
 
   - : The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts — such as kerning — don't scale linearly. So this value can make text using those fonts look good.
@@ -48,7 +61,10 @@ text-rendering: unset;
 
     But the `geometricPrecision` property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.
 
-    > **Note:** WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
+    The `geometricPrecision` value optimizes neither readability nor performance. It usually makes sense in SVG, where you want your graphic to scale faithfully without distorting the text dimensions.
+
+    > [!NOTE]
+    > WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
 
 ## Formal definition
 
@@ -151,4 +167,4 @@ p {
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
 
 - The [SVG](/en-US/docs/Web/SVG) {{SVGAttr("text-rendering")}} attribute
-- [SVG and CSS](/en-US/docs/Web/SVG/Tutorial/SVG_and_CSS)
+- [SVG and CSS](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS)

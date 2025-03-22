@@ -60,7 +60,7 @@ console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 
 Here JavaScript thinks that you meant to have `);` inside the string and
 ignores it, and it ends up not knowing that you meant the `);` to end the
-function `console.log`. To fix this, we could put a`'` after the
+function `console.log`. To fix this, we could put a `'` after the
 "Script" string:
 
 ```js example-good

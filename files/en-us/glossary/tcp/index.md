@@ -13,10 +13,9 @@ TCP's role is to ensure the packets are reliably delivered, and error-free. TCP 
 ## See also
 
 - [Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Wikipedia)
-- [HTTP Overview](/en-US/docs/Web/HTTP/Overview)
-- [How browsers work](/en-US/docs/Web/Performance/How_browsers_work)
-- [Glossary](/en-US/docs/Glossary)
-
+- [HTTP Overview](/en-US/docs/Web/HTTP/Guides/Overview)
+- [How browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)
+- Related glossary terms:
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}
   - {{Glossary("Packet")}}

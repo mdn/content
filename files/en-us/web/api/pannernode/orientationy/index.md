@@ -16,7 +16,7 @@ The complete vector is defined by the position of the audio source, given as
 {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
-{{domxref("PannerNode.orientationY", "orientationY")}},
+`orientationY`,
 {{domxref("PannerNode.orientationZ", "orientationZ")}}).
 
 Depending on the directionality of the sound (as specified using the attributes

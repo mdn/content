@@ -118,19 +118,19 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           <dd>
             String: URL used by the search engine. This must be an HTTPS URL.
           </dd>
-          <dt><code>is_default {{optional_inline}}</code></dt>
+          <dt><code>is_default</code> {{optional_inline}}</dt>
           <dd>
             Boolean: True if the search engine should be the default choice. On
             Firefox, this is opt-in and the user will only be asked the first
             time the extension is installed. They will not be asked again if a
             search engine is added later.
           </dd>
-          <dt><code>alternate_urls {{optional_inline}}</code></dt>
+          <dt><code>alternate_urls</code> {{optional_inline}}</dt>
           <dd>
             Array of String: An array of alternative URLs that can be used
             instead of <code>search_url</code>.
           </dd>
-          <dt><code>encoding {{optional_inline}}</code></dt>
+          <dt><code>encoding</code> {{optional_inline}}</dt>
           <dd>
             String: Encoding of the search term, specified as a
             <a
@@ -138,32 +138,36 @@ The `chrome_settings_overrides` key is an object that may have the following pro
               >standard character encoding name</a
             >, such as "UTF-8".
           </dd>
-          <dt><code>favicon_url {{optional_inline}}</code></dt>
+          <dt><code>favicon_url</code> {{optional_inline}}</dt>
           <dd>
             String: URL pointing to an icon for the search engine. In Manifest V2,
             this must be an absolute HTTP or HTTPS URL. In Manifest V3, this must
             reference an icon provided in the extension as a path relative to the
             extension's root.
           </dd>
-          <dt><code>image_url {{optional_inline}}</code></dt>
+          <dt><code>image_url</code> {{optional_inline}}</dt>
           <dd>String: URL used for image search.</dd>
-          <dt><code>image_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>image_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>image_url</code>.</dd>
-          <dt><code>instant_url {{optional_inline}}</code></dt>
+          <dt><code>instant_url</code> {{optional_inline}}</dt>
           <dd>String: URL used for instant search.</dd>
-          <dt><code>instant_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>instant_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>instant_url</code>.</dd>
-          <dt><code>keyword {{optional_inline}}</code></dt>
+          <dt><code>keyword</code> {{optional_inline}}</dt>
           <dd>String: Address bar keyword for the search engine.</dd>
-          <dt><code>prepopulated_id {{optional_inline}}</code></dt>
+          <dt><code>prepopulated_id</code> {{optional_inline}}</dt>
           <dd>The ID of a built-in search engine to use.</dd>
-          <dt><code>search_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>search_url_get_params</code> {{optional_inline}}</dt>
+          <dd>String: GET parameters to send to <code>search_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>search_url</code> instead.</dd>
+          <dt><code>search_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>search_url</code>.</dd>
-          <dt><code>suggest_url {{optional_inline}}</code></dt>
+          <dt><code>suggest_url</code> {{optional_inline}}</dt>
           <dd>
             String: URL used for search suggestions. This must be an HTTPS URL.
           </dd>
-          <dt><code>suggest_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>suggest_url_get_params</code> {{optional_inline}}</dt>
+          <dd>String: GET parameters to send to <code>suggest_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>suggest_url</code> instead.</dd>
+          <dt><code>suggest_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>suggest_url</code>.</dd>
         </dl>
       </td>

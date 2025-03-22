@@ -8,9 +8,11 @@ browser-compat: api.Location.port
 
 {{ApiRef("Location")}}
 
-The **`port`** property of the {{domxref("Location")}}
-interface is a string containing the port number of the URL. If the
-URL does not contain an explicit port number, it will be set to `''`.
+The **`port`** property of the {{domxref("Location")}} interface is a string containing the port number of the location's URL. If the port is the default for the protocol (`80` for `ws:` and `http:`, `443` for `wss:` and `https:`, and `21` for `ftp:`), this property contains an empty string, `""`.
+
+This property can be set to change the port of the URL. If the URL has no {{domxref("Location.host", "host")}} or its scheme is `file:`, then setting this property has no effect. It also silently ignores invalid port numbers.
+
+See {{domxref("URL.port")}} for more information.
 
 ## Value
 
@@ -19,9 +21,13 @@ A string.
 ## Examples
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/Location.port"> element be in the document
-const anchor = document.getElementByID("myAnchor");
-const result = anchor.port; // Returns:'443'
+// Assume current page is at https://developer.mozilla.org/en-US/docs/Location/port
+const result = location.port; // Returns:''
+```
+
+```js
+// Assume another page is at https://developer.mozilla.org:8888/en-US/docs/Location/port
+const result = location.port; // Returns:'8888'
 ```
 
 ## Specifications

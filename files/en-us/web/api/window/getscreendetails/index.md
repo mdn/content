@@ -30,7 +30,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if a {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is set that blocks use of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), or if the user has explicitly denied the browser's permission request to use the API.
+  - : Thrown if a {{httpheader("Permissions-Policy/window-management", "window-management")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is set that blocks use of the [Window Management API](/en-US/docs/Web/API/Window_Management_API), or if the user has explicitly denied the browser's permission request to use the API.
 
 ## Examples
 
@@ -54,7 +54,8 @@ for (const screen of screenDetails.screens) {
 }
 ```
 
-> **Note:** See [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) for a full example (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api) also).
+> [!NOTE]
+> See [Multi-window learning environment](https://mdn.github.io/dom-examples/window-management-api/) for a full example (see the [source code](https://github.com/mdn/dom-examples/tree/main/window-management-api) also).
 
 ## Specifications
 

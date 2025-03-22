@@ -52,7 +52,7 @@ for (const file of fileInput.files) {
 
 ## Browser compatibility
 
-{{ Compat }}
+{{Compat}}
 
 ## See also
 

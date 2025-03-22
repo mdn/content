@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.uniform[1234][fi][v]()`** methods
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of uniform
@@ -15,7 +15,8 @@ when the program object is linked successfully. They retain the values assigned 
 by a call to this method until the next successful link operation occurs on the program
 object, when they are once again initialized to 0.
 
-> **Note:** Many of the functions described here have expanded WebGL 2 interfaces, which can be
+> [!NOTE]
+> Many of the functions described here have expanded WebGL 2 interfaces, which can be
 > found under
 > [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform).
 
@@ -48,7 +49,7 @@ uniform4iv(location, value)
 - `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
-- `value, v0, v1, v2, v3`
+- `value`, `v0`, `v1`, `v2`, `v3`
 
   - : A new value to be used for the uniform variable. Possible types:
 

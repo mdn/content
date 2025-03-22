@@ -85,7 +85,7 @@ if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
 }
 ```
 
-If you want to know whether an _external_ page has changed, you can make a {{HTTPMethod("HEAD")}} request using the {{domxref("fetch()")}} API, and examine the {{HTTPHeader("Last-Modified")}} response header.
+If you want to know whether an _external_ page has changed, you can make a {{HTTPMethod("HEAD")}} request using the {{domxref("Window/fetch", "fetch()")}} API, and examine the {{HTTPHeader("Last-Modified")}} response header.
 
 ## Specifications
 

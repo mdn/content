@@ -10,7 +10,8 @@ browser-compat: api.Window.screenY
 
 The **`Window.screenY`** read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.
 
-> **Note:** An alias of `screenY` was implemented across modern browsers in more recent times — {{domxref("Window.screenTop")}}. This was originally supported only in IE but was introduced everywhere due to popularity.
+> [!NOTE]
+> An alias of `screenY` was implemented across modern browsers in more recent times — {{domxref("Window.screenTop")}}. This was originally supported only in IE but was introduced everywhere due to popularity.
 
 ## Value
 

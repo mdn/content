@@ -8,34 +8,36 @@
 # Default content owners
 /files/en-us/ @mdn/yari-content-mdn
 
-# Accessibility
-/files/en-us/web/accessibility/ @mdn/yari-content-accessibility
-/files/en-us/learn/accessibility/ @mdn/yari-content-accessibility
-
-# CSS
-/files/en-us/web/css/ @mdn/yari-content-css
-/files/en-us/learn/css/ @mdn/yari-content-css
-
-# HTML
-/files/en-us/web/html/ @mdn/yari-content-html
-/files/en-us/learn/html/ @mdn/yari-content-html
-
-# JavaScript
-/files/en-us/web/javascript/ @mdn/yari-content-javascript
-/files/en-us/learn/javascript/ @mdn/yari-content-javascript
-
-# HTTP
-/files/en-us/web/http/ @mdn/yari-content-http
-/files/en-us/learn/server-side/ @mdn/yari-content-http
-
-# Web API
-/files/en-us/web/api/ @mdn/yari-content-web-api
+# MDN Firefox release notes
+/files/en-us/mozilla/ @mdn/core-yari-content
 
 # Mozilla Add-ons
 /files/en-us/mozilla/add-ons/ @mdn/yari-content-mozilla-add-ons
 
+# Accessibility
+/files/en-us/web/accessibility/ @mdn/yari-content-accessibility
+
+# Web API
+/files/en-us/web/api/ @mdn/yari-content-web-api
+
+# CSS
+/files/en-us/web/css/ @mdn/yari-content-css
+
+# HTML
+/files/en-us/web/html/ @mdn/yari-content-html
+
+# HTTP
+/files/en-us/web/http/ @mdn/yari-content-http
+
+# JavaScript
+/files/en-us/web/javascript/ @mdn/yari-content-javascript
+
 # MathML
 /files/en-us/web/mathml/ @mdn/content-mathml
+
+# Templates and sidebars (rari)
+/files/jsondata/L10n-Template.json @mdn/core-dev
+/files/sidebars/ @mdn/core-dev
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing

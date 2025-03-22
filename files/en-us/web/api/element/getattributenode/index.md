@@ -21,7 +21,8 @@ getAttributeNode(attrName)
 
 ### Parameters
 
-- `attrName` is a string containing the name of the attribute.
+- `attrName`
+  - : A string containing the name of the attribute.
 
 ### Return value
 

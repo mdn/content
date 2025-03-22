@@ -25,7 +25,8 @@ The text is rendered using the font and text layout configuration as defined by 
 {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, and
 {{domxref("CanvasRenderingContext2D.direction","direction")}} properties.
 
-> **Note:** To draw the outlines of the characters in a string, call the context's
+> [!NOTE]
+> To draw the outlines of the characters in a string, call the context's
 > {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} method.
 
 ## Syntax

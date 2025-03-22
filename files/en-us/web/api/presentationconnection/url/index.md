@@ -8,9 +8,9 @@ status:
 browser-compat: api.PresentationConnection.url
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{APIRef("Presentation API")}}{{SecureContext_Header}}
 
-The **`url`** readonly property of the
+The **`url`** read-only property of the
 {{domxref("PresentationConnection")}} interface returns the URL used to create or
 reconnect to the presentation.
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.HID
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`HID`** interface provides methods for connecting to _HID devices_, listing attached HID devices and event handlers for connected HID devices.
 
@@ -22,7 +22,7 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("HID.getDevices","getDevices()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
 - {{domxref("HID.requestDevice","requestDevice()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
 
@@ -43,4 +43,4 @@ _This interface also inherits methods of its parent, {{domxref("EventTarget")}}.
 
 ## See also
 
-- {{domxref("WebHID API")}}
+- [WebHID API](/en-US/docs/Web/API/WebHID_API)

@@ -24,7 +24,7 @@ The `content` value is logged to the console to display the [keywords](/en-US/do
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web">
-let meta = document.querySelector("meta[name='keywords']");
+const meta = document.querySelector("meta[name='keywords']");
 console.log(meta.content);
 // "documentation, HTML, web"
 ```
@@ -35,7 +35,7 @@ The following example creates a new `<meta>` element with a `name` attribute set
 The `content` attribute sets a description of the document and is appended to the document `<head>`:
 
 ```js
-let meta = document.createElement("meta");
+const meta = document.createElement("meta");
 meta.name = "description";
 meta.content =
   "The <meta> element can be used to provide document metadata in terms of name-value pairs, with the name attribute giving the metadata name, and the content attribute giving the value.";
@@ -55,4 +55,4 @@ document.head.appendChild(meta);
 - {{HTMLElement("meta")}}
 - {{domxref("HTMLMetaElement.name")}}
 - {{domxref("HTMLMetaElement.httpEquiv")}}
-- [Learn: Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [Learn: Metadata in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

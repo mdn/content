@@ -75,7 +75,8 @@ worth of sound starting 3 seconds into the audio buffer.
 source.start(audioCtx.currentTime + 1, 3, 10);
 ```
 
-> **Note:** For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [try the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), and have a look at [the example source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data).
+> [!NOTE]
+> For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [try the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), and have a look at [the example source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data).
 
 ## Specifications
 

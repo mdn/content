@@ -87,12 +87,11 @@ A similar effect can be achieved by [capturing](/en-US/docs/Web/JavaScript/Refer
 
 Using lookahead, you can match a string multiple times with different patterns, which allows you to express complex relationships like subtraction (is X but not Y) and intersection (is both X and Y).
 
-The following example matches any [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that's not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (only showing three reserved words here for brevity; more reserved words can be added to this disjunction). The `[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*` syntax describes exactly the set of identifier strings in the language spec; you can read more about identifiers in [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and the `\p` escape in [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape).
+The following example matches any [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that's not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words) (only showing three reserved words here for brevity; more reserved words can be added to this disjunction). The `[$_\p{ID_Start}][$\p{ID_Continue}]*` syntax describes exactly the set of identifier strings in the language spec; you can read more about identifiers in [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) and the `\p` escape in [Unicode character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape).
 
 ```js
 function isValidIdentifierName(str) {
-  const re =
-    /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*$/u;
+  const re = /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\p{ID_Continue}]*$/u;
   return re.test(str);
 }
 

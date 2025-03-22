@@ -16,7 +16,8 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 
 At first sight a {{HTMLElement("canvas")}} looks like the {{HTMLElement("img")}} element, with the only clear difference being that it doesn't have the `src` and `alt` attributes. Indeed, the `<canvas>` element has only two attributes, [`width`](/en-US/docs/Web/HTML/Element/canvas#width) and [`height`](/en-US/docs/Web/HTML/Element/canvas#height). These are both optional and can also be set using {{Glossary("DOM")}} [properties](/en-US/docs/Web/API/HTMLCanvasElement). When no `width` and `height` attributes are specified, the canvas will initially be **300 pixels** wide and **150 pixels** high. The element can be sized arbitrarily by {{Glossary("CSS")}}, but during rendering the image is scaled to fit its layout size: if the CSS sizing doesn't respect the ratio of the initial canvas, it will appear distorted.
 
-> **Note:** If your renderings seem distorted, try specifying your `width` and `height` attributes explicitly in the `<canvas>` attributes, and not using CSS.
+> [!NOTE]
+> If your renderings seem distorted, try specifying your `width` and `height` attributes explicitly in the `<canvas>` attributes, and not using CSS.
 
 The [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute isn't specific to the `<canvas>` element but is one of the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) which can be applied to any HTML element (like [`class`](/en-US/docs/Web/HTML/Global_attributes/class) for instance). It is always a good idea to supply an `id` because this makes it much easier to identify it in a script.
 
@@ -80,7 +81,8 @@ if (canvas.getContext) {
 
 Here is a minimalistic template, which we'll be using as a starting point for later examples.
 
-> **Note:** it is not good practice to embed a script inside HTML. We do it here to keep the example concise.
+> [!NOTE]
+> It is not good practice to embed a script inside HTML. We do it here to keep the example concise.
 
 ```html
 <!doctype html>
@@ -109,7 +111,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 </html>
 ```
 
-The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("setTimeout()")}}, {{domxref("setInterval()")}}, or any other event handler, as long as the page has been loaded first.
+The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or any other event handler, as long as the page has been loaded first.
 
 Here is how a template would look in action. As shown here, it is initially blank.
 
@@ -117,7 +119,7 @@ Here is how a template would look in action. As shown here, it is initially blan
 
 ## A simple example
 
-To begin, let's take a look at a simple example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
+To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
 
 ```html
 <!doctype html>

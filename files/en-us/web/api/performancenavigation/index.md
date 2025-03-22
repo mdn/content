@@ -11,7 +11,8 @@ browser-compat: api.PerformanceNavigation
 
 The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.
 
-> **Warning:** This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
+> [!WARNING]
+> This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
 > Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 An object of this type can be obtained by calling the {{domxref("Performance.navigation")}} read-only attribute.
@@ -45,8 +46,7 @@ _The `Performance` interface doesn't inherit any methods._
 
 ## Specifications
 
-This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
-Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+{{Specifications}}
 
 ## Browser compatibility
 

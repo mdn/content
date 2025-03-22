@@ -71,11 +71,11 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDisplacementMapElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
 - {{domxref("SVGFEDisplacementMapElement.xChannelSelector")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("xChannelSelect")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("xChannelSelector")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
 - {{domxref("SVGFEDisplacementMapElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 - {{domxref("SVGFEDisplacementMapElement.yChannelSelector")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("yChannelSelect")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("yChannelSelector")}} attribute of the given element. It takes one of the `SVG_CHANNEL_*` constants defined on this interface.
 
 ## Instance methods
 

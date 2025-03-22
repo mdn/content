@@ -15,7 +15,7 @@ entire `attestationObject` with a private key that is stored in the
 authenticator when it is manufactured.
 
 As part of the {{domxref("CredentialsContainer.create()")}} call, an authenticator will
-create a new keypair as well as an `attestationObject` for that keypair. The public key
+create a new key pair as well as an `attestationObject` for that key pair. The public key
 that corresponds to the private key that has created the attestation signature is well
 known; however, there are various well known attestation public key chains for different
 ecosystems (for example, Android or TPM attestations).

@@ -19,7 +19,7 @@ RTCPeerConnection.generateCertificate(keygenAlgorithm)
 ### Parameters
 
 - `keygenAlgorithm`
-  - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) {{domxref("AlgorithmIdentifier")}} string or an {{domxref("Algorithm")}} -subclassed object specifying an algorithm to use when creating the certificate's key.
+  - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) {{domxref("AlgorithmIdentifier")}} string or an {{domxref("CryptoKey/algorithm","Algorithm")}} -subclassed object specifying an algorithm to use when creating the certificate's key.
 
 > **Note:** `generateCertificate()` is a static method, so it is always called on the `RTCPeerConnection` interface itself, not an instance thereof.
 
@@ -37,7 +37,7 @@ Other errors may occur; for example, if the specified `keygenAlgorithm` can't be
 ## Description
 
 If a string is specified, it must be a [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)-compatible algorithm name string.
-Alternatively, you can provide specific details for the algorithm's configuration by providing an object based on one of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.
+Alternatively, you can provide specific details for the algorithm's configuration by providing an object based on one of the Web Crypto API's {{domxref("CryptoKey/algorithm","Algorithm")}} class's subclasses.
 
 ### Standard configurations
 
@@ -107,7 +107,7 @@ RTCPeerConnection.generateCertificate("ECDSA");
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
-- [`crypto`](/en-US/docs/Web/API/Crypto)
+- {{DOMxRef("Crypto")}}

@@ -12,7 +12,8 @@ The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
 reverb effects to your audio. See the [spec definition of Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
 
-> **Note:** The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
+> [!NOTE]
+> The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
 > constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 

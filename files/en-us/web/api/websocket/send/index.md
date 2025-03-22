@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebSocket.send
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.send()`** method enqueues the specified data
 to be transmitted to the server over the WebSocket connection, increasing the value of

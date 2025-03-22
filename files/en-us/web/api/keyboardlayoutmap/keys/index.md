@@ -15,7 +15,13 @@ The **`keys()`** method of the {{domxref("KeyboardLayoutMap")}} interface return
 
 The method is otherwise the same as {{jsxref("Map.prototype.keys()")}}.
 
-## Value
+## Syntax
+
+```js-nolint
+keys()
+```
+
+### Return value
 
 A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 

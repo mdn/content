@@ -12,7 +12,8 @@ The **`store()`** method of the
 {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
 {{domxref("Credential")}} instance, returning this in a {{jsxref("Promise")}}.
 
-> **Note:** This method is restricted to top-level contexts. Calls to it within an
+> [!NOTE]
+> This method is restricted to top-level contexts. Calls to it within an
 > `<iframe>` element will resolve without effect.
 
 ## Syntax

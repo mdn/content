@@ -13,7 +13,8 @@ The **`SVGRenderingIntent`** interface defines the enumerated list of possible v
 
 {{InheritanceDiagram}}
 
-> **Warning:** This interface was removed in the SVG 2 specification.
+> [!WARNING]
+> This interface was removed in the SVG 2 specification.
 
 ## Constants
 

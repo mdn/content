@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.
 
@@ -41,7 +41,7 @@ Or, null.
 
 ## Examples
 
-In this example, passing the {{htmlelement("script")}} element and [`src`](/en-US/docs/Web/HTML/Global_attributes#src) attribute to `getAttributeType` returns "TrustedScriptURL".
+In this example, passing the {{htmlelement("script")}} element and `src` attribute to `getAttributeType()` returns "TrustedScriptURL".
 
 ```js
 console.log(trustedTypes.getAttributeType("script", "src")); // "TrustedScriptURL"

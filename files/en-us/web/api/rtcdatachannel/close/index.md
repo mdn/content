@@ -46,10 +46,6 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-## Return value
-
-`undefined`.
-
 ## Examples
 
 ```js

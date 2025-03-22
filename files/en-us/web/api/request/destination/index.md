@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string
@@ -45,7 +45,7 @@ Possible values are:
     - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
-    - {{domxref("fetch()")}}
+    - {{domxref("Window/fetch", "fetch()")}}
     - {{domxref("navigator.sendBeacon()")}}
     - {{domxref("WebSocket")}}
     - {{domxref("XMLHttpRequest")}}
@@ -113,5 +113,5 @@ const myDestination = myRequest.destination; // returns the empty string by defa
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

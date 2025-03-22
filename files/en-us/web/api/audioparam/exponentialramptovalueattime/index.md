@@ -12,7 +12,8 @@ The **`exponentialRampToValueAtTime()`** method of the {{domxref("AudioParam")}}
 The change starts at the time specified for the _previous_ event, follows an exponential ramp to the new value given in the `value` parameter, and reaches the new value at the time given in the
 `endTime` parameter.
 
-> **Note:** Exponential ramps are considered more useful when changing
+> [!NOTE]
+> Exponential ramps are considered more useful when changing
 > frequencies or playback rates than linear ramps because of the way the human ear
 > works.
 
@@ -75,7 +76,8 @@ expRampMinus.onclick = () => {
 };
 ```
 
-> **Note:** A value of 0.01 was used for the value to ramp down to in the
+> [!NOTE]
+> A value of 0.01 was used for the value to ramp down to in the
 > last function rather than 0, as an _invalid or illegal string_ error is thrown
 > if 0 is used — the value needs to be positive.
 

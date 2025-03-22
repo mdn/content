@@ -308,28 +308,28 @@ const colorSphere = (element) => {
   const halfWidth = width / 2;
   const rotate = (1 / 360) * Math.PI * 2; // per degree
   const offset = 0; // scrollbar offset
-  const oleft = -20;
-  const otop = -20;
+  const oLeft = -20;
+  const oTop = -20;
   for (let n = 0; n <= 359; n++) {
     const gradient = ctx.createLinearGradient(
-      oleft + halfWidth,
-      otop,
-      oleft + halfWidth,
-      otop + halfWidth,
+      oLeft + halfWidth,
+      oTop,
+      oLeft + halfWidth,
+      oTop + halfWidth,
     );
     const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
     gradient.addColorStop(0, "rgb(0 0 0 / 0%)");
     gradient.addColorStop(0.7, `rgb(${color.R} ${color.G} ${color.B} / 100%)`);
     gradient.addColorStop(1, "rgb(255 255 255 / 100%)");
     ctx.beginPath();
-    ctx.moveTo(oleft + halfWidth, otop);
-    ctx.lineTo(oleft + halfWidth, otop + halfWidth);
-    ctx.lineTo(oleft + halfWidth + 6, otop);
+    ctx.moveTo(oLeft + halfWidth, oTop);
+    ctx.lineTo(oLeft + halfWidth, oTop + halfWidth);
+    ctx.lineTo(oLeft + halfWidth + 6, oTop);
     ctx.fillStyle = gradient;
     ctx.fill();
-    ctx.translate(oleft + halfWidth, otop + halfWidth);
+    ctx.translate(oLeft + halfWidth, oTop + halfWidth);
     ctx.rotate(rotate);
-    ctx.translate(-(oleft + halfWidth), -(otop + halfWidth));
+    ctx.translate(-(oLeft + halfWidth), -(oTop + halfWidth));
   }
   ctx.beginPath();
   ctx.fillStyle = "#00f";

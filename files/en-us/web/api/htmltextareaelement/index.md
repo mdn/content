@@ -7,7 +7,7 @@ browser-compat: api.HTMLTextAreaElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
+The **`HTMLTextAreaElement`** interface provides properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
 
 {{InheritanceDiagram}}
 
@@ -15,8 +15,6 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
-  - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
@@ -28,7 +26,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
+  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
@@ -103,9 +101,9 @@ Make a textarea autogrow while typing:
 #### JavaScript
 
 ```js
-function autoGrow(oField) {
-  if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = `${oField.scrollHeight}px`;
+function autoGrow(field) {
+  if (field.scrollHeight > field.clientHeight) {
+    field.style.height = `${field.scrollHeight}px`;
   }
 }
 ```
@@ -113,7 +111,7 @@ function autoGrow(oField) {
 #### CSS
 
 ```css
-textarea.noscrollbars {
+textarea.no-scrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
@@ -126,7 +124,7 @@ textarea.noscrollbars {
 <form>
   <fieldset>
     <legend>Your comments</legend>
-    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><textarea class="no-scrollbars" onkeyup="autoGrow(this);"></textarea></p>
     <p><input type="submit" value="Send" /></p>
   </fieldset>
 </form>
@@ -136,27 +134,25 @@ textarea.noscrollbars {
 
 ### Insert HTML tags example
 
-Insert some HTML tags in a textarea.
+Insert some HTML tags in a textarea:
 
-#### JavaScript
-
-```js
+```js live-sample___insert-html
 function insert(startTag, endTag) {
-  const textArea = document.myForm.myTxtArea;
-  const selectionStart = textArea.selectionStart;
-  const selectionEnd = textArea.selectionEnd;
+  const textArea = document.myForm.myTextArea;
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
   const oldText = textArea.value;
 
-  const prefix = oldText.substring(0, selectionStart);
-  const inserted =
-    startTag + oldText.substring(selectionStart, selectionEnd) + endTag;
-  const suffix = oldText.substring(selectionEnd);
+  const prefix = oldText.substring(0, start);
+  const inserted = startTag + oldText.substring(start, end) + endTag;
+  const suffix = oldText.substring(end);
+
   textArea.value = `${prefix}${inserted}${suffix}`;
 
-  const newSelectionStart = selectionStart + startTag.length;
-  const newSelectionEnd = selectionEnd + startTag.length;
-  textArea.setSelectionRange(newSelectionStart, newSelectionEnd);
+  const newStart = start + startTag.length;
+  const newEnd = end + startTag.length;
 
+  textArea.setSelectionRange(newStart, newEnd);
   textArea.focus();
 }
 
@@ -165,7 +161,7 @@ function insertURL() {
   if (newURL) {
     insert(`<a href="${newURL}">`, "</a>");
   } else {
-    document.myForm.myTxtArea.focus();
+    document.myForm.myTextArea.focus();
   }
 }
 
@@ -177,14 +173,12 @@ const code = document.querySelector("#format-code");
 strong.addEventListener("click", (e) => insert("<strong>", "</strong>"));
 em.addEventListener("click", (e) => insert("<em>", "</em>"));
 link.addEventListener("click", (e) => insertURL());
-code.addEventListener("click", (e) => insert("\n<code>\n", "\n</code>\n"));
+code.addEventListener("click", (e) => insert("<code>", "</code>"));
 ```
 
-#### CSS
+Decorate the span to behave like a link:
 
-CSS to decorate the internal span to behave like a link:
-
-```css
+```css live-sample___insert-html
 .intLink {
   cursor: pointer;
   text-decoration: underline;
@@ -192,92 +186,25 @@ CSS to decorate the internal span to behave like a link:
 }
 ```
 
-HTML:
-
-```html
+```html live-sample___insert-html
 <form name="myForm">
   <p>
-    [&nbsp;
+    [
     <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
     <span class="intLink" id="format-em"><em>Italic</em></span> |
     <span class="intLink" id="format-link">URL</span> |
-    <span class="intLink" id="format-code">code</span> &nbsp;]
+    <span class="intLink" id="format-code">code</span> ]
   </p>
 
   <p>
-    <textarea name="myTxtArea" rows="10" cols="50">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem.
+    <textarea name="myTextArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. 
     </textarea>
   </p>
 </form>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
-
-### Maximum length and number of lines example
-
-Create a textarea with a maximum number of characters per line and a maximum number of lines:
-
-First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.
-
-```js
-function checkRows(oField, oKeyEvent) {
-  let nKey = (
-      oKeyEvent ||
-      /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }
-    ).keyCode,
-    // put here the maximum number of characters per line:
-    nCols = 30,
-    // put here the maximum number of lines:
-    nRows = 5,
-    nSelS = oField.selectionStart,
-    nSelE = oField.selectionEnd,
-    sVal = oField.value,
-    nLen = sVal.length,
-    nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw =
-      sVal
-        .substring(nBackward, nSelS)
-        .search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
-    nRowStart = nBackward + nDeltaForw,
-    aReturns = (
-      sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)
-    ).match(/\n/g),
-    nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow =
-      sVal.substring(nRowStart, nSelS) +
-      sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
-    bKeepCols =
-      nKey === 13 ||
-      nLen + 1 < nCols ||
-      /\n/.test(sRow) ||
-      ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) &&
-        (sRow.length < nCols ||
-          (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
-
-  return (
-    (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) &&
-    ((nKey > 32 && nKey < 41) || bKeepCols)
-  );
-}
-```
-
-In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
-
-```html
-<form>
-  <p>
-    Textarea with fixed number of characters per line:<br />
-    <textarea
-      cols="50"
-      rows="10"
-      onkeypress="return checkRows(this, event);"
-      onpaste="return false;"></textarea>
-  </p>
-</form>
-```
-
-{{EmbedLiveSample('Maximum_length_and_number_of_lines_example', 600, 300)}}
+{{EmbedLiveSample('insert-html', , '300', , , , , 'allow-modals')}}
 
 ## Specifications
 

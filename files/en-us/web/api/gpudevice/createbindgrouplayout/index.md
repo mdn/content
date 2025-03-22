@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroupLayout()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroupLayout")}} that defines the structure and purpose of related GPU resources such as buffers that will be used in a pipeline, and is used as a template when creating {{domxref("GPUBindGroup")}}s.
@@ -92,7 +92,15 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
 - `storageTexture`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUTextureView")}} object. A `storageTexture` resource layout object can contain the following properties:
 
   - `access` {{optional_inline}}
-    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are currently `"write-only"` and `undefined`, with the intention to add more access modes in the future. If omitted, the default value is `"write-only"`.
+
+    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are:
+
+      - `"read-only"`: Enables WGSL code to read storage textures.
+      - `"read-write"`: Enables WGSL code to read and write to storage textures.
+      - `"write-only"`: The default value; Enables WGSL code to write to storage textures.
+
+      The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}. If this is not the case, a {{domxref("GPUValidationError")}} is generated.
+
   - `format`
     - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
   - `viewDimension` {{optional_inline}}
@@ -153,7 +161,8 @@ The following criteria must be met when calling **`createBindGroupLayout()`**, o
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 

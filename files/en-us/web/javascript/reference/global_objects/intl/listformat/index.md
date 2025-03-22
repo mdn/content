@@ -9,7 +9,29 @@ browser-compat: javascript.builtins.Intl.ListFormat
 
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Constructor
 
@@ -27,8 +49,8 @@ These properties are defined on `Intl.ListFormat.prototype` and shared by all `I
 
 - {{jsxref("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.ListFormat` instances, the initial value is the {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat")}} constructor.
-- `Intl.ListFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.ListFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.ListFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.ListFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -37,7 +59,7 @@ These properties are defined on `Intl.ListFormat.prototype` and shared by all `I
 - {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
   - : Returns an array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.
 - {{jsxref("Intl/ListFormat/resolvedOptions", "Intl.ListFormat.prototype.resolvedOptions()")}}
-  - : Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current {{jsxref("Intl.ListFormat")}} object.
+  - : Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current `Intl.ListFormat` object.
 
 ## Examples
 
@@ -98,5 +120,5 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)
+- [Polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-listformat/)
 - {{jsxref("Intl")}}

@@ -30,7 +30,7 @@ An array of the `WorkletSharedStorage`'s enumerable property key-value pairs.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
+  - : Thrown if the calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
 
 ## Examples
 

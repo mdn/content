@@ -7,12 +7,12 @@ browser-compat: api.HTMLElement.toggle_event
 
 {{APIRef("HTML DOM")}}
 
-The **`toggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) just after it is shown or hidden.
+The **`toggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element, {{htmlelement("dialog")}} element, or {{htmlelement("details")}} element just after it is shown or hidden.
 
-- If the popover element is transitioning from hidden to showing, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
-- If the popover element is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
+- If the element is transitioning from hidden to showing, the [`event.oldState`](/en-US/docs/Web/API/ToggleEvent/oldState) property will be set to `closed` and the [`event.newState`](/en-US/docs/Web/API/ToggleEvent/newState) property will be set to `open`.
+- If the element is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
 
-> **Note:** The `toggle` event behaves differently when fired on {{htmlelement("details")}} elements. In this case, it does not relate to popovers, and instead fires when the `open`/`closed` state of a `<details>` element is toggled. See the `HTMLDetailsElement` {{domxref("HTMLDetailsElement.toggle_event", "toggle event")}} page for more information.
+This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
 
 ## Syntax
 
@@ -32,12 +32,49 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+The example code below demonstrates how the `toggle` event might be used for {{domxref("Popover_API", "popover", "", "nocode")}}.
+The same code is might be used for a {{htmlelement("dialog")}} or {{htmlelement("details")}} elements in the same way.
+
 ### Basic example
+
+This example shows how to listen for the `toggle` event and log the result.
+
+#### HTML
+
+The HTML consists of a popover and a button for toggling it open and closed.
+
+```html
+<button popovertarget="mypopover">Toggle the popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+The code adds an event listener for the `toggle` event and logs the state.
 
 ```js
 const popover = document.getElementById("mypopover");
-
-// ...
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
@@ -48,9 +85,14 @@ popover.addEventListener("toggle", (event) => {
 });
 ```
 
+#### Result
+
+{{EmbedLiveSample("Basic example", '100%', "250px")}}
+
 ### A note on toggle event coalescing
 
-It is worth pointing out that `toggle` events are coalesced, meaning that if multiple `toggle` events are fired before the event loop has a chance to cycle, only a single event will be fired.
+If multiple `toggle` events are fired before the event loop has a chance to cycle, only a single event will be fired.
+This is referred to as "event coalescing".
 
 For example:
 
@@ -63,6 +105,10 @@ popover.showPopover();
 popover.hidePopover();
 // `toggle` only fires once
 ```
+
+### Other examples
+
+- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#opening_a_modal_dialog) example in `HTMLDialogElement`
 
 ## Specifications
 

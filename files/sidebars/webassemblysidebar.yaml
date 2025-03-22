@@ -1,0 +1,119 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /WebAssembly
+    title: WebAssembly
+  - title: Guides
+    details: open
+    children:
+      - link: /WebAssembly/Guides/Concepts
+        title: WebAssembly_concepts
+      - link: /WebAssembly/Guides/C_to_Wasm
+        title: Compiling_to_Wasm
+      - link: /WebAssembly/Guides/Rust_to_Wasm
+        title: Compiling_Rust_to_Wasm
+      - link: /WebAssembly/Guides/Using_the_JavaScript_API
+        title: JavaScript_API
+      - link: /WebAssembly/Guides/Understanding_the_text_format
+        title: Text_format
+      - link: /WebAssembly/Guides/Text_format_to_Wasm
+        title: Text_format_to_Wasm
+      - link: /WebAssembly/Guides/Loading_and_running
+        title: Loading_and_running
+      - link: /WebAssembly/Guides/Exported_functions
+        title: Exported_functions
+      - link: /WebAssembly/Guides/JavaScript_builtins
+        title: JavaScript_builtins
+      - link: /WebAssembly/Guides/Imported_string_constants
+        title: Imported_string_constants
+  - title: JavaScript_interface
+    details: open
+    children:
+      - link: /WebAssembly/Reference/JavaScript_interface
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Module
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Global
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Instance
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Memory
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Table
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Tag
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/Exception
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/CompileError
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/LinkError
+        code: true
+      - link: /WebAssembly/Reference/JavaScript_interface/RuntimeError
+        code: true
+l10n:
+  de:
+    WebAssembly_concepts: WebAssembly-Konzepte
+    Compiling_to_Wasm: C/C++ zu WebAssembly kompilieren
+    Compiling_Rust_to_Wasm: Rust zu WebAssembly kompilieren
+    JavaScript_API: WebAssembly-JavaScript-API verwenden
+    Text_format: WebAssembly-Textformat verstehen
+    Text_format_to_Wasm: WebAssembly-Textformat in Wasm umwandeln
+    Loading_and_running: WebAssembly-Code laden und ausführen
+    Exported_functions: Exportierte WebAssembly-Funktionen
+    JavaScript_builtins: JavaScript-Standardobjekte
+    Imported_string_constants: Importierte globale String-Konstanten
+    JavaScript_interface: JavaScript-Schnittstelle
+  en-US:
+    WebAssembly_concepts: WebAssembly concepts
+    Compiling_to_Wasm: Compiling from C/C++ to WebAssembly
+    Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly
+    JavaScript_API: Using the WebAssembly JavaScript API
+    Text_format: Understanding WebAssembly text format
+    Text_format_to_Wasm: Converting WebAssembly text format to Wasm
+    Loading_and_running: Loading and running WebAssembly code
+    Exported_functions: Exported WebAssembly functions
+    JavaScript_builtins: JavaScript builtins
+    Imported_string_constants: Imported global string constants
+    JavaScript_interface: JavaScript interface
+  fr:
+    WebAssembly_concepts: Concepts WebAssembly
+    Compiling_to_Wasm: Compiler du C/C++ en WebAssembly
+    Compiling_Rust_to_Wasm: Compiler du Rust en WebAssembly
+    JavaScript_API: Utiliser l'API JavaScript WebAssembly
+    Text_format: Comprendre le format texte WebAssembly
+    Text_format_to_Wasm: Convertir du format texte WebAssembly en Wasm
+    Loading_and_running: Chargement et exécution de code WebAssembly
+    Exported_functions: Fonctions WebAssembly exportées
+    JavaScript_interface: JavaScript interface
+  ko:
+    WebAssembly_concepts: 웹어셈블리의 개념
+    Compiling_to_Wasm: C/C++ 모듈을 웹어셈블리로 컴파일하기
+    Compiling_Rust_to_Wasm: Rust를 웹어셈블리로 컴파일하기
+    JavaScript_API: 웹어셈블리 JavaScript API 사용하기
+    Text_format: 웹어셈블리 텍스트 형식 이해하기
+    Text_format_to_Wasm: 웹어셈블리 기반 텍스트를 Wasm 형식으로 변환하기
+    Loading_and_running: 웹어셈블리 코드 로딩하고 실행하기
+    Exported_functions: 내보낸 웹어셈블리(Exported WebAssembly) 함수
+    JavaScript_interface: JavaScript 인터페이스
+  ru:
+    WebAssembly_concepts: Основы WebAssembly
+    Compiling_to_Wasm: Компиляция кода C/C++ в WebAssembly
+    Compiling_Rust_to_Wasm: Компиляция Rust в WebAssembly
+    JavaScript_API: Использование WebAssembly JavaScript API
+    Text_format: Описание текстового формата WebAssembly
+    Text_format_to_Wasm: Перевод из текстового формата WebAssembly в Wasm
+    Loading_and_running: Загрузка и запуск кода WebAssembly
+    Exported_functions: Экспортируемые функции WebAssembly
+    JavaScript_interface: JavaScript interface
+  zh-CN:
+    WebAssembly_concepts: WebAssembly 概念
+    Compiling_to_Wasm: 将 C/C++ 编译为 WebAssembly
+    Compiling_Rust_to_Wasm: 将 Rust 编译为 WebAssembly
+    JavaScript_API: 使用 WebAssembly JavaScript API
+    Text_format: 理解 WebAssembly 文本格式
+    Text_format_to_Wasm: 将 WebAssembly 文本格式转换为 Wasm
+    Loading_and_running: 加载和运行 WebAssembly 代码
+    Exported_functions: 导出的 WebAssembly 函数
+    JavaScript_interface: JavaScript 接口

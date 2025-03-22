@@ -12,7 +12,8 @@ The `createDelay()` method of the
 {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("DelayNode")}},
 which is used to delay the incoming audio signal by a certain amount of time.
 
-> **Note:** The {{domxref("DelayNode.DelayNode", "DelayNode()")}}
+> [!NOTE]
+> The {{domxref("DelayNode.DelayNode", "DelayNode()")}}
 > constructor is the recommended way to create a {{domxref("DelayNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -35,7 +36,7 @@ seconds.
 
 ## Examples
 
-We have created a simple example that allows you to play three different samples on a
+We have created an example that allows you to play three different samples on a
 constant loop — see [create-delay](https://chrisdavidmills.github.io/create-delay/) (you can also
 [view the source code](https://github.com/chrisdavidmills/create-delay)). If
 you just press the play buttons, the loops will start immediately; if you slide the

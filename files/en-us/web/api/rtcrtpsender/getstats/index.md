@@ -27,7 +27,7 @@ The promise's fulfillment handler receives as a parameter a {{domxref("RTCStatsR
 
 The returned `RTCStatsReport` accumulates the statistics for all of the streams being sent using the `RTCRtpSender`, as well as the statistics for any dependencies those streams have.
 
-These might include, for example, statistics with [types](2/en-US/docs/Web/API/RTCStatsReport#the_statistic_types): [`outbound-rtp`](/en-US/docs/Web/API/RTCOutboundRtpStreamStats), [`candidate-pair`](/en-US/docs/Web/API/RTCIceCandidatePairStats), [`local-candidate`](/en-US/docs/Web/API/RTCIceCandidateStats), [`remote-candidate`](/en-US/docs/Web/API/RTCIceCandidateStats).
+These might include, for example, statistics with [types](/en-US/docs/Web/API/RTCStatsReport#the_statistic_types): [`outbound-rtp`](/en-US/docs/Web/API/RTCOutboundRtpStreamStats), [`candidate-pair`](/en-US/docs/Web/API/RTCIceCandidatePairStats), [`local-candidate`](/en-US/docs/Web/API/RTCIceCandidateStats), [`remote-candidate`](/en-US/docs/Web/API/RTCIceCandidateStats).
 
 ## Examples
 

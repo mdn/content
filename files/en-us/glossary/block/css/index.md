@@ -12,4 +12,4 @@ Using the {{cssxref("display")}} property you can change whether an element disp
 
 ## See also
 
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)

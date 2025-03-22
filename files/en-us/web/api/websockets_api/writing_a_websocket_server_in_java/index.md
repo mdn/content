@@ -132,7 +132,8 @@ If we send "abcdef", we get these bytes:
 
   If the second byte minus 128 is between 0 and 125, this is the length of the message. If it is 126, the following 2 bytes (16-bit unsigned integer), if 127, the following 8 bytes (64-bit unsigned integer, the most significant bit MUST be 0) are the length.
 
-  > **Note:** It can take 128 because the first bit is always 1.
+  > [!NOTE]
+  > It can take 128 because the first bit is always 1.
 
 - 167, 225, 225 and 210 are the bytes of the key to decode. It changes every time.
 

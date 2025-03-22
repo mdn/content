@@ -13,4 +13,5 @@ Compression methods such as {{glossary("WebP")}} are capable of [both lossy and 
 
 ## See also
 
-- {{glossary("Lossy compression")}}
+- Related glossary terms:
+  - {{glossary("Lossy compression")}}

@@ -18,7 +18,8 @@ If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the
 
 In technical terms, we apply a [Blackman window](https://webaudio.github.io/web-audio-api/#blackman-window) and smooth the values over time. The default value is good enough for most cases.
 
-> **Note:** If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
+> [!NOTE]
+> If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
 
 ## Examples
 
@@ -28,7 +29,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 If you are curious about the effect the `smoothingTimeConstant()` has, try cloning the above example and setting `analyser.smoothingTimeConstant = 0;` instead. You'll notice that the value changes are much more jarring.
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;

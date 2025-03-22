@@ -59,15 +59,15 @@ The important parts of this template are as follows:
 
 - The editable CSS from the second `<head>` block must also be copied into the `playable-css` section.
 
-A simple working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
+A working example is [center.html](https://github.com/mdn/css-examples/blob/main/css-cookbook/center.html), which is embedded on the page [Center an element](/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element). You can use this to see how to add the various bits correctly.
 
 If you've forked the repo and have our CSS and JavaScript files with your example, opening your live example in a browser should display everything working exactly as it would appear on an MDN page.
 
 #### Useful tips
 
-- Do not indent the CSS and HTML inside the textareas; instead, align the code with the start of the lines. This will look better when it is rendered.
+- Do not indent the CSS and HTML inside the text areas; instead, align the code with the start of the lines. This will look better when it is rendered.
 - If any images are required, put them in the directory with the examples. You are welcome to use any images already present.
-- You can adjust the height of the textareas by changing the height in the inline styles.
+- You can adjust the height of the text areas by changing the height in the inline styles.
 
 ### 3. Create a downloadable version
 

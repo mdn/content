@@ -17,6 +17,8 @@ This interface doesn't allow to manipulate the CSS it contains (in most case). T
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLStyleElement.blocking")}}
+  - : A string indicating that certain operations should be blocked on the fetching of critical subresources. It reflects the `blocking` attribute of the {{HTMLElement("style")}} element.
 - {{domxref("HTMLStyleElement.media")}}
   - : A string reflecting the HTML attribute representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}

@@ -34,12 +34,12 @@ No notable changes.
 
 ### Security
 
-- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
+- Support of the [`wasm-unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_webassembly_execution) CSP policy directive has been implemented.
   A document with a CSP that restricts scripts will no longer load and execute WebAssembly unless the CSP uses `'wasm-unsafe-eval'` or the existing `'unsafe-eval'` keyword ([Firefox bug 1740263](https://bugzil.la/1740263)).
 
 #### DOM
 
-- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
+- The Firefox-only property {{domxref("Window.external", "Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
 
 ### WebDriver conformance
 

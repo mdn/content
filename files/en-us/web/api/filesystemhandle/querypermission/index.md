@@ -17,27 +17,28 @@ current handle.
 ## Syntax
 
 ```js-nolint
-queryPermission(fileSystemHandlePermissionDescriptor)
+queryPermission(descriptor)
 ```
 
 ### Parameters
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : An object which specifies the permission mode to query for. Options are as follows:
 
-    - `'mode'`: Can be either `'read'` or
-      `'readwrite'`.
+    - `'mode'` {{optional_inline}}
+
+      - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
+A {{jsxref("Promise")}} that resolves with {{domxref('PermissionStatus.state')}} which is one of `'granted'`, `'denied'` or `'prompt'`. It may also reject with one of the exceptions below.
 
-If {{domxref('PermissionStatus.state')}} returns "prompt" the website will have to call requestPermission() before any
-operations on the handle can be done. If this returns "denied" any operations will
+If this resolves with "prompt", the website will have to call `requestPermission()` before any
+operations on the handle can be done. If this resolves with "denied" any operations will
 reject. Usually handles returned by the local file system handle factories will
-initially return "granted" for their read permission state. However, other than through
-the user revoking permission, a handle retrieved from IndexedDB is also likely to return
+initially resolves with "granted" for their read permission state. However, other than through
+the user revoking permission, a handle retrieved from IndexedDB is also likely to resolves with
 "prompt".
 
 ### Exceptions

@@ -13,7 +13,8 @@ Speech recognition involves receiving speech through a device's microphone, whic
 
 The Web Speech API has a main controller interface for this — {{domxref("SpeechRecognition")}} — plus a number of closely-related interfaces for representing grammar, results, etc. Generally, the default speech recognition system available on the device will be used for the speech recognition — most modern OSes have a speech recognition system for issuing voice commands. Think about Dictation on macOS, Siri on iOS, Cortana on Windows 10, Android Speech, etc.
 
-> **Note:** On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
+> [!NOTE]
+> On some browsers, such as Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
 ### Demo
 
@@ -198,7 +199,7 @@ The HTML and CSS are again pretty trivial, containing a title, some instructions
 <h1>Speech synthesizer</h1>
 
 <p>
-  Enter some text in the input below and press return to hear it. change voices
+  Enter some text in the input below and press return to hear it. Change voices
   using the dropdown menu.
 </p>
 
@@ -303,7 +304,7 @@ inputForm.onsubmit = (event) => {
   synth.speak(utterThis);
 ```
 
-In the final part of the handler, we include an {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
+In the final part of the handler, we include a {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} event to demonstrate how {{domxref("SpeechSynthesisEvent")}} can be put to good use. When {{domxref("SpeechSynthesis.pause()")}} is invoked, this returns a message reporting the character number and name that the speech was paused at.
 
 ```js
 utterThis.onpause = (event) => {

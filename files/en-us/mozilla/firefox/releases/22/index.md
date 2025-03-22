@@ -32,12 +32,12 @@ page-type: firefox-release-notes
 - `Node.setUserData` and `Node.getUserData` has been removed for web content and are deprecated for chrome content ([Firefox bug 842372](https://bugzil.la/842372)).
 - The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ([Firefox bug 844134](https://bugzil.la/844134)).
 - The Mac OS X backend for **Ambient Light Events** has been implemented.
-- Elements in the HTML namespace with local names `<bgsound>`, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. `<bgsound>` implements {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
+- Elements in the HTML namespace with local names `<bgsound>`, `<multicol>`, and `<image>` no longer implement the {{domxref("HTMLSpanElement")}} interface. `<bgsound>` implements {{domxref("HTMLUnknownElement")}} and `<image>` implements {{domxref("HTMLElement")}}.
 - The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ([Firefox bug 823549](https://bugzil.la/823549)).
 - The {{domxref("BlobEvent")}} interface has been implemented ([Firefox bug 834165](https://bugzil.la/834165)).
 - The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ([Firefox bug 847370](https://bugzil.la/847370) and [Firefox bug 850346](https://bugzil.la/850346)).
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
-- Web Components: the {{domxref("Document.register")}} method has been implemented ([Firefox bug 783129](https://bugzil.la/783129)).
+- Web Components: the `Document.register()` method has been implemented ([Firefox bug 783129](https://bugzil.la/783129)).
 - The `ProgressEvent.initProgressEvent()` constructor method has been removed. Use the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construct and initialize {{domxref("ProgressEvent")}} ([Firefox bug 843489](https://bugzil.la/843489)).
 - Manipulated data associated with a {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, or {{domxref("Element/paste_event", "paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ([Firefox bug 407983](https://bugzil.la/407983)).
 - The {{domxref("HTMLTimeElement")}} interface has been implemented ([Firefox bug 629801](https://bugzil.la/629801)).

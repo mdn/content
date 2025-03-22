@@ -17,7 +17,7 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 ## Constructor
 
-- {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}} {{Experimental_Inline}}
+- {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}} {{Experimental_Inline}}
   - : Creates and returns a new `XRWebGLLayer` object for use by the specified {{domxref("XRSession")}}, using a particular {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}} as the destination context.
 
 ## Instance properties
@@ -67,7 +67,7 @@ let pose = xrFrame.getViewerPose(xrReferenceSpace);
 
 if (pose) {
   const glLayer = xrSession.renderState.baseLayer;
-  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.Framebffer);
+  gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
   for (const view of pose.views) {
     const viewport = glLayer.getViewport(view);

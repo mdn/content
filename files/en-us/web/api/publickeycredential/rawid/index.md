@@ -14,7 +14,8 @@ containing the identifier of the credentials.
 
 The {{domxref("PublicKeyCredential.id")}} property is a [base64url encoded](/en-US/docs/Glossary/Base64) version of this identifier.
 
-> **Note:** This property may only be used in top-level contexts and will
+> [!NOTE]
+> This property may only be used in top-level contexts and will
 > not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Value

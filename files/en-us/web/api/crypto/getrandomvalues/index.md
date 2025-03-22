@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Crypto.getRandomValues
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto.getRandomValues()`** method lets you get cryptographically strong random values.
 The array given as the parameter is filled with random numbers (random in its cryptographic meaning).
@@ -74,5 +74,4 @@ for (const num of array) {
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- {{domxref("crypto_property", "crypto")}} to get a {{domxref("Crypto")}} object.
 - {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

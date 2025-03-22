@@ -1,10 +1,9 @@
 ---
-title: ":-moz-drag-over"
+title: :-moz-drag-over
 slug: Web/CSS/:-moz-drag-over
 page-type: css-pseudo-class
 status:
   - non-standard
-browser-compat: css.selectors:-moz-drag-over
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -25,8 +25,8 @@ This allows construction of sentences that make sense in English for each case, 
 Creating appropriate sentences for each form depends on the language, and even in English may not be as simple as just adding "s" to a noun to make the plural form.
 Using the example above, we see that the form may affect:
 
-- **Nouns**: 1 dogs/2 dogs (but not "fish" or "sheep", which have the same singular and plural form).
-- **Verbs**: 1 dog _is_ happy, 2 dogs _are_ happy
+- **Nouns**: 1 dog, 2 dogs (but not "fish" or "sheep", which have the same singular and plural form).
+- **Verbs**: 1 dog _is_ happy, 2 dogs _are_ happy.
 - **Pronouns** (and other referents): Do you want to play with _it_ / _them_.
 
 Other languages have more forms, and choosing appropriate sentences can be even more complex.
@@ -53,8 +53,8 @@ These properties are defined on `Intl.PluralRules.prototype` and shared by all `
 
 - {{jsxref("Object/constructor", "Intl.PluralRules.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.PluralRules` instances, the initial value is the {{jsxref("Intl/PluralRules/PluralRules", "Intl.PluralRules")}} constructor.
-- `Intl.PluralRules.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.PluralRules"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.PluralRules.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.PluralRules"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -147,5 +147,5 @@ formatOrdinals(103); // '103rd'
 
 ## See also
 
-- [Polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)
+- [Polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-pluralrules/)
 - {{jsxref("Intl")}}

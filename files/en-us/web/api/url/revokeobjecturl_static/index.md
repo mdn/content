@@ -6,17 +6,18 @@ page-type: web-api-static-method
 browser-compat: api.URL.revokeObjectURL_static
 ---
 
-{{ApiRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **`URL.revokeObjectURL()`** static
-method releases an existing object URL which was previously created by calling
+The **`revokeObjectURL()`** static method of the {{domxref("URL")}} interface
+releases an existing object URL which was previously created by calling
 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 Call this method when you've finished
 using an object URL to let the browser know not to keep the reference to the file any
 longer.
 
-> **Note:** This method is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API), due to
+> [!NOTE]
+> This method is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API), due to
 > issues with the {{domxref("Blob")}} interface's life cycle and the potential for leaks.
 
 ## Syntax

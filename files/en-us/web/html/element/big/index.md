@@ -11,7 +11,8 @@ browser-compat: html.elements.big
 
 The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
-> **Warning:** This element has been removed from the specification and shouldn't be used anymore. Use the CSS {{cssxref("font-size")}} property to adjust the font size.
+> [!WARNING]
+> This element has been removed from the specification and shouldn't be used anymore. Use the CSS {{cssxref("font-size")}} property to adjust the font size.
 
 ## Attributes
 

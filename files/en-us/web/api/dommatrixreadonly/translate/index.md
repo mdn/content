@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface
 creates a new matrix being the result of the original matrix with a translation applied.
@@ -14,8 +14,8 @@ creates a new matrix being the result of the original matrix with a translation 
 ## Syntax
 
 ```js-nolint
-DOMMatrix.translate(translateX, translateY)
-DOMMatrix.translate(translateX, translateY, translateZ)
+translate(translateX, translateY)
+translate(translateX, translateY, translateZ)
 ```
 
 ### Parameters

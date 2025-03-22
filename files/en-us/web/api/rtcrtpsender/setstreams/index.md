@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.setStreams
 ---
 
-{{DefaultAPISidebar("WebRTC API")}}
+{{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method **`setStreams()`** associates the sender's {{domxref("RTCRtpSender.track", "track")}} with the specified {{domxref("MediaStream")}} objects.
 

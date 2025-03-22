@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: width property"
 short-title: width
 slug: Web/API/MediaTrackSupportedConstraints/width
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.width
+browser-compat: api.MediaStreamTrack.applyConstraints.width_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -19,13 +19,7 @@ isn't supported, it's not included in the list, so this value will never be
 You can access the supported constraints dictionary by calling
 `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js-nolint
-widthConstraintSupported = supportedConstraintsDictionary.width
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `width` constraint. If the property isn't

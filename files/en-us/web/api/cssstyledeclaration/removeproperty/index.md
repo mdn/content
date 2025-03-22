@@ -20,7 +20,7 @@ removeProperty(property)
 ### Parameters
 
 - `property`
-  - A string representing the property name to be removed. Multi-word property names are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) and not {{Glossary("camel_case", "camel-cased")}}.
+  - : A string representing the property name to be removed. Multi-word property names are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) and not {{Glossary("camel_case", "camel-cased")}}.
 
 ### Return value
 

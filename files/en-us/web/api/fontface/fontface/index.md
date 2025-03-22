@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.FontFace.FontFace
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFace()`** constructor creates a new {{domxref("FontFace")}} object.
 
@@ -70,7 +70,7 @@ new FontFace(family, source, descriptors)
 
 ```js
 async function loadFonts() {
-  const font = new FontFace("myfont", "url(myfont.woff)", {
+  const font = new FontFace("my-font", "url(my-font.woff)", {
     style: "normal",
     weight: "400",
     stretch: "condensed",

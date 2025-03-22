@@ -141,7 +141,8 @@ The rotation center point is always the canvas origin. To change the center poin
 
 In this example, we'll use the `rotate()` method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of `translate()`.
 
-> **Note:** Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {
@@ -237,23 +238,28 @@ Finally, the following transformation methods allow modifications directly to th
 
   - : Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by:
 
-    <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+    <!-- prettier-ignore-start -->
+
+    <math display="block">
+      <semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics>
+    </math>
+    <!-- prettier-ignore-end -->
 
     If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
 The parameters of this function are:
 
-- `a (m11)`
+- `a` (`m11`)
   - : Horizontal scaling.
-- `b (m12)`
+- `b` (`m12`)
   - : Horizontal skewing.
-- `c (m21)`
+- `c` (`m21`)
   - : Vertical skewing.
-- `d (m22)`
+- `d` (`m22`)
   - : Vertical scaling.
-- `e (dx)`
+- `e` (`dx`)
   - : Horizontal moving.
-- `f (dy)`
+- `f` (`dy`)
   - : Vertical moving.
 - {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
   - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments. This basically undoes the current transformation, then sets the specified transform, all in one step.

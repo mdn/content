@@ -2,17 +2,12 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 page-type: web-api-interface
-status:
-  - deprecated
-  - non-standard
 browser-compat: api.InstallEvent
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Service Workers API")}}
 
-> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall` handler to catch events of this type, handle the (non-deprecated) {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event using a listener added with {{domxref("EventTarget/addEventListener", "addEventListener")}}.
-
-The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
+The parameter passed into an {{DOMxRef("ServiceWorkerGlobalScope.install_event", "install")}} event handler function, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
@@ -20,16 +15,19 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{experimental_inline}}
   - : Creates a new `InstallEvent` object.
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
+
+- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}} {{experimental_inline}}
+  - : Specifies one or more static routes, which define rules for fetching specified resources that will be used even before service worker startup.
 
 ## Examples
 
@@ -37,7 +35,8 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.
 
-> **Note:** Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
+> [!NOTE]
+> Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
 const CACHE_VERSION = 1;
@@ -77,6 +76,10 @@ self.addEventListener("install", (event) => {
   );
 });
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -44,14 +44,14 @@ _No changes._
 - The {{domxref("Gamepad.displayId")}} property has been implemented ([Firefox bug 1375816](https://bugzil.la/1375816)).
 - The {{domxref("PerformanceTiming.secureConnectionStart")}} property has been implemented ([Firefox bug 772589](https://bugzil.la/772589)).
 - Firefox used to accept `iso-2022-jp-2` sequences silently when an `iso-2022-jp` {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} was instantiated, however this has now been removed to simplify the API, as no other browsers support it and no pages seem to use it. ([Firefox bug 715833](https://bugzil.la/715833)).
-- The 4ms clamping behavior of {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/setTimeout#timeouts_throttled_to_%3e4ms) ([Firefox bug 1378586](https://bugzil.la/1378586)).
+- The 4ms clamping behavior of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} has been updated to be more in line with other browsers, as described in [Timeouts throttled to >=4ms](/en-US/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) ([Firefox bug 1378586](https://bugzil.la/1378586)).
 - The [Page Visibility API's](/en-US/docs/Web/API/Page_Visibility_API) {{domxref("Document.visibilitychange_event", "onvisibilitychange")}} handler has been added ([Firefox bug 1333912](https://bugzil.la/1333912)).
 - The {{domxref("Window.showModalDialog()")}} method has been removed ([Firefox bug 981796](https://bugzil.la/981796)).
 - The implementation of the {{domxref("HTMLFormElement.action")}}, {{domxref("HTMLInputElement.formAction")}}, and {{domxref("HTMLButtonElement.formAction")}} properties has been updated so that they return the correct form submission URL, as per spec ([Firefox bug 1366361](https://bugzil.la/1366361)).
 
 #### DOM events
 
-- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
+- {{domxref("Element/wheel_event", "onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
 
 #### Media and WebRTC
 
@@ -74,13 +74,13 @@ _No changes._
 ### Other
 
 - Gecko now encodes URLs internally as [punycode](https://en.wikipedia.org/wiki/Punycode), to avoid URL encoding problems (see [Firefox bug 945240](https://bugzil.la/945240), also see discussion in [Firefox bug 942074](https://bugzil.la/942074)).
-- Firefox on Windows and macOS can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see [Firefox bug 1355150](https://bugzil.la/1355150) and [Firefox bug 1355147](https://bugzil.la/1355147)).
+- Firefox on Windows and macOS can now be made to run in headless mode using the `-headless` flag (see [Firefox bug 1355150](https://bugzil.la/1355150) and [Firefox bug 1355147](https://bugzil.la/1355147)).
 
 ## Removals from the web platform
 
 ### HTML
 
-- The {{htmlelement("isindex")}} element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
+- The `<isindex>` element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
 - The `<applet>` element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
 
 ### APIs

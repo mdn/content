@@ -6,14 +6,14 @@ page-type: web-api-static-method
 browser-compat: api.DOMPointReadOnly.fromPoint_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The static **{{domxref("DOMPointReadOnly")}}**
 method `fromPoint()` creates and returns a new
 `DOMPointReadOnly` object given a source point.
 
 You can also create a new `DOMPointReadOnly` object using the
-{{domxref("DOMPointReadOnly.DOMPointReadOnly", "new DOMPointReadOnly()")}} constructor.
+{{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}} constructor.
 
 ## Syntax
 
@@ -57,7 +57,7 @@ const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
 ### Creating a 3D point using an existing point
 
 This example creates a point, `origPoint`, of type
-{{domxref("DOMPoint")}}, using {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}}. That
+{{domxref("DOMPoint")}}, using {{domxref("DOMPoint.DOMPoint", "DOMPoint()")}}. That
 point is then used as the input for `fromPoint()` to create a new point,
 `newPoint`.
 

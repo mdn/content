@@ -1,5 +1,5 @@
 ---
-title: ":-moz-suppressed"
+title: :-moz-suppressed
 slug: Web/CSS/:-moz-suppressed
 page-type: css-pseudo-class
 status:
@@ -10,7 +10,8 @@ status:
 
 The **`:-moz-suppressed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing images that were suppressed because loading images from the specified site has been blocked.
 
-> **Note:** This selector is mainly intended to be used by theme developers.
+> [!NOTE]
+> This selector is mainly intended to be used by theme developers.
 
 ## Syntax
 

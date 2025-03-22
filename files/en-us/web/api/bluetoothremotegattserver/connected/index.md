@@ -26,5 +26,3 @@ A `boolean`.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

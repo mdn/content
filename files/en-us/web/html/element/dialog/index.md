@@ -17,14 +17,16 @@ JavaScript should be used to display the `<dialog>` element. Use the {{domxref("
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
+> [!WARNING]
+> The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
 - `open`
 
   - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
     It is recommended to use the `.show()` or `.showModal()` method to render dialogs, rather than the `open` attribute. If a `<dialog>` is opened using the `open` attribute, it is non-modal.
 
-    > **Note:** While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended.
+    > [!NOTE]
+    > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended. See {{domxref("HTMLDialogElement.open", "open")}} for more information.
 
 ## Usage notes
 
@@ -33,11 +35,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - The [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute should be added to the element the user is expected to interact with immediately upon opening a modal dialog. If no other element involves more immediate interaction, it is recommended to add `autofocus` to the close button inside the dialog, or the dialog itself if the user is expected to click/activate it to dismiss.
 - Do not add the `tabindex` property to the `<dialog>` element as it is not interactive and does not receive focus. The dialog's contents, including the close button contained in the dialog, can receive focus and be interactive.
 
+## Accessibility
+
+When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
+
+Ensure a mechanism is provided to allow users to close the dialog. The most robust way to ensure that all users can close the dialog is to include an explicit button to do so, such as a confirmation, cancellation, or close button.
+
+By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
+
+While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
+
+The `<dialog>` element is exposed by browsers in a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
+
 ## Examples
 
 ### HTML-only dialog
 
-This example demonstrates the create a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
+This example demonstrates the creation of a non-modal dialog by using only HTML. Because of the boolean `open` attribute in the `<dialog>` element, the dialog appears open when the page loads. The dialog can be closed by clicking the "OK" button because the `method` attribute in the `<form>` element is set to `"dialog"`. In this case, no JavaScript is needed to close the form.
 
 ```html
 <dialog open>
@@ -52,7 +66,8 @@ This example demonstrates the create a non-modal dialog by using only HTML. Beca
 
 {{EmbedLiveSample("HTML-only_dialog", "100%", 200)}}
 
-> **Note:** Reload the page to reset the output.
+> [!NOTE]
+> Reload the page to reset the output.
 
 This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. After clicking "OK", the dialog gets dismissed, leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
@@ -91,7 +106,7 @@ We can style the backdrop of the dialog by using the {{cssxref('::backdrop')}} p
 
 #### JavaScript
 
-The dialog is opened modally using the `.showModal()` method and closed using the `.close()` method.
+The dialog is opened modally using the `.showModal()` method and closed using the `.close()` or `.requestClose()` methods.
 
 ```js
 const dialog = document.querySelector("dialog");
@@ -164,11 +179,6 @@ const confirmBtn = favDialog.querySelector("#confirmBtn");
 // "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener("click", () => {
   favDialog.showModal();
-});
-
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
 });
 
 // "Cancel" button closes the dialog without submitting because of [formmethod="dialog"], triggering a close event.
@@ -264,14 +274,15 @@ From the output, we see it is impossible to close the dialog using the _Normal c
 
 ### Animating dialogs
 
-`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
+`<dialog>`s are set to [`display: none;`](/en-US/docs/Web/CSS/display) when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
 
 So for example:
 
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
+> [!NOTE]
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
 
 #### Transitioning dialog elements
 
@@ -303,18 +314,18 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 
 ##### CSS
 
-In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog[open]` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
+In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog:open` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
 
-We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog[open]::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
+We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
-/*   Open state of the dialog  */
-dialog[open] {
+/* Open state of the dialog  */
+dialog:open {
   opacity: 1;
   transform: scaleY(1);
 }
 
-/*   Closed state of the dialog   */
+/* Closed state of the dialog   */
 dialog {
   opacity: 0;
   transform: scaleY(0);
@@ -327,11 +338,11 @@ dialog {
   transition: all 0.7s allow-discrete; */
 }
 
-/*   Before-open state  */
-/* Needs to be after the previous dialog[open] rule to take effect,
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect,
     as the specificity is the same */
 @starting-style {
-  dialog[open] {
+  dialog:open {
     opacity: 0;
     transform: scaleY(0);
   }
@@ -348,7 +359,7 @@ dialog::backdrop {
   transition: all 0.7s allow-discrete; */
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
   background-color: rgb(0 0 0 / 25%);
 }
 
@@ -356,11 +367,14 @@ dialog[open]::backdrop {
 because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
-  dialog[open]::backdrop {
+  dialog:open::backdrop {
     background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
+
+> [!NOTE]
+> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `dialog[open]` to style the `<dialog>` element when it is in the open state.
 
 ##### JavaScript
 
@@ -386,7 +400,8 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning dialog elements", "100%", "200") }}
 
-> **Note:** Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog[open]` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog[open]` state to the default `dialog` state.
+> [!NOTE]
+> Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog:open` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog:open` state to the default `dialog` state.
 >
 > It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
@@ -423,11 +438,11 @@ dialog {
   animation: fade-out 0.7s ease-out;
 }
 
-dialog[open] {
+dialog:open {
   animation: fade-in 0.7s ease-out;
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
   animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
@@ -501,18 +516,6 @@ The code renders as follows:
 
 {{ EmbedLiveSample("dialog keyframe animations", "100%", "200") }}
 
-## Accessibility concerns
-
-When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
-
-Ensure a mechanism is provided to allow users to close the dialog. The most robust way to ensure that all users can close the dialog is to include an explicit button to do so, such as a confirmation, cancellation, or close button.
-
-By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
-
-While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
-
-The `<dialog>` element is exposed by browsers in a manner similar to custom dialogs that use the ARIA [role="dialog"](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) attribute. `<dialog>` elements invoked by the `showModal()` method implicitly have [aria-modal="true"](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal), whereas `<dialog>` elements invoked by the `show()` method or displayed using the `open` attribute or by changing the default `display` of a `<dialog>` are exposed as `[aria-modal="false"]`. When implementing modal dialogs, everything other than the `<dialog>` and its contents should be rendered inert using the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. When using `<dialog>` along with the `HTMLDialogElement.showModal()` method, this behavior is provided by the browser.
-
 ## Technical summary
 
 <table class="properties">
@@ -546,12 +549,12 @@ The `<dialog>` element is exposed by browsers in a manner similar to custom dial
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role">dialog</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -571,9 +574,9 @@ The `<dialog>` element is exposed by browsers in a manner similar to custom dial
 ## See also
 
 - {{domxref("HTMLDialogElement")}} interface
-- {{domxref("HTMLDialogElement/close_event", "close")}} event
-- {{domxref("HTMLElement/cancel_event", "cancel")}} event
+- {{domxref("HTMLDialogElement/close_event", "close")}} event of the `HTMLDialogElement` interface
+- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event of the `HTMLDialogElement` interface
 - {{domxref("HTMLDialogElement/open", "open")}} property of the `HTMLDialogElement` interface
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) global attribute for HTML elements
 - {{CSSXref("::backdrop")}} CSS pseudo-element
-- [Web forms](/en-US/docs/Learn/Forms) in the Learn area
+- [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms) in the Learn area

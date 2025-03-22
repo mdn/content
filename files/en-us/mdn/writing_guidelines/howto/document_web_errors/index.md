@@ -1,10 +1,10 @@
 ---
 title: How to document web errors
+short-title: Document errors
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors) on MDN Web Docs is a project to help web developers with errors occurring in the [Developer Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). For this project, we need to write more error documentation on MDN Web Docs so that we can add more links to the tools where the messages are thrown. This article explains how to document the web errors.
 
@@ -13,7 +13,6 @@ JavaScript errors contain a "Learn more" link that takes you to the JavaScript e
 ## Step 1 – Determine the error to document
 
 - Firefox/Gecko's error messages: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Edge/Chakra's error messages: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
 - Chrome/v8's error messages: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
 ## Step 2 – Check the existing error documentation

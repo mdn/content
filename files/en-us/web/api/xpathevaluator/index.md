@@ -18,8 +18,8 @@ The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath"
 
 - {{DOMxRef("XPathEvaluator.createExpression()")}}
   - : Creates a parsed XPath expression with resolved namespaces.
-- {{DOMxRef("XPathEvaluator.createNSResolver()")}}
-  - : Adapts any DOM node to resolve namespaces allowing the XPath expression to be evaluated relative to the context of the node where it appeared within the document.
+- {{DOMxRef("XPathEvaluator.createNSResolver()")}} {{deprecated_inline}}
+  - : Returns the input as-is.
 - {{DOMxRef("XPathEvaluator.evaluate()")}}
   - : Evaluates an XPath expression string and returns a result of the specified type if possible.
 

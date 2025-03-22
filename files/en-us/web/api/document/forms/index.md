@@ -12,7 +12,8 @@ The **`forms`** read-only property of
 the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
 all the {{HTMLElement("form")}} elements contained in the document.
 
-> **Note:** Similarly, you can access a list of a form's component user
+> [!NOTE]
+> Similarly, you can access a list of a form's component user
 > input elements using the {{domxref("HTMLFormElement.elements")}} property.
 
 ## Value
@@ -101,5 +102,5 @@ const selectFormElement = document.forms[index].elements[index];
 
 ## See also
 
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface

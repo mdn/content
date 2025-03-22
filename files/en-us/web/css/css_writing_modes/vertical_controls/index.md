@@ -26,9 +26,11 @@ Specifically:
 
 You could use a [transform](/en-US/docs/Web/CSS/transform) to rotate the controls by 90 degrees, but that would place the controls in their own layer and cause unintended layout side effects such as other content being overlapped. Using `writing-mode` offers a more reliable solution.
 
-> **Note:** While the {{cssxref("writing-mode")}} property is well supported, creating vertically-oriented form controls with `writing-mode` only gained full browser support in 2024.
+> [!NOTE]
+> While the {{cssxref("writing-mode")}} property is well supported, creating vertically-oriented form controls with `writing-mode` only gained full browser support in 2024.
 
-> **Note:** The experimental `sideways-lr` and `sideways-rl` values have a similar effect as `vertical-lr` and `vertical-rl` respectively, except that normally vertical text characters (for example in Chinese or Japanese) are rotated 90 degrees to display on their sides, while horizontal text characters (for example in Latin languages) are unaffected by these values.
+> [!NOTE]
+> The experimental `sideways-lr` and `sideways-rl` values have a similar effect as `vertical-lr` and `vertical-rl` respectively, except that normally vertical text characters (for example in Chinese or Japanese) are rotated 90 degrees to display on their sides, while horizontal text characters (for example in Latin languages) are unaffected by these values.
 
 In addition, the {{cssxref("direction")}} property can be used to control the direction of the content inside the controls:
 
@@ -57,7 +59,8 @@ A typical set of visual [`<input type="range">`](/en-US/docs/Web/HTML/Element/in
 </form>
 ```
 
-> **Note:** Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done that here, as this article focuses purely on aspects of the form controls' visual rendering, but you should make sure you do so in production code.
+> [!NOTE]
+> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done that here, as this article focuses purely on aspects of the form controls' visual rendering, but you should make sure you do so in production code.
 
 To display the controls vertically, we can use CSS like this:
 
@@ -470,5 +473,5 @@ The result looks like so:
 
 - The [`<input>`](/en-US/docs/Web/HTML/Element/input) element.
 - Other relevant elements: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, and {{htmlelement("select")}}.
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Learn: Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)

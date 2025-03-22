@@ -85,20 +85,20 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-Insignificant {{Glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](https://symbl.cc/en/0009/)), carriage return ([U+000D](https://symbl.cc/en/000D/)), line feed ([U+000A](https://symbl.cc/en/000A/)), and space ([U+0020](https://symbl.cc/en/0020/)) characters are the only valid whitespace characters.
+Insignificant {{Glossary("whitespace")}} may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab (U+0009), carriage return (U+000D), line feed (U+000A), and space (U+0020) characters are the only valid whitespace characters.
 
 ## Static properties
 
-- `JSON[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"JSON"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `JSON[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"JSON"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 
-- {{jsxref("JSON.isRawJSON()")}} {{experimental_inline}}
+- {{jsxref("JSON.isRawJSON()")}}
   - : Tests whether a value is an object returned by {{jsxref("JSON.rawJSON()")}}.
 - {{jsxref("JSON.parse()")}}
   - : Parse a piece of string text as JSON, optionally transforming the produced value and its properties, and return the value.
-- {{jsxref("JSON.rawJSON()")}} {{experimental_inline}}
+- {{jsxref("JSON.rawJSON()")}}
   - : Creates a "raw JSON" object containing a piece of JSON text. When serialized to JSON, the raw JSON object is treated as if it is already a piece of JSON. This text is required to be valid JSON.
 - {{jsxref("JSON.stringify()")}}
   - : Return a JSON string corresponding to the specified value, optionally including only certain properties or replacing property values in a user-defined manner.
@@ -240,7 +240,6 @@ const parsedData = JSON.parse(str, (key, value, context) => {
 
 ## See also
 
-- {{jsxref("Date.prototype.toJSON()")}}
 - [JSON Diff](https://json-diff.com/)
 - [JSON Beautifier/editor](https://jsonbeautifier.org/)
 - [JSON Parser](https://jsonparser.org/)

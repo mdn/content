@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.beginRenderPass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginRenderPass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a render pass, returning a {{domxref("GPURenderPassEncoder")}} that can be used to control rendering.
@@ -45,7 +45,8 @@ beginRenderPass(descriptor)
         - `queryIndex`: A number specifying the index position in the `querySet` that the timestamp will be written to.
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
-        > **Note:** To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > [!NOTE]
+        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ### Color attachment object structure
 
@@ -74,6 +75,10 @@ Color attachment objects can have the following properties:
 
     If `clearValue` is omitted, it defaults to `{r: 0, g: 0, b: 0, a: 0}`.
 
+- `depthSlice` {{optional_inline}}
+
+  - : A number representing the index of the 3D depth slice that will be output to for this color attachment, in the case of a 3D {{domxref("GPUTextureView")}} `view`. When specified, this allows WebGPU to render directly to slices of 3D textures within render passes.
+
 - `loadOp`
 
   - : An enumerated value indicating the load operation to perform on `view` prior to executing the render pass. Possible values are:
@@ -81,7 +86,8 @@ Color attachment objects can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `storeOp`
   - : An enumerated value indicating the store operation to perform on `view` after executing the render pass. Possible values are:
@@ -93,7 +99,8 @@ Color attachment objects can have the following properties:
 
   - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will be output to for this color attachment.
 
-    > **Note:** Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
+    > [!NOTE]
+    > Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
 
 ### Depth/stencil attachment object structure
 
@@ -112,7 +119,8 @@ The `depthStencilAttachment` object can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `depthReadOnly` {{optional_inline}}
   - : A boolean. Setting the value to `true` causes the depth component of `view` to be read-only. If `depthReadOnly` is omitted, it defaults to `false`.
@@ -133,7 +141,8 @@ The `depthStencilAttachment` object can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `stencilReadOnly` {{optional_inline}}
   - : A boolean. Setting the value to `true` causes the stencil component of `view` to be read-only. If `stencilReadOnly` is omitted, it defaults to `false`.

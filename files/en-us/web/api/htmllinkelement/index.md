@@ -17,6 +17,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
   - : A string representing the type of content being loaded by the HTML link when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+- {{domxref("HTMLLinkElement.blocking")}}
+  - : A string indicating that certain operations should be blocked on the fetching of an external resource. It reflects the `blocking` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.crossOrigin")}}
   - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
@@ -30,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
-  - : A string representing a list of one or more media formats to which the resource applies.
+  - : A string representing a list of one or more media formats to which the resource applies. It reflects the `media` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
   - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
@@ -52,7 +54,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
   - : A string representing the reverse relationship of the linked resource from the resource to the document.
 
-    > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
+    > [!NOTE]
+    > Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
   - : A string representing the name of the target frame to which the resource applies.

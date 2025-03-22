@@ -14,7 +14,8 @@ or `null` if the element is not in a namespace.
 The namespace URI is set at the {{domxref("Attr")}} creation and cannot be changed.
 An attribute with a namespace can be created using {{domxref("Element.setAttributeNS()")}}.
 
-> **Note:** an attribute does not inherit its namespace from the element it is attached to.
+> [!NOTE]
+> An attribute does not inherit its namespace from the element it is attached to.
 > If an attribute is not explicitly given a namespace, it has no namespace.
 
 The browser does not handle or enforce namespace validation per se. It is up to the JavaScript

@@ -11,7 +11,8 @@ A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determi
 
 The underlying value is a boolean.
 
-> **Note:** From Firefox version 88 this setting is read-only.
+> [!NOTE]
+> From Firefox version 88 this setting is read-only.
 
 ## Browser compatibility
 

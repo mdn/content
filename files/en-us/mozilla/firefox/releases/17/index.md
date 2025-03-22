@@ -28,7 +28,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 - Support DOM Meta key on Linux again ([Firefox bug 751749](https://bugzil.la/751749)).
 - On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a JavaScript object whose properties represent metadata from the playing media resource as {key: value} pairs ([Firefox bug 763010](https://bugzil.la/763010)).
 - Support for {{domxref("Range.intersectsNode")}} has been added again; it has been removed in Gecko 1.9 ([Firefox bug 579638](https://bugzil.la/579638).
-- {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ([Firefox bug 714279](https://bugzil.la/714279)) .
+- {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ([Firefox bug 714279](https://bugzil.la/714279)).
 - {{domxref("Event.initEvent()")}} has been adapted to the spec: it doesn't throw anymore if called after the dispatch of the event, it is only a no-op ([Firefox bug 768310](https://bugzil.la/768310)).
 - The non-standard {{domxref("XMLHttpRequest", "XMLHttpRequest.onuploadrequest")}} property has been removed ([Firefox bug 761278](https://bugzil.la/761278)).
 - The method {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now separates them with a CRLF (instead of a LF), as requested by the spec ([Firefox bug 730925](https://bugzil.la/730925)).
@@ -39,7 +39,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 - The String methods [link](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) and [anchor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) now escape the `'"'` (quotation mark) ([Firefox bug 352437](https://bugzil.la/352437)).
 - Experimental support for strawman `ParallelArray` object has been implemented ([Firefox bug 778559](https://bugzil.la/778559)).
 - Support to iterate [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)/[`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) ([Firefox bug 725909](https://bugzil.la/725909)).
-- Disabled EcmaScript for XML (E4X), an abandoned JavaScript extension, for web content by default ([Firefox bug 778851](https://bugzil.la/778851)).
+- Disabled ECMAScript for XML (E4X), an abandoned JavaScript extension, for web content by default ([Firefox bug 778851](https://bugzil.la/778851)).
 - `__exposedProps__` must now be set for Chrome JavaScript objects exposed to content. Attempts to access Chrome objects from content without `__exposedProps__` set will fail silently ([Firefox bug 553102](https://bugzil.la/553102)).
 - [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now work in terms of `.iterator()` and `.next()` ([Firefox bug 725907](https://bugzil.la/725907)).
 

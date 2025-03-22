@@ -13,11 +13,12 @@ A related attribute, [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtyp
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
-> **Note:** Find more about `itemtype` attributes at <https://schema.org/Thing>
+> [!NOTE]
+> Find more about `itemtype` attributes at <https://schema.org/Thing>
 
 ### itemscope id attributes
 
-When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
+When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
 
 ## Examples
 
@@ -74,7 +75,7 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
 
 ### Representing structured data for a recipe
 
-There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
+There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](https://www.schema.org/) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
 
 <table class="standard-table">
   <tbody>
@@ -191,7 +192,8 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   </tbody>
 </table>
 
-> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Rich Results Testing Tool](https://search.google.com/test/rich-results). Try it on the HTML shown here.
+> [!NOTE]
+> A handy tool for extracting microdata structures from HTML is Google's [Rich Results Testing Tool](https://search.google.com/test/rich-results). Try it on the HTML shown here.
 
 #### HTML
 

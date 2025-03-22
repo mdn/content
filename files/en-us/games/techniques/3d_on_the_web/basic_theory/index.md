@@ -55,7 +55,7 @@ There are four stages to this processing: the first one involves arranging the o
 
 ![Camera](mdn-games-3d-camera.png)
 
-**Projection transformation** (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes _field of view_, _aspect ratio_ and optional _near_ and _far planes_. read the [Camera paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) in the Three.js article to learn about those.
+**Projection transformation** (also called perspective transformation) then defines the camera settings. It sets up what can be seen by the camera — the configuration includes _field of view_, _aspect ratio_ and optional _near_ and _far planes_. Read the [Camera paragraph](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) in the Three.js article to learn about those.
 
 ![Camera settings](mdn-games-3d-camera-settings.png)
 

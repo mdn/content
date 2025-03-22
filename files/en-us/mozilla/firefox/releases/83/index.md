@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
-> **Note:** See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
+> [!NOTE]
+> See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
 
 ## Changes for web developers
 
@@ -20,7 +21,7 @@ This article provides information about the changes in Firefox 83 that will affe
 ### HTML/XML
 
 - The `crossorigin` attribute is now supported for `<link rel=icon>` ([Firefox bug 1661075](https://bugzil.la/1661075)).
-- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
+- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Reference/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
 
 ### CSS
 

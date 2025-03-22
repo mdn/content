@@ -40,7 +40,7 @@ An object with the following properties:
     The `synchronizationSource` would include the ssrc of the application, while `contributingSources` would include the ssrc values of all the individual audio sources.
 - `sequenceNumber`
   - : The sequence number of an incoming audio frame (not used for outgoing frames) that can be used for reconstructing the original send-order of frames.
-    This is number between 0 and 32767 .
+    This is number between 0 and 32767.
     Note that while numbers are allocated sequentially when sent, they will overflow at 32767 and restart back at 0.
     Therefore to compare two frame sequence numbers, in order to determine whether one is assumed to be after another, you must use [serial number arithmetic](https://en.wikipedia.org/wiki/Serial_number_arithmetic). <!-- [RFC1982] -->
 

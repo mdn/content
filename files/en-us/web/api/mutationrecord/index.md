@@ -7,7 +7,7 @@ browser-compat: api.MutationRecord
 
 {{APIRef("DOM")}}
 
-The {{domxref("MutationRecord")}} is a read-only interface that represents an individual DOM mutation observed by a {{domxref("MutationObserver")}}. It is the object inside the array passed to the callback of a {{domxref("MutationObserver")}}.
+The **`MutationRecord`** is a read-only interface that represents an individual DOM mutation observed by a {{domxref("MutationObserver")}}. It is the object inside the array passed to the callback of a {{domxref("MutationObserver")}}.
 
 ## Instance properties
 

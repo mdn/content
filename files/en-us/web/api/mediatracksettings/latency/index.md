@@ -3,7 +3,7 @@ title: "MediaTrackSettings: latency property"
 short-title: latency
 slug: Web/API/MediaTrackSettings/latency
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.latency
+browser-compat: api.MediaStreamTrack.applyConstraints.latency_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

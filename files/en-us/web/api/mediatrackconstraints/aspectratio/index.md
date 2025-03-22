@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: aspectRatio property"
 short-title: aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.aspectRatio
+browser-compat: api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -19,7 +19,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 ## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the acceptable or required value(s) for a
-video track's aspect ratio. The value is the width divided by the height and is rounded
+video track's {{glossary("aspect ratio")}}. The value is the width divided by the height and is rounded
 to ten decimal places. For example, the standard high-definition video aspect ratio of
 16:9 can be computed as 1920/1080, or 1.7777777778.
 
