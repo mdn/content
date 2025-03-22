@@ -8,13 +8,13 @@ page-type: guide
 
 ## Description
 
-This last example shows problems that arise when mixing several positioned elements in a multi-level HTML hierarchy and when `z-index` values are assigned using class selectors.
+This example shows problems that arise when mixing several positioned elements in a multi-level HTML hierarchy and when `z-index` values are assigned using class selectors.
 
-Let's take as an example a three-level hierarchical menu made from several positioned `div` elements. Second-level and third-level `div` elements appear when a user hovers or clicks on their parents. Usually this kind of menu is script-generated either client-side or server-side, so style rules are assigned with a class selector instead of the id selector.
+The example has a three-level hierarchical menu made from several positioned `div` elements. Second-level and third-level `div` elements appear when a user hovers or clicks on their parents. Usually this kind of menu is script-generated either client-side or server-side, so style rules are assigned with a class selector instead of the id selector.
 
 If the three menu levels partially overlap, then managing stacking could become a problem.
 
-The first-level menu is only relatively positioned, so no stacking context is created.
+The first-level menu is relatively positioned, creating a stacking context.
 
 The second-level menu is absolutely positioned inside the parent element. In order to put it above all first-level menus, the `z-index` property is used. The problem is that for each second-level menu, a stacking context is created and each third-level menu belongs to the context of its parent.
 
@@ -51,70 +51,68 @@ This problem can be avoided by removing overlapping between different level menu
 
 ```html
 <div class="lev1">
-  <span class="bold">LEVEL #1</span>
+  LEVEL #1
 
   <div id="container1">
     <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+      LEVEL #2 <br />z-index: 1;
 
       <div id="container2">
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
-        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
+        <div class="lev3">LEVEL #3</div>
       </div>
     </div>
 
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
-    <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
-    </div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
+    <div class="lev2">LEVEL #2 <br />z-index: 1;</div>
   </div>
 </div>
 
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-  <span class="bold">LEVEL #1</span>
-</div>
+<div class="lev1">LEVEL #1</div>
+<div class="lev1">LEVEL #1</div>
+<div class="lev1">LEVEL #1</div>
 ```
 
 ### CSS
 
-```css
+```css hidden
 div {
   font: 12px Arial;
-}
-
-span.bold {
   font-weight: bold;
+  padding-left: 5px;
 }
+.lev1 {
+  border: 2px outset #669966;
+  background-color: #ccffcc;
+}
+.lev2 {
+  border: 2px outset #990000;
+  background-color: #ffdddd;
+}
+.lev3 {
+  border: 2px outset #000099;
+  background-color: #ddddff;
+}
+```
 
-div.lev1 {
+```css
+div {
+  opacity: 0.9;
+}
+.lev1 {
   width: 250px;
   height: 70px;
   position: relative;
-  border: 2px outset #669966;
-  background-color: #ccffcc;
-  padding-left: 5px;
 }
 
 #container1 {
@@ -124,14 +122,10 @@ div.lev1 {
   left: 75px;
 }
 
-div.lev2 {
-  opacity: 0.9;
+.lev2 {
   width: 200px;
   height: 60px;
   position: relative;
-  border: 2px outset #990000;
-  background-color: #ffdddd;
-  padding-left: 5px;
 }
 
 #container2 {
@@ -141,13 +135,10 @@ div.lev2 {
   left: 110px;
 }
 
-div.lev3 {
+.lev3 {
   z-index: 10;
   width: 100px;
   position: relative;
-  border: 2px outset #000099;
-  background-color: #ddddff;
-  padding-left: 5px;
 }
 ```
 
@@ -163,7 +154,3 @@ div.lev3 {
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context): Notes on the stacking context.
 - [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
 - [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
-
-> [!NOTE]
-> The sample image looks wrong - with the second level 2 overlapping the level 3 menus - because level 2 has opacity, which creates a new stacking context.
-> Basically, this whole sample page is incorrect and misleading.
