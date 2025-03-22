@@ -13,7 +13,7 @@ The
 containing the values of all CSS properties of an element, after applying active
 stylesheets and resolving any basic computation those values may contain.
 
-Individual CSS property values are accessed through APIs provided by the returned {{DOMxRef("CSSStyleDeclaration")}} object, or by indexing with CSS property names. The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value). See the linked article for more information.
+Individual CSS property values are accessed through APIs provided by the returned {{DOMxRef("CSSStyleDeclaration")}} object, or by indexing with CSS property names. The values returned by `getComputedStyle` are [resolved values](en-US/docs/Web/CSS/Value_processing#resolved_value). See the linked article for more information.
 
 ## Syntax
 
