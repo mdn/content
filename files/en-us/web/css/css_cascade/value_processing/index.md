@@ -24,7 +24,7 @@ After applying the cascading rules and resolving values step by step, the browse
 
 ## Processing stages
 
-All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS "`p { font-size: 1.25em; }`" and your HTML includes "`<p>CSS is fun!</p>`", what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
+All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS `p { font-size: 1.25em; }`"and your HTML includes `<p>CSS is fun!</p>`, what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
 
 - [Initial value](#initial-value)
 - [Specified value](#specified-value)
@@ -54,7 +54,7 @@ The **specified value** is the value initially assigned in the CSS file or by th
 2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
 3. If none of the above apply, the element's [initial value](#initial_value) will be used.
 
-In the example, "`p { font-size: 1.25em; }`", the specified value is `1.25em`, unless the codebase includes a `font-size` declaration with greater {{cssxref("specificity")}}.
+In the example, `p { font-size: 1.25em; }`, the specified value is `1.25em`, unless the codebase includes a `font-size` declaration with greater {{cssxref("specificity")}}.
 
 ### Computed value
 
@@ -69,7 +69,7 @@ The computation needed to reach a property's computed value typically involves c
 
 However, for some properties (those where percentages are relative to something that may require layout to determine, such as `width`, `margin-right`, `text-indent`, and `top`), percentage-specified values turn into percentage-computed values. Additionally, unitless numbers specified on the `line-height` property become the computed value, as specified. The relative values that remain in the computed value become absolute when the [used value](#used-value) is determined.
 
-Given "`p { font-size: 1.25em; }`", if `em` is `16px`, the computed font size for a paragraph will be `20px`.
+Given `p { font-size: 1.25em; }`, if `em` is `16px`, the computed font size for a paragraph will be `20px`.
 
 ### Used value
 

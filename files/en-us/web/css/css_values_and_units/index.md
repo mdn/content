@@ -148,7 +148,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
 - [`x`](/en-US/docs/Web/CSS/length#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -158,11 +158,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [Dynamic viewport units](/en-US/docs/Web/CSS/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
 - [Frequency units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
 - [Large viewport-percentage units](/en-US/docs/Web/CSS/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
-- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch` ,`em`, `ex`, `ic`, `lh`)
+- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
 - [Physical units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
 - [Relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
 - [Resolution units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
-- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) (`rcap` ,`rch`, `rem`, `rex`, `ric`, `rlh`)
+- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
 - [Small viewport-percentage unit](/en-US/docs/Web/CSS/length#small_viewport_units) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
 - [Time units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#time_units) (`ms`, `s`)
 - [Viewport units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
@@ -235,7 +235,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 
-  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
+  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 
