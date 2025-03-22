@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-overflow/
   - https://drafts.csswg.org/css-overflow-4/
+  - https://drafts.csswg.org/css-overflow-5/
 ---
 
 {{CSSRef}}
@@ -226,11 +227,20 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{cssxref("scroll-marker-group")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 
 > [!NOTE]
 > The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
+
+### Selectors
+
+- {{cssxref("::column")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker-group")}}
+- {{cssxref(":target-current")}}
 
 ### Data types
 
@@ -240,6 +250,8 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 - [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Learn what overflow is and how to manage it.
+- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+  - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 - [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
