@@ -1119,7 +1119,7 @@ It's no longer necessary to choose between MP3's broad compatibility and the nee
     <td><strong>General Purpose Video</strong></td>
     <td><strong>MP4</strong></td>
     <td>
-      MP4 is the industry standard for video content, widely supported across devices and browsers. For robust compatibility, it’s advisable to offer WebM or Ogg as fallback options.
+      MP4 is the industry standard for video content, widely supported across devices and browsers. For robust compatibility, it's advisable to offer WebM or Ogg as fallback options.
     </td>
   </tr>
   <tr>
