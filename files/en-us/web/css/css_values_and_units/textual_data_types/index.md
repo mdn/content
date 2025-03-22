@@ -15,10 +15,10 @@ In CSS specifications, values that can be defined by the web developer — such 
 When both quoted and unquoted user-defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with [keyframe animation names]:
 
 ```css
-@keyframe validIdent {
+@keyframes validIdent {
   /* keyframes go here */
 }
-@keyframe 'validString' {
+@keyframes 'validString' {
   /* keyframes go here */
 }
 ```
