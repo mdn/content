@@ -1039,7 +1039,7 @@ The relative importance of each will depend on your needs, your license requirem
 
 When selecting the appropriate media format, your decision should depend on your intended usage. Playing back media is different from recording or editing it. For manipulation, uncompressed formats can improve performance, while lossless compression prevents the accumulation of noise from repeated recompression.
 
-- **For Mobile or Low-Bandwidth Situations:**  
+- **For Mobile or Low-Bandwidth Situations:**
   If your target audience includes mobile users—especially those with lower-end devices or slow networks—consider providing a version in a 3GP container with appropriate compression.
 
 - **For Specific Encoding Requirements:**  
