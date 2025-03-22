@@ -59,7 +59,7 @@ Such values are used without quotes:
 }
 ```
 
-## CSS-wide values
+## CSS-wide keywords
 
 In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide, or "global", property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
 
