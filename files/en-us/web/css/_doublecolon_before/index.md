@@ -218,8 +218,8 @@ li[aria-current="step"] {
   font-weight: bold;
 }
 
-li[aria-current="step"]::after {
-  content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
+li[aria-current="step"]::before {
+  content: "\21E8 "; /* Hexadecimal for Unicode Rightwards white arrow*/
   display: inline;
 }
 ```
@@ -227,6 +227,48 @@ li[aria-current="step"]::after {
 #### Result
 
 {{EmbedLiveSample('Special_characters', 400, 200)}}
+
+### Styling `::before::marker` nested pseudo-elements
+
+The `::before::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nested_pseudo-elements) selects the list {{CSSxRef("::marker")}} of a `::before` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item` (no other elements generate `::marker` pseudo-elements).
+
+#### HTML
+
+```html
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul::before {
+  content: "Before";
+  display: list-item;
+}
+
+ul::after {
+  content: "After";
+  display: list-item;
+}
+
+::before::marker,
+::after::marker {
+  color: orange;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Styling `::before::marker` nested pseudo-elements', 450, 200)}}
 
 ## Specifications
 
