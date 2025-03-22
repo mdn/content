@@ -28,21 +28,10 @@ setProperty(propertyName, value, priority)
     as the empty string. A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
-
-  - : A string allowing the CSS priority to be set to important.
-    Only the values listed below are accepted, anything else will cause no changes to be applied.
-    `false` for example is not a valid value.
-    - `"important"`
-    - `""`
-    - `undefined`
-    - `null`
-
-```js-nolint
-element.style.setProperty("background", "red", "important")
-element.style.cssText // "background: red !important;"
-element.style.setProperty("background", "blue", false) // no changes will be applied
-element.style.cssText // "background: red !important;
-```
+  - : A string allowing the CSS priority to be set to important. Only the values listed below are accepted:
+    - `"important"` (case-insensitive) for setting the property as `!important`;
+    - `""`, `undefined`, or `null` for removing the `!important` flag if present.
+    Anything else causes the method to return early and no change to happen (unless `value` is empty, in which case the property is removed regardless of the `priority` value). `false`, for example, is not a valid priority value.
 
 ### Return value
 
