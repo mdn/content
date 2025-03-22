@@ -93,6 +93,9 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 _The `Element` interface also includes the following properties._
 
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : An element reflecting the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, which identifies the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
+    .
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute.
 - {{domxref("Element.ariaAutoComplete")}}
@@ -113,14 +116,24 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+- {{domxref("Element.ariaControlsElements")}}
+  - : An array reflecting the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute, which identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 - {{domxref("Element.ariaCurrent")}}
   - : A string reflecting the [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) attribute, which indicates the element that represents the current item within a container or set of related elements.
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : An array of elements reflecting the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute, which identifies the element (or elements) that describe the object. It is used to establish a relationship between widgets or groups and elements that contains the text that describes them.
 - {{domxref("Element.ariaDescription")}}
   - : A string reflecting the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) attribute, which defines a string value that describes or annotates the current element.
+- {{domxref("Element.ariaDetailsElements")}}
+  - : An array of elements reflecting the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute, which identify the elements that provide additional information related to the object.
 - {{domxref("Element.ariaDisabled")}}
   - : A string reflecting the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : An array of elements reflecting the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute, which identifies the element (or elements) that provide an error message for the object.
 - {{domxref("Element.ariaExpanded")}}
   - : A string reflecting the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+- {{domxref("Element.ariaFlowToElements")}}
+  - : An array of elements reflecting the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute, which identifies the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
 - {{domxref("Element.ariaHasPopup")}}
   - : A string reflecting the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 - {{domxref("Element.ariaHidden")}}
@@ -129,6 +142,8 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-keyshortcuts`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 - {{domxref("Element.ariaLabel")}}
   - : A string reflecting the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, which defines a string value that labels the current element.
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : An array reflecting the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute, which identifies the element (or elements) that provide an accessible name for the element it is applied to.
 - {{domxref("Element.ariaLevel")}}
   - : A string reflecting the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) attribute, which defines the hierarchical level of an element within a structure.
 - {{domxref("Element.ariaLive")}}
@@ -141,6 +156,9 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
 - {{domxref("Element.ariaOrientation")}}
   - : A string reflecting the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
+- {{domxref("Element.ariaOwnsElements")}}
+  - : An array of elements reflecting the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute, which identifies the element (or elements) that this object owns.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
 - {{domxref("Element.ariaPlaceholder")}}
   - : A string reflecting the [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
 - {{domxref("Element.ariaPosInSet")}}
