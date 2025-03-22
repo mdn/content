@@ -91,7 +91,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - Favicon Cache
 - Connection Pooling
 - Stylesheet Cache
-- [DNS](/en-US/docs/Glossary/DNS)
+- {{Glossary("DNS")}}
 - HTTP Authentication
 - [Alt-Svc](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc)
 - Speculative Connections
@@ -103,7 +103,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - TLS Session Identifiers
 - Prefetch
 - Preconnect
-- [CORS-preflight](/en-US/docs/Glossary/Preflight_request) Cache
+- {{Glossary("Preflight_request", "CORS-preflight")}} Cache
 - WebRTC deviceID
 
 ## Dynamic partitioning
