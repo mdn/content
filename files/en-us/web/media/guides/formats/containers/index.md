@@ -1045,7 +1045,7 @@ When selecting the appropriate media format, your decision should depend on your
 - **For Specific Encoding Requirements:**
   Ensure that the container you select supports the necessary codecs.
 
-- **For Non-Proprietary, Open Formats:**  
+- **For Non-Proprietary, Open Formats:**
   Consider using open container formats such as FLAC for audio or WebM for video.
 
 - **For Broad Compatibility:**  
