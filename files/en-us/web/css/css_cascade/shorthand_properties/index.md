@@ -234,6 +234,7 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 - {{cssxref("scroll-padding-block")}}
 - {{cssxref("scroll-padding-inline")}}
 - {{cssxref("scroll-timeline")}}
+- {{cssxref("text-box")}}
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-emphasis")}}
 - {{cssxref("text-wrap")}}
