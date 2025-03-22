@@ -29,12 +29,20 @@ setProperty(propertyName, value, priority)
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
 
-  - : A string allowing the "important" CSS priority to be set. If not
-    specified, treated as the empty string. The following values are accepted:
+  - : A string allowing the CSS priority to be set to important.
+  Only the values listed below are accepted, anything else will cause no changes to be applied.
+  `false` for example is not a valid value.
+    - `"important"`
+    - `""`
+    - `undefined`
+    - `null`
 
-    - String value `"important"`
-    - Keyword `undefined`
-    - String empty value `""`
+```js-nolint
+element.style.setProperty("background", "red", "important")
+element.style.cssText // "background: red !important;"
+element.style.setProperty("background", "blue", false) // no changes will be applied
+element.style.cssText // "background: red !important;
+```
 
 ### Return value
 
