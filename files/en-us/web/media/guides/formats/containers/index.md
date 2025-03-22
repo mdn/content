@@ -1042,7 +1042,7 @@ When selecting the appropriate media format, your decision should depend on your
 - **For Mobile or Low-Bandwidth Situations:**
   If your target audience includes mobile users—especially those with lower-end devices or slow networks—consider providing a version in a 3GP container with appropriate compression.
 
-- **For Specific Encoding Requirements:**  
+- **For Specific Encoding Requirements:**
   Ensure that the container you select supports the necessary codecs.
 
 - **For Non-Proprietary, Open Formats:**  
