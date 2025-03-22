@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Mobile
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-Mobile`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which indicates whether the browser is on a mobile device.
+The HTTP **`Sec-CH-UA-Mobile`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which indicates whether the browser is on a mobile device.
 It can also be used by a desktop browser to indicate a preference for a "mobile" user experience.
 
 `Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints).

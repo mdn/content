@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Bitness
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-Bitness`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the "bitness" of the user-agent's underlying CPU architecture.
+The HTTP **`Sec-CH-UA-Bitness`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the "bitness" of the user-agent's underlying CPU architecture.
 This is the size in bits of an integer or memory address—typically 64 or 32 bits.
 
 This might be used by a server, for example, to select and offer the correct binary format of an executable for a user to download.
