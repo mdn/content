@@ -1066,23 +1066,77 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-| If you need…                                  | Consider using this container format |
-| --------------------------------------------- | ------------------------------------ |
-| Compressed files for general-purpose playback | MP3 (MPEG-1 Audio Layer III)         |
-| Losslessly compressed files                   | FLAC with ALAC fallback              |
-| Uncompressed files                            | WAV                                  |
+<table border="1">
+    <tr>
+      <th>Need</th>
+      <th>Container/Format</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><strong>Losslessly compressed files</strong></td>
+      <td><strong>MP3 (MPEG-1 Audio Layer III)</strong></td>
+      <td>Widely compatible and recognized; uses lossy compression to provide a good balance between file size and audio quality.</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Losslessly compressed files</strong></td>
+      <td><strong>FLAC (Free Lossless Audio Codec)</strong></td>
+      <td>Offers lossless compression, ensuring that the original audio remains intact while reducing file size.</td>
+    </tr>
+    <tr>
+      <td><strong>ALAC (Apple Lossless Audio Codec)</strong></td>
+      <td>Similar to FLAC but designed for Apple devices; it's a great fallback when working within the Apple ecosystem.</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Uncompressed files</strong></td>
+      <td><strong>WAV (Waveform Audio File Format)</strong></td>
+      <td>Contains uncompressed PCM audio, delivering the highest fidelity at the cost of larger file sizes.</td>
+    </tr>
+    <tr>
+      <td><strong>AIFF (Audio Interchange File Format)</strong></td>
+      <td>Comparable to WAV in terms of quality and file size, though it's often favored on Apple platforms.</td>
+    </tr>
+  </table>
 
 Now that MP3's patents have all expired, the choice of audio file format has become much easier to make.
 It's no longer necessary to choose between MP3's broad compatibility and the need to pay royalties when using it.
 
 #### Video files
 
-| If you need…                                        | Consider using this container format                |
-| --------------------------------------------------- | --------------------------------------------------- |
-| General purpose video, preferably in an open format | WebM (ideally with MP4 fallback)                    |
-| General purpose video                               | MP4 (ideally with WebM or Ogg fallback)             |
-| High compression optimized for slow connections     | 3GP (ideally with MP4 fallback)                     |
-| Compatibility with older devices/browsers           | QuickTime (ideally with AVI and/or MPEG-2 fallback) |
+<table border="1">
+  <tr>
+    <th>Need</th>
+    <th>Container/Format</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><strong>General Purpose Video (preferably open format)</strong></td>
+    <td><strong>WebM</strong></td>
+    <td>
+      Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers. Consider using an MP4 fallback to maximize compatibility.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>General Purpose Video</strong></td>
+    <td><strong>MP4</strong></td>
+    <td>
+      MP4 is the industry standard for video content, widely supported across devices and browsers. For robust compatibility, it’s advisable to offer WebM or Ogg as fallback options.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>High Compression for Slow Connections</strong></td>
+    <td><strong>3GP</strong></td>
+    <td>
+      Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions. Pair with MP4 as a fallback to ensure a smoother viewing experience.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Compatibility with Older Devices/Browsers</strong></td>
+    <td><strong>QuickTime</strong></td>
+    <td>
+      QuickTime is a legacy container originally popular on Apple platforms. If targeting older devices or browsers, consider using QuickTime together with AVI and/or MPEG-2 fallback options to enhance support.
+    </td>
+  </tr>
+</table>
 
 These suggestions make a number of assumptions.
 You should carefully consider the options before making a final decision, especially if you have a lot of media that will need to be encoded.
