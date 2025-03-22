@@ -17,15 +17,12 @@ See [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) 
 
 While there are a vast number of media container formats, the ones listed below are the ones you are most likely to encounter.
 Some support only audio while others support both audio and video.
-The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 (MP4), Web Media File (WEBM), and MP3 format.
-However, you may also encounter Ogg, WAV, AVI, MOV, and other formats.
-Not all of these are broadly supported by browsers, however; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
+The MIME types and extensions for each are listed. The most commonly used containers for media on the web are probably MPEG-4 Part-14 (MP4) and Web Media File (WEBM). However, you may also encounter Ogg, WAV, AVI, MOV, and other formats.
+Not all of these are broadly supported by browsers; some combinations of container and codec are sometimes given their own file extensions and MIME types as a matter of convenience, or because of their ubiquity.
 For example, an Ogg file with only an Opus audio track is sometimes referred to as an Opus file, and might even have the extension `.opus`.
 But it's still actually just an Ogg file.
 
-In other cases, a particular codec, stored in a certain container type, is so ubiquitous that the pairing is treated in a unique fashion.
-A good example of this is the MP3 audio file, which is in fact an MPEG-1 container with a single audio track encoded using MPEG-1 Audio Layer III encoding.
-These files use the `audio/mp3` MIME type and the `.mp3` extension, even though their containers are just MPEG.
+In some cases, a particular codec becomes so ubiquitous that its usage is treated as a unique format. A prime example is the MP3 audio file, which isn't stored in a conventional container. Instead, an MP3 file is essentially a stream of MPEG-1 Audio Layer III-encoded frames, often accompanied by metadata such as ID3 tags. These files use the `audio/mpeg` MIME type and the `.mp3` extension.
 
 ### Index of media container formats (file types)
 
@@ -326,8 +323,7 @@ FLAC files can only contain FLAC audio data.
 The **[MPEG-1](https://en.wikipedia.org/wiki/MPEG-1)** and **[MPEG-2](https://en.wikipedia.org/wiki/MPEG-2)** file formats are essentially identical.
 Created by the Moving Picture Experts Group (MPEG), these formats are widely used in physical media, including as the format of the video on DVD media.
 
-On the internet, perhaps the most common use of the MPEG file format is to contain [Layer_III/MP3](https://en.wikipedia.org/wiki/MPEG-1) sound data; the resulting files are the wildly popular MP3 file used by digital music devices around the world.
-Otherwise, MPEG-1 and MPEG-2 are not widely used in Web content.
+On the internet, perhaps the most common application of the MPEG standard is for [MPEG-1 Audio Layer III](https://en.wikipedia.org/wiki/MPEG-1), commonly known as MP3, sound data. These MP3 files are wildly popular with digital music devices around the world, even though MPEG-1 and MPEG-2, as a whole, are not widely used in other web content.
 
 The main differences between MPEG-1 and MPEG-2 take place in the media data formats rather than the container format.
 MPEG-1 was introduced in 1992; MPEG-2 was introduced in 1996.
@@ -1041,18 +1037,22 @@ The relative importance of each will depend on your needs, your license requirem
 
 ### Guidelines
 
-The best choice also depends on what you'll be doing with the media.
-Playing back media is a different thing than recording and/or editing it.
-If you're going to be manipulating the media data, using an uncompressed format can improve performance, while using a lossless compressed format at least prevents the accumulation of noise as compression artifacts are multiplied with each re-compression that occurs.
+When selecting the appropriate media format, your decision should depend on your intended usage. Playing back media is different from recording or editing it. For manipulation, uncompressed formats can improve performance, while lossless compression prevents the accumulation of noise from repeated recompression.
 
-- If your target audience is likely to include users on mobile, especially on lower-end devices or on slow networks, consider providing a version of your media in a 3GP container with appropriate compression.
-- If you have any specific encoding requirements, make sure the container you choose supports the appropriate codecs.
-- If you want your media to be in a non-proprietary, open format, consider using one of the open container formats such as FLAC (for audio) or WebM (for video).
-- If for any reason you are only able to provide media in a single format, choose a format that's available on the broadest selection of devices and browsers, such as MP3 (for audio) or MP4 (for video and/or audio).
-- If your media is audio-only, choosing an audio-only container format likely makes sense.
-  Now that the patents have all expired, MP3 is a widely supported and good choice.
-  WAVE is good but uncompressed, so be aware of that before using it for large audio samples.
-  FLAC is a very good choice, due to its lossless compression, if the target browsers all support it.
+- **For Mobile or Low-Bandwidth Situations:**  
+  If your target audience includes mobile users—especially those with lower-end devices or slow networks—consider providing a version in a 3GP container with appropriate compression.
+
+- **For Specific Encoding Requirements:**  
+  Ensure that the container you select supports the necessary codecs.
+
+- **For Non-Proprietary, Open Formats:**  
+  Consider using open container formats such as FLAC for audio or WebM for video.
+
+- **For Broad Compatibility:**  
+  If you need to offer your media in a single format, choose one that's supported by the widest range of devices and browsers—for example, MP4 for video (and/or audio) content.
+
+- **For Audio-Only Content:**  
+  When dealing with audio-only media, it makes sense to use a dedicated audio format. Now that the relevant patents have expired, MP3 is a widely supported and reliable option. Note that MP3 is an audio format, not a container. Alternatives include WAV for uncompressed audio (though keep in mind the larger file sizes) or FLAC for lossless compression, assuming your target browsers support it.
 
 Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
 FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS.
