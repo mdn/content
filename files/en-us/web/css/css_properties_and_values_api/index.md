@@ -9,7 +9,7 @@ spec-urls: https://www.w3.org/TR/css-properties-values-api-1/
 
 The **CSS properties and values API** module defines a method for registering new CSS properties, defining the property's data type, inheritance behavior, and, optionally, an initial value.
 This API expands on [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module, which allows authors to define custom properties in CSS using [two dash syntax (`--`)](/en-US/docs/Web/CSS/--*).
-The CSS properties and values API is part of the [CSS Houdini](/en-US/docs/Web/CSS/CSS_properties_and_values_API/Houdini) umbrella of APIs.
+The CSS properties and values API is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs.
 
 Custom properties let you reuse values across a project to simplify complex or repetitive stylesheets.
 Basic custom properties are defined in the [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module.
