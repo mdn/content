@@ -18,10 +18,17 @@ The **`SVGPathElement`** interface corresponds to the {{SVGElement("path")}} ele
 
 _This interface inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
+- {{domxref("SVGPathElement.pathLength")}} {{ReadOnlyInline}}
+  - : This property reflects the {{SVGAttr("pathLength")}} attribute.
+
 ## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
+- {{domxref("SVGPathElement.getTotalLength()")}}
+  - : Returns the user agent's computed value for the total length of the path in user units.
+- {{domxref("SVGPathElement.getPointAtLength()")}}
+  - : Returns the point at a given distance along the path.
 - {{domxref("SVGPathElement.getPathSegAtLength()")}} {{deprecated_inline}}
   - : Returns an unsigned long representing the index within the {{domxref("SVGAnimatedPathData.pathSegList", "pathSegList")}} utilizing the user agent's distance-along-a-path algorithm.
 - {{domxref("SVGPathElement.createSVGPathSegClosePath()")}} {{deprecated_inline}}
