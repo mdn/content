@@ -126,6 +126,11 @@ jobs:
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
+
+          # Add the custom 404 page to provide production links to the unbuilt documents
+          cp -v ./.github/workflows/404.html ${BUILD_OUT_ROOT}/en-us/404/index.html
+          cp -v ./.github/workflows/404.js ${BUILD_OUT_ROOT}/en-us/404/index.js
+
           # Show the final disk usage size of the build.
           du -sh $BUILD_OUT_ROOT
 
