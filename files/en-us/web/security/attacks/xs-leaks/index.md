@@ -4,30 +4,26 @@ slug: Web/Security/Attacks/XS-leaks
 page-type: guide
 ---
 
-Cross-site leaks (also called XS-leaks) are a class of attack which exploit the ways in which a site can leak information to an attacker, either through web platform APIs that are available cross-site, or through {{glossary("side channels")}} such as timing attacks. The information leaked could include, for example:
+Cross-site leaks (also called XS-leaks) are a class of attack which exploit the ways in which a target site can leak information to an attacker's site, either through web platform APIs that are available cross-site, or through {{glossary("side channels")}} such as timing attacks. The information leaked could include, for example:
 
 - Whether the user has visited a particular site.
 - Whether the user is logged into a particular site.
 - What the user's ID on the site is.
 - What the user has recently searched for on the site.
 
-Unlike other attacks such as [XSS](/en-US/docs/Web/Security/Attacks/XSS) or [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking), cross-site leaks are not a single technique but are more of an umbrella term, under which many different individual attacks target various different parts of the web platform, with different objectives.
+Unlike other attacks such as [XSS](/en-US/docs/Web/Security/Attacks/XSS) or [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking), cross-site leaks are not a single technique. Instead, they are a term for a whole class of attack which exploit weaknesses in the ways that browsers isolate websites from each other.
 
-In this guide we will not attempt to describe every cross-site leak attack and defense. Instead, we'll describe a few attacks, and then some general defenses that can work against many known attacks.
+In this guide we will not attempt to describe every cross-site leak attack and defense. Instead, we'll start by describing a few example attacks, then outline the common underlying weaknesses that enable them, then describe some general defenses that can work against many known attacks.
 
-## Common cross-site leaks
+## Sample cross-site leaks
 
-In this section we'll list some cross-site leaks: however, this is not an exhaustive list. For a more complete catalog, see the [XS-Leaks Wiki](https://xsleaks.dev/) and the [OWASP Cross-site Leaks Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XS_Leaks_Cheat_Sheet.html).
-
-### Leaking history using the {{cssxref(":visited")}} selector
-
-The `:visited` selector enables websites to style links differently depending on whether the user has visited the linked page. Although browsers have for a long time prevented JavaScript from directly accessing this difference, there are more indirect ways in which an attacker could do so, including asking the user to click an element (for example, as part of a game) that would only be visible if certain links had the `:visited` styling.
+In this section we'll describe three different cross-site leaks attacks, to give an idea of how they work. However, this is not an exhaustive list: for a more complete catalog, see the [XS-Leaks Wiki](https://xsleaks.dev/) and the [OWASP Cross-site Leaks Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XS_Leaks_Cheat_Sheet.html).
 
 ### Leaking page existence using error events
 
-In this attack, the attacker tests whether specific pages in the target site can be loaded, by seeing whether attempts to embed them as resources generates an error. If these pages are only available to logged-in users, an attacker could determine whether a user is logged in. An attacker may even be able to discover a user's ID, by iteratively trying to load pages to see if pages like `https://example.org/users/my_username` exist.
+In this attack, the attacker tests whether specific pages in the target site can be loaded, by seeing whether attempts to embed them as resources generate an error. If these pages are only available to logged-in users, an attacker could determine whether a user is logged in.
 
-A website can embed a resource from another site, for example by setting the `src` attribute of a {{htmlelement("script")}} element to the URL of the resource:
+The attack relies on the ability of a website to load a resource from another site, for example by setting the `src` attribute of a {{htmlelement("script")}} element to the URL of the resource:
 
 ```js
 const script = document.createElement("script");
@@ -35,11 +31,17 @@ script.src = "https://example.org/admin";
 document.head.appendChild(script);
 ```
 
-If the linked resource could not be loaded, then the element fires an {{domxref("Window.error_event", "error")}} event:
+This results in an HTTP request to the `https://example.org/` website. If the request includes cookies that the site uses to identify users, and the page requested is only available to logged-in users, then the success or failure of the request reveals whether or not the user is logged in.
+
+If the request fails, then the element fires an {{domxref("HTMLElement.error_event", "error")}} event. If the request succeeds, the element fires a {{domxref("HTMLElement.load_event", "load")}} event. By listening for these events, the attacker can discover whether the user is logged in.
 
 ```js
 const url = "https://example.org/admin";
 const script = document.createElement("script");
+
+script.addEventListener("load", (e) => {
+  console.log(`${url} exists`);
+});
 
 script.addEventListener("error", (e) => {
   console.log(`${url} does not exist`);
@@ -49,11 +51,13 @@ script.src = url;
 document.head.appendChild(script);
 ```
 
+An attacker may even be able to discover a user's ID, by iteratively trying to load pages to see if pages like `https://example.org/users/my_username` exist.
+
 ### Frame counting using window references
 
 In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable to attacker to learn, for example, whether the user is currently logged into the site.
 
-If an attacker site gets a reference to a {{domxref("Window")}} object containing the target site, the attacker can count the number of frames in the target site by reading the {{domxref("Window.length", "window.length")}} property:
+If an attacker site gets a reference to a {{domxref("Window")}} object containing the target site, the attacker can count the number of frames in the target site by reading the {{domxref("Window.length", "window.length")}} property.
 
 The attacker can get a `Window` object by calling {{domxref("Window.open()", "window.open()")}}:
 
@@ -73,11 +77,46 @@ const target = document.querySelector("iframe").contentWindow;
 const frames = target.length;
 ```
 
-## Defenses against XS leaks
+### Leaking redirects with a CSP
 
-Since cross-site leak attacks can work in many different ways, there isn't a single defense that will work against all of them. However, there are several practices that will work against many of them, and we will summarise them here.
+In this attack, the attacker creates a page with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that will generate a {{domxref("Element.securitypolicyviolation_event", "securitypolicyviolation")}} event if the page tries to embed a document that is not from the target URL.
 
-### SameSite=Lax
+The attacker's page then creates an {{htmlelement("iframe")}} that embeds the target URL, and listens for the violation event. If the violation event fires, the attacker knows that a redirect took place, and this in turn may reveal something about the user's relationship with the site (for example, that they are signed in, or that they have some other status on the site).
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="frame-src https://example.org" />
+  </head>
+  <body>
+    <script>
+      document.addEventListener("securitypolicyviolation", () => {
+        console.log("Page was redirected");
+      });
+      const frame = document.createElement("iframe");
+      document.body.appendChild(frame);
+      frame.src = "https://example.org";
+    </script>
+  </body>
+</html>
+```
+
+Note that this attack works even if the target site disallows embedding using a mechanism such as [`frame-ancestors`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
+
+## Defenses against cross-site leaks
+
+The three attacks described above target quite different parts of the web platform, but they have a common underlying cause: the extent to which the browser enables websites to connect to and interact with each other by mechanisms such as framing, loading subresources, or opening new windows.
+
+Correspondingly, the defenses against cross-site leaks all involve isolating the target website from potential attackers, by disabling or controlling these cross-site interactions.
+
+Since cross-site leaks can work in many different ways, there isn't a single defense that will work against all of them. However, there are several practices that will work against many of them, and we will summarise them here.
+
+### Fetch metadata
+
+### SameSite cookies
 
 Setting the [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute to `Lax` means that cross-site requests will only include a user's cookies if the request is a top-level navigation (meaning essentially that the value in the browser's address bar changes to the target site).
 
@@ -107,8 +146,6 @@ The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setti
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
 
 ### Cross-Origin Opener Policy (COOP)
-
-### Fetch metadata
 
 ## See also
 
