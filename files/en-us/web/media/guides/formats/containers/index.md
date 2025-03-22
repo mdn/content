@@ -1051,7 +1051,7 @@ When selecting the appropriate media format, your decision should depend on your
 - **For Broad Compatibility:**
   If you need to offer your media in a single format, choose one that's supported by the widest range of devices and browsers—for example, MP4 for video (and/or audio) content.
 
-- **For Audio-Only Content:**  
+- **For Audio-Only Content:**
   When dealing with audio-only media, it makes sense to use a dedicated audio format. Now that the relevant patents have expired, MP3 is a widely supported and reliable option. Note that MP3 is an audio format, not a container. Alternatives include WAV for uncompressed audio (though keep in mind the larger file sizes) or FLAC for lossless compression, assuming your target browsers support it.
 
 Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
