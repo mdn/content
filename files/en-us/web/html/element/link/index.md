@@ -184,6 +184,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 
+- `compression-dictionary`
+
+  - : This attribute is used for {{glossary("Compression dictionary transport")}} to specify a dictionary that can be used for future requests.
+
 - [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
