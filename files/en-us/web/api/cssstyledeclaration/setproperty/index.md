@@ -30,8 +30,8 @@ setProperty(propertyName, value, priority)
 - `priority` {{optional_inline}}
 
   - : A string allowing the CSS priority to be set to important.
-  Only the values listed below are accepted, anything else will cause no changes to be applied.
-  `false` for example is not a valid value.
+    Only the values listed below are accepted, anything else will cause no changes to be applied.
+    `false` for example is not a valid value.
     - `"important"`
     - `""`
     - `undefined`
