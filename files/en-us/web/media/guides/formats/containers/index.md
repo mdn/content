@@ -1048,7 +1048,7 @@ When selecting the appropriate media format, your decision should depend on your
 - **For Non-Proprietary, Open Formats:**
   Consider using open container formats such as FLAC for audio or WebM for video.
 
-- **For Broad Compatibility:**  
+- **For Broad Compatibility:**
   If you need to offer your media in a single format, choose one that's supported by the widest range of devices and browsers—for example, MP4 for video (and/or audio) content.
 
 - **For Audio-Only Content:**  
