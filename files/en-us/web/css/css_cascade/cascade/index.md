@@ -50,16 +50,16 @@ The cascading algorithm determines how to find the value to apply for each prope
 1. **Relevance**: It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
 2. **Origin and importance**: Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. Ignoring layers for the moment, the cascade order is as follows:
 
-   | Precedence Order (low to high) | Origin                   | Importance   |
-   | ------------------------------ | ------------------------ | ------------ |
-   | 1                              | user-agent (browser)     | normal       |
-   | 2                              | user                     | normal       |
-   | 3                              | author (developer)       | normal       |
-   | 4                              | CSS @keyframe animations |              |
-   | 5                              | author (developer)       | `!important` |
-   | 6                              | user                     | `!important` |
-   | 7                              | user-agent (browser)     | `!important` |
-   | 8                              | CSS transitions          |              |
+   | Precedence Order (low to high) | Origin                  | Importance   |
+   | ------------------------------ | ----------------------- | ------------ |
+   | 1                              | user-agent (browser)    | normal       |
+   | 2                              | user                    | normal       |
+   | 3                              | author (developer)      | normal       |
+   | 4                              | CSS keyframe animations |              |
+   | 5                              | author (developer)      | `!important` |
+   | 6                              | user                    | `!important` |
+   | 7                              | user-agent (browser)    | `!important` |
+   | 8                              | CSS transitions         |              |
 
 3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
 4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
