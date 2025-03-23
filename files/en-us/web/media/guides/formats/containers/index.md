@@ -1054,11 +1054,14 @@ Be sure to consider the needs of your application and your organization before s
 #### Audio-only files
 
 <table>
+  <thead>
     <tr>
       <th>Need</th>
       <th>Container/Format</th>
       <th>Description</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><strong>Wide support and small file size</strong></td>
       <td><strong>MP3 (MPEG-1 Audio Layer III)</strong></td>
@@ -1082,7 +1085,8 @@ Be sure to consider the needs of your application and your organization before s
       <td><strong>AIFF (Audio Interchange File Format)</strong></td>
       <td>Comparable to WAV in terms of quality and file size, though it's often favored on Apple platforms.</td>
     </tr>
-  </table>
+  </tbody>
+</table>
 
 Now that MP3's patents have all expired, the choice of audio file format has become much easier to make.
 It's no longer necessary to choose between MP3's broad compatibility and the need to pay royalties when using it.
@@ -1094,39 +1098,43 @@ If you need to offer lossless audio, you may need to provide both FLAC and ALAC 
 #### Video files
 
 <table>
-  <tr>
-    <th>Need</th>
-    <th>Container/Format</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><strong>General purpose video (preferably open format)</strong></td>
-    <td><strong>WebM</strong></td>
-    <td>
-      Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>General purpose video</strong></td>
-    <td><strong>MP4</strong></td>
-    <td>
-      MP4 is the industry standard for video content, widely supported across devices and browsers.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>High compression for slow connections</strong></td>
-    <td><strong>3GP</strong></td>
-    <td>
-      Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Compatibility with Older Devices/Browsers</strong></td>
-    <td><strong>QuickTime</strong></td>
-    <td>
-      QuickTime is a legacy container originally popular on Apple platforms. It is still commonly produced by macOS video recording software.
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Need</th>
+      <th>Container/Format</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>General purpose video (preferably open format)</strong></td>
+      <td><strong>WebM</strong></td>
+      <td>
+        Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>General purpose video</strong></td>
+      <td><strong>MP4</strong></td>
+      <td>
+        MP4 is the industry standard for video content, widely supported across devices and browsers.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>High compression for slow connections</strong></td>
+      <td><strong>3GP</strong></td>
+      <td>
+        Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Compatibility with Older Devices/Browsers</strong></td>
+      <td><strong>QuickTime</strong></td>
+      <td>
+        QuickTime is a legacy container originally popular on Apple platforms. It is still commonly produced by macOS video recording software.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 These suggestions make a number of assumptions.
