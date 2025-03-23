@@ -1039,24 +1039,11 @@ The relative importance of each will depend on your needs, your license requirem
 
 When selecting the appropriate media format, your decision should depend on your intended usage. Playing back media is different from recording or editing it. For manipulation, uncompressed formats can improve performance, while lossless compression prevents the accumulation of noise from repeated recompression.
 
-- **For Mobile or Low-Bandwidth Situations:**
-  If your target audience includes mobile users—especially those with lower-end devices or slow networks—consider providing a version in a 3GP container with appropriate compression.
-
-- **For Specific Encoding Requirements:**
-  Ensure that the container you select supports the necessary codecs.
-
-- **For Non-Proprietary, Open Formats:**
-  Consider using open container formats such as FLAC for audio or WebM for video.
-
-- **For Broad Compatibility:**
-  If you need to offer your media in a single format, choose one that's supported by the widest range of devices and browsers—for example, MP4 for video (and/or audio) content.
-
-- **For Audio-Only Content:**
-  When dealing with audio-only media, it makes sense to use a dedicated audio format. Now that the relevant patents have expired, MP3 is a widely supported and reliable option. Note that MP3 is an audio format, not a container. Alternatives include WAV for uncompressed audio (though keep in mind the larger file sizes) or FLAC for lossless compression, assuming your target browsers support it.
-
-Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
-FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS.
-If you need to offer lossless audio, you may need to provide both FLAC and ALAC to get close to universal compatibility.
+- If your target audience is likely to include users on mobile, especially on lower-end devices or on slow networks, consider providing a version of your media in a 3GP container with appropriate compression.
+- If you have any specific encoding requirements, make sure the container you choose supports the appropriate codecs.
+- If you want your media to be in a non-proprietary, open format, consider using one of the open container formats such as FLAC (for audio) or WebM (for video).
+- If for any reason you are only able to provide media in a single format, choose a format that's available on the broadest selection of devices and browsers, such as MP3 (for audio) or MP4 (for video and/or audio).
+- If your media is audio-only, choosing an audio-only format likely makes sense. See below for a comparison of the various audio-only formats.
 
 ### Container selection advice
 
@@ -1073,12 +1060,12 @@ Be sure to consider the needs of your application and your organization before s
       <th>Description</th>
     </tr>
     <tr>
-      <td><strong>Losslessly compressed files</strong></td>
+      <td><strong>Wide support and small file size</strong></td>
       <td><strong>MP3 (MPEG-1 Audio Layer III)</strong></td>
       <td>Widely compatible and recognized; uses lossy compression to provide a good balance between file size and audio quality.</td>
     </tr>
     <tr>
-      <td rowspan="2"><strong>Losslessly compressed files</strong></td>
+      <td rowspan="2"><strong>Lossless compression</strong></td>
       <td><strong>FLAC (Free Lossless Audio Codec)</strong></td>
       <td>Offers lossless compression, ensuring that the original audio remains intact while reducing file size.</td>
     </tr>
@@ -1100,6 +1087,10 @@ Be sure to consider the needs of your application and your organization before s
 Now that MP3's patents have all expired, the choice of audio file format has become much easier to make.
 It's no longer necessary to choose between MP3's broad compatibility and the need to pay royalties when using it.
 
+Unfortunately, neither of the relatively major lossless compression formats (FLAC and ALAC) are universally supported.
+FLAC is the more broadly supported of the two, but is not supported by macOS without additional software installed, and is not supported at all on iOS.
+If you need to offer lossless audio, you may need to provide both FLAC and ALAC to get close to universal compatibility.
+
 #### Video files
 
 <table border="1">
@@ -1109,37 +1100,38 @@ It's no longer necessary to choose between MP3's broad compatibility and the nee
     <th>Description</th>
   </tr>
   <tr>
-    <td><strong>General Purpose Video (preferably open format)</strong></td>
+    <td><strong>General purpose video (preferably open format)</strong></td>
     <td><strong>WebM</strong></td>
     <td>
-      Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers. Consider using an MP4 fallback to maximize compatibility.
+      Designed for modern web usage, WebM is an open, royalty-free container that offers efficient compression and native support in most browsers.
     </td>
   </tr>
   <tr>
-    <td><strong>General Purpose Video</strong></td>
+    <td><strong>General purpose video</strong></td>
     <td><strong>MP4</strong></td>
     <td>
-      MP4 is the industry standard for video content, widely supported across devices and browsers. For robust compatibility, it's advisable to offer WebM or Ogg as fallback options.
+      MP4 is the industry standard for video content, widely supported across devices and browsers.
     </td>
   </tr>
   <tr>
-    <td><strong>High Compression for Slow Connections</strong></td>
+    <td><strong>High compression for slow connections</strong></td>
     <td><strong>3GP</strong></td>
     <td>
-      Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions. Pair with MP4 as a fallback to ensure a smoother viewing experience.
+      Optimized for mobile devices and low-bandwidth environments, 3GP delivers acceptable video quality under constrained conditions.
     </td>
   </tr>
   <tr>
     <td><strong>Compatibility with Older Devices/Browsers</strong></td>
     <td><strong>QuickTime</strong></td>
     <td>
-      QuickTime is a legacy container originally popular on Apple platforms. If targeting older devices or browsers, consider using QuickTime together with AVI and/or MPEG-2 fallback options to enhance support.
+      QuickTime is a legacy container originally popular on Apple platforms. It is still commonly produced by macOS video recording software.
     </td>
   </tr>
 </table>
 
 These suggestions make a number of assumptions.
 You should carefully consider the options before making a final decision, especially if you have a lot of media that will need to be encoded.
+Very often, you would want to provide multiple fallback options for these formats—for example, MP4 fallback for WebM or 3GP, or AVI for QuickTime.
 
 ## Maximizing compatibility with multiple containers
 
