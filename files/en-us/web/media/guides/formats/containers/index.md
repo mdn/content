@@ -1057,7 +1057,7 @@ Be sure to consider the needs of your application and your organization before s
   <thead>
     <tr>
       <th>Need</th>
-      <th>Container/Format</th>
+      <th>Format</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -1101,7 +1101,7 @@ If you need to offer lossless audio, you may need to provide both FLAC and ALAC 
   <thead>
     <tr>
       <th>Need</th>
-      <th>Container/Format</th>
+      <th>Format</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -1128,7 +1128,7 @@ If you need to offer lossless audio, you may need to provide both FLAC and ALAC 
       </td>
     </tr>
     <tr>
-      <td><strong>Compatibility with Older Devices/Browsers</strong></td>
+      <td><strong>Compatibility with older devices/browsers</strong></td>
       <td><strong>QuickTime</strong></td>
       <td>
         QuickTime is a legacy container originally popular on Apple platforms. It is still commonly produced by macOS video recording software.
