@@ -1063,7 +1063,7 @@ Be sure to consider the needs of your application and your organization before s
   </thead>
   <tbody>
     <tr>
-      <td><strong>Wide support and small file size</strong></td>
+      <td><strong>Compressed files for general-purpose playback</strong></td>
       <td><strong>MP3 (MPEG-1 Audio Layer III)</strong></td>
       <td>Widely compatible and recognized; uses lossy compression to provide a good balance between file size and audio quality.</td>
     </tr>
