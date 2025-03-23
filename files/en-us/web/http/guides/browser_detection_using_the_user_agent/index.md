@@ -83,7 +83,7 @@ Try to identify why you want to do browser detection:
 ## Alternatives to UA sniffing
 
 Aside from variants in how different browsers identify themselves, the biggest problem in browser detection is that clients can easily spoof indicators like UA strings or other HTTP headers.
-A browser can pretend to be another browser, or include information based on multiple browsers.
+For historical reasons, a browser will often pretend to be another browser, or include information based on multiple browsers.
 
 The following sections describe alternatives to browser detection which are applicable to more situations than UA sniffing.
 
