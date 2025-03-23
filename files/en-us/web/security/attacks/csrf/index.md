@@ -57,7 +57,7 @@ In this section we'll outline three alternative defenses against CSRF and a four
 
 - The first primary defense is to [use _CSRF tokens_](#csrf_tokens) embedded in the page. This is the most common method if you're issuing state-changing requests from form elements, as in our example above.
 
-- The second is to [use _Fetch metadata_](fetch_metadata) HTTP headers to check whether or not the state-changing request is being issued cross-site.
+- The second is to [use _Fetch metadata_](#fetch_metadata) HTTP headers to check whether or not the state-changing request is being issued cross-site.
 
 - The third is to ensure that state-changing requests are [not _simple requests_](#avoiding_simple_requests), so that cross-origin requests are blocked by default. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
 
