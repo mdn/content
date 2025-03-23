@@ -14,7 +14,7 @@ This string is intended to identify the browser, its version number, and its hos
 User-Agent: <product> / <product-version> <comment>
 ```
 
-You can also access this via the [`navigator.userAgent`](/en-US/docs/Web/API/Navigator/userAgent) property in JavaScript:
+You can also access this string via the [`navigator.userAgent`](/en-US/docs/Web/API/Navigator/userAgent) property in JavaScript:
 
 ```js
 console.log(window.navigator.userAgent);
