@@ -1053,7 +1053,7 @@ Be sure to consider the needs of your application and your organization before s
 
 #### Audio-only files
 
-<table border="1">
+<table>
     <tr>
       <th>Need</th>
       <th>Container/Format</th>
@@ -1093,7 +1093,7 @@ If you need to offer lossless audio, you may need to provide both FLAC and ALAC 
 
 #### Video files
 
-<table border="1">
+<table>
   <tr>
     <th>Need</th>
     <th>Container/Format</th>
