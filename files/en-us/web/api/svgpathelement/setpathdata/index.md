@@ -21,7 +21,6 @@ setPathData(pathData)
 - `pathData`
 
   - : An array of path segments.
-  
     Each path segment is an object with the following properties:
 
     - `type`
