@@ -64,10 +64,8 @@ Knowing what browser is used is irrelevant, what we're actually looking for in t
 
 ## Alternatives to UA sniffing
 
-Aside from variants in how different browsers identify themselves, the biggest problem in browser detection is that clients can easily spoof indicators like UA strings or other HTTP headers.
-For historical reasons, a browser will often pretend to be another browser, or include information based on multiple browsers.
-
-The following sections describe alternatives to browser detection that are applicable to more situations than UA sniffing.
+Aside from variants in how different browsers identify themselves, clients can easily spoof indicators like UA strings, other HTTP headers, or include information based on multiple browsers.
+The following sections describe alternatives to browser detection that are more robust and applicable in many more scenarios than UA sniffing.
 
 ### Feature detection
 
@@ -87,7 +85,7 @@ if ("geolocation" in navigator) {
 ```
 
 You can do this for many features.
-For example, you can determine whether PDF files can be viewed inline if the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}} is supported, and so on:
+For example, you can determine whether PDF files can be viewed inline, or if the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}} is supported, and so on:
 
 ```js
 if ("application/pdf" in navigator.mimeTypes) {
