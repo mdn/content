@@ -52,7 +52,7 @@ This code makes several assumptions that may be wrong, and which will break the 
 
 1. All user agent strings that include the substring `Chrome` indicate a Chrome browser.
 
-   One of the biggest problems with browser detection with UA strings is that browsers and user agents routinely pretend to be another browser, or include information based on multiple browsers.
+   One of the biggest problems with browser detection based on UA strings is that browsers and user agents routinely pretend to be another browser, or include information based on multiple browsers.
 
 2. The lookbehind feature is always available if the browser is Chrome.
    In reality, the browser might be an older version of Chrome before support was added, or it could be a later version of Chrome that removes it.
