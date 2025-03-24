@@ -15,10 +15,6 @@ The **`select` role**, an abstract role, is superclass role for form widgets tha
 
 The structural `select` role, an abstract role, is superclass role for four form widgets, [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role), [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role), and [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role), which allow users to make selections from a set of choices.
 
-## Best Practices
-
-Do not use.
-
 ## Specifications
 
 {{Specifications}}

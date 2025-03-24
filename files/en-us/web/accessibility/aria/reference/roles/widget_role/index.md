@@ -19,10 +19,6 @@ The `widget` role is a superclass role several abstract interactive GUI roles, i
 
 The abstract `widget` role is also a superclass role for some grouping roles which can be used by web authors, including [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (when not focusable), and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), which can and should be used when appropriate. When the user navigates to one of these non-abstract roles of widget, keyboard events can switch to an application browsing mode, and pass keyboard events through to the browser.
 
-## Best Practices
-
-Do not use.
-
 ## Specifications
 
 {{Specifications}}

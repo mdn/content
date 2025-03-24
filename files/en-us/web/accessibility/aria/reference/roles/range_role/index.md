@@ -15,10 +15,6 @@ The `range` abstract role is a generic type of structure role representing a ran
 
 The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role, [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) and [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role). For these three, consider using the {{HTMLElement("meter")}} element, the {{HTMLElement("progress")}} element, and the {{HTMLElement("input/range")}}, respectively.
 
-## Best Practices
-
-Do not use.
-
 ## Specifications
 
 {{Specifications}}

@@ -13,11 +13,7 @@ The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Rol
 
 ## Description
 
-`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
-
-## Best Practices
-
-Do not use.
+`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
 
 ## Specifications
 

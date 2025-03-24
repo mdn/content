@@ -14,11 +14,6 @@ The **`roletype`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/R
 ## Description
 
 The `roletype` role's properties describe the structural and functional purpose of objects that are assigned this role, or "instances". A role is a concept that can be used to understand and operate instances.
-Note
-
-## Best Practices
-
-Do not use.
 
 ## Specifications
 
