@@ -516,7 +516,7 @@
 /en-US/docs/CSS/Multiple_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /en-US/docs/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
-/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector
+/en-US/docs/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/CSS/Pseudo-classes	/en-US/docs/Web/CSS/Pseudo-classes
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/CSS_images/Replaced_element_properties
@@ -6153,6 +6153,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_methods_of_installing_add-ons/Sideloading_add-ons	https://extensionworkshop.com/documentation/publish/distribute-sideloading/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
+/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension_	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Building_a_cross_browser_extension	/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Context_menu_items	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
@@ -12161,6 +12162,7 @@
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/Subsequent-sibling_combinator
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
+/en-US/docs/Web/CSS/Inline_formatting_context	/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
 /en-US/docs/Web/CSS/Layout_mode	/en-US/docs/Glossary/Layout_mode
@@ -12172,6 +12174,7 @@
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_motion_path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Paged_Media	/en-US/docs/Web/CSS/CSS_paged_media
+/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector	/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/WebKit_Extensions
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position

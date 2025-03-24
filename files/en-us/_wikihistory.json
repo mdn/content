@@ -15097,10 +15097,6 @@
       "ccarruitero"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json": {
-    "modified": "2020-11-03T15:02:11.613Z",
-    "contributors": ["9999472", "wbamberg", "marcoscaceres", "ExE-Boss"]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs": {
     "modified": "2020-10-15T20:55:17.532Z",
     "contributors": [
@@ -76782,50 +76778,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2020-09-05T23:17:19.677Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "j9t",
-      "Konrud",
-      "chrisdavidmills",
-      "rachelandrew",
-      "LurN",
-      "ishan123456789",
-      "andreaswachowski",
-      "VladPavel15",
-      "mikkelrd",
-      "mfluehr",
-      "mustafasalah",
-      "david_ross",
-      "Levenson",
-      "jacklj",
-      "manavm1990",
-      "codingplayboy",
-      "jichao",
-      "BychekRU",
-      "YoutaoXing",
-      "rolfedh",
-      "jackarmley",
-      "zhen-w",
-      "NicBright",
-      "teoli",
-      "xfq",
-      "arigoldx",
-      "zhanglun",
-      "denised",
-      "AprilMorone",
-      "adrianocastro",
-      "Jeremie",
-      "Naesten",
-      "ZhoraVdB",
-      "maybe",
-      "Sheppy",
-      "ethertank",
-      "Dholbert"
-    ]
-  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-12-02T11:05:43.361Z",
     "contributors": ["peterbe", "wbamberg", "fscholz", "mfluehr"]
@@ -77332,6 +77284,10 @@
       "Piro",
       "BenoitL"
     ]
+  },
+  "Web/CSS/CSS_inline_layout/Inline_formatting_context": {
+    "modified": "2020-04-27T22:33:13.546Z",
+    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
   },
   "Web/CSS/CSS_lists": {
     "modified": "2020-07-07T12:20:22.683Z",
@@ -77981,6 +77937,20 @@
       "ExE-Boss"
     ]
   },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2020-05-05T20:20:41.094Z",
+    "contributors": [
+      "jswisher",
+      "wbamberg",
+      "mfluehr",
+      "una",
+      "Sheppy",
+      "DBaron",
+      "Dholbert",
+      "gavenkoa",
+      "fscholz"
+    ]
+  },
   "Web/CSS/CSS_shapes": {
     "modified": "2020-07-07T12:26:26.279Z",
     "contributors": [
@@ -78391,10 +78361,6 @@
       "miken32"
     ]
   },
-  "Web/CSS/Inline_formatting_context": {
-    "modified": "2020-04-27T22:33:13.546Z",
-    "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
-  },
   "Web/CSS/Layout_cookbook": {
     "modified": "2020-07-07T12:18:05.178Z",
     "contributors": [
@@ -78550,20 +78516,6 @@
       "BYK",
       "miken32",
       "Wjjohnst"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2020-05-05T20:20:41.094Z",
-    "contributors": [
-      "jswisher",
-      "wbamberg",
-      "mfluehr",
-      "una",
-      "Sheppy",
-      "DBaron",
-      "Dholbert",
-      "gavenkoa",
-      "fscholz"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -78814,6 +78766,50 @@
       "miken32",
       "Montehansen",
       "BijuGC"
+    ]
+  },
+  "Web/CSS/Visual_formatting_model": {
+    "modified": "2020-09-05T23:17:19.677Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "j9t",
+      "Konrud",
+      "chrisdavidmills",
+      "rachelandrew",
+      "LurN",
+      "ishan123456789",
+      "andreaswachowski",
+      "VladPavel15",
+      "mikkelrd",
+      "mfluehr",
+      "mustafasalah",
+      "david_ross",
+      "Levenson",
+      "jacklj",
+      "manavm1990",
+      "codingplayboy",
+      "jichao",
+      "BychekRU",
+      "YoutaoXing",
+      "rolfedh",
+      "jackarmley",
+      "zhen-w",
+      "NicBright",
+      "teoli",
+      "xfq",
+      "arigoldx",
+      "zhanglun",
+      "denised",
+      "AprilMorone",
+      "adrianocastro",
+      "Jeremie",
+      "Naesten",
+      "ZhoraVdB",
+      "maybe",
+      "Sheppy",
+      "ethertank",
+      "Dholbert"
     ]
   },
   "Web/CSS/WebKit_Extensions": {
