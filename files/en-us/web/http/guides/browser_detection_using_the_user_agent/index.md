@@ -21,7 +21,7 @@ console.log(window.navigator.userAgent);
 // Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:138.0) Gecko/20100101 Firefox/138.0
 ```
 
-It may be tempting to parse the UA string (sometimes called "UA sniffing") and change how your site behaves based on the values in the UA string, but this is very hard to do reliably, and is usually a cause of bugs.
+It may be tempting to parse the UA string (sometimes called "UA sniffing") and change how your site behaves based on the values in the UA string, but this is very hard to do reliably, and is often a cause of bugs.
 
 This document describes common pitfalls of using the UA string for browser detection and the recommended alternatives.
 At the end we provide some hints for UA detection using the string, but you should do this only if it's absolutely necessary!
@@ -48,9 +48,12 @@ console.log(splitUpString("fooBar")); // ["fooB", "ar"]
 console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 ```
 
-This code makes several assumptions that may be wrong, and which will break the code if the wrong browser runs it:
+This code makes several assumptions that may be wrong, and which will break the code if it is run on the wrong browser or browser version:
 
 1. All user agent strings that include the substring `Chrome` indicate a Chrome browser.
+
+   One of the biggest problems with browser detection with UA strings is that browsers and user agents routinely pretend to be another browser, or include information based on multiple browsers.
+
 2. The lookbehind feature is always available if the browser is Chrome.
    In reality, the browser might be an older version of Chrome before support was added, or it could be a later version of Chrome that removes it.
 3. Most importantly, it assumes no other browsers support the feature, when it could be added to any other browser at any time.
@@ -85,7 +88,7 @@ Try to identify why you want to do browser detection:
 Aside from variants in how different browsers identify themselves, the biggest problem in browser detection is that clients can easily spoof indicators like UA strings or other HTTP headers.
 For historical reasons, a browser will often pretend to be another browser, or include information based on multiple browsers.
 
-The following sections describe alternatives to browser detection which are applicable to more situations than UA sniffing.
+The following sections describe alternatives to browser detection that are applicable to more situations than UA sniffing.
 
 ### Feature detection
 
@@ -104,7 +107,8 @@ if ("geolocation" in navigator) {
 }
 ```
 
-You can do this for many features, like if PDF files can be viewed inline, if the {{domxref("VirtualKeyboard_API", "The VirtualKeyboard API", "", "nocode")}} is supported, and so on:
+You can do this for many features.
+For example, you can determine whether PDF files can be viewed inline if the {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}} is supported, and so on:
 
 ```js
 if ("application/pdf" in navigator.mimeTypes) {
@@ -140,7 +144,8 @@ For Blink-based browsers (Chromium, Edge, Brave, Vivaldi, etc.), an alternative 
 In client hints, the server proactively requests device information from a client through HTTP headers or via [JavaScript API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
 Client hints are better than UA sniffing for detecting Blink-based browsers in that they're not as commonly-spoofed, and they provide smaller, more reliable pieces of information that are easier to parse.
-Changing site functionality based on client hints is still a bad idea, and you should consider feature detection and progressive enhancement for your use case [as described above](#why_feature_detection_is_better_than_browser_detection).
+Changing site functionality based on client hints is still a bad idea!
+Where possible you should instead use feature detection and progressive enhancement [as described above](#why_feature_detection_is_better_than_browser_detection).
 
 For example, in the HTTP mechanism, the server includes a {{httpheader("Accept-CH")}} header along with a list of headers that should be included by the client in subsequent requests.
 Let's assume the server sends this response to the client:
