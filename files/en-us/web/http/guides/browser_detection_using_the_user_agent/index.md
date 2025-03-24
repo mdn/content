@@ -64,7 +64,6 @@ Knowing what browser is used is irrelevant, what we're actually looking for in t
 
 ## Alternatives to UA sniffing
 
-Aside from variants in how different browsers identify themselves, clients can easily spoof indicators like UA strings, other HTTP headers, or include information based on multiple browsers.
 The following sections describe alternatives to browser detection that are more robust and applicable in many more scenarios than UA sniffing.
 
 ### Feature detection
