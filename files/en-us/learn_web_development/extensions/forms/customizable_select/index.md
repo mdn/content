@@ -304,12 +304,12 @@ Finally, the value of the {{cssxref("content")}} property is set to a different 
 option::checkmark {
   order: 1;
   margin-left: auto;
-  content: "☑️" / "";
+  content: "☑️";
 }
 ```
 
 > [!NOTE]
-> When changing the icon like this, you should mark it as decorative by including an empty alt text string after the slash in the `content` property value, as shown above. This causes assistive technology (AT) to not announce anything for it, so it will make more sense to users of those tools. In general, AT and the underlying platform will handle announcing whether an option is selected or not, so you don't need to do it a second time.
+> The `::checkmark` and `::picker-icon` pseudo-elements are not included in the accessibility tree, so any generated {{cssxref("content")}} set on them will not be announced by assistive technologies. You should still make sure that any new icon you set visually makes sense for its intended purpose.
 
 Let's check in again on how the example is rendering. The updated state after the last three sections is as follows:
 

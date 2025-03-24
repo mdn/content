@@ -29,6 +29,9 @@ It is only available to target when the originating element has a picker and has
 
 The `::checkmark` selector is useful for example if you want to hide the checkmark, use a custom icon, or adjust the checkmark's rendering position inside `<option>` elements.
 
+> [!NOTE]
+> The `::checkmark` pseudo-element is not included in the accessibility tree, so any generated {{cssxref("content")}} set on it will not be announced by assistive technologies. You should still make sure that any new icon you set visually makes sense for its intended purpose.
+
 ## Examples
 
 ### Customizing the checkmark
@@ -50,12 +53,9 @@ The value of the {{cssxref("content")}} property could also be set to a differen
 option::checkmark {
   order: 1;
   margin-left: auto;
-  content: "☑️" / "";
+  content: "☑️";
 }
 ```
-
-> [!NOTE]
-> When changing the icon like this, you should mark it as decorative by including an empty alt text string after the slash in the `content` property value, as shown above. This causes assistive technology (AT) to not announce anything for it, so it will make more sense to users of those tools. In general, AT and the underlying platform will handle announcing whether an option is selected or not, so you don't need to do it a second time.
 
 See [Styling the current selection checkmark](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#styling_the_current_selection_checkmark) for a full example that uses this code, along with a live example rendering.
 
