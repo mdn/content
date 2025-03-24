@@ -30,7 +30,9 @@ getPathData(options)
 
 An array of path segments corresponding to the path data. If no valid path data exists, returns an empty sequence.
 
-## Example
+## Examples
+
+### Get path data
 
 Consider the following `<path>` element, drawing a square:
 
