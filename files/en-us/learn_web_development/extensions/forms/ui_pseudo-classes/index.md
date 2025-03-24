@@ -160,7 +160,7 @@ input:optional {
 ```
 
 The standard convention on the web for required status is an asterisk (`*`), or the word "required" associated with the respective controls.
-In the next section, we'll look at a better example of indicating required fields using `:required` using generated content.
+In the next section, we'll look at a better example of indicating required fields using `:required` and generated content.
 
 > [!NOTE]
 > You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
