@@ -21,6 +21,14 @@ setPathData(pathData)
 - `pathData`
 
   - : An array of path segments.
+  
+    Each path segment is an object with the following properties:
+
+    - `type`
+      - : A [path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
+        If [`options.normalize`](/en-US/docs/Web/API/SVGPathElement/getPathData#normalize) is true this will be one of the the absolute commands: `'M'`, `'L'`, `'C'` and `'Z'`.
+    - `values`
+      - : An array or value containing the parameters for the corresponding command.
 
 ### Return value
 
