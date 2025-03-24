@@ -74,12 +74,20 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
   - : Creates a pseudo-element that is the first child of the selected element.
 - {{CSSxRef("::after")}}
   - : Creates a pseudo-element that is the last child of the selected element.
+- {{CSSxRef("::column")}}
+  - : The different column fragments of a container set to display in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout).
 - {{CSSxRef("::marker")}}
   - : The automatically generated marker box of a list item.
 - {{CSSxRef("::placeholder")}}
   - : The placeholder text in an input field.
 - {{CSSxRef("::backdrop")}}
   - : The backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
+- {{CSSxRef("::scroll-button()")}}
+  - : A button for controlling the scrolling of a {{glossary("scroll container")}}. Generated as a sibling of the container's child DOM elements, immediately preceding them, but after a generated {{cssxref("::scroll-marker-group")}} pseudo-element.
+- {{CSSxRef("::scroll-marker")}}
+  - : Represents an element's scroll marker. A scroll marker behaves like an anchor ({{htmlelement("a")}} element) whose scroll target is its originating element — when activated, the element's nearest ancestor {{glossary("scroll container")}} will scroll to it.
+- {{CSSxRef("::scroll-marker-group")}}
+  - : A container generated inside a {{glossary("scroll container")}}, which contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on the descendants of the scroll container.
 
 ## Element-backed pseudo-elements
 
@@ -109,6 +117,7 @@ B
 
 C
 
+- {{CSSxRef("::column")}}
 - {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
 
 D
@@ -140,6 +149,9 @@ P
 
 S
 
+- {{CSSxRef("::scroll-button()")}}
+- {{CSSxRef("::scroll-marker")}}
+- {{CSSxRef("::scroll-marker-group")}}
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
 - {{CSSxRef("::spelling-error")}}

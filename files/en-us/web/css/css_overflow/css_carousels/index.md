@@ -22,11 +22,11 @@ Historically, carousels were challenging to implement — they would involve Jav
 
 The CSS carousel features enable creating carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in an accessible, flexible, consistent manner. These features are as follows:
 
-- {{cssxref("::scroll-button()")}} pseudo-elements exist inside a scrolling container and represent scroll buttons, which will be wired up to scroll the container in the specified direction.
-- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scrolling container, and is used to collect together and lay out scroll markers.
-- {{cssxref("::scroll-marker")}} pseudo-elements exist inside the children of a scrolling container ancestor, and represent their scroll markers. These can be selected to scroll the container to their associated child elements, and are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
+- {{cssxref("::scroll-button()")}} pseudo-elements exist inside a {{glossary("scroll container")}} and represent scroll buttons, which will be wired up to scroll the container in the specified direction.
+- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
+- {{cssxref("::scroll-marker")}} pseudo-elements exist inside the children of a scroll container ancestor, and represent their scroll markers. These can be selected to scroll the container to their associated child elements, and are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 - The {{cssxref(":target-current")}} pseudo-class can be used to select the currently-active scroll marker, to give it a highlight style.
-- The {{cssxref("::column")}} pseudo-element represents the different columns of a container set to display in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). This can be used to, for example, generate scroll markers for each column, regardless of what content has been placed inside them.
+- The {{cssxref("::column")}} pseudo-element represents the different column fragments of a container set to display in multiple columns via [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). This can be used to, for example, generate scroll markers for each column, regardless of what content has been placed inside them.
 
 The examples below also use other features, including:
 
@@ -173,7 +173,7 @@ Next, the animation {{cssxref("@keyframes")}} are defined. An {{cssxref("interac
 
 ## Creating the scroll buttons
 
-The {{cssxref("::scroll-button()")}} pseudo-elements are generated inside a scrolling container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each {{cssxref("::scroll-button()")}} represents a scroll button, which will be wired up to scroll the container in the direction specified by the selector's argument. You can generate up to four scroll buttons, which will scroll the content towards the start and end of the block and inline axes.
+The {{cssxref("::scroll-button()")}} pseudo-elements are generated inside a scroll container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each {{cssxref("::scroll-button()")}} represents a scroll button, the scrolling direction of which is specified by the selector's argument. You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes.
 
 You can also specify a value of `*` to target all of the {{cssxref("::scroll-button()")}} pseudo-elements with styles.
 
@@ -202,7 +202,7 @@ ul::scroll-button(*):disabled {
 }
 ```
 
-Next, an appropriate icon is set on the left and right scroll buttons via the `content` property, which is also what causes the scroll buttons to be rendered:
+Next, an appropriate icon is set on the left and right scroll buttons via the `content` property, which is also what causes the scroll buttons to be generated:
 
 ```css live-sample___first-example
 ul::scroll-button(left) {
@@ -216,7 +216,7 @@ ul::scroll-button(right) {
 
 ### Positioning the scroll buttons
 
-The scroll buttons are positioned relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each list item has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
+The scroll buttons are positioned relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
 
 ```css live-sample___first-example
 ul {
@@ -248,8 +248,8 @@ ul::scroll-button(right) {
 Creating the scroll markers involves three main features:
 
 - The {{cssxref("scroll-marker-group")}} property needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated.
-- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scrolling container, and is used to collect together and lay out scroll markers.
-- {{cssxref("::scroll-marker")}} pseudo-elements exist inside children of a scrolling container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
+- The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
+- {{cssxref("::scroll-marker")}} pseudo-elements exist inside children of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 
 To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is generated after the list's DOM content:
 
