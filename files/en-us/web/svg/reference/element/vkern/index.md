@@ -41,4 +41,4 @@ This element implements the {{domxref("SVGVKernElement")}} interface.
 - {{SVGElement("font")}}
 - {{SVGElement("glyph")}}
 - {{SVGElement("hkern")}}
-- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts)
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

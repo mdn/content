@@ -53,7 +53,7 @@ This directive may have one of the following values:
     - [`'<hash_algorithm>-<hash_value>'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#hash_algorithm-hash_value)
     - [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
 
-    Note that the specification also includes [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) as a valid source expression value, in order to permit the CSSOM methods that parse and insert CSS strings, including the `insertRule()` methods and `cssText` setters on various interfaces, such as {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleDeclaration.cssText")}}. However no browser currently blocks these methods, so there is no need to apply `unsafe-eval`.
+    Note that the specification also includes [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) as a valid source expression value, in order to permit the CSSOM methods that parse and insert CSS strings, including the `insertRule()` methods and `cssText` setters on various interfaces, such as {{domxref("CSSStyleSheet.insertRule()")}} and {{domxref("CSSStyleDeclaration.cssText")}}. However no browser currently blocks these methods, so there is no need to apply `unsafe-eval`.
 
 ## Examples
 
