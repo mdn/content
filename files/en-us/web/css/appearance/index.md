@@ -83,7 +83,7 @@ Some examples are provided, but the list is not exhaustive.
   - : Opts the {{htmlelement("select")}} element and the {{cssxref("::picker()", "::picker(select)")}} pseudo-element into the browser-defined default (base) styles and behavior for [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
     > [!NOTE]
-    > The specification currently defines the `base` value, which is intended to apply base browser styles more generally for UI elements they are available for. However, this does not appear to be supported in any browser.
+    > The specification currently defines the `base` value, which is intended to apply base browser styles more generally for UI elements they are available for. However, this is not currently supported in any browser.
 
 - `<compat-special>`
 
