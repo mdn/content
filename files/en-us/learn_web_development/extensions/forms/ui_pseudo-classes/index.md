@@ -60,7 +60,7 @@ One of the most basic concepts regarding client-side form validation is whether 
 {{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit.
 For example, the first name and last name are required in the form below, but the email address is optional:
 
-```html live-sample__forms1
+```html live-sample___optional-required-styles
 <form>
   <fieldset>
     <legend>Feedback form</legend>
@@ -73,9 +73,7 @@ For example, the first name and last name are required in the form below, but th
       <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">
-        Email address (include if you want a response):
-      </label>
+      <label for="email"> Email address (if you want a response): </label>
       <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
@@ -85,11 +83,11 @@ For example, the first name and last name are required in the form below, but th
 
 You can match these two states using the {{cssxref(':required')}} and {{cssxref(':optional')}} pseudo-classes. For example, if we apply the following CSS to the above HTML:
 
-```css hidden live-sample__forms1
+```css hidden live-sample___optional-required-styles
 body {
   font-family: sans-serif;
   margin: 20px auto;
-  max-width: 60%;
+  max-width: 70%;
 }
 
 fieldset {
@@ -112,14 +110,10 @@ button,
 label,
 input {
   display: block;
-  font-family: inherit;
   font-size: 100%;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   width: 100%;
   padding: 5px;
-  height: 30px;
 }
 
 input {
@@ -138,25 +132,35 @@ button {
 }
 ```
 
-```css live-sample__forms1
+```css live-sample___optional-required-styles
+input:required {
+  border: 2px solid;
+}
+
+input:optional {
+  border: 2px dashed;
+}
+```
+
+The required controls have a solid border, and the optional control has a dashed border.
+You can also try submitting the form without filling it in, to see the client-side validation error messages browsers give you by default:
+
+{{EmbedLiveSample("optional-required-styles", , "400px", , , , , "allow-forms")}}
+
+In general, you should avoid styling 'required' versus 'optional' elements in forms using color alone, because this isn't great for colorblind people:
+
+```css example-bad
 input:required {
   border: 2px solid red;
 }
 
 input:optional {
-  border: 2px dashed blue;
+  border: 2px dashed green;
 }
 ```
 
-The required controls would have a solid red border, and the optional control will have a dashed, blue border, like so:
-
-{{EmbedLiveSample("forms1", , "400px", , , , , "allow-forms")}}
-
-You can also try submitting the form without filling it in, to see the client-side validation error messages browsers give you by default.
-
-The above form isn't bad, but it isn't great either. For a start, we are signaling required versus optional status using color alone, which isn't great for colorblind people. Second, the standard convention on the web for required status is an asterisk (`*`), or the word "required" being associated with the controls in question.
-
-In the next section, we'll look at a better example of indicating required fields using `:required`, which also digs into using generated content.
+The standard convention on the web for required status is an asterisk (`*`), or the word "required" associated with the respective controls.
+In the next section, we'll look at a better example of indicating required fields using `:required` using generated content.
 
 > [!NOTE]
 > You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
