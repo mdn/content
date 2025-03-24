@@ -39,7 +39,7 @@ To recap what we said in the previous article, we have:
 
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
-  > Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
+  > Modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
@@ -369,7 +369,7 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 ### Selects and datalists
 
-Selects are generally not too bad to style. Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
+Selects are generally not too bad to style. Modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
 
 Datalist styling is still limited.
 

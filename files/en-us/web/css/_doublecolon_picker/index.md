@@ -34,13 +34,11 @@ This allows you to target all of the picker contents as a single entity, for exa
 
 ### Picker popover behavior
 
-The select control `<button>` and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which brings several advantages such as accessibility semantics, tabbing order adjustments, and the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class.
-
-See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) for a typical usae case allowed by the implicit popover association.
+The `<select>` element and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API). See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) for a typical usae case allowed by the implicit popover association.
 
 ### Picker anchor positioning
 
-A further side-effect of the implicit invoker/popover relationship mentioned above is that the button and the picker also have an implicit anchor reference, meaning that the picker is automatically associated with the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This has several advantages, most notably:
+A further side-effect of the implicit invoker/popover relationship mentioned above is that the `<select>` element and the picker also have an implicit anchor reference, meaning that the picker is automatically associated with the select via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This has several advantages, most notably:
 
 - The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor). For reference, the related default styles are as follows:
 

@@ -63,7 +63,7 @@ The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
-  > Many modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
+  > Modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
 For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.

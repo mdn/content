@@ -77,7 +77,7 @@ Setting up a relationship between a popover and its control in this manner also 
 You can set up a popover-invoker relationship in other ways, in addition to using the `popovertarget` attribute:
 
 - Using the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods. Bear in mind that in this case, only the focus navigation order changes are made, not the implicit ARIA relationship. This because the `source` option can be set to any kind of element, not just `<button>` elements, and it cannot be guaranteed that the relationship would make sense.
-- Between a {{htmlelement("select")}} element's dropdown picker and its select {{htmlelement("button")}}, when opting it into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two.
+- Between a {{htmlelement("select")}} element and its dropdown picker, when opting it into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two.
 
 ## Using manual popover state
 
