@@ -62,27 +62,6 @@ This code makes several assumptions that may be wrong, and which will break the 
 It's important to note that these problems will exist regardless of the browser detection method; UA sniffing, client hints, the presence, absence or contents of other HTTP headers, and so on.
 Knowing what browser is used is irrelevant, what we're actually looking for in this case is feature detection, which is described in more detail below.
 
-## Invalid reasons to use browser detection
-
-There are ways to develop your website so that it's progressively enhanced based on the availability of features in a client rather than targeting specific browsers.
-For this reason, the first avenue to explore before starting to detect browsers via UA string is **how to avoid UA sniffing**, if possible.
-Try to identify why you want to do browser detection:
-
-- **Are you trying to work around a specific bug in a certain browser version?**
-  - : Look or ask in specialized forums: you're unlikely to be the first person to encounter it.
-    Experts or people with another point of view may give you hints to avoid or work around the bug.
-    If the problem is uncommon, it's worth checking if this bug has been reported to the browser vendor via bug tracking systems ([Mozilla](https://bugzilla.mozilla.org/); [WebKit](https://bugs.webkit.org/); [Blink](https://www.chromium.org/issue-tracking/); [Opera](https://bugs.opera.com/)).
-    Browser makers do pay attention to bug reports, and yours may help fix or provide more reliable workarounds for a problem.
-- **Do you want to provide different HTML depending on which browser is being used?**
-  - : This is usually a bad idea, but there are rare cases where this is necessary.
-    Can you prevent it by adding non-semantic {{ HTMLElement("div") }} or {{ HTMLElement("span") }} elements?
-    Consider if there's actually a problem with your design: can you use progressive enhancement or fluid layouts to help remove your need to do this?
-    The effort in applying accurate UA detection compared to reworking your HTML should be a deciding factor.
-- **Are you trying to check for the existence of a specific feature?**
-  - : Your site needs to use a specific feature that some browsers don't yet support, and you want users with incompatible browsers to be served an older website with fewer features you know will work.
-    This is the worst reason to use UA detection because all browsers will likely catch up, eventually.
-    In addition, it's not practical to test each browser for different features in this way.
-
 ## Alternatives to UA sniffing
 
 Aside from variants in how different browsers identify themselves, the biggest problem in browser detection is that clients can easily spoof indicators like UA strings or other HTTP headers.
@@ -138,7 +117,28 @@ See [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feat
 In rare cases where behavior differs between browsers for a feature, you should test how browsers implement the API and determine how to use it based on that.
 To learn more, see the [Implementing feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) documentation.
 
-### Client Hints
+#### Mobile device detection
+
+A common misuse of UA sniffing (and [client hints](#client_hints)) is to detect if the client is a mobile device.
+Usually people are actually motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website by adding extra padding to buttons, for example.
+
+Instead, you should detect features using modern APIs.
+For example, to check for touch support, try the [maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) property in the {{domxref("Navigator")}} interface:
+
+```js
+if (navigator.maxTouchPoints > 1) {
+  // browser supports multi-touch
+}
+```
+
+For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) for flexible layouts.
+Instead of hiding content on smaller screens, adjust the layout dynamically.
+[Media queries](/en-US/docs/Web/CSS/CSS_media_queries) should handle most layout changes, reducing the need for JavaScript-based adjustments.
+
+If you want to ensure smooth transitions when users rotate their devices or switch between different screen modes, you can look at [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
+For foldable devices, there are newer APIs such as the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API), although be sure to check compatibility data as support varies widely.
+
+### Client hints
 
 For Blink-based browsers (Chromium, Edge, Brave, Vivaldi, etc.), an alternative is [User agent client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints).
 In client hints, the server proactively requests device information from a client through HTTP headers or via [JavaScript API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
@@ -174,33 +174,31 @@ Sec-CH-UA-Platform: "Android"
 To learn more about client hints, see [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints).
 Be sure to check the [Browser Compatibility](/en-US/docs/Web/HTTP/Reference/Headers/Accept-CH#browser_compatibility) details for more information before using this feature.
 
-### Mobile device detection
-
-A common misuse of UA sniffing is to detect if the client is a mobile device.
-Usually people are motivated to detect if the users' device is **touch-friendly** and has a small screen so they can optimize their website by adding extra padding to buttons, for example.
-
-Instead, you should detect features using modern APIs.
-For example, to check for touch support, try the [maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) property in the {{domxref("Navigator")}} interface:
-
-```js
-if (navigator.maxTouchPoints > 1) {
-  // browser supports multi-touch
-}
-```
-
-For other concerns, like layout, use modern CSS like [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) for flexible layouts.
-Instead of hiding content on smaller screens, adjust the layout dynamically.
-[Media queries](/en-US/docs/Web/CSS/CSS_media_queries) should handle most layout changes, reducing the need for JavaScript-based adjustments.
-
-If you want to ensure smooth transitions when users rotate their devices or switch between different screen modes, you can look at [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
-For foldable devices, there are newer APIs such as the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API), although be sure to check compatibility data as support varies widely.
-
 ### Other techniques and principles
 
 - {{glossary("Progressive enhancement")}}
   - : This design technique involves developing your website in 'layers', using a bottom-up approach, starting with a simpler layer and improving the capabilities of the site in successive layers, each using more features.
 - {{glossary("Graceful degradation")}}
   - : This is a top-down approach in which you build the best possible site using all the features you want, then tweak it to make it work on older browsers. This can be harder to do, and less effective, than progressive enhancement, but may be useful in some cases.
+
+## Invalid reasons to use browser detection
+
+If you're still considering browser detection instead of feature detection and progressive enhancement, check if you are motivated by the following (invalid) reasons:
+
+- **You are trying to work around a specific bug in a certain browser version**
+  - : You're unlikely to be the first person to encounter it.
+    Experts or people with another point of view may give you hints to better avoid or work around the bug.
+    If the problem is uncommon, it's worth checking if this bug has been reported to the browser vendor via bug tracking systems ([Mozilla](https://bugzilla.mozilla.org/); [WebKit](https://bugs.webkit.org/); [Blink](https://www.chromium.org/issue-tracking/); [Opera](https://bugs.opera.com/)).
+    Browser makers do pay attention to bug reports, and yours may help fix or provide more reliable workarounds for a problem.
+- **Serving different HTML depending on the visitor's browser**
+  - : This is usually a bad idea, but there are rare cases where this is necessary.
+    Can you prevent it by adding non-semantic {{ HTMLElement("div") }} or {{ HTMLElement("span") }} elements?
+    Consider if there's actually a problem with your design: can you use progressive enhancement or fluid layouts to help remove your need to do this?
+    The effort in applying accurate UA detection compared to reworking your HTML should be a deciding factor.
+- **Trying to find out if a visitor's browser has a specific feature**
+  - : Your site needs to use a specific feature that some browsers don't yet support, and you want users with incompatible browsers to be served an older website with fewer features you know will work.
+    This is the worst reason to use UA detection because all browsers will likely catch up, eventually.
+    In addition, it's not practical to test each browser for different features in this way.
 
 ## Extracting relevant UA string parts
 
