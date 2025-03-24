@@ -13,8 +13,7 @@ The HTTP **`Prefer`** header allows clients to indicate preferences for specific
 > Browsers have no handling for the `Prefer` and {{HTTPHeader("Preference-Applied")}} headers: they are used in custom, implementation-specific clients.
 > Ensure both client and server support this header before relying on it in production.
 >
-> The `Prefer` header does not cause the server to return an error if it does not support or apply the specified preferences.
-> Instead, the server processes the request as if the header was not present.
+> Servers should silently ignore preferences that they do not support, as though the header were not present.
 
 <table class="properties">
   <tbody>
