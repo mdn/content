@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A float indicating the total length of the path in user units.
+A number indicating the total length of the path in user units.
 
 ### Examples
 
