@@ -11,8 +11,8 @@ spec-urls:
 
 The **initial value** of a [CSS](/en-US/docs/Web/CSS) property is its default value, as listed in its definition table in the specification. The usage of the initial value depends on whether a property is inherited or not:
 
-- For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value) is supplied.
-- For [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no [specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value) is supplied.
+- For [inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), the initial value is used on the _root element only_, as long as no [specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) is supplied.
+- For [non-inherited properties](/en-US/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties), the initial value is used on _all elements_, as long as no [specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) is supplied.
 
 You can explicitly specify the initial value by using the {{cssxref("initial")}} keyword.
 
@@ -37,10 +37,10 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
     - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

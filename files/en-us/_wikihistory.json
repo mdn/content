@@ -15097,10 +15097,6 @@
       "ccarruitero"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json": {
-    "modified": "2020-11-03T15:02:11.613Z",
-    "contributors": ["9999472", "wbamberg", "marcoscaceres", "ExE-Boss"]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs": {
     "modified": "2020-10-15T20:55:17.532Z",
     "contributors": [
@@ -76782,50 +76778,6 @@
       "rachelandrew"
     ]
   },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2020-09-05T23:17:19.677Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "j9t",
-      "Konrud",
-      "chrisdavidmills",
-      "rachelandrew",
-      "LurN",
-      "ishan123456789",
-      "andreaswachowski",
-      "VladPavel15",
-      "mikkelrd",
-      "mfluehr",
-      "mustafasalah",
-      "david_ross",
-      "Levenson",
-      "jacklj",
-      "manavm1990",
-      "codingplayboy",
-      "jichao",
-      "BychekRU",
-      "YoutaoXing",
-      "rolfedh",
-      "jackarmley",
-      "zhen-w",
-      "NicBright",
-      "teoli",
-      "xfq",
-      "arigoldx",
-      "zhanglun",
-      "denised",
-      "AprilMorone",
-      "adrianocastro",
-      "Jeremie",
-      "Naesten",
-      "ZhoraVdB",
-      "maybe",
-      "Sheppy",
-      "ethertank",
-      "Dholbert"
-    ]
-  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-12-02T11:05:43.361Z",
     "contributors": ["peterbe", "wbamberg", "fscholz", "mfluehr"]
@@ -78814,6 +78766,50 @@
       "miken32",
       "Montehansen",
       "BijuGC"
+    ]
+  },
+  "Web/CSS/Visual_formatting_model": {
+    "modified": "2020-09-05T23:17:19.677Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "j9t",
+      "Konrud",
+      "chrisdavidmills",
+      "rachelandrew",
+      "LurN",
+      "ishan123456789",
+      "andreaswachowski",
+      "VladPavel15",
+      "mikkelrd",
+      "mfluehr",
+      "mustafasalah",
+      "david_ross",
+      "Levenson",
+      "jacklj",
+      "manavm1990",
+      "codingplayboy",
+      "jichao",
+      "BychekRU",
+      "YoutaoXing",
+      "rolfedh",
+      "jackarmley",
+      "zhen-w",
+      "NicBright",
+      "teoli",
+      "xfq",
+      "arigoldx",
+      "zhanglun",
+      "denised",
+      "AprilMorone",
+      "adrianocastro",
+      "Jeremie",
+      "Naesten",
+      "ZhoraVdB",
+      "maybe",
+      "Sheppy",
+      "ethertank",
+      "Dholbert"
     ]
   },
   "Web/CSS/WebKit_Extensions": {

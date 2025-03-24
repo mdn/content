@@ -3,10 +3,12 @@ title: "Profiler: Profiler() constructor"
 short-title: Profiler()
 slug: Web/API/Profiler/Profiler
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.Profiler.Profiler
 ---
 
-{{APIRef("JS Self-Profiling API")}}
+{{APIRef("JS Self-Profiling API")}}{{SeeCompatTable}}
 
 The **`Profiler()`** constructor creates a new {{domxref("Profiler")}} object.
 

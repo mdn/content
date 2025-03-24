@@ -129,7 +129,7 @@ The `attr()` function can reference attributes that were never intended by the p
 </style>
 ```
 
-Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
+Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
