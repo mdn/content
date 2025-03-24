@@ -134,6 +134,8 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 
 In this example, the first paragraph contains a spelling mistake and uses the browser's styling for spelling errors on the misspelled word. The second paragraph uses the browser's styling for grammar errors. There is no styling change in browsers that do not support these `text-decoration-line` values.
 
+<!-- cSpell:ignore speling -->
+
 ```html
 <p>This text contains a <span class="spelling">speling</span> mistake.</p>
 <p class="grammar">This text contain grammatical errors.</p>
