@@ -155,7 +155,7 @@ input:required {
 }
 
 input:optional {
-  border: 2px dashed green;
+  border: 2px solid green;
 }
 ```
 
