@@ -19,7 +19,7 @@ getPointAtLength(distance)
 ### Parameters
 
 - `distance`
-  - : A float referring to the distance along the path.
+  - : A number indicating the distance along the path.
 
 ### Return value
 
