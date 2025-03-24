@@ -28,7 +28,6 @@ None ({{jsxref('undefined')}}).
 
 ## Example
 
-
 ### Set path data
 
 Consider the following `<path>` element, drawing a square:
