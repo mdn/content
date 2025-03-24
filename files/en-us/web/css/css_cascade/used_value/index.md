@@ -9,12 +9,12 @@ spec-urls:
 
 {{CSSRef}}
 
-The **used value** of a [CSS](/en-US/docs/Web/CSS) property is its value after all calculations have been performed on the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value).
+The **used value** of a [CSS](/en-US/docs/Web/CSS) property is its value after all calculations have been performed on the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value).
 
 After the {{glossary("user agent")}} has finished its calculations, every CSS property has a used value. The used values of dimensions (e.g., {{cssxref("width")}}, {{cssxref("line-height")}}) are in pixels. The used values of shorthand properties (e.g., {{cssxref("background")}}) are consistent with those of their component properties (e.g., {{cssxref("background-color")}} or {{cssxref("background-size")}}) and with {{cssxref("position")}} and {{cssxref("float")}}.
 
 > [!NOTE]
-> The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns the [resolved value](/en-US/docs/Web/CSS/resolved_value), which may either be the [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) or the used value, depending on the property.
+> The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns the [resolved value](/en-US/docs/Web/CSS/resolved_value), which may either be the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) or the used value, depending on the property.
 
 ## Example
 
@@ -110,14 +110,14 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Layout modes](/en-US/docs/Glossary/Layout_mode)
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
     - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

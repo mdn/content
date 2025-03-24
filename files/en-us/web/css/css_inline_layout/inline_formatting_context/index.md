@@ -1,12 +1,12 @@
 ---
 title: Inline formatting context
-slug: Web/CSS/Inline_formatting_context
+slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
 page-type: guide
 ---
 
 {{CSSRef}}
 
-This article explains the inline formatting context.
+This guide explains the inline formatting context.
 
 ## Core concepts
 

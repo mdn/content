@@ -35,4 +35,4 @@ This element implements the {{domxref("SVGFontFaceFormatElement")}} interface.
 ## See also
 
 - {{SVGElement("font-face-uri")}}
-- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts)
+- [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-WoW64
 
 {{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) indicating if a 32-bit user-agent application is running on a 64-bit Windows machine.
+The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) indicating if a 32-bit user-agent application is running on a 64-bit Windows machine.
 
 [WoW64](https://en.wikipedia.org/wiki/WoW64) was commonly used to know which [NPAPI](https://en.wikipedia.org/wiki/NPAPI) plugin installer should be offered for download.
 This client hint header is used for backwards compatibility considerations, to provide a one-to-one mapping from the user-agent string of certain browsers to UA client hints.
