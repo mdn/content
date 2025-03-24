@@ -39,7 +39,8 @@ Consider the following `<path>` element, drawing a square:
 </svg>
 ```
 
-The {{domxref("SVGPathElement/getPathData", "getPathData()")}} method will return normalized path data using [absolute commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). Setting this data back to the `<path>` element using the `setPathData()` method will result in the different set of path commands in the DOM:
+The code below uses {{domxref("SVGPathElement/getPathData", "getPathData()")}} method to return the normalized path data as [absolute commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
+Setting the returned data back to the `<path>` element using the `setPathData()` method will result in the different set of path commands in the DOM:
 
 ```js
 const svgPath = document.querySelector("path");
