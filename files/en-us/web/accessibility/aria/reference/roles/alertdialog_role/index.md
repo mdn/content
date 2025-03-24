@@ -34,7 +34,7 @@ Adding `role="alertdialog"` alone is not sufficient to make an alert dialog acce
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
-## Associated WAI-ARIA roles, states, and properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 

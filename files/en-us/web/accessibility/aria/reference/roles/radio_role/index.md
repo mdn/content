@@ -101,7 +101,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 <div role="radio">name of my radio</div>
 ```
 
-## Associated WAI-ARIA roles, states, and properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) role
 

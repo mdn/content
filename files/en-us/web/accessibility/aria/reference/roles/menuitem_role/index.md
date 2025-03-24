@@ -24,7 +24,7 @@ A common convention for indicating that a `menuitem` launches a dialog box is to
 
 Every `menuitem` must have an accessible name. This name comes from the element's contents by default. If the contents don't provide for a useful accessible name, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) can be used to reference visible label. If no visible content is available to provide the accessible name, an accessible name can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
-## Associated WAI-ARIA roles, states, and properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) role
   - : A widget providing a list of choices. Required context role (or `menubar`)
