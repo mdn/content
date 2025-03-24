@@ -32,7 +32,7 @@ It is preferable to use the HTML5 [`<nav>` element](/en-US/docs/Web/HTML/Element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : A brief description of the purpose of the navigation, omitting the term "navigation", as the screen reader will read both the role and the contents of the label.
 
-### Keyboard Interactions
+### Keyboard interactions
 
 None.
 

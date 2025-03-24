@@ -37,7 +37,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
   - : Indicates the availability and type of interactive popup that can be triggered by the `menuitem`
 
-## Keyboard interactions
+### Keyboard interactions
 
 - <kbd>Enter</kbd> and <kbd>Space</kbd>
   - : If the `menuitem` has a submenu, opens the submenu and places focus on its first item. Otherwise, activates the item and closes the menu.

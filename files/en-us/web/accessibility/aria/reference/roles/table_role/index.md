@@ -81,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the `grid` pat
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 
