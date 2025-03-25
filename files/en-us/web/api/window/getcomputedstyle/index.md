@@ -150,7 +150,7 @@ Java.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
   using array or [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
-- The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved-value).
+- The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value).
   These are usually the same as CSS 2.1's
   [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), but for some older properties
   like `width`, `height`, or `padding`, they are
@@ -188,4 +188,4 @@ Java.
 
 - {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
-- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved-value)
+- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)
