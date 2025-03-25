@@ -120,7 +120,7 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 - {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
   - : Fired before sending any HTTP data, but after HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 - {{WebExtAPIRef("webRequest.onSendHeaders")}}
-  - : Fired just before sending headers. If your add-on or some other add-on modified headers in `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, you'll see the modified version here.
+  - : Fired just before sending headers. If your add-on or some other add-on modified headers in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, you'll see the modified version here.
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
   - : Fired when the HTTP response headers associated with a request have been received. You can use this event to modify HTTP response headers.
 - {{WebExtAPIRef("webRequest.onAuthRequired")}}
