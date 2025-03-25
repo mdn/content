@@ -48,6 +48,13 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 
 The target object.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - The `target` parameter is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}.
+    - Assignment of a property on the target object fails; for example, because the property is non-writable on the target object, or because its setter throws an error.
+
 ## Description
 
 Properties in the target object are overwritten by properties in the sources if they
@@ -72,14 +79,7 @@ In case of an error, for example if a property is non-writable, a
 {{jsxref("TypeError")}} is raised, and the `target` object is
 changed if any properties are added before the error is raised.
 
-> **Note:** `Object.assign()` does not throw on
-> [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
-
-## Exceptions
-
-- {{jsxref("TypeError")}}
-  - : Thrown if the `target` parameter is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}.
-  - : Thrown if the source object has a property that is non-writable on the target object.
+> **Note:** `Object.assign()` does not throw on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
 ## Examples
 
@@ -91,7 +91,7 @@ const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 ```
 
-### Warning for Deep Clone
+### Warning for deep clone
 
 For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like {{DOMxRef("Window.structuredClone", "structuredClone()")}}, because `Object.assign()`
 copies property values.
