@@ -13,10 +13,10 @@ The **`toSpliced()`** method of {{jsxref("Array")}} instances is the [copying](/
 
 ```js-nolint
 toSpliced(start)
-toSpliced(start, deleteCount)
-toSpliced(start, deleteCount, item1)
-toSpliced(start, deleteCount, item1, item2)
-toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
+toSpliced(start, skipCount)
+toSpliced(start, skipCount, item1)
+toSpliced(start, skipCount, item1, item2)
+toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 ```
 
 ### Parameters
@@ -28,13 +28,13 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
     - If `start < -array.length` or `start` is omitted, `0` is used.
     - If `start >= array.length`, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.
 
-- `deleteCount` {{optional_inline}}
+- `skipCount` {{optional_inline}}
 
   - : An integer indicating the number of elements in the array to remove from `start`.
 
-    If `deleteCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `deleteCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
+    If `skipCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `skipCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
 
-    If `deleteCount` is `0` or negative, no elements are removed.
+    If `skipCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).
 
 - `item1`, …, `itemN` {{optional_inline}}
@@ -45,7 +45,7 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 
 ### Return value
 
-A new array that consists of all elements before `start`, `item1`, `item2`, …, `itemN`, and all elements after `start + deleteCount`.
+A new array that consists of all elements before `start`, `item1`, `item2`, …, `itemN`, and all elements after `start + skipCount`.
 
 ## Description
 
