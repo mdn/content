@@ -53,7 +53,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row he
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 
