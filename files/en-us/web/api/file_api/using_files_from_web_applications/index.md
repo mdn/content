@@ -372,7 +372,7 @@ If the {{DOMxRef("FileList")}} object passed to `handleFiles()` is empty, we set
    2. Create a new image ({{HTMLElement("img")}}) element.
    3. Set the image's source to a new object URL representing the file, using {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} to create the blob URL.
    4. Set the image's height to 60 pixels.
-   5. Note that we don't immediately revoke the object URL after the image has loaded, as doing so would make the image unusable for user interactions (such as right-clicking to save the image or opening it in a new tab). For long-lived applications, you should revoke object URLs when they're no longer needed (such as when the image is removed from the DOM) to free up memory.
+   5. Note that we don't immediately revoke the object URL after the image has loaded, as doing so would make the image unusable for user interactions (such as right-clicking to save the image or opening it in a new tab). For long-lived applications, you should revoke object URLs when they're no longer needed (such as when the image is removed from the DOM) to free up memory by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string.
    6. Append the new list item to the list.
 
 Here is a live demo of the code above:
