@@ -40,8 +40,7 @@ Object.assign(target, source1, source2, /* …, */ sourceN)
 ### Parameters
 
 - `target`
-  - : The target object — what to apply the sources' properties to, which is returned
-    after it is modified.
+  - : The target object — what to apply the sources' properties to, which is returned after it is modified. If a primitive value is provided as the target, it will be converted to an object.
 - `source1`, …, `sourceN`
   - : The source object(s) — objects containing the properties you want to apply.
 
@@ -188,6 +187,12 @@ const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
 // Note, only string wrappers can have own enumerable properties.
 console.log(obj); // { "0": "a", "1": "b", "2": "c" }
+
+// Primitives as the target are also wrapped to objects
+const number = Object.assign(3, { a: 1 });
+console.log(number); // Number {3, a: 1}
+console.log(typeof number); // object
+console.log(number.a); // 1
 ```
 
 ### Exceptions will interrupt the ongoing copying task
@@ -264,3 +269,4 @@ console.log(copy);
 - {{jsxref("Object.defineProperties()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)
+
