@@ -30,7 +30,7 @@ If the associated element is moved back into scope the relationship will be rest
 The property also reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute, which can be set in HTML or with {{domxref("Element.setAttribute()")}}.
 If the attribute contains invalid or out of scope references, then there will be no corresponding elements in `ariaLabelledByElements`.
 
-Note that when the property is set, the corresponding [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute is set to the empty string (`""`).
+Note that when the property is set, the corresponding [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute is set to the empty string (`""`).
 
 ## Examples
 

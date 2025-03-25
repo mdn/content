@@ -8,27 +8,33 @@ browser-compat: api.Element.ariaControlsElements
 
 {{APIRef("DOM")}}
 
-The **`ariaControlsElements`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute, which identifies the element (or elements) that are controlled by the element it is applied to.
-
+The **`ariaControlsElements`** property of the {{domxref("Element")}} interface identifies the element (or elements) that are controlled by the element it is applied to.
 For example, this might be set on a [combobox](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) to indicate the element that it pops up, or on a [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) to indicate the ID of the element it controls.
 
-The [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) topic contains additional information about when the property should be set.
+The property reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 
 ## Value
 
 An array of elements that are controlled by this element.
 
-The property array can include elements in the current scope, or to an ancestor scope, but not to a descendant scope.
-In other words, an element in a shadow root can set that it controls other elements within its own shadow DOM or the parent DOM, but a DOM element can't set that it controls elements defined in a shadow root.
-Setting the `ariaControlsElements` to an element that is not in scope will fail, and the property will not be included in the array if the property is read.
+## Description
 
-If the `ariaControlsElements` property includes an element that is subsequently moved out of scope the property subsequently omits that element, but the relationship is not severed!
+The `ariaControlsElements` property is a flexible alternative to using the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute to set the controlled elements.
+Unlike `aria-controls`, the elements assigned to this property can be selected: they do not have to have an `id`.
+This can be convenient as it avoids having to unnecessarily create ids for elements in order to set them as controlled.
+
+The elements to be controlled may be in the current scope or an ancestor scope of the element, but not a descendant scope.
+In other words, a shadow root can set an element as controlled from within its own shadow DOM or the parent DOM, but a DOM element can't set an element defined in a shadow root.
+
+If the `ariaControlsElements` property array includes an element that is subsequently moved out of scope, it will be omitted if you read the property, but the relationship is not severed!
 If the associated element is moved back into scope the relationship will be restored (provided it has not been replaced).
 
-The property also reflects the element's [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute, which can be set in HTML or with {{domxref("Element.setAttribute()")}}.
-If the attribute contains invalid or out of scope references, then there will be no corresponding elements in `ariaControlsElements`.
+The property reflects the element's [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute if it is defined.
+Note however that the property will omit elements in the attribute where the associated reference `id` does not exist or is out of scope.
+The property can be set directly or using the `aria-controls` attribute with {{domxref("Element.setAttribute()")}}.
+If the description is set using `ariaControlsElements` then the `aria-controls` is set to the empty string (`""`).
 
-Note that when the property is set, the corresponding [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute is set to the empty string (`""`).
+The [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) topic contains additional information about how the accessible description should be used.
 
 ## Examples
 
@@ -214,43 +220,45 @@ toggleButton.addEventListener("click", () => {
 
 We then define a logging function to list the ids from the `aria-controls` attribute using {{domxref("Element.getAttribute()")}}, the controlled elements from `ariaControlsElements`, and the inner text for each of those elements.
 
-If `ariaControlsElements` is supported, the code:
+```js
+function logAccessibleInfo(element) {
+  const refids = element.getAttribute("aria-controls");
+
+  controlledElements = element.ariaControlsElements;
+  // List innerText for each of the ariaControlsElements
+  let text = "";
+  controlledElements.forEach((controlled) => {
+    text += `"${controlled.textContent.trim()}" `;
+  });
+  text = text.trim();
+
+  log(
+    `  id: "${refids}",
+  el: ${controlledElements},
+  text: ${text} `,
+  );
+}
+```
+
+If `ariaControlsElements` is supported, the code then:
 
 1. Logs the original `id` reference from `aria-controls`, the corresponding `ariaControlsElements`, and the element's text content.
 2. Sets the `ariaControlsElements` property to be just the `panel2` element and logs the same information.
 3. Sets the `aria-controls` attribute to the reference `id` string of `panel1 panel3 panel2` and logs the same information (note that "panel3" is an invalid reference).
 
 ```js
-function logElementControlledElements(element) {
-  const refids = element.getAttribute("aria-controls");
-
-  controlledElements = element.ariaControlsElements;
-  // List innerText for each of the ariaControlsElements
-  let textOfControllingElements = "";
-  controlledElements.forEach((controlled) => {
-    textOfControllingElements += `"${controlled.textContent.trim()}" `;
-  });
-  textOfControllingElements = textOfControllingElements.trim();
-
-  log(
-    `  id: "${refids}",
-  el: ${controlledElements},
-  text: ${textOfControllingElements} `,
-  );
-}
-
 // Feature test for ariaControlsElements
 if ("ariaControlsElements" in Element.prototype) {
   log("[1] Attribute set in HTML");
-  logElementControlledElements(toggleButton);
+  logAccessibleInfo(toggleButton);
 
   log("[2] Property set with element");
   toggleButton.ariaControlsElements = [panel2];
-  logElementControlledElements(toggleButton);
+  logAccessibleInfo(toggleButton);
 
   log("[3] Attribute set from using setAttribute()");
   toggleButton.setAttribute("aria-controls", "panel1 panel3 panel2");
-  logElementControlledElements(toggleButton);
+  logAccessibleInfo(toggleButton);
 } else {
   log("ariaControlsElements not supported by browser");
 }
@@ -259,11 +267,14 @@ if ("ariaControlsElements" in Element.prototype) {
 #### Result
 
 The log below shows the output of the above code.
-Line 2 demonstrates that the `ariaControlsElements` property can be set using either the property or a valid reference in the `aria-controls` attribute, and that setting the `ariaControlsElements` property sets the `aria-controls` attribute to `""`.
-Line [3] shows what happens when you set three reference `id` values in the attribute, but one of them is invalid (`panel3`).
-In this case the attribute is set/readable and the `ariaControlsElements` is populated with the valid elements.
 
 {{EmbedLiveSample("Set the controlled elements","100%","400px")}}
+
+Note:
+
+- Line [1] Logs the original `id` reference from `aria-describedby`, the corresponding `ariaDescribedByElements`, and the element's text content.
+- Line [2] demonstrates that the `ariaControlsElements` property can be set using either the property or a valid reference in the `aria-controls` attribute, and that setting the `ariaControlsElements` property sets the `aria-controls` attribute to `""`.
+- Line [3] shows that when we set three references in the attribute and one is invalid (`panel3`), then we only get the two valid elements in `ariaControlsElements`.
 
 ## Specifications
 

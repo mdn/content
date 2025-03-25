@@ -172,14 +172,14 @@ function log(text) {
 function logAccessibleInfo(element) {
   const refids = element.getAttribute("aria-describedby");
 
-  let accessibleText = "";
+  let text = "";
   accessibleElements = element.ariaDescribedByElements;
   accessibleElements.forEach((descElement) => {
-    accessibleText += descElement.textContent.trim() + " ";
+    text += descElement.textContent.trim() + " ";
   });
-  accessibleText = accessibleText.trim();
+  text = text.trim();
 
-  log(` id: "${refids}", el: ${accessibleElements}, label ${accessibleText} `);
+  log(` id: "${refids}", el: ${accessibleElements}, desc: ${text} `);
 }
 ```
 
