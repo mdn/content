@@ -282,4 +282,3 @@ console.log(copy);
 - {{jsxref("Object.defineProperties()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [Spread in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)
-

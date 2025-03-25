@@ -131,4 +131,4 @@ strong {
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
 - [Stacking without `z-index`](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout/) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

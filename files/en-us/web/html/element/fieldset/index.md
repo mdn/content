@@ -127,9 +127,7 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root"
-          >sectioning root</a
-        >,
+        sectioning root,
         <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
