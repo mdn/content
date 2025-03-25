@@ -30,7 +30,7 @@ A {{domxref("DOMPoint")}} indicating the point at a given distance along the pat
 
 #### Getting the midpoint of a `<path>`
 
-In this example, we get the midpoint of a path by get the point that is half way along the length of a path.
+In this example, we determine the midpoint of a path by getting the point that is half way along the length of the path.
 
 We define an SVG that includes two paths: a basic line and a complex heart shape.
 
@@ -51,7 +51,7 @@ The path that creates the heart is approximately 275 units long.
 ```
 
 The line is horizontal, starting at `0, 30` and is 100 units long.
-The path of the heart starts at `10, 30` and is approximately 275 units long
+The path of the heart starts at `10, 30` and is approximately 275 units long.
 
 ```html hidden
 <pre id="log"></pre>
@@ -74,13 +74,16 @@ function log(text) {
 }
 ```
 
-We know the length of the line is 100 units, so know that `50` is the mid way point. We use the {{domxref("SVGPathElement.getTotalLength()")}} method to get the length of the heart's path, dividing it by `2` to get the mid-point distance, then uses the `getPointAtLength()` method to return mid point as a `DOMPoint`. We display the `x` and `y` coordinates for each mid point.
+We know the length of the line is 100 units, and hence that `50` is the mid point.
+We use the {{domxref("SVGPathElement.getTotalLength()")}} method to get the length of the heart's path, dividing it by `2` to get the mid-point distance.
+We then use the `getPointAtLength()` method to return the mid point as a `DOMPoint`.
+We display the `x` and `y` coordinates for each mid point.
 
 ```js
 const basicPath = document.getElementById("line");
 const complexPath = document.getElementById("heart");
 
-// get the length of the heart and divide by 2
+// Get the length of the heart and divide by 2
 const halfLength = complexPath.getTotalLength() / 2;
 
 // Access the getPointAtLength property
