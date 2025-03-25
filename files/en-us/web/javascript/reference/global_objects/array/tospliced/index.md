@@ -30,7 +30,7 @@ toSpliced(start, skipCount, item1, item2, /* …, */ itemN)
 
 - `skipCount` {{optional_inline}}
 
-  - : An integer indicating the number of elements in the array to remove from `start`.
+  - : An integer indicating the number of elements in the array to remove (or, to skip) from `start`.
 
     If `skipCount` is omitted, or if its value is greater than or equal to the number of elements after the position specified by `start`, then all the elements from `start` to the end of the array will be deleted. However, if you wish to pass any `itemN` parameter, you should pass `Infinity` as `skipCount` to delete all elements after `start`, because an explicit `undefined` gets [converted](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) to `0`.
 
@@ -49,7 +49,7 @@ A new array that consists of all elements before `start`, `item1`, `item2`, …,
 
 ## Description
 
-The `toSpliced()` method, like `splice()`, does multiple things at once: it removes the given number of elements from the array, starting at a given index, and then inserts the given elements at the same index. However, it returns a new array instead of modifying the original array. The deleted elements therefore are not returned from this method.
+The `toSpliced()` method, like `splice()`, does multiple things at once: it removes the given number of elements from the array, starting at a given index, and then inserts the given elements at the same index. However, it returns a new array instead of modifying the original array. The deleted elements therefore are not returned from this method, but they remain accessible in the original array.
 
 The `toSpliced()` method never produces a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). If the source array is sparse, the empty slots will be replaced with `undefined` in the new array.
 
