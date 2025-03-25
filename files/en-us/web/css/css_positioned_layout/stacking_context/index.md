@@ -242,4 +242,4 @@ Additional examples include a [2-level hierarchy with `z-index` on the last leve
 - [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
 - [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
 - {{glossary("Top layer")}}
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout/) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

@@ -114,4 +114,4 @@ div {
 - [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout/) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
