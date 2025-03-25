@@ -44,32 +44,32 @@ If the `readonly` attribute is specified on an input element, because the user c
 The `readonly` attribute is supported by textual form controls, including:
 
 - {{HTMLElement("input")}} elements of type:
-  - {{HTMLElement("input/text","text")}}
-  - {{HTMLElement("input/search","search")}}
-  - {{HTMLElement("input/tel","tel")}}
-  - {{HTMLElement("input/url","url")}}
-  - {{HTMLElement("input/email","email")}}
-  - {{HTMLElement("input/password","password")}}
-  - {{HTMLElement("input/date","date")}}
-  - {{HTMLElement("input/month","month")}}
-  - {{HTMLElement("input/week","week")}}
-  - {{HTMLElement("input/time","time")}}
-  - {{HTMLElement("input/datetime-local","datetime-local")}}
-  - {{HTMLElement("input/number","number")}}
+  - `{{HTMLElement("input/text","text")}}`
+  - `{{HTMLElement("input/search","search")}}`
+  - `{{HTMLElement("input/tel","tel")}}`
+  - `{{HTMLElement("input/url","url")}}`
+  - `{{HTMLElement("input/email","email")}}`
+  - `{{HTMLElement("input/password","password")}}`
+  - `{{HTMLElement("input/date","date")}}`
+  - `{{HTMLElement("input/month","month")}}`
+  - `{{HTMLElement("input/week","week")}}`
+  - `{{HTMLElement("input/time","time")}}`
+  - `{{HTMLElement("input/datetime-local","datetime-local")}}`
+  - `{{HTMLElement("input/number","number")}}`
 - {{HTMLElement("textarea")}}
 
 The attribute is not relevant to all other elements, including {{HTMLElement("select")}} and {{HTMLElement("button")}}. It also does not apply to non-textual input elements, including:
 
-- {{HTMLElement("input/hidden","hidden")}}
-- {{HTMLElement("input/range","range")}}
-- {{HTMLElement("input/color","color")}}
-- {{HTMLElement("input/checkbox","checkbox")}}
-- {{HTMLElement("input/radio","radio")}}
-- {{HTMLElement("input/file","file")}}
-- {{HTMLElement("input/submit","submit")}}
-- {{HTMLElement("input/image","image")}}
-- {{HTMLElement("input/reset","reset")}}
-- {{HTMLElement("input/button","button")}}
+- `{{HTMLElement("input/hidden","hidden")}}`
+- `{{HTMLElement("input/range","range")}}`
+- `{{HTMLElement("input/color","color")}}`
+- `{{HTMLElement("input/checkbox","checkbox")}}`
+- `{{HTMLElement("input/radio","radio")}}`
+- `{{HTMLElement("input/file","file")}}`
+- `{{HTMLElement("input/submit","submit")}}`
+- `{{HTMLElement("input/image","image")}}`
+- `{{HTMLElement("input/reset","reset")}}`
+- `{{HTMLElement("input/button","button")}}`
 
 Inputs that support the `readonly` attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class. All other elements match the {{cssxref(":read-only")}} pseudo-class.
 

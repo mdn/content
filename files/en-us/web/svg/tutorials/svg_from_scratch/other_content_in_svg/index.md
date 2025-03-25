@@ -36,7 +36,7 @@ The embedded picture becomes a normal SVG element. This means, that you can use 
 
 ### Embedding arbitrary XML
 
-Since SVG is an XML application, you can of course _always_ embed arbitrary XML anywhere in an SVG document. But then you have no means to define how the surrounding SVG should react on the content. Actually, in a conforming viewer it will react in no way at all, the data will be omitted. Therefore the specification adds the {{ SVGElement("foreignObject") }} element to SVG. Its sole purpose is to be a container for other markup and a carrier for SVG styling attributes (most prominently `width` and `height` to define the space the object will take).
+Since SVG is an XML application, you can of course _always_ embed arbitrary XML anywhere in an SVG document. But then you have no means to define how the surrounding SVG should react on the content. Actually, in a conforming viewer it will react in no way at all, the data will be omitted. Therefore the specification adds the `{{ SVGElement("foreignObject") }}` element to SVG. Its sole purpose is to be a container for other markup and a carrier for SVG styling attributes (most prominently `width` and `height` to define the space the object will take).
 
 The `foreignObject` element is a good way to embed XHTML in SVG. If you have longer texts, the HTML layout is more suitable and comfortable than the SVG `text` element. Another often cited use case is the embedding of formulas with MathML. For scientific applications of SVG this is a very good way to join both worlds.
 

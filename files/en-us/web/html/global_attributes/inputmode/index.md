@@ -31,20 +31,20 @@ The attribute can have any of the following values:
     Devices may or may not show a minus key.
 - `tel`
   - : A telephone keypad input, including the digits 0–9, the asterisk (<kbd>\*</kbd>), and the pound (<kbd>#</kbd>) key.
-    Inputs that _require_ a telephone number should typically use {{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}} instead.
+    Inputs that _require_ a telephone number should typically use `{{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}}` instead.
 - `search`
   - : A virtual keyboard optimized for search input.
     For instance, the [return/submit key](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search", along with possible other optimizations.
-    Inputs that _require_ a search query should typically use {{HTMLElement("input/search", '&lt;input type="search"&gt;')}} instead.
+    Inputs that _require_ a search query should typically use `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}` instead.
 - `email`
   - : A virtual keyboard optimized for entering email addresses.
     Typically includes the <kbd>@</kbd>character as well as other optimizations.
-    Inputs that _require_ email addresses should typically use {{HTMLElement("input/email", '&lt;input type="email"&gt;')}} instead.
+    Inputs that _require_ email addresses should typically use `{{HTMLElement("input/email", '&lt;input type="email"&gt;')}}` instead.
 - `url`
   - : A keypad optimized for entering URLs.
     This may have the <kbd>/</kbd> key more prominent, for example.
     Enhanced features could include history access and so on.
-    Inputs that _require_ a URL should typically use {{HTMLElement("input/url", '&lt;input type="url"&gt;')}} instead.
+    Inputs that _require_ a URL should typically use `{{HTMLElement("input/url", '&lt;input type="url"&gt;')}}` instead.
 
 ## Specifications
 

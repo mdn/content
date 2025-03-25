@@ -217,7 +217,7 @@ If your comment contains no line breaks, you can put it behind two slashes like 
 
 ### Operators
 
-An {{Glossary("operator")}} is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
+An `{{Glossary("operator")}}` is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
 
 <table class="standard-table">
   <thead>

@@ -198,7 +198,7 @@ Let's look at an example.
 
 According to [the HTML specification](https://html.spec.whatwg.org/multipage/input.html#attr-input-list), the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. This leads to some uses of it that might seem a little non-obvious.
 
-For example, in browsers that support {{htmlelement("datalist")}} on `range` input types, a small tick mark will be displayed above the range for each datalist {{htmlelement("option")}} value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#adding_tick_marks).
+For example, in browsers that support `{{htmlelement("datalist")}}` on `range` input types, a small tick mark will be displayed above the range for each datalist `{{htmlelement("option")}}` value. You can see an implementation [example of this on the `<input type="range">` reference page](/en-US/docs/Web/HTML/Element/input/range#adding_tick_marks).
 
 And browsers that support {{htmlelement('datalist')}}s and [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) should display a customized palette of colors as the default, while still making the full color palette available.
 

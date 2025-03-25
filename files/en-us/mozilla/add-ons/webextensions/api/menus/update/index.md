@@ -47,7 +47,7 @@ let updating = browser.menus.update(
 
     - `contexts` {{optional_inline}}
 
-      - : `array` of {{WebExtAPIRef('menus.ContextType')}}. Array of contexts in which this menu item will appear. If this option is omitted:
+      - : `array` of `{{WebExtAPIRef('menus.ContextType')}}`. Array of contexts in which this menu item will appear. If this option is omitted:
 
         - if the item's parent has contexts set, then this item will inherit its parent's contexts
         - otherwise, the item is given a context array of \["page"].
@@ -105,9 +105,9 @@ let updating = browser.menus.update(
         Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "\&A and \&B" will be shown as "A and B" and set "A" as the access key.
 
     - `type` {{optional_inline}}
-      - : {{WebExtAPIRef('menus.ItemType')}}. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
+      - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
     - `viewTypes` {{optional_inline}}
-      - : {{WebExtAPIRef('extension.ViewType')}}. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
