@@ -133,7 +133,7 @@ _No changes._
 
 ### API changes
 
-- Using the `proxy.settings.set()` method to change `{{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}` values will throw an exception unless the extension was granted private window access by the user ([Firefox bug 1525447](https://bugzil.la/1525447)).
+- Using the `proxy.settings.set()` method to change {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} values will throw an exception unless the extension was granted private window access by the user ([Firefox bug 1525447](https://bugzil.la/1525447)).
 
 ### Manifest changes
 

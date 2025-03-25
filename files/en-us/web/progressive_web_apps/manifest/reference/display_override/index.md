@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Manifest/Reference/display_override
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.display_override
+browser-compat: manifests.webapp.display_override
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
