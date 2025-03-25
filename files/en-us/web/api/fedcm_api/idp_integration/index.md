@@ -193,17 +193,6 @@ account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_a
 
 A request to this endpoint is sent as a result of the user choosing an account to sign in with from the relevant browser UI. When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the user on its own server, according to the usage instructions outlined by the IdP they are using for identity federation. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
 
-The ID assertion endpoint response must include the {{httpheader("Access-Control-Allow-Origin")}} and {{httpheader("Access-Control-Allow-Credentials")}} headers, and the `Access-Control-Allow-Origin` must include the requester's origin:
-
-```http
-Access-Control-Allow-Origin: https://rp.example
-Access-Control-Allow-Credentials: true
-```
-
-Note that the `Access-Control-Allow-Origin` must be set to the specific origin of the requester (the RP) and cannot be the wildcard value `*`.
-
-Without these headers, the request will fail with a network error.
-
 ```json
 {
   "token": "***********"
@@ -225,6 +214,19 @@ The request payload contains the following params:
 
 > [!NOTE]
 > If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
+
+#### CORS headers for the ID assertion endpoint
+
+The ID assertion endpoint response must include the {{httpheader("Access-Control-Allow-Origin")}} and {{httpheader("Access-Control-Allow-Credentials")}} headers, and the `Access-Control-Allow-Origin` must include the requester's origin:
+
+```http
+Access-Control-Allow-Origin: https://rp.example
+Access-Control-Allow-Credentials: true
+```
+
+Note that the `Access-Control-Allow-Origin` must be set to the specific origin of the requester (the RP) and cannot be the wildcard value `*`.
+
+Without these headers, the request will fail with a network error.
 
 #### ID assertion error responses
 
