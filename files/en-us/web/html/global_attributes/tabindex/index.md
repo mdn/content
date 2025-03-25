@@ -9,7 +9,37 @@ browser-compat: html.global_attributes.tabindex
 
 The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable (usually with the <kbd>Tab</kbd> key, hence the name) and determine their relative ordering for sequential focus navigation.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+
+```html interactive-example
+<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+
+<label>First in tab order:<input type="text" /></label>
+
+<div tabindex="0">Tabbable due to tabindex.</div>
+
+<div>Not tabbable: no tabindex.</div>
+
+<label>Third in tab order:<input type="text" /></label>
+```
+
+```css interactive-example
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div,
+label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+div:focus {
+  font-weight: bold;
+}
+```
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
@@ -36,7 +66,7 @@ Some focusable HTML elements have a default `tabindex` value of `0` set under th
 
 Avoid using the `tabindex` attribute in conjunction with non-[interactive content](/en-US/docs/Web/HTML/Content_categories#interactive_content) to make something intended to be interactive focusable by keyboard input. An example of this would be using a {{HTMLElement("div")}} element to describe a button, instead of the {{HTMLElement("button")}} element.
 
-Interactive components authored using non-interactive elements are not listed in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This prevents assistive technology from being able to navigate to and manipulate those components. The content should be semantically described using interactive elements ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.) instead. These elements have built-in roles and states that communicate status to the accessibility that would otherwise have to be managed by [ARIA](/en-US/docs/Web/Accessibility/ARIA).
+Interactive components authored using non-interactive elements are not listed in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). This prevents assistive technology from being able to navigate to and manipulate those components. The content should be semantically described using interactive elements ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.) instead. These elements have built-in roles and states that communicate status to the accessibility that would otherwise have to be managed by [ARIA](/en-US/docs/Web/Accessibility/ARIA).
 
 - [Using the tabindex attribute | The Paciello Group](https://www.tpgi.com/using-the-tabindex-attribute/)
 

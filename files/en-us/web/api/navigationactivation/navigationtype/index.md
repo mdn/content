@@ -46,4 +46,4 @@ window.addEventListener("pageswap", (event) => {
 ## See also
 
 - [Navigation API](/en-US/docs/Web/API/Navigation_API)
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

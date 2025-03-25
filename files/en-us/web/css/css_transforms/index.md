@@ -358,8 +358,9 @@ Use the sliders in the example below to modify the translation, rotation, scale,
   padding: 0;
   margin-bottom: 4px;
   accent-color: blue; /* or any color */
-  font-family: Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #allTransformFieldset > legend {
@@ -699,7 +700,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 - {{cssxref("transform-function/skewX", "skewX()")}}
 - {{cssxref("transform-function/skewY", "skewY()")}}
 - {{cssxref("transform-function/translate", "translate()")}}
-- {{cssxref("transform-function/translate3d", "translate()")}}
+- {{cssxref("transform-function/translate3d", "translate3d()")}}
 - {{cssxref("transform-function/translateX", "translateX()")}}
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
@@ -714,7 +715,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
-- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Fundamentals#use_css_transforms)
+- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : Describes how object transformations can be represented by mathematical matrices.
@@ -748,10 +749,10 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
 - [SVG](/en-US/docs/Web/SVG) concepts:
-  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate) element
-  - [`<animateTransform>`](/en-US/docs/Web/SVG/Element/animateTransform) element
-  - [`<set>`](/en-US/docs/Web/SVG/Element/set) element
-  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform) element
+  - [`<animate>`](/en-US/docs/Web/SVG/Reference/Element/animate) element
+  - [`<animateTransform>`](/en-US/docs/Web/SVG/Reference/Element/animateTransform) element
+  - [`<set>`](/en-US/docs/Web/SVG/Reference/Element/set) element
+  - [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) element
 
 ## Specifications
 
@@ -759,6 +760,6 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 ## See also
 
-- [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) tutorial
+- [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations) tutorial
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module

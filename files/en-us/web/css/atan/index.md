@@ -7,7 +7,7 @@ browser-compat: css.types.atan
 
 {{CSSRef}}
 
-The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ That is:
 - `atan(1)` representing `45deg`
 - `atan(infinity)` representing `90deg`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

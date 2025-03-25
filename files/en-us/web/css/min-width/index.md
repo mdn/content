@@ -7,9 +7,44 @@ browser-compat: css.properties.min-width
 
 {{CSSRef}}
 
-The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
+The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+{{InteractiveExample("CSS Demo: min-width")}}
+
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 The element's width is set to the value of `min-width` whenever `min-width` is larger than {{Cssxref("max-width")}} or {{Cssxref("width")}}.
 
@@ -61,7 +96,7 @@ min-width: unset;
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 - `stretch`
 
-  - : Limits the minimum width of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+  - : Limits the minimum width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
     > [!NOTE]
     > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.

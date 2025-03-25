@@ -1,5 +1,5 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.spelling-error
@@ -67,3 +67,4 @@ In this example, eventual supporting browsers should highlight any flagged spell
 ## See also
 
 - {{cssxref("::grammar-error")}}
+- {{cssxref("text-decoration-line")}}

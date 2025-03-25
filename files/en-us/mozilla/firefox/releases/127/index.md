@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
-- [`data:`](/en-US/docs/Web/URI/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+- [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Reference/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
 
 ### CSS
 
@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh` and `rlh`](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 ### Security
 

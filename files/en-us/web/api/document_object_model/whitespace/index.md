@@ -91,7 +91,7 @@ The `<h1>` element contains only inline elements. In fact it contains:
 - An inline element (the `<span>`, which contains a space, and the word "World!").
 - Another text node (consisting only of tabs and spaces).
 
-Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
+Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
 
 Inside this context, whitespace character processing can be summarized as follows:
 
@@ -278,7 +278,7 @@ The Firefox DevTools HTML Inspector will highlight text nodes, and also show you
 
 There are a few ways of getting around this problem:
 
-Use [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
+Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
 
 ```css
 ul {

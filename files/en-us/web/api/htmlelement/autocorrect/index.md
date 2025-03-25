@@ -3,14 +3,16 @@ title: "HTMLElement: autocorrect property"
 short-title: autocorrect
 slug: Web/API/HTMLElement/autocorrect
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLElement.autocorrect
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not user text input is automatically corrected for spelling and/or punctuation errors.
+The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not autocorrection of editable text is enabled for spelling and/or punctuation errors.
+
+The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.
+For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
+Other devices and browsers may use a different approach.
 
 The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 
@@ -88,8 +90,9 @@ if (`autocorrect` in HTMLElement.prototype) {
 
 <!-- cSpell:ignore Carot -->
 
-Activate the button to toggle the autocorrect value. Enter invalid text into the text box, such as "Carot".
-This should be corrected automatically when the feature is enabled.
+Activate the button to toggle the autocorrect value.
+Enter invalid text into the text box, such as "Carot".
+When the autocorrect is enabled, and if the implementation has the appropriate substitute word "carrot", the text should automatically be corrected.
 
 {{EmbedLiveSample("Enable and disable autocorrection", "100%", "200")}}
 

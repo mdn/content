@@ -11,7 +11,21 @@ The **`Symbol.search`** static data property represents the [well-known symbol](
 
 For more information, see [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) and {{jsxref("String.prototype.search()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-search.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+
+```js interactive-example
+class Search1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.search](string) {
+    return string.indexOf(this.value);
+  }
+}
+
+console.log("foobar".search(new Search1("bar")));
+// Expected output: 3
+```
 
 ## Value
 

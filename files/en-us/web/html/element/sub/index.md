@@ -9,7 +9,23 @@ browser-compat: html.elements.sub
 
 The **`<sub>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## Attributes
 
@@ -121,7 +137,7 @@ Another example:
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
           ></code
         >
       </td>
@@ -148,5 +164,5 @@ Another example:
 ## See also
 
 - The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use `sup` and `sub` both at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
-- The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+- The [`<msub>`](/en-US/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Reference/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Reference/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

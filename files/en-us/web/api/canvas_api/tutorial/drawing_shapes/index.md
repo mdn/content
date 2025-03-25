@@ -568,7 +568,7 @@ As we have seen in the last example, there can be a series of paths and drawing 
 Let's see how we can construct a `Path2D` object:
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : The **`Path2D()`** constructor returns a newly instantiated `Path2D` object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) data.
+  - : The **`Path2D()`** constructor returns a newly instantiated `Path2D` object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) data.
 
 ```js
 new Path2D(); // empty path object
@@ -621,7 +621,7 @@ draw();
 
 ### Using SVG paths
 
-Another powerful feature of the new canvas `Path2D` API is using [SVG path data](/en-US/docs/Web/SVG/Tutorial/Paths) to initialize paths on your canvas. This might allow you to pass around path data and re-use them in both, SVG and canvas.
+Another powerful feature of the new canvas `Path2D` API is using [SVG path data](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) to initialize paths on your canvas. This might allow you to pass around path data and re-use them in both, SVG and canvas.
 
 The path will move to point (`M10 10`) and then move horizontally 80 points to the right (`h 80`), then 80 points down (`v 80`), then 80 points to the left (`h -80`), and then back to the start (`z`). You can see this example on the [`Path2D` constructor](/en-US/docs/Web/API/Path2D/Path2D#using_svg_paths) page.
 

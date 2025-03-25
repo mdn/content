@@ -1,5 +1,5 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined

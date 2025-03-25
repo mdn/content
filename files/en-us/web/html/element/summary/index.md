@@ -9,7 +9,40 @@ browser-compat: html.elements.summary
 
 The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 ## Attributes
 
@@ -77,12 +110,12 @@ You can use heading elements in `<summary>`, like this:
 
 #### Result
 
-{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
+{{EmbedLiveSample("Summaries_as_headings", 650, 200)}}
 
 This currently has some spacing issues that could be addressed using CSS.
 
 > [!WARNING]
-> Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
+> Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
 
 ### HTML in summaries
 
@@ -101,7 +134,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 #### Result
 
-{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+{{EmbedLiveSample("HTML_in_summaries", 650, 150)}}
 
 ### Changing the summary's icon
 
@@ -156,26 +189,34 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
 
 #### HTML
 
-```html
+```html-nolint
+<h1>Quotes from Helen Keller</h1>
+
 <details>
-<h1>Quotes from Helen Keller</h2>
   <summary>On women's rights</summary>
   <p>
-    <q>We have prayed, we have coaxed, we have begged, for the vote, with the hope that men, out of chivalry, would bestow equal rights upon women and take them into partnership in the affairs of the state. We hoped that their common sense would triumph over prejudices and stupidity. We thought their boasted sense of justice would overcome the errors that so often fetter the human spirit; but we have always gone away empty-handed. We shall beg no more.</q>
+    <q>We have prayed, we have coaxed, we have begged, for the vote, with the
+      hope that men, out of chivalry, would bestow equal rights upon women and
+      take them into partnership in the affairs of the state. We hoped that
+      their common sense would triumph over prejudices and stupidity. We thought
+      their boasted sense of justice would overcome the errors that so often
+      fetter the human spirit; but we have always gone away empty-handed. We
+      shall beg no more.</q>
   </p>
 </details>
 
 <details>
   <summary>On optimism</summary>
   <p>
-    <q>Optimism is the faith that leads to achievement; nothing can be done without hope.</q>
+    <q>Optimism is the faith that leads to achievement; nothing can be done
+      without hope.</q>
   </p>
 </details>
 ```
 
 #### Result
 
-{{EmbedLiveSample("Changing the summary's icon", 650, 150)}}
+{{EmbedLiveSample("Changing the summary's icon", 650, 400)}}
 
 ## Technical summary
 

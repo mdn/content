@@ -9,7 +9,45 @@ browser-compat: css.properties.font-variation-settings
 
 The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
-{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
+{{InteractiveExample("CSS Demo: font-variation-settings")}}
+
+```css interactive-example-choice
+font-variation-settings: "wght" 50;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wght" 850;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 25;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 75;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: Amstelvar;
+}
+```
 
 ## Syntax
 

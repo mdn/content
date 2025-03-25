@@ -2,14 +2,16 @@
 title: autocorrect
 slug: Web/HTML/Global_attributes/autocorrect
 page-type: html-attribute
-status:
-  - experimental
 browser-compat: html.global_attributes.autocorrect
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}
 
-The **`autocorrect`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether editable text is automatically corrected for spelling and/or punctuation errors.
+The **`autocorrect`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether autocorrection of editable text is enabled for spelling and/or punctuation errors.
+
+The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.
+For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
+Other devices and browsers may use a different approach.
 
 Autocorrection is relevant to editable text elements:
 
@@ -37,7 +39,7 @@ The {{htmlelement("input")}} element types that don't support auto-correction al
 For all other editable elements, setting any other value than those listed above is always treated as `on`.
 The default value for elements that are not nested inside a `<form>` is `on`.
 
-When nested in a `<form>`, the following elements inherit their their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
+When nested in a `<form>`, the following elements inherit their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
 ## Examples
 
@@ -62,7 +64,8 @@ We include two text `<input>` elements with different values for their `autocorr
 {{EmbedLiveSample("Basic example", "100%", "75")}}
 
 Enter invalid text into the fruit and vegetable text entry boxes above.
-If auto-correction is enabled on your browser, a typo in a vegetable name should be auto-corrected, but not in a fruit name.
+If auto-correction is supported on your browser, and there is an appropriate substitution provided by the underlying device, a typo in a vegetable name input should be auto-corrected.
+Typos should not be corrected in the fruit name field.
 
 ### Enabling and disabling autocorrection
 
@@ -138,10 +141,12 @@ resetButton.addEventListener("click", (e) => {
 
 #### Results
 
-Enter invalid text into the name and biography text entry boxes below.
-If auto-correction is enabled on your browser (see the log below) the text in the "Biography" should be auto-corrected, but not in the "Name" box.
+If auto-correction is supported by your browser, the log area below the "Biography" and "Name" inputs should show that it is enabled for "Biography" inputs but not "Name" inputs.
 
 {{EmbedLiveSample("Enabling and disabling autocorrection", "100%", "250")}}
+
+Enter invalid text into the name and biography text entry boxes.
+If the device has a substitute for the entered word, this will be used to autocorrect text in the "Biography" input (only).
 
 ## Specifications
 
@@ -150,3 +155,8 @@ If auto-correction is enabled on your browser (see the log below) the text in th
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck).

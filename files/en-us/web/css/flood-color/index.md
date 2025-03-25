@@ -82,7 +82,7 @@ rect {
 }
 ```
 
-We then apply different flood color values to the `<feFlood>` elements using the CSS `flood-color` property. We use a named color and a 3-digit hexidecimal color, but we can use any valid CSS color syntax:
+We then apply different flood color values to the `<feFlood>` elements using the CSS `flood-color` property. We use a named color and a 3-digit hexadecimal color, but we can use any valid CSS color syntax:
 
 ```css
 #flood1 feFlood {

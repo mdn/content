@@ -43,7 +43,7 @@ Default values for these properties tend to vary across browsers.
 - `protectedContentEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. Available on Windows only. If `true`, the browser provides a unique ID to plugins in order to run protected content.
 - `referrersEnabled`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends [referer](/en-US/docs/Web/HTTP/Headers/Referer) headers with your requests.
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends [referer](/en-US/docs/Web/HTTP/Reference/Headers/Referer) headers with your requests.
 - `resistFingerprinting`
 
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.
@@ -55,7 +55,7 @@ Default values for these properties tend to vary across browsers.
     Defaults to `false`.
 
 - `thirdPartyCookiesAllowed`
-  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the browser blocks [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the browser blocks [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 - `trackingProtectionMode`
 
   - : "Tracking protection" is a browser feature that blocks requests made to domains that are known to engage in cross-site tracking of users. Sites that track users are most commonly third-party advertising and analytics sites. This setting is a {{WebExtAPIRef("types.BrowserSetting")}} object that determines whether the browser should enable tracking protection. Its underlying value is a string that may take one of three values:

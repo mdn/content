@@ -9,7 +9,47 @@ browser-compat: css.properties.border-start-start-radius
 
 The **`border-start-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_writing_modes).
 
-{{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
+{{InteractiveExample("CSS Demo: border-start-start-radius")}}
+
+```css interactive-example-choice
+border-start-start-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a top left rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 This property affects the corner between the block-start and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-top-left-radius")}} property.
 

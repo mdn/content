@@ -25,7 +25,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 
 - {{domxref("ServiceWorkerGlobalScope.clients")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object associated with the service worker.
 - {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.

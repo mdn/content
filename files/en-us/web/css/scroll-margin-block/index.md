@@ -7,9 +7,69 @@ browser-compat: css.properties.scroll-margin-block
 
 {{CSSRef}}
 
-The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the block dimension.
+The `scroll-margin-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the block dimension.
 
-{{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin-block")}}
+
+```css interactive-example-choice
+scroll-margin-block: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-block: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-block: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## Constituent properties
 

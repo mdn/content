@@ -12,7 +12,17 @@ operator that returns its right-hand side operand when its left-hand side operan
 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Nullish coalescing (??) operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Syntax
 

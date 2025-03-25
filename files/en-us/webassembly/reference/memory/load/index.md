@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Memory/Load
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from a memory onto the stack.
 
@@ -16,7 +15,37 @@ For the integer numbers, there are separate instruction variants for loading a n
 For example, you can load an unsigned 8-bit number and convert it into an i32 using `i32.load8_u`.
 All the variants are [listed below](#instructions_and_opcodes).
 
-{{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: load", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (func (export "load_first_item_in_mem") (param $num i32) (result i32)
+    i32.const 0
+
+    ;; load first item in memory and return the result
+    i32.load
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+const result = await WebAssembly.instantiateStreaming(fetch(url));
+const load_first_item_in_mem = result.instance.exports.load_first_item_in_mem;
+const memory = result.instance.exports.memory;
+
+const dataView = new DataView(memory.buffer);
+// Store 30 at the beginning of memory
+dataView.setUint32(0, 30, true);
+
+console.log(load_first_item_in_mem(100));
+// Expected output: 30
+```
 
 ## Syntax
 
@@ -169,7 +198,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 > [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `load` can be used with a specified memory.
 
 {{Compat}}

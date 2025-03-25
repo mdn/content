@@ -123,7 +123,7 @@ To check if a font format is supported by a browser within CSS, use the {{cssxre
 
 > [!NOTE]
 >
-> - `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
+> - `format(svg)` stands for [SVG fonts](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts), and `tech(color-SVG)` stands for [OpenType fonts with SVG table](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (also called OpenType-SVG color fonts), which are completely different.
 > - The `opentype` and `truetype` values are equivalent whether the font file uses cubic bezier curves (within CFF/CFF2 table) or quadratic bezier curves (within glyph table).
 
 Older non-normalized `format()` values have the following equivalent syntax; provided as a string enclosed in quotes for backward-compatibility reasons:

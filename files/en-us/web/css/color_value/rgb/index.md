@@ -15,7 +15,37 @@ spec-urls:
 
 The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
+{{InteractiveExample("CSS Demo: rgb()")}}
+
+```css interactive-example-choice
+background: rgb(31 120 50);
+```
+
+```css interactive-example-choice
+background: rgb(30% 20% 50%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 80%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 0.2);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Syntax
 
@@ -143,9 +173,9 @@ rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1
 > [!NOTE]
 > Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

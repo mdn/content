@@ -17,7 +17,7 @@ In addition to English-language articles, over 35 volunteers lead translation an
 
 ## Build the site
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
+To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash
@@ -46,5 +46,11 @@ By participating in and contributing to our projects and discussions, you acknow
 
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
+<!---
+Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
+See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
+It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
+-->
+
+[mdn web docs]: https://developer.mozilla.org
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[MDN Web Docs]: https://developer.mozilla.org/

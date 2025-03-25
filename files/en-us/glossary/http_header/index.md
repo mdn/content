@@ -55,14 +55,14 @@ X-Cache-Info: cached
 
 ## See also
 
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - Syntax of [headers](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) in the HTTP specification
 - Related glossary terms:
   - {{Glossary("Request header")}}
   - {{Glossary("Response header")}}
   - {{Glossary("Representation header")}}
   - {{Glossary("Fetch metadata request header")}}
-  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Forbidden request header")}}
   - {{Glossary("Forbidden response header name")}}
   - {{Glossary("CORS-safelisted request header")}}
   - {{Glossary("CORS-safelisted response header")}}

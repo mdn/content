@@ -9,7 +9,34 @@ browser-compat: html.elements.input.type_text
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Value
 
@@ -299,7 +326,7 @@ If you try to submit the form with less than 4 characters, you'll be given an ap
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -357,7 +384,7 @@ This renders like so:
 
 ## Examples
 
-You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) articles.
+You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form) articles.
 
 ## Technical summary
 
@@ -411,8 +438,8 @@ You can see good examples of text inputs used in context in our [Your first HTML
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
@@ -427,8 +454,7 @@ You can see good examples of text inputs used in context in our [Your first HTML
 
 ## See also
 
-- [HTML Forms](/en-US/docs/Learn/Forms)
+- [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Multi-line text input
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

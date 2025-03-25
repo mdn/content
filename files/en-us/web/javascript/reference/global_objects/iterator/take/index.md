@@ -69,7 +69,7 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-Because `fibonacci()` is an infinite iterator, you can't use a `for` loop to iterate it directly.
+Because `fibonacci()` is an infinite iterator, using a `for` loop to iterate it without any logic to exit early (such as a {{jsxref("Statements/break", "break")}} statement) would result in an infinite loop.
 
 ### Combining drop() with take()
 
@@ -130,5 +130,6 @@ for (const n of new Set([1, 2, 3]).values().take(Infinity)) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.take` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.take`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.drop()")}}

@@ -11,31 +11,31 @@ Use this event to listen for messages from another part of your extension.
 
 Some example use cases are:
 
-- **in a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)**, to listen for messages from a [background script.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)
-- **in a background script**, to listen for messages from a content script.
-- **in an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) or [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups) script**, to listen for messages from a background script.
-- **in a background script**, to listen for messages from an options page or popup script.
+- **in a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)** to listen for messages from a [background script.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)
+- **in a background script** to listen for messages from a content script.
+- **in an [options page or popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_and_options_pages) script** to listen for messages from a background script.
+- **in a background script** to listen for messages from an options page or popup script.
 
 To send a message that is received by the `onMessage()` listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.
 
 > [!NOTE]
-> Avoid creating multiple `onMessage()` listeners for the same type of message, because the order in which multiple listeners will fire is not guaranteed.
+> Avoid creating multiple `onMessage()` listeners for the same type of message because the order in which multiple listeners fire is not guaranteed.
 >
-> If you want to guarantee the delivery of a message to a specific end point, use the [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
+> If you want to guarantee the delivery of a message to a specific endpoint, use the [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 
 Along with the message itself, the listener is passed:
 
-- a `sender` object giving details about the message sender.
+- a `sender` object with details about the message sender.
 - a `sendResponse()` function that can be used to send a response back to the sender.
 
-You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](#sending_a_synchronous_response).
+You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. See the [sending a synchronous response example](#sending_a_synchronous_response).
 
 To send an asynchronous response, there are two options:
 
-- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](#sending_an_asynchronous_response_using_sendresponse).
+- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. See the [sending an asynchronous response using `sendResponse` example](#sending_an_asynchronous_response_using_sendresponse).
   > [!WARNING]
   > Do not prepend `async` to the function. Prepending `async` changes the meaning to [sending an asynchronous response using a promise](#sending_an_asynchronous_response_using_a_promise), which is effectively the same as `sendResponse(true)`.
-- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](#sending_an_asynchronous_response_using_a_promise).
+- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See the [sending an asynchronous response using a promise example](#sending_an_asynchronous_response_using_a_promise).
 
 > [!NOTE]
 > You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
@@ -66,21 +66,21 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `message`
-      - : `object`. The message itself. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+      - : `object`. The message. This is a serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
     - `sendResponse`
 
-      - : A function to call, at most once, to send a response to the `message`. The function takes a single argument, which may be any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). This argument is passed back to the message sender.
+      - : A function to call, at most once, to send a response to the `message`. The function takes one argument: any serializable object (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). This argument is passed back to the message sender.
 
-        If you have more than one `onMessage()` listener in the same document, then only one may send a response.
+        If you have more than one `onMessage()` listener in the same document, then only one can send a response.
 
         To send a response synchronously, call `sendResponse()` before the listener function returns.
 
-        To send a response asynchronously:
+        To send a response asynchronously, use one of these options:
 
-        - either keep a reference to the `sendResponse()` argument and return `true` from the listener function. You will then be able to call `sendResponse()` after the listener function has returned.
-        - or return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is a preferred way.
+        - Return a {{jsxref("Promise")}} from the listener function and resolve the promise when the response is ready. This is the preferred approach.
+        - Keep a reference to the `sendResponse()` argument and return `true` from the listener function. You then call `sendResponse()` after the listener function returns.
 
           > [!NOTE]
           > Promise as a return value is not supported in Chrome until [Chrome bug 1185241](https://crbug.com/1185241) is resolved. As an alternative, [return true and use sendResponse](#sending_an_asynchronous_response_using_sendresponse).
@@ -88,7 +88,7 @@ Events have three functions:
     The `listener` function can return either a Boolean or a {{jsxref("Promise")}}.
 
     > [!NOTE]
-    > If you pass an async function to `addListener()`, the listener will return a Promise for every message it receives, preventing other listeners from responding:
+    > If you pass an async function to `addListener()`, the listener returns a Promise for every message it receives, preventing other listeners from responding:
     >
     > ```js example-bad
     > // don't do this
@@ -99,7 +99,7 @@ Events have three functions:
     > });
     > ```
     >
-    > If you only want the listener to respond to messages of a certain type, you must define the listener as a non-`async` function, and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or undefined:
+    > Suppose you only want the listener to respond to messages of a specific type. In that case, you must define the listener as a non-async function and return a Promise only for the messages the listener is meant to respond to — and otherwise return false or undefined:
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener((data, sender) => {
@@ -110,15 +110,11 @@ Events have three functions:
     > });
     > ```
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ### Simple example
 
-This content script listens for click events on the web page. If the click was on a link, it messages the background page with the target URL:
+This content script listens for click events on the web page. If the click is on a link, it messages the background page with the target URL:
 
 ```js
 // content-script.js
@@ -175,7 +171,7 @@ function sendMessage(e) {
 window.addEventListener("click", sendMessage);
 ```
 
-Here is a version of the corresponding background script, that sends a response synchronously, from inside in the listener:
+Here is a version of the corresponding background script that sends a response synchronously from inside the listener:
 
 ```js
 // background-script.js
@@ -188,7 +184,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-And here is another version which uses {{jsxref("Promise.resolve()")}}:
+And here is another version that uses {{jsxref("Promise.resolve()")}}:
 
 ```js
 // background-script.js
@@ -203,7 +199,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ### Sending an asynchronous response using sendResponse
 
-Here is an alternative version of the background script from the previous example. It sends a response asynchronously after the listener has returned. Note `return true;` in the listener: this tells the browser that you intend to use the `sendResponse` argument after the listener has returned.
+Here is an alternative version of the background script from the previous example. It sends a response asynchronously after the listener returns. Note `return true;` in the listener: this tells the browser that you intend to use the `sendResponse` argument after the listener returns.
 
 ```js
 // background-script.js
@@ -247,7 +243,7 @@ browser.runtime
   .then(handleResponse);
 ```
 
-Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
+Here is the background script. It uses {{WebExtAPIRef("bookmarks.search()")}} to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
 
 ```js
 // background-script.js
@@ -280,6 +276,10 @@ browser.runtime.onMessage.addListener(handleMessage);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

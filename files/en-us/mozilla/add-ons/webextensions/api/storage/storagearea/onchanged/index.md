@@ -11,6 +11,8 @@ Fires when one or more items in a storage area change, returning details for the
 
 > [!NOTE]
 > In Firefox, the information returned includes all keys within the storage area. Also, the callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+>
+> Firefox only loads changes to managed storage content (from the [JSON manifest (native manifest) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty)), when it restarts. Therefore, this event never triggers in Firefox.
 
 ## Syntax
 

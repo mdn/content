@@ -11,7 +11,27 @@ The **`async function*`** declaration creates a {{Glossary("binding")}} of a new
 
 You can also define async generator functions using the [`async function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function*).
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: async function* declaration", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## Syntax
 

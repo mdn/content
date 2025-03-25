@@ -170,6 +170,7 @@ devtools.errorconsole
 devtools.inspector.ruleview
 devtools.netmonitor
 devtools.webconsole
+diak
 dialogheight
 dialogleft
 dialogtext
@@ -253,6 +254,7 @@ FunciOES
 funcref
 fwdred
 fwid
+gara
 gattserverdisconnected
 geometrychange
 geor
@@ -270,6 +272,7 @@ Grek
 greklow
 GSUB
 gujr
+gukh
 gulpfile
 hanidays
 hanidec
@@ -287,6 +290,8 @@ HTTPWG
 hvline
 iarc_rating_id
 icccolor
+idbversionchangeevent
+idledetector
 IDOM
 ifequal
 ifnotequal
@@ -299,6 +304,7 @@ importmap
 imscjs
 inactivetitlebarcolor
 indexeddb-examples
+indexifembedded
 inputreport
 inputsourceschange
 intl.uidirection.locale
@@ -322,6 +328,7 @@ jsdouble
 jspubtd.h
 jsval
 kaios
+kawi
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -344,6 +351,7 @@ KEY_dead_perispomeni
 KEY_dead_psili
 KEY_dead_semivoiced_sound
 keybase.txt
+keyboardlock
 KEYCODE_ENDCALL
 KEYCODE_HEADSETHOOK
 KEYCODE_SYSRQ
@@ -354,6 +362,8 @@ keywordsearch
 khmr
 KIND_NONHEAP
 knda
+Kore
+krai
 lanatham
 laoo
 largeop
@@ -386,6 +396,8 @@ mathbold
 mathdbl
 mathit
 mathml
+mathmlref
+mathmlsidebar
 mathmono
 mathrm
 mathsanb
@@ -393,6 +405,7 @@ mathsans
 mathtt
 max-smbps
 maxplaybackrate
+mdnsidebar
 media.autoplay.block-webaudio
 media.getusermedia
 media.mediasource
@@ -416,6 +429,7 @@ mkcol
 mkvirtualenv
 mlabeledtr
 mlym
+MMDD
 Mobi
 mod_autoindex
 modif
@@ -438,9 +452,12 @@ msword
 mtei
 mths
 mymr
+mymrepka
+mymrpao
 mymrshan
 mymrtlng
 nacl_arch
+nagm
 nalt
 navigateerror
 navigatesuccess
@@ -491,6 +508,7 @@ Okhsl
 Okhsv
 olck
 oldstyle
+onao
 onbeforematch
 onbeforetoggle
 oncanmakepayment
@@ -512,6 +530,7 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onrtctransform
+onsamplebufferfull
 onscreenschange
 onscrollend
 onscrollsnapchange
@@ -532,6 +551,7 @@ ornm
 orya
 oscpu
 osma
+otpcredential
 outbound-rtpp
 overlayinfo
 packetlossperc
@@ -553,6 +573,7 @@ permessage
 personaltoolbar
 phonebk
 PHPSESSID
+pictureinpicturewindow
 PINGOTHER
 pjpeg
 PlatformNaclArch
@@ -614,6 +635,8 @@ rustc
 rustup
 safariextz
 SAMEORIGIN
+samplebufferfull
+sampleinterval
 samplerate
 samr
 sansserif
@@ -654,10 +677,12 @@ sizemodechange
 skipad
 slnt
 slotchange
+smartcardconnection
 smpl
 smsto
 SPACEBAR
 speculationrules
+speechrecognition
 spreadsheetml
 sprop-parameter-sets
 squeezeend
@@ -668,10 +693,12 @@ streamfilter
 stripsurroundingwhitespace
 SUBDOCUMENT
 sund
+sunu
 superspeed
 SVGDOMElement
 SVGHKernElement
 SVGMPathElement
+svgref
 SVGVKernElement
 svgz
 swsh
@@ -696,6 +723,7 @@ tibt
 Timecount
 tirh
 titl
+tnsa
 todoapp
 togglecamera
 togglemicrophone
@@ -777,6 +805,7 @@ wcho
 wdth
 weba
 webappmanifest
+webassemblysidebar
 webauthn
 webbundle
 webcal
@@ -784,6 +813,7 @@ webglcontextcreationerror
 webglcontextlost
 webglcontextrestored
 webgpu
+webhid
 webidentity
 webidl
 webkitmouseforcechanged
@@ -797,6 +827,7 @@ webshell
 webtransport
 WEBVTT
 webxr
+webxrdevice
 wentaway
 wght
 wimax

@@ -60,7 +60,7 @@ A typical set of visual [`<input type="range">`](/en-US/docs/Web/HTML/Element/in
 ```
 
 > [!NOTE]
-> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done that here, as this article focuses purely on aspects of the form controls' visual rendering, but you should make sure you do so in production code.
+> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done that here, as this article focuses purely on aspects of the form controls' visual rendering, but you should make sure you do so in production code.
 
 To display the controls vertically, we can use CSS like this:
 
@@ -473,5 +473,5 @@ The result looks like so:
 
 - The [`<input>`](/en-US/docs/Web/HTML/Element/input) element.
 - Other relevant elements: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, and {{htmlelement("select")}}.
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Learn: Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)

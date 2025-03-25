@@ -29,19 +29,19 @@
         ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
     },
@@ -226,6 +226,21 @@
       "attributes": ["coreAttributes", "'class'", "'style'"],
       "interfaces": ["SVGDescElement"]
     },
+    "discard": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProcessingAttributes",
+        "coreAttributes",
+        "ariaAttributes",
+        "'begin'",
+        "'href'"
+      ],
+      "interfaces": ["SVGDiscardElement"]
+    },
     "ellipse": {
       "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
       "content": {
@@ -252,7 +267,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -270,7 +285,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -309,7 +324,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -331,7 +346,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -378,7 +393,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -398,7 +413,7 @@
       "categories": ["lightSourceElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "'azimuth'", "'elevation'"],
       "interfaces": ["SVGFEDistantLightElement"]
@@ -407,7 +422,12 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;script&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;discard&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -426,7 +446,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -443,7 +463,7 @@
       "categories": ["noCategory"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "transferFunctionAttributes"],
       "interfaces": ["SVGFEFuncAElement"]
@@ -452,7 +472,7 @@
       "categories": ["noCategory"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "transferFunctionAttributes"],
       "interfaces": ["SVGFEFuncBElement"]
@@ -461,7 +481,7 @@
       "categories": ["noCategory"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "transferFunctionAttributes"],
       "interfaces": ["SVGFEFuncGElement"]
@@ -470,7 +490,7 @@
       "categories": ["noCategory"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "transferFunctionAttributes"],
       "interfaces": ["SVGFEFuncRElement"]
@@ -479,7 +499,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -499,6 +519,7 @@
         "elements": [
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
           "&lt;set&gt;"
         ]
       },
@@ -534,7 +555,7 @@
       "categories": ["noCategory"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "'in'"],
       "interfaces": ["SVGFEMergeNodeElement"]
@@ -543,7 +564,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -561,7 +582,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -579,7 +600,7 @@
       "categories": ["lightSourceElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": ["coreAttributes", "'x'", "'y'", "'z'"],
       "interfaces": ["SVGFEPointLightElement"]
@@ -611,7 +632,7 @@
       "categories": ["lightSourceElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -630,7 +651,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -646,7 +667,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;discard&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -670,6 +691,7 @@
           "descriptiveElements",
           "filterPrimitiveElements",
           "&lt;animate&gt;",
+          "&lt;discard&gt;",
           "&lt;set&gt;"
         ]
       },
@@ -803,19 +825,15 @@
       "interfaces": ["SVGFontFaceUriElement"]
     },
     "foreignObject": {
-      "categories": ["noCategory"],
+      "categories": ["graphicsElement", "renderableElement"],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
@@ -939,26 +957,37 @@
       "interfaces": ["SVGHKernElement"]
     },
     "image": {
-      "categories": ["graphicsElement", "graphicsReferencingElement"],
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement",
+        "renderableElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateMotion&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "xLinkAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
+        "'crossorigin'",
+        "'href'",
         "'preserveAspectRatio'"
       ],
       "interfaces": ["SVGImageElement"]
@@ -993,6 +1022,7 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
           "&lt;script&gt;",
           "&lt;set&gt;",
           "&lt;stop&gt;",
@@ -1194,20 +1224,16 @@
         "elements": [
           "animationElements",
           "descriptiveElements",
+          "gradientElements",
           "shapeElements",
           "structuralElements",
-          "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;cursor&gt;",
           "&lt;filter&gt;",
-          "&lt;font&gt;",
-          "&lt;font-face&gt;",
           "&lt;foreignObject&gt;",
           "&lt;image&gt;",
           "&lt;marker&gt;",
           "&lt;mask&gt;",
-          "&lt;pattern&gt;",
           "&lt;script&gt;",
           "&lt;style&gt;",
           "&lt;switch&gt;",
@@ -1216,23 +1242,19 @@
         ]
       },
       "attributes": [
-        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'viewBox'",
-        "'patternUnits'",
-        "'patternContentUnits'",
-        "'patternTransform'",
+        "'preserveAspectRatio'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
-        "'preserveAspectRatio'"
+        "'patternUnits'",
+        "'patternContentUnits'",
+        "'patternTransform'",
+        "'href'"
       ],
       "interfaces": ["SVGPatternElement"]
     },
@@ -1282,6 +1304,7 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
           "&lt;script&gt;",
           "&lt;set&gt;",
           "&lt;stop&gt;",
@@ -1337,9 +1360,9 @@
       "attributes": [
         "coreAttributes",
         "xLinkAttributes",
-        "'externalResourcesRequired'",
         "'type'",
-        "'xlink:href'"
+        "'href'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
@@ -1367,6 +1390,7 @@
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
           "&lt;animate&gt;",
+          "&lt;discard&gt;",
           "&lt;script&gt;",
           "&lt;set&gt;",
           "&lt;style&gt;"
@@ -1375,8 +1399,6 @@
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
         "'offset'",
         "'stop-color'",
         "'stop-opacity'"
@@ -1549,6 +1571,7 @@
           "descriptiveElements",
           "&lt;a&gt;",
           "&lt;animate&gt;",
+          "&lt;discard&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
@@ -1582,7 +1605,12 @@
       "categories": ["textContentElement", "textContentChildElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;discard&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1605,6 +1633,7 @@
           "descriptiveElements",
           "&lt;a&gt;",
           "&lt;animate&gt;",
+          "&lt;discard&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"

@@ -11,7 +11,58 @@ The **`filter`** [CSS](/en-US/docs/Web/CSS) property applies graphical effects l
 
 Several [functions](#functions), such as `blur()` and `contrast()`, are available to help you achieve predefined effects.
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## Syntax
 
@@ -52,7 +103,7 @@ With a function, use the following:
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
+You can use `url()` to reference an [SVG filter element](/en-US/docs/Web/SVG/Reference/Element/filter). For a reference to an SVG {{SVGElement("filter")}} element, use the following syntax:
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -233,8 +284,9 @@ The filters are applied in order. This is why the drop shadows are not the same 
 
 ## See also
 
-- CSS {{cssxref("backdrop-filter")}} property
+- {{cssxref("backdrop-filter")}}
+- {{cssxref("mask")}}
+- SVG {{SVGAttr("filter")}} attribute
 - CSS [compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
-- The CSS {{cssxref("mask")}} property
 - [SVG](/en-US/docs/Web/SVG), including the SVG {{SVGElement("filter")}} element and SVG {{SVGAttr("filter")}} attribute.
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

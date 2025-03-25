@@ -9,7 +9,14 @@ browser-compat: javascript.builtins.Date.getSeconds
 
 The **`getSeconds()`** method of {{jsxref("Date")}} instances returns the seconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.getSeconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## Syntax
 

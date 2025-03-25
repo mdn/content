@@ -16,7 +16,7 @@ This technique is so common in modern web development that the specific term "Aj
 
 ## See also
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - Related glossary terms:
   - {{Glossary("SPA", "Single-page application")}}

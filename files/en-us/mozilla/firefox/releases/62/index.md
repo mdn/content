@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 62 that will affe
 - If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ([Firefox bug 1456069](https://bugzil.la/1456069)).
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cookies) now shows the cookie `samesite` attribute ([Firefox bug 1452715](https://bugzil.la/1452715)).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) now works inside container tabs ([Firefox bug 1306975](https://bugzil.la/1306975)).
-- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
+- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/Guides/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
 - Create a screenshot of the current page (with an optional filename) from the Console tab ([Firefox bug 1464461](https://bugzil.la/1464461)) using the following command:
 
   ```bash
@@ -53,7 +53,7 @@ _No changes._
 
 ### JavaScript
 
-- The [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global) constructor is now supported, along with global variables in WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
+- The [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) constructor is now supported, along with global variables in WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
 - The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ([Firefox bug 1435813](https://bugzil.la/1435813)).
 - The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see [Firefox bug 1435828](https://bugzil.la/1435828) and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).

@@ -15,7 +15,7 @@ present).
 
 When `clientWidth` is used on the root element (the
 `<html>` element), (or on `<body>` if the document is
-in quirks mode), the viewport's width (excluding any scrollbar) is returned. [This is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
+in quirks mode), the viewport's width (excluding any scrollbar) is returned.
 
 > [!NOTE]
 > This property will round the value to an integer. If you need

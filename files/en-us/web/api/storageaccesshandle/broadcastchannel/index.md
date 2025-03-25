@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: BroadcastChannel() property"
+title: "StorageAccessHandle: BroadcastChannel() method"
 short-title: BroadcastChannel()
 slug: Web/API/StorageAccessHandle/BroadcastChannel
 page-type: web-api-instance-method
@@ -14,7 +14,7 @@ browser-compat: api.StorageAccessHandle.BroadcastChannel
 ## Syntax
 
 ```js-nolint
-handle.BroadcastChannel(channelName)
+BroadcastChannel(channelName)
 ```
 
 ### Parameters

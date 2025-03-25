@@ -382,12 +382,12 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     <tr>
       <td><code>*://*</code></td>
       <td>Invalid</td>
-      <td>Empty path: this should be "<code>*://*/*</code>".</td>
+      <td>Empty path: this should be <code>*://*/*</code>.</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
       <td>Invalid</td>
-      <td>Empty path: this should be "<code>file:///*</code>". <code>file://*</code> is accepted when declared in `host_permissions` in Chrome, which auto-corrects the entry to <code>file:///*</code>.</td>
+      <td>Empty path: this should be <code>file:///*</code>. <code>file://*</code> is accepted when declared in `host_permissions` in Chrome, which auto-corrects the entry to <code>file:///*</code>.</td>
     </tr>
   </tbody>
 </table>

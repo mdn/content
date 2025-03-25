@@ -14,7 +14,7 @@ Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/E
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
 - `xml:lang` and `xml:base` — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
-- The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) states and properties, used for ensuring accessibility.
+- The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) states and properties, used for ensuring accessibility.
 - The [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`.
 
 ## List of global attributes
@@ -88,12 +88,12 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
   - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
+  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
   - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e. a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
-- [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
   - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
@@ -125,14 +125,14 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
+  - : An {{Glossary("enumerated")}} attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
 
 - [`writingsuggestions`](/en-US/docs/Web/HTML/Global_attributes/writingsuggestions)
 
-  - : Used to control the behavior of the browser's writing suggestions in an input field, a section of a page, or the entire page.
+  - : An {{Glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 
     - `false`, which disables the browser's writing suggestions.
     - `true` or an _empty string_, which enables writing suggestions.

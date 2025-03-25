@@ -58,7 +58,7 @@ In this section we'll demonstrate the five registered axes defined with examples
 
    `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.
 
-2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
+2. If you have set values using `font-variation-settings` and want to change one of those values, you must redeclare all of them (in the same way as when you set OpenType font features using {{cssxref("font-feature-settings")}}). You can work around this limitation by using [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (CSS variables) for the individual values, and modifying the value of an individual custom property. Example code follows at the end of the guide.
 
 ### Weight
 
@@ -272,6 +272,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 <div>
   <p class="p1">Italic</p>
   <span>(font-style: italic)</span>
+  <p class=".p1-no-synthesis">Italic</p>
+  <span>(font-style: italic; font-synthesis: none)</span>
 </div>
 <div>
   <p class="p2">Italic</p>
@@ -320,16 +322,20 @@ p {
 ```
 
 ```css live-sample___variable-fonts-italic-example
-/* italic range is 0 or 1 */
+/* font-style: italic, with and without font-synthesis */
 .p1 {
-  font-synthesis: none;
   font-style: italic;
+}
+
+.p1-no-synthesis {
+  font-style: italic;
+  font-synthesis: none;
 }
 
 /* italic range is 0 or 1 */
 .p2 {
-  font-synthesis: none;
   font-variation-settings: "ital" 1;
+  font-synthesis: none;
 }
 
 /* Adjust with slider & custom property */
@@ -655,11 +661,12 @@ The basic syntax is the same, but the font technology can be specified, and allo
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: normal;
 }
 ```
 
-In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `oblique 0deg` and `oblique 0deg 20deg` values, because of the `0deg`, also indicate the font has normal upright glyphs.
+In this case, the `font-style: normal` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `normal`. As an alternative, you could use `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` to indicate that the font has normal upright glyphs (indicated by `0deg`).
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -670,11 +677,12 @@ In this case, the `normal` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: italic;
 }
 ```
 
-In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `oblique 14deg` value also indicates the font has italic glyphs.
+In this case, the `font-style: italic` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `italic`. As an alternative, you could use `font-style: oblique 14deg` to indicate that the font has italic glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
@@ -685,6 +693,7 @@ In this case, the `italic` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: oblique 0deg 12deg;
 }
 ```
@@ -842,7 +851,7 @@ body {
 - [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
 - [Microsoft Open Type Variations introduction](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
 - [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)
+- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a drag-and-drop inspection interface)
 - [Axis Praxis](https://www.axis-praxis.org/) (the original variable fonts playground site)
 - [V-Fonts.com](https://v-fonts.com/) (a catalog of variable fonts and where to get them)
 - [Font Playground](https://play.typedetail.com/) (another playground for variable fonts with some very unique approaches to user interface)

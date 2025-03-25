@@ -22,7 +22,33 @@ The `capture` attribute takes as its value a string that specifies which camera 
 > [!NOTE]
 > Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: capture", "tabbed-standard")}}
+
+```html interactive-example
+<label for="selfie">Take a picture of your face:</label>
+
+<input type="file" id="selfie" name="selfie" accept="image/*" capture="user" />
+
+<label for="picture">Take a picture using back facing camera:</label>
+
+<input
+  type="file"
+  id="picture"
+  name="picture"
+  accept="image/*"
+  capture="environment" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## Examples
 

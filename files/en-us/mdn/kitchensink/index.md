@@ -316,20 +316,20 @@ this.color("blue");
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 
-The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 {{AvailableInWorkers}}
 
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 <!---->
 
@@ -346,7 +346,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
-- [Ajax](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

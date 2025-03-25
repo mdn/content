@@ -7,26 +7,65 @@ browser-compat: css.properties.text-wrap-mode
 
 {{CSSRef}}
 
-The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
+The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("white-space")}} shorthand.
+
+> [!NOTE]
+> The {{CSSxRef("white-space-collapse")}} and `text-wrap-mode` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 > [!NOTE]
 > The name of this property is a placeholder, pending the CSSWG finding a better name.
 
-{{EmbedInteractiveExample("pages/css/text-wrap-mode.html")}}
+{{InteractiveExample("CSS Demo: text-wrap-mode")}}
+
+```css interactive-example-choice
+text-wrap-mode: wrap;
+```
+
+```css interactive-example-choice
+text-wrap-mode: nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## Syntax
 
 ```css
 /* Keyword values */
-text-wrap-style: wrap;
-text-wrap-style: nowrap;
+text-wrap-mode: wrap;
+text-wrap-mode: nowrap;
 
 /* Global values */
-text-wrap-style: inherit;
-text-wrap-style: initial;
-text-wrap-style: revert;
-text-wrap-style: revert-layer;
-text-wrap-style: unset;
+text-wrap-mode: inherit;
+text-wrap-mode: initial;
+text-wrap-mode: revert;
+text-wrap-mode: revert-layer;
+text-wrap-mode: unset;
 ```
 
 ## Values
@@ -47,9 +86,6 @@ This property specifies whether lines may wrap at unforced soft wrap opportuniti
 {{CSSSyntax}}
 
 ## Examples
-
-> [!NOTE]
-> Check the browser support for this property.
 
 ### Wrapping content
 

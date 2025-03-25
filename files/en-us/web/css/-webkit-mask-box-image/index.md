@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-box-image"
+title: -webkit-mask-box-image
 slug: Web/CSS/-webkit-mask-box-image
 page-type: css-shorthand-property
 status:
@@ -9,7 +9,7 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 {{CSSRef}} {{ Non-standard_header() }}
 
-The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) property sets the mask image for an element's border box.
+The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) property sets the mask image for an element's border box.
 
 > [!NOTE]
 > This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.
@@ -78,10 +78,10 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal definition
 
-- [Initial value](/en-US/docs/Web/CSS/initial_value): `none`
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value): `none`
 - Applies to: all elements
-- [Inherited](/en-US/docs/Web/CSS/Inheritance): no
-- [Computed value](/en-US/docs/Web/CSS/computed_value): as specified
+- [Inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance): no
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value): as specified
 
 ## Formal syntax
 

@@ -9,7 +9,23 @@ browser-compat: javascript.operators.division_assignment
 
 The **division assignment (`/=`)** operator performs [division](/en-US/docs/Web/JavaScript/Reference/Operators/Division) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Division assignment (/=) operator")}}
+
+```js interactive-example
+let a = 3;
+
+a /= 2;
+console.log(a);
+// Expected output: 1.5
+
+a /= 0;
+console.log(a);
+// Expected output: Infinity
+
+a /= "hello";
+console.log(a);
+// Expected output: NaN
+```
 
 ## Syntax
 

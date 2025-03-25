@@ -7,7 +7,7 @@ browser-compat: css.types.log
 
 {{CSSRef}}
 
-The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the logarithm of a number.
+The **`log()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is an exponential function that returns the logarithm of a number.
 
 [Logarithm](https://en.wikipedia.org/wiki/Logarithm) is the inverse of exponentiation. It is the number that a fixed base has to be raised to in order to yield the number passed as the first parameter.
 
@@ -39,7 +39,7 @@ The logarithm of `value`, when `base` is defined.
 
 The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -47,7 +47,7 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 ### Using the `log()` function on a logarithmic scale
 
-This example illustrates how the `log()` function can be used to visualize data values by using a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale). The width of each bar in this example is relative to its data value on a logarithmic scale with base 10. On each element, its value is assigned to a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties) named `--value`, which is then used by the `.bar` class to calculate its width.
+This example illustrates how the `log()` function can be used to visualize data values by using a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale). The width of each bar in this example is relative to its data value on a logarithmic scale with base 10. On each element, its value is assigned to a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) named `--value`, which is then used by the `.bar` class to calculate its width.
 
 #### HTML
 

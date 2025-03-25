@@ -4,7 +4,9 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 page-type: guide
 ---
 
-The [box alignment specification](/en-US/docs/Web/CSS/CSS_box_alignment) details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page, which details the common features of box alignment across layout methods.
+{{CSSRef}}
+
+The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this guide aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## align-content and justify-content
 
@@ -75,19 +77,9 @@ For many use cases, turning the block container into a flex item will give you t
 
 {{EmbedLiveSample("intro", "", "320px")}}
 
-## Reference
+## See also
 
-### CSS Properties
-
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("justify-self")}}
-- {{cssxref("align-self")}}
-
-### Glossary Entries
-
-- [Alignment subject](/en-US/docs/Glossary/Alignment_Subject)
-- [Alignment container](/en-US/docs/Glossary/Alignment_Container)
-- [Fallback alignment](/en-US/docs/Glossary/Fallback_Alignment)
-
-{{CSSRef}}
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)

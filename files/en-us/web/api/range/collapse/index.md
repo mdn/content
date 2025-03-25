@@ -8,7 +8,7 @@ browser-compat: api.Range.collapse
 
 {{APIRef("DOM")}}
 
-The **`Range.collapse()`** method collapses the
+The **`collapse()`** method of the {{domxref("Range")}} interface collapses the
 {{domxref("Range")}} to one of its boundary points.
 
 A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
@@ -27,7 +27,7 @@ collapse(toStart)
 - `toStart` {{optional_inline}}
   - : A boolean value: `true` collapses the {{domxref("Range")}}
     to its start, `false` to its end. If omitted, it defaults to
-    `false` {{experimental_inline}}.
+    `false`.
 
 ### Return value
 

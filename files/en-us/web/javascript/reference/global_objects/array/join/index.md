@@ -12,7 +12,20 @@ returns a new string by concatenating all of the elements in this array,
 separated by commas or a specified separator string. If the array has
 only one item, then that item will be returned without using the separator.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## Syntax
 
@@ -115,6 +128,7 @@ console.log(Array.prototype.join.call(arrayLike, "."));
 ## See also
 
 - [Polyfill of `Array.prototype.join` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.join`](https://www.npmjs.com/package/array.prototype.join)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}

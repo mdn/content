@@ -80,6 +80,6 @@ userInput.addEventListener("input", () => {
 
 - {{domxref("ValidityState.rangeOverflow")}}
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)
 - [`max` attribute](/en-US/docs/Web/HTML/Attributes/max)

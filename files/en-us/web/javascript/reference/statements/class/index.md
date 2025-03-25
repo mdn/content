@@ -11,7 +11,18 @@ The **`class`** declaration creates a {{Glossary("binding")}} of a new [class](/
 
 You can also define classes using the [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+{{InteractiveExample("JavaScript Demo: class declaration")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 ## Syntax
 

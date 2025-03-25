@@ -9,7 +9,19 @@ browser-compat: javascript.operators.unsigned_right_shift
 
 The **unsigned right shift (`>>>`)** operator returns a number whose binary representation is the first operand shifted by the specified number of bits to the right. Excess bits shifted off to the right are discarded, and zero bits are shifted in from the left. This operation is also called "zero-filling right shift", because the sign bit becomes `0`, so the resulting number is always positive. Unsigned right shift does not accept [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) values.
 
-{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Unsigned right shift (>>>) operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >>> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >>> b); //  00111111111111111111111111111110
+// Expected output: 1073741822
+```
 
 ## Syntax
 

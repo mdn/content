@@ -52,7 +52,7 @@ A string that identifies the encoding method to use when submitting the form dat
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
-If specified, the value of the `formenctype` attribute overrides the owning form's [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute.
+If specified, the value of the `formenctype` attribute overrides the owning form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 
@@ -61,7 +61,7 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
 - `post`
   - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} method. This method supports complex data and file attachments.
 - `dialog`
@@ -120,7 +120,7 @@ This renders like so:
 
 Try entering some text into the text field, and then submitting the form.
 
-Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=user-text`, where "user-text" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) for more details.
+Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=user-text`, where "user-text" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) for more details.
 
 ### Adding a keyboard shortcut to a submit button
 
@@ -202,7 +202,7 @@ We've included basic examples above. There isn't really anything more to say abo
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -218,7 +218,6 @@ We've included basic examples above. There isn't really anything more to say abo
 ## See also
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- [Forms and buttons](/en-US/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [Forms and buttons](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#actual_buttons)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - The {{HTMLElement("button")}} element
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

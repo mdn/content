@@ -11,7 +11,61 @@ The **`inset-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the log
 
 This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
-{{EmbedInteractiveExample("pages/css/inset-inline-start.html")}}
+{{InteractiveExample("CSS Demo: inset-inline-start")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">
+      I am absolutely positioned with inset-inline-start: 50px
+    </div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-inline-start: 50px;
+  inline-size: 140px;
+  min-block-size: 80px;
+}
+```
 
 ## Syntax
 
@@ -19,8 +73,8 @@ This {{glossary("inset properties", "inset property")}} has no effect on non-pos
 /* <length> values */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
-inset-inline-start: anchor(self-end);
 inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: anchor-size(width);
 
 /* <percentage>s of the width or height of the containing block */
 inset-inline-start: 10%;

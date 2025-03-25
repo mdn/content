@@ -24,49 +24,49 @@ browser-compat: webextensions.manifest.icons
   </tbody>
 </table>
 
-The `icons` key specifies icons for your extension. Those icons will be used to represent the extension in components such as the Add-ons Manager.
+The `icons` key specifies icons for your extension. Those icons represent the extension in components such as the add-ons manager (`about:addons`).
 
-It consists of key-value pairs of image size in px and image path relative to the root directory of the extension.
+The key consists of key-value pairs specifying the image size in pixels and the image path relative to the extension's root directory.
 
-If `icons` is not supplied, a standard extension icon will be used by default.
+If `icons` is not supplied, a standard extension icon is used.
 
-You should supply at least a main extension icon, ideally 48x48 px in size. This is the default icon that will be used in the Add-ons Manager. You may, however, supply icons of any size and Firefox will attempt to find the best icon to display in different components.
+You should supply an extension icon, ideally 32x32 px in size. This is the default icon that is used in the add-ons manager. You can supply icons of any size, and Firefox uses the one that fits a component best.
 
-Firefox will consider the screen resolution when choosing an icon. To deliver the best visual experience to users with high-resolution displays, such as Retina displays, provide double-sized versions of all your icons.
+Firefox considers the screen resolution when choosing an icon. To deliver the best visual experience to users with high-resolution displays, such as Retina displays, provide double-sized versions of your icons.
 
 ## Example
 
-The keys in the `icons` object specify the icon size in px, values specify the relative icon path. This example contains a 48px extension icon and a larger version for high-resolution displays.
+The keys in the `icons` object specify the icon size in pixels, and values specify the relative icon file path. This example contains a 32px extension icon and a larger version for high-resolution displays.
 
 ```json
 "icons": {
-  "48": "icon.png",
-  "96": "icon@2x.png"
+  "32": "icon.png",
+  "64": "icon@2x.png"
 }
 ```
 
 ## SVG
 
-You can use SVG and the browser will scale your icon appropriately. There are currently two caveats though:
+You can use SVG, and the browser scales your icon appropriately. There are two caveats:
 
-1. You need to specify a viewBox in the image. E.g.:
+1. You need to specify a viewBox in the image, e.g.:
 
    ```html
    <svg
      xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 48 48"
-     width="48"
-     height="48">
+     viewBox="0 0 32 32"
+     width="32"
+     height="32">
      <!-- your svg content -->
    </svg>
    ```
 
-2. Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
+2. Even though you can use one SVG file, you need to specify icon sizes in your manifest, e.g.:
 
    ```json
    "icons": {
-     "48": "icon.svg",
-     "96": "icon.svg"
+     "32": "icon.svg",
+     "64": "icon.svg"
    }
    ```
 
@@ -74,10 +74,10 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
 > Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
 
 > [!NOTE]
-> Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
+> Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't display the icon.
 
 > [!NOTE]
-> If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
+> When using a program such as Inkscape to create SVG, save your file as a "plain SVG". Firefox isn't guaranteed to handle special namespaces and may not display an icon containing them.
 
 ## Browser compatibility
 

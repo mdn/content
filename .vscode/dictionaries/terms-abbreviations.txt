@@ -21,6 +21,7 @@ ANMF
 anonymization
 antialiasing
 antitracking
+apideck
 APNG
 appcontent
 arcosh
@@ -94,7 +95,6 @@ catchable
 CAVLC
 CCPA
 CCPL
-CDLR
 CELP
 CGATS
 cheatsheet
@@ -132,6 +132,8 @@ coprime
 CORB
 credentialled
 credentialless
+CRSF
+cryptids
 cryptosystems
 CSSWG
 CSWH
@@ -171,6 +173,7 @@ doorhanger
 downsampled
 downsampling
 downscaling
+dragonfish
 DTLSL
 dyscalculia
 EBNF
@@ -278,12 +281,15 @@ HPKE
 HPKP
 HTCPCP
 HVXC
+IACVT
 ICANN
 ICNS
 iconset
 idents
 IERS
 IMSC
+Indo-Pacific
+inferencing
 infobar
 infobox
 infoboxes
@@ -446,6 +452,7 @@ overscript
 overscripts
 overscrolling
 packetizer
+packetizing
 pageload
 paintable
 pantherina
@@ -520,6 +527,7 @@ QCIF
 QCMS
 QPACK
 QTFF
+qtrs
 quantizer
 quarternion
 querysets
@@ -528,6 +536,7 @@ quickmenu
 qvalues
 QWERTZ
 randomizer
+rari
 rasterizes
 RDBMS
 RDBMSes
@@ -561,9 +570,12 @@ retarget
 retargeted
 retargeting
 retargetings
+reviewdog
+RFCOMM
 RGTC
 roadmaps
 Rockhopper
+romcoms
 roundoff
 RSAOAEP
 RSASSA
@@ -583,6 +595,7 @@ scanability
 scattergun
 schemeful
 scopable
+scorpionfish
 screencast
 screenful
 scriptable
@@ -618,6 +631,7 @@ skipnav
 skybox
 skyboxes
 slabcraft
+slablike
 slottables
 SMACSS
 SMARTPOSTER
@@ -628,6 +642,7 @@ snapport
 snapshotted
 snapshotting
 SNES
+spammy
 spatialization
 spatializations
 spatialize
@@ -675,6 +690,7 @@ sublocality
 submatch
 submatches
 subminor
+subminute
 subpage
 subpages
 subpanels
@@ -710,6 +726,7 @@ sundried
 sunsetting
 supercookie
 superdomain
+superpowered
 superscaling
 supersets
 SVCB
@@ -743,6 +760,7 @@ timerange
 timeslice
 timeslices
 timestep
+tinyfill
 toggletips
 toolsets
 touchpad
@@ -772,6 +790,7 @@ TTSI
 tweens
 UAAG
 ufrag
+unabbreviate
 unbookmark
 uncacheable
 uncategorized
@@ -877,6 +896,7 @@ xrayed
 Xrays
 XRCPU
 XSSI
+yari
 yearless
 Zalgo
 zoomable

@@ -8,7 +8,9 @@ browser-compat: api.HTMLTitleElement.text
 
 {{APIRef("HTML DOM")}}
 
-The **`text`** property of the {{domxref("HTMLTitleElement")}} interface represents the text of the document's title. Only the text part is included; tags within the element and their content are stripped and ignored.
+The **`text`** property of the {{domxref("HTMLTitleElement")}} interface represents the child text content of the document's title as a string. It contains the {{HTMLelement("title")}} element's content as text; if HTML tags are included within the `<title>` element, they are included as part of the string value rather than being parsed as HTML.
+
+Setting a value for the `text` property replaces the entire text contents of the `<title>`.
 
 ## Value
 
@@ -32,10 +34,11 @@ Consider the example below:
 
 ```js
 const title = document.querySelector("title");
-console.log(title.text); // yield: "Hello world!  really?"
+console.log(title.text); // "Hello world! <span class="highlight">Isn't this wonderful</span> really?"
+title.text = "Update the title";
 ```
 
-As you can see, the tag `span` and its content were skipped.
+As you can see, the `span` tag remained unparsed; the `<title>` element's contents were treated as plain text and returned exactly as they appear in the `title` element.
 
 ## Specifications
 

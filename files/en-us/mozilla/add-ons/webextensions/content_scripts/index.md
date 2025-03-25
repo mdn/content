@@ -6,15 +6,12 @@ page-type: guide
 
 {{AddonSidebar}}
 
-A content script is a part of your extension that runs in the context of a web page (as opposed to background scripts that are part of the extension, or scripts that are part of the website itself, such as those loaded using the {{HTMLElement("script")}} element).
+A content script is a part of your extension that runs in the context of a web page. It can read and modify page content using the standard [Web APIs](/en-US/docs/Web/API). Content script behavior is similar to scripts that are part of a website, such as those loaded using the {{HTMLElement("script")}} element). However, content scripts can only access page content when [host permissions for the web page's origin are granted](#permissions).
 
-[Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.
+Content scripts can access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system and thereby indirectly access the WebExtension APIs. [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) but can't directly access the content of web pages.
 
-Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard [Web APIs](/en-US/docs/Web/API). However, they can only do this when [host permissions to the web page's origin have been granted](#permissions).
-
-> [!NOTE] Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
-
-Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
+> [!NOTE]
+> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
 
 ## Loading content scripts
 
@@ -27,14 +24,22 @@ You can load a content script into a web page:
 3. At runtime, into specific tabs.
    - Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).)
 
-There is only one global scope _per frame, per extension_. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
+There is only one global scope _per frame, per extension_. This means that variables from a content script can be accessed by any other content scripts, regardless of how the content script was loaded.
 
 Using methods (1) and (2), you can only load scripts into pages whose URLs can be represented using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "`about:debugging`" or "`about:addons`").
+Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like `about:debugging` or `about:addons`).
 
 > **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
 > Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
+
+### Persistence
+
+Content scripts loaded with {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}} run on request and do not persist.
+
+Content scripts defined in the manifest file's [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key or with the {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}} API persisted by default. They remain registered across browser restarts and updates, and extension restarts.
+
+However, the {{WebExtAPIRef("scripting.registerContentScripts()")}} API provides for defining the script as non-persistent. This may be useful when, for example, your extension (on behalf of a user) wants to activate a content script only in the current browser session.
 
 ## Permissions, restrictions, and limitations
 
@@ -50,7 +55,7 @@ Starting with Manifest V3, host permissions are not automatically granted at ins
 
 Both [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
-In Firefox, this includes the following domains:
+In Firefox, this includes these domains:
 
 - accounts-static.cdn.mozilla.net
 - accounts.firefox.com
@@ -74,7 +79,7 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
+Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Reference/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
 
 ## Content script environment
 
@@ -169,7 +174,7 @@ If a content script needs to use a JavaScript library, then the library itself s
 
 ### WebExtension APIs
 
-In addition to the standard DOM APIs, content scripts can use the following WebExtension APIs:
+In addition to the standard DOM APIs, content scripts can use these WebExtension APIs:
 
 **From [`extension`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension):**
 
@@ -212,9 +217,9 @@ Content scripts can make requests using the normal [`window.XMLHttpRequest`](/en
 Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key in `manifest.json`, then its content scripts get access that domain as well.
 
 > [!NOTE]
-> When using Manifest V3, content scripts can perform cross-origin requests when the destination server opts in using [CORS](/en-US/docs/Web/HTTP/CORS); however, host permissions don't work in content scripts, but they still do in regular extension pages.
+> When using Manifest V3, content scripts can perform cross-origin requests when the destination server opts in using [CORS](/en-US/docs/Web/HTTP/Guides/CORS); however, host permissions don't work in content scripts, but they still do in regular extension pages.
 
-This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
+This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
 
 > [!NOTE]
 > In Firefox in Manifest V2, extensions that need to perform requests that behave as if they were sent by the content itself can use `content.XMLHttpRequest` and `content.fetch()` instead.
@@ -224,7 +229,7 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 > This is not possible in Manifest V3, as `content.XMLHttpRequest` and `content.fetch()` are not available.
 
 > [!NOTE]
-> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
+> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/Guides/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
 
 ## Communicating with background scripts
 

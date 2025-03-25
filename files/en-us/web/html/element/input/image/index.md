@@ -9,7 +9,37 @@ browser-compat: html.elements.input.type_image
 
 {{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
 
-{{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Sign in to your account:</p>
+
+<div>
+  <label for="userId">User ID</label>
+  <input type="text" id="userId" name="userId" />
+</div>
+
+<input
+  type="image"
+  id="image"
+  alt="Login"
+  src="/shared-assets/images/examples/login-button.png" />
+```
+
+```css interactive-example
+label {
+  font-size: 0.8rem;
+}
+
+label,
+input[type="image"] {
+  margin-top: 1rem;
+}
+
+input[type="image"] {
+  width: 80px;
+}
+```
 
 ## Value
 
@@ -56,7 +86,7 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
 - `post`
   - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} request. This method supports complex data and file attachments.
 - `dialog`
@@ -109,7 +139,7 @@ If `usemap` is specified, it must be the name of an image map element, {{HTMLEle
 
 ## Using image inputs
 
-The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
+The `<input type="image">` element is a {{ glossary("replaced elements", "replaced element")}} (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
 
 ### Essential image input features
 
@@ -323,7 +353,7 @@ Here, `object-position` is configured to draw the image in the top-right corner 
     </tr>
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -341,4 +371,3 @@ Here, `object-position` is configured to draw the image in the top-right corner 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The HTML {{HTMLElement("img")}} element
 - Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -33,5 +33,5 @@ console.log(formElement.autocomplete);
 
 - {{HTMLElement("form")}}
 - HTML [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
-- ARIA [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute
+- ARIA [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute
 - [Turning off autocompletion](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

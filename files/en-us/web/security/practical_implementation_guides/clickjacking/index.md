@@ -6,15 +6,19 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-The [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive and the [`X-Frame-Options`](/en-US/docs/Web/HTTP/Headers/X-Frame-Options) header provide control over how your site may be embedded within an {{htmlelement("iframe")}} on another site. These features help prevent clickjacking.
+The [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive and the [`X-Frame-Options`](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options) header provide control over how your site may be embedded within an {{htmlelement("iframe")}} on another site. These features help prevent clickjacking.
 
 ## Problem
 
-[Clickjacking](/en-US/docs/Glossary/Clickjacking) is an attack whereby malicious sites trick users into clicking links or UI elements by making them appear like a trusted site the user is familiar with. This is usually done by embedding part or all of the trusted site into the malicious site via an `<iframe>`. A button, link, or other UI feature is then positioned on top of that content to make the user think they are interacting with their trusted site, when in fact they are interacting with the malicious site.
+In a clickjacking attack, an attacker tricks a user into interacting with a trusted site in a way that they didn't intend.
+
+Typically, the attacker creates a decoy site which embeds the user's trusted site inside an {{htmlelement("iframe")}} element. The attacker's site hides the `<iframe>`, and aligns some decoy elements so they appear in the same place as elements in the trusted site that perform sensitive actions. When the user tries to interact with the decoy elements, they are inadvertently interacting with the trusted site instead, and may be tricked into performing actions with the trusted site which they did not intend.
+
+See [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) for more details.
 
 ## Solution
 
-Use the HTTP headers as required:
+The main solution to clickjacking is to prevent the trusted site from being embedded in an `<iframe>`. There are two headers which can be used for this:
 
 - `Content-Security-Policy: frame-ancestors` is preferred as it provides more granular control over site embedding. It is however not supported in IE11 and earlier, pre-Chromium versions of Edge, Safari 9.1 (desktop), and Safari 9.2 (iOS).
 - `X-Frame-Options` is less granular, but it is supported in the older browser set listed above.
@@ -63,5 +67,6 @@ X-Frame-Options: DENY
 
 ## See also
 
+- [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking)
 - [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html) on `owasp.org`
 - [Clickjacking Attacks and How to Prevent Them](https://auth0.com/blog/preventing-clickjacking-attacks/) on `auth0.com` (2020)

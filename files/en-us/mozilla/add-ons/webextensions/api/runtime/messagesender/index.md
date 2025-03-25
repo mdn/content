@@ -37,6 +37,9 @@ Values of this type are objects. They contain the following properties:
 
     If the sender is a script running in a web page (including content and normal page scripts), then `url` is the web page URL. If the script is running in an iframe, `url` is the iframe's URL.
 
+- `userScriptWorldId` {{optional_inline}}
+  - : `string`. The `worldId` of the `USER_SCRIPT` world that sent the message. Only present in {{WebExtAPIRef("runtime.onUserScriptMessage")}} and in [`port.sender`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port#sender) for {{WebExtAPIRef("runtime.onUserScriptConnect")}}.
+
 {{WebExtExamples}}
 
 ## Browser compatibility

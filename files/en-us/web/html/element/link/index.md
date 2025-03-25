@@ -10,7 +10,16 @@ browser-compat: html.elements.link
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 To link an external stylesheet, you'd include a `<link>` element inside your {{HTMLElement("head")}} like this:
 
@@ -69,7 +78,7 @@ Other usage notes:
   For example, the `stylesheet` link type is body-ok, and therefore `<link rel="stylesheet">` is permitted in the body.
   However, this isn't a good practice to follow; it makes more sense to separate your `<link>` elements from your body content, putting them in the `<head>`.
 - When using `<link>` to establish a favicon for a site, and your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon.
-  If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
+  If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 - The HTML and XHTML specifications define event handlers for the `<link>` element, but it is unclear how they would be used.
 - Under XHTML 1.0, {{glossary("void element", "void elements")}} such as `<link>` require a trailing slash: `<link />`.
 - WebTV supports the use of the value `next` for `rel` to preload the next page in a document series.
@@ -81,7 +90,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `as`
 
   - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
-    It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
+    It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
     The table below lists the valid values for this attribute and the elements or resources they apply to.
@@ -265,7 +274,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `title`
   - : The `title` attribute has special semantics on the `<link>` element.
-    When used on a `<link rel="stylesheet">` it defines a [default or an alternate stylesheet](/en-US/docs/Web/CSS/Alternative_style_sheets).
+    When used on a `<link rel="stylesheet">` it defines a [default or an alternate stylesheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
 - `type`
   - : This attribute is used to define the type of the content linked to.
     The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on.
@@ -310,7 +319,7 @@ To include a stylesheet in a page, use the following syntax:
 
 ### Providing alternative stylesheets
 
-You can also specify [alternative style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
+You can also specify [alternative style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
 
 The user can choose which style sheet to use by choosing it from the **View > Page Style** menu.
 This provides a way for users to see multiple versions of a page.
@@ -438,7 +447,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> with <code>href</code> attribute</td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> with <code>href</code> attribute</td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

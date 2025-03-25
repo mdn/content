@@ -3,8 +3,8 @@ title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
 spec-urls:
-  - https://drafts.csswg.org/css-overflow-3
-  - https://drafts.csswg.org/css-overflow-4
+  - https://drafts.csswg.org/css-overflow/
+  - https://drafts.csswg.org/css-overflow-4/
 ---
 
 {{CSSRef}}
@@ -216,8 +216,9 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Reference
 
-### CSS properties
+### Properties
 
+- {{CSSxRef("line-clamp")}}
 - {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -227,10 +228,9 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("-webkit-line-clamp")}}
 
 > [!NOTE]
-> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
+> The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
 
 ### Data types
 
@@ -238,8 +238,8 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Guides
 
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-  - : CSS building block: learn what overflow is and how to manage it.
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
+  - : Learn what overflow is and how to manage it.
 - [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 
@@ -256,7 +256,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{cssxref("scroll-snap-type")}} CSS property
 - {{cssxref("text-overflow")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - Element {{domxref("Element.scroll", "scroll()")}} method
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method

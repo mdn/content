@@ -7,11 +7,48 @@ browser-compat: html.elements.button
 
 {{HTMLSidebar}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.
 
 By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
-{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<button class="favorite styled" type="button">Add to favorites</button>
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+```
 
 ## Attributes
 
@@ -27,19 +64,31 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `"show-modal"`
       - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method on the dialog element.
     - `"close"`
       - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method on the dialog element.
+    - `"request-close"`
+      - : The button will request to close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+      - : This is a declarative equivalent of calling the [`.requestClose()`](/en-US/docs/Web/API/HTMLDialogElement/requestClose) method on the dialog element.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"show"`.
+      - : This is a declarative equivalent of calling the [`.showPopover()`](/en-US/docs/Web/API/HTMLElement/showPopover) method on the popover element.
     - `"hide-popover"`
       - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"hide"`.
+      - : This is a declarative equivalent of calling the [`.hidePopover()`](/en-US/docs/Web/API/HTMLElement/hidePopover) method on the popover element.
     - `"toggle-popover"`
       - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+      - : This is equivalent to [`popovertargetaction`](#popovertargetaction) with the value `"toggle"`.
+      - : This is a declarative equivalent of calling the [`.togglePopover()`](/en-US/docs/Web/API/HTMLElement/togglePopover) method on the popover element.
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor` {{experimental_inline}}
-  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : This is a more general version of [`popovertarget`](#popovertarget).
+  - : Turns a `<button>` element into a command button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
@@ -62,7 +111,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `formmethod`
 
-  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Methods) used to submit the form. Possible values:
+  - : If the button is a submit button (it's inside/associated with a `<form>` and doesn't have `type="button"`), this attribute specifies the [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) used to submit the form. Possible values:
 
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
@@ -72,7 +121,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `formnovalidate`
 
-  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
 
@@ -91,7 +140,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `popovertarget`
 
-  - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+  - : Turns a `<button>` element into a popover control button; takes the ID of the popover element to control as its value. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
+
+    - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
 
@@ -123,7 +175,7 @@ A submit button with the attribute `formaction` set, but without an associated f
 
 If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise, they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
-While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
+While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), such as removing an item from a list.
 
 By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
@@ -131,7 +183,7 @@ By default, user agents style buttons as `display: flow-root`, which establishes
 
 ### Icon buttons
 
-Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
@@ -158,7 +210,7 @@ If you want to visually hide the button's text, an accessible way to do so is to
 However, it is worth noting that leaving the button text visible can help people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially important for people who are not technologically sophisticated or who may have different cultural interpretations of the icon the button uses.
 
 - [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+- [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
 - [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### Size and Proximity
@@ -181,7 +233,7 @@ Spacing may be created using CSS properties such as {{cssxref("margin")}}.
 
 ### ARIA state information
 
-To describe the state of a button the correct ARIA attribute to use is [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and not [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) or [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
+To describe the state of a button the correct ARIA attribute to use is [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) and not [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) or [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected). To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role).
 
 ### Button styles
 
@@ -192,7 +244,7 @@ The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an
 Color contrast ratio is determined by comparing the luminosity of the button text and background color values to the background the button is placed on. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### Clicking and focus
@@ -228,13 +280,13 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
           >submittable</a
         >
         <a
@@ -274,7 +326,7 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
             >button</a
           ></code
         >
@@ -283,12 +335,12 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>
       </td>
     </tr>
     <tr>

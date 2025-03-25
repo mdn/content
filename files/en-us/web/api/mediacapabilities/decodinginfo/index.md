@@ -48,7 +48,7 @@ decodingInfo(configuration)
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
           - : The width of the video.
         - `height`
@@ -64,7 +64,7 @@ decodingInfo(configuration)
         This has the following properties: <!-- AudioConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
           - : The number of channels used by the audio track.
         - `bitrate`
@@ -328,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 In the previous example we used [promise chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining), to wait on the result.
-Here we've chosen to use [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) to wait on the result, and then log it.
+Here we've chosen to use [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await) to wait on the result, and then log it.
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

@@ -12,6 +12,8 @@ The **`WheelEvent.deltaZ`** read-only property is a
 `double` representing the scroll amount along the z-axis, in the
 {{domxref("WheelEvent.deltaMode")}} unit.
 
+You must check the `deltaMode` property to determine the unit of the `deltaZ` value. Do not assume that the `deltaZ` value is specified in pixels. Some browsers, for compatibility reasons, may return different units for the `deltaZ` value depending on whether `deltaMode` has been accessed, to accommodate for websites not explicitly checking the `deltaMode` property.
+
 ## Value
 
 A number.

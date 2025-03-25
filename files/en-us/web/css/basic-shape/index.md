@@ -7,9 +7,58 @@ browser-compat: css.types.basic-shape
 
 {{CSSRef}}
 
-The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
+The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a shape used in the {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, and {{cssxref("offset-path")}} properties.
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -44,7 +93,7 @@ The parameters common across the syntax of some basic shape functions include:
 The {{cssxref("basic-shape/inset","inset()")}} function creates an inset rectangle, with its size defined by the offset distance of each of the four sides of its container and, optionally, rounded corners.
 
 ```plain
-inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
+inset( <length-percentage>{1,4} [ round <'border-radius'> ]? )
 ```
 
 When all of the first four arguments are supplied, they represent the top, right, bottom, and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
@@ -56,7 +105,7 @@ If a pair of insets for a dimension adds up to more than 100% of that dimension,
 The {{cssxref("basic-shape/rect","rect()")}} function defines a rectangle using the specified distances from the top and left edges of the reference box, with optional rounded corners.
 
 ```plain
-rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+rect( [ <length-percentage> | auto ]{4} [ round <'border-radius'> ]? )
 ```
 
 When using the `rect()` function, you do not define the width and height of the rectangle. Instead, you specify four values to create the rectangle, with its dimensions determined by the size of the reference box and the four offset values. Each value can be either a {{cssxref("length")}}, a {{cssxref("percentage")}}, or the keyword `auto`. The `auto` keyword is interpreted as `0%` for the top and left values and as `100%` for the bottom and right values.
@@ -66,7 +115,7 @@ When using the `rect()` function, you do not define the width and height of the 
 The {{cssxref("basic-shape/xywh","xywh()")}} function defines a rectangle located at the specified distances from the left (`x`) and top (`y`) edges of the reference box and sized by the specified width (`w`) and height (`h`) of the rectangle, in that order, with optional rounded corners.
 
 ```plain
-xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <'border-radius'> ]? )
 ```
 
 ### Syntax for circles
@@ -94,30 +143,30 @@ The `<shape-radius>` arguments represent _rx_ and _ry_, the x-axis and y-axis ra
 The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of coordinates.
 
 ```plain
-polygon( <`fill-rule`>?, [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
 ```
 
 The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represent the x and y axis coordinates of the polygon at position _i_ (the vertex point where two lines meet).
 
 ### Syntax for paths
 
-The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Reference/Attribute/d).
 
 ```plain
-path( <`fill-rule`>?, ]? <string> )
+path( <'fill-rule'>? , <string> )
 ```
 
-The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
+The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Reference/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes
 
 The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an initial starting point and a series of shape commands.
 
 ```plain
-shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
+shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
-The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ## Description
 
@@ -148,7 +197,7 @@ Each value in the lists of the two `<basic-shape>` functions is interpolated bas
 
 - **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value if they use the same `<fill-rule>` and have the same number of comma-separated coordinate pairs.
 
-- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
 
 - **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
 

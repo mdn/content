@@ -1,10 +1,10 @@
 ---
 title: Writing style guide
+short-title: Writing style
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This writing style guide describes how content should be written, organized, spelled, and formatted on MDN Web Docs.
 
@@ -83,7 +83,7 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Use inclusive language
 
@@ -152,7 +152,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Review page structure**: Review the page to ensure that it's structured properly for its [page type](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) it is. Check to make sure that all sections are present and have appropriate content.
   - **Ensure completeness**: Review sections to ensure that no information is missing. Ensure that all parameters are listed and explained. Ensure that any exceptions are covered — this is a particularly common place where content is missing.
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
-  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
+  - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > [!NOTE]
@@ -373,10 +373,10 @@ Do not use variant spelling.
 - **Correct**: localize, behavior, color
 - **Incorrect**: localise, behaviour, colour
 
-We have [cSpell](https://cspell.org/) installed to catch spelling errors. It runs every week and generates [a report of spelling errors](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle) in the repository. You can also run it locally via the following command:
+We have [cSpell](https://cspell.org/) installed to catch spelling errors. It runs every week and generates [a report of spelling errors](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle) in the repository. You can also run it locally using the following command:
 
 ```bash
-npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+yarn lint:typos
 ```
 
 In the repository, we maintain several word lists, located at [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries), that contain sanctioned words not in the default dictionaries. You can add more words to these lists if they are valid but reported by the spell checker. Read [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) to understand what each dictionary contains and the details of our spell-checking configuration.
@@ -435,7 +435,7 @@ A page on MDN Web Docs can contain more than one code example. The following lis
 - If you are working with a large piece of example code, it may make sense to break it up into smaller logical parts so that they can be described individually.
 - When adding [live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples), it's helpful to be aware that all of the sample's code blocks that have the same type (HTML, CSS, and JavaScript) are concatenated together before running the example. This lets you break the code into multiple segments, each optionally with its own descriptions, headings, and so forth. This makes documenting code incredibly powerful and flexible.
 
-To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+To learn about how to style or format code examples for MDN Web Docs, see [Guidelines for styling code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ### Cross-references (linking)
 
@@ -446,7 +446,7 @@ When referencing another page or the section of a page on MDN by its title, foll
 
 Follow similar style when linking to a section on a page, as shown below:
 
-- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
+- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Guide/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
 
 If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
@@ -465,6 +465,8 @@ We follow similar cross-referencing guidelines in the [See also](#see_also) sect
 ### External links
 
 External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Your pull request to add an external link will be rejected if it does not meet the guidelines described here.
+
+If you are considering adding an external link to MDN [Learn web development](/en-US/docs/Learn_web_development) content, please also read [Learn web development writing guidelines > External links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#external_links_and_embeds).
 
 In general, if you're considering adding an external link, you need to ensure that there is minimal risk of the following:
 
@@ -577,14 +579,14 @@ However, depending on the type of list you are creating, you will want to adjust
 
 Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross-references_linking) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
-In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
+In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn_web_development) section on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
 To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section.
 
 #### Link text
 
-- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes) page with the page title "ARIA states and properties" will be:
-  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) page with the page title "ARIA states and properties" will be:
+  - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
   - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
@@ -623,7 +625,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 - [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
 - [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 
@@ -632,8 +634,8 @@ Try to avoid putting your article at the top of the hierarchy, which slows the s
 The page title, which is displayed at the top of the page, can be different from the page "slug", which is the portion of the page's URL following `<locale>/docs/`. Keep the following guidelines in mind when defining a slug:
 
 - Slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.
-- Slugs should use an underscore for a multi-word component, such as `Getting_started` in `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started`.
-- Follow sentence casing in slugs as well for each component, such as `Getting_started` in the previous example.
+- Slugs should use an underscore for a multi-word component, such as `Basic_HTML_syntax` in `/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax`.
+- Follow sentence casing in slugs as well for each component, such as `Basic_HTML_syntax` in the previous example.
 
 ### Titles
 
@@ -664,11 +666,11 @@ Keep the following guidelines in mind when writing titles:
 
 ## See also
 
-- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
-- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [Guidelines for writing code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)
+- [Guidelines for writing HTML code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [Guidelines for writing CSS code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [Guidelines for writing JavaScript code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Guidelines for writing shell prompt code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## Further reading
 
