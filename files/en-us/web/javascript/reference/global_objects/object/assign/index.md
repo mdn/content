@@ -75,6 +75,12 @@ changed if any properties are added before the error is raised.
 > **Note:** `Object.assign()` does not throw on
 > [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}} sources.
 
+## Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `target` parameter is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}.
+  - : Thrown if the source object has a property that is non-writable on the target object.
+
 ## Examples
 
 ### Cloning an object
@@ -193,6 +199,13 @@ const number = Object.assign(3, { a: 1 });
 console.log(number); // Number {3, a: 1}
 console.log(typeof number); // object
 console.log(number.a); // 1
+
+// null and undefined as targets throw TypeError
+try {
+  Object.assign(null, { a: 1 });
+} catch (e) {
+  console.log(e.message); // "Cannot convert undefined or null to object"
+}
 ```
 
 ### Exceptions will interrupt the ongoing copying task
