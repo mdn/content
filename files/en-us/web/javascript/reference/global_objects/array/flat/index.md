@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.flat
 The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.flat()")}}
 
 ```js interactive-example
 const arr1 = [0, 1, 2, [3, 4]];
@@ -121,6 +121,7 @@ console.log(Array.prototype.flat.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.flat`](https://www.npmjs.com/package/array.prototype.flat)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}

@@ -12,7 +12,7 @@ spec-urls: https://wicg.github.io/first-party-sets/
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
+Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
 
 ## Concepts and usage
 
@@ -139,7 +139,7 @@ RWS has been designed with security in mind. It would be disastrous if a bad act
 - **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e. if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
 - **`site1.example.com` and `site2.example.com` are intentionally in the same set, but `site1.example.com` gets hijacked by `evilsite.example.com`**: The impact of a site hijacking attack within a set isn't any worse than it would usually be, once the other sites are updated accordingly:
   - The regular [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) requires an active opt-in by the embedded site, so `site2.example.com` can stop calling `document.requestStorageAccess()` when it's embedded in `site1.example.com`, avoiding a {{glossary("CSRF")}} attack.
-  - Use of `requestStorageAccessFor()` requires [CORS](/en-US/docs/Web/HTTP/CORS), so `site2.example.com` could choose not to respond with the appropriate CORS headers when network requests are coming from `site1.example.com`, thereby avoiding a CSRF attack.
+  - Use of `requestStorageAccessFor()` requires [CORS](/en-US/docs/Web/HTTP/Guides/CORS), so `site2.example.com` could choose not to respond with the appropriate CORS headers when network requests are coming from `site1.example.com`, thereby avoiding a CSRF attack.
 
 ## Examples
 

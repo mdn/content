@@ -64,7 +64,7 @@ console.log(matrix); // output: "matrix(1, 0, 0, 1, 25, 25)"
   - {{cssxref("transform-function/translateY", "translateY()")}}
   - {{cssxref("transform-function/translateZ", "translateZ()")}}
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface methods
   - {{domxref("CanvasRenderingContext2D.translate()")}}
   - {{domxref("CanvasRenderingContext2D.transform()")}}

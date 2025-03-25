@@ -1,5 +1,6 @@
 ---
 title: Sizing items in CSS
+short-title: Sizing
 slug: Learn_web_development/Core/Styling_basics/Sizing
 page-type: learn-module-chapter
 ---

@@ -141,7 +141,7 @@ Note that we can leave cells empty if we wish. One of the very nice things about
 
 ## The `grid-column` and `grid-row` shorthands
 
-The previous example had quite a lot of code to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}. In this example, we replicate the above example using these shorthand properties:
+The previous example had quite a lot of code to position each item. It should come as no surprise to know there is a [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties). The {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties can be combined into {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} into {{cssxref("grid-row")}}. In this example, we replicate the above example using these shorthand properties:
 
 ```css hidden
 * {

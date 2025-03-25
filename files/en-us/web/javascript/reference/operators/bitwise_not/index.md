@@ -9,7 +9,7 @@ browser-compat: javascript.operators.bitwise_not
 
 The **bitwise NOT (`~`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bit of the operand is `0`, and a `0` otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+{{InteractiveExample("JavaScript Demo: Bitwise NOT (~) operator")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101
@@ -30,7 +30,7 @@ console.log(~b); // 00000000000000000000000000000010
 
 ## Description
 
-The `~` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt NOT if the operand becomes a BigInt; otherwise, it converts the operand to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise NOT.
+The `~` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). For numbers, the operator returns a 32-bit integer. For BigInts, the operator returns a BigInt. It first [coerces the operand to a numeric value](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt NOT if the operand becomes a BigInt; otherwise, it converts the operand to a [32-bit integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion) and performs number bitwise NOT.
 
 The operator operates on the operands' bit representations in [two's complement](https://en.wikipedia.org/wiki/Two's_complement). The operator is applied to each bit, and the result is constructed bitwise.
 

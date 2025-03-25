@@ -69,7 +69,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn_web_development/Co
 
 ### Improve accessibility
 
-{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the `<dfn>` element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to associate a term more formally with its definition:
+{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the `<dfn>` element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to associate a term more formally with its definition:
 
 ```html
 <p>
@@ -141,4 +141,4 @@ This produces the slightly more readable result below:
 - {{htmlelement("dl")}}
 - {{htmlelement("dt")}}
 - {{htmlelement("dd")}}
-- [How to use the aria-describedby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [How to use the aria-describedby attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)

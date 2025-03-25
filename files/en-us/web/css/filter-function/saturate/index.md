@@ -11,7 +11,33 @@ The **`saturate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/C
 
 > **Note:** `saturate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the hue or lightness of the original color.
 
-{{EmbedInteractiveExample("pages/css/function-saturate.html")}}
+{{InteractiveExample("CSS Demo: saturate()")}}
+
+```css interactive-example-choice
+filter: saturate(1);
+```
+
+```css interactive-example-choice
+filter: saturate(4);
+```
+
+```css interactive-example-choice
+filter: saturate(50%);
+```
+
+```css interactive-example-choice
+filter: saturate(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 
@@ -21,8 +47,8 @@ saturate(amount)
 
 ### Parameters
 
-- `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `1`.
+- `amount` {{Optional_Inline}}
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value under `100%` desaturates the image, while a value over `100%` super-saturates it. A value of `0%` is completely unsaturated, while a value of `100%` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `1`. The default value is `1`.
 
 ## Formal syntax
 
@@ -35,6 +61,7 @@ saturate(amount)
 ```css
 saturate(0)     /* Completely unsaturated */
 saturate(.4)    /* 40% saturated */
+saturate()      /* No effect */
 saturate(100%)  /* No effect */
 saturate(200%)  /* Double saturation */
 ```

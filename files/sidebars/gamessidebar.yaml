@@ -48,7 +48,7 @@ sidebar:
     children:
       - link: /Games/Techniques/Async_scripts
         title: Using_async_scripts_for_asm.js
-      - link: /Web/Performance/Optimizing_startup_performance
+      - link: /Web/Performance/Guides/Optimizing_startup_performance
         title: Optimizing_startup_performance
       - link: /Games/Techniques/WebRTC_data_channels
         title: Using_WebRTC_peer-to-peer_data_channels

@@ -9,7 +9,35 @@ browser-compat: css.selectors.not
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+
+```css interactive-example
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+```html interactive-example
+<p>
+  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
+  the same as an Earth day, only <strong>37 minutes</strong> longer.
+</p>
+
+<p class="irrelevant">
+  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
+  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
+  and atmospheric pressure.
+</p>
+```
 
 The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 

@@ -9,7 +9,7 @@ browser-compat: javascript.operators.assignment
 
 The **assignment (`=`)** operator is used to assign a value to a variable or property. The assignment expression itself has a value, which is the assigned value. This allows multiple assignments to be chained in order to assign a single value to multiple variables.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+{{InteractiveExample("JavaScript Demo: Assignment (=) operator")}}
 
 ```js interactive-example
 let x = 2;
@@ -34,7 +34,7 @@ x = y
 ### Parameters
 
 - `x`
-  - : A valid assignment target, including an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It can also be a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+  - : A valid assignment target, including an [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). It can also be a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `y`
   - : An expression specifying the value to be assigned to `x`.
 
@@ -54,7 +54,7 @@ The value of `y`.
 The assignment operator is completely different from the equals (`=`) sign used as syntactic separators in other locations, which include:
 
 - Initializers of [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations
-- Default values of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value)
+- Default values of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value)
 - [Default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 - Initializers of [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 
@@ -137,7 +137,7 @@ let a = "",
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+For more information, see [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ## Specifications
 
@@ -150,4 +150,4 @@ For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)

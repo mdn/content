@@ -55,7 +55,7 @@ A script example:
 </script>
 ```
 
-Speculation rules using a `<script>` element need to be explicitly allowed in the {{httpheader("Content-Security-Policy")}} [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source.
+Speculation rules using a `<script>` element need to be explicitly allowed in the {{httpheader("Content-Security-Policy")}} [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source.
 
 An HTTP header example:
 
@@ -446,4 +446,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

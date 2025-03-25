@@ -48,7 +48,7 @@ bufferSubData(target, dstByteOffset, srcData, srcOffset, length)
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes where the data replacement
     will start.
 - `srcData` {{optional_inline}}
-  - : An {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, a {{jsxref("DataView")}}, or a {{jsxref("TypedArray")}}
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that views an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}
     that will be copied into the data store.
 - `srcOffset` {{optional_inline}}
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the element index offset where to start reading

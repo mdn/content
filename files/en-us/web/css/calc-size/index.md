@@ -123,7 +123,7 @@ In this expression:
 `calc-size()` return values can be interpolated, enabling animations between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and a `calc-size()` intrinsic size return value.
 
 > [!NOTE]
-> You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Critical_rendering_path#layout)).
+> You should avoid animating box model properties if possible, to cut down on layout events and mitigate the resulting impact on performance (see [Critical rendering path > Layout](/en-US/docs/Web/Performance/Guides/Critical_rendering_path#layout)).
 
 For example, you could use a [transition](/en-US/docs/Web/CSS/CSS_transitions) to animate a container `width` between `0` and `auto` like so:
 
@@ -221,7 +221,7 @@ p {
 }
 ```
 
-In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the`width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
+In the CSS, we use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the child elements inside the `<section>`, and set the `width` and `height` of the `<section>` to `calc-size()` functions. The `width` is set equal to `fit-content` plus `6rem`. The `height` is set to `auto` multiplied by two.
 
 ```css
 section {

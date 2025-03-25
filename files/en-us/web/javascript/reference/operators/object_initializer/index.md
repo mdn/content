@@ -9,7 +9,7 @@ browser-compat: javascript.operators.object_initializer
 
 An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or [by invoking a constructor function](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object initializer", "taller")}}
 
 ```js interactive-example
 const object1 = { a: "foo", b: 42, c: {} };

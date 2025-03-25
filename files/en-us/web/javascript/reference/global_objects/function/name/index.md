@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.name
 
 The **`name`** data property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{InteractiveExample("JavaScript Demo: Function: name")}}
 
 ```js interactive-example
 const func1 = function () {};
@@ -133,7 +133,7 @@ f.name; // "f"
 
 ### Initializer and default value
 
-Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., will inherit the name of the bound identifier as their `name`.
+Functions in initializers (default values) of [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., will inherit the name of the bound identifier as their `name`.
 
 ```js
 const [f = () => {}] = [];
@@ -324,4 +324,5 @@ In the uncompressed version, the program runs into the truthy branch and logs "'
 ## See also
 
 - [Polyfill for `Function: name` in `core-js`](https://github.com/zloirock/core-js#ecmascript-function)
+- [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
 - {{jsxref("Function")}}

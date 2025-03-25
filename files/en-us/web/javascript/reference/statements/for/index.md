@@ -9,7 +9,7 @@ browser-compat: javascript.statements.for
 
 The **`for`** statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
 
-{{InteractiveExample("JavaScript Demo: Statement - For")}}
+{{InteractiveExample("JavaScript Demo: for statement")}}
 
 ```js interactive-example
 let str = "";
@@ -136,7 +136,7 @@ while (i <= 3) {
 
 ### Lexical declarations in the initialization block
 
-Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Closures) within the loop body. For example, for the code below:
+Declaring a variable within the initialization block has important differences from declaring it in the upper [scope](/en-US/docs/Glossary/Scope), especially when creating a [closure](/en-US/docs/Web/JavaScript/Guide/Closures) within the loop body. For example, for the code below:
 
 ```js
 for (let i = 0; i < 3; i++) {

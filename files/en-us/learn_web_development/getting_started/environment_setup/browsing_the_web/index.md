@@ -46,6 +46,8 @@ We will start by describing various web-related concepts: web pages, websites, w
   - : A collection of web pages grouped together into a single resource, with links connecting them together. Often called a "site".
 - **Web server**
   - : A computer that hosts a website on the Internet.
+- **Web service**
+  - : A software that responds to requests over the Internet to perform a function or provide data. A web service is typically backed by a web server, and may provide web pages for users to interact with. Many websites are also web services, though some websites (such as MDN) comprise of static content only. Examples of web services would be something that resizes images, provides a weather report, or handles user login.
 - **Search engine**
   - : A web service that helps you find other web pages, such as Google, Bing, Yahoo, or DuckDuckGo. Search engines are normally accessed through a web browser (for example, you can perform search engine searches directly in the address bar of Firefox, Chrome, etc.) or through a web page (for example, [bing.com](https://www.bing.com/) or [duckduckgo.com](https://duckduckgo.com/)).
 
@@ -168,7 +170,7 @@ If you are looking for a solution to a specific problem, such as `how to print o
 
 ### Using AI
 
-AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
+AI-generated search results are a very popular way of receiving information. They basically provide a superpowered search: they do a lot of searching in the background, before compiling the results into a single, easily-digestible answer. Common choices are [ChatGPT](https://chatgpt.com/), [Google Gemini](https://gemini.google.com/app), and [Microsoft Copilot](https://copilot.microsoft.com/), accessed either directly in a chat format, or via AI-powered in-app help or automation systems.
 
 When learning to code, AI chat prompts can be useful in a variety of ways:
 

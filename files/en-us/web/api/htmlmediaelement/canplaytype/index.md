@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.canPlayType
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likely it is that the current browser will be able to play media of a given [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likely it is that the current browser will be able to play media of a given [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
 
 ## Syntax
 
@@ -19,7 +19,7 @@ canPlayType(type)
 ### Parameters
 
 - `type`
-  - : A string specifying the [MIME type](/en-US/docs/Web/HTTP/MIME_types) of the media and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) containing a comma-separated list of the supported codecs.
+  - : A string specifying the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the media and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) containing a comma-separated list of the supported codecs.
 
 ### Return value
 

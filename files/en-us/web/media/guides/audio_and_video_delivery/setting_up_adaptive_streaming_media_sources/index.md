@@ -34,7 +34,7 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Range_requests)
+1. Your client or server does not support [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests)
 2. Your server cannot cache range requests efficiently
 3. Your server cannot prefetch range requests efficiently
 4. The SIDX\* is large and having to load it first slows down startup a little
@@ -114,7 +114,7 @@ A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https:/
 > Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
 
 > [!NOTE]
-> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video).
+> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming).
 
 Once encoded your file structure may look something like this:
 
@@ -266,14 +266,14 @@ Further resources on adaptive streaming.
 ### MPEG-DASH overview and references
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/slideshow/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption/14933566)
 
 ### MPEG-DASH tools
 
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
 - [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
-- [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
+- [DASH.js](https://github.com/Dash-Industry-Forum/dash.js)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 
 Adaptive streaming examples

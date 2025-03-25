@@ -24,7 +24,7 @@ While HTML does not require authors to specify `<html>` element start and ending
 
 Including a valid `lang` declaration on the `<html>` element also ensures that important metadata contained in the page's {{HTMLElement("head")}}, such as the page's {{HTMLElement("title")}}, are also announced properly.
 
-- [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## Example
@@ -76,7 +76,7 @@ Including a valid `lang` declaration on the `<html>` element also ensures that i
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
           >document</a
         >
       </td>

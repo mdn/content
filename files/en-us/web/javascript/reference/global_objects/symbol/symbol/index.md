@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Symbol.Symbol
 
 The **`Symbol()`** function returns primitive values of type Symbol.
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol() constructor", "taller")}}
 
 ```js interactive-example
 const symbol1 = Symbol();

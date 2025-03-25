@@ -30,7 +30,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
 - {{domxref("HTMLMediaElement.controls")}}
   - : A boolean that reflects the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
-- {{domxref("HTMLMediaElement.controlsList")}} {{ReadOnlyInline}}
+- {{domxref("HTMLMediaElement.controlsList")}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
   - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for this media element.
@@ -81,7 +81,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
-  - : An object which serves as the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
+  - : An object which serves as the source of the media associated with the `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{ReadOnlyInline}}

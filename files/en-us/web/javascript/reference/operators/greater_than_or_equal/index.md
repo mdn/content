@@ -11,7 +11,7 @@ The **greater than or equal (`>=`)** operator returns `true` if
 the left operand is greater than or equal to the right operand, and `false`
 otherwise.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}
+{{InteractiveExample("JavaScript Demo: Greater than or equal (>=) operator")}}
 
 ```js interactive-example
 console.log(5 >= 3);
@@ -43,7 +43,7 @@ The operands are compared using the same algorithm as the [Less than](/en-US/doc
 
 `x >= y` is generally equivalent to `x > y || x == y`, except for a few cases:
 
-- When one of `x` or `y` is `null`, and the other is something that's not `null` and becomes 0 when [coerced to numeric](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) (including `0`, `0n`, `false`, `""`, `"0"`, `new Date(0)`, etc.): `x >= y` is `true`, while `x > y || x == y` is `false`.
+- When one of `x` or `y` is `null`, and the other is something that's not `null` and becomes 0 when [coerced to numeric](/en-US/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) (including `0`, `0n`, `false`, `""`, `"0"`, `new Date(0)`, etc.): `x >= y` is `true`, while `x > y || x == y` is `false`.
 - When one of `x` or `y` is `undefined`, and the other is one of `null` or `undefined`: `x >= y` is `false`, while `x == y` is `true`.
 - When `x` and `y` are the same object that becomes `NaN` after the first step of [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) (such as `new Date(NaN)`): `x >= y` is `false`, while `x == y` is `true`.
 - When `x` and `y` are different objects that become the same value after the first step of [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than): `x >= y` is `true`, while `x > y || x == y` is `false`.

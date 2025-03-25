@@ -34,8 +34,6 @@ A string with one of the following values:
 - `other`
   - : The quality is primarily limited for a reason other than the above.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}

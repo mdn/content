@@ -16,7 +16,7 @@ The **Web Share API** provides a mechanism for sharing text, links, files, and o
 > This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 > [!NOTE]
-> This API should not be confused with the [Web Share Target API](/en-US/docs/Web/Manifest/Reference/share_target), which allows a website to specify itself as a share target.
+> This API should not be confused with the [Web Share Target API](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target), which allows a website to specify itself as a share target.
 
 ## Concepts and usage
 
@@ -30,7 +30,7 @@ The {{domxref("navigator.share()")}} method invokes the native sharing mechanism
 It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
 Further, the method must specify valid data that is supported for sharing by the native implementation.
 
-The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy.
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) Permissions Policy.
 If the policy is supported but has not been granted, both methods will indicate that the data is not shareable.
 
 ## Interfaces
@@ -80,4 +80,4 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## See also
 
-- [Web Share Target API](/en-US/docs/Web/Manifest/Reference/share_target)
+- [Web Share Target API](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)

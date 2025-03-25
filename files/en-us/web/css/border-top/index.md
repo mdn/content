@@ -7,9 +7,47 @@ browser-compat: css.properties.border-top
 
 {{CSSRef}}
 
-The **`border-top`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/border).
+The **`border-top`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's top [border](/en-US/docs/Web/CSS/border).
 
-{{EmbedInteractiveExample("pages/css/border-top.html")}}
+{{InteractiveExample("CSS Demo: border-top")}}
+
+```css interactive-example-choice
+border-top: solid;
+```
+
+```css interactive-example-choice
+border-top: dashed red;
+```
+
+```css interactive-example-choice
+border-top: 1rem solid;
+```
+
+```css interactive-example-choice
+border-top: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 As with all shorthand properties, `border-top` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 

@@ -106,12 +106,12 @@ processor.doLoad();
 
 {{EmbedLiveSample("Video_and_canvas", '100%', 580)}}
 
-This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
+This is an example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
 You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
 > [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/Guides/CORS) on your video server.
 
 ### Video and WebGL
 
@@ -291,7 +291,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Editable_example_2', 700, 450) }}
 
 > [!NOTE]
-> Unless you have [CORS](/en-US/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> Unless you have [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Common audio filters
 

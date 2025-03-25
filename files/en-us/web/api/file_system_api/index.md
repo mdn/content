@@ -79,12 +79,16 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 
 ## Interfaces
 
+- {{domxref("FileSystemChangeRecord")}} {{experimental_inline}}
+  - : Contains details of a single change observed by a {{domxref("FileSystemObserver")}}.
 - {{domxref("FileSystemHandle")}}
   - : An object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 - {{domxref("FileSystemFileHandle")}}
   - : Provides a handle to a file system entry.
 - {{domxref("FileSystemDirectoryHandle")}}
   - : Provides a handle to a file system directory.
+- {{domxref("FileSystemObserver")}} {{experimental_inline}}
+  - : Provides a mechanism to observe changes to selected files or directories.
 - {{domxref("FileSystemSyncAccessHandle")}}
   - : Provides a synchronous handle to a file system entry, which operates in-place on a single file on disk. The synchronous nature of the file reads and writes allows for higher performance for critical methods in contexts where asynchronous operations come with high overhead, e.g., [WebAssembly](/en-US/docs/WebAssembly). This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](#origin_private_file_system).
 - {{domxref("FileSystemWritableFileStream")}}
@@ -99,7 +103,7 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 - {{domxref("Window.showSaveFilePicker()")}}
   - : Shows a file picker that allows a user to save a file.
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : Returns a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
+  - : Returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 - {{domxref("StorageManager.getDirectory()")}}
   - : Used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system). Returns a {{jsxref('Promise')}} that fulfills with a {{domxref("FileSystemDirectoryHandle")}} object.
 

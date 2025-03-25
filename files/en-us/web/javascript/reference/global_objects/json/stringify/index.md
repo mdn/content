@@ -84,7 +84,7 @@ A JSON string representing the given value, or undefined.
 
     All {{jsxref("Temporal")}} objects implement the `toJSON()` method, which returns a string (the same as calling `toString()`). Thus, they will be serialized as strings. Similarly, {{jsxref("Date")}} objects implement `toJSON()`, which returns the same as [`toISOString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).
 
-  - Only [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) are visited. This means {{jsxref("Map")}}, {{jsxref("Set")}}, etc. will become `"{}"`. You can use the [`replacer`](#the_replacer_parameter) parameter to serialize them to something more useful.
+  - Only [enumerable own properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) are visited. This means {{jsxref("Map")}}, {{jsxref("Set")}}, etc. will become `"{}"`. You can use the [`replacer`](#the_replacer_parameter) parameter to serialize them to something more useful.
 
     Properties are visited using the same algorithm as [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), which has a well-defined order and is stable across implementations. For example, `JSON.stringify` on the same object will always produce the same string, and `JSON.parse(JSON.stringify(obj))` would produce an object with the same key ordering as the original (assuming the object is completely JSON-serializable).
 

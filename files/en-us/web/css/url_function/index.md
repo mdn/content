@@ -19,7 +19,7 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 url("https://example.com/images/myImg.jpg");
 url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
-url("data:image/jpg;base64,iRxVB0…");
+url("data:image/jpeg;base64,iRxVB0…");
 url(myImg.jpg);
 url(#IDofSVGpath);
 
@@ -80,7 +80,7 @@ The **`url()`** function can be included as a value for
         If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
 
     - path
-      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) or an [SVG filter](/en-US/docs/Web/SVG/Element/filter).
+      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) or an [SVG filter](/en-US/docs/Web/SVG/Reference/Element/filter).
 
 - `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.

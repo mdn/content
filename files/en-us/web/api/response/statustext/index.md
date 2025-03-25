@@ -17,7 +17,7 @@ For example, this would be `OK` for a status code `200`, `Continue` for `100`, `
 A {{jsxref("String")}} containing the HTTP status message associated with the response.
 The default value is "".
 
-See [HTTP response status codes](/en-US/docs/Web/HTTP/Status) for a list of codes and their associated status messages.
+See [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status) for a list of codes and their associated status messages.
 Note that HTTP/2 [does not support](https://fetch.spec.whatwg.org/#concept-response-status-message) status messages.
 
 ## Examples
@@ -54,5 +54,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

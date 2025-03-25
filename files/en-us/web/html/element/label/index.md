@@ -9,7 +9,28 @@ browser-compat: html.elements.label
 
 The **`<label>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for an item in a user interface.
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 Associating a `<label>` with a form control, such as {{htmlelement("input")}} or {{htmlelement("textarea")}} offers some major advantages:
 
@@ -57,7 +78,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-There are no special styling considerations for `<label>` elements — structurally they are simple inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
+There are no special styling considerations for `<label>` elements — structurally they are inline elements, and so can be styled in much the same way as a {{htmlelement("span")}} or {{htmlelement("a")}} element. You can apply styling to them in any way you want, as long as you don't cause the text to become difficult to read.
 
 ## Accessibility
 

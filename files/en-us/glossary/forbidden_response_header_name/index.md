@@ -6,10 +6,10 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A _forbidden response header name_ is an [HTTP header](/en-US/docs/Web/HTTP/Headers) name (`Set-Cookie`) that cannot be modified programmatically.
+A _forbidden response header name_ is an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name (`Set-Cookie`) that cannot be modified programmatically.
 
 ## See also
 
 - [Fetch specification: forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
 - Related glossary terms:
-  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Forbidden request header")}}
