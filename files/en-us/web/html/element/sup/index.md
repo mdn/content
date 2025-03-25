@@ -43,7 +43,6 @@ Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
 - Displaying exponents, such as "x<sup>3</sup>". It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
 - Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M<sup>lle</sup>"; this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
-- Representing ordinal numbers, such as "4<sup>th</sup>" instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
 
 ## Examples
 
@@ -73,24 +72,6 @@ Superior lettering is not technically the same thing as superscript. However, it
 #### Result
 
 {{EmbedLiveSample("Superior_lettering", 650, 80)}}
-
-### Ordinal numbers
-
-Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbreviated using numerals and language-specific text rendered in superscript:
-
-```html
-<p>
-  The ordinal number "fifth" can be abbreviated in various languages as follows:
-</p>
-<ul>
-  <li>English: 5<sup>th</sup></li>
-  <li>French: 5<sup>ème</sup></li>
-</ul>
-```
-
-#### Result
-
-{{EmbedLiveSample("Ordinal_numbers", 650, 160)}}
 
 ## Technical summary
 
