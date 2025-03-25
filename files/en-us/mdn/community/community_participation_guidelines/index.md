@@ -1,5 +1,5 @@
 ---
-title: Community Participation Guidelines (CPG)
+title: Code of conduct enforcement guidelines 
 short-title: Community Participation Guidelines
 slug: MDN/Community/Community_Participation_Guidelines
 page-type: mdn-community-guide
@@ -47,14 +47,13 @@ Below is a summary of severity levels and enforcement actions.
 
 - **Severity:** Continued violations or escalation in severity.
 - **Actions:**
-  - A private warning with clarity of the violation and consequences of continued behavior.
-  - Request to avoid interaction on community messaging platforms (public forums, commenting on bugs).
-  - Required to not interact with others involved in the report or those suspected to be involved.
-  - This includes avoiding any interactions in Mozilla channels, spaces/offices, and external channels like social media (e.g., following/liking/retweeting).
-
-> Mandatory cooling-off period.
->
-> Mandatory CPG onboarding process.
+    - A private warning with clarity of the violation and consequences of continued behavior.
+    - **Mandatory cooling-off period:**
+    - No interaction on community messaging platforms, such as public forums, commenting on bugs.
+    - No interacting with people involved in the report or others suspected to be involved.
+    - Avoid interactions in Mozilla channels, physical spaces and offices, and online channels like social media (e.g., following/liking/retweeting).
+  - **Mandatory CPG onboarding process.**
+    The reportee has the opportunity to participate in the project again after onboarding that clarifies expected behavior.
 
 ### Level 4: Ban across MDN and Mozilla Spaces, All Areas Permanent Ban
 
