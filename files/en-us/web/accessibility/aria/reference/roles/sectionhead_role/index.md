@@ -8,7 +8,7 @@ sidebar: accessibilitysidebar
 
 The **`sectionhead` role**, an abstract role, is superclass role for labels or summaries of the topic of its related section.
 
-> [!NOTE]
+> [!WARNING]
 > The `sectionhead` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description

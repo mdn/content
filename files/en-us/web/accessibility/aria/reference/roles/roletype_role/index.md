@@ -8,7 +8,7 @@ sidebar: accessibilitysidebar
 
 The **`roletype`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles), is the base role from which all other ARIA roles inherit.
 
-> [!NOTE]
+> [!WARNING]
 > The `roletype` role is an abstract role used for the ontology. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description

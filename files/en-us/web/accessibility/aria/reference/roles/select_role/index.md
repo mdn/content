@@ -8,8 +8,8 @@ sidebar: accessibilitysidebar
 
 The **`select` role**, an abstract role, is superclass role for form widgets that allows the user to make selections from a set of choices.
 
-> [!NOTE]
-> The `select` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
+> [!WARNING]
+> The `select` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
