@@ -231,7 +231,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### CSS
 
-In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframe` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/color) so that you get a smooth animation effect as the content is shown/hidden.
 
 ```css
 div {

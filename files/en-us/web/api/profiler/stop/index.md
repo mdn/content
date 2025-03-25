@@ -3,10 +3,12 @@ title: "Profiler: stop() method"
 short-title: stop()
 slug: Web/API/Profiler/stop
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Profiler.stop
 ---
 
-{{APIRef("JS Self-Profiling API")}}
+{{APIRef("JS Self-Profiling API")}}{{SeeCompatTable}}
 
 The **`stop()`** method of the {{domxref("Profiler")}} interface stops the profiler and returns a {{jsxref("Promise")}} which resolves to the profile itself.
 

@@ -35,4 +35,5 @@ console.log(navigator.userAgentData.brands);
 
 ## See also
 
+- [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)

@@ -3,6 +3,7 @@ title: begin
 slug: Web/SVG/Reference/Attribute/begin
 page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#BeginAttribute
+sidebar: svgref
 ---
 
 The **`begin`** attribute defines when the associated element becomes active.

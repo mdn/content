@@ -132,6 +132,7 @@ coprime
 CORB
 credentialled
 credentialless
+CRSF
 cryptids
 cryptosystems
 CSSWG

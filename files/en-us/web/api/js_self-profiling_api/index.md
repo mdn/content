@@ -2,11 +2,13 @@
 title: JS Self-Profiling API
 slug: Web/API/JS_Self-Profiling_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.Profiler
 spec-urls: https://wicg.github.io/js-self-profiling/
 ---
 
-{{DefaultAPISidebar("JS Self-Profiling API")}}
+{{DefaultAPISidebar("JS Self-Profiling API")}}{{SeeCompatTable}}
 
 The JS Self-Profiling API enables a website to run a sampling profiler, to understand where it is spending JavaScript execution time.
 
@@ -35,7 +37,7 @@ To understand exactly what a profile contains and how it is formatted, see [Prof
 
 ### Profiling best practices
 
-Collecting and processing profile data incurs a performance overhead of its own, and developers should be careful to manage this. Practices to minimise performance overhead include:
+Collecting and processing profile data incurs a performance overhead of its own, and developers should be careful to manage this. Practices to minimize performance overhead include:
 
 - Use the [`maxbuffersize`](/en-US/docs/Web/API/Profiler/Profiler#maxbuffersize) and [`sampleinterval`](/en-US/docs/Web/API/Profiler/Profiler#sampleinterval) options to control how many samples to take and how often to sample.
 - Sample for short periods in a sampled manner: for example, trace for 5 seconds out of every 60 seconds.

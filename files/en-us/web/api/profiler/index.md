@@ -2,21 +2,23 @@
 title: Profiler
 slug: Web/API/Profiler
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.Profiler
 ---
 
-{{APIRef("JS Self-Profiling API")}}
+{{APIRef("JS Self-Profiling API")}}{{SeeCompatTable}}
 
 The **`Profiler`** interface of the [JS Self-Profiling API](/en-US/docs/Web/API/JS_Self-Profiling_API) enables you to create a [profile](/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format) of some part of your web application's execution.
 
 ## Constructor
 
-- {{domxref("Profiler.Profiler","Profiler()")}}
+- {{domxref("Profiler.Profiler","Profiler()")}} {{experimental_inline}}
   - : Creates a new `Profiler` object, and starts collecting samples.
 
 ## Instance methods
 
-- {{domxref("Profiler.stop()")}}
+- {{domxref("Profiler.stop()")}} {{experimental_inline}}
   - : Stops the profiler, returning a {{jsxref("Promise")}} that resolves to the [profile](/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format).
 
 ## Events

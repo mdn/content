@@ -14,3 +14,7 @@ This page links to pages explaining how some common attacks work, and how they c
   - : In a cross-site request forgery (CSRF) attack, an attacker tricks the user or the browser into making an HTTP request to the target site from a malicious site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
 - [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
   - : In a cross-site scripting (XSS) attack, a website accepts some input crafted by the attacker and mistakenly includes this input in the site's own pages in a way that makes the browser execute it as code. The malicious code can then do anything that the site's own front-end code could do.
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
+</section>

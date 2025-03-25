@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Platform-Version
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-Platform-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the version of the operating system on which the user agent is running.
+The HTTP **`Sec-CH-UA-Platform-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the version of the operating system on which the user agent is running.
 
 <table class="properties">
   <tbody>

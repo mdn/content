@@ -50,4 +50,4 @@ You can find more detailed information about the differences in the supported br
 
 - [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 - [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility)
