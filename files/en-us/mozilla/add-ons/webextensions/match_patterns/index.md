@@ -360,11 +360,11 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     </tr>
     <tr>
       <td><code>*://*</code></td>
-      <td>Empty path: this should be "<code>*://*/*</code>".</td>
+      <td>Empty path: this should be <code>*://*/*</code>.</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
-      <td>Empty path: this should be "<code>file:///*</code>".</td>
+      <td>Empty path: this should be <code>file:///*</code>.</td>
     </tr>
   </tbody>
 </table>

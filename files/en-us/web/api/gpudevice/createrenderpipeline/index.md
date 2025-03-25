@@ -272,7 +272,7 @@ The `primitive` object can contain the following properties:
 
     If omitted, `frontFace` defaults to `"ccw"`.
 
-    > [!NOTE] > `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
+    > **Note:** `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
 
 - `stripIndexFormat` {{optional_inline}}
 
