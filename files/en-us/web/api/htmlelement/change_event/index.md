@@ -12,10 +12,10 @@ The `change` event is fired for {{HTMLElement("input")}}, {{HTMLElement("select"
 
 Depending on the kind of element being changed and the way the user interacts with the element, the `change` event fires at a different moment:
 
-- When a `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` element is checked or unchecked (by clicking or using the keyboard);
-- When a `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` element is checked (but not when unchecked);
-- When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, by selecting a file in the file picker for `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.);
-- When the element loses focus after its value was changed: for elements where the user's interaction is typing rather than selection, such as a {{HTMLElement("textarea")}} or the `{{HTMLElement('input/text', 'text')}}`, `{{HTMLElement('input/search', 'search')}}`, `{{HTMLElement('input/url', 'url')}}`, `{{HTMLElement('input/tel', 'tel')}}`, `{{HTMLElement('input/email', 'email')}}`, or `{{HTMLElement('input/password', 'password')}}` types of the {{HTMLElement('input')}} element.
+- When a {{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}} element is checked or unchecked (by clicking or using the keyboard);
+- When a {{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}} element is checked (but not when unchecked);
+- When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for {{HTMLElement('input/date', '&lt;input type="date"&gt;')}}, by selecting a file in the file picker for {{HTMLElement('input/file', '&lt;input type="file"&gt;')}}, etc.);
+- When the element loses focus after its value was changed: for elements where the user's interaction is typing rather than selection, such as a {{HTMLElement("textarea")}} or the {{HTMLElement('input/text', 'text')}}, {{HTMLElement('input/search', 'search')}}, {{HTMLElement('input/url', 'url')}}, {{HTMLElement('input/tel', 'tel')}}, {{HTMLElement('input/email', 'email')}}, or {{HTMLElement('input/password', 'password')}} types of the {{HTMLElement('input')}} element.
 
 The HTML specification lists [the `<input>` types that should fire the `change` event](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
 

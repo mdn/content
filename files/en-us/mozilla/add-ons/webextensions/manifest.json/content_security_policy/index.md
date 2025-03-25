@@ -69,7 +69,7 @@ In Manifest V2, a source for a script directive is considered secure if it meets
 
 ## object-src directive
 
-The `{{CSP("object-src")}}` directive may be required in some browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin) and should be set to a secure source such as `'none'` if needed. This may be necessary for browsers up until 2022.
+The {{CSP("object-src")}} directive may be required in some browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin) and should be set to a secure source such as `'none'` if needed. This may be necessary for browsers up until 2022.
 
 - In Firefox, `"object-src"` it optional from Firefox 106. In earlier versions, if `"object-src"` isn't specified, `"content_security_policy"` is ignored and the default CSP used.
 - In Chrome, `"object-src"` is required. If it's missing or deemed insecure, the default (`"object-src 'self'"`) is used and a warning message logged.
@@ -129,7 +129,7 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to significant security issues.
 
 > [!NOTE]
-> Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
+> Some examples include the {{CSP("object-src")}} directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
 
 Require that all types of content should be packaged with the extension:
 

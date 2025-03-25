@@ -47,7 +47,7 @@ input {
 }
 ```
 
-If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
+If the user's browser doesn't support type `range`, it will fall back and treat it as a {{HTMLElement('input/text', 'text')}} input.
 
 ### Validation
 

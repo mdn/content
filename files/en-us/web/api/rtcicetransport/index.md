@@ -17,7 +17,7 @@ This is particularly useful if you need to access state information about the co
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_
 
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
-  - : The ICE component being used by the transport. The value is one of the strings from the `RTCIceTransport` enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
+  - : The ICE component being used by the transport. The value is one of the strings from the `RTCIceTransport` enumerated type: {{Glossary("RTP", '"RTP"')}} or `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
   - : A string indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
