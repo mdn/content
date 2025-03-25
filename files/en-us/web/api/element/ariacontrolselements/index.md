@@ -227,8 +227,8 @@ function logAccessibleInfo(element) {
   controlledElements = element.ariaControlsElements;
   // List innerText for each of the ariaControlsElements
   let text = "";
-  controlledElements.forEach((controlled) => {
-    text += `"${controlled.textContent.trim()}" `;
+  controlledElements.forEach((el) => {
+    text += `"${el.textContent.trim()}" `;
   });
   text = text.trim();
 

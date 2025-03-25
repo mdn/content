@@ -8,29 +8,36 @@ browser-compat: api.Element.ariaLabelledByElements
 
 {{APIRef("DOM")}}
 
-The **`ariaLabelledByElements`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute, which identifies the element (or elements) that provide an accessible name for the element it is applied to.
+The **`ariaDescribedByElements`** property of the {{domxref("Element")}} interface identifies the element (or elements) that provide an accessible name for the element it is applied to.
 
 The property is primarily intended to provide a label for elements that don't have a standard method for defining their accessible name.
 For example, this might be used to name a generic container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}}, or a grouping of elements, such as an image with a slider that can be used to change its opacity.
 The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.
 
-The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) topic contains additional information about when the property should be set.
+The property reflects the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 
 ## Value
 
-An array of elements that provide the accessible name.
+An array of elements that can be joined with spaces to get the accessible name (label).
 
-The property array can include elements in the current scope, or to an ancestor scope, but not to a descendant scope.
-In other words, a shadow root can set part of the label from within its own shadow DOM or the parent DOM, but a DOM element can't set part of the label from an element defined in a shadow root.
-Setting the `ariaLabelledByElements` to an element that is not in scope will fail, and the property will be set to `null`.
+## Description
 
-If the `ariaLabelledByElements` property includes an element that is subsequently moved out of scope the property subsequently omit that element, but the relationship is not severed!
+The `ariaLabelledByElements` property is a flexible alternative to using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to set the accessible name.
+Unlike `aria-labelledby`, the elements assigned to this property can be selected: they do not have to have an `id`.
+This can be convenient as it avoids having to unnecessarily create ids for elements in order to assign them as the name.
+
+The elements that form the name may be in the current scope or an ancestor scope of the element, but not a descendant scope.
+In other words, a shadow root can set parts of the name from within its own shadow DOM or the parent DOM, but a DOM element can't set parts of the name from elements defined in a shadow root.
+
+If the `ariaLabelledByElements` property array includes an element that is subsequently moved out of scope, it will be omitted if you read the property, but the relationship is not severed!
 If the associated element is moved back into scope the relationship will be restored (provided it has not been replaced).
 
-The property also reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute, which can be set in HTML or with {{domxref("Element.setAttribute()")}}.
-If the attribute contains invalid or out of scope references, then there will be no corresponding elements in `ariaLabelledByElements`.
+The property reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute if it is defined.
+Note however that the property will omit elements in the attribute where the associated reference `id` does not exist or is out of scope.
+The property can be set directly or using the `aria-labelledby` attribute with {{domxref("Element.setAttribute()")}}.
+If the accessible name is set using `ariaLabelledByElements` then the `aria-labelledby` is set to the empty string (`""`).
 
-Note that when the property is set, the corresponding [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute is set to the empty string (`""`).
+The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) topic contains additional information about how the accessible name should be used.
 
 ## Examples
 
@@ -136,6 +143,21 @@ The accessible name of the `<input>` is then the concatenation of the inner text
 
 The code first defines a logging function to list the ids from the `aria-labelledby` attribute using {{domxref("Element.getAttribute()")}}, the aria labelled elements from `ariaLabelledByElements`, and the accessible name constructed from the inner text of each of those elements.
 
+```js
+function logAccessibleInfo(element) {
+  const refids = element.getAttribute("aria-labelledby");
+
+  let text = "";
+  accessElements = element.ariaLabelledByElements;
+  accessElements.forEach((el) => {
+    text += el.textContent.trim() + " ";
+  });
+  text = text.trim();
+
+  log(` id: "${refids}", el: ${accessElements}, label: ${text} `);
+}
+```
+
 If `ariaLabelledByElements` is supported, the code:
 
 1. Logs the original `id` reference from `aria-labelledby`, the corresponding `ariaLabelledByElements`, and the element's text content.
@@ -153,36 +175,18 @@ function log(text) {
 ```js
 const inputElement = document.querySelector("input");
 
-function logElementAccessibleName(element) {
-  const refids = element.getAttribute("aria-labelledby");
-
-  let accessibleName = "";
-  accessElements = element.ariaLabelledByElements;
-  accessElements.forEach((labelElement) => {
-    accessibleName += labelElement.textContent.trim() + " ";
-  });
-  accessibleName = accessibleName.trim();
-
-  log(` id: "${refids}", el: ${accessElements}, label ${accessibleName} `);
-}
-
 // Feature test for ariaLabelledByElements
 if ("ariaLabelledByElements" in Element.prototype) {
   log("[1] Attribute set in HTML");
-  logElementAccessibleName(inputElement);
+  logAccessibleInfo(inputElement);
 
   log("[2] Property set from span selector");
   inputElement.ariaLabelledByElements = document.querySelectorAll("span");
-  logElementAccessibleName(inputElement);
-
-  // We could also set the labels explicitly.
-  //const label1Element = document.querySelector("#label_1");
-  //const label2Element = document.querySelector("#label_2");
-  //inputElement.ariaLabelledByElements = [label1Element, label2Element];
+  logAccessibleInfo(inputElement);
 
   log("[3] Attribute set from using setAttribute");
   inputElement.setAttribute("aria-labelledby", "label_1 label_4 label_3");
-  logElementAccessibleName(inputElement);
+  logAccessibleInfo(inputElement);
 } else {
   log("ariaLabelledByElements not supported by browser");
 }
@@ -191,10 +195,14 @@ if ("ariaLabelledByElements" in Element.prototype) {
 #### Result
 
 The log below shows the output of the above code.
-Line 2 demonstrates that `ariaLabelledByElements` property can be set using either the property or a valid reference in the `aria-labelledby` attribute, and that setting the `ariaLabelledByElements` property sets the `aria-labelledby` attribute to `""`.
-Line [3] shows what happens when you set three reference `id` values in the attribute, but one of them is invalid (`label_4`).
 
 {{EmbedLiveSample("Set the accessible name","100%","350px")}}
+
+Note:
+
+- Line [1] Logs the original `id` reference from `aria-labelledby`, the corresponding `ariaLabelledByElements`, and the element's text content.
+- Line [2] demonstrates that `ariaLabelledByElements` property can be set using either the property or a valid reference in the `aria-labelledby` attribute, and that setting the `ariaLabelledByElements` property sets the `aria-labelledby` attribute to `""`.
+- Line [3] shows what happens when you set three reference `id` values in the attribute, but one of them is invalid (`label_4`).
 
 ## Specifications
 

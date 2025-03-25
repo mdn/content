@@ -15,7 +15,7 @@ The property reflects the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARI
 
 ## Value
 
-An array of elements that can be joined with spaces to get the accessible name.
+An array of elements that can be joined with spaces to get the accessible description.
 
 ## Description
 
@@ -26,7 +26,7 @@ This can be convenient as it avoids having to unnecessarily create ids for eleme
 The elements that form the description may be in the current scope or an ancestor scope of the element, but not a descendant scope.
 In other words, a shadow root can set parts of the description from within its own shadow DOM or the parent DOM, but a DOM element can't set parts of the description from elements defined in a shadow root.
 
-If the `ariaDescribedByElements` property includes an element that is subsequently moved out of scope the property subsequently omit that element, but the relationship is not severed!
+If the `ariaDescribedByElements` property array includes an element that is subsequently moved out of scope, it will be omitted if you read the property, but the relationship is not severed!
 If the associated element is moved back into scope the relationship will be restored (provided it has not been replaced).
 
 The property reflects the element's [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute if it is defined.
@@ -216,7 +216,6 @@ if ("ariaDescribedByElements" in Element.prototype) {
 #### Result
 
 The log below shows the output of the above code.
-
 
 {{EmbedLiveSample("Set the accessible description","100%","350px")}}
 
