@@ -56,7 +56,7 @@ browser.menus.create(
 
     - `contexts` {{optional_inline}}
 
-      - : `array` of `{{WebExtAPIRef('menus.ContextType')}}`. Array of contexts in which this menu item will appear. If this option is omitted:
+      - : `array` of {{WebExtAPIRef('menus.ContextType')}}. Array of contexts in which this menu item will appear. If this option is omitted:
 
         - if the item's parent has contexts set, then this item will inherit its parent's contexts
         - otherwise, the item is given a context array of \["page"].
@@ -116,9 +116,9 @@ browser.menus.create(
         In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see [Firefox bug 1647373](https://bugzil.la/1647373).
 
     - `type` {{optional_inline}}
-      - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
+      - : {{WebExtAPIRef('menus.ItemType')}}. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
     - `viewTypes` {{optional_inline}}
-      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+      - : {{WebExtAPIRef('extension.ViewType')}}. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
     - `visible` {{optional_inline}}
       - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
 
