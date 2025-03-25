@@ -40,6 +40,7 @@ Prefer: <preference>
 
 - `respond-async`
   - : The client prefers asynchronous processing.
+    For example, the server might respond with {{httpstatus("202", "202 (Accepted)")}} response indicated that the request has been accepted, along with the {{httpheader("Location")}} header that has a URL that the client can use to monitor the state of the processing.
 - `return=minimal`
   - : Requests that the server return minimal content (a headers-only response).
 - `return=representation`
