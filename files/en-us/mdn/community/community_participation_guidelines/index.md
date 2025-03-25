@@ -19,7 +19,7 @@ This document describes how to report violations and what happens depending on t
 
 ## Code of Conduct Violations and Enforcement Ladder
 
-MDN Community Management investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
+[MDN Community Management](https://github.com/orgs/mdn/teams/community) investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
 Violations follow a step-by-step escalation process, and the reportee is informed of consequences at leach level.
 In serious cases, enforcement may skip levels up to and including an immediate, permanent ban.
 
@@ -59,12 +59,12 @@ Below is a summary of severity levels and enforcement actions.
 
 - **Severity:** Serious [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/) breaches
 - **Actions:**
-  - Private communication of ban from project leadership, with clarity of the violation and consequences of continued behavior.
+  - Private communication of a ban from project leadership, with clarity of the violation and warning of consequences. Should the behavior continue, it would lead to a ban from all Mozilla community spaces.
   - Required to avoid interaction on community messaging platforms and external channels.
-  - All Mozilla accounts will be deactivated permanently.
-  - Not allowed to enter Mozilla digital and event spaces permanently.
-  - All community leadership roles will be permanently suspended.
-  - Permission to use the Mozilla trademark is revoked.
+  - Deactivation of any and all Mozilla accounts.
+  - Permanently banned from entering Mozilla digital and event spaces.
+  - Permanently suspended from any and all community leadership roles.
+  - Revocation of any and all permissions to use the Mozilla trademark.
 
 ## Reporting Process
 
@@ -74,14 +74,16 @@ Reports should be sent to mdn-cpg-report@mozilla.com.
 Include any relevant details, including date, time, description of the violation.
 Include identifying information of the offender and screenshots, if possible.
 
+To report a violation or abuse on GitHub, you can [use this guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) for the MDN team to take necessary action.
+
 ### Investigation
 
-MDN Community Management investigate all reports confidentially.
+[MDN Community Management](https://github.com/orgs/mdn/teams/community) investigates all reports confidentially.
 When necessary, further information may be requested from the involved parties.
 
 ### Decision Making
 
-MDN Community Management assess the severity of the violation, apply the enforcement actions as outlined, and communicate the outcome to relevant parties.
+[MDN Community Management](https://github.com/orgs/mdn/teams/community) assess the severity of the violation, apply the enforcement actions as outlined, and communicate the outcome to relevant parties.
 
 ### Appeals
 
@@ -91,7 +93,7 @@ Appeals are reviewed by a separate, impartial panel.
 ### Documentation and Record Keeping
 
 All incidents will be documented to ensure consistency and fairness.
-Records of violations and actions taken are kept private, and accessible only by MDN Community Management.
+Records of violations and actions taken are kept private, and accessible only by [MDN Community Management](https://github.com/orgs/mdn/teams/community).
 
 ## Frequently Asked Questions (FAQs)
 
