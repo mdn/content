@@ -7,13 +7,13 @@ browser-compat: html.elements.selectedcontent
 
 {{HTMLSidebar}}
 
-The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content, created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood. `<selectedcontent>` represents the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}** as it is the button you need to press to open the drop-down picker.
+The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to display the content of the currently selected `<option>` inside a closed `<select>` element.
 
 ## Attributes
 
-The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select `<button>`, the element is rendered {{glossary("inert")}}.
+The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered {{glossary("inert")}}.
 
-The select `<button>` and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
+The select button and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
 
 No other attributes are defined on `<selectedcontent>`.
 
@@ -31,17 +31,19 @@ When creating a [Customizable select element](/en-US/docs/Learn_web_development/
 </select>
 ```
 
+`<selectedcontent>` contains a clone of a {{htmlelement("select")}} element's currently-selected {{htmlelement("option")}} element content, created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood.
+
 Any subsequent `<select>` content will be included in the drop-down picker.
 
 Whenever the `<select>` element's selected `<option>` switches from one option to another, the `<selectedcontent>` element's content is removed and replaced by a new cloned copy of the DOM structure of the newly selected <code>option</code>, which is created using {{domxref("Node.cloneNode", "cloneNode()")}}.
 
 ## Styling with CSS
 
-It is useful to be able to target the currently-selected `<option>` element's content as it appears inside the select `<button>` with CSS styles, without affecting the styling of the content as it appears inside the picker.
+It is useful to be able to target the currently-selected `<option>` element's content as it appears inside the select button with CSS styles, without affecting the styling of the content as it appears inside the picker.
 
-For example, your `<option>` elements may contain icons, images, or even videos. This content might look nice inside the picker, but could cause the select `<button>` to increase in size, look untidy, and affect the surrounding layout.
+For example, your `<option>` elements may contain icons, images, or even videos. This content might look nice inside the picker, but could cause the select button to increase in size, look untidy, and affect the surrounding layout.
 
-This can be fixed by hiding the problem content when it is contained inside `<selectedcontent>`. For example:
+This could be fixed by hiding the problem content when it is contained inside `<selectedcontent>`. For example:
 
 ```css
 selectedcontent img {
@@ -50,7 +52,7 @@ selectedcontent img {
 ```
 
 > [!NOTE]
-> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select `<button>` implicitly, but this targetting will not be possible.
+> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targetting will not be possible.
 
 ## Examples
 

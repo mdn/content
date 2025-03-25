@@ -389,7 +389,7 @@ You can see an isolated example of this in our [Popover positioning example](htt
 
 There is another useful positioning option that the Popover API provides. If you want to position a popover relative to its invoker rather than the viewport or a positioned ancestor, you can take advantage of the fact that popovers and their invokers have an **implicit anchor reference**.
 
-[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 

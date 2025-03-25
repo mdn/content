@@ -39,7 +39,7 @@ To recap what we said in the previous article, we have:
 
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
-  > Modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
+  > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
@@ -369,11 +369,9 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 ### Selects and datalists
 
-Selects are generally not too bad to style. Modern browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you don't need to worry about these legacy techniques any more.
+Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you no longer need to worry about the legacy techniques described below for `<select>` elements.
 
-Datalist styling is still limited.
-
-For datalists, and for selects in browsers that don't support customizable selects, you can get an OK level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The `datalist` invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
+Styling datalists and selects (in browsers that don't support customizable selects) allows an acceptable level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
 Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
 
@@ -511,8 +509,6 @@ You can see the result of the above CSS styling in the below live example (see a
 [`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
-
-The article [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS, and JavaScript.
 
 ## Summary
 

@@ -53,7 +53,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-Styling `<option>` elements has historically been highly limited, hence features being introduced to enable their full customization, just like any regular DOM element. See [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) for more details.
+Styling `<option>` elements has historically been highly limited. [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) explains newer features that enable their full customization, just like any regular DOM element.
 
 ### Legacy option styling
 

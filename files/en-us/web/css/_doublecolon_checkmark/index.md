@@ -7,7 +7,7 @@ browser-compat: css.selectors.checkmark
 
 {{CSSRef}}
 
-The **`::checkmark`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the checkmark placed inside the currently-selected {{htmlelement("option")}} element of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) to provide a visual indication of which one is selected.
+The **`::checkmark`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the checkmark placed inside the currently-selected {{htmlelement("option")}} element of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select). It can be used to provide a visual indication of which option is selected.
 
 ## Syntax
 
@@ -16,10 +16,6 @@ The **`::checkmark`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
   /* ... */
 }
 ```
-
-### Parameters
-
-None.
 
 ## Description
 
@@ -45,9 +41,9 @@ select,
 }
 ```
 
-Assuming [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is being used to lay out the `<option>` elements (which it is by default in customizable selects), you could then move the checkmark from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_and_auto_margins)).
+Assuming [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is being used to lay out the `<option>` elements, you could then move the checkmark from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_and_auto_margins)).
 
-The value of the {{cssxref("content")}} property could also be set to a different emoji, to set a different icon to display.
+The value of the {{cssxref("content")}} property could also be set to a different emoji to change the displayed icon.
 
 ```css
 option::checkmark {

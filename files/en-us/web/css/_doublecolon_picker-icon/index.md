@@ -7,7 +7,7 @@ browser-compat: css.selectors.picker-icon
 
 {{CSSRef}}
 
-The **`::picker-icon`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the picker icon inside form controls that have an icon associated with them. In the case of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), it selects the down-facing arrow on the inline-end side of the `<select>` element.
+The **`::picker-icon`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the picker icon inside form controls that have an icon associated with them. In the case of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), it selects the arrow icon shown on the `<select>` element that points down when it is closed.
 
 ## Syntax
 
@@ -16,10 +16,6 @@ The **`::picker-icon`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
   /* ... */
 }
 ```
-
-### Parameters
-
-None.
 
 ## Description
 
