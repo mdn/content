@@ -203,6 +203,7 @@ Access-Control-Allow-Credentials: true
 Note that the `Access-Control-Allow-Origin` must be set to the specific origin of the requester (the RP) and cannot be the wildcard value `*`.
 
 Without these headers, the request will fail with a network error.
+
 ```json
 {
   "token": "***********"
