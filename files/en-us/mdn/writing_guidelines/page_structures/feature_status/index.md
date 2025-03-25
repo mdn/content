@@ -36,7 +36,7 @@ The following sections document the mechanisms that are used to insert and rende
 
 ### Feature status icons in sidebars
 
-The `status` property in page [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) is used to generate status icons for features when they are displayed in sidebars.
+The `status` property in page front matter is used to generate status icons for features when they are displayed in sidebars.
 
 ```yml
 ---
