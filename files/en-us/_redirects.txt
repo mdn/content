@@ -566,7 +566,7 @@
 /en-US/docs/CSS/Using_the_CSS_multi-column_layout	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/CSS/Value_definition_syntax	/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /en-US/docs/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
-/en-US/docs/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/actual_value
+/en-US/docs/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/CSS/align-content	/en-US/docs/Web/CSS/align-content
 /en-US/docs/CSS/align-items	/en-US/docs/Web/CSS/align-items
 /en-US/docs/CSS/align-self	/en-US/docs/Web/CSS/align-self
@@ -663,7 +663,7 @@
 /en-US/docs/CSS/column-span	/en-US/docs/Web/CSS/column-span
 /en-US/docs/CSS/column-width	/en-US/docs/Web/CSS/column-width
 /en-US/docs/CSS/columns	/en-US/docs/Web/CSS/columns
-/en-US/docs/CSS/computed_value	/en-US/docs/Web/CSS/CSS_cascade/computed_value
+/en-US/docs/CSS/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
 /en-US/docs/CSS/content	/en-US/docs/Web/CSS/content
 /en-US/docs/CSS/counter	/en-US/docs/Web/CSS/counter
 /en-US/docs/CSS/counter-increment	/en-US/docs/Web/CSS/counter-increment
@@ -716,7 +716,7 @@
 /en-US/docs/CSS/inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS/initial	/en-US/docs/Web/CSS/initial
-/en-US/docs/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/initial_value
+/en-US/docs/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/CSS/integer	/en-US/docs/Web/CSS/integer
 /en-US/docs/CSS/justify-content	/en-US/docs/Web/CSS/justify-content
 /en-US/docs/CSS/left	/en-US/docs/Web/CSS/left
@@ -786,7 +786,7 @@
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
 /en-US/docs/CSS/shape-rendering	/en-US/docs/Web/SVG/Reference/Attribute/shape-rendering
-/en-US/docs/CSS/specified_value	/en-US/docs/Web/CSS/CSS_cascade/specified_value
+/en-US/docs/CSS/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
 /en-US/docs/CSS/static	/en-US/docs/Web/CSS/position
 /en-US/docs/CSS/stop-color	/en-US/docs/Web/SVG/Reference/Attribute/stop-color
 /en-US/docs/CSS/stop-opacity	/en-US/docs/Web/SVG/Reference/Attribute/stop-opacity
@@ -833,7 +833,7 @@
 /en-US/docs/CSS/transition-timing-function	/en-US/docs/Web/CSS/transition-timing-function
 /en-US/docs/CSS/unicode-bidi	/en-US/docs/Web/CSS/unicode-bidi
 /en-US/docs/CSS/uri	/en-US/docs/Web/CSS/url_value
-/en-US/docs/CSS/used_value	/en-US/docs/Web/CSS/CSS_cascade/used_value
+/en-US/docs/CSS/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
 /en-US/docs/CSS/user-select	/en-US/docs/Web/CSS/user-select
 /en-US/docs/CSS/vertical-align	/en-US/docs/Web/CSS/vertical-align
@@ -997,7 +997,7 @@
 /en-US/docs/CSS:clip	/en-US/docs/Web/CSS/clip
 /en-US/docs/CSS:color	/en-US/docs/Web/CSS/color
 /en-US/docs/CSS:color_value	/en-US/docs/Web/CSS/color_value
-/en-US/docs/CSS:computed_value	/en-US/docs/Web/CSS/CSS_cascade/computed_value
+/en-US/docs/CSS:computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
 /en-US/docs/CSS:content	/en-US/docs/Web/CSS/content
 /en-US/docs/CSS:counter	/en-US/docs/Web/CSS/counter
 /en-US/docs/CSS:counter-increment	/en-US/docs/Web/CSS/counter-increment
@@ -1022,7 +1022,7 @@
 /en-US/docs/CSS:inheritance	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS:inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
 /en-US/docs/CSS:initial	/en-US/docs/Web/CSS/initial
-/en-US/docs/CSS:initial_value	/en-US/docs/Web/CSS/CSS_cascade/initial_value
+/en-US/docs/CSS:initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/CSS:integer	/en-US/docs/Web/CSS/integer
 /en-US/docs/CSS:left	/en-US/docs/Web/CSS/left
 /en-US/docs/CSS:length	/en-US/docs/Web/CSS/length
@@ -12111,6 +12111,11 @@
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_animations/Tips	/en-US/docs/Web/API/Web_Animations_API/Tips
+/en-US/docs/Web/CSS/CSS_cascade/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
+/en-US/docs/Web/CSS/CSS_cascade/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
+/en-US/docs/Web/CSS/CSS_cascade/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
+/en-US/docs/Web/CSS/CSS_cascade/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
+/en-US/docs/Web/CSS/CSS_cascade/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
 /en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
@@ -12210,7 +12215,7 @@
 /en-US/docs/Web/CSS/Visual_formatting_model	/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model
 /en-US/docs/Web/CSS/_image	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/abs()	/en-US/docs/Web/CSS/abs
-/en-US/docs/Web/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/actual_value
+/en-US/docs/Web/CSS/actual_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value
 /en-US/docs/Web/CSS/additive-symbols	/en-US/docs/Web/CSS/@counter-style/additive-symbols
 /en-US/docs/Web/CSS/align-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/attr()	/en-US/docs/Web/CSS/attr
@@ -12244,7 +12249,7 @@
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/system-color	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/color_value/system_color_keywords	/en-US/docs/Web/CSS/system-color
-/en-US/docs/Web/CSS/computed_value	/en-US/docs/Web/CSS/CSS_cascade/computed_value
+/en-US/docs/Web/CSS/computed_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/conic-gradient()	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/counter()	/en-US/docs/Web/CSS/counter
@@ -12297,7 +12302,7 @@
 /en-US/docs/Web/CSS/image/paint()	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/imagefunction	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/CSS_cascade/Inheritance
-/en-US/docs/Web/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/initial_value
+/en-US/docs/Web/CSS/initial_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value
 /en-US/docs/Web/CSS/inset-area	/en-US/docs/Web/CSS/position-area
 /en-US/docs/Web/CSS/inset-area_value	/en-US/docs/Web/CSS/position-area_value
 /en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
@@ -12347,6 +12352,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
+/en-US/docs/Web/CSS/resolved_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value
 /en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
@@ -12354,7 +12360,7 @@
 /en-US/docs/Web/CSS/sign()	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/sign_function	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
-/en-US/docs/Web/CSS/specified_value	/en-US/docs/Web/CSS/CSS_cascade/specified_value
+/en-US/docs/Web/CSS/specified_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value
 /en-US/docs/Web/CSS/static	/en-US/docs/Web/CSS/position
 /en-US/docs/Web/CSS/suffix	/en-US/docs/Web/CSS/@counter-style/suffix
 /en-US/docs/Web/CSS/symbols()	/en-US/docs/Web/CSS/symbols
@@ -12388,7 +12394,7 @@
 /en-US/docs/Web/CSS/uri	/en-US/docs/Web/CSS/url_value
 /en-US/docs/Web/CSS/url	/en-US/docs/Web/CSS/url_value
 /en-US/docs/Web/CSS/url()	/en-US/docs/Web/CSS/url_function
-/en-US/docs/Web/CSS/used_value	/en-US/docs/Web/CSS/CSS_cascade/used_value
+/en-US/docs/Web/CSS/used_value	/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value
 /en-US/docs/Web/CSS/user-ident	/en-US/docs/Web/CSS/custom-ident
 /en-US/docs/Web/CSS/var()	/en-US/docs/Web/CSS/var
 /en-US/docs/Web/CSS/visible	/en-US/docs/Web/CSS/visibility
