@@ -7,7 +7,7 @@ browser-compat: css.selectors.target-current
 
 {{CSSRef}}
 
-The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker. This can be used to stlye it differently, so the user can see see their navigation position inside the scroll marker group.
+The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker. This can be used to style it differently, so the user can see see their navigation position inside the scroll marker group.
 
 ## Syntax
 
@@ -20,6 +20,14 @@ The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Examples
 
 See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for full examples that use the `:target-current` pseudo-class.
+
+### Basic usage
+
+```css
+::scroll-marker:target-current {
+  background-color: black;
+}
+```
 
 ## Specifications
 

@@ -21,7 +21,9 @@ The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 A scroll container's **`::scroll-marker-group`** pseudo-element automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on its descendants. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel, to create a scroll position indicator. The individual scroll markers can also be used to navigate to their associated content items.
 
-The {{cssxref("scroll-marker-group")}} property must be set to a non-`none` value on the scroll container for a `::scroll-marker-group` pseudo-element to be generated; the chosen value determines whether it is generated `before` or `after` the container's DOM content.
+The {{cssxref("scroll-marker-group")}} property must be set to a non-`none` value on the scroll container for a `::scroll-marker-group` pseudo-element to be generated; the chosen value determines whether it is generated `before` or `after` the container's DOM content. It also affects where the scroll marker group appears in the container's tab order — `before` puts it at the start, while `after` puts it at the end.
+
+It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the group at the start of the content, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
 
 Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
 
@@ -32,7 +34,7 @@ Accessibility-wise, the scroll marker group and contained scroll markers are ren
 
 ### Generating and positioning a scroll marker group
 
-IIn the below snippet, a scrolling {{htmlelement("ul")}} element's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is generated after the list's DOM content:
+In the below snippet, a scrolling {{htmlelement("ul")}} element's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is generated after the list's DOM content:
 
 ```css
 ul {

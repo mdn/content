@@ -259,6 +259,9 @@ ul {
 }
 ```
 
+> [!NOTE]
+> The `scroll-marker-group` property value also affects where the scroll marker group appears in the carousel's tab order — `before` puts it at the start, while `after` puts it at the end.
+
 Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll buttons except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___first-example

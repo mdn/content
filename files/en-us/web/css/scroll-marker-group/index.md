@@ -31,15 +31,18 @@ scroll-marker-group: unset;
 
 - `after`
 
-  - : The {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately following them.
+  - : The {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately following them. It is also put at the end of the container's tab order.
 
 - `before`
 
-  - : The `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements.
+  - : The `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It is also put at the start of the container's tab order.
 
 - `none`
 
   - : The scroll container does not have a generated `::scroll-marker-group` pseudo-element. This is the default value if the `scroll-marker-group` property is not explicitly set.
+
+> [!NOTE]
+> It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the group at the start of the content, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
 
 ## Formal definition
 
