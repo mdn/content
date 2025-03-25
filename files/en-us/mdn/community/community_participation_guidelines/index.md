@@ -40,7 +40,7 @@ Below is a summary of severity levels and enforcement actions.
 - **Severity:** Moderate violation of the CPG, or repeated minor violations.
 - **Actions:**
   - A private, written warning with clarity of the violation and consequences of continued behavior.
-  - Guidance on rectification of aggrieving situation, if applicable.
+  - Guidance on rectifying the situation, if possible.
   - Communication of next-level consequences if behaviors are repeated.
 
 ### Level 3: Warning + Mandatory Cooling Off Period (Tool Access Revoked - GH & Discord)
@@ -68,7 +68,9 @@ Below is a summary of severity levels and enforcement actions.
 
 ### How to Report a violation
 
-Reports should be sent to mdn-cpg-report@mozilla.com.
+Reports can be sent to mdn-cpg-report@mozilla.com.
+Content flagged on MDN GitHub repositories is visible to MDN staff when the "Report to repository admins" option is checked, and this may be used to report CPG violations.
+See GitHub's [Reporting abuse or spam](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) documentation for details.
 Include any relevant details, including date, time, description of the violation.
 Include identifying information of the offender and screenshots, if possible.
 
