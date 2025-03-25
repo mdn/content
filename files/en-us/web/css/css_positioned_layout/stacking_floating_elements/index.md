@@ -123,4 +123,4 @@ strong {
 - [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
 - [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout/) module
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
