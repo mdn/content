@@ -116,9 +116,9 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 From here the process is similar to the previous example when a matching resources is requested.
 
-## Creating dictionary compressed responses
+## Creating dictionary-compressed responses
 
-Delta-compressed dictioresourcesnaries use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
+Dictionary-compressed (also known as delta-compressed) responses use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
 
 These can be created dynamically, but it is often better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
 
