@@ -69,7 +69,7 @@ This article provides information about the changes in Firefox 137 that affect d
 
 #### General
 
-- Mouse and touch pointer actions in Marionette and WebDriver BiDi support now fractional numbers for x and y positions ([Firefox bug 1946774](https://bugzil.la/1946774)).
+- Input sources of type `mouse` and `touch` now support fractional numbers for x and y positions for the `pointerMove` action ([Firefox bug 1946774](https://bugzil.la/1946774)).
 
 #### WebDriver BiDi
 
