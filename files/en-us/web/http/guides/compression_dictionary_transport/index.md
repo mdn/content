@@ -57,7 +57,7 @@ While text compression is incredibly effiction, creating files that are are ofte
 
 ## Dictionary format
 
-A compression dictionary does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files and so can be text files or even binary. For example, [WASM](/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
