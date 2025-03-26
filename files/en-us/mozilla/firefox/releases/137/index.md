@@ -73,7 +73,7 @@ This article provides information about the changes in Firefox 137 that affect d
 
 #### WebDriver BiDi
 
-- Implemented new `webExtenstion.install` ([Firefox bug 1934551](https://bugzil.la/1934551)) and `webExtenstion.uninstall` ([Firefox bug 1934551](https://bugzil.la/1934553)) commands, enabling clients to install and uninstall web extensions in the browser.
+- Implemented new `webExtension.install` ([Firefox bug 1934551](https://bugzil.la/1934551)) and `webExtension.uninstall` ([Firefox bug 1934553](https://bugzil.la/1934553)) commands, enabling clients to install and uninstall web extensions in the browser.
 - Added support for `userContexts` argument to `sessions.subscribe` command, which allows clients subscribing to a list of user contexts (also known as Firefox containers)
   ([Firefox bug 1938604](https://bugzil.la/1938604)).
 - `script.addPreloadScript` command is updated to throw "InvalidArgument" error when both "contexts" and "userContexts" arguments are provided ([Firefox bug 1945554](https://bugzil.la/1945554)).
