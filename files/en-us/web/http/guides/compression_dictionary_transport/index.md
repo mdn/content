@@ -6,7 +6,7 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-**Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP requests.
+**Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 
 Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like function is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
 
@@ -36,7 +36,7 @@ Where `[0:9]` refers to copying the 9 characters starting at character 0. Note t
 
 Clients can then easily reverse the compression after download to recreate the original, uncompressed resource.
 
-Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a pre-defined, default dictionary that is used when compressing HTTP requests.
+Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a pre-defined, default dictionary that is used when compressing HTTP responses.
 
 Compression Dictionary Transport builds on this by enabling you to provide your own dictionary which is especially applicable to a particular set of resources. The compression algorithm can then use as a source of strings when compressing and decompressing the resource.
 
