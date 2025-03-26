@@ -53,11 +53,11 @@ Bitwise NOTing any number representable as a 32-bit signed integer `x` yields `-
 
 Numbers with more than 32 bits as a signed integer get their most significant bits discarded before the bitwise operation is performed. For example:
 
-| Binary | Decimal |
-|-------:|--------:|
-`11100110111110100000000000000110000000000001`<br>Truncated: `10100000000000000110000000000001` | 15872588537857<br>2684379137
-`11111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` | -1<br>-1
-`011111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` | 4294967295 (2<sup>32</sup> - 1)<br>-1
+|                                                                                          Binary |                               Decimal |
+| ----------------------------------------------------------------------------------------------: | ------------------------------------: |
+| `11100110111110100000000000000110000000000001`<br>Truncated: `10100000000000000110000000000001` |          15872588537857<br>2684379137 |
+|             `11111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` |                              -1<br>-1 |
+|            `011111111111111111111111111111111`<br>Truncated: `11111111111111111111111111111111` | 4294967295 (2<sup>32</sup> - 1)<br>-1 |
 
 Likewise, any non-integer part is also discarded. As a result, bitwise NOTing any number `x` twice returns `x` converted to a 32-bit integer, so `~~x` is occasionally used as a way of truncating arbitrary numbers to integers. However, [`Math.trunc()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc#using_bitwise_no-ops_to_truncate_numbers) is a better general-purpose method of truncating numbers, as it doesn't suffer from 32-bit integer overflow, and typically has near-identical performance in modern JavaScript engines.
 
