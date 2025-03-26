@@ -108,6 +108,12 @@ Alternatively, an HTML document can specify one or more separate dictionaries wi
 <link rel="compression-dictionary" href="/dictionary.dat" />
 ```
 
+Or, alternatively, with {{HTTPHeader("Link")}} header:
+
+```http
+Link: </dictionary.dat>; rel="compression-dictionary"
+```
+
 This dictionary is then downloaded by the browser during idle time, and that response must include the {{HTTPHeader("Use-As-Dictionary")}} HTTP Header:
 
 ```http
