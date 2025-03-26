@@ -88,7 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `commandfor` {{experimental_inline}}
   - : This is a more general version of [`popovertarget`](#popovertarget).
-  - : Turns a {{htmlelement("button")}} element into a command button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : Turns a `<button>` element into a command button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
@@ -280,13 +280,13 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
           >submittable</a
         >
         <a

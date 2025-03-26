@@ -2,7 +2,7 @@
 title: shortcuts
 slug: Web/Progressive_web_apps/Manifest/Reference/shortcuts
 page-type: web-manifest-member
-browser-compat: html.manifest.shortcuts
+browser-compat: manifests.webapp.shortcuts
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
