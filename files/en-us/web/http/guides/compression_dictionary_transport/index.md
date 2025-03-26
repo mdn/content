@@ -53,6 +53,12 @@ For example, suppose your website uses a JavaScript library. You would typically
 
 If you then update to v2 of the library, most of the library's code will probably have stayed the same. So sites can greatly reduce the size of the download for `my-library.v2.js` by telling the browser to use `my-library.v1.js` as a compression dictionary for `my-library.v2.js`. Then all strings that are common between v1 and v2 don't need to be included in the download for v2, because the browser already has them. Most of the download size of `my-library.v2.js` is then just the delta between the two versions.
 
+While text compression is incredibly effiction, creating files that are are often 25% the size of uncompressed files, delta compression allows for an order of magnitude more compression with [examples files of only 2% site](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md).
+
+## Dictionary format
+
+A compression dictionary does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files and so can be text files or even binary. For example, [WASM](/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+
 ## Existing resource as a dictionary
 
 To use a resource as a dictionary the resource will include the {{HTTPHeader("Use-As-Dictionary")}} HTTP response Header:
@@ -110,6 +116,44 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 From here the process is similar to the previous example when a matching resources is requested.
 
+## Creating dictionary compressed responses
+
+Delta-compressed dictioresourcesnaries use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
+
+These can be created dynamically, but it is often better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
+
+Example command line options are shown below, and these can be configured in build tools if they do not natively support this.
+
+### Delta-compressed Brotli (`dcb`) a resource
+
+Assuming the dictionary file is `dictionary.txt` and the file to be compressed is data.text, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+
+```bash
+echo -en '\xffDCB' > data.txt.dcb && \
+openssl dgst -sha256 -binary dictionary.txt >> data.txt.dcb && \
+brotli --stdout -D dictionary.txt data.txt >> data.txt.dcb
+```
+
+### Delta-compressed Brotli (`dcz`) a resource
+
+Assuming the dictionary file is `dictionary.txt` and the file to be compressed is data.text, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+
+```bash
+echo -en '\x5e\x2a\x4d\x18\x20\x00\x00\x00' > data.txt.dcz && \
+openssl dgst -sha256 -binary dictionary.txt >> data.txt.dcz && \
+zstd -D dictionary.txt -f -o tmp.zstd data.txt && \
+cat tmp.zstd >> data.txt.dcz
+```
+
+## Restrictions
+
+Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
+
+- Dictionaries must be served on the same-origin as the resource using the dictionary.
+- Delta-compressed resources must be same-origin to the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+
+Additionally, Compression Dictionary Transport could themselves becoming tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+
 ## See also
 
 - Glossary terms:
@@ -122,3 +166,4 @@ From here the process is similar to the previous example when a matching resourc
 - {{HTTPHeader("Dictionary-ID")}}
 - {{HTTPHeader("Use-As-Dictionary")}}
 - [Draft specification](https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/)
+- [Resources for Compression Dictionary Transport](https://use-as-dictionary.com/)
