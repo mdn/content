@@ -6,7 +6,8 @@ page-type: mdn-community-guide
 sidebar: mdnsidebar
 ---
 
-Participating in MDN Web Docs projects means adhering to the [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/). These guidelines exist to foster a welcoming, inclusive, and safe environment, and to ensure that every community member feels valued, heard, and protected.
+Participating in MDN Web Docs projects means adhering to the [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+These guidelines exist to foster a welcoming, inclusive, and safe environment, and to ensure that every community member feels valued, heard, and protected.
 
 This document describes how to report violations and what happens depending on the severity of a violation.
 
@@ -55,7 +56,7 @@ Below is a summary of severity levels and enforcement actions.
 
 ### Level 4: Ban across MDN and Mozilla Spaces, All Areas Permanent Ban
 
-- **Severity:** Serious [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/) breaches
+- **Severity:** Serious [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/) breaches.
 - **Actions:**
   - Private communication of a ban from project leadership, with clarity of the violation and warning of consequences. Should the behavior continue, it would lead to a ban from all Mozilla community spaces.
   - Required to avoid interaction on community messaging platforms and external channels.
@@ -70,7 +71,7 @@ Below is a summary of severity levels and enforcement actions.
 
 Reports can be sent to mdn-cpg-report@mozilla.com.
 To report a violation or abuse on GitHub, see [GitHub's content reporting guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
-The "Report to repository admins" option must be checked for the MDN team to see a content report.
+The **"Report to repository admins"** option must be checked for the MDN team to see a content report.
 
 Include any relevant details, including date, time, description of the violation.
 Include identifying information of the offender and screenshots, if possible.
