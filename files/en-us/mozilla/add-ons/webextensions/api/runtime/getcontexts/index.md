@@ -12,7 +12,7 @@ Returns information about the contexts associated with the extension.
 ## Syntax
 
 ```js-nolint
-let gettingContexts = browser.runtime.getContexts(
+let gettingContexts = await browser.runtime.getContexts(
     filter           // object
 );
 ```
@@ -83,7 +83,7 @@ function gotContextInfo(contexts) {
   }
 }
 
-let gettingContextInfo = browser.runtime.getContext({ incognito: true });
+let gettingContextInfo = browser.runtime.getContexts({ incognito: true });
 gettingContextInfo.then(gotContextInfo);
 ```
 

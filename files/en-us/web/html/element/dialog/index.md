@@ -526,7 +526,7 @@ The code renders as follows:
       </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots">sectioning root</a>
+        sectioning root
       </td>
     </tr>
     <tr>

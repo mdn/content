@@ -55,7 +55,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
       <td>
-        Good choice for simple images and animations.
+        Good choice for basic images and animations.
         Prefer PNG for lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
         <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
@@ -951,7 +951,7 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 
 SVG can be used in web content in two ways:
 
-1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
+1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
 2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
@@ -991,7 +991,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     <tr>
       <th scope="row">Compression</th>
       <td>
-        SVG source may be compressed during transit using <a href="/en-US/docs/Web/HTTP/Compression">HTTP compression</a> techniques, or on disk as an <code>.svgz</code> file.
+        SVG source may be compressed during transit using <a href="/en-US/docs/Web/HTTP/Guides/Compression">HTTP compression</a> techniques, or on disk as an <code>.svgz</code> file.
       </td>
     </tr>
     <tr>

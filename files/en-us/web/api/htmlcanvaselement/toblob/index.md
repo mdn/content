@@ -60,11 +60,6 @@ canvas.toBlob((blob) => {
   const newImg = document.createElement("img");
   const url = URL.createObjectURL(blob);
 
-  newImg.onload = () => {
-    // no longer need to read the blob so it's revoked
-    URL.revokeObjectURL(url);
-  };
-
   newImg.src = url;
   document.body.appendChild(newImg);
 });
@@ -82,6 +77,8 @@ canvas.toBlob(
   0.95,
 ); // JPEG at 95% quality
 ```
+
+Note that we don't immediately revoke the object URL after the image has loaded, because doing so would make the image unusable for user interactions (such as right-clicking to save the image or opening it in a new tab). For long-lived applications, you should revoke object URLs when they're no longer needed (such as when the image is removed from the DOM) to free up memory by calling the {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} method and passing in the object URL string.
 
 ### Convert a canvas to an ico (Mozilla only)
 

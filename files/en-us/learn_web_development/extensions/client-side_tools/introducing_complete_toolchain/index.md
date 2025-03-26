@@ -1,5 +1,6 @@
 ---
 title: Introducing a complete toolchain
+short-title: Sample toolchain
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
 ---

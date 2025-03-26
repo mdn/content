@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.setUTCHours
 
 The **`setUTCHours()`** method of {{jsxref("Date")}} instances changes the hours, minutes, seconds, and/or milliseconds for this date according to universal time.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.setUTCHours()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30 GMT-3:00");

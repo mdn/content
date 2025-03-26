@@ -1,5 +1,6 @@
 ---
-title: What's in the head? Webpage metadata
+title: What's in the head? Web page metadata
+short-title: Web page metadata
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 page-type: tutorial-chapter
 ---
@@ -249,7 +250,7 @@ The comments explain what each icon is used for — these elements cover things 
 Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
 
 > [!NOTE]
-> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
+> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 
 ## Applying CSS and JavaScript to HTML
 

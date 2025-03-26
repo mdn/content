@@ -1,5 +1,6 @@
 ---
 title: Handling different text directions
+short-title: Multiple text directions
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 page-type: learn-module-chapter
 ---

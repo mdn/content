@@ -137,7 +137,7 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
     - {{cssxref("url_value", "&lt;url&gt;")}}
 
-      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
+      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - {{cssxref("basic-shape")}}
 
@@ -362,7 +362,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [SVG \<path>](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
 - {{cssxref("basic-shape/path","path()")}}
 - Other demos:
   - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks

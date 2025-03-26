@@ -9,7 +9,7 @@ This article explains what third-party cookies are, describes the issues associa
 
 ## What are third-party cookies?
 
-A [cookie](/en-US/docs/Web/HTTP/Cookies) is associated with a particular domain and scheme (usually `https`), and may also be associated with subdomains if the {{HTTPHeader("Set-Cookie")}} `Domain` attribute is set.
+A [cookie](/en-US/docs/Web/HTTP/Guides/Cookies) is associated with a particular domain and scheme (usually `https`), and may also be associated with subdomains if the {{HTTPHeader("Set-Cookie")}} `Domain` attribute is set.
 
 - If the cookie domain and scheme match the current page the user is looking at (the URL shown in the browser's address bar), the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 - If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
@@ -82,7 +82,7 @@ Cookie blocking can cause some third-party components (such as social media widg
 
 ### Enabling third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, to for example personalize the experience as soon as they get there.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when third-party cookies are sent. If you don't specify `SameSite` in your `Set-Cookie` headers, the default value, `Lax`, is used. This instructs the browser to not send third-party cookies except when the user navigates to the cookie's origin site from a different site. This is useful when you want to send cookies straight away as soon as a user navigates to your site from another site, to for example personalize the experience as soon as they get there.
 
 However, it is no good if you want to embed cross-site content across multiple sites inside `<iframe>`s and rely on third-party cookies for functionality, for example in the case of the sign-in example we looked at above. In such cases, you need to explicitly set `SameSite=None` to allow the browser to pass those cookies around:
 
@@ -93,7 +93,7 @@ Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
 > [!NOTE]
-> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
+> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
 ### Transitioning from third-party cookies
 
@@ -123,5 +123,5 @@ You can start to explore the different features available in Google's [Privacy S
 
 ## See also
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
 - [Privacy on the web](/en-US/docs/Web/Privacy)

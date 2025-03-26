@@ -25,23 +25,30 @@ jobs:
           node-version-file: ".nvmrc"
           cache: yarn
 
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Run scripts
+        id: check
         run: |
           echo Running spelling check...
-          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
+          output=$(yarn --silent lint:typos-group-by-file || exit 0)
           if [ -n "${output}" ]; then
             output=$(node scripts/linkify-logs.js "${output}")
             output=$(echo "$output" | sed 's/^/- /')
             echo "$output"
-            echo "OUTPUT<<EOF" >> $GITHUB_ENV
-            echo "$output" >> $GITHUB_ENV
-            echo "EOF" >> $GITHUB_ENV
+            echo "OUTPUT<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$output" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
           else
             echo "No typos found! 🎉"
           fi
 
       - name: Report spellcheck errors
-        if: env.OUTPUT != ''
+        if: steps.check.outputs.OUTPUT != ''
         run: |
           issue=$(gh issue create --title "$TITLE" --label "$LABELS" --body "$BODY")
           echo Issue URL ${issue}
@@ -52,7 +59,7 @@ jobs:
           BODY: |
             Typos and unknown words:
 
-            ${{ env.OUTPUT }}
+            ${{ steps.check.outputs.OUTPUT }}
 
             > [!TIP]
             > If the word is actually valid or it is required to be ignored, consider adding it to one of the dictionaries under [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries).

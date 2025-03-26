@@ -164,7 +164,7 @@ In this updated version, you should find that the up and down step buttons will 
 
 ### Allowing decimal values
 
-One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a basic example:
+One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal value that's not a whole number (such as "1.1"), it will be considered invalid. Note that values like "1.0" are considered valid because they are numerically equivalent to whole numbers. If you want to enter values with fractions, you'll need to reflect this in the `step` value (e.g., `step="0.01"` to allow decimals to two decimal places). Here's a basic example:
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />

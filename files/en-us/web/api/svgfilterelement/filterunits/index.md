@@ -60,4 +60,4 @@ console.log(filterElement.filterUnits.baseVal); // Output: 1 (SVG_UNIT_TYPE_USER
 
 - {{domxref("SVGFilterElement.primitiveUnits")}}
 - {{domxref("SVGUnitTypes")}}
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filters_attributes)

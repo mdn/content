@@ -14,7 +14,7 @@ Cookies often contain session identifiers or other sensitive information. Unauth
 
 ## Solution
 
-To minimize the scope for cookie vulnerabilities on your site, limit access to cookies as much as possible. This can be done via sensible usage of the following directives of the [`Set-Cookie`](/en-US/docs/Web/HTTP/Headers/Set-Cookie) header:
+To minimize the scope for cookie vulnerabilities on your site, limit access to cookies as much as possible. This can be done via sensible usage of the following directives of the [`Set-Cookie`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) header:
 
 - `Name`
   - : Cookie names should be prepended with either `__Secure-` or `__Host-` to prevent cookies from being overwritten by insecure sources.
@@ -73,7 +73,7 @@ Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; H
 
 ## See also
 
-- [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
 - [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies)
 - [`Document.cookie`: Security](/en-US/docs/Web/API/Document/cookie#security)
 - [RFC 6265 (HTTP Cookies)](https://datatracker.ietf.org/doc/html/rfc6265) (2011)

@@ -10,9 +10,9 @@ The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of th
 
 ## Syntax
 
-| Method                                     | URI template                     |
-| ------------------------------------------ | -------------------------------- |
-| [`POST`](/en-US/docs/Web/HTTP/Methods/GET) | `/session/{session id}/timeouts` |
+| Method                                               | URI template                     |
+| ---------------------------------------------------- | -------------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/GET) | `/session/{session id}/timeouts` |
 
 ### URL parameters
 

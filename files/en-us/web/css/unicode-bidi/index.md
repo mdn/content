@@ -117,3 +117,4 @@ unicode-bidi: unset;
 
 - {{Cssxref("direction")}}
 - SVG {{SVGAttr("unicode-bidi")}} attribute
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

@@ -76,7 +76,7 @@ const xError = window.frames[window.frames.length - 1].Error;
 const error = new xError();
 
 // Correctly checking for Error
-Error.isERror(error); // true
+Error.isError(error); // true
 // The prototype of error is xError.prototype, which is a
 // different object from Error.prototype
 error instanceof Error; // false

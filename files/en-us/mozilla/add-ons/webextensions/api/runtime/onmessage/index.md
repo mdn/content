@@ -13,7 +13,7 @@ Some example use cases are:
 
 - **in a [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)** to listen for messages from a [background script.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)
 - **in a background script** to listen for messages from a content script.
-- **in an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) or [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups) script** to listen for messages from a background script.
+- **in an [options page or popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_and_options_pages) script** to listen for messages from a background script.
 - **in a background script** to listen for messages from an options page or popup script.
 
 To send a message that is received by the `onMessage()` listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.
@@ -243,7 +243,7 @@ browser.runtime
   .then(handleResponse);
 ```
 
-Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
+Here is the background script. It uses {{WebExtAPIRef("bookmarks.search()")}} to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
 
 ```js
 // background-script.js

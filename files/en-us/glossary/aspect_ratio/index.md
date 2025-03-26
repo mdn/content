@@ -21,7 +21,7 @@ In CSS, the {{cssxref("ratio")}} data type is written as `width / height` (e.g.,
 }
 ```
 
-In SVG, the aspect ratio is defined by the a four-value [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute. The first two values the smallest X and Y origin coordinates the SVG can have, and the second two values are the width and height which set the aspect ratio of the SVG.
+In SVG, the aspect ratio is defined by the a four-value [`viewBox`](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute. The first two values the smallest X and Y origin coordinates the SVG can have, and the second two values are the width and height which set the aspect ratio of the SVG.
 
 ```svg
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 
 The **`Intl.ListFormat()`** constructor creates {{jsxref("Intl.ListFormat")}} objects.
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat() constructor", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

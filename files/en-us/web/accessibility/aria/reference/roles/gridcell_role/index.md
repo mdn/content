@@ -88,7 +88,7 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 
 In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - `grid`
   - : Communicates that a parent element is a table or tree style grouping of information.

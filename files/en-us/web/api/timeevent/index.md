@@ -2,11 +2,12 @@
 title: TimeEvent
 slug: Web/API/TimeEvent
 page-type: web-api-interface
+browser-compat: api.TimeEvent
 ---
 
 {{APIRef("SVG")}}
 
-The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL) animation, provides specific contextual information associated with Time events.
+The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL) animation, provides specific contextual information associated with Time events.
 
 {{InheritanceDiagram}}
 
@@ -21,3 +22,11 @@ The **`TimeEvent`** interface, a part of [SVG SMIL](/en-US/docs/Web/SVG/SVG_anim
 
 - {{domxref("TimeEvent.initTimeEvent()")}}
   - : Used to initialize the value of a TimeEvent created through the DocumentEvent interface. This method may only be called before the TimeEvent has been dispatched via the dispatchEvent method, though it may be called multiple times during that phase if necessary.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

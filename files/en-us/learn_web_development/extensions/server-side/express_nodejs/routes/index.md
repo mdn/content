@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 4: Routes and controllers"
+short-title: "4: Routes and controllers"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 page-type: learn-module-chapter
 ---

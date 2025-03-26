@@ -173,7 +173,7 @@ Live Regions are well supported. The Paciello Group, in 2014, posted [informatio
 
 ### Basic examples: `aria-atomic`
 
-As an illustration of `aria-atomic`, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
+As an illustration of `aria-atomic`, consider a site with a basic clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
 
 ```html
 <div id="clock" role="timer" aria-live="polite">

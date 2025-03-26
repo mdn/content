@@ -92,7 +92,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
@@ -104,7 +104,7 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG Element reference</a> (/Web/SVG/Element).
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}
@@ -115,7 +115,7 @@ Most macros will also take a second argument allowing you to change the display 
         <code><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> (/Web/HTTP/Headers).
+        <a href="/en-US/docs/Web/HTTP/Reference/Headers">HTTP headers</a> (/Web/HTTP/Headers).
       </td>
       <td>
         <code>\{{HTTPHeader("ACCEPT")}}</code> results in {{HTTPHeader("ACCEPT")}}
@@ -126,7 +126,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
+        <a href="/en-US/docs/Web/HTTP/Reference/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
       </td>
       <td>
         <code>\{{HTTPMethod("HEAD")}}</code> results in {{HTTPMethod("HEAD")}}
@@ -137,7 +137,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)
+        <a href="/en-US/docs/Web/HTTP/Reference/Status">HTTP response status codes</a> (/Web/HTTP/Status)
       </td>
       <td>
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}

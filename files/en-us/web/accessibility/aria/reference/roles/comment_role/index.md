@@ -81,7 +81,7 @@ It's possible to nest comments inside one another, like so:
 
 ## Accessibility concerns
 
-None
+None.
 
 ## Specifications
 

@@ -9,7 +9,7 @@ browser-compat: javascript.operators.right_shift_assignment
 
 The **right shift assignment (`>>=`)** operator performs [right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift) on the two operands and assigns the result to the left operand.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}
+{{InteractiveExample("JavaScript Demo: Right shift assignment (>>=) operator")}}
 
 ```js interactive-example
 let a = 5; //  00000000000000000000000000000101

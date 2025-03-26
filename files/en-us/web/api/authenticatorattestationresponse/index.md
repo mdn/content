@@ -42,7 +42,7 @@ _Also inherits properties from its parent, {{domxref("AuthenticatorResponse")}}.
 
 ## Examples
 
-See [Creating a public key credential using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential_using_the_webauthn_api) for a detailed example.
+See [Creating a public key credential](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

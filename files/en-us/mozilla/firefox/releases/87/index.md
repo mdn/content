@@ -58,9 +58,9 @@ _No changes._
 
 ### HTTP
 
-- Some enterprise authentication services require that TLS client certificates be [sent in CORS preflight requests](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials). Users of these services can enable this (non-specification compliant) behavior using the `network.cors_preflight.allow_client_cert` preference ([Firefox bug 1511151](https://bugzil.la/1511151)).
-- The default [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) has been changed to [`strict-origin-when-cross-origin`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) (from `no-referrer-when-downgrade`), reducing the risk of leaking referrer information in cross-origin requests ([Firefox bug 1589074](https://bugzil.la/1589074)).
-- [`Content-Length`](/en-US/docs/Web/HTTP/Headers/Content-Length) has been added to the list of [CORS-safelisted response headers](/en-US/docs/Glossary/CORS-safelisted_response_header) ([Firefox bug 1460299](https://bugzil.la/1460299)).
+- Some enterprise authentication services require that TLS client certificates be [sent in CORS preflight requests](/en-US/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials). Users of these services can enable this (non-specification compliant) behavior using the `network.cors_preflight.allow_client_cert` preference ([Firefox bug 1511151](https://bugzil.la/1511151)).
+- The default [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) has been changed to [`strict-origin-when-cross-origin`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin) (from `no-referrer-when-downgrade`), reducing the risk of leaking referrer information in cross-origin requests ([Firefox bug 1589074](https://bugzil.la/1589074)).
+- [`Content-Length`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Length) has been added to the list of [CORS-safelisted response headers](/en-US/docs/Glossary/CORS-safelisted_response_header) ([Firefox bug 1460299](https://bugzil.la/1460299)).
 
 ### Security
 

@@ -14,7 +14,7 @@ When an element has the `textbox` role, the browser sends an accessible textbox 
 The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `aria-multiline="true"`. Including the HTML `contenteditable` attribute ensures the text node is editable.
 
 ```html
-<!-- Simple text input field -->
+<!-- Text input field -->
 <div id="txtboxLabel">Enter your five-digit zip code</div>
 <div
   role="textbox"
@@ -120,7 +120,7 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 
 ## Best practices
 
-- Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
+Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
 
 ## See also
 

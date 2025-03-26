@@ -37,7 +37,7 @@ Response.json(data, options)
       - : The status message associated with the status code.
         For a status of `200` this might be `OK`.
     - `headers`
-      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
+      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) for a reference).
 
 ### Return value
 

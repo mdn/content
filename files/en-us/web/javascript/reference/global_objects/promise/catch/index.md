@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Promise.catch
 
 The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "then(undefined, onRejected)")}}.
 
-{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+{{InteractiveExample("JavaScript Demo: Promise.prototype.catch()")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {

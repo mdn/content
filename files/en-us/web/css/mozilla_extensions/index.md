@@ -418,7 +418,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
 - {{CSSxRef(":is", ":-moz-any")}}
-- {{CSSxRef(":any-link", ":-moz-any-link")}} \[Matches `:link` and `:visited`]
+- {{CSSxRef(":any-link", ":-moz-any-link")}} (Matches `:link` and `:visited`)
 - {{CSSxRef(":-moz-broken")}}
 - {{CSSxRef("::-moz-canvas")}}
 - {{CSSxRef("::-moz-color-swatch")}}

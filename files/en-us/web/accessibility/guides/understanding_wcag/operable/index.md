@@ -348,7 +348,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         </p>
       </td>
       <td>
-        Most of these mechanisms can be created using simple HTML features, for
+        Most of these mechanisms can be created using fully supported HTML features, for
         example see
         <a
           href="/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#search_field"

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.parseInt
 
 The **`parseInt()`** function parses a string argument and returns an integer of the specified [radix](https://en.wikipedia.org/wiki/Radix) (the base in mathematical numeral systems).
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{InteractiveExample("JavaScript Demo: parseInt()")}}
 
 ```js interactive-example
 console.log(parseInt("123"));

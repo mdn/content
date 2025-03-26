@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.split
 
 The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.split()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";

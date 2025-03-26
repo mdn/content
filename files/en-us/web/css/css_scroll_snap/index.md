@@ -319,6 +319,7 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" ch
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on CodePen (2022)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2021)

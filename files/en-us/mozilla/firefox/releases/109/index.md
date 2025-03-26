@@ -38,7 +38,7 @@ No notable changes.
 ### HTTP
 
 - The `'unsafe-hashes'` value for {{HTTPHeader("Content-Security-Policy")}} source directives is now supported.
-  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox bug 1343950](https://bugzil.la/1343950)).
+  For more information, see [CSP unsafe-hashes](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox bug 1343950](https://bugzil.la/1343950)).
 
 ### APIs
 

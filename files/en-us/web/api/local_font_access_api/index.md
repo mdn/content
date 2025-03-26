@@ -28,7 +28,7 @@ In terms of privacy and security:
 
 - The Local Font Access API is designed to only provide access to the data required to solve the above problems. There is also no requirement for browsers to provide the full list of available local fonts, nor to provide the data in the same order as it appears on disk.
 - When {{domxref("Window.queryLocalFonts()")}} is invoked, the user is asked for permission to access their local fonts. The status of this permission can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the `local-fonts` permission).
-- You can control access to this feature using a {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- You can control access to this feature using a {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 
 ## Interfaces
 
@@ -122,4 +122,4 @@ async function computeOutlineFormat() {
 
 - [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
-- The {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive
+- The {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive

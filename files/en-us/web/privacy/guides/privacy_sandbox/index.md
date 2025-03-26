@@ -12,7 +12,7 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)
   - : Enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 - [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)
-  - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
+  - : Also known as **partitioned cookies**, CHIPS allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
   - : Provides functionality for controlling content embedded in {{htmlelement("fencedframe")}} elements, which enable content to be embedded while solving the privacy issues of {{htmlelement("iframe")}}s.
 - [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)

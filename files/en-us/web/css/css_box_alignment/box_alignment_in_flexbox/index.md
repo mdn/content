@@ -12,21 +12,24 @@ The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how al
 
 In this flexbox example, three flex items are aligned on the main axis using {{cssxref("justify-content")}} and on the cross axis using {{cssxref("align-items")}}. The first item overrides the `align-items` values set on the group by setting {{cssxref("align-self")}} to `center`.
 
-```html live-sample___flex-align-items
-<div class="box">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three <br />has <br />extra <br />text</div>
-</div>
-```
-
-```css hidden live-sample___flex-align-items
+```css hidden live-sample___gap live-sample___flex-align-items live-sample___auto-margins
+body {
+  font-family: sans-serif;
+}
 .box > * {
   padding: 20px;
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
 }
+```
+
+```html live-sample___flex-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
 ```
 
 ```css live-sample___flex-align-items
@@ -87,15 +90,6 @@ By setting a {{cssxref("margin")}} of `auto` on one item in a set of flex items 
 </div>
 ```
 
-```css hidden live-sample___auto-margins
-.box > * {
-  padding: 20px;
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-}
-```
-
 ```css live-sample___auto-margins
 .box {
   display: flex;
@@ -129,15 +123,6 @@ On the cross axis the `row-gap` property creates spacing between adjacent flex l
   <div>Five</div>
   <div>Six</div>
 </div>
-```
-
-```css hidden live-sample___gap
-.box > * {
-  padding: 20px;
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-}
 ```
 
 ```css live-sample___gap

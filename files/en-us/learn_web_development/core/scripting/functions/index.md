@@ -1,5 +1,6 @@
 ---
 title: Functions — reusable blocks of code
+short-title: Functions
 slug: Learn_web_development/Core/Scripting/Functions
 page-type: learn-module-chapter
 ---

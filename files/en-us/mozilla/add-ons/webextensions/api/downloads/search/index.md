@@ -24,7 +24,7 @@ let searching = browser.downloads.search(query);
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of `{{WebExtAPIRef('downloads.DownloadItem')}}` objects that match the given criteria.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of {{WebExtAPIRef('downloads.DownloadItem')}} objects that match the given criteria.
 
 ## Browser compatibility
 

@@ -13,7 +13,7 @@ The value of `this` in JavaScript depends on how a function is invoked (runtime 
 
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) differ in their handling of `this`: they inherit `this` from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own `this` binding. Therefore, their `this` value cannot be set by `bind()`, `apply()` or `call()` methods, nor does it point to the current object in object methods.
 
-{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+{{InteractiveExample("JavaScript Demo: this expression")}}
 
 ```js interactive-example
 const test = {

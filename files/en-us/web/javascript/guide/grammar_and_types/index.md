@@ -358,7 +358,7 @@ Note that the second item is "empty", which is not exactly the same as the actua
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
-In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
+In the following example, the `length` of the array is three. There is no `myList[3]` and `myList[1]` is empty. All other commas in the list indicate a new element.
 
 ```js
 const myList = ["home", , "school"];

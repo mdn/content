@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
     - The top-level and embedded sites are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
-    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.
 - `TypeError`
   - : Thrown if `requestedOrigin` is not a valid URL.
@@ -67,7 +67,7 @@ navigator.permissions.query({
 ```
 
 > [!NOTE]
-> Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server (the same one that controls the rest of the Storage Access API). In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, or anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics.
+> Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server (the same one that controls the rest of the Storage Access API). In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, or anti-[clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) heuristics.
 
 ## Examples
 
@@ -87,7 +87,7 @@ function rSAFor() {
 }
 ```
 
-After a successful `requestStorageAccessFor()` call, cross-site requests will include cookies if they include [CORS](/en-US/docs/Web/HTTP/CORS) / [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin), so sites may want to wait before triggering a request. Such requests must use the [`credentials: "include"`](/en-US/docs/Web/API/RequestInit#credentials) option and resources must include the `crossorigin="use-credentials"` attribute.
+After a successful `requestStorageAccessFor()` call, cross-site requests will include cookies if they include [CORS](/en-US/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin), so sites may want to wait before triggering a request. Such requests must use the [`credentials: "include"`](/en-US/docs/Web/API/RequestInit#credentials) option and resources must include the `crossorigin="use-credentials"` attribute.
 
 For example:
 

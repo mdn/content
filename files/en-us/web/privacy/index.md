@@ -85,7 +85,7 @@ Related topics are as follows:
 
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
   - : An open standard for monitoring and auditing certificates, creating a database of public logs that can be used to help identify incorrect or malicious certificates.
-- [HTTP Strict Transport Security (HSTS)](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security (HSTS)](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS is used by servers to let them protect themselves from protocol downgrade and cookie hijack attacks by letting sites tell clients that they can only use HTTPS to communicate with the server.
 - [HTTP/2](/en-US/docs/Glossary/HTTP_2)
   - : While HTTP/2 technically does not <em>have</em> to use encryption, most browser developers support it only when used with HTTPS; so in that regard, it can be thought of as a feature to enhance security/privacy.
@@ -98,7 +98,7 @@ So-called "powerful" web API features that provide access to potentially sensiti
 
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
-- The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) for more information.
+- The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite) for more information.
 - Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
 - Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies).
 - Several browsers strip out known tracking parameters from URLs — this includes Firefox, Safari, and Brave. Browser extensions also help to do this, for example [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
@@ -197,7 +197,7 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 - Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to API "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third-party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permission prompts that they may not understand. You can also control usage of "powerful features" inside third-party sites embedded inside {{htmlelement("iframe")}} elements by specifying permissions policies inside an `allow` attribute on the `<iframe>` itself.
 
   > [!NOTE]
-  > See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Permissions_Policy) for more information and examples, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
+  > See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for more information and examples, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
 
 - Use the {{htmlelement("iframe")}} `sandbox` attribute to allow or disallow usage of certain features inside the content embedded in the `<iframe>` — this includes things like downloads, form submissions, modals, and scripting.
 
@@ -214,7 +214,7 @@ The below tips offer some guidance on protecting your user's data:
 - If you want to roll out your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multifactor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.
 - When collecting user sign-up information, enforce strong passwords so your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. Encourage your users to use a password manager to generate and store complex passwords; this way they won't worry about remembering them, or create a security risk by writing them down.
 - Don't include sensitive data in URLs — if a third party intercepts the URL (for example via the {{httpheader("Referer")}} header), they could steal that information. Use `POST` requests rather than `GET` requests to avoid this.
-- Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third-party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).
+- Consider using tools like [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) and [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) to enforce a set of feature usage on your site that makes it harder to introduce vulnerabilities. Be careful when doing this — if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality. This is something you can look into when auditing your third-party resources (see [Carefully manage third-party resources](#carefully_manage_third-party_resources)).
 
 ## See also
 

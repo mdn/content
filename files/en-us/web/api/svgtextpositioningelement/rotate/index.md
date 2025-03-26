@@ -3,7 +3,7 @@ title: "SVGTextPositioningElement: rotate property"
 short-title: rotate
 slug: Web/API/SVGTextPositioningElement/rotate
 page-type: web-api-instance-property
-browser-compat: api.SVGAnimationElement.rotate
+browser-compat: api.SVGTextPositioningElement.rotate
 ---
 
 {{APIRef("SVG")}}

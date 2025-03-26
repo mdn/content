@@ -135,7 +135,7 @@ Events have three functions:
         It is a dictionary in which each key contains the list of all values for that key. For example: `{'key': ['value1', 'value2']}`. If the data is of another media type, or if it is malformed, the object is not present.
 
     - `raw` {{optional_inline}}
-      - : `array` of `{{WebExtAPIRef('webRequest.UploadData')}}`. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
+      - : `array` of {{WebExtAPIRef('webRequest.UploadData')}}. If the request method is PUT or POST, and the body is not already parsed in `formData`, then this array contains the unparsed request body elements.
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.

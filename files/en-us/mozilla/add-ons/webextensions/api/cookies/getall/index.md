@@ -63,7 +63,7 @@ let getting = browser.cookies.getAll(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned are sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time are first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of {{WebExtAPIRef('cookies.Cookie')}} objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned are sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time are first.
 
 > [!NOTE]
 > Before Firefox 133, Firefox returned the cookie sorted by creation time, with the earliest creation time first.

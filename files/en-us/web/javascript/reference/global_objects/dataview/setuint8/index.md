@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.DataView.setUint8
 
 The **`setUint8()`** method of {{jsxref("DataView")}} instances takes a number and stores it as an 8-bit unsigned integer in the byte at the specified byte offset of this `DataView`.
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+{{InteractiveExample("JavaScript Demo: DataView.prototype.setUint8()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

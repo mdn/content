@@ -16,7 +16,7 @@ request.
 
 A {{domxref("DOMException")}} or `null` if there is no error. The exception object will have one of the following names, depending on what caused the error.
 
-These errors are asynchronous, meaning that they can't be handled via [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch). However, if an `IDBRequest` has an {{domxref("IDBRequest.error", "error")}} event handler assigned, you can still inspect such errors by querying the request's `error` property via the event object, for example [`event.target.error.name`](/en-US/docs/Web/API/DOMException/name) or [`event.target.error.message`](/en-US/docs/Web/API/DOMException/message).
+These errors are asynchronous, meaning that they can't be handled via [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch). However, if an `IDBRequest` has an {{domxref("IDBRequest.error_event", "error")}} event handler assigned, you can still inspect such errors by querying the request's `error` property via the event object, for example [`event.target.error.name`](/en-US/docs/Web/API/DOMException/name) or [`event.target.error.message`](/en-US/docs/Web/API/DOMException/message).
 
 - `AbortError`
   - : If you abort the transaction, then all requests still in progress receive this error.

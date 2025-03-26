@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 62 that will affe
 - If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ([Firefox bug 1456069](https://bugzil.la/1456069)).
 - The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)'s [Cookies tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#cookies) now shows the cookie `samesite` attribute ([Firefox bug 1452715](https://bugzil.la/1452715)).
 - [Responsive design mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) now works inside container tabs ([Firefox bug 1306975](https://bugzil.la/1306975)).
-- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
+- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/Guides/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
 - Create a screenshot of the current page (with an optional filename) from the Console tab ([Firefox bug 1464461](https://bugzil.la/1464461)) using the following command:
 
   ```bash

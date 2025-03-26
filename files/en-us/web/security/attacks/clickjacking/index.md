@@ -53,14 +53,14 @@ Clickjacking depends on the target website being embedded in the attacker's deco
 
 There are two relevant tools here:
 
-- The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/CSP)
+- The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/Guides/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - The {{httpheader("X-Frame-Options")}} response header.
 
-The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. As [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), this is not a major concern.
+The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. As [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), this is not a major concern.
 
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
 
-As an additional partial mitigation, sites should set the [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`. Requests from embedded contexts such as `<iframe>` elements that are not {{glossary("Site", "same-site")}} with the top-level document will not include these cookies, and the server will therefore not treat the request as coming from a logged-in user.
+As an additional partial mitigation, sites should set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`. Requests from embedded contexts such as `<iframe>` elements that are not {{glossary("Site", "same-site")}} with the top-level document will not include these cookies, and the server will therefore not treat the request as coming from a logged-in user.
 
 ## See also
 

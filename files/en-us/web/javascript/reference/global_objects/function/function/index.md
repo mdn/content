@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.Function
 
 The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval` (which may have access to the local scope), the `Function` constructor creates functions which execute in the global scope only.
 
-{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Function() constructor", "shorter")}}
 
 ```js interactive-example
 const sum = new Function("a", "b", "return a + b");

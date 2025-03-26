@@ -28,7 +28,7 @@ While all three of these ranges have the same ARIA states and properties, the `s
 > To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
 > Fully test slider widgets using assistive technologies on devices where touch is a primary input mechanism before using the `slider` role (and all range widgets).
 
-#### Common attributes
+### Common attributes
 
 The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
 
@@ -89,7 +89,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 <div role="slider">Temperature in Celsius</div>
 ```
 
-## Associated roles, states, and properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (required)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the slider.
@@ -103,6 +103,19 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : Defines the string value or identifies the element (or elements) that label the slider element providing an accessible name. An accessible name is required.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. With a slider, the implicit value is `horizontal` but can be set to `vertical`. As it has an implicit value, the slider orientation is never ambiguous.
+
+### Keyboard interactions
+
+| Key(s)               | Action                                                              |
+| -------------------- | ------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                             |
+| Left and Down arrows | Decrease the selected value by one step                             |
+| Page Up              | (Optional) increase the value by a set amount greater than one step |
+| Page Down            | (Optional) decrease the value by a set amount greater than one step |
+| Home                 | Set the slider to the minimum value.                                |
+| End                  | Set the slider to the maximum value.                                |
+
+For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
 ## Examples
 
@@ -169,19 +182,6 @@ Using semantic HTML, this could have been written as:
 By using {{HTMLElement('input')}}, we get an already-styled range-input widget with keyboard focus, focus styling, keyboard interactions, and `value` updated on user interaction for free. We still need to use JavaScript to change the `aria-valuetext` and the value of the {{HTMLElement('output')}} element.
 
 There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/transform).
-
-## Keyboard interactions
-
-| Key(s)               | Action                                                              |
-| -------------------- | ------------------------------------------------------------------- |
-| Right and Up arrows  | Increase the selected value by one step                             |
-| Left and Down arrows | Decrease the selected value by one step                             |
-| Page Up              | (Optional) increase the value by a set amount greater than one step |
-| Page Down            | (Optional) decrease the value by a set amount greater than one step |
-| Home                 | Set the slider to the minimum value.                                |
-| End                  | Set the slider to the maximum value.                                |
-
-For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
 ## Best practices
 

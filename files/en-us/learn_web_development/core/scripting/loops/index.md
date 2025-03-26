@@ -1,5 +1,6 @@
 ---
 title: Looping code
+short-title: Loops
 slug: Learn_web_development/Core/Scripting/Loops
 page-type: learn-module-chapter
 ---

@@ -25,7 +25,7 @@ The `<search>` element defines a [`search`](/en-US/docs/Web/Accessibility/ARIA/R
 
 ### Header search form
 
-This example demonstrates the use of `<search>` as the container for a search within a website header to perform a simple site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
+This example demonstrates the use of `<search>` as the container for a search within a website header to perform a site-wide search. The `<search>` is a semantic container for the {{HTMLElement("form")}} that submits the user-entered search query to a server.
 
 #### HTML
 

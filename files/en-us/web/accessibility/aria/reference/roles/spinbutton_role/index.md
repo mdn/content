@@ -37,7 +37,7 @@ While all three of these ranges have the same ARIA states and properties, the `s
 > To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
 > Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
 
-#### Common attributes
+### Common attributes
 
 The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
 
@@ -59,7 +59,7 @@ When not using the HTML {{HTMLElement('input')}} element to create your spinbutt
 
 There are some types of user interface components that, when represented in a platform accessibility API, can only contain specific content. The children or owned elements of `spinbutton` are limited to a textbox and two buttons. Alternatively, the `spinbutton` role can be applied to a `text` input and sibling buttons can be used to support the increment and decrement functions.
 
-## Associated roles, states, and properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (required)
 
@@ -81,6 +81,19 @@ There are some types of user interface components that, when represented in a pl
   - : Defines the string value or identifies the element (or elements) that label the spinbutton element providing an accessible name. An accessible name is required.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Defines a string value that labels the spinbutton element. This provides an accessible name to the element when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
+
+### Keyboard interactions
+
+| Key(s)               | Action                                                                          |
+| -------------------- | ------------------------------------------------------------------------------- |
+| Right and Up arrows  | Increase the selected value by one step                                         |
+| Left and Down arrows | Decrease the selected value by one step                                         |
+| Page Up              | (Optional) Increase the value by a set amount greater than or equal to one step |
+| Page Down            | (Optional) Decrease the value by a set amount greater than or equal to one step |
+| Home                 | Set the spinbutton to the minimum value                                         |
+| End                  | Set the spinbutton to the maximum value                                         |
+
+For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in spinbutton value should preferably be by an amount larger than the step changes made by Up and Down arrow keys.
 
 ## Examples
 
@@ -122,19 +135,6 @@ This could have also been written using semantic HTML, removing the need for any
 {{EmbedLiveSample("With_semantic_HTML", 50, 50)}}
 
 In this case, the only JavaScript needed would be to update the `aria-valuetext` when the input value changes, which really is an optional feature in this case.
-
-## Keyboard interactions
-
-| Key(s)               | Action                                                                          |
-| -------------------- | ------------------------------------------------------------------------------- |
-| Right and Up arrows  | Increase the selected value by one step                                         |
-| Left and Down arrows | Decrease the selected value by one step                                         |
-| Page Up              | (Optional) Increase the value by a set amount greater than or equal to one step |
-| Page Down            | (Optional) Decrease the value by a set amount greater than or equal to one step |
-| Home                 | Set the spinbutton to the minimum value                                         |
-| End                  | Set the spinbutton to the maximum value                                         |
-
-For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in spinbutton value should preferably be by an amount larger than the step changes made by Up and Down arrow keys.
 
 ## Best practices
 

@@ -27,7 +27,7 @@ The `region` landmark role's content should make sense if separated from the mai
 
 Using the {{HTMLElement('section')}} element will automatically communicate a section has a role of `region` if it is given an accessible name. Developers should always prefer using the correct semantic HTML element, in this case `<section>`, over using ARIA.
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.

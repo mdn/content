@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.copyWithin
 
 The **`copyWithin()`** method of {{jsxref("TypedArray")}} instances shallow copies part of this typed array to another location in the same typed array and returns this typed array without modifying its length. This method has the same algorithm as {{jsxref("Array.prototype.copyWithin()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.copyWithin()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.copyWithin()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);

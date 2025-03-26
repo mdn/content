@@ -60,7 +60,7 @@ To create an ARIA table header, table footer or table body, add `role="rowgroup"
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 

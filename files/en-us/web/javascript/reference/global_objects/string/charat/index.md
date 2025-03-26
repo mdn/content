@@ -11,7 +11,7 @@ The **`charAt()`** method of {{jsxref("String")}} values returns a new string co
 
 `charAt()` always indexes the string as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters), so it may return lone surrogates. To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.fromCodePoint()")}}.
 
-{{InteractiveExample("JavaScript Demo: String.charAt()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.charAt()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

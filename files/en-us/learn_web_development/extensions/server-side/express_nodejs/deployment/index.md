@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 7: Deploying to production"
+short-title: "7: Deploying"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
 page-type: learn-module-chapter
 ---
@@ -262,7 +263,7 @@ app.use(
 
 We normally might have just inserted `app.use(helmet());` to add the _subset_ of the security-related headers that make sense for most sites.
 However in the [LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template) we include some bootstrap and jQuery scripts.
-These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP), which does not allow loading of cross-site scripts.
+These violate the helmet's _default_ [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP), which does not allow loading of cross-site scripts.
 To allow these scripts to be loaded we modify the helmet configuration so that it sets CSP directives to allow script loading from the indicated domains.
 For your own server you can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
 

@@ -64,7 +64,7 @@ These features are newly shipped in Firefox 130 but are disabled by default. To 
 
 - **CSP violation reports using the Reporting API:** `dom.reporting.enabled`.
 
-  The [Reporting API](/en-US/docs/Web/API/Reporting_API) can be used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violations.
+  The [Reporting API](/en-US/docs/Web/API/Reporting_API) can be used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
   This includes support for {{domxref('Report')}} objects that have a `type` property with the value `"csp-violation"` and `body` property that is an instance of the {{domxref('CSPViolationReportBody')}} interface, the {{CSP("report-to")}} directive of the {{httpheader('Content-Security-Policy')}} HTTP response header, and the {{httpheader('Reporting-Endpoints')}} and {{httpheader('Report-To')}} HTTP response headers.
   This feature is disabled by default.
   ([Firefox bug 1391243](https://bugzil.la/1391243)).

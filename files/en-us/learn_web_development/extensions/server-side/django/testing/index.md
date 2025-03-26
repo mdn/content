@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 10: Testing a Django web application"
+short-title: "10: Testing"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
 page-type: learn-module-chapter
 ---

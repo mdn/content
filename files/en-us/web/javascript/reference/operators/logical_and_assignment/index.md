@@ -9,7 +9,7 @@ browser-compat: javascript.operators.logical_and_assignment
 
 The **logical AND assignment (`&&=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("truthy")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+{{InteractiveExample("JavaScript Demo: Logical AND assignment (&&=) operator")}}
 
 ```js interactive-example
 let a = 1;

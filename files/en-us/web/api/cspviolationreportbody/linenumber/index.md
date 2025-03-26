@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.lineNumber
 
 {{APIRef("Reporting API")}}
 
-The **`lineNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the line number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation.
+The **`lineNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the line number in the source file that triggered the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violation.
 
 Note that the browser extracts the value from _the global object_ of the file that triggered the violation.
 If the resource that triggers the CSP violation is not loaded, the value will be `null`.

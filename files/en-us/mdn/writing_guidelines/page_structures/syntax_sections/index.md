@@ -293,7 +293,7 @@ The "Directive" section contains a description list containing the names and des
 
 ### HTTP request methods
 
-Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Methods/GET) looks like this:
+Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Reference/Methods/GET) looks like this:
 
 ```http
 GET /index.html

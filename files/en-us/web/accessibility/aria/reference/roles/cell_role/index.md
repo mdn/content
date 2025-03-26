@@ -74,7 +74,7 @@ A cell can contain a number of property attributes clarifying the cell's positio
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 

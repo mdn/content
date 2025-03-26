@@ -1,5 +1,6 @@
 ---
 title: Debugging JavaScript and handling errors
+short-title: Debugging and error handling
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
 page-type: learn-module-chapter
 ---

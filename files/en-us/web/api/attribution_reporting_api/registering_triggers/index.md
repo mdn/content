@@ -47,7 +47,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
    The fields specified here are as follows:
 
    - `"event_trigger_data"`: An object representing data about the trigger. This includes:
-     - `"trigger_data"`: The data associated with the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
+     - `"trigger_data"`: The data associated with the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
        > [!NOTE]
        > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
      - `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
@@ -88,7 +88,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    Again, see {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
-3. When the user interacts with the attribution trigger, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the `Attribution-Reporting-Register-Trigger`'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) must match one of the values provided in the {{httpheader("Attribution-Reporting-Register-Source")}}'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data), and the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
+3. When the user interacts with the attribution trigger, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the `Attribution-Reporting-Register-Trigger`'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) must match one of the values provided in the {{httpheader("Attribution-Reporting-Register-Source")}}'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data), and the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
 
    - match the site of at least one of the `destination`s specified in the source's associated data.
    - be same-origin with the request that specified the source registration.
@@ -99,8 +99,8 @@ However, what happens behind the scenes to register triggers, look for matches, 
    There are many other factors that will prevent a successful match outcome; for example:
 
    - The trigger's filters do not match the source's filter data (See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details).
-   - The source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) setting results in no match occurring.
-   - The source's [`"max_event_level_reports"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) limit has been reached.
+   - The source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) setting results in no match occurring.
+   - The source's [`"max_event_level_reports"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) limit has been reached.
    - A successful match is not reported due to the browser's randomized response algorithm. See [Adding noise to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#adding_noise_to_reports) for more details.
 
 4. If a successful match is found, the browser [generates a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) based on the source and trigger data, and sends it to a reporting endpoint.

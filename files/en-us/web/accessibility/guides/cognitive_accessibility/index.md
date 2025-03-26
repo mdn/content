@@ -37,7 +37,7 @@ A solid approach to providing accessible solutions for people with cognitive imp
 - incorporating familiar elements, such as underlined links that are blue when not visited and purple when visited;
 - dividing processes into logical, essential steps with progress indicators;
 - making website authentication as easy as possible without compromising security; and
-- making forms easy to complete, such as with clear error messages and simple error recovery.
+- making forms easy to complete, such as with clear error messages and error recovery.
 
 ## WCAG Guidelines
 

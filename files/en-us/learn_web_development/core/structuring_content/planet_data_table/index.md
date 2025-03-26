@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Structuring a planet data table"
+short-title: "Challenge: Planet data table"
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 page-type: learn-module-assessment
 ---

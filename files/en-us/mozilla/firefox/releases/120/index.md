@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### HTTP
 
-- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code is enabled for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to a particular origin (that the page is likely to need resources from).
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Reference/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code is enabled for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to a particular origin (that the page is likely to need resources from).
   For more details see [Firefox bug 1858712](https://bugzil.la/1858712).
 - Firefox supports the [Global Privacy Control](https://globalprivacycontrol.org/) {{HTTPHeader("Sec-GPC")}} request header, which may be sent to indicate that the user does not consent to a website or service selling or sharing their personal information with third parties.
   Users can enable the header, in both normal and private browsing modes, by setting the preference `privacy.globalprivacycontrol.enabled` to `true` (in `about:config`).

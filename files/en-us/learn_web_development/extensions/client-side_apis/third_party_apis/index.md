@@ -189,7 +189,7 @@ The app will end up allowing you to type in a search term and optional start and
 
 ### Connect the API to your app
 
-First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Methods/GET) parameter every time you request data from the service at the correct URL.
+First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Reference/Methods/GET) parameter every time you request data from the service at the correct URL.
 
 1. Find the following line:
 

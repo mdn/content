@@ -9,7 +9,7 @@ browser-compat: javascript.statements.var
 
 The **`var`** statement declares function-scoped or globally-scoped variables, optionally initializing each to a value.
 
-{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+{{InteractiveExample("JavaScript Demo: var statement")}}
 
 ```js interactive-example
 var x = 1;

@@ -18,6 +18,7 @@ select a directory.
 
 ```js-nolint
 showDirectoryPicker()
+showDirectoryPicker(options)
 ```
 
 ### Parameters

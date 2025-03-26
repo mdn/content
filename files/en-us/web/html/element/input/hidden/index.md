@@ -58,7 +58,7 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 ## Examples
 
-Let's look at how we might implement a simple version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
+Let's look at how we might implement a version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
 The edit form's HTML might look a bit like this:
 

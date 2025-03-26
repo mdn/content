@@ -30,14 +30,14 @@ The article on [media container formats](/en-US/docs/Web/Media/Guides/Formats/Co
 
 ## Handle range requests correctly
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, you can uses [range requests](/en-US/docs/Web/HTTP/Range_requests) to retrieve the media from the seek target position.
+In order to support seeking and playing back regions of the media that aren't yet downloaded, you can uses [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) to retrieve the media from the seek target position.
 In addition, it uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
 Your server should accept the {{HTTPHeader("Accept-Ranges")}} header if it can accept range requests.
 It must return {{HTTPStatus("206", "206 Partial Content")}} to all range requests, otherwise browsers can't determine if the server supports range requests.
 Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
 
-See [range requests](/en-US/docs/Web/HTTP/Range_requests) for more information.
+See [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) for more information.
 
 ## Include regular key frames
 

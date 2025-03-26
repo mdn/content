@@ -81,7 +81,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
-  - : An object which serves as the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
+  - : An object which serves as the source of the media associated with the `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{ReadOnlyInline}}

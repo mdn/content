@@ -16,7 +16,7 @@ It can also be used to build UIs that allow users to select their preferred loca
 
 This method is locale-unaware: it is possible that certain identifiers are only supported or preferred in certain locales. If you want to determine the preferred values for a specific locale, you should use the {{jsxref("Intl.Locale")}} object, such as {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}.
 
-{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf()", "taller")}}
 
 ```js interactive-example
 console.log(Intl.supportedValuesOf("calendar"));

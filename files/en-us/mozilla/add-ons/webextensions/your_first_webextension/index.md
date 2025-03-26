@@ -9,7 +9,7 @@ page-type: guide
 > [!NOTE]
 > If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
 
-This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from "`mozilla.org`" or any of its subdomains.
+This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from `mozilla.org` or any of its subdomains.
 
 The source code for this example is on GitHub: <https://github.com/mdn/webextensions-examples/tree/main/borderify>.
 
@@ -120,16 +120,16 @@ Alternatively, you can run the extension from the command line using the [web-ex
 ### Testing
 
 > [!NOTE]
-> By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open "`about:addons`", click on the extension, and select the Allow radio button for Run in Private Windows.
+> By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open `about:addons`, click on the extension, and select the Allow radio button for Run in Private Windows.
 
-Now visit a page under "`https://www.mozilla.org/en-US/`", and you should see the red border round the page.
+Now visit a page under `https://www.mozilla.org/en-US/`, and you should see the red border round the page.
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > [!NOTE]
-> Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
+> Don't try it on `addons.mozilla.org`, though! Content scripts are currently blocked on that domain.
 
-Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the Reload button in "`about:debugging`". You can see the changes right away.
+Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the Reload button in `about:debugging`. You can see the changes right away.
 
 - [Learn more about loading extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 

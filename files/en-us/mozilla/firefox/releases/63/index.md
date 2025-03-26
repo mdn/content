@@ -123,7 +123,7 @@ _No changes._
 
 ### Security
 
-- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
+- Site favicons are now subject to [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) if one is configured for the site ([Firefox bug 1297156](https://bugzil.la/1297156)).
 - CSP `script-src` directive's `'report-sample'` expression now recognized when generating violation reports. This directive indicates that a short sample of where the violation occurred should be included in the report. Previously, Firefox always included this sample ([Firefox bug 1473218](https://bugzil.la/1473218)).
 - Firefox now uses NSS 3.39 ([Firefox bug 1470914](https://bugzil.la/1470914)).
 

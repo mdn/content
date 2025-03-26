@@ -17,7 +17,7 @@ When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke in
 > [!NOTE]
 > Where possible, use the HTML {{HTMLElement('input')}} or the {{HTMLElement('textarea')}}, as these have built in semantics and behaviors, do not require ARIA attributes or scripting, and have keyboard support built in.
 
-If the `aria-multiline="true"` is set, it means the textbox widget will accept line breaks within the input, similar to the HTML {{HTMLElement('textarea')}}. Elements with a role of `textbox` that do not have the attribute, or with the value set to `false`, are simple text box.
+If the `aria-multiline="true"` is set, it means the textbox widget will accept line breaks within the input, similar to the HTML {{HTMLElement('textarea')}}. Elements with a role of `textbox` that do not have the attribute, or with the value set to `false`, are simple text boxes.
 
 Be aware of focus and keystrokes when designing text boxes. ARIA only modifies the accessibility tree and therefore how assistive technology presents the textbox to your users. ARIA doesn't change anything about an element's default function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior and functionality, including responding to keystroke events.
 

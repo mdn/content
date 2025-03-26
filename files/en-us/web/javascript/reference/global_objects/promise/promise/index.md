@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Promise.Promise
 
 The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is primarily used to wrap callback-based APIs that do not already support promises.
 
-{{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise() constructor", "taller")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {

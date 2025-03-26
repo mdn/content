@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Creating fancy letterheaded paper"
+short-title: "Challenge: Fancy letterhead"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 page-type: learn-module-assessment
 ---

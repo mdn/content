@@ -32,12 +32,14 @@ If the current context is not receiving a presentation, `receiver` is
 ### Determining whether or not the context is receiving a presentation
 
 You can easily determine whether or not the context is the receiver for a presentation
-by checking the value of `navigator.receiver`. If it's a non-null value, then
+by checking the value of `navigator.presentation.receiver`. If it's a non-null value, then
 the context is indeed receiving a presentation. If it's `null`, there's no
 incoming presentation.
 
 ```js
-footer.textContent = navigator.receiver ? "Receiving presentation" : "(idle)";
+footer.textContent = navigator.presentation.receiver
+  ? "Receiving presentation"
+  : "(idle)";
 ```
 
 ### Accessing the connection list
@@ -57,7 +59,7 @@ navigator.presentation.receiver.connectionList.then((connections) => {
 ```
 
 After getting access to the output list element in the variable
-`connectionView`, {{domxref("navigator.receiver")}} is used to get a
+`connectionView`, `navigator.presentation.receiver` is used to get a
 reference to the {{domxref("PresentationReceiver")}} object for this context, and its
 {{domxref("PresentationReceiver.connectionList", "connectionList")}} is used to get a
 {{jsxref("Promise")}} which will be called when the list is available.

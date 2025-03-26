@@ -77,4 +77,4 @@ let SPVEvt = new SecurityPolicyViolationEvent("foo", {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)

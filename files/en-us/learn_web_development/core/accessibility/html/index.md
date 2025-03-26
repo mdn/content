@@ -1,5 +1,6 @@
 ---
 title: "HTML: A good basis for accessibility"
+short-title: Accessible HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 page-type: learn-module-chapter
 ---

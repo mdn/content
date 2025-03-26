@@ -1,5 +1,6 @@
 ---
 title: "Challenge: A cool-looking box"
+short-title: "Challenge: Fancy box styles"
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 page-type: learn-module-assessment
 ---

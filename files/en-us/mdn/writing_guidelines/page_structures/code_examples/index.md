@@ -11,7 +11,7 @@ This article describes the ways you can add code examples to pages, along with t
 
 > [!NOTE]
 > This page describes **how** code gets included in MDN pages.
-> If you want linting and style hints for adding code in an MDN page, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> If you want linting and style hints for adding code in an MDN page, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ## What types of code example are on MDN?
 

@@ -21,7 +21,7 @@ new Headers(init)
 ### Parameters
 
 - `init` {{optional_inline}}
-  - : An object containing any [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+  - : An object containing any [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
     that you want to pre-populate your `Headers` object with. This can be a
     simple object literal with {{jsxref("String")}} values, an array of name-value pairs, where each pair is a 2-element string array; or an existing
     `Headers` object. In the last case, the new `Headers` object
@@ -85,5 +85,5 @@ const myHeaders = new Headers(headers);
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

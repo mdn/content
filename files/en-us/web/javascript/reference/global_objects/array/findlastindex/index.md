@@ -12,7 +12,7 @@ If no elements satisfy the testing function, -1 is returned.
 
 See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
 
-{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLastIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 50, 130, 44];

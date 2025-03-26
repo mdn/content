@@ -59,7 +59,7 @@ Events have three functions:
 
     When the listener returns an array or a Promise that resolves to an array, the `ProxyInfo` objects after the first one represent failovers. If the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires, the browser tries the proxy at position N+1.
 
-    By default, the request fails over to any browser-defined proxy unless a `null` object or an array ending in a `null` object (`[{ ... proxy info ...} , null]``) is returned.
+    By default, the request fails over to any browser-defined proxy unless a `null` object or an array ending in a `null` object (`[{ ... proxy info ...} , null]`) is returned.
 
     If there is an error specifying the {{WebExtAPIRef("proxy.ProxyInfo")}} objects, then {{WebExtAPIRef("proxy.onError")}} is called.
 

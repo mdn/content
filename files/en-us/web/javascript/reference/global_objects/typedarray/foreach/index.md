@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.forEach
 
 The **`forEach()`** method of {{jsxref("TypedArray")}} instances executes a provided function once for each typed array element. This method has the same algorithm as {{jsxref("Array.prototype.forEach()")}}.
 
-{{InteractiveExample("JavaScript Demo: TypedArray.forEach()")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.prototype.forEach()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);

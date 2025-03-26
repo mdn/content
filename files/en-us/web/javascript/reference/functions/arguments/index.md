@@ -9,7 +9,7 @@ browser-compat: javascript.functions.arguments
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{InteractiveExample("JavaScript Demo: The arguments object")}}
 
 ```js interactive-example
 function func1(a, b, c) {

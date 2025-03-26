@@ -63,7 +63,7 @@ The `suggested_key` property is an object with any or none of these properties (
 - `"android"`
 - `"ios"`
 
-The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "`+`". The value for `"default"` is used on all platforms that aren't explicitly listed. If `"default"` isn't included, the command doesn't have a keyboard shortcut on any platform not included, unless a shortcut is configured by the user or through the {{WebExtAPIRef("commands.update")}} API.
+The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by `+`. The value for `"default"` is used on all platforms that aren't explicitly listed. If `"default"` isn't included, the command doesn't have a keyboard shortcut on any platform not included, unless a shortcut is configured by the user or through the {{WebExtAPIRef("commands.update")}} API.
 
 For example:
 
@@ -187,7 +187,7 @@ Key combinations must consist of 2 or 3 keys:
      > From Firefox 135, users can assign the `F13` to `F19` keys to an extension using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox). Your extension can't assign these keys from the manifest file. However, it can assign them using {{WebExtAPIRef("commands.update")}}.
    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
-The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.
+The key is then given as a string containing the set of key values, in the order listed above, separated by `+`. For example, `"Ctrl+Shift+Z"`.
 
 If a key combination is already used by the browser (like `"Ctrl+P"`) or by an existing add-on, then you can't override it. You can define it, but your event handler will not be called when the user presses the key combination.
 

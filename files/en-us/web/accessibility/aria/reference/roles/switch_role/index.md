@@ -90,11 +90,11 @@ The following examples should help you understand how to apply and use the `swit
 
 ### Adding the switch role in ARIA
 
-This simple example just creates a widget and assigns the ARIA `switch` role to it. The button is styled with an appearance reminiscent of an on/off power switch.
+This example creates a widget and assigns the ARIA `switch` role to it. The button is styled with an appearance reminiscent of an on/off power switch.
 
 #### HTML
 
-The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("button")}} element which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
+A switch is implemented as a {{HTMLElement("button")}} element, which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
 
 ```html
 <button role="switch" aria-checked="true" id="speakerPower" class="switch">

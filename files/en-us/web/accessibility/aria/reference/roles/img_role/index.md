@@ -102,7 +102,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 <div role="img">Title of my image</div>
 ```
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - `aria-label` or `aria-labelledby`
   - : An accessible name is required. For the HTML {{HTMLElement('img')}} element, use the `alt` attribute. For all other elements with the `img` role, use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
