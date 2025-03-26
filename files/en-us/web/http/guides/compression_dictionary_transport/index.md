@@ -126,7 +126,7 @@ Example command line options are shown below, and these can be configured in bui
 
 ### Delta-compressed Brotli (`dcb`) a resource
 
-Assuming the dictionary file is `dictionary.txt` and the file to be compressed is data.text, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+Assuming the dictionary file is `dictionary.txt` and the file to be compressed is `data.text`, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
 
 ```bash
 echo -en '\xffDCB' > data.txt.dcb && \
@@ -136,7 +136,7 @@ brotli --stdout -D dictionary.txt data.txt >> data.txt.dcb
 
 ### Delta-compressed Brotli (`dcz`) a resource
 
-Assuming the dictionary file is `dictionary.txt` and the file to be compressed is data.text, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+Assuming the dictionary file is `dictionary.txt` and the file to be compressed is `data.text`, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
 
 ```bash
 echo -en '\x5e\x2a\x4d\x18\x20\x00\x00\x00' > data.txt.dcz && \
