@@ -14,7 +14,7 @@ The `kernelUnitLength` attribute indicates the intended distance in current filt
 
 ## Value
 
-An {{domxref("SVGAnimatedNumber")}} object.
+An {{domxref("SVGAnimatedNumber")}} object that corresponds to the X-component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.
 
 ## Specifications
 
