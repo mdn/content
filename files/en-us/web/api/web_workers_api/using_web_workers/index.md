@@ -825,7 +825,7 @@ To open devtools for web workers, one can use the following shortcuts:
 | chrome  | chrome://inspect/                     |
 | firefox | about:debugging#/runtime/this-firefox |
 
-This pages show an overview over all service workers, one needs to find the relevant one by the URL and then click *inspect*. The devtools will open for that worker and give access to the console and debugger.
+This pages show an overview over all service workers, one needs to find the relevant one by the URL and then click _inspect_. The devtools will open for that worker and give access to the console and debugger.
 
 ## Functions and interfaces available in workers
 
