@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
 The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
 
@@ -48,7 +48,7 @@ decodingInfo(configuration)
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
           - : The width of the video.
         - `height`
@@ -64,7 +64,7 @@ decodingInfo(configuration)
         This has the following properties: <!-- AudioConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
           - : The number of channels used by the audio track.
         - `bitrate`
@@ -186,7 +186,7 @@ All supported audio codecs report `powerEfficient` as true.
 
 ## Usage notes
 
-### Comparision with Navigator.requestMediaKeySystemAccess()
+### Comparison with Navigator.requestMediaKeySystemAccess()
 
 `decodingInfo()` and the {{domxref("Navigator.requestMediaKeySystemAccess()")}} method of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) reflect fundamentally different approaches for selecting a configuration for decoding encrypted media.
 
@@ -328,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 In the previous example we used [promise chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining), to wait on the result.
-Here we've chosen to use [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) to wait on the result, and then log it.
+Here we've chosen to use [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await) to wait on the result, and then log it.
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

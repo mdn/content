@@ -98,11 +98,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `"userlist"` which have a `"data-active"`
+a list whose ID is `"user-list"` which have a `"data-active"`
 attribute whose value is `"1"`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 
@@ -295,7 +295,7 @@ Clicking the first button gives an error, while the second and third buttons wor
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
-- [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelector()")}} and
   {{domxref("Document.querySelectorAll()")}}

@@ -38,9 +38,9 @@ const bindGroupLayout = device.createBindGroupLayout({
   ],
 });
 
-bindGroupLayout.label = "mybindgrouplayout";
+bindGroupLayout.label = "my_bind_group_layout";
 
-console.log(bindGroupLayout.label); // "mybindgrouplayout";
+console.log(bindGroupLayout.label); // "my_bind_group_layout"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createBindGroupLayout()")}} call, and then getting it via `GPUBindGroupLayout.label`:
@@ -58,10 +58,10 @@ const bindGroupLayout = device.createBindGroupLayout({
       },
     },
   ],
-  label: "mybindgrouplayout",
+  label: "my_bind_group_layout",
 });
 
-console.log(bindGroupLayout.label); // "mybindgrouplayout";
+console.log(bindGroupLayout.label); // "my_bind_group_layout"
 ```
 
 ## Specifications

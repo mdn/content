@@ -14,13 +14,11 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
 
 ### HTML
 
-- [Meet the HTML5 parser](/en-US/docs/Learn/HTML)
-  - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
-- [Forms in HTML5](/en-US/docs/Learn/Forms)
+- [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.
@@ -42,10 +40,10 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - {{HTMLElement("textarea")}} elements are now resizable by default; you can use the {{cssxref("resize")}} CSS property to disable this.
 - `canvas.getContext` and `canvas.toDataURL` no longer throw an exception when called with unrecognized arguments.
 - The {{HTMLElement("canvas")}} element now supports the Mozilla-specific `mozGetAsFile()` method, which lets you obtain a memory-based file containing an image of the canvas's contents. See {{domxref("HTMLCanvasElement")}} for details.
-- `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
-- `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
+- `Canvas2DContext.lineCap` and `Canvas2DContext.lineJoin` no longer throw an exception when set to an unrecognized value.
+- `Canvas2DContext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete `<spacer>` element, which was absent in all other browsers, has been removed.
-- The `<isindex>` element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
+- The `<isindex>` element, when created by calling {{domxref("Document.createElement()")}}, is now created as a simple element with no properties or methods.
 - Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 - The {{HTMLElement("input")}} element supports a new `mozactionhint` attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
@@ -64,7 +62,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : Support for touch properties is added. Details, and real article names, to come later.
 - [Using arbitrary elements as CSS backgrounds](/en-US/docs/Web/CSS/element)
   - : You can use the `-moz-element` CSS function and the {{domxref("document.mozSetImageElement()")}} DOM function to use arbitrary HTML elements as backgrounds.
-- [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/en-US/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
 
 #### New CSS properties
@@ -232,9 +230,9 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The developing WebGL standard is now supported by Firefox.
 - [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
-- [Support for WebM video](/en-US/docs/Web/Media/Formats#webm)
+- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.
 - Using SVG as images and as CSS backgrounds
   - : You can now use SVG with the {{htmlelement("img")}} element, as well as a CSS {{cssxref("background-image")}}.
@@ -273,41 +271,41 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 #### Miscellaneous DOM changes
 
 - The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
-- {{HTMLElement("script")}} elements created using {{domxref("document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
-- DOM {{domxref("file")}} objects now offer a `url` property.
+- {{HTMLElement("script")}} elements created using {{domxref("Document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
+- DOM {{domxref("File")}} objects now offer a `url` property.
 - [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
-- The {{domxref("element.isContentEditable")}} property has been implemented.
-- The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
-- Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
-- Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
+- The {{domxref("HTMLElement.isContentEditable")}} property has been implemented.
+- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute", "afterscriptexecute")}} events are fired before and after a script element executes.
+- Added the `mozSourceNode` property to the {{domxref("DataTransfer")}} object.
+- Added the {{domxref("Selection.modify()")}} method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
-- The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
+- The {{domxref("MouseEvent.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
 - The {{domxref("Document")}} {{domxref("Document/readystatechange_event", "readystatechange")}} event has been implemented.
 - The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
-- The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
+- The {{domxref("Element.setCapture()")}} and {{domxref("Document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
+- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Guides/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
 - The {{domxref("XMLHttpRequest")}} object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
-- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
+- The {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
-- {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
-- You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
+- `Node.mozMatchesSelector()` now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
+- You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("HTMLElement/style", "style")}} for details.
 - The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM {{domxref("StorageEvent")}} object now matches the latest version of the specification.
-- The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
+- The minimum allowed delay for the {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
 - The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their websites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
-- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security is a security feature that lets a website tell browsers that it should only be communicated with using HTTPS, instead of using HTTP.
-- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+- [The X-FRAME-OPTIONS response header](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : The X-FRAME-OPTIONS HTTP response header introduced in Internet Explorer 8 is now supported by Firefox. This allows sites to indicate whether or not their pages can be used in frames, and if so, whether or not to restrict that to the same origin.
-- [User Agent string](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox) changes
+- [User Agent string](/en-US/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox) changes
   - : As a means to reduce the amount of data and entropy sent out in HTTP requests (see [Firefox bug 572650](https://bugzil.la/572650)), the crypto strength and language tokens have been removed from the user agent string.
 
 ### JavaScript
@@ -353,7 +351,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 ### DOM changes
 
-- {{domxref("ChromeWorker")}}
+- `ChromeWorker`
   - : A new type of worker for privileged code; this lets you use things like [js-ctypes](/en-US/docs/js-ctypes) from workers in extensions and application code.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Support for (non-standard) touch events has been added; these let you track multiple fingers moving on a touch screen at the same time.
@@ -375,7 +373,7 @@ Several changes were made to the `<xul:tabbrowser>` element that impact extensio
 - Added the new `getIcon` method, which lets you get a tab's favicon without having to pull up the `<xul:browser>` element.
 - Added the new `tabbrowser.tabs` property, which lets you easily get a list of the tabs in a `<xul:tabbrowser>` element.
 - The new `pinTab` and `unpinTab` methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).
-- Added the `getTabModalPromptBox` method and `tabmodalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
+- Added the `getTabModalPromptBox` method and `tabModalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
 
 #### Changes to popups
 
@@ -475,7 +473,7 @@ In addition to the specific changes referenced below, it's important to note tha
 - The `accessibility.disablecache` preference is no longer supported; it was only exposed for debugging purposes and is no longer used.
 - Addons whose GUID changes from one version to another can now be updated properly.
 - As a side effect of the removal of platform-specific directories in add-on bundles, you can no longer provide different default preferences for each platform.
-- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
+- By default, [extensions are no longer unpacked when they are installed](https://web.archive.org/web/20130707104214/https://blog.mozilla.org/mwu/2010/09/10/extensions-now-installed-packed/), but are instead run directly from the XPI file. Extensions can use the [unpack](/en-US/docs/Install_Manifests#unpack) property in the [install manifest](/en-US/docs/Install_Manifests) to choose the old behavior. Extensions that use binary components, DLLs loaded using [js-ctypes](/en-US/docs/js-ctypes), [search plugins](/en-US/docs/Web/XML/Guides/OpenSearch), dictionaries, and window icons must specify that they need to be unpacked. Extensions that [create SQLite database](/en-US/docs/XUL_School/Local_Storage#sqlite), or do copy things from the filesystem relatively to the extension's directory, may also need to change their code.
 - You may now include extensions that [automatically get installed at application startup](/en-US/docs/Mozilla/Developer_guide/Customizing_Firefox#including_extensions_with_your_distribution_of_firefox) within a customized Firefox.
 
 ## Other changes

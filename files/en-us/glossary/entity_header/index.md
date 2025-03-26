@@ -14,7 +14,7 @@ An entity header is an {{glossary("HTTP_header", "HTTP header")}} that describes
 In the following example, {{HTTPHeader("Content-Length")}} is an entity header, while {{HTTPHeader("Host")}} and {{HTTPHeader("User-Agent")}} are requests headers:
 
 ```http
-POST /myform.html HTTP/1.1
+POST /my-form.html HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Content-Length: 128

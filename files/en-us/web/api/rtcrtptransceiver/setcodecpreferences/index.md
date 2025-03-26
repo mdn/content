@@ -25,7 +25,7 @@ The codecs can be changed when you have an ongoing communication, but you need t
 A WebRTC application will already have code for this in the [`negotiationneeded` event handler](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
 Note however that at time of writing the event is not automatically fired when you call `setCodecParameters()`, so you will have to call `onnegotiationneeded` yourself.
 
-A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
+A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs).
 
 ## Syntax
 
@@ -37,7 +37,7 @@ setCodecPreferences(codecs)
 
 - `codecs`
 
-  - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs), ordered by preference.
+  - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
     > [!NOTE]
@@ -63,7 +63,7 @@ setCodecPreferences(codecs)
       - : A string indicating the codec's MIME media type and subtype, specified as a string of the form `"type/subtype"`.
         The MIME type strings used by RTP differ from those used elsewhere.
         IANA maintains a [registry of valid MIME types](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-2).
-        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
 
     - `sdpFmtpLine` {{optional_inline}}
 
@@ -97,7 +97,7 @@ You can get the codecs supported for decoding data using the {{domxref("RTCRtpRe
 const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 ```
 
-To reorder the codecs array to our preferred order, we can use the sorting fuction below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
+To reorder the codecs array to our preferred order, we can use the sorting function below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
 
 ```js
 function sortByMimeTypes(codecs, preferredOrder) {
@@ -137,6 +137,6 @@ transceiver.setCodecPreferences(sortedCodecs); // <---
 
 - [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - [Web media technologies](/en-US/docs/Web/Media)

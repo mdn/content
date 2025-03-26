@@ -12,7 +12,7 @@ Sets the background color for the badge. Tabs without a specific badge backgroun
 > [!NOTE]
 > This API is available in Manifest V3 or higher.
 
-In Firefox, unless the badge text color is explicitly set using {{WebExtAPIRef("action.setBadgeTextColor()")}}, then the badge text color iw automatically set to black or white to maximize contrast with the specified badge background color. For example, if you set the badge background color to white, the default badge text color is set to black, and vice versa.
+In Firefox, unless the badge text color is explicitly set using {{WebExtAPIRef("action.setBadgeTextColor()")}}, then the badge text color will automatically be set to black or white to maximize contrast with the specified badge background color. For example, if you set the badge background color to white, the default badge text color is set to black, and vice versa.
 
 Other browsers always use a white text color, so setting a dark background may be preferable to ensure the text is readable.
 
@@ -35,7 +35,7 @@ browser.action.setBadgeBackgroundColor(
       - : The color, specified as one of:
 
         - a string: any CSS [\<color>](/en-US/docs/Web/CSS/color_value) value, for example `"red"`, `"#FF0000"`, or `"rgb(255 0 0)"`. If the string is not a valid color, the returned promise will be rejected and the background color won't be altered.
-        - a `{{WebExtAPIRef('action.ColorArray')}}` object.
+        - a {{WebExtAPIRef('action.ColorArray')}} object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.
 
     - `tabId` {{optional_inline}}

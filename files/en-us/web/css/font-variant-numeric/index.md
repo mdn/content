@@ -9,7 +9,67 @@ browser-compat: css.properties.font-variant-numeric
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
-{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
+{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+
+```css interactive-example-choice
+font-variant-numeric: normal;
+```
+
+```css interactive-example-choice
+font-variant-numeric: slashed-zero;
+```
+
+```css interactive-example-choice
+font-variant-numeric: tabular-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: oldstyle-nums;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <table>
+      <tr>
+        <td><span class="tabular">0</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## Syntax
 
@@ -85,7 +145,29 @@ This property can take one of two forms:
 
 ### Setting ordinal numeric forms
 
-{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
+```html live-sample___font-variant-numeric-example
+<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+```
+
+```css live-sample___font-variant-numeric-example
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ordinal {
+  font-family: "Source Sans Pro";
+  font-size: 2rem;
+  font-variant-numeric: ordinal;
+}
+```
+
+{{EmbedLiveSample("font-variant-numeric-example")}}
 
 ## Specifications
 

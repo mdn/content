@@ -9,7 +9,32 @@ browser-compat: javascript.classes.extends
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or [class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class) to create a class that is a child of another class.
 
-{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Class extends", "taller")}}
+
+```js interactive-example
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
+// Expected output: "19-Aug-1975"
+```
 
 ## Syntax
 

@@ -36,7 +36,7 @@ It clones by recursing through the input object while maintaining a map of previ
 - {{jsxref("Map")}}
 - {{jsxref("Number")}}
 - {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
-- [Primitive types](/en-US/docs/Web/JavaScript/Data_structures#primitive_values), except `symbol`.
+- [Primitive types](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values), except `symbol`.
 - {{jsxref("RegExp")}}: but note that `lastIndex` is not preserved.
 - {{jsxref("Set")}}
 - {{jsxref("String")}}
@@ -64,6 +64,9 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - {{domxref("DOMQuad")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMRectReadOnly")}}
+- {{domxref("EncodedAudioChunk")}}
+- {{domxref("EncodedVideoChunk")}}
+- {{domxref("FencedFrameConfig")}}
 - {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileSystemDirectoryHandle")}}
@@ -71,10 +74,17 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - {{domxref("FileSystemHandle")}}
 - {{domxref("GPUCompilationInfo")}}
 - {{domxref("GPUCompilationMessage")}}
+- {{domxref("GPUPipelineError")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("RTCCertificate")}}
+- {{domxref("RTCEncodedAudioFrame")}}
+- {{domxref("RTCEncodedVideoFrame")}}
 - {{domxref("VideoFrame")}}
+- {{domxref("WebTransportError")}}
+
+> [!NOTE]
+> Serializable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Serializable]`.
 
 ## See also
 

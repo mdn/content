@@ -83,7 +83,7 @@ Many built-in operations that expect booleans first coerce their arguments to bo
 > A legacy behavior makes [`document.all`](/en-US/docs/Web/API/Document/all) return `false` when used as a boolean, despite it being an object. This property is legacy and non-standard and should not be used.
 
 > [!NOTE]
-> Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to [convert objects to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling user methods.
+> Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to [convert objects to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling user methods.
 
 In other words, there are only a handful of values that get coerced to `false` — these are called [falsy](/en-US/docs/Glossary/Falsy) values. All other values are called [truthy](/en-US/docs/Glossary/Truthy) values. A value's truthiness is important when used with logical operators, conditional statements, or any boolean context.
 
@@ -166,5 +166,5 @@ const bObjProto = Boolean({});
 ## See also
 
 - [Boolean](/en-US/docs/Glossary/Boolean)
-- [Boolean primitives](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Boolean primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type)
 - [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia

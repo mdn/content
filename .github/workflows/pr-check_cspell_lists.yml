@@ -5,8 +5,10 @@ on:
     branches:
       - main
     paths:
-      - .vscode/ignore-list.txt
-      - .vscode/terms-abbreviations.txt
+      - .vscode/dictionaries/*
+
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
 
 jobs:
   docs:
@@ -16,8 +18,7 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            .vscode/ignore-list.txt
-            .vscode/terms-abbreviations.txt
+            .vscode/dictionaries/*
             .nvmrc
             package.json
             scripts/sort_and_unique_file_lines.js
@@ -29,5 +30,4 @@ jobs:
 
       - name: Check if cSpell word lists are in correct order
         run: |
-          node scripts/sort_and_unique_file_lines.js .vscode/ignore-list.txt --check
-          node scripts/sort_and_unique_file_lines.js .vscode/terms-abbreviations.txt --check
+          node scripts/sort_and_unique_file_lines.js --check .vscode/dictionaries

@@ -98,7 +98,7 @@ The following example takes the list of input ports and adds them to a select li
 inputs.forEach((port, key) => {
   const opt = document.createElement("option");
   opt.text = port.name;
-  document.getElementById("inputportselector").add(opt);
+  document.getElementById("port-selector").add(opt);
 });
 ```
 

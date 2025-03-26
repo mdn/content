@@ -10,7 +10,31 @@ browser-compat: javascript.builtins.Map
 The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
 Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## Description
 
@@ -20,7 +44,7 @@ The specification requires maps to be implemented "that, on average, provide acc
 
 ### Key equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Objects vs. Maps
 
@@ -92,7 +116,7 @@ cases:
       <th scope="row">Key Order</th>
       <td>
         <p>
-          The keys in <code>Map</code> are ordered in a simple, straightforward
+          The keys in <code>Map</code> are ordered in a straightforward
           way: A <code>Map</code> object iterates entries, keys, and values in
           the order of entry insertion.
         </p>
@@ -473,7 +497,7 @@ console.log(original === clone); // false (useful for shallow comparison)
 ```
 
 > [!NOTE]
-> Keep in mind that _the data itself_ is not cloned.
+> Keep in mind that _the data itself_ is not cloned. In other words, it is only a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the `Map`.
 
 Maps can be merged, maintaining key uniqueness:
 
@@ -513,9 +537,9 @@ const second = new Map([
 ]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, "eins"]]);
+const merged = new Map([...first, ...second, [1, "un"]]);
 
-console.log(merged.get(1)); // eins
+console.log(merged.get(1)); // un
 console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
 ```
@@ -531,6 +555,7 @@ console.log(merged.get(3)); // three
 ## See also
 
 - [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
+- [es-shims polyfill of `Map`](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

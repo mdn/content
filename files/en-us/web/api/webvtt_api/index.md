@@ -282,7 +282,7 @@ video::cue {
 }
 ```
 
-Then we style each of the tags above with a different colour.
+Then we style each of the tags above with a different color.
 
 ```css
 video::cue(u) {
@@ -298,7 +298,7 @@ video::cue(i) {
 }
 
 video::cue(c) {
-  color: lightpurple;
+  color: lavender;
 }
 ```
 

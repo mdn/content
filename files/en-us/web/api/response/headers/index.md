@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Response.headers
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`headers`** read-only property of the
 {{domxref("Response")}} interface contains the {{domxref("Headers")}} object associated
@@ -52,5 +52,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

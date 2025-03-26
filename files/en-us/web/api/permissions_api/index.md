@@ -19,7 +19,7 @@ For example, it can be used to determine if permission to access a particular fe
 Historically different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) provided its own methods for requesting permissions and checking permission status, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation) did not.
 The Permissions API provides the tools to allow developers to implement a consistent user experience for working with permissions.
 
-The permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, requirements for user interaction, and user prompts.
+The permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) restrictions applied to the document, requirements for user interaction, and user prompts.
 So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
 
 The `permissions` property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.
@@ -82,7 +82,7 @@ A non-exhaustive list of permission-aware APIs includes:
 
 ## Examples
 
-We have created a simple example called Location Finder.
+We have created an example called Location Finder.
 You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages), or read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
 The [`Permissions.query()` example](/en-US/docs/Web/API/Permissions/query#test_support_for_various_permissions) also so shows code that tests most permissions on the current browser and logs the result.

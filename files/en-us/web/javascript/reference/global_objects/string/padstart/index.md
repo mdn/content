@@ -10,7 +10,21 @@ browser-compat: javascript.builtins.String.padStart
 The **`padStart()`** method of {{jsxref("String")}} values pads this string with another string (multiple times, if needed) until the resulting
 string reaches the given length. The padding is applied from the start of this string.
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.padStart()")}}
+
+```js interactive-example
+const str1 = "5";
+
+console.log(str1.padStart(2, "0"));
+// Expected output: "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Expected output: "************5581"
+```
 
 ## Syntax
 
@@ -72,4 +86,5 @@ console.log(leftFillNum(num, 5)); // "00123"
 ## See also
 
 - [Polyfill of `String.prototype.padStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.padStart`](https://www.npmjs.com/package/string.prototype.padstart)
 - {{jsxref("String.prototype.padEnd()")}}

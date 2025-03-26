@@ -48,11 +48,11 @@ function draw() {
   ctx.clip();
 
   // Draw background
-  const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, "#232256");
-  lingrad.addColorStop(1, "#143778");
+  const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
+  linGrad.addColorStop(0, "#232256");
+  linGrad.addColorStop(1, "#143778");
 
-  ctx.fillStyle = lingrad;
+  ctx.fillStyle = linGrad;
   ctx.fillRect(-75, -75, 150, 150);
 
   generateStars(ctx);
@@ -131,11 +131,11 @@ function draw() {
     ctx.clip();
 
     // Draw background
-    const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-    lingrad.addColorStop(0, "#232256");
-    lingrad.addColorStop(1, "#143778");
+    const linGrad = ctx.createLinearGradient(0, -75, 0, 75);
+    linGrad.addColorStop(0, "#232256");
+    linGrad.addColorStop(1, "#143778");
 
-    ctx.fillStyle = lingrad;
+    ctx.fillStyle = linGrad;
     ctx.fillRect(-75, -75, 150, 150);
 
     generateStars(ctx);

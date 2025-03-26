@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.takeRecords
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **`takeRecords()`** method of the {{domxref('PressureObserver')}} interface returns the current list of pressure records stored in the pressure observer, emptying it out.
 

@@ -9,7 +9,33 @@ browser-compat: html.elements.input.type_week
 
 {{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO_8601#Week_dates)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 
@@ -81,7 +107,7 @@ We'll look at basic and more complex uses of `<input type="week">`, then offer a
 
 ### Basic uses of week
 
-The simplest use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -389,4 +415,3 @@ function populateWeeks() {
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

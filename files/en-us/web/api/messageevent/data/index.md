@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.data
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`data`** read-only property of the
 {{domxref("MessageEvent")}} interface represents the data sent by the message emitter.

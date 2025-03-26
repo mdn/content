@@ -80,11 +80,81 @@ The above rules can therefore also be written as:
 
 In the example below we have an `inset()` shape used to pull content over the floated element. Change the offset values to see how the shape changes.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset.html", '100%', 800)}}
+```html live-sample___inset
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___inset
+body {
+  font: 1.2em sans-serif;
+}
+
+.shape {
+  float: left;
+  width: 150px;
+  height: 100px;
+  shape-outside: inset(20px 50px 10px 0 round 50px);
+  background-color: rebeccapurple;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("inset", "", "250px")}}
 
 You can also add a box value as an alternative reference box. In the example below, try changing the reference box from `margin-box` to `border-box`, `padding-box`, or `content-box` to see how the reference box used as the starting point changes before offsets are calculated.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/inset-box.html", '100%', 800)}}
+```html hidden live-sample___inset-box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___inset-box
+body {
+  font: 1.2em sans-serif;
+}
+
+.shape {
+  float: left;
+  width: 150px;
+  height: 100px;
+  shape-outside: inset(20px 50px 10px 0 round 50px) margin-box;
+  background-color: rebeccapurple;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("inset-box", "", "250px")}}
 
 You can also create rectangles based on distances from the top and left edges of the reference box with the [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) function, or by width and height with the [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) function; both of these also support optional rounded corners.
 
@@ -100,13 +170,74 @@ The second argument is a `position`, which accepts a one- or two-keyword [`<posi
 
 To create a circle, we include a single radius value, optionally followed by the keyword **at** followed by a position value. This example has a circle applied to an {{htmlelement("img")}} with a `width` and `height` of `210px` and a `margin` of `20px`. This gives a total width for the reference box of `250px`. The `50%` value for the `<shape-radius>` means the radius is `125px`. The position value is set to `30%`, which is `30%` from the left and at the default vertical `center`.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle.html", '100%', 800)}}
+```html live-sample___circle
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___circle
+body {
+  font: 1.2em sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: circle(50% at 30%);
+  margin: 20px;
+}
+```
+
+{{EmbedLiveSample("circle", "", "250px")}}
 
 Play with increasing or decreasing the size of the circle by changing the size of the radius, moving the circle around with the position value, or setting a reference box as we did for `inset()`.
 
 The below example combines generated content with a `circle()` function that uses the keywords `top left` for position. This creates a quarter circle shape in the top left corner of the page for text to flow around.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/circle-generated.html", '100%', 700)}}
+```html live-sample___circle-generated
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___circle-generated
+body {
+  font: 1.2em sans-serif;
+}
+
+.box::before {
+  content: "";
+  float: left;
+  width: 250px;
+  height: 250px;
+  shape-outside: circle(50% at top left);
+}
+```
+
+{{EmbedLiveSample("circle-generated", "", "300px")}}
 
 ### The shape will be clipped by the margin box
 
@@ -127,11 +258,72 @@ An ellipse is a squashed circle. As such, the [`ellipse()`](/en-US/docs/Web/CSS/
 
 These may then be followed by one or two `<position>` values, as with `circle()`, to define the location of the center of the ellipse. In the example below, we have an ellipse with an `x` radius of `40%`, a `y` radius of `50%` and the `<position>` set to `left`. This means that the center of the ellipse is at the center of the left edge of the reference box. This creates a half ellipse shape around which the text will wrap. You can change these values to see how the ellipse changes.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse.html", '100%', 800)}}
+```html live-sample___ellipse
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___ellipse
+body {
+  font: 1.2em sans-serif;
+}
+.shape {
+  float: left;
+  shape-outside: ellipse(40% 50% at left);
+  margin: 20px;
+  width: 100px;
+  height: 200px;
+}
+```
+
+{{EmbedLiveSample("ellipse", "", "300px")}}
 
 The keyword values of `closest-side` and `farthest-side` are useful in creating a quick ellipse based on the size of the floated element reference box.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/ellipse-keywords.html", '100%', 800)}}
+```html hidden live-sample___ellipse-keywords
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___ellipse-keywords
+body {
+  font: 1.2em sans-serif;
+}
+
+.shape {
+  float: left;
+  shape-outside: ellipse(closest-side farthest-side at 30%);
+  margin: 20px;
+  width: 100px;
+  height: 140px;
+}
+```
+
+{{EmbedLiveSample("ellipse-keywords", "", "250px")}}
 
 ## polygon()
 
@@ -139,7 +331,43 @@ The [`polygon()`](/en-US/docs/Web/CSS/basic-shape/polygon) function is more comp
 
 The example below creates a shape for text to follow using the `polygon()` function. Try changing the coordinate values to see how the shape changes.
 
-{{EmbedGHLiveSample("css-examples/shapes/basic-shape/polygon.html", '100%', 800)}}
+```html hidden live-sample___polygon
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___polygon
+body {
+  font: 1.2em sans-serif;
+}
+
+.shape {
+  float: left;
+  shape-outside: polygon(
+    0px 0px,
+    0px 189px,
+    100.48% 94.71%,
+    200px 120px,
+    80.67% 37.17%
+  );
+  width: 200px;
+  height: 200px;
+}
+```
+
+{{EmbedLiveSample("polygon", "", "250px")}}
 
 To create even more complex shapes, you can define the outline of any shape with the [`path()`](/en-US/docs/Web/CSS/basic-shape/path) or [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) functions.
 

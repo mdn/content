@@ -20,7 +20,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

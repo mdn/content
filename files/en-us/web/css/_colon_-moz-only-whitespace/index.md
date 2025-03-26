@@ -1,5 +1,5 @@
 ---
-title: ":-moz-only-whitespace"
+title: :-moz-only-whitespace
 slug: Web/CSS/:-moz-only-whitespace
 page-type: css-pseudo-class
 status:
@@ -24,7 +24,7 @@ The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 ## Examples
 
-### Simple :-moz-only-whitespace example
+### Basic :-moz-only-whitespace example
 
 #### HTML
 
@@ -46,7 +46,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Simple_-moz-only-whitespace_example', '100%', 50)}}
+{{EmbedLiveSample('Basic_-moz-only-whitespace_example', '100%', 50)}}
 
 ## Specifications
 

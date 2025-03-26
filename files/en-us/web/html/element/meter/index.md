@@ -9,7 +9,22 @@ browser-compat: html.elements.meter
 
 The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scalar value within a known range or a fractional value.
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## Attributes
 
@@ -37,7 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple Example
+### Basic Example
 
 #### HTML
 
@@ -47,7 +62,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 300, 60)}}
+{{EmbedLiveSample("Basic_example", 300, 60)}}
 
 ### High and low range example
 
@@ -111,7 +126,7 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">meter</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">meter</a
           ></code
         >
       </td>

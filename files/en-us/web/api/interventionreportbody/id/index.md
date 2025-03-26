@@ -8,7 +8,7 @@ status:
 browser-compat: api.InterventionReportBody.id
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
 

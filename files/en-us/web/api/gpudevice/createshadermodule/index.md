@@ -49,6 +49,12 @@ createShaderModule(descriptor)
 
 A {{domxref("GPUShaderModule")}} object instance.
 
+### Validation
+
+The following criteria must be met when calling **`createShaderModule()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUShaderModule")}} object is returned:
+
+- If your shader's WGSL code uses the half-precision floating-point type [`f16`](https://gpuweb.github.io/gpuweb/wgsl/#extension-f16), it includes `enable f16;` at the top, and the associated {{domxref("GPUDevice")}} is created with the `shader-f16` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) enabled.
+
 ## Examples
 
 In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), our shader module is created using the following code:

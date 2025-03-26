@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 **`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"mark"`.
 

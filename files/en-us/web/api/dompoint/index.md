@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMPoint
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 A **`DOMPoint`** object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value. `DOMPoint` is based on {{domxref("DOMPointReadOnly")}} but allows its properties' values to be changed.
 

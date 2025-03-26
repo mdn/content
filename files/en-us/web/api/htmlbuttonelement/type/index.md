@@ -29,7 +29,7 @@ Its possible values are listed in the attribute's [button types](/en-US/docs/Web
 ### JavaScript
 
 ```js
-const buttonElement = document.querySelector("#buttton");
+const buttonElement = document.querySelector("#button");
 console.log(buttonElement.type); // "reset"
 ```
 

@@ -21,7 +21,7 @@ Usually, the response is parsed as `"text/xml"`. If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
 `"document"` and the request was made asynchronously, instead the response is
 parsed as `"text/html"`. `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
 `"text/xml"` or `"application/xml"`, you can use
@@ -75,7 +75,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

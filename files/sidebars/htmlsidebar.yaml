@@ -1,0 +1,223 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/HTML
+  - title: Beginners
+    details: closed
+    children:
+      - link: /Learn_web_development/Getting_started/Your_first_website/Creating_the_content
+        title: Creating_the_content
+      - link: /Learn_web_development/Core/Structuring_content
+        title: Structuring_content_with_HTML
+        details: closed
+        children:
+          - /Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+          - /Learn_web_development/Core/Structuring_content/Webpage_metadata
+          - /Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
+          - /Learn_web_development/Core/Structuring_content/Emphasis_and_importance
+          - /Learn_web_development/Core/Structuring_content/Lists
+          - /Learn_web_development/Core/Structuring_content/Structuring_documents
+          - /Learn_web_development/Core/Structuring_content/Advanced_text_features
+          - /Learn_web_development/Core/Structuring_content/Creating_links
+          - /Learn_web_development/Core/Structuring_content/Marking_up_a_letter
+          - /Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
+          - /Learn_web_development/Core/Structuring_content/HTML_images
+          - /Learn_web_development/Core/Structuring_content/HTML_video_and_audio
+          - /Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+          - /Learn_web_development/Core/Structuring_content/HTML_table_basics
+          - /Learn_web_development/Core/Structuring_content/Table_accessibility
+          - /Learn_web_development/Core/Structuring_content/Planet_data_table
+          - /Learn_web_development/Core/Structuring_content/HTML_forms
+          - /Learn_web_development/Core/Structuring_content/Debugging_HTML
+  - title: Guides
+    details: closed
+    children:
+      - link: /Web/HTML/Content_categories
+        title: Content_categories
+      - link: /Glossary/Block-level_content
+        title: Block-level_elements
+      - link: /Glossary/Inline-level_content
+        title: Inline_elements
+      - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
+        title: Quirks_Mode_and_Standards_Mode
+      - link: /Web/HTML/Date_and_time_formats
+        title: Date_and_time_formats
+      - link: /Web/HTML/Constraint_validation
+        title: Constraint_validation
+      - link: /Web/HTML/Microdata
+        title: Microdata
+      - link: /Web/HTML/microformats
+        title: Microformats
+      - link: /Web/HTML/Viewport_meta_tag
+        title: Viewport_meta_tag
+      - link: /Web/HTML/CORS_enabled_image
+        title: Allowing_cross-origin_images_and_canvas
+  - type: section
+    link: /Web/HTML/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/HTML/Element
+    title: HTML_Elements
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTML/Global_attributes
+    title: Global_attributes
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/HTML/Attributes
+    title: Attributes
+    details: closed
+  - type: listSubPages
+    path: /Web/HTML/Element/input
+    title: Input_types
+    details: closed
+    code: true
+l10n:
+  de:
+    Beginners: Einsteiger-Tutorials
+    Creating_the_content: "Ihre erste Website: Inhalte erstellen"
+    Structuring_content_with_HTML: Inhalte mit HTML strukturieren
+    Reference: Referenzen
+    HTML_Elements: HTML-Elemente
+    Global_attributes: Globale Attribute
+    Attributes: Attribute
+    Input_types: <code>&lt;input&gt;</code>-Typen
+    Guides: Anleitungen
+    Content_categories: Inhaltskategorien
+    Block-level_elements: Block-Elemente
+    Inline_elements: Inline-Elemente
+    Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
+    Date_and_time_formats: Datums- und Zeitformate in HTML
+    Constraint_validation: Einschränkungsvalidierung
+    Microdata: Mikrodaten
+    Microformats: Mikroformate
+    Viewport_meta_tag: Viewport-Meta-Tag
+    Allowing_cross-origin_images_and_canvas: Erlauben der Cross-Origin-Nutzung von Bildern und Canvas
+  en-US:
+    Beginners: Beginner's tutorials
+    Creating_the_content: "Your first website: Creating the content"
+    Structuring_content_with_HTML: Structuring content with HTML
+    Reference: References
+    HTML_Elements: HTML elements
+    Global_attributes: Global attributes
+    Attributes: Attributes
+    Input_types: <code>&lt;input&gt;</code> types
+    Guides: Guides
+    Content_categories: Content categories
+    Block-level_elements: Block-level elements
+    Inline_elements: Inline elements
+    Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
+    Date_and_time_formats: Date and time formats used in HTML
+    Constraint_validation: Constraint validation
+    Microdata: Microdata
+    Microformats: Microformats
+    Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: Allowing cross-origin use of images and canvas
+  fr:
+    Beginners: Tutoriels
+    Reference: Références
+    HTML_Elements: Éléments HTML
+    Global_attributes: Attributs universels
+    Attributes: Attributs
+    Input_types: Types <code>&lt;input&gt;</code>
+    Guides: Guides
+    Content_categories: Catégories de contenu
+    Block-level_elements: Éléments de bloc
+    Inline_elements: Éléments en ligne
+    Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
+    Date_and_time_formats: Formats de date et d'heure utilisés en HTML
+    Microdata: Microdonnées
+    Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
+    Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
+  ja:
+    Beginners: チュートリアル
+    Creating_the_content: "初めてのウェブサイト: コンテンツの作成"
+    Structuring_content_with_HTML: HTML によるコンテンツの構造化
+    Reference: リファレンス
+    HTML_Elements: HTML 要素
+    Global_attributes: グローバル属性
+    Attributes: 属性
+    Input_types: <code>&lt;input&gt;</code> 型
+    Guides: ガイド
+    Content_categories: コンテンツカテゴリー
+    Block-level_elements: ブロックレベル要素
+    Inline_elements: インライン要素
+    Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
+    Date_and_time_formats: HTML で使用される日付と時刻の形式
+    Constraint_validation: 制約検証
+    Microdata: Microdata
+    Microformats: Microformats
+    Viewport_meta_tag: ビューポートメタタグ
+    Allowing_cross-origin_images_and_canvas: 別オリジンの画像とキャンバスを利用可能にする
+  ko:
+    Beginners: "자습서:"
+    Reference: "참고서:"
+    HTML_Elements: HTML 요소
+    Global_attributes: 전역 속성
+    Attributes: 속성
+    Input_types: <code>&lt;input&gt;</code> types
+    Guides: "안내서:"
+    Block-level_elements: 블록 단위 요소
+    Inline_elements: 인라인 요소
+    Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
+    Date_and_time_formats: HTML의 날짜와 시간 형식
+    Microdata: Microdata
+    Microformats: Microformats
+    Viewport_meta_tag: 뷰포트 메타 태그
+    Allowing_cross-origin_images_and_canvas: cross-origin이 가능한 이미지와 캔버스
+  pt-BR:
+    Beginners: Tutoriais
+    Reference: Referências
+    HTML_Elements: Elementos HTML
+    Global_attributes: Atributos globais
+    Attributes: Atributos
+    Input_types: Tipos de <code>&lt;input&gt;</code>
+    Guides: Guides
+    Content_categories: Categorias de conteúdo
+    Block-level_elements: Elementos block-level
+    Inline_elements: Elementos inline
+    Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
+    Date_and_time_formats: Date and time formats used in HTML
+    Microdata: Microdata
+    Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: CORS habilitar imagens
+  ru:
+    Beginners: Уроки
+    Reference: Справочники
+    HTML_Elements: HTML элементы
+    Global_attributes: Глобальные атрибуты
+    Attributes: Aтрибуты
+    Input_types: Типы <code>&lt;input&gt;</code>
+    Guides: Путеводитель
+    Content_categories: Категории контента
+    Block-level_elements: Блочные элементы
+    Inline_elements: Строчные элементы
+    Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
+    Date_and_time_formats: Date and time formats used in HTML
+    Constraint_validation: Валидация ограничений
+    Microdata: Microdata
+    Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
+  zh-CN:
+    Beginners: 初学者教程
+    Creating_the_content: 你的第一个网站：创建内容
+    Structuring_content_with_HTML: 使用 HTML 构建内容
+    Reference: 参考
+    HTML_Elements: HTML 元素
+    Global_attributes: 全局属性
+    Attributes: 属性
+    Input_types: <code>&lt;input&gt;</code> 类型
+    Guides: 指南
+    Content_categories: 内容分类
+    Block-level_elements: 块级元素
+    Inline_elements: 行级元素
+    Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
+    Date_and_time_formats: HTML 中使用的日期与时间格式
+    Constraint_validation: 约束验证
+    Microdata: 微数据
+    Microformats: 微格式
+    Viewport_meta_tag: Viewport meta 标签
+    Allowing_cross-origin_images_and_canvas: 允许图片和 canvas 跨源使用

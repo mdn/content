@@ -65,6 +65,10 @@ No notable changes.
 - Improved stability and performance when minimizing or restoring windows on Linux ([Firefox bug 1780212](https://bugzil.la/1780212)).
 - Added support for `touch` actions ([Firefox bug 1543337](https://bugzil.la/1543337)).
 
+## Changes for add-on developers
+
+- The `emailtracking` and `emailtracking_content` flags have been added to the tracking classifications available in `urlClassification` for the {{WebExtAPIRef("webRequest")}} events ([Firefox bug 1773695](https://bugzil.la/1773695))
+
 ## Older versions
 
 {{Firefox_for_developers}}

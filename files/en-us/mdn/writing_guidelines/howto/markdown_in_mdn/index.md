@@ -1,10 +1,10 @@
 ---
 title: How to write in Markdown
+short-title: Write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This page describes how we use Markdown to write documentation on MDN Web Docs. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
 
@@ -98,7 +98,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `django` - Django templates
   - `svelte` - Svelte templates
   - `handlebars` - Handlebars templates
-  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
   - `diff` - Diff file
@@ -582,7 +582,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
 ## Page summary
 
-The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#sidebar_generation) or [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) macros.
+The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) or [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) macros.
 
 This summary is used for search engine optimization (SEO) and also automatically included alongside page listings by some macros.
 The first paragraph should therefore be both succinct and informative.

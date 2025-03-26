@@ -53,7 +53,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 - {{domxref("MediaStreamTrack.clone()")}}
   - : Returns a duplicate of the `MediaStreamTrack`.
 - {{domxref("MediaStreamTrack.getCapabilities()")}}
-  - : Returns the a list of constrainable properties available for the `MediaStreamTrack`.
+  - : Returns an object detailing the accepted values or value range for each constrainable property of the associated `MediaStreamTrack`.
 - {{domxref("MediaStreamTrack.getConstraints()")}}
   - : Returns a {{domxref('MediaTrackConstraints')}} object containing the currently set constraints for the track; the returned value matches the constraints last set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}.
 - {{domxref("MediaStreamTrack.getSettings()")}}

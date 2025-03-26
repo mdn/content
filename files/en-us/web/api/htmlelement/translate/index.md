@@ -60,4 +60,4 @@ controller.addEventListener("change", (e) => {
 
 ## See also
 
-- [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) HTML global attribute
+- [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) HTML global attribute

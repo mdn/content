@@ -9,7 +9,35 @@ browser-compat: html.elements.input.type_url
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
 
-{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<form>
+  <label for="url">Enter an https:// URL:</label>
+  <input
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
@@ -18,13 +46,16 @@ The input value is automatically validated to ensure that it's either empty or a
 The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicates the user did not enter a value or that the value was removed.
-2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://restofurl` can be valid, even if the `urlscheme` entered doesn't exist.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://rest-of-url` can be valid, even if the `urlscheme` entered doesn't exist.
 
 See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+
+> [!NOTE]
+> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
 
 ### list
 
@@ -90,19 +121,6 @@ An input field can have spell-checking enabled if it doesn't have the [readonly]
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
-## Non-standard attributes
-
-The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
-
-### autocorrect
-
-A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
-
 ## Using URL inputs
 
 When you create a URL input with the proper `type` value, `url`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL. This can help avoid cases in which the user mistypes their website's address, or provides an invalid one.
@@ -112,7 +130,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 > [!NOTE]
 > A user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
 
-### A simple URL input
+### A basic URL input
 
 This element is implemented as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
@@ -120,7 +138,7 @@ This element is implemented as a standard text input field with basic validation
 <input id="myURL" name="myURL" type="url" />
 ```
 
-{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
 Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 
@@ -238,7 +256,7 @@ There are two levels of content validation available for `url` inputs. First, th
 
 Browsers that support the `url` input type automatically provide validation to ensure that only text that matches the standard format for URLs is entered into the input box.
 
-The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 
 ### Making a URL required
 
@@ -322,7 +340,7 @@ Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular e
 
 This isn't perfect, but it is good enough for this basic demo's requirements.
 
-It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
+It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
 
 That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
 
@@ -387,8 +405,8 @@ You can also find our [pattern validation example on GitHub](https://github.com/
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
@@ -403,8 +421,7 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
 - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -11,7 +11,33 @@ browser-compat: html.elements.input.type_date
 
 The resulting value includes the year, month, and day, but _not_ the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Value
 
@@ -77,7 +103,7 @@ In this section, we'll look at basic and then more complex uses of `<input type=
 
 ### Basic uses of date
 
-The simplest use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
+The most basic use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
 
 ```html
 <form action="https://example.com">
@@ -275,6 +301,5 @@ input:valid + span::after {
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

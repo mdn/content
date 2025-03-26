@@ -9,7 +9,67 @@ browser-compat: html.elements.colgroup
 
 The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of columns within a table.
 
-{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## Attributes
 
@@ -233,7 +293,7 @@ table {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each column group cell
 - {{cssxref("border")}}: CSS property to control borders of column group cells

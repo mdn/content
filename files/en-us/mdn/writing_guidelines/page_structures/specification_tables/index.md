@@ -3,9 +3,8 @@ title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
 browser-compat: css.properties.text-align
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
 
@@ -33,7 +32,7 @@ browser-compat: css.property.text-align
 
 Some features are not maintained in the above repository.
 In these cases, specification information can be added to the page front matter using the `spec-urls` key.
-For example, the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute has the front matter key:
+For example, the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute has the front matter key:
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

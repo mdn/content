@@ -7,7 +7,7 @@ browser-compat: css.properties.vector-effect
 
 {{CSSRef}}
 
-The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific [transformation effects](/en-US/docs/Web/SVG/Attribute/transform) in SVG, thus permitting effects like a road on a map staying the same width no matter how the map is zoomed, or allowing a diagram key to retain its position and size regardless of other transforms. It can only be used with SVG elements that accept the {{SVGAttr("vector-effect")}} attribute. When used, the CSS value overrides any values of the element's `vector-effect` attribute.
+The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific [transformation effects](/en-US/docs/Web/SVG/Reference/Attribute/transform) in SVG, thus permitting effects like a road on a map staying the same width no matter how the map is zoomed, or allowing a diagram key to retain its position and size regardless of other transforms. It can only be used with SVG elements that accept the {{SVGAttr("vector-effect")}} attribute. When used, the CSS value overrides any values of the element's `vector-effect` attribute.
 
 ## Syntax
 
@@ -15,9 +15,6 @@ The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific 
 /* Keywords */
 vector-effect: none;
 vector-effect: non-scaling-stroke;
-vector-effect: non-scaling-size;
-vector-effect: non-rotation;
-vector-effect: fixed-position;
 
 /* Global values */
 vector-effect: inherit;
@@ -30,24 +27,12 @@ vector-effect: unset;
 ### Values
 
 - `none`
-
   - : No vector effects are applied to the element, meaning it will be fully affected by transforms as normal.
-
 - `non-scaling-stroke`
-
   - : The element's drawn stroke width will be physically equal in size to its defined stroke width, even if the element has been scaled up or down in size due to transforms of either itself or its coordinate system. This is the case whether the element is scaled with transforms or by physical resizing of the entire image.
 
-- `non-scaling-size` {{Experimental_Inline}}
-
-  - : The element will ignore the effects of any scaling transformations.
-
-- `non-rotation` {{Experimental_Inline}}
-
-  - : The element will ignore the effects of any rotation transformations.
-
-- `fixed-position` {{Experimental_Inline}}
-
-  - : The element will ignore the effects of any translation transformations.
+> [!NOTE]
+> The spec defines three other values, `non-scaling-size`, `non-rotation`, and `fixed-position`, but these have no implementations and are considered at-risk.
 
 ## Formal syntax
 

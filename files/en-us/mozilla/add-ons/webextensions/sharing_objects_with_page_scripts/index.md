@@ -35,7 +35,7 @@ So, for example, when a content script accesses the page's [window](/en-US/docs/
 
 In Firefox, DOM objects in content scripts get an extra property `wrappedJSObject`. This is an "unwrapped" version of the object, which includes any changes made to that object by any page scripts.
 
-Let's take a simple example. Suppose a web page loads a script:
+Let's take an example. Suppose a web page loads a script:
 
 ```html
 <!doctype html>

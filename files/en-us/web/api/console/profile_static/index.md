@@ -2,7 +2,7 @@
 title: "console: profile() static method"
 short-title: profile()
 slug: Web/API/console/profile_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 status:
   - non-standard
 browser-compat: api.console.profile_static
@@ -19,7 +19,7 @@ To stop recording call {{domxref("console/profileEnd_static", "console.profileEn
 ## Syntax
 
 ```js-nolint
-profile(profileName)
+console.profile(profileName)
 ```
 
 ### Parameters

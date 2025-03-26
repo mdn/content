@@ -119,7 +119,7 @@ There is also an `activate` event, which is used in the same way as `install`. T
 
 ### Responding to fetches
 
-We also have a `fetch` event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. Here is a simple usage example:
+We also have a `fetch` event at our disposal, which fires every time an HTTP request is fired off from our app. This is very useful, as it allows us to intercept requests and respond to them with custom responses. For example:
 
 ```js
 self.addEventListener("fetch", (e) => {

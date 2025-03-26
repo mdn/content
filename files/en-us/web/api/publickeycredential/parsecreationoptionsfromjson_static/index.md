@@ -32,6 +32,8 @@ A {{domxref("PublicKeyCredentialCreationOptions")}} object.
 
 - `EncodingError` {{domxref("DOMException")}}
   - : Thrown the `options` object cannot be converted into a {{domxref("PublicKeyCredentialCreationOptions")}} object.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Description
 
@@ -86,7 +88,7 @@ const createCredentialOptions =
   );
 
 navigator.credentials
-  .create({ createCredentialOptions })
+  .create({ publicKey: createCredentialOptions })
   .then((newCredentialInfo) => {
     // Handle the new credential information here.
   })

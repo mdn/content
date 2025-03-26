@@ -51,7 +51,7 @@ function drawVRScene() {
 
   // grab the current timestamp on each run of the rendering loop
   // and do something with it
-  framedata.timestamp;
+  frameData.timestamp;
 
   // …
 

@@ -12,7 +12,7 @@ In this step-by-step tutorial we create an **MDN Breakout** game written entirel
 
 Every step has editable, live samples available to play with so you can see what the intermediate stages should look like. You will learn the basics of using the {{htmlelement("canvas")}} element to implement fundamental game mechanics like rendering and moving images, collision detection, control mechanisms, and winning and losing states.
 
-To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) knowledge. After working through this tutorial you should be able to build your own Web games.
+To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) knowledge. After working through this tutorial you should be able to build your own Web games.
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

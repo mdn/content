@@ -16,7 +16,7 @@ The **`blockingDuration`** read-only property of the {{domxref("PerformanceLongA
 
 `blockingDuration` is calculated by taking all the [long tasks](/en-US/docs/Web/API/PerformanceLongTaskTiming#description) within the LoAF that have a `duration` of more than `50ms`, subtracting `50ms` from each, adding the rendering time to the longest task time, and summing the results. Let's look at an example to clarify what this means.
 
-Consider a JavaScript file that takes a total of 145ms to process. After the first major chunk of the script is processed in 65ms, we could consider breaking the execution of the remaining script into a second task, with this second one taking 80ms to execute. Splitting the processing in this way is preferable to the complete script execution as one task because it gives the browser a chance to handle user interactions between tasks. This approach is known as **yielding**. As an example, you can yield by inserting a {{domxref("setTimeout()")}} after the first major chunk of the script is executed.
+Consider a JavaScript file that takes a total of 145ms to process. After the first major chunk of the script is processed in 65ms, we could consider breaking the execution of the remaining script into a second task, with this second one taking 80ms to execute. Splitting the processing in this way is preferable to the complete script execution as one task because it gives the browser a chance to handle user interactions between tasks. This approach is known as **yielding**. As an example, you can yield by inserting a {{domxref("Window.setTimeout", "setTimeout()")}} after the first major chunk of the script is executed.
 
 There are three options to consider here in how the script might end up being processed:
 

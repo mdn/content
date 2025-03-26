@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 

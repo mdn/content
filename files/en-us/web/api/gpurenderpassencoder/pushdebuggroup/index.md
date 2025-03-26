@@ -37,7 +37,7 @@ None ({{jsxref("Undefined")}}).
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-passEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+passEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 passEncoder.setPipeline(renderPipeline);
 passEncoder.setVertexBuffer(0, vertexBuffer);

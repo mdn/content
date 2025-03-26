@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.EventSource.url
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`url`** read-only property of the
 {{domxref("EventSource")}} interface returns a string representing the

@@ -30,14 +30,14 @@ On a local Windows machine:
     <title>href example</title>
     <link rel="styleSheet" href="example.css" />
     <script>
-      function sref() {
+      function printRef() {
         alert(document.styleSheets[0].href);
       }
     </script>
   </head>
   <body>
     <div class="thunder">Thunder</div>
-    <button onclick="sref()">ss</button>
+    <button onclick="printRef()">ss</button>
   </body>
 </html>
 ```

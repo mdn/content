@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.clone
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
 
@@ -81,5 +81,5 @@ fetch(myRequest).then((response) => {
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

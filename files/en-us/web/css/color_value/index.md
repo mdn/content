@@ -7,7 +7,7 @@ browser-compat: css.types.color
 
 {{CSSRef}}
 
-The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
+The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
 
 > [!NOTE]
@@ -76,7 +76,6 @@ A `<color>` value can be specified using one of the methods listed below:
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
 - By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
-- By selecting a color based on contrast ratios: {{CSSXref("color_value/color-contrast", "color-contrast()")}}.
 - By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
 ### `currentcolor` keyword
@@ -115,7 +114,7 @@ background-color: hsl(0deg 100% 50%);
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
-When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
+When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
 ### Interpolation with missing components
 
@@ -191,7 +190,7 @@ The preprocessing procedure is:
 
 ## Accessibility
 
-Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
+Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 
 ## Formal syntax
 

@@ -37,7 +37,7 @@ A {{domxref("DynamicsCompressorNode")}}.
 
 ## Examples
 
-The code below demonstrates a simple usage of `createDynamicsCompressor()`
+The code below shows how to use `createDynamicsCompressor()`
 to add compression to an audio track. For a more complete example, have a look at our [basic Compressor example](https://mdn.github.io/webaudio-examples/compressor-example/) ([view the source code](https://github.com/mdn/webaudio-examples/tree/main/compressor-example)).
 
 ```js

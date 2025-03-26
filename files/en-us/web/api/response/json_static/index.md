@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.Response.json_static
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** static method of the {{domxref("Response")}} interface returns a `Response` that contains the provided JSON data as body, and a {{HTTPHeader("Content-Type")}} header which is set to `application/json`.
 The response status, status message, and additional headers can also be set.
@@ -37,7 +37,7 @@ Response.json(data, options)
       - : The status message associated with the status code.
         For a status of `200` this might be `OK`.
     - `headers`
-      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
+      - : Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) for a reference).
 
 ### Return value
 

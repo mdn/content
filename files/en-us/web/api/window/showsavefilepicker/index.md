@@ -18,6 +18,7 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ```js-nolint
 showSaveFilePicker()
+showSaveFilePicker(options)
 ```
 
 ### Parameters
@@ -36,7 +37,7 @@ showSaveFilePicker()
         IDs. If the same ID is used for another picker, the picker opens in the same
         directory.
     - `startIn` {{Optional_Inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+      - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `suggestedName` {{Optional_Inline}}
       - : A {{jsxref('String')}}. The suggested file name.
@@ -49,7 +50,7 @@ showSaveFilePicker()
           - : An optional description of the category of files
             types allowed. Default to be an empty string.
         - `accept`
-          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
 
 ### Return value

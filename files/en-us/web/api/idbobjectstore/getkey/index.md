@@ -50,7 +50,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 let openRequest = indexedDB.open("telemetry");
 openRequest.onsuccess = (event) => {
   let db = event.target.result;
-  let store = db.transaction("netlogs").objectStore("netlogs");
+  let store = db.transaction("net-logs").objectStore("net-logs");
 
   let today = new Date();
   let yesterday = new Date(today);

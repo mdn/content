@@ -9,7 +9,23 @@ browser-compat: javascript.builtins.Promise.Promise
 
 The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is primarily used to wrap callback-based APIs that do not already support promises.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise() constructor", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Syntax
 
@@ -26,7 +42,7 @@ new Promise(executor)
 
 ### Return value
 
-When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolveFunc` or `rejectFunc` are invoked. Note that if you call `resolveFunc` or `rejectFunc` and pass another `Promise` object as an argument, it can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
+When called via `new`, the `Promise` constructor returns a promise object. The promise object will become _resolved_ when either of the functions `resolveFunc` or `rejectFunc` are invoked. Note that if you call `resolveFunc` and pass another promise object as an argument, the initial promise can be said to be "resolved", but still not "settled". See the [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for more explanation.
 
 ## Description
 

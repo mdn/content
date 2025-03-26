@@ -9,7 +9,17 @@ browser-compat: javascript.operators.multiplication_assignment
 
 The **multiplication assignment (`*=`)** operator performs [multiplication](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Multiplication assignment (*=) operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= "hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 

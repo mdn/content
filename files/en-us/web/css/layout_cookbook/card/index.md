@@ -20,11 +20,123 @@ The cards in the group should line up in two dimensions — both vertically and 
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
+```html live-sample___card-example
+<div class="cards">
+  <article class="card">
+    <header>
+      <h2>A short heading</h2>
+    </header>
+
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg"
+      alt="Hot air balloons" />
+    <div class="content">
+      <p>
+        The idea of reaching the North Pole by means of balloons appears to have
+        been entertained many years ago.
+      </p>
+    </div>
+  </article>
+
+  <article class="card">
+    <header>
+      <h2>A short heading</h2>
+    </header>
+
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg"
+      alt="Hot air balloons" />
+    <div class="content">
+      <p>Short content.</p>
+    </div>
+    <footer>I have a footer!</footer>
+  </article>
+
+  <article class="card">
+    <header>
+      <h2>A longer heading in this card</h2>
+    </header>
+
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg"
+      alt="Hot air balloons" />
+    <div class="content">
+      <p>
+        In a curious work, published in Paris in 1863 by Delaville Dedreux,
+        there is a suggestion for reaching the North Pole by an aerostat.
+      </p>
+    </div>
+    <footer>I have a footer!</footer>
+  </article>
+  <article class="card">
+    <header>
+      <h2>A short heading</h2>
+    </header>
+
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg"
+      alt="Hot air balloons" />
+    <div class="content">
+      <p>
+        The idea of reaching the North Pole by means of balloons appears to have
+        been entertained many years ago.
+      </p>
+    </div>
+  </article>
+</div>
+```
+
+```css live-sample___card-example
+body {
+  font: 1.2em sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cards {
+  max-width: 700px;
+  margin: 1em auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  border: 1px solid #999;
+  border-radius: 3px;
+
+  display: grid;
+  grid-template-rows: max-content 200px 1fr;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.card .content {
+  padding: 0.5rem;
+}
+
+.card footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+}
+```
+
+{{EmbedLiveSample("card-example", "", "950px")}}
 
 ## Choices made
 

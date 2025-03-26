@@ -6,16 +6,12 @@ import { eachLimit } from "async";
 import cliProgress from "cli-progress";
 
 import fdir_pkg from "fdir";
-const { fdir, PathsOutput } = fdir_pkg;
+const { fdir } = fdir_pkg;
 
 import caporal from "@caporal/core";
 const { program } = caporal;
 
-import {
-  getAjvValidator,
-  checkFrontMatter,
-  getRelativePath,
-} from "./front-matter_utils.js";
+import { getAjvValidator, checkFrontMatter } from "./front-matter_utils.js";
 
 async function resolveDirectory(file) {
   const stats = await fs.lstat(file);
@@ -24,11 +20,14 @@ async function resolveDirectory(file) {
       .withErrors()
       .withFullPaths()
       .filter((filePath) => filePath.endsWith("index.md"))
+      .exclude((dirName) => dirName === "conflicting" || dirName === "orphaned")
       .crawl(file);
     return api.withPromise();
   } else if (
     stats.isFile() &&
     file.endsWith("index.md") &&
+    !file.includes("/conflicting/") &&
+    !file.includes("/orphaned/") &&
     !file.includes("tests/front-matter_test_files")
   ) {
     return [file];

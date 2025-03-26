@@ -13,7 +13,7 @@ browser-compat: api.FeaturePolicy.features
 The **`features()`** method of the
 {{DOMxRef("FeaturePolicy")}} interface returns a list of names of all features
 supported by the User Agent. Feature whose name appears on the list might not be
-allowed by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) of the current execution context and/or might not be
+allowed by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) of the current execution context and/or might not be
 accessible because of user's permissions.
 
 ## Syntax

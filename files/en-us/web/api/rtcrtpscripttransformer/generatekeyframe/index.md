@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: generateKeyFrame()"
+title: "RTCRtpScriptTransformer: generateKeyFrame() method"
 short-title: generateKeyFrame()
 slug: Web/API/RTCRtpScriptTransformer/generateKeyFrame
 page-type: web-api-instance-method
@@ -98,8 +98,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to encrypt frames (not shown)
 
   // Get codec to generate a new key frame using the rid
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.generateKeyFrame(rid);
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.generateKeyFrame(rid);
 };
 ```
 

@@ -15,5 +15,5 @@ A proxy can be on the user's local computer, or anywhere between the user's comp
 
 ## See also
 
-- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
 - [Proxy server](https://en.wikipedia.org/wiki/Proxy_server) on Wikipedia

@@ -24,7 +24,7 @@ Here however, we will use a `rel` value of `preload`, which turns `<link>` into 
 - The path to the resource in the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute.
 - The type of resource in the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute.
 
-A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/main/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
+An example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/main/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
 
 ```html
 <head>
@@ -53,7 +53,7 @@ Here we preload our CSS and JavaScript files so they will be available as soon a
 `preload` has other advantages too. Using `as` to specify the type of content to be preloaded allows the browser to:
 
 - Store in the cache for future requests, reusing the resource if appropriate.
-- Apply the correct [content security policy](/en-US/docs/Web/HTTP/CSP) to the resource.
+- Apply the correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP) to the resource.
 - Set the correct {{HTTPHeader("Accept")}} request headers for it.
 
 ### What types of content can be preloaded?
@@ -102,7 +102,7 @@ However, the lack of preloading doesn't prevent the `image/webp` image from actu
 
 ## CORS-enabled fetches
 
-When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
+When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/Guides/CORS) enabled (e.g. [`fetch()`](/en-US/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [fonts](/en-US/docs/Web/CSS/@font-face)), special care needs to be taken to setting the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute on your [`<link>`](/en-US/docs/Web/HTML/Element/link) element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -181,7 +181,7 @@ We include `media` attributes on our `<link>` elements so that a narrow image is
 
 This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
 
-This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simple SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.
+This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simplified SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.
 
 ## Scripting and preloads
 
@@ -219,5 +219,5 @@ This is useful when you want to preload a script, but then defer execution until
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="preload">` and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of `<link rel="preload">` and other similar performance improvement features.
 - [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

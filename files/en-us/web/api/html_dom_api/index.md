@@ -171,7 +171,6 @@ These interfaces offer access to the browser window and document that contain th
 
 #### Obsolete web app and browser integration interfaces
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
@@ -371,4 +370,4 @@ The HTML for the form looks like this:
 
 ### Guides
 
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

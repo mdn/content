@@ -16,7 +16,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 - {{domxref('PaymentResponse.details')}} {{ReadOnlyInline}}
   - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
 - {{domxref('PaymentResponse.methodName')}} {{ReadOnlyInline}}
-  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc.
+  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, PayPal, etc.
 - {{domxref('PaymentResponse.payerEmail')}} {{ReadOnlyInline}}
   - : Returns the email address supplied by the user. This option is only present when the `requestPayerEmail` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 - {{domxref('PaymentResponse.payerName')}} {{ReadOnlyInline}}

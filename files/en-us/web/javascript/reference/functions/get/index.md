@@ -9,7 +9,19 @@ browser-compat: javascript.functions.get
 
 The **`get`** syntax binds an object property to a function that will be called when that property is looked up. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Getter declaration")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## Syntax
 

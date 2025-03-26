@@ -9,7 +9,73 @@ browser-compat: html.elements.tr
 
 The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements.
 
-{{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## Attributes
 
@@ -61,26 +127,28 @@ Four `<tr>` elements are used to create four table rows. Each row contains three
 
 ```html
 <table>
-  <tr>
-    <th scope="row">A</th>
-    <td>Alfa</td>
-    <td>AL fah</td>
-  </tr>
-  <tr>
-    <th scope="row">B</th>
-    <td>Bravo</td>
-    <td>BRAH voh</td>
-  </tr>
-  <tr>
-    <th scope="row">C</th>
-    <td>Charlie</td>
-    <td>CHAR lee</td>
-  </tr>
-  <tr>
-    <th scope="row">D</th>
-    <td>Delta</td>
-    <td>DELL tah</td>
-  </tr>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -128,31 +196,35 @@ An additional table row (`<tr>`) is added as the first row of the table with col
 
 ```html
 <table>
-  <tr>
-    <th scope="col">Symbol</th>
-    <th scope="col">Code word</th>
-    <th scope="col">Pronunciation</th>
-  </tr>
-  <tr>
-    <th scope="row">A</th>
-    <td>Alfa</td>
-    <td>AL fah</td>
-  </tr>
-  <tr>
-    <th scope="row">B</th>
-    <td>Bravo</td>
-    <td>BRAH voh</td>
-  </tr>
-  <tr>
-    <th scope="row">C</th>
-    <td>Charlie</td>
-    <td>CHAR lee</td>
-  </tr>
-  <tr>
-    <th scope="row">D</th>
-    <td>Delta</td>
-    <td>DELL tah</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Code word</th>
+      <th scope="col">Pronunciation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -345,7 +417,7 @@ th {
 {{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
 > [!NOTE]
-> To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
+> To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
 
 ## Technical summary
 
@@ -396,7 +468,7 @@ th {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/row_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role"
             >row</a
           ></code
         >
@@ -423,7 +495,7 @@ th {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each row cell
 - {{cssxref("border")}}: CSS property to control borders of row cells

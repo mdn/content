@@ -11,7 +11,41 @@ browser-compat: html.elements.input.type_radio
 
 Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
 
@@ -326,7 +360,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role">radio</a></code>
       </td>
     </tr>
   </tbody>
@@ -344,4 +378,3 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.
 - {{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

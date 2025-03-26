@@ -69,7 +69,7 @@ The flow is as follows:
    1. The well-known file (`/.well-known/web-identity`), available from `/.well-known/web-identity` at the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the `configURL`.
    2. The [IdP config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) (`/config.json`), available at the `configURL`.
 
-   These are both [`GET`](/en-US/docs/Web/HTTP/Methods/GET) requests, which don't have cookies and don't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+   These are both [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) requests, which don't have cookies and don't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
    All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included.
 
@@ -82,7 +82,7 @@ The flow is as follows:
 
 5. The IdP responds with the account information requested from the `accounts_endpoint`. This is an array of all accounts associated with the user's IdP cookies for any RPs associated with the IdP.
 
-6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the IdP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
+6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the RP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
 
 7. {{optional_inline}} The IdP responds with the URLs requested from the `client_metadata_endpoint`.
 
@@ -93,7 +93,7 @@ The flow is as follows:
 
 9. If the user grants permission to do so, the browser makes a credentialed request to the [`id_assertion_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) to request a validation token from the IdP for the selected account.
 
-   The credentials are sent in an HTTP [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with cookies and a content type of `application/x-www-form-urlencoded`.
+   The credentials are sent in an HTTP [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) request with cookies and a content type of `application/x-www-form-urlencoded`.
 
    If the call fails, an error payload is returned as explained in [ID assertion error responses](/en-US/docs/Web/API/FedCM_API/IDP_integration#id_assertion_error_responses) and the promise returned by `get()` will reject with the error.
 

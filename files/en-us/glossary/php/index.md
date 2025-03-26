@@ -33,15 +33,15 @@ PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source s
 ```php
 <?php
   // variables
-  $nome='Danilo';
-  $sobrenome='Santos';
-  $pais='Brasil';
+  $name='Danilo';
+  $surname='Santos';
+  $country='Brasil';
   $email='danilocarsan@gmail.com';
 
   // printing the variables
-  echo $nome;
-  echo $sobrenome;
-  echo $pais;
+  echo $name;
+  echo $surname;
+  echo $country;
   echo $email;
 ?>
 ```

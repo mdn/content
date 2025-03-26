@@ -34,7 +34,7 @@ Each of these iterators have a distinct prototype object, which defines the `nex
 
 All of these prototype objects inherit from `Iterator.prototype`, which provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
-### Iterator helpers
+### Iterator helper methods
 
 > [!NOTE]
 > These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
@@ -90,7 +90,11 @@ You will find many iterator methods analogous to array methods, such as:
 
 {{jsxref("Iterator.prototype.drop()")}} and {{jsxref("Iterator.prototype.take()")}} combined are somewhat analogous to {{jsxref("Array.prototype.slice()")}}.
 
-Among these methods, {{jsxref("Iterator/filter", "filter()")}}, {{jsxref("Iterator/flatMap", "flatMap()")}}, {{jsxref("Iterator/map", "map()")}}, {{jsxref("Iterator/drop", "drop()")}}, and {{jsxref("Iterator/take", "take()")}} return a new _Iterator Helper_ object. The iterator helper is also an `Iterator` instance, making the helper methods chainable. All iterator helper objects inherit from a common prototype object, which implements the iterator protocol:
+### Iterator helper objects
+
+> **Note:** _Iterator helper objects_ and _iterator helper methods_ are two different concepts. An Iterator helper object is detectable at runtime, while "iterator helper method" is just a name for a set of methods for comprehension. _Iterator helper_ may refer to either the object or the method, depending on the context.
+
+Among the iterator helper methods, {{jsxref("Iterator/filter", "filter()")}}, {{jsxref("Iterator/flatMap", "flatMap()")}}, {{jsxref("Iterator/map", "map()")}}, {{jsxref("Iterator/drop", "drop()")}}, and {{jsxref("Iterator/take", "take()")}} return a new _Iterator Helper_ object. The iterator helper is also an `Iterator` instance, making these helper methods chainable. All iterator helper objects inherit from a common prototype object, which implements the iterator protocol:
 
 - `next()`
   - : Calls the `next()` method of the underlying iterator, applies the helper method to the result, and returns the result.
@@ -151,25 +155,25 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 ## Instance methods
 
 - {{jsxref("Iterator.prototype.drop()")}}
-  - : Returns a new iterator helper that skips the given number of elements at the start of this iterator.
+  - : Returns a new iterator helper object that skips the given number of elements at the start of this iterator.
 - {{jsxref("Iterator.prototype.every()")}}
   - : Tests whether all elements produced by the iterator pass the test implemented by the provided function.
 - {{jsxref("Iterator.prototype.filter()")}}
-  - : Returns a new iterator helper that yields only those elements of the iterator for which the provided callback function returns `true`.
+  - : Returns a new iterator helper object that yields only those elements of the iterator for which the provided callback function returns `true`.
 - {{jsxref("Iterator.prototype.find()")}}
   - : Returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - {{jsxref("Iterator.prototype.flatMap()")}}
-  - : Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
+  - : Returns a new iterator helper object that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 - {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
 - {{jsxref("Iterator.prototype.map()")}}
-  - : Returns a new iterator helper that yields elements of the iterator, each transformed by a mapping function.
+  - : Returns a new iterator helper object that yields elements of the iterator, each transformed by a mapping function.
 - {{jsxref("Iterator.prototype.reduce()")}}
   - : Executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
 - {{jsxref("Iterator.prototype.some()")}}
   - : Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.
 - {{jsxref("Iterator.prototype.take()")}}
-  - : Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.
+  - : Returns a new iterator helper object that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 - [`Iterator.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
@@ -200,5 +204,6 @@ for (const value of arrIterator) {
 ## See also
 
 - [Polyfill of `Iterator` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator` and associated helpers](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Statements/function*", "function*")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

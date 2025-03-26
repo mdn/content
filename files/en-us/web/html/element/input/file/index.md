@@ -7,9 +7,29 @@ browser-compat: html.elements.input.type_file
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
+{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn_web_development/Extensions/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Value
 
@@ -53,7 +73,7 @@ In addition to the attributes listed above, the following non-standard attribute
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
-Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
+Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Firefox. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
 
 ## Unique file type specifiers
 
@@ -119,12 +139,9 @@ Each `File` object contains the following information:
 - `size`
   - : The size of the file in bytes.
 - `type`
-  - : The file's [MIME type](/en-US/docs/Web/HTTP/MIME_types).
+  - : The file's [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
-
-> [!NOTE]
-> You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
@@ -370,7 +387,7 @@ function updateImageDisplay() {
 The custom `validFileType()` function takes a {{domxref("File")}} object as a parameter, then uses {{jsxref("Array.prototype.includes()")}} to check if any value in the `fileTypes` matches the file's `type` property. If a match is found, the function returns `true`. If no match is found, it returns `false`.
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -436,7 +453,7 @@ The example looks like this; have a play:
       <td>
         {{domxref("HTMLElement/change_event", "change")}},
         {{domxref("Element/input_event", "input")}} and
-        {{domxref("HTMLElement/cancel_event", "cancel")}}
+        {{domxref("HTMLInputElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
@@ -483,4 +500,3 @@ The example looks like this; have a play:
 ## See also
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/en-US/docs/Web/API/File).
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

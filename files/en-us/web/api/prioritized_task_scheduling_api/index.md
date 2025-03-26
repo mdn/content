@@ -147,7 +147,7 @@ function main() {
 
 However, this kind of structure doesn't help with main thread blocking. Since all five of the tasks are being run inside one main function, the browser runs them all as a single task.
 
-To handle this, we tend to run a function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("setTimeout()")}} to postpone execution into a separate task:
+To handle this, we tend to run a function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("Window.setTimeout", "setTimeout()")}} to postpone execution into a separate task:
 
 ```js
 function yield() {
@@ -216,7 +216,7 @@ function yield() {
 
 ## Examples
 
-Note that the examples below use `mylog()` to write to a text area.
+Note that the examples below use `myLog()` to write to a text area.
 The code for the log area and method is generally hidden to not distract from more relevant code.
 
 ```html hidden
@@ -226,7 +226,7 @@ The code for the log area and method is generally hidden to not distract from mo
 ```js
 // hidden logger code - simplifies example
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -244,7 +244,7 @@ The code below prints "Feature: Supported" if the API is supported on this brows
 ```js hidden
 //hidden logger code - simplifies example
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -252,9 +252,9 @@ function mylog(text) {
 ```js
 // Check that feature is supported
 if ("scheduler" in globalThis) {
-  mylog("Feature: Supported");
+  myLog("Feature: Supported");
 } else {
-  mylog("Feature: NOT Supported");
+  myLog("Feature: NOT Supported");
 }
 ```
 
@@ -271,7 +271,7 @@ The method returns a {{jsxref("Promise")}} that resolves with the return value o
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -289,7 +289,7 @@ function myTask() {
 if ("scheduler" in this) {
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler.postTask(myTask).then((taskResult) => mylog(`${taskResult}`));
+  scheduler.postTask(myTask).then((taskResult) => myLog(`${taskResult}`));
 }
 ```
 
@@ -305,7 +305,7 @@ async function runTask2() {
   const result = await scheduler.postTask(myTask2, {
     priority: "user-blocking",
   });
-  mylog(result); // Logs 'Task 2: user-blocking'.
+  myLog(result); // Logs 'Task 2: user-blocking'.
 }
 runTask2();
 ```
@@ -316,7 +316,7 @@ For simplicity many of the examples here simply log the result as the task execu
 ```js
 // A function that defines a task
 function myTask3() {
-  mylog("Task 3: user-visible");
+  myLog("Task 3: user-visible");
 }
 
 if ("scheduler" in this) {
@@ -341,7 +341,7 @@ When run, each task simply logs it's expected order (we're not waiting on the re
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -349,17 +349,17 @@ function mylog(text) {
 ```js
 if ("scheduler" in this) {
   // three tasks, in reverse order of priority
-  scheduler.postTask(() => mylog("bckg 1"), { priority: "background" });
-  scheduler.postTask(() => mylog("usr-vis 1"), { priority: "user-visible" });
-  scheduler.postTask(() => mylog("usr-blk 1"), { priority: "user-blocking" });
+  scheduler.postTask(() => myLog("bkg 1"), { priority: "background" });
+  scheduler.postTask(() => myLog("usr-vis 1"), { priority: "user-visible" });
+  scheduler.postTask(() => myLog("usr-blk 1"), { priority: "user-blocking" });
 
   // three more tasks, in reverse order of priority
-  scheduler.postTask(() => mylog("bckg 2"), { priority: "background" });
-  scheduler.postTask(() => mylog("usr-vis 2"), { priority: "user-visible" });
-  scheduler.postTask(() => mylog("usr-blk 2"), { priority: "user-blocking" });
+  scheduler.postTask(() => myLog("bkg 2"), { priority: "background" });
+  scheduler.postTask(() => myLog("usr-vis 2"), { priority: "user-visible" });
+  scheduler.postTask(() => myLog("usr-blk 2"), { priority: "user-blocking" });
 
   // Task with default priority: user-visible
-  scheduler.postTask(() => mylog("usr-vis 3 (default)"));
+  scheduler.postTask(() => myLog("usr-vis 3 (default)"));
 }
 ```
 
@@ -392,7 +392,7 @@ The task is then posted, passing in the signal, and then we immediately change t
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -406,12 +406,12 @@ if ("scheduler" in this) {
   controller.signal.addEventListener("prioritychange", (event) => {
     const previousPriority = event.previousPriority;
     const newPriority = event.target.priority;
-    mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
+    myLog(`Priority changed from ${previousPriority} to ${newPriority}.`);
   });
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
-  scheduler.postTask(() => mylog("Task 1"), { signal: controller.signal });
+  scheduler.postTask(() => myLog("Task 1"), { signal: controller.signal });
 
   // Change the priority to 'background' using the controller
   controller.setPriority("background");
@@ -434,7 +434,7 @@ The only difference is that you must use {{domxref("TaskController")}} if you al
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -450,11 +450,11 @@ if ("scheduler" in this) {
   const abortTaskController = new TaskController();
   // Post task passing the controller's signal
   scheduler
-    .postTask(() => mylog("Task executing"), {
+    .postTask(() => myLog("Task executing"), {
       signal: abortTaskController.signal,
     })
-    .then((taskResult) => mylog(`${taskResult}`)) // This won't run!
-    .catch((error) => mylog(`Error: ${error}`)); // Log the error
+    .then((taskResult) => myLog(`${taskResult}`)) // This won't run!
+    .catch((error) => myLog(`Error: ${error}`)); // Log the error
 
   // Abort the task
   abortTaskController.abort();
@@ -468,7 +468,7 @@ The log below shows the aborted task.
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("setTimeout()")}}.
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("Window.setTimeout", "setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 ```html hidden
@@ -477,7 +477,7 @@ The `delay` is the minimum amount of time before the task is added to the schedu
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -489,10 +489,10 @@ if ("scheduler" in this) {
   // Post task as arrow function with delay of 2 seconds
   scheduler
     .postTask(() => "Task delayed by 2000ms", { delay: 2000 })
-    .then((taskResult) => mylog(`${taskResult}`));
+    .then((taskResult) => myLog(`${taskResult}`));
   scheduler
     .postTask(() => "Next task should complete in about 2000ms", { delay: 1 })
-    .then((taskResult) => mylog(`${taskResult}`));
+    .then((taskResult) => myLog(`${taskResult}`));
 }
 ```
 

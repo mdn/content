@@ -22,15 +22,18 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
   - : Returns a reference to the element's anchor element, or `null` if it doesn't have one.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
-- {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+- {{domxref("HTMLElement.autocapitalize")}}
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
   - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
+- {{domxref("HTMLElement.autocorrect")}}
+  - : A boolean that represents whether or not text input by a user should be automatically corrected.
+    This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`).
+  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`).
 - {{DOMxRef("HTMLElement.dir")}}
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
@@ -70,11 +73,11 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
     As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{domxref("HTMLElement.popover")}}
-  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
+  - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
 - {{DOMxRef("HTMLElement.style")}}
-  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}
@@ -83,6 +86,8 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A boolean value representing the translation.
 - {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
   - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
+- {{DOMxRef("HTMLElement.writingSuggestions")}}
+  - : A string indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 
 ## Instance methods
 
@@ -144,12 +149,12 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-### Popover events
+### Toggle events
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : Fired when the element is a popover, before it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}}, before it is hidden or shown.
 - {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : Fired when the element is a popover, just after it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}}, or {{htmlelement("details")}} element, just after it is hidden or shown.
 
 ## Specifications
 

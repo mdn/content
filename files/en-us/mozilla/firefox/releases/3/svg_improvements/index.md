@@ -37,7 +37,7 @@ Firefox 3 offers improved [Scalable Vector Graphics](/en-US/docs/Web/SVG) (SVG) 
   - `feTurbulence`
   - `feTile`
 
-- `<a>` element handling in SVG has had several bugs fixed; see [Firefox bug 267664](https://bugzil.la/267664), [Webkit bug 268135](https://bugzil.la/268135), [Webkit bug 316248](https://bugzil.la/316248), [Webkit bug 317270](https://bugzil.la/317270) and [Webkit bug 320724](https://bugzil.la/320724).
+- `<a>` element handling in SVG has had several bugs fixed; see [Firefox bug 267664](https://bugzil.la/267664), [WebKit bug 268135](https://bugzil.la/268135), [WebKit bug 316248](https://bugzil.la/316248), [WebKit bug 317270](https://bugzil.la/317270) and [WebKit bug 320724](https://bugzil.la/320724).
 - The SVG DOM Methods `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()`, and `getCharNumAtPosition()` have been implemented.
 - the `xml:space` attribute support ([spec](https://www.w3.org/TR/SVG/text.html#WhiteSpace))
 - fallback `fill`/`stroke` are now supported ([spec](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))

@@ -21,14 +21,14 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Console
 
-- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Firefox_tracking_protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
+- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection), [CSP errors](/en-US/docs/Web/HTTP/Guides/CSP), and [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
 - All visible logs in the console can shared by saving to a file or copying to clipboard via a new _Export visible messages to_ context menu item ([Firefox bug 1517728](https://bugzil.la/1517728)).
 - The console's toolbar now responsively reduces its height into a single row to save vertical space ([Firefox bug 972530](https://bugzil.la/972530)).
 - Messages from content can now be hidden in the console to focus on logs from the Firefox UI ([Firefox bug 1523842](https://bugzil.la/1523842)).
 
 #### Network
 
-- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/CSP) or [Mixed Content](/en-US/docs/Web/Security/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
+- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [Mixed Content](/en-US/docs/Web/Security/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
 - A new optional _URL_ column in the Network panel can be enabled to show the full URL for resources ([Firefox bug 1341155](https://bugzil.la/1341155)).
 
 #### Inspector
@@ -91,9 +91,9 @@ This article provides information about the changes in Firefox 69 that will affe
 - The {{domxref("DOMMatrix")}}, {{domxref("DOMPoint")}}, and related objects are now supported in workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
 - The `pageX` and `pageY` properties have been moved from {{domxref("UIEvent")}} to {{domxref("MouseEvent")}}, for better spec compliance ([Firefox bug 1178763](https://bugzil.la/1178763)). These properties are no longer exposed to the {{domxref("CompositionEvent")}}, {{domxref("FocusEvent")}}, {{domxref("InputEvent")}}, {{domxref("KeyboardEvent")}}, and {{domxref("TouchEvent")}} interfaces, which all inherit from `UIEvent`.
 - The {{domxref("Blob.text()")}}, {{domxref("Blob.arrayBuffer()")}}, and {{domxref("Blob.stream()")}} methods are now implemented ([Firefox bug 1557121](https://bugzil.la/1557121)).
-- {{domxref("DOMMatrix.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
-- We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
-- The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
+- {{domxref("DOMMatrixReadOnly.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
+- We now support the six-parameter version of the {{domxref("DOMMatrixReadOnly.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
+- The arguments for {{domxref("DOMMatrixReadOnly.translate()")}}, {{domxref("DOMMatrixReadOnly.skewX()")}}, and {{domxref("DOMMatrixReadOnly.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
 - The {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.platform")}}, and {{domxref("Navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
 - The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ([Firefox bug 1549560](https://bugzil.la/1549560)).
 - We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ([Firefox bug 1444847](https://bugzil.la/1444847)).
@@ -107,7 +107,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Removals
 
-- The {{domxref("DOMMatrix.scaleNonUniformSelf()")}} method has been removed ([Firefox bug 1560119](https://bugzil.la/1560119)).
+- The `DOMMatrix.scaleNonUniformSelf()` method has been removed ([Firefox bug 1560119](https://bugzil.la/1560119)).
 
 ### WebDriver conformance (Marionette)
 

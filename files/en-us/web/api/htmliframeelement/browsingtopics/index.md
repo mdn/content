@@ -29,7 +29,7 @@ A boolean. The default value is `false`; set it to `true` to send the associated
 Set `browsingtopics` to `true` then load the `<iframe>` contents declaratively:
 
 ```html
-<iframe browsingtopics title="Advertising container" src="adtech1.example">
+<iframe browsingtopics title="Advertising container" src="ad-tech1.example">
   ...
 </iframe>
 ```
@@ -56,7 +56,7 @@ const iframeElem = document.querySelector("iframe");
 
 iframeElem.browsingTopics = true;
 iframeElem.title = "Advertising container";
-iframeElem.src = "adtech1.example";
+iframeElem.src = "ad-tech1.example";
 ```
 
 ## Specifications

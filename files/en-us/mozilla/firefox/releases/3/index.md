@@ -36,11 +36,11 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Firefox 3 offers a number of new features in Firefox 3's DOM implementation, including support for several Internet Explorer extensions to the DOM.
 - [JavaScript 1.8 support](/en-US/docs/New_in_JavaScript_1.8)
   - : Firefox 3 offers JavaScript 1.8.
-- [EXSLT support](/en-US/docs/Web/EXSLT)
-  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/EXSLT) extensions to [XSLT](/en-US/docs/Web/XSLT).
+- [EXSLT support](/en-US/docs/Web/XML/EXSLT)
+  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/XML/EXSLT) extensions to [XSLT](/en-US/docs/Web/XML/XSLT).
 - [SVG improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
-- [Animated PNG graphics](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
+- [Animated PNG graphics](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 supports the animated PNG (APNG) image format.
 
 ### For XUL and extension developers
@@ -127,7 +127,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Bookmarks and History Organizer.** The new unified bookmarks and history organizer lets you easily search your history and bookmarks with multiple views and smart folders for saving your frequent searches.
 - **Web-based protocol handlers.** Web applications, such as your favorite web mail provider, can now be used instead of desktop applications for handling `mailto:` links from other sites. Similar support is provided for other protocols as well. (Note that web applications do have to register themselves with Firefox before this will work.)
 - **Easy to use Download Actions.** A new Applications preferences pane provides an improved user interface for configuring handlers for various file types and protocol schemes.
-- **Improved look and feel.** Graphics and font handling have been improved to make websites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
+- **Improved look and feel.** Graphics and font handling have been improved to make websites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (GNOME) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
 - **Color management support.** By setting the `gfx.color_management.enabled` preference in `about:config`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
 - **Offline support.** Web applications can take advantage of new features to support being used even when you don't have an Internet connection.
 

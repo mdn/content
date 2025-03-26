@@ -21,7 +21,7 @@ An integer. Note that this can be negative if the queue is over-full.
 The [A readable stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
 provides a good example of using `desiredSize` to manually detect when the
 stream is full and apply backpressure, and also of using
-{{domxref("ReadablestreamDefaultController.error()")}} to manually trigger a stream
+{{domxref("ReadableStreamDefaultController.error()")}} to manually trigger a stream
 error if another part of the system it relies on fails.
 
 ## Specifications

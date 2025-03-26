@@ -3,16 +3,14 @@ title: "Window: pagereveal event"
 short-title: pagereveal
 slug: Web/API/Window/pagereveal_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Window.pagereveal_event
 ---
 
-{{APIRef("HTML DOM")}}{{seecompattable}}
+{{APIRef("HTML DOM")}}
 
 The **`pagereveal`** event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 
-This is useful in the case of cross-document (MPA) [view transitions](/en-US/docs/Web/API/View_Transitions_API) for manipulating an active transition from the inbound page of a navigation. For example, you might wish to skip the transition, or customize the inbound transition animation via JavaScript.
+This is useful in the case of cross-document (MPA) [view transitions](/en-US/docs/Web/API/View_Transition_API) for manipulating an active transition from the inbound page of a navigation. For example, you might wish to skip the transition, or customize the inbound transition animation via JavaScript.
 
 ## Syntax
 
@@ -88,7 +86,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 
@@ -100,5 +98,5 @@ window.addEventListener("pagereveal", async (e) => {
 
 ## See also
 
-- [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Using)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pageswap_event", "pageswap")}} event

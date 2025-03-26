@@ -9,9 +9,34 @@ browser-compat: css.properties.content
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 
-Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+Objects inserted using the `content` property are **anonymous {{ glossary("replaced elements")}}**.
 
-{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+
+```css interactive-example
+.topic-games::before {
+  content: "🎮 ";
+}
+
+.topic-weather::before {
+  content: "⛅ ";
+}
+
+.topic-hot::before {
+  content: url("/shared-assets/images/examples/fire.png");
+  margin-right: 6px;
+}
+```
+
+```html interactive-example
+<p class="topic-games">Game News: A new inFamous is not planned</p>
+
+<p class="topic-weather">
+  Weather for Today: Heat, violent storms and twisters
+</p>
+
+<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+```
 
 ## Syntax
 
@@ -64,9 +89,9 @@ content: unset;
 
 The value can be:
 
-- One of two keywords — `none` or `normal`
+- One of two keywords — `none` or `normal`.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
-- A `<content-list>` when replacing pseudo-elements and margin boxes. A content-list is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
+- A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
 - An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
 
 The keywords and data types mentioned above are described in more detail below:
@@ -78,11 +103,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
-
-- `contents`
-
-  - : Adds the contents of the element itself to the generated content value.
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to the element's descendants.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -133,14 +154,14 @@ The keywords and data types mentioned above are described in more detail below:
 
 ## Accessibility
 
-CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
+CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
 
 If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
-- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
+- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/WCAG20-TECHS/F87) Techniques for WCAG 2.0
 
 ## Examples
 
@@ -462,7 +483,7 @@ div {
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 

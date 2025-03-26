@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Response.type
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
@@ -63,5 +63,5 @@ fetch(myRequest)
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

@@ -56,7 +56,7 @@ One or more of the keyword values listed below, separated by commas.
 - `stroke-box`
   - : The painted content is clipped to the stroke bounding box.
 - `view-box`
-  - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : Uses the nearest SVG viewport as reference box. If a [`viewBox`](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `no-clip`
   - : The painted content is not clipped.
 - `border`
@@ -80,9 +80,28 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Clipping a mask to the border box
 
-Change the `mask-clip` value to any of the allowed values detailed above. If viewing the example in a Chromium-based browser change the value of `-webkit-mask-clip`.
+Click "Play" in the live sample to open the code in the MDN Playground and change the `mask-clip` value to any of the allowed values described above.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
+```html live-sample___mask-clip-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-clip-example
+.masked {
+  width: 100px;
+  height: 100px;
+  background-color: #8cffa0;
+  margin: 20px;
+  border: 20px solid #8ca0ff;
+  padding: 20px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-size: 100% 100%;
+  mask-clip: border-box;
+}
+```
+
+{{EmbedLiveSample("mask-clip-example", "", "250px")}}
 
 ## Specifications
 

@@ -53,7 +53,7 @@ const myWorker = new Worker("worker.js");
 ```
 
 > [!NOTE]
-> Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vitejs.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+> Bundlers, including [webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
 >
 > ```js
 > const myWorker = new Worker(new URL("worker.js", import.meta.url));
@@ -66,15 +66,12 @@ const myWorker = new Worker("worker.js");
 The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.
@@ -151,7 +148,7 @@ importScripts(
 ); /* You can import scripts from other origins */
 ```
 
-The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
+The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
 
 > [!NOTE]
 > Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()`. This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
@@ -240,7 +237,7 @@ Content-Security-Policy: script-src 'self'
 
 Among other things, this will prevent any scripts it includes from using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
 
-To specify a content security policy for the worker, set a [Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
+To specify a content security policy for the worker, set a [Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
 
 The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.
 
@@ -825,14 +822,14 @@ To learn how to debug web workers, see the documentation for each browser's Java
 You can use most standard JavaScript features inside a web worker, including:
 
 - {{domxref("Navigator")}}
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
-The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then doing the changes in event handler.
+The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}, then doing the changes in event handler.
 
 > [!NOTE]
-> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter {{domxref("EventSource")}} into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 
 > [!NOTE]
 > For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
@@ -843,7 +840,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 ## See also
 
-- [`Worker`](/en-US/docs/Web/API/Worker) interface
-- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
+- {{domxref("Worker")}} interface
+- {{domxref("SharedWorker")}} interface
 - [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface
+- {{domxref("OffscreenCanvas")}} interface

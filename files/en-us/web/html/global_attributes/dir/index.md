@@ -9,7 +9,21 @@ browser-compat: html.global_attributes.dir
 
 The **`dir`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the element's text.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+
+```html interactive-example
+<p dir="rtl">
+  This paragraph is in English but incorrectly goes right to left.
+</p>
+<p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+
+<hr />
+
+<p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+<p dir="auto">
+  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+</p>
+```
 
 It can have the following values:
 
@@ -54,3 +68,4 @@ Browsers might allow users to change the directionality of {{ HTMLElement("input
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.dir")}} that reflects this attribute.
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

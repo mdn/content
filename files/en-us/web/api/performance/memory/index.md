@@ -9,9 +9,9 @@ status:
 browser-compat: api.Performance.memory
 ---
 
-{{APIRef("Performance API")}} {{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-The non-standard and legacy `performance.memory` property returns the size of the JavaScript heap which can be helpful to measure and reduce the memory footprint of websites.
+The non-standard and legacy **`memory`** read-only property returns the size of the JavaScript heap which can be helpful to measure and reduce the memory footprint of websites.
 
 Note that the information this API provides is unreliable as it might overestimate actual memory usage if web pages share the same heap, or might underestimate actual memory usage if web pages use workers and/or cross-site iframes that are allocated in separate heaps. It is not standardized what "heap" means exactly. The API is only available in Chromium-based browsers.
 
@@ -19,7 +19,7 @@ A new API aiming to replace `performance.memory` is {{domxref("Performance.measu
 
 ## Value
 
-The read-only `performance.memory` property is an object with the following properties:
+Returns an object with the following properties:
 
 - `jsHeapSizeLimit`
   - : The maximum size of the heap, in bytes, that is available to the context.

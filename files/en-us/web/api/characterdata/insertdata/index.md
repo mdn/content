@@ -16,7 +16,7 @@ The provided data is spliced into the existing data.
 ## Syntax
 
 ```js-nolint
-characterData.insertData(offset, data)
+insertData(offset, data)
 ```
 
 ### Parameters
@@ -44,9 +44,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.insertData(2, "long ");
+textNode.insertData(2, "long ");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

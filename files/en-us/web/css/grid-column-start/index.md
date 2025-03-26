@@ -9,7 +9,54 @@ browser-compat: css.properties.grid-column-start
 
 The **`grid-column-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the {{glossary("grid areas", "grid area")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
+{{InteractiveExample("CSS Demo: grid-column-start")}}
+
+```css interactive-example-choice
+grid-column-start: auto;
+```
+
+```css interactive-example-choice
+grid-column-start: 2;
+```
+
+```css interactive-example-choice
+grid-column-start: -1;
+```
+
+```css interactive-example-choice
+grid-column-start: span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Syntax
 
@@ -18,16 +65,16 @@ The **`grid-column-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid
 grid-column-start: auto;
 
 /* <custom-ident> value */
-grid-column-start: somegridarea;
+grid-column-start: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-column-start: 2;
-grid-column-start: somegridarea 4;
+grid-column-start: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-column-start: span 3;
-grid-column-start: span somegridarea;
-grid-column-start: span somegridarea 5;
+grid-column-start: span some-grid-area;
+grid-column-start: span some-grid-area 5;
 
 /* Global values */
 grid-column-start: inherit;

@@ -8,11 +8,11 @@ browser-compat: api.Element.securitypolicyviolation_event
 
 {{APIRef}}
 
-The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 
 The event is fired on the element when there is a violation of the CSP policy.
 
-This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed).
 It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
 
 > [!NOTE]
@@ -65,4 +65,4 @@ window.addEventListener("securitypolicyviolation", (e) => {
 
 - The {{domxref("Document/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Document")}} interface
 - The {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("WorkerGlobalScope")}} interface
-- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)

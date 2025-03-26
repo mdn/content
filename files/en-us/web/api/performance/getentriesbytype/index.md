@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntriesByType()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline for a given _type_.
 

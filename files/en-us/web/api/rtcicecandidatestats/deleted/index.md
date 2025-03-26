@@ -35,7 +35,7 @@ value is `true`.
 
 ## Examples
 
-In this example, {{domxref("setInterval()")}}
+In this example, {{domxref("Window.setInterval", "setInterval()")}}
 is used to set up a function that runs periodically to display the latest statistics for
 candidates. Only candidates which have not been deleted are included in the output.
 

@@ -25,7 +25,7 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 
 ## Fetch Interfaces
 
-- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("Window.fetch()")}} and {{domxref("WorkerGlobalScope.fetch()")}}
   - : The `fetch()` method used to fetch a resource.
 - {{DOMxRef("Headers")}}
   - : Represents response/request headers, allowing you to query them and take different actions depending on the results.
@@ -46,5 +46,5 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

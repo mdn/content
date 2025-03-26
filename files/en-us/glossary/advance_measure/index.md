@@ -14,5 +14,5 @@ The _advance measure_ of unit `ch` is either the width or height of character "0
 ## See also
 
 - {{cssxref("&lt;length&gt;")}}
-- [Learn: CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [TextMetrics API](/en-US/docs/Web/API/TextMetrics)

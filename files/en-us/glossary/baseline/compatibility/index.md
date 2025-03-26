@@ -18,7 +18,7 @@ Baseline considers support in the following browsers:
 - Mozilla Firefox (Android)
 - Mozilla Firefox (desktop)
 
-Baseline is a summary of browser support. It is not a substitute for accessibility, usability, performance, security, or other testing. Baseline may not tell if you if a feature works with:
+Baseline is a summary of browser support. It is not a substitute for accessibility, usability, performance, security, or other testing. Baseline may not tell you if a feature works with:
 
 - Older devices and browser releases
 - Browsers not covered by the Baseline definition, such as operating system web views
@@ -40,7 +40,7 @@ Features listed with **limited availability** are _not_ yet available in all bro
 
 ## See also
 
-- [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Testing](/en-US/docs/Learn_web_development/Extensions/Testing)
 - [web-platform-dx/web-features repository](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)

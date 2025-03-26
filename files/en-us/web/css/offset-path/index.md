@@ -11,7 +11,74 @@ The **`offset-path`** [CSS](/en-US/docs/Web/CSS) property specifies a path for a
 
 The `offset-path` property is used in combination with the {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}}, and {{cssxref("offset-anchor")}} properties to control the position and orientation of the element along a path.
 
-{{EmbedInteractiveExample("pages/css/offset-path.html")}}
+{{InteractiveExample("CSS Demo: offset-path")}}
+
+```css interactive-example-choice
+offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+```
+
+```css interactive-example-choice
+offset-path: path("M0,0 L60,70 L-60,30z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  animation: distance 8000ms infinite linear;
+  animation-play-state: paused;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#default-example {
+  position: relative;
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 ## Syntax
 
@@ -62,7 +129,7 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
 - `<offset-path>`
 
-  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : A `ray()` function, a `<url>` value, or a `<basic-shape>` value that specifies the geometrical offset path. If omitted, the path shape for the `<coord-box>` value is `inset(0 round X)`, where `X` is the value of {{cssxref("border-radius")}} of the element that establishes the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 
     - {{cssxref("ray","ray()")}}
 
@@ -70,7 +137,7 @@ The `offset-path` property takes as its value an `<offset-path>` value, a [`<coo
 
     - {{cssxref("url_value", "&lt;url&gt;")}}
 
-      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
+      - : Specifies the ID of an [SVG shape element](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes). The path is the shape of the SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, or {{SVGElement("rect")}} element referenced by its `id` in the `url()` function. If the URL does not reference a shape element or is otherwise invalid, the resolved value for the offset path is `path("M0,0")` (which is a valid `<basic-shape>` value).
 
     - {{cssxref("basic-shape")}}
 
@@ -215,10 +282,10 @@ In this example, the {{svgelement("svg")}} element creates a house with a chimne
   offset-path: path(
     "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
   );
-  animation: followpath 4s linear infinite;
+  animation: follow-path 4s linear infinite;
 }
 
-@keyframes followpath {
+@keyframes follow-path {
   to {
     offset-distance: 100%;
   }
@@ -295,10 +362,10 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
+- [SVG \<path>](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
 - {{cssxref("basic-shape/path","path()")}}
 - Other demos:
-  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on Codepen by CSS-Tricks
-  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on Codepen by Eric Willigers
-  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on Codepen by Eric Willigers
+  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks
+  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on CodePen by Eric Willigers
+  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on CodePen by Eric Willigers
   - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) on JSFiddle by Eric Willigers

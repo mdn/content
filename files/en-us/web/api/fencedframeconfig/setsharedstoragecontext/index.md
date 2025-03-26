@@ -22,7 +22,7 @@ setSharedStorageContext(context)
 ### Parameters
 
 - `context`
-  - : A string representing the contextual data to pass in to shared storage. Once set, this will be stored in the [internal config](/en-US/docs/Web/API/FencedFrameConfig#internal_config) `storageContext` property.
+  - : A string representing the contextual data to pass into shared storage. Once set, this will be stored in the {{domxref("FencedFrameConfig")}} instance's internal config.
 
 ### Return value
 

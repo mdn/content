@@ -89,10 +89,10 @@ dc.addEventListener(
         break;
       case "dtls-failure":
         if (err.receivedAlert) {
-          console.error("    Received DLTS failure alert: ", err.receivedAlert);
+          console.error("    Received DTLS failure alert: ", err.receivedAlert);
         }
         if (err.sentAlert) {
-          console.error("    Sent DLTS failure alert: ", err.receivedAlert);
+          console.error("    Sent DTLS failure alert: ", err.receivedAlert);
         }
         break;
     }

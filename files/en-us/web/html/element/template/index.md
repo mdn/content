@@ -237,7 +237,7 @@ The second code block is identical except that it sets the `shadowrootdelegatesf
 </div>
 ```
 
-Last of all we use the following CSS to apply a green-yellow border to the parent `<div>` element when it has focus.
+Last of all we use the following CSS to apply a red border to the parent `<div>` element when it has focus.
 
 ```css
 div:focus {
@@ -252,7 +252,7 @@ For the shadow root that does not have `shadowrootdelegatesfocus` set you can cl
 ![Screenshot of code with no focus set](template_with_no_focus.png)
 
 For the shadow root with `shadowrootdelegatesfocus` set, clicking on the text (which is non-focusable) selects the `<input>` element, as this is the first focusable element in the tree.
-This also focusses the parent element as shown below.
+This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
@@ -378,9 +378,9 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) HTML attributes
+- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
-- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)

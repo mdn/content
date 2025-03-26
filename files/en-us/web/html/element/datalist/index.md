@@ -9,7 +9,27 @@ browser-compat: html.elements.datalist
 
 The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
@@ -57,7 +77,7 @@ The types {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "
 Predefined values can be shown there, allowing the user to quickly fill the control value.
 
 > [!NOTE]
-> When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
+> When these types are not supported, a basic `text` type will be rendered instead, creating a text field. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
 <input type="time" list="popularHours" />
@@ -149,7 +169,7 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"
           >listbox</a
         >
       </td>

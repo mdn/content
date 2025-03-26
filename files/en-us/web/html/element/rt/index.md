@@ -9,7 +9,19 @@ browser-compat: html.elements.rt
 
 The **`<rt>`** [HTML](/en-US/docs/Web/HTML) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a {{HTMLElement("ruby")}} element.
 
-{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 See the article about the {{HTMLElement("ruby")}} element for more examples.
 
@@ -21,7 +33,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ### Using ruby annotations
 
-This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
+This example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:
 
 ```html
 <ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>

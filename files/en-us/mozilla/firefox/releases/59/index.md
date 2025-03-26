@@ -26,7 +26,7 @@ This article provides information about the changes in Firefox 59 that will affe
 
 - The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ([Firefox bug 951793](https://bugzil.la/951793)), and it has been enabled by default on all releases ([Firefox bug 1428879](https://bugzil.la/1428879)).
 - The behavior of "unusual elements" (elements that aren't rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ([Firefox bug 1427292](https://bugzil.la/1427292)). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specified behaviors are.
-- {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
+- {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) parts (e.g. {{htmlelement("th")}} elements) ([Firefox bug 975644](https://bugzil.la/975644)).
 - {{cssxref("calc", "calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ([Firefox bug 984021](https://bugzil.la/984021)).
 - {{cssxref("calc", "calc()")}} in [media query](/en-US/docs/Web/CSS/CSS_media_queries) values is now supported [Firefox bug 1396057](https://bugzil.la/1396057).
 - The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ([Firefox bug 1035091](https://bugzil.la/1035091)).
@@ -122,7 +122,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 ### APIs
 
 - The non-standard method `Event.getPreventDefault()` has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.
-- The proprietary [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
+- The proprietary `Navigator.mozNotification` property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
 - The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.external")}} for more details.
 - The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` has been removed.
 

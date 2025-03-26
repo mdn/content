@@ -220,7 +220,7 @@
       "overview": ["Console API"],
       "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console"],
+      "properties": [],
       "events": []
     },
     "Cookie Store API": {
@@ -252,13 +252,6 @@
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
-      "events": []
-    },
-    "CSS Counter Styles": {
-      "overview": ["CSS Counter Styles"],
-      "interfaces": ["CSSCounterStyleRule"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "CSS Font Loading API": {
@@ -389,6 +382,14 @@
         "Window: devicemotion"
       ]
     },
+    "Device Posture API": {
+      "overview": ["Device Posture API"],
+      "guides": [],
+      "interfaces": ["DevicePosture"],
+      "methods": ["Navigator.devicePosture"],
+      "properties": [],
+      "events": []
+    },
     "Document Picture-in-Picture API": {
       "overview": ["Document Picture-in-Picture API"],
       "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
@@ -407,6 +408,7 @@
         "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
+        "/docs/Web/API/Document_Object_Model/Transforming_with_XSLT",
         "/docs/Web/API/Document_Object_Model/Events",
         "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
@@ -556,10 +558,7 @@
     },
     "File and Directory Entries API": {
       "overview": ["File and Directory Entries API"],
-      "guides": [
-        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
-        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
-      ],
+      "guides": [],
       "interfaces": [
         "FileSystemDirectoryEntry",
         "FileSystemDirectoryReader",
@@ -567,17 +566,23 @@
         "FileSystemFileEntry",
         "FileSystem"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["DataTransferItem.webkitGetAsEntry()"],
+      "properties": [
+        "File.webkitRelativePath",
+        "HTMLInputElement.webkitdirectory",
+        "HTMLinputElement.webkitEntries"
+      ],
       "events": []
     },
     "File System API": {
       "overview": ["File System API"],
       "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
+        "FileSystemChangeRecord",
         "FileSystemHandle",
         "FileSystemFileHandle",
         "FileSystemDirectoryHandle",
+        "FileSystemObserver",
         "FileSystemSyncAccessHandle",
         "FileSystemWritableFileStream"
       ],
@@ -811,10 +816,11 @@
         "Element: focus",
         "Element: select",
         "Element: show",
-        "HTMLDetailsElement: toggle",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
         "HTMLFormElement: reset",
         "HTMLFormElement: submit",
         "HTMLInputElement: change",
@@ -921,7 +927,7 @@
     },
     "Ink API": {
       "overview": ["Ink API"],
-      "interfaces": ["Ink", "InkPresenter"],
+      "interfaces": ["DelegatedInkTrailPresenter", "Ink"],
       "methods": [],
       "properties": ["Navigator.ink"],
       "events": []
@@ -951,6 +957,24 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "Invoker Commands API": {
+      "overview": ["Invoker Commands API"],
+      "guides": [],
+      "interfaces": ["CommandEvent"],
+      "methods": [],
+      "properties": [
+        "HTMLButtonElement.commandForElement",
+        "HTMLButtonElement.command"
+      ],
+      "events": ["HTMLElement: command"]
+    },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
     },
     "Keyboard API": {
       "overview": ["Keyboard API"],
@@ -1020,6 +1044,10 @@
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
+      "guides": [
+        "/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE",
+        "/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming"
+      ],
       "interfaces": [
         "MediaSource",
         "MediaSourceHandle",
@@ -1029,6 +1057,9 @@
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": [
+        "HTMLMediaElement.buffered",
+        "HTMLMediaElement.seekable",
+        "HTMLMediaElement.srcObject",
         "AudioTrack.sourceBuffer",
         "VideoTrack.sourceBuffer",
         "TextTrack.sourceBuffer"
@@ -1331,8 +1362,16 @@
     },
     "Screen Capture API": {
       "overview": ["Screen Capture API"],
-      "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
-      "interfaces": ["CaptureController"],
+      "guides": [
+        "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+      ],
+      "interfaces": [
+        "BrowserCaptureMediaStreamTrack",
+        "CaptureController",
+        "CropTarget",
+        "RestrictionTarget"
+      ],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
         "MediaTrackConstraints.displaySurface",
@@ -1534,6 +1573,7 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
+        "SVGDiscardElement",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1761,8 +1801,8 @@
       "properties": [],
       "events": []
     },
-    "View Transitions API": {
-      "overview": ["View Transitions API"],
+    "View Transition API": {
+      "overview": ["View Transition API"],
       "guides": ["/docs/Web/API/View_Transitions_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
@@ -2103,7 +2143,7 @@
         "HIDConnectionEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.hid"],
+      "properties": ["Navigator.hid", "WorkerNavigator.hid"],
       "events": []
     },
     "Web Locks API": {

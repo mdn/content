@@ -109,7 +109,43 @@ So-called advanced constraints are created by adding an `advanced` property to t
 
 You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent. This function returns an object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
 
-> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox [Firefox bug 1179084](https://bugzil.la/1179084), for example.
+For example, the following snippet will result in the user being asked for permission to access their local camera and microphone. Once permission is granted, `MediaTrackCapabilities` objects will be logged to the console that detail the capabilities of each {{domxref("MediaStreamTrack")}}:
+
+```js
+navigator.mediaDevices
+  .getUserMedia({ video: true, audio: true })
+  .then((stream) => {
+    const tracks = stream.getTracks();
+    tracks.map((t) => console.log(t.getCapabilities()));
+  });
+```
+
+An example capabilities object looks like this:
+
+```js
+{
+  "autoGainControl": [
+    true,
+    false
+  ],
+  "channelCount": {
+    "max": 1,
+    "min": 1
+  },
+  "deviceId": "jjxEMqxIhGdryqbTjDrXPWrkjy55Vte70kWpMe3Lge8=",
+  "echoCancellation": [
+    true,
+    false
+  ],
+  "groupId": "o2tZiEj4MwOdG/LW3HwkjpLm1D8URat4C5kt742xrVQ=",
+  "noiseSuppression": [
+    true,
+    false
+  ]
+}
+```
+
+The exact contents of the object will depend on the browser and media hardware.
 
 ## Applying constraints
 
@@ -200,22 +236,22 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 <ul id="supportedConstraints"></ul>
 <div id="startButton" class="button">Start</div>
 <div class="wrapper">
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>Requested video constraints:</h3>
       <textarea id="videoConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>Actual video settings:</h3>
       <textarea id="videoSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
   </div>
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>Requested audio constraints:</h3>
       <textarea id="audioConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>Actual audio settings:</h3>
       <textarea id="audioSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
@@ -260,16 +296,16 @@ video {
   width: 600px;
 }
 
-.trackrow {
+.track-row {
   height: 200px;
 }
 
-.leftside {
+.left-side {
   float: left;
   width: calc(calc(100% / 2) - 10px);
 }
 
-.rightside {
+.right-side {
   float: right;
   width: calc(calc(100% / 2) - 10px);
 }

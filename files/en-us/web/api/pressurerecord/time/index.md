@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureRecord.time
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The read-only **`time`** property returns the {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for a {{domxref("PressureRecord")}}. It corresponds to the time the data was obtained from the system relative to the [time origin of the global object](/en-US/docs/Web/API/Performance/timeOrigin) in which the {{domxref("PressureObserver")}} generated the notification.
 

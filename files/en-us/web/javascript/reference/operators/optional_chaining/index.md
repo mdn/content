@@ -9,14 +9,30 @@ browser-compat: javascript.operators.optional_chaining
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Optional chaining (?.) operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Syntax
 
 ```js-nolint
-obj.val?.prop
-obj.val?.[expr]
-obj.func?.(args)
+obj?.prop
+obj?.[expr]
+func?.(args)
 ```
 
 ## Description
@@ -192,20 +208,20 @@ Except the `temp` variable isn't created.
 ### Basic example
 
 This example looks for the value of the `name` property for the member
-`bar` in a map when there is no such member. The result is therefore
+`CSS` in a map when there is no such member. The result is therefore
 `undefined`.
 
 ```js
 const myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+myMap.set("JS", { name: "Josh", desc: "I maintain things" });
 
-const nameBar = myMap.get("bar")?.name;
+const nameBar = myMap.get("CSS")?.name;
 ```
 
 ### Dealing with optional callbacks or event handlers
 
-If you use callbacks or fetch methods from an object with
-[a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
+If you use callbacks or fetch methods from an object with a
+[destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring) pattern, you may have non-existent values that you cannot call as
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js

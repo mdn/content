@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.claimInterface
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`claimInterface()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when

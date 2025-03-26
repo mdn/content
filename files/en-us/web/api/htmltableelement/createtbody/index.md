@@ -36,8 +36,8 @@ None.
 ## Examples
 
 ```js
-let mybody = mytable.createTBody();
-// Now this should be true: mybody === mytable.tBodies.item(mytable.tBodies.length - 1)
+let myBody = myTable.createTBody();
+// Now this should be true: myBody === myTable.tBodies.item(myTable.tBodies.length - 1)
 ```
 
 ## Specifications

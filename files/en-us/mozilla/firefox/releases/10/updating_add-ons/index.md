@@ -21,17 +21,11 @@ Some obsolete APIs have been removed from the DOM:
 
 - {{ domxref("Node.isSameNode()") }}
   - : This is the removal that has the most likelihood to affect add-on developers, as it was fairly commonly used. You can now use the JavaScript `===` operator to compare nodes instead of this obsolete method. This method was made obsolete by the DOM4 specification.
-- {{ domxref("text.isElementContentWhitespace") }}
-
-  `text.replaceWholeText()`
+- `text.isElementContentWhitespace`, `text.replaceWholeText()`
 
   - : These APIs were rendered obsolete by the DOM4 specification.
 
-- {{ domxref("Document.xmlEncoding") }}
-
-  {{ domxref("Document.xmlStandalone") }}
-
-  {{ domxref("Document.xmlVersion") }}
+- {{ domxref("Document.xmlEncoding") }}, {{ domxref("Document.xmlStandalone") }}, {{ domxref("Document.xmlVersion") }}
 
   - : All of these APIs were rendered obsolete by the DOM4 specification. They were most frequently being used to detect whether the document being displayed was HTML or XML. See the article for {{ domxref("Document.xmlVersion") }} for a recommended way to test for this going forward.
 

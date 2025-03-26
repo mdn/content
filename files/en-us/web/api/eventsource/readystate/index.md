@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.EventSource.readyState
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`readyState`** read-only property of the
 {{domxref("EventSource")}} interface returns a number representing the state of the

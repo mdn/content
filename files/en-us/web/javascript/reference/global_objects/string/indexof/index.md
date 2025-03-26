@@ -9,7 +9,25 @@ browser-compat: javascript.builtins.String.indexOf
 
 The **`indexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.indexOf()", "taller")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## Syntax
 
@@ -65,7 +83,7 @@ Strings are zero-indexed: The index of a string's first character is `0`, and th
 
 ```js
 "Blue Whale".indexOf("Blue"); // returns  0
-"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Wale"); // returns -1
 "Blue Whale".indexOf("Whale", 0); // returns  5
 "Blue Whale".indexOf("Whale", 5); // returns  5
 "Blue Whale".indexOf("Whale", 7); // returns -1
@@ -88,7 +106,7 @@ When checking if a specific substring occurs within a string, the correct way to
 
 ```js
 "Blue Whale".indexOf("Blue") !== -1; // true; found 'Blue' in 'Blue Whale'
-"Blue Whale".indexOf("Bloe") !== -1; // false; no 'Bloe' in 'Blue Whale'
+"Blue Whale".indexOf("Wale") !== -1; // false; no 'Wale' in 'Blue Whale'
 ```
 
 ## Examples

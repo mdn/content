@@ -30,7 +30,7 @@ forEach(callbackFn)
 
 ## Description
 
-`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work well with infinite iterators, because it is not lazy.
+`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work with infinite iterators, because it is not lazy.
 
 ## Examples
 
@@ -64,6 +64,7 @@ for (const v of new Set([1, 2, 3]).values()) {
 ## See also
 
 - [Polyfill of `Iterator.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#iterator-helpers)
+- [es-shims polyfill of `Iterator.prototype.forEach`](https://www.npmjs.com/package/es-iterator-helpers)
 - {{jsxref("Iterator")}}
 - {{jsxref("Iterator.prototype.find()")}}
 - {{jsxref("Iterator.prototype.map()")}}

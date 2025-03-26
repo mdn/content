@@ -77,7 +77,7 @@ and manner of that performance varies depending on each text track's
 
 In this example, we configure the text track's cues so that every time a cue is
 finished, the video automatically pauses playback. This is done by setting the
-{{domxref("TextTrackCue.pauseonExit", "pauseOnExit")}} property on each cue to
+{{domxref("TextTrackCue.pauseOnExit", "pauseOnExit")}} property on each cue to
 `true`. However, to ensure that the track's cues are available, we first set
 `mode` to `showing`.
 

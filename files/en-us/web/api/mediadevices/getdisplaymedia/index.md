@@ -35,7 +35,7 @@ getDisplayMedia(options)
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
-    - `monitorTypeSurfaces` {{optional_inline}}
+    - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
 
       - : An enumerated value specifying whether the browser should offer entire screens in the screen capture options presented to the user alongside tab and window options. This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps. Possible values are `include`, which hints that the browser should include screen options, and `exclude`, which hints that they should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
@@ -50,8 +50,6 @@ getDisplayMedia(options)
       - : An enumerated value specifying whether the browser should display a control to allow the user to dynamically switch the shared tab during screen-sharing. This is much more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab. Possible values are `include`, which hints that the browser should include the control, and `exclude`, which hints that it should not be shown. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `systemAudio` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user. Possible values are `include`, which hints that the browser should include the system audio in the list of choices, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
-    - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
-      - : An enumerated value specifying whether the application would like the user agent to offer the user the option to choose display surfaces whose type is monitor. Possible values are `include`, which hints that the browser should include the display surfaces whose type is monitor, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
 > [!NOTE]
 > See the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for a lot more detail on how these options work.
@@ -75,7 +73,7 @@ audio track.
     not fully active or does not focused. Or if the `controller` options has been already used in creating
     another {{domxref("MediaStream")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
+  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}

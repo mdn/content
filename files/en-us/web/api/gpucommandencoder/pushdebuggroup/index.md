@@ -35,7 +35,7 @@ None ({{jsxref("Undefined")}}).
 ```js
 // ...
 
-commandEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+commandEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 

@@ -11,7 +11,45 @@ The **`block-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal 
 
 If the writing mode is vertically oriented, the value of `block-size` relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
 
-{{EmbedInteractiveExample("pages/css/block-size.html")}}
+{{InteractiveExample("CSS Demo: block-size")}}
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the block-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 

@@ -66,7 +66,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
       - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Safari.)
-    - `hiliteColor`
+    - `highlightColor`
       - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function.
     - `increaseFontSize`
       - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point.
@@ -149,7 +149,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 

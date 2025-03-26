@@ -45,7 +45,7 @@ text-spacing-trim: unset;
       - : Behaves as `normal`, except that CJK full-width opening punctuation characters are set to be half-width at the start of each line.
 
     > [!NOTE]
-    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both,` `trim-all,` and `auto` values. However, these are not currently implemented in any browser.
+    > The [CSS Text](/en-US/docs/Web/CSS/CSS_text) module also defines `trim-both`, `trim-all`, and `auto` values. However, these are not currently implemented in any browser.
 
 ## Description
 
@@ -121,7 +121,8 @@ This example compares the effect of four different `text-spacing-trim` propertie
 
 ```css
 main {
-  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
+  font-family:
+    "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", sans-serif;
   display: grid;
   gap: 0.5em;
@@ -174,5 +175,5 @@ p {
 
 ## See also
 
-- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units#root_font-relative_lengths) units
+- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/CSS_text) module

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.serverTiming
 ---
 
-{{APIRef("Performance API")}} {{securecontext_header}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`serverTiming`** read-only property returns an array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 

@@ -9,6 +9,13 @@ browser-compat: css.types.color.color-mix
 
 The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
+Choosing the correct color space is important for producing desired results. Given the same colors to mix, different color spaces may be more appropriate depending on the interpolation use case.
+
+- If the result of physically mixing two colored lights is desired, the CIE XYZ or srgb-linear color space is appropriate, because they are linear in light intensity.
+- If colors need to be evenly spaced perceptually (such as in a gradient), the Oklab color space (and the older Lab) are appropriate, because they are designed to be perceptually uniform.
+- If avoiding graying out in color mixing is desired, i.e. maximizing chroma throughout the transition, Oklch (and the older LCH) work well.
+- Only use sRGB if you need to match the behavior of a specific device or software that uses sRGB. The sRGB color space is neither linear-light nor perceptually uniform, and produces poorer results such as overly dark or grayish mixes.
+
 ## Syntax
 
 ```css
@@ -58,9 +65,9 @@ Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentag
     - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
       - If `p1 + p2 < 100%`, then an alpha multiplier of `p1 + p2` is applied to the resulting color. This is similar to mixing in [`transparent`](/en-US/docs/Web/CSS/named-color#transparent), with percentage `pt = 100% - p1 - p2`.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

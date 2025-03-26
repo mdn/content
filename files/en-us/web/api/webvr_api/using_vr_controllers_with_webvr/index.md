@@ -38,7 +38,7 @@ There are two types of controller you'll encounter with VR hardware:
 
 Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
+We've written up an example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
 
 ### Getting the display information
 
@@ -89,7 +89,7 @@ Display max layers: ${cap.maxLayers}`;
 
 This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRDisplayCapabilities")}} object. The most useful of these are {{domxref("VRDisplayCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRDisplayCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
 
-The last line contained in this function is a {{domxref("setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
+The last line contained in this function is a {{domxref("Window.setTimeout", "setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
 
 ### Getting the Gamepad information
 

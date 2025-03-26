@@ -10,7 +10,7 @@ browser-compat: api.HTMLMediaElement.srcObject
 
 The **`srcObject`** property of the
 {{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
-the source of the media associated with the {{domxref("HTMLMediaElement")}}.
+the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
 
 The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from `Blob`).
@@ -22,7 +22,7 @@ The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 
 A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
 {{domxref('File')}} object (though see the compatibility table for what is actually
-supported).
+supported), or `null` if not assigned.
 
 ## Usage notes
 

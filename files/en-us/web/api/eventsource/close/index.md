@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventSource.close
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("EventSource")}}
 interface closes the connection, if one is made, and sets the

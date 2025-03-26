@@ -68,7 +68,7 @@ function download() {
   a.href = url;
   a.download = "test.webm";
   a.click();
-  window.URL.revokeObjectURL(url);
+  URL.revokeObjectURL(url);
 }
 
 // demo: to download after 9sec
@@ -93,7 +93,7 @@ In this code snippet, `enumerateDevices()` is used to examine the available inpu
 ```js
 navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
-    const menu = document.getElementById("inputdevices");
+    const menu = document.getElementById("input-devices");
     if (device.kind === "audioinput") {
       const item = document.createElement("option");
       item.textContent = device.label;

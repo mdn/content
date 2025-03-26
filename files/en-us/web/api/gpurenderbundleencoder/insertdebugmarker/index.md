@@ -38,7 +38,7 @@ None ({{jsxref("Undefined")}}).
 ```js
 // ...
 
-bundleEncoder.insertDebugMarker("mymarker");
+bundleEncoder.insertDebugMarker("my_marker");
 
 // ...
 ```

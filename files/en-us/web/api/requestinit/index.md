@@ -7,7 +7,7 @@ spec-urls: https://fetch.spec.whatwg.org/#requestinit
 
 {{APIRef("Fetch API")}}
 
-The **`RequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the set of options that can be used to configure a Fetch request.
+The **`RequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the set of options that can be used to configure a [fetch request](/en-US/docs/Web/API/Window/fetch).
 
 You can pass a `RequestInit` object into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/Window/fetch) function call.
 
@@ -56,8 +56,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
-        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
+        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `no-store`
@@ -68,7 +68,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `force-cache`
@@ -109,13 +109,13 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
   - : Any headers you want to add to your request, contained
     within a {{domxref("Headers")}} object or an object literal whose keys are the names of headers and whose values are the header values.
 
-    Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
+    Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden request header", "Forbidden request headers")}}.
 
     If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
 
     See [Setting headers](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_headers) for more details.
 
-- `integrity`
+- `integrity` {{optional_inline}}
 
   - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
     value of the request.
@@ -131,32 +131,48 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `keepalive` {{optional_inline}}
 
-  - : A boolean. If `true`, the browser will not abort the request if the page that made it is unloaded before the request is complete. This enables a Fetch request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session.
+  - : A boolean.
+    When set to `true`, the browser will not abort the associated request if the page that initiated it is unloaded before the request is complete.
+    This enables a {{domxref('Window.fetch','fetch()')}} request to send analytics at the end of a session even if the user navigates away from or closes the page.
 
-    The body size for keepalive requests is limited to 64 kibibytes.
+    This has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose.
+    For example, you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment.
+    It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
+
+    The body size for `keepalive` requests is limited to 64 kibibytes.
 
     Defaults to `false`.
 
 - `method` {{optional_inline}}
 
-  - : The [request method](/en-US/docs/Web/HTTP/Methods).
+  - : The [request method](/en-US/docs/Web/HTTP/Reference/Methods).
 
     Defaults to {{httpmethod("GET")}}.
 
 - `mode` {{optional_inline}}
 
-  - : One of the following values:
+  - : Sets cross-origin behavior for the request. One of the following values:
 
     - `same-origin`
-      - : Disallows cross-origin requests completely.
+
+      - : Disallows cross-origin requests. If a `same-origin` request is sent to a different origin, the result is a network error.
+
     - `cors`
-      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism.
+
+      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) mechanism. Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
+
     - `no-cors`
-      - : The request must be a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), which restricts the headers that may be set to {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, and restricts methods to `GET`, `HEAD`, and `POST`.
+
+      - : Disables CORS for cross-origin requests. This option comes with the following restrictions:
+
+        - The method may only be one of `HEAD`, `GET` or `POST`.
+        - The headers may only be {{Glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, with the additional restriction that the {{httpheader("Range")}} header is also not allowed. This also applies to any headers added by service workers.
+        - The response is _opaque_, meaning that its headers and body are not available to JavaScript, and its {{domxref("Response.status", "status code", "", "nocode")}} is always `0`.
+
+        The main application for `no-cors` is for a service worker: although the response to a `no-cors` request can't be read by JavaScript, it can be cached by a service worker and then used as a response to an intercepted fetch request. Note that in this situation you don't know whether the request succeeded or not, so you should adopt a caching strategy which enables the cached response to be updated from the network (such as [cache first with cache refresh](/en-US/docs/Web/Progressive_web_apps/Guides/Caching#cache_first_with_cache_refresh)).
+
     - `navigate`
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.
-    - `websocket`
-      - : Used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
     See [Making cross-origin requests](/en-US/docs/Web/API/Fetch_API/Using_Fetch#making_cross-origin_requests) for more details.
 
@@ -171,13 +187,14 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - `low`
       - : A low priority fetch request relative to other requests of the same type.
     - `auto`
-      - : Automatically determine the priority of the fetch request relative to other requests of the same type.
+      - : No user preference for the fetch priority.
+        It is used if no value is set or if an invalid value is set.
 
     Defaults to `auto`.
 
 - `redirect` {{optional_inline}}
 
-  - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Status#redirection_messages). One of the following values:
+  - : Determines the browser's behavior in case the server replies with a [redirect status](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages). One of the following values:
 
     - `follow`
       - : Automatically follow redirects.
@@ -284,5 +301,5 @@ In this case the request will be sent with the following options:
 
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

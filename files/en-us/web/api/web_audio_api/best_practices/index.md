@@ -44,7 +44,7 @@ But what does that mean in practice? A user gesture has been interpreted to mean
 
 When you create an audio context (either offline or online) it is created with a `state`, which can be `suspended`, `running`, or `closed`.
 
-When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
+When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is an example of creating the context from inside a `click` event:
 
 ```js
 const button = document.querySelector("button");
@@ -82,7 +82,7 @@ You might instead be working with an {{domxref("OfflineAudioContext")}}, in whic
 
 If your website or application contains sound, you should allow the user control over it, otherwise again, it will become annoying. This can be achieved by play/stop and volume/mute controls. The [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) tutorial goes over how to do this.
 
-If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
+If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
 As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
 

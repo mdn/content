@@ -55,7 +55,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-- `blocking` {{Experimental_Inline}}
+- `blocking`
 
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
@@ -81,28 +81,33 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching an external script.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other external scripts.
+      - : Fetch the external script at a high priority relative to other external scripts.
     - `low`
-      - : Signals a low-priority fetch relative to other external scripts.
+      - : Fetch the external script at a low priority relative to other external scripts.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other external scripts.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
 
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
-  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+  - : A cryptographic nonce (number used once) to allow scripts in a [script-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `referrerpolicy`
 
   - : Indicates which [referrer](/en-US/docs/Web/API/Document/referrer) to send when fetching the script, or resources fetched by the script:
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -122,7 +127,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
-        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
+        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
     - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
         The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
@@ -158,13 +163,13 @@ If the script is blocked, an {{domxref("HTMLElement/error_event", "error")}} eve
 
 ### Basic usage
 
-These examples show how to import (an external) script using the `<script>` element.
+This example shows how to import (an external) script using the `<script>` element:
 
 ```html
 <script src="javascript.js"></script>
 ```
 
-And the following examples show how to put (an inline) script inside the `<script>` element.
+The following example shows how to put (an inline) script inside the `<script>` element:
 
 ```html
 <script>

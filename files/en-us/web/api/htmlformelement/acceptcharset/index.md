@@ -8,18 +8,20 @@ browser-compat: api.HTMLFormElement.acceptCharset
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLFormElement.acceptCharset`** property represents a
-list of the supported [character encodings](/en-US/docs/Glossary/Character_encoding) for the given {{htmlelement("form")}} element. This list can be
-comma-separated or space-separated.
+The **`HTMLFormElement.acceptCharset`** property represents the {{glossary("character encoding")}} for the given {{htmlelement("form")}} element.
+
+The specification allows a single case-insensitive value of `"UTF-8"`, reflecting the ubiquity of this encoding (historically multiple character encodings could be specified as a comma-separated or space-separated list).
+
+This reflects the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Element/form#accept-charset) HTML attribute.
 
 ## Value
 
-A string.
+A string which may be a case-insensitive match for `UTF-8`.
 
 ## Examples
 
 ```js
-let inputs = document.forms["myform"].acceptCharset;
+let charSet = document.forms["my-form"].acceptCharset;
 ```
 
 ## Specifications

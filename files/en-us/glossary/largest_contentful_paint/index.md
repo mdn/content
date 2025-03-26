@@ -1,5 +1,5 @@
 ---
-title: Largest contentful paint
+title: Largest Contentful Paint (LCP)
 slug: Glossary/Largest_contentful_paint
 page-type: glossary-definition
 ---
@@ -11,7 +11,7 @@ The **Largest Contentful Paint** (LCP) performance metric provides the render ti
 The following elements are considered when determining the LCP:
 
 - {{HTMLElement("img")}} elements.
-- [`<image>`](/en-US/docs/Web/SVG/Element/image) elements inside an SVG.
+- [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.
 - The poster images of {{HTMLElement("video")}} elements.
 - Elements with a {{cssxref("background-image")}}.
 - Groups of text nodes, such as {{HTMLElement("p")}}.
@@ -20,5 +20,5 @@ The following elements are considered when determining the LCP:
 
 - [`LargestContentfulPaint`](/en-US/docs/Web/API/LargestContentfulPaint)
 - Related glossary terms:
-  - {{Glossary("First contentful paint")}}
-  - {{Glossary("First paint")}}
+  - {{Glossary("First Contentful Paint")}}
+  - {{Glossary("First Paint")}}

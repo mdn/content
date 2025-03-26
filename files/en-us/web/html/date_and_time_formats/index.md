@@ -401,7 +401,7 @@ Because of data storage and precision issues, you may want to be aware of a few 
 
 JavaScript uses double precision floating points to store dates, as with all numbers, meaning that JavaScript code will not suffer from the Y2K38 problem unless integer coercion/bit-hacks are used because all JavaScript bit operators use 32-bit signed 2s-complement integers.
 
-The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may be as simple as upgrading to PHP 8 or 7, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
+The problem is with the server side of things: storage of dates greater than 2^31 - 1. To fix this problem, you must store all dates using either unsigned 32-bit integers, signed 64-bit integers, or double-precision floating points on the server. If your server is written in PHP, the fix may require upgrading your PHP to a more recent version, and upgrading your hardware to x86_64 or IA64. If you are stuck with other hardware, you can try to emulate 64-bit hardware inside a 32-bit virtual machine, but most VMs don't support this kind of virtualization, since stability may suffer, and performance will definitely suffer greatly.
 
 ### The Y10k Problem (often client-side)
 
@@ -414,7 +414,7 @@ The problem is with the client side of things: parsing of dates with more than 4
 <input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
-It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
+We need to prepare our code for any number of digits — not just 5. The following JavaScript function programmatically sets the value:
 
 ```js
 function setValue(element, date) {
@@ -430,6 +430,6 @@ Why worry about the Y10K problem if it is going to happen many centuries after y
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} and {{HTMLElement("del")}}: see the `datetime` attribute, which specifies either a date or a local date and time at which the content was inserted or deleted
 - [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [Numbers and Dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - The JavaScript {{jsxref("Date")}} object
 - The [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object for formatting dates and times for a given locale

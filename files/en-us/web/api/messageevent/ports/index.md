@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.ports
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`ports`** read-only property of the
 {{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects
-representing the ports associated with the channel the message is being sent through
-(where appropriate, e.g. in channel messaging or when sending a message to a shared
-worker).
+containing all {{domxref("MessagePort")}} objects sent with the message, in order.
 
 ## Value
 

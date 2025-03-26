@@ -4,7 +4,7 @@ slug: Web/CSS/Column_combinator
 page-type: css-combinator
 status:
   - experimental
-browser-compat: css.selectors.column
+spec-urls: https://drafts.csswg.org/selectors/#selectordef-column
 ---
 
 {{CSSRef}} {{SeeCompatTable}}
@@ -76,7 +76,7 @@ col.selected||td {
 
 ## Browser compatibility
 
-{{Compat}}
+Currently, no browsers have implemented this feature.
 
 ## See also
 

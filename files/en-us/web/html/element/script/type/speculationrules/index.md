@@ -136,7 +136,7 @@ Each object can contain the following properties:
 
 - `"referrer_policy"` {{experimental_inline}}
 
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
 
     > [!NOTE]
     > A cross-site prefetch requires a referrer policy that is at least as strict as the default `"strict-origin-when-cross-origin"` value — so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`. A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case.
@@ -172,7 +172,7 @@ Each object can contain the following properties:
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
 > [!NOTE]
-> As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
+> As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
 ## Examples
 
@@ -463,6 +463,27 @@ If a link is hovered over, the browser will start prefetching that specific link
 
 If the user hovers over another link before the prefetch completes, the `expects_no_vary_search` pattern tells the browser that there is no need to cancel the current prefetch, because all `/users` URLs with `id` URL parameter values effectively point to the same page for this context (and for caching purposes).
 
+> [!WARNING]
+> Additional care must be taken when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement, etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
+
+Multiple params can be provided in a space-separated array:
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        { "where": { "href_matches": "/users?id=*" } },
+        "expects_no_vary_search": "params=(\"id\" \"order\" \"lang\")"
+      }
+    ]
+  }
+</script>
+```
+
+> [!NOTE]
+> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
+
 ### `eagerness` example
 
 The following set of document rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prerender each matching set of links.
@@ -503,5 +524,5 @@ Here we are hinting that:
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)

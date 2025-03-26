@@ -6,17 +6,17 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The **`<blink>` element** (blink tag) is an obsolete HTML feature no longer supported by web browsers, and no longer documented on MDN. It was used make text content blink on and off (flash) continually.
+The **`<blink>` element** (blink tag) is an obsolete HTML feature no longer supported by web browsers and no longer documented on MDN. It was used to make text content blink on and off (flash) continually.
 
 ## Brief history
 
-In the early days of the web (the early- to mid-90s), there were not many features available for styling web pages. The [CSS](/en-US/docs/Web/CSS) specification (version 1) was first released in 1996, and not adopted consistently by browsers until much later. Before CSS, browsers experimented with several features to make particular text sections stand out and grab the user's attention if desired. The `<blink>` element was one of these, introduced in early versions of [Netscape Navigator](/en-US/docs/Glossary/Netscape_Navigator); [Internet Explorer's](/en-US/docs/Glossary/Microsoft_Internet_Explorer) {{htmlelement("marquee")}} element was another one.
+In the early days of the web (the early- to mid-90s), there were not many features available for styling web pages. The [CSS](/en-US/docs/Web/CSS) specification (version 1) was first released in 1996 and not adopted consistently by browsers until much later. Before CSS, browsers experimented with several features to make particular text sections stand out and grab the user's attention. The `<blink>` element was one of these, introduced in early versions of [Netscape Navigator](/en-US/docs/Glossary/Netscape_Navigator); [Internet Explorer's](/en-US/docs/Glossary/Microsoft_Internet_Explorer) {{htmlelement("marquee")}} element was another.
 
-The `<blink>` element was apparently created after a conversation in a bar in Mountain View between Netscape engineer [Lou Montulli](https://en.wikipedia.org/wiki/Lou_Montulli) and colleagues. When he went into the office the next morning, he found that one of his fellow engineers have stayed up all night and implemented it ([read the story here](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)).
+The `<blink>` element was apparently created after a conversation in a bar in Mountain View between Netscape engineer [Lou Montulli](https://en.wikipedia.org/wiki/Lou_Montulli) and colleagues. When he went into the office the next morning, he found that one of his fellow engineers had stayed up all night and implemented it ([read the story here](https://web.archive.org/web/20220331020029/http://www.montulli.org/theoriginofthe%3Cblink%3Etag)).
 
-While initially popular, `<blink>` became much maligned because of overuse; many people found it annoying. More importantly, it degrades readability, and can be particularly problematic for users with visual impairments or [cognitive disorders](/en-US/docs/Web/Accessibility/Cognitive_accessibility) such as epilepsy or ADHD. It can be disorienting or, in the worst cases, even [trigger seizures](/en-US/docs/Web/Accessibility/Seizure_disorders).
+While initially popular, `<blink>` became much maligned because of overuse; many people found it annoying. More importantly, it degrades readability and can be particularly problematic for users with visual impairments or [cognitive disorders](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility) such as epilepsy or ADHD. It can be disorienting or, in the worst cases, even [trigger seizures](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders).
 
-`<blink>` was never properly specified, and never achieved significant cross-browser support. It can be considered a piece of web history.
+`<blink>` was never properly specified and never achieved significant cross-browser support. It can be considered a piece of web history.
 
 ## Syntax
 

@@ -33,7 +33,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
-    "strict_min_version": "42.0"
+    "strict_min_version": "58.0"
   }
 }
 </pre

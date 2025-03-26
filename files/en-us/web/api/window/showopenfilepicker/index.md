@@ -18,6 +18,7 @@ or multiple files and returns a handle for the file(s).
 
 ```js-nolint
 showOpenFilePicker()
+showOpenFilePicker(options)
 ```
 
 ### Parameters
@@ -39,7 +40,7 @@ showOpenFilePicker()
       - : A boolean value that defaults to `false`. When
         set to `true` multiple files may be selected.
     - `startIn` {{Optional_Inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+      - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `types` {{Optional_Inline}}
 
@@ -49,7 +50,7 @@ showOpenFilePicker()
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files types allowed. Defaults to an empty string.
         - `accept`
-          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
+          - : An {{jsxref('Object')}} with the keys set to the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types) and the values an {{jsxref('Array')}} of file extensions (see below
             for an example).
 
 ### Return value

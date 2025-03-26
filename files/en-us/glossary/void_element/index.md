@@ -48,4 +48,4 @@ In SVG and MathML, elements that cannot have any child nodes are allowed to be m
 
 ## See also
 
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}

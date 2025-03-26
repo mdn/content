@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.observe
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`observe()`** method of the **{{domxref("PerformanceObserver")}}** interface is used to specify the set of performance entry types to observe.
 

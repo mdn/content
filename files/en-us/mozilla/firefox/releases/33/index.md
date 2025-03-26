@@ -47,7 +47,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Element/meta#name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
 
   ```html
-  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
+  <meta name="msapplication-TileImage" content="images/my-img-144.png" />
   <meta name="msapplication-TileColor" content="#d83434" />
   ```
 
@@ -95,7 +95,7 @@ _No change._
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 846978](https://bugzil.la/846978)).
 
 ## Changes for add-on and Mozilla developers
 

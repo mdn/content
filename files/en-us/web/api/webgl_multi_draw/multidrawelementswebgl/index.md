@@ -23,7 +23,7 @@ multiDrawElementsWEBGL(mode,
     countsList, countsOffset,
     type,
     firstsList, firstsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters

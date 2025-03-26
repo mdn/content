@@ -34,7 +34,7 @@ See [Browser compatibility](#browser_compatibility) to learn which browsers have
 
 ### Showing the mouse position relative to page origin
 
-Let's take a look at a simple example that shows you the mouse's position relative to the page's origin.
+Let's take a look at an example that shows you the mouse's position relative to the page's origin.
 Since this example is presented in an {{HTMLElement("iframe")}}, that top-left corner is the top-left corner of the frame, not the browser window.
 
 #### HTML

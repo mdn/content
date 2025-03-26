@@ -14,10 +14,10 @@ The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element i
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - [`for`](/en-US/docs/Web/HTML/Attributes/for)
-  - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes#id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
+  - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
 - `form`
 
-  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the output with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of a `<form>` in the same document. (If this attribute is not set, the `<output>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<output>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element. The `<output>` element's name and content are not submitted when the form is submitted.
 
@@ -28,7 +28,7 @@ The `<output>` value, name, and contents are NOT submitted during form submissio
 
 ## Accessibility
 
-Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
+Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
 ## Examples
 
@@ -80,13 +80,13 @@ updateResult();
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#resettable"
           >resettable</a
         >
         <a
@@ -118,7 +118,7 @@ updateResult();
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

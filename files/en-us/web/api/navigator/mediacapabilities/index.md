@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaCapabilities
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Media Capabilities API")}}
 
 The **`mediaCapabilities`** read-only property of the {{domxref("Navigator")}} interface references a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given media format and output capabilities.
 

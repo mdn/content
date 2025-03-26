@@ -66,12 +66,12 @@ For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a 
 "content_scripts": [
   {
     "matches" : ["<all_urls>"],
-    "js": ["purify.min.js", "myinjectionscript.js"]
+    "js": ["purify.min.js", "my-injection-script.js"]
   }
 ]
 ```
 
-Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page's DOM:
+Then, in `my-injection-script.js` you can read the external HTML, sanitize it, and add it to a page's DOM:
 
 ```js
 let elem = document.createElement("div");

@@ -3,12 +3,10 @@ title: "PageSwapEvent: PageSwapEvent() constructor"
 short-title: PageSwapEvent()
 slug: Web/API/PageSwapEvent/PageSwapEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.PageSwapEvent.PageSwapEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageSwapEvent()`** constructor creates a new
 {{domxref("PageSwapEvent")}} object instance.
@@ -44,4 +42,4 @@ A developer would not use this constructor manually. A new `PageSwapEvent` objec
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

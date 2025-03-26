@@ -658,6 +658,6 @@ Further reading for you to find out more information if desired.
 - [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory MongoDB backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
 - [PouchDB](https://pouchdb.com/): A client-side implementation of CouchDB in the browser using IndexedDB
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
-- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
+- [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based key-value store implemented with IndexedDB
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
 - [RxDB](https://rxdb.info/): A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.

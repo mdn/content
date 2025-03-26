@@ -13,9 +13,9 @@ A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` s
 
 The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/reference/manifest/storage) article.
 
-For Firefox, you need to create a JSON manifest file in a specific format and location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+For Firefox, you need to create a [JSON manifest (native manifest) file in a specific format and location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or use the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty).
 
-Here's an example manifest:
+Here's an example native manifest:
 
 ```json
 {
@@ -36,6 +36,9 @@ storageItem.then((res) => {
   console.log(`Managed colour is: ${res.colour}`);
 });
 ```
+
+> [!NOTE]
+> In Firefox, a browser restart is required to load changes to the JSON manifest or policy into managed storage. In other browsers, the loading of changes is dynamic.
 
 ## Methods
 

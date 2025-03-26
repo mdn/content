@@ -36,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In the following snippet, we have a simple function that when called creates an
+In the following snippet, we have a function that when called creates an
 `options` object and then a new notification. At the end of the function, it
 also calls `close()` inside a
 {{domxref("EventTarget.addEventListener","addEventListener()")}} function to remove the

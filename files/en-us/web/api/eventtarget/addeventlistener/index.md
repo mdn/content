@@ -79,7 +79,7 @@ addEventListener(type, listener, useCapture)
         If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
 
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
+      - : An {{domxref("AbortSignal")}}. The listener will be removed when the {{domxref("AbortController/abort()", "abort()")}} method of the {{domxref("AbortController")}} which owns the `AbortSignal` is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
 
@@ -95,7 +95,7 @@ addEventListener(type, listener, useCapture)
 
     > [!NOTE]
     > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
-    > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
+    > Event listeners in the _capturing_ phase are called before event listeners in the target and bubbling phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
@@ -277,7 +277,7 @@ myObject.register();
 Event listeners only take one argument,
 an {{domxref("Event")}} or a subclass of `Event`,
 which is automatically passed to the listener, and the return value is ignored.
-Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Closures) instead.
+Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Guide/Closures) instead.
 
 The functions passed as event listeners have access to all variables declared in the outer scopes that contain the function.
 
@@ -296,7 +296,7 @@ myButton.addEventListener("click", () => {
 console.log(someString); // Expected Value: 'Data' (will never output 'Data Again')
 ```
 
-Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope) for more information about function scopes.
+Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures) for more information about function scopes.
 
 ### Memory issues
 
@@ -486,7 +486,7 @@ responsible for actually responding to the event.
 
 ### Event listener with an arrow function
 
-This example demonstrates a simple event listener implemented using arrow function
+This example demonstrates an event listener implemented using arrow function
 notation.
 
 #### HTML

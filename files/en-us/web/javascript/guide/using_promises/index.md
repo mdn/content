@@ -434,15 +434,15 @@ However, before you compose promises sequentially, consider if it's really neces
 
 A {{jsxref("Promise")}} can be created from scratch using its [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise). This should be needed only to wrap old APIs.
 
-In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/setTimeout) function:
+In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the {{domxref("Window.setTimeout", "setTimeout()")}} function:
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
-Mixing old-style callbacks and promises is problematic. If `saySomething()` fails or contains a programming error, nothing catches it. This is intrinsic to the design of `setTimeout`.
+Mixing old-style callbacks and promises is problematic. If `saySomething()` fails or contains a programming error, nothing catches it. This is intrinsic to the design of `setTimeout()`.
 
-Luckily we can wrap `setTimeout` in a promise. The best practice is to wrap the callback-accepting functions at the lowest possible level, and then never call them directly again:
+Luckily we can wrap `setTimeout()` in a promise. The best practice is to wrap the callback-accepting functions at the lowest possible level, and then never call them directly again:
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -484,7 +484,7 @@ console.log(value); // 1 or 2?
 
 On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
 
-- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Event_loop#run-to-completion) of the JavaScript event loop.
+- Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.
 - Multiple callbacks may be added by calling [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) several times. They will be invoked one after another, in the order in which they were inserted.
 
@@ -510,7 +510,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### Task queues vs. microtasks
 
-Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
+Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas {{domxref("Window.setTimeout", "setTimeout()")}} callbacks are handled as task queues.
 
 ```js
 const promise = new Promise((resolve, reject) => {

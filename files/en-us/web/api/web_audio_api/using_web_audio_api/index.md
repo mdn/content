@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
+[Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -52,7 +52,7 @@ Now, the audio context we've created needs some sound to play through it. There 
 ```
 
 > [!NOTE]
-> If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) for more information.
+> If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS) for more information.
 
 To use all the nice things we get with the Web Audio API, we need to grab the source from this element and _pipe_ it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -73,7 +73,7 @@ When playing sound on the web, it's important to allow the user to control it. D
 
 Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or an allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.
 
-These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 Since our scripts are playing audio in response to a user input event (a click on a play button, for instance), we're in good shape and should have no problems from autoplay blocking. So, let's start by taking a look at our play and pause functionality. We have a play button that changes to a pause button when the track is playing:
 
@@ -235,7 +235,7 @@ Let's adjust our audio graph again, to connect all the nodes together:
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-The only thing left to do is give the app a try: [Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/).
+The only thing left to do is give the app a try: [Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/).
 
 ## Summary
 

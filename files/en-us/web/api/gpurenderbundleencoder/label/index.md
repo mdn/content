@@ -31,8 +31,8 @@ const renderBundleEncoder = device.createRenderBundleEncoder({
   colorFormats: [presentationFormat],
 });
 
-renderBundleEncoder.label = "myrenderbundleencoder";
-console.log(renderBundleEncoder.label); // "myrenderbundleencoder"
+renderBundleEncoder.label = "my_render_bundle_encoder";
+console.log(renderBundleEncoder.label); // "my_render_bundle_encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createRenderBundleEncoder()")}} call, and then getting it via `GPURenderBundleEncoder.label`:
@@ -40,10 +40,10 @@ Setting a label via the originating {{domxref("GPUDevice.createRenderBundleEncod
 ```js
 const renderBundleEncoder = device.createRenderBundleEncoder({
   colorFormats: [presentationFormat],
-  label: "myrenderbundleencoder",
+  label: "my_render_bundle_encoder",
 });
 
-console.log(renderBundleEncoder.label); // "myrenderbundleencoder"
+console.log(renderBundleEncoder.label); // "my_render_bundle_encoder"
 ```
 
 ## Specifications

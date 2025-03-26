@@ -7,7 +7,7 @@ browser-compat: css.properties.mask
 
 {{CSSRef}}
 
-The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points.
+The **`mask`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) hides an element (partially or fully) by masking or clipping the image at specific points.
 
 > [!NOTE]
 > As well as the properties listed below, the `mask` shorthand also resets {{cssxref("mask-border")}} to its initial value. It is therefore recommended to use the `mask` shorthand rather than other shorthands or the individual properties to override any mask settings earlier in the cascade. This will ensure that `mask-border` has also been reset to allow the new styles to take effect.
@@ -93,7 +93,7 @@ mask:
   mask: url(#c1) luminance;
 }
 
-.anothertarget {
+.another-target {
   mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
 }
 ```
@@ -108,7 +108,8 @@ mask:
 
 ## See also
 
-- {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
+- {{CSSxRef("clip-path")}}
+- {{CSSxRef("filter")}}
+- SVG {{SVGAttr("mask")}} attribute
 - [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- [SVG](/en-US/docs/Web/SVG)
+- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

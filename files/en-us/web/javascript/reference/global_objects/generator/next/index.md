@@ -41,11 +41,16 @@ An {{jsxref("Object")}} with two properties:
 - `value`
   - : Any JavaScript value yielded or returned by the generator.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
 ## Examples
 
 ### Using next()
 
-The following example shows a simple generator and the object that the
+The following example shows a generator and the object that the
 `next` method returns:
 
 ```js

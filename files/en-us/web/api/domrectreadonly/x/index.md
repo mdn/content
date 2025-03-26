@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.x
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`x`** read-only property of the **`DOMRectReadOnly`** interface represents the x coordinate of the `DOMRect`'s origin.
 

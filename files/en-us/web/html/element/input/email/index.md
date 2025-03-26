@@ -9,7 +9,27 @@ browser-compat: html.elements.input.type_email
 
 {{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of email addresses.
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The input value is automatically validated to ensure that it's either empty or a properly-formatted email address (or list of addresses) before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid email address or not.
 
@@ -18,14 +38,17 @@ The input value is automatically validated to ensure that it's either empty or a
 The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is automatically validated as conforming to email syntax. More specifically, there are three possible value formats that will pass validation:
 
 1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2. A single properly-formed email address. This doesn't necessarily mean the email address exists, but it is at least formatted correctly. In simple terms, this means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the email address validation algorithm.
+2. A single properly-formed email address. This doesn't necessarily mean the email address exists, but it is at least formatted correctly. This means `username@domain` or `username@domain.tld`. There's more to it than that, of course; see [Validation](#validation) for a {{Glossary("regular expression")}} that matches the email address validation algorithm.
 3. If and only if the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list.
 
 See [Validation](#validation) for details on how email addresses are validated to ensure that they're formatted properly.
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `email` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `email` inputs support the following attributes.
+
+> [!NOTE]
+> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to email inputs, but the stored state is always `off`.
 
 ### list
 
@@ -92,7 +115,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 > [!NOTE]
 > It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the email address on the server side of any transaction in which the provided text may have any security implications of any kind.
 
-### A simple email input
+### A basic email input
 
 Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. The specification does, however, allow browsers latitude on this. For example, the element could be integrated with the user's device's built-in address book to allow picking email addresses from that list. In its most basic form, an `email` input can be implemented like this:
 
@@ -100,7 +123,7 @@ Currently, all browsers which implement this element implement it as a standard 
 <input id="emailAddress" type="email" />
 ```
 
-{{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_email_input', 600, 40) }}
 
 Notice that it's considered valid when empty and when a single validly-formatted email address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only validly-formed email addresses are allowed; the input is no longer considered valid when empty.
 
@@ -219,7 +242,7 @@ Browsers automatically provide validation to ensure that only text that matches 
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
-To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn/Forms/Form_validation).
+To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid, see [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
 > There are known specification issues related to international domain names and the validation of email addresses in HTML. See [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) for details.
@@ -292,11 +315,11 @@ An appropriate [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) i
 
 ![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
-If we left things at that, we would at least be validating on legitimate email addresses. But we want to go one step farther: we want to make sure that the email address is in fact in the form `[username]@beststartupever.com`. This is where we'll use [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern). We set `pattern` to `.+@beststartupever.com`. This simple regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
+If we left things at that, we would at least be validating on legitimate email addresses. But we want to go one step farther: we want to make sure that the email address is in fact in the form `[username]@beststartupever.com`. This is where we'll use [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern). We set `pattern` to `.+@beststartupever.com`. This regular expression requests a string that consists of at least one character of any kind, then an "@" followed by the domain name "beststartupever.com".
 
 Note that this is not even close to an adequate filter for valid email addresses; it would allow things such as " @beststartupever.com" (note the leading space) or "@@beststartupever.com", neither of which is valid. However, the browser runs both the standard email address filter _and_ our custom pattern against the specified text. As a result, we wind up with a validation which says "make sure this resembles a valid email address, and if it is, make sure it's also a beststartupever.com address."
 
-It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "Email address", the result would be the message "The entered text doesn't match the required pattern. Email address", which isn't very good.
+It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern. That is, it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "Email address", the result would be the message "The entered text doesn't match the required pattern. Email address", which isn't very good.
 
 That's why, instead, we specify the string "Please provide only a Best Startup Ever corporate email address" By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address."
 
@@ -386,8 +409,8 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         with no <code>list</code> attribute:
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br />
-        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
       </td>
     </tr>
   </tbody>
@@ -403,7 +426,7 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
@@ -416,4 +439,3 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
   - [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder)
   - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
   - [`size`](/en-US/docs/Web/HTML/Attributes/size)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

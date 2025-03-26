@@ -8,7 +8,7 @@ status:
 browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`anticipatedRemoval`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns `null` because the date is unknown, then the deprecation should be considered low priority.
 

@@ -9,7 +9,27 @@ browser-compat: html.elements.i
 
 The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the `<i>` naming of this element.
 
-{{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I looked at it and thought <i>This can't be real!</i></p>
+
+<p>
+  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
+  includes bananas and plantains.
+</p>
+
+<p>
+  The term <i>bandwidth</i> describes the measure of how much information can
+  pass through a data connection in a given amount of time.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+i {
+}
+```
 
 ## Attributes
 
@@ -21,7 +41,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
   - Alternative voice or mood
   - Taxonomic designations (such as the genus and species "_Homo sapiens_")
-  - Idiomatic terms from another language (such as "_et cetera_"); these should include the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute to identify the language
+  - Idiomatic terms from another language (such as "_et cetera_"); these should include the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute to identify the language
   - Technical terms
   - Transliterations
   - Thoughts (such as "She wondered, _What is this writer talking about, anyway?_")
@@ -95,7 +115,7 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

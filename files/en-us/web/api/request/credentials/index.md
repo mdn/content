@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.credentials
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`credentials`** read-only property of the {{domxref("Request")}} interface reflects the value given to the {{domxref("Request.Request()", "Request()")}} constructor in the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option. It determines whether or not the browser sends credentials with the request, as well as whether any **`Set-Cookie`** response headers are respected.
 
@@ -31,7 +31,7 @@ In the following snippet, we create a new request using the {{domxref("Request.R
 
 ```js
 const request = new Request("flowers.jpg");
-const request = request.request; // returns "same-origin" by default
+const credentials = request.credentials; // returns "same-origin" by default
 ```
 
 ## Specifications
@@ -45,5 +45,5 @@ const request = request.request; // returns "same-origin" by default
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

@@ -9,7 +9,34 @@ browser-compat: html.elements.input.type_text
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Value
 
@@ -23,7 +50,7 @@ If no validation constraints are in place for the input (see [Validation](#valid
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, text inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, text inputs support the following attributes.
 
 ### `list`
 
@@ -76,7 +103,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### `spellcheck`
 
-The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.
@@ -88,19 +115,6 @@ The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) global att
 An input field can have spell-checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
-
-## Non-standard attributes
-
-The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
-
-### `autocorrect`
-
-A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
 
 ## Using text inputs
 
@@ -312,7 +326,7 @@ If you try to submit the form with less than 4 characters, you'll be given an ap
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -370,7 +384,7 @@ This renders like so:
 
 ## Examples
 
-You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) articles.
+You can see good examples of text inputs used in context in our [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form) and [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form) articles.
 
 ## Technical summary
 
@@ -424,8 +438,8 @@ You can see good examples of text inputs used in context in our [Your first HTML
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
@@ -440,8 +454,7 @@ You can see good examples of text inputs used in context in our [Your first HTML
 
 ## See also
 
-- [HTML Forms](/en-US/docs/Learn/Forms)
+- [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Multi-line text input
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

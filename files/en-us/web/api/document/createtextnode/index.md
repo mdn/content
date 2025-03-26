@@ -35,10 +35,10 @@ A {{domxref("Text")}} node.
     <title>createTextNode example</title>
     <script>
       function addTextNode(text) {
-        const newtext = document.createTextNode(text);
+        const newText = document.createTextNode(text);
         const p1 = document.getElementById("p1");
 
-        p1.appendChild(newtext);
+        p1.appendChild(newText);
       }
     </script>
   </head>

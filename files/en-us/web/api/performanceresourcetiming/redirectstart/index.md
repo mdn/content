@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.redirectStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`redirectStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the start time of the fetch which that initiates the redirect.
 

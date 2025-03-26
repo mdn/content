@@ -7,7 +7,7 @@ browser-compat: css.properties.marker-mid
 
 {{CSSRef}}
 
-The **`marker-mid`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the middle vertices of the element's path; that is, at each of its vertices between the start and end vertices. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref('url()')}} value. The value of the CSS property overrides any values of the `marker-mid` attribute in the SVG.
+The **`marker-mid`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the middle vertices of the element's path; that is, at each of its vertices between the start and end vertices. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref("url_value", "&lt;url&gt;")}} value. The value of the CSS property overrides any values of the `marker-mid` attribute in the SVG.
 
 The direction each marker points is defined as the direction halfway between the direction at the end of the preceding path segment and the direction of the start of the following path segment. This can be thought of as the cross product of the vectors defined by the two path directions.
 

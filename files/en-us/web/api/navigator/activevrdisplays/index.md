@@ -14,7 +14,7 @@ browser-compat: api.Navigator.activeVRDisplays
 The **`activeVRDisplays`** read-only property of the
 {{domxref("Navigator")}} interface returns an array containing every
 {{domxref("VRDisplay")}} object that is currently presenting
-({{domxref("VRDisplay.ispresenting")}} is `true`).
+({{domxref("VRDisplay.isPresenting")}} is `true`).
 
 > [!NOTE]
 > This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).

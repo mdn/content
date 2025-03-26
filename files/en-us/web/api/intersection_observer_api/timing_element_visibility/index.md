@@ -219,7 +219,7 @@ These are used as follows:
 - `adObserver`
   - : Will hold our {{domxref("IntersectionObserver")}} used to track the intersection between the ads and the `<main>` element's bounds.
 - `refreshIntervalID`
-  - : Used to store the interval ID returned by {{domxref("setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
+  - : Used to store the interval ID returned by {{domxref("Window.setInterval", "setInterval()")}}. This interval will be used to trigger our periodic refreshes of the ads' content.
 
 #### Setting up
 
@@ -320,7 +320,7 @@ If the ad has transitioned to the not-intersecting state, we remove the ad from 
 
 #### Handling periodic actions
 
-Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
+Our interval handler, `handleRefreshInterval()`, is called about once per second courtesy of the call to {{domxref("Window.setInterval", "setInterval()")}} made in the `startup()` function [described above](#setting_up). Its main job is to update the timers every second and schedule a redraw to update the timers we'll be drawing within each ad.
 
 ```js
 function handleRefreshInterval() {

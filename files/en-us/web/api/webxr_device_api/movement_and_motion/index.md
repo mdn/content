@@ -277,7 +277,7 @@ After storing the newly-created {{domxref("XRSession")}} object into `xrSession`
 
 Then we get a reference to the {{HTMLElement("canvas")}} found in our HTML—as well as its WebGL rendering context—which will be used as the drawing surface for the scene. The `xrCompatible` property is requested when calling {{domxref("HTMLCanvasElement.getContext", "getContext()")}} on the element to gain access to the WebGL rendering context for the canvas. This ensures that the context is configured for use as a source for WebXR rendering.
 
-Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "mouselook" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
+Next, we add event handlers for the {{domxref("Element.mousemove_event", "mousemove")}} and {{domxref("Element.contextmenu_event","contextmenu")}}, but only if the `allowMouseRotation` constant is `true`. The `mousemove` handler will deal with the pitching and yawing of the view based upon the movement of the mouse. Since the "" feature functions only while the right mouse button is held down, and clicking using the right mouse button triggers the context menu, we add a handler for the `contextmenu` event to the canvas to prevent the context menu from appearing when the user initially begins their drag of the mouse.
 
 Next, we compile the shader programs; get references to its variables; initialize the buffers that store the array of each position; the indexes into the position table for each vertex; the vertex normals; and the texture coordinates for each vertex. This is all taken directly from the WebGL sample code, so refer to [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) and its preceding articles [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL) and [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL). Then our `loadTexture()` function is called to load the texture file.
 
@@ -357,47 +357,13 @@ function handleKeyDown(event) {
 
 The keys and their effects are:
 
-- The
-
-  <kbd>W</kbd>
-
-  key moves the viewer upward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>S</kbd>
-
-  key moves the viewer downward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>A</kbd>
-
-  key slides the viewer to the left by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>D</kbd>
-
-  key slides the viewer to the right by `MOVE_DISTANCE`.
-
-- The up arrow key,
-
-  <kbd>↑</kbd>
-
-  , slides the viewer forward by `MOVE_DISTANCE`.
-
-- The down arrow key,
-
-  <kbd>↓</kbd>
-
-  , slides the viewer backward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>R</kbd>
-
-  key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
+- The <kbd>W</kbd> key moves the viewer upward by `MOVE_DISTANCE`.
+- The <kbd>S</kbd> key moves the viewer downward by `MOVE_DISTANCE`.
+- The <kbd>A</kbd> key slides the viewer to the left by `MOVE_DISTANCE`.
+- The <kbd>D</kbd> key slides the viewer to the right by `MOVE_DISTANCE`.
+- The up arrow key, <kbd>↑</kbd>, slides the viewer forward by `MOVE_DISTANCE`.
+- The down arrow key, <kbd>↓</kbd>, slides the viewer backward by `MOVE_DISTANCE`.
+- The <kbd>R</kbd> key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
 
 These offsets will be applied by the renderer starting with the next frame drawn.
 

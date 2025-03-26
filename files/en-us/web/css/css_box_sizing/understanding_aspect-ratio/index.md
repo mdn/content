@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
-When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
+When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
 
 Using CSS, you can adjust the size of replaced and non-replaced elements based on their aspect ratio. In this guide, we will learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
@@ -49,11 +49,8 @@ div {
   line-height: 100px;
   text-align: center;
   float: left;
-  background-image: repeating-linear-gradient(
-      to right,
-      black 0px 1px,
-      transparent 1px 20px
-    ),
+  background-image:
+    repeating-linear-gradient(to right, black 0px 1px, transparent 1px 20px),
     repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
   background-size:
     181px 5px,
@@ -78,7 +75,7 @@ You will have noticed the word "preferred" in the definitions above. The `aspect
 
 When both the height and width or inline and block sizes are explicitly set, the `aspect-ratio` property value is ignored. In this case, no dimension is allowed to be automatically sized - the preferred sizes are explicitly set - so the `aspect-ratio` property has no effect. When you declare both the inline and block dimensions, those take precedence.
 
-With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) properties, etc.
+With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
 
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 
@@ -98,7 +95,7 @@ Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are r
 
 This is a `220px` square image with no CSS applied; it is displayed at its intrinsic or default size.
 
-If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value forwidth, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
+If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value for `width`, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
 
 In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/width) value.
 
@@ -135,7 +132,7 @@ Only when you provide sizes for both dimensions is there a risk of distorting th
 
 In this example, the same image is repeated three times, explicitly sized with the same {{cssxref("height")}} value (`110px`) but different {{cssxref("width")}} values (`55px`, `110px`, and `220px`).
 
-```html hidden live-sample___imagebad
+```html hidden live-sample___image-bad
 <img
   src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
   alt="Pride flag" />
@@ -147,7 +144,7 @@ In this example, the same image is repeated three times, explicitly sized with t
   alt="Pride flag" />
 ```
 
-```css hidden live-sample___imagebad
+```css hidden live-sample___image-bad
 img {
   width: 55px;
   height: 110px;
@@ -162,7 +159,7 @@ img + img + img {
 }
 ```
 
-{{EmbedLiveSample("imagebad", "100", "120")}}
+{{EmbedLiveSample("image-bad", "100", "120")}}
 
 We have distorted the images intentionally by setting both a `height` and `width`: we've squashed the first one and stretched the third.
 
@@ -193,7 +190,7 @@ In this example, the square image is placed into a grid of three items, each wit
 
 To begin with, we create a container with three items, each containing one image:
 
-```html live-sample___imagegrid
+```html live-sample___image-grid
 <div class="grid">
   <div>
     <img
@@ -217,7 +214,7 @@ To begin with, we create a container with three items, each containing one image
 
 Next, we designate the container as a grid, where each item has an aspect ratio of `2.5` (`5/2`) with a minimum width of `150px`. Therefore, the minimum height will be `60px`. However, the final width and height are determined by the width of the example's iframe, which will be based on your viewport size:
 
-```css live-sample___imagegrid
+```css live-sample___image-grid
 .grid {
   display: grid;
   gap: 20px;
@@ -233,7 +230,7 @@ div div {
 
 We then size the images and set the `object-fit` property on the last two images:
 
-```css live-sample___imagegrid
+```css live-sample___image-grid
 img {
   height: 100%;
   width: 100%;
@@ -248,7 +245,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("imagegrid", "100", "100")}}
+{{EmbedLiveSample("image-grid", "100", "100")}}
 
 Only the first image is distorted (stretched). We could have used the `fill` value of `object-fit` to create the same effect. The `cover` image spans the full width of the container, centered vertically, and clipped to fit in the container. The `contain` value ensures the image is contained within the container, centered horizontally, and shrunk to fit.
 
@@ -592,6 +589,10 @@ For the content of a grid item to not grow beyond the preferred height set by th
 ```
 
 {{EmbedLiveSample("making_grid_cells_square", "100", "380")}}
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 

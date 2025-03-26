@@ -48,15 +48,12 @@ The following code snippet shows the creation of a {{domxref("Worker")}} object 
 ```js
 const myWorker = new Worker("worker.js");
 
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).

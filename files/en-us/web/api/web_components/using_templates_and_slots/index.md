@@ -95,7 +95,7 @@ So, if we want to add a slot into our trivial example, we could update our templ
 
 If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>` just contains the fallback content "My default text".
 
-To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
+To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
 
 ```html
 <my-paragraph>
@@ -117,11 +117,43 @@ or
 > [!NOTE]
 > Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
 
-> [!NOTE]
-> An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute. This includes text nodes.
-
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
+
+The `name` attribute should be unique per shadow root: if you have two slots with the same name, all of the elements with a matching `slot` attribute will be assigned to the first slot with that name. But the `slot` attribute does not need to be unique: a `<slot>` can be filled by multiple elements that all have a matching `slot` attribute.
+
+The `name` and `slot` attributes both default to the empty string, so elements with no `slot` attributes are assigned to the `<slot>` with no `name` attribute (the unnamed slot, or default slot). Here's an example:
+
+```html
+<template id="custom-paragraph">
+  <style>
+    p {
+      color: white;
+      background-color: #666;
+      padding: 5px;
+    }
+  </style>
+  <p>
+    <slot name="my-text">My default text</slot>
+    <slot></slot>
+  </p>
+</template>
+```
+
+You can then use it like this:
+
+```html
+<my-paragraph>
+  <span slot="my-text">Let's have some different text!</span>
+  <span>This will go into the unnamed slot</span>
+  <span>This will also go into the unnamed slot</span>
+</my-paragraph>
+```
+
+In this example:
+
+- Content with `slot="my-text"` goes into the named slot.
+- All other content automatically goes into the unnamed slot.
 
 ## A more involved example
 
@@ -259,7 +291,7 @@ Now let's take that **`<element-details>`** element and actually use it in our d
 
 About that snippet, notice these points:
 
-- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot).
+- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot).
 - Only the first of those two **`<element-details>`** elements references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name). The second `<element-details>` element lacks any reference to the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name).
 - The first `<element-details>` element references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name) using a {{HTMLElement("dl")}} element with {{HTMLElement("dt")}} and {{HTMLElement("dd")}} children.
 

@@ -12,13 +12,19 @@ browser-compat:
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
 > [!NOTE]
-> For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+> For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
 ## How Subresource Integrity helps
 
-Using {{Glossary("CDN", "Content Delivery Networks (CDNs)")}} to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.
+Websites sometimes choose to rely on a third party such as a {{glossary("CDN", "Content Delivery Network (CDN)")}} to host some of their resources, rather than self-host all their resources. For example, a document served from `https://example.com` might include a resource from another location:
 
-Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
+```html
+<script src="https://not-example.com/script.js"></script>
+```
+
+This comes with a risk, in that if an attacker gains control of the third-party host, the attacker can inject arbitrary malicious content into its files (or replace the files completely) and thus can also potentially attack sites that fetch files from it.
+
+Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches have been delivered without an attacker having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
 
 ## Using Subresource Integrity
 
@@ -89,7 +95,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 ### Cross-Origin Resource Sharing and Subresource Integrity
 
-For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
+For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
 ```http
 Access-Control-Allow-Origin: *
@@ -119,7 +125,7 @@ Browsers handle SRI by doing the following:
 
 1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
 
-   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
 2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
@@ -133,7 +139,7 @@ Browsers handle SRI by doing the following:
 
 ## See also
 
-- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

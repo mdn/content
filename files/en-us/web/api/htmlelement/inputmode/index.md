@@ -12,7 +12,7 @@ The {{domxref("HTMLElement")}} property **`inputMode`** reflects the value of th
 
 It provides a hint about the type of data that might be entered by the user while editing the element or its contents. This allows the browser to display an appropriate virtual keyboard.
 
-It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) mode.
+It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) mode.
 
 ## Value
 
@@ -41,8 +41,6 @@ This attribute may have one of the following values:
 
 For details on the usage of this attribute, see the page for the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) HTML attribute that this property reflects.
 
-## Examples
-
 ## Specifications
 
 {{Specifications}}
@@ -53,4 +51,4 @@ For details on the usage of this attribute, see the page for the [`inputmode`](/
 
 ## See also
 
-- [inputmode](/en-US/docs/Web/HTML/Global_attributes#inputmode) attribute
+- [inputmode](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute

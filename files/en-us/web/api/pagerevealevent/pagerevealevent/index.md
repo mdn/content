@@ -3,12 +3,10 @@ title: "PageRevealEvent: PageRevealEvent() constructor"
 short-title: PageRevealEvent()
 slug: Web/API/PageRevealEvent/PageRevealEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.PageRevealEvent.PageRevealEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageRevealEvent()`** constructor creates a new
 {{domxref("PageRevealEvent")}} object instance.
@@ -42,4 +40,4 @@ A developer would not use this constructor manually. A new `PageRevealEvent` obj
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

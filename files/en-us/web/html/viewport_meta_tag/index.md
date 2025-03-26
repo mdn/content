@@ -21,7 +21,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 
 ## Viewport basics
 
-A typical mobile-optimized site contains something like the following:
+The viewport is a comma-separated list of feature and value pairs. A typical mobile-optimized site contains something like the following:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,7 +47,7 @@ The basic attributes of the "viewport" `<meta>` element include:
   - : Specifies the effect that interactive UI widgets, such as a virtual keyboard, have on the page's viewports. Valid values: `resizes-visual`, `resizes-content`, or `overlays-content`. Default: `resizes-visual`.
 
 > [!WARNING]
-> Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2× scaling; however, the best practice is to enable a 5× zoom.
+> Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2× scaling; however, the best practice is to enable a 5× zoom.
 
 ## Screen density
 
@@ -55,7 +55,7 @@ Screen resolutions have risen to the size that individual pixels are indistingui
 
 On high dpi screens, pages with `initial-scale=1` will effectively be zoomed by browsers. Their text will be smooth and crisp, but their bitmap images may not take advantage of the full screen resolution. To get sharper images on these screens, web developers may want to design images – or whole layouts – at a higher scale than their final size and then scale them down using CSS or viewport properties.
 
-The default pixel ratio depends on the display density. On a display with density less than 200dpi, the ratio is 1.0. On displays with density between 200 and 300dpi, the ratio is 1.5. For displays with density over 300dpi, the ratio is the integer floor (_density_/150dpi). Note that the default ratio is true only when the viewport scale equals 1. Otherwise, the relationship between CSS pixels and device pixels depends on the current zoom level.
+The default pixel ratio depends on the display density. On a display with density less than 200dpi, the ratio is 1.0. On displays with density between 200 and 300dpi, the ratio is 1.5. For displays with density over 300dpi, the ratio is the integer floor (_density_/150dpi). Note that the default ratio is true only when the viewport scale equals 1. Otherwise, the relationship between CSS pixels and {{glossary("device pixel", "device pixels")}} depends on the current zoom level.
 
 ## Viewport width and screen width
 
@@ -82,7 +82,11 @@ Allowed values are:
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
 
-When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
+
+When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 ## Common viewport sizes for mobile and tablet devices
 

@@ -225,7 +225,7 @@ Next, we create a descriptor object that specifies the configuration of our rend
 
 In addition, in the case of the vertex shader stage we provide our `vertexBuffers` object to provide the expected state of our vertex data. And in the case of our fragment shader stage, we provide an array of color target states that indicate the specified rendering format (this matches the format specified in our canvas context config earlier).
 
-We also specify a `primitive` state, which in this case just states the type of primitive we will be drawing, and a `layout` of `auto`. The `layout` property defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. In more complex apps, this would take the form of a {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}} (you can see an example in our [Basic compute pipeline](#basic_compute_pipeline)), which allows the GPU to figure out how to run the pipeline most efficiently ahead of time. Here however we are specifying the `auto` value, which will cause the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
+We also specify a `primitive` object, which in this case just states the type of primitive we will be drawing, and a `layout` of `auto`. The `layout` property defines the layout (structure, purpose, and type) of all the GPU resources (buffers, textures, etc.) used during the execution of the pipeline. In more complex apps, this would take the form of a {{domxref("GPUPipelineLayout")}} object, created using {{domxref("GPUDevice.createPipelineLayout()")}} (you can see an example in our [Basic compute pipeline](#basic_compute_pipeline)), which allows the GPU to figure out how to run the pipeline most efficiently ahead of time. However, we are specifying the `auto` value, which will cause the pipeline to generate an implicit bind group layout based on any bindings defined in the shader code.
 
 ```js
 const pipelineDescriptor = {
@@ -321,7 +321,8 @@ The app follows a similar structure to the basic rendering demo. We create a {{d
 
 ```js
 // Define global buffer size
-const BUFFER_SIZE = 1000;
+const NUM_ELEMENTS = 1000;
+const BUFFER_SIZE = NUM_ELEMENTS * 4; // Buffer size, in bytes
 
 const shader = `
 @group(0) @binding(0)
@@ -336,7 +337,7 @@ fn main(
   local_id : vec3u,
 ) {
   // Avoid accessing the buffer out of bounds
-  if (global_id.x >= ${BUFFER_SIZE}) {
+  if (global_id.x >= ${NUM_ELEMENTS}) {
     return;
   }
 
@@ -431,7 +432,7 @@ We then signal the end of the render pass command list using {{domxref("GPURende
 ```js
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
+passEncoder.dispatchWorkgroups(Math.ceil(NUM_ELEMENTS / 64));
 
 passEncoder.end();
 ```
@@ -447,7 +448,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE,
+  BUFFER_SIZE, // Length, in bytes
 );
 
 // End frame by passing array of command buffers to command queue for execution
@@ -461,7 +462,7 @@ Once the output data is available in the `stagingBuffer`, we use the {{domxref("
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE, // Length
+  BUFFER_SIZE, // Length, in bytes
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);

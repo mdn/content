@@ -31,6 +31,8 @@ _Doesn't inherit any properties._
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
 - {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
+- {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the browser's {{domxref("DevicePosture")}} object, which allows developers to query the device's current posture (that is, whether the viewport is in a flat or folded state) and run code in response to posture changes.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
 - {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
@@ -98,7 +100,7 @@ _Doesn't inherit any properties._
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
-- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
@@ -106,7 +108,7 @@ _Doesn't inherit any properties._
 ### Deprecated properties
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
+  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.isPresenting")}} is `true`).
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Always returns `'Mozilla'`, in any browser.
 - {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}

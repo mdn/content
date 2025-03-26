@@ -227,7 +227,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
     request
       .show()
       .then((paymentResponse) => {
-        // Post the results to the server and call `paymeResponse.complete()`.
+        // Post the results to the server and call `paymentResponse.complete()`.
       })
       .catch((error) => {
         console.error(error);

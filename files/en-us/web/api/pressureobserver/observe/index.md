@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.observe
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **`observe()`** method of the {{domxref("PressureObserver")}} interface tells the pressure observer to start observing pressure changes. After this method is called, the observer will call its callback function when a pressure record for the specified `source` is observed.
 
@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that fulfils with {{jsxref("undefined")}}.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) is disallowed by a {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API) is disallowed by a {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the `source` parameter is not one of the supported sources for this user agent.
 

@@ -631,7 +631,7 @@ can be used to change an underlined element that is in focus.
     return [-1]; // no hit
   }
 
-  /* Handle a mouse move for either a mousemove event or mouseentry */
+  /* Handle a mouse move for either a mousemove event or mouseenter */
   function doMouseMove(pointCursor, rBtnDown) {
     /* Test for active move. If so, move accordingly based on the
      * cursor position. The right button down flag handles the case

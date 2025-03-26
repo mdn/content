@@ -707,6 +707,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
+        <!-- cSpell:ignore cndy -->
         <p>
           Where "n" and "m" are non-negative integers and <code>m >= n</code>,
           matches at least "n" and at most "m" occurrences of the preceding

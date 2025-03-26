@@ -31,7 +31,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.captureStream()")}}
   - : Returns a {{domxref("CanvasCaptureMediaStreamTrack")}} that is a real-time video capture of the surface of the canvas.
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with `"2d"` returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with `"webgl"` (or `"experimental-webgl"`) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API).
+  - : Returns a drawing context on the canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported, or the canvas has already been set to a different context mode.
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : Returns a data-URL containing a representation of the image in the format specified by the `type` parameter (defaults to `png`). The returned image is in a resolution of 96dpi.
 - {{domxref("HTMLCanvasElement.toBlob()")}}

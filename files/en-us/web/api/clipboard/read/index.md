@@ -11,7 +11,7 @@ browser-compat: api.Clipboard.read
 The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
 
 The method can in theory return arbitrary data (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
-Browsers commonly support reading text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
+Browsers commonly support reading text, HTML, and PNG image data.
 
 ## Syntax
 
@@ -248,7 +248,7 @@ Notes:
 
 - Even though the butterfly image is a JPG file, when read from the clipboard it is a PNG.
 - If prompted, you will need to grant permission in order to paste the image.
-- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
+- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
 ### Reading unsanitized HTML from the clipboard
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.unobserve
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **`unobserve()`** method of the {{domxref('PressureObserver')}} interface stops the pressure observer callback from receiving pressure records from the specified source.
 

@@ -36,8 +36,8 @@ These browser-specified values are selected from the set of system colors — th
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill attribute](/en-US/docs/Web/SVG/Attribute/fill)
-- [SVG stroke attribute](/en-US/docs/Web/SVG/Attribute/stroke)
+- [SVG fill attribute](/en-US/docs/Web/SVG/Reference/Attribute/fill)
+- [SVG stroke attribute](/en-US/docs/Web/SVG/Reference/Attribute/stroke)
 
 Additionally the following properties have special behavior in forced colors mode:
 
@@ -55,11 +55,13 @@ The system colors that are forced for the above properties depend on the context
 
 In addition to these adjustments, browsers will help ensure text legibility by drawing "backplates" behind text. This is particularly important for preserving contrast when text is placed on top of images.
 
-There are two cases where the user agent does not force the values for the above properties — when a {{cssxref("forced-color-adjust")}} value of `none` is applied to an element, or when a system color is specified by the author.
+There are some cases where the user agent does not force the values for the above properties:
 
-When forced-color-adjust is set to `none` on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.
+When {{cssxref("forced-color-adjust")}} is set to `none` on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.
 
-When a system color is specified, it will be used instead of the value that would otherwise have been forced.
+When {{cssxref("forced-color-adjust")}} is set to `preserve-parent-color` on an element, and the {{cssxref("color")}} value on the element does not inherit from its parent, then the element will behave the same as setting `preserve-parent-color` to `none`.
+
+When a [system color](/en-US/docs/Web/CSS/system-color) is specified, it will be used instead of the value that would otherwise have been forced.
 
 You can also use system colors with any property _other_ than those listed above, to ensure that the rest of the page integrates with the restricted color palette available in forced colors mode.
 

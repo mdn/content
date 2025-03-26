@@ -46,10 +46,10 @@ Highlights:
 - {{domxref('MouseEvent.offsetX')}} and {{domxref('MouseEvent.offsetY')}} have been added ([Firefox bug 69787](https://bugzil.la/69787)).
 - The {{domxref("HTMLInputElement")}} interface has been experimentally extended to handle the upload of directories ([Firefox bug 1164310](https://bugzil.la/1164310)). These four members can be exposed by setting the `dom.input.dirpicker` preference to `true`:
 
-  - {{domxref("HTMLInputElement.directory")}}
-  - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
-  - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
-  - {{domxref("HTMLInputElement.chooseDirectory()")}}
+  - `HTMLInputElement.directory`
+  - `HTMLInputElement.isFilesAndDirectoriesSupported`
+  - `HTMLInputElement.getFilesAndDirectories()`
+  - `HTMLInputElement.chooseDirectory()`
 
 - The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and {{domxref("Directory.getContents")}} can be exposed by setting the `dom.input.dirpicker` preference to `true`.
 - The `HTMLMediaElement.mozSrcObject` has been renamed in {{domxref('HTMLMediaElement.srcObject')}} ([Firefox bug 1175523](https://bugzil.la/1175523)).
@@ -119,7 +119,7 @@ _No change._
 
 ## Networking
 
-- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
+- The CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) directive has been implemented ([Firefox bug 1139297](https://bugzil.la/1139297)).
 
 ## Security
 

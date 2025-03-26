@@ -19,8 +19,11 @@ An enumerated value. Possible values are:
 
 - `"occlusion"`
   - : The `GPUQuerySet` manages occlusion queries.
-- `"timestamp"`
+- `"timestamp"` {{experimental_inline}}
   - : The `GPUQuerySet` manages timestamp queries.
+
+> [!NOTE]
+> The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ## Examples
 

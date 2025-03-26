@@ -18,7 +18,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](/en-US/docs/XUL/Property/maxwidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute to set the maximum width of input fields.
 - The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
 - The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
-- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Global_attributes#data-) (`data-*`) has been added. The DOM {{ domxref("element.dataset") }} property allows to access them.
+- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows to access them.
 - When a {{ HTMLElement("textarea") }} element receives focus, the text insertion point is now placed, by default, at the beginning of the text rather than at the end. This makes Firefox's behavior consistent with other browsers.
 
 ### CSS
@@ -39,8 +39,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 #### Other changes
 
 - The `@-moz-document` property has a new `regexp()` function, which lets you match the document's URL to a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
-- The {{ cssxref("azimuth") }} CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
-- In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
+- The `azimuth` CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
+- In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.some-class:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
 - [Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
@@ -72,7 +72,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
 - The `EventTarget` function [`addEventListener()`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMEventTarget)'s `useCapture` parameter is now optional, as it is in WebKit (and as per the latest version of the specification).
 - The `mozResponseArrayBuffer` property of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object has been replaced with the `responseType` and `response` properties.
-- The {{ domxref("element.dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes#data-) of an element.
+- The {{ domxref("HTMLElement/dataset", "dataset") }} property has been added to the [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) interface allowing access to the [`data-*` global attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) of an element.
 - The {{ domxref("CustomEvent") }} interface has been implemented. (see [Firefox bug 427537](https://bugzil.la/427537))
 - For security reasons, `data:` and `javascript:` URLs no longer inherit the security context of the current page when the user enters them in the location bar; instead, a new, empty, security context is created. This means that script loaded by entering `javascript:` URLs in the location bar no longer has access to DOM methods and the like, for example. These URLs continue to work as before when used by script, however.
 
@@ -84,7 +84,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### SVG
 
 - The {{ SVGAttr("pathLength") }} attribute is now supported.
-- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
+- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 ### MathML
 

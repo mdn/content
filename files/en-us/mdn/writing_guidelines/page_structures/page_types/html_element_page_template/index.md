@@ -2,9 +2,8 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -21,8 +20,8 @@ page-type: mdn-writing-guide
 > slug: Web/HTML/Element/NameOfTheElement
 > page-type: html-element
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---
@@ -39,7 +38,7 @@ page-type: mdn-writing-guide
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `html.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -69,7 +68,7 @@ page-type: mdn-writing-guide
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -183,7 +182,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
       <th scope="row">Permitted ARIA roles</th>
       <td>
         Fill in a list of ARIA roles that can be set on the element; for example
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>.
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>.
       </td>
     </tr>
     <tr>

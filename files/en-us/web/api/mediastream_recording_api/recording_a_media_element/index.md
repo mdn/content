@@ -141,7 +141,7 @@ function wait(delayInMS) {
 }
 ```
 
-The `wait()` function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which calls {{domxref("setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.
+The `wait()` function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which calls {{domxref("Window.setTimeout", "setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.
 
 ### Starting media recording
 
@@ -268,7 +268,7 @@ This calls the [`stop()`](#stopping_the_input_stream) function we covered earlie
 
 When put all together with the rest of the HTML and the CSS not shown above, it looks and works like this:
 
-{{ EmbedLiveSample('Example_of_recording_a_media_element', 600, 440) }}
+{{EmbedLiveSample('Example_of_recording_a_media_element', '600', '440', , , , 'camera;microphone')}}
 
 You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
 

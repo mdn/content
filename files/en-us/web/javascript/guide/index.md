@@ -59,8 +59,7 @@ Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
 
 - [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
 - [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
-- [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
-- [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+- [Function scopes and closures](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures)
 - [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
 - [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
@@ -73,24 +72,33 @@ Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressio
 - [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
 - [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
 
-## Numbers and dates
+## Numbers and strings
 
-Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+Overview: [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
-- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+- [Numbers](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [Strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#strings)
+- [`String` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#string_object)
+- [Template literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings#template_literals)
 
-## Text formatting
+## Representing dates & times
 
-Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+Overview: [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-- [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-- [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
-- [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times#date_object)
+
+## Regular expressions
+
+Overview: [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+- [Creating a regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#creating_a_regular_expression)
+- [Writing a regular expression pattern](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#writing_a_regular_expression_pattern)
+  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ## Indexed collections
 
@@ -144,6 +152,14 @@ Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_
 - [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
 - [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
 - [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions)
+
+## Internationalization
+
+Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization)
+
+- [Date and time formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#date_and_time_formatting)
+- [Number formatting](/en-US/docs/Web/JavaScript/Guide/Internationalization#number_formatting)
+- [Collation](/en-US/docs/Web/JavaScript/Guide/Internationalization#collation)
 
 ## Meta programming
 

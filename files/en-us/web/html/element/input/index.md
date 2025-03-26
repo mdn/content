@@ -9,7 +9,34 @@ browser-compat: html.elements.input
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## \<input> types
 
@@ -555,7 +582,10 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `popovertarget`
 
-  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
+
+    - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
 
@@ -582,7 +612,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
 
@@ -643,16 +673,9 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
+        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}} events to allow updating live search results while the user is still editing the value of the field.
         <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
       </td>
     </tr>
@@ -687,15 +710,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
-- `autocorrect` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-    - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-    - `off`
-      - : Disable automatic correction and text substitutions.
 
 - `incremental` {{non-standard_inline}}
 
@@ -752,7 +766,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 
 <table class="no-markdown">
   <caption>
-    Captions super relevant to the
+    Pseudo-classes relevant to the
     <code>&#x3C;input></code>
     element:
   </caption>
@@ -887,6 +901,12 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         containing the invalid control.
       </td>
     </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the open state, that is, when the picker is displayed.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -910,7 +930,7 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
@@ -981,7 +1001,7 @@ This property is typically used to create form fields that shrinkwrap their cont
 
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a {{ glossary("replaced elements", "replaced element")}}. When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
 ### Styling
 
@@ -991,9 +1011,8 @@ For more information about adding color to elements in HTML, see:
 
 Also see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and
 
 ## Additional features
 
@@ -1041,7 +1060,7 @@ Not only is the placeholder not accessible to screen readers, but once the user 
 ### Client-side validation
 
 > [!WARNING]
-> Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
+> Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Reference/Status/400) if the format is invalid.
 
 In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
 
@@ -1170,7 +1189,7 @@ The last line, setting the custom validity message to the empty string is vital.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
@@ -1287,11 +1306,11 @@ Interactive elements such as form input should provide an area large enough that
           <li>
             <code>type=button</code>:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=checkbox</code>:
-            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>
+            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role">checkbox</a></code>
           </li>
           <li>
             <code>type=email</code>
@@ -1300,52 +1319,52 @@ Interactive elements such as form input should provide an area large enough that
                 with no <code>list</code> attribute:
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
           <li>
             <code>type=image</code>:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
+            <code>type=number</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
-          <li><code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><code>type=range</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+          <li><code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><code>type=range</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
           <li>
             <code>type=reset</code>:
-            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=search</code>
             <ul>
               <li>
-                with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
+                with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
           <li>
             <code>type=submit</code>:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=tel</code>
             <ul>
               <li>
                 with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1354,10 +1373,10 @@ Interactive elements such as form input should provide an area large enough that
             <ul>
               <li>
                 with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1367,10 +1386,10 @@ Interactive elements such as form input should provide an area large enough that
               <li>
                 with no <code>list</code> attribute:
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a ></code>
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a ></code>
               </li>
               <li>
-                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1386,35 +1405,35 @@ Interactive elements such as form input should provide an area large enough that
       <td>
         <ul>
           <li>
-            <code>type=button</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
+            <code>type=button</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a> when used
+            <code>type=checkbox</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a> when used
             with <code>aria-pressed</code>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=image</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
+            <code>type=image</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>
+            <code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>
           </li>
           <li>
             <code>type=text</code> with no <code>list</code> attribute:
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>,
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
           <li>
             <code>type=color|date|datetime-local|email|file|hidden|</code>
@@ -1443,14 +1462,13 @@ Interactive elements such as form input should provide an area large enough that
 ## See also
 
 - [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

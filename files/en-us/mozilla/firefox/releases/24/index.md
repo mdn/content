@@ -39,14 +39,14 @@ page-type: firefox-release-notes
 ### Developer Tools
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The Devtools options panel to the left lets you disable/enable JavaScript temporarily.
+- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
 - Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### MathML
 
 - The `dir` attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
-- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#stretchy).
+- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Reference/Element/mo#stretchy).
 - The "`updiagonalarrow`" value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
 
 ## Changes for add-on and Mozilla developers

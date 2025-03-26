@@ -9,7 +9,68 @@ browser-compat: css.properties.font-feature-settings
 
 The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) property controls advanced typographic features in OpenType fonts.
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## Syntax
 
@@ -65,27 +126,27 @@ This property is specified as either the keyword `normal` or as a comma-separate
 
 ```css
 /* use small-cap alternate glyphs */
-.smallcaps {
+.small-caps {
   font-feature-settings: "smcp" on;
 }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
-.allsmallcaps {
+.all-small-caps {
   font-feature-settings: "c2sc", "smcp";
 }
 
 /* use zeros with a slash through them to differentiate from "O" */
-.nicezero {
+.nice-zero {
   font-feature-settings: "zero";
 }
 
 /* enable historical forms */
-.hist {
+.historical {
   font-feature-settings: "hist";
 }
 
 /* disable common ligatures, usually on by default */
-.noligs {
+.no-ligatures {
   font-feature-settings: "liga" 0;
 }
 
@@ -105,7 +166,7 @@ td.tabular {
 }
 
 /* enable stylistic set 7 */
-.fancystyle {
+.fancy-style {
   font-family: Gabriola;
   font-feature-settings: "ss07";
 }

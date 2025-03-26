@@ -30,7 +30,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
   - : A string reflecting the value of the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : A string reflecting the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Element/form#accept-charset) HTML attribute, representing the character encoding that the server accepts.
+  - : A string reflecting the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Element/form#accept-charset) HTML attribute.
 - {{domxref("HTMLFormElement.autocomplete")}}
   - : A string reflecting the value of the form's [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.noValidate")}}
@@ -187,10 +187,10 @@ Submit a `<form>` into a new window:
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>First name: <input type="text" name="firstname" /></label>
+        <label>First name: <input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
+        <label>Last name: <input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>

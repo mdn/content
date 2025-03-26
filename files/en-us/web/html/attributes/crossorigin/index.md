@@ -14,7 +14,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-se
 
 {{HTMLSidebar}}
 
-The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
+The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/Guides/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
@@ -73,7 +73,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser to
 
 ### Example: Web manifest with credentials
 
-The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
+The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
@@ -89,7 +89,7 @@ The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/
 
 ## See also
 
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTML attribute: `rel`](/en-US/docs/Web/HTML/Attributes/rel)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

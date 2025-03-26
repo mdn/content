@@ -12,7 +12,7 @@ In this step-by-step tutorial, we create a simple mobile **MDN Breakout** game w
 
 Every step has editable, live samples available to play with, so you can see what the intermediate stages should look like. You will learn the basics of using the Phaser framework to implement fundamental game mechanics like rendering and moving images, collision detection, control mechanisms, framework-specific helper functions, animations and tweens, and winning and losing states.
 
-To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) knowledge. After working through this tutorial, you should be able to build your own simple Web games with Phaser.
+To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) knowledge. After working through this tutorial, you should be able to build your own simple Web games with Phaser.
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
@@ -28,7 +28,7 @@ All the lessons — and the different versions of the [MDN Breakout game](https:
 6. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
 7. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 8. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-9. [Build the brickfield](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+9. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 10. [Collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
 11. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
 12. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)

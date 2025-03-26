@@ -16,7 +16,29 @@ set (e.g., `/foo/g` or `/foo/y`). They store a
 internally, `test()` can be used to iterate over multiple matches in a string
 of text (with capture groups).
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test()", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -53,7 +75,7 @@ previous match.
 
 ### Using test()
 
-Simple example that tests if `"hello"` is contained at the very beginning of
+This example tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
@@ -67,8 +89,8 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 

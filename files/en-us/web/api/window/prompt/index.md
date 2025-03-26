@@ -10,7 +10,7 @@ browser-compat: api.Window.prompt
 
 `window.prompt()` instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
 
-Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.
+Under some conditions (when the user switches tabs, for example) the browser may not display a dialog, or may not wait for the user to submit text or to cancel the dialog.
 
 ## Syntax
 
@@ -34,47 +34,67 @@ A string containing the text entered by the user, or `null`.
 
 ## Examples
 
-```js
-let sign = prompt("What's your sign?");
+### Using a prompt with a message and default value
 
-if (sign.toLowerCase() === "scorpio") {
-  alert("Wow! I'm a Scorpio too!");
-}
+The following example shows how to check the returned value of a prompt.
+When the user clicks the OK button, text entered in the input field is returned.
+If the user clicks OK without entering any text, an empty string is returned.
+If the user clicks the Cancel button, this function returns `null`.
 
-// there are many ways to use the prompt feature
-sign = window.prompt(); // open the blank prompt window
-sign = prompt(); //  open the blank prompt window
-sign = window.prompt("Are you feeling lucky"); // open the window with Text "Are you feeling lucky"
-sign = window.prompt("Are you feeling lucky", "sure"); // open the window with Text "Are you feeling lucky" and default value "sure"
+```html live-sample___prompt
+<button id="signButton">Check star sign</button>
+<pre id="log"></pre>
 ```
 
-When the user clicks the OK button, text entered in the input field is returned. If the
-user clicks OK without entering any text, an empty string is returned. If the user
-clicks the Cancel button, this function returns `null`.
+```js live-sample___prompt
+const signButton = document.querySelector("#signButton");
+const log = document.querySelector("#log");
 
-The above prompt appears as follows (in Chrome on macOS):
+signButton.addEventListener("click", () => {
+  let sign = prompt("What's your sign?");
 
-![prompt() dialog in Chrome on macOS](prompt.png)
+  if (sign === null) {
+    log.innerText = "OK, maybe next time.";
+  } else if (sign.toLowerCase() === "") {
+    log.innerText = "Don't be shy, enter your sign!";
+  } else if (sign.toLowerCase() === "scorpio") {
+    log.innerText = "Wow! I'm a Scorpio too!";
+  } else {
+    log.innerText = `${sign} is my favorite!`;
+  }
+});
+```
+
+{{EmbedLiveSample('prompt', , , , , , , 'allow-modals')}}
+
+### Prompt messages and default values
+
+There are multiple ways to use a prompt, using `prompt`, `window.prompt`, and providing a message and default values:
+
+```js
+// open a blank prompt window
+sign = prompt();
+// open a blank prompt window
+sign = window.prompt();
+// open a prompt with the text "Are you feeling lucky"
+sign = window.prompt("Are you feeling lucky");
+// open a prompt with the text "Are you feeling lucky" and "sure" as the default value
+sign = prompt("Are you feeling lucky", "sure");
+```
 
 ## Notes
 
-A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
-returns the (possibly empty) text the user entered into that textbox.
+Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
+For this reason, you should not overuse any function that creates a dialog box or a modal window.
+Alternatively, a {{HTMLElement("dialog")}} element can be used for confirmations.
 
-Please note that result is a string. That means you should sometimes cast the value
-given by the user. For example, if their answer should be a Number, you should cast the
-value to Number.
+A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.
+The result is a string, which means you should sometimes cast the value given by the user.
+For example, if their answer should be a Number, you should cast the value to Number.
 
 ```js
 const aNumber = Number(window.prompt("Type a number", ""));
 ```
-
-Dialog boxes are modal windows; they
-prevent the user from accessing the rest of the program's interface until the dialog box
-is closed. For this reason, you should not overuse any function that creates a dialog
-box (or modal window).
-
-Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
 ## Specifications
 
@@ -89,3 +109,4 @@ Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on A List Apart (2017)

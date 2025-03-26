@@ -108,11 +108,11 @@ Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Ti
 <p class="times">
   B: This text uses the Times font (14px), which is hard to read in small sizes.
 </p>
-<p class="times adjtimesexheight">
+<p class="times adj-times-ex-height">
   C: This text in 14px Times font is adjusted to the same aspect value as the
   Verdana font, so lowercase letters are normalized across the two fonts.
 </p>
-<p class="times adjtimescapheight">
+<p class="times adj-times-cap-height">
   D: This text in 14px Times font is adjusted to the same cap-height to font
   size ratio as the Verdana font, so uppercase letters are normalized across the
   two fonts.
@@ -130,11 +130,11 @@ Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Ti
   font-size: 14px;
 }
 
-.adjtimesexheight {
+.adj-times-ex-height {
   font-size-adjust: 0.545;
 }
 
-.adjtimescapheight {
+.adj-times-cap-height {
   font-size-adjust: cap-height 0.73;
 }
 ```
@@ -229,4 +229,5 @@ span {
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` descriptor
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- SVG {{SVGAttr("font-size-adjust")}} attribute
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

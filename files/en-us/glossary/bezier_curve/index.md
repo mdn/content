@@ -17,5 +17,5 @@ To draw a quadratic Bézier curve, two imaginary lines are drawn, one from P<sub
 ## See also
 
 - [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) on Wikipedia
-- [Cubic Bézier easing functions in CSS](/en-US/docs/Web/CSS/easing-function#using_the_cubic-bezier_function)
+- [Cubic Bézier easing functions in CSS](/en-US/docs/Web/CSS/easing-function/cubic-bezier)
 - {{SVGAttr("keySplines")}} SVG attribute

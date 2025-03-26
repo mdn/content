@@ -7,7 +7,7 @@ browser-compat: css.types.flex
 
 {{CSSRef}}
 
-The **`<flex>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.
+The **`<flex>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) denotes a flexible length within a grid container. It is used in {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} and other related properties.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 2.5fr  /* Using a float value */
 ```
 
-### Example of use in a tracklisting for CSS grid layout
+### Example of use in a track listing for CSS grid layout
 
 ```css
 .grid {

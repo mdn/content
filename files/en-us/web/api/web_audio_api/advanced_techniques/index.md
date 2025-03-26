@@ -119,7 +119,7 @@ We pass a time parameter to the function here, which we'll use later to schedule
 
 ### Controlling amplitude
 
-This is great, but wouldn't it be nice if we had an amplitude envelope to go with it? Let's create a simple one, so we get used to the methods we need to create an envelope with the Web Audio API.
+This is great, but wouldn't it be nice if we had an amplitude envelope to go with it? Let's create one so we get used to the methods we need to create an envelope with the Web Audio API.
 
 Let's say our envelope has attack and release. We can allow the user to control these using [range inputs](/en-US/docs/Web/HTML/Element/input/range) on the interface:
 

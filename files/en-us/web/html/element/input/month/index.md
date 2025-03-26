@@ -10,10 +10,30 @@ browser-compat: html.elements.input.type_month
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
 The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
 Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
@@ -117,7 +137,7 @@ We'll look at basic and more complex uses of `<input type="month">`, then offer 
 
 ### Basic uses of month
 
-The simplest use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -526,6 +546,5 @@ function populateYears() {
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

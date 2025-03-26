@@ -15,7 +15,7 @@ When an authenticator registers a new key pair with a service, the authenticator
 The attestation is returned through the WebAuthn API as the [AuthenticatorAttestationResponse](/en-US/docs/Web/API/AuthenticatorAttestationResponse). The attestation format contains two basic {{jsxref("ArrayBuffer")}} objects:
 
 - **clientDataJSON** - An ArrayBuffer that contains a JSON representation of what the browser saw when being asked to authenticate.
-- [attestationObject](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject) - Cryptographic attestation that a newly generated keypair was created by that authenticator. This contains:
+- [attestationObject](/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject) - Cryptographic attestation that a newly generated key pair was created by that authenticator. This contains:
   - [Authenticator data](/en-US/docs/Web/API/Web_Authentication_API/Authenticator_data) containing an `attestedCredentialData` field, which in turn contains the `credentialId` and `credentialPublicKey`. The `attestedCredentialData` is an optional field used in attestation. It is not included when used in the AuthenticatorAssertionResponse.
   - An attestation statement, which is optionally present depending on whether the relying party requests attestation. In general, relying parties aren't encouraged to request attestation, so it's more likely that this statement won't be present.
 

@@ -147,8 +147,8 @@ The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref(
 ```js
 function move_handler(ev) {
   // Note: if the user makes more than one "simultaneous" touches, most browsers
-  // fire at least one touchmove event and some will fire several touchmoves.
-  // Consequently, an application might want to "ignore" some touchmoves.
+  // fire at least one touchmove event and some will fire several touch moves.
+  // Consequently, an application might want to "ignore" some touch moves.
   //
   // This function sets the target element's border to "dashed" to visually
   // indicate the target received a move event.

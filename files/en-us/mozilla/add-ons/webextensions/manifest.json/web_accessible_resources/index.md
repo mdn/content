@@ -110,7 +110,12 @@ Each object must include a `"resources"` property and either a `"matches"` or `"
       <td>
         Optional. Defaults to <code>[]</code>, meaning that other websites cannot access the resource.
         <p>
-        A list of URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a> specifying the pages that can access the resources. Only the origin is used to match URLs. Origins include subdomain matching. Paths must be set to <code>/*</code>.
+        A list of URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a> specifying the pages that can access the resources. Only the origin is used to match URLs. However:
+        <ul>
+          <li>In Firefox and Safari, any path can be included.</li>
+          <li>In Chrome, the path must be set to <code>/*</code>.</li>
+        </ul>
+        Origins include subdomain matching.
       </td>
     </tr>
     <tr>
@@ -183,7 +188,7 @@ This approach gives you the correct URL regardless of the browser your extension
 
 If you make a page web-accessible, any website may link or redirect to that page. The page should then treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.
 
-Web-accessible extension resources are not blocked by [CORS](/en-US/docs/Web/HTTP/CORS) or [CSP](/en-US/docs/Web/HTTP/CSP). Because of this ability to bypass security checks, extensions should avoid using web-accessible scripts when possible. A web-accessible extension script can unexpectedly be misused by malicious websites to weaken the security of other websites. Follow the [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/) by avoiding injection of moz-extension:-URLs in web pages and ensuring that third-party libraries are up to date.
+Web-accessible extension resources are not blocked by [CORS](/en-US/docs/Web/HTTP/Guides/CORS) or [CSP](/en-US/docs/Web/HTTP/Guides/CSP). Because of this ability to bypass security checks, extensions should avoid using web-accessible scripts when possible. A web-accessible extension script can unexpectedly be misused by malicious websites to weaken the security of other websites. Follow the [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/) by avoiding injection of moz-extension:-URLs in web pages and ensuring that third-party libraries are up to date.
 
 ## Example
 

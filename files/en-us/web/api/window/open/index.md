@@ -82,7 +82,7 @@ open(url, target, windowFeatures)
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
     - `noreferrer`
-      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
+      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
 
     A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
 
@@ -91,7 +91,10 @@ open(url, target, windowFeatures)
 
 ### Return value
 
-If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned. The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned.
+The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+
+If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, and the document policies are such that the document is opened in a new {{glossary("Browsing context","browsing context group")}}, references to the opened window are severed and the returned object will indicate that the opened window is closed ({{domxref("Window.closed","closed")}} is `true`).
 
 `null` is returned if the browser fails to open the new browsing context, for example because it was blocked by a browser popup blocker.
 
@@ -304,7 +307,7 @@ The purpose is to warn users of context changes to minimize confusion on the use
 When extreme changes in context are explicitly identified before they occur, then the users can determine if they wish to proceed or so they can be prepared for the change: not only they will not be confused or feel disoriented, but more experienced users can better decide how to open such links (in a new window or not, in the same window, in a new tab or not, in "background" or not).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / Understanding WCAG, Guideline 3.2](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 

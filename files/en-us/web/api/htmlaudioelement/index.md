@@ -70,5 +70,5 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
+- [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
 - HTML element implementing this interface: {{HTMLElement("audio")}}.

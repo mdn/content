@@ -32,9 +32,9 @@ const depthTexture = device.createTexture({
   usage: GPUTextureUsage.RENDER_ATTACHMENT,
 });
 
-depthTexture.label = "mytexture";
+depthTexture.label = "my_texture";
 
-console.log(depthTexture.label); // "mytexture"
+console.log(depthTexture.label); // "my_texture"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createTexture()")}} call, and then getting it via `GPUTexture.label`:
@@ -46,10 +46,10 @@ const depthTexture = device.createTexture({
   size: [canvas.width, canvas.height],
   format: "depth24plus",
   usage: GPUTextureUsage.RENDER_ATTACHMENT,
-  label: "mytexture",
+  label: "my_texture",
 });
 
-console.log(depthTexture.label); // "mytexture"
+console.log(depthTexture.label); // "my_texture"
 ```
 
 ## Specifications

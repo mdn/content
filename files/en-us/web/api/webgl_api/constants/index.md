@@ -830,7 +830,7 @@ For more information, see {{domxref("EXT_texture_filter_anisotropic")}}.
 | Constant name                   | Value  | Description                                                                                                                                                    |
 | ------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `COMPRESSED_RGB_S3TC_DXT1_EXT`  | 0x83F0 | A DXT1-compressed image in an RGB image format.                                                                                                                |
-| `COMPRESSED_RGBA_S3TC_DXT1_EXT` | 0x83F1 | A DXT1-compressed image in an RGB image format with a simple on/off alpha value.                                                                               |
+| `COMPRESSED_RGBA_S3TC_DXT1_EXT` | 0x83F1 | A DXT1-compressed image in an RGB image format with an on/off alpha value.                                                                                     |
 | `COMPRESSED_RGBA_S3TC_DXT3_EXT` | 0x83F2 | A DXT3-compressed image in an RGBA image format. Compared to a 32-bit RGBA texture, it offers 4:1 compression.                                                 |
 | `COMPRESSED_RGBA_S3TC_DXT5_EXT` | 0x83F3 | A DXT5-compressed image in an RGBA image format. It also provides a 4:1 compression, but differs to the DXT3 compression in how the alpha compression is done. |
 

@@ -24,7 +24,7 @@ If you need to know how much space the actual displayed content takes up, includ
 
 If you need to know the actual size of the content, regardless of how much of it is currently visible, you need to use the {{DOMxRef("Element.scrollWidth")}} and {{DOMxRef("Element.scrollHeight")}} properties. These return the width and height of the entire content of an element, even if only part of it is presently visible due to the use of scroll bars.
 
-For example, if a 600x400 pixel element is being displayed inside a 300x300 pixel scrollbox, `scrollWidth` will return 600 while `scrollHeight` will return 400.
+For example, if a 600x400 pixel element is being displayed inside a 300x300 pixel scroll container, `scrollWidth` will return 600 while `scrollHeight` will return 400.
 
 ## See also
 

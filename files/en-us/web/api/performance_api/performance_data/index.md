@@ -16,7 +16,7 @@ Most of the metrics exposed by the Performance API are automatically collected b
 
 For some metrics you do have to tell the browser what to measure:
 
-- the [Element Timing](/en-US/docs/Web/API/Performance_API/Element_timing) metric measures the time it takes to load and render certain DOM elements. This metric is opt-in: to ask the browser to include metrics for a particular element you must add the `elementtiming` attribute to it.
+- the [Element Timing](/en-US/docs/Web/API/PerformanceElementTiming) metric measures the time it takes to load and render certain DOM elements. This metric is opt-in: to ask the browser to include metrics for a particular element you must add the `elementtiming` attribute to it.
 - the [User Timing](/en-US/docs/Web/API/Performance_API/User_timing) metric enables you to measure the time between arbitrary points in your program, that might map to application-defined operations (such as logging in a user). To collect these metrics you need to add Performance API calls at the relevant points.
 - the [Server Timing](/en-US/docs/Web/API/Performance_API/Server_timing) metric enables you to measure the time taken for application-defined server-side operations. To collect these metrics your server must send the `Server-Timing` HTTP header.
 
@@ -33,8 +33,8 @@ A single recorded performance data point is called a _performance entry_ and is 
 The Performance API records various different types of performance data, and the `PerformanceEntry` has an {{domxref("PerformanceEntry.entryType", "entryType")}} property which is a string describing the type of this performance entry:
 
 - `"element"` records how long it takes an element to load and render.
-- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run.
-- `"first-input"` records the {{Glossary("First input delay")}}.
+- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run. Used to measure {{Glossary("Interaction to Next Paint")}}.
+- `"first-input"` records the {{Glossary("First Input Delay")}}.
 - `"largest-contentful-paint"` records the largest paint during page load.
 - `"layout-shift"` records a metric representing how much the page layout has shifted in each animation frame.
 - `"longtask"` records tasks that took 50ms or more.

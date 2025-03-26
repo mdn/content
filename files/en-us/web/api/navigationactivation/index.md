@@ -79,7 +79,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 
@@ -92,4 +92,4 @@ window.addEventListener("pagereveal", async (e) => {
 ## See also
 
 - [Navigation API](/en-US/docs/Web/API/Navigation_API)
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

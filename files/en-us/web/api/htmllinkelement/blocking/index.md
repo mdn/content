@@ -3,12 +3,10 @@ title: "HTMLLinkElement: blocking property"
 short-title: blocking
 slug: Web/API/HTMLLinkElement/blocking
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLLinkElement.blocking
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`blocking`** property of the {{domxref("HTMLLinkElement")}} interface is a string indicating that certain operations should be blocked on the fetching of an external resource.
 

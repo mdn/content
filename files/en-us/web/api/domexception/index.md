@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMException
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException`** interface represents an abnormal event (called an **exception**) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
 

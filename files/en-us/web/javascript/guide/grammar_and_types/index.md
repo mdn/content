@@ -90,7 +90,7 @@ You can declare a variable in two ways:
 - With the keyword {{jsxref("Statements/var", "var")}}. For example, `var x = 42`. This syntax can be used to declare both **local** and **global** variables, depending on the _execution context_.
 - With the keyword {{jsxref("Statements/const", "const")}} or {{jsxref("Statements/let", "let")}}. For example, `let y = 13`. This syntax can be used to declare a block-scope local variable. (See [Variable scope](#variable_scope) below.)
 
-You can declare variables to unpack values using the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax. For example, `const { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
+You can declare variables to unpack values using the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax. For example, `const { bar } = foo`. This will create a variable named `bar` and assign to it the value corresponding to the key of the same name from our object `foo`.
 
 Variables should always be declared before they are used. JavaScript used to allow assigning to undeclared variables, which creates an **[undeclared global](/en-US/docs/Web/JavaScript/Reference/Statements/var#description)** variable. This is an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables) and should be avoided altogether.
 
@@ -358,7 +358,7 @@ Note that the second item is "empty", which is not exactly the same as the actua
 
 If you include a trailing comma at the end of the list of elements, the comma is ignored.
 
-In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
+In the following example, the `length` of the array is three. There is no `myList[3]` and `myList[1]` is empty. All other commas in the list indicate a new element.
 
 ```js
 const myList = ["home", , "school"];
@@ -666,7 +666,7 @@ The following table lists the special characters that you can use in JavaScript 
 | `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol.                                                                       |
 | `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol.                                                                |
 | `\uXXXX`    | The Unicode character specified by the four hexadecimal digits `XXXX`. For example, `\u00A9` is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
-| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.                                                                                                                                       |
+| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the Unicode escapes `\uD87E\uDC04`.                                                                                                                                              |
 
 #### Escaping characters
 

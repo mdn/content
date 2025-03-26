@@ -40,7 +40,7 @@ let clonedObject = cloneInto(
 - `options` {{optional_inline}}
   - : `object`. Options for the function.
     - `cloneFunctions` {{optional_inline}}
-      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Content_scripts/exportFunction). See [Cloning objects that have functions](#cloning_objects_that_have_functions). {{optional_inline}}
+      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction). See [Cloning objects that have functions](#cloning_objects_that_have_functions). {{optional_inline}}
     - `wrapReflectors` {{optional_inline}}
       - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#cloning_objects_that_contain_dom_elements).
 
@@ -97,7 +97,7 @@ window.foo(cloneInto(addonScriptObject, window)); // "they said: hello from your
 
 ### Cloning objects that have functions
 
-If the object to clone contains functions, you must pass the `{cloneFunctions:true}` flag, or you get an error. If you do pass this flag, then functions in the object are cloned using the same mechanism used in [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction):
+If the object to clone contains functions, you must pass the `{cloneFunctions:true}` flag, or you get an error. If you do pass this flag, then functions in the object are cloned using the same mechanism used in [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction):
 
 ```js
 // content script

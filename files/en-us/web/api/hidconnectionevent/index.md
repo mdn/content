@@ -7,7 +7,7 @@ status:
 browser-compat: api.HIDConnectionEvent
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`HIDConnectionEvent`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) represents HID connection events, and is the event type passed to {{domxref("HID/connect_event", "connect")}} and {{domxref("HID/disconnect_event", "disconnect")}} event handlers when a device's connection state changes.
 

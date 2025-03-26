@@ -8,7 +8,7 @@ browser-compat: api.Element.matches
 
 {{APIRef("DOM")}}
 
-The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Syntax
 
@@ -19,7 +19,7 @@ matches(selectors)
 ### Parameters
 
 - `selectors`
-  - : A string containing valid [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A string containing valid [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 

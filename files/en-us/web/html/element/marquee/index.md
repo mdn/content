@@ -11,6 +11,8 @@ browser-compat: html.elements.marquee
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
+The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) with [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) instead of `<marquee>` elements to smoothly animate content. Additionally, include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
+
 ## Attributes
 
 - `behavior` {{Deprecated_Inline}}
@@ -35,22 +37,6 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
   - : Sets the vertical margin in pixels or percentage value.
 - `width` {{Deprecated_Inline}}
   - : Sets the width in pixels or percentage value.
-
-## Event handlers
-
-- `onbounce` {{deprecated_inline}}
-  - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
-- `onfinish` {{deprecated_inline}}
-  - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
-- `onstart` {{deprecated_inline}}
-  - : Fires when the marquee starts scrolling.
-
-## Methods
-
-- `start()` {{deprecated_inline}}
-  - : Starts scrolling of the marquee.
-- `stop()` {{deprecated_inline}}
-  - : Stops scrolling of the marquee.
 
 ## Examples
 
@@ -94,4 +80,8 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 
 ## See also
 
+- CSS {{cssxref("transform")}} property
+- CSS {{cssxref("translate")}} property
+- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
 - {{DOMxRef("HTMLMarqueeElement")}}

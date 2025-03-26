@@ -31,10 +31,11 @@ requestDevice(descriptor)
     - `requiredFeatures` {{optional_inline}}
       - : An array of strings representing additional functionality that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these features. See {{domxref("GPUSupportedFeatures")}} for a full list of possible features. This defaults to an empty array if no value is provided.
     - `requiredLimits` {{optional_inline}}
-      - : An object containing properties representing the limits that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these limits. Each key must be the name of a member of {{domxref("GPUSupportedLimits")}}. This defaults to an empty object if no value is provided.
+      - : An object containing properties representing the limits that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these limits. Each key with a non-`undefined` value must be the name of a member of {{domxref("GPUSupportedLimits")}}.
+        > [!NOTE]
+        > You can request unknown limits when requesting a GPU device without causing an error. Such limits will be `undefined`. This is useful because it makes WebGPU code less brittle — a codebase won't stop working because a limit no longer exists in the adapter.
 
-> [!NOTE]
-> Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
+Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
 
 ### Return value
 
@@ -104,7 +105,7 @@ async function init() {
 
   const device = await adapter.requestDevice({
     defaultQueue: {
-      label: "myqueue",
+      label: "my_queue",
     },
     requiredFeatures,
     requiredLimits,

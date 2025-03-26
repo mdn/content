@@ -87,9 +87,9 @@ Here, the `condition` can be any expression that evaluates to
 for an explanation of what evaluates to `true` and `false`.)
 
 If `condition` evaluates to `true`,
-`statement_1` is executed. Otherwise,
-`statement_2` is executed. `statement_1` and
-`statement_2` can be any statement, including further nested
+`statement1` is executed. Otherwise,
+`statement2` is executed. `statement1` and
+`statement2` can be any statement, including further nested
 `if` statements.
 
 You can also compound the statements using `else if` to have multiple
@@ -234,11 +234,11 @@ If `break` is omitted, the program continues execution inside the
 ##### Example
 
 In the following example, if `fruitType` evaluates to
-`'Bananas'`, the program matches the value with case `'Bananas'`
+`"Bananas"`, the program matches the value with `case "Bananas"`
 and executes the associated statement. When `break` is encountered, the
 program exits the `switch` and continues execution from the statement
 following `switch`. If `break` were omitted, the statement for
-`case 'Cherries'` would also be executed.
+`case "Cherries"` would also be executed.
 
 ```js
 switch (fruitType) {
@@ -258,7 +258,7 @@ switch (fruitType) {
     console.log("Mangoes are $0.56 a pound.");
     break;
   case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
+    console.log("Papayas are $2.79 a pound.");
     break;
   default:
     console.log(`Sorry, we are out of ${fruitType}.`);
@@ -307,7 +307,7 @@ throw {
 };
 ```
 
-### `try...catch` statement
+### try...catch statement
 
 The `try...catch` statement marks a block of statements to try, and
 specifies one or more responses should an exception be thrown. If an exception is

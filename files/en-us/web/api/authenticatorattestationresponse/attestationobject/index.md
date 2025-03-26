@@ -15,7 +15,7 @@ entire `attestationObject` with a private key that is stored in the
 authenticator when it is manufactured.
 
 As part of the {{domxref("CredentialsContainer.create()")}} call, an authenticator will
-create a new keypair as well as an `attestationObject` for that keypair. The public key
+create a new key pair as well as an `attestationObject` for that key pair. The public key
 that corresponds to the private key that has created the attestation signature is well
 known; however, there are various well known attestation public key chains for different
 ecosystems (for example, Android or TPM attestations).
@@ -51,7 +51,7 @@ properties:
 
 ## Examples
 
-See [Creating a public key credential using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential_using_the_webauthn_api) for a detailed example.
+See [Creating a public key credential](/en-US/docs/Web/API/CredentialsContainer/create#creating_a_public_key_credential) for a detailed example.
 
 ## Specifications
 

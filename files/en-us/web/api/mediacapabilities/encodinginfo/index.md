@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
 The **`encodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfills with the tested media configuration's capabilities for encoding media.
 This contains the three boolean properties `supported`, `smooth`, and `powerefficient`, which describe how compatible the device is with the type of media.
@@ -40,7 +40,7 @@ encodingInfo(configuration)
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid video MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `width`
           - : The width of the video.
         - `height`
@@ -56,7 +56,7 @@ encodingInfo(configuration)
         This has the following properties: <!-- AudioConfiguration in the spec -->
 
         - `contentType`
-          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
+          - : String containing a valid audio MIME type, and (optionally) a [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter).
         - `channels`
           - : The number of channels used by the audio track.
         - `bitrate`

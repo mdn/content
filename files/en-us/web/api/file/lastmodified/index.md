@@ -24,7 +24,7 @@ The example below will loop through the files you choose, and print whether each
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" multiple />
+<input type="file" id="file-picker" name="fileList" multiple />
 <output id="output"></output>
 ```
 
@@ -39,9 +39,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
   output.textContent = "";

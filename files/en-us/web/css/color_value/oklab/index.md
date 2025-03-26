@@ -143,9 +143,9 @@ oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alp
 > [!NOTE]
 > Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -273,17 +273,17 @@ This example demonstrates the effects of setting the `a` and `b` values of the `
 #### HTML
 
 ```html
-<div data-color="redyellow"></div>
-<div data-color="redzero"></div>
-<div data-color="redblue"></div>
+<div data-color="red-yellow"></div>
+<div data-color="red-zero"></div>
+<div data-color="red-blue"></div>
 
-<div data-color="zeroyellow"></div>
-<div data-color="zerozero"></div>
-<div data-color="zeroblue"></div>
+<div data-color="zero-yellow"></div>
+<div data-color="zero-zero"></div>
+<div data-color="zero-blue"></div>
 
-<div data-color="greenyellow"></div>
-<div data-color="greenzero"></div>
-<div data-color="greenblue"></div>
+<div data-color="green-yellow"></div>
+<div data-color="green-zero"></div>
+<div data-color="green-blue"></div>
 ```
 
 #### CSS
@@ -305,35 +305,35 @@ div {
 
 ```css
 /* a-axis max, variable b-axis */
-[data-color="redyellow"] {
+[data-color="red-yellow"] {
   background-color: oklab(0.5 0.4 0.4);
 }
-[data-color="redzero"] {
+[data-color="red-zero"] {
   background-color: oklab(0.5 0.4 0);
 }
-[data-color="redblue"] {
+[data-color="red-blue"] {
   background-color: oklab(0.5 0.4 -0.4);
 }
 
 /* a-axis center, variable b-axis */
-[data-color="zeroyellow"] {
+[data-color="zero-yellow"] {
   background-color: oklab(0.5 0 0.4);
 }
-[data-color="zerozero"] {
+[data-color="zero-zero"] {
   background-color: oklab(0.5 0 0);
 }
-[data-color="zeroblue"] {
+[data-color="zero-blue"] {
   background-color: oklab(0.5 0 -0.4);
 }
 
 /* a-axis min, variable b-axis */
-[data-color="greenyellow"] {
+[data-color="green-yellow"] {
   background-color: oklab(0.5 -0.4 0.4);
 }
-[data-color="greenzero"] {
+[data-color="green-zero"] {
   background-color: oklab(0.5 -0.4 0);
 }
-[data-color="greenblue"] {
+[data-color="green-blue"] {
   background-color: oklab(0.5 -0.4 -0.4);
 }
 ```
@@ -349,23 +349,23 @@ The left column is at the yellow end (`-0.4`) of the b-axis and the right column
 This example includes linear gradients to demonstrate the progression of values of the `oklab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from low to high values.
 
 ```html hidden
-<div data-color="redtogreen-yellow">
+<div data-color="red-to-green-yellow">
   <span>red</span><span>`b`= -0.4 (yellow)</span><span>green</span>
 </div>
-<div data-color="redtogreen-zero">
+<div data-color="red-to-green-zero">
   <span>red</span><span>no yellow or blue</span><span>green</span>
 </div>
-<div data-color="redtogreen-blue">
+<div data-color="red-to-green-blue">
   <span>red</span><span>`b`= 0.4 (blue)</span><span>green</span>
 </div>
 
-<div data-color="yellowtoblue-red">
+<div data-color="yellow-to-blue-red">
   <span>yellow</span><span>`a` = -0.4 (red)</span><span>blue</span>
 </div>
-<div data-color="yellowtoblue-zero">
+<div data-color="yellow-to-blue-zero">
   <span>yellow</span><span>no red or green</span><span>blue</span>
 </div>
-<div data-color="yellowtoblue-green">
+<div data-color="yellow-to-blue-green">
   <span>yellow</span><span>`a` = 0.4 (green)</span><span>blue</span>
 </div>
 ```
@@ -390,24 +390,24 @@ span {
 
 ```css-nolint
 /* a-axis gradients */
-[data-color="redtogreen-yellow"] {
+[data-color="red-to-green-yellow"] {
   background-image: linear-gradient(to right, oklab(50% 0.4 0.4), oklab(50% -0.4 0.4));
 }
-[data-color="redtogreen-zero"] {
+[data-color="red-to-green-zero"] {
   background-image: linear-gradient(to right, oklab(50% 0.4 0), oklab(50% -0.4 0));
 }
-[data-color="redtogreen-blue"] {
+[data-color="red-to-green-blue"] {
   background-image: linear-gradient(to right, oklab(50% 0.4 -0.4), oklab(50% -0.4 -0.4));
 }
 
 /* b-axis gradients */
-[data-color="yellowtoblue-red"] {
+[data-color="yellow-to-blue-red"] {
   background-image: linear-gradient(to right, oklab(50% 0.4 0.4), oklab(50% 0.4 -0.4));
 }
-[data-color="yellowtoblue-zero"] {
+[data-color="yellow-to-blue-zero"] {
   background-image: linear-gradient(to right, oklab(50% 0 0.4), oklab(50% 0 -0.4));
 }
-[data-color="yellowtoblue-green"] {
+[data-color="yellow-to-blue-green"] {
   background-image: linear-gradient(to right, oklab(50% -0.4 0.4),oklab(50% -0.4 -0.4));
 }
 ```

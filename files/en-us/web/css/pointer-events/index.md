@@ -9,7 +9,62 @@ browser-compat: css.properties.pointer-events
 
 The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what circumstances (if any) a particular graphic element can become the [target](/en-US/docs/Web/API/Event/target) of pointer events.
 
-{{EmbedInteractiveExample("pages/css/pointer-events.html")}}
+{{InteractiveExample("CSS Demo: pointer-events")}}
+
+```css interactive-example-choice
+pointer-events: auto;
+```
+
+```css interactive-example-choice
+pointer-events: none;
+```
+
+```css interactive-example-choice
+pointer-events: stroke; /* SVG-only */
+```
+
+```css interactive-example-choice
+pointer-events: fill; /* SVG-only */
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element">
+    <p>
+      <a href="#">example link</a>
+    </p>
+    <p>
+      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <a xlink:href="#">
+          <circle
+            cx="50"
+            cy="50"
+            fill="#3E6E84"
+            r="40"
+            stroke="#ffb500"
+            stroke-width="5"></circle>
+          <text fill="white" text-anchor="middle" x="50" y="55">SVG</text>
+        </a>
+      </svg>
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-weight: bold;
+}
+
+#example-element a {
+  color: #009e5f;
+}
+
+#example-element svg {
+  width: 10em;
+  height: 10em;
+}
+```
 
 ## Syntax
 
@@ -45,7 +100,7 @@ The `pointer-events` property is specified as a single keyword chosen from the l
   - : The element behaves as it would if the `pointer-events` property were not specified. In SVG content, this value and the value `visiblePainted` have the same effect.
 - `none`
 
-  - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targettable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to or from the descendant during the event capture and [bubble](/en-US/docs/Web/API/Event/bubbles) phases.
+  - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targetable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to or from the descendant during the event capture and [bubble](/en-US/docs/Web/API/Event/bubbles) phases.
 
     > [!NOTE]
     > The `pointerenter` and `pointerleave` events are fired when a pointing device is moved into an element or one of its descendants. So, even if `pointer-events: none` is set on the parent and not set on children, the events are triggered on the parent after the pointer is moved in or out of a descendant.
@@ -137,8 +192,7 @@ a[href="http://example.com"]
 
 ## See also
 
-- The SVG attribute {{SVGAttr("pointer-events")}}
-- The SVG attribute {{SVGAttr("visibility")}}
-- The {{domxref("PointerEvent")}} API
-- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
-- {{cssxref("user-select")}} - controls whether the user can select text
+- {{cssxref("user-select")}}
+- SVG {{SVGAttr("pointer-events")}} attribute
+- SVG {{SVGAttr("visibility")}} attribute
+- {{domxref("PointerEvent")}}

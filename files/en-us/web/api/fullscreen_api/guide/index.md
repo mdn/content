@@ -18,22 +18,26 @@ Given an element that you'd like to present in fullscreen mode (such as a {{HTML
 Let's consider this {{HTMLElement("video")}} element:
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 We can put that video into fullscreen mode as follows:
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
 ```
 
 This code checks for the existence of the `requestFullscreen()` method before calling it.
+
+Once an element is in fullscreen mode, it is matched by {{cssxref(":fullscreen")}}, which gives it some default styles like taking up the entire screen. It is also placed in the {{glossary("top layer")}}.
+
+If multiple elements are requested to be displayed in fullscreen mode, they all get matched by {{cssxref(":fullscreen")}} and are all in the top layer. They stack on top each other, with more recently requested elements on top of older ones. The most recently requested element gets displayed and is returned by {{domxref("Document.fullscreenElement")}}.
 
 ### Notification
 
@@ -49,6 +53,8 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 ## Getting out of full screen mode
 
 The user always has the ability to exit fullscreen mode of their own accord; see [Things your users want to know](#things_your_users_want_to_know). You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+
+If there are multiple elements in fullscreen mode, calling `exitFullscreen()` only exits the topmost element, revealing the next element below it. Pressing <kbd>Esc</kbd> or <kbd>F11</kbd> exits all fullscreen elements.
 
 ## Other information
 

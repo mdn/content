@@ -27,6 +27,8 @@ _Inherits properties from its parent, {{domxref("DOMException")}}._
 
 ## Examples
 
+<!-- cSpell:ignore maijn -->
+
 In the following snippet we are attempting to create a {{domxref("GPUComputePipeline")}} using {{domxref("GPUDevice.createComputePipelineAsync()")}}. However, we have misspelt our compute pipeline `entryPoint` as `"maijn"` (it should be `"main"`), therefore pipeline creation fails, and our `catch` block prints the resulting reason and error message to the console.
 
 ```js

@@ -57,7 +57,7 @@ const proxy2 = new Proxy(target, handler2);
 
 Here we've provided an implementation of the {{jsxref("Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.
 
-Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The very simple trap in `handler2` above redefines all property accessors:
+Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The trap in `handler2` above redefines all property accessors:
 
 ```js
 console.log(proxy2.message1); // world
@@ -104,9 +104,9 @@ The following terms are used when talking about the functionality of proxies.
 
 ### Object internal methods
 
-[Objects](/en-US/docs/Web/JavaScript/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
+[Objects](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects) are collections of properties. However, the language doesn't provide any machinery to _directly_ manipulate data stored in the object — rather, the object defines some internal methods specifying how it can be interacted with. For example, when you read `obj.x`, you may expect the following to happen:
 
-- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) until it is found.
+- The `x` property is searched up the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) until it is found.
 - If `x` is a data property, the property descriptor's `value` attribute is returned.
 - If `x` is an accessor property, the getter is invoked, and the return value of the getter is returned.
 
@@ -160,7 +160,7 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ### Basic example
 
-In this simple example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
+In this example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
 
 ```js
 const handler = {
@@ -308,20 +308,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // The default behavior to store the value
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // Indicate success
       return true;

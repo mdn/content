@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceEntry.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry")}} object.
 

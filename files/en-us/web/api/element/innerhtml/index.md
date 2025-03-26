@@ -17,7 +17,7 @@ To insert the HTML into the document rather than replace the contents of an elem
 The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
 
-So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specfied
+So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specified
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ## Value
@@ -128,7 +128,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attack, the result is harmless. A {{HTMLElement("script")}} tag inserted with `innerHTML` will not execute.
 
 However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
 For example:

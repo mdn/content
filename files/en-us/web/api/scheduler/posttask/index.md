@@ -137,7 +137,7 @@ When run, each task simply logs it's expected order (we're not waiting on the re
 
 ```js
 // three tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 1"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 1"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 1"), {
   priority: "user-visible",
 });
@@ -146,7 +146,7 @@ scheduler.postTask(() => console.log("usr-blk 1"), {
 });
 
 // three more tasks, in reverse order of priority
-scheduler.postTask(() => console.log("bckg 2"), { priority: "background" });
+scheduler.postTask(() => console.log("bkg 2"), { priority: "background" });
 scheduler.postTask(() => console.log("usr-vis 2"), {
   priority: "user-visible",
 });
@@ -168,8 +168,8 @@ usr-blk 2
 usr-vis 1
 usr-vis 2
 usr-vis 3 (default)
-bckg 1
-bckg 2
+bkg 1
+bkg 2
 ```
 
 ### Changing task priorities
@@ -245,7 +245,7 @@ abortTaskController.abort();
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("Window.setTimeout", "setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 The code below shows two tasks added (as arrow functions) with a delay.

@@ -7,11 +7,37 @@ browser-compat: css.types.filter-function.hue-rotate
 
 {{CSSRef}}
 
-The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 > **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
 
-{{EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}
+{{InteractiveExample("CSS Demo: hue-rotate()")}}
+
+```css interactive-example-choice
+filter: hue-rotate(0);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(-0.25turn);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntax
 
@@ -23,8 +49,8 @@ hue-rotate(angle)
 
 ### Values
 
-- `angle`
-  - : The relative change in hue of the input sample, specified as an {{cssxref("&lt;angle&gt;")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360.
+- `angle` {{Optional_Inline}}
+  - : The relative change in hue of the input sample, specified as an {{cssxref("&lt;angle&gt;")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360. The default value is `0deg`.
 
 The `<angle>` CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. The following are equivalent:
 
@@ -36,9 +62,9 @@ hue-rotate(3.14159rad)
 hue-rotate(0.5turn)
 ```
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -115,7 +141,7 @@ p {
 
 ### With url() and the SVG hue-rotate filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes#id). The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
 
 ```svg
 <filter id="filterID">

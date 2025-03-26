@@ -7,9 +7,56 @@ browser-compat: css.properties.grid-row
 
 {{CSSRef}}
 
-The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-row.html")}}
+{{InteractiveExample("CSS Demo: grid-row")}}
+
+```css interactive-example-choice
+grid-row: 1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / 3;
+```
+
+```css interactive-example-choice
+grid-row: 2 / -1;
+```
+
+```css interactive-example-choice
+grid-row: 1 / span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Constituent properties
 
@@ -26,20 +73,20 @@ grid-row: auto;
 grid-row: auto / auto;
 
 /* <custom-ident> values */
-grid-row: somegridarea;
-grid-row: somegridarea / someothergridarea;
+grid-row: some-grid-area;
+grid-row: some-grid-area / some-other-grid-area;
 
 /* <integer> + <custom-ident> values */
-grid-row: somegridarea 4;
-grid-row: 4 somegridarea / 6;
+grid-row: some-grid-area 4;
+grid-row: 4 some-grid-area / 6;
 
 /* span + <integer> + <custom-ident> values */
 grid-row: span 3;
-grid-row: span somegridarea;
-grid-row: 5 somegridarea span;
+grid-row: span some-grid-area;
+grid-row: 5 some-grid-area span;
 grid-row: span 3 / 6;
-grid-row: span somegridarea / span someothergridarea;
-grid-row: 5 somegridarea span / 2 span;
+grid-row: span some-grid-area / span some-other-grid-area;
+grid-row: 5 some-grid-area span / 2 span;
 
 /* Global values */
 grid-row: inherit;

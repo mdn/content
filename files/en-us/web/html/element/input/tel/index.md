@@ -9,7 +9,35 @@ browser-compat: html.elements.input.type_tel
 
 {{HTMLElement("input")}} elements of type **`tel`** are used to let the user enter and edit a telephone number. Unlike [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url), the input value is not automatically validated to a particular format before the form can be submitted, because formats for telephone numbers vary so much around the world.
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Despite the fact that inputs of type `tel` are functionally identical to standard `text` inputs, they do serve useful purposes; the most quickly apparent of these is that mobile browsers — especially on mobile phones — may opt to present a custom keypad optimized for entering phone numbers. Using a specific input type for telephone numbers also makes adding custom validation and handling of phone numbers more convenient.
 
@@ -22,7 +50,7 @@ The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/in
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
 
 ### list
 
@@ -73,19 +101,6 @@ The `size` attribute is a numeric value indicating how many characters wide the 
 
 This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
-## Non-standard attributes
-
-The following non-standard attributes are available to telephone number input fields. As a general rule, you should avoid using them unless it can't be helped.
-
-### autocorrect
-
-A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
-
 ## Using tel inputs
 
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.
@@ -100,7 +115,7 @@ One of the main advantages of `<input type="tel">` is that it causes mobile brow
 | ------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Firefox for Android screen shot](fx-android-tel.png) | ![Firefox for iOS screenshot](iphone-tel-keyboard-50pct.png) |
 
-### A simple tel input
+### A basic tel input
 
 In its most basic form, a tel input can be implemented like this:
 
@@ -109,7 +124,7 @@ In its most basic form, a tel input can be implemented like this:
 <input id="telNo" name="telNo" type="tel" />
 ```
 
-{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_tel_input', 600, 40) }}
 
 There is nothing magical going on here. When submitted to the server, the above input's data would be represented as, for example, `telNo=+12125553151`.
 
@@ -316,9 +331,9 @@ Notice how the entered value is reported as invalid unless the pattern xxx-xxx-x
 
 ## Examples
 
-In this example, we present a simple interface with a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
+In this example, we present a {{htmlelement("select")}} element that lets the user choose which country they're in, and a set of `<input type="tel">` elements to let them enter each part of their phone number; there is no reason why you can't have multiple `tel` inputs.
 
-Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
+Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute to show a hint to sighted users about what to enter into it, a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) to enforce a specific number of characters for the desired section, and an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute to contain a hint to be read out to screen reader users about what to enter into it.
 
 ```html
 <form>
@@ -372,7 +387,7 @@ Each input has a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder)
 </form>
 ```
 
-The JavaScript is relatively simple — it contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
+The JavaScript contains an {{domxref("HTMLElement.change_event", "onchange")}} event handler that, when the `<select>` value is changed, updates the `<input>` element's `pattern`, `placeholder`, and `aria-label` to suit the format of telephone numbers in that country/territory.
 
 ```js
 const selectElem = document.querySelector("select");
@@ -513,8 +528,8 @@ input:valid + span::after {
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>
@@ -529,8 +544,7 @@ input:valid + span::after {
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

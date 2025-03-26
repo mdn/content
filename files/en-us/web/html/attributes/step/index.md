@@ -117,7 +117,7 @@ See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{d
 
 ## Accessibility concerns
 
-Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Specifications
 
@@ -132,7 +132,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

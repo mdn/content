@@ -1,5 +1,5 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined
@@ -16,7 +16,7 @@ The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 }
 
 /* Selects any instance of a specific custom element */
-simple-custom:defined {
+custom-element:defined {
   display: block;
 }
 ```

@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.String.replace
 
 The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## Syntax
 
@@ -248,6 +259,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 ## See also
 
 - [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

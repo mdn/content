@@ -11,7 +11,27 @@ browser-compat: html.elements.input.type_number
 
 The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 
@@ -74,7 +94,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 
 ## Using number inputs
 
-The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes#inputmode) attribute:
+The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute:
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -86,11 +106,11 @@ The `number` input type should only be used for incremental numbers, especially 
 > Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
 > [!NOTE]
-> A user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
+> A user can tinker with your HTML behind the scenes, so your site _must not_ use client-side validation for security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.
 
-### A simple number input
+### A basic number input
 
 In its most basic form, a number input can be implemented like this:
 
@@ -99,7 +119,7 @@ In its most basic form, a number input can be implemented like this:
 <input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
-{{EmbedLiveSample('A_simple_number_input', 600, 40)}}
+{{EmbedLiveSample('A_basic_number_input', 600, 40)}}
 
 A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 
@@ -144,7 +164,7 @@ In this updated version, you should find that the up and down step buttons will 
 
 ### Allowing decimal values
 
-One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a simple example:
+One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal value that's not a whole number (such as "1.1"), it will be considered invalid. Note that values like "1.0" are considered valid because they are numerically equivalent to whole numbers. If you want to enter values with fractions, you'll need to reflect this in the `step` value (e.g., `step="0.01"` to allow decimals to two decimal places). Here's a basic example:
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -160,7 +180,7 @@ If you want to allow arbitrary decimal values, you can set the `step` value to `
 
 {{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
 
-For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
+For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
 <input
@@ -186,7 +206,7 @@ The result looks like this:
 
 ### Offering suggested values
 
-You can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
+You can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -275,7 +295,7 @@ The rationale for this is that number inputs won't be valid if they contain anyt
 
 ## Accessibility
 
-The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
+The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
 Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to help users complete forms more quickly and with fewer chances of errors. For example, to enable autofill on a zip code field, set `autocomplete="postal-code"`.
 
@@ -397,7 +417,7 @@ switchBtn.addEventListener("click", () => {
 });
 ```
 
-After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This is pretty simple, mostly involving changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
+After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This involves changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
 
 (Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.)
 
@@ -453,7 +473,7 @@ After declaring a few variables, an event listener is added to the `button` to c
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role">spinbutton</a></code>
       </td>
     </tr>
   </tbody>
@@ -469,8 +489,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 - [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

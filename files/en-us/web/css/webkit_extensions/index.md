@@ -1,5 +1,5 @@
 ---
-title: "-webkit-prefixed CSS extensions"
+title: -webkit-prefixed CSS extensions
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
@@ -36,7 +36,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 - {{CSSxRef("-webkit-line-align")}}
 - {{CSSxRef("-webkit-line-box-contain")}}
-- {{CSSxRef("-webkit-line-clamp")}}
+- {{CSSxRef("line-clamp", "-webkit-line-clamp")}}
 - {{CSSxRef("-webkit-line-grid")}}
 - {{CSSxRef("-webkit-line-snap")}}
 - {{CSSxRef("-webkit-locale")}}
@@ -178,6 +178,11 @@ For each of them, use the standard equivalent provided.
   - : Use the standard {{CSSxRef("padding-inline-end")}} property instead.
 - `-webkit-padding-start`
   - : Use the standard {{CSSxRef("padding-inline-start")}} property instead.
+
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container. The flexbox `stretch` value (see for example {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}}) provides a standard replacement.
 
 ## Pseudo-classes
 

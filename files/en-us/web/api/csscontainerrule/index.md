@@ -71,7 +71,7 @@ As described in the corresponding {{cssxref("@container")}} example, the CSS for
 The {{cssxref("@container")}} then applies a new width, font-size and background color to the card if the width is less than 650px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* A container context based on inline size */
   .post {
     container-type: inline-size;
@@ -94,7 +94,7 @@ Since we added the `@container` as the second rule above, we can access the asso
 Last of all, we log the `containerName`, `containerQuery` and `conditionText` (inherited) properties.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
@@ -152,7 +152,7 @@ As described in {{cssxref("@container")}}, the CSS for the container element spe
 The card has a default font size, which is overridden for the `@container` named `sidebar` if the minimum width is greater than 700px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   .post {
     container-type: inline-size;
     container-name: sidebar;
@@ -175,7 +175,7 @@ The code for getting the sheet and rules is almost identical to the previous exa
 The only difference is that in this example we have three CSS rules, so to get the associated `CSSContainerRule` we get the third entry in the `cssRules`.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);

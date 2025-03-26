@@ -9,7 +9,34 @@ browser-compat: css.properties.appearance
 
 The **`appearance`** [CSS](/en-US/docs/Web/CSS) property is used to display UI elements with platform-specific styling, based on the operating system's theme.
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 Before standardization, this property allowed elements to be shown as widgets, such as buttons or check boxes. It was considered a misfeature and authors are encouraged to use only standard keywords now.
 
@@ -44,7 +71,7 @@ Some examples are provided, but the list is not exhaustive.
 
 - `none`
 
-  - : Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.
+  - : If the element is a widget (native form control), it will be forced to use a standardized primitive appearance instead of a platform-native or operating system specific appearance, supporting the usual rules of CSS. This value has no effect on non-widget elements, including replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}}.
 
 - `auto`
 

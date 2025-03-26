@@ -46,9 +46,9 @@ console.log(element.checkValidity());
 
 ## See also
 
-- {{domxref("HTMLTextAreaElement.reportValidity()")}}
+- {{domxref("HTMLSelectElement.reportValidity()")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

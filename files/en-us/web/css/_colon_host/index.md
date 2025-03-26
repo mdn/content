@@ -1,5 +1,5 @@
 ---
-title: ":host"
+title: :host
 slug: Web/CSS/:host
 page-type: css-pseudo-class
 browser-compat: css.selectors.host
@@ -12,7 +12,44 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 > [!NOTE]
 > This has no effect when used outside a shadow DOM.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :host", "tabbed-shorter")}}
+
+```css interactive-example
+/* This CSS is being applied inside the shadow DOM. */
+
+:host {
+  background-color: aqua;
+}
+```
+
+```html interactive-example
+<h1 id="shadow-dom-host"></h1>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* Selects a shadow root host */
@@ -35,7 +72,7 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
+In this example we have a basic custom element — `<context-span>` — that you can wrap around text:
 
 ```html
 <h1>

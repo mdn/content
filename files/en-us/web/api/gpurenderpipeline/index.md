@@ -32,7 +32,7 @@ A `GPURenderPipeline` object instance can be created using the {{domxref("GPUDev
 
 ### Basic example
 
-Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a `GPURenderPipeline` via a `createRenderPipeline()` call.
+Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a `GPURenderPipeline` via a `createRenderPipeline()` call.
 
 ```js
 // ...

@@ -46,7 +46,7 @@ When the window is no longer needed, it can be closed programmatically.
 For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:
 
 ```js
-document.getElementById("closeme").addEventListener("click", () => {
+document.getElementById("close-me").addEventListener("click", () => {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -66,7 +66,7 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-To use the history API, you must request the "`history`" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use the history API, you must request the `"history"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 ## Web page design
 

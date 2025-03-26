@@ -17,7 +17,7 @@ A string containing the value of the {{htmlelement("button")}} element.
 ## Examples
 
 ```js
-const buttonElement = document.getElementById("givenname");
+const buttonElement = document.getElementById("given-name");
 console.log(`value: ${buttonElement.value}`);
 ```
 

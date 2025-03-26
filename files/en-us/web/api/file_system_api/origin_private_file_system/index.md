@@ -75,7 +75,7 @@ const existingDirectoryHandle =
 
 1. Make a {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} call to return a {{domxref("FileSystemFileHandle")}} object.
 2. Call {{domxref("FileSystemFileHandle.createWritable()")}} to return a {{domxref("FileSystemWritableFileStream")}} object, which is a specialized type of {{domxref("WritableStream")}}.
-3. Write contents to it using a {{domxref("FileSystemWritableFilestream.write()")}} call.
+3. Write contents to it using a {{domxref("FileSystemWritableFileStream.write()")}} call.
 4. Close the stream using {{domxref("WritableStream.close()")}}.
 
 ### Deleting a file or folder
@@ -127,7 +127,7 @@ You can synchronously access a file by calling {{domxref("FileSystemFileHandle.c
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("my highspeed file.txt", {
+const fileHandle = await opfsRoot.getFileHandle("my-high-speed-file.txt", {
   create: true,
 });
 const syncAccessHandle = await fileHandle.createSyncAccessHandle();

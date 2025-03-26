@@ -31,7 +31,7 @@ query(permissionDescriptor)
     All permissions have a name:
 
     - `name`
-      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `camera`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
+      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `microphone`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
         The returned {{jsxref("Promise")}} will reject with a {{jsxref("TypeError")}} if the permission name is not supported by the browser.
 
     For the `push` permissions you can also specify:
@@ -141,7 +141,15 @@ async function processPermissions() {
 // Query a single permission in a try...catch block and return result
 async function getPermission(permission) {
   try {
-    const result = await navigator.permissions.query({ name: permission });
+    let result;
+    if (permission === "top-level-storage-access") {
+      result = await navigator.permissions.query({
+        name: permission,
+        requestedOrigin: window.location.origin,
+      });
+    } else {
+      result = await navigator.permissions.query({ name: permission });
+    }
     return `${permission}: ${result.state}`;
   } catch (error) {
     return `${permission} (not supported)`;

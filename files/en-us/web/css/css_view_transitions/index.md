@@ -9,16 +9,14 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS view transitions** module defines the behavior of the [View Transition API](/en-US/docs/Web/API/View_Transitions_API), which allows developers to create animated transitions between different states within a document and across documents. This module also defines the CSS properties and pseudo-elements for styling these transitions.
+The **CSS view transitions** module defines the behavior of the [View Transition API](/en-US/docs/Web/API/View_Transition_API), which allows developers to create animated transitions between different states within a document and across documents. This module also defines the CSS properties and pseudo-elements for styling these transitions.
 
 ## Reference
 
 ### Properties
 
-- {{cssxref("view-transition-name")}} {{experimental_inline}}
-
-> [!NOTE]
-> This module also defines the `view-transition-class` property, but it is currently not supported in any browser.
+- {{cssxref("view-transition-class")}}
+- {{cssxref("view-transition-name")}}
 
 ### At-rules and descriptors
 
@@ -27,14 +25,13 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 ### Selectors and pseudo-elements
 
-- {{cssxref("::view-transition")}} {{experimental_inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-group()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-new()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-old()")}} {{experimental_inline}}
-
-> [!NOTE]
-> This module also defines the `:active-view-transition` and `:active-view-transition-type()` pseudo-classes, but they are currently not supported in any browser.
+- {{cssxref(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type()")}}
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
 
 ### Interfaces
 
@@ -48,7 +45,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 ## Guides
 
-- [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Using)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 
   - : Explains how to create view transitions and customize transition animations, including manipulating active view transitions.
 
@@ -79,4 +76,4 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 - [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 - [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
-- [CSS building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

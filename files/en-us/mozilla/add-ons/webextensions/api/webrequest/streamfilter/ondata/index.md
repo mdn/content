@@ -20,6 +20,8 @@ This example adds an `ondata` listener which replaces "Example" in the response 
 > [!NOTE]
 > This example only works for occurrences of "Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
 
+<!-- cSpell:ignore Examp -->
+
 ```js
 function listener(details) {
   const filter = browser.webRequest.filterResponseData(details.requestId);

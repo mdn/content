@@ -30,9 +30,9 @@ const shaderModule = device.createShaderModule({
   code: shaders,
 });
 
-shaderModule.label = "myshader";
+shaderModule.label = "my_shader";
 
-console.log(shaderModule.label); // "myshader"
+console.log(shaderModule.label); // "my_shader"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createShaderModule()")}} call, and then getting it via `GPUShaderModule.label`:
@@ -42,10 +42,10 @@ Setting a label via the originating {{domxref("GPUDevice.createShaderModule()")}
 
 const shaderModule = device.createShaderModule({
   code: shaders,
-  label: "myshader",
+  label: "my_shader",
 });
 
-console.log(shaderModule.label); // "myshader"
+console.log(shaderModule.label); // "my_shader"
 ```
 
 ## Specifications

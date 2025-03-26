@@ -53,6 +53,6 @@ If you have ideas or questions, you can reach us on the [Add-ons Discourse](http
 
 ## What's next?
 
-- Walk through the development of a simple extension in [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
+- Walk through the development of an extension in [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
 - Learn about the structure of an extension in [Anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 - Try out some example extensions in [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).

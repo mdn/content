@@ -31,9 +31,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("Window.navigator")}}.
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : This property indicates whether the current window is closed or not.
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : Returns a reference to the console object which provides access to the browser's debugging console.
-- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
@@ -68,7 +66,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
+  - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
 - {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
@@ -177,10 +175,10 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+- {{domxref("Window.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("Window.setInterval()")}}.
+- {{domxref("Window.clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("Window.setTimeout()")}}.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
@@ -241,9 +239,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
@@ -257,8 +255,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : This method stops window loading.
 - {{domxref("Window.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : Updates the state of commands of the current chrome window (UI).
 
 ### Deprecated methods
 
@@ -346,11 +342,11 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
-- {{domxref("Window.pagereveal_event", "pagereveal")}} {{experimental_inline}}
+- {{domxref("Window.pagereveal_event", "pagereveal")}}
   - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
-- {{domxref("Window.pageswap_event", "pageswap")}} {{experimental_inline}}
+- {{domxref("Window.pageswap_event", "pageswap")}}
   - : Fired when a document is about to be unloaded due to a navigation.
 - {{domxref("Window/popstate_event", "popstate")}}
   - : Fired when the active history entry changes.
@@ -392,6 +388,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
 
+### Scroll events
+
+- {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
+- {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+
 ### Deprecated events
 
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
@@ -407,9 +410,127 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
 
+### Bubbled events
+
+Not all events that bubble can reach the `Window` object. Only the following do and can be listened for on the `Window` object:
+
+- `abort`
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
+- {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}}
+- `cancel`
+- {{domxref("HTMLMediaElement/canplay_event", "canplay")}}
+- {{domxref("HTMLMediaElement/canplaythrough_event", "canplaythrough")}}
+- {{domxref("HTMLElement/change_event", "change")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("HTMLDialogElement/close_event", "close")}}
+- {{domxref("HTMLCanvasElement/contextlost_event", "contextlost")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("HTMLCanvasElement/contextrestored_event", "contextrestored")}}
+- {{domxref("Element/copy_event", "copy")}}
+- {{domxref("HTMLTrackElement/cuechange_event", "cuechange")}}
+- {{domxref("Element/cut_event", "cut")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("HTMLElement/drag_event", "drag")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
+- {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
+- {{domxref("HTMLMediaElement/ended_event", "ended")}}
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}}
+- {{domxref("Element/input_event", "input")}}
+- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}}
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}}
+- {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/paste_event", "paste")}}
+- {{domxref("HTMLMediaElement/pause_event", "pause")}}
+- {{domxref("HTMLMediaElement/play_event", "play")}}
+- {{domxref("HTMLMediaElement/playing_event", "playing")}}
+- {{domxref("HTMLMediaElement/progress_event", "progress")}}
+- {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
+- {{domxref("HTMLFormElement/reset_event", "reset")}}
+- {{domxref("Element/scrollend_event", "scrollend")}}
+- {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
+- {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
+- {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
+- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
+- {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
+- {{domxref("HTMLFormElement/submit_event", "submit")}}
+- {{domxref("HTMLMediaElement/suspend_event", "suspend")}}
+- {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}}
+- {{domxref("HTMLElement/toggle_event", "toggle")}}
+- {{domxref("HTMLMediaElement/volumechange_event", "volumechange")}}
+- {{domxref("HTMLMediaElement/waiting_event", "waiting")}}
+- {{domxref("Element/wheel_event", "wheel")}}
+
 ## Interfaces
 
 See [DOM Reference](/en-US/docs/Web/API/Document_Object_Model).
+
+## Listening for events on Window
+
+HTML elements have three ways to listen for events:
+
+- Add an event listener to the element using the {{domxref("EventTarget.addEventListener")}} method.
+- Assign an event handler to the element's `oneventname` property in JavaScript.
+- Add an `on`-prefixed attribute to the element in the HTML.
+
+To listen for events on `Window` objects, in general, you can only use the first two methods, because `Window` has no corresponding HTML element. However, there's a specific group of events whose listeners can be added to the {{HTMLElement("body")}} (or the deprecated {{HTMLElement("frameset")}}) element that's owned by the `Window`'s document, using the second or third methods. These events are:
+
+- `afterprint`
+- `beforeprint`
+- `beforeunload`
+- `blur`
+- `error`
+- `focus`
+- `hashchange`
+- `languagechange`
+- `load`
+- `message`
+- `messageerror`
+- `offline`
+- `online`
+- `pagehide`
+- `pagereveal`
+- `pageshow`
+- `pageswap`
+- `popstate`
+- `rejectionhandled`
+- `resize`
+- `scroll`
+- `storage`
+- `unhandledrejection`
+- `unload`
+
+This means the following are strictly equivalent:
+
+```js
+window.onresize = (e) => console.log(e.currentTarget);
+document.body.onresize = (e) => console.log(e.currentTarget);
+```
+
+```html
+<body onresize="console.log(event.currentTarget)"></body>
+```
+
+In all three cases, you see the `Window` object logged as `currentTarget`.
 
 ## Specifications
 

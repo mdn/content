@@ -48,7 +48,7 @@ In the past, {{ domxref("Document.getSelection()") }} was returning a stringifie
 
 When the DOM File API was added, a new global called {{ domxref("File") }} was added; this can conflict with objects in your scripts. If you have any globals called `File`, you should rename them.
 
-Similarly, a new global, {{ domxref("ChromeWorker") }}, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.
+Similarly, a new global, `ChromeWorker`, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.
 
 ## Security changes
 

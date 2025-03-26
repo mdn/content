@@ -3,12 +3,10 @@ title: "ImageDecoder: decode() method"
 short-title: decode()
 slug: Web/API/ImageDecoder/decode
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ImageDecoder.decode
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`decode()`** method of the {{domxref("ImageDecoder")}} interface enqueues a control message to decode the frame of an image.
 

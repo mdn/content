@@ -9,7 +9,15 @@ browser-compat: javascript.builtins.Array.from
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Syntax
 
@@ -132,20 +140,23 @@ Array.from({ length: 5 }, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
+// Sequence generator function (commonly referred to as "range", cf. Python, Clojure, etc.)
 const range = (start, stop, step) =>
-  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
+  Array.from(
+    { length: Math.ceil((stop - start) / step) },
+    (_, i) => start + i * step,
+  );
 
-// Generate numbers range 0..4
-range(0, 4, 1);
+// Generate a sequence of numbers from 0 (inclusive) to 5 (exclusive), incrementing by 1
+range(0, 5, 1);
 // [0, 1, 2, 3, 4]
 
-// Generate numbers range 1..10 with step of 2
+// Generate a sequence of numbers from 1 (inclusive) to 10 (exclusive), incrementing by 2
 range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
-// Generate the alphabet using Array.from making use of it being ordered as a sequence
-range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+// Generate the Latin alphabet making use of it being ordered as a sequence
+range("A".charCodeAt(0), "Z".charCodeAt(0) + 1, 1).map((x) =>
   String.fromCharCode(x),
 );
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -188,6 +199,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## See also
 
 - [Polyfill of `Array.from` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.from`](https://www.npmjs.com/package/array.from)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}

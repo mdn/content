@@ -10,7 +10,22 @@ browser-compat: javascript.builtins.Symbol.keyFor
 The **`Symbol.keyFor()`** static method retrieves a shared symbol
 key from the global symbol registry for the given symbol.
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // Global symbol
+
+console.log(Symbol.keyFor(globalSym));
+// Expected output: "foo"
+
+const localSym = Symbol(); // Local symbol
+
+console.log(Symbol.keyFor(localSym));
+// Expected output: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// Expected output: undefined
+```
 
 ## Syntax
 

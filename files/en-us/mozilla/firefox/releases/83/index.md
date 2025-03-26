@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 83 that will affe
 ### HTML/XML
 
 - The `crossorigin` attribute is now supported for `<link rel=icon>` ([Firefox bug 1661075](https://bugzil.la/1661075)).
-- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
+- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Reference/Attribute) is now implemented for all MathML elements ([Firefox bug 1666075](https://bugzil.la/1666075)).
 
 ### CSS
 
