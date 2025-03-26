@@ -19,7 +19,7 @@ This document describes how to report violations and what happens depending on t
 
 ## Code of Conduct Violations and Enforcement Ladder
 
-[MDN Community Management](https://github.com/orgs/mdn/teams/community) investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
+The MDN Community Management team ([`@mdn/community`](https://github.com/orgs/mdn/teams/community) on GitHub) investigates the severity of behavior based on a report, then determines and carries out any actions, if appropriate.
 Violations follow a step-by-step escalation process, and the reportee is informed of consequences at leach level.
 In serious cases, enforcement may skip levels up to and including an immediate, permanent ban.
 
@@ -50,7 +50,7 @@ Below is a summary of severity levels and enforcement actions.
   - A private warning with clarity of the violation and consequences of continued behavior.
   - No interaction on community messaging platforms, such as public forums, commenting on bugs.
   - No interacting with people involved in the report or others suspected to be involved.
-  - Avoid interactions in Mozilla channels, physical spaces and offices, and online channels like social media (e.g., following/liking/retweeting).
+  - Avoid interactions in Mozilla channels, physical spaces and offices, and online channels like social media (e.g., following/liking/re-posting).
   - The reportee has the opportunity to participate in the project again after onboarding that clarifies expected behavior.
 
 ### Level 4: Ban across MDN and Mozilla Spaces, All Areas Permanent Ban
@@ -69,21 +69,20 @@ Below is a summary of severity levels and enforcement actions.
 ### How to Report a violation
 
 Reports can be sent to mdn-cpg-report@mozilla.com.
-Content flagged on MDN GitHub repositories is visible to MDN staff when the "Report to repository admins" option is checked, and this may be used to report CPG violations.
-See GitHub's [Reporting abuse or spam](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) documentation for details.
+To report a violation or abuse on GitHub, see [GitHub's content reporting guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
+The "Report to repository admins" option must be checked for the MDN team to see a content report.
+
 Include any relevant details, including date, time, description of the violation.
 Include identifying information of the offender and screenshots, if possible.
 
-To report a violation or abuse on GitHub, you can [use this guide](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) for the MDN team to take necessary action.
-
 ### Investigation
 
-[MDN Community Management](https://github.com/orgs/mdn/teams/community) investigates all reports confidentially.
+MDN Community Management investigates all reports confidentially.
 When necessary, further information may be requested from the involved parties.
 
 ### Decision Making
 
-[MDN Community Management](https://github.com/orgs/mdn/teams/community) assess the severity of the violation, apply the enforcement actions as outlined, and communicate the outcome to relevant parties.
+MDN Community Management assess the severity of the violation, apply the enforcement actions as outlined, and communicate the outcome to relevant parties.
 
 ### Appeals
 
@@ -93,9 +92,12 @@ Appeals are reviewed by a separate, impartial panel.
 ### Documentation and Record Keeping
 
 All incidents will be documented to ensure consistency and fairness.
-Records of violations and actions taken are kept private, and accessible only by [MDN Community Management](https://github.com/orgs/mdn/teams/community).
+Records of violations and actions taken are kept private, and accessible only by MDN Community Management.
 
 ## Frequently Asked Questions (FAQs)
+
+Common questions are answered below.
+If anything else about CPG reports and processes is unclear or unanswered, get in touch via [our Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ### What happens if a violation involves an edge-case scenario?
 
