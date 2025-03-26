@@ -8,9 +8,50 @@ page-type: guide
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP requests.
 
-Modern compression formats such as {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} allow the use of dictionaries of frequently used data to further increase compression over just referencing those from within the file being compressed. Typically, for HTTP requests, this uses the pre-defined static dictionary included in that format (for example [the Brotli static dictionary is available in the source code](https://github.com/google/brotli/blob/master/csharp/org/brotli/dec/Dictionary.cs)).
+Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like function is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
 
-Compression Dictionary Transport allows the use of specifying a resource which can be used as a dictionary for future requests. This can either be a specific dictionary file, or an existing resource (for example, using `app.v1.js` as a dictionary when downloading `app.v2.js`). This can result in a huge savings in subsequent file download sizes and hence time. In the `app.vX.js` example, basically only the delta would need to be download and the common bytes could be referenced from the original `app.v1.js` file that is already downloaded.
+For example, take this JavaScript:
+
+```javascript
+function a() {
+  console.log("Hello World!");
+}
+
+function b() {
+  console.log("I am here");
+}
+```
+
+This could be compressed by replacing repeated strings with references to a previous location and number of characters, like in this example:
+
+```Compressed
+function a() {
+  console.log("Hello World!");
+}
+
+[0:9]b[10:20]I am here[42:]
+```
+
+Where `[0:9]` refers to copying the 9 characters starting at character 0. Note this is a simple example to demonstrate the concept and the actual algorithms are more complex than this.
+
+Clients can then easily reverse the compression after download to recreate the original, uncompressed resource.
+
+Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a pre-defined, default dictionary that is used when compressing HTTP requests.
+
+Compression Dictionary Transport builds on this by enabling you to provide your own dictionary which is especially applicable to a particular set of resources. The compression algorithm can then use as a source of strings when compressing and decompressing the resource.
+
+Assuming the references from the previous example are included in that common dictionary, this could be further reduced to this:
+
+```Compressed
+[d1]a[d2]Hello World![d3]
+[d1]b[d2]I am here[d3]
+```
+
+The dictionary can either be a separate resource that is only required for Compression Dictionary Transport. Or it can be an existing resource that is needed by the website.
+
+For example, suppose your website uses a JavaScript library. You would typically load a specific version of the library, and might include the version name in the name of the library, like `<script src="my-library.v1.js">`. When the browser loads your page, it will fetch a copy of the library as a subresource.
+
+If you then update to v2 of the library, most of the library's code will probably have stayed the same. So sites can greatly reduce the size of the download for `my-library.v2.js` by telling the browser to use `my-library.v1.js` as a compression dictionary for `my-library.v2.js`. Then all strings that are common between v1 and v2 don't need to be included in the download for v2, because the browser already has them. Most of the download size of `my-library.v2.js` is then just the delta between the two versions.
 
 ## Existing resource as a dictionary
 
