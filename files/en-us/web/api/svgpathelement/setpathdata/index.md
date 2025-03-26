@@ -3,10 +3,12 @@ title: "SVGPathElement: setPathData() method"
 short-title: setPathData()
 slug: Web/API/SVGPathElement/setPathData
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SVGPathElement.setPathData
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`SVGPathElement.setPathData()`** method sets the sequence of path segments as the new path data.
 

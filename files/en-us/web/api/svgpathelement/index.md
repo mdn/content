@@ -25,13 +25,13 @@ _This interface inherits properties from its parent, {{domxref("SVGGeometryEleme
 
 _This interface also inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-- {{domxref("SVGPathElement.getPathData()")}}
+- {{domxref("SVGPathElement.getPathData()")}} {{experimental_inline}}
   - : Returns the sequence of path segments that corresponds to the path data, optionally normalizing the values and segment types.
 - {{domxref("SVGPathElement.getPointAtLength()")}}
   - : Returns the point at a given distance along the path.
 - {{domxref("SVGPathElement.getTotalLength()")}}
   - : Returns the user agent's computed value for the total length of the path in user units.
-- {{domxref("SVGPathElement.setPathData()")}}
+- {{domxref("SVGPathElement.setPathData()")}} {{experimental_inline}}
   - : Sets the sequence of path segments as the new path data.
 
 ### Deprecated methods

@@ -3,10 +3,12 @@ title: "SVGPathElement: getPathData() method"
 short-title: getPathData()
 slug: Web/API/SVGPathElement/getPathData
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SVGPathElement.getPathData
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`SVGPathElement.getPathData()`** method returns the sequence of path segments that corresponds to the path data, optionally normalizing the values and segment types.
 
