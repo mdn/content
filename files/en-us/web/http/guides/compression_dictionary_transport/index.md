@@ -44,7 +44,7 @@ Assuming the references from the previous example are included in that common di
 
 ```Compressed
 [d0:9]a[d10:20]Hello World![d42:46]
-[d1]b[d2]I am here[d3]
+[d0:9]b[d10:20]I am here[d42:46]
 ```
 
 The dictionary can either be a separate resource that is only required for Compression Dictionary Transport. Or it can be an existing resource that is needed by the website.
