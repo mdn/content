@@ -247,11 +247,11 @@ ul::scroll-button(right) {
 
 Creating the scroll markers involves three main features:
 
-- The {{cssxref("scroll-marker-group")}} property needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated.
+- The {{cssxref("scroll-marker-group")}} property needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated; its value specifies where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
 - The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
 - {{cssxref("::scroll-marker")}} pseudo-elements exist inside children of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 
-To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is generated after the list's DOM content:
+To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus order:
 
 ```css live-sample___first-example
 ul {

@@ -31,11 +31,11 @@ scroll-marker-group: unset;
 
 - `after`
 
-  - : The {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately following them. It is also put at the end of the container's tab order.
+  - : The {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It does however appear at the end of the container's tab order and layout box order (but not DOM structure).
 
 - `before`
 
-  - : The `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It is also put at the start of the container's tab order.
+  - : The `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It also appears at the start of the container's tab order and layout box order.
 
 - `none`
 
