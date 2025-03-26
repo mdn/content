@@ -26,5 +26,5 @@ An {{domxref("SVGAnimatedNumber")}} object that corresponds to the X-component o
 
 ## See also
 
-- {{domxref("feSpecularLighting.kernelUnitLengthY")}}
+- {{domxref("SVGFeSpecularLightingElement.kernelUnitLengthY")}}
 - {{domxref("SVGAnimatedNumber")}}
