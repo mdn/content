@@ -29,7 +29,7 @@ function a() {
   console.log("Hello World!");
 }
 
-[0:9]b[10:20]I am here[42:]
+[0:9]b[10:20]I am here[42:46]
 ```
 
 Where `[0:9]` refers to copying the 9 characters starting at character 0. Note this is a simple example to demonstrate the concept and the actual algorithms are more complex than this.
