@@ -78,7 +78,7 @@ Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs
 
 ## Compression dictionary transport
 
-Modern compression formats such as {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} allow the use of dictionaries of frequently used data to further increase compression over just referencing those from within the file being compressed. Typically, for HTTP requests, this uses the pre-defined static dictionary included in that format (for example [the Brotli static dictionary is available in the source code](https://github.com/google/brotli/blob/master/csharp/org/brotli/dec/Dictionary.cs)).
+Modern compression formats such as {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} allow the use of dictionaries of frequently used data to further increase compression over just referencing those from within the file being compressed. Typically, for HTTP responses, this uses the pre-defined static dictionary included in that format (for example [the Brotli static dictionary is available in the source code](https://github.com/google/brotli/blob/master/csharp/org/brotli/dec/Dictionary.cs)).
 
 [Compression Dictionary Transport](./compression_dictionary_transport/) allows the use of specifying a resource which can be used as a dictionary for future requests. This can either be a specific dictionary file, or an existing resource (for example, using `app.v1.js` as a dictionary when downloading `app.v2.js`). This can result in a huge savings in subsequent file download sizes and hence time. In the `app.vX.js` example, basically only the delta would need to be download and the common bytes could be referenced from the original `app.v1.js` file that is already downloaded.
 

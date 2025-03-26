@@ -38,7 +38,7 @@ Clients can then easily reverse the compression after download to recreate the o
 
 Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a pre-defined, default dictionary that is used when compressing HTTP responses.
 
-Compression Dictionary Transport builds on this by enabling you to provide your own dictionary which is especially applicable to a particular set of resources. The compression algorithm can then use as a source of strings when compressing and decompressing the resource.
+Compression Dictionary Transport builds on this by enabling you to provide your own dictionary which is especially applicable to a particular set of resources. The compression algorithm can then reference it as a source of bytes when compressing and decompressing the resource.
 
 Assuming the references from the previous example are included in that common dictionary, this could be further reduced to this:
 
@@ -53,7 +53,7 @@ For example, suppose your website uses a JavaScript library. You would typically
 
 If you then update to v2 of the library, most of the library's code will probably have stayed the same. So sites can greatly reduce the size of the download for `my-library.v2.js` by telling the browser to use `my-library.v1.js` as a compression dictionary for `my-library.v2.js`. Then all strings that are common between v1 and v2 don't need to be included in the download for v2, because the browser already has them. Most of the download size of `my-library.v2.js` is then just the delta between the two versions.
 
-While text compression is incredibly effiction, creating files that are are often 25% the size of uncompressed files, delta compression allows for an order of magnitude more compression with [examples files of only 2% site](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md).
+While text compression is incredibly effiction, creating files that are are often 25% the size of uncompressed files, delta compression allows for an order of magnitude more compression with [examples files of only 2% size](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md).
 
 ## Dictionary format
 
@@ -120,7 +120,7 @@ From here the process is similar to the previous example when a matching resourc
 
 Dictionary-compressed (also known as delta-compressed) responses use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
 
-These can be created dynamically, but it is often better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
+These can be created dynamically, but for static resources it can be better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
 
 Example command line options are shown below, and these can be configured in build tools if they do not natively support this.
 
