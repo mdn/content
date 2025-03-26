@@ -70,7 +70,7 @@ This guideline focuses on making text content as understandable as possible.
         link to when they appear, or at the very least provide definitions
         somewhere in the surrounding text, or in a
         <a
-          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#description_lists"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Lists#description_lists"
           >description list</a
         >
         at the bottom of the page.

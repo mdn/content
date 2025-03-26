@@ -24,11 +24,6 @@ The state of ARIA technology has always depended on the community. If you notice
    <td></td>
   </tr>
   <tr>
-   <td><a href="/en-US/docs/Mozilla/Developer_guide/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
-   <td><a href="mailto:support@gwmicro.com">Window-Eyes comments, questions, and feedback</a></td>
-   <td></td>
-  </tr>
-  <tr>
    <td><a href="https://www.nvaccess.org/">Non Visual Desktop Access (NVDA)</a></td>
    <td><a href="https://github.com/nvaccess/nvda">File NVDA bugs</a></td>
    <td>Discuss NVDA issues</td>

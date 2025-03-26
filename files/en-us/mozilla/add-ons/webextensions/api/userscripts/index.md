@@ -10,7 +10,7 @@ browser-compat: webextensions.api.userScripts
 Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.
 
 > [!NOTE]
-> This is documentation for the new API version, available in Firefox for Manifest V3. See {{WebExtAPIRef("userScripts_legacy","userScripts (legacy)")}} for information on the API available for use in Firefox with Manifest V2.
+> This is documentation for the new API version, available in Firefox for Manifest V3. See [`userScripts` (legacy)](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy) for information on the API available for use in Firefox with Manifest V2.
 
 This API offers capabilities similar to {{WebExtAPIRef("scripting")}} but with features suited to handling third-party scripts.
 

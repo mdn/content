@@ -89,7 +89,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           The search provider has a name and a primary search URL. Alternative
           URLs may be provided, including URLs for more specialized searches
           like image search. In the URL you supply, use
-          "<code>{searchTerms}</code>" to interpolate the search term into the
+          <code>{searchTerms}</code> to interpolate the search term into the
           URL, like:
           <code>https://www.discogs.com/search/?q={searchTerms}</code>. You can
           also provide POST parameters to be sent along with the search.

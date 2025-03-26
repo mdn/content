@@ -10,7 +10,7 @@ browser-compat: webextensions.api.tabs.getCurrent
 Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 
 > [!NOTE]
-> This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages).
+> This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_and_options_pages).
 >
 > If you call it from a background script or a popup, it will return `undefined`.
 
