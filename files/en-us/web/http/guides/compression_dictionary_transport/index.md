@@ -43,7 +43,7 @@ Compression Dictionary Transport builds on this by enabling you to provide your 
 Assuming the references from the previous example are included in that common dictionary, this could be further reduced to this:
 
 ```Compressed
-[d1]a[d2]Hello World![d3]
+[d0:9]a[d10:20]Hello World![d42:46]
 [d1]b[d2]I am here[d3]
 ```
 
