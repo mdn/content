@@ -819,11 +819,11 @@ To learn how to debug web workers, see the documentation for each browser's Java
 
 To open devtools for web workers, one can use the following shortcuts:
 
-browser | shortcut
---- | ---
-edge | edge://inspect/
-chrome | chrome://inspect/
-firefox | about:debugging#/runtime/this-firefox
+| browser | shortcut                              |
+| ------- | ------------------------------------- |
+| edge    | edge://inspect/                       |
+| chrome  | chrome://inspect/                     |
+| firefox | about:debugging#/runtime/this-firefox |
 
 This pages show an overview over all service workers, one needs to find the relevant one by the URL and then click *inspect*. The devtools will open for that worker and give access to the console and debugger.
 
