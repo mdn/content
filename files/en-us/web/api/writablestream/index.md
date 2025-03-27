@@ -54,7 +54,7 @@ try {
   writer.write('This has been a demo!\n');
 
   await writer.close();   // wait for all chunks to be written
-  console.log("All chunks written")
+  console.log("All chunks written");
 }
 catch (error) {
   console.error("Stream error: " + error);
