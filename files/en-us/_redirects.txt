@@ -1119,7 +1119,7 @@
 /en-US/docs/Creating_and_triggering_custom_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/CredentialsContainer.preventSilentAccess()	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
 /en-US/docs/Cryptanalysis	/en-US/docs/Glossary/Cryptanalysis
-/en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
+/en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Hash
 /en-US/docs/CustomElements	/en-US/docs/Web/API/Web_components/Using_custom_elements
 /en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
@@ -3559,9 +3559,11 @@
 /en-US/docs/Glossary/Client_hints	/en-US/docs/Web/HTTP/Guides/Client_hints
 /en-US/docs/Glossary/Condition	/en-US/docs/Glossary/Conditional
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
+/en-US/docs/Glossary/Cryptographic_hash_function	/en-US/docs/Glossary/Hash
 /en-US/docs/Glossary/DOS_attack	/en-US/docs/Glossary/Denial_of_Service
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
 /en-US/docs/Glossary/Descriptor_(CSS)	/en-US/docs/Glossary/CSS_Descriptor
+/en-US/docs/Glossary/Digest	/en-US/docs/Glossary/Hash
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
@@ -3571,7 +3573,7 @@
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
-/en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
+/en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Hash
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
