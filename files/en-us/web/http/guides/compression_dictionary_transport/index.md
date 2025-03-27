@@ -161,7 +161,7 @@ Compression algorithms are at risk of security attacks, so there are a number of
 - Delta-compressed resources must be same-origin to the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
-Additionally, Compression Dictionary Transport could themselves becoming tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
 
 ## See also
 
