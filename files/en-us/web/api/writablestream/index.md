@@ -33,30 +33,29 @@ This object comes with built-in backpressure and queuing.
 
 ## Examples
 
-The following example illustrates several features of this interface. It creates the `WritableStream` with a custom sink. It then calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. Next, several strings are written to the stream. Finally,  `close()` returns a promise that resolves when all the writes have successfully completed.
+The following example illustrates several features of this interface. It creates the `WritableStream` with a custom sink. It then calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. Next, several strings are written to the stream. Finally, `close()` returns a promise that resolves when all the writes have successfully completed.
 
 ```js
 const writableStream = new WritableStream(
   // Implement the sink
   {
     write(chunk) {
-      const textElement = document.getElementById('text-output');
+      const textElement = document.getElementById("text-output");
       textElement.textContent += chunk;
-    }
-  }
+    },
+  },
 );
 
 const writer = writableStream.getWriter();
 
 try {
-  writer.write('Hello, ');
-  writer.write('world!\n');
-  writer.write('This has been a demo!\n');
+  writer.write("Hello, ");
+  writer.write("world!\n");
+  writer.write("This has been a demo!\n");
 
-  await writer.close();   // wait for all chunks to be written
+  await writer.close(); // wait for all chunks to be written
   console.log("All chunks written");
-}
-catch (error) {
+} catch (error) {
   console.error("Stream error: " + error);
 }
 ```
