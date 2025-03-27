@@ -22,9 +22,9 @@ An important aspect of technical projects that beginners often miss out on is an
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Typical technology combinations in common web projects.</li>
-          <li>Typical job roles, and where they are involved in those processes.</li>
-          <li>Typical technical project phases.</li>
+          <li>Typical technology combinations in web projects.</li>
+          <li>Typical job roles on a web development team.</li>
+          <li>Typical technical project phases, and where the different job roles are involved.</li>
           <li>Common work management processes, such as agile and waterfall.</li>
         </ul>
       </td>
@@ -34,7 +34,7 @@ An important aspect of technical projects that beginners often miss out on is an
 
 ## Typical technology combinations
 
-When building a website, you will use a combination of different technologies, commonly referred to as a **tech stack**. As websites get larger and more complex, so does the tech stack. Your tech stack might start off simple when you are creating a demo and only you and a few colleagues will be looking at it. However, a seemingly-simple production website's tech stack could be more complex than you first think when you consider that it needs to:
+When building a website, you will use a combination of different technologies, commonly referred to as a **tech stack**. As websites get larger and more complex, so does the tech stack. It might start off simple when you are creating a demo and only you and a few colleagues will be looking at it. However, a seemingly-simple production website's tech stack could be more complex than you first think when you consider that it needs to:
 
 - Load quickly (this is the purpose of [performance](/en-US/docs/Learn_web_development/Extensions/Performance/why_web_performance)).
 - Handle a large number of users simultaneously (it must **scale**).
@@ -44,19 +44,23 @@ When building a website, you will use a combination of different technologies, c
 At a very high level, a web application tech stack might look something like this:
 
 ```plain
-Front-end — HTML, CSS, JavaScript
+Front-end
+HTML, CSS, JavaScript
 |
-Back-end — Node.js, .NET, PHP, Python, or some other server-side language
+Back-end
+Node.js, .NET, PHP, Python, or some other server-side language
 |
-Database — MySQL, Postgres, MongoDB, or some other database
+Database
+MySQL, Postgres, MongoDB, or some other database
 |
-Web server — your own, or a service such as Netlify
+Web server
+Your own, built around a server product such as Apache, or a service like Netlify
 ```
 
 > [!NOTE]
 > You will often see acronyms that refer to poplar tech stacks, such as [MEAN](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) or [LAMP](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>) (Linux, Apache, MySQL, PHP or Python).
 
-On MDN, we are mainly concerned wth the front-end part, but even that can be broken down into lots of different pieces. Take the front-end for example:
+On MDN, we are mainly concerned with the front-end part, but even that can be broken down into lots of different pieces. Take the front-end for example:
 
 - You will probably use a JavaScript framework (such as [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) to define the components that go together to create the user interface.
 - The framework will probably use some kind of templating language (such as [Mustache](https://mustache.github.io/)) to define the HTML structure but also provide functionality to dynamically include variable content.
@@ -77,18 +81,18 @@ There will also be tools involved outside the actual tech stack itself to help y
 
 OK, so that is a lot to take in. Our advice is **don't panic!** The aim of this article is not to worry you by making you think that all of a sudden you have 10 times as many things to learn as you did before. The idea is simply to make you aware of the bigger picture in terms of website projects, and give you a basic familiarity with some of the terms you might encounter.
 
-Eventually, you will probably develop some knowledge of several of the above tools and technologies, but you won't be an expert in them all, nor will you need to be — that's what teams are for. For the moment, you are absolutely doing the right thing by learning the core skills such as HTML, CSS, and JavaScript. More tools, and specializations, will come later on in your career.
+Eventually, you will develop some knowledge of several of the above tools and technologies, but you won't be an expert in them all, nor will you need to be — that's what teams are for. For the moment, you are absolutely doing the right thing by learning the core skills such as HTML, CSS, and JavaScript. More tools, and specializations, will come later on in your career.
 
 ## Job roles
 
 In a web development team, there are many different job roles involved; it is useful to understand what each one entails:
 
 - **Product manager**
-  - : Responsible for the whole website from a product perspective — how is the product performing in the market, compared to its competitors? What are its strengths and weaknesses? What new features are the target audience asking for, and which ones are the highest priority? What are the website's main success criteria, and how did recent new features help meet those criteria? The product manager will collect data and write reports to help the team understand how effective their work is, and prioritize future work.
+  - : Responsible for the whole website from a product perspective — how is the product performing in the market, compared to its competitors? What are its strengths and weaknesses? What new features is the target audience asking for, and which ones are the highest priority? What are the website's main success criteria, and how did recent new features help meet those criteria? The product manager will collect data and write reports to help the team understand how effective their work is, and prioritize future work.
 - **Project manager**
-  - : Responsible for scheduling the work the team needs to do. The project manager will create a project plan, assign personnel to do each task, hold regular check-in meetings to see if progress targets are being met and surface any problems, and adjust the plan as needed.
+  - : Responsible for organizing the work the team needs to do. The project manager will create a project plan with prioritized tasks and due dates, assign personnel to do each task, hold regular check-in meetings to see if progress targets are being met and surface any problems, and adjust the plan as needed.
 - **User experience (UX) designer**
-  - : Responsible for understanding the needs of the product's target audience, and designing the product workflow/experience so that those audience needs are met most effectively. Typical UX questions are "where should we direct the user first when they land on our homepage?" and "how can we make signing up for an account as easy and intuitive as possible?" This work is often coupled with user research and testing to better understand the target audience, and creating wireframes to communicate their ideas. The UX designer is one of the main consumers of the product manager's reports.
+  - : Responsible for understanding the needs of the product's target audience, and designing the product workflow/experience so that those audience needs are met most effectively. Typical UX questions are "where should we direct the user first when they land on our homepage?" and "how can we make signing up for an account as easy and intuitive as possible?" This work is often coupled with user research and testing to better understand the target audience, and creating wireframes to communicate ideas. The UX designer is one of the main consumers of the product manager's reports.
 - **Graphic designer**
   - : Responsible for visual design work on the website project. Graphic designers are responsible for a variety of disciplines such as typography, choosing color schemes, creating icons and other graphic assets, and creating website mockups based on the UX designer's wireframes.
 - **Front-end developer**
@@ -96,7 +100,7 @@ In a web development team, there are many different job roles involved; it is us
 - **Back-end developer**
   - : Responsible for the non-visual parts of the website. They write back-end code to request internal data, generate HTML pages from templates, and process external data submitted by users. They also handle web server configuration, keeping the site secure, etc.
 - **Full-stack developer**
-  - : Handles both front-end development and the back-end development.
+  - : Handles both front-end development and back-end development tasks.
 - **Quality assurance (QA) engineer**
   - : Responsible for testing new features to make sure they work properly and reporting bugs, communicating with the developers to help them prioritize the necessary fixes.
 - **Content specialist/technical writer**
@@ -175,9 +179,9 @@ Tools such as [Trello](https://trello.com/) and [Asana](https://asana.com/) prov
 > 3. Prioritizing tasks.
 > 4. Putting them in order with due dates.
 > 5. Starting to work on different tasks.
-> 6. Setting their statuses ("in progress", "blocked", "done", etc.)
+> 6. Setting their statuses ("in progress", "blocked", "done", etc.) as the work progresses.
 >
-> Track the progress of a complete project from start to finish — try it with your own website or a side project of some kind. Also, try [contributing to an open source project](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#participate_in_open_source) or two; many of them will use some kind of process to track their work similar to what we have described above.
+> Track the progress of a complete project from start to finish — try it with your own website or a side project of some kind. Also, try [contributing to an open source project](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#participate_in_open_source) or two; many of them will use a process to track their work similar to what we have described above.
 
 ## See also
 
