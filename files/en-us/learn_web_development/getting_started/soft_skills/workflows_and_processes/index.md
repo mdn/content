@@ -95,6 +95,8 @@ In a web development team, there are many different job roles involved; it is us
   - : This is (probably) what you are aiming to be if you are reading this! Front-end developers use HTML, CSS, and JavaScript to create the visual part of the website that users interact with, bringing to life the behavioral and visual mockups created by the UX and graphic designers.
 - **Back-end developer**
   - : Responsible for the non-visual parts of the website. They write back-end code to request internal data, generate HTML pages from templates, and process external data submitted by users. They also handle web server configuration, keeping the site secure, etc.
+- **Full-stack developer**
+  - : Handles both front-end development and the back-end development.
 - **Quality assurance (QA) engineer**
   - : Responsible for testing new features to make sure they work properly and reporting bugs, communicating with the developers to help them prioritize the necessary fixes.
 - **Content specialist/technical writer**
@@ -106,8 +108,6 @@ Other less common job roles include:
 
 - **User researcher**
   - : Larger teams will often have a dedicated researcher to do user research and testing.
-- **Full-stack developer**
-  - : Handles both the front-end development and the back-end development.
 - **Search Engine Optimization (SEO) specialist**
   - : Analyses the content and structure of the website and makes changes that will cause the website to be more visible in relevant search engine results. See {{glossary("SEO")}} for more information.
 
@@ -145,9 +145,11 @@ The project manager will use some kind of process to manage the website project,
 > [!NOTE]
 > Web development teams often prefer to work with an agile process, as software development is by its very nature prone to (sometimes rapid) changes in requirements due to new bugs, user feedback, company strategy, etc.
 
+### Scrum and kanban
+
 There is a specific type of agile methodology called **scrum**, which has a fixed set of rules about how a project is run. For example:
 
-- The person in charge of the scrum is called the scrum master.
+- The person in charge of the scrum is called the scrum master. This is quite often just the project manager with a different name.
 - The work to do is divided into cycles, called **sprints**, which are typically two weeks long.
 - Before each sprint, potential new work items are discussed, and if accepted into the sprint, they are put into a backlog.
 - Work items are taken from the backlog and move through different phases towards completion, such as "in progress" and "in review".
@@ -156,7 +158,26 @@ There is a specific type of agile methodology called **scrum**, which has a fixe
 
 Another type of agile methodology is called **kanban**, which has less rules than scrum, doesn't use sprints, and tends to focus more on the continuous improvement aspects of agile. Kanban is particularly useful for managing continuous processes that don't have a clear defined end, such as customer support tickets.
 
+### Kanban boards
+
 Tools such as [Trello](https://trello.com/) and [Asana](https://asana.com/) provide visualizations that show the status of different work items in a project. They are usually called **Kanban boards**, although they can be used to manage different process types, not just kanban. Kanban boards consist of different columns, which can represent different work statuses in a scrum project ("backlog", "todo", "in progress", etc.), different types of work ("research", "design", "development", etc.) or whatever else is useful for your project.
+
+[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) provide another good tooling option, and are free to use — you just need to sign up for a GitHub account.
+
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> You should read up on the above processes, and practice tracking some of your work or personal projects using a kanban board. Don't worry about using a complex scrum methodology; basic kanban is fine for the moment. Even if you're doing something solo, it can be great to practice the workflow of:
+>
+> 1. Creating tasks.
+> 2. Deciding how big they are or how long they will take.
+> 3. Prioritizing tasks.
+> 4. Putting them in order with due dates.
+> 5. Starting to work on different tasks.
+> 6. Setting their statuses ("in progress", "blocked", "done", etc.)
+>
+> Track the progress of a complete project from start to finish — try it with your own website or a side project of some kind. Also, try [contributing to an open source project](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#participate_in_open_source) or two; many of them will use some kind of process to track their work similar to what we have described above.
 
 ## See also
 
