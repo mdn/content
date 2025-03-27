@@ -83,6 +83,7 @@ This article provides information about the changes in Firefox 137 that affect d
 
 - From now on, `JavaScriptError` raised by script evaluation will contain line and column number if available ([Firefox bug 1865146](https://bugzil.la/1865146)).
 - Performing actions with async events enabled will not fail anymore with `JavascriptException: Cyclic object value` ([Firefox bug 1947112](https://bugzil.la/1947112)).
+  Async events were enabled since Firefox 135. See more details in [the release notes](/en-US/docs/Mozilla/Firefox/Releases/135#webdriver_conformance_webdriver_bidi_marionette).
 
 ## Changes for add-on developers
 
