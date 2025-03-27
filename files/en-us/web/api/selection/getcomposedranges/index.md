@@ -29,17 +29,22 @@ Application code might use a {{domxref("MutationObserver")}} to monitor for DOM 
 
 ```js-nolint
 getComposedRanges()
-getComposedRanges(shadowRoot1)
-getComposedRanges(shadowRoot1, shadowRoot2)
-getComposedRanges(shadowRoot1, shadowRoot2, /* …, */ shadowRootN)
+getComposedRanges(options)
 ```
 
 ### Parameters
 
-- `shadowRoot1`, …, `shadowRootN`
-  - : Zero or more {{domxref("ShadowRoot")}} arguments.
-    If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
-    Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
+- `options` {{optional_inline}}
+
+  - : The following optional properties may also be specified.
+
+    - `shadowRoots` {{optional_inline}}
+      - : An array of {{domxref("ShadowRoot")}} objects.
+        If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
+        Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.
+
+> [!NOTE]
+> Some browsers may still support the legacy syntax with individual ShadowRoot parameters: `getComposedRanges(shadowRoot1, shadowRoot2, ..., shadowRootN)`
 
 ### Return value
 
@@ -144,7 +149,7 @@ const copySelectionWithShadowRootsButton = document.querySelector(
 copySelectionWithShadowRootsButton.addEventListener("click", () => {
   composedRangeSelection = window
     .getSelection()
-    .getComposedRanges(openRoot, closedRoot)[0];
+    .getComposedRanges({ shadowRoots: [openRoot, closedRoot] })[0];
   log(`Selection has been copied (shadow roots passed)`);
 });
 ```
