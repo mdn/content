@@ -125,7 +125,7 @@ A typical technical project might happen like this:
 8. The front-end developer creates the interactive feature based on the graphic designer's mockups and connects it to the back-end so that it retrieves the data it needs.
 9. The QA engineer thoroughly tests the new feature, and writes a detailed report on the issues they find with it.
 10. The developers fix the bugs that are deemed sufficiently serious that they should block the release of the feature.
-11. Once the bugs are fixed and the project is signed off, the feature can be put live on the website.
+11. Once the (blocking) bugs are fixed and the project is signed off, the feature can be put live on the website.
 
 This is a simplified view — other phases will exist around the feature implementation itself, and the phases will not necessarily all be completed in the order shown, but this gives you an idea of what's involved.
 
