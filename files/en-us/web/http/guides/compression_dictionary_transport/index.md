@@ -55,7 +55,7 @@ For example, suppose your website uses a JavaScript library. You would typically
 
 If you then update to v2 of the library, most of the library's code will probably have stayed the same. So sites can greatly reduce the size of the download for `my-library.v2.js` by telling the browser to use `my-library.v1.js` as a compression dictionary for `my-library.v2.js`. Then all strings that are common between v1 and v2 don't need to be included in the download for v2, because the browser already has them. Most of the download size of `my-library.v2.js` is then just the delta between the two versions.
 
-While text compression is incredibly effiction, creating files that are are often 25% the size of uncompressed files, delta compression allows for an order of magnitude more compression with [examples files of only 2% size](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md).
+Compression Dictionary Transport can achieve an order of magnitude more compression than compression using a default built-in dictionary: see [Compression dictionary transport examples](https://github.com/WICG/compression-dictionary-transport/blob/main/examples.md) for some real-life results.
 
 ## Dictionary format
 
