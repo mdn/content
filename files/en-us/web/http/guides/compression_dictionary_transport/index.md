@@ -130,9 +130,9 @@ From here the process is similar to the previous example when a matching resourc
 
 ## Creating dictionary-compressed responses
 
-Dictionary-compressed responses use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
+Dictionary-compressed responses can use either the Brotli or ZStandard algothms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
 
-These can be created dynamically, but for static resources it can be better to create these in advance at build time. When using prior versions as dictionaries, this will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions for some value of X.
+Dictionary-compressed resources can be created dynamically, but for static resources it can be better to create these in advance at build time. When using prior versions as dictionaries, this will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions for some value of X.
 
 Given a dictionary file named `dictionary.text` and a file to compress named `data.text`, the following Bash command will compress the file using Brotli, producing a compressed file named `data.txt.dcb`:
 
