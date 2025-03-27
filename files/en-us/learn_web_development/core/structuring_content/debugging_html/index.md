@@ -65,7 +65,7 @@ HTML itself doesn't suffer from syntax errors because browsers parse it permissi
 
 For example, the following HTML snippet contains incorrectly nested elements:
 
-```html
+```html example-bad
 <p>I didn't expect to find the <em>next-door neighbor's <strong>cat</em></strong> here!</p>
 ```
 
@@ -73,7 +73,7 @@ The closing `</strong>` tag should be before the closing `</em>` tag, but it is 
 
 If you load this HTML into a browser then look at the [rendered DOM](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites#handling_html), you'll see that the nesting has been corrected by the browser:
 
-```html
+```html example-good
 <p>
   I didn't expect to find the
   <em>next-door neighbor's <strong>cat</strong></em> here!
@@ -105,7 +105,28 @@ For this article, the only relevant devtools function is the **DOM inspector**, 
 
 It's time to study some HTML code using the DOM inspector, and see how the browser handles common markup errors.
 
-1. First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore.
+1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
+
+   ```html-nolint
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8">
+       <title>HTML debugging examples</title>
+     </head>
+
+     <body>
+       <h1>HTML debugging examples</h1>
+       <p>What causes errors in HTML?
+       <ul>
+         <li>Unclosed elements: If an element is <strong>not closed properly,then its effect can spread to areas you didn't intend
+         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasised?</strong> what is this?</em>
+         <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
+       </ul>
+     </body>
+   </html>
+   ```
+
 2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
