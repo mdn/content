@@ -34,7 +34,7 @@ An important aspect of technical projects that beginners often miss out on is an
 
 ## Typical technology combinations
 
-When building a website, you will use a combination of different technologies, commonly referred to as a **tech stack**. As websites get larger and more complex, so does the tech stack. Your tech stack might start off simple when you are creating a demo and only you and a few colleages will be looking at it. However, a seemingly-simple production website's tech stack could be more complex than you first think when you consider that it needs to:
+When building a website, you will use a combination of different technologies, commonly referred to as a **tech stack**. As websites get larger and more complex, so does the tech stack. Your tech stack might start off simple when you are creating a demo and only you and a few colleagues will be looking at it. However, a seemingly-simple production website's tech stack could be more complex than you first think when you consider that it needs to:
 
 - Load quickly (this is the purpose of [performance](/en-US/docs/Learn_web_development/Extensions/Performance/why_web_performance)).
 - Handle a large number of users simultaneously (it must **scale**).
