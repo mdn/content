@@ -130,9 +130,9 @@ From here the process is similar to the previous example when a matching resourc
 
 ## Creating dictionary-compressed responses
 
-Dictionary-compressed (also known as delta-compressed) responses use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
+Dictionary-compressed responses use the Brotli or ZStandard algothms, a custom dictionary, but also include a magic header and embedded dictionary hash.
 
-These can be created dynamically, but for static resources it can be better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
+These can be created dynamically, but for static resources it can be better to create these in advance at build time. When using prior versions as dictionaries, this will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions for some value of X.
 
 Given a dictionary file named `dictionary.text` and a file to compress named `data.text`, the following Bash command will compress the file using Brotli, producing a compressed file named `data.txt.dcb`:
 
@@ -158,7 +158,7 @@ Note that you will need {{glossary("OpenSSL")}} installed locally as well as Bro
 Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
 
 - Dictionaries must same-origin with the resource using the dictionary.
-- Delta-compressed resources must be same-origin with the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
