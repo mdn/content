@@ -23,14 +23,6 @@ overscroll-behavior: contain;
 overscroll-behavior: none;
 ```
 
-```css interactive-example-choice
-overscroll-behavior: auto;
-```
-
-```css interactive-example-choice
-overscroll-behavior: contain;
-```
-
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
