@@ -7,6 +7,7 @@ page-type: guide
 {{HTTPSidebar}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
+
 ## Overview
 
 Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like the string `"function"` is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
