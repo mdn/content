@@ -46,9 +46,9 @@ Prefer: <preference>
 - `return=representation`
   - : Requests a full resource representation in the response.
 - `wait=<seconds>`
-  - : The maximum time the client expects it will take for the server to process the request once it's been received.
-    For example, if `respond-async` preference is also provided, the client requests that the service respond asynchronously after the specified length of time.
-    Otherwise, a server may interpret the wait time as a request to timeout after the specified period of time.
+  - : The time within which the client expects the server to provide a response, from the point at which the request was received.
+    If the `respond-async` preference is also provided, the server should respond asynchronously if processing the request will exceed the wait time.
+    Otherwise, the server should consider that the client will timeout after the `wait` time (response behavior depends on server implementation).
 - `handling=lenient`
   - : The client wishes the server to apply lenient validation and error handling to the processing of the request.
 - `handling=strict`
