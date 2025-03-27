@@ -132,11 +132,7 @@ Dictionary-compressed (also known as delta-compressed) responses use the Brotli 
 
 These can be created dynamically, but for static resources it can be better to create these in advance at build time. This will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions.
 
-Example command line options are shown below, and these can be configured in build tools if they do not natively support this.
-
-### Delta-compressed Brotli (`dcb`) a resource
-
-Assuming the dictionary file is `dictionary.txt` and the file to be compressed is `data.text`, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+Given a dictionary file named `dictionary.text` and a file to compress named `data.text`, the following Bash command will compress the file using Brotli, producing a compressed file named `data.txt.dcb`:
 
 ```bash
 echo -en '\xffDCB' > data.txt.dcb && \
@@ -144,9 +140,7 @@ openssl dgst -sha256 -binary dictionary.txt >> data.txt.dcb && \
 brotli --stdout -D dictionary.txt data.txt >> data.txt.dcb
 ```
 
-### Delta-compressed Brotli (`dcz`) a resource
-
-Assuming the dictionary file is `dictionary.txt` and the file to be compressed is `data.text`, this will create a `dcb`-compressed file `data.txt.dcb` that includes the magic header and embedded dictionary hash:
+Given the same input files, the following Bash command will compress the file using ZStandard, producing a compressed file named `data.txt.dcz`:
 
 ```bash
 echo -en '\x5e\x2a\x4d\x18\x20\x00\x00\x00' > data.txt.dcz && \
@@ -154,6 +148,8 @@ openssl dgst -sha256 -binary dictionary.txt >> data.txt.dcz && \
 zstd -D dictionary.txt -f -o tmp.zstd data.txt && \
 cat tmp.zstd >> data.txt.dcz
 ```
+
+Note that you will need {{glossary("OpenSSL")}} installed locally as well as Brotli or ZStandard.
 
 ## Restrictions
 
