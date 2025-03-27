@@ -7,8 +7,9 @@ page-type: guide
 {{HTTPSidebar}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
+## Overview
 
-Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like function is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
+Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like the string `"function"` is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
 
 For example, take this JavaScript:
 
@@ -22,9 +23,9 @@ function b() {
 }
 ```
 
-This could be compressed by replacing repeated strings with references to a previous location and number of characters, like in this example:
+This could be compressed by replacing repeated strings with references to a previous location and number of characters, like this:
 
-```Compressed
+```plain
 function a() {
   console.log("Hello World!");
 }
@@ -32,22 +33,23 @@ function a() {
 [0:9]b[10:20]I am here[42:46]
 ```
 
-Where `[0:9]` refers to copying the 9 characters starting at character 0. Note this is a simple example to demonstrate the concept and the actual algorithms are more complex than this.
+In this example, `[0:9]` refers to copying the 9 characters starting at character 0. Note this is a simplified example to demonstrate the concept and the actual algorithms are more complex than this.
 
-Clients can then easily reverse the compression after download to recreate the original, uncompressed resource.
+Clients can then reverse the compression after download to recreate the original, uncompressed resource.
+### Compression dictionaries
 
-Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a pre-defined, default dictionary that is used when compressing HTTP responses.
+Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a predefined default dictionary that is used when compressing HTTP responses.
 
 Compression Dictionary Transport builds on this by enabling you to provide your own dictionary which is especially applicable to a particular set of resources. The compression algorithm can then reference it as a source of bytes when compressing and decompressing the resource.
 
 Assuming the references from the previous example are included in that common dictionary, this could be further reduced to this:
 
-```Compressed
+```plain
 [d0:9]a[d10:20]Hello World![d42:46]
 [d0:9]b[d10:20]I am here[d42:46]
 ```
 
-The dictionary can either be a separate resource that is only required for Compression Dictionary Transport. Or it can be an existing resource that is needed by the website.
+The dictionary can either be a separate resource that is only required for Compression Dictionary Transport, or it can be a resource that the website needs anyway.
 
 For example, suppose your website uses a JavaScript library. You would typically load a specific version of the library, and might include the version name in the name of the library, like `<script src="my-library.v1.js">`. When the browser loads your page, it will fetch a copy of the library as a subresource.
 
@@ -61,26 +63,28 @@ A compression dictionary is a "raw" file that does not follow any specific forma
 
 ## Existing resource as a dictionary
 
-To use a resource as a dictionary the resource will include the {{HTTPHeader("Use-As-Dictionary")}} HTTP response Header:
+To use a resource as a dictionary, the server should include the {{HTTPHeader("Use-As-Dictionary")}} HTTP header in the response that provides the resource:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js"
 ```
 
-When a subsequent resource is requested (for example, `app.v2.js`) that matches the specified pattern, the request will include a SHA-256 hash of the available disctionary in the {{HTTPHeader("Available-Dictionary")}} HTTP Header, along with `dcb` and/or `dcz` values in the {{HTTPHeader("Accept-Encoding")}} HTTP Header (for delta compression brotli or zstd as appropriate):
+The value of this header indicates the resources that can use this resource as a dictionary: in this case, that includes any resources whose URLs match the given [pattern](/en-US/docs/Web/API/URL_Pattern_API).
+
+When a resource is later requested that matches the given pattern (for example, `app.v2.js`), the request will include a SHA-256 hash of the available dictionary in the {{HTTPHeader("Available-Dictionary")}} header, along with `dcb` and/or `dcz` values in the {{HTTPHeader("Accept-Encoding")}} header (for delta compression using Brotli or ZStandard as appropriate):
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz
 Available-Dictionary: :pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=:
 ```
 
-The server can then respond with an appropriately-encoded response and content encoding in the {{HTTPHeader("Content-Encoding")}} HTTP Header:
+The server can then respond with an appropriately-encoded response with the chosen content encoding given in the {{HTTPHeader("Content-Encoding")}} header:
 
 ```http
 Content-Encoding: dcb
 ```
 
-If the response is cacheable, it MUST include a {{HTTPHeader("Vary")}} to prevent caches serving dictionary-compressed resources to clients that don't support them or serving the response compressed with the wrong dictionary:
+If the response is cacheable, it must include a {{HTTPHeader("Vary")}} header to prevent caches serving dictionary-compressed resources to clients that don't support them or serving the response compressed with the wrong dictionary:
 
 ```http
 Vary: accept-encoding, available-dictionary
@@ -92,7 +96,7 @@ An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}}
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
 ```
 
-In which case the value will be sent in future requests in the {{HTTPHeader("Dictionary-ID")}} header:
+If this is provided, the value will be sent in future requests in the {{HTTPHeader("Dictionary-ID")}} header:
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz
@@ -102,19 +106,19 @@ Dictionary-ID: "dictionary-12345"
 
 ## Separate dictionary
 
-Alternatively, an HTML document can specify one or more separate dictionaries with {{HTMLElement("Link#compression-dictionary", "&lt;link rel=&quot;compression-dictionary&quot;&gt;")}} elements:
+Alternatively, an HTML document can specify one or more separate dictionaries by including a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
 
 ```html
 <link rel="compression-dictionary" href="/dictionary.dat" />
 ```
 
-Or, alternatively, with {{HTTPHeader("Link")}} header:
+Alternatively a dictionary can be included using the {{HTTPHeader("Link")}} header:
 
 ```http
 Link: </dictionary.dat>; rel="compression-dictionary"
 ```
 
-This dictionary is then downloaded by the browser during idle time, and that response must include the {{HTTPHeader("Use-As-Dictionary")}} HTTP Header:
+This dictionary is then downloaded by the browser during idle time, and that response must include the {{HTTPHeader("Use-As-Dictionary")}} header:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js"
