@@ -37,6 +37,7 @@ function a() {
 In this example, `[0:9]` refers to copying the 9 characters starting at character 0. Note this is a simplified example to demonstrate the concept and the actual algorithms are more complex than this.
 
 Clients can then reverse the compression after download to recreate the original, uncompressed resource.
+
 ### Compression dictionaries
 
 Algorithms like {{glossary("Brotli compression")}} and {{glossary("Zstandard compression")}} achieve even greater efficiency by allowing the use of dictionaries of commonly encountered strings, so you don't need any copies of them in the compressed resource. These algorithms ship with a predefined default dictionary that is used when compressing HTTP responses.
