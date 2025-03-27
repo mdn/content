@@ -65,7 +65,7 @@ The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above
 - `<request-target>`
   - : The request target is usually an absolute or relative {{glossary("URL")}}, and is characterized by the context of the request.
     The format of the request target depends on the HTTP method used and the request context.
-    It is described in more detail in the [Request targets](#request-targets) section below.
+    It is described in more detail in the [Request targets](#request_targets) section below.
 - `<protocol>`
   - : The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
     This is almost always `HTTP/1.1`, as `HTTP/0.9` and `HTTP/1.0` are obsolete.

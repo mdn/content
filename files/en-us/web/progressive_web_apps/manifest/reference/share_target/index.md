@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Manifest/Reference/share_target
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.share_target
+browser-compat: manifests.webapp.share_target
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}

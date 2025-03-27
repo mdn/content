@@ -8,16 +8,12 @@ sidebar: accessibilitysidebar
 
 The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 
-> [!NOTE]
+> [!WARNING]
 > The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
-`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
-
-## Best Practices
-
-Do not use.
+`Composite` is an abstract role used for the ontology. Don't use this role in content. Instead, use the composite subclasses of [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role), [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
 
 ## Specifications
 
