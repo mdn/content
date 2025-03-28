@@ -344,6 +344,8 @@ if ("geolocation" in navigator) {
 }
 ```
 
+You can find some more feature detection examples in [Alternatives to UA sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent#alternatives_to_ua_sniffing).
+
 ## Finding help
 
 There are many other issues you'll encounter with JavaScript (and HTML and CSS!), making knowledge of how to find answers online invaluable.
