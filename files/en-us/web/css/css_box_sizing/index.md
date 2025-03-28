@@ -73,7 +73,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_prope
 
   - : Sometimes, two adjacent margins are collapsed into one. This article describes the rules that govern when and why this happens, and how to control it.
 
-- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
   - : Explains the visual formatting model.
 

@@ -33,11 +33,11 @@ Use the HTML {{HTMLElement('form')}} element if possible. The `<form>` element d
 
 Use the `role="form"` to identify a region of the page; do not use it to identify every form field. Even if you are using the form landmark instead of `<form>`, you are encouraged to use native HTML form controls like {{HTMLElement('button')}}, {{HTMLElement('input')}}, {{HTMLElement('select')}}, and {{HTMLElement('textarea')}}.
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 No role specific states or properties.
 
-### Keyboard Interactions
+### Keyboard interactions
 
 No role specific keyboard interactions
 

@@ -132,6 +132,7 @@ coprime
 CORB
 credentialled
 credentialless
+CRSF
 cryptids
 cryptosystems
 CSSWG
@@ -553,6 +554,7 @@ renderable
 renderbuffers
 reparsed
 replayability
+reportee
 repost
 reposted
 reposts

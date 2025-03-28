@@ -6,7 +6,7 @@ browser-compat: svg.elements.rect
 sidebar: svgref
 ---
 
-The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
+The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
 
 ## Example
 
