@@ -2,7 +2,7 @@
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
 page-type: web-manifest-member
-browser-compat: html.manifest.scope
+browser-compat: manifests.webapp.scope
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

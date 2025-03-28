@@ -55,7 +55,7 @@ Addition and subtraction are performed according to rules defined in [RFC 5545 (
 These rules make arithmetic with `Temporal.ZonedDateTime` "DST-safe", which means that the results most closely match the expectations of both real-world users and implementers of other standards-compliant calendar applications. These expectations include:
 
 - Adding or subtracting days should keep clock time consistent across DST transitions. For example, if you have an appointment on Saturday at 1:00PM and you ask to reschedule it 1 day later, you would expect the reschedule appointment to still be at 1:00PM, even if there was a DST transition overnight.
-- Adding or subtracting the time portion of a duration should ignore DST transitions. For example, a friend you've asked to meet in in 2 hours will be annoyed if you show up 1 hour or 3 hours later. There should be a consistent and relatively-unsurprising order of operations.
+- Adding or subtracting the time portion of a duration should ignore DST transitions. For example, a friend you've asked to meet in 2 hours will be annoyed if you show up 1 hour or 3 hours later. There should be a consistent and relatively-unsurprising order of operations.
 - If results are at or near a DST transition, ambiguities should be handled automatically (no crashing) and deterministically.
 
 Adding a duration is equivalent to [subtracting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/subtract) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated).

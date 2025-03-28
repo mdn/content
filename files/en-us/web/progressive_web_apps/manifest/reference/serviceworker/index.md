@@ -5,7 +5,7 @@ page-type: web-manifest-member
 status:
   - experimental
   - non-standard
-browser-compat: html.manifest.serviceworker
+browser-compat: manifests.webapp.serviceworker
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}

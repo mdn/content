@@ -27,12 +27,12 @@ It is preferable to use the HTML5 [`<nav>` element](/en-US/docs/Web/HTML/Element
 > [!NOTE]
 > Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. Developers should always prefer using the correct semantic HTML element over using ARIA
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : A brief description of the purpose of the navigation, omitting the term "navigation", as the screen reader will read both the role and the contents of the label.
 
-### Keyboard Interactions
+### Keyboard interactions
 
 None.
 
