@@ -131,7 +131,6 @@ The following snippet of code is a popup menu nested in a menubar. It is display
     tabindex="0"
     aria-label="Text Color: purple">
     Purple
-    <span></span>
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
     <li

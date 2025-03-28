@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the user-agent's branding and significant version information.
+The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the user-agent's branding and significant version information.
 
 The `Sec-CH-UA` header provides the brand and significant version for each brand associated with the browser in a comma-separated list.
 The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their respective versions.

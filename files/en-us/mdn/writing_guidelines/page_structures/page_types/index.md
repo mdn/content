@@ -142,7 +142,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 #### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
 #### Templates
 
@@ -260,4 +260,4 @@ There are only a few types of page inside Learn web development:
 ## See also
 
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)

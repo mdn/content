@@ -14,7 +14,7 @@ The following can be replaced elements:
 - {{HTMLElement("video")}}
 - {{HTMLElement("iframe")}}
 - {{HTMLElement("embed")}}
-- {{HTMLElement("fencedframe")}} {{experimental_inline}}
+- {{HTMLElement("fencedframe")}}
 
 The following are treated as replaced elements only in specific cases:
 

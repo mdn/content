@@ -1,5 +1,6 @@
 ---
 title: Overflowing content
+short-title: Overflow
 slug: Learn_web_development/Core/Styling_basics/Overflow
 page-type: learn-module-chapter
 ---

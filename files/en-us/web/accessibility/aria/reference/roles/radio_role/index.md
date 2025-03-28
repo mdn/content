@@ -101,7 +101,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 <div role="radio">name of my radio</div>
 ```
 
-## Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) role
 
@@ -119,7 +119,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 > [!NOTE]
 > Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
 
-## Keyboard interactions
+### Keyboard interactions
 
 - <kbd>Tab</kbd> + <kbd>Shift</kbd>
 

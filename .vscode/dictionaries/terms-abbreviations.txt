@@ -132,6 +132,7 @@ coprime
 CORB
 credentialled
 credentialless
+CRSF
 cryptids
 cryptosystems
 CSSWG
@@ -172,6 +173,7 @@ doorhanger
 downsampled
 downsampling
 downscaling
+dragonfish
 DTLSL
 dyscalculia
 EBNF
@@ -286,6 +288,7 @@ iconset
 idents
 IERS
 IMSC
+Indo-Pacific
 inferencing
 infobar
 infobox
@@ -551,6 +554,7 @@ renderable
 renderbuffers
 reparsed
 replayability
+reportee
 repost
 reposted
 reposts
@@ -592,6 +596,7 @@ scanability
 scattergun
 schemeful
 scopable
+scorpionfish
 screencast
 screenful
 scriptable
@@ -627,6 +632,7 @@ skipnav
 skybox
 skyboxes
 slabcraft
+slablike
 slottables
 SMACSS
 SMARTPOSTER
@@ -755,6 +761,7 @@ timerange
 timeslice
 timeslices
 timestep
+tinyfill
 toggletips
 toolsets
 touchpad

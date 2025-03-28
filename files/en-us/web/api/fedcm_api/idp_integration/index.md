@@ -147,7 +147,7 @@ This includes the following information:
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
 - `login_hints` {{optional_inline}}
-  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#providers_2) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
+  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
 > [!NOTE]
 > If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Reference/Status/401).
@@ -214,6 +214,19 @@ The request payload contains the following params:
 
 > [!NOTE]
 > If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
+
+#### CORS headers for the ID assertion endpoint
+
+The ID assertion endpoint response must include the {{httpheader("Access-Control-Allow-Origin")}} and {{httpheader("Access-Control-Allow-Credentials")}} headers, and the `Access-Control-Allow-Origin` must include the requester's origin:
+
+```http
+Access-Control-Allow-Origin: https://rp.example
+Access-Control-Allow-Credentials: true
+```
+
+Note that the `Access-Control-Allow-Origin` must be set to the specific origin of the requester (the RP) and cannot be the wildcard value `*`.
+
+Without these headers, the request will fail with a network error.
 
 #### ID assertion error responses
 

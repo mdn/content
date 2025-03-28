@@ -8,7 +8,7 @@ browser-compat: css.properties.transform
 {{CSSRef}}
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
-It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
+It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model).
 
 {{InteractiveExample("CSS Demo: transform")}}
 

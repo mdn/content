@@ -130,7 +130,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 
 This property can be used to set a margin on all four sides of an element. Margins create extra space _around_ an element, unlike {{cssxref("padding")}}, which creates extra space _within_ an element.
 
-The top and bottom margins have no effect on _non-[replaced](/en-US/docs/glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ### Horizontal centering
 

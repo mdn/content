@@ -12,7 +12,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 > [!NOTE]
 > This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
-The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the user-agent's full version string.
+The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the user-agent's full version string.
 
 <table class="properties">
   <tbody>
