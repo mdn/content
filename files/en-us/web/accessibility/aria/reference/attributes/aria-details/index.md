@@ -31,10 +31,11 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) role.
 
 ```html
-<p>The <strong>cubic-bezier()</strong> functional notation defines a cubic
-  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As
-  these curves are continuous, they are often used to smooth down the start and
-  end of the curve and are therefore sometimes called easing functions.
+<p>
+  The <strong>cubic-bezier()</strong> functional notation defines a cubic
+  <span role="term" aria-details="bezier bezImg">Bézier curve</span>. As these
+  curves are continuous, they are often used to smooth down the start and end of
+  the curve and are therefore sometimes called easing functions.
 </p>
 
 <p role="definition" id="bezier">A <strong>Bézier curve</strong>,
