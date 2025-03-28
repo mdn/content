@@ -266,7 +266,7 @@ function setEdgeTrim() {
 }
 ```
 
-In the last part of the JavaScript we run the `setEdgeTrim()` function once to set an initial state for the UI. We then then apply [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listeners to all of the `<select>` elements (via [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)) so that `setEdgeTrim()` is run whenever one of the `<select>` values changes to update the UI accordingly:
+In the last part of the JavaScript we run the `setEdgeTrim()` function once to set an initial state for the UI. We then apply [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listeners to all of the `<select>` elements (via [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)) so that `setEdgeTrim()` is run whenever one of the `<select>` values changes to update the UI accordingly:
 
 ```js
 setEdgeTrim();

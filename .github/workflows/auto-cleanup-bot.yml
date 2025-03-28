@@ -28,7 +28,7 @@ jobs:
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HUSKY: 0
+          LEFTHOOK: 0
 
       - name: Lint markdown files
         run: |

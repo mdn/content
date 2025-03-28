@@ -529,7 +529,7 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "reference"]
+              "enum": ["guide", "landing-page", "uri-scheme", "uri-component"]
             }
           }
         },

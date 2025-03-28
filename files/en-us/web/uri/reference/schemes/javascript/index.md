@@ -2,7 +2,7 @@
 title: "javascript: URLs"
 short-title: "javascript:"
 slug: Web/URI/Reference/Schemes/javascript
-page-type: reference
+page-type: uri-scheme
 spec-urls: https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-javascript:-url-special-case
 sidebar: urlsidebar
 ---
