@@ -8,7 +8,7 @@ browser-compat: api.SVGPathElement.getPathSegmentAtLength
 
 {{APIRef("SVG")}}
 
-The **`SVGPathElement.getPathSegmentAtLength()`** method returns the segment at a given distance along the path.
+The **`getPathSegmentAtLength()`** method of the {{domxref("SVGPathElement")}} interface returns the path segment at a given distance along the path.
 
 ## Syntax
 
