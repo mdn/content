@@ -43,6 +43,8 @@ The above text is a good indicator as to why we've put web forms into its own st
   - : This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.
 - [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : Here we look at some more advanced form styling techniques that need to be used when trying to deal with some of the more difficult-to-style form elements.
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized `<select>` elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual `<option>` element.
 - [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
   - : An introduction to the UI pseudo-classes enabling HTML form controls to be targeted based on their current state.
 

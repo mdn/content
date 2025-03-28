@@ -101,7 +101,7 @@ The pseudo-elements are related to form controls.
 - {{CSSxRef("::picker()")}}
   - : The picker part of an element, for example the drop-down picker of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 - {{CSSxRef("::picker-icon")}}
-  - : The picker icon inside form controls that have an icon associated with them. In the case of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), it selects the down-facing arrow on the inline-end side of the select {{htmlelement("button")}}.
+  - : The picker icon inside form controls that have an icon associated with them. In the case of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), it selects the arrow that points down when the select is closed.
 - {{CSSxRef("::placeholder")}}
   - : The placeholder text in an input field.
 

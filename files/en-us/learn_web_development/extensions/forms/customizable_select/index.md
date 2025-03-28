@@ -1,10 +1,11 @@
 ---
 title: Customizable select elements
+short-title: Customizable selects
 slug: Learn_web_development/Extensions/Forms/Customizable_select
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 
@@ -14,9 +15,11 @@ Traditionally it has been difficult to customize the look and feel of `<select>`
 
 Previously, the best available option — aside from using a custom JavaScript library — was to set an {{cssxref("appearance")}} value of `none` on the `<select>` element to strip away some of the OS-level styling, and then use CSS to customize the bits that can be styled. This technique is explained in [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
-Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS, which are fully customized in supporting browsers but fall back to "classic" selects in non-supporting browsers:
+Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS, which are fully customized in supporting browsers. This includes `<select>` and drop-down picker layout, color scheme, icons, font, transitions, positioning, markers to indicate the selected icon, and more.
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
+
+In addition, they provide a progressive enhancement on top of existing functionality, falling back to "classic" selects in non-supporting browsers.
 
 You'll find out how to build this example in the sections below.
 
@@ -43,7 +46,7 @@ In addition, the `<select>` element and its drop-down picker have the following 
 - They have an implicit anchor reference, meaning that the picker is automatically associated with the `<select>` element via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). The browser default styles position the picker relative to the button (the anchor) and you can customize this position as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor). The browser default styles also define some position-try fallbacks that reposition the picker if it is in danger of overflowing the viewport. Position try fallback are explained in [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
 > [!NOTE]
-> You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages listed above.
+> You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages for related features such as {{htmlelement("selectedcontent")}}, {{cssxref("::picker()", "::picker(select)")}}, and {{cssxref("::checkmark")}}.
 
 Let's look at all of the above features in action, by walking through the example shown at the top of the page.
 
@@ -272,7 +275,7 @@ Our example now renders like this:
 
 ## Adjusting the styling of the selected option contents inside the select button
 
-If you select any pet option from the last few live examples, you'll notice a problem — the pet icons cause the select button to increase in height, which also changes the position of the picker icon, and there is no spacing between the option icon and label — not a great look.
+If you select any pet option from the last few live examples, you'll notice a problem — the pet icons cause the select button to increase in height, which also changes the position of the picker icon, and there is no spacing between the option icon and label.
 
 This can be fixed by hiding the icon when it is contained inside `<selectedcontent>`, which represents the contents of the selected `<option>` as they appear inside the select button. In our example, it is hidden using {{cssxref("display", "display: none")}}:
 
@@ -394,9 +397,15 @@ The above sections have covered all the new functionality available in customiza
 - {{htmlelement("optgroup")}}
   - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
+## Next up
+
+In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.
+
 ## See also
 
 - {{htmlelement("select")}}, {{htmlelement("option")}}, {{htmlelement("optgroup")}}, {{htmlelement("label")}}, {{htmlelement("button")}}, {{htmlelement("selectedcontent")}}
 - {{cssxref("appearance")}}
 - {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::picker-icon")}}, {{cssxref("::checkmark")}}
 - {{cssxref(":open")}}, {{cssxref(":checked")}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}

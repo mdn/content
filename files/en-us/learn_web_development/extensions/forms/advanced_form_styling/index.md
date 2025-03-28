@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
 
 In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the more problematic bits.
 
@@ -514,11 +514,6 @@ It is easier to just create your own custom solution for these features, if you 
 
 While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.
 
-In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.
+In the next article of this module, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
-
-## See also
-
-- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
-  - : This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements.
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
