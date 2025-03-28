@@ -18,7 +18,7 @@ A {{domxref("TrustedHTML")}} object.
 
 ## Examples
 
-In the below example an empty string is to be inserted into the element. Therefore there is no need to create a policy, and the `emptyHTML` property can be used to insert the empty element when a Trusted Types object is expected.
+In this example, an empty string is to be inserted into the element. Therefore, there is no need to create a policy, and the `emptyHTML` property can be used to insert the empty element when a Trusted Types object is expected.
 
 ```js
 el.innerHTML = trustedTypes.emptyHTML;

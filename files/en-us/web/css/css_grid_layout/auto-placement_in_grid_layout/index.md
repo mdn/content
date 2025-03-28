@@ -275,7 +275,7 @@ Grid places items that have not been given a grid position in what is described 
 
 ### Items with placement properties
 
-The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don't start after the position of a placed item that comes before them.
+The first thing grid will do is place any items that have a position. In the example below, I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don't start after the position of a placed item that comes before them.
 
 ```css hidden
 body {
@@ -338,7 +338,7 @@ body {
 
 ### Deal with items that span tracks
 
-You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting items 1, 5, and 9 (4n+1) to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to `span 2`. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.
+You can use placement properties while still taking advantage of auto-placement. In this next example, I have added to the layout by setting items 1, 5, and 9 (4n+1) to span two tracks both for rows and columns. I do this with the {{cssxref("grid-column-end")}} and {{cssxref("grid-row-end")}} properties and setting the value of this to `span 2`. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.
 
 You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn't fit into a track, it will move to the next row until it finds a space the item can fit in.
 
@@ -493,7 +493,7 @@ Anonymous items are always auto-placed because there is no way to target them. T
 
 ### Use cases for auto-placement
 
-Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of `landscape` to span two column tracks. I then use `grid-auto-flow: dense` to create a densely packed grid.
+Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example, I have some landscape and some portrait images. I have set landscape images – with a class of `landscape` to span two column tracks. I then use `grid-auto-flow: dense` to create a densely packed grid.
 
 Try removing the line `grid-auto-flow: dense` to see the content reflow to leave gaps in the layout.
 

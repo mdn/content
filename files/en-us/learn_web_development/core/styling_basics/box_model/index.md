@@ -192,7 +192,7 @@ Making up a block box in CSS we have the:
 - **Border box**: The border box wraps the content and any padding; size it using {{cssxref("border")}} and related properties.
 - **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using {{cssxref("margin")}} and related properties.
 
-The below diagram shows these layers:
+The following diagram shows these layers:
 
 ![Diagram of the box model](box-model.png)
 

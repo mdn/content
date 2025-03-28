@@ -464,7 +464,7 @@ def book_detail_view(request, primary_key):
 
 ### Creating the Detail View template
 
-Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
+Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html** and populate it with the content below. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
 ```django
 {% extends "base_generic.html" %}
@@ -660,7 +660,7 @@ That's it!
 
 ### What does it look like?
 
-The screenshot below shows what the pagination looks like — if you haven't entered more than 10 titles into your database, then you can test it more easily by lowering the number specified in the `paginate_by` line in your **catalog/views.py** file. To get the below result we changed it to `paginate_by = 2`.
+The screenshot below shows what the pagination looks like — if you haven't entered more than 10 titles into your database, then you can test it more easily by lowering the number specified in the `paginate_by` line in your **catalog/views.py** file. To get the result as shown below, we changed it to `paginate_by = 2`.
 
 The pagination links are displayed on the bottom, with next/previous links being displayed depending on which page you're on.
 

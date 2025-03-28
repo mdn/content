@@ -16,7 +16,7 @@ An integer.
 
 ## Examples
 
-The below example prints the value of `numberOfChannels` to the console.
+The following example prints the value of `numberOfChannels` to the console:
 
 ```js
 console.log(AudioData.numberOfChannels);

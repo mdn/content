@@ -100,7 +100,7 @@ CSS positioning generally allows us to position an element in a manner relative 
 
 These properties take a length or a percentage as a value, and relate to the user's screen dimensions.
 
-In the below example, the `inset-block-start` and `inset-inline-end` properties are used to position the blue box using absolute positioning inside the area with the grey dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
+In the example below, the `inset-block-start` and `inset-inline-end` properties are used to position the blue box using absolute positioning inside the area with the grey dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
 
 ```html live-sample___positioning-inset
 <div class="container">
@@ -165,7 +165,7 @@ As with other properties in the module, we have shorthand properties which give 
 
 ## Example: Logical values for text-align
 
-The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using `left` and `right` you can use `start` and `end`. In the below example, `text-align: right` is set in the first block and `text-align: end` in the second.
+The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using `left` and `right` you can use `start` and `end`. In the example below, `text-align: right` is set in the first block and `text-align: end` in the second.
 
 If you change the value of `direction` to `rtl`, you will see that the alignment stays to the right for the first block, but goes to the logical end on the left in the second.
 

@@ -35,7 +35,7 @@ A {{domxref("TrustedHTML")}} object.
 
 ## Examples
 
-In the below example a string containing a potentially dangerous script is used as the input for `createHTML()`. Dangerous code inserted by a user could then be sanitized before insertion into any injection sink.
+In this example, a string containing a potentially dangerous script is used as the input for `createHTML()`. Dangerous code inserted by a user could then be sanitized before insertion into any injection sink.
 
 ```js
 const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");

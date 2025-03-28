@@ -16,7 +16,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Event attributes
 
 > [!NOTE]
-> Each of the below event attribute names is linked to its equivalent {{domxref("Window")}} interface event. You can listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) instead of adding the `oneventname` attribute to the `<body>` element.
+> Each of the event attribute names below is linked to its equivalent {{domxref("Window")}} interface event. You can listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) instead of adding the `oneventname` attribute to the `<body>` element.
 
 - [`onafterprint`](/en-US/docs/Web/API/Window/afterprint_event)
   - : Function to call after the user has printed the document.

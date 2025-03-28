@@ -18,7 +18,7 @@ One of either `"unspecified"`, `"inline"` or `"attachment"`.
 
 ## Examples
 
-In the below example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method, then logging the `presentationStyle` property.
+In this example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method, then logging the `presentationStyle` property.
 
 ```js
 async function getClipboardContents() {

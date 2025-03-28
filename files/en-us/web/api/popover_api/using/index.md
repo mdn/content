@@ -216,7 +216,7 @@ This is useful for situations where, for example, you have toolbar buttons that 
 
 See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show `auto` popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips (`hint` popovers) to give the user an idea of what each button does, which do not hide a currently-showing sub-menu.
 
-In the below sections, we'll walk through all the important parts of the code.
+In the sections below, we'll walk you through all the important parts of the code.
 
 > [!NOTE]
 > You _can_ use `hint` popovers alongside `manual` popovers, although there is not really much of a reason to. They are designed to circumvent some of the limitations of `auto` popovers, enabling use cases like the one detailed in this section.

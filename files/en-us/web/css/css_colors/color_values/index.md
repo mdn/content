@@ -264,7 +264,7 @@ hwb(90 10% 10% / 0.5)
 hwb(90 10% 10% / 50%)
 ```
 
-In the below examples, we set the same hues as in the `hsl()` examples, but we are adding whiteness and blackness to each hue via `hwb()` instead of saturation and lightness:
+In the examples below, we set the same hues as in the `hsl()` examples, but we are adding whiteness and blackness to each hue via `hwb()` instead of saturation and lightness:
 
 ```css hidden
 {/*end the bad selector*/}

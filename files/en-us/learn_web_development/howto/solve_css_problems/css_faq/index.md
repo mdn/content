@@ -230,7 +230,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
+When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity). Inline styles (in HTML `style` attributes) have the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the {{htmlelement("div")}} below will therefore be red.
 
 ```css
 div {

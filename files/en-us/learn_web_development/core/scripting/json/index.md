@@ -112,8 +112,8 @@ The key takeaway is that there's really nothing special about working with JSON;
 
 ### Arrays as JSON
 
-Above we mentioned that JSON text basically looks like a JavaScript object inside a string.
-We can also convert arrays to/from JSON. The below example is perfectly valid JSON:
+Above, we mentioned that JSON text resembles a JavaScript object inside a string.
+We can also convert arrays to/from JSON. The following example is perfectly valid JSON:
 
 ```json
 [

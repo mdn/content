@@ -18,7 +18,7 @@ First you need to embed the imscJS library:
 <script src="https://unpkg.com/imsc@1.1.0-beta.2/build/umd/imsc.all.min.js">
 ```
 
-Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the below sections.
+Once the imscJS library is loaded, it can be used to render an IMSC document in three distinct steps, explained in the sections below.
 
 ## Parsing the IMSC document
 
@@ -55,7 +55,7 @@ imsc.renderHTML(isd, renderDiv);
 
 ## Building an IMSC player
 
-Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
+Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example, we use the following video with subtitles:
 
 {{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 

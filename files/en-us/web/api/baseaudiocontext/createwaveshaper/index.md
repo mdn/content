@@ -39,7 +39,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 > [!NOTE]
 > Sigmoid functions are commonly used for distortion curves
 > because of their natural properties. Their S-shape, for instance, helps create a
-> smoother sounding result. We found the below distortion curve code on [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
+> smoother sounding result. We found the distortion curve code below on [Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
 ```js
 const audioCtx = new AudioContext();

@@ -16,7 +16,7 @@ An integer.
 
 ## Examples
 
-The below example prints the value of `duration` to the console.
+The following example prints the value of `duration` to the console:
 
 ```js
 console.log(AudioData.duration);

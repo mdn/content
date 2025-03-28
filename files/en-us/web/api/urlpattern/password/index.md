@@ -21,9 +21,8 @@ A string.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with
-`correct-horse-battery{-staple}?` for the `password` part. This pattern matches
-the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
+This example creates a {{domxref("URLPattern")}} object with `correct-horse-battery{-staple}?` for the `password` part.
+This pattern matches the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
 
 ```js
 const pattern = new URLPattern({ password: "correct-horse-battery{-staple}?" });

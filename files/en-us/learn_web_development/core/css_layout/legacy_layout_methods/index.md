@@ -42,7 +42,7 @@ It is worth bearing in mind, as we explore these systems, that none of them actu
 
 ## A two column layout
 
-Let's start with the simplest possible example — a two column layout. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section you can see a live example of what the final code should look like.
+Let's start with the simplest possible example — a two column layout. You can follow along by creating a new `index.html` file on your computer, filling it with a [simple HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the code below into it at the appropriate places. At the bottom of the section you can see a live example of what the final code should look like.
 
 First of all, we need some content to put into our columns. Replace whatever is inside the body currently with the following:
 

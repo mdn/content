@@ -181,7 +181,7 @@ Above all, it is up to you to find a comfortable coding style that results in ac
 
 ### Active learning: building a form structure
 
-Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
+Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the instructions below, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) in a new directory on your computer.
 

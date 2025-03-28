@@ -76,7 +76,7 @@ img
 
 ### Avoiding empty images
 
-In the below example, you'll likely get an empty image shown on the page as the image is downloaded:
+In this example, you'll likely get an empty image shown on the page as the image is downloaded:
 
 ```js
 const img = new Image();

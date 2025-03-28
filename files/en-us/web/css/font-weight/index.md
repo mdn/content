@@ -125,7 +125,7 @@ If the exact weight given is unavailable, then the following rule is used to det
 
 ### Meaning of relative weights
 
-When `lighter` or `bolder` is specified, the below chart shows how the absolute font weight of the element is determined.
+When `lighter` or `bolder` is specified, the chart below shows how the absolute font weight of the element is determined.
 
 Note that when using relative weights, only four font weights are considered — thin (100), normal (400), bold (700), and heavy (900). If a font family has more weights available, they are ignored for the purposes of relative weight calculation.
 

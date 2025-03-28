@@ -20,7 +20,7 @@ The value of a `TrustedHTML` object is set when the object is created and cannot
 
 ## Examples
 
-In the below example we create a policy that will create `TrustedHTML` objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML()")}} to create a sanitized HTML string to be inserted into the document.
+In this example, we create a policy that will create `TrustedHTML` objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML()")}} to create a sanitized HTML string to be inserted into the document.
 
 The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.
 

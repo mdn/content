@@ -62,7 +62,7 @@ A typical (simple) WebVR app works like this:
 3. WebVR's dedicated {{domxref("VRDisplay.requestAnimationFrame()")}} method is used to run the app's rendering loop at the correct refresh rate for the display.
 4. Inside the rendering loop, you grab the data required to display the current frame ({{domxref("VRDisplay.getFrameData()")}}), draw the displayed scene twice — once for the view in each eye — then submit the rendered view to the display to show to the user via ({{domxref("VRDisplay.submitFrame()")}}).
 
-In the below sections we'll look at our raw-webgl-demo in detail, and see where exactly the above features are used.
+In the sections that follow, we'll look at our raw-webgl-demo in detail, and see where exactly the above features are used.
 
 ### Starting with some variables
 

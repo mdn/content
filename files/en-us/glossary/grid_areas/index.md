@@ -14,7 +14,7 @@ Grid areas _must_ be rectangular in nature; it is not possible to create, for ex
 
 ## Example
 
-In the example below I have a grid container with two grid items. I have named these with the {{cssxref("grid-area")}} property and then laid them out on the grid using {{cssxref("grid-template-areas")}}. This creates two grid areas, one covering four grid cells, the other two.
+In the example below, I have a grid container with two grid items. I have named these with the {{cssxref("grid-area")}} property and then laid them out on the grid using {{cssxref("grid-template-areas")}}. This creates two grid areas, one covering four grid cells, the other two.
 
 ```css hidden
 * {

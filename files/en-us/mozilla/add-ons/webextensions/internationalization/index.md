@@ -45,7 +45,7 @@ An internationalized extension can contain the same features as any other extens
 
     - locale-dependent CSS
 
-Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.
+Let's explore each of the new features in turn — each of the sections below represents a step to follow when internationalizing your extension.
 
 ## Providing localized strings in \_locales
 

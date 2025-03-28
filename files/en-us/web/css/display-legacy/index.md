@@ -48,7 +48,7 @@ Valid `<display-legacy>` values:
 
 ## Examples
 
-In the below example, we are creating an inline flex container with the legacy keyword inline-flex.
+In this example, we are creating an inline flex container with the legacy keyword inline-flex.
 
 ### HTML
 

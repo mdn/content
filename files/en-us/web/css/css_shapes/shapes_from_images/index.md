@@ -131,7 +131,7 @@ img {
 
 In the above example, I have both used the image as the value of {{cssxref("shape-outside")}} and also added it to the page. Many demos do this as it helps to show the shape we are following, however, the `shape-outside` property is not related to the image that is displayed on the page and so you do not need to display an image to use an image to create a shape.
 
-You do need something to float, but that could be some generated content as in the below example. I am floating generated content and using a larger star image to shape my content without displaying any image on the page.
+You do need something to float, but that could be some generated content, as shown in the example below. I am floating generated content and using a larger star image to shape my content without displaying any image on the page.
 
 ```html live-sample___generated-content
 <div class="box">

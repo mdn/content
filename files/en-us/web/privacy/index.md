@@ -106,7 +106,7 @@ Browsers have implemented several anti-tracking features that automatically enha
 
 ## Privacy considerations for client-side developers
 
-There are several actions web developers can and should take to improve privacy for their users. The below sections discuss the most important ones. Some of the categories are not purely technical tasks as such and will involve collaboration with other team members.
+There are several actions web developers can and should take to improve privacy for their users. The sections below discuss the most important ones. Some of the categories are not purely technical tasks and will involve collaboration with other team members.
 
 ## Collect data ethically
 
@@ -208,7 +208,7 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 
 You need to make sure that user data is transmitted and stored securely once you've collected it. This is more of a [security](/en-US/docs/Web/Security) topic, but it is worth mentioning here — a good privacy policy is useless if your security is lax and attackers can steal the data from you.
 
-The below tips offer some guidance on protecting your user's data:
+The following tips offer some guidance on protecting your user's data:
 
 - Security is hard to get right. When implementing a secure solution that involves data collection — particularly if it is sensitive data such as sign-in credentials — it makes sense to use a reputable solution from a well-respected provider. For example, any respectable server-side framework will have built-in features to protect against common vulnerabilities. You could also consider using a specialized product for your purpose — for example an identity provider solution, or a secure online survey provider.
 - If you want to roll out your own solution for collecting user data, make sure you understand what you are doing. Hire an experienced server-side developer and/or security engineer to implement the system, and ensure it is tested thoroughly. Use multifactor authentication (MFA) to provide better protection. Consider using a dedicated API such as [Web Authentication](/en-US/docs/Web/API/Web_Authentication_API) or [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) to streamline the client-side of the app.

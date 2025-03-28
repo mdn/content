@@ -102,7 +102,7 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 - The controls HTML is probably the most interesting:
 
   - We have four {{htmlelement("button")}}s — play/pause, stop, rewind, and fast forward.
-  - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the below section), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screen readers when their users focus on the elements that contain them.
+  - Each `<button>` has a `class` name, a `data-icon` attribute for defining what icon should be shown on each button (we'll show how this works in the section below), and an `aria-label` attribute to provide an understandable description of each button, since we're not providing a human-readable label inside the tags. The contents of `aria-label` attributes are read out by screen readers when their users focus on the elements that contain them.
   - There is also a timer {{htmlelement("div")}}, which will report the elapsed time when the video is playing. Just for fun, we are providing two reporting mechanisms — a {{htmlelement("span")}} containing the elapsed time in minutes and seconds, and an extra `<div>` that we will use to create a horizontal indicator bar that gets longer as the time elapses. To get an idea of what the finished product will look like, [check out our finished version](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### Exploring the CSS

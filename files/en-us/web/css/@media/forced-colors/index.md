@@ -78,7 +78,7 @@ This media feature is active only if the user has enabled color scheme preferenc
 ## Examples
 
 > [!NOTE]
-> The below example will only work when using a browser that supports this media feature, and with a preference such as High Contrast mode enabled in your OS.
+> The example below will work only in browsers that support this media feature and when a preference such as High Contrast mode is enabled in your OS.
 
 This example is a button that normally gets its contrast via {{cssxref("box-shadow")}}. Under forced colors mode, box-shadow is forced to none, so the example uses the forced-colors media feature to ensure there is a border of the appropriate color (ButtonText in this case)
 

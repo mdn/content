@@ -21,9 +21,8 @@ A string.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with
-`(80|443|8080)` for the `port` part. This pattern matches the port `80`, `443`,
-and `8080`.
+This example creates a {{domxref("URLPattern")}} object with `(80|443|8080)` for the `port` part.
+This pattern matches the port `80`, `443`, and `8080`.
 
 ```js
 const pattern = new URLPattern({ port: "(80|443|8080)" });

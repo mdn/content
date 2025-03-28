@@ -13,14 +13,14 @@ An `AudioParamMap` instance is a read-only [`Map`-like object](/en-US/docs/Web/J
 
 ## Instance properties
 
-The following methods are available to all read-only [`Map`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) (the below links are to the {{jsxref("Map")}} global object reference page).
+The following methods are available to all read-only [`Map`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) (the links below are to the {{jsxref("Map")}} global object reference page).
 
 - {{jsxref("Map/size", "size")}}
   - : Returns the number of entries in the map.
 
 ## Instance methods
 
-The following methods are available to all read-only [`Map`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) (the below links are to the {{jsxref("Map")}} global object reference page).
+The following methods are available to all read-only [`Map`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) (the links below are to the {{jsxref("Map")}} global object reference page).
 
 - {{jsxref("Map/entries", "entries()")}}
   - : Returns a new [iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields entries in `[key, value]` pairs in the map in insertion order.

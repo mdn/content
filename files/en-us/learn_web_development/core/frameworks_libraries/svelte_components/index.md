@@ -140,7 +140,7 @@ We'll begin by creating our `FilterButton.svelte`.
    import FilterButton from "./FilterButton.svelte";
    ```
 
-4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
+4. Now replace the `<div class="filters...` element with a call to the `FilterButton` component, which takes the current filter as a prop. The following line is all you need:
 
    ```svelte
    <FilterButton {filter} />

@@ -508,7 +508,7 @@ You can omit the end value if the area only spans one track.
 
 ## Grid cells
 
-A _grid cell_ is the smallest unit on a grid. Conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. In the below image, the first cell of the grid is highlighted.
+A _grid cell_ is the smallest unit on a grid. Conceptually, it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent, the child items will each occupy one cell in the defined grid. In the image below, the first cell of the grid is highlighted.
 
 ![The first cell of the grid highlighted](1_grid_cell.png)
 
@@ -520,7 +520,7 @@ Items can span one or more cells both by row or by column, and this creates a _g
 
 ## Gutters
 
-_Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties, or the shorthand {{cssxref("gap")}}. In the below example, we add a 10-pixel gap between columns and a `1em` gap between rows.
+_Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties, or the shorthand {{cssxref("gap")}}. In the following example, we add a 10-pixel gap between columns and a `1em` gap between rows:
 
 ```css
 .wrapper {

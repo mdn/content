@@ -363,11 +363,11 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 </aside>
 ```
 
-To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Element/aside) info panel. In the below sections we'll explain how this all works.
+To start with, we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Element/aside) info panel. In the following sections, we'll explain how this all works.
 
 ### Styling the button
 
-First let's deal with the button — add the following CSS in between your {{htmlelement("style")}} tags:
+First, let's deal with the button. Add the following CSS in between your {{htmlelement("style")}} tags:
 
 ```css
 #menu-button {

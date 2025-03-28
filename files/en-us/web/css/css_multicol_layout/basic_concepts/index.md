@@ -36,7 +36,7 @@ By adding the `column-count` or the `column-width` property to an element, or us
 
 The `column-count` property specifies the number of columns that you would like the content to be displayed as. The browser will then assign the correct amount of space to each column box to create the requested number of columns.
 
-In the below example, we use the `column-count` property to create three columns on the `.container` element. The content, including the children of `.container`, is then split between the three columns.
+In the example below, we use the `column-count` property to create three columns on the `.container` element. The content, including the children of `.container`, is then split between the three columns.
 
 ```html live-sample___column-count
 <div class="container">

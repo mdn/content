@@ -192,7 +192,7 @@ CSS provides additional hyphenation control: the {{cssxref("hyphenate-limit-char
 
 If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.
 
-In the below example the text breaks in the location of the {{HTMLElement("wbr")}}.
+In the following example, the text breaks in the location of the {{HTMLElement("wbr")}}:
 
 ```html live-sample___wbr
 <div class="box">

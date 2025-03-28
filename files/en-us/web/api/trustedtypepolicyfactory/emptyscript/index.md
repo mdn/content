@@ -20,7 +20,7 @@ A {{domxref("TrustedScript")}} object.
 
 The [specification](https://w3c.github.io/trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript) explains that the `emptyScript` object can be used to detect support for dynamic code compilation.
 
-Native Trusted Types implementations can support `eval(TrustedScript)`, therefore in the below example a native implementation will return false for `eval(trustedTypes.emptyScript)`. A polyfill will return a truthy object.
+Native Trusted Types implementations can support `eval(TrustedScript)`, so in the example below, a native implementation will return `false` for `eval(trustedTypes.emptyScript)`. A polyfill will return a truthy object.
 
 ```js
 const supportsTS = !eval(trustedTypes.emptyScript);

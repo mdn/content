@@ -72,7 +72,7 @@ function update() {
 }
 ```
 
-The first parameter is one of the objects we are interested in — the ball — and the second is the other one, the paddle. This works, but not quite as we expected it to — when the ball hits the paddle, the paddle falls off the screen! All we want is the ball bouncing off the paddle and the paddle staying in the same place. We can set the `body` of the paddle to be `immovable`, so it won't move when the ball hits it. To do this, add the below line at the bottom of the `create()` function:
+The first parameter is one of the objects we are interested in — the ball — and the second is the other one, the paddle. This works, but not quite as we expected it to — when the ball hits the paddle, the paddle falls off the screen! All we want is the ball bouncing off the paddle and the paddle staying in the same place. We can set the `body` of the paddle to be `immovable`, so it won't move when the ball hits it. To do this, add the following line at the bottom of the `create()` function:
 
 ```js
 paddle.body.immovable = true;

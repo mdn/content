@@ -40,7 +40,7 @@ Below is a list of interfaces based on the `FileSystemHandle` interface.
 
 ### Checking Type
 
-The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory
+The following code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory:
 
 ```js
 // store a reference to our file handle
