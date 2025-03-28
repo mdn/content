@@ -12,6 +12,9 @@ page-type: guide
 
 Compression algorithms are used in HTTP to reduce the size of resources downloaded over the network, reducing bandwidth cost and the time taken to load pages. Lossless HTTP compression algorithms work by finding redundancy in the source: for example, places where text like the string `"function"` is repeated. They then include just one copy of the redundant string, and replace occurrences of it in the resource with references to that copy. Since the references are shorter than the string, the compressed version is shorter.
 
+> [!NOTE]
+> A previous attempt at this technology was called SDCH (Shared Dictionary Compression for HTTP) but was never widely supported and was removed in 2017. Compression Dictionary Transport is a better specified and more robust implementation with broader industry consensus.
+
 For example, take this JavaScript:
 
 ```javascript
