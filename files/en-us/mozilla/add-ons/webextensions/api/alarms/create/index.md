@@ -52,7 +52,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Create a one-time delay-based alarm with "" for the name:
 
 ```js
-function onAddad() {
+function onAdded() {
   console.log("Alarm Added!");
 }
 
@@ -61,7 +61,7 @@ let delayInMinutes = 5;
 let addingAlarm = browser.alarms.create({
   delayInMinutes,
 });
-addingAlarm.then(onAddad);
+addingAlarm.then(onAdded);
 ```
 
 Create a periodic delay-based alarm named "my-periodic-alarm":
