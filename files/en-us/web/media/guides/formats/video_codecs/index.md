@@ -305,7 +305,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="moire-pattern.jpg"><img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" /></a>
+        <img alt="a brick wall showing swirling effect similar to waves due to the moire pattern" src="moire-pattern.jpg" />
       </td>
     </tr>
     <tr>
@@ -320,11 +320,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="staircase-effect.jpg"
-          ><img alt="
-          Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect
-          " src="staircase-effect.jpg"
-        /></a>
+        <img alt="Photo of diagonal lines that look like a staircase due to aliasing causing a staircase effect" src="staircase-effect.jpg" />
       </td>
     </tr>
     <tr>
@@ -345,9 +341,7 @@ Aliasing is a general term for anything that upon being reconstructed from the e
         </p>
       </td>
       <td>
-        <a href="stroboscopic-effect.gif"
-          ><img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif"
-        /></a>
+        <img alt="Turning wheel due to aliasing causing a wagon wheel effect." src="stroboscopic-effect.gif" />
       </td>
     </tr>
   </tbody>

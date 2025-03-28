@@ -69,9 +69,21 @@ This article provides information about the changes in Firefox 137 that affect d
 
 #### General
 
+- Input sources of type `mouse` and `touch` now support fractional numbers for x and y positions for the `pointerMove` action ([Firefox bug 1946774](https://bugzil.la/1946774)).
+
 #### WebDriver BiDi
 
+- Implemented new `webExtension.install` ([Firefox bug 1934551](https://bugzil.la/1934551)) and `webExtension.uninstall` ([Firefox bug 1934553](https://bugzil.la/1934553)) commands, enabling clients to install and uninstall web extensions in the browser.
+- Added support for `userContexts` argument to `sessions.subscribe` command, which allows clients subscribing to a list of user contexts (also known as Firefox containers)
+  ([Firefox bug 1938604](https://bugzil.la/1938604)).
+- `script.addPreloadScript` command is updated to throw an `invalid argument` error when both `contexts` and `userContexts` arguments are provided ([Firefox bug 1945554](https://bugzil.la/1945554)).
+- `browsingContext.navigate` command will not return immediately anymore when `wait` argument equals `none` and beforeunload prompt opens. That's the first step of updating the logic behind `wait` argument equals `none` ([Firefox bug 1948700](https://bugzil.la/1948700)).
+
 #### Marionette
+
+- From now on, a `javascript error` from a syntax error raised by script evaluation will contain line and column number ([Firefox bug 1865146](https://bugzil.la/1865146)).
+- Performing actions with async events enabled will not fail anymore with a `Cyclic object value` error message ([Firefox bug 1947112](https://bugzil.la/1947112)).
+  Async events were enabled since Firefox 135. See more details in [the release notes](/en-US/docs/Mozilla/Firefox/Releases/135#webdriver_conformance_webdriver_bidi_marionette).
 
 ## Changes for add-on developers
 

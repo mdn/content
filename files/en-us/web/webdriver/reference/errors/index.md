@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: webdriver
 ---
 
-Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
+Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
 
@@ -26,7 +26,7 @@ The **error object** is a JSON Object that bears three, and sometimes four, fiel
 
 ## Example
 
-For example a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to `/session/1234/url`, where `1234` is a bogus session, would return a response with the {{HTTPStatus(404, "404 Not Found")}} status and the following body:
+For example a [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request to `/session/1234/url`, where `1234` is a bogus session, would return a response with the {{HTTPStatus(404, "404 Not Found")}} status and the following body:
 
 ```json
 {

@@ -38,7 +38,7 @@ That is, the API enables you to define your policy in one place and then be assu
 The API has two main parts:
 
 - A JavaScript API enables a developer to sanitize data before passing it to an injection sink.
-- Two [CSP](/en-US/docs/Web/HTTP/CSP) directives enforce and control the usage of the JavaScript API.
+- Two [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives enforce and control the usage of the JavaScript API.
 
 ### The Trusted Types JavaScript API
 
@@ -75,7 +75,7 @@ element.innerHTML = trustedHTML;
 
 The API described above enables you to sanitize data, but it doesn't ensure that your code never passes input directly to an injection sink: that is, it doesn't stop you passing a string into `innerHTML`.
 
-In order to enforce that a trusted type must always be passed, you include the {{CSP("require-trusted-types-for")}} directive in your [CSP](/en-US/docs/Web/HTTP/CSP).
+In order to enforce that a trusted type must always be passed, you include the {{CSP("require-trusted-types-for")}} directive in your [CSP](/en-US/docs/Web/HTTP/Guides/CSP).
 With this directive set, passing strings into injection sinks will result in a `TypeError` exception:
 
 ```js example-bad
