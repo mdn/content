@@ -99,3 +99,4 @@ Inherits from roles:
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+- {{domxref("Element.ariaErrorMessageElements")}} and {{domxref("ElementInternals.ariaErrorMessageElements")}}

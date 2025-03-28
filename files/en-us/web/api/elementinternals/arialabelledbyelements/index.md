@@ -22,7 +22,7 @@ An array of elements that provide the accessible name.
 
 ## Examples
 
-### Get the accessible name from other elements
+### Get the accessible name
 
 This example shows how `ariaLabelledByElements` can be used to programmatically get a label defined using `aria-labelledby` within the shadow root.
 
@@ -97,7 +97,7 @@ if ("ariaLabelledByElements" in ElementInternals.prototype) {
 The log below shows the output of the above code.
 This should show the array of referenced {{domxref("HTMLSpanElement")}} elements, and the resulting accessible name from their inner text.
 
-{{EmbedLiveSample("Get the accessible name from other elements","100%","150px")}}
+{{EmbedLiveSample("Get the accessible name","100%","150px")}}
 
 <!-- Below is test code - shows that ariaLabelledByElements isn't picking up the label that is assigned outside the shadow
 Not sure how relevant this is. Asking -->
