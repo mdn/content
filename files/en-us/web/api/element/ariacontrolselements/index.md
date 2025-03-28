@@ -242,9 +242,9 @@ function logAccessibleInfo(element) {
 
 If `ariaControlsElements` is supported, the code then:
 
-1. Logs the original `id` reference from `aria-controls`, the corresponding `ariaControlsElements`, and the element's text content.
-2. Sets the `ariaControlsElements` property to be just the `panel2` element and logs the same information.
-3. Sets the `aria-controls` attribute to the reference `id` string of `panel1 panel3 panel2` and logs the same information (note that "panel3" is an invalid reference).
+1. Logs the original ids, elements, and element text, as set from the HTML
+2. Sets the property to be just the `panel2` element and logs the same information.
+3. Sets the attribute to the reference `id` string of `panel1 panel3 panel2` and logs the same information (note that "panel3" is an invalid reference).
 
 ```js
 // Feature test for ariaControlsElements
@@ -266,15 +266,13 @@ if ("ariaControlsElements" in Element.prototype) {
 
 #### Result
 
-The log below shows the output of the above code.
+The log below shows the output of the above code:
+
+- Line [1] demonstrates that the property reflects the references set in the HTML attribute.
+- Line [2] demonstrates that setting the property clears the attribute to `""`.
+- Line [3] demonstrates that invalid references in the attribute are omitted from the property.
 
 {{EmbedLiveSample("Set the controlled elements","100%","400px")}}
-
-Note:
-
-- Line [1] Logs the original `id` reference from `aria-describedby`, the corresponding `ariaDescribedByElements`, and the element's text content.
-- Line [2] demonstrates that the `ariaControlsElements` property can be set using either the property or a valid reference in the `aria-controls` attribute, and that setting the `ariaControlsElements` property sets the `aria-controls` attribute to `""`.
-- Line [3] shows that when we set three references in the attribute and one is invalid (`panel3`), then we only get the two valid elements in `ariaControlsElements`.
 
 ## Specifications
 

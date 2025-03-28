@@ -99,7 +99,7 @@ if ("ariaDescribedByElements" in Element.prototype) {
   const buttonElements = buttonElement.ariaDescribedByElements;
   log(`ariaDescribedByElements: ${buttonElements}`);
 
-  // Accessible name from ariaDescribedByElements
+  // Accessible description from the elements
   let ariaDescription = "";
   buttonElements.forEach((descElement) => {
     ariaDescription += descElement.textContent.trim() + " ";
@@ -158,7 +158,7 @@ span {
 
 #### JavaScript
 
-The code first defines a logging function to list the ids from the `aria-describedby` attribute using {{domxref("Element.getAttribute()")}}, the aria labelled elements from `ariaDescribedByElements`, and the accessible name constructed from the inner text of each of those elements.
+The code first defines a logging function to list the ids from the `aria-describedby` attribute using {{domxref("Element.getAttribute()")}}, the elements from `ariaDescribedByElements`, and the accessible description constructed from the inner text of each of those elements.
 
 ```js hidden
 const logElement = document.querySelector("#log");
@@ -174,8 +174,8 @@ function logAccessibleInfo(element) {
 
   let text = "";
   accessibleElements = element.ariaDescribedByElements;
-  accessibleElements.forEach((descElement) => {
-    text += descElement.textContent.trim() + " ";
+  accessibleElements.forEach((elem) => {
+    text += elem.textContent.trim() + " ";
   });
   text = text.trim();
 
@@ -185,8 +185,8 @@ function logAccessibleInfo(element) {
 
 Next the code checks if `ariaDescribedByElements` is supported, and if so:
 
-1. Logs the original `id` reference from `aria-describedby`, the corresponding `ariaDescribedByElements`, and the element's text content.
-2. Sets the `ariaDescribedByElements` property to be the `<span>` elements and logs the same information.
+1. Logs the original ids, elements, and element text, as set from the HTML
+2. Sets the property by selecting the `<span>` elements and logs the same information (shows that the attribute is cleared if you set the property).
    Note that here we don't have to specify the `id` values, as we did in the attribute!
 3. Sets the `aria-describedby` attribute to the reference `id` string of `trash-desc1 trash-desc3 trash-desc2` and logs the same information.
 
@@ -215,15 +215,13 @@ if ("ariaDescribedByElements" in Element.prototype) {
 
 #### Result
 
-The log below shows the output of the above code.
+The log below shows the output of the above code:
+
+- Line [1] demonstrates that the property reflects the references set in the HTML attribute.
+- Line [2] demonstrates that setting the property clears the attribute to `""`.
+- Line [3] demonstrates that invalid references in the attribute are omitted from the property.
 
 {{EmbedLiveSample("Set the accessible description","100%","350px")}}
-
-Note:
-
-- Line [1] shows that `ariaDescribedByElements` property can be set using a reference in the `aria-describedby` attribute.
-- Line [2] demonstrates that `ariaDescribedByElements` property can be set using property, and that this sets the `aria-describedby` attribute to `""`.
-- Line [3] shows that when we set three references in the attribute and one is invalid (`trash-desc3`), then we only get two elements in `ariaDescribedByElements`.
 
 ## Specifications
 

@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaLabelledByElements
 
 {{APIRef("DOM")}}
 
-The **`ariaDescribedByElements`** property of the {{domxref("Element")}} interface identifies the element (or elements) that provide an accessible name for the element it is applied to.
+The **`ariaLabelledByElements`** property of the {{domxref("Element")}} interface identifies the element (or elements) that provide an accessible name for the element it is applied to.
 
 The property is primarily intended to provide a label for elements that don't have a standard method for defining their accessible name.
 For example, this might be used to name a generic container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}}, or a grouping of elements, such as an image with a slider that can be used to change its opacity.
@@ -141,7 +141,7 @@ The accessible name of the `<input>` is then the concatenation of the inner text
 
 #### JavaScript
 
-The code first defines a logging function to list the ids from the `aria-labelledby` attribute using {{domxref("Element.getAttribute()")}}, the aria labelled elements from `ariaLabelledByElements`, and the accessible name constructed from the inner text of each of those elements.
+The code first defines a logging function to list the ids from the `aria-labelledby` attribute using {{domxref("Element.getAttribute()")}}, the elements from `ariaLabelledByElements`, and the accessible name constructed from the inner text of each of those elements.
 
 ```js
 function logAccessibleInfo(element) {
@@ -160,8 +160,9 @@ function logAccessibleInfo(element) {
 
 If `ariaLabelledByElements` is supported, the code:
 
-1. Logs the original `id` reference from `aria-labelledby`, the corresponding `ariaLabelledByElements`, and the element's text content.
-2. Sets the `ariaLabelledByElements` property to be the `<span>` elements and logs the same information.
+1. Logs the original ids, elements, and element text, as set from the HTML (shows that properties are reflected)
+2. Sets the property by selecting the `<span>` elements and logs the same information (shows that the attribute is cleared if you set the property).
+   Note that here we don't have to specify the `id` values, as we did in the attribute!
 3. Sets the `aria-labelledby` attribute to the reference `id` string of `label_1 label_4 label_3` and logs the same information.
 
 ```js hidden
@@ -194,15 +195,13 @@ if ("ariaLabelledByElements" in Element.prototype) {
 
 #### Result
 
-The log below shows the output of the above code.
+The log below shows the output of the above code:
+
+- Line [1] demonstrates that the property reflects the references set in the HTML attribute.
+- Line [2] demonstrates that setting the property clears the attribute to `""`.
+- Line [3] demonstrates that invalid references in the attribute are omitted from the property.
 
 {{EmbedLiveSample("Set the accessible name","100%","350px")}}
-
-Note:
-
-- Line [1] Logs the original `id` reference from `aria-labelledby`, the corresponding `ariaLabelledByElements`, and the element's text content.
-- Line [2] demonstrates that `ariaLabelledByElements` property can be set using either the property or a valid reference in the `aria-labelledby` attribute, and that setting the `ariaLabelledByElements` property sets the `aria-labelledby` attribute to `""`.
-- Line [3] shows what happens when you set three reference `id` values in the attribute, but one of them is invalid (`label_4`).
 
 ## Specifications
 
