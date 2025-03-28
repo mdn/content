@@ -9,7 +9,7 @@ browser-compat: api.SubtleCrypto.digest
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}
-interface generates a _digest_ of the given data, using the specified {{glossary("Hash", "hash function")}}. A digest is a short
+interface generates a _digest_ of the given data, using the specified {{glossary("hash function")}}. A digest is a short
 fixed-length value derived from some variable-length input. Cryptographic digests should
 exhibit collision-resistance, meaning that it's hard to come up with two different
 inputs that have the same digest value.
@@ -42,7 +42,7 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 
 ## Supported algorithms
 
-Digest algorithms, also known as {{glossary("Hash", "hash functions")}},
+Digest algorithms, also known as {{glossary("Hash function", "hash functions")}},
 transform an arbitrarily large block of data into a fixed-size output,
 usually much shorter than the input. They have a variety of applications in
 cryptography.

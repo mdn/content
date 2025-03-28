@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In cryptography, **salt** is random data added to a password before it is {{glossary("hash", "hashed")}}. This makes it impossible for an attacker to derive passwords from their hashes using precomputed tables of passwords and the corresponding hashes.
+In cryptography, **salt** is random data added to a password before it is {{glossary("hash function", "hashed")}}. This makes it impossible for an attacker to derive passwords from their hashes using precomputed tables of passwords and the corresponding hashes.
 
 Passwords should never be stored in their plaintext form, because of the risk that an attacker might break into the database where they are stored. Typically, the password is hashed, and the resulting hash is stored. If the hash function is cryptographically secure, then even if an attacker can get access to the stored hashes, it is impractical for them to reverse the function.
 

@@ -1,6 +1,6 @@
 ---
 title: Hash function
-slug: Glossary/Hash
+slug: Glossary/Hash_function
 page-type: glossary-definition
 ---
 

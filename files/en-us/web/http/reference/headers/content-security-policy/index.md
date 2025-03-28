@@ -215,7 +215,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
-- The hash value is the base64-encoded {{glossary("hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
+- The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
 
 For example:
 

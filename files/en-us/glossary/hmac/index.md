@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 **Hash-based message authentication code**(_HMAC_) is a mechanism used for {{Glossary("cryptography", "cryptographically")}} authenticating messages.
 
-It can use any kind of {{Glossary("Hash", "cryptographic hash function")}}. Its strength depends on the underlying hash function and the chosen secret key. With such a combination, the HMAC verification {{Glossary("Algorithm", "algorithm")}} is then known with a compound name such as HMAC-SHA2.
+It can use any kind of {{Glossary("Hash function", "cryptographic hash function")}}. Its strength depends on the underlying hash function and the chosen secret key. With such a combination, the HMAC verification {{Glossary("Algorithm", "algorithm")}} is then known with a compound name such as HMAC-SHA2.
 
 HMAC is used to ensure both integrity and authentication.
 
