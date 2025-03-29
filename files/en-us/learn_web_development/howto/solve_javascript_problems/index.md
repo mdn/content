@@ -143,7 +143,7 @@ const myObject = {
 - [How do you log a value to the JavaScript console?](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#the_console_api)
 - [How do you use breakpoints and other JavaScript debugging features?](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#using_the_javascript_debugger)
 
-For more information on JavaScript debugging, see [Handling common JavaScript problems](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript). Also, see [Other common errors](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong#other_common_errors) for a description of common errors.
+For more information on JavaScript debugging, see [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript). Also, see [Other common errors](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong#other_common_errors) for a description of common errors.
 
 ### Making decisions in code
 
