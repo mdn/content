@@ -114,8 +114,7 @@ If no packages are available on your Linux distributions, or if you just want to
 
 You must use the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/).
 
-> [!NOTE]
-> Noto Sans Math provides good Unicode coverage for math symbols and [Google plans to add support for math layout features](https://github.com/notofonts/math/issues/14#issuecomment-1161414446).
+Noto Sans Math provides good Unicode coverage for math symbols and [math layout](https://github.com/notofonts/math/blob/main/documentation/building-math-fonts/index.md).
 
 ### Other systems
 
