@@ -9,21 +9,32 @@ browser-compat: http.headers.Use-As-Dictionary
 
 The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 
+See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
+
+## Syntax
+
+```http
+Use-As-Dictionary: match="<urlpattern>"
+Use-As-Dictionary: match-dest=("<destination1>" "<destination2>", …)
+Use-As-Dictionary: id="<string-identifier>"
+Use-As-Dictionary: type="raw"
+
+// Multiple, in any order
+Content-Encoding: match="<urlpattern>", match-dest=("<destination1>")
+```
+
 ## Directives
 
 - `match`
   - : A string value containing a [URL Pattern](/en-US/docs/Web/API/URL_Pattern_API): only resources whose URLs match this pattern may use this resource as a dictionary.
 - `match-dest`
-  - : An [Inner List of String values](https://www.rfc-editor.org/rfc/rfc8941#name-inner-lists) that provides a list of [Fetch request destinations](/docs/Web/API/Request/destination) for the dictionary to match.
+  - : A space-separated list of strings, with each string in quotres and the whole value enclosed in parentheses, that provides a list of [Fetch request destinations](/docs/Web/API/Request/destination) for the dictionary to match.
 - `id`
-  - : A string value that specifies a server identifier for the dictionary. This ID value will then be added in the  {{HTTPHeader("Dictionary-ID")}} request header when the browser requests a resource which can use this dictionary.
+  - : A string value that specifies a server identifier for the dictionary. This ID value will then be added in the {{HTTPHeader("Dictionary-ID")}} request header when the browser requests a resource which can use this dictionary.
 - `type`
   - : A string value that describes the file format of the supplied dictionary. Currently only `raw` is supported (which is the default) so this is more for future compatibility.
 
 ## Examples
-
-> [!NOTE]
-> See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
 ### Path prefix
 
@@ -47,16 +58,13 @@ This uses a wildcard to match multiple versions of a file.
 Use-As-Dictionary: match="/product/*", match-dest=("document")
 ```
 
-This uses`match-dest` to ensure the dictionary is inly used for `document` requests so `/product/js/app.js` would not match and hence would not use this dictionary.
+This uses`match-dest` to ensure the dictionary is only used for `document` requests so `<script src="/product/js/app.js">` resource requests for example would not match.
 
 ```http
 Use-As-Dictionary: match="/product/*", match-dest=("document" "frame")
 ```
 
 This would allow the dictionary to match both top-level documents and iframes.
-
-> [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
 
 ### Id
 

@@ -68,7 +68,7 @@ A compression dictionary is a "raw" file that does not follow any specific forma
 
 ## Existing resource as a dictionary
 
-To use a resource as a dictionary, the server should include the {{HTTPHeader("Use-As-Dictionary")}} HTTP header in the response that provides the resource:
+To use a resource as a dictionary, the server should include the {{HTTPHeader("Use-As-Dictionary")}} header in the response that provides the resource:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js"

@@ -68,10 +68,9 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 - `zstd`
   - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
 - `dcb`
-  - : A compression format that uses the [Dictionary-Compressed Brotli format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
+  - : A format that uses the [Dictionary-Compressed Brotli](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl) algorithm. See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 - `dcz`
-  - : A compression format that uses the [Dictionary-Compressed Zstandard format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
-- `identity`
+  - : A format that uses the [Dictionary-Compressed Zstandard](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan) algorithm. See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
 - `*` (wildcard)
   - : Matches any content encoding not already listed in the header. This is the default value if the header is not present. This directive does not suggest that any algorithm is supported but indicates that no preference is expressed.
@@ -109,7 +108,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## See also
 
-- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
 - {{HTTPStatus("415", "415 Unsupported Media Type")}}
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}
@@ -117,3 +115,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)
