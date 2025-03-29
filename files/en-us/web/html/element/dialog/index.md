@@ -452,13 +452,11 @@ dialog:open::backdrop {
   0% {
     opacity: 0;
     transform: scaleY(0);
-    display: none;
   }
 
   100% {
     opacity: 1;
     transform: scaleY(1);
-    display: block;
   }
 }
 
@@ -466,13 +464,11 @@ dialog:open::backdrop {
   0% {
     opacity: 1;
     transform: scaleY(1);
-    display: block;
   }
 
   100% {
     opacity: 0;
     transform: scaleY(0);
-    display: none;
   }
 }
 
