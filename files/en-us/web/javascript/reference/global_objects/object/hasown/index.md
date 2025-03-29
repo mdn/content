@@ -15,17 +15,25 @@ If the property is inherited, or does not exist, the method returns `false`.
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
 
 ```js interactive-example
-const object1 = {
-  prop: "exists",
+const object = {
+  propertyNameValue: "exists",
+  propertyNameUndefined: undefined,
+  propertyNameNull: null,
 };
 
-console.log(Object.hasOwn(object1, "prop"));
+console.log(Object.hasOwn(object, "propertyNameValue"));
 // Expected output: true
 
-console.log(Object.hasOwn(object1, "toString"));
+console.log(Object.hasOwn(object, "propertyNameUndefined"));
+// Expected output: true
+
+console.log(Object.hasOwn(object, "propertyNameNull"));
+// Expected output: true
+
+console.log(Object.hasOwn(object, "toString"));
 // Expected output: false
 
-console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+console.log(Object.hasOwn(object, "undeclaredPropertyValue"));
 // Expected output: false
 ```
 
