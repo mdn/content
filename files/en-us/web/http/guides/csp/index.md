@@ -202,7 +202,7 @@ Note that nonces can only be used for elements that have a `nonce` attribute: th
 
 Fetch directives can also use a hash of the script to guarantee its integrity. With this method, the server:
 
-1. calculates a hash of the script contents using a {{glossary("cryptographic hash function")}} (one of SHA-256, SHA-384, or SHA-512)
+1. calculates a hash of the script contents using a {{glossary("hash function")}} (one of SHA-256, SHA-384, or SHA-512)
 2. creates a {{glossary("Base64")}} encoding of the result
 3. appends a prefix identifying the hash algorithm used (one of `sha256-`, `sha384-`, or `sha512-`).
 

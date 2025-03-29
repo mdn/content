@@ -143,9 +143,9 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 ## Integrity digests
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
-  - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
+  - : Provides a {{Glossary("hash function", "digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
-  - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
+  - : Provides a {{Glossary("hash function", "digest")}} of the selected representation of the target resource before transmission.
     Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
