@@ -45,7 +45,7 @@ To summarize the [overview of web technologies](/en-US/docs/Learn_web_developmen
 
 When the user navigates to a new web page (by clicking a link, or entering a web address in the browser address bar), several HTTP requests are sent, and several files are sent back in HTTP responses. The files received in these responses are processed by the browser and put together into a web page that the user can interact with. This process of assembling the pieces into a web page is called **rendering**.
 
-The below sections provide a high-level explanation of how a browser renders a web page. Bear in mind that this is a very simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of the basics behind how things work.
+The sections below provide a high-level explanation of how a browser renders a web page. Bear in mind that this is a very simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of the basics behind how things work.
 
 ## Handling HTML
 
