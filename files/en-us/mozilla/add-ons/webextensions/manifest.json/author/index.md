@@ -28,7 +28,9 @@ browser-compat: webextensions.manifest.author
   </tbody>
 </table>
 
-The extension's author, intended for display in the browser's user interface. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is supplied and it contains the "name" property, it will override the author key. There's no way to specify multiple authors.
+The extension's author, intended for display in the browser's user interface. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is supplied and it contains the "name" property, it overrides the author key. There's no way to specify multiple authors.
+
+From Manifest V3, Chrome prefers this key to be an object, but the Chrome Web Store continues to accept a string value. When publishing to the Chrome Web Store, this key (if specified) must match the email address of the account used to publish the extension. If this item is specified as an object, Firefox ignores it. In this case, you can define the author to Firefox using the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key.
 
 This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
