@@ -2,10 +2,13 @@
 title: "<selectedcontent>: The selected option display element"
 slug: Web/HTML/Element/selectedcontent
 page-type: html-element
+status:
+  - experimental
+  - non-standard
 browser-compat: html.elements.selectedcontent
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to display the content of the currently selected `<option>` inside a closed `<select>` element.
 
