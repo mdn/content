@@ -331,6 +331,8 @@ l10n:
     Tools: Werkzeuge
     Types: Typen
   en-US:
+    Accessibility_Understanding_colors_and_luminance: "Accessibility: Colors and luminance"
+    Applying_color_to_HTML_elements: Applying color to HTML
     Beginners: Beginner's tutorials
     Styling_the_content: "Your first website: Styling the content"
     CSS_styling_basics: CSS styling basics
