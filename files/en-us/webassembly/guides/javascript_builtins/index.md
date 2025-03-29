@@ -23,7 +23,7 @@ Considering these problems, creating built-in definitions that adapt existing Ja
 
 ## Available WebAssembly JavaScript builtins
 
-The below sections detail the available builtins. Other builtins are likely to be supported in the future.
+The sections that follow explain the available builtins. Other builtins are likely to be supported in the future.
 
 ### String operations
 

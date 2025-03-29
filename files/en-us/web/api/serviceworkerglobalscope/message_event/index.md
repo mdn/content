@@ -46,7 +46,7 @@ _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Examples
 
-In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.
+In this example, a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.
 
 ```js
 // main.js

@@ -166,7 +166,7 @@ Django will show an error that it could not find a mapping for this URL, and lis
 From this you can see the URLs that will work once we have created templates.
 
 > [!NOTE]
-> Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
+> Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the URL mapping above automatically maps the URLs listed below.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -196,7 +196,7 @@ The URLs (and implicitly, views) that we just added expect to find their associa
 For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > [!NOTE]
-> Your folder structure should now look like the below:
+> Your folder structure should now resemble the following structure:
 >
 > ```plain
 > django-locallibrary-tutorial/   # Django top level project folder

@@ -89,7 +89,7 @@ https://search.example.com?a=1&b=2&c=3
 https://search.example.com?b=2&a=1&c=3&d=4
 ```
 
-The below examples illustrate how to control which parameters are ignored in the context of cache matching.
+The examples below illustrate how to control which parameters are ignored in the context of cache matching.
 
 ### Allowing responses from URLs with a different param to match the same cache entry
 

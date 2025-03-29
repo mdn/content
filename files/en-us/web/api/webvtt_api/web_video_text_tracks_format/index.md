@@ -613,7 +613,7 @@ cue1
 Green!
 ```
 
-Note that escape sequences are used in WebVTT CSS in the same way as HTML pages. The below example shows how to escape spaces in a cue identifier:
+Note that escape sequences are used in WebVTT CSS in the same way as HTML pages. The following example shows how to escape spaces in a cue identifier:
 
 ```plain
 WEBVTT

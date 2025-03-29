@@ -124,7 +124,7 @@ To mitigate the potential for confusion with these values, you are advised to us
 
 The `center` and `<percentage>` values are valid within the `anchor()` function within all logical and physical inset properties.
 
-The below table lists the inset properties, and the `<anchor-side>` parameter values that are compatible with them. We have only listed the longhand inset properties; these comprise the shorthand inset property values.
+The table below lists the inset properties, and the `<anchor-side>` parameter values that are compatible with them. We have only listed the longhand inset properties; these comprise the shorthand inset property values.
 
 | Inset property                              | Compatible `<anchor-side>` value                                                                                                               |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |

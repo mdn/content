@@ -53,8 +53,8 @@ the available space:
 window.outerHeight = window.screen.availHeight;
 ```
 
-The result is something similar to the below. Note the Panels window filling all
-available vertical space at the left of the screen.
+The result is something similar to the image below. Note the Panels window filling all
+available vertical space on the left side of the screen.
 
 ![Screenshot of the example for Screen.availHeight](screen-availheight.png)
 

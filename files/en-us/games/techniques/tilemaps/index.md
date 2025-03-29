@@ -14,7 +14,7 @@ Some popular games that use this technique are _Super Mario Bros_, _Pacman_, _Ze
 
 ## The tile atlas
 
-The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The below images shows a tile atlas of 8 x 4 tiles:
+The most efficient way to store the tile images is in an atlas or spritesheet. This is all of the required tiles grouped together in a single image file. When it's time to draw a tile, only a small section of this bigger image is rendered on the game canvas. The images below show a tile atlas of 8 x 4 tiles:
 
 ![Tile atlas image](tile_atlas.png)
 
@@ -106,7 +106,7 @@ Since tilemaps are an actual grid of visual tiles, it is common to create a mapp
 
 ## Isometric tilemaps
 
-Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy, or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_, or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
+Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy, or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_, or _Final Fantasy Tactics_. The image below shows an example of an atlas for an isometric tileset.
 
 ![A 3x4 map of variously colored tiles in isometric projection](iso_tiles.png)
 

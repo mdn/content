@@ -134,7 +134,7 @@ This is because percentages resolve against the size of the containing block. Wi
 
 ### Percentage margins and padding
 
-If you set `margins` and `padding` as a percentage, you may notice some strange behavior. In the below example we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of `10%`. The padding and margin on the top and bottom of the box are the same size as the padding and margin on the left and right.
+If you set `margins` and `padding` as a percentage, you may notice some strange behavior. In the following example, we have a box. We have given the inner box a {{cssxref("margin")}} of 10% and a {{cssxref("padding")}} of `10%`. The padding and margin on the top and bottom of the box are the same size as the padding and margin on the left and right.
 
 ```html live-sample___percent-mp
 <div class="box">I have margin and padding set to 10% on all sides.</div>

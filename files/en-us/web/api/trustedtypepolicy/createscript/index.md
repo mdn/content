@@ -35,7 +35,7 @@ A {{domxref("TrustedScript")}} object.
 
 ## Examples
 
-In the below example a string containing a potentially risky script is used as the input for `createScript()`. The policy can sanitize this script before inserting it into an injection sink that could cause it to be executed.
+In this example, a string containing a potentially risky script is used as the input for `createScript()`. The policy can sanitize this script before inserting it into an injection sink that could cause it to be executed.
 
 ```js
 const sanitized = scriptPolicy.createScript("eval('2 + 2')");

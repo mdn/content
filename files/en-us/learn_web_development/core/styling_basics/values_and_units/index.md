@@ -202,9 +202,9 @@ After following the instructions above, try playing with the values in other way
 
 #### ems and rems
 
-`em` and `rem` are the two relative lengths you are likely to encounter most frequently when sizing anything from boxes to text. It's worth understanding how these work, and the differences between them, especially when you start getting on to more complex subjects like [styling text](/en-US/docs/Learn_web_development/Core/Text_styling) or [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout). The below example provides a demonstration.
+`em` and `rem` are the two relative lengths you are likely to encounter most frequently when sizing anything from boxes to text. It's worth understanding how these work, and the differences between them, especially when you start getting on to more complex subjects like [styling text](/en-US/docs/Learn_web_development/Core/Text_styling) or [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout). The example below provides a demonstration.
 
-The HTML illustrated below is a set of nested lists — we have two lists in total and both examples have the same HTML. The only difference is that the first has a class of _ems_ and the second a class of _rems_.
+The HTML illustrated in this example is a set of nested lists — we have two lists in total and both examples have the same HTML. The only difference is that the first has a class of _ems_ and the second a class of _rems_.
 
 To start with, we set 16px as the font size on the `<html>` element.
 
@@ -326,7 +326,7 @@ p {
 
 In a lot of cases, a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's `font-size` as a percentage, it will be a percentage of the `font-size` of the element's parent. If you use a percentage for a `width` value, it will be a percentage of the `width` of the parent.
 
-In the below example the two percentage-sized boxes and the two pixel-sized boxes have the same class names. The sets are 40% and 200px wide respectively.
+In the example below, the two percentage-sized boxes and the two pixel-sized boxes have the same class names. The sets are 40% and 200px wide, respectively.
 
 The difference is that the second set of two boxes is inside a wrapper that is 400 pixels wide. The second 200px wide box is the same width as the first one, but the second 40% box is now 40% of 400px — a lot narrower than the first one!
 
@@ -399,7 +399,7 @@ Note that, while many value types accept a length or a percentage, there are som
 
 Some value types accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the `opacity` property, which controls the opacity of an element (how transparent it is). This property accepts a number between `0` (fully transparent) and `1` (fully opaque).
 
-In the below example, try changing the value of `opacity` to various decimal values between `0` and `1` and see how the box and its contents become more or less opaque:
+In the example below, try changing the value of `opacity` to various decimal values between `0` and `1` and see how the box and its contents become more or less opaque:
 
 ```html live-sample___opacity
 <div class="wrapper">
