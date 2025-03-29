@@ -68,9 +68,9 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 - `zstd`
   - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
 - `dcb`
-  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Dictionary-Compressed Brotli format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl)
+  - : A compression format that uses the [Dictionary-Compressed Brotli format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 - `dcz`
-  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Dictionary-Compressed Zstandard format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan)
+  - : A compression format that uses the [Dictionary-Compressed Zstandard format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 - `identity`
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
 - `*` (wildcard)

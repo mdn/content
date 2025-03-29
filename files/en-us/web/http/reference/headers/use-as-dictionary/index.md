@@ -7,18 +7,18 @@ browser-compat: http.headers.Use-As-Dictionary
 
 {{HTTPSidebar}}
 
-The HTTP **`Use-As-Dictionary`** header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
+The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 
 ## Directives
 
 - `match`
-  - : A string value that provides the {{domxref("URL Pattern API", "URL Pattern")}} to use for future request matching (regex patterns are not supported).
+  - : A string value containing a [URL Pattern](/en-US/docs/Web/API/URL_Pattern_API): only resources whose URLs match this pattern may use this resource as a dictionary.
 - `match-dest`
   - : An [Inner List of String values](https://www.rfc-editor.org/rfc/rfc8941#name-inner-lists) that provides a list of [Fetch request destinations](/docs/Web/API/Request/destination) for the dictionary to match.
 - `id`
-  - : A string value that specifies a server identifier for the dictionary. This will then be added as a {{HTTPHeader("Dictionary-ID")}} to resource requests where that dictionary can be used for.
+  - : A string value that specifies a server identifier for the dictionary. This ID value will then be added in the  {{HTTPHeader("Dictionary-ID")}} request header when the browser requests a resource which can use this dictionary.
 - `type`
-  - : A token value that describes the file format of the supplied dictionary. Currently only `raw` is supported (which is the default) so this is more for future compatibility.
+  - : A string value that describes the file format of the supplied dictionary. Currently only `raw` is supported (which is the default) so this is more for future compatibility.
 
 ## Examples
 
@@ -64,7 +64,7 @@ This would allow the dictionary to match both top-level documents and iframes.
 Use-As-Dictionary: match="/product/*", id="dictionary-12345"
 ```
 
-In which case the `id` will be used in the future requests in the {{HTTPHeader("Dictionary-ID")}} HTTP header along with the SHA-256 hash of the dictionary surrounded by colons in the {{HTTPHeader("Available-Dictionary")}} HTTP header:
+When `Use-As-Dictionary` includes an `id` directive, as in this example, the `id` value will be included in the {{HTTPHeader("Dictionary-ID")}} request header for resources that can use this dictionary. The resource request will also include the SHA-256 hash of the dictionary surrounded by colons in the {{HTTPHeader("Available-Dictionary")}} header:
 
 ```http
 Accept-Encoding: gzip, br, zstd, dcb, dcz

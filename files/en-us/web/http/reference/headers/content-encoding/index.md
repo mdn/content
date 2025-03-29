@@ -39,8 +39,8 @@ Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: br
 Content-Encoding: zstd
-Content-Encoding: cdb
-Content-Encoding: cdz
+Content-Encoding: dcb
+Content-Encoding: dcz
 
 // Multiple, in the order in which they were applied
 Content-Encoding: deflate, gzip
