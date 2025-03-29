@@ -11,7 +11,8 @@ The **`<dialog>`** [HTML](/en-US/docs/Web/HTML) element represents a modal or no
 
 The HTML `<dialog>` element is used to create both modal and non-modal dialog boxes. Modal dialog boxes interrupt interaction with the rest of the page being inert, while non-modal dialog boxes allow interaction with the rest of the page.
 
-JavaScript should be used to display the `<dialog>` element. Use the {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", ".show()")}} method to display a non-modal dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", ".close()")}} method or using the [`dialog`](/en-US/docs/Web/HTML/Element/form#method) method when submitting a `<form>` that is nested within the `<dialog>` element. Modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key.
+JavaScript should be used to display the `<dialog>` element. Use the {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} method to display a modal dialog and the {{domxref("HTMLDialogElement.show()", ".show()")}} method to display a non-modal dialog. The dialog box can be closed using the {{domxref("HTMLDialogElement.close()", ".close()")}} method or using the [`dialog`](/en-US/docs/Web/HTML/Element/form#method) method when submitting a `<form>` that is nested within the `<dialog>` element.
+By default modal dialogs can also be closed by pressing the <kbd>Esc</kbd> key, this behavior can be controlled via the [`closedby`](#attributes) attribute.
 
 ## Attributes
 
@@ -28,6 +29,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > [!NOTE]
     > While you can toggle between the open and closed states of non-modal dialog boxes by toggling the presence of the `open` attribute, this approach is not recommended. See {{domxref("HTMLDialogElement.open", "open")}} for more information.
 
+- `closedby`
+
+  - : Indicates the mechanisms which will close the dialog. The value can be one of the following:
+    - `"none"`: The dialog is not closed by close requests (e.g., the <kbd>Esc</kbd> key) or light dismiss.
+    - `"closerequest"`: The dialog is closed by close requests only.
+    - `"any"`: The dialog is closed by close requests and light dismiss.
+
 ## Usage notes
 
 - HTML {{HTMLElement("form")}} elements can be used to close a dialog box if they have the attribute `method="dialog"` or if the button used to submit the form has [`formmethod="dialog"`](/en-US/docs/Web/HTML/Element/input#formmethod) set. When a `<form>` within a `<dialog>` is submitted via the `dialog` method, the dialog box closes, the states of the form controls are saved but not submitted, and the {{domxref("HTMLDialogElement.returnValue", "returnValue")}} property gets set to the value of the button that was activated.
@@ -41,7 +49,7 @@ When implementing a dialog, it is important to consider the most appropriate pla
 
 Ensure a mechanism is provided to allow users to close the dialog. The most robust way to ensure that all users can close the dialog is to include an explicit button to do so, such as a confirmation, cancellation, or close button.
 
-By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser.
+By default, a dialog invoked by the `showModal()` method can be dismissed by pressing the <kbd>Esc</kbd> key. A non-modal dialog does not dismiss via the <kbd>Esc</kbd> key by default, and depending on what the non-modal dialog represents, it may not be desired for this behavior. Keyboard users expect the <kbd>Esc</kbd> key to close modal dialogs; ensure that this behavior is implemented and maintained. If multiple modal dialogs are open, pressing the <kbd>Esc</kbd> key should close only the last shown dialog. When using `<dialog>`, this behavior is provided by the browser. This behavior can be controlled via the [`closedby`](#attributes) attribute.
 
 While dialogs can be created using other elements, the native `<dialog>` element provides usability and accessibility features that must be replicated if you use other elements for a similar purpose. If you're creating a custom dialog implementation, ensure that all expected default behaviors are supported and proper labeling recommendations are followed.
 
