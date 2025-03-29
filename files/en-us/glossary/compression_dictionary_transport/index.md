@@ -18,8 +18,7 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 - Related glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- {{HTMLElement("Link#compression-dictionary", "&lt;link rel=&quot;compression-dictionary&quot;&gt;")}}
-- {{HTTPHeader("Accept-encoding")}}
+- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Attributes/rel/compression-dictionary)- {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}
