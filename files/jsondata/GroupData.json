@@ -468,7 +468,7 @@
         "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["HTMLElement.editContext"],
       "events": []
     },
     "Encoding API": {
