@@ -2,6 +2,7 @@
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
 page-type: webextension-api
+browser-compat: webextensions.api.types
 ---
 
 {{AddonSidebar}}
@@ -14,6 +15,8 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
   - : Represents a browser setting.
 
 ## Browser compatibility
+
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
