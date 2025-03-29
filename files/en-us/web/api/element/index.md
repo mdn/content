@@ -93,6 +93,8 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 _The `Element` interface also includes the following properties._
 
+- {{domxref("Element.ariaActiveDescendantElement")}}
+  - : An element reflecting the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute, which identifies the current active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute.
 - {{domxref("Element.ariaAutoComplete")}}
@@ -177,6 +179,24 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+
+#### Instance properties reflected from aria element references
+
+- {{domxref("Element.ariaControlsElements")}}
+  - : An array reflecting the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute, which identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
+- {{domxref("Element.ariaDescribedByElements")}}
+  - : An array of elements reflecting the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute, which identifies the element (or elements) that describe the object. It is used to establish a relationship between widgets or groups and elements that contains the text that describes them.
+- {{domxref("Element.ariaDetailsElements")}}
+  - : An array of elements reflecting the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute, which identify the elements that provide additional information related to the object.
+- {{domxref("Element.ariaErrorMessageElements")}}
+  - : An array of elements reflecting the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute, which identifies the element (or elements) that provide an error message for the object.
+- {{domxref("Element.ariaFlowToElements")}}
+  - : An array of elements reflecting the [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute, which identifies the next element (or elements) in an alternate reading order of content, overriding the general default reading order at the user's discretion.
+- {{domxref("Element.ariaLabelledByElements")}}
+  - : An array of elements reflecting the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute, which identifies the element (or elements) that provide an accessible name for the element it is applied to.
+- {{domxref("Element.ariaOwnsElements")}}
+  - : An array of elements reflecting the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute, which identifies the element (or elements) that this object owns.
+    This is used to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
 
 ## Instance methods
 
