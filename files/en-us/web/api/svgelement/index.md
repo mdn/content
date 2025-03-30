@@ -36,7 +36,7 @@ _Also inherits properties from the {{DOMxRef("Element")}} interface._
 
 ## Instance methods
 
-_This interface has no methods, but inherits methods from {{DOMxRef("Element")}}._
+_This interface also inherits methods from {{DOMxRef("Element")}}._
 
 - {{DOMxRef("SVGElement.blur")}}
   - : Removes keyboard focus from the currently focused element.
