@@ -380,12 +380,13 @@ In this exercise, you will manipulate some numbers and operators to change the s
 
 In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:
 
-- Change the line that calculates x so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
-- Change the line that calculates y so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
-- Change the line that calculates x so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
-- Change the line that calculates y so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
-- Change the line that calculates x so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
-- Change the line that calculates y so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator. Don't forget to first assign y a default value, so the addition works as expected.
+- Change the line that calculates `x` so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
+- Change the line that calculates `y` so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
+- Change the line that calculates `x` so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
+- Change the line that calculates `y` so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
+- Change the line that calculates `x` so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
+- Change the line that calculates `y` so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.
+  Don't forget to first assign `y` a default value, so the addition works as expected.
 
 Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.
 
