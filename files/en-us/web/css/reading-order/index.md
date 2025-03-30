@@ -42,7 +42,6 @@ In this example there are six grid items, the [grid-auto-flow](/en-US/docs/Web/C
 
 #### CSS
 
-
 ```css
 .wrapper {
   display: grid;
@@ -51,7 +50,9 @@ In this example there are six grid items, the [grid-auto-flow](/en-US/docs/Web/C
   reading-flow: grid-rows;
 }
 
-.top { reading-order: -1; }
+.top {
+  reading-order: -1;
+}
 ```
 
 {{EmbedLiveSample('Grid_rows', '', '50px')}}
@@ -75,11 +76,17 @@ In this example there are five direct block-level children of a block container 
 #### CSS
 
 ```css
-.wrapper { reading-flow: source-order; }
+.wrapper {
+  reading-flow: source-order;
+}
 
-.wrapper > a { display: block; }
+.wrapper > a {
+  display: block;
+}
 
-.wrapper a:nth-child(3){ reading-order: -1; }
+.wrapper a:nth-child(3) {
+  reading-order: -1;
+}
 ```
 
 {{EmbedLiveSample('Source_order', '', '50px')}}

@@ -27,18 +27,23 @@ reading-flow: grid-order;
 It takes one keyword value. Values are defined as follows:
 
 - `normal`
+
   - : Follow the order of elements in the `DOM`.
 
 - `flex-visual`
+
   - : Only takes effect on `flex` containers. Follows the visual reading order of `flex` items, taking the writing mode into account. Therefore, a document in English, with `flex-direction: row-reverse` and `reading-flow: flex-visual` would have a reading order of [left](/en-US/docs/Web/CSS/left) to [right](/en-US/docs/Web/CSS/right).
 
 - `flex-flow`
+
   - : Only takes effect on flex containers. Follows the [flex-flow](/en-US/docs/Web/CSS/flex-flow) direction.
 
 - `grid-rows`
+
   - : Only takes effect on grid containers. Follows the visual order of grid items by row, taking the writing mode into account.
 
 - `grid-columns`
+
   - : Only takes effect on grid containers. Follows the visual order of grid items by column, taking the writing mode into account.
 
 - `grid-order`
@@ -95,27 +100,35 @@ In this example there are four grid items, placed on a grid and displayed visual
 
 #### CSS
 
-
 ```css
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 150px);
-  grid-template-areas: "d b b"
-             "c c a";
+  grid-template-areas:
+    "d b b"
+    "c c a";
   reading-flow: grid-rows;
 }
 
-.a { grid-area: a; }
-.b { grid-area: b; }
-.c { grid-area: c; }
-.d { grid-area: d; }
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
 ```
 
 {{EmbedLiveSample('Grid_rows', '', '50px')}}
 
 The `reading-flow` property affects neither layout nor painting order and therefore has no effect on rendering to the visual `canvas`.
 
-When using a [flex-*](/en-US/docs/Web/CSS/flex) or [grid-*](/en-US/docs/Web/CSS/grid) keyword value, the order property is taken into account.
+When using a [flex-\*](/en-US/docs/Web/CSS/flex) or [grid-\*](/en-US/docs/Web/CSS/grid) keyword value, the order property is taken into account.
 
 ### Flex Flow
 
@@ -160,5 +173,3 @@ In this example, there are three flex items displayed as a row, with `reading-fl
 ## See also
 
 - [Learn CSS: reading-order](/en-US/docs/Web/CSS/reading-order)
-
-
