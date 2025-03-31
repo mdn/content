@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaBrailleRoleDescription
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`ariaBrailleRoleDescription`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 
