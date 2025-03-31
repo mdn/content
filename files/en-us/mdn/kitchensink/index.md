@@ -29,7 +29,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Another one…
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Extra_lives", "Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
 ## Code snippets
 

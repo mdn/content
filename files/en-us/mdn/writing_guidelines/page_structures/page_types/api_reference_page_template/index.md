@@ -73,7 +73,7 @@ sidebar: mdnsidebar
 
 The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
 
-{{InheritanceDiagram}}
+`\{{InheritanceDiagram}}`
 
 _To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) in the sections below, remove the backticks and backslash in the markdown file._
 
