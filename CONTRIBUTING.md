@@ -391,7 +391,7 @@ Here are some things to keep in mind at this point:
 
 - Your pull request must be **reviewed and approved** before it's merged into the `main` branch.
 - **You do not need to request a review**; one or more reviewers will be selected for you automatically.
-- **It can be up to 48 hours** for merged pull requests to have their changes published to [MDN Web Docs](/).
+- **It can be up to 48 hours** for merged pull requests to have their changes published to [MDN Web Docs][].
 
 During reviews, you may be asked to answer questions about your work or to make changes to your suggested edits.
 This is a common part of the process of making changes in open source projects.
@@ -425,7 +425,7 @@ See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content
 It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
 -->
 
-[mdn web docs]: https://developer.mozilla.org
+[mdn web docs]: https://developer.mozilla.org/
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started
 [community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
 [writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
