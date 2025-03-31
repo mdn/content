@@ -52,7 +52,7 @@ To opt out of scroll anchoring for a section of the document, set `overflow-anch
 }
 ```
 
-If opting out of scroll anchoring on the document or a section thereof, a descendent of an opted-out area cannot be opted back in. For example, if you opt out the entire document, you can't set `overflow-anchor: auto` on a descendant node to turn scroll anchoring back on for a subsection.
+If opting out of scroll anchoring on the document or a section thereof, a descendant of an opted-out area cannot be opted back in. For example, if you opt out the entire document, you can't set `overflow-anchor: auto` on a descendant node to turn scroll anchoring back on for a subsection.
 
 ### Suppression triggers
 
