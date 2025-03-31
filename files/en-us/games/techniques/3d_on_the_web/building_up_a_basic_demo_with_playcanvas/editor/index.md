@@ -97,7 +97,7 @@ Now follow the same steps as we did before when coloring the cube:
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`.) You should now have three shapes on your scene, something like the screenshot shown below.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`.) You should now have three shapes on your scene, something like the following screenshot.
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 
