@@ -19,7 +19,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 ### CSS
 
 - The `turn` {{cssxref("&lt;angle&gt;")}} unit is now supported (to be used with CSS functions like `rotate()`).
-- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like "`right 10px bottom 20px`". See [Firefox bug 522607](https://bugzil.la/522607)
+- Support for 3-to-4 value syntax of the {{cssxref("background-position")}} has been added. You can offset a background image from any corner by writing like `right 10px bottom 20px`. See [Firefox bug 522607](https://bugzil.la/522607)
 - Support for the 2-value syntax of the CSS {{cssxref("background-repeat")}} has been added.
 - Support for {{cssxref("border-radius","-moz-border-radius*")}} and {{cssxref("box-shadow","-moz-box-shadow")}} has been removed. Authors should use unprefixed `border-radius` or `box-shadow` instead. See [Firefox bug 693510](https://bugzil.la/693510)
 - The {{cssxref("column-fill")}} property has been implemented (prefixed).

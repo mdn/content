@@ -7,7 +7,27 @@ sidebar: webassemblysidebar
 
 The **`mul`** instructions, short for _multiplication_, are used for multiplying one number by another number, similar to the **`*`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/mul.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: mul", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    ;; load `10` and `3` onto the stack
+    i32.const 10
+    i32.const 3
+
+    i32.mul ;; multiply one number by the other
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

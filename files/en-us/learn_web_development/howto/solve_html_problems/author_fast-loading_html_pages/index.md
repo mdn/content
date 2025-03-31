@@ -26,7 +26,7 @@ Tools such as [HTML Tidy](https://www.html-tidy.org/) can automatically strip le
 
 Reducing the number of files referenced in a web page lowers the number of [HTTP](/en-US/docs/Web/HTTP) connections required to download a page, thereby reducing the time for these requests to be sent, and for their responses to be received.
 
-Depending on a browser's cache settings, it may send a request with the [`If-Modified-Since`](/en-US/docs/Web/HTTP/Headers/If-Modified-Since) header for each referenced file, asking whether the file has been modified since the last time it was downloaded. Too much time spent querying the last modified time of the referenced files can delay the initial display of the web page, since the browser must check the modification time for each of these files, before rendering the page.
+Depending on a browser's cache settings, it may send a request with the [`If-Modified-Since`](/en-US/docs/Web/HTTP/Reference/Headers/If-Modified-Since) header for each referenced file, asking whether the file has been modified since the last time it was downloaded. Too much time spent querying the last modified time of the referenced files can delay the initial display of the web page, since the browser must check the modification time for each of these files, before rendering the page.
 
 If you use background images a lot in your CSS, you can reduce the number of HTTP lookups needed by combining the images into one, known as an image sprite. Then you just apply the same image each time you need it for a background and adjust the x/y coordinates appropriately. This technique works best with elements that will have limited dimensions, and will not work for every use of a background image. However, the fewer HTTP requests and single image caching can help reduce page-load time.
 
@@ -34,11 +34,11 @@ If you use background images a lot in your CSS, you can reduce the number of HTT
 
 For the purposes of this article, a CDN is a means to reduce the physical distance between your server and your visitor. As the distance between your server origin and visitor increases, the load times will increase. Suppose your website server is located in the United States and it has a visitor from India; the page load time will be much higher for the Indian visitor compared to a visitor from the US.
 
-A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](/en-US/docs/Web/Performance/Understanding_latency).
+A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](/en-US/docs/Web/Performance/Guides/Understanding_latency).
 
 Further reading:
 
-- [Understanding CDNs](https://www.imperva.com/Learn_web_development/Extensions/Performance/what-is-cdn-how-it-works/)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### Reduce domain lookups
 

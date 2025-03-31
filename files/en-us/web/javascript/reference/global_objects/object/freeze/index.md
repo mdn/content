@@ -11,7 +11,21 @@ The **`Object.freeze()`** static method _freezes_ an object. Freezing an object 
 
 Freezing an object is the highest integrity level that JavaScript provides.
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## Syntax
 

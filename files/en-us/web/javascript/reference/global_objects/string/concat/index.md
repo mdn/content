@@ -10,7 +10,18 @@ browser-compat: javascript.builtins.String.concat
 The **`concat()`** method of {{jsxref("String")}} values concatenates
 the string arguments to this string and returns a new string.
 
-{{EmbedInteractiveExample("pages/js/string-concat.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.concat()")}}
+
+```js interactive-example
+const str1 = "Hello";
+const str2 = "World";
+
+console.log(str1.concat(" ", str2));
+// Expected output: "Hello World"
+
+console.log(str2.concat(", ", str1));
+// Expected output: "World, Hello"
+```
 
 ## Syntax
 

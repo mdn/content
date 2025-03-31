@@ -9,7 +9,36 @@ browser-compat: html.elements.legend
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
+
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## Attributes
 
@@ -50,7 +79,7 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("fieldset")}} whose first child is this
-        <code>&#x3C;legend></code> element
+        <code>&#x3C;legend></code> element. In <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select elements</a>, a <code>&#x3C;legend></code> element is permitted as a child of {{htmlelement("optgroup")}} .
       </td>
     </tr>
     <tr>
@@ -82,4 +111,4 @@ See {{HTMLElement("form")}} for examples on `<legend>`.
 
 ## See also
 
-- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)

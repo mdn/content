@@ -26,7 +26,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 Relative colors are created using the same [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) as absolute colors, but with different parameters:
 
 1. Include a basic color function (represented by _`color-function()`_ above) such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
-2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
+2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
 3. In the case of the [`color()`](/en-US/docs/Web/CSS/color_value/color) function, include the _[`colorspace`](/en-US/docs/Web/CSS/color_value/color#colorspace)_ of the output color.
 4. Provide an output value for each individual channel. The output color is defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders. The channels defined here depend on the [color function](/en-US/docs/Web/CSS/CSS_colors#functions) you are using for your relative color. For example, if you are using [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), you would need to define the values for hue, saturation, and lightness. Each channel value can be a new value, the same as the original value, or a value relative to the channel value of the origin color.
 5. Optionally, an `alpha` channel value for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case for absolute color values).
@@ -173,7 +173,7 @@ It is worth mentioning again that the color system of the origin color doesn't n
 
 ## Using custom properties
 
-When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.
+When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.
 
 In the below CSS we define two custom properties:
 
@@ -231,7 +231,7 @@ The output is as follows:
 
 ## Using math functions
 
-You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
+You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
 
 The below CSS is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given an unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
 
@@ -386,7 +386,7 @@ The full HTML is included below for reference. The most interesting parts are as
 
 #### CSS
 
-Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
+Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendant selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
 
 In the last rule we've used the [general sibling selector (`~`)](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to target the unused `<div>` elements in each palette type, setting [`display: none`](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to stop them being rendered.
 
@@ -405,7 +405,7 @@ h1 {
   margin-left: 16px;
 }
 
-/* Simple form styling */
+/* Basic form styling */
 
 #color-picker {
   margin-left: 16px;
@@ -562,7 +562,7 @@ fieldset {
 
 In the example CSS you'll notice {{cssxref("@supports")}} blocks being used to provide different {{cssxref("background-color")}} values to browsers that support a previous draft specification of the relative color syntax. These are required because Safari's initial implementation was based on an older version of the spec in which origin color channel values resolved to {{cssxref("&lt;number&gt;")}}s or other unit types depending on the context. This meant that values sometimes required units when performing additions and subtractions, which created confusion. In newer implementations, origin color channel values always resolve to an equivalent {{cssxref("&lt;number&gt;")}} value, which means calculations are always done with unitless values.
 
-Note how the support test in each case is done using a simple declaration — `color: lch(from red l c calc(h + 90deg))` for example — rather than the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
+Note how the support test in each case is done using any color declaration — `color: lch(from red l c calc(h + 90deg))` for example — not necessarily the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
 
 Including a custom property in the `@supports` test doesn't work — the test always comes back as positive regardless of what value the custom property is given. This is because a custom property value only becomes invalid when assigned to be an invalid value (or part of an invalid value) of a regular CSS property. To work around this, in each test we have replaced `var(--base-color)` with the `red` keyword.
 

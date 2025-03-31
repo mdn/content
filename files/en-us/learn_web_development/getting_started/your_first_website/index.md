@@ -14,7 +14,7 @@ It's a lot of work to create a professional website, so if you're new to web dev
 
 ## Prerequisites
 
-This module assumes no prior knowledge of web technologies, but you should already be comfortable with using your operating system, including using the file system and browsing the web. You should have a code editor and multiple web browser installed.
+This module assumes no prior knowledge of web technologies, but you should already be comfortable with using your operating system, including using the file system and browsing the web. You should have a code editor and multiple web browsers installed.
 
 If this is not the case, we'd suggest that you run through the [Environment setup](/en-US/docs/Learn_web_development/Getting_started/Environment_setup) module first.
 
@@ -44,5 +44,5 @@ If this is not the case, we'd suggest that you run through the [Environment setu
 
 ## See also
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

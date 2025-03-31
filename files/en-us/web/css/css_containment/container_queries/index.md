@@ -6,15 +6,21 @@ page-type: guide
 
 {{CSSRef}}
 
-Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+Container queries enable you to apply styles to an element based on certain attributes of its container:
+
+- The container's size.
+- Styles applied to the container.
+- The container's scroll-state or that of its scrolling ancestor.
 
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
+This article provides an introduction to using container queries, specifically focusing on size container queries. Other guides discuss [style](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) and [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) container queries in detail.
+
 ![Two different query types. First, a media query based on the viewport's width, which is the full width of the browser. Second, a container query based on the width of a container element.](container-query.svg)
 
-## Using container queries
+## Using container size queries
 
-To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
+Container queries test elements based on their container type. To use container size queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
 To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
@@ -165,6 +171,7 @@ If you want to use a single-column layout for devices with a smaller viewport, y
 - CSS {{Cssxref("container-name")}} property
 - CSS {{cssxref("content-visibility")}} property
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) by Ahmad Shadeed
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

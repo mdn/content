@@ -21,7 +21,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 
 - [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
   - : Covers the absolute basics of {{glossary("HTML")}}, to get you started — we define elements, attributes, and other important terms, and show where they fit in the language. We also show how a typical HTML page is structured and how an HTML element is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!
-- [What's in the head? Webpage metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
+- [What's in the head? Web page metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)
   - : The {{Glossary("Head","head")}} of an HTML document is the part that **is not** displayed in the web browser when the page is loaded. It contains metadata information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you want to style your HTML content with CSS), links to custom favicons, and metadata (data about the HTML, such as who wrote it, and important keywords that describe the document).
 - [Headings and paragraphs](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
   - : One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains how HTML can be used to provide fundamental page structure by defining headings and paragraphs.
@@ -69,9 +69,9 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 - [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
   - : A useful (and free resource) for learning HTML basics.
-- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
-- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
+- [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
   - : This interactive lesson provides a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}

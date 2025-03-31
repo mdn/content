@@ -151,7 +151,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
     </tr>
     <tr>
       <td><code>additional_backgrounds</code></td>
-      <td><code>Array </code>of <code>String</code></td>
+      <td><code>Array</code> of <code>String</code></td>
       <td>
         <div class="warning">
           <p>
@@ -207,7 +207,7 @@ All these properties can be specified as either a string containing any valid [C
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value#rgb_syntax_variations) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 
@@ -237,7 +237,7 @@ All these properties can be specified as either a string containing any valid [C
           </p>
           <p>
             Where <code>icons</code> isn't defined, also ensure good contrast
-            with<code> button_background_active</code> and
+            with <code>button_background_active</code> and
             <code>button_background_hover</code>.
           </p>
         </div>

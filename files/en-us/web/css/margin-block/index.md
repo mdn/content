@@ -7,9 +7,64 @@ browser-compat: css.properties.margin-block
 
 {{CSSRef}}
 
-The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
+The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/margin-block.html")}}
+{{InteractiveExample("CSS Demo: margin-block")}}
+
+```css interactive-example-choice
+margin-block: 10px 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block: 20px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block: 5% 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block: 1rem auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## Constituent properties
 

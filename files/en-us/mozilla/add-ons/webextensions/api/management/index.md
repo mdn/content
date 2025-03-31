@@ -33,7 +33,7 @@ Most of these operations require the "management" [API permission](/en-US/docs/M
 - {{WebExtAPIRef("management.getSelf()")}}
   - : Returns information about the calling add-on.
 - {{WebExtAPIRef("management.install()")}}
-  - : Installs a particular theme, given its URL at [addons.mozilla.org](https://addons.mozilla.org).
+  - : Installs a particular theme, given its URL at [addons.mozilla.org](https://addons.mozilla.org/).
 - {{WebExtAPIRef("management.uninstall()")}}
   - : Uninstalls a particular add-on, given its ID.
 - {{WebExtAPIRef("management.uninstallSelf()")}}

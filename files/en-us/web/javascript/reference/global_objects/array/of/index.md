@@ -11,7 +11,15 @@ The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 
-{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// Expected output: Array []
+```
 
 ## Syntax
 
@@ -88,6 +96,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.of`](https://www.npmjs.com/package/array.of)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}

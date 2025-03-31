@@ -17,7 +17,7 @@ To send an HTTP request:
 2. Open a URL
 3. Send the request.
 
-After the transaction completes, the `XMLHttpRequest` object will contain useful information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Status) of the result.
+After the transaction completes, the `XMLHttpRequest` object will contain useful information such as the response body and the [HTTP status](/en-US/docs/Web/HTTP/Reference/Status) of the result.
 
 ```js
 function reqListener() {
@@ -227,7 +227,7 @@ And to test:
 ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });
@@ -237,7 +237,7 @@ If you want to know if the current page has changed, refer to the article about 
 
 ## Cross-site XMLHttpRequest
 
-Modern browsers support cross-site requests by implementing the [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/CORS) (CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
+Modern browsers support cross-site requests by implementing the [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS) (CORS) standard. As long as the server is configured to allow requests from your web application's origin, `XMLHttpRequest` will work. Otherwise, an `INVALID_ACCESS_ERR` exception is thrown.
 
 ## Bypassing the cache
 
@@ -265,7 +265,7 @@ The recommended way to enable cross-site scripting is to use the `Access-Control
 
 ### XMLHttpRequests being stopped
 
-If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
+If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the `XMLHttpRequest` origin (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Specifications
 
@@ -279,6 +279,6 @@ If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null
 
 - [Using the Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control](/en-US/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

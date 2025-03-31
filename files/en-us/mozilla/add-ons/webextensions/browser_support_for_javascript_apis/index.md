@@ -10,4 +10,4 @@ page-type: guide
 
 ## See also
 
-- [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility)

@@ -62,7 +62,7 @@ doc.nodeName # DOM property of document object
 p_list = doc.getElementsByTagName("para")
 ```
 
-For more information on what technologies are involved in writing JavaScript on the web, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+For more information on what technologies are involved in writing JavaScript on the web, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Accessing the DOM
 

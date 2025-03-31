@@ -14,13 +14,13 @@ When the term "Base64" is used on its own to refer to a specific {{glossary("alg
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in {{glossary("URL")}} path segments or query parameters. You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/URI/Schemes/data) have neither and can use the standard Base64 encoding.
+A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in {{glossary("URL")}} path segments or query parameters. You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/URI/Reference/Schemes/data) have neither and can use the standard Base64 encoding.
 
 Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 
 - Email via [MIME](https://en.wikipedia.org/wiki/MIME)
 - Storing complex data in [XML](/en-US/docs/Web/XML)
-- Encoding binary data so that it can be included in a [`data:` URL](/en-US/docs/Web/URI/Schemes/data)
+- Encoding binary data so that it can be included in a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data)
 
 ## Encoded size increase
 
@@ -58,6 +58,6 @@ Browsers also natively provide two JavaScript functions for decoding and encodin
   - {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}})
   - {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}})
   - {{jsxref("Uint8Array")}}
-- [Data URLs](/en-US/docs/Web/URI/Schemes/data)
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - [Base64](https://en.wikipedia.org/wiki/Base64) on Wikipedia
 - Base64 Algorithm described in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)

@@ -9,7 +9,21 @@ browser-compat: html.elements.audio
 
 The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound content in documents. It may contain one or more audio sources, represented using the `src` attribute or the {{HTMLElement("source")}} element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a {{domxref("MediaStream")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 The above example shows basic usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
 
@@ -74,7 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
 - `src`
-  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
+  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/Guides/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 ## Events
 
@@ -253,7 +267,7 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Guides/Fo
 </audio>
 ```
 
-The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
+The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
 
 You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files. You can set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{domxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
 
@@ -367,7 +381,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -459,7 +473,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

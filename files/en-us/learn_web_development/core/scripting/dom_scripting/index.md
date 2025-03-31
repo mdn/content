@@ -1,5 +1,6 @@
 ---
 title: DOM scripting introduction
+short-title: DOM scripting
 slug: Learn_web_development/Core/Scripting/DOM_scripting
 page-type: learn-module-chapter
 ---

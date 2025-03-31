@@ -166,4 +166,4 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}

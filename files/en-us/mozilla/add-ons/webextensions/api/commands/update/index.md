@@ -9,8 +9,6 @@ browser-compat: webextensions.api.commands.update
 
 Change the description or keyboard shortcut for the given command.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint

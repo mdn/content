@@ -33,10 +33,10 @@ You could take your students through the provided pathway as-is, or you may wish
 - Grouping the learning outcomes differently. For example, you may wish to start with the basics of HTML document structure, then follow up quickly with some CSS fundamentals such as box model and text styling. In the next step, you might introduce more complex HTML features such as images and form fields, ramp up the CSS with some flexbox and media queries, and introduce some rudimentary DOM scripting.
 - Providing students with a repository containing their project work that can be published as a portfolio to demonstrate proof of their skills to prospective employers.
 
-You could also consider using an advanced turnkey solution such as an interactive video course. We would recommend [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) from our learning partner, [Scrimba](https://scrimba.com/?via=mdn), which teaches all of the learning outcomes in the MDN Curriculum Core and more.
+You could also consider using an advanced turnkey solution such as an interactive video course. We would recommend [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) from our learning partner, [Scrimba](https://scrimba.com/?via=mdn), which teaches all of the learning outcomes in the MDN Curriculum Core and more.
 
 > [!NOTE]
-> Scrimba offers multiple license deals — see [Scrimba for Teams](https://v2.scrimba.com/teams?via=mdn-edu).
+> Scrimba offers multiple license deals — see [Scrimba for Teams](https://scrimba.com/teams?via=mdn-edu).
 
 The Frontend Developer Career Path features fun interactive lessons and challenges, knowledgeable teachers, and a supportive community; it aims to give students all they need to land their first junior developer job. Many of the course components are available as standalone free versions.
 

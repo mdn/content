@@ -9,7 +9,20 @@ browser-compat: javascript.builtins.String.matchAll
 
 The **`matchAll()`** method of {{jsxref("String")}} values returns an iterator of all results matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## Syntax
 
@@ -153,6 +166,7 @@ str.matchAll({
 ## See also
 
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.matchAll`](https://www.npmjs.com/package/string.prototype.matchall)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - {{jsxref("String.prototype.match()")}}

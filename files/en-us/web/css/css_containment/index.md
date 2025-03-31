@@ -50,7 +50,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 ## Related concepts
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
@@ -75,7 +75,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
   - {{CSSxRef("contain-intrinsic-inline-size")}} property
-  - {{CSSxRef("contain-intrinsic-size")}} property
+  - {{CSSxRef("contain-intrinsic-block-size")}} property
   - {{CSSxRef("contain-intrinsic-width")}} property
   - {{CSSxRef("contain-intrinsic-height")}} property
 

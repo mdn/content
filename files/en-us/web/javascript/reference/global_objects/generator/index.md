@@ -11,8 +11,6 @@ The **`Generator`** object is returned by a {{jsxref("Statements/function*", "ge
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
-
 ## Constructor
 
 There's no JavaScript entity that corresponds to the `Generator` constructor. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):

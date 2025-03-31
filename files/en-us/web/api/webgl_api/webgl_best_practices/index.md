@@ -428,7 +428,7 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://registry.khronos.org/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://docs.vulkan.org/spec/latest/chapters/pipelines.html) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
@@ -587,7 +587,7 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 
 ## ResizeObserver and 'device-pixel-content-box'
 
-On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
+On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true {{glossary("device pixel")}} size of an element. This can be used to build an async-but-accurate function:
 
 ```js
 window.getDevicePixelSize =

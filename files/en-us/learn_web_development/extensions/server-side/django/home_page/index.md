@@ -1,5 +1,6 @@
 ---
 title: "Django Tutorial Part 5: Creating our home page"
+short-title: "5: Home page"
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 page-type: learn-module-chapter
 ---
@@ -339,7 +340,7 @@ You can add an image into the page in a similar way, for example:
 ```django
 {% load static %}
 <img
-  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  src="{% static 'images/local_library_model_uml.png' %}"
   alt="UML diagram"
   style="width:555px;height:540px;" />
 ```

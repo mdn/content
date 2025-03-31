@@ -1,5 +1,6 @@
 ---
 title: Debugging JavaScript and handling errors
+short-title: Debugging and error handling
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
 page-type: learn-module-chapter
 ---
@@ -124,7 +125,6 @@ The `console.log()` output shows that the return value of `fetch()` is not the J
 We can do this by putting the code that uses the response inside the {{jsxref("Promise.prototype.then()", "then()")}} method of the returned `Promise`, like this:
 
 ```js
-const response = fetch(requestURL);
 fetch(requestURL).then((response) => {
   populateHeader(response);
   showHeroes(response);

@@ -46,7 +46,7 @@ As an example, consider the loading experience of CNN.com, which at the time of 
 
 A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
 
-And it isn't just the time taken to download that is a major problem. In some regions, internet connections are billed per megabyte, making large downloads prohibitively expensive. Our example 22.6 MB CNN.com experience would cost a significant portion of a mobile data user's daily allowance or even lead to high charges in certain international roaming plans.(See [how much your site costs to download](https://whatdoesmysitecost.com/).)
+And it isn't just the time taken to download that is a major problem. In some regions, internet connections are billed per megabyte, making large downloads prohibitively expensive. Our example 22.6 MB CNN.com experience would cost a significant portion of a mobile data user's daily allowance or even lead to high charges in certain international roaming plans.
 
 ### Improve conversion rates
 
@@ -65,7 +65,7 @@ Here's some real-world examples of performance improvements:
 
 To build websites and applications people want to use; to attract and retain site visitors, you need to create an accessible site that provides a good user experience. Building websites requires HTML, CSS, and JavaScript, typically including binary file types such as images and video. The decisions you make and the tools you choose as you build your site can greatly affect the performance of the finished work.
 
-Good performance is an asset. Bad performance is a liability. Site speed directly affects bounce rates, conversion, revenue, user satisfaction, and search engine ranking. Performant sites have been shown to increase visitor retention and user satisfaction. Slow content has been shown to lead to site abandonment, with some visitors leaving to never return. Reducing the amount of data that passes between the client and the server lowers the costs to all parties. Reducing HTML/CSS/JavaScript and media file sizes reduces both the time to load and a site's power consumption (see [performance budgets](/en-US/docs/Web/Performance/Performance_budgets)).
+Good performance is an asset. Bad performance is a liability. Site speed directly affects bounce rates, conversion, revenue, user satisfaction, and search engine ranking. Performant sites have been shown to increase visitor retention and user satisfaction. Slow content has been shown to lead to site abandonment, with some visitors leaving to never return. Reducing the amount of data that passes between the client and the server lowers the costs to all parties. Reducing HTML/CSS/JavaScript and media file sizes reduces both the time to load and a site's power consumption (see [performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets)).
 
 Tracking performance is important. Multiple factors, including network speed and device capabilities affect performance. There is no single performance metric; and differing business objectives may mean different metrics are more relevant to the goals of the site or the organization that it supports. How the performance of your site is perceived is user experience!
 

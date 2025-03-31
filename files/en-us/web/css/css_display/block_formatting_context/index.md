@@ -41,7 +41,7 @@ Let's have a look at a couple of these in order to see the effect creating a new
 
 ### Contain internal floats
 
-In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
+In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in flow and out of flow elements](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
 
 **using `overflow: auto`**
 
@@ -227,13 +227,13 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Layout modes](/en-US/docs/Glossary/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used values](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- {{glossary("Replaced elements")}}

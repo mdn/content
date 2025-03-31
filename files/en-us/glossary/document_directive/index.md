@@ -10,7 +10,7 @@ In {{Glossary("CSP")}}, **document directives** are used in a {{HTTPHeader("Cont
 
 Document directives don't fall back to the {{CSP("default-src")}} directive.
 
-See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives) for a complete list.
+See [Document directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#document_directives) for a complete list.
 
 ## See also
 

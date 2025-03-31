@@ -7,9 +7,59 @@ browser-compat: css.properties.margin-inline
 
 {{CSSRef}}
 
-The **`margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) is a shorthand property that defines both the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
+The **`margin-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) is a shorthand property that defines both the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
-{{EmbedInteractiveExample("pages/css/margin-inline.html")}}
+{{InteractiveExample("CSS Demo: margin-inline")}}
+
+```css interactive-example-choice
+margin-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-inline: 10px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-inline: 5% 10%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col">One</div>
+    <div class="col transition-all" id="example-element">Two</div>
+    <div class="col">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: white;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Constituent properties
 

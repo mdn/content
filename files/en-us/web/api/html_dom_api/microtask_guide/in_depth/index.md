@@ -92,7 +92,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 ### Event loops
 
-Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
+Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
 
 Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
@@ -146,7 +146,7 @@ The microtask queue has been around for a while, but it's historically been used
 
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("Window.queueMicrotask()")}}
-- [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
+- [The Event Loop](/en-US/docs/Web/JavaScript/Reference/Execution_model)
 - [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)

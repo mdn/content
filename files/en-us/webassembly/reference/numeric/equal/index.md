@@ -9,7 +9,35 @@ The **`eq`** instructions, short for _equal_, check if two numbers are equal. If
 
 Similarly, the **`eqz`** instructions check if a number is equal to zero, the **`eqz`** instructions are only available for the integer types and not for the floating point types.
 
-{{EmbedInteractiveExample("pages/wat/eq.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: eq", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "env" "log_bool" (func $log_bool (param i32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    i32.const 10
+    i32.const 2
+
+    i32.eq ;; check if `10` is equal to `2`
+    call $log_bool ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+
+function log_bool(value) {
+  console.log(Boolean(value));
+  // Expected output: false
+}
+
+await WebAssembly.instantiateStreaming(fetch(url), {
+  env: { log_bool },
+});
+```
 
 ## Syntax
 

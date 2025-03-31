@@ -11,7 +11,41 @@ browser-compat: html.elements.input.type_range
 
 Because this kind of widget is imprecise, it should only be used if the control's exact value isn't important.
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
@@ -325,7 +359,7 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vert
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role">slider</a></code>
       </td>
     </tr>
   </tbody>

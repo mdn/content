@@ -247,7 +247,4 @@ You must also provide alternatives to multimedia content.
 
 ### Image compression
 
-Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:
-
-- **Installed software.** [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](https://optipng.sourceforge.net/) (all platforms), [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux)
-- **Online tools.** Dynamic drive's [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) (which can convert automatically from one format to another if it's more bandwidth-efficient)
+Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local. Generally, local tools are preferred because they can be more integrated with your development workflow; these tools include [ImageOptim](https://imageoptim.com/api) (Mac), [OptiPNG](https://optipng.sourceforge.net/) (all platforms), and [PNGcrush](https://pmt.sourceforge.io/pngcrush/) (DOS, Unix/Linux).

@@ -116,14 +116,6 @@
       "inh": "Event",
       "impl": []
     },
-    "AudioRenderCapacity": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "AudioRenderCapacityEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "AudioScheduledSourceNode": {
       "inh": "AudioNode",
       "impl": []
@@ -422,6 +414,10 @@
     },
     "CloseWatcher": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "CommandEvent": {
+      "inh": "Event",
       "impl": []
     },
     "Comment": {
@@ -1285,10 +1281,6 @@
       "impl": []
     },
     "GamepadPose": {
-      "inh": "",
-      "impl": []
-    },
-    "GamepadTouch": {
       "inh": "",
       "impl": []
     },
@@ -2712,6 +2704,14 @@
       "inh": "",
       "impl": []
     },
+    "PrivateAttribution": {
+      "inh": "",
+      "impl": []
+    },
+    "PrivateAttributionAggregationServices": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -3136,14 +3136,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SpeechGrammar": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechGrammarList": {
-      "inh": "",
-      "impl": []
-    },
     "SpeechRecognition": {
       "inh": "EventTarget",
       "impl": []
@@ -3522,6 +3514,10 @@
     },
     "SVGPathElement": {
       "inh": "SVGGeometryElement",
+      "impl": []
+    },
+    "SVGPathSegment": {
+      "inh": "",
       "impl": []
     },
     "SVGPatternElement": {
@@ -4118,6 +4114,10 @@
     },
     "WebTransportDatagramDuplexStream": {
       "inh": "",
+      "impl": []
+    },
+    "WebTransportDatagramsWritable": {
+      "inh": "WritableStream",
       "impl": []
     },
     "WebTransportError": {

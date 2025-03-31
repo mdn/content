@@ -7,13 +7,66 @@ browser-compat: css.properties.all
 
 {{CSSRef}}
 
-The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
+The **`all`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## Constituent properties
 
-This property is a shorthand for all CSS properties except for {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+This property is a shorthand for all CSS properties except for {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties).
 
 ## Syntax
 
@@ -31,16 +84,16 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 ### Values
 
 - {{cssxref("initial")}}
-  - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/initial_value).
+  - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value).
 - {{cssxref("inherit")}}
-  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/Inheritance).
+  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/CSS_cascade/Inheritance).
 - {{cssxref("unset")}}
   - : Specifies that all the element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
 - {{cssxref("revert")}}
   - : Specifies behavior that depends on the stylesheet origin to which the declaration belongs:
-    - If the rule belongs to the [author origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets), the `revert` value rolls back the [cascade](/en-US/docs/Web/CSS/Cascade) to the user level, so that the [specified values](/en-US/docs/Web/CSS/specified_value) are calculated as if no author-level rules were specified for the element. For purposes of `revert`, the author origin includes the Override and Animation origins.
-    - If the rule belongs to the [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets), the `revert` value rolls back the [cascade](/en-US/docs/Web/CSS/Cascade) to the user-agent level, so that the [specified values](/en-US/docs/Web/CSS/specified_value) are calculated as if no author-level or user-level rules were specified for the element.
-    - If the rule belongs to the [user-agent origin](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets), the `revert` value acts like `unset`.
+    - If the rule belongs to the [author origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#author_stylesheets), the `revert` value rolls back the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) to the user level, so that the [specified values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) are calculated as if no author-level rules were specified for the element. For purposes of `revert`, the author origin includes the Override and Animation origins.
+    - If the rule belongs to the [user origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user_stylesheets), the `revert` value rolls back the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) to the user-agent level, so that the [specified values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) are calculated as if no author-level or user-level rules were specified for the element.
+    - If the rule belongs to the [user-agent origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets), the `revert` value acts like `unset`.
 - {{cssxref("revert-layer")}}
   - : Specifies that all the element's properties should roll back the cascade to a previous [cascade layer](/en-US/docs/Web/CSS/@layer), if one exists. If no other cascade layer exists, the element's properties will roll back to the matching rule, if one exists, in the current layer or to a previous [style origin](/en-US/docs/Glossary/Style_origin).
 

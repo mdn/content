@@ -11,7 +11,16 @@ The **`function`** declaration creates a {{Glossary("binding")}} of a new functi
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: function declaration", "shorter")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## Syntax
 

@@ -7,9 +7,44 @@ browser-compat: css.properties.border-block
 
 {{CSSRef}}
 
-The **`border-block`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical block border property values in a single place in the style sheet.
+The **`border-block`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical block border property values in a single place in the style sheet.
 
-{{EmbedInteractiveExample("pages/css/border-block.html")}}
+{{InteractiveExample("CSS Demo: border-block")}}
+
+```css interactive-example-choice
+border-block: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 `border-block` can be used to set the values for one or more of {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, and {{cssxref("border-block-color")}} setting both the start and end in the block dimension at once. The physical borders to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}} and {{cssxref("border-bottom")}} or {{cssxref("border-right")}}, and {{cssxref("border-left")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 

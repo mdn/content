@@ -9,7 +9,19 @@ browser-compat: javascript.functions.default_parameters
 
 **Default function parameters** allow named parameters to be initialized with default values if no value or `undefined` is passed.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Default parameters")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## Syntax
 
@@ -221,7 +233,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 ### Destructured parameter with default value assignment
 
-You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax.
+You can use default value assignment with the [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) syntax.
 
 A common way of doing that is to set an empty object/array as the default value for the destructured parameter; for example: `[x = 1, y = 2] = []`. This makes it possible to pass nothing to the function and still have those values prefilled:
 

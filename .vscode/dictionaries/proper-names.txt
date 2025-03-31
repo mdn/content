@@ -4,9 +4,11 @@ Academind
 Acrosync
 Addy
 Adham
+Adhemar
 Adilah
 Akhgari
 alastairc
+Aldous
 Alexa
 alispivak
 Alman
@@ -14,6 +16,7 @@ Amit
 Amorim
 AMPPS
 Amstelvar
+Amélie
 Anand
 ANDI
 Andreessen
@@ -55,8 +58,10 @@ bitsies
 Bitsov
 Bixa
 Blackmoon
+Blankers
 Bloggs
 Bocoup
+Bodmin
 Boonie
 bottosson
 Boulton
@@ -65,6 +70,7 @@ Browserleaks
 Browsershots
 Browsersync
 Bruant
+Bubka
 BugZilla
 Bundlesize
 Bunyakovsky
@@ -122,6 +128,7 @@ Cyberduck
 Cylon
 Célestes
 Dahlkemper
+Dahlström
 Dailymotion
 Danilo
 Dannaway
@@ -132,6 +139,7 @@ Dedalium
 Dedreux
 Deepti
 Degit
+Deke
 DekiWiki
 Delaville
 Denicola
@@ -151,10 +159,12 @@ Domenic
 dorey
 Dotclear
 Dottoro
+Downey
 Dragomir
 Drasner
 Dreamweaver
 Dutton
+Dwyane
 dynamis
 Dyno
 Dynos
@@ -171,6 +181,7 @@ Eisenberg
 Elchi
 Emscripten
 Endtest
+Ensatina
 Envato
 Ephesis
 Eplepsia
@@ -179,7 +190,9 @@ Erdös
 ericwbailey
 Esben
 ethertank
+Eventbrite
 Exljbris
+Exocoetidae
 Fairchild
 FDCP
 ffconf
@@ -194,28 +207,35 @@ Flickr
 Florian
 flowplayer
 Fontsquirrel
+François
 Frederik
 Frida
 Fujisawa
 Galinski
 Gandi
 Gayatri
+Gebrselassie
 geckodriver
 Gedit
 Gerd
+Giancarlo
 gifplayer
 Gillenwater
 Gitbash
+Golightly
 Googlebot
+Gordo
 Grahl
 Granado
 Grande-Dixence
 Graywolf9
 Grigsby
+Grissom
 Groff
 groovecoder
 GSAP
 Guildford
+Haile
 Hamish
 hamishwillee
 Haml
@@ -248,10 +268,12 @@ Icecast
 idb-keyval
 Igalia
 Imagify
+Iniesta
 Inkscape
 intercooler
 Invision
 Ionos
+Irena
 Isac
 ITCSS
 ITEC
@@ -279,6 +301,7 @@ Joyo
 jpmedley
 JSCAMP
 jswebm
+Junxia
 Jérémie
 Júnior
 Kadir
@@ -295,6 +318,7 @@ Kazam
 Kearney
 kenji-yamasaki
 Kerckhoffs
+Kersee
 Kesteren
 Kettner
 Kinlan
@@ -310,6 +334,7 @@ Kneeland
 Knocky
 Knowbility
 Kobabe
+Koen
 Kokoro
 Komodo
 Konva
@@ -321,6 +346,7 @@ Lagerblad
 Lanyrd
 Laravel
 Lauke
+LeBron
 Leidel
 Leithead
 Leitura
@@ -359,6 +385,7 @@ Massieux
 Mathoid
 Matomo
 Matroska
+Matuzovic
 Maxability
 Maximiliano
 Mayank
@@ -394,6 +421,7 @@ momot
 Montulli
 Moonrocks
 Mooog
+Morgawr
 Morinigo
 Mork
 Mothman
@@ -401,6 +429,8 @@ Moussavi
 mozhacks
 Mufasa
 Mullany
+Musa
+Musaceae
 Musicr
 Mustafa
 myshov
@@ -436,6 +466,8 @@ olliej
 OptiPNG
 Orendorff
 Osmani
+Owlman
+Paavo
 Paciello
 Pacman
 Pagella
@@ -487,10 +519,12 @@ Resig
 Rhiana
 Riazhskikh
 Rigby
+Robison
 Rocher
 Rohini
 Ronaldo
 Roselli
+Rossi
 Roushan
 rsvg
 rubentd
@@ -504,7 +538,9 @@ Sandrina
 sashasushko
 Saurabh
 Scarfone
+Scarlett
 Schiff
+Schirra
 Schmarsow
 Schola
 Scholz
@@ -527,8 +563,10 @@ Siouxsie
 Siri
 Sitepoint
 Sivonen
+Skeletor
 Skywalker
 Slaght
+Slayton
 SlimerJS
 Snackbars.jsm
 Softgames
@@ -556,6 +594,7 @@ sveltesociety
 SVGOMG
 Swooop
 Symfony
+Szewinska
 Tabliss
 Tamaran
 Tanx
@@ -589,6 +628,7 @@ tristantheb
 Trustwave
 twgl
 Updown
+Usain
 usrsctp
 Vallejoanderson
 Vanderheiden
@@ -625,6 +665,7 @@ wisedog
 Wolenetz
 Wrox
 XAMPP
+Xavi
 Xiluodu
 Xiowan
 XITS
@@ -646,6 +687,7 @@ zantroke
 zantrokeregular
 Zaptec
 Zartner
+Zatopek
 Zehe
 Zenevich
 Zepto

@@ -40,8 +40,8 @@ _No changes._
 
 ### HTTP
 
-- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with an unquoted filename containing spaces ([Firefox bug 1440677](https://bugzil.la/1440677)).
-- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ([Firefox bug 1653199](https://bugzil.la/1653199)).
+- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) headers with an unquoted filename containing spaces ([Firefox bug 1440677](https://bugzil.la/1440677)).
+- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ([Firefox bug 1653199](https://bugzil.la/1653199)).
 
 ### APIs
 

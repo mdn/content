@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.String.toLocaleUpperCase
 
 The **`toLocaleUpperCase()`** method of {{jsxref("String")}} values returns this string converted to upper case, according to any locale-specific case mappings.
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## Syntax
 

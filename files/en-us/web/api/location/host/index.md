@@ -8,10 +8,9 @@ browser-compat: api.Location.host
 
 {{ApiRef("Location")}}
 
-The **`host`** property of the {{domxref("Location")}}
-interface is a string containing the host, that is the
-_hostname_, and then, if the _port_ of the URL is nonempty, a
-`':'`, and the _port_ of the URL.
+The **`host`** property of the {{domxref("Location")}} interface is a string containing the host, which is the {{domxref("Location.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a `":"`, followed by the {{domxref("Location.port", "port")}} of the URL. If the URL does not have a `hostname`, this property contains an empty string, `""`.
+
+See {{domxref("URL.host")}} for more information.
 
 ## Value
 

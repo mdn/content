@@ -23,12 +23,12 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("ImageDecoder.tracks")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("ImageTrackList")}} object listing the available tracks and providing a method for selecting a track to decode.
 - {{domxref("ImageDecoder.type")}} {{ReadOnlyInline}}
-  - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/MIME_types) configured during construction.
+  - : Returns a string reflecting the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) configured during construction.
 
 ## Static methods
 
 - {{domxref("ImageDecoder.isTypeSupported_static", "ImageDecoder.isTypeSupported()")}}
-  - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/MIME_types) is supported for unpacking and decoding.
+  - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) is supported for unpacking and decoding.
 
 ## Instance methods
 

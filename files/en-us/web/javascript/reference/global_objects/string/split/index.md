@@ -9,7 +9,23 @@ browser-compat: javascript.builtins.String.split
 
 The **`split()`** method of {{jsxref("String")}} values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## Syntax
 
@@ -29,7 +45,11 @@ split(separator, limit)
 
 ### Return value
 
-An {{jsxref("Array")}} of strings, split at each point where the `separator` occurs in the given string.
+If `separator` is a string, an {{jsxref("Array")}} of strings is returned, split at each point where the `separator` occurs in the given string.
+
+If `separator` is a regex, the returned {{jsxref("Array")}} also contains the [captured groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) for each separator match; see below for details. The capturing groups may be unmatched, in which case they are `undefined` in the array.
+
+If `separator` has a custom `[Symbol.split]()` method, its return value is directly returned.
 
 ## Description
 
@@ -292,6 +312,7 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 ## See also
 
 - [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.split`](https://www.npmjs.com/package/string.prototype.split)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}

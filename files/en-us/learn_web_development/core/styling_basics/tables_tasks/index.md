@@ -180,4 +180,4 @@ table {
 ## See also
 
 - [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
-- [Web Typography: Designing Tables to be Read, Not Looked At](https://alistapart.com/article/web-typography-tables) on alistapart.com (2017)
+- [Web Typography: Designing Tables to be Read, Not Looked At](https://alistapart.com/article/web-typography-tables/) on alistapart.com (2017)

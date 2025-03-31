@@ -54,9 +54,9 @@ The below image shows an alignment container with two alignment subjects inside.
 
 There are three different types of alignment that the specification details; these use keyword values.
 
-- [Positional alignment](#positional-alignment)
-- [Baseline alignment](#baseline-alignment)
-- [Distributed alignment](#distributed-alignment)
+- [Positional alignment](#positional_alignment)
+- [Baseline alignment](#baseline_alignment)
+- [Distributed alignment](#distributed_alignment)
 
 ### Positional alignment
 
@@ -285,4 +285,4 @@ As the CSS box alignment properties are implemented differently depending on the
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

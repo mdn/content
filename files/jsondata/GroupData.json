@@ -220,7 +220,7 @@
       "overview": ["Console API"],
       "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console"],
+      "properties": [],
       "events": []
     },
     "Cookie Store API": {
@@ -558,10 +558,7 @@
     },
     "File and Directory Entries API": {
       "overview": ["File and Directory Entries API"],
-      "guides": [
-        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
-        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
-      ],
+      "guides": [],
       "interfaces": [
         "FileSystemDirectoryEntry",
         "FileSystemDirectoryReader",
@@ -569,17 +566,23 @@
         "FileSystemFileEntry",
         "FileSystem"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["DataTransferItem.webkitGetAsEntry()"],
+      "properties": [
+        "File.webkitRelativePath",
+        "HTMLInputElement.webkitdirectory",
+        "HTMLinputElement.webkitEntries"
+      ],
       "events": []
     },
     "File System API": {
       "overview": ["File System API"],
       "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
+        "FileSystemChangeRecord",
         "FileSystemHandle",
         "FileSystemFileHandle",
         "FileSystemDirectoryHandle",
+        "FileSystemObserver",
         "FileSystemSyncAccessHandle",
         "FileSystemWritableFileStream"
       ],
@@ -966,6 +969,13 @@
       ],
       "events": ["HTMLElement: command"]
     },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
+    },
     "Keyboard API": {
       "overview": ["Keyboard API"],
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
@@ -1034,6 +1044,10 @@
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
+      "guides": [
+        "/docs/Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE",
+        "/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming"
+      ],
       "interfaces": [
         "MediaSource",
         "MediaSourceHandle",
@@ -1559,6 +1573,7 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
+        "SVGDiscardElement",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",
@@ -1788,7 +1803,7 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
+      "guides": ["/docs/Web/API/View_Transition_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
