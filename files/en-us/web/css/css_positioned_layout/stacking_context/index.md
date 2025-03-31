@@ -16,6 +16,8 @@ Within a stacking context, child elements are stacked according to the `z-index`
 
 The hierarchy of stacking contexts is a subset of the hierarchy of HTML elements because only certain elements create stacking contexts. Elements that don't create their own stacking contexts are _assimilated_ by the parent stacking context.
 
+To see it in action open the '3D view' tab in your browser's developer tools.
+
 ## Features creating stacking contexts
 
 A stacking context is formed, anywhere in the document, by any element in the following scenarios:
