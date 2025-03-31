@@ -185,4 +185,4 @@ These will be rendered as:
 
 ## Guidelines for using placeholder text
 
-Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com/) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin. The standard loren-ipsum text helps prevent spell-check warnings in editors or during review. Using a consistent placeholder text makes it easier to scan and recognize examples across MDN. It also helps keep examples clearly artificial and avoids distracting readers with realistic or potentially meaningful content. 
+Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com/) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin. The standard loren-ipsum text helps prevent spell-check warnings in editors or during review. Using a consistent placeholder text makes it easier to scan and recognize examples across MDN. It also helps keep examples clearly artificial and avoids distracting readers with realistic or potentially meaningful content.
