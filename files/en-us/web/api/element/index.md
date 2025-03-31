@@ -54,12 +54,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : A string representing the local part of the qualified name of the element.
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : The namespace URI of the element, or `null` if it is no namespace.
-
-    > [!NOTE]
-    > In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
-
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
@@ -176,7 +171,11 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaValueNow")}}
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
+
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+
+- {{domxref("Element.role")}}
+  - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/) attribute, which provides the semantic role of the element.
 
 ## Instance methods
 
