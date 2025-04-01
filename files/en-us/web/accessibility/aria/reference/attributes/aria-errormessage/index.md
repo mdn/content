@@ -66,6 +66,11 @@ When we went from valid to invalid, the only JavaScript change for this example 
 - ID reference list
   - : The `id` or space-separated list of element `id`s that contain the error message for the current element.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaErrorMessageElements")}} and {{domxref("ElementInternals.ariaErrorMessageElements")}}
+  - : The `ariaErrorMessageElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-errormessage` attribute (for cases where those ID values reference valid and in-scope elements).
+
 ## Associated roles
 
 Used in roles:
@@ -99,4 +104,3 @@ Inherits from roles:
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-- {{domxref("Element.ariaErrorMessageElements")}} and {{domxref("ElementInternals.ariaErrorMessageElements")}}
