@@ -22,7 +22,7 @@ Dictionary-ID: "<string-identifier>"
 ## Directives
 
 - `<string-identifier>`
-  - : A string identifier
+  - : A string representing the dictionary's server-assigned ID.
 
 ## Examples
 

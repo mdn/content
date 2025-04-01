@@ -13,7 +13,7 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 
 ## Syntax
 
-Clients can send an `Available-Dictionary` Header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded base-64 encoded SHA-256 {{glossary("Hash")}} of the dictionary contents.
+Clients can send an `Available-Dictionary` header when they support `dcb` or `dcz` encodings. The header is a colon-surrounded base-64 encoded SHA-256 {{glossary("hash")}} of the dictionary contents.
 
 ```http
 Available-Dictionary: :<base64-hash>:
@@ -22,7 +22,7 @@ Available-Dictionary: :<base64-hash>:
 ## Directives
 
 - `<base64-hash>`
-  - : A base-64 encoded SHA-256 {{glossary("Hash")}} of the dictionary contents.
+  - : A base-64 encoded SHA-256 {{glossary("hash")}} of the dictionary contents.
 
 ## Examples
 
