@@ -111,17 +111,19 @@ Dictionary-ID: "dictionary-12345"
 
 ## Separate dictionary
 
-Alternatively, an HTML document can specify one or more separate dictionaries by including a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
+An HTML document can also provide a compression dictionary to the browser which isn't a resource that the browser is downloading anyway via an element such as a {{htmlelement("script")} tag. There are two methods to do this:
 
-```html
-<link rel="compression-dictionary" href="/dictionary.dat" />
-```
+- Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
 
-Alternatively a dictionary can be included using the {{HTTPHeader("Link")}} header:
+    ```html
+    <link rel="compression-dictionary" href="/dictionary.dat" />
+    ```
 
-```http
-Link: </dictionary.dat>; rel="compression-dictionary"
-```
+- Reference the dictionary using the {{HTTPHeader("Link")}} header:
+
+    ```http
+    Link: </dictionary.dat>; rel="compression-dictionary"
+    ```
 
 This dictionary is then downloaded by the browser during idle time, and that response must include the {{HTTPHeader("Use-As-Dictionary")}} header:
 
