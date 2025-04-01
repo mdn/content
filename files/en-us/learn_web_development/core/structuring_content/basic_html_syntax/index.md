@@ -69,7 +69,7 @@ The anatomy of our element is:
 The element is the opening tag, followed by content, followed by the closing tag.
 
 > [!NOTE]
-> Head on over to our learning partner Scrimba's [HTML tags](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>_MDN learning partner_</sup> scrim for an interactive explanation of HTML tags.
+> Head on over to our learning partner Scrimba's [HTML tags](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim for an interactive explanation of HTML tags.
 
 ### Active learning: creating your first HTML element
 
