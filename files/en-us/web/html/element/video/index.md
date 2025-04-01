@@ -300,21 +300,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 </video>
 ```
 
-### Note
-
-When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the error event fires on the {{htmlelement("video")}} element, not the {{htmlelement("source")}}. The video element will automatically try the next source if available. The error event will only trigger after all sources have failed.
-
-```html
-<video controls>
-  <source src="invalid.mp4" type="video/mp4" />
-</video>
-<script>
-  const video = document.querySelector("video");
-  video.addEventListener("error", () => {
-    console.log("Error loading media:", video.error);
-  });
-</script>
-```
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the {{htmlelement("video")}} element after all sources have failed; `error` events are not fired on each individual {{htmlelement("source")}} element.
 
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Guides/Formats) and the [guide to the codecs supported for video](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). Also available is a guide to [audio codecs that can be used with them](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 
