@@ -141,7 +141,7 @@ showHeroes http://localhost:7800/js-debug-test/index.js:25
 
 This means that the error is coming from the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is the line that is calling `showHeroes()`. These lines are referred to as a **call stack**, and can be really useful when trying to track down the source of an error involving lots of different locations in your code.
 
-OK, so `console.error()` didn't help us _that_ much here, but it is useful to be able to generate a custom call stack if one is not available.
+The `console.error()` call isn't all that useful in this case, but it can be useful for generating a call stack if one is not already available.
 
 ### Fixing the error
 
@@ -176,7 +176,10 @@ In Firefox, the Debugger tab looks like this:
 
 The main feature of such tools is the ability to add breakpoints to code — these are points where the execution of the code stops, and at that point you can examine the environment in its current state and see what is going on.
 
-Let's get to work. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
+Let's explore using breakpoints:
+
+1. The error is being thrown at the same line as before — `for (const hero of heroes) {` — line 26 in the screenshot below. Click on this line in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it).
+2. Now refresh the page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) — the browser will pause execution of the code on that line. At this point, the right-hand side will update to show the following:
 
 ![Firefox debugger with a breakpoint](breakpoint.png)
 
