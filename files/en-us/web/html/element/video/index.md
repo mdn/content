@@ -86,7 +86,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
-    - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
+    - `metadata`: Indicates that only video metadata (e.g., length) is fetched.
     - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
     - _empty string_: A synonym of the `auto` value.
 

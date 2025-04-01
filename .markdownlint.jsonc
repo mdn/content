@@ -238,6 +238,13 @@
         "replace": "i.e., ",
         "searchScope": "text",
       },
+      {
+        "name": "comma-after-eg",
+        "message": "Add comma after 'e.g.'",
+        "searchPattern": "/\\be\\.g\\. /g",
+        "replace": "e.g., ",
+        "searchScope": "text",
+      },
     ],
   },
 }

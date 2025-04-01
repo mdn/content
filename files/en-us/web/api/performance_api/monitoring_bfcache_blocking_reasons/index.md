@@ -155,7 +155,7 @@ There are many different reasons why blocking could occur. Although the reasons 
 The values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
 
 - `"fetch"`
-  - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
+  - : While unloading, a fetch initiated by the current document (e.g., via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
 - `"lock"`
   - : While unloading, held locks and lock requests were terminated, so the page was not in a stable state that could be stored in the bfcache.
 - `"masked"`

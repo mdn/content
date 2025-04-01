@@ -46,7 +46,7 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 
 1. Check whether a match for the request is found in the CacheStorage. If so, serve that.
 2. If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3. If this fails (e.g. because the network is down), return a fallback response.
+3. If this fails (e.g., because the network is down), return a fallback response.
 
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 

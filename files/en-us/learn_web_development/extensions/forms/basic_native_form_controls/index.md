@@ -91,7 +91,7 @@ The following screenshot shows Password input field in which each input characte
 
 ![Password field in chrome 115 on macOS](password.png)
 
-The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g. with dots or asterisks) so it can't be easily read by others.
+The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g., with dots or asterisks) so it can't be easily read by others.
 
 Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e., located at an `https://` address), so the data is encrypted before it is sent.
 

@@ -112,7 +112,7 @@ The primary site's `.well-known` file must explicitly list out the full set stru
 }
 ```
 
-Each associate and service site needs to specify its primary site in a `.well-known` file. Each non-primary site in the above example (e.g. `https://associateA.com`) would need a `/.well-known/related-website-set.json` file like this:
+Each associate and service site needs to specify its primary site in a `.well-known` file. Each non-primary site in the above example (e.g., `https://associateA.com`) would need a `/.well-known/related-website-set.json` file like this:
 
 ```json
 {

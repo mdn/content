@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerContainer.startMessages
 
 The **`startMessages()`** method of
 the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of
-messages being dispatched from a service worker to pages under its control (e.g. sent
+messages being dispatched from a service worker to pages under its control (e.g., sent
 via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages
 earlier, even before that page's content has finished loading.
 

@@ -44,7 +44,7 @@ This article discusses only the basic parts that you need to know now.
 
 In programming, even the humble decimal number system that we all know so well is more complicated than you might think. We use different terms to describe different types of decimal numbers, for example:
 
-- **Integers** are numbers without a fractional part. They can either be positive or negative, e.g. 10, 400, or -5.
+- **Integers** are numbers without a fractional part. They can either be positive or negative, e.g., 10, 400, or -5.
 - **Floating point numbers** (floats) have decimal points and decimal places, for example 12.5, and 56.7786543.
 
 We even have different types of number systems! Decimal is base 10 (meaning it uses 0–9 in each digit), but we also have things like:

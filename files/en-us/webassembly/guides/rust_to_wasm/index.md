@@ -248,7 +248,7 @@ Put the following content in the `index.html` file:
 
 The script in this file will import the JavaScript glue code, initialize the Wasm module, and call the `greet` function we wrote in Rust.
 
-Serve the project root with a local web server, (e.g. `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
+Serve the project root with a local web server, (e.g., `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 > [!NOTE]
 > Use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.

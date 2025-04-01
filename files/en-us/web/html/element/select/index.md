@@ -74,7 +74,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
+  - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
     > [!NOTE]
     > According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
@@ -94,13 +94,13 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
 - Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
 - Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
 - Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 

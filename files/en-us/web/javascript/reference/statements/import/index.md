@@ -166,7 +166,7 @@ import * as myModule from "/modules/my-module.js";
 
 ### Module specifier resolution
 
-The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g. browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
+The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g., browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
 
 There are three types of specifiers widely recognized, as implemented by the HTML spec, Node, and many others:
 

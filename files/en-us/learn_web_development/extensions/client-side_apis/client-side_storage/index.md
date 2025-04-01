@@ -39,8 +39,8 @@ Elsewhere in the MDN learning area, we talked about the difference between [stat
 
 Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e., on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:
 
-- Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).
-- Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).
+- Personalizing site preferences (e.g., showing a user's choice of custom widgets, color scheme, or font size).
+- Persisting previous site activity (e.g., storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).
 - Saving data and assets locally so a site will be quicker (and potentially less expensive) to download, or be usable without a network connection.
 - Saving web application generated documents locally for use offline
 
@@ -53,7 +53,7 @@ Often client-side and server-side storage are used together. For example, you co
 
 The concept of client-side storage has been around for a long time. Since the early days of the web, sites have used [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
 
-These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) article.
+These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g., session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) article.
 
 ### New school: Web Storage and IndexedDB
 
@@ -408,7 +408,7 @@ This is quite complex; breaking it down, we:
 
 - Run {{domxref("Event.preventDefault()")}} on the event object to stop the form actually submitting in the conventional manner (this would cause a page refresh and spoil the experience).
 - Create an object representing a record to enter into the database, populating it with values from the form inputs. Note that we don't have to explicitly include an `id` value — as we explained earlier, this is auto-populated.
-- Open a `readwrite` transaction against the `notes_os` object store using the {{domxref("IDBDatabase.transaction()")}} method. This transaction object allows us to access the object store so we can do something to it, e.g. add a new record.
+- Open a `readwrite` transaction against the `notes_os` object store using the {{domxref("IDBDatabase.transaction()")}} method. This transaction object allows us to access the object store so we can do something to it, e.g., add a new record.
 - Access the object store using the {{domxref("IDBTransaction.objectStore()")}} method, saving the result in the `objectStore` variable.
 - Add the new record to the database using {{domxref("IDBObjectStore.add()")}}. This creates a request object, in the same fashion as we've seen before.
 - Add a bunch of event handlers to the `request` and the `transaction` objects to run code at critical points in the lifecycle. Once the request has succeeded, we clear the form inputs ready for entering the next note. Once the transaction has completed, we run the `displayData()` function again to update the display of notes on the page.
@@ -697,7 +697,7 @@ if ("serviceWorker" in navigator) {
 
 #### Installing the service worker
 
-The next time any page under the service worker's control is accessed (e.g. when the example is reloaded), the service worker is installed against that page, meaning that it will start controlling it. When this occurs, an `install` event is fired against the service worker; you can write code inside the service worker itself that will respond to the installation.
+The next time any page under the service worker's control is accessed (e.g., when the example is reloaded), the service worker is installed against that page, meaning that it will start controlling it. When this occurs, an `install` event is fired against the service worker; you can write code inside the service worker itself that will respond to the installation.
 
 Let's look at an example, in the [sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) file (the service worker). You'll see that the install listener is registered against `self`. This `self` keyword is a way to refer to the global scope of the service worker from inside the service worker file.
 

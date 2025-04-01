@@ -81,7 +81,7 @@ python3 manage.py runserver
 
 ## Logging in and using the site
 
-To login to the site, open the _/admin_ URL (e.g. `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
+To login to the site, open the _/admin_ URL (e.g., `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
 
 This part of the site displays all our models, grouped by installed application. You can click on a model name to go to a screen that lists all its associated records, and you can further click on those records to edit them. You can also directly click the **Add** link next to each model to start creating a record of that type.
 
@@ -94,7 +94,7 @@ Enter values for the fields. You can create new authors or genres by pressing th
 ![Admin Site - Book Add](admin_book_add.png)
 
 > [!NOTE]
-> At this point we'd like you to spend some time adding a few books, authors, languages, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
+> At this point we'd like you to spend some time adding a few books, authors, languages, and genres (e.g., Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
 
 When you've finished adding books, click on the **Home** link in the top bookmark to be taken back to the main admin page. Then click on the **Books** link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's `__str__()` method that we specified in the last article.
 
@@ -132,13 +132,13 @@ You can further customize the interface to make it even easier to use. Some of t
 - List views:
 
   - Add additional fields/information displayed for each record.
-  - Add filters to select which records are listed, based on date or some other selection value (e.g. Book loan status).
+  - Add filters to select which records are listed, based on date or some other selection value (e.g., Book loan status).
   - Add additional options to the actions menu in list views and choose where this menu is displayed on the form.
 
 - Detail views
 
   - Choose which fields to display (or exclude), along with their order, grouping, whether they are editable, the widget used, orientation etc.
-  - Add related fields to a record to allow inline editing (e.g. add the ability to add and edit book records while you're creating their author record).
+  - Add related fields to a record to allow inline editing (e.g., add the ability to add and edit book records while you're creating their author record).
 
 In this section we're going to look at a few changes that will improve the interface for our _LocalLibrary_, including adding more information to `Book` and `Author` model lists, and improving the layout of their edit views. We won't change the `Language` and `Genre` model presentation because they only have one field each, so there is no real benefit in doing so!
 

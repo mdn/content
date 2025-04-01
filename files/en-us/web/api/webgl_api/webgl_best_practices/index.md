@@ -120,7 +120,7 @@ WebGL doesn't offer APIs to query the maximum amount of video memory on the syst
 
 One technique pioneered by the Google Maps team is the notion of a _per-pixel VRAM budget_:
 
-1\) For one system (e.g. a particular desktop / laptop), decide the maximum amount of VRAM your application should use. 2) Compute the number of pixels covered by a maximized browser window. E.g. `(window.innerWidth * devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)` 3) The per-pixel VRAM budget is (1) divided by (2), and is a constant.
+1\) For one system (e.g., a particular desktop / laptop), decide the maximum amount of VRAM your application should use. 2) Compute the number of pixels covered by a maximized browser window. E.g. `(window.innerWidth * devicePixelRatio) * (window.innerHeight * window.devicePixelRatio)` 3) The per-pixel VRAM budget is (1) divided by (2), and is a constant.
 
 This constant should _generally_ be portable among systems. Mobile devices typically have smaller screens than powerful desktop machines with large monitors. Re-compute this constant on a few target systems to get a reliable estimate.
 
@@ -389,7 +389,7 @@ It may work on your system, but on many others it won't. Avoid it if you can. Ch
 
 Float16-blending is always supported.
 
-## Some formats (e.g. RGB) may be emulated
+## Some formats (e.g., RGB) may be emulated
 
 A number of formats (particularly three-channel formats) are emulated. For example, RGB32F is often actually RGBA32F, and Luminance8 may actually be RGBA8. RGB8 in particular is often surprisingly slow, as masking out the alpha channel and/or patching blend functions has fairly high overhead. Prefer to use RGBA8 and ignore the alpha yourself for better performance.
 
@@ -401,7 +401,7 @@ Most applications, even those requiring alpha blending, can be structured to pro
 
 ## Consider compressed texture formats
 
-While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g. normals or coordinates).
+While JPG and PNG are generally smaller over-the-wire, GPU compressed texture formats are smaller on in GPU memory, and are faster to sample from. (This reduces texture memory bandwidth, which is precious on mobile) However, compressed texture formats have worse quality than JPG, and are generally only acceptable for colors (not e.g., normals or coordinates).
 
 Unfortunately, there's no single universally supported format. Every system has at least one of the following though:
 

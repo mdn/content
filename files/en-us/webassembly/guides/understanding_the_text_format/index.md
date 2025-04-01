@@ -458,7 +458,7 @@ To show how you can create memory within the WebAssembly module, we've created a
 ```
 
 The three memory instances are automatically assigned an instance based on their order of creation.
-The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+The code below shows how we can specify this index (e.g., `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
 Here we write a string that indicates each memory type.
 
 ```wasm

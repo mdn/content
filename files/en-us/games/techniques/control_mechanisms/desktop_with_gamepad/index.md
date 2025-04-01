@@ -14,7 +14,7 @@ The Gamepad API gives you the ability to connect a gamepad to your computer and 
 
 ## API status, browser and hardware support
 
-The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is still in Working Draft status, although browser support is already quite good — around 63% global coverage, according to [caniuse.com](https://caniuse.com/#search=gamepad). The list of supported devices is also quite extensive — most popular gamepads (e.g. XBox 360 or PS3) should be suitable for web implementations.
+The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is still in Working Draft status, although browser support is already quite good — around 63% global coverage, according to [caniuse.com](https://caniuse.com/#search=gamepad). The list of supported devices is also quite extensive — most popular gamepads (e.g., XBox 360 or PS3) should be suitable for web implementations.
 
 ## Pure JavaScript approach
 

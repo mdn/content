@@ -100,7 +100,7 @@ We've looked at elements, but how can we specify the namespace of IMSC attribute
 
 In addition, IMSC attributes are contained in more than one namespace. Let's explain further — in IMSC there are different categories of attributes, styling attributes for example. The different categories have different namespaces. For example, all styling attributes have the namespace `http://www.w3.org/ns/ttml#styling`.
 
-As for XML elements, it would be too verbose to always write the complete namespace for each attribute, e.g. `color_http://www.w3.org/ns/ttml#styling="yellow"`.
+As for XML elements, it would be too verbose to always write the complete namespace for each attribute, e.g., `color_http://www.w3.org/ns/ttml#styling="yellow"`.
 
 Luckily XML has the concept of prefixes. A prefix can be thought of as a "shortcut" for a namespace. For example, we can define an attribute namespace on the root element:
 

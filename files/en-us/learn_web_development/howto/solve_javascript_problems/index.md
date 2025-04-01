@@ -112,7 +112,7 @@ const myObject = {
 - [How do you do basic math in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators)
 - [What is operator precedence, and how is it handled in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#operator_precedence)
 - [How do you increment and decrement values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#increment_and_decrement_operators)
-- [How do you compare values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) (e.g. to see which one is bigger, or to see if one value is equal to another).
+- [How do you compare values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) (e.g., to see which one is bigger, or to see if one value is equal to another).
 
 ### Strings
 
@@ -212,4 +212,4 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 ### Web APIs
 
-- [How do you manipulate the DOM (e.g. adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)

@@ -516,7 +516,7 @@ Optimizing animation of graphics is an entire specialty of programming, with lot
 
 In general, the process of doing a canvas animation involves the following steps:
 
-1. Clear the canvas contents (e.g. with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
+1. Clear the canvas contents (e.g., with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
 2. Save state (if necessary) using {{domxref("CanvasRenderingContext2D.save", "save()")}} — this is needed when you want to save settings you've updated on the canvas before continuing, which is useful for more advanced applications.
 3. Draw the graphics you are animating.
 4. Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}

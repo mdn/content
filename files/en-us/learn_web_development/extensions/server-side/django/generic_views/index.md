@@ -98,7 +98,7 @@ class BookListView(generic.ListView):
         return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 ```
 
-We might also override `get_context_data()` in order to pass additional context variables to the template (e.g. the list of books is passed by default). The fragment below shows how to add a variable named `some_data` to the context (it would then be available as a template variable).
+We might also override `get_context_data()` in order to pass additional context variables to the template (e.g., the list of books is passed by default). The fragment below shows how to add a variable named `some_data` to the context (it would then be available as a template variable).
 
 ```python
 class BookListView(generic.ListView):
@@ -164,7 +164,7 @@ If `book_list` is not empty, then we iterate through the list of books.
 {% endif %}
 ```
 
-The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g. `{% elif var2 %}`).
+The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g., `{% elif var2 %}`).
 For more information about conditional operators see: [if](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) (Django Docs).
 
 #### For loops
@@ -201,7 +201,7 @@ The code inside the loop creates a list item for each book that shows both the t
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
-We access the _fields_ of the associated book record using the "dot notation" (e.g. `book.title` and `book.author`), where the text following the `book` item is the field name (as defined in the model).
+We access the _fields_ of the associated book record using the "dot notation" (e.g., `book.title` and `book.author`), where the text following the `book` item is the field name (as defined in the model).
 
 We can also call _functions_ in the model from within our template — in this case we call `Book.get_absolute_url()` to get a URL you could use to display the associated detail record. This works provided the function does not have any arguments (there is no way to pass arguments!)
 
@@ -293,7 +293,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     <tr>
       <td>\w</td>
       <td>
-        Match a word character, e.g. any upper- or lower-case character in the
+        Match a word character, e.g., any upper- or lower-case character in the
         alphabet, digit or the underscore character (_)
       </td>
     </tr>

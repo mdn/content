@@ -18,7 +18,7 @@ The **`lost`** read-only property of the
 Many causes for lost devices are transient, so you should try getting a new device once a previous one has been lost unless the loss was caused by the application intentionally destroying the device (i.e., with {{domxref("GPUDevice.destroy()")}}). Note that any WebGPU resources created with a previous device (buffers, textures, etc.) will need to be re-created with the new one.
 
 > [!NOTE]
-> Also bear in mind that a `GPUAdapter` may become unavailable, e.g. if the physical GPU is unplugged from the system or disabled to save power. From then on, the adapter can no longer return valid devices, and will always return already-lost devices.
+> Also bear in mind that a `GPUAdapter` may become unavailable, e.g., if the physical GPU is unplugged from the system or disabled to save power. From then on, the adapter can no longer return valid devices, and will always return already-lost devices.
 
 ## Value
 

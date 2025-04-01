@@ -142,7 +142,7 @@ Each object can contain the following properties:
     > A cross-site prefetch requires a referrer policy that is at least as strict as the default `"strict-origin-when-cross-origin"` value — so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`. A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case.
 
     > [!NOTE]
-    > In the case of document rules, the matched link's specified referrer policy (e.g. using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
+    > In the case of document rules, the matched link's specified referrer policy (e.g., using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
 
 - `"relative_to"` {{experimental_inline}}
 

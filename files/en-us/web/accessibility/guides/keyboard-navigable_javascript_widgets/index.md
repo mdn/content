@@ -43,7 +43,7 @@ The following table describes `tabindex` behavior in modern browsers:
       <td>In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).</td>
     </tr>
     <tr>
-      <td>Positive (e.g. <code>tabindex="33"</code>)</td>
+      <td>Positive (e.g., <code>tabindex="33"</code>)</td>
       <td>Yes</td>
       <td><code>tabindex</code> value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, <code>tabindex="7"</code> will be positioned before <code>tabindex="11"</code>).</td>
     </tr>

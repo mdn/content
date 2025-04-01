@@ -108,7 +108,7 @@ As we talked about in [Chapter 1](/en-US/docs/Learn_web_development/Extensions/C
 
 - **Development environment**: The tools that are most fundamental to running your code. This part is already set up in the previous chapter.
 - **Safety net**: Making the software development experience stable and more efficient. We might also refer to this as our development environment.
-- **Transformation**: Tooling that allows us to use the latest features of a language (e.g. JavaScript) or another language entirely (e.g. JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
+- **Transformation**: Tooling that allows us to use the latest features of a language (e.g., JavaScript) or another language entirely (e.g., JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
 - **Post development**: Tooling that comes into play after you are done with the body of development to ensure that your software makes it to the web and continues to run. In this case study we'll look at adding tests to your code, and deploying your app using GitHub Pages so it is available for all the web to see.
 
 Let's start working on these, beginning with our development environment. We will follow the same steps as how a real project would be set up, so in the future, if you are setting up a new project, you can refer back to this chapter and follow the steps again.

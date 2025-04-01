@@ -13,7 +13,7 @@ The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement
 
 {{InheritanceDiagram}}
 
-The `Document` interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. [HTML](/en-US/docs/Web/HTML), [XML](/en-US/docs/Web/XML), SVG, …), a larger API is available: HTML documents, served with the `"text/html"` content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.
+The `Document` interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g., [HTML](/en-US/docs/Web/HTML), [XML](/en-US/docs/Web/XML), SVG, …), a larger API is available: HTML documents, served with the `"text/html"` content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.
 
 ## Constructor
 

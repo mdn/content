@@ -54,7 +54,7 @@ If the match succeeds, the `exec()` method returns an array and updates the [`la
 
 ## Description
 
-JavaScript {{jsxref("RegExp")}} objects are _stateful_ when they have the [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) or [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flags set (e.g. `/foo/g` or `/foo/y`). They store a [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) from the previous match. Using this internally, `exec()` can be used to iterate over multiple matches in a string of text (with capture groups), as opposed to getting just the matching strings with {{jsxref("String.prototype.match()")}}.
+JavaScript {{jsxref("RegExp")}} objects are _stateful_ when they have the [global](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) or [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flags set (e.g., `/foo/g` or `/foo/y`). They store a [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) from the previous match. Using this internally, `exec()` can be used to iterate over multiple matches in a string of text (with capture groups), as opposed to getting just the matching strings with {{jsxref("String.prototype.match()")}}.
 
 When using `exec()`, the global flag has no effect when the sticky flag is set — the match is always sticky.
 
@@ -123,7 +123,7 @@ Found ab. Next match starts at 9
 >
 > - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition — it will recreate the regex for every iteration and reset {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 > - Be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) is set, or `lastIndex` will never be advanced.
-> - If the regex may match zero-length characters (e.g. `/^/gm`), increase its {{jsxref("RegExp/lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
+> - If the regex may match zero-length characters (e.g., `/^/gm`), increase its {{jsxref("RegExp/lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
 
 You can usually replace this kind of code with {{jsxref("String.prototype.matchAll()")}} to make it less error-prone.
 

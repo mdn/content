@@ -90,7 +90,7 @@ Nodes are also referred to by their position in the tree relative to other nodes
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
 - **Sibling nodes**: Nodes that sit on the same level under the same parent node in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
 
-It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (e.g. descendant selector, child selector).
+It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (e.g., descendant selector, child selector).
 
 ## Active learning: Basic DOM manipulation
 
@@ -120,7 +120,7 @@ Note that, as with many things in JavaScript, there are many ways to select an e
 
 There are older methods available for grabbing element references, such as:
 
-- {{domxref("Document.getElementById()")}}, which selects an element with a given `id` attribute value, e.g. `<p id="myId">My paragraph</p>`. The ID is passed to the function as a parameter, i.e., `const elementRef = document.getElementById('myId')`.
+- {{domxref("Document.getElementById()")}}, which selects an element with a given `id` attribute value, e.g., `<p id="myId">My paragraph</p>`. The ID is passed to the function as a parameter, i.e., `const elementRef = document.getElementById('myId')`.
 - {{domxref("Document.getElementsByTagName()")}}, which returns an array-like object containing all the elements on the page of a given type, for example `<p>`s, `<a>`s, etc. The element type is passed to the function as a parameter, i.e., `const elementRefArray = document.getElementsByTagName('p')`.
 
 These two work better in older browsers than the modern methods like `querySelector()`, but are not as convenient. Have a look and see what others you can find!
@@ -225,7 +225,7 @@ The first way is to add inline styles directly onto elements you want to dynamic
    ```
 
 > [!NOTE]
-> Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
+> Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g., `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
 There is another common way to dynamically manipulate styles on your document, which we'll look at now.
 

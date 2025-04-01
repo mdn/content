@@ -214,7 +214,7 @@ const checkAllTodos = (completed) => {
 };
 ```
 
-Assignments to properties of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
+Assignments to properties of arrays and objects — e.g., `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
 
 Another solution is to assign a new array to `todos` containing a copy of all the to-dos with the `completed` property updated accordingly, like this:
 

@@ -35,7 +35,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 ## Interfaces
 
 - {{domxref("ViewTransition")}}
-  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+  - : Represents a view transition, and provides functionality to react to the transition reaching different states (e.g., ready to run the animation, or animation finished) or skip the transition altogether.
 
 ## Extensions to other interfaces
 

@@ -20,7 +20,7 @@ Values of this type are objects. They contain the following properties:
 - `bytesReceived`
   - : A `number` representing the number of bytes received so far from the host during the download; this does not take file compression into consideration.
 - `canResume`
-  - : A `boolean` indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (`true`), or not (`false`).
+  - : A `boolean` indicating whether a currently-interrupted (e.g., paused) download can be resumed from the point where it was interrupted (`true`), or not (`false`).
 - `cookieStoreId` {{optional_inline}}
   - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `danger`

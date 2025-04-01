@@ -402,7 +402,7 @@ const fn2 = obj.getThisGetter;
 console.log(fn2()() === globalThis); // true in non-strict mode
 ```
 
-This behavior is very useful when defining callbacks. Usually, each function expression creates its own `this` binding, which shadows the `this` value of the upper scope. Now, you can define functions as arrow functions if you don't care about the `this` value, and only create `this` bindings where you do (e.g. in class methods). See [example with `setTimeout()`](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply).
+This behavior is very useful when defining callbacks. Usually, each function expression creates its own `this` binding, which shadows the `this` value of the upper scope. Now, you can define functions as arrow functions if you don't care about the `this` value, and only create `this` bindings where you do (e.g., in class methods). See [example with `setTimeout()`](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply).
 
 ### this with a getter or setter
 

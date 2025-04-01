@@ -87,7 +87,7 @@ The view is very similar to all our other templates. The main difference is that
 
 ## What does it look like?
 
-Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
+Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g., "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 

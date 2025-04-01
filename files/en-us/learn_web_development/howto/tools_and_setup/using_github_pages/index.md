@@ -20,7 +20,7 @@ GitHub is a very important and useful community to get involved in, and Git/GitH
 
 ### Preparing your code for upload
 
-You can store any code you like in a GitHub repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g. with the primary entry point being an HTML file called `index.html`.
+You can store any code you like in a GitHub repository, but to use the GitHub Pages feature to full effect, your code should be structured as a typical website, e.g., with the primary entry point being an HTML file called `index.html`.
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 

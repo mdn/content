@@ -241,7 +241,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setDate()")}}
   - : Sets the day of the month for a specified date according to local time.
 - {{jsxref("Date.prototype.setFullYear()")}}
-  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.
+  - : Sets the full year (e.g., 4 digits for 4-digit years) for a specified date according to local time.
 - {{jsxref("Date.prototype.setHours()")}}
   - : Sets the hours for a specified date according to local time.
 - {{jsxref("Date.prototype.setMilliseconds()")}}
@@ -257,7 +257,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setUTCDate()")}}
   - : Sets the day of the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCFullYear()")}}
-  - : Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.
+  - : Sets the full year (e.g., 4 digits for 4-digit years) for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCHours()")}}
   - : Sets the hour for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCMilliseconds()")}}

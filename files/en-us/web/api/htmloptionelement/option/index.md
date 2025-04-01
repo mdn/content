@@ -31,7 +31,7 @@ new Option(text, value, defaultSelected, selected)
   - : A string representing the value of the
     {{domxref("HTMLOptionElement")}}, i.e., the value attribute of the equivalent
     {{htmlelement("option")}}. If this is not specified, the value of text is used as the
-    value, e.g. for the associated {{htmlelement("select")}} element's value when the form
+    value, e.g., for the associated {{htmlelement("select")}} element's value when the form
     is submitted to the server.
 - `defaultSelected` {{optional_inline}}
   - : A value of either `true` or `false` that sets the [`selected`](/en-US/docs/Web/HTML/Element/option#selected)

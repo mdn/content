@@ -87,7 +87,7 @@ We know that we need to store information about books (title, summary, author, g
 
 When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case some obvious candidates for these models are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g. like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g. fantasy, science fiction, etc.).
+You might also want to use models to represent selection-list options (e.g., like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g., fantasy, science fiction, etc.).
 
 Once we've decided on our models and fields, we need to think about the relationships between them.
 
@@ -310,9 +310,9 @@ The code also shows both ways of declaring a field:
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
 
   - default values.
-  - built-in validators (e.g. max/min values) and custom validation functions.
+  - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
-  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
+  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g., `{ type: String, lowercase: true, trim: true }`)
 
 For more information about options see [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
 
@@ -837,7 +837,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g., whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

@@ -12,7 +12,7 @@ This page provides a very brief "reminder" of how to work with events and event 
 
 Events are documented in and/or below the pages for the JavaScript objects that emit them. For example, to find out events fired on the browser window or the current document see the events sections in [`Window`](/en-US/docs/Web/API/Window#events) and [`Document`](/en-US/docs/Web/API/Document#events).
 
-You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find out what JavaScript objects fire events for particular APIs, e.g. animation, media, and so on.
+You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find out what JavaScript objects fire events for particular APIs, e.g., animation, media, and so on.
 
 ## Registering event handlers
 

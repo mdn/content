@@ -185,7 +185,7 @@ You get no guarantee that scripts will run in any specific order.
 It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
 
 Scripts loaded with the `defer` attribute will load in the order they appear on the page.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g., they modify one or more elements on the page).
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
@@ -216,7 +216,7 @@ Scripts loaded using the `defer` attribute (see below) will run in the order the
 ```
 
 In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g., they modify one or more elements on the page).
 
 To summarize:
 

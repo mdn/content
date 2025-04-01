@@ -16,7 +16,7 @@ The dialog can be triggered in the following ways:
 
 - Calling the event object's {{domxref("Event.preventDefault()", "preventDefault()")}} method.
 - Setting the event object's {{domxref("BeforeUnloadEvent.returnValue", "returnValue")}} property to a non-empty string value or any other [truthy](/en-US/docs/Glossary/Truthy) value.
-- Returning any truthy value from the event handler function, e.g. `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
+- Returning any truthy value from the event handler function, e.g., `return "string"`. Note that this only works when the function is attached via the `onbeforeunload` property, not the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. This behavior is consistent across modern versions of Firefox, Safari, and Chrome.
 
 The last two mechanisms are legacy features; best practice is to trigger the dialog by invoking `preventDefault()` on the event object, while also setting `returnValue` to support legacy cases.
 

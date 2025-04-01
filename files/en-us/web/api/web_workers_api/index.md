@@ -11,7 +11,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 
 ## Concepts and usage
 
-A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
+A worker is an object created using a constructor (e.g., {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
 
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("Window")}} object. For information about the code that you _can_ run see [supported functions](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#functions_available_in_workers), and [supported Web APIs](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers).
 

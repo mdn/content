@@ -200,7 +200,7 @@ async function logIngredients() {
 }
 ```
 
-Note how the code looks exactly like synchronous code, except for the `await` keywords in front of promises. One of the only tradeoffs is that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword, which can only be fixed when there's a type mismatch (e.g. trying to use a promise as a value).
+Note how the code looks exactly like synchronous code, except for the `await` keywords in front of promises. One of the only tradeoffs is that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword, which can only be fixed when there's a type mismatch (e.g., trying to use a promise as a value).
 
 `async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 

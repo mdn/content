@@ -208,7 +208,7 @@ You can specify
 
 - {{httpheader("Permissions-Policy/web-share", "web-share")}} {{experimental_inline}}
 
-  - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
+  - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g., mobile apps.
 
 - {{httpheader("Permissions-Policy/window-management", "window-management")}} {{experimental_inline}}
 

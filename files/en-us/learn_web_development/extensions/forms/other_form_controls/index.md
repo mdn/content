@@ -169,7 +169,7 @@ By default, a select box lets a user select only one value. By adding the [`mult
 
 You can provide suggested, automatically-completed values for form widgets using the {{HTMLElement("datalist")}} element with child {{HTMLElement("option")}} elements to specify the values to display. The `<datalist>` needs to be given an `id`.
 
-The data list is then bound to an {{htmlelement("input")}} element (e.g. a `text` or `email` input type) using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, the value of which is the `id` of the data list to bind.
+The data list is then bound to an {{htmlelement("input")}} element (e.g., a `text` or `email` input type) using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, the value of which is the `id` of the data list to bind.
 
 Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible matches for what they've typed into the input.
 
