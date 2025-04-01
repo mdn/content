@@ -76,7 +76,7 @@ The parameters are:
     - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
-      attr(data-name string, "stranger")
+      attr(data-name raw-string, "stranger")
       ```
 
     - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
