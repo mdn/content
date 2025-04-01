@@ -73,7 +73,7 @@ The parameters are:
 
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `raw-string`.
 
-    - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed at all (including CSS escapes, whitespace removal, comments, etc). No value triggers fallback; only the lack of the attribute entirely does.
+    - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
       ```css
       attr(data-name string, "stranger")
@@ -94,7 +94,7 @@ The parameters are:
 
       For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
-      To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parse validly, and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
+      To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
 
       ```css
       attr(data-content type(*))
