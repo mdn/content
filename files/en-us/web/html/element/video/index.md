@@ -309,9 +309,9 @@ When using {{htmlelement("source")}} elements, the browser attempts to load each
 </video>
 
 <script>
-  const video = document.querySelector('video');
-  video.addEventListener('error', () => {
-    console.log('Error loading media:', video.error);
+  const video = document.querySelector("video");
+  video.addEventListener("error", () => {
+    console.log("Error loading media:", video.error);
   });
 </script>
 ```
