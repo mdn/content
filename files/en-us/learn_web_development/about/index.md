@@ -116,7 +116,7 @@ We intend to do this in Q2 each year, to give educators time over Q2/Q3 to imple
 
 #### How does MDN know Scrimba's courses are high quality and follow best practices?
 
-Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
+Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
 
 #### Is MDN sharing user data with Scrimba?
 

@@ -7,7 +7,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-2
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Digest`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} provides a {{Glossary("digest")}} calculated using a hashing algorithm applied to the message content.
+The HTTP **`Content-Digest`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} provides a {{Glossary("hash function", "digest")}} calculated using a hashing algorithm applied to the message content.
 A recipient can use the `Content-Digest` to validate the HTTP message content for integrity purposes.
 
 The {{HTTPHeader("Want-Content-Digest")}} field lets a sender request a `Content-Digest` along with their hashing algorithm preferences.

@@ -1827,19 +1827,6 @@
       "teoli"
     ]
   },
-  "Glossary/Cryptographic_hash_function": {
-    "modified": "2019-12-08T08:53:55.136Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "sebastien-bartoli",
-      "marumari",
-      "lpiot",
-      "Andrew_Pfeiffer",
-      "kscarfone",
-      "teoli"
-    ]
-  },
   "Glossary/Cryptography": {
     "modified": "2020-02-21T15:01:36.818Z",
     "contributors": [
@@ -1952,18 +1939,6 @@
   "Glossary/Developer_Tools": {
     "modified": "2019-03-23T22:10:49.789Z",
     "contributors": ["LaAzteca", "Sebastianz"]
-  },
-  "Glossary/Digest": {
-    "modified": "2019-03-23T23:04:10.174Z",
-    "contributors": [
-      "joshuaptfan",
-      "Sodan",
-      "marumari",
-      "Andrew_Pfeiffer",
-      "hbloomer",
-      "kscarfone",
-      "teoli"
-    ]
   },
   "Glossary/Digital_certificate": {
     "modified": "2019-03-23T22:57:42.093Z",

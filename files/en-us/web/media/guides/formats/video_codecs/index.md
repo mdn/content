@@ -1503,7 +1503,7 @@ Theora was originally based upon the VC3 codec by On2 Technologies. The codec an
 
 One drawback to Theora is that it only supports 8 bits per color component, with no option to use 10 or more in order to avoid color banding. That said, 8 bits per component is still the most commonly-used color format in use today, so this is only a minor inconvenience in most cases. Also, Theora can only be used in an Ogg container. The biggest drawback of all, however, is that it is not supported by Safari, leaving Theora unavailable not only on macOS but on all those millions and millions of iPhones and iPads.
 
-The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers additional details about Theora as well as the Ogg container format it is used within.
+The [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/) offers additional details about Theora as well as the Ogg container format it is used within.
 
 <table class="standard-table">
   <tbody>
