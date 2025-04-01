@@ -139,7 +139,7 @@ showHeroes http://localhost:7800/js-debug-test/index.js:25
 <anonymous> http://localhost:7800/js-debug-test/index.js:10
 ```
 
-This means that the error is coming from the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is the line that is calling `showHeroes()`. This is called a **call stack**, and it can be really useful when trying to track down the source of an error involving lots of different locations in your code.
+This means that the error is coming from the `showHeroes()` function, line 25, as we noted earlier. If you look at your code, you'll see that the anonymous call on line 10 is the line that is calling `showHeroes()`. These lines are referred to as a **call stack**, and can be really useful when trying to track down the source of an error involving lots of different locations in your code.
 
 OK, so `console.error()` didn't help us _that_ much here, but it is useful to be able to generate a custom call stack if one is not available.
 
