@@ -23,7 +23,7 @@ In this lesson, we will return to the subject of debugging JavaScript (which we 
         <ul>
           <li>Using browser developer tools to inspect the JavaScript running on your page and see what errors it is generating.</li>
           <li>Using <code>console.log()</code> and <code>console.error()</code> for debugging.</li>
-          <li>Advanced JavaScript debugging with devtools JavaScript debuggers.</li>
+          <li>Advanced JavaScript debugging with browser devtools.</li>
           <li>Error handling with <code>conditionals</code>, <code>try...catch</code>, and <code>throw</code>.</li>
         </ul>
       </td>
