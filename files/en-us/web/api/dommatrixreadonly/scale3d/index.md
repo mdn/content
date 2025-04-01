@@ -75,5 +75,5 @@ console.log(matrix.toString()); // original matrix is unchanged
 - {{domxref("DOMMatrixReadOnly.scale()")}}
 - CSS {{cssxref("transform")}} property and {{cssxref("transform-function/scale3d", "scale3d()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} functions
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface's {{domxref("CanvasRenderingContext2D.transform()")}} method

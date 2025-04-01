@@ -41,7 +41,7 @@ This page is a curated list of some of the most popular goal-oriented learning m
 
 - [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
   - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using {{domxref("Window/fetch", "fetch()")}}. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
-- [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
+- [Progressive web apps](/en-US/docs/Web/Progressive_web_apps)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
 - [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
   - : The web platform provides different methods of parsing and serializing XML, each with its pros and cons.

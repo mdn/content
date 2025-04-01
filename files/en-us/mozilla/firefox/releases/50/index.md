@@ -53,10 +53,10 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### Security
 
-- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute of {{htmlelement("a")}} element now abides by the [`connect-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) ([Firefox bug 1100181](https://bugzil.la/1100181)).
-- Support for the [`sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#sandbox) [CSP](/en-US/docs/Web/HTTP/CSP) directive has been added ([Firefox bug 671389](https://bugzil.la/671389)).
+- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute of {{htmlelement("a")}} element now abides by the [`connect-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#connect-src) [CSP 1.1 policy directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ([Firefox bug 1100181](https://bugzil.la/1100181)).
+- Support for the [`sandbox`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#sandbox) [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directive has been added ([Firefox bug 671389](https://bugzil.la/671389)).
 - It's now possible to set a [content security policy for workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ([Firefox bug 959388](https://bugzil.la/959388)).
-- The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) restriction; instead, it returns `false` as expected ([Firefox bug 1234813](https://bugzil.la/1234813)).
+- The {{domxref("Navigator.sendBeacon()")}} method no longer throws an exception if the beacon data couldn't be sent due to a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) restriction; instead, it returns `false` as expected ([Firefox bug 1234813](https://bugzil.la/1234813)).
 - Support for RC4 encryption was deprecated in Firefox 36 and disabled by default in Firefox 44. The one-year grace period has ended, so Firefox 50 removes all support for RC4 (Google Chrome removed support for RC4 in August 2016). From now on, any time Firefox encounters RC4 encryption, it will report an `SSL_ERROR_NO_CYPHER_OVERLAP` error.
 
 ### Networking

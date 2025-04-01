@@ -164,5 +164,5 @@ Another example:
 ## See also
 
 - The {{HTMLElement("sup")}} HTML element that produces superscript. Note that you cannot use `sup` and `sub` both at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript directly above a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
-- The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+- The [`<msub>`](/en-US/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Reference/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Reference/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

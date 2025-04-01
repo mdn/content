@@ -21,7 +21,7 @@ Before looking at codec-specific capabilities and requirements, there are a few 
 
 Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.
 
-SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
+SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
 
 ## Supported video codecs
 
@@ -106,7 +106,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
       <td>—</td>
       <td>
         <p>Chrome (113+), Firefox (136+)</p>
-        <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
+        <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
       </td>
     </tr>
   </tbody>
@@ -183,7 +183,7 @@ AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#
 
 WebRTC supports two main technologies for efficiently sending video for consumption by recipients that are operating with different capabilities and network conditions.
 
-AV1 uses the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) to provide frame dependency information needed to support [multi-party conferencing use cases](/en-US/docs/Web/API/WebRTC_API/Protocols#multi-party_video_conferencing).
+AV1 uses the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) to provide frame dependency information needed to support [multi-party conferencing use cases](/en-US/docs/Web/API/WebRTC_API/Protocols#multi-party_video_conferencing).
 
 ## Supported audio codecs
 

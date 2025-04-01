@@ -25,7 +25,7 @@ The **`<video>`** [HTML](/en-US/docs/Web/HTML) element embeds a media player whi
 </video>
 ```
 
-The above example shows simple usage of the `<video>` element. Similarly to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, etc.
+The above example shows how to use the `<video>` element. Similar to the {{htmlelement("img")}} element, we include a path to the media we want to display inside the `src` attribute; we can include other attributes to specify information such as video width and height, whether we want it to autoplay and loop, or to show the browser's default video controls, and so on.
 
 The content inside the opening and closing `<video></video>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -300,6 +300,8 @@ Browsers don't all support the same video formats; you can provide multiple sour
 </video>
 ```
 
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the `<video>` element after all sources have failed; `error` events are not fired on each individual `<source>` element.
+
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Guides/Formats) and the [guide to the codecs supported for video](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). Also available is a guide to [audio codecs that can be used with them](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 
 Other usage notes:
@@ -481,7 +483,7 @@ This example builds on the last one, offering three different sources for the me
 
 First AVI is tried. If that can't be played, [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) is tried. A fallback message is displayed if the video element isn't supported, but not if all sources fail.
 
-Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) parameter as part of the file's type string. A relatively simple example is `video/webm; codecs="vp8, vorbis"`, which says that the file is a [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) for audio.
+Some media file types let you provide more specific information using the [`codecs`](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) parameter as part of the file's type string. For example, `video/webm; codecs="vp8, vorbis"` says that the file is a [WebM](/en-US/docs/Web/Media/Guides/Formats/Containers#webm) video using [VP8](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp8) for its video and [Vorbis](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) for audio.
 
 ## Technical summary
 

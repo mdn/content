@@ -128,13 +128,13 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
     - The user canceled the request.
 
-    - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
+    - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy):
 
       - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}
       - {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}}
       - {{HTTPHeader("Permissions-Policy/otp-credentials","otp-credentials")}}
 
-    - The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Headers/Origin#null).
+    - The calling origin is an [opaque origin](/en-US/docs/Web/HTTP/Reference/Headers/Origin#null).
 
 - `SecurityError` {{domxref("DOMException")}}
 
@@ -214,16 +214,18 @@ The following snippet shows a typical `get()` call with the WebAuthn `publicKey`
 
 ```js
 const publicKey = {
-  challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* ,… */]),
   rpId: "acme.com",
-  allowCredentials: [{
-    type: "public-key",
-    id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-  }],
+  allowCredentials: [
+    {
+      type: "public-key",
+      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* ,… */]),
+    },
+  ],
   userVerification: "required",
-}
+};
 
-navigator.credentials.get({ publicKey })
+navigator.credentials.get({ publicKey });
 ```
 
 A successful `get()` call returns a promise that resolves with a {{domxref("PublicKeyCredential")}} object instance, representing a public key credential previously created via a WebAuthn {{domxref("CredentialsContainer.create()", "create()")}} that has now been used to authenticate a user. Its {{domxref("PublicKeyCredential.response")}} property contains an {{domxref("AuthenticatorAssertionResponse")}} object providing access to several useful pieces of information including the authenticator data, signature, and user handle.

@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-In this recipe, you will see how to center one box inside another by using [flexbox](#using_flexbox) and [grid](#using_grid). Centering both horizontally and vertically is simple and straightforward.
+In this recipe, you will see how to center one box inside another by using [flexbox](#using_flexbox) and [grid](#using_grid), centering content both horizontally and vertically.
 
 ![an element centered inside a larger box](cookbook-center.png)
 

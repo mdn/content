@@ -70,7 +70,7 @@ This guideline focuses on making text content as understandable as possible.
         link to when they appear, or at the very least provide definitions
         somewhere in the surrounding text, or in a
         <a
-          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#description_lists"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Lists#description_lists"
           >description list</a
         >
         at the bottom of the page.
@@ -356,7 +356,7 @@ This guideline centers around helping users enter correct information when requi
       <td>
         <p>
           Clear instructions should be provided when data input is required.
-          When a simple instruction or prompt is required, you can use
+          When a short instruction or prompt is required, you can use
           {{htmlelement("label")}} elements for single inputs like name
           or age, a combination or {{htmlelement("label")}}s and
           {{htmlelement("fieldset")}}s/{{htmlelement("legend")}}s

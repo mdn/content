@@ -37,7 +37,7 @@ A solid approach to providing accessible solutions for people with cognitive imp
 - incorporating familiar elements, such as underlined links that are blue when not visited and purple when visited;
 - dividing processes into logical, essential steps with progress indicators;
 - making website authentication as easy as possible without compromising security; and
-- making forms easy to complete, such as with clear error messages and simple error recovery.
+- making forms easy to complete, such as with clear error messages and error recovery.
 
 ## WCAG Guidelines
 
@@ -278,4 +278,4 @@ The above are good design practices. They will benefit everyone.
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)
+- [CDC information on disabilities](https://www.cdc.gov/disability-and-health/)

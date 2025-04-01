@@ -139,7 +139,7 @@ The `attr()` function can reference attributes that were never intended by the p
 </style>
 ```
 
-Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
+Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
@@ -504,4 +504,4 @@ document.querySelector("button").addEventListener("click", (e) => {
 
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
 - [HTML `data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Attribute/data-*)
+- [SVG `data-*` attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*)

@@ -88,7 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
 - `src`
-  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
+  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/Guides/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 ## Events
 
@@ -268,6 +268,8 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Guides/Fo
 ```
 
 The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
+
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the `<audio>` element after all sources have failed; `error` events are not fired on each individual `<source>` element.
 
 You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files. You can set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{domxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
 

@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.dataset
 
 {{APIRef("SVG")}}
 
-The **`dataset`** read-only property of the {{DOMxRef("SVGElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/SVG/Attribute/data-*) (`data-*`) on elements. It exposes a map of strings ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
+The **`dataset`** read-only property of the {{DOMxRef("SVGElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/SVG/Reference/Attribute/data-*) (`data-*`) on elements. It exposes a map of strings ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
 For more information on the behavior of `dataset`, see {{domxref("HTMLElement.dataset")}}.
 
@@ -44,5 +44,5 @@ console.log(el.dataset.id); // "1234567890"
 
 ## See also
 
-- [`data-*`](/en-US/docs/Web/SVG/Attribute/data-*) SVG attributes
+- [`data-*`](/en-US/docs/Web/SVG/Reference/Attribute/data-*) SVG attributes
 - [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

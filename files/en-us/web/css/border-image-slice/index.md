@@ -121,7 +121,7 @@ The optional `fill` value, if used, can be placed anywhere in the declaration.
 
 ### Adjustable border width and slice
 
-The following example shows a simple `<div>` with a border image set on it. The source image for the borders is as follows:
+The following example shows a `<div>` with a border image set on it. The source image for the borders is as follows:
 
 ![nice multi-colored diamonds](border-diamonds.png)
 

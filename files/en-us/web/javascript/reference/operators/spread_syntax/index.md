@@ -9,9 +9,9 @@ browser-compat: javascript.operators.spread
 
 The **spread (`...`)** syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
 
-Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property).
+Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opposite of rest syntax. Spread syntax "expands" an array into its elements, while rest syntax collects multiple elements and "condenses" them into a single element. See [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_properties_and_rest_elements).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{InteractiveExample("JavaScript Demo: Spread syntax (...)")}}
 
 ```js interactive-example
 function sum(x, y, z) {
@@ -356,5 +356,5 @@ const mergedObj1 = merge(obj1, obj2);
 ## See also
 
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)
+- [Rest property](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_properties_and_rest_elements)
 - {{jsxref("Function.prototype.apply()")}}

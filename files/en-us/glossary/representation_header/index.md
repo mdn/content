@@ -14,7 +14,7 @@ The underlying resource is semantically the same in each case, but its represent
 
 While representations are different forms of resources, representations can themselves also be transmitted in various forms: an HTTP message frames (cf., e.g., HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}), a particular stream of octets (cf., e.g., {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
 
-Clients specify the formats that they prefer to be sent during [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) (using `Accept-*` headers), and the representation headers tell the client the format of the _selected representation_ they received.
+Clients specify the formats that they prefer to be sent during [Content Negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) (using `Accept-*` headers), and the representation headers tell the client the format of the _selected representation_ they received.
 
 Representation headers may be present in both HTTP request and response messages with various methods.
 If sent as a response to a `HEAD` request, they describe the body content representation that _would_ be selected if the resource was requested with a `GET` request.
@@ -28,7 +28,7 @@ Representation headers include:
 - {{HTTPHeader("Content-Location")}}
 - {{HTTPHeader("Content-Language")}}
 
-- Validators used in [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests), such as:
+- Validators used in [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests), such as:
   - {{HTTPHeader("Last-Modified")}}
   - {{HTTPHeader("ETag")}}
 
@@ -39,6 +39,6 @@ Representation headers are not mutually exclusive with {{Glossary("Content heade
 - Related glossary terms:
   - {{Glossary("Content header")}}
 - [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}

@@ -305,6 +305,5 @@ You can also create a {{domxref("Blob")}} from the canvas.
 - {{domxref("ImageData")}}
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Download Canvas API-Generated Images Using toBlob](https://www.digitalocean.com/community/tutorials/js-canvas-toblob)
-- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

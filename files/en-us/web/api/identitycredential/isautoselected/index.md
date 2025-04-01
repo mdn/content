@@ -5,11 +5,10 @@ slug: Web/API/IdentityCredential/isAutoSelected
 page-type: web-api-instance-property
 status:
   - experimental
-  - non-standard
 browser-compat: api.IdentityCredential.isAutoSelected
 ---
 
-{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}{{non-standard_header}}
+{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
 The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in flow was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e. without user mediation) or not.
 

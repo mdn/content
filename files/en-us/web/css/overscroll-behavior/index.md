@@ -23,14 +23,6 @@ overscroll-behavior: contain;
 overscroll-behavior: none;
 ```
 
-```css interactive-example-choice
-overscroll-behavior: auto;
-```
-
-```css interactive-example-choice
-overscroll-behavior: contain;
-```
-
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
@@ -183,4 +175,5 @@ html {
 ## See also
 
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

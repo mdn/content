@@ -1,5 +1,6 @@
 ---
 title: "JavaScript: Adding interactivity"
+short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
 ---
@@ -57,7 +58,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
 > [!WARNING]
 > If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
 
-1. Inside your `first-website` folder, create a new folder named `scripts`.
+1. Inside your `first-website` folder or the example folder you have just downloaded, create a new folder named `scripts`.
 2. Within the `scripts` folder, create a new text document called `main.js`, and save it.
 3. Go to your `index.html` file and enter this code on a new line, just before the closing `</body>` tag:
 

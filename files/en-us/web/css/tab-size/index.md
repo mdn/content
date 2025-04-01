@@ -29,7 +29,7 @@ tab-size: 4;
 
 ```html interactive-example
 <section id="default-example">
-  <pre id="example-element">  123</pre>
+  <pre id="example-element">&#9;123</pre>
 </section>
 ```
 

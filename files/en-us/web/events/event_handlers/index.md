@@ -27,7 +27,7 @@ By convention, JavaScript objects that fire events have a corresponding "onevent
 
 To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
 
-Below we show how to set a simple `greet()` function for the `click` event using the `onclick` property.
+Below we show how to set a `greet()` function for the `click` event using the `onclick` property.
 
 ```js
 const btn = document.querySelector("button");
@@ -48,7 +48,7 @@ The most flexible way to set an event handler on an element is to use the {{domx
 > [!NOTE]
 > The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.
 
-Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use an anonymous function expression instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
+Below we show how a `greet()` function can be set as a listener/event handler for the `click` event (you could use an anonymous function expression instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
 
 ```js
 const btn = document.querySelector("button");

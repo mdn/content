@@ -112,7 +112,7 @@ The `background-attachment` property is specified as one of the keyword values f
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -135,7 +135,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Basic_example")}}
 
 ### Multiple background images
 
