@@ -95,7 +95,7 @@ The parameters are:
       attr(data-size type(<length> | <percentage>), 0px)
       ```
 
-      > [!NOTE] 
+      > [!NOTE]
       > For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
       To accept any data type, use `*` as the type. This still triggers CSS parsing but with no requirements placed on it beyond that it parses validly and substitutes the result of that parsing directly as tokens, rather than as a `<string>` value.
