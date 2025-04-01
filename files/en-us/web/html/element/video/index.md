@@ -316,7 +316,6 @@ When using {{htmlelement("source")}} elements, the browser attempts to load each
 </script>
 ```
 
-
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Guides/Formats) and the [guide to the codecs supported for video](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). Also available is a guide to [audio codecs that can be used with them](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 
 Other usage notes:
