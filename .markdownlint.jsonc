@@ -232,10 +232,10 @@
         "searchScope": "text",
       },
       {
-        "name": "ie-replacement",
-        "message": "Replace 'i.e.' with 'i.e.,'",
-        "searchPattern": "/\\bi\\.e\\./g",
-        "replace": "i.e.,",
+        "name": "comma-after-ie",
+        "message": "Add comma after 'i.e.'",
+        "searchPattern": "/\\bi\\.e\\. /g",
+        "replace": "i.e., ",
         "searchScope": "text"
       },      
     ],
