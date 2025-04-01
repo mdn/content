@@ -317,7 +317,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
 
 | Constant name | Value  | Description                                                                                                                                                     |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass, i.e., nothing will be drawn.                                 |
+| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass, i.e., nothing will be drawn.                                  |
 | `LESS`        | 0x0201 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than the stored value.                |
 | `EQUAL`       | 0x0202 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is equals to the stored value.                |
 | `LEQUAL`      | 0x0203 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than or equal to the stored value.    |
