@@ -78,7 +78,6 @@ The parameters are:
       ```css
       attr(data-name raw-string, "stranger")
       ```
-      
       > [!NOTE]
       > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported for a short while, for backwards compatibility purposes.
 
