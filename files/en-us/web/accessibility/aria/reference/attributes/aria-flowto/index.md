@@ -26,6 +26,11 @@ When `aria-flowto` has a single [id](/en-US/docs/Web/HTML/Reference/Global_attri
 - `id` list
   - : Space separated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
 
+## Associated interfaces
+
+- {{domxref("Element.ariaFlowToElements")}} and {{domxref("ElementInternals.ariaFlowToElements")}}
+  - : The `ariaFlowToElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-flowto` attribute (for cases where those ID values reference valid and in-scope elements).
+
 ## Associated roles
 
 Used in **ALL** roles.

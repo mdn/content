@@ -84,8 +84,8 @@ In this tabs example, each tab controls one tabpanel:
 
 ## Associated interfaces
 
-- {{domxref("Element.ariaControlsElements")}}
-  - : The `ariaControlsElements` property is part of each element's interface. Its value is a list of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-controls` attribute.
+- {{domxref("Element.ariaControlsElements")}} and {{domxref("ElementInternals.ariaControlsElements")}}
+  - : The `ariaControlsElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-controls` attribute (for cases where those ID values reference valid and in-scope elements).
 
 ## Associated roles
 
