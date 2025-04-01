@@ -120,7 +120,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
 - {{domxref("Window.scrollMaxY")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to vertically (i.e.,,, the document height minus the viewport height).
+  - : The maximum offset that the window can be scrolled to vertically (i.e.,, the document height minus the viewport height).
 - {{domxref("Window.scrollX")}} {{ReadOnlyInline}}
   - : Returns the number of pixels that the document has already been scrolled horizontally.
 - {{domxref("Window.scrollY")}} {{ReadOnlyInline}}
@@ -393,7 +393,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e.,, it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Deprecated events
 
@@ -408,7 +408,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a display can no longer be presented to.
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the presenting state of a VR device changes — i.e.,, goes from presenting to not presenting, or vice versa.
+  - : Fired when the presenting state of a VR device changes — i.e., goes from presenting to not presenting, or vice versa.
 
 ### Bubbled events
 

@@ -48,7 +48,7 @@ That dotted red border represents the outer edges of the content area of each li
 
 ### List items nested in a list
 
-Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e.,,, `<ul>`). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area.
+Now we wrap these in a parent element; in this case, we'll wrap them in an unordered list (i.e.,, `<ul>`). According to the CSS box model, the list items' boxes must be displayed within the parent element's content area.
 
 ```css
 ul {

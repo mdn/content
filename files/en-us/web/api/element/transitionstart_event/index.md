@@ -8,7 +8,7 @@ browser-compat: api.Element.transitionstart_event
 
 {{APIRef}}
 
-The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started, i.e.,,, after any {{cssxref("transition-delay")}} has ended.
+The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started, i.e.,, after any {{cssxref("transition-delay")}} has ended.
 
 This event is not cancelable.
 
@@ -105,8 +105,8 @@ transition.addEventListener("transitionend", () => {
 
 The difference is that:
 
-- transitionrun fires when the transition is created (i.e.,, at the start of any delay).
-- transitionstart fires when the actual animation has begun (i.e.,, at the end of any delay).
+- transitionrun fires when the transition is created (i.e., at the start of any delay).
+- transitionstart fires when the actual animation has begun (i.e., at the end of any delay).
 
 ## Specifications
 

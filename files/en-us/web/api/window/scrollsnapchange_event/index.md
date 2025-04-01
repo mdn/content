@@ -12,7 +12,7 @@ browser-compat: api.Window.scrollsnapchange_event
 
 The **`scrollsnapchange`** event of the {{domxref("Window")}} interface is fired on the `window` at the end of a scrolling operation when a new scroll snap target is selected.
 
-This event works in much the same way as the {{domxref("Element")}} interface's [`scrollsnapchange`](/en-US/docs/Web/API/Element/scrollsnapchange_event) event, except that the overall HTML document has to be set as the scroll snap container (i.e.,,, {{cssxref("scroll-snap-type")}} is set on the {{htmlelement("html")}} element).
+This event works in much the same way as the {{domxref("Element")}} interface's [`scrollsnapchange`](/en-US/docs/Web/API/Element/scrollsnapchange_event) event, except that the overall HTML document has to be set as the scroll snap container (i.e.,, {{cssxref("scroll-snap-type")}} is set on the {{htmlelement("html")}} element).
 
 ## Syntax
 

@@ -31,7 +31,7 @@ reportEvent(event)
       - `eventData`
         - : A string representing the data to be sent.
       - `destination`
-        - : An array containing one or more enumerated values representing destination types. These are the involved parties that will receive the data to their registered URLs (i.e.,, via {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}}). The possible values are:
+        - : An array containing one or more enumerated values representing destination types. These are the involved parties that will receive the data to their registered URLs (i.e., via {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}}). The possible values are:
           - `"buyer"`: The bidder in the ad auction.
           - `"seller"`: The top-level seller running the ad auction.
           - `"component-seller"`: The seller for a component auction in a multi-level auction.

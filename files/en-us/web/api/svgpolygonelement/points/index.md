@@ -8,7 +8,7 @@ browser-compat: api.SVGPolygonElement.points
 
 {{APIRef("SVG")}}
 
-The **`points`** read-only property of the {{domxref("SVGPolygonElement")}} interface reflects the base (i.e.,,, static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
+The **`points`** read-only property of the {{domxref("SVGPolygonElement")}} interface reflects the base (i.e.,, static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
 
 ## Value
 

@@ -71,7 +71,7 @@ copyTextureToBuffer(source, destination, copySize)
     - `offset` {{optional_inline}}
       - : The offset, in bytes, from the beginning of `data` to the start position to write the copied data to. If omitted, `offset` defaults to 0.
     - `bytesPerRow` {{optional_inline}}
-      - : A number representing the stride, in bytes, between the start of each block row (i.e.,, a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e.,, the copy height or depth is more than one block).
+      - : A number representing the stride, in bytes, between the start of each block row (i.e., a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e., the copy height or depth is more than one block).
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image inside the data. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 

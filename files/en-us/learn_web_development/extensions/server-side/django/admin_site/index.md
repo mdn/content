@@ -30,7 +30,7 @@ Now that we've created models for the [LocalLibrary](/en-US/docs/Learn_web_devel
 
 ## Overview
 
-The Django admin _application_ can use your models to automatically build a site area that you can use to create, view, update, and delete records. This can save you a lot of time during development, making it very easy to test your models and get a feel for whether you have the _right_ data. The admin application can also be useful for managing data in production, depending on the type of website. The Django project recommends it only for internal data management (i.e.,, just for use by admins, or people internal to your organization), as the model-centric approach is not necessarily the best possible interface for all users, and exposes a lot of unnecessary detail about the models.
+The Django admin _application_ can use your models to automatically build a site area that you can use to create, view, update, and delete records. This can save you a lot of time during development, making it very easy to test your models and get a feel for whether you have the _right_ data. The admin application can also be useful for managing data in production, depending on the type of website. The Django project recommends it only for internal data management (i.e., just for use by admins, or people internal to your organization), as the model-centric approach is not necessarily the best possible interface for all users, and exposes a lot of unnecessary detail about the models.
 
 All the configuration required to include the admin application in your website was done automatically when you [created the skeleton project](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (for information about actual dependencies needed, see the [Django docs here](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/)). As a result, all you **must** do to add your models to the admin application is to _register_ them. At the end of this article we'll provide a brief demonstration of how you might further configure the admin area to better display our model data.
 
@@ -280,7 +280,7 @@ In your website go to the author detail view — it should now appear as shown b
 
 You can add "sections" to group related model information within the detail form, using the [fieldsets](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets) attribute.
 
-In the `BookInstance` model we have information related to what the book is (i.e.,, `name`, `imprint`, and `id`) and when it will be available (`status`, `due_back`). We can add these to our `BookInstanceAdmin` class as shown below, using the `fieldsets` property.
+In the `BookInstance` model we have information related to what the book is (i.e., `name`, `imprint`, and `id`) and when it will be available (`status`, `due_back`). We can add these to our `BookInstanceAdmin` class as shown below, using the `fieldsets` property.
 
 ```python
 @admin.register(BookInstance)

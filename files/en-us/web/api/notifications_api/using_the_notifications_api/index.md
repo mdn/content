@@ -26,7 +26,7 @@ Before an app can send a notification, the user must grant the application the r
 
 Because of abuses of push notifications in the past, web browsers and developers have begun to implement strategies to help mitigate this problem. You should only request consent to display notifications in response to a user gesture (e.g. clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notification permission requests not triggered in response to a user gesture. Firefox is already doing this from version 72, for example, and Safari has done it for some time.
 
-In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e.,, HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.
+In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e., HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.
 
 ### Checking current permission status
 

@@ -69,7 +69,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e.,, generically `<the model name>_list`).
+That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e., generically `<the model name>_list`).
 
 > [!NOTE]
 > This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
@@ -266,7 +266,7 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
 
 _Regular expressions_ are an incredibly powerful pattern mapping tool. They are, frankly, quite unintuitive and can be intimidating for beginners. Below is a very short primer!
 
-The first thing to know is that regular expressions should usually be declared using the raw string literal syntax (i.e.,, they are enclosed as shown: **r'\<your regular expression text goes here>'**).
+The first thing to know is that regular expressions should usually be declared using the raw string literal syntax (i.e., they are enclosed as shown: **r'\<your regular expression text goes here>'**).
 
 The main parts of the syntax you will need to know for declaring the pattern matches are:
 
@@ -429,7 +429,7 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-That's it! All you need to do now is create a template called **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e.,, generically `the_model_name`).
+That's it! All you need to do now is create a template called **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e., generically `the_model_name`).
 
 If you need to, you can change the template used and the name of the context object used to reference the book in the template. You can also override methods to, for example, add additional information to the context.
 
@@ -531,7 +531,7 @@ The first interesting thing we haven't seen before is the function `book.bookins
 {% endfor %}
 ```
 
-This method is needed because you declare a `ForeignKey` (one-to many) field only in the "many" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("one") model, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e.,, so the function created in `Book` is `bookinstance_set()`).
+This method is needed because you declare a `ForeignKey` (one-to many) field only in the "many" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("one") model, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e., so the function created in `Book` is `bookinstance_set()`).
 
 > [!NOTE]
 > Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.

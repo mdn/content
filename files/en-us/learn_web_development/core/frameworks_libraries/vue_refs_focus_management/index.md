@@ -203,7 +203,7 @@ However, unlike with the edit form, we don't have a clear location for focus to 
 
 We're already tracking the number of elements in our list heading — the `<h2>` in `App.vue` — and it's associated with our list of to-do items. This makes it a reasonable place to move focus to when we delete a node.
 
-First, we need to add a ref to our list heading. We also need to add a `tabindex="-1"` to it — this makes the element programmatically focusable (i.e.,, it can be focused via JavaScript), when by default it is not.
+First, we need to add a ref to our list heading. We also need to add a `tabindex="-1"` to it — this makes the element programmatically focusable (i.e., it can be focused via JavaScript), when by default it is not.
 
 Inside `App.vue`, update your `<h2>` as follows:
 

@@ -55,7 +55,7 @@ formData.append("username", "Chris");
 You can specify the optional `form` and `submitter` arguments when creating the `FormData` object, to prepopulate it with values from the specified form.
 
 > [!NOTE]
-> Only successful form controls are included in a FormData object, i.e.,, those with a name and not in a disabled state.
+> Only successful form controls are included in a FormData object, i.e., those with a name and not in a disabled state.
 
 #### HTML
 

@@ -13,7 +13,7 @@ Several standards bodies are responsible for defining different aspects of the W
 This non-exhaustive list gives you an idea of which standards websites and network systems must conform to:
 
 - **IETF** (Internet Engineering Task Force): Internet standards (STD), which among other things govern set-up and use of {{Glossary("URI", "URIs")}}, {{Glossary("HTTP")}}, and {{Glossary("MIME")}}
-- **{{Glossary("W3C")}}**: specifications for markup language (e.g., {{Glossary("HTML")}}), style definitions (i.e.,,, {{Glossary("CSS")}}), {{Glossary("DOM")}}, {{Glossary("Accessibility", "accessibility")}}
+- **{{Glossary("W3C")}}**: specifications for markup language (e.g., {{Glossary("HTML")}}), style definitions (i.e.,, {{Glossary("CSS")}}), {{Glossary("DOM")}}, {{Glossary("Accessibility", "accessibility")}}
 - **IANA** (Internet Assigned Numbers Authority): name and number registries
 - **Ecma Intl.:** scripting standards, most prominently for {{Glossary("JavaScript")}}
 - **{{Glossary("ISO")}}** (International Organization for Standardization): standards governing a diverse array of aspects, including character encodings, website management, and user-interface design

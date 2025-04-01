@@ -267,7 +267,7 @@ This gives your HTML table an explicit definition of the position of each cell i
 Returning to our "Items Sold August 2016" example, we can use the `id` and `headers` attributes as follows:
 
 1. Add a unique `id` to each `<th>` element in the table.
-2. Add a `headers` attribute to each `<th>` element that acts as a subheading, i.e.,,, has a header element above it. The value is the `id` of the heading that sits over the top and defines the subheadings, which is `"clothes"` for the column headers and `"belgium"` for the row header in our example.
+2. Add a `headers` attribute to each `<th>` element that acts as a subheading, i.e.,, has a header element above it. The value is the `id` of the heading that sits over the top and defines the subheadings, which is `"clothes"` for the column headers and `"belgium"` for the row header in our example.
 3. Add a `headers` attribute to each `<td>` element and add the `id`s of the associated `<th>` element(s) in form of a space-separated list. You can proceed as you would in a spreadsheet: Find the data cell and search for the corresponding headings for the row and column. The order of the specified `id`s doesn't matter, but you should be consistent to keep it organized.
 
 ```html

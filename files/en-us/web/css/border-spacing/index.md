@@ -80,7 +80,7 @@ border-spacing: unset;
 The `border-spacing` property may be specified as either one or two values.
 
 - When **one** `<length>` value is specified, it defines both the horizontal and vertical spacings between cells.
-- When **two** `<length>` values are specified, the first value defines the horizontal spacing between cells (i.e.,,, the space between cells in adjacent _columns_), and the second value defines the vertical spacing between cells (i.e.,,, the space between cells in adjacent _rows_).
+- When **two** `<length>` values are specified, the first value defines the horizontal spacing between cells (i.e.,, the space between cells in adjacent _columns_), and the second value defines the vertical spacing between cells (i.e.,, the space between cells in adjacent _rows_).
 
 ### Values
 

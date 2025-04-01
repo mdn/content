@@ -170,7 +170,7 @@ General:
 
 For color attachment objects
 
-- The `view` is renderable, and the `view`'s format (i.e.,, specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
+- The `view` is renderable, and the `view`'s format (i.e., specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
 - If `resolveTarget` is provided:
   - The `view`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is greater than 1.
   - The `resolveTarget`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is 1.

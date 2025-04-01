@@ -52,7 +52,7 @@ myFunction();
 
 #### Function scope
 
-Remember that [functions have their own scope](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts) — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e.,, not inside any functions), or [return the value](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) from the function.
+Remember that [functions have their own scope](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts) — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e., not inside any functions), or [return the value](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) from the function.
 
 #### Running code after a return statement
 

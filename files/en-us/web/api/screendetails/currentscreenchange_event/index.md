@@ -12,7 +12,7 @@ browser-compat: api.ScreenDetails.currentscreenchange_event
 
 The **`currentscreenchange`** event of the {{domxref("ScreenDetails")}} interface is fired when the {{domxref("ScreenDetails.currentScreen")}} changes in one of the following ways:
 
-- The current screen changes to a different screen, i.e.,,, the current browser window is moved to a different screen.
+- The current screen changes to a different screen, i.e.,, the current browser window is moved to a different screen.
 - One or more of the following properties change on the current screen:
   - {{domxref("Screen.width", "width")}}
   - {{domxref("Screen.height", "height")}}

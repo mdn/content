@@ -10,7 +10,7 @@ browser-compat: api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm
 
 The **`getPublicKeyAlgorithm()`** method of the {{domxref("AuthenticatorAttestationResponse")}} interface returns a number that is equal to a [COSE Algorithm Identifier](https://www.iana.org/assignments/cose/cose.xhtml#algorithms), representing the cryptographic algorithm used for the new credential.
 
-This is a convenience function created to allow easy access to the algorithm type. This information will need to be stored in order to verify future authentication operations (i.e.,,, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}).
+This is a convenience function created to allow easy access to the algorithm type. This information will need to be stored in order to verify future authentication operations (i.e.,, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}).
 
 ## Syntax
 

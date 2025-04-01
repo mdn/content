@@ -23,7 +23,7 @@ createProcessingInstruction(target, data)
 - `piNode`
   - : The resulting {{ domxref("ProcessingInstruction") }} node.
 - `target`
-  - : A string containing the first part of the processing instruction (i.e.,,, `<?target … ?>`)
+  - : A string containing the first part of the processing instruction (i.e.,, `<?target … ?>`)
 - `data`
   - : A string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 

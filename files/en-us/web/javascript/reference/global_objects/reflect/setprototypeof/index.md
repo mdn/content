@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.setPrototypeOf
 
 {{JSRef}}
 
-The **`Reflect.setPrototypeOf()`** static method is like {{jsxref("Object.setPrototypeOf()")}} but returns a {{jsxref("Boolean")}}. It sets the prototype (i.e.,,, the internal `[[Prototype]]` property) of a specified object.
+The **`Reflect.setPrototypeOf()`** static method is like {{jsxref("Object.setPrototypeOf()")}} but returns a {{jsxref("Boolean")}}. It sets the prototype (i.e.,, the internal `[[Prototype]]` property) of a specified object.
 
 {{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
 

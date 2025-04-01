@@ -10,7 +10,7 @@ browser-compat: api.PerformanceScriptTiming.windowAttribution
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
-The **`windowAttribution`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns an enumerated value describing the relationship of the container (i.e.,,, either the top-level document or an {{htmlelement("iframe")}}) in which the long animation frame (LoAF)-causing script was executed, relative to the window running the current document.
+The **`windowAttribution`** read-only property of the {{domxref("PerformanceScriptTiming")}} interface returns an enumerated value describing the relationship of the container (i.e.,, either the top-level document or an {{htmlelement("iframe")}}) in which the long animation frame (LoAF)-causing script was executed, relative to the window running the current document.
 
 ## Value
 

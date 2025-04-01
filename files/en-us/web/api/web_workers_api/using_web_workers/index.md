@@ -204,7 +204,7 @@ onconnect = (e) => {
 };
 ```
 
-First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e.,, when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
+First, we use an `onconnect` handler to fire code when a connection to the port happens (i.e., when the `onmessage` event handler in the parent thread is set up, or when the `start()` method is explicitly called in the parent thread).
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 

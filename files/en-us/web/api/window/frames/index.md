@@ -20,7 +20,7 @@ using the `[i]` notation.
 - `frames === window` evaluates to true.
 - Each item in the `window.frames` pseudo-array represents the {{domxref("Window")}}
   object corresponding to the given {{HTMLElement("frame")}}'s or
-  {{HTMLElement("iframe")}}'s content, not the `frame` or `iframe` DOM element (i.e.,,,
+  {{HTMLElement("iframe")}}'s content, not the `frame` or `iframe` DOM element (i.e.,,
   `window.frames[0]` is the same thing as
   `document.getElementsByTagName("iframe")[0].contentWindow`).
 - For more details about the returned value, refer to this [thread on mozilla.dev.platform](https://groups.google.com/g/mozilla.dev.platform/c/VijG80aFnU8).

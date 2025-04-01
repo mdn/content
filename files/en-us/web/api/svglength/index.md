@@ -44,7 +44,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
       <td><code>SVG_LENGTHTYPE_NUMBER</code></td>
       <td><code>1</code></td>
       <td>
-        No unit type was provided (i.e.,,, a unitless value was specified), which
+        No unit type was provided (i.e.,, a unitless value was specified), which
         indicates a value in user units.
       </td>
     </tr>

@@ -16,7 +16,7 @@ The **`zoomAndPan`** attribute specifies whether the SVG document can be magnifi
 
 Magnification in this context means the effect of a supplemental scale and translate transformation on the outermost SVG document fragment.
 
-Panning represents a translation (i.e.,,, a shift) transformation on an SVG document fragment in response to a user interface action.
+Panning represents a translation (i.e.,, a shift) transformation on an SVG document fragment in response to a user interface action.
 
 You can use this attribute with the following SVG elements:
 

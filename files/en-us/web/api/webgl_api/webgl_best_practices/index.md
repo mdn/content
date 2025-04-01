@@ -108,7 +108,7 @@ In production code, avoid such entry points, especially on the browser main thre
 - `get*Parameter()` in general: possible flush + round-trip. In some cases, these will be cached to avoid the round-trip, but try to avoid relying on this.
 - `checkFramebufferStatus()`: possible flush + round-trip.
 - `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#use_non-blocking_async_data_readback) below.)
-- `readPixels()` to the CPU (i.e.,, without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
+- `readPixels()` to the CPU (i.e., without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
 
 ## Always enable vertex attrib 0 as an array
 

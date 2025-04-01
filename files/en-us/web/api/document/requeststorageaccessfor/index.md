@@ -29,8 +29,8 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 
 `requestStorageAccessFor()` requests are automatically denied unless the top-level content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they must run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
-- If the promise resolves (i.e.,,, permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs requiring a user gesture.
-- If the promise is rejected (i.e.,,, permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This prevents scripts from calling `requestStorageAccessFor()` again if permission is denied.
+- If the promise resolves (i.e.,, permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs requiring a user gesture.
+- If the promise is rejected (i.e.,, permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This prevents scripts from calling `requestStorageAccessFor()` again if permission is denied.
 
 ### Exceptions
 

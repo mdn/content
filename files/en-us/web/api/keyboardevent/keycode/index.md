@@ -37,10 +37,10 @@ Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable b
 4. If the pressed key inputs an ASCII alphabetic or numeric character with a Shift key modifier, use a keycode for it.
 5. If the pressed key inputs a different ASCII character with no modifier key, use a keycode for it.
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
-7. Otherwise, i.e.,,, pressed key inputs a unicode character:
+7. Otherwise, i.e.,, pressed key inputs a unicode character:
 
-   1. If the keyboard layout is ASCII-capable (i.e.,,, can input ASCII alphabets), use 0 or compute with the following additional rules.
-   2. Otherwise, i.e.,,, the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
+   1. If the keyboard layout is ASCII-capable (i.e.,, can input ASCII alphabets), use 0 or compute with the following additional rules.
+   2. Otherwise, i.e.,, the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
       1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
       2. Otherwise, use 0 or compute with the following additional rules.

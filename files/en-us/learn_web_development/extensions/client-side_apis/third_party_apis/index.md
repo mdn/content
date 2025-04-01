@@ -392,7 +392,7 @@ To get it running, you'll need to:
 - Make sure you visit the [Enabled APIs page](https://console.cloud.google.com/apis/enabled), and in the list of APIs, make sure the status is ON for the YouTube Data API v3.
 - Get an API key from [Google Cloud](https://cloud.google.com/).
 - Find the string `ENTER-API-KEY-HERE` in the source code, and replace it with your API key.
-- Run the example through a web server. It won't work if you just run it directly in the browser (i.e.,, via a `file://` URL).
+- Run the example through a web server. It won't work if you just run it directly in the browser (i.e., via a `file://` URL).
 
 ## Summary
 

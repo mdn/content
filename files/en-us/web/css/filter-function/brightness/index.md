@@ -155,7 +155,7 @@ p {
 
 The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `<filter>` element's {{SVGElement("feComponentTransfer")}} primitive enables pixel-level color remapping.
 
-In this example, to create a filter that darkens the content on which it is applied by 25% (i.e.,,, 75% of the original brightness), the `slope` attribute is set to `0.75`. We can then reference the filter by `id`.
+In this example, to create a filter that darkens the content on which it is applied by 25% (i.e.,, 75% of the original brightness), the `slope` attribute is set to `0.75`. We can then reference the filter by `id`.
 
 Given the following:
 

@@ -40,7 +40,7 @@ requestVideoFrameCallback(callback)
           - : A number representing the number of frames submitted for composition so far alongside the current callback.
             This can be used to detect whether frames were missed between callback instances.
         - `processingDuration`
-          - : A number, in seconds, representing the duration between the submission of the encoded packet with the same presentation timestamp as this frame to the decoder (i.e.,,, the `mediaTime`) and the decoded frame being ready for presentation.
+          - : A number, in seconds, representing the duration between the submission of the encoded packet with the same presentation timestamp as this frame to the decoder (i.e.,, the `mediaTime`) and the decoded frame being ready for presentation.
         - `width`
           - : A number, in media pixels, representing the width of the video frame (the visible decoded pixels, without aspect ratio adjustments).
 

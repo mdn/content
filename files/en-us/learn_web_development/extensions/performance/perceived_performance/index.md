@@ -57,7 +57,7 @@ There is no single metric or test that can be run on a site to evaluate how a us
 - [Speed index](/en-US/docs/Glossary/Speed_index)
   - : Measures the average time for pixels on the visible screen to be painted.
 - [Time to interactive](/en-US/docs/Glossary/Time_to_interactive)
-  - : Time until the UI is available for user interaction (i.e.,, the last [long task](/en-US/docs/Glossary/Long_task) of the load process finishes).
+  - : Time until the UI is available for user interaction (i.e., the last [long task](/en-US/docs/Glossary/Long_task) of the load process finishes).
 
 ## Improving performance
 

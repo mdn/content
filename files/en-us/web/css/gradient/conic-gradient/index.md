@@ -102,7 +102,7 @@ conic-gradient(
 
 ## Description
 
-As with any gradient, a conic gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size of the `<image>` if it is set to something other than the element size.
+As with any gradient, a conic gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to, or the size of the `<image>` if it is set to something other than the element size.
 
 To create a conic gradient that repeats so as to fill a 360 degree rotation, use the {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} function instead.
 

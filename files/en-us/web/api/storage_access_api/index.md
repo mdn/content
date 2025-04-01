@@ -15,7 +15,7 @@ spec-urls:
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e.,,, embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) that it would typically only have access to in a first-party context (i.e.,,, when loaded directly in a browser tab).
+The Storage Access API provides a way for cross-site content loaded in a third-party context (i.e.,, embedded in an {{htmlelement("iframe")}}) to gain access to [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) that it would typically only have access to in a first-party context (i.e.,, when loaded directly in a browser tab).
 
 The Storage Access API is relevant to user agents that, by default, block access to third-party cookies and unpartitioned state to improve privacy (for example, to prevent tracking). There are legitimate uses for third-party cookies and unpartitioned state that we still want to enable, even with these default restrictions in place. Examples include single sign-on (SSO) with federated identity providers (IdPs), or persisting user details such as location data or viewing preferences across different sites.
 
@@ -124,7 +124,7 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - {{domxref("Document.hasUnpartitionedCookieAccess()")}}
   - : New name for {{domxref("Document.hasStorageAccess()")}}.
 - {{domxref("Document.requestStorageAccess()")}}
-  - : Allows content loaded in a third-party context (i.e.,,, embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies and unpartitioned state; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+  - : Allows content loaded in a third-party context (i.e.,, embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies and unpartitioned state; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 

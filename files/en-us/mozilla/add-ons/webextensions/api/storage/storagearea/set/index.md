@@ -36,7 +36,7 @@ Where `<storageType>` is one of the writable storage types — {{WebExtAPIRef("s
     It's generally not possible to store other types, such as `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer`, and so on. Some unsupported types restore as an empty object, while others cause `set()` to throw an error. The behavior is browser-specific.
 
 > [!NOTE]
-> If you want to remove keys from storage, use {{WebExtAPIRef("storage.storageArea.remove")}}. If you want to overwrite a value with a void value, use `null`, i.e.,,, `key: null`.
+> If you want to remove keys from storage, use {{WebExtAPIRef("storage.storageArea.remove")}}. If you want to overwrite a value with a void value, use `null`, i.e.,, `key: null`.
 
 ### Return value
 

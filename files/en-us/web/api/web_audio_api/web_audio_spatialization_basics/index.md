@@ -174,7 +174,7 @@ const panner = new PannerNode(audioCtx, {
 
 Now we're going to move our boombox around our 'room'. We've got some controls set up to do this.
 We can move it left and right, up and down, and back and forth; we can also rotate it.
-The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e.,, make it project to the back when the boombox is rotated 180 degrees and facing away from us.
+The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e., make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
 First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.

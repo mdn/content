@@ -15,7 +15,7 @@ browser-compat: http.headers.Viewport-Width
 > The proposed replacement is [`Sec-CH-Viewport-Width`](https://wicg.github.io/responsive-image-client-hints/#sec-ch-viewport-width) (Responsive Image Client Hints).
 
 The HTTP **`Viewport-Width`** {{Glossary("request header")}} is a [device client hint](/en-US/docs/Web/HTTP/Guides/Client_hints) which provides the client's layout viewport width in {{Glossary("CSS pixel", "CSS pixels")}}.
-The value is rounded up to the smallest following integer (i.e.,,, ceiling value).
+The value is rounded up to the smallest following integer (i.e.,, ceiling value).
 
 The hint can be used with other screen-specific hints to deliver images optimized for a specific screen size, or to omit resources that are not needed for a particular screen width.
 If the `Viewport-Width` header appears more than once in a message the last occurrence is used.

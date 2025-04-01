@@ -63,7 +63,7 @@ The `gecko` subkey supports these properties:
 - `strict_max_version`
   - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to "\*", which disables checking for a maximum version.
 - `update_url`
-  - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e.,,, not through AMO).
+  - : A link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e.,, not through AMO).
 
 The `gecko_android` subkey supports these properties:
 
@@ -74,7 +74,7 @@ The `gecko_android` subkey supports these properties:
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
 
-To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e.,, `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
+To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e., `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
 #### Extension ID format
 

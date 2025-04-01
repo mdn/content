@@ -14,7 +14,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
 - `attestation` {{optional_inline}}
 
-  - : A string specifying the relying party's preference for how the attestation statement (i.e.,,, provision of verifiable evidence of the authenticity of the authenticator and its data) is conveyed during credential creation. The value can be one of the following:
+  - : A string specifying the relying party's preference for how the attestation statement (i.e.,, provision of verifiable evidence of the authenticity of the authenticator and its data) is conveyed during credential creation. The value can be one of the following:
 
     - `"none"`
 

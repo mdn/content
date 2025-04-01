@@ -102,7 +102,7 @@ svg {
 - `noStitch`
   - : This value indicates that no attempt is made to achieve smooth transitions at the border of tiles which contain a turbulence function. Sometimes the result will show clear discontinuities at the tile borders.
 - `stitch`
-  - : This value indicates that the user agent will automatically adjust the x and y values of the base frequency such that the {{SVGElement("feTurbulence")}} node's width and height (i.e.,,, the width and height of the current subregion) contain an integral number of the tile width and height for the first octave.
+  - : This value indicates that the user agent will automatically adjust the x and y values of the base frequency such that the {{SVGElement("feTurbulence")}} node's width and height (i.e.,, the width and height of the current subregion) contain an integral number of the tile width and height for the first octave.
 
 ## Specifications
 

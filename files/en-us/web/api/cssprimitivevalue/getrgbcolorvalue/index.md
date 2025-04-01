@@ -43,7 +43,7 @@ An {{domxref("RGBColor")}} object representing the color value.
 
 | **Type**       | **Description**                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the attached property can't return an RGB color value (i.e.,, this is not `CSS_RGBCOLOR`). |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the attached property can't return an RGB color value (i.e., this is not `CSS_RGBCOLOR`). |
 
 ## Examples
 

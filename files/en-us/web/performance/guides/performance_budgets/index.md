@@ -17,9 +17,9 @@ These goals can be:
 - Quantity-based (e.g. amount of JS files/total image size).
 - Rule-based (e.g. PageSpeed index, Lighthouse score).
 
-Their primary goal is to prevent regressions, but they can provide insights to forecast trends (i.e.,, On September, 50% of the budget was spent in a week).
+Their primary goal is to prevent regressions, but they can provide insights to forecast trends (i.e., On September, 50% of the budget was spent in a week).
 
-Additionally, it can uncover development needs (i.e.,, A large library with smaller alternatives is often picked to solve a common problem).
+Additionally, it can uncover development needs (i.e., A large library with smaller alternatives is often picked to solve a common problem).
 
 ## How do I define a performance budget?
 
@@ -36,7 +36,7 @@ In order to begin, you need to first measure the devices and connection speeds w
 
 A default baseline to reduce bounce rate is to achieve [Time to Interactive under 5 seconds in 3G/4G, and under 2 seconds for subsequent loads](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/). However, based on the specific goals and content of your site, you might choose to focus on other metrics.
 
-For a text-heavy site such as a blog or a news site, the [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) metric could reflect more closely the user behavior. (i.e.,, How fast can users start reading), which will inform file specific budgets (e.g. Font size), and their optimizations. (e.g. Using [font-display](/en-US/docs/Web/CSS/@font-face/font-display) to improve [Perceived Performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance)).
+For a text-heavy site such as a blog or a news site, the [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) metric could reflect more closely the user behavior. (i.e., How fast can users start reading), which will inform file specific budgets (e.g. Font size), and their optimizations. (e.g. Using [font-display](/en-US/docs/Web/CSS/@font-face/font-display) to improve [Perceived Performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance)).
 
 The ultimate value of a Performance Budget is to correlate the impact of Performance on business or product goals. When defining metrics, you should focus on [User Experience](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/), which will dictate not only the bounce or conversion rate but how likely is that user to return.
 
@@ -57,7 +57,7 @@ The [Lighthouse Bot](https://github.com/GoogleChromeLabs/lighthousebot) integrat
 
 The sooner that you can identify a potential addition pushing the budget, the better you can analyze the current state of your site, and pinpoint optimizations or unnecessary code.
 
-However, you should have multiple budgets and be dynamic. They are meant to reflect your ongoing goals but allow risks and experiments. For example, you may introduce a feature that increases overall load time but attempts to increase user engagement. (i.e.,, How long a user stays on a page or site).
+However, you should have multiple budgets and be dynamic. They are meant to reflect your ongoing goals but allow risks and experiments. For example, you may introduce a feature that increases overall load time but attempts to increase user engagement. (i.e., How long a user stays on a page or site).
 
 A performance budget helps you protect optimal behavior for your current users while enabling you to tap into new markets and deliver custom experiences.
 

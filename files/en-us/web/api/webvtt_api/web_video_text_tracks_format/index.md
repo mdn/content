@@ -215,7 +215,7 @@ Cue settings are added to the right of cue timings. There must be one or more sp
     - A line number
       - : The position of the first line of the cue as it appears on the video. Positive numbers are counted from the top down and negative numbers are counted from the bottom up.
     - A percentage
-      - : An integer (i.e.,,, no decimals) between 0 and 100 inclusive, which must be followed by a percent sign (%).
+      - : An integer (i.e.,, no decimals) between 0 and 100 inclusive, which must be followed by a percent sign (%).
 
     | Line        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
     | ----------- | ------------------ | ------------- | ------------- |
@@ -351,7 +351,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
 
 - Ruby tag (`<ruby></ruby>`)
 
-  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e.,,, small annotative characters above other characters).
+  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e.,, small annotative characters above other characters).
 
     ```xml
     <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
@@ -359,7 +359,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
 
 - Ruby text tag (`<rt></rt>`)
 
-  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e.,,, small annotative characters above other characters).
+  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e.,, small annotative characters above other characters).
 
     ```xml
     <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>

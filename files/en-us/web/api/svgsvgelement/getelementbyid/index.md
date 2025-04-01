@@ -8,7 +8,7 @@ browser-compat: api.SVGSVGElement.getElementById
 
 {{APIRef("SVG")}}
 
-The `getElementById()` method of the {{domxref("SVGSVGElement")}} interface searches the SVG document fragment (i.e.,,, the search is restricted to a subset of the document tree) for an {{domxref("Element")}} whose `id` property matches the specified string.
+The `getElementById()` method of the {{domxref("SVGSVGElement")}} interface searches the SVG document fragment (i.e.,, the search is restricted to a subset of the document tree) for an {{domxref("Element")}} whose `id` property matches the specified string.
 
 ## Syntax
 

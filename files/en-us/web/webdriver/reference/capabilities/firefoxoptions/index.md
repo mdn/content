@@ -19,7 +19,7 @@ It is used to define options which control how Firefox gets started and run.
 
 Absolute path to the custom Firefox binary to use.
 
-On macOS you may either give the path to the application bundle, i.e.,, `/Applications/Firefox.app`, or the
+On macOS you may either give the path to the application bundle, i.e., `/Applications/Firefox.app`, or the
 absolute path to the executable binary inside this bundle, for example
 `/Applications/Firefox.app/Contents/MacOS/firefox-bin`.
 

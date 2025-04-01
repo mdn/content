@@ -104,7 +104,7 @@ The **viewport-percentage length units** are based on four different viewport si
     > [!NOTE]
     > For example, a browser might implement the default viewport-percentage unit for height (`vh`) that is equivalent to the large viewport-percentage height unit (`lvh`). If so, this could obscure content on a full-page display while the browser interface is expanded. Currently, all default viewport units (`vh`, `vw`, etc.) are equivalent to their large viewport counterparts (`lvh`, `lvw`, etc.).
 
-Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e.,,, the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.
+Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e.,, the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.
 
 > [!NOTE]
 > Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.

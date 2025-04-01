@@ -37,7 +37,7 @@ Modern web browsers support a number of ways for websites to store data on the u
 
 Elsewhere in the MDN learning area, we talked about the difference between [static sites](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#static_sites) and [dynamic sites](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#dynamic_sites). Most major modern websites are dynamic — they store data on the server using some kind of database (server-side storage), then run [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.
 
-Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e.,, on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:
+Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e., on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:
 
 - Personalizing site preferences (e.g. showing a user's choice of custom widgets, color scheme, or font size).
 - Persisting previous site activity (e.g. storing the contents of a shopping cart from a previous session, remembering if a user was previously logged in).
@@ -732,7 +732,7 @@ This is what the second bit of code in `sw.js` does. We add another listener to 
 
 Inside the handler, we first log the URL of the requested asset. We then provide a custom response to the request, using the {{domxref("FetchEvent.respondWith()")}} method.
 
-Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e.,, matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
+Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e., matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
 If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/Window/fetch) the response from the network and return that instead.
 

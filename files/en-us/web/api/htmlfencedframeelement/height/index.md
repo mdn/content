@@ -12,7 +12,7 @@ browser-compat: api.HTMLFencedFrameElement.height
 
 The **`height`** property of the {{domxref("HTMLFencedFrameElement")}} gets and sets the value of the corresponding {{htmlelement("fencedframe")}} `height` attribute, which specifies the height of the element.
 
-The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the {{domxref("HTMLFencedFrameElement.width", "width")}} or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e.,, {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
+The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the {{domxref("HTMLFencedFrameElement.width", "width")}} or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e., {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 
 ## Value
 

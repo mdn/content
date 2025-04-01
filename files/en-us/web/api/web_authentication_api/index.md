@@ -191,7 +191,7 @@ The availability of WebAuthn can be controlled using a [Permissions Policy](/en-
 
 Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
 In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
-`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e.,, in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e., in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
 For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
 > [!NOTE]
@@ -251,7 +251,7 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 - {{domxref("AuthenticatorAssertionResponse")}}
   - : Provides proof to a service that an authenticator has the necessary key pair to successfully handle an authentication request initiated by a {{domxref("CredentialsContainer.get()")}} call. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `get()` {{jsxref("Promise")}} fulfills.
 - {{domxref("AuthenticatorAttestationResponse")}}
-  - : The result of a WebAuthn credential registration (i.e.,,, a {{domxref("CredentialsContainer.create()")}} call). It contains information about the credential that the server needs to perform WebAuthn assertions, such as its credential ID and public key. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `create()` {{jsxref("Promise")}} fulfills.
+  - : The result of a WebAuthn credential registration (i.e.,, a {{domxref("CredentialsContainer.create()")}} call). It contains information about the credential that the server needs to perform WebAuthn assertions, such as its credential ID and public key. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `create()` {{jsxref("Promise")}} fulfills.
 - {{domxref("AuthenticatorResponse")}}
   - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}.
 - {{domxref("PublicKeyCredential")}}

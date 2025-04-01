@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_image
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e.,, submit buttons that take the form of an image rather than text.
+{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e., submit buttons that take the form of an image rather than text.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 

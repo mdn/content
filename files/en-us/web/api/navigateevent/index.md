@@ -31,7 +31,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.formData", "formData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission, or `null` otherwise.
 - {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns `true` if the navigation is a fragment navigation (i.e.,, to a fragment identifier in the same document), or `false` otherwise.
+  - : Returns `true` if the navigation is a fragment navigation (i.e., to a fragment identifier in the same document), or `false` otherwise.
 - {{domxref("NavigateEvent.hasUAVisualTransition", "hasUAVisualTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user agent performed a visual transition for this navigation before dispatching this event, or `false` otherwise.
 - {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}} {{Experimental_Inline}}

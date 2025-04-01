@@ -44,7 +44,7 @@ background:
 
 The length of the gradient that repeats is the distance between the first and last color stop. If the first color does not have a color-stop-length, the color-stop-length defaults to 0. With each repetition, the positions of the color stops are shifted by a multiple of the length of the basic linear gradient. Thus, the position of each ending color stop coincides with a starting color stop; if the color values are different, this will result in a sharp visual transition. This can be altered with repeating the first color again as the last color.
 
-As with any gradient, a repeating linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
+As with any gradient, a repeating linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `repeating-linear-gradient()` won't work on {{Cssxref("background-color")}} and other properties that use the {{cssxref("&lt;color&gt;")}} data type.
 

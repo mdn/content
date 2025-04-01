@@ -32,7 +32,7 @@ forEach(callbackFn, thisArg)
       - : The StylePropertyMapReadOnly that `forEach()` is being called on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e.,,, the reference
+  - : Value to use as **`this`** (i.e.,, the reference
     `Object`) when executing `callback`.
 
 ### Return value

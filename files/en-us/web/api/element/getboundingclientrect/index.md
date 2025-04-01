@@ -43,7 +43,7 @@ set for the element this would be directly equal to its `width` or
 `height`.
 
 The returned value can be thought of as the union of the rectangles returned by
-{{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e.,,, the CSS
+{{domxref("Element.getClientRects", "getClientRects()")}} for the element, i.e.,, the CSS
 border-boxes associated with the element.
 
 Empty border-boxes are completely ignored. If all the element's border-boxes are empty,

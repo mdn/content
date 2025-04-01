@@ -43,7 +43,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
     Both of the above values are useful in protecting against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks in cases that rely on the user being authenticated.
 
     > [!NOTE]
-    > In theory, `SameSite=Strict` should be more useful than it is in practice. It often breaks navigations — for example, users clicking a link to a website on which they are already logged in (i.e.,, a valid session cookie is set) appear not to be logged in, because the browser has deliberately omitted the session cookie. The best middle ground is to use `SameSite=Strict` only on tokens where CSRF is a concern or use `SameSite=Strict` everywhere, but reload the page and do a cookie check in JavaScript if there's an indication that the user is logged in but required cookies are not being sent.
+    > In theory, `SameSite=Strict` should be more useful than it is in practice. It often breaks navigations — for example, users clicking a link to a website on which they are already logged in (i.e., a valid session cookie is set) appear not to be logged in, because the browser has deliberately omitted the session cookie. The best middle ground is to use `SameSite=Strict` only on tokens where CSRF is a concern or use `SameSite=Strict` everywhere, but reload the page and do a cookie check in JavaScript if there's an indication that the user is logged in but required cookies are not being sent.
 
 ## Examples
 

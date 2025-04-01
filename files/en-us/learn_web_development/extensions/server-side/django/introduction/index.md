@@ -122,7 +122,7 @@ The `urlpatterns` object is a list of `path()` and/or `re_path()` functions (Pyt
 
 The first argument to both methods is a route (pattern) that will be matched. The `path()` method uses angle brackets to define parts of a URL that will be captured and passed through to the view function as named arguments. The `re_path()` function uses a flexible pattern matching approach known as a regular expression. We'll talk about these in a later article!
 
-The second argument is another function that will be called when the pattern is matched. The notation `views.book_detail` indicates that the function is called `book_detail()` and can be found in a module called `views` (i.e.,, inside a file named `views.py`)
+The second argument is another function that will be called when the pattern is matched. The notation `views.book_detail` indicates that the function is called `book_detail()` and can be found in a module called `views` (i.e., inside a file named `views.py`)
 
 ### Handling the request (views.py)
 

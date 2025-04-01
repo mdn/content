@@ -845,7 +845,7 @@ First of all, let's revisit the form example we first looked at in our CSS and J
 ```
 
 - [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) automatically turns the element it is applied to into a live region, so changes to it are read out; it also semantically identifies it as an alert message (important time/context-sensitive information), and represents a better, more accessible way of delivering an alert to a user (modal dialogs like [`alert()`](/en-US/docs/Web/API/Window/alert) calls have a number of accessibility problems; see [Popup Windows](https://webaim.org/techniques/javascript/other#popups) by WebAIM).
-- An [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) value of `all` instructs the screen reader to read out the contents of the error list when any changes are made to it — i.e.,,, when errors are added or removed. This is useful because the user will want to know what errors are left, not just what has been added or removed from the list.
+- An [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) value of `all` instructs the screen reader to read out the contents of the error list when any changes are made to it — i.e.,, when errors are added or removed. This is useful because the user will want to know what errors are left, not just what has been added or removed from the list.
 
 We could go further with our ARIA usage, and provide some more validation help. How about indicating whether fields are required in the first place, and what range the age should be?
 

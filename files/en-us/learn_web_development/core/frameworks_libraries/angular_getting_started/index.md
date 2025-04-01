@@ -190,7 +190,7 @@ export class ItemComponent {
 ```
 
 This component is called `ItemComponent`, and its selector is `app-item`.
-You use a selector just like regular HTML tags by placing it within other templates, i.e.,, `<app-item></app-item>`.
+You use a selector just like regular HTML tags by placing it within other templates, i.e., `<app-item></app-item>`.
 When a selector is in a template, the browser renders the template of that component whenever an instance of the selector is encountered.
 This tutorial guides you through creating two components and using one within the other.
 

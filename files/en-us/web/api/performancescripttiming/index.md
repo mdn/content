@@ -18,7 +18,7 @@ Long animation frames (LoAFs) are rendering updates that are delayed beyond 50ms
 The `PerformanceScriptTiming` interface (instances of which are accessed via the {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} property) provides the following granular set of information on individual scripts that contribute to LoAFs, allowing developers to narrow down their root causes:
 
 - A detailed set of timestamps for each script.
-- The identity and type of the invoker, i.e.,, the feature that, when invoked, ran the script.
+- The identity and type of the invoker, i.e., the feature that, when invoked, ran the script.
 - Detailed information on each script source file, including the URL, and the function name and character position that contributed to the LoAF.
 
 `PerformanceScriptTiming` inherits from {{domxref("PerformanceEntry")}}.
@@ -57,9 +57,9 @@ This interface also supports the following properties:
 - {{domxref("PerformanceScriptTiming.sourceURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string representing the URL of the script.
 - {{domxref("PerformanceScriptTiming.window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to a {{domxref("Window")}} object representing the `window` of the container (i.e.,,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed.
+  - : Returns a reference to a {{domxref("Window")}} object representing the `window` of the container (i.e.,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed.
 - {{domxref("PerformanceScriptTiming.windowAttribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an enumerated value describing the relationship of the container (i.e.,,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed, relative to the window running the current document.
+  - : Returns an enumerated value describing the relationship of the container (i.e.,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed, relative to the window running the current document.
 
 ## Instance methods
 

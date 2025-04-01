@@ -377,7 +377,7 @@ There are many ways that you can implement rewind and fast-forward functionality
 
    Again, we'll just run through the first one of these functions as they work almost identically, but in reverse to one another. In `windBackward()` we do the following — bear in mind that when the interval is active, this function is being run once every 200 milliseconds.
 
-   1. We start off with an `if` statement that checks to see whether the current time is less than 3 seconds, i.e.,,, if rewinding by another three seconds would take it back past the start of the video. This would cause strange behavior, so if this is the case we stop the video playing by calling `stopMedia()`, remove the `active` class from the rewind button, and clear the `intervalRwd` interval to stop the rewind functionality. If we didn't do this last step, the video would just keep rewinding forever.
+   1. We start off with an `if` statement that checks to see whether the current time is less than 3 seconds, i.e.,, if rewinding by another three seconds would take it back past the start of the video. This would cause strange behavior, so if this is the case we stop the video playing by calling `stopMedia()`, remove the `active` class from the rewind button, and clear the `intervalRwd` interval to stop the rewind functionality. If we didn't do this last step, the video would just keep rewinding forever.
    2. If the current time is not within 3 seconds of the start of the video, we remove three seconds from the current time by executing `media.currentTime -= 3`. So in effect, we are rewinding the video by 3 seconds, once every 200 milliseconds.
 
 #### Updating the elapsed time
@@ -445,7 +445,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
 1. The time display currently breaks if the video is an hour long or more (well, it won't display hours; just minutes and seconds). Can you figure out how to change the example to make it display hours?
 2. Because `<audio>` elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an `<audio>` element too. Try doing so.
-3. Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scroller — i.e.,,, when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
+3. Can you work out a way to turn the timer inner `<div>` element into a true seek bar/scroller — i.e.,, when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the [`getBoundingClientRect()`](/en-US/docs/Web/API/Element/getBoundingClientRect) method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:
 
    ```js
    document.onclick = function (e) {

@@ -10,7 +10,7 @@ The **`radius`** attribute represents the radius (or radii) for the operation on
 
 If two numbers are provided, the first number represents the x-radius and the second one the y-radius. If one number is provided, then that value is used for both x and y. The values are in the coordinate system established by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
-A negative or zero value disables the effect of the given filter primitive (i.e.,,, the result is the filter input image).
+A negative or zero value disables the effect of the given filter primitive (i.e.,, the result is the filter input image).
 
 You can use this attribute with the following SVG elements:
 

@@ -10,7 +10,7 @@ browser-compat: api.AuthenticatorAttestationResponse.getPublicKey
 
 The **`getPublicKey()`** method of the {{domxref("AuthenticatorAttestationResponse")}} interface returns an {{jsxref("ArrayBuffer")}} containing the DER `SubjectPublicKeyInfo` of the new credential (see [Subject Public Key Info](https://www.rfc-editor.org/rfc/rfc5280#section-4.1.2.7)), or `null` if this is not available.
 
-This is a convenience function, created to allow easy access to the public key. This key will need to be stored in order to verify future authentication operations (i.e.,,, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}).
+This is a convenience function, created to allow easy access to the public key. This key will need to be stored in order to verify future authentication operations (i.e.,, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}).
 
 ## Syntax
 

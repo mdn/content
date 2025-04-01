@@ -35,7 +35,7 @@ navigator.mediaSession.playbackState = "playing";
 ## Interfaces
 
 - {{domxref("ChapterInformation")}}
-  - : Represents the metadata for an individual chapter of a media resource (i.e.,,, a video or audio file).
+  - : Represents the metadata for an individual chapter of a media resource (i.e.,, a video or audio file).
 - {{domxref("MediaMetadata")}}
   - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}

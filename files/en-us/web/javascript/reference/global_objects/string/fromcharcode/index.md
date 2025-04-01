@@ -55,7 +55,7 @@ String.fromCharCode(0x12014); // also returns "—"; the digit 1 is truncated an
 String.fromCharCode(8212); // also returns "—"; 8212 is the decimal form of 0x2014
 ```
 
-Supplementary characters, in UTF-16, require two code units (i.e.,, a surrogate pair):
+Supplementary characters, in UTF-16, require two code units (i.e., a surrogate pair):
 
 ```js
 String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with

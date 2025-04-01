@@ -28,7 +28,7 @@ For detailed information on anchor features and position try fallback usage, see
 
 ### Descriptors
 
-The descriptors specify property values that define the behavior of the custom position option, i.e.,,, where it will result in the positioned element being placed.
+The descriptors specify property values that define the behavior of the custom position option, i.e.,, where it will result in the positioned element being placed.
 
 - `position-anchor`
   - : Specifies a {{cssxref("position-anchor")}} property value that defines the anchor element that the positioned element is tethered to, by specifying a {{cssxref("dashed-ident")}} value equal to the anchor element's {{cssxref("anchor-name")}} property value.

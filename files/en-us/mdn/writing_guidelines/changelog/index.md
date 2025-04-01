@@ -39,7 +39,7 @@ Multiple updates to the CSS style guide to reflect the move towards Markdown, an
 
 ### Multiline JavaScript and API syntax blocks
 
-Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can be used in multiple different ways (i.e.,, various parameters are optional) were commonly written using [BNF formal syntax notation](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form). Most notably, square brackets were used to signify optional parameters.
+Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can be used in multiple different ways (i.e., various parameters are optional) were commonly written using [BNF formal syntax notation](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form). Most notably, square brackets were used to signify optional parameters.
 
 This was problematic — many developers were confused by this, and it conflicts with valid syntax forms in other programming languages (e.g. `[]` is also an array in JavaScript).
 

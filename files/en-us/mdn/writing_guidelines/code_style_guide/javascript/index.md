@@ -540,7 +540,7 @@ Switch statements can be a little tricky.
 
 ### Object creation
 
-For creating general objects (i.e.,,, when classes are not involved), use literals and not constructors.
+For creating general objects (i.e.,, when classes are not involved), use literals and not constructors.
 
 For example, do this:
 

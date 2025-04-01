@@ -29,7 +29,7 @@ defines a rectangle from the upper left corner that spans 100px to the right and
 
 ### What are "pixels"?
 
-In the most basic case, one pixel in an SVG document maps to one pixel on the output device (i.e.,,, the screen). But SVG wouldn't have the "Scalable" in its name if there weren't several possibilities to change this behavior. Much like absolute and relative font sizes in CSS, SVG defines absolute units (ones with a dimensional identifier like "pt" or "cm") and so-called user units, which lack that identifier and are plain numbers.
+In the most basic case, one pixel in an SVG document maps to one pixel on the output device (i.e.,, the screen). But SVG wouldn't have the "Scalable" in its name if there weren't several possibilities to change this behavior. Much like absolute and relative font sizes in CSS, SVG defines absolute units (ones with a dimensional identifier like "pt" or "cm") and so-called user units, which lack that identifier and are plain numbers.
 
 Without further specification, one user unit equals one screen unit. To explicitly change this behavior, there are several possibilities in SVG. We start with the `svg` root element:
 
@@ -49,6 +49,6 @@ The current mapping (for a single element or the whole image) of user units to s
 
 A quote from the SVG 1.1 specification illustrates this:
 
-> \[...] suppose that the user agent can determine from its environment that "1px" corresponds to "0.2822222mm" (i.e.,,, 90dpi). Then, for all processing of SVG content: \[...] "1cm" equals "35.43307px" (and therefore 35.43307 user units)
+> \[...] suppose that the user agent can determine from its environment that "1px" corresponds to "0.2822222mm" (i.e.,, 90dpi). Then, for all processing of SVG content: \[...] "1cm" equals "35.43307px" (and therefore 35.43307 user units)
 
 {{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}

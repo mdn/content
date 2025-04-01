@@ -19,7 +19,7 @@ The **`WebAssembly.Table`** object is a JavaScript wrapper object — an array-l
 ## Instance properties
 
 - [`Table.prototype.length`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/length) {{ReadOnlyInline}}
-  - : Returns the length of the table, i.e.,, the number of elements in the table.
+  - : Returns the length of the table, i.e., the number of elements in the table.
 
 ## Instance methods
 

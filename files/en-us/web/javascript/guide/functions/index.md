@@ -454,7 +454,7 @@ A(1); // Logs 6 (which is 1 + 2 + 3)
 
 In this example, `C` accesses `B`'s `y` and `A`'s `x`. This can be done because:
 
-1. `B` forms a closure including `A` (i.e.,,, `B` can access `A`'s arguments and variables).
+1. `B` forms a closure including `A` (i.e.,, `B` can access `A`'s arguments and variables).
 2. `C` forms a closure including `B`.
 3. Because `C`'s closure includes `B` and `B`'s closure includes `A`, then `C`'s closure also includes `A`. This means `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
 

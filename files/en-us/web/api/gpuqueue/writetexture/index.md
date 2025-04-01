@@ -72,7 +72,7 @@ writeTexture(destination, data, dataLayout, size)
     - `offset` {{optional_inline}}
       - : The offset, in bytes, from the beginning of `data` to the start of the image data to be copied. If omitted, `offset` defaults to 0.
     - `bytesPerRow` {{optional_inline}}
-      - : A number representing the stride, in bytes, between the start of each block row (i.e.,, a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e.,, the copy height or depth is more than one block).
+      - : A number representing the stride, in bytes, between the start of each block row (i.e., a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e., the copy height or depth is more than one block).
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image of the texture. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 - `size`

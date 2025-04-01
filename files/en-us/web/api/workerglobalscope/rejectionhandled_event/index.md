@@ -8,7 +8,7 @@ browser-compat: api.WorkerGlobalScope.rejectionhandled_event
 
 {{APIRef}}{{AvailableInWorkers("worker")}}
 
-The **`rejectionhandled`** event is sent to the script's global scope (typically {{domxref("WorkerGlobalScope")}}) whenever a rejected {{jsxref("Promise")}} is handled late, i.e.,,, when a handler is attached to the promise after its rejection had caused an {{domxref("WorkerGlobalScope.unhandledrejection_event", "unhandledrejection")}} event.
+The **`rejectionhandled`** event is sent to the script's global scope (typically {{domxref("WorkerGlobalScope")}}) whenever a rejected {{jsxref("Promise")}} is handled late, i.e.,, when a handler is attached to the promise after its rejection had caused an {{domxref("WorkerGlobalScope.unhandledrejection_event", "unhandledrejection")}} event.
 
 This can be used in debugging and for general application resiliency, in tandem with the `unhandledrejection` event, which is sent when a promise is rejected but there is no handler for the rejection at the time.
 

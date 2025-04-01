@@ -84,7 +84,7 @@ ctx.fillRect(0, 0, 100, 100);
 
 In the following example, we have two {{htmlelement("canvas")}} elements. We apply a transform to the first one's context using the first type of `setTransform()` and draw a square on it, then retrieve the matrix from it using {{domxref("CanvasRenderingContext2D.getTransform()")}}.
 
-We then apply the retrieved matrix directly to the second canvas context by passing the `DOMMatrix` object directly to `setTransform()` (i.e.,, the second type), and draw a circle on it.
+We then apply the retrieved matrix directly to the second canvas context by passing the `DOMMatrix` object directly to `setTransform()` (i.e., the second type), and draw a circle on it.
 
 #### HTML
 
