@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
+Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e.,,, the `network.cookie.cookieBehavior` pref is set to `4`).
 
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
@@ -38,7 +38,7 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 - DOM Quota Storage (localStorage, IndexedDB, ServiceWorkers, DOM Cache, etc.)
 - DOM Push notifications
 - Reporting API Reports
-- Security Settings (i.e. HSTS)
+- Security Settings (i.e.,, HSTS)
 - EME Media Plugin Data
 - Plugin Data (e.g. Flash)
 - Media Devices
@@ -49,7 +49,7 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 > [!NOTE]
 > Even though we're clearing all of this data, we currently only flag origins for clearing when they use cookies or other site storage.
 
-Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e. from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
+Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e.,, from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
 
 ## How frequently is data cleared?
 

@@ -9,14 +9,14 @@ browser-compat: api.VisibilityStateEntry
 
 {{APIRef("Performance API")}}{{seecompattable}}
 
-The **`VisibilityStateEntry`** interface provides timings of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
+The **`VisibilityStateEntry`** interface provides timings of page visibility state changes, i.e.,,, when a tab changes from the foreground to the background or vice versa.
 
 This can be used to pinpoint visibility changes on the performance timeline, and cross-reference them against other performance entries such as "first-contentful-paint" (see {{domxref("PerformancePaintTiming")}}).
 
 There are two key visibility state change times that this API reports on:
 
-- `visible`: The time when the page becomes visible (i.e. when its tab moves into the foreground).
-- `hidden`: The time when the pages become hidden (i.e. when its tab moves into the background).
+- `visible`: The time when the page becomes visible (i.e.,, when its tab moves into the foreground).
+- `hidden`: The time when the pages become hidden (i.e.,, when its tab moves into the background).
 
 The performance timeline will always have a `"visibility-state"` entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
 

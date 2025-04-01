@@ -167,7 +167,7 @@ Each CSS property accepts specific data types. For example, the {{cssxref("backg
 
 ### Invalid custom properties
 
-Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e. they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
+Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e.,, they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
 
 Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 

@@ -103,7 +103,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
 ## Description
 
-As with any gradient, a linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
+As with any gradient, a linear gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
 To create a linear gradient that repeats to fill its container, use the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} function instead.
 

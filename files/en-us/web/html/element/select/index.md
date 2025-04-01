@@ -101,7 +101,7 @@ Keyboard users can select multiple contiguous items by:
 Keyboard users can select multiple non-contiguous items by:
 
 - Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e.,, the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS

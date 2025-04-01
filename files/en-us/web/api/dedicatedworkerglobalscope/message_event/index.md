@@ -8,7 +8,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.message_event
 
 {{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
-The `message` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e. when the parent sends a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)).
+The `message` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e.,, when the parent sends a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)).
 
 This event is not cancellable and does not bubble.
 

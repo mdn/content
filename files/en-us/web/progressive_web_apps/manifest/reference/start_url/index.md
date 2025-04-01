@@ -32,7 +32,7 @@ The `start_url` manifest member is used to specify the URL that should be opened
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.
 
-    If `start_url` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or not {{glossary("origin", "same-origin")}} as the page that links to the manifest), the URL of the page that links to the manifest is used.
+    If `start_url` is unspecified or the value is invalid (i.e.,,, not a string, not a valid URL, or not {{glossary("origin", "same-origin")}} as the page that links to the manifest), the URL of the page that links to the manifest is used.
 
     > [!NOTE]
     > If [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).

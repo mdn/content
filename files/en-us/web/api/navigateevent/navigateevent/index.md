@@ -33,7 +33,7 @@ new NavigateEvent(type, init)
     - `formData` {{optional_inline}}
       - : The {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission. Defaults to `null`.
     - `hashChange` {{optional_inline}}
-      - : A boolean defining if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document). Defaults to `false`.
+      - : A boolean defining if the navigation is a fragment navigation (i.e.,, to a fragment identifier in the same document). Defaults to `false`.
     - `hasUAVisualTransition` {{optional_inline}}
       - : A boolean defining whether the user agent has performed a visual transition for this navigation before dispatching this event. Defaults to `false`.
     - `info` {{optional_inline}}

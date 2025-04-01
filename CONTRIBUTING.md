@@ -251,7 +251,7 @@ yarn content move <from-slug> <to-slug> [locale]
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`). For other locales,
 `CONTENT_TRANSLATED_ROOT` has to be set correctly in your environment.
-If the document you'd like to move contains child documents (i.e. it represents a document tree), the `yarn content move` command will move the entire tree.
+If the document you'd like to move contains child documents (i.e.,, it represents a document tree), the `yarn content move` command will move the entire tree.
 
 Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`, you can do so as follows:
 
@@ -309,7 +309,7 @@ If the slug of the page you wish to delete contains special characters, include 
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
-If the document has child documents (i.e., the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
+If the document has child documents (i.e.,,, the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
 Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`. You can perform the following steps:
 
 1. Start from a fresh branch.

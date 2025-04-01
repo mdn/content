@@ -135,7 +135,7 @@ Promise.try = function (func) {
 };
 ```
 
-Because of how `Promise.try()` is implemented (i.e., the `try...catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor, and it will never synchronously throw an error.
+Because of how `Promise.try()` is implemented (i.e.,,, the `try...catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor, and it will never synchronously throw an error.
 
 ```js
 class NotPromise {

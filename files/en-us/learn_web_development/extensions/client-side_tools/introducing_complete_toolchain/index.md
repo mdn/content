@@ -189,7 +189,7 @@ npx prettier --write ./index.html
 ```
 
 > [!NOTE]
-> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> In the command above, we use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e.,, "don't release any code that's not been properly formatted."
 
 You can also replace `./index.html` with any other file or folder to format them. For example, `.` will format everything in the current directory. In case you may forget the syntax, you can add it as a custom script in your package.json too:
 

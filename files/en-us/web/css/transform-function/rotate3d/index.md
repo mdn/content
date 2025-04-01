@@ -98,7 +98,7 @@ transform: rotate3d(0, 1, 0.5, 3.142rad);
 
 In 3D space, rotations have three degrees of freedom, which together describe a single axis of rotation. The axis of
 rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
-property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
+property). If, as specified, the vector is not _normalized_ (i.e.,,, if the sum of the square of its three
 coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
 the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invalidating the whole CSS property.
 

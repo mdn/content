@@ -14,7 +14,7 @@ The `Intl` object is very use-case driven. It provides a separate object for eac
 
 - [Getting information about a locale](#locale_information) using {{jsxref("Intl.Locale")}}.
 - [Formatting data](#formatting_data) using {{jsxref("Intl.DateTimeFormat")}}, {{jsxref("Intl.DurationFormat")}}, {{jsxref("Intl.ListFormat")}}, {{jsxref("Intl.NumberFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}}.
-- [Collation](#collation) (i.e., comparing strings for sorting or searching) using {{jsxref("Intl.Collator")}}.
+- [Collation](#collation) (i.e.,,, comparing strings for sorting or searching) using {{jsxref("Intl.Collator")}}.
 - [Selecting plural forms](#plural_rules) using {{jsxref("Intl.PluralRules")}}.
 - [Segmenting text](#segmentation) into units such as words, sentences, or graphemes using {{jsxref("Intl.Segmenter")}}.
 - [Getting the displayed name](#display_names) for currencies, languages, scripts, regions, and time zones using {{jsxref("Intl.DisplayNames")}}.

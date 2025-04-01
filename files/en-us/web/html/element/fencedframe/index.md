@@ -54,7 +54,7 @@ Currently these are always enabled inside fenced frames. In the future, which on
 
 ## Focusing across fenced frame boundaries
 
-The ability of the document's active focus to be moved across fenced frame boundaries (i.e. from an element outside the fenced frame to one inside, or vice versa) is limited. User-initiated actions such as a click or a tab can do so, as there is no fingerprinting risk there.
+The ability of the document's active focus to be moved across fenced frame boundaries (i.e.,, from an element outside the fenced frame to one inside, or vice versa) is limited. User-initiated actions such as a click or a tab can do so, as there is no fingerprinting risk there.
 
 However, trying to traverse the boundary via an API call such as {{domxref("HTMLElement.focus()")}} is prohibited — a malicious script could use a series of such calls to leak inferred information across the boundary.
 
@@ -65,7 +65,7 @@ Being a {{ glossary("replaced elements", "replaced element")}}, the `<fencedfram
 > [!NOTE]
 > The {{cssxref("object-fit")}} property has no effect on `<fencedframe>` elements.
 
-The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
+The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e.,, {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 
 ## Accessibility
 

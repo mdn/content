@@ -44,7 +44,7 @@ Values of this type are objects. They contain the following properties:
 - `mime`
   - : A `string` representing the downloaded file's MIME type.
 - `paused`
-  - : A `boolean` indicating whether the download is paused, i.e. if the download has stopped reading data from the host but has kept the connection open. If so, the value is `true`, `false` if not.
+  - : A `boolean` indicating whether the download is paused, i.e.,, if the download has stopped reading data from the host but has kept the connection open. If so, the value is `true`, `false` if not.
 - `referrer`
   - : A `string` representing the downloaded file's referrer.
 - `startTime`

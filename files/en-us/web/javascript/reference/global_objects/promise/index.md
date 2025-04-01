@@ -193,7 +193,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 - {{jsxref("Promise.reject()")}}
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
-  - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+  - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e.,, has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
 - {{jsxref("Promise.try()")}}
   - : Takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a `Promise`.
 - {{jsxref("Promise.withResolvers()")}}
@@ -215,7 +215,7 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 - {{jsxref("Promise.prototype.finally()")}}
   - : Appends a handler to the promise, and returns a new promise that is resolved when the original promise is resolved. The handler is called when the promise is settled, whether fulfilled or rejected.
 - {{jsxref("Promise.prototype.then()")}}
-  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler `onFulfilled` or `onRejected` is not a function).
+  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e.,, if the relevant handler `onFulfilled` or `onRejected` is not a function).
 
 ## Examples
 

@@ -95,7 +95,7 @@ One of the common possible errors when opening a database is `VER_ERR`. It indic
 
 ### Creating or updating the version of the database
 
-When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when [Opening a database](#opening_a_database)), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e., `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
+When you create a new database or increase the version number of an existing database (by specifying a higher version number than you did previously, when [Opening a database](#opening_a_database)), the `onupgradeneeded` event will be triggered and an [IDBVersionChangeEvent](/en-US/docs/Web/API/IDBVersionChangeEvent) object will be passed to any `onversionchange` event handler set up on `request.result` (i.e.,,, `db` in the example). In the handler for the `upgradeneeded` event, you should create the object stores needed for this version of the database:
 
 ```js
 // This event is only implemented in recent browsers
@@ -492,7 +492,7 @@ index.openKeyCursor().onsuccess = (event) => {
 
 ### Specifying the range and direction of cursors
 
-If you would like to limit the range of values you see in a cursor, you can use an `IDBKeyRange` object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e., the key range includes the given value(s)) or "open" (i.e., the key range does not include the given value(s)). Here's how it works:
+If you would like to limit the range of values you see in a cursor, you can use an `IDBKeyRange` object and pass it as the first argument to `openCursor()` or `openKeyCursor()`. You can make a key range that only allows a single key, or one that has a lower or upper bound, or one that has both a lower and upper bound. The bound may be "closed" (i.e.,,, the key range includes the given value(s)) or "open" (i.e.,,, the key range does not include the given value(s)). Here's how it works:
 
 ```js
 // Only match "Donna"

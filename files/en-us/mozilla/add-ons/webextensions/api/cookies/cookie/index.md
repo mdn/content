@@ -20,9 +20,9 @@ Values of this type are objects that can contain these properties:
 - `firstPartyDomain`
   - : A `string` representing the first-party domain associated with the cookie. This is an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 - `hostOnly`
-  - : A `boolean`, `true` if the cookie is a host-only cookie (i.e., the request's host must exactly match the domain of the cookie), or `false` otherwise.
+  - : A `boolean`, `true` if the cookie is a host-only cookie (i.e.,,, the request's host must exactly match the domain of the cookie), or `false` otherwise.
 - `httpOnly`
-  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e., the cookie is inaccessible to client-side scripts), or `false` otherwise.
+  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e.,,, the cookie is inaccessible to client-side scripts), or `false` otherwise.
 - `name`
   - : A `string` representing the name of the cookie.
 - `partitionKey` {{optional_inline}}
@@ -35,7 +35,7 @@ Values of this type are objects that can contain these properties:
 - `path`
   - : A `string` representing the path of the cookie.
 - `secure`
-  - : A `boolean`, `true` if the cookie is marked as secure (i.e., its scope is limited to secure channels, typically HTTPS), or `false` otherwise.
+  - : A `boolean`, `true` if the cookie is marked as secure (i.e.,,, its scope is limited to secure channels, typically HTTPS), or `false` otherwise.
 - `session`
   - : A `boolean`, `true` if the cookie is a session cookie, or `false` if it is a persistent cookie with an expiration date.
 - `sameSite`

@@ -9,7 +9,7 @@ browser-compat: api.SharedStorage
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Shared Storage API")}}
 
-The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access while preserving privacy (i.e. without relying on tracking cookies).
+The **Shared Storage API** is a client-side storage mechanism that enables unpartitioned, cross-site data access while preserving privacy (i.e.,, without relying on tracking cookies).
 
 ## Concepts and usage
 

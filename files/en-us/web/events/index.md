@@ -668,7 +668,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Provides notification events from interacting with a touch sensitive
-          screen (i.e. using a finger or stylus). Not related to the
+          screen (i.e.,, using a finger or stylus). Not related to the
           <a href="/en-US/docs/Web/API/Force_Touch_events#events"
             >Force Touch API</a
           >.

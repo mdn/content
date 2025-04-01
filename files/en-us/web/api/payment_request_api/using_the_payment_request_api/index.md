@@ -108,7 +108,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
 
 ## Detecting availability of the Payment Request API
 
-You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e. `if (window.PaymentRequest)`.
+You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e.,, `if (window.PaymentRequest)`.
 
 In the following snippet, a merchant page performs this check, and if it returns `true` updates the checkout button to use `PaymentRequest` instead of legacy web forms.
 

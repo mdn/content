@@ -112,7 +112,7 @@ Events have three functions:
 - `statusCode`
   - : `integer`. Standard HTTP status code returned by the server.
 - `statusLine`
-  - : `string`. HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers.
+  - : `string`. HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e.,,, responses that lack a status line) or an empty string if there are no headers.
 - `tabId`
   - : `integer`. The ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
 - `thirdParty`

@@ -8,7 +8,7 @@ browser-compat: api.SVGSVGElement.pauseAnimations
 
 {{APIRef("SVG")}}
 
-The `pauseAnimations()` method of the {{domxref("SVGSVGElement")}} interface suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
+The `pauseAnimations()` method of the {{domxref("SVGSVGElement")}} interface suspends (i.e.,,, pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
 
 ## Syntax
 

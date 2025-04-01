@@ -306,7 +306,7 @@ Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the des
 
 The code also shows both ways of declaring a field:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
+- Field _name_ and _type_ as a key-value pair (i.e.,, as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
 
   - default values.
@@ -370,7 +370,7 @@ We provide a brief overview below. For more information see: [Models](https://mo
 
 > [!NOTE]
 > Creation, update, deletion and querying of records are asynchronous operations that return a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-> The examples below show just the use of the relevant methods and `await` (i.e. the essential code for using the methods).
+> The examples below show just the use of the relevant methods and `await` (i.e.,, the essential code for using the methods).
 > The surrounding `async function` and `try...catch` block to catch errors are omitted for clarity.
 > For more information on using `await/async` see [Database APIs are asynchronous](#database_apis_are_asynchronous) above.
 
@@ -681,7 +681,7 @@ npm install mongoose
 ## Connect to MongoDB
 
 Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e.,, using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection

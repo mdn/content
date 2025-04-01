@@ -90,7 +90,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
    For example, `"Document: selectionchange"` is part of the [Selection API](/en-US/docs/Web/API/Selection_API) but `Document` is not, so we add the event to the array and it will be linked from the [Selection API](/en-US/docs/Web/API/Selection_API) topic.
 6. `"guides"` — the value is an array of strings, each that addresses a guide topic that explain how to use the API.
-   The strings contain the part of the guide's URL address after the language path: i.e. the `/docs/...` part of the guide URL.
+   The strings contain the part of the guide's URL address after the language path: i.e.,, the `/docs/...` part of the guide URL.
    For example, to link to the topic "Using Fetch" at `https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch`, the guide array would contain "/docs/Web/API/Fetch_API/Using_Fetch".
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.

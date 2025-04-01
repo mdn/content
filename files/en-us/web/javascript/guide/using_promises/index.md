@@ -293,7 +293,7 @@ async function main() {
 
 ### Chaining after a catch
 
-It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
+It's possible to chain _after_ a failure, i.e.,, a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
 
 ```js
 doSomething()
@@ -496,7 +496,7 @@ console.log(1);
 // Logs: 1, 2
 ```
 
-Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e. pretty soon:
+Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later (only after the function which created it exits, and when the JavaScript execution stack is empty), just before control is returned to the event loop; i.e.,, pretty soon:
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

@@ -98,7 +98,7 @@ For example, you can see here that:
 - My browser (`User-Agent`) is Mozilla Firefox (`Mozilla/5.0`).
 - It can accept gzip compressed information (`Accept-Encoding: gzip`).
 - It can accept the specified languages (`Accept-Language: en-US,en;q=0.8,es;q=0.6`).
-- The `Referer` line indicates the address of the web page that contained the link to this resource (i.e. the origin of the request, `https://developer.mozilla.org/en-US/`).
+- The `Referer` line indicates the address of the web page that contained the link to this resource (i.e.,, the origin of the request, `https://developer.mozilla.org/en-US/`).
 
 HTTP requests can also have a body, but it is empty in this case.
 

@@ -9,7 +9,7 @@ browser-compat: api.FencedFrameConfig
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-The **`FencedFrameConfig`** interface represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it.
+The **`FencedFrameConfig`** interface represents the navigation of a {{htmlelement("fencedframe")}}, i.e.,, what content will be displayed in it.
 
 `FencedFrameConfig` objects cannot be constructed manually via JavaScript. They are returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
 

@@ -178,7 +178,7 @@ function drawImageActualSize() {
 ## Notes
 
 - `drawImage()` only works correctly on an {{domxref("HTMLVideoElement")}}
-  when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,
+  when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,,,
   **seek** event fired after setting the `currentTime`
   property).
 - `drawImage()` will always use the source element's _intrinsic size in

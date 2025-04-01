@@ -24,7 +24,7 @@ You can store any code you like in a GitHub repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e.,, "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
    ```bash
    cd Desktop/test-site

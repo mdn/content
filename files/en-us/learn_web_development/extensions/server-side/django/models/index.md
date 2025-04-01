@@ -100,7 +100,7 @@ A model can have an arbitrary number of fields, of any type — each one represe
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
-Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e. what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
+Our above example has a single field called `my_field_name`, of type `models.CharField` — which means that this field will contain strings of alphanumeric characters. The field types are assigned using specific classes, which determine the type of record that is used to store the data in the database, along with validation criteria to be used when values are received from an HTML form (i.e.,, what constitutes a valid value). The field types can also take arguments that further specify how the field is stored or can be used. In this case we are giving our field two arguments:
 
 - `max_length=20` — States that the maximum length of a value in this field is 20 characters.
 - `help_text='Enter field documentation'` — helpful text that may be displayed in a form to help users understand how the field is used.

@@ -16,7 +16,7 @@ Related website sets are a mechanism for defining a set of related sites that sh
 
 ## Concepts and usage
 
-Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies and unpartitioned state when loaded in a third-party context inside other related sites (i.e., embedded in an {{htmlelement("iframe")}}). Typical use cases are:
+Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies and unpartitioned state when loaded in a third-party context inside other related sites (i.e.,,, embedded in an {{htmlelement("iframe")}}). Typical use cases are:
 
 - App sites: A single application may be deployed over multiple sites, aiming to allow users to navigate between them seamlessly in a single session.
 - Brand sites: A set of brand assets may be contained in a single site but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
@@ -136,7 +136,7 @@ Once a set is active:
 RWS has been designed with security in mind. It would be disastrous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
 
 - **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (`i.e.` by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
-- **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e. if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
+- **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e.,, if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
 - **`site1.example.com` and `site2.example.com` are intentionally in the same set, but `site1.example.com` gets hijacked by `evilsite.example.com`**: The impact of a site hijacking attack within a set isn't any worse than it would usually be, once the other sites are updated accordingly:
   - The regular [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) requires an active opt-in by the embedded site, so `site2.example.com` can stop calling `document.requestStorageAccess()` when it's embedded in `site1.example.com`, avoiding a {{glossary("CSRF")}} attack.
   - Use of `requestStorageAccessFor()` requires [CORS](/en-US/docs/Web/HTTP/Guides/CORS), so `site2.example.com` could choose not to respond with the appropriate CORS headers when network requests are coming from `site1.example.com`, thereby avoiding a CSRF attack.

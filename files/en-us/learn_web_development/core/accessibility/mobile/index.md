@@ -40,7 +40,7 @@ To make a website accessible and usable on mobile, you just need to follow gener
 
 There are some exceptions that need special consideration for mobile; the main ones are:
 
-- Control mechanisms — Make sure interface controls such as buttons are accessible on mobiles (i.e., mainly touchscreen), as well as desktops/laptops (mainly mouse/keyboard).
+- Control mechanisms — Make sure interface controls such as buttons are accessible on mobiles (i.e.,,, mainly touchscreen), as well as desktops/laptops (mainly mouse/keyboard).
 - User input — Make user input requirements as painless as possible on mobile (e.g., in forms, keep typing to a minimum).
 - Responsive design — Make sure layouts work on mobile, conserve image download sizes, and think about the provision of images for high-resolution screens.
 

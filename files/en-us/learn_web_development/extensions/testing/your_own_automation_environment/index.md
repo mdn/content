@@ -427,7 +427,7 @@ const { Builder, Browser, By, Key } = require("selenium-webdriver");
 })();
 ```
 
-Try running the updated code. WebDriver will now fill out the first form field, wait for one second, then test whether its value got filled out (i.e., is not empty) by using `getAttribute()` to retrieve its `value` attribute value. It then prints a message to the console to report success/failure.
+Try running the updated code. WebDriver will now fill out the first form field, wait for one second, then test whether its value got filled out (i.e.,,, is not empty) by using `getAttribute()` to retrieve its `value` attribute value. It then prints a message to the console to report success/failure.
 
 > [!NOTE]
 > There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
@@ -471,7 +471,7 @@ Now when you run it, you should now see the test execute and the browser instanc
 
 There has been a lot written about best practices for writing tests. You can find some good background information at [Test Practices](https://www.selenium.dev/documentation/test_practices/). In general, you should make sure that your tests are:
 
-1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
+1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e.,, they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. The `duck_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
 3. Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.
 
@@ -756,7 +756,7 @@ If you now go back to your [Sauce Labs Automated Test dashboard](https://app.sau
 If you don't want to use a service like Sauce Labs or BrowserStack, you can always set up your own remote testing server. Let's look at how to do this.
 
 1. The Selenium remote server requires Java to run. Download the latest JDK for your platform from the [Java SE downloads page](https://www.oracle.com/java/technologies/downloads/). Install it when it is downloaded.
-2. Next, download the latest [Selenium standalone server](https://selenium-release.storage.googleapis.com/index.html) — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e. not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your `PATH`, do so now (see the [Setting up Selenium in Node](#setting_up_selenium_in_node) section).
+2. Next, download the latest [Selenium standalone server](https://selenium-release.storage.googleapis.com/index.html) — this acts as a proxy between your script and the browser drivers. Choose the latest stable version number (i.e.,, not a beta), and from the list choose a file starting with "selenium-server-standalone". When this has downloaded, put it in a sensible place, like in your home directory. If you've not already added the location to your `PATH`, do so now (see the [Setting up Selenium in Node](#setting_up_selenium_in_node) section).
 3. Run the standalone server by entering the following into a terminal on your server computer
 
    ```bash

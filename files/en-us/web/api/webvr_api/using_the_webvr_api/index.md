@@ -44,7 +44,7 @@ Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've im
 Our demo also features:
 
 - A button to start (and stop) our scene from being presented in the VR display.
-- A button to show (and hide) VR pose data, i.e. the position and orientation of the headset, updated in real time.
+- A button to show (and hide) VR pose data, i.e.,, the position and orientation of the headset, updated in real time.
 
 When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
 
@@ -465,7 +465,7 @@ You should note that we've used a conditional expression to detect whether the l
 
 The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/en-US/docs/Web/API/WebVR_API#window_events)). For example:
 
-- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e.,, goes from presenting to not presenting, or vice versa.
 - {{domxref("Window.vrdisplayconnect_event", "vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
 - {{domxref("Window.vrdisplaydisconnect_event", "vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
 

@@ -67,7 +67,7 @@ For detailed guidance on using `X-Forwarded-For`, see the [Parsing](#parsing) an
 This header exposes privacy-sensitive information by design, such as the IP address of the client.
 Therefore, the user's privacy must be kept in mind when using this header.
 
-If you know that all proxies in the request chain are trusted (i.e., you control them) and are configured correctly, the parts of the header added by your proxies can be trusted.
+If you know that all proxies in the request chain are trusted (i.e.,,, you control them) and are configured correctly, the parts of the header added by your proxies can be trusted.
 If any proxy is malicious or misconfigured, any part of the header not added by a trusted proxy may be spoofed or may have an unexpected format or contents.
 If the server can be directly connected to from the internet — even if it is also behind a trusted reverse proxy — **no part** of the `X-Forwarded-For` IP list can be considered trustworthy or safe for security-related uses.
 

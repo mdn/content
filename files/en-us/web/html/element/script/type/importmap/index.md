@@ -109,7 +109,7 @@ They can also contain or end with path separators, or be absolute URLs, or be re
 }
 ```
 
-If there are several module specifier keys in a module specifier map that might match, then the most specific key will be selected (i.e. the one with the longer path/value).
+If there are several module specifier keys in a module specifier map that might match, then the most specific key will be selected (i.e.,, the one with the longer path/value).
 
 A module specifier of `./foo/../js/app.js` would be resolved to `./js/app.js` before matching.
 This means that a module specifier key of `./js/app.js` would match the module specifier even though they are not exactly the same.

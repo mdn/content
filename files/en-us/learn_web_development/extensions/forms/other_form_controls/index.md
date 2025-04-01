@@ -41,7 +41,7 @@ This renders like so:
 
 {{EmbedLiveSample("Multi-line_text_fields", 120, 160)}}
 
-The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
+The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e.,, pressing return) that will be included when the data is submitted.
 
 `<textarea>` also takes a closing tag; any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
@@ -120,7 +120,7 @@ The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgr
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
+On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e.,, by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
 
 #### Using the value attribute
 

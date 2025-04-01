@@ -245,7 +245,7 @@ A better approach is to use the {{domxref("Animation.commitStyles()")}} method. 
 
 ## Automatically removing filling animations
 
-It is possible to trigger a large number of animations on the same element. If they are indefinite (i.e., forwards-filling), this can result in a huge animations list, which could create a memory leak. For this reason, browsers automatically remove filling animations after they are replaced by newer animations, unless the developer explicitly specifies to keep them.
+It is possible to trigger a large number of animations on the same element. If they are indefinite (i.e.,,, forwards-filling), this can result in a huge animations list, which could create a memory leak. For this reason, browsers automatically remove filling animations after they are replaced by newer animations, unless the developer explicitly specifies to keep them.
 
 Animations are removed when all of the following are true:
 

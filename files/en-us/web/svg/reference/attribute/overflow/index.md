@@ -10,7 +10,7 @@ The **`overflow`** attribute sets what to do when an element's content is too bi
 
 This attribute has the same parameter values and meaning as the CSS {{cssxref("overflow")}} property, however, the following additional points apply:
 
-- If it has a value of `visible`, the attribute has no effect (i.e., a clipping rectangle is not created).
+- If it has a value of `visible`, the attribute has no effect (i.e.,,, a clipping rectangle is not created).
 - If the `overflow` property has the value `hidden` or `scroll`, a clip of the exact size of the SVG viewport is applied.
 - When `scroll` is specified on an {{SVGElement("svg")}} element, a scrollbar or panner is normally shown for the SVG viewport whether or not any of its content is clipped.
 - Within SVG content, the value `auto` implies that all rendered content for child elements must be visible, either through a scrolling mechanism, or by rendering with no clip.

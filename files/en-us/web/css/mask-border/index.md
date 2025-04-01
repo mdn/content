@@ -74,7 +74,7 @@ In this example, we will mask an element's border with a diamond pattern. The so
 
 <img src="https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png" alt="The image used for the mask examples on this page. The mask is a transparent square with three rows of three diamonds each. The diamonds are a very light, almost white, shade of grey. The middle part between the diamonds is also solid grey. The parts between the outside of the diamonds and the edge of the image are transparent." loading="lazy" style="background-color: black;">
 
-To match the size of a single diamond, we will use a value of 90 divided by 3, or `30`, for slicing the image into corner and edge regions. A repeat value of `round` will make the mask slices fit evenly, i.e., without clipping or gaps.
+To match the size of a single diamond, we will use a value of 90 divided by 3, or `30`, for slicing the image into corner and edge regions. A repeat value of `round` will make the mask slices fit evenly, i.e.,,, without clipping or gaps.
 
 ```html live-sample___mask-border-example
 <div class="masked">

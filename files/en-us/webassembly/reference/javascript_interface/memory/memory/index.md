@@ -37,7 +37,7 @@ new WebAssembly.Memory(memoryDescriptor)
         set to `true`, it is a shared memory. The default is `false`.
 
 > [!NOTE]
-> A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
+> A WebAssembly page has a constant size of 65,536 bytes, i.e.,,, 64KiB.
 
 ### Exceptions
 

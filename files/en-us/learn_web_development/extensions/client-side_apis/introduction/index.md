@@ -109,7 +109,7 @@ Let's return to the example of the Web Audio API — this is a fairly complex AP
 
 - {{domxref("AudioContext")}}, which represents an [audio graph](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_graphs) that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.
 - {{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.
-- {{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.
+- {{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e.,, the device on your computer that will actually output it — usually your speakers or headphones.
 
 So how do these objects interact? If you look at our [simple web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), you'll first see the following HTML:
 
@@ -274,7 +274,7 @@ In addition, some WebAPIs request permission to be enabled from the user once ca
 The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called [autoplay policy](/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy) — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.
 
 > [!NOTE]
-> Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
+> Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e.,, if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
 
 ## Summary
 

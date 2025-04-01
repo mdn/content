@@ -51,7 +51,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies a list of source sizes that describe the final rendered width of the image. Allowed if the parent of `<source>` is {{HTMLElement("picture")}}. Not allowed if the parent is {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
-    The list consists of source sizes separated by commas. Each source size is media condition-length pair. Before laying the page out, the browser uses this information to determine which image defined in [`srcset`](#srcset) to display. Note that `sizes` will take effect only if width descriptors are provided with `srcset`, not pixel density descriptors (i.e., `200w` should be used instead of `2x`).
+    The list consists of source sizes separated by commas. Each source size is media condition-length pair. Before laying the page out, the browser uses this information to determine which image defined in [`srcset`](#srcset) to display. Note that `sizes` will take effect only if width descriptors are provided with `srcset`, not pixel density descriptors (i.e.,,, `200w` should be used instead of `2x`).
 
 - `media`
 

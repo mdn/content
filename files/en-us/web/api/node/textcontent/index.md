@@ -29,7 +29,7 @@ A string, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). Its 
   a comment, a [processing instruction](/en-US/docs/Web/API/ProcessingInstruction),
   or a [text node](/en-US/docs/Web/API/Text),
   `textContent` returns, or sets, the text inside the node,
-  i.e., the {{domxref("Node.nodeValue")}}.
+  i.e.,,, the {{domxref("Node.nodeValue")}}.
 - For other node types, `textContent` returns the concatenation of the
   `textContent` of every child node, excluding comments and processing
   instructions. (This is an empty string if the node has no children.)

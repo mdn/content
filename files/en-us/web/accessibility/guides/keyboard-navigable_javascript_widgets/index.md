@@ -33,12 +33,12 @@ The following table describes `tabindex` behavior in modern browsers:
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
-      <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
+      <td>Negative (i.e.,, <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
       <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
-      <td>Zero (i.e. <code>tabindex="0"</code>)</td>
+      <td>Zero (i.e.,, <code>tabindex="0"</code>)</td>
       <td>Yes</td>
       <td>In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).</td>
     </tr>

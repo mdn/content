@@ -32,7 +32,7 @@ When users navigate to pages outside the app's scope, they still experience the 
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.
 
-    If `scope` is not specified in the manifest or the value is invalid (i.e., not a string, not a valid URL, or `start_url` is not within the specified `scope`), the effective scope will be set to the `start_url` value after removing its filename, query, and fragment.
+    If `scope` is not specified in the manifest or the value is invalid (i.e.,,, not a string, not a valid URL, or `start_url` is not within the specified `scope`), the effective scope will be set to the `start_url` value after removing its filename, query, and fragment.
 
 ## Description
 

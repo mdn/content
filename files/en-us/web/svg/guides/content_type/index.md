@@ -168,7 +168,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     SVG supports two types of _IRI_ references:
 
-    - **local _IRI_ references**, where the IRI reference does not contain an \<absoluteIRI> or \<relativeIRI> and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`).
+    - **local _IRI_ references**, where the IRI reference does not contain an \<absoluteIRI> or \<relativeIRI> and thus only contains a fragment identifier (i.e.,,, `#<elementID>` or `#xpointer(id<elementID>)`).
     - **non-local _IRI_ references**, where the _IRI_ reference does contain an \<absoluteIRI> or \<relativeIRI>.
 
       For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference).

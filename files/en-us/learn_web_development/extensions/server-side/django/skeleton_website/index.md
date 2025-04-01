@@ -238,7 +238,7 @@ urlpatterns += [
 > [!NOTE]
 > Note that we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
 
-Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`. This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
+Now let's redirect the root URL of our site (i.e.,, `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`. This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
 
 Add the following lines to the bottom of the file:
 

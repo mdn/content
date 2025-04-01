@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that resolves with a boolean value indicating whether th
 The result returned by this method can be inaccurate in a couple of circumstances:
 
 1. The user may have active browser settings that block third-party cookies; in this case, `true` may be returned even though third-party cookies are still inaccessible. To handle such a situation, you should gracefully handle any errors resulting in cookie values being unretrievable; for example, inform the user that access to their personalized settings is blocked and invite them to sign in again to use them.
-2. The browser might not block third-party cookie access by default; in this case, `false` may be returned even though third-party cookies are accessible, and storage access wouldn't need to be requested (i.e., via {{domxref("Document.requestStorageAccess()")}}). To get around this issue, you could query {{domxref("Document.cookie")}} to find out whether your cookies are accessible, and call {{domxref("Document.requestStorageAccess()")}} if they are not.
+2. The browser might not block third-party cookie access by default; in this case, `false` may be returned even though third-party cookies are accessible, and storage access wouldn't need to be requested (i.e.,,, via {{domxref("Document.requestStorageAccess()")}}). To get around this issue, you could query {{domxref("Document.cookie")}} to find out whether your cookies are accessible, and call {{domxref("Document.requestStorageAccess()")}} if they are not.
 
 > [!NOTE]
 > If the promise gets resolved and a user gesture event was being processed when the function was originally called, the resolve handler will run as if a user gesture was being processed, so it will be able to call APIs that require user activation.

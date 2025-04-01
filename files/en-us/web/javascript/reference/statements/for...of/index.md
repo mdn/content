@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...of` loop is in.
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)). Variables declared with `var` are not local to the loop, i.e.,, they are in the same scope the `for...of` loop is in.
 - `iterable`
   - : An iterable object. The source of the sequence of values on which the loop operates.
 - `statement`
@@ -374,7 +374,7 @@ The object `iterable` inherits the properties `objCustom` and `arrCustom` becaus
 
 The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log array _elements_ `3`, `5`, `7` or `"hello"` because those are not _properties_ — they are _values_. It logs array _indexes_ as well as `arrCustom` and `objCustom`, which are actual properties. If you're not sure why these properties are iterated over, there's a more thorough explanation of how [array iteration and `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in) work.
 
-The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e. not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
+The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e.,, not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
 
 The `for...of` loop iterates and logs _values_ that `iterable`, as an array (which is [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), defines to be iterated over. The object's _elements_ `3`, `5`, `7` are shown, but none of the object's _properties_ are.
 

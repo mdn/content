@@ -133,7 +133,7 @@ In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} 
 Access-Control-Allow-Origin: *
 ```
 
-This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example` (i.e., no domain other than `https://foo.example` can access the resource in a cross-origin manner), they would send:
+This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example` (i.e.,,, no domain other than `https://foo.example` can access the resource in a cross-origin manner), they would send:
 
 ```http
 Access-Control-Allow-Origin: https://foo.example

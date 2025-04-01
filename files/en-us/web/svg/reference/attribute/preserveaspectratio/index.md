@@ -90,7 +90,7 @@ The following two keywords determine how the SVG should be scaled relative to th
     - The entire {{ SVGAttr("viewBox") }} is visible within the viewport.
     - The {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria.
 
-    In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
+    In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e.,,, the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
 
 - `slice`
 
@@ -100,7 +100,7 @@ The following two keywords determine how the SVG should be scaled relative to th
     - The entire viewport is covered by the {{ SVGAttr("viewBox") }}.
     - The {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria.
 
-    In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
+    In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e.,,, the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
 
 ## Examples
 

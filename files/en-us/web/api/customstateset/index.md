@@ -63,7 +63,7 @@ The states can be used within the custom element but are not directly accessible
 
 You can select a custom element that is in a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
 The format of this pseudo-class is `:state(my-state-name)`, where `my-state-name` is the state as defined in the element.
-The custom state pseudo-class matches the custom element only if the state is `true` (i.e., if `my-state-name` is present in the `CustomStateSet`).
+The custom state pseudo-class matches the custom element only if the state is `true` (i.e.,,, if `my-state-name` is present in the `CustomStateSet`).
 
 For example, the following CSS matches a `labeled-checkbox` custom element when the element's `CustomStateSet` contains the `checked` state, and applies a `solid` border to the checkbox:
 

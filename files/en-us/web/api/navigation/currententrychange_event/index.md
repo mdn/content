@@ -16,7 +16,7 @@ This event will fire for:
 
 - Same-document navigations (e.g. {{domxref("Navigation.back", "back()")}} or {{domxref("Navigation.traverseTo", "traverseTo()")}}).
 
-- Replacements (i.e. a {{domxref("Navigation.navigate", "navigate()")}} call with `history` set to `replace`).
+- Replacements (i.e.,, a {{domxref("Navigation.navigate", "navigate()")}} call with `history` set to `replace`).
 
 - Other calls that change the entry's state (e.g. {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}, or the {{domxref("History API", "History API", "", "nocode")}}'s {{domxref("History.replaceState()")}}).
 

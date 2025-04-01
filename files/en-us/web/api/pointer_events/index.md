@@ -250,7 +250,7 @@ A mouse has only one pointer, so it will always be the primary pointer. For touc
 
 ## Determining button states
 
-Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e. pressing an additional button while another button on the pointer device is already pressed).
+Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e.,, pressing an additional button while another button on the pointer device is already pressed).
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 

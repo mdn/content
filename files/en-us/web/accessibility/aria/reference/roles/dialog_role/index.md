@@ -25,7 +25,7 @@ The `dialog` role is used to mark up an HTML based application dialog or window 
 
 ## Description
 
-A dialog is a descendant window of the primary window of a web application. For HTML pages, the primary application window is the entire web document, i.e., the body element.
+A dialog is a descendant window of the primary window of a web application. For HTML pages, the primary application window is the entire web document, i.e.,,, the body element.
 
 Marking up a dialog element with the `dialog` role helps assistive technology identify the dialog's content as being grouped and separated from the rest of the page content. However, adding `role="dialog"` alone is not sufficient to make a dialog accessible. Additionally, the following needs to be done:
 

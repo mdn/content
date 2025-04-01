@@ -10,7 +10,7 @@ browser-compat: api.HTMLFencedFrameElement.config
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e.,, what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
 
 ## Value
 

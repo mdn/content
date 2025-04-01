@@ -25,11 +25,11 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
   - : Returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document.
 - {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate backwards in the navigation history
-    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
+    (i.e.,, the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
     and `false` if it is not.
 - {{domxref("Navigation.canGoForward", "canGoForward")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate forwards in the navigation history
-    (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
+    (i.e.,, the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the last one in the history entry list),
     and `false` if it is not.
 - {{domxref("Navigation.currentEntry", "currentEntry")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigationHistoryEntry")}} object representing the location the user is currently

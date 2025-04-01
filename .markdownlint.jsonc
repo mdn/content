@@ -231,6 +231,13 @@
         "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
         "searchScope": "text",
       },
+      {
+        "name": "ie-replacement",
+        "message": "Replace 'i.e.' with 'i.e.,'",
+        "searchPattern": "/\\bi\\.e\\./g",
+        "replace": "i.e.,",
+        "searchScope": "text"
+      },      
     ],
   },
 }

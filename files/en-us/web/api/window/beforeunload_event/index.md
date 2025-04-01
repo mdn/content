@@ -75,7 +75,7 @@ In the following example we have an HTML text {{htmlelement("input")}} to repres
 
 Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a `beforeunload` event listener is attached to the {{domxref("Window")}} object.
 
-If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
+If the value becomes an empty string again (i.e.,, the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
 
 The `beforeunload` event handler function invokes `event.preventDefault()` to trigger the warning dialog when the user closes or navigates the tab. We have also included `event.returnValue = true` in the handler function so that any browsers that don't support the `event.preventDefault()` mechanism will still run the demo correctly.
 

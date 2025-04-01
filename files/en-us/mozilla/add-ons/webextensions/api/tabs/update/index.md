@@ -67,7 +67,7 @@ let updating = browser.tabs.update(
         - chrome: URLs
         - [javascript: URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
         - [data: URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
-        - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
+        - file: URLs (i.e.,,, files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Non-privileged URLs (e.g., `about:blank`) are allowed.
 
         To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.

@@ -39,7 +39,7 @@ It is hard to talk about privacy without also talking about security — they ar
 - Hobbies, interests, or other personal preferences
 - Biometric data such as fingerprints or facial recognition data
 
-**Private information** is any information that users do not want shared publicly and must be kept private (i.e., information that is accessible only by a certain group of authorized users). Some private data is private by law (for example medical data), and some is private more by personal preference.
+**Private information** is any information that users do not want shared publicly and must be kept private (i.e.,,, information that is accessible only by a certain group of authorized users). Some private data is private by law (for example medical data), and some is private more by personal preference.
 
 ### Personally identifiable information
 

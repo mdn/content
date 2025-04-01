@@ -28,7 +28,7 @@ new WebSocket(url, protocols)
 - `protocols` {{optional_inline}}
 
   - : A single string or an array of strings representing the [sub-protocol(s)](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) that the client would like to use, in order of preference.
-    If it is omitted, an empty array is used by default, i.e. `[]`.
+    If it is omitted, an empty array is used by default, i.e.,, `[]`.
 
     A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value.
     Note however that only one sub-protocol can be selected per connection.

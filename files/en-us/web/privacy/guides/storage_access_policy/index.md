@@ -71,7 +71,7 @@ Browser caches:
 Network connections:
 
 - [TLS sessions](https://wiki.mozilla.org/Security/Server_Side_TLS#Session_Resumption) will not be resumed using a session ticket when an HTTPS connection is made to an embedded third-party resource that is classified as a tracker.
-- [HTTP connection reuse](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e., as a first party).
+- [HTTP connection reuse](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x#persistent_connections) by domains classified as trackers is limited to requests that occur under the same top-level origin. For example, a request for content from `tracker.example` on `news.example` will not reuse an HTTP connection with a request for content from `tracker.example` on `shopping.example` or with requests that occur when `tracker.example` is visited directly (i.e.,,, as a first party).
 
 HTTP Referrers
 
@@ -97,7 +97,7 @@ Third-party storage access may be granted to resources that have been classified
 
 - The origin of the resource that is initially loaded in the pop-up window is granted storage access on the opener document if that origin has received user interaction as a first party within the past 30 days.
 - After the initial resource is loaded in the pop-up window, the window may go through a series of redirects to other hosts. If a user interacts with the pop-up window following a redirect, the origin of the content loaded in the pop-up window is given storage access on the opener document.
-- When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e., if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
+- When there is a top-level redirect from a tracking origin to a non-tracking origin, the tracking origin receives short-lived storage access on the non-tracking origin and any other non-tracking origins that appear further down the redirect chain (i.e.,,, if the load continues to redirect). The tracking origin must have received user interaction as a first party within the past 30 days, and the storage access permission expires after 15 minutes.
 
 ### Scope of storage access
 

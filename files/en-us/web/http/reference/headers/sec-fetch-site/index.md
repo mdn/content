@@ -44,7 +44,7 @@ Sec-Fetch-Site: none
 ## Directives
 
 - `cross-site`
-  - : The request initiator and the server hosting the resource have a different site (i.e. a request by "potentially-evil.com" for a resource at "example.com").
+  - : The request initiator and the server hosting the resource have a different site (i.e.,, a request by "potentially-evil.com" for a resource at "example.com").
 - `same-origin`
   - : The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).
 - `same-site`
