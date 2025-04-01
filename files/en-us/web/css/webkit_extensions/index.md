@@ -19,7 +19,7 @@ User agents based on WebKit or Blink (such as Safari and Chrome) support several
 
 ### A-C
 
-- `-webkit-app-region`: No longer supported in Safari
+- `-webkit-app-region`: {{deprecated_inline}} No longer supported in Safari
 - `-webkit-border-horizontal-spacing`
 - `-webkit-border-vertical-spacing`
 - {{CSSxRef("-webkit-box-reflect")}}: Supported with `-webkit-` by every browser, for compatibility reasons
@@ -48,17 +48,17 @@ User agents based on WebKit or Blink (such as Safari and Chrome) support several
 
 - `-webkit-margin-after`
 - `-webkit-margin-before`
-- `-webkit-mask-box-image-outset`
-- `-webkit-mask-box-image-repeat`
-- `-webkit-mask-box-image-slice`
-- `-webkit-mask-box-image-source`
-- `-webkit-mask-box-image-width`
-- `-webkit-mask-box-image`
-- `-webkit-mask-composite`
+- {{CSSxRef("-webkit-mask-box-image")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
+- {{CSSxRef("-webkit-mask-composite")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}
 - {{CSSxRef("-webkit-mask-position-x")}}: Supported with `-webkit-` by every browser for compatibility reasons
 - {{CSSxRef("-webkit-mask-position-y")}}: Supported with `-webkit-` by every browser for compatibility reasons
-- `-webkit-mask-repeat-x`{{deprecated_inline}}: No longer supported; see {{CSSxRef("mask-repeat")}}
-- `-webkit-mask-repeat-y` {{deprecated_inline}}: No longer supported; see {{CSSxRef("mask-repeat")}}
+- {{CSSxRef("-webkit-mask-repeat-x")}} {{deprecated_inline}}: No longer supported; see {{CSSxRef("mask-repeat")}}
+- {{CSSxRef("-webkit-mask-repeat-y")}} {{deprecated_inline}}: No longer supported; see {{CSSxRef("mask-repeat")}}
 - `-webkit-mask-source-type`: Not supported in Chrome
 - `-webkit-max-logical-height`
 - `-webkit-max-logical-width`
@@ -74,14 +74,14 @@ User agents based on WebKit or Blink (such as Safari and Chrome) support several
 
 ### T
 
-- {{CSSxRef("-webkit-tap-highlight-color")}}: Not supported in Safari
+- {{CSSxRef("-webkit-tap-highlight-color")}}: Only supported in Safari on iOS
 - `-webkit-text-decoration-skip`: Not supported in Chrome
 - `-webkit-text-decorations-in-effect`
 - {{CSSxRef("-webkit-text-fill-color")}}
 - {{CSSxRef("-webkit-text-security")}}
+- {{CSSxRef("-webkit-text-stroke")}}
 - {{CSSxRef("-webkit-text-stroke-color")}}
 - {{CSSxRef("-webkit-text-stroke-width")}}
-- {{CSSxRef("-webkit-text-stroke")}}
 - `-webkit-text-zoom`: Not supported in Chrome
 - {{CSSxRef("-webkit-touch-callout")}} {{deprecated_inline}}: Only supported in Safari on iOS
 - `-webkit-transform-origin-x`
@@ -105,7 +105,7 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-border-after-color`: Use {{CSSxRef("border-block-end-color")}}
 - `-webkit-border-after-style`: Use {{CSSxRef("border-block-end-style")}}
 - `-webkit-border-after-width`: Use {{CSSxRef("border-block-end-width")}}
-- `-webkit-border-before`: Use {{CSSxRef("border-block-start")}}
+- {{CSSxRef("-webkit-border-before")}}: Use {{CSSxRef("border-block-start")}}
 - `-webkit-border-before-color`: Use {{CSSxRef("border-block-start-color")}}
 - `-webkit-border-before-style`: Use {{CSSxRef("border-block-start-style")}}
 - `-webkit-border-before-width`: Use {{CSSxRef("border-block-start-width")}}
@@ -125,13 +125,14 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("order")}}
 - `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}
 - `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("justify-content")}}
+- {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{CSSxRef("element", "element()")}} function
 
 ### C-I
 
 - `-webkit-column-break-after`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-after")}}
 - `-webkit-column-break-before`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-before")}}
 - `-webkit-column-break-inside`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-inside")}}
-- `-webkit-font-feature-settings`: Use {{CSSxRef("font-feature-settings")}}
+- `-webkit-font-feature-settings`: Use {{CSSxRef("font-feature-settings")}} (Prefixed version not supported in Safari)
 - `-webkit-hyphenate-character`: Use {{CSSxRef("hyphenate-character")}}
 - `-webkit-initial-letter`: Use {{CSSxRef("initial-letter")}}
 
@@ -147,26 +148,25 @@ For each of the properties below, use the standard equivalents.
 
 ## -webkit-prefixed property values
 
-- `-webkit-fill-available`
-  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container.
-    The flexbox `stretch` value (see for example {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}}) provides a standard replacement.
+- `-webkit-fill-available` {{deprecated_inline}} Not supported in Safari or Chrome.
+  - : Used in sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}} to allow elements to take up all the available space within their parent container.
+    Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("align-items")}} or {{CSSxRef("justify-items")}}, for example.
 
 ## Pseudo-classes
 
 > [!NOTE]
 > If there is an invalid pseudo-class within in a chain or group of selectors, the whole selector list is invalid.
 
-- `:-webkit-animating-full-screen-transition`
 - `:-webkit-any()`: Use {{CSSxRef(":is")}}
 - `:-webkit-any-link`: Use {{CSSxRef(":any-link")}}
 - `:-webkit-autofill`: Use {{CSSxRef(":autofill")}}
-- `:-webkit-autofill-strong-password`
+- `:-webkit-autofill-strong-password`: Use {{CSSxRef(":autofill")}}
 - `:-webkit-drag`
-- `:-webkit-full-page-media`
+- `:-webkit-full-page-media`: Use {{CSSxRef(":fullscreen")}}
 - `:-webkit-full-screen`: Use {{CSSxRef(":fullscreen")}}
-- `:-webkit-full-screen-ancestor`
-- `:-webkit-full-screen-document`
-- `:-webkit-full-screen-controls-hidden`
+- `:-webkit-full-screen-ancestor`: Use {{CSSxRef(":fullscreen")}}
+- `:-webkit-full-screen-document`: Use {{CSSxRef(":fullscreen")}}
+- `:-webkit-full-screen-controls-hidden`: Use {{CSSxRef(":fullscreen")}}
 
 ## Pseudo-elements
 
@@ -193,9 +193,9 @@ If a pseudo-element (but not pseudo-class) has a `-webkit-` prefix, Blink, WebKi
 ## Media features
 
 - {{CSSxRef("@media/-webkit-animation")}} {{deprecated_inline}}
-- {{CSSxRef("@media/-webkit-device-pixel-ratio")}}
+- {{CSSxRef("@media/-webkit-device-pixel-ratio")}}: Supported cross-browser
 - {{CSSxRef("@media/-webkit-transform-2d")}} {{deprecated_inline}}
-- {{CSSxRef("@media/-webkit-transform-3d")}}
+- {{CSSxRef("@media/-webkit-transform-3d")}}: Supported cross-browser
 - {{CSSxRef("@media/-webkit-transition")}} {{deprecated_inline}}
 
 ## See also

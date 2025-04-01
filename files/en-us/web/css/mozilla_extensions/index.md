@@ -18,13 +18,13 @@ Firefox supports a number of extensions to [CSS](/en-US/docs/Web/CSS) which are 
 > You should avoid using them on production websites.
 
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}: Use proper `alt` text
-- {{CSSxRef("-moz-image-region")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}: Use `alt` text instead
+- {{CSSxRef("-moz-image-region")}}
 - {{CSSxRef("-moz-orient")}}
 - `-moz-osx-font-smoothing`: A similar {{CSSxRef("font-smooth")}} equivalent exists
-- {{CSSxRef("-moz-user-focus")}}
-- {{CSSxRef("-moz-user-input")}}
-- `-moz-user-modify`: A non-prefixed {{CSSxRef("user-modify")}} equivalent exists, but the HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is recommended.
+- {{CSSxRef("-moz-user-focus")}} {{deprecated_inline}}
+- {{CSSxRef("-moz-user-input")}} {{deprecated_inline}}
+- `-moz-user-modify`: A non-prefixed {{CSSxRef("user-modify")}} equivalent exists, but the HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is recommended instead.
 
 ## -moz-prefixed properties with standard equivalents
 
@@ -42,7 +42,7 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 - {{CSSxRef("animation-name", "-moz-animation-name")}} {{deprecated_inline}}: Prefixed version still supported
 - {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{deprecated_inline}}: Prefixed version still supported
 - {{CSSxRef("animation-timing-function", "-moz-animation-timing-function")}} {{deprecated_inline}}: Prefixed version still supported
-- {{CSSxRef("appearance", "-moz-appearance")}} {{Experimental_Inline}}: Prefixed version still supported
+- `-moz-appearance`: The prefixed version of {{CSSxRef("appearance")}} is still supported.
 
 ### B
 
@@ -131,95 +131,6 @@ Support for the prefixed version is typically dropped eventually, so use the sta
 
 - `-moz-initial`: See {{CSSxRef("initial")}}.
 
-### -moz-appearance
-
-Property: {{CSSxRef("appearance", "-moz-appearance")}}
-
-- `button`
-- `button-arrow-down`
-- `button-arrow-next`
-- `button-arrow-previous`
-- `button-arrow-up`
-- `button-bevel`
-- `checkbox`
-- `checkbox-container`
-- `checkbox-label`
-- `checkmenuitem`
-- `dialog`
-- `groupbox`
-- `listbox`
-- `menuarrow`
-- `menucheckbox`
-- `menuimage`
-- `menuitem`
-- `menuitemtext`
-- `menulist`
-- `menulist-button`
-- `menulist-text`
-- `menulist-textfield`
-- `menupopup`
-- `menuradio`
-- `menuseparator`
-- `-moz-mac-unified-toolbar`
-- `-moz-win-borderless-glass`
-- `-moz-win-browsertabbar-toolbox`
-- `-moz-win-communications-toolbox`
-- `-moz-win-glass`
-- `-moz-win-media-toolbox`
-- `-moz-window-button-box`
-- `-moz-window-button-box-maximized`
-- `-moz-window-button-close`
-- `-moz-window-button-maximize`
-- `-moz-window-button-minimize`
-- `-moz-window-button-restore`
-- `-moz-window-titlebar`
-- `-moz-window-titlebar-maximized`
-- `progressbar`
-- `progresschunk`
-- `radio`
-- `radio-container`
-- `radio-label`
-- `radiomenuitem`
-- `resizer`
-- `resizerpanel`
-- `scale-horizontal`
-- `scalethumb-horizontal`
-- `scalethumb-vertical`
-- `scale-vertical`
-- `scrollbarbutton-down`
-- `scrollbarbutton-left`
-- `scrollbarbutton-right`
-- `scrollbarbutton-up`
-- `scrollbar-small`
-- `scrollbarthumb-horizontal`
-- `scrollbarthumb-vertical`
-- `scrollbartrack-horizontal`
-- `scrollbartrack-vertical`
-- `separator`
-- `spinner`
-- `spinner-downbutton`
-- `spinner-textfield`
-- `spinner-upbutton`
-- `statusbar`
-- `statusbarpanel`
-- `tab`
-- `tabpanels`
-- `tab-scroll-arrow-back`
-- `tab-scroll-arrow-forward`
-- `textfield`
-- `textfield-multiline`
-- `toolbar`
-- `toolbarbutton-dropdown`
-- `toolbox`
-- `tooltip`
-- `treeheadercell`
-- `treeheadersortarrow`
-- `treeitem`
-- `treetwisty`
-- `treetwistyopen`
-- `treeview`
-- `window`
-
 ### background-image
 
 Property: {{CSSxRef("background-image")}}
@@ -235,13 +146,7 @@ Property: {{CSSxRef("background-image")}}
 
 #### Sub-images
 
-- {{CSSxRef("-moz-image-rect")}}
-
-### border-color
-
-Property: {{CSSxRef("border-color")}}
-
-- `-moz-use-text-color` {{deprecated_inline}}: Removed in [Firefox bug 1306214](https://bugzil.la/1306214)); use {{CSSxRef("color_value#currentcolor_keyword", "currentcolor")}}
+- {{CSSxRef("-moz-image-rect")}} {{deprecated_inline}}
 
 ### order-style and outline-style
 
@@ -258,7 +163,6 @@ Type: {{CSSxRef("&lt;color&gt;")}}
 - `-moz-activehyperlinktext`
 - `-moz-hyperlinktext`
 - `-moz-visitedhyperlinktext`
-- `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
 - `-moz-default-background-color`
@@ -269,44 +173,14 @@ Type: {{CSSxRef("&lt;color&gt;")}}
 - `-moz-fieldtext`
 - `-moz-dialog`
 - `-moz-dialogtext`
-- `-moz-dragtargetzone`
-- `-moz-mac-accentdarkestshadow`
-- `-moz-mac-accentdarkshadow`
-- `-moz-mac-accentface`
-- `-moz-mac-accentlightesthighlight`
-- `-moz-mac-accentlightshadow`
-- `-moz-mac-accentregularhighlight`
-- `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`
-- `-moz-mac-chrome-inactive`
-- `-moz-mac-focusring`
-- `-moz-mac-menuselect`
-- `-moz-mac-menushadow`
-- `-moz-mac-menutextselect`
 - `-moz-menuhover`
 - `-moz-menuhovertext`
-- `-moz-win-communicationstext`
-- `-moz-win-mediatext`
-- `-moz-nativehyperlinktext`
 
 ### display
 
 Property: {{CSSxRef("display")}}
 
-- `-moz-box` {{deprecated_inline}}
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box` {{deprecated_inline}}
-- `-moz-inline-grid` {{deprecated_inline}}
-- `-moz-inline-stack` {{deprecated_inline}}
-- `-moz-inline-table` {{deprecated_inline}}
-- `-moz-grid` {{deprecated_inline}}
-- `-moz-grid-group` {{deprecated_inline}}
-- `-moz-grid-line` {{deprecated_inline}}
-- `-moz-groupbox` {{deprecated_inline}}
-- `-moz-deck` {{deprecated_inline}}
-- `-moz-popup` {{deprecated_inline}}
-- `-moz-stack` {{deprecated_inline}}
-- `-moz-marker` {{deprecated_inline}}
+All `display: -moz-*` values are no longer supported.
 
 ### empty-cells
 
@@ -318,16 +192,7 @@ Property: {{CSSxRef("empty-cells")}}
 
 Property: {{CSSxRef("font")}}
 
-- `-moz-button`
-- `-moz-info`
-- `-moz-desktop`
-- `-moz-dialog`: Also a color
-- `-moz-document`
-- `-moz-workspace`
-- `-moz-window`
-- `-moz-list`
-- `-moz-pull-down-menu`
-- `-moz-field`: Also a color
+All `font: -moz-*` values are no longer supported.
 
 ### font-family
 
@@ -339,79 +204,45 @@ Property: {{CSSxRef("font-family")}}
 
 Property: {{CSSxRef("image-rendering")}}
 
-- `-moz-crisp-edges` {{deprecated_inline}}: Use {{CSSxRef("image-rendering")}}
+- `-moz-crisp-edges` {{deprecated_inline}}: Use [`crisp-edges`](/en-US/docs/Web/CSS/image-rendering#crisp-edges)
 
 ### &lt;length&gt;
 
 Type: {{CSSxRef("&lt;length&gt;")}}
 
-- {{CSSxRef("calc", "-moz-calc")}}
+- `-moz-calc`{{deprecated_inline}}: Use {{CSSxRef("calc")}}
 
 ### list-style-type
 
 Property: {{CSSxRef("list-style-type")}}
 
-- `-moz-arabic-indic`
-- `-moz-bengali`
-- `-moz-cjk-earthly-branch`
-- `-moz-cjk-heavenly-stem`
-- `-moz-devanagari`
+Standard `list-style-type` values are supported without a `-moz-` prefix, except for the following list.
+See [Browser Compatibility](/en-US/docs/Web/CSS/list-style-type#browser_compatibility) for details.
+
 - `-moz-ethiopic-halehame`
 - `-moz-ethiopic-halehame-am`
 - `-moz-ethiopic-halehame-ti-er`
 - `-moz-ethiopic-halehame-ti-et`
-- `-moz-ethiopic-numeric`
-- `-moz-gujarati`
-- `-moz-gurmukhi`
 - `-moz-hangul`
 - `-moz-hangul-consonant`
-- `-moz-japanese-formal`
-- `-moz-japanese-informal`
-- `-moz-kannada`
-- `-moz-khmer`
-- `-moz-lao`
-- `-moz-malayalam`
-- `-moz-myanmar`
-- `-moz-oriya`
-- `-moz-persian`
-- `-moz-simp-chinese-formal`
-- `-moz-simp-chinese-informal`
-- `-moz-tamil`
-- `-moz-telugu`
-- `-moz-thai`
-- `-moz-trad-chinese-formal`
-- `-moz-trad-chinese-informal`
 - `-moz-urdu`
 
 ### text-align
 
 Property: {{CSSxRef("text-align")}}
 
-- `-moz-center`
-- `-moz-left`
-- `-moz-right`
-
-### text-decoration
-
-Property: {{CSSxRef("text-decoration")}}
-
-- `-moz-anchor-decoration`
-
-### -moz-user-select
-
-Property: {{CSSxRef("user-select", "-moz-user-select")}}
-
-- `-moz-all`
-- `-moz-none`
+- `-moz-center` {{deprecated_inline}}: Use `text-align: center`
+- `-moz-left` {{deprecated_inline}}: Use `text-align: left`
+- `-moz-right` {{deprecated_inline}}: Use `text-align: right`
 
 ### width, min-width, and max-width
 
 Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-width")}}
 
-- `-moz-min-content`
-- `-moz-fit-content`
-- `-moz-max-content`
-- `-moz-available`
+- `-moz-min-content`: See {{CSSxRef("min-content")}}
+- `-moz-fit-content`: See {{CSSxRef("fit-content")}}
+- `-moz-max-content`: See {{CSSxRef("max-content")}}
+- `-moz-available`: See [`stretch`](/en-US/docs/Web/CSS/width#stretch)
 
 ## Pseudo-elements and pseudo-classes
 
@@ -421,7 +252,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - `::-moz-anonymous-positioned-block`
 - `:-moz-any` {{deprecated_inline}}: Use {{CSSxRef(":is")}}
 - `:-moz-any-link` {{deprecated_inline}}: Use {{CSSxRef(":any-link")}}
-- {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef(":-moz-broken")}} {{deprecated_inline}}
 - `::-moz-canvas`
 - {{CSSxRef("::-moz-color-swatch")}}
 - `::-moz-cell-content`
@@ -458,21 +289,21 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-only-whitespace")}}
 - `::-moz-pagebreak`
 - `::-moz-pagecontent`
-- {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder", "::-moz-placeholder")}} {{deprecated_inline}}
+- `:-moz-placeholder` {{deprecated_inline}}: Use {{CSSxRef(":placeholder-shown")}}
+- `::-moz-placeholder` {{deprecated_inline}}: Use {{CSSxRef("::placeholder")}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}
 - {{CSSxRef("::-moz-range-track")}}
-- `:-moz-read-only`
-- `:-moz-read-write`
+- `:-moz-read-only` {{deprecated_inline}}: Use {{CSSxRef(":read-only")}}
+- `:-moz-read-write` {{deprecated_inline}}: Use {{CSSxRef(":read-write")}}
 
 ### S
 
 - `::-moz-scrolled-canvas`
 - `::-moz-scrolled-content`
 - `::-moz-selection` {{deprecated_inline}}: Use {{CSSxRef("::selection")}}
-- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-submit-invalid")}}: See {{CSSxRef(":invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}
 - `::-moz-svg-foreign-content`
 
@@ -508,7 +339,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ## Other
 
-- `-moz-alt-content`: See [Firefox bug 11011](https://bugzil.la/11011))
+- `-moz-alt-content`: See [Firefox bug 11011](https://bugzil.la/11011)
 
 ## See also
 
