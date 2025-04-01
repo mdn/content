@@ -194,7 +194,7 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.notepad-plus-plus.org/" rel="external"
+        <a href="https://notepad-plus-plus.org/" rel="external"
           >Notepad++</a
         >
       </td>
