@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e.,, the `network.cookie.cookieBehavior` pref is set to `4`).
+Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 

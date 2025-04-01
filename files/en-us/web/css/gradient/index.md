@@ -43,7 +43,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.
+A CSS gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element to which it applies.
 
 ## Syntax
 

@@ -21,7 +21,7 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 > [!NOTE]
 >
 > - When no `z-index` property is specified, elements are rendered on the default rendering layer (Layer 0).
-> - If several elements share the same `z-index` value (i.e.,, they are placed on the same layer), stacking rules explained in the section [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) apply.
+> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) apply.
 
 ## Example
 

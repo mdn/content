@@ -23,7 +23,7 @@ of the following filter functions in a string.
     This can be the ID of an element, a path to external XML file, or even a data encoded SVG value.
 - [`blur()`](/en-US/docs/Web/CSS/filter-function/blur)
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
-    defines the value of the standard deviation to the Gaussian function, i.e.,, how many
+    defines the value of the standard deviation to the Gaussian function, i.e., how many
     pixels on the screen blend into each other; thus, a larger value will create more
     blur. A value of `0` leaves the input unchanged.
 - [`brightness()`](/en-US/docs/Web/CSS/filter-function/brightness)

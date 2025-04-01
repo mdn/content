@@ -317,14 +317,14 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
 
 | Constant name | Value  | Description                                                                                                                                                     |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass, i.e.,, nothing will be drawn.                                 |
+| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass, i.e., nothing will be drawn.                                 |
 | `LESS`        | 0x0201 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than the stored value.                |
 | `EQUAL`       | 0x0202 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is equals to the stored value.                |
 | `LEQUAL`      | 0x0203 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than or equal to the stored value.    |
 | `GREATER`     | 0x0204 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than the stored value.             |
 | `NOTEQUAL`    | 0x0205 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is not equal to the stored value.             |
 | `GEQUAL`      | 0x0206 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than or equal to the stored value. |
-| `ALWAYS`      | 0x0207 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will always pass, i.e.,, pixels will be drawn in the order they are drawn.     |
+| `ALWAYS`      | 0x0207 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will always pass, i.e., pixels will be drawn in the order they are drawn.     |
 
 ### Stencil actions
 

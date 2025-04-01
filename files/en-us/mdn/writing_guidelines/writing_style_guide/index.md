@@ -191,14 +191,14 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   - **Correct**: XUL
   - **Incorrect**: X.U.L.; Xul
 
-- **Latin abbreviations**: You can use common Latin abbreviations (etc., i.e.,, e.g.) in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
+- **Latin abbreviations**: You can use common Latin abbreviations (etc., i.e., e.g.) in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
 
   - **Correct**: Web browsers (e.g., Firefox) can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
   - **Incorrect**: Web browsers, e.g. Firefox, can be used ...
   - **Incorrect**: Web browsers, (eg: Firefox) can be used ...
 
-  In regular text (i.e.,, text outside of notes or parentheses), use the English equivalent of the abbreviation.
+  In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
   - **Correct**: ... web browsers, and so on.
   - **Incorrect**: ... web browsers, etc.
@@ -539,7 +539,7 @@ Lists should be formatted and structured consistently across all pages.
 Individual list items should be written with suitable punctuation, regardless of the list format.
 However, depending on the type of list you are creating, you will want to adjust your writing as described in the sections below. In both cases, include a lead-in sentence that describes the information in the list.
 
-- **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Sentences and phrases (i.e.,, sentence fragments missing a verb or a subject or both) in bulleted lists should include standard punctuation — sentences end with periods, phrases don't.
+- **Bulleted lists**: Bulleted lists should be used to group related pieces of concise information. Each item in the list should follow a similar sentence structure. Sentences and phrases (i.e., sentence fragments missing a verb or a subject or both) in bulleted lists should include standard punctuation — sentences end with periods, phrases don't.
 
   If there are multiple sentences in a list item, a period must appear at the end of each sentence, including the item's final sentence, just as would be expected in a paragraph. This is an example of a correctly structured bulleted list:
 

@@ -168,7 +168,7 @@ You can specify
 
 - {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e.,, via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
+  - : Controls whether the current document is allowed to use the [WebOTP API](/en-US/docs/Web/API/WebOTP_API) to request a one-time password (OTP) from a specially-formatted SMS message sent by the app's server, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}}.
 
 - {{httpheader('Permissions-Policy/payment', 'payment')}} {{Experimental_Inline}}
 
@@ -180,11 +180,11 @@ You can specify
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e.,, via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
 
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{experimental_inline}}
 
-  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e.,, via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
+  - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
 - {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{experimental_inline}}
 

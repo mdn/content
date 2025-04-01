@@ -15,7 +15,7 @@ they meet.
 
 This property has no effect wherever two connected segments have the same direction,
 because no joining area will be added in this case. Degenerate segments with a length of
-zero (i.e.,, with all endpoints and control points at the exact same position) are also
+zero (i.e., with all endpoints and control points at the exact same position) are also
 ignored.
 
 > [!NOTE]

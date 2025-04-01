@@ -9,7 +9,7 @@ browser-compat: api.VisibilityStateEntry
 
 {{APIRef("Performance API")}}{{seecompattable}}
 
-The **`VisibilityStateEntry`** interface provides timings of page visibility state changes, i.e.,, when a tab changes from the foreground to the background or vice versa.
+The **`VisibilityStateEntry`** interface provides timings of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 This can be used to pinpoint visibility changes on the performance timeline, and cross-reference them against other performance entries such as "first-contentful-paint" (see {{domxref("PerformancePaintTiming")}}).
 

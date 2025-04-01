@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 {{JSRef}}
 
-The **`Object.setPrototypeOf()`** static method sets the prototype (i.e.,, the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 > [!WARNING]
 > Changing the `[[Prototype]]` of an object is, by the nature of how modern JavaScript engines optimize property accesses, currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `Object.setPrototypeOf(...)` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes).

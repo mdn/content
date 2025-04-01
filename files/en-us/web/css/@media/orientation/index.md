@@ -19,9 +19,9 @@ The `orientation` feature is specified as a keyword value chosen from the list b
 ### Keyword values
 
 - `portrait`
-  - : The viewport is in a portrait orientation, i.e.,, the height is greater than or equal to the width.
+  - : The viewport is in a portrait orientation, i.e., the height is greater than or equal to the width.
 - `landscape`
-  - : The viewport is in a landscape orientation, i.e.,, the width is greater than the height.
+  - : The viewport is in a landscape orientation, i.e., the width is greater than the height.
 
 ## Examples
 

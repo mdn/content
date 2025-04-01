@@ -60,7 +60,7 @@ to move (e.g., `Web/HTTP/Authentication`), as well as the slug of its new
 location (e.g., `Web/HTTP/Auth`), optionally followed by the locale of the
 existing document (defaults to `en-US`).
 
-If the existing document that you'd like to move has child documents (i.e.,,
+If the existing document that you'd like to move has child documents (i.e.,
 it represents a document tree), the `yarn content move` command will move
 the entire tree.
 
@@ -122,7 +122,7 @@ You just have to specify the slug of the existing document that you'd like
 to delete (e.g., `Web/HTTP/Authentication`), optionally followed by the locale
 of the existing document (defaults to `en-US`).
 
-If the existing document that you'd like to delete has child documents (i.e.,, it represents a
+If the existing document that you'd like to delete has child documents (i.e., it represents a
 document tree), you must also specify the `-r, --recursive` option, otherwise
 the command will fail.
 

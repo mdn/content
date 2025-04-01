@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-An object containing the configuration options set on the context (i.e.,, via the {{domxref("GPUCanvasContext.configure()")}} method), or `null` if no configuration is set (either no configuration was previously set, or a configuration was set and then {{domxref("GPUCanvasContext.unconfigure()")}} was called on the context).
+An object containing the configuration options set on the context (i.e., via the {{domxref("GPUCanvasContext.configure()")}} method), or `null` if no configuration is set (either no configuration was previously set, or a configuration was set and then {{domxref("GPUCanvasContext.unconfigure()")}} was called on the context).
 
 ## Examples
 

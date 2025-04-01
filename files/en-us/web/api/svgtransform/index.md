@@ -22,7 +22,7 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   - : The angle as a floating point value. A convenience attribute for `SVG_TRANSFORM_ROTATE`, `SVG_TRANSFORM_SKEWX` and `SVG_TRANSFORM_SKEWY`. For `SVG_TRANSFORM_MATRIX`, `SVG_TRANSFORM_TRANSLATE` and `SVG_TRANSFORM_SCALE`, `angle` will be zero.
 
 - {{domxref("SVGTransform.matrix", "matrix")}}
-  - : The matrix as a {{ domxref("DOMMatrix") }} that represents this transformation. The matrix object is live, meaning that any changes made to the `SVGTransform` object are immediately reflected in the matrix object and vice versa. In case the matrix object is changed directly (i.e.,, without using the methods on the `SVGTransform` interface itself) then the type of the `SVGTransform` changes to `SVG_TRANSFORM_MATRIX`.
+  - : The matrix as a {{ domxref("DOMMatrix") }} that represents this transformation. The matrix object is live, meaning that any changes made to the `SVGTransform` object are immediately reflected in the matrix object and vice versa. In case the matrix object is changed directly (i.e., without using the methods on the `SVGTransform` interface itself) then the type of the `SVGTransform` changes to `SVG_TRANSFORM_MATRIX`.
 
 <table class="no-markdown">
   <tbody>

@@ -10,7 +10,7 @@ browser-compat: api.SVGTransform.matrix
 
 The **`matrix`** read-only property of the {{domxref("SVGTransform")}} interface represents the transformation matrix that corresponds to the transformation `type`.
 
-In case the `matrix` object is changed directly (i.e.,, without using the methods on the `SVGTransform` interface itself) then the `type` of the `SVGTransform` changes to `SVG_TRANSFORM_MATRIX`.
+In case the `matrix` object is changed directly (i.e., without using the methods on the `SVGTransform` interface itself) then the `type` of the `SVGTransform` changes to `SVG_TRANSFORM_MATRIX`.
 
 - For `SVG_TRANSFORM_MATRIX`, the matrix contains the a, b, c, d, e, f values supplied by the user.
 

@@ -94,7 +94,7 @@ For {{SVGElement("feComposite")}}, `operator` defines the compositing operation 
 
 ## feMorphology
 
-For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e.,, thin) or dilate (fatten) the source graphic.
+For {{SVGElement("feMorphology")}}, `operator` defines whether to erode (i.e., thin) or dilate (fatten) the source graphic.
 
 <table class="properties">
   <tbody>

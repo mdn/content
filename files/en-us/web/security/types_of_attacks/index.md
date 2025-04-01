@@ -79,7 +79,7 @@ Exfiltration avenues can be limited by deploying a strict Content-Security-Polic
 
 ### Session fixation
 
-A third party is able to determine a user's session identifier (i.e.,, by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
+A third party is able to determine a user's session identifier (i.e., by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
 
 Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other subdomains by setting the `Domain` attribute:
 

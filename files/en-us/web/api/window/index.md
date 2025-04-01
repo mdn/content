@@ -120,7 +120,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
 - {{domxref("Window.scrollMaxY")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : The maximum offset that the window can be scrolled to vertically (i.e.,, the document height minus the viewport height).
+  - : The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).
 - {{domxref("Window.scrollX")}} {{ReadOnlyInline}}
   - : Returns the number of pixels that the document has already been scrolled horizontally.
 - {{domxref("Window.scrollY")}} {{ReadOnlyInline}}

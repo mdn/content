@@ -11,13 +11,13 @@ These terms are described below in the context of their use on MDN Web Docs.
 ## Experimental
 
 When a technology is described as experimental on MDN Web Docs, it means that the technology is nascent and immature and is currently _in the process_ of being added to the web platform (or being considered for addition).
-Marking a technology as experimental indicates that readers should think carefully before using that technology in any kind of production project (i.e.,, a project that is not just a demo or experiment). Readers are [encouraged to try out experimental features](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) and provide feedback to browser vendors and standards authors.
+Marking a technology as experimental indicates that readers should think carefully before using that technology in any kind of production project (i.e., a project that is not just a demo or experiment). Readers are [encouraged to try out experimental features](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) and provide feedback to browser vendors and standards authors.
 
 For a technology marked **experimental**, one or more of the following conditions apply:
 
 - It is implemented and enabled by default in the release build of **only one** modern major browser rendering engine.
 - It is only supported through configuration changes such as preferences or flags, regardless of the number of supported rendering engines.
-- Its defining specification is likely to change significantly in backwards-incompatible ways (i.e.,, it may break existing code that relies on the feature).
+- Its defining specification is likely to change significantly in backwards-incompatible ways (i.e., it may break existing code that relies on the feature).
 
 > [!NOTE]
 > A feature released only on one rendering engine is still considered experimental even if it is available on preview builds of other rendering engines (or by setting a preference or flag).

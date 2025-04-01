@@ -89,7 +89,7 @@ A radial gradient is specified by indicating the center of the gradient (where t
 
 ## Description
 
-As with any gradient, a radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e.,, it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
+As with any gradient, a radial gradient has [no intrinsic dimensions](/en-US/docs/Web/CSS/image#description); i.e., it has no natural or preferred size, nor a preferred ratio. Its concrete size will match the size of the element it applies to.
 
 To create a radial gradient that repeats so as to fill its container, use the {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}} function instead.
 

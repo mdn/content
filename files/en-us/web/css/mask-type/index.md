@@ -31,9 +31,9 @@ The `mask-type` property is specified as one of the keyword values listed below.
 ### Values
 
 - `luminance`
-  - : Is a keyword indicating that the associated mask image is a luminance mask, i.e.,, that its [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values must be used when applying it.
+  - : Is a keyword indicating that the associated mask image is a luminance mask, i.e., that its [relative luminance](https://en.wikipedia.org/wiki/Luminance_%28relative%29) values must be used when applying it.
 - `alpha`
-  - : Is a keyword indicating that the associated mask image is an alpha mask, i.e.,, that its [alpha channel](https://en.wikipedia.org/wiki/Alpha_compositing) values must be used when applying it.
+  - : Is a keyword indicating that the associated mask image is an alpha mask, i.e., that its [alpha channel](https://en.wikipedia.org/wiki/Alpha_compositing) values must be used when applying it.
 
 ## Formal definition
 

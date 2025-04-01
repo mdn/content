@@ -14,7 +14,7 @@ method of the Canvas 2D API starts a new path by emptying the list of sub-paths.
 this method when you want to create a new path.
 
 > [!NOTE]
-> To create a new sub-path, i.e.,, one matching the current
+> To create a new sub-path, i.e., one matching the current
 > canvas state, you can use {{domxref("CanvasRenderingContext2D.moveTo()")}}.
 
 ## Syntax

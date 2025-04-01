@@ -43,7 +43,7 @@ The Performance API records various different types of performance data, and the
 - `"navigation"` records metrics associated with navigating to and initial load of the page.
 - `"paint"` records key moments of rendering during page load.
 - `"resource"` records how long it took the browser to fetch a resource.
-- `"visibility-state"` records the timing of page visibility state changes, i.e.,, when a tab changes from the foreground to the background or vice versa.
+- `"visibility-state"` records the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ### Performance entry subclasses
 

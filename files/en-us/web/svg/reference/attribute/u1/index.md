@@ -12,7 +12,7 @@ sidebar: svgref
 
 The **`u1`** attribute specifies list of {{Glossary("Unicode")}} characters (refer to the description of the {{SVGAttr("unicode")}} attribute of the {{SVGElement("glyph")}} element for a description of how to express individual Unicode characters) and/or ranges of Unicode characters, which identify a set of possible first {{Glossary("glyph")}} in a kerning pair.
 
-If a given Unicode character within the set has multiple corresponding `<glyph>` elements (i.e.,, there are multiple `<glyph>` elements with the same `unicode` attribute value but different {{SVGAttr("glyph-name")}} values), then all such glyphs are included in the set. Comma is the separator character; thus, to kern a comma, specify the comma as part of a range of Unicode characters or as a glyph name using the {{SVGAttr("g1")}} attribute. The total set of possible first glyphs in the kerning pair is the union of glyphs specified by the `u1` and `g1` attributes.
+If a given Unicode character within the set has multiple corresponding `<glyph>` elements (i.e., there are multiple `<glyph>` elements with the same `unicode` attribute value but different {{SVGAttr("glyph-name")}} values), then all such glyphs are included in the set. Comma is the separator character; thus, to kern a comma, specify the comma as part of a range of Unicode characters or as a glyph name using the {{SVGAttr("g1")}} attribute. The total set of possible first glyphs in the kerning pair is the union of glyphs specified by the `u1` and `g1` attributes.
 
 ## Elements
 

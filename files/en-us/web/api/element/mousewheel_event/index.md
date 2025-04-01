@@ -74,13 +74,13 @@ The `wheelDelta` attribute value is an abstract value which indicates how far th
 
 IE and Opera (Presto) only support `wheelDelta` attribute and do _not_ support horizontal scroll.
 
-The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e.,, if it's to left, the value is positive.
+The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value along the horizontal axis. When a user operates the device for scrolling to right, the value is negative. Otherwise, i.e., if it's to left, the value is positive.
 
 The `wheelDeltaY` attribute value indicates the `wheelDelta` attribute value along the vertical axis. The sign of the value is the same as the `wheelDelta` attribute value.
 
 ### Chrome
 
-On Windows, the value is the same as the delta value of `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. And also, the value isn't changed even if the scroll amount of system settings is page scroll, i.e.,, the value is the same as IE on Windows.
+On Windows, the value is the same as the delta value of `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. And also, the value isn't changed even if the scroll amount of system settings is page scroll, i.e., the value is the same as IE on Windows.
 
 On Linux, the value is `120` or `-120` per native wheel event. This makes the same behavior as IE and Chrome for Windows.
 

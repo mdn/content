@@ -113,7 +113,7 @@ Highlights:
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 916893](https://bugzil.la/916893)).
 - `DOMRequest` and `DOMCursor` are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1167650](https://bugzil.la/1167650)).
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) has been completely implemented and is now enabled by default ([Firefox bug 1149381](https://bugzil.la/1149381)).
-- Shared workers can no longer be shared between private (i.e.,, browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
+- Shared workers can no longer be shared between private (i.e., browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
 - The {{domxref("URL.searchParams")}} property is now read-only ([Firefox bug 1174731](https://bugzil.la/1174731)).
 - The {{domxref('HTMLAnchorElement.hash')}} property no longer decodes URL fragment ([Firefox bug 1093611](https://bugzil.la/1093611)).
 

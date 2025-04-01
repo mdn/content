@@ -54,7 +54,7 @@ The key here is that text can be converted to other forms that people with disab
     </tr>
     <tr>
       <td>
-        Multimedia content (i.e.,, audio or video) should at least have a
+        Multimedia content (i.e., audio or video) should at least have a
         descriptive identification available, such as a caption or similar.
       </td>
       <td>
@@ -133,7 +133,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
   <tbody>
     <tr>
        <td>1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
-       <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e.,, silent video).</td>
+       <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).</td>
        <td>See&nbsp;<a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
@@ -533,7 +533,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>1.4.9 Images of text (No Exception) (AAA)</td>
       <td>
         Text should not be presented as part of an image unless it is purely
-        decoration (i.e.,, it does not convey any content) or cannot be presented
+        decoration (i.e., it does not convey any content) or cannot be presented
         in any other way.
       </td>
       <td></td>

@@ -63,7 +63,7 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Components
 - Services
 - Promises
-- Data (i.e.,, from a remote API — from ember-data, by default)
+- Data (i.e., from a remote API — from ember-data, by default)
 - Deprecation Information
 - Render Performance
 

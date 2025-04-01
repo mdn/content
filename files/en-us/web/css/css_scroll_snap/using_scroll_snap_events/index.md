@@ -477,7 +477,7 @@ In this article, we've covered the scroll snap events that fire on the {{domxref
 - `Document` {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} and {{domxref("Document/scrollsnapchanging_event", "scrollsnapchanging")}} event references.
 - `Window` {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} and {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} event references.
 
-These work in much the same way as the `Element` versions, except that the overall HTML document has to be set as the scroll snap container (i.e.,, {{cssxref("scroll-snap-type")}} is set on the {{htmlelement("html")}} element).
+These work in much the same way as the `Element` versions, except that the overall HTML document has to be set as the scroll snap container (i.e., {{cssxref("scroll-snap-type")}} is set on the {{htmlelement("html")}} element).
 
 For example, if we took a similar example to the ones we've looked at above, where we've got a `<main>` element containing significant content:
 

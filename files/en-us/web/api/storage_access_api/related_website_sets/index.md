@@ -16,7 +16,7 @@ Related website sets are a mechanism for defining a set of related sites that sh
 
 ## Concepts and usage
 
-Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies and unpartitioned state when loaded in a third-party context inside other related sites (i.e.,, embedded in an {{htmlelement("iframe")}}). Typical use cases are:
+Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies and unpartitioned state when loaded in a third-party context inside other related sites (i.e., embedded in an {{htmlelement("iframe")}}). Typical use cases are:
 
 - App sites: A single application may be deployed over multiple sites, aiming to allow users to navigate between them seamlessly in a single session.
 - Brand sites: A set of brand assets may be contained in a single site but then deployed over multiple domains, including session data relating to user preferences, customization, etc.

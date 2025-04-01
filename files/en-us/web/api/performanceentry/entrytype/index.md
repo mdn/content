@@ -96,7 +96,7 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
 - `visibility-state`
 
-  - : Reports the timing of page visibility state changes, i.e.,, when a tab changes from the foreground to the background or vice versa.
+  - : Reports the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
     The entry instance will be a {{domxref("VisibilityStateEntry")}} object.
 

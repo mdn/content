@@ -57,9 +57,9 @@ This interface also supports the following properties:
 - {{domxref("PerformanceScriptTiming.sourceURL")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string representing the URL of the script.
 - {{domxref("PerformanceScriptTiming.window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to a {{domxref("Window")}} object representing the `window` of the container (i.e.,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed.
+  - : Returns a reference to a {{domxref("Window")}} object representing the `window` of the container (i.e., either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed.
 - {{domxref("PerformanceScriptTiming.windowAttribution")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an enumerated value describing the relationship of the container (i.e.,, either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed, relative to the window running the current document.
+  - : Returns an enumerated value describing the relationship of the container (i.e., either the top-level document or an {{htmlelement("iframe")}}) in which the LoAF-causing script was executed, relative to the window running the current document.
 
 ## Instance methods
 

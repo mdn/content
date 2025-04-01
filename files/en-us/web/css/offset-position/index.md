@@ -234,7 +234,7 @@ pre {
 
 {{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
 
-In `box0`, the absence of the `offset-path` property means that an `offset-position` of either `normal` or `auto` has no effect. When `offset-position` is `normal`, the ray starts at the center of the containing block (i.e.,, `50% 50%`). This is the default starting position of an offset path and is used when no `offset-position` is specified. Notice the difference between offset starting positions `auto` and `left top`. The value `auto` aligns the element's anchor point to its own top-left corner, whereas the value `left top` aligns the element's anchor point to the top-left corner of the containing block.
+In `box0`, the absence of the `offset-path` property means that an `offset-position` of either `normal` or `auto` has no effect. When `offset-position` is `normal`, the ray starts at the center of the containing block (i.e., `50% 50%`). This is the default starting position of an offset path and is used when no `offset-position` is specified. Notice the difference between offset starting positions `auto` and `left top`. The value `auto` aligns the element's anchor point to its own top-left corner, whereas the value `left top` aligns the element's anchor point to the top-left corner of the containing block.
 
 ## Specifications
 

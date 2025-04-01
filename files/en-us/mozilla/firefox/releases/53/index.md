@@ -66,7 +66,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ([Firefox bug 1269155](https://bugzil.la/1269155)).
 - Own properties of {{domxref("Plugin")}} and {{domxref("PluginArray")}} objects are no longer enumerable ([Firefox bug 1270366](https://bugzil.la/1270366)).
 - Named properties of {{domxref("MimeTypeArray")}} objects are no longer enumerable ([Firefox bug 1270364](https://bugzil.la/1270364)).
-- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see [Firefox bug 1270038](https://bugzil.la/1270038)). This allows an origin to use a persistent box (i.e.,, [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
+- The [Permissions API](/en-US/docs/Web/API/Permissions_API) now has a new permission name available — `persistent-storage` — as used when making a {{domxref("Permissions.query()")}} (see [Firefox bug 1270038](https://bugzil.la/1270038)). This allows an origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 - The {{domxref("Performance.timeOrigin")}} property has been implemented ([Firefox bug 1313420](https://bugzil.la/1313420)).
 
 ### Workers and service workers

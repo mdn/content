@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-**State Partitioning** is a broad effort by Mozilla to rework how Firefox manages client-side state (i.e.,, data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e., via [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
+**State Partitioning** is a broad effort by Mozilla to rework how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e., via [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
 This effort aims to achieve that by providing a partitioned storage location to every website a user visits.
 This article gives an overview of the mechanism, lists the affected APIs and explains how to debug affected sites.
@@ -146,7 +146,7 @@ These heuristics are intended to allow some third-party integrations that are co
 
 Third-party frames may use
 [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned access to cookie through the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
-Once granted, the requesting party will gain access to its entire first-party cookies (i.e.,, the cookies it would have access to if visited as a first-party).
+Once granted, the requesting party will gain access to its entire first-party cookies (i.e., the cookies it would have access to if visited as a first-party).
 
 > [!WARNING]
 > When storage access is granted there may still be references to the partitioned storage.

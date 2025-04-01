@@ -6,7 +6,7 @@ spec-urls: https://w3c.github.io/aria/#link
 sidebar: accessibilitysidebar
 ---
 
-A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e.,, either outside or within the current page or application.
+A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e., either outside or within the current page or application.
 
 > [!NOTE]
 > Where possible, it is recommended that you use a native {{HTMLElement("a")}} element rather than the `link` role, as native elements are more widely supported by user agents and assistive technology. Native {{HTMLElement("a")}} elements also support keyboard and focus requirements by default, without need for additional customization.

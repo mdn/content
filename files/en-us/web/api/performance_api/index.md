@@ -90,7 +90,7 @@ The following interfaces are present in the Performance API:
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
 - {{domxref("VisibilityStateEntry")}}
-  - : Measures the timing of page visibility state changes, i.e.,, when a tab changes from the foreground to the background or vice versa.
+  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
 ## Guides
 

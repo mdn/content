@@ -47,7 +47,7 @@ The `depthStencil` object can contain the following properties:
 - `depthBias` {{optional_inline}}
   - : A number representing a constant depth bias that is added to each fragment. If omitted, `depthBias` defaults to 0.
     > [!NOTE]
-    > The `depthBias`, `depthBiasClamp`, and `depthBiasSlopeScale` properties must be set to `0` for line and point topologies, i.e.,, if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`. If not, a {{domxref("GPUValidationError")}} will be generated and the returned {{domxref("GPURenderPipeline")}} will be invalid.
+    > The `depthBias`, `depthBiasClamp`, and `depthBiasSlopeScale` properties must be set to `0` for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`. If not, a {{domxref("GPUValidationError")}} will be generated and the returned {{domxref("GPURenderPipeline")}} will be invalid.
 - `depthBiasClamp` {{optional_inline}}
   - : A number representing the maximum depth bias of a fragment. If omitted, `depthBiasClamp` defaults to 0.
 - `depthBiasSlopeScale` {{optional_inline}}
@@ -370,7 +370,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
-  - The [`depthBias`](#depthbias), [`depthBiasClamp`](#depthbiasclamp), and [`depthBiasSlopeScale`](#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e.,, if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
+  - The [`depthBias`](#depthbias), [`depthBiasClamp`](#depthbiasclamp), and [`depthBiasSlopeScale`](#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
   - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:

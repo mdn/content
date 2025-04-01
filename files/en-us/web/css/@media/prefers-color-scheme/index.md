@@ -13,7 +13,7 @@ A user indicates their preference through an operating system setting (e.g. ligh
 ## Embedded elements
 
 For SVG and iframes, `prefers-color-scheme` lets you set a CSS style for the SVG or iframe based on the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the parent element in the web page.
-SVGs must be used embedded (i.e.,, `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
+SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as opposed to [inlined in HTML](/en-US/docs/Web/SVG/Guides/SVG_in_HTML#basic_example).
 An example of using `prefers-color-scheme` in SVGs can be found in the ["Inherited color scheme in embedded elements"](#inherited_color_scheme_in_embedded_elements) section.
 
 Using `prefers-color-scheme` is allowed in [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) `<svg>` and `<iframe>` elements. Cross-origin elements are elements retrieved from a different host than the page that is referencing them.

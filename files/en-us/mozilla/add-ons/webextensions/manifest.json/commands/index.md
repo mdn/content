@@ -51,7 +51,7 @@ The `commands` key is an object, and each shortcut is a property of it. **The pr
 Each shortcut's value is an object with up to 2 properties:
 
 1. `suggested_key` {{optional_inline}}: the combination of keys that activate the shortcut.
-2. `description` {{optional_inline}}: a string that describes the shortcut, i.e.,, what it does.
+2. `description` {{optional_inline}}: a string that describes the shortcut, i.e., what it does.
 
 The `suggested_key` property is an object with any or none of these properties (all strings):
 

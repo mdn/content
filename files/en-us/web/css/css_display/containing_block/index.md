@@ -23,7 +23,7 @@ Many developers believe that the containing block of an element is always the co
 
 Before learning what determines the containing block of an element, it's useful to know why it matters in the first place.
 
-The size and position of an element are often impacted by its containing block. Percentage values that are applied to the {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, and offset properties of an absolutely positioned element (i.e.,, which has its {{cssxref("position")}} set to `absolute` or `fixed`) are computed from the element's containing block.
+The size and position of an element are often impacted by its containing block. Percentage values that are applied to the {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, and offset properties of an absolutely positioned element (i.e., which has its {{cssxref("position")}} set to `absolute` or `fixed`) are computed from the element's containing block.
 
 ## Identifying the containing block
 

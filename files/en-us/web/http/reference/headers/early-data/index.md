@@ -14,7 +14,7 @@ The HTTP **`Early-Data`** {{Glossary("request header")}} is set by an intermedia
 If a client has interacted with a server recently, early data (also known as zero round-trip time [(0-RTT) data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3)) allows the client to send data to a server in the first round trip of a connection, without waiting for the TLS [handshake](/en-US/docs/Glossary/TCP_handshake) to complete.
 This reduces latency for repeat connections between a client and server, but has security implications, as early data is susceptible to replay attacks.
 
-The `Early-Data` header is **not** set by the originator of the request (i.e.,, a browser).
+The `Early-Data` header is **not** set by the originator of the request (i.e., a browser).
 
 <table class="properties">
   <tbody>

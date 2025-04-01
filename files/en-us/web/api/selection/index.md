@@ -104,7 +104,7 @@ Safari and Chrome (unlike Firefox) currently focus the element containing select
 
 ### Behavior of Selection API in terms of editing host focus changes
 
-The Selection API has a common behavior (i.e.,, shared between browsers) that governs how focus behavior changes for _editing hosts_ after certain methods are called.
+The Selection API has a common behavior (i.e., shared between browsers) that governs how focus behavior changes for _editing hosts_ after certain methods are called.
 
 The behavior is as follows:
 

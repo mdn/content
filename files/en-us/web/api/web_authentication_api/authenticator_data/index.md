@@ -25,7 +25,7 @@ An authenticator data {{jsxref("ArrayBuffer")}} is at least 37 bytes in length, 
 
   - : A bitfield that indicates various attributes that were asserted by the authenticator. The bits are as follows, where Bit 0 is the least significant bit and all bits not specifically mentioned below are "reserved for future use":
 
-    - Bit 0, User Presence (UP): If set (i.e.,, to `1`), the authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.
+    - Bit 0, User Presence (UP): If set (i.e., to `1`), the authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.
     - Bit 2, User Verification (UV): If set, the authenticator verified the actual user through a biometric, PIN, or other method.
     - Bit 3, Backup Eligibility (BE): If set, the public key credential source used by the authenticator to generate an assertion is backup-eligible. This means that it can be backed up in some fashion (for example via cloud or local network sync) and as such may become present on an authenticator other than its generating authenticator. Backup-eligible credential sources are therefore also known as multi-device credentials.
     - Bit 4, Backup State (BS): If set, the public key credential source is currently backed up (see Bit 3 for context).

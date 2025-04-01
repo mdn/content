@@ -309,7 +309,7 @@ If the slug of the page you wish to delete contains special characters, include 
 yarn content delete "Glossary/Round_Trip_Time_(RTT)" --redirect Glossary/Latency
 ```
 
-If the document has child documents (i.e.,, the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
+If the document has child documents (i.e., the document represents a document tree), you must specify the `-r, --recursive` option, else the command will fail.
 Say you want to delete the entire `/en-US/Learn/Accessibility` tree and redirect all the deleted documents to `Web/Accessibility`. You can perform the following steps:
 
 1. Start from a fresh branch.

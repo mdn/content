@@ -46,7 +46,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<name>#`
-  - : This value indicates a comma-separated sequence of glyph names (i.e.,, values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible second glyphs in the kerning pair.
+  - : This value indicates a comma-separated sequence of glyph names (i.e., values that match {{SVGAttr("glyph-name")}} attributes on {{SVGElement("glyph")}} elements) which identify a set of possible second glyphs in the kerning pair.
 
 ## Specifications
 

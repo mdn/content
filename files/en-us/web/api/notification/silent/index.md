@@ -10,7 +10,7 @@ browser-compat: api.Notification.silent
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be
-silent, i.e.,, no sounds or vibrations should be issued regardless of the device
+silent, i.e., no sounds or vibrations should be issued regardless of the device
 settings. This is controlled via the `silent` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 

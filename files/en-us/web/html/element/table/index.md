@@ -257,7 +257,7 @@ This example extends the [basic table](#basic_table), extending the content and 
 
 #### HTML
 
-The table comprises four rows ({{HTMLElement("tr")}} elements) now, with four columns each. The first row is a row of header cells (The first row contains only {{HTMLElement("th")}} elements). Subsequent rows include a header column ({{HTMLElement("th")}} elements as the first child elements of each row) and three data columns ({{HTMLElement("td")}} elements). As table sectioning elements are not used, the browser automatically defines the content group structure, i.e.,, all rows are wrapped within the body of the table of an implicit {{HTMLElement("tbody")}} element.
+The table comprises four rows ({{HTMLElement("tr")}} elements) now, with four columns each. The first row is a row of header cells (The first row contains only {{HTMLElement("th")}} elements). Subsequent rows include a header column ({{HTMLElement("th")}} elements as the first child elements of each row) and three data columns ({{HTMLElement("td")}} elements). As table sectioning elements are not used, the browser automatically defines the content group structure, i.e., all rows are wrapped within the body of the table of an implicit {{HTMLElement("tbody")}} element.
 
 ```html
 <table>

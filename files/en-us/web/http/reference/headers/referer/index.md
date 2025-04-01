@@ -14,7 +14,7 @@ This data can be used for analytics, logging, optimized caching, and more.
 When you click a link, the `Referer` contains the address of the page that includes the link.
 When you make resource requests to another domain, the `Referer` contains the address of the page that uses the requested resource.
 
-The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Reference/Fragment) (i.e.,, `#section`) or `username:password` information.
+The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Reference/Fragment) (i.e., `#section`) or `username:password` information.
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#examples).
 
 The `Referer` should also be sent in requests following a {{httpheader("Refresh")}} response (or equivalent [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Element/meta#http-equiv)) that causes a navigation to a new page, if permitted by the referrer policy.
@@ -50,7 +50,7 @@ Referer: <url>
 
 - `<url>`
   - : An absolute or partial address of the web page that makes the request.
-    URL fragments (i.e.,, `#section`) and user info (i.e.,, `username:password` in `https://username:password@example.com/foo/bar/`) are not included.
+    URL fragments (i.e., `#section`) and user info (i.e., `username:password` in `https://username:password@example.com/foo/bar/`) are not included.
     Origin, path, and query string may be included, depending on the [referrer policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#directives).
 
 ## Examples

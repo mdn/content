@@ -67,7 +67,7 @@ You can also use the `try` statement to handle JavaScript exceptions. See the [J
 
 ### Catch binding
 
-When an exception is thrown in the `try` block, `exceptionVar` (i.e.,, the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
+When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
 It doesn't need to be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple identifiers at once.
 
