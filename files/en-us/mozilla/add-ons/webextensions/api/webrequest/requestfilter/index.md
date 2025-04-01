@@ -16,7 +16,7 @@ Values of this type are objects. They contain the following properties:
 - `urls`
   - : `array` of `string`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. `view-source:` requests may be matched based on its inner URL.
 - `types` {{optional_inline}}
-  - : `array` of `{{WebExtAPIRef('webRequest.ResourceType')}}`. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.
+  - : `array` of {{WebExtAPIRef('webRequest.ResourceType')}}. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.
 - `tabId` {{optional_inline}}
   - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID.
 - `windowId` {{optional_inline}}

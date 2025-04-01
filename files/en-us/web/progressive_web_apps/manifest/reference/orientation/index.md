@@ -2,7 +2,7 @@
 title: orientation
 slug: Web/Progressive_web_apps/Manifest/Reference/orientation
 page-type: web-manifest-member
-browser-compat: html.manifest.orientation
+browser-compat: manifests.webapp.orientation
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

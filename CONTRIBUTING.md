@@ -216,9 +216,9 @@ This will make it easier to submit a pull request for your changes.
 
 #### Linting edited files
 
-To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [MarkdownLint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
+To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://prettier.io/) and [MarkdownLint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
 
-If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
+If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev/), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
 > [!NOTE]
 > Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
@@ -391,7 +391,7 @@ Here are some things to keep in mind at this point:
 
 - Your pull request must be **reviewed and approved** before it's merged into the `main` branch.
 - **You do not need to request a review**; one or more reviewers will be selected for you automatically.
-- **It can be up to 48 hours** for merged pull requests to have their changes published to [MDN Web Docs](https://developer.mozilla.org).
+- **It can be up to 48 hours** for merged pull requests to have their changes published to [MDN Web Docs][].
 
 During reviews, you may be asked to answer questions about your work or to make changes to your suggested edits.
 This is a common part of the process of making changes in open source projects.
@@ -425,7 +425,7 @@ See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content
 It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
 -->
 
-[mdn web docs]: https://developer.mozilla.org
+[mdn web docs]: https://developer.mozilla.org/
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started
 [community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
 [writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines

@@ -77,7 +77,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 ### HTTP
 
-- The HTTP headers {{HTTPHeader("Access-Control-Expose-Headers")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}, and {{HTTPHeader("Access-Control-Allow-Headers")}} now accept a wildcard value "`*`" for requests without credentials ([Firefox bug 1309358](https://bugzil.la/1309358)). This change has also been uplifted to Firefox 68 ESR.
+- The HTTP headers {{HTTPHeader("Access-Control-Expose-Headers")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}, and {{HTTPHeader("Access-Control-Allow-Headers")}} now accept a wildcard value `*` for requests without credentials ([Firefox bug 1309358](https://bugzil.la/1309358)). This change has also been uplifted to Firefox 68 ESR.
 
 ### APIs
 

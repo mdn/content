@@ -243,7 +243,7 @@ browser.runtime
   .then(handleResponse);
 ```
 
-Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
+Here is the background script. It uses {{WebExtAPIRef("bookmarks.search()")}} to see if the link is bookmarked, which returns a {{jsxref("Promise")}}:
 
 ```js
 // background-script.js

@@ -817,6 +817,14 @@ To learn how to debug web workers, see the documentation for each browser's Java
 - [Chrome Sources panel](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
+To open devtools for web workers, you can use the following URLs:
+
+- Edge: `edge://inspect/`
+- Chrome: `chrome://inspect/`
+- Firefox: `about:debugging#/runtime/this-firefox`
+
+These pages show an overview over all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
+
 ## Functions and interfaces available in workers
 
 You can use most standard JavaScript features inside a web worker, including:

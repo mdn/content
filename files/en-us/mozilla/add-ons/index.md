@@ -24,7 +24,7 @@ Extensions written using WebExtensions APIs for Firefox are designed to be cross
 
 ### Extension Workshop
 
-The [Firefox Extension Workshop](https://extensionworkshop.com) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You'll find:
+The [Firefox Extension Workshop](https://extensionworkshop.com/) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You'll find:
 
 - [Overview of the Firefox extension features](https://extensionworkshop.com/#about)
 - [Tools and processes for developing and testing](https://extensionworkshop.com/documentation/develop/)
@@ -40,7 +40,7 @@ In 2020, Mozilla will release a new Firefox for Android experience. This new, hi
 
 ## Publishing add-ons
 
-[Addons.mozilla.org](https://addons.mozilla.org), commonly known as "AMO," is Mozilla's official site for developers to list add-ons, and for users to discover them. By uploading your add-on to AMO, you can participate in our community of users and creators and find an audience for your add-on.
+[Addons.mozilla.org](https://addons.mozilla.org/), commonly known as "AMO," is Mozilla's official site for developers to list add-ons, and for users to discover them. By uploading your add-on to AMO, you can participate in our community of users and creators and find an audience for your add-on.
 
 You are not required to list your add-on on AMO, but your add-on must be signed by Mozilla else users will not be able to install it.
 

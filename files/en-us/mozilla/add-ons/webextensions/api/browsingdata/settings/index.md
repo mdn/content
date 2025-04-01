@@ -30,11 +30,11 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the settings information. This object has three properties:
 
 - `options`
-  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. A `RemovalOptions` object describing the removal options currently selected.
+  - : {{WebExtAPIRef("browsingData.RemovalOptions")}}. A `RemovalOptions` object describing the removal options currently selected.
 - `dataToRemove`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. This will contain a property for every data type that can be toggled in the browser's UI. Each property will have a value of `true` if that type is selected for removal and `false` otherwise.
+  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}. This will contain a property for every data type that can be toggled in the browser's UI. Each property will have a value of `true` if that type is selected for removal and `false` otherwise.
 - `dataRemovalPermitted`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. This will contain a property for every data type that can be toggled in the browser's UI. Each will have a value of `true` if the administrator of the device has allowed the user to remove that type, and `false` otherwise.
+  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}. This will contain a property for every data type that can be toggled in the browser's UI. Each will have a value of `true` if the administrator of the device has allowed the user to remove that type, and `false` otherwise.
 
 If any error occurs, the promise will be rejected with an error message.
 

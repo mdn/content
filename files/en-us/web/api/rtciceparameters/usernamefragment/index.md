@@ -3,7 +3,7 @@ title: "RTCIceParameters: usernameFragment property"
 short-title: usernameFragment
 slug: Web/API/RTCIceParameters/usernameFragment
 page-type: web-api-instance-property
-browser-compat: api.RTCIceParameters.usernameFragment
+spec-urls: https://w3c.github.io/webrtc-pc/#dom-rtciceparameters-usernamefragment
 ---
 
 {{APIRef("WebRTC")}}
@@ -25,7 +25,3 @@ fragments and their role in a connection.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

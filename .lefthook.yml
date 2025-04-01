@@ -51,15 +51,11 @@ pre-commit:
             run: yarn node scripts/update-moved-file-links.js --check
 
 post-merge:
+  only:
+    - ref: main
   commands:
-    yarn-install-post-merge-main:
-      run: |
-        BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-        if [ "$BRANCH" != "main" ]; then
-          exit 0
-        else
-          yarn install
-        fi
+    yarn-install:
+      run: yarn install
 
 output:
   - summary
