@@ -300,7 +300,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 </video>
 ```
 
-When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the {{htmlelement("video")}} element after all sources have failed; `error` events are not fired on each individual {{htmlelement("source")}} element.
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the `<video>` element after all sources have failed; `error` events are not fired on each individual `<source>` element.
 
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Guides/Formats) and the [guide to the codecs supported for video](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). Also available is a guide to [audio codecs that can be used with them](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 
