@@ -157,7 +157,7 @@ fetch(requestURL).then((response) => {
 Save and refresh, and see if your code is working. Spoiler alert — the above change has not fixed the problem. Unfortunately, we **still have the same error**!
 
 > [!NOTE]
-> To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()`, `console.error()`, or another similar function to print out the value and see what is happening.
+> To summarize, any time something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()`, `console.error()`, or another similar function to print out the value and see what is happening.
 
 ## Using the JavaScript debugger
 
