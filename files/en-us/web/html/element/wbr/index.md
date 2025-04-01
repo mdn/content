@@ -14,7 +14,7 @@ The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opp
 ```html interactive-example
 <div id="example-paragraphs">
   <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
-  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
   <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
 </div>
 ```
@@ -45,7 +45,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
 
 ```html
 <p>
-  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+  http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages
 </p>
 ```
 
