@@ -308,7 +308,6 @@ When using {{htmlelement("source")}} elements, the browser attempts to load each
 <video controls>
   <source src="invalid.mp4" type="video/mp4" />
 </video>
-
 <script>
   const video = document.querySelector("video");
   video.addEventListener("error", () => {
