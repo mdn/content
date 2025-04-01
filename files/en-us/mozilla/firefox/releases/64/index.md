@@ -104,7 +104,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 
@@ -129,11 +129,11 @@ _No changes._
 
 #### Menus
 
-- A new API, `{{WebExtAPIRef("menus.overrideContext()")}}`, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
+- A new API, {{WebExtAPIRef("menus.overrideContext()")}}, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
 
-  - `{{WebExtAPIRef("menus.overrideContext()")}}` was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
+  - {{WebExtAPIRef("menus.overrideContext()")}} was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
   - The `showDefaults: false` option, which can be used to hide the default context menu options, was implemented in ([Firefox bug 1367160](https://bugzil.la/1367160)).
-  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if `{{WebExtAPIRef("menus.overrideContext()")}}` is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
+  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if {{WebExtAPIRef("menus.overrideContext()")}} is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
 
 - You can now restrict where context menus can appear in an add-on using the new `viewTypes` property in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} ([Firefox bug 1416839](https://bugzil.la/1416839)).
 - {{WebExtAPIRef("menus.update()")}} can now be used to update the icon of an existing menu item ([Firefox bug 1414566](https://bugzil.la/1414566)).

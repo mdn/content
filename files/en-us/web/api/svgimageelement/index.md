@@ -15,12 +15,14 @@ The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} e
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-- {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
+- {{domxref("SVGImageElement.crossOrigin")}}
+  - : A string reflecting the {{SVGAttr("crossorigin")}} content attribute, which represents the CORS setting of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.decoding")}}
-  - : Represents a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `"sync"` to decode the image synchronously, `"async"` to decode it asynchronously, or `"auto"` to indicate no preference (which is the default).
+  - : Represents a hint given to the browser on how it should decode the image.
 - {{domxref("SVGImageElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("image")}} element.
+- {{domxref("SVGImageElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}} element.
 - {{domxref("SVGImageElement.width")}} {{ReadOnlyInline}}

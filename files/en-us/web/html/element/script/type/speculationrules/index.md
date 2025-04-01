@@ -136,7 +136,7 @@ Each object can contain the following properties:
 
 - `"referrer_policy"` {{experimental_inline}}
 
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
 
     > [!NOTE]
     > A cross-site prefetch requires a referrer policy that is at least as strict as the default `"strict-origin-when-cross-origin"` value — so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`. A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case.
@@ -172,7 +172,7 @@ Each object can contain the following properties:
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
 > [!NOTE]
-> As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
+> As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
 ## Examples
 

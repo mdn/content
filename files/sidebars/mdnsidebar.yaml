@@ -5,13 +5,14 @@ sidebar:
     link: /MDN
   - /MDN/Tutorials
   - /MDN/Guides
-  - title: community_resources
+  - link: /MDN/Community
+    title: community_resources
     details: closed
     children:
-      - /MDN/Community
       - /MDN/Community/Getting_started
       - /MDN/Community/Our_repositories
       - /MDN/Community/Open_source_etiquette
+      - /MDN/Community/Community_Participation_Guidelines
       - /MDN/Community/Issues
       - /MDN/Community/Pull_requests
       - /MDN/Community/Discussions
@@ -19,26 +20,31 @@ sidebar:
       - /MDN/Community/Roles_teams
       - /MDN/Community/Communication_channels
       - /MDN/Community/Learn_forum
-  - title: writing_guide
+  - link: /MDN/Writing_guidelines
+    title: writing_guide
     details: closed
     children:
-      - /MDN/Writing_guidelines
       - /MDN/Writing_guidelines/What_we_write
+      - /MDN/Writing_guidelines/Criteria_for_inclusion
       - /MDN/Writing_guidelines/Writing_style_guide
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Code_style_guide
+        link: /MDN/Writing_guidelines/Code_style_guide
+        details: closed
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Page_structures
+        link: /MDN/Writing_guidelines/Page_structures
+        title: page_structures
+        details: closed
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Howto
+        link: /MDN/Writing_guidelines/Howto
+        title: how_to_guides
+        details: closed
       - link: /MDN/Writing_guidelines/Learning_content
         title: learning_guidelines
       - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
       - /MDN/Writing_guidelines/Attrib_copyright_license
-      - type: listSubPages
-        path: /MDN/Writing_guidelines/Howto
-        includeParent: true
-        title: how_to_guides
-        details: closed
-      - type: listSubPages
-        path: /MDN/Writing_guidelines/Page_structures
-        includeParent: true
-        title: page_structures
-        details: closed
 l10n:
   de:
     community_resources: Gemeinschaftsrichtlinien

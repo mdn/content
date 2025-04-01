@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.codePointAt
 
 The **`codePointAt()`** method of {{jsxref("String")}} values returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
 
-{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.prototype.codePointAt()", "shorter")}}
 
 ```js interactive-example
 const icons = "☃★♲";

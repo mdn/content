@@ -8,15 +8,7 @@ browser-compat: api.Range.comparePoint
 
 {{ApiRef("DOM")}}
 
-The **`Range.comparePoint()`** method returns `-1`,
-`0`, or `1` depending on whether the `referenceNode` is
-before, the same as, or after the {{domxref("Range")}}.
-
-If the _reference node_ is a {{domxref("Node")}} of type {{domxref("Text")}},
-{{domxref("Comment")}}, or {{domxref("CDATASection")}}, then offset is the number of
-characters from the start of _reference node_. For other {{domxref("Node")}}
-types, offset is the number of child nodes between the start of the _reference
-node_.
+The **`comparePoint()`** method of the {{domxref("Range")}} interface determines whether a specified point is before, within, or after the {{domxref("Range")}}. The point is specified by a reference node and an offset within that node.
 
 ## Syntax
 
@@ -27,21 +19,31 @@ comparePoint(referenceNode, offset)
 ### Parameters
 
 - `referenceNode`
-  - : The {{domxref("Node")}} to compare with the {{domxref("Range")}}.
+  - : The {{domxref("Node")}} that the `offset` is relative to.
 - `offset`
-  - : An integer greater than or equal to zero representing the offset inside the
-    _referenceNode_.
+  - : An integer greater than or equal to zero describing the position inside `referenceNode` of the point to be checked. If `referenceNode` is a {{domxref("Node")}} of type {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then `offset` is the number of characters from the start of `referenceNode`. For other {{domxref("Node")}} types, `offset` is the number of child nodes from the start of the `referenceNode`.
 
 ### Return value
 
-Returns `-1`, `0`, or `1`.
+A number.
+
+- `-1` if the point specified by the `referenceNode` and `offset` is before the start of this `Range`.
+- `0` if the point specified by the `referenceNode` and `offset` is within this `Range` (including the start and end points of the range).
+- `1` if the point specified by the `referenceNode` and `offset` is after the end of this `Range`.
 
 ## Examples
 
 ```js
-range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-returnValue = range.comparePoint(document.getElementsByTagName("p").item(0), 1);
+const text = new Text("0123456789");
+
+const thisRange = new Range();
+thisRange.setStart(text, 1);
+thisRange.setEnd(text, 6);
+
+thisRange.comparePoint(text, 3); // 0
+thisRange.comparePoint(text, 0); // -1
+thisRange.comparePoint(text, 6); // 0
+thisRange.comparePoint(text, 7); // 1
 ```
 
 ## Specifications

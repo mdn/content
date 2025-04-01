@@ -358,7 +358,7 @@ Result of `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
 
 ### Allowing features
 
-The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#embedded_frame_syntax).
 
 ```html
 <div id="fullscreen-content">

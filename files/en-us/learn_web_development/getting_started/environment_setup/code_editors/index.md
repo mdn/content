@@ -148,7 +148,7 @@ The concept of search and replace should be fairly familiar to you if you've use
 4. Type `sayHello` into the _Replace_ box that should now be visible.
 5. You can now replace all instances of `createGreeting` in the code with `sayHello` using the two buttons to the right of the _Replace_ box. The left button moves to the next instance of the search string with one click and replaces it with a second click. The right button replaces all instances with a single click.
 
-VS Code has many powerful find and replace features — see [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace).
+VS Code has many powerful find and replace features — see [Find and replace](https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace).
 
 ## Enhancing your code editor with extensions
 

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Function.bind
 
 The **`bind()`** method of {{jsxref("Function")}} instances creates a new function that, when called, calls this function with its `this` keyword set to the provided value, and a given sequence of arguments preceding any provided when the new function is called.
 
-{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.prototype.bind()", "taller")}}
 
 ```js interactive-example
 const module = {

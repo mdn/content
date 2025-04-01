@@ -21,7 +21,7 @@ Inside an {{HTMLElement("iframe")}}, the `Document.referrer` will initially
 be set to the {{domxref("HTMLAnchorElement/href", "href")}} of the parent's
 {{domxref("Window/location", "Window.location")}} in same-origin requests.
 In cross-origin requests, it's the {{domxref("HTMLAnchorElement/origin", "origin")}} of the parent's `Window.location` by default.
-For more information, see the [Referrer-Policy: strict-origin-when-cross-origin](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) documentation.
+For more information, see the [Referrer-Policy: strict-origin-when-cross-origin](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin) documentation.
 
 ## Examples
 

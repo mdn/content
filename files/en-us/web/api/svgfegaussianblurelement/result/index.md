@@ -38,7 +38,7 @@ console.log(filterName.baseVal); // the filter's assigned name
 
 - {{domxref("SVGFEGaussianBlurElement.in1")}}
 - {{cssxref("custom-ident")}} data type
-- [SVG filter tutorial](/en-US/docs/Web/SVG/Tutorial/SVG_Filters_Tutorial)
+- [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("filter-function/blur", "blur()")}} function
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module- CSS {{cssxref("mix-blend-mode")}} property

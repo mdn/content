@@ -63,7 +63,7 @@ const rtcConfig = {
 const pc = new RTCPeerConnection(rtcConfig);
 ```
 
-[Bundling](https://webrtcstandards.info/sdp-bundle/) lets you use one `RTCDtlsTransport` to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.
+[Bundling](https://datatracker.ietf.org/doc/rfc8843/) lets you use one `RTCDtlsTransport` to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.
 
 #### When not using BUNDLE
 

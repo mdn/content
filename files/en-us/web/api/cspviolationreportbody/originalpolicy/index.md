@@ -8,9 +8,9 @@ browser-compat: api.CSPViolationReportBody.originalPolicy
 
 {{APIRef("Reporting API")}}
 
-The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) whose enforcement uncovered the violation.
+The **`originalPolicy`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) whose enforcement uncovered the violation.
 
-This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
+This is the string in the {{HTTPHeader("Content-Security-Policy")}} HTTP response header that contains the list of [directives](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#directives) and their values that make the CSP policy.
 Note that differs from the {{domxref("CSPViolationReportBody.effectiveDirective","effectiveDirective")}}, which is the specific directive that is effectively being violated (and which might not be explicitly listed in the policy if `default-src` is used).
 
 ## Value

@@ -30,7 +30,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 - Beyond the basics?
   - : Our [Extension modules](/en-US/docs/Learn_web_development/Extensions) cover useful additional skills to learn as you start to expand your knowledge and develop specialisms. Go onto these after you finish our Core.
 - Working at a school?
-  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN learning partner_</sup>.
+  - : Use our modules to guide your teaching, check out our [Educators page](/en-US/docs/Learn_web_development/Educators) for more ideas, or enroll your students in Scrimba's [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN learning partner_</sup>.
 
 ## Getting our code examples
 

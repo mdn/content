@@ -10,7 +10,7 @@ browser-compat: api.SVGEllipseElement.rx
 
 The **`rx`** read-only property of the {{domxref("SVGEllipseElement")}} interface describes the x-axis radius of the ellipse as an {{domxref("SVGAnimatedLength")}}. It reflects the computed value of the {{SVGAttr("rx")}} attribute on the {{SVGElement("ellipse")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the radius of the ellipse along the x-axis in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the radius of the ellipse along the x-axis in the user coordinate system.
 
 ## Value
 

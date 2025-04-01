@@ -33,13 +33,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `content-security-policy`
 
-      - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
+      - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
 
         Also see {{HTTPHeader("Content-Security-Policy")}}.
 
     - `content-type`
 
-      - : Declares the [MIME type](/en-US/docs/Web/HTTP/MIME_types) and the document's character encoding. The `content` attribute must have the value `"text/html; charset=utf-8"` if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+      - : Declares the [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) and the document's character encoding. The `content` attribute must have the value `"text/html; charset=utf-8"` if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
 
         Also see {{HTTPHeader("Content-Type")}}.
 

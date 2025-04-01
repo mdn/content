@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **forbidden request header** is an [HTTP header](/en-US/docs/Web/HTTP/Headers) name-value pair that cannot be set or modified programmatically in a request. For headers forbidden to be modified in responses, see {{Glossary("forbidden response header name")}}.
+A **forbidden request header** is an [HTTP header](/en-US/docs/Web/HTTP/Reference/Headers) name-value pair that cannot be set or modified programmatically in a request. For headers forbidden to be modified in responses, see {{Glossary("forbidden response header name")}}.
 
 Modifying such headers is forbidden because the user agent retains full control over them.
 For example, the {{HTTPHeader("Date")}} header is a forbidden request header, so this code cannot set the message `Date` field:
@@ -22,7 +22,7 @@ fetch("https://httpbin.org/get", {
 Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} that grant developers control over headers, such as {{domxref("Window/fetch", "fetch()")}}.
 Forbidden headers are one of the following:
 
-- {{HTTPHeader("Accept-Charset")}}
+- `Accept-Charset`
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Access-Control-Request-Headers")}}
 - {{HTTPHeader("Access-Control-Request-Method")}}

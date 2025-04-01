@@ -13,7 +13,7 @@ The **`share()`** method of the {{domxref("Navigator")}} interface invokes the n
 The method resolves a {{jsxref("Promise")}} with `undefined`.
 On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
 
-The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) permission policy.
+The [Web Share API](/en-US/docs/Web/API/Web_Share_API) is gated by the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy.
 The `share()` method will throw exceptions if the permission is supported but has not been granted.
 
 ## Syntax
@@ -53,7 +53,7 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The document is not fully active, or other sharing operations are in progress.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
+  - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
 
   - : The specified share data cannot be validated. Possible reasons include:
@@ -121,7 +121,7 @@ The following is a list of usually shareable file types. However, you should alw
 
 ## Security
 
-This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
+This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) Permissions Policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
 ## Examples
 

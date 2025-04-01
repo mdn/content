@@ -79,7 +79,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - Adds the `preferred_environment` property to the [`background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background), enabling extensions to request that the browser run their background scripts as a document or service worker ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
-- A new version of the {{WebExtAPIRef("userScripts")}} API is available. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
+- A new version of the {{WebExtAPIRef("userScripts")}} API is available on desktop Firefox. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
+- The `canResume` property of {{WebExtAPIRef("downloads.DownloadItem")}} is now set to `true` when a download fails with `NETWORK_FAILED`. This enables downloads that fail due to a network error to be resumed using {{WebExtAPIRef("downloads.resume","downloads.resume()")}}. ([Firefox bug 1694049](https://bugzil.la/1694049)).
 
 ## Experimental web features
 
@@ -92,13 +93,13 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
   Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
   ([Firefox bug 1886820](https://bugzil.la/1886820)).
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`.
-  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
+  The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
 - **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
   The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
 - **SVG path API methods**: `dom.svg.pathSegment.enabled`.
-  The `SVGPathSegment` interface now supports the `getPathData()`, `setPathData()`, and `getPathSegmentAtLength()` methods. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
+  The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
 
 ## Older versions
 

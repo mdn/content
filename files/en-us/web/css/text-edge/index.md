@@ -20,7 +20,7 @@ The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property t
 ```
 
 > [!NOTE]
-> The `ideographic` and `ideographic-ink` keywords are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
+> The `ideographic` and `ideographic-ink` keywords are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are not supported by any browser.
 
 ## Values
 

@@ -10,7 +10,7 @@ browser-compat: api.SVGLineElement.x2
 
 The **`x2`** read-only property of the {{domxref("SVGLineElement")}} interface describes the x-axis coordinate value of the end of a line as an {{domxref("SVGAnimatedLength")}}. It reflects the {{SVGElement("line")}} element's {{SVGAttr("x2")}} geometric attribute.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that end position along the x-axis in user coordinate system units.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that end position along the x-axis in user coordinate system units.
 
 ## Value
 

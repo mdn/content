@@ -23,7 +23,7 @@ div:empty {
 <div></div>
 
 <p>Element with comment:</p>
-<div><!-- Simple Comment --></div>
+<div><!-- A comment --></div>
 
 <p>Element with nested empty element:</p>
 <div><p></p></div>

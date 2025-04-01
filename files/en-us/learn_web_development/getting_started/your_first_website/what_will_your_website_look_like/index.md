@@ -1,5 +1,6 @@
 ---
 title: What will your website look like?
+short-title: What will it look like?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 page-type: tutorial-chapter
 ---

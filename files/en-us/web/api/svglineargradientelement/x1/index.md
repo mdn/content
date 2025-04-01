@@ -10,7 +10,7 @@ browser-compat: api.SVGLinearGradientElement.x1
 
 The **`x1`** read-only property of the {{domxref("SVGLinearGradientElement")}} interface describes the x-axis coordinate of the start point of the gradient as an {{domxref("SVGAnimatedLength")}}. It reflects the computed value of the {{SVGAttr("x1")}} attribute on the {{SVGElement("linearGradient")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the x-coordinate of the gradient's starting point in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the x-coordinate of the gradient's starting point in the user coordinate system.
 
 ## Value
 

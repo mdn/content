@@ -68,7 +68,7 @@ The magic of workers happens via the {{domxref("Worker.postMessage", "postMessag
 ```js
 [first, second].forEach((input) => {
   input.onchange = () => {
-    myWorker.port.postMessage([first.value, second.value]);
+    myWorker.postMessage([first.value, second.value]);
     console.log("Message posted to worker");
   };
 });
@@ -237,7 +237,7 @@ Content-Security-Policy: script-src 'self'
 
 Among other things, this will prevent any scripts it includes from using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
 
-To specify a content security policy for the worker, set a [Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
+To specify a content security policy for the worker, set a [Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
 
 The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.
 
@@ -816,6 +816,14 @@ To learn how to debug web workers, see the documentation for each browser's Java
 
 - [Chrome Sources panel](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
+
+To open devtools for web workers, you can use the following URLs:
+
+- Edge: `edge://inspect/`
+- Chrome: `chrome://inspect/`
+- Firefox: `about:debugging#/runtime/this-firefox`
+
+These pages show an overview over all service workers. You need to find the relevant one by the URL and then click _inspect_ to access devtools such as the console and debugger for that worker.
 
 ## Functions and interfaces available in workers
 
