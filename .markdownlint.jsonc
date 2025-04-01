@@ -236,8 +236,8 @@
         "message": "Add comma after 'i.e.'",
         "searchPattern": "/\\bi\\.e\\. /g",
         "replace": "i.e., ",
-        "searchScope": "text"
-      },      
+        "searchScope": "text",
+      },
     ],
   },
 }
