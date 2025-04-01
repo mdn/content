@@ -148,7 +148,7 @@ Additionally, avoid using vague link text like "Click here" or "Read this articl
 - **Incorrect**: "Click [here](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
 - **Incorrect**: "Read [this article](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items) to learn more."
 
-By following these guidelines, you help that MDN documentation is accessible, clear, and usable by everyone, regardless of how they access the page.
+By following these guidelines, you help make MDN documentation accessible, clear, and usable by everyone, regardless of how they access the page.
 
 ### Write with SEO in mind
 
