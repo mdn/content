@@ -7,7 +7,10 @@ browser-compat: css.selectors.target-current
 
 {{CSSRef}}
 
-The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker. This can be used to style it differently, so the user can see see their navigation position inside the scroll marker group.
+The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the **active** scroll marker — the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to. This [selector](/en-US/docs/Web/CSS/CSS_selectors) can be used to style the active navigation position within a [scroll marker group](/en-US/docs/Web/CSS/::scroll-marker-group#description).
+
+> [!NOTE]
+> The `:target-current` pseudo-class is only valid on `::scroll-marker` pseudo-elements.
 
 ## Syntax
 
@@ -19,11 +22,15 @@ The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for full examples that use the `:target-current` pseudo-class.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels#first_example) for examples of using the `:target-current` pseudo-class.
 
 ### Basic usage
 
 ```css
+::scroll-marker {
+  background-color: white;
+}
+
 ::scroll-marker:target-current {
   background-color: black;
 }
@@ -39,8 +46,11 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 
 ## See also
 
-- {{cssxref("scroll-marker-group")}} and {{cssxref("interactivity")}} properties
-- {{cssxref("::scroll-button()")}}, {{cssxref("::scroll-marker")}}, {{cssxref("::scroll-marker-group")}}, and {{cssxref("::column")}} pseudo-elements
+- {{cssxref("scroll-marker-group")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker-group")}}
+- {{cssxref("::column")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS Carousel Gallery](https://chrome.dev/carousel/) on chrome.dev (2025)
+- [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

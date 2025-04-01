@@ -157,6 +157,14 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
   - {{CSSXref(":has-slotted")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+  - {{cssxref("::column")}}
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 
   - {{CSSXref(":left")}} pseudo-class

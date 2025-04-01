@@ -65,6 +65,14 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+
+  - {{cssxref("::column")}}
+  - {{cssxref("::scroll-button()")}}
+  - {{cssxref("::scroll-marker")}}
+  - {{cssxref("::scroll-marker-group")}}
+  - {{cssxref(":target-current")}}
+
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}}
