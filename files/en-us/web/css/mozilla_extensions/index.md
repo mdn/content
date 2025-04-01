@@ -216,7 +216,7 @@ Type: {{CSSxRef("&lt;length&gt;")}}
 
 Property: {{CSSxRef("list-style-type")}}
 
-Standard `list-style-type` values are supported without a `-moz-` prefix, except for the following list.
+Several vendor-prefixed values for `list-style-type` are now supported as standard values without a `-moz-` prefix, except for those in the following list.
 See [Browser Compatibility](/en-US/docs/Web/CSS/list-style-type#browser_compatibility) for details.
 
 - `-moz-ethiopic-halehame`
@@ -248,8 +248,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 
 ### A – D
 
-- `::-moz-anonymous-block`
-- `::-moz-anonymous-positioned-block`
 - `:-moz-any` {{deprecated_inline}}: Use {{CSSxRef(":is")}}
 - `:-moz-any-link` {{deprecated_inline}}: Use {{CSSxRef(":any-link")}}
 - {{CSSxRef(":-moz-broken")}} {{deprecated_inline}}
@@ -264,7 +262,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-focus-inner")}}
 - `::-moz-focus-outer`
 - `:-moz-full-screen` {{deprecated_inline}}: Not supported; use {{CSSxRef(":fullscreen")}}
-- `:-moz-full-screen-ancestor`
+- `:-moz-full-screen-ancestor` {{deprecated_inline}}: Not supported; use {{CSSxRef(":fullscreen")}}
 - {{CSSxRef(":-moz-handler-blocked")}}
 - {{CSSxRef(":-moz-handler-crashed")}}
 - {{CSSxRef(":-moz-handler-disabled")}}
@@ -278,9 +276,6 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-loading")}}
 - {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
 - {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
-- `:-moz-lwtheme`
-- `:-moz-lwtheme-brighttext`
-- `:-moz-lwtheme-darktext`
 - {{CSSxRef("::-moz-meter-bar")}}
 
 ### N – R
@@ -333,8 +328,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 ## Media features
 
 - {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}}
-- `-moz-os-version`
-- `-moz-touch-enabled`
+- `-moz-platform`
 - `-moz-windows-glass`
 
 ## Other
