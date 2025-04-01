@@ -111,7 +111,7 @@ Dictionary-ID: "dictionary-12345"
 
 ## Separate dictionary
 
-An HTML document can also provide a compression dictionary to the browser which isn't a resource that the browser is downloading anyway via an element such as a {{htmlelement("script")} tag. There are two methods to do this:
+An HTML document can also provide a compression dictionary to the browser which isn't a resource that the browser is downloading anyway via an element such as a {{htmlelement("script")}} tag. There are two methods to do this:
 
 - Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
 
