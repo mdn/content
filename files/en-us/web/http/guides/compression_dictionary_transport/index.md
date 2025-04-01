@@ -117,7 +117,6 @@ An HTML document can also provide a compression dictionary to the browser which 
 
   ```html
   <link rel="compression-dictionary" href="/dictionary.dat" />
-
 - Reference the dictionary using the {{HTTPHeader("Link")}} header:
 
   ```http
