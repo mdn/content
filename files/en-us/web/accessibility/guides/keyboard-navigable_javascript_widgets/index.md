@@ -114,8 +114,6 @@ Bind a key down handler to each element in the group, and when an arrow key is u
 2. update the `tabindex` of the focused element to "0", and
 3. update the `tabindex` of the previously focused element to "-1".
 
-Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
-
 ### Technique 2: `aria-activedescendant`
 
 This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets).)

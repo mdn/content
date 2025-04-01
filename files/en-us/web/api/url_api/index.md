@@ -93,7 +93,7 @@ function fillTableWithParameters(tbl) {
 }
 ```
 
-A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
+A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me/?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me/?from=mdn&excitement=high&likelihood=inconceivable).
 
 ## Specifications
 

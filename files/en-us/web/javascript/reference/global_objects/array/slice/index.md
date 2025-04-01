@@ -55,7 +55,7 @@ slice(start, end)
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
-    - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be extracted.
+    - If `end >= array.length` or `end` is omitted or `undefined`, `array.length` is used, causing all elements until the end to be extracted.
     - If `end` implies a position before or at the position that `start` implies, an empty array is returned.
 
 ### Return value

@@ -661,6 +661,7 @@ seekforward
 seekto
 seeother
 selectchange
+selectedcontent
 selectend
 seltype
 sentenceboundary

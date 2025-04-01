@@ -24,7 +24,7 @@ After applying the cascading rules and resolving values step by step, the browse
 
 ## Processing stages
 
-All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS `p { font-size: 1.25em; }`"and your HTML includes `<p>CSS is fun!</p>`, what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
+All elements that are part of the document's flattened element tree have declared, cascaded, specified, computed, used, and actual values. For a specific property, these values may or may not be the same. For example, if your large code base includes the CSS `p { font-size: 1.25em; }` and your HTML includes `<p>CSS is fun!</p>`, what size will the paragraph be? The {{cssxref("font-size")}} value moves through a few stages to go from the `em` specified value to the rendered `px` value.
 
 - [Initial value](#initial_value)
 - [Specified value](#specified_value)
@@ -152,7 +152,7 @@ The **actual value** of a property is the [used value](#used_value) of that prop
 
 The calculation includes these steps:
 
-1. First, the [specified value](#specified_valuespecified_value) is determined based on the result of [cascading](/en-US/docs/Web/CSS/CSS_cascade/Cascade), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), or using the [initial value](#initial_value).
+1. First, the [specified value](#specified_value) is determined based on the result of [cascading](/en-US/docs/Web/CSS/CSS_cascade/Cascade), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), or using the [initial value](#initial_value).
 2. Next, the [computed value](#computed_value) is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
 3. Then, layout is calculated, resulting in the [used value](#used_value).
 4. Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.

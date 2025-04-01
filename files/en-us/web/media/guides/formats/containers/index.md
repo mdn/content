@@ -558,7 +558,7 @@ While Ogg has been around for a long time, it has never gained the wide support 
 You are typically better off using WebM, though there are times when Ogg is useful to offer, such as when you wish to support older versions of Firefox and Chrome which don't yet support WebM.
 For example, Firefox 3.5 and 3.6 support Ogg, but not WebM.
 
-You can get more information about Ogg and its codecs in the [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/).
+You can get more information about Ogg and its codecs in the [Theora Cookbook](https://archive.flossmanuals.net/ogg-theora/).
 
 | Audio       | Video       |
 | ----------- | ----------- |

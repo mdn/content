@@ -81,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the `grid` pat
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 
@@ -133,10 +133,6 @@ The above is part of a table. While the full table has 81 entries, as indicated 
 ## Best practices
 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when CSS's display property overrides the native semantics of a table, such as by `display: grid`. In this case, you can use the ARIA table roles to re-add the semantics.
-
-### Added benefits
-
-none
 
 ## Specifications
 

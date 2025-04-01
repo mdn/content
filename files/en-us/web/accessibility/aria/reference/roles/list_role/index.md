@@ -25,7 +25,7 @@ There are no hard and fast rules about which elements you should use to mark up 
 > [!NOTE]
 > Best practices dictate using the appropriate semantic HTML elements over ARIA roles to mark up lists and listitems — {{HTMLElement("ul")}}, {{HTMLElement("ol")}} and {{HTMLElement("li")}}. See [Best practices](#best_practices) for a full example.
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) role
   - : A single item in a list. Elements with role `listitem` can only be found in an element with the role `list`.
