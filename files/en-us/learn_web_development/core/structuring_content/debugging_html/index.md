@@ -120,7 +120,7 @@ It's time to study some HTML code using the DOM inspector, and see how the brows
        <p>What causes errors in HTML?
        <ul>
          <li>Unclosed elements: If an element is <strong>not closed properly,then its effect can spread to areas you didn't intend
-         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasised?</strong> what is this?</em>
+         <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
          <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
        </ul>
      </body>

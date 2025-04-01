@@ -386,7 +386,7 @@ The full HTML is included below for reference. The most interesting parts are as
 
 #### CSS
 
-Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
+Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendant selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
 
 In the last rule we've used the [general sibling selector (`~`)](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to target the unused `<div>` elements in each palette type, setting [`display: none`](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to stop them being rendered.
 

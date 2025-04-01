@@ -477,7 +477,7 @@ We are choosing to use Glitch for several reasons:
   - The starter plan environment has a limited amount of container RAM and storage space.
     There is more than enough for the tutorial, in particular because our database is hosted elsewhere.
   - Custom domains are not well supported (at time of writing).
-  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions).
+  - Other limitations can be found in the [Glitch technical restrictions page](https://help.glitch.com/s/article/Technical-Restrictions).
 
 While Glitch is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
 
@@ -487,9 +487,9 @@ Glitch provides a web-based interface in which you can create projects from star
 As you make changes, the project is built and run in its own isolated and independent virtualized container.
 
 How this all works "under the hood" is a mystery — Glitch doesn't say.
-What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions), your application should "just work".
+What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/s/article/Technical-Restrictions), your application should "just work".
 
-Once the application is running, it can be configured for production using [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) supplied in a `.env` file.
+Once the application is running, it can be configured for production using [private data](https://help.glitch.com/s/article/Adding-Private-Data) supplied in a `.env` file.
 The values in the secret data are read by the application as environment variables, which, as you will recall from a previous section, is how we configured our application to get its database URL.
 Note that the variables are _secret_: the `.env` should not be included in your GitHub repository.
 
@@ -577,7 +577,7 @@ The site updates as you enter values into the editor.
 
 > [!NOTE]
 > We didn't create this file.
-> It is intended for [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) and was created automatically on import to Glitch.
+> It is intended for [private data](https://help.glitch.com/s/article/Adding-Private-Data) and was created automatically on import to Glitch.
 > It is never exported or copied.
 
 ### Other configuration variables

@@ -55,7 +55,7 @@ selectedcontent img {
 ```
 
 > [!NOTE]
-> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targetting will not be possible.
+> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targeting will not be possible.
 
 ## Examples
 
