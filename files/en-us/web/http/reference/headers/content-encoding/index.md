@@ -63,9 +63,10 @@ Content-Encoding: deflate, gzip
 - `zstd`
   - : A format using the {{glossary("Zstandard compression","Zstandard")}} algorithm structure (defined in {{rfc(8878)}}).
 - `dcb`
-  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Dictionary-Compressed Brotli format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl)
+  - : A format that uses the [Dictionary-Compressed Brotli algorithm](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
+
 - `dcz`
-  - : A {{glossary("Compression Dictionary Transport")}} format that uses the [Dictionary-Compressed Zstandard format](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan)
+  - : A format that uses the [Dictionary-Compressed Zstandard algorithm](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 
 ## Examples
 
