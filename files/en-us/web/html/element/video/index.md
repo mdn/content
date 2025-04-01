@@ -302,7 +302,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 
 ### Note
 
-When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the error event fires on the {{htmlelement("video")}} element, not the {{htmlelement("source")}}. The video element will automatically try the next source if available. The error event will only trigger after all sources have faile
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the error event fires on the {{htmlelement("video")}} element, not the {{htmlelement("source")}}. The video element will automatically try the next source if available. The error event will only trigger after all sources have failed.
 
 ```html
 <video controls>
