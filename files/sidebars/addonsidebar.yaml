@@ -3,6 +3,8 @@
 sidebar:
   - type: section
     link: /Mozilla/Add-ons/WebExtensions
+  - type: section
+    title: Guides
   - title: WebExtensions#Getting_started
     details: closed
     children:
@@ -15,7 +17,6 @@ sidebar:
   - title: WebExtensions#Concepts
     details: closed
     children:
-      - /Mozilla/Add-ons/WebExtensions/API
       - /Mozilla/Add-ons/WebExtensions/Content_scripts
       - /Mozilla/Add-ons/WebExtensions/Background_scripts
       - /Mozilla/Add-ons/WebExtensions/Match_patterns
@@ -25,19 +26,11 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-  - title: WebExtensions#User_Interface
+  - type: listSubPages
+    path: /Mozilla/Add-ons/WebExtensions/user_interface
+    link: /Mozilla/Add-ons/WebExtensions/user_interface
+    title: User interface
     details: closed
-    children:
-      - /Mozilla/Add-ons/WebExtensions/user_interface
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
-      - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
-      - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
   - title: WebExtensions#How_to
     details: closed
     children:
@@ -54,12 +47,6 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
       - /Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
       - /Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-  - type: webExtApi
-    title: WebExtensions#API
-  - type: listSubPages
-    path: /Mozilla/Add-ons/WebExtensions/manifest.json
-    title: WebExtensions#manifest.json
-    details: closed
   - title: extension_workshop
     details: closed
     children:
@@ -71,6 +58,262 @@ sidebar:
         title: extension_workshop_manage
       - link: https://extensionworkshop.com/documentation/enterprise/
         title: extension_workshop_enterprise
+  - type: section
+    title: Reference
+  - type: listSubPages
+    path: /Mozilla/Add-ons/WebExtensions/manifest.json
+    link: /Mozilla/Add-ons/WebExtensions/manifest.json
+    title: WebExtensions#manifest.json
+    details: closed
+    code: true
+  - link: /Mozilla/Add-ons/WebExtensions/API
+    details: closed
+    children:
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/action
+        link: /Mozilla/Add-ons/WebExtensions/API/action
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/alarms
+        link: /Mozilla/Add-ons/WebExtensions/API/alarms
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/bookmarks
+        link: /Mozilla/Add-ons/WebExtensions/API/bookmarks
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/browserAction
+        link: /Mozilla/Add-ons/WebExtensions/API/browserAction
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/browserSettings
+        link: /Mozilla/Add-ons/WebExtensions/API/browserSettings
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/browsingData
+        link: /Mozilla/Add-ons/WebExtensions/API/browsingData
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/captivePortal
+        link: /Mozilla/Add-ons/WebExtensions/API/captivePortal
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/clipboard
+        link: /Mozilla/Add-ons/WebExtensions/API/clipboard
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/commands
+        link: /Mozilla/Add-ons/WebExtensions/API/commands
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/contentScripts
+        link: /Mozilla/Add-ons/WebExtensions/API/contentScripts
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/contextualIdentities
+        link: /Mozilla/Add-ons/WebExtensions/API/contextualIdentities
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/cookies
+        link: /Mozilla/Add-ons/WebExtensions/API/cookies
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
+        link: /Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/devtools
+        link: /Mozilla/Add-ons/WebExtensions/API/devtools
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/dns
+        link: /Mozilla/Add-ons/WebExtensions/API/dns
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/dom
+        link: /Mozilla/Add-ons/WebExtensions/API/dom
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/downloads
+        link: /Mozilla/Add-ons/WebExtensions/API/downloads
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/events
+        link: /Mozilla/Add-ons/WebExtensions/API/events
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/extension
+        link: /Mozilla/Add-ons/WebExtensions/API/extension
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/extensionTypes
+        link: /Mozilla/Add-ons/WebExtensions/API/extensionTypes
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/find
+        link: /Mozilla/Add-ons/WebExtensions/API/find
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/history
+        link: /Mozilla/Add-ons/WebExtensions/API/history
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/i18n
+        link: /Mozilla/Add-ons/WebExtensions/API/i18n
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/identity
+        link: /Mozilla/Add-ons/WebExtensions/API/identity
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/idle
+        link: /Mozilla/Add-ons/WebExtensions/API/idle
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/management
+        link: /Mozilla/Add-ons/WebExtensions/API/management
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/menus
+        link: /Mozilla/Add-ons/WebExtensions/API/menus
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/notifications
+        link: /Mozilla/Add-ons/WebExtensions/API/notifications
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/omnibox
+        link: /Mozilla/Add-ons/WebExtensions/API/omnibox
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/pageAction
+        link: /Mozilla/Add-ons/WebExtensions/API/pageAction
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/permissions
+        link: /Mozilla/Add-ons/WebExtensions/API/permissions
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/pkcs11
+        link: /Mozilla/Add-ons/WebExtensions/API/pkcs11
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/privacy
+        link: /Mozilla/Add-ons/WebExtensions/API/privacy
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/proxy
+        link: /Mozilla/Add-ons/WebExtensions/API/proxy
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/runtime
+        link: /Mozilla/Add-ons/WebExtensions/API/runtime
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/scripting
+        link: /Mozilla/Add-ons/WebExtensions/API/scripting
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/search
+        link: /Mozilla/Add-ons/WebExtensions/API/search
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/sessions
+        link: /Mozilla/Add-ons/WebExtensions/API/sessions
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/sidebarAction
+        link: /Mozilla/Add-ons/WebExtensions/API/sidebarAction
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/storage
+        link: /Mozilla/Add-ons/WebExtensions/API/storage
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/tabs
+        link: /Mozilla/Add-ons/WebExtensions/API/tabs
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/theme
+        link: /Mozilla/Add-ons/WebExtensions/API/theme
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/topSites
+        link: /Mozilla/Add-ons/WebExtensions/API/topSites
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/types
+        link: /Mozilla/Add-ons/WebExtensions/API/types
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/userScripts
+        link: /Mozilla/Add-ons/WebExtensions/API/userScripts
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/userScripts_legacy
+        link: /Mozilla/Add-ons/WebExtensions/API/userScripts_legacy
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/webNavigation
+        link: /Mozilla/Add-ons/WebExtensions/API/webNavigation
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/webRequest
+        link: /Mozilla/Add-ons/WebExtensions/API/webRequest
+        details: closed
+        code: true
+      - type: listSubPages
+        path: /Mozilla/Add-ons/WebExtensions/API/windows
+        link: /Mozilla/Add-ons/WebExtensions/API/windows
+        details: closed
+        code: true
   - type: section
     link: /Mozilla/Add-ons/Contact_us
   - title: Channels
@@ -86,9 +329,7 @@ l10n:
   de:
     WebExtensions#Getting_started: Erste Schritte
     WebExtensions#Concepts: Konzepte
-    WebExtensions#User_Interface: Benutzeroberfläche
     WebExtensions#How_to: Anleitungen
-    WebExtensions#API: JavaScript-APIs
     WebExtensions#manifest.json: Manifest-Schlüssel
     extension_workshop: Erweiterungs-Workshop
     extension_workshop_develop: Entwickeln
@@ -102,9 +343,7 @@ l10n:
   en-US:
     WebExtensions#Getting_started: Getting started
     WebExtensions#Concepts: Concepts
-    WebExtensions#User_Interface: User interface
     WebExtensions#How_to: How to
-    WebExtensions#API: JavaScript APIs
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop
     extension_workshop_develop: Develop
@@ -118,9 +357,7 @@ l10n:
   fr:
     WebExtensions#Getting_started: Commencer
     WebExtensions#Concepts: Concepts
-    WebExtensions#User_Interface: Interface utilisateur
     WebExtensions#How_to: Mode d'emploi
-    WebExtensions#API: Les API JavaScript
     WebExtensions#manifest.json: Clés de manifeste
     extension_workshop: Atelier des extensions
     extension_workshop_develop: Développer
@@ -134,9 +371,7 @@ l10n:
   ja:
     WebExtensions#Getting_started: 始めましょう
     WebExtensions#Concepts: 概念
-    WebExtensions#User_Interface: ユーザーインターフェイス
     WebExtensions#How_to: 逆引きリファレンス
-    WebExtensions#API: JavaScript APIs
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop
     extension_workshop_develop: Develop
@@ -150,9 +385,7 @@ l10n:
   ko:
     WebExtensions#Getting_started: 시작하기
     WebExtensions#Concepts: 개념
-    WebExtensions#User_Interface: 사용자 인터페이스
     WebExtensions#How_to: 방법
-    WebExtensions#API: JavaScript APIs
     WebExtensions#manifest.json: Manifest 키
     extension_workshop: Extension Workshop
     extension_workshop_develop: Develop
@@ -166,9 +399,7 @@ l10n:
   zh-CN:
     WebExtensions#Getting_started: 开始
     WebExtensions#Concepts: 概念
-    WebExtensions#User_Interface: 用户界面
     WebExtensions#How_to: 怎么做
-    WebExtensions#API: JavaScript API
     WebExtensions#manifest.json: 清单键
     extension_workshop: Extension Workshop
     extension_workshop_develop: Develop
@@ -182,9 +413,7 @@ l10n:
   pt-BR:
     WebExtensions#Getting_started: Começando
     WebExtensions#Concepts: Conceitos
-    WebExtensions#User_Interface: Interface de usuário
     WebExtensions#How_to: Como
-    WebExtensions#API: APIs JavaScript
     WebExtensions#manifest.json: Chaves Manifest
     extension_workshop: Workshop de extensões
     extension_workshop_develop: Desenvolver
@@ -198,9 +427,7 @@ l10n:
   es:
     WebExtensions#Getting_started: Comenzar
     WebExtensions#Concepts: Conceptos
-    WebExtensions#User_Interface: Interfaz de usuario
     WebExtensions#How_to: Cómo hacer
-    WebExtensions#API: API de JavaScript
     WebExtensions#manifest.json: Claves de manifiesto
     extension_workshop: Taller de Extensión
     extension_workshop_develop: Desarrollar
@@ -214,9 +441,7 @@ l10n:
   ru:
     WebExtensions#Getting_started: Начало работы
     WebExtensions#Concepts: Основные понятия
-    WebExtensions#User_Interface: Пользовательский интерфейс
     WebExtensions#How_to: How to
-    WebExtensions#API: Обзор JavaScript API
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop
     extension_workshop_develop: Develop
