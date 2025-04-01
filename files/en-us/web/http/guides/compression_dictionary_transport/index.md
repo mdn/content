@@ -120,9 +120,8 @@ An HTML document can also provide a compression dictionary to the browser which 
 
 - Reference the dictionary using the {{HTTPHeader("Link")}} header:
 
-    ```http
-    Link: </dictionary.dat>; rel="compression-dictionary"
-    ```
+  ```http
+  Link: </dictionary.dat>; rel="compression-dictionary"
 
 This dictionary is then downloaded by the browser during idle time, and that response must include the {{HTTPHeader("Use-As-Dictionary")}} header:
 
