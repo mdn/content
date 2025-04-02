@@ -109,7 +109,7 @@ The above example uses `"string_constants"` as the imported global string namesp
 
 If you are already using the `""` namespace for some other purpose, you should consider using a single-character namespace for your strings such as `"s"`, `"'"`, or `"#"`.
 
-The namespace choice is generally made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
+The namespace choice is generally made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace anymore; you have to use what the `.wasm` file expects.
 
 ## Imported global string example
 
