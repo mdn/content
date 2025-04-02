@@ -325,6 +325,7 @@ The generated content is the value of the `href` attribute, prepended by "URL: "
 ### Adding an image with alternative text
 
 This example inserts an image before all links. Two `content` values are provided. The later `content` value includes an image with alternative text that a screen reader can output as speech.
+
 #### HTML
 
 ```html
