@@ -80,7 +80,7 @@ The report JSON object has a single top-level property, `"csp-report"`, which co
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Violations originating from external files are not included in the report.
 
-    This is only applicable to [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
+    This is only applicable to [`script-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample) keyword.
 
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
