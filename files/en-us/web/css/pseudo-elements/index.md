@@ -40,17 +40,6 @@ A pseudo-element can be selected based on the current state of the originating e
 > [!NOTE]
 > When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
-## Nested pseudo-elements
-
-Some pseudo-element selectors can be chained together to enable styling pseudo-elements that are nested inside other pseudo-elements. The following nested pseudo-elements currently have styling support:
-
-- {{CSSxRef("::after")}}
-  - `::after::marker`: Selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item` (no other elements generate `::marker` pseudo-elements).
-- {{CSSxRef("::before")}}
-  - `::before::marker`: Selects the list {{CSSxRef("::marker")}} of a `::before` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
-
-Check out the individual pseudo-element reference pages to find examples and specific browser compatibility information.
-
 ## Typographic pseudo-elements
 
 - {{CSSxRef("::first-line")}}
@@ -166,6 +155,17 @@ V
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
+
+## Nesting pseudo-elements
+
+You can chain some pseudo-element selectors together to style pseudo-elements nested inside other pseudo-elements. The following nested pseudo-element combinations are supported:
+
+- {{CSSxRef("::after")}}
+  - `::after::marker`: Selects the {{CSSxRef("::marker")}} pseudo-element of an `::after` pseudo-element, when `::after` is styled as a list item {{CSSxRef("display", "display: list-item")}}.
+- {{CSSxRef("::before")}}
+  - `::before::marker`: Selects the {{CSSxRef("::marker")}} pseudo-element of a `::before` pseudo-element, when `::before` is styled as a list item {{CSSxRef("display", "display: list-item")}}.
+
+Check out the individual pseudo-element reference pages for examples and browser compatibility information.
 
 ## Specifications
 
