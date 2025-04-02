@@ -9,7 +9,7 @@ status:
 {{CSSRef}}
 
 A {{glossary("vendor prefix")}} is used to indicate that a feature is specific to a certain browser.
-Firefox supports a number of extensions to [CSS](/en-US/docs/Web/CSS) which are prefixed with `-moz-`.
+Firefox supports several extensions to [CSS](/en-US/docs/Web/CSS), which are prefixed with `-moz-`.
 
 ## -moz-prefixed properties without standard equivalents
 

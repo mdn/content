@@ -9,7 +9,7 @@ status:
 {{CSSRef}}
 
 A {{glossary("vendor prefix")}} is used to indicate that a feature is specific to a certain browser.
-User agents based on WebKit or Blink (such as Safari and Chrome) support several extensions to [CSS](/en-US/docs/Web/CSS) which are prefixed with `-webkit-`.
+User agents based on WebKit or Blink (such as Safari and Chrome) support several extensions to [CSS](/en-US/docs/Web/CSS), which are prefixed with `-webkit-`.
 
 ## -webkit-prefixed properties without standard equivalents
 
