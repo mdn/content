@@ -16,9 +16,10 @@ This is useful for debugging and for providing fallback error handling for unexp
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("unhandledrejection", (event) => {});
-onunhandledrejection = (event) => {};
+```js-nolint
+addEventListener("unhandledrejection", (event) => { })
+
+onunhandledrejection = (event) => { }
 ```
 
 ## Event type

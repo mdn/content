@@ -14,10 +14,10 @@ The **`result`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_AP
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("result", (event) => {});
+```js-nolint
+addEventListener("result", (event) => { })
 
-onresult = (event) => {};
+onresult = (event) => { }
 ```
 
 ## Event type

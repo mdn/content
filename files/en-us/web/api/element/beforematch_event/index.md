@@ -16,10 +16,10 @@ An element receives a **`beforematch`** event when it is in the _hidden until fo
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforematch", (event) => {});
+```js-nolint
+addEventListener("beforematch", (event) => { })
 
-onbeforematch = (event) => {};
+onbeforematch = (event) => { }
 ```
 
 ## Event type

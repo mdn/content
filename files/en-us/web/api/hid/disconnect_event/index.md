@@ -16,10 +16,10 @@ The **`disconnect`** event of the {{domxref("HID")}} interface fires when the us
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("disconnect", (event) => {});
+```js-nolint
+addEventListener("disconnect", (event) => { })
 
-ondisconnect = (event) => {};
+ondisconnect = (event) => { }
 ```
 
 ## Event type

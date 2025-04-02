@@ -14,9 +14,10 @@ The **`offline`** event of the {{domxref("Window")}} interface is fired when the
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("offline", (event) => {});
-onoffline = (event) => {};
+```js-nolint
+addEventListener("offline", (event) => { })
+
+onoffline = (event) => { }
 ```
 
 ## Event type

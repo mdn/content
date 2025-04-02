@@ -33,9 +33,10 @@ Please note that the unload event also follows the document tree: parent frame u
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("unload", (event) => {});
-onunload = (event) => {};
+```js-nolint
+addEventListener("unload", (event) => { })
+
+onunload = (event) => { }
 ```
 
 ## Event type

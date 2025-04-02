@@ -16,10 +16,10 @@ The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} in
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("canmakepayment", (event) => {});
+```js-nolint
+addEventListener("canmakepayment", (event) => { })
 
-oncanmakepayment = (event) => {};
+oncanmakepayment = (event) => { }
 ```
 
 ## Event type

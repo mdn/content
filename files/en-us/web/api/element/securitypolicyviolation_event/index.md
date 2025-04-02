@@ -23,10 +23,10 @@ It is normally handled by an event handler on the {{domxref("Window")}} or {{dom
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("securitypolicyviolation", (event) => {});
+```js-nolint
+addEventListener("securitypolicyviolation", (event) => { })
 
-onsecuritypolicyviolation = (event) => {};
+onsecuritypolicyviolation = (event) => { }
 ```
 
 ## Event type

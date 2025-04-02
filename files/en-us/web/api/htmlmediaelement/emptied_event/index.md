@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("emptied", (event) => {});
+```js-nolint
+addEventListener("emptied", (event) => { })
 
-onemptied = (event) => {};
+onemptied = (event) => { }
 ```
 
 ## Event type

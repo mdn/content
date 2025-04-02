@@ -16,10 +16,10 @@ The **`screenschange`** event of the {{domxref("ScreenDetails")}} interface is f
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("screenschange", (event) => {});
+```js-nolint
+addEventListener("screenschange", (event) => { })
 
-onscreenschange = (event) => {};
+onscreenschange = (event) => { }
 ```
 
 ## Event type

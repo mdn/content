@@ -23,10 +23,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mute", (event) => {});
+```js-nolint
+addEventListener("mute", (event) => { })
 
-onmute = (event) => {};
+onmute = (event) => { }
 ```
 
 ## Event type

@@ -14,10 +14,10 @@ The **`copy`** event fires when the user initiates a copy action through the bro
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("copy", (event) => {});
+```js-nolint
+addEventListener("copy", (event) => { })
 
-oncopy = (event) => {};
+oncopy = (event) => { }
 ```
 
 ## Event type

@@ -22,10 +22,10 @@ It is a proprietary event specific to Gecko (Firefox).
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("NameOfTheEvent", (event) => {});
+```js-nolint
+addEventListener("NameOfTheEvent", (event) => { })
 
-onNameOfTheEvent = (event) => {};
+onNameOfTheEvent = (event) => { }
 ```
 
 ## Event type

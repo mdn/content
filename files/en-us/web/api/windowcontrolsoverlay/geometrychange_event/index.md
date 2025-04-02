@@ -18,10 +18,10 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("geometrychange", (event) => {});
+```js-nolint
+addEventListener("geometrychange", (event) => { })
 
-ongeometrychange = (event) => {};
+ongeometrychange = (event) => { }
 ```
 
 ## Event type

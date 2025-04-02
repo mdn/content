@@ -16,10 +16,10 @@ The **`DOMActivate`** event is fired at an element when it becomes active, such 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("DOMActivate", (event) => {});
+```js-nolint
+addEventListener("DOMActivate", (event) => { })
 
-onDOMActivate = (event) => {};
+onDOMActivate = (event) => { }
 ```
 
 ## Event type

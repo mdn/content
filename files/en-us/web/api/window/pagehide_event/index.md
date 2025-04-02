@@ -16,9 +16,10 @@ For example, when the user clicks the browser's Back button, the current page re
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pagehide", (event) => {});
-onpagehide = (event) => {};
+```js-nolint
+addEventListener("pagehide", (event) => { })
+
+onpagehide = (event) => { }
 ```
 
 ## Event type

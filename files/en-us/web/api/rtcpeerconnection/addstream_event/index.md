@@ -24,10 +24,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("addstream", (event) => {});
+```js-nolint
+addEventListener("addstream", (event) => { })
 
-onaddstream = (event) => {};
+onaddstream = (event) => { }
 ```
 
 ## Event type

@@ -16,10 +16,10 @@ The **`sinkchange`** event of the {{domxref("AudioContext")}} interface is fired
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("sinkchange", (event) => {});
+```js-nolint
+addEventListener("sinkchange", (event) => { })
 
-onsinkchange = (event) => {};
+onsinkchange = (event) => { }
 ```
 
 ## Event type

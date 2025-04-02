@@ -16,10 +16,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("fetch", (event) => {});
+```js-nolint
+addEventListener("fetch", (event) => { })
 
-onfetch = (event) => {};
+onfetch = (event) => { }
 ```
 
 ## Description

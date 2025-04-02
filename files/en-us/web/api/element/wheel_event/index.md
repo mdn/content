@@ -26,10 +26,10 @@ The `wheel` event is cancelable. If the event is canceled, no scrolling or zoomi
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("wheel", (event) => {});
+```js-nolint
+addEventListener("wheel", (event) => { })
 
-onwheel = (event) => {};
+onwheel = (event) => { }
 ```
 
 ## Event type

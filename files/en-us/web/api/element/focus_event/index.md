@@ -18,10 +18,10 @@ The `focus` event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("focus", (event) => {});
+```js-nolint
+addEventListener("focus", (event) => { })
 
-onfocus = (event) => {};
+onfocus = (event) => { }
 ```
 
 ## Event type

@@ -18,10 +18,10 @@ If the target element has child elements, `mouseout` and `mouseover` events fire
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseout", (event) => {});
+```js-nolint
+addEventListener("mouseout", (event) => { })
 
-onmouseout = (event) => {};
+onmouseout = (event) => { }
 ```
 
 ## Event type

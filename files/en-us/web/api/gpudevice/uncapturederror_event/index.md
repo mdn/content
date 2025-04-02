@@ -18,10 +18,10 @@ Known error cases should be handled using {{domxref("GPUDevice.pushErrorScope", 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("uncapturederror", (event) => {});
+```js-nolint
+addEventListener("uncapturederror", (event) => { })
 
-onuncapturederror = (event) => {};
+onuncapturederror = (event) => { }
 ```
 
 ## Event type

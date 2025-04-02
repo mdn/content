@@ -18,10 +18,10 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforexrselect", (event) => {});
+```js-nolint
+addEventListener("beforexrselect", (event) => { })
 
-onbeforexrselect = (event) => {};
+onbeforexrselect = (event) => { }
 ```
 
 ## Event type

@@ -22,10 +22,10 @@ To instruct macOS not to engage any default Force Touch actions if the user appl
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("webkitmouseforceup", (event) => {});
+```js-nolint
+addEventListener("webkitmouseforceup", (event) => { })
 
-onwebkitmouseforceup = (event) => {};
+onwebkitmouseforceup = (event) => { }
 ```
 
 ## Event type

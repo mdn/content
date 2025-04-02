@@ -14,10 +14,10 @@ The **`prioritychange`** event is sent to a {{domxref('TaskSignal')}} if its [pr
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("prioritychange", (event) => {});
+```js-nolint
+addEventListener("prioritychange", (event) => { })
 
-onprioritychange = (event) => {};
+onprioritychange = (event) => { }
 ```
 
 ## Event type

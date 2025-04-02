@@ -14,10 +14,10 @@ The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationend", (event) => {});
+```js-nolint
+addEventListener("animationend", (event) => { })
 
-onanimationend = (event) => {};
+onanimationend = (event) => { }
 ```
 
 ## Event type

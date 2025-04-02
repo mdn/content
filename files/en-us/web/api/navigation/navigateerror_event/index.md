@@ -18,10 +18,10 @@ For example, if the network is down, any {{domxref("Window/fetch", "fetch()")}} 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("navigateerror", (event) => {});
+```js-nolint
+addEventListener("navigateerror", (event) => { })
 
-onnavigateerror = (event) => {};
+onnavigateerror = (event) => { }
 ```
 
 ## Event type

@@ -17,10 +17,10 @@ The `beforescriptexecute` event fires when a static {{HTMLElement("script")}} is
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforescriptexecute", (event) => {});
+```js-nolint
+addEventListener("beforescriptexecute", (event) => { })
 
-onbeforescriptexecute = (event) => {};
+onbeforescriptexecute = (event) => { }
 ```
 
 ## Event type

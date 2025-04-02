@@ -18,9 +18,10 @@ It also provides access to the navigation type and current and destination docum
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pageswap", (event) => {});
-onpageswap = (event) => {};
+```js-nolint
+addEventListener("pageswap", (event) => { })
+
+onpageswap = (event) => { }
 ```
 
 ## Event type

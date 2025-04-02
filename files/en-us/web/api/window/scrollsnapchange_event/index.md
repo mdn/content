@@ -18,10 +18,10 @@ This event works in much the same way as the {{domxref("Element")}} interface's 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollsnapchange", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchange", (event) => { })
 
-onscrollsnapchange = (event) => {};
+onscrollsnapchange = (event) => { }
 ```
 
 ## Event type

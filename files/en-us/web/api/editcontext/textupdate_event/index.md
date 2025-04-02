@@ -18,10 +18,10 @@ This event makes it possible to render the updated text and selection in the UI,
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("textupdate", (event) => {});
+```js-nolint
+addEventListener("textupdate", (event) => { })
 
-ontextupdate = (event) => {};
+ontextupdate = (event) => { }
 ```
 
 ## Event type

@@ -20,10 +20,10 @@ Note that "moving out of an element" refers to the element's position in the DOM
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mouseleave", (event) => {});
+```js-nolint
+addEventListener("mouseleave", (event) => { })
 
-onmouseleave = (event) => {};
+onmouseleave = (event) => { }
 ```
 
 ## Event type

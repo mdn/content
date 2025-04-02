@@ -14,10 +14,10 @@ The **`lostpointercapture`** event is fired when a [captured pointer](/en-US/doc
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("lostpointercapture", (event) => {});
+```js-nolint
+addEventListener("lostpointercapture", (event) => { })
 
-onlostpointercapture = (event) => {};
+onlostpointercapture = (event) => { }
 ```
 
 ## Event type
