@@ -2,7 +2,7 @@
 title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
 page-type: web-manifest-member
-browser-compat: html.manifest.icons
+browser-compat: manifests.webapp.icons
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

@@ -88,7 +88,7 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 
 In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - `grid`
   - : Communicates that a parent element is a table or tree style grouping of information.
@@ -152,16 +152,9 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 - [The Table element](/en-US/docs/Web/HTML/Element/table)
 - [ARIA: Grid role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [Grid Role - Maxability](https://www.maxability.co.in/wai-aria-overview/grid-role/)
 - [The Table row element](/en-US/docs/Web/HTML/Element/tr)
 - [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [Row Role - Maxability](https://www.maxability.co.in/wai-aria-overview/row-role/)
-- [aria-rowcount - Maxability](https://www.maxability.co.in/2018/09/07/aria-rowcount-property/)
 - [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [Rowgroup Role - Maxability](https://www.maxability.co.in/wai-aria-overview/rowgroup-role/)
 - [The Table header element](/en-US/docs/Web/HTML/Element/th)
-- [Columnheader - Maxability](https://www.maxability.co.in/wai-aria-overview/columnheader-role/)
-- [aria-colcount - Maxability](https://www.maxability.co.in/2017/07/26/aria-colcount-property/)
 - [The Table Data Cell element](/en-US/docs/Web/HTML/Element/td)
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
-- [Gridcell Role - Maxability](https://www.maxability.co.in/wai-aria-overview/gridcell-role/)

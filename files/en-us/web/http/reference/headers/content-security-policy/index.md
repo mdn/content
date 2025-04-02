@@ -159,9 +159,9 @@ Reporting directives control the destination URL for CSP violation reports in `C
 
 ### Other directives
 
-- {{CSP("require-trusted-types-for")}} {{experimental_inline}}
+- {{CSP("require-trusted-types-for")}}
   - : Enforces [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) at the DOM XSS injection sinks.
-- {{CSP("trusted-types")}} {{experimental_inline}}
+- {{CSP("trusted-types")}}
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
     Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
@@ -215,7 +215,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
-- The hash value is the base64-encoded {{glossary("Cryptographic_hash_function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
+- The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
 
 For example:
 

@@ -36,7 +36,7 @@ console.log(filterName.baseVa); // the filter's assigned name
 
 ## See also
 
-- {{domxref("SVGFEFloodElement.in1")}}
-- {{cssxref("custom-ident")}} data type- [SVG filter tutorial](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_Filters_Tutorial)
+- {{cssxref("custom-ident")}} data type
+- [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property

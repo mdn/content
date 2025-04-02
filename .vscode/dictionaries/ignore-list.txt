@@ -325,7 +325,6 @@ webvr
 weta
 Whereami
 Whereshire
-wisen
 wisi
 Wookie
 xyzzy

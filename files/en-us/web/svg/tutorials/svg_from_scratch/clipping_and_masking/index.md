@@ -32,7 +32,7 @@ We create the above-mentioned semicircle based on a `circle` element:
 </svg>
 ```
 
-Centered at (100,100), a circle with radius 100 is painted. The attribute `clip-path` references a `{{ SVGElement("clipPath") }}` element with a single `rect` element. This rectangular on its own would paint the upper half of the canvas black. Note, that the `clipPath` element is usually placed in a `defs` section.
+Centered at (100,100), a circle with radius 100 is painted. The attribute `clip-path` references a {{ SVGElement("clipPath") }} element with a single `rect` element. This rectangular on its own would paint the upper half of the canvas black. Note, that the `clipPath` element is usually placed in a `defs` section.
 
 The `rect` will not be painted, however. Instead, its pixel data will be used to determine which pixels of the circle "make it" to the final rendering. Since the rectangle covers only the upper half of the circle, the lower half of the circle will vanish:
 

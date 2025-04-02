@@ -43,7 +43,7 @@ The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event"
   - : A number representing the HTTP status code of the document or worker in which the violation occurred.
 - {{domxref("SecurityPolicyViolationEvent.violatedDirective")}} {{ReadOnlyInline}}
   - : A string representing the directive that was violated.
-    This is a historical alias of [`effectiveDirective`](#effectivedirective).
+    This is a historical alias of [`effectiveDirective`](/en-US/docs/Web/API/SecurityPolicyViolationEvent/effectiveDirective).
 
 ## Examples
 

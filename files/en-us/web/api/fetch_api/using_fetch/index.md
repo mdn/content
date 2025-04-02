@@ -47,7 +47,7 @@ To make a request, call `fetch()`, passing in:
 
 1. a definition of the resource to fetch. This can be any one of:
    - a string containing the URL
-   - an object, such an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
+   - an object, such as an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 

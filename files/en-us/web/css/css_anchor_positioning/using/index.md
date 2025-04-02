@@ -96,6 +96,7 @@ In some cases, an implicit anchor reference will be made between two elements, d
 
 - Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes.
 - Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+- A {{htmlelement("select")}} element and its dropdown picker are opted into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two, which also means they'll have an implicit anchor reference.
 
 > [!NOTE]
 > The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.

@@ -8,7 +8,7 @@ sidebar: svgref
 
 The **`<pattern>`** [SVG](/en-US/docs/Web/SVG) element defines a graphics object which can be redrawn at repeated x- and y-coordinate intervals ("tiled") to cover an area.
 
-The `<pattern>` is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("stroke")}} attributes on other [graphics elements](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes) to fill or stroke those elements with the referenced pattern.
+The `<pattern>` is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("stroke")}} attributes on other [graphics elements](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) to fill or stroke those elements with the referenced pattern.
 
 ## Examples
 

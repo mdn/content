@@ -75,7 +75,7 @@ Learning outcomes:
 
 ## See also
 
-- [Learn UI Design Fundamentals](https://scrimba.com/learn/design?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Learn UI Design Fundamentals](https://scrimba.com/intro-to-ui-design-fundamentals-c0q?via=mdn), Scrimba <sup>Course Partner</sup>
 - [The Shape of Design](https://shapeofdesignbook.com/chapters/00-introduction/), Frank Chimero
 - [Designing for the Web](https://designingfortheweb.co.uk/), Mark Boulton
 - [Design for web](https://designforweb.org/), Prisca Schmarsow + other contributors

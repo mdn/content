@@ -120,7 +120,7 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 
 ## Best practices
 
-- Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
+Be sure to add the `contenteditable="true"` attribute to the HTML element to which this role is applied. Do so even if you set `aria-readonly` to `true`; in this way, you communicate that the content would be editable if it were not read-only.
 
 ## See also
 

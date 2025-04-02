@@ -79,9 +79,9 @@ The point that the field of vision is an important consideration arises in the a
 
 This pixel area ratio calculates for relative size, but distance also matters.
 
-Distance matters because it affects the total field of vision. When viewers wear ocular masks for gaming, the field of vision is likely enveloped in its entirety by the screen. [WebVR](https://webvr.info/) is an open specification that makes it possible to experience VR in your browser, which can be experienced on phone, computer or headset. The concern about flashing images in an ocular mask is a growing one, since the mask is so close to the eyes.
+Distance matters because it affects the total field of vision. When viewers wear ocular masks for gaming, the field of vision is likely enveloped in its entirety by the screen. [WebXR](/en-US/docs/Web/API/WebXR_Device_API) is an open specification that makes it possible to experience VR in your browser, which can be experienced on phone, computer or headset. The concern about flashing images in an ocular mask is a growing one, since the mask is so close to the eyes.
 
-[The Epilepsy Society (UK)](https://epilepsysociety.org.uk/), in their article, ["3d Films and Virtual Reality"](https://epilepsysociety.org.uk/3d-films-and-virtual-reality#.XQlC5ohKiUk), noted: _"With VR the images flash very quickly and generally this is too quickly to trigger a seizure in people with photosensitive epilepsy. However, the field of view is large and so more of the eye is stimulated. This means that more of the brain may be affected and this may trigger a photosensitive seizure."_
+Research generally indicates that VR usage may actually be safer than normal screen consumption, due to higher refresh rates. As [Fisher et al. 2022](https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17175) summarizes, _"The limited data so far available raise no special seizure concerns in terms of VR technology, although this view may change with more experience. Certain types of VR content, including bright flashes, provocative patterns, or color changes would be expected to provoke seizures, just as they do in the real world."_
 
 (Note that some users will not be able to see with blinking cursors, and may get migraines, motion sickness, and disorientation, although blinking cursors occupy a much smaller area of the screen.)
 
@@ -203,11 +203,6 @@ All image types are potentially dangerous, however, animated GIFs deserve specia
 - Zakirt provides a gist for [animated-gif-detect.js](https://gist.github.com/zakirt/faa4a58cec5a7505b10e3686a226f285)
 
 With animated GIFs, ensure animation is inactive until the user chooses to activate it. For example, the user must push a button or check a box in order to start the animation.
-
-**Resources for detecting and controlling animated GIFs include:**
-
-- [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated GIFs on your website
 
 ### Videos
 

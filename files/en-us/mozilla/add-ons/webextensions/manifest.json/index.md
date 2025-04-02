@@ -14,7 +14,7 @@ The `manifest.json` file is the only file that every extension using WebExtensio
 
 Using `manifest.json`, you specify basic metadata about your extension such as the name and version, and can also specify aspects of your extension's functionality (such as background scripts, content scripts, and browser actions).
 
-It is a [JSON](/en-US/docs/Glossary/JSON)-formatted file, with one exception: it is allowed to contain "`//`"-style comments.
+It is a [JSON](/en-US/docs/Glossary/JSON)-formatted file, with one exception: it is allowed to contain `//`-style comments.
 
 ## List of manifest.json keys
 
@@ -65,7 +65,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 ### Notes about manifest.json keys
 
 - `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys.
-- `"default_locale"` must be present if the "`_locales`" directory is present, and must be absent otherwise.
+- `"default_locale"` must be present if the `_locales` directory is present, and must be absent otherwise.
 - `"browser_specific_settings"` is not supported in Google Chrome.
 
 ### Accessing manifest.json keys at runtime
@@ -162,8 +162,6 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 ```
 
 ## Browser compatibility
-
-For a full overview of all manifest keys and their sub-keys, see the [full manifest.json browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
 {{Compat}}
 

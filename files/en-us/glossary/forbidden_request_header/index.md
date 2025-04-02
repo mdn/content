@@ -22,7 +22,7 @@ fetch("https://httpbin.org/get", {
 Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} that grant developers control over headers, such as {{domxref("Window/fetch", "fetch()")}}.
 Forbidden headers are one of the following:
 
-- {{HTTPHeader("Accept-Charset")}}
+- `Accept-Charset`
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Access-Control-Request-Headers")}}
 - {{HTTPHeader("Access-Control-Request-Method")}}

@@ -42,7 +42,7 @@ A validation error can occur if any of the following are false:
 
 - For `depthStencil` objects:
   - `format` is a [`depth-or-stencil`](https://gpuweb.github.io/gpuweb/#depth-or-stencil-format) format.
-  - The [`depthBias`](#depthbias), [`depthBiasClamp`](#depthbiasclamp), and [`depthBiasSlopeScale`](#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
+  - The [`depthBias`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbias), [`depthBiasClamp`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbiasclamp), and [`depthBiasSlopeScale`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#depthbiasslopescale) properties are set to <code>0</code> for line and point topologies, i.e., if [`topology`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#topology) is set to `"line-list"`, `"line-strip"`, or `"point-list"`.
   - If `depthWriteEnabled` is `true` or `depthCompare` is not `"always"`, `format` has a depth component.
   - If `stencilFront` or `stencilBack`'s properties are not at their default values, `format` has a stencil component.
 - For `fragment` objects:

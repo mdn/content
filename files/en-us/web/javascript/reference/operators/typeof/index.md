@@ -151,8 +151,8 @@ The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Referen
 // Parentheses can be used for determining the data type of expressions.
 const someData = 99;
 
-typeof someData + " Wisen"; // "number Wisen"
-typeof (someData + " Wisen"); // "string"
+typeof someData + " foo"; // "number foo"
+typeof (someData + " foo"); // "string"
 ```
 
 ### Interaction with undeclared and uninitialized variables

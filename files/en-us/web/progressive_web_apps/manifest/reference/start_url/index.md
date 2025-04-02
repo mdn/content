@@ -2,7 +2,7 @@
 title: start_url
 slug: Web/Progressive_web_apps/Manifest/Reference/start_url
 page-type: web-manifest-member
-browser-compat: html.manifest.start_url
+browser-compat: manifests.webapp.start_url
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
