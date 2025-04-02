@@ -28,7 +28,7 @@ Content-Encoding: match="<urlpattern>", match-dest=("<destination1>")
 - `match`
   - : A string value containing a [URL Pattern](/en-US/docs/Web/API/URL_Pattern_API): only resources whose URLs match this pattern may use this resource as a dictionary.
 - `match-dest`
-  - : A space-separated list of strings, with each string in quotes and the whole value enclosed in parentheses, that provides a list of [Fetch request destinations](/docs/Web/API/Request/destination) that requests must match if they are to use this dictionary.
+  - : A space-separated list of strings, with each string in quotes and the whole value enclosed in parentheses, that provides a list of [Fetch request destinations](/en-US/docs/Web/API/Request/destination) that requests must match if they are to use this dictionary.
 - `id`
   - : A string value that specifies a server identifier for the dictionary. This ID value will then be added in the {{HTTPHeader("Dictionary-ID")}} request header when the browser requests a resource which can use this dictionary.
 - `type`
