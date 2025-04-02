@@ -175,7 +175,7 @@ _The `Element` interface also includes the following properties._
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
 
 - {{domxref("Element.role")}}
-  - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/) attribute, which provides the semantic role of the element.
+  - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute, which provides the semantic role of the element.
 
 ## Instance methods
 
