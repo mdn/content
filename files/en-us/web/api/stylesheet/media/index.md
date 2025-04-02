@@ -38,9 +38,9 @@ A read-only array-like `MediaList` object.
             document.styleSheets[i].media,
           )}`,
         );
-        if (iSheetIndex === 0)
+        if (i === 0)
           document.styleSheets[i].media.appendMedium("handheld");
-        if (iSheetIndex === 1)
+        if (i === 1)
           document.styleSheets[i].media.deleteMedium("print");
         console.log(
           `document.styleSheets[${i}].media: ${JSON.stringify(
