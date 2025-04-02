@@ -89,7 +89,7 @@ For information about image formats supported by web browsers and guidance on se
 
 ### Using the `type` attribute with `<video>`
 
-This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
+This example demonstrates how to offer a video in different formats: WebM for browsers that support it, Ogg for those that support Ogg, and QuickTime for browsers that support QuickTime. If the `<audio>` or `<video>` element is not supported by the browser, a notice is displayed instead. If the browser supports the element but does not support any of the specified formats, an `error` event is raised on the `<audio>` or `<video>` element and the default media controls (if enabled) will indicate an error. For more details on which media file formats to use and their browser support, refer to our [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats).
 
 ```html
 <video controls>

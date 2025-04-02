@@ -107,7 +107,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
       .then(() => defaultWriter.write(chunk))
@@ -127,7 +127,7 @@ So here we create a writer to write the chunks to the stream using {{domxref("Wr
 
 We also create a new {{domxref("TextEncoder")}} instance using the relevant constructor to encode the message into chunks to be put into the stream.
 
-With the chunks encoded, we then call [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
+With the chunks encoded, we then call [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach) on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
 
 After the chunks have all been written, we then perform the `ready` check once more, to check that the last chunk has finished being written and all the work is done. When this `ready` check fulfills, we invoke {{domxref("WritableStreamDefaultWriter.close()")}} to close the stream. This also triggers the `close()` method specified inside the `WritableStream()` constructor, as discussed above.
 

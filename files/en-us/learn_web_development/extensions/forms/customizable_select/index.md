@@ -367,7 +367,7 @@ These rules work together to make the picker smoothly fade in and fade out when 
 
 ## Positioning the picker using anchor positioning
 
-A customizable `<select>` element's select button and drop-down picker have have an implicit anchor reference, and the picker is automatically associated with the select button via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This means that an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+A customizable `<select>` element's select button and drop-down picker have an implicit anchor reference, and the picker is automatically associated with the select button via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This means that an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 In addition, the [browser's default styles provide a default position](/en-US/docs/Web/CSS/::picker#picker_anchor_positioning), which you can customize as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
 

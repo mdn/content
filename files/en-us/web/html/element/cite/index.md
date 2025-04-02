@@ -31,8 +31,8 @@ The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to mark up the tit
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 cite {
+  /* Add your styles here */
 }
 ```
 

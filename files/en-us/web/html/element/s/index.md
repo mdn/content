@@ -18,8 +18,8 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 s {
+  /* Add your styles here */
 }
 ```
 

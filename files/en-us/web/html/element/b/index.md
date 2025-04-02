@@ -21,8 +21,8 @@ The **`<b>`** [HTML](/en-US/docs/Web/HTML) element is used to draw the reader's 
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 b {
+  /* Add your styles here */
 }
 ```
 

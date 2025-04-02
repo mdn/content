@@ -20,7 +20,6 @@ ol {
   color: darkblue;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :is(ol, ul, menu:unsupported) :is(ol, ul) {
   color: green;
 }
