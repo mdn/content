@@ -229,7 +229,7 @@ To summarize:
 
 ### Module fallback
 
-Browsers that support the `module` value for the [`type`](#type) attribute ignore any script with a `nomodule` attribute. That enables you to use module scripts while providing `nomodule`-marked fallback scripts for non-supporting browsers.
+Browsers that support the `module` value for the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute ignore any script with a `nomodule` attribute. That enables you to use module scripts while providing `nomodule`-marked fallback scripts for non-supporting browsers.
 
 ```html
 <script type="module" src="main.js"></script>
@@ -238,7 +238,7 @@ Browsers that support the `module` value for the [`type`](#type) attribute ignor
 
 ### Importing modules with importmap
 
-When importing modules in scripts, if you don't use the [`type=importmap`](#importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
+When importing modules in scripts, if you don't use the [`type=importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
 In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
 
 ```js
