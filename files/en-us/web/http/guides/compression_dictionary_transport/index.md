@@ -17,7 +17,7 @@ Compression algorithms are used in HTTP to reduce the size of resources download
 
 For example, take this JavaScript:
 
-```javascript
+```js
 function a() {
   console.log("Hello World!");
 }
