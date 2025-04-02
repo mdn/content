@@ -89,7 +89,6 @@ const inputElement = shadowRoot.querySelector("input");
 
 // Feature test for ariaLabelledByElements
 if ("ariaLabelledByElements" in ElementInternals.prototype) {
-
   // Get and log attribute that provides the accessible name
   log(`aria-labelledby: ${inputElement.getAttribute("aria-labelledby")}`);
 
