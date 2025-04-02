@@ -33,18 +33,16 @@ m dx dy
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
-![A red dot is drawn on a white square 10 pixels down and 10 pixels to the right. This dot would not normally show but is used as an example of where the cursor will start after the "Move To" command](blank_path_area.png)
-
-```xml
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M10 10"/>
+```html live-sample___move-to
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 10" />
 
   <!-- Points -->
-  <circle cx="10" cy="10" r="2" fill="red"/>
-
+  <circle cx="10" cy="10" r="2" fill="red" />
 </svg>
 ```
+
+{{ EmbedLiveSample('move-to', 100, 100) }}
 
 There are three commands that draw lines. The most generic is the "Line To" command, called with `L`. `L` takes two parameters—x and y coordinates—and draws a line from the current position to a new position.
 
@@ -68,21 +66,19 @@ v dy
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a {{SVGElement("rect")}} element). It's composed of horizontal and vertical lines only.
 
-![A square with black fill is drawn within a white square. The black square's edges begin at position (10,10), move horizontally to position (90,10), move vertically to position (90,90), move horizontally back to position (10,90), and finally move back to the original position (10, 10).](path_line_commands.png)
-
-```xml
+```html live-sample___rectangle-lines
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
+  <path d="M 10 10 H 90 V 90 H 10 L 10 10" />
 
   <!-- Points -->
-  <circle cx="10" cy="10" r="2" fill="red"/>
-  <circle cx="90" cy="90" r="2" fill="red"/>
-  <circle cx="90" cy="10" r="2" fill="red"/>
-  <circle cx="10" cy="90" r="2" fill="red"/>
-
+  <circle cx="10" cy="10" r="2" fill="red" />
+  <circle cx="90" cy="90" r="2" fill="red" />
+  <circle cx="90" cy="10" r="2" fill="red" />
+  <circle cx="10" cy="90" r="2" fill="red" />
 </svg>
 ```
+
+{{ EmbedLiveSample('rectangle-lines', 100, 100) }}
 
 We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
 
@@ -126,21 +122,36 @@ The last set of coordinates here (`x`, `y`) specify where the line should end. T
 
 ![Cubic Bézier Curves with grid](cubic_bezier_curves_with_grid.png)
 
-```xml
+```html live-sample___cubic_bezier_curves_with_grid
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
-  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
-  <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
-  <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
-  <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
-  <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
-  <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
-  <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
-  <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/>
-
+  <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent" />
+  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent" />
+  <path
+    d="M 130 10 C 120 20, 180 20, 170 10"
+    stroke="black"
+    fill="transparent" />
+  <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent" />
+  <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent" />
+  <path
+    d="M 130 60 C 120 80, 180 80, 170 60"
+    stroke="black"
+    fill="transparent" />
+  <path
+    d="M 10 110 C 20 140, 40 140, 50 110"
+    stroke="black"
+    fill="transparent" />
+  <path
+    d="M 70 110 C 70 140, 110 140, 110 110"
+    stroke="black"
+    fill="transparent" />
+  <path
+    d="M 130 110 C 120 140, 180 140, 170 110"
+    stroke="black"
+    fill="transparent" />
 </svg>
 ```
+
+{{ EmbedLiveSample('cubic_bezier_curves_with_grid', 190, 160) }}
 
 The example above creates nine cubic Bézier curves. As the curves move toward the right, the control points become spread out horizontally. As the curves move downward, they become further separated from the end points. The thing to note here is that the curve starts in the direction of the first control point, and then bends so that it arrives along the direction of the second control point.
 
@@ -158,11 +169,16 @@ An example of this syntax is shown below, and in the figure to the left the spec
 
 ![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bezier_with_grid.png)
 
-```xml
+```html live-sample___shortcut_cubic_bezier_with_grid
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+  <path
+    d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
+    stroke="black"
+    fill="transparent" />
 </svg>
 ```
+
+{{ EmbedLiveSample('shortcut_cubic_bezier_with_grid', 190, 160) }}
 
 The other type of Bézier curve, the quadratic curve called with `Q`, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two parameters: the control point and the end point of the curve.
 
@@ -177,11 +193,13 @@ q dx1 dy1, dx dy
 
 ![Quadratic Bézier with grid](quadratic_bezier_with_grid.png)
 
-```xml
+```html live-sample___quadratic_bezier_with_grid
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+  <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent" />
 </svg>
 ```
+
+{{ EmbedLiveSample('quadratic_bezier_with_grid', 190, 160) }}
 
 As with the cubic Bézier curve, there is a shortcut for stringing together multiple quadratic Béziers, called with `T`.
 
@@ -197,11 +215,16 @@ This only works if the previous command was a `Q` or a `T` command. If not, then
 
 ![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bezier_with_grid.png)
 
-```xml
+```html live-sample___shortcut_quadratic_bezier_with_grid
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+  <path
+    d="M 10 80 Q 52.5 10, 95 80 T 180 80"
+    stroke="black"
+    fill="transparent" />
 </svg>
 ```
+
+{{ EmbedLiveSample('shortcut_quadratic_bezier_with_grid', 190, 160) }}
 
 Both curves produce similar results, although the cubic one allows greater freedom in exactly what the curve looks like. Deciding which curve to use is situational and depends on the amount of symmetry the line has.
 
@@ -224,16 +247,23 @@ The third parameter describes the rotation of the arc. This is best explained wi
 
 ![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
-```xml
+```html live-sample___svgarcs_xaxisrotation_with_grid
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 315
+  <path
+    d="M 10 315
            L 110 215
            A 30 50 0 0 1 162.55 162.45
            L 172.55 152.45
            A 30 50 -45 0 1 215.1 109.9
-           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+           L 315 10"
+    stroke="black"
+    fill="green"
+    stroke-width="2"
+    fill-opacity="0.5" />
 </svg>
 ```
+
+{{ EmbedLiveSample('svgarcs_xaxisrotation_with_grid', 320, 320) }}
 
 The example shows a `<path>` element that goes diagonally across the page. At its center, two elliptical arcs have been cut out (x radius = `30`, y radius = `50`). In the first one, the x-axis-rotation has been left at `0`, so the ellipse that the arc travels around (shown in gray) is oriented straight up and down. For the second arc, though, the x-axis-rotation is set to `-45` degrees. This rotates the ellipse so that it is aligned with its minor axis along the path direction, as shown by the second ellipse in the example image.
 
@@ -241,20 +271,39 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 
 ![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
-```xml
+```html live-sample___svgarcs_xaxisrotation_with_grid_ellipses
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
-  <path d="M 10 315
+  <path
+    d="M 10 315
            L 110 215
            A 36 60 0 0 1 150.71 170.29
            L 172.55 152.45
            A 30 50 -45 0 1 215.1 109.9
-           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
-  <circle cx="150.71" cy="170.29" r="2" fill="red"/>
-  <circle cx="110" cy="215" r="2" fill="red"/>
-  <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
-  <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+           L 315 10"
+    stroke="black"
+    fill="green"
+    stroke-width="2"
+    fill-opacity="0.5" />
+  <circle cx="150.71" cy="170.29" r="2" fill="red" />
+  <circle cx="110" cy="215" r="2" fill="red" />
+  <ellipse
+    cx="144.931"
+    cy="229.512"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
+  <ellipse
+    cx="115.779"
+    cy="155.778"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
 </svg>
 ```
+
+{{ EmbedLiveSample('svgarcs_xaxisrotation_with_grid_ellipses', 320, 320) }}
 
 Notice that each of the blue ellipses are formed by two arcs, depending on traveling clockwise or counter-clockwise. Each ellipse has one short arc and one long arc. The two ellipses are just mirror images of each other. They are flipped along the line formed from the start→end points.
 
@@ -264,22 +313,32 @@ The four different paths mentioned above are determined by the next two paramete
 
 ![Four examples are shown for each combination of large-arc-flag and sweep-flag for two circles overlapping, one in the top right, the other in the bottom left. For sweep-flag = 0, when large-arc-flag = 0, the interior arc of the top right circle is drawn, and when large-arc-flag = 1, the exterior arc of the bottom left circle is drawn. For sweep-flag = 1, when large-arc-flag = 0, the interior arc of the bottom left circle is drawn, and when large-arc-flag = 1, the exterior arc of the top right circle is drawn.](svgarcs_flags.png)
 
-```xml
+```html live-sample___svgarcs_flags
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 80 80
+  <path
+    d="M 80 80
            A 45 45, 0, 0, 0, 125 125
-           L 125 80 Z" fill="green"/>
-  <path d="M 230 80
+           L 125 80 Z"
+    fill="green" />
+  <path
+    d="M 230 80
            A 45 45, 0, 1, 0, 275 125
-           L 275 80 Z" fill="red"/>
-  <path d="M 80 230
+           L 275 80 Z"
+    fill="red" />
+  <path
+    d="M 80 230
            A 45 45, 0, 0, 1, 125 275
-           L 125 230 Z" fill="purple"/>
-  <path d="M 230 230
+           L 125 230 Z"
+    fill="purple" />
+  <path
+    d="M 230 230
            A 45 45, 0, 1, 1, 275 275
-           L 275 230 Z" fill="blue"/>
+           L 275 230 Z"
+    fill="blue" />
 </svg>
 ```
+
+{{ EmbedLiveSample('svgarcs_flags', 325, 325) }}
 
 Arcs are an easy way to create pieces of circles or ellipses in drawings. For instance, a pie chart would require a different arc for each piece.
 
