@@ -53,9 +53,8 @@ console.log(first_number_in_mem);
 
 ## Syntax
 
-Store in default memory
-
-```wasm
+```wat
+;; Store in default memory
 ;; Store value in default memory at particular offset
 i32.const 0 ;; stack variable with offset in memory to store the number
 i32.const 20 ;; stack variable with the number to store
@@ -63,11 +62,8 @@ i32.store ;; store in default memory
 
 ;; Store using S-function (same values and offset)
 (i32.store (i32.const 0) (i32.const 20))
-```
 
-Store to specified memory (if multi-memory supported)
-
-```wasm
+;; Store to specified memory (if multi-memory supported)
 ;; Store in memory referenced by its index
 i32.const 0 ;; offset in memory to store the number
 i32.const 20 ;; the number to store
