@@ -193,10 +193,12 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 - **Latin abbreviations**: You can use common Latin abbreviations (etc., i.e., e.g.) in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
 
+<!-- markdownlint-disable comma-after-eg -->
   - **Correct**: Web browsers (e.g., Firefox) can be used ...
-  - **Incorrect**: Web browsers e.g., Firefox can be used ...
-  - **Incorrect**: Web browsers, e.g., Firefox, can be used ...
+  - **Incorrect**: Web browsers e.g. Firefox can be used ...
+  - **Incorrect**: Web browsers, e.g. Firefox, can be used ...
   - **Incorrect**: Web browsers, (eg: Firefox) can be used ...
+<!-- markdownlint-enable comma-after-eg -->
 
   In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
@@ -208,15 +210,17 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
   The following table summarizes the meanings and English equivalents of Latin abbreviations:
 
+<!-- markdownlint-disable comma-after-eg -->
   | Abbrev | Latin            | English                 |
   | ------ | ---------------- | ----------------------- |
   | cf.    | _confer_         | compare                 |
-  | e.g.,  | _exempli gratia_ | for example             |
+  | e.g.   | _exempli gratia_ | for example             |
   | et al. | _et alii_        | and others              |
   | etc.   | _et cetera_      | and so forth, and so on |
   | i.e.,  | _id est_         | that is, in other words |
   | N.B.   | _nota bene_      | note well               |
   | P.S.   | _post scriptum_  | postscript              |
+<!-- markdownlint-enable comma-after-eg -->  
 
   > [!NOTE]
   > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
