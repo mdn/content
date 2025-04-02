@@ -71,7 +71,7 @@ The parameters are:
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
 
-  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `raw-string`.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a `type()` function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
 
     - The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
@@ -80,7 +80,7 @@ The parameters are:
       ```
 
       > [!NOTE]
-      > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported for a short while, for backwards compatibility purposes.
+      > This keyword was originally named and supported in Chromium browsers as `string`. Both keywords will be supported briefly, for backwards compatibility purposes.
 
     - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
@@ -127,7 +127,7 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended by the page author to be used for styling and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
 
 ```html
 <!-- This won't work! -->
@@ -143,7 +143,7 @@ Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tai
 
 ### Backwards compatibility
 
-Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
+Generally speaking, the modern `attr()` syntax is backward-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
 
 However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
@@ -162,7 +162,7 @@ div::before {
 }
 ```
 
-In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration, but because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 To prevent this kind of situation, [feature detection](#feature_detection) is recommended.
 
