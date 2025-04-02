@@ -2,9 +2,8 @@
 title: Firefox 138 for developers
 slug: Mozilla/Firefox/Releases/138
 page-type: firefox-release-notes
+sidebar: FirefoxSidebar
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 138 that affect developers.
 Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
