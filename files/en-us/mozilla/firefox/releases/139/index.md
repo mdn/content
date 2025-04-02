@@ -2,7 +2,7 @@
 title: Firefox 139 for developers
 slug: Mozilla/Firefox/Releases/139
 page-type: firefox-release-notes
-sidebar: FirefoxSidebar
+sidebar: firefoxsidebar
 ---
 
 This article provides information about the changes in Firefox 139 that affect developers.

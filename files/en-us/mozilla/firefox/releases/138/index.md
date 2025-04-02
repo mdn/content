@@ -2,7 +2,7 @@
 title: Firefox 138 for developers
 slug: Mozilla/Firefox/Releases/138
 page-type: firefox-release-notes
-sidebar: FirefoxSidebar
+sidebar: firefoxsidebar
 ---
 
 This article provides information about the changes in Firefox 138 that affect developers.
