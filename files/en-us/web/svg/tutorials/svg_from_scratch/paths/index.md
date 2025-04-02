@@ -251,11 +251,11 @@ The third parameter describes the rotation of the arc. This is best explained wi
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
   <path
     d="M 10 315
-           L 110 215
-           A 30 50 0 0 1 162.55 162.45
-           L 172.55 152.45
-           A 30 50 -45 0 1 215.1 109.9
-           L 315 10"
+       L 110 215
+       A 30 50 0 0 1 162.55 162.45
+       L 172.55 152.45
+       A 30 50 -45 0 1 215.1 109.9
+       L 315 10"
     stroke="black"
     fill="green"
     stroke-width="2"
@@ -275,11 +275,11 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
   <path
     d="M 10 315
-           L 110 215
-           A 36 60 0 0 1 150.71 170.29
-           L 172.55 152.45
-           A 30 50 -45 0 1 215.1 109.9
-           L 315 10"
+       L 110 215
+       A 36 60 0 0 1 150.71 170.29
+       L 172.55 152.45
+       A 30 50 -45 0 1 215.1 109.9
+       L 315 10"
     stroke="black"
     fill="green"
     stroke-width="2"
@@ -317,23 +317,23 @@ The four different paths mentioned above are determined by the next two paramete
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
   <path
     d="M 80 80
-           A 45 45, 0, 0, 0, 125 125
-           L 125 80 Z"
+       A 45 45, 0, 0, 0, 125 125
+       L 125 80 Z"
     fill="green" />
   <path
     d="M 230 80
-           A 45 45, 0, 1, 0, 275 125
-           L 275 80 Z"
+       A 45 45, 0, 1, 0, 275 125
+       L 275 80 Z"
     fill="red" />
   <path
     d="M 80 230
-           A 45 45, 0, 0, 1, 125 275
-           L 125 230 Z"
+       A 45 45, 0, 0, 1, 125 275
+       L 125 230 Z"
     fill="purple" />
   <path
     d="M 230 230
-           A 45 45, 0, 1, 1, 275 275
-           L 275 230 Z"
+       A 45 45, 0, 1, 1, 275 275
+       L 275 230 Z"
     fill="blue" />
 </svg>
 ```
