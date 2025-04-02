@@ -28,8 +28,8 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdi {
+  /* Add your styles here */
 }
 
 .name {

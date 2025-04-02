@@ -3,10 +3,12 @@ title: "SVGPathElement: getPathData() method"
 short-title: getPathData()
 slug: Web/API/SVGPathElement/getPathData
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SVGPathElement.getPathData
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`SVGPathElement.getPathData()`** method returns the sequence of path segments that corresponds to the path data, optionally normalizing the values and segment types.
 
@@ -34,7 +36,7 @@ Each path segment is an object with the following properties:
 
 - `type`
   - : A [path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
-    If [`options.normalize`](#normalize) is true this will be one of the the absolute commands: `'M'`, `'L'`, `'C'` and `'Z'`.
+    If [`options.normalize`](#normalize) is true this will be one of the absolute commands: `'M'`, `'L'`, `'C'` and `'Z'`.
 - `values`
   - : An array or value containing the parameters for the corresponding command.
 

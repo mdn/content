@@ -143,9 +143,9 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 ## Integrity digests
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
-  - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
+  - : Provides a {{Glossary("hash function", "digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
-  - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
+  - : Provides a {{Glossary("hash function", "digest")}} of the selected representation of the target resource before transmission.
     Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
@@ -166,6 +166,17 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
   - : Describes the human language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.
 - {{HTTPHeader("Content-Location")}}
   - : Indicates an alternate location for the returned data.
+
+## Preferences
+
+Preferences can be sent by clients in requests to indicate optional behaviors for requests and responses.
+The server response may indicate if a preference is applied, in cases where it would otherwise be ambiguous for the client.
+Browsers have no native handling for sending preferences via these headers; they are used in custom, implementation-specific clients.
+
+- {{HTTPHeader("Prefer")}}
+  - : Indicates preferences for specific server behaviors during request processing. For example, it can request minimal response content (`return=minimal`) or asynchronous processing (`respond-async`). The server processes the request normally if the header is unsupported.
+- {{HTTPHeader("Preference-Applied")}}
+  - : Informs the client which preferences specified in the `Prefer` header were applied by the server. It is a response-only header providing transparency about preference handling.
 
 ## Proxies
 
