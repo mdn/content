@@ -141,10 +141,6 @@ h1 {
   text-align: center;
   font-size: 1.7rem;
 }
-
-button {
-  background-color: white;
-}
 ```
 
 ```css hidden live-sample___carousel-example

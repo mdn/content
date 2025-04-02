@@ -12,13 +12,13 @@ The [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module defines features ena
 
 **Carousels** are a common feature on the web. They typically take the form of a scrolling content area containing several items, such as presentation slides, ads, headline news stories, or key product features.
 
-Users can move through the items by clicking or activating navigational buttons or by swiping. The navigation usually includes **scroll buttons**, generally "previous" and "next" buttons or links, and **scroll markers**, which are a series of button or link icons each representing an item within the carousel.
+Users can move through the items by clicking or activating navigational buttons or by swiping. The navigation usually includes **scroll buttons**, generally "previous" and "next" buttons or links, and **scroll markers**, which are a series of button or link icons each representing one or more items depending on how many items are shown at each scroll position within the carousel.
 
 ![A carousel with a content area in the middle, previous and next buttons to the left and right, and scroll markers at the bottom](carousel.png)
 
-A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time, or several items on each "page". When several items are shown, you might choose to show an entire new page of items each time the "next" button is pressed, or add a single new item on the end of the list and move the first one out of view.
+A key feature of carousels is **pagination** — the items feel like separate pieces of content that are moved between rather than forming one continuous section of content. You might show one item at a time or several items on each carousel "page". When several items are visible, you might show an entirely new group of items each time the "next" or "previous" button is pressed. Alternatively, you could add a single new item to one end of the list and move the item at the other end out of view.
 
-JavaScript carousels can be quite brittle and a challenge to implement. They require scripts to associate scroll markers with the items they represent and continuously update the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls needs to be added in.
+Creating carousels with JavaScript can be quite brittle and challenging to implement. They require scripts to associate scroll markers with the items they represent and continuously update the scroll buttons to keep them operating correctly. When carousels are created using JavaScript, the accessibility of the carousel and the associated controls needs to be added in.
 
 ## CSS carousel features
 
@@ -37,9 +37,11 @@ The CSS carousel features enable creating carousels using only CSS and HTML, wit
 
 ## Carousel with single pages
 
-In our first demo, each content item takes up a full page of the carousel, and you can scroll between items using the scroll buttons, etc. [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is used in this case to force each item to take up the full width of the carousel.
+In our first demo, we will create a carousel of single pages, with each item taking up the full page. We'll have [scroll markers](#creating_scroll_markers) as bottom navigation and [scroll buttons](#creating_scroll_buttons) on the sides of the page, enabling the user to move to the next and previous pages.
 
-The HTML for the first demo consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is used for the general layout of the carousel, [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is used to enforce clear pagination, and [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) is used to position the scroll markers and scroll buttons relative to the carousel.
+
+The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
 
 ```html live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 <h1>CSS carousel single item per page</h1>
@@ -61,7 +63,9 @@ The HTML for the first demo consists of a [heading element](/en-US/docs/Web/HTML
 
 ### Carousel layout with flexbox
 
-The unordered list is made to fill the full width of the viewport with a width {{cssxref("width")}} of `100vw`; it is also given a {{cssxref("height")}} of `300px`, and some {{cssxref("padding")}}. We then use flexbox to lay out the list — setting a {{cssxref("display")}} value of `flex` to force the child list items to display horizontally, with a {{cssxref("gap")}} of `4vw` between each one.
+We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) on the `<ul>` container and `<li>` children to create a single row of items, forcing the child list items to display horizontally with each item taking up the full width of the carousel.
+
+The unordered list is made to fill the full width of the viewport with a width {{cssxref("width")}} of `100vw`; it is also given a {{cssxref("height")}} of `300px`, and some {{cssxref("padding")}}. We then use flexbox to lay out the list — setting a {{cssxref("display")}} value of `flex` to cause the child list items to display in a row (due to the default {{cssxref("flex-direction")}} value of `row`), with a {{cssxref("gap")}} of `4vw` between each one.
 
 ```css hidden live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 * {
@@ -77,10 +81,6 @@ h1 {
   text-align: center;
   font-size: 1.7rem;
 }
-
-button {
-  background-color: white;
-}
 ```
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
@@ -93,7 +93,7 @@ ul {
 }
 ```
 
-Now its time to style the list items — they are given some rudimentary styling, followed by a {{cssxref("flex")}} value of `0 0 100%` to force each one to be as wide as their container (the `<ul>`). This causes the list items to be horizontally centered inside their container when visible.
+Now its time to style the list items. The first declarations provide rudimentary styling. The important declaration is the {{cssxref("flex")}} value of `0 0 100%`, which forces each item to be as wide as the container (the `<ul>`). The viewport content will now scroll horizontally.
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 li {
@@ -114,7 +114,9 @@ In addition, every even-numbered list item is given a different background-color
 
 ### Setting up scroll snapping on the list
 
-As the viewport is wider than our horizontal row of flex-items, the `<ul>` will be a {{glossary("scroll container")}}. An {{cssxref("overflow-x")}} value of `scroll` is set on the list so that its content will scroll horizontally. [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is then used to snap to each item or "page": a {{cssxref("scroll-snap-type")}} value of `x mandatory` is set to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, whereas the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
+In this section, we will set an overflow value on the `<ul>` to turn it into a {{glossary("scroll container")}}, then apply [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) to cause the list to snap to the center of each list item as the content is scrolled.
+
+An {{cssxref("overflow-x")}} value of `scroll` is set on the list so that its content will scroll horizontally, rather than the entire viewport scrolling. [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is then used to snap to each "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is set to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). The `x` keyword causes the container's [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) to be snapped to horizontally, while the `mandatory` keyword means that the container will always snap to a snap target at the end of a scrolling action.
 
 ```css live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 ul {
@@ -131,24 +133,24 @@ li {
 }
 ```
 
-The code shown so far creates a horizontally-scrolling list, where each list item stretches the entire width of the list. CSS scroll snap has been used to cause the list to snap to each list item when scrolling.
+The code shown so far renders as follows:
 
 {{EmbedLiveSample("first-example-step1", "100%", "400px")}}
 
-Try scrolling the list by swiping or using the scrollbar to see the scroll snapping effect.
+Try scrolling the list by swiping or using the scrollbar to see the scroll snapping effect. No matter where you end your scroll motion, an item will always "snap" into place.
 
 > [!NOTE]
 > CSS scroll snapping is not mandatory to use the CSS carousel features. However, they work a lot better with scroll snapping included. Without scroll snapping, the scroll buttons and markers will be unlikely to navigate cleanly between pages, and the result will be substandard.
 
 ### Creating scroll buttons
 
-In this section we will add "previous" and "next" scroll buttons to the demo to provide another tool to navigate between carousel pages. This can be achieved easily using the {{cssxref("::scroll-button()")}} pseudo-element.
+In this section we will add "previous" and "next" scroll buttons to the demo to provide a tool to navigate between carousel pages. This can be achieved using the {{cssxref("::scroll-button()")}} pseudo-element.
 
-The `::scroll-button()` pseudo-elements are generated inside a scroll container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each `::scroll-button()` represents a scroll button, the scrolling direction of which is specified by the selector's argument. You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes.
+The `::scroll-button()` pseudo-elements generate buttons inside a scroll container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each `::scroll-button()` represents a scroll button, the scrolling direction of which is specified by the selector's argument. You can generate up to four scroll buttons per scroll container, which will scroll the container's content towards the start or end of the block or inline axis.
 
 You can also specify a value of `*` to target all of the `::scroll-button()` pseudo-elements with styles.
 
-First, all scroll buttons are targeted with some rudimentary styles for different states. Note that scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction.
+First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul::scroll-button(*) {
@@ -185,9 +187,14 @@ ul::scroll-button(right) {
 }
 ```
 
+> [!NOTE]
+> The scroll buttons are automatically given an appropriate accessible name, so they are announced appropriately by assistive technologies. For example, the above buttons are announced in VoiceOver as "scroll left, button" and "scroll right, button".
+
 ### Positioning scroll buttons
 
-The scroll buttons can be positioned relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
+We've created the scroll buttons. Now we will position them relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+
+First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul {
@@ -200,7 +207,7 @@ ul::scroll-button(*) {
 }
 ```
 
-To actually position each scroll button, we set values on their {{glossary("inset properties")}} that use {{cssxref("anchor()")}} functions to position the specified sides of the buttons relative to the sides of the carousel. In each case, the {{cssxref("calc()")}} function is used to add some space between the button edge and the carousel edge. So for example, the right-hand edge of the left scroll button is positioned 70 pixels to the right of the carousel's left-hand edge.
+To actually position each scroll button, we set values on their {{glossary("inset properties")}}. We use {{cssxref("anchor()")}} functions to position the specified sides of the buttons relative to the sides of the carousel. In each case, the {{cssxref("calc()")}} function is used to add some space between the button edge and the carousel edge. For example, the right-hand edge of the left scroll button is positioned 70 pixels to the right of the carousel's left-hand edge.
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul::scroll-button(left) {
@@ -222,22 +229,21 @@ Try pressing the "previous" and "next" scroll buttons to see how the pages are s
 
 ### Creating scroll markers
 
-In this section, scroll markers will be added to to the carousel to provide another navigation tool that also indicates your progress through the carousel pages. Creating the scroll markers involves three main features:
+Scroll markers are a group of links, each one of which scrolls the carousel to a position related to one of the content pages. They provide an additional navigation tool that also indicates your progress through the carousel pages.
 
-- The {{cssxref("scroll-marker-group")}} property needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated; its value specifies where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
+In this section, we will add scroll markers to the carousel, which involves three main features:
+
+- The {{cssxref("scroll-marker-group")}} property is set on the scroll container element. It needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated; its value specifies where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, before the scroll buttons, while `after` puts it at the end.
 - The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
 - {{cssxref("::scroll-marker")}} pseudo-elements exist inside children of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 
-To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus order:
+To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus and layout box order:
 
 ```css live-sample___first-example
 ul {
   scroll-marker-group: after;
 }
 ```
-
-> [!NOTE]
-> The `scroll-marker-group` property value also affects where the scroll marker group appears in the carousel's tab order — `before` puts it at the start, while `after` puts it at the end.
 
 Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning, similar to the scroll buttons except that it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
@@ -275,9 +281,9 @@ li::scroll-marker:target-current {
 ```
 
 > [!NOTE]
-> Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
+> Accessibility-wise, the scroll marker group and contained scroll markers are rendered with [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) semantics. When you <kbd>Tab</kbd> to the group with the keyboard, it behaves like a single item (that is, another press of the <kbd>Tab</kbd> key will move past the group to the next item), and you can move between the different scroll markers using the left and right (or up and down) cursor keys.
 
-## First example final result
+## Single page carousel final result
 
 All of the above code combines together to create the following final result:
 
@@ -289,9 +295,11 @@ You can also navigate between pages by swiping left and right, using the scroll 
 
 ## Responsive carousel: multiple items per page
 
-The second demo uses the {{cssxref("columns")}} property and the {{cssxref("::column")}} pseudo-element to create arbitary columns that span the full width of the carousel and contain multiple items that can vary in number depending on the viewport width. In this case, the scroll markers are created per-column rather than per-item.
+The second demo creates a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. The demo is also responsive — different numbers of items appear on each page depending on the viewport width.
 
-The HTML for the second demo is very similar to that of the first demo, except that there are significantly more list items, and we are labelling them as items, not pages:
+This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitary columns that span the full width of the carousel and contain multiple items. In this case, the scroll markers are created per-column rather than per-item.
+
+The HTML is very similar to that of the previous demo, except that there are significantly more list items and, as multiple items will be visible at a time, we are labeling them as items rather than pages:
 
 ```html-nolint
 ...
@@ -301,7 +309,7 @@ The HTML for the second demo is very similar to that of the first demo, except t
 ...
 ```
 
-The second example also has very similar CSS, with the exception of the rules explained in the following sections.
+This demo also has very similar CSS, with the exception of the rules explained in the following sections.
 
 ```html hidden live-sample___second-example
 <h1>CSS carousel multiple items per page</h1>
@@ -356,7 +364,7 @@ The second example also has very similar CSS, with the exception of the rules ex
 
 ### Carousel layout using columns
 
-The list's layout doesn't use flexbox, instead using a {{cssxref("columns")}} value of `1` to force its contents to display as a single column. A {{cssxref("text-align")}} value of `center` is also applied, to force the contents to align with the center of the list.
+This example uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), rather than flexbox, to layout the carousel items. The {{cssxref("columns")}} value of `1` forces its contents to display as a single column. A {{cssxref("text-align")}} value of `center` is also applied, forcing the contents to align with the center of the list.
 
 ```css hidden live-sample___second-example
 * {
@@ -371,10 +379,6 @@ body {
 h1 {
   text-align: center;
   font-size: 1.7rem;
-}
-
-button {
-  background-color: white;
 }
 ```
 
@@ -392,7 +396,7 @@ ul {
 }
 ```
 
-The list item layout rule is similar to the one for the first demo — it uses the same rudimentary box styling for the list items. However, each list item no longer stretches the full width of the list — multiple items now fit into the single content column (as defined using the `columns` property above), and the number will dynamically change as the list gets wider or narrower.
+We provide rudimentary box styling for the list items, with multiple items fitting into the single content column (as previously defined using the `columns` property); the number dynamically changes as the list gets wider or narrower.
 
 ```css live-sample___second-example
 li {
@@ -415,13 +419,13 @@ li:nth-child(even) {
 }
 ```
 
-The differences are as follows:
+The key properties are as follows:
 
 - A {{cssxref("display")}} value of `inline-block` has been set to force the list items to sit alongside one another and make the list scroll horizontally.
 - A fixed {{cssxref("aspect-ratio")}} of `3/4` has been set on them, to control their sizing as the list size changes, but keep their width constant while the height of the list stays constant.
 - A `text-align` value of `left` is set on them to override the `text-align: center` set on the parent container, so the item content will be left-aligned.
 
-Finally for the layout changes, the {{cssxref("scroll-snap-align")}} property is now set on the {{cssxref("::column")}} pseudo-elements — which represent the content columns generated by the `columns` property — rather than the list items. This makes sense, as in this case we want to snap to each complete column rather than every individual list item.
+The {{cssxref("scroll-snap-align")}} property is now set on the {{cssxref("::column")}} pseudo-elements — which represent the content columns generated by the `columns` property — rather than the list items. We want to snap to each complete column rather than every individual list item, showing all new items with each scroll action.
 
 ```css live-sample___second-example
 ul::column {
@@ -495,7 +499,7 @@ ul::scroll-marker-group {
 
 ### Column scroll markers
 
-The CSS for creating the scroll markers in the second example is nearly identical to the first example, except that the selectors are different — the scroll markers are created on the generated `::column` scroll markers rather than the list items.
+The CSS for creating the scroll markers in this demo is nearly identical to the [previous demo](#creating_scroll_markers), except that the selectors are different — the scroll markers are created on the generated `::column` scroll markers rather than the list items.
 
 ```css live-sample___second-example
 ul::column::scroll-marker {
@@ -512,17 +516,19 @@ ul::column::scroll-marker:target-current {
 }
 ```
 
-## Second example final result
+## Responsive carousel final result
 
-The second example is rendered as follows:
+The Responsive carousel is rendered as follows:
 
 {{EmbedLiveSample("second-example", "100%", "400px")}}
 
-Again, try navigating between the different pages by swiping left and right or using the scroll bar, pressing the scroll buttons, and pressing the scroll markers. This works much the same as in the first example, except that now there are multiple list items in each navigated position.
+Try navigating between the different pages by swiping left and right, using the scroll bar, pressing the scroll buttons, and pressing the scroll markers. The functionality is similar to the single page flexbox example, except that now there are multiple list items in each navigated position; the scroll markers are on columns potentially containing multiple items, instead of on each item.
 
 Also, try resizing the screen width and you'll see that the number of list items that can fit inside the list changes — and therefore the number of generated columns changes too. As the number of columns changes, the number of scroll markers dynamically updates so that each column is represented in the scroll marker group.
 
 ## See also
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

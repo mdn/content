@@ -112,10 +112,6 @@ h1 {
   text-align: center;
   font-size: 1.7rem;
 }
-
-button {
-  background-color: white;
-}
 ```
 
 The list is given a fixed {{cssxref("height")}} and a {{cssxref("width")}} of `100vw` to make it span the full width of the viewport. An {{cssxref("overflow-x")}} value of `scroll` is then set so that the content will scroll horizontally, and [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is used to snap to each item or "page" — a {{cssxref("scroll-snap-type")}} value of `x mandatory` is used to make the list into a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container). Finally, a {{cssxref("columns")}} value of `1` is set to force the list contents to display as a single column. A {{cssxref("text-align")}} value of `center` is also applied, to force the contents to align with the center of the list.
