@@ -228,7 +228,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   >
   > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 <!-- markdownlint-enable comma-after-eg -->
-<!-- markdownlint-enable comma-after-ie -->  
+<!-- markdownlint-enable comma-after-ie -->
+
 - **Plurals of abbreviations and acronyms**: For plurals of abbreviations and acronyms, add _s_. Don't use an apostrophe. Ever. Please.
 
   - **Correct**: CD-ROMs
