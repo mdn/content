@@ -189,7 +189,7 @@ span[data-descr]:focus::after {
 
 The `::after::marker` [nested pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) selects the list {{CSSxRef("::marker")}} of an `::after` pseudo-element that is itself a list item, that is, it has its {{CSSxRef("display")}} property set to `list-item`.
 
-In this demo, we generate before and after markers for a list navigation menu using `::before` and `::after`, setting them to `display: list-item` so they behave like list items. We then use `ul::before::marker` and `ul::after::marker` to color their list markers a different color.
+In this demo, we generate extra list items before and after a list navigation menu using `::before` and `::after` (setting them to `display: list-item` so they behave like list items). We then use `ul::before::marker` and `ul::after::marker` to give their list markers a different color.
 
 #### HTML
 
@@ -216,11 +216,11 @@ ul::after {
 }
 
 ul::before {
-  content: "start";
+  content: "Start";
 }
 
 ul::after {
-  content: "end";
+  content: "End";
 }
 
 ul::before::marker,
@@ -232,6 +232,8 @@ ul::after::marker {
 #### Result
 
 {{EmbedLiveSample('`::after::marker` nested pseudo-elements', 450, 200)}}
+
+While the list bullets of the three navigation items are generated because they are `<li>` elements, "Start" and "End" have been inserted via pseudo-elements and `::marker` is used to style their bullets.
 
 ## Specifications
 
