@@ -431,7 +431,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ### Compression Dictionary Transport
 
-Compression Dictionary Transport is a way of using a shared compression dictionary to reduce the transport size of HTTP responses rather than using the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}.
+[Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is a way of using a shared compression dictionary to reduce the transport size of HTTP responses rather than using the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}.
 
 - {{HTTPHeader("Available-Dictionary")}} {{experimental_inline}}
   - : Lets the browser indicate that it already has a dictionary available that the server can use for compression.
