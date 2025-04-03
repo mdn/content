@@ -2,12 +2,10 @@
 title: Origin-Agent-Cluster
 slug: Web/HTTP/Reference/Headers/Origin-Agent-Cluster
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Origin-Agent-Cluster
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an **origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)**. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
 
