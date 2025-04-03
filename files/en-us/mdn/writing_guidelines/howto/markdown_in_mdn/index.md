@@ -6,7 +6,8 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This page describes how we use Markdown to write documentation on MDN Web Docs. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
+This page describes how we use Markdown to write documentation on MDN Web Docs.
+We have chosen GitHub-Flavored Markdown (GFM) as a baseline and added extensions to support the things we need on MDN.
 
 ## Baseline: GitHub-Flavored Markdown
 
@@ -20,7 +21,6 @@ The GFM specification defines two basic types of links:
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
 On MDN we allow only inline links.
-
 This is the correct way to write GFM links on MDN:
 
 ```md example-good
@@ -37,11 +37,10 @@ This is an incorrect way to write links on MDN:
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The specification states the following:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string".
+The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
 
-> The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
-
-It's permissible for the info string to contain multiple words, like:
+The info string may contain multiple words:
 
 ````md
 ```fee fi fo fum
@@ -135,7 +134,7 @@ Code blocks like this will get appropriate syntax highlighting and will be recog
 
 GFM supports [info strings](https://github.github.com/gfm/#info-string), which allow authors to supply additional information about a code block. On MDN, info strings are converted into class names.
 
-Writers will be able to supply any one of the following info strings:
+Writers can supply one of the following info strings:
 
 - `example-good`: style this example as a good example (one to follow)
 - `example-bad`: style this example as a bad example (one to avoid)
@@ -342,9 +341,7 @@ For example, this is a `<dl>`:
 
 ````md
 - term1
-
   - : My description of term1
-
 - `term2`
 
   - : My description of term2
@@ -458,7 +455,7 @@ and not this style:
 cell 4 | cell 5 | cell 6
 ```
 
-Luckily, table formatting is auto-fixed by Prettier, so authors may rely on Prettier to format their tables properly.
+Tables are formatted by Prettier, so authors rely on tooling to format tables properly.
 
 ### When to use HTML tables
 
@@ -591,20 +588,14 @@ The first paragraph should therefore be both succinct and informative.
 
 This issue was resolved in <https://github.com/mdn/content/issues/3923>.
 
-## KumaScript
+## Macros
 
-Writers will be able to include KumaScript macro calls in prose content:
+Writers use macros in prose for templating common linking patterns, or to include specific blocks of code or text:
 
 ```md
-The **`margin`** [CSS](/en-US/docs/Web/CSS) property
-sets the margin area on all four sides of an element. It is a shorthand for
-\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
-and \{{cssxref("margin-left")}}.
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-The top and bottom margins have no effect on replaced inline elements, such as
-\{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) property sets the margin area on all four sides of an element.
+It is a shorthand for \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}}, and \{{cssxref("margin-left")}}.
+…
 ```
 
-See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information on macros.
+See [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) for more information.
