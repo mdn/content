@@ -33,7 +33,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wat
+```wasm
 i32.const 0
 if
   ;; do something

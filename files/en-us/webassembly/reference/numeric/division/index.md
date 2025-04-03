@@ -31,7 +31,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wat
+```wasm
 ;; load two numbers onto the stack
 i32.const 12
 i32.const 3

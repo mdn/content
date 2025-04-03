@@ -62,7 +62,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
 
 ## Syntax
 
-```wat
+```wasm
 ;; label the block so that it can be branched to.
 (block $my_block
 

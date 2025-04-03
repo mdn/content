@@ -37,12 +37,12 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 
 ## Syntax
 
-```wat
+```wasm
 f32.const 4.3
 return
 ```
 
-```wat
+```wasm
 i32.const 7
 f32.const 4.3
 return

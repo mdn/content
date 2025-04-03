@@ -26,7 +26,7 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 
 ## Syntax
 
-```wat
+```wasm
 nop
 ```
 
