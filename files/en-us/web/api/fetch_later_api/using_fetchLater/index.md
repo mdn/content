@@ -21,4 +21,4 @@ fetchLater("/endpoint/");
 ## See also
 
 - [HTTP](/en-US/docs/Web/HTTP)
-- [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)
+- [Fetch Later API](/en-US/docs/Web/API/Fetch_Later_API) 
