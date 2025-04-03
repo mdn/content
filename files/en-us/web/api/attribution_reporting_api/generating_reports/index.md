@@ -122,17 +122,22 @@ The properties are as follows:
 
     - `"payload"`
 
-      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure:
+      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure (using JSON for notation only):
 
-        ```js
+        ```json
         {
-          "operation": "histogram",  // Allows for the service to support other operations in the future
-          "data": [{
-            "bucket": <bucket, encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>,
-            "value": <value, encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>
-          }, ...]
+          "operation": "histogram",
+          "data": [
+            {
+              "bucket": "<Encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>",
+              "value": "<Encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>"
+            }
+            // …
+          ]
         }
         ```
+
+        The `operation` is always `"histogram"`; it allows for the service to support other operations in the future.
 
     - `"key_id"`
       - : A string identifying the public key used to encrypt the payload.

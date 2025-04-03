@@ -69,12 +69,11 @@ This example [WebRTC encoded transform](/en-US/docs/Web/API/WebRTC_API/Using_Enc
 
 ```js
 addEventListener("rtctransform", (event) => {
-  const async transform = new TransformStream({
+  const transform = new TransformStream({
     async transform(encodedFrame, controller) {
-
       // Get the metadata and log
       const frameMetaData = encodedFrame.getMetadata();
-      console.log(frameMetaData)
+      console.log(frameMetaData);
 
       // Enqueue the frame without modifying
       controller.enqueue(encodedFrame);
@@ -89,12 +88,10 @@ addEventListener("rtctransform", (event) => {
 The resulting object from a local webcam might look like the one shown below.
 Note that there are no contributing sources because there is just one source.
 
-```js
+```json
 {
   "contributingSources": [],
-  "dependencies": [
-    405
-  ],
+  "dependencies": [405],
   "frameId": 406,
   "height": 480,
   "payloadType": 120,

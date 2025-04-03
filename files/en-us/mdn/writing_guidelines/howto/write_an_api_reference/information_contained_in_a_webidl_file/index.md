@@ -358,7 +358,7 @@ The name of the method is `canPlayType`, and we will refer to it as `HTMLMediaEl
 
 ### Parameters
 
-```js
+```webidl
 TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString label = "",
                        optional DOMString language = "");
