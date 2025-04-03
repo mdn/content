@@ -67,7 +67,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.setPosition()")}}
   - : Collapses the current selection to a single point.
 - {{DOMxRef("Selection.toString()")}}
-  - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
+  - : Returns a string currently being represented by the selection object, i.e., the currently selected text.
 
 ## Notes
 

@@ -29,7 +29,7 @@ In terms of behavior, we are recreating a native HTML element. Therefore it shou
 
 - the page loads.
 - the control was active and the user clicks anywhere outside it.
-- the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).
+- the control was active and the user moves the focus to another control using the keyboard (e.g., the <kbd>Tab</kbd> key).
 
 **The control is in its active state when:**
 

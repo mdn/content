@@ -45,7 +45,7 @@ This article provides information about the changes in Firefox 120 that affect d
     - `"YYYY.MM.DD"`
     - `"Mon DD YYYY hh:mmXm"` (`am`/`pm` directly following time)
 
-  - Timezone `'Z'` is now accepted for non-ISO formats (e.g. `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
+  - Timezone `'Z'` is now accepted for non-ISO formats (e.g., `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
 
 ### HTTP
 

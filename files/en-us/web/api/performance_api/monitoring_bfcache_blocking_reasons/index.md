@@ -53,16 +53,14 @@ function returnNRR() {
 
 The code snippets shown above will log {{domxref("NotRestoredReasons")}} objects to the console. These objects have the following structure, which represents the blocked state of the top-level frame:
 
-```js
+```json
 {
-  children: [],
-  id: null,
-  name: null,
-  reasons: [
-    { reason: "unload-listener" }
-  ],
-  src: "",
-  url: "example.com",
+  "children": [],
+  "id": null,
+  "name": null,
+  "reasons": [{ "reason": "unload-listener" }],
+  "src": "",
+  "url": "example.com"
 }
 ```
 
@@ -87,33 +85,31 @@ When a page has same-origin `<iframe>`s embedded, the returned `notRestoredReaso
 
 For example:
 
-```js
+```json
 {
-  children: [
+  "children": [
     {
-      children: [],
-      id: "iframe-id",
-      name: "iframe-name",
-      reasons: [],
-      src: "./index.html",
-      url: "https://www.example.com/iframe-examples.html"
+      "children": [],
+      "id": "iframe-id",
+      "name": "iframe-name",
+      "reasons": [],
+      "src": "./index.html",
+      "url": "https://www.example.com/iframe-examples.html"
     },
     {
-      children: [],
-      id: "iframe-id2",
-      name: "iframe-name2",
-      reasons: [
-        { "reason": "unload-listener" }
-      ],
-      src: "./unload-examples.html",
-      url: "https://www.example.com/unload-examples.html"
-    },
+      "children": [],
+      "id": "iframe-id2",
+      "name": "iframe-name2",
+      "reasons": [{ "reason": "unload-listener" }],
+      "src": "./unload-examples.html",
+      "url": "https://www.example.com/unload-examples.html"
+    }
   ],
-  id: null,
-  name: null,
-  reasons: [],
-  src: null,
-  url:"https://www.example.com"
+  "id": null,
+  "name": null,
+  "reasons": [],
+  "src": null,
+  "url": "https://www.example.com"
 }
 ```
 
@@ -123,27 +119,24 @@ When a page has cross-origin frames embedded, the amount of information shared a
 
 For example:
 
-```js
+```json
 {
-  children: [
+  "children": [
     {
-      children: [],
-      id: "iframe-id",
-      name: "iframe-name",
-      reasons: [],
-      src: "https://www.example2.com/",
-      url: null
+      "children": [],
+      "id": "iframe-id",
+      "name": "iframe-name",
+      "reasons": [],
+      "src": "https://www.example2.com/",
+      "url": null
     }
   ],
-  id: null,
-  name: null,
-  reasons: [
-        { "reason": "masked" }
-  ],
-  src: null,
-  url:"https://www.example.com"
+  "id": null,
+  "name": null,
+  "reasons": [{ "reason": "masked" }],
+  "src": null,
+  "url": "https://www.example.com"
 }
-
 ```
 
 For all the cross-origin `<iframe>`s, no blocking reasons are reported; for the top-level frame a reason of `"masked"` is reported, to indicate that the reasons are being kept hidden for privacy purposes. Note that `"masked"` may also be used for hiding user agent-specific reasons; it doesn't always indicate an issue in an `<iframe>`.
@@ -155,7 +148,7 @@ There are many different reasons why blocking could occur. Although the reasons 
 The values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
 
 - `"fetch"`
-  - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
+  - : While unloading, a fetch initiated by the current document (e.g., via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
 - `"lock"`
   - : While unloading, held locks and lock requests were terminated, so the page was not in a stable state that could be stored in the bfcache.
 - `"masked"`

@@ -348,7 +348,7 @@ shExpMatch(str, shExp)
 #### Parameters
 
 - str
-  - : is any string to compare (e.g. the URL, or the hostname).
+  - : is any string to compare (e.g., the URL, or the hostname).
 - shExp
   - : is a shell expression to compare against.
 

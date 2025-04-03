@@ -57,7 +57,7 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
     > [!NOTE]
-    > Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls.
+    > Currently FedCM only allows the API to be invoked with a single IdP, i.e., the `providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls.
 
 ## Specifications
 

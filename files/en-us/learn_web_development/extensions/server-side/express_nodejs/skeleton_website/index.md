@@ -82,7 +82,7 @@ express
 You can also choose a view (template) engine using `--view` and/or a CSS generation engine using `--css`.
 
 > [!NOTE]
-> The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
+> The other options for choosing template engines (e.g., `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
 
 ### What view engine should I use?
 

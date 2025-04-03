@@ -13,7 +13,7 @@ It is used for efficient copying from underlying sources where the data is deliv
 An instance of this reader type should usually be obtained by calling {{domxref("ReadableStream.getReader()")}} on the stream, specifying `mode: "byob"` in the options parameter.
 The readable stream must have an _underlying byte source_. In other words, it must have been [constructed](/en-US/docs/Web/API/ReadableStream/ReadableStream) specifying an underlying source with [`type: "bytes"`](/en-US/docs/Web/API/ReadableStream/ReadableStream#type)).
 
-Using this kind of reader, a [`read()`](#readablestreambyobreader.read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
+Using this kind of reader, a [`read()`](/en-US/docs/Web/API/ReadableStreamBYOBReader/read) request when the readable stream's internal queues are empty will result in a zero copy transfer from the underlying source (bypassing the stream's internal queues).
 If the internal queues are not empty, a `read()` will satisfy the request from the buffered data.
 
 Note that the methods and properties are similar to those for the default reader ({{domxref("ReadableStreamDefaultReader")}}).

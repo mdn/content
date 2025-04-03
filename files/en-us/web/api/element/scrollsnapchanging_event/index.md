@@ -10,7 +10,7 @@ browser-compat: api.Element.scrollsnapchanging_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-The **`scrollsnapchanging`** event of the {{domxref("Element")}} interface is fired on the [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+The **`scrollsnapchanging`** event of the {{domxref("Element")}} interface is fired on the [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 Specifically, this event fires during a scrolling gesture, each time the user moves over potential new snap targets. For example, the user could scroll slowly by dragging their finger on a touch screen device, or hold down the mouse button on a scroll bar and move the mouse. `scrollsnapchanging` can therefore fire multiple times for each scrolling gesture.
 

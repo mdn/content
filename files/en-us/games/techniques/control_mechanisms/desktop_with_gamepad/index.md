@@ -14,7 +14,7 @@ The Gamepad API gives you the ability to connect a gamepad to your computer and 
 
 ## API status, browser and hardware support
 
-The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is still in Working Draft status, although browser support is already quite good — around 63% global coverage, according to [caniuse.com](https://caniuse.com/#search=gamepad). The list of supported devices is also quite extensive — most popular gamepads (e.g. XBox 360 or PS3) should be suitable for web implementations.
+The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is still in Working Draft status, although browser support is already quite good — around 63% global coverage, according to [caniuse.com](https://caniuse.com/#search=gamepad). The list of supported devices is also quite extensive — most popular gamepads (e.g., XBox 360 or PS3) should be suitable for web implementations.
 
 ## Pure JavaScript approach
 
@@ -105,7 +105,7 @@ function draw() {
 In this case, we are checking the four D-Pad buttons (0-3) and the A button (11).
 
 > [!NOTE]
-> Please remember that different devices may have different key mappings, i.e. the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.
+> Please remember that different devices may have different key mappings, i.e., the D-Pad Right button have an index of 3 on the wireless XBox 360, but may have a different one on another device.
 
 You could also create a helper function that would assign proper names to the listed buttons, so for example instead of checking out if `gamepadButtonPressedHandler(3)` is pressed, you could do a more descriptive check: `gamepadButtonPressedHandler('DPad-Right')`.
 

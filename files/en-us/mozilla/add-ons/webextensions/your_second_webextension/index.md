@@ -320,7 +320,7 @@ If executing the content script is successful, we call `listenForClicks()`. This
 
 - If the click was not on a button in the popup, we ignore it and do nothing.
 - If the click was on a button with `type="reset"`, then we call `reset()`.
-- If the click was on any other button (i.e. the beast buttons), then we call `beastify()`.
+- If the click was on any other button (i.e., the beast buttons), then we call `beastify()`.
 
 The `beastify()` function does three things:
 
