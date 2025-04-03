@@ -525,6 +525,14 @@
       "events": []
     },
     "Fetch API": {
+      "overview": ["Fetch Later API"],
+      "guides": ["/docs/Web/API/Fetch_Later_API/Using_Fetch"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
+      "methods": ["Window.fetchLater()"],
+      "properties": [],
+      "events": []
+    },
+    "Fetch Later API": {
       "overview": ["Fetch API"],
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
