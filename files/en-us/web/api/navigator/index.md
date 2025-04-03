@@ -143,7 +143,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
-  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developers.google.com/privacy-sandbox) APIs.
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://privacysandbox.google.com/) APIs.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}
