@@ -29,71 +29,30 @@ Accessibility-wise, the scroll marker group and contained scroll markers are ren
 
 ## Examples
 
-### Creating a responsive carousel layout
+### Creating carousel scroll markers
 
-This demo creates a responsive, CSS-only carousel. It uses the {{cssxref("columns")}} property and the `::columns` pseudo-element to create arbitary content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled between. Each column contains multiple items of content, which can vary in number depending on the viewport width.
+This demo is a carousel of single pages, with each item taking up the full page. We have included scroll markers to enable the user to move to the next and previous pages.
+
+[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is used for the general layout of the carousel, [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is used to enforce clear pagination, and [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) is used to position the scroll markers relative to the carousel.
 
 #### HTML
 
-The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
 
-```html-nolint
-<ul>
-...
-  <li>
-    <h2>Item 1</h2>
-  </li>
-...
-</ul>
-```
-
-```html hidden live-sample___carousel-example
-<h1>CSS carousel multiple items per page</h1>
+```html live-sample___carousel-example
+<h1>CSS carousel single item per page</h1>
 <ul>
   <li>
-    <h2>Item 1</h2>
+    <h2>Page 1</h2>
   </li>
   <li>
-    <h2>Item 2</h2>
+    <h2>Page 2</h2>
   </li>
   <li>
-    <h2>Item 3</h2>
+    <h2>Page 3</h2>
   </li>
   <li>
-    <h2>Item 4</h2>
-  </li>
-  <li>
-    <h2>Item 5</h2>
-  </li>
-  <li>
-    <h2>Item 6</h2>
-  </li>
-  <li>
-    <h2>Item 7</h2>
-  </li>
-  <li>
-    <h2>Item 8</h2>
-  </li>
-  <li>
-    <h2>Item 9</h2>
-  </li>
-  <li>
-    <h2>Item 10</h2>
-  </li>
-  <li>
-    <h2>Item 11</h2>
-  </li>
-  <li>
-    <h2>Item 12</h2>
-  </li>
-  <li>
-    <h2>Item 13</h2>
-  </li>
-  <li>
-    <h2>Item 14</h2>
-  </li>
-  <li>
-    <h2>Item 15</h2>
+    <h2>Page 4</h2>
   </li>
 </ul>
 ```
@@ -114,100 +73,39 @@ h1 {
   text-align: center;
   font-size: 1.7rem;
 }
-```
 
-```css hidden live-sample___carousel-example
 ul {
   width: 100vw;
   height: 300px;
-  padding: 10px;
-
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-
-  columns: 1;
-  text-align: center;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
 }
-```
 
-```css hidden live-sample___carousel-example
 li {
   list-style-type: none;
-
-  display: inline-block;
-  height: 100%;
-  aspect-ratio: 3/4;
-
   background-color: #eee;
   border: 1px solid #ddd;
   padding: 20px;
-  margin: 0 10px;
 
-  text-align: left;
+  flex: 0 0 100%;
 }
 
 li:nth-child(even) {
   background-color: cyan;
 }
-```
 
-```css hidden live-sample___carousel-example
-ul::column {
+ul {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+li {
   scroll-snap-align: center;
 }
 ```
 
-```css hidden live-sample___carousel-example
-ul::scroll-button(*) {
-  border: 0;
-  font-size: 2rem;
-  background: none;
-  color: rgb(0 0 0 / 0.7);
-  cursor: pointer;
-}
-
-ul::scroll-button(*):hover,
-ul::scroll-button(*):focus {
-  color: rgb(0 0 0 / 1);
-}
-
-ul::scroll-button(*):active {
-  translate: 1px 1px;
-}
-
-ul::scroll-button(*):disabled {
-  color: rgb(0 0 0 / 0.2);
-}
-
-ul::scroll-button(left) {
-  content: "◄";
-}
-
-ul::scroll-button(right) {
-  content: "►";
-}
-
-ul {
-  anchor-name: --myCarousel;
-}
-
-ul::scroll-button(*) {
-  position: absolute;
-  position-anchor: --myCarousel;
-}
-
-ul::scroll-button(left) {
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) + 13px);
-}
-
-ul::scroll-button(right) {
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) + 13px);
-}
-```
-
-In this demo, the list's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus order:
+To begin with, the list's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus and layout box order; this means it comes after the scroll buttons:
 
 ```css live-sample___carousel-example
 ul {
@@ -215,7 +113,7 @@ ul {
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). It is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the `::scroll-marker` pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning; it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
 ```css live-sample___carousel-example
 ul::scroll-marker-group {
@@ -229,32 +127,35 @@ ul::scroll-marker-group {
 }
 ```
 
-We then select the {{cssxref("::scroll-marker")}} pseudo-elements of each generated column using `ul::column::scroll-marker`. The look of each one is handled by setting {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}}, and {{cssxref("border-radius")}}, but we also need to set a non-`none` value for the `content` property so they are actually generated.
+Next, the scroll markers themselves are styled. The look of each one is handled by setting {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}}, and {{cssxref("border-radius")}}, but we also need to set a non-`none` value for the `content` property so they are actually generated.
 
 ```css live-sample___carousel-example
-ul::column::scroll-marker {
-  content: "";
+li::scroll-marker {
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 50%;
+  content: "";
 }
 ```
 
-Finally, we set a solid black background on the the **active** scroll marker using {{cssxref(":target-current")}}, so you can see the current carousel scroll position:
+> [!NOTE]
+> Generated content is inline by default; we can apply `width` and `height` to our scroll markers because they are being laid out as flex items.
+
+Finally, the {{cssxref(":target-current")}} pseudo-class is used to select whichever scroll marker corresponds to the currently visible "page", highlighting how far the user has scrolled through the content. In this case, we set the `background-color` to `black` so it is styled as a filled-in circle.
 
 ```css live-sample___carousel-example
-ul::column::scroll-marker:target-current {
+li::scroll-marker:target-current {
   background-color: black;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("carousel-example", "100%", "400px")}}
+{{EmbedLiveSample("carousel-example", "100%", "420px")}}
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full explanation of the above demo.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full carousel example that uses the above technique.
 
 ## Specifications
 

@@ -58,7 +58,7 @@ When it is not possible to scroll any further in a particular scroll button's sc
 
 ### Creating carousel scroll buttons
 
-This demo creates a responsive, CSS-only carousel. It uses the {{cssxref("columns")}} property and the `::columns` pseudo-element to create arbitary content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled between using several mechanisms, including scroll buttons. Each column contains multiple items of content, which can vary in number depending on the viewport width.
+This demo creates a responsive, CSS-only carousel. It uses the {{cssxref("columns")}} property and the `::columns` pseudo-element to create arbitary content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled between using scroll buttons. Each column contains multiple items of content, which can vary in number depending on the viewport width.
 
 #### HTML
 
@@ -127,6 +127,8 @@ The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with 
 
 #### CSS
 
+First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
+
 ```css hidden live-sample___carousel-example
 * {
   box-sizing: border-box;
@@ -184,8 +186,6 @@ ul::column {
 }
 ```
 
-The following snippet targets all of the scroll buttons generated inside the scrolling list to apply general styles:
-
 ```css live-sample___carousel-example
 ul::scroll-button(*) {
   border: 0;
@@ -206,6 +206,7 @@ ul::scroll-button(*):active {
 
 ul::scroll-button(*):disabled {
   color: rgb(0 0 0 / 0.2);
+  cursor: unset;
 }
 ```
 
@@ -221,7 +222,9 @@ ul::scroll-button(right) {
 }
 ```
 
-The scroll buttons are positioned relative to their parent scroll container using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
+At this point, we've created the scroll buttons. Now we will position them relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+
+First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
 
 ```css live-sample___carousel-example
 ul {
@@ -251,44 +254,11 @@ ul::scroll-button(right) {
 > [!NOTE]
 > In each case, the {{cssxref("calc()")}} function is used to add some space between the button edge and the scroll container edge. So for example, the right-hand edge of the left scroll button is positioned 70 pixels to the right of the container's left-hand edge.
 
-```css hidden live-sample___carousel-example
-ul {
-  scroll-marker-group: after;
-}
-
-ul::scroll-marker-group {
-  position: absolute;
-  position-anchor: --myCarousel;
-  top: calc(anchor(bottom) - 70px);
-  justify-self: anchor-center;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-```
-
-```css hidden live-sample___carousel-example
-ul::column::scroll-marker {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-```
-
-```css hidden live-sample___carousel-example
-ul::column::scroll-marker:target-current {
-  background-color: black;
-}
-```
-
 #### Result
 
 {{EmbedLiveSample("carousel-example", "100%", "400px")}}
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full explanation of the above demo.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full carousel example featuring the technique outlined above.
 
 ## Specifications
 
