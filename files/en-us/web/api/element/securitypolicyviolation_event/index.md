@@ -16,8 +16,7 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 
 > [!NOTE]
 > You should generally add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
-> While the event may originate from HTML elements, JavaScript that assigns a handler to the element usually executes after the element has been loaded, by which time this event has already fired.
-> You can only successfully listen to this event if the loading starts after the listener is attached, usually by dynamically modifying the fetch target via JavaScript.
+> While HTML elements can technically be the target of the `securitypolicyviolation` event, in reality this event does not fire on them—for example, a blocked `<img>` source directly triggers this event on `document` as the target, instead of bubbling from the `<img>` element.
 
 ## Syntax
 
@@ -49,31 +48,6 @@ window.onsecuritypolicyviolation = (e) => {
 window.addEventListener("securitypolicyviolation", (e) => {
   // Handle SecurityPolicyViolationEvent e here
 });
-```
-
-### Listening for securitypolicyviolation on an element
-
-Generally, it is not possible to listen for the `securitypolicyviolation` event on an element. For example, if you have the code below:
-
-```html example-bad
-<img src="https://example.com/image.png" />
-<script>
-  document
-    .querySelector("img")
-    .addEventListener("securitypolicyviolation", (e) => {
-      // Handle SecurityPolicyViolationEvent e here
-    });
-</script>
-```
-
-Then the image loads as soon as the `<img>` element is parsed, and the `securitypolicyviolation` event has already fired by the time the script runs. You can only successfully listen to this event if the loading starts after the listener is attached, usually by dynamically modifying the fetch target via JavaScript.
-
-```js example-good
-const img = document.createElement("img");
-img.addEventListener("securitypolicyviolation", (e) => {
-  // Handle SecurityPolicyViolationEvent e here
-});
-img.src = "https://example.com/image.png"; // Loading starts here
 ```
 
 ## Specifications
