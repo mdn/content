@@ -74,6 +74,10 @@ These features are newly shipped in Firefox 138 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+
+  The CSS {{cssxref("::details-content")}} pseudo-element allows the styling of the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
