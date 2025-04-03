@@ -1,13 +1,12 @@
 ---
 title: FetchLaterResult interface
 slug: Web/API/FetchLaterResult
-page-type: web-api-overview
-browser-compat: api.fetchLaterResult
+page-type: web-api-interface
 ---
 
-{{DefaultAPISidebar("Fetch Later API")}}
+{{DefaultAPISidebar("fetchLater API")}}
 
-The **`FetchLaterResult`** interface of the {{DOMxRef("Fetch Later API")}} is returned by the {{domxref("window.FetchLater()")}} method after a deferred fetch has been created.
+The **`FetchLaterResult`** interface of the {{DOMxRef("fetchLater() API")}} is returned by the {{domxref("window.FetchLater()")}} method after a deferred fetch has been created.
 
 It contains a single `activated` property
 
@@ -28,5 +27,5 @@ On successful sending, the whole response is ignored, including body and headers
 
 ## See also
 
-- [Using Fetch Later](/en-US/docs/Web/API/Fetch_Later_API/Using_FetchLater)
+- [Using fetchLater](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)
 - [HTTP](/en-US/docs/Web/HTTP)

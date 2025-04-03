@@ -2,9 +2,6 @@
 title: "Permissions-Policy: deferred-fetch"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
 page-type: http-permissions-policy-directive
-status:
-  - experimental
-browser-compat: http.headers.Permissions-Policy.deferred-fetch
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
@@ -38,5 +35,5 @@ The default allowlist for `display-capture` is `self`.
 
 - {{HTTPHeader("Permissions-Policy")}} header
 - [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
-- [Fetch Later API](/en-US/docs/Web/API/Fetch_Later_API)
-- [Using Fetch Later](/en-US/docs/Web/API/Fetch_Later_API/Using_FetchLater)
+- [fetchLater() API](/en-US/docs/Web/API/fetchLater_API)
+- [Using fetchLater](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)

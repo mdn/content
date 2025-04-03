@@ -3,20 +3,11 @@ title: "Window: fetchLater() method"
 short-title: fetchLater()
 slug: Web/API/Window/fetchLater
 page-type: web-api-instance-method
-browser-compat: api.fetchLater
 ---
 
-{{APIRef("Fetch Later API")}}
+{{APIRef("fetchLater API")}}
 
-The **`fetchLater()`** method of the {{domxref("Window")}} interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
-
-The promise resolves to the {{domxref("Response")}} object representing the response to your request.
-
-A `fetch()` promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error.
-A `fetch()` promise _does not_ reject if the server responds with HTTP status codes that indicate errors (`404`, `504`, etc.).
-Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{domxref("Response.status")}} properties.
-
-The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
+The **`fetchLater()`** method of the {{domxref("Window")}} creates a deferred fetch and returns a {{domxref("FetchLaterResult")}}.
 
 > [!NOTE]
 > The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
@@ -24,8 +15,8 @@ The `fetch()` method is controlled by the `connect-src` directive of [Content Se
 ## Syntax
 
 ```js-nolint
-fetch(resource)
-fetch(resource, options)
+fetchLater(resource)
+fetchLater(resource, options)
 ```
 
 ### Parameters
@@ -39,7 +30,7 @@ fetch(resource, options)
 
 - `options` {{optional_inline}}
 
-  - : A {{domxref("RequestInit")}} object containing any custom settings that you want to apply to the request.
+  - : A {{domxref("DeferredRequestInit")}} object containing any custom settings that you want to apply to the request.
 
 ### Return value
 
@@ -52,138 +43,6 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     {{domxref("AbortController.abort", "abort()")}} method.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
-- {{jsxref("TypeError")}}
-  - : Can occur for the following reasons:
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Reason</th>
-      <th scope="col">Failing examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Blocked by a permissions policy</td>
-      <td>Use of the <a href="/en-US/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> is blocked by a <a href="/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}}, and a <code>fetch()</code> request was made with <code>attributionReporting</code> specified.</td>
-    </tr>
-    <tr>
-      <td>Invalid header name.</td>
-      <td>
-        <!-- cSpell:ignore ontent -->
-        <pre>
-// space in "C ontent-Type"
-const headers = {
-  'C ontent-Type': 'text/xml',
-  'Breaking-Bad': '<3',
-};
-fetch('https://example.com/', { headers });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Invalid header value. The header object must contain exactly two elements.
-      </td>
-      <td>
-        <pre>
-const headers = [
-  ['Content-Type', 'text/html', 'extra'],
-  ['Accept'],
-];
-fetch('https://example.com/', { headers });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Invalid URL or scheme, or using a scheme that fetch does not support, or using a scheme that is not supported for a particular request mode.
-      </td>
-      <td>
-        <pre>
-fetch('blob://example.com/', { mode: 'cors' });
-        </pre>
-      </td>
-    </tr>
-      <td>URL includes credentials.</td>
-      <td>
-        <pre>
-fetch('https://user:password@example.com/');
-        </pre>
-      </td>
-    <tr>
-      <td>Invalid referrer URL.</td>
-      <td>
-        <pre>
-fetch('https://example.com/', { referrer: './abc\u0000df' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>).</td>
-      <td>
-        <pre>
-fetch('https://example.com/', { mode: 'navigate' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  cache: 'only-if-cached',
-  mode: 'no-cors',
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        If the request method is an invalid name token or one of the forbidden headers
-        (<code>'CONNECT'</code>, <code>'TRACE'</code> or <code>'TRACK'</code>).
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', { method: 'CONNECT' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method
-        (<code>'GET'</code>, <code>'HEAD'</code>, or <code>'POST'</code>).
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'CONNECT',
-  mode: 'no-cors',
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        If the request method is <code>'GET'</code> or <code>'HEAD'</code> and the body is non-null or not undefined.
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'GET',
-  body: new FormData(),
-});
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>If fetch throws a network error.</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
 
 ## Examples
 
