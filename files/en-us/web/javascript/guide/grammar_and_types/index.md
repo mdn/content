@@ -496,7 +496,7 @@ Property names that are not valid identifiers cannot be accessed as a dot (`.`) 
 const unusualPropertyNames = {
   "": "An empty string",
   "!": "Bang!",
-}
+};
 console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
 console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
 ```

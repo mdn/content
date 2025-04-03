@@ -241,7 +241,7 @@ One use of this feature is inserting dynamic text, as shown in the following exa
 The double curly braces instruct Angular to interpolate the contents within them.
 The value for `title` comes from the component class:
 
-```ts-nolint
+```ts
 import { Component } from "@angular/core";
 
 @Component({
@@ -271,10 +271,13 @@ To include the styles directly in the component decorator, use the `styles` prop
 
 ```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: ['h1 { color: red; }']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styles: ["h1 { color: red; }"],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 Typically, a component uses styles in a separate file.
@@ -282,10 +285,13 @@ You can use the `styleUrl` property with the path to the CSS file as a string or
 
 ```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
 })
+export class AppComponent {
+  // …
+}
 ```
 
 With component-specific styles, you can organize your CSS so that it is easily maintainable and portable.
@@ -299,15 +305,18 @@ It's common to import [`CommonModule`](https://angular.dev/api/common/CommonModu
 
 ```ts
 import { Component } from "@angular/core";
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
 
 @Component({
   standalone: true,
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
   imports: [CommonModule],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 ## Summary

@@ -64,12 +64,15 @@ You can see a reference to the HTML and CSS files in the `@Component()` decorato
 
 ```ts
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   standalone: true,
   imports: [],
-  templateUrl: './item.component.html',
-  styleUrl: './item.component.css'
+  templateUrl: "./item.component.html",
+  styleUrl: "./item.component.css",
 })
+export class ItemComponent {
+  // …
+}
 ```
 
 ## Add HTML for the ItemComponent
@@ -187,8 +190,12 @@ import { ItemComponent } from "./item/item.component";
 Then, configure the AppComponent by adding the following to the same file's class:
 
 ```ts
-remove(item: Item) {
-  this.allItems.splice(this.allItems.indexOf(item), 1);
+export class AppComponent {
+  // …
+  remove(item: Item) {
+    this.allItems.splice(this.allItems.indexOf(item), 1);
+  }
+  // …
 }
 ```
 
@@ -213,12 +220,15 @@ You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/
 
 ```ts
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './item.component.html',
-  styleUrl: './item.component.css',
+  templateUrl: "./item.component.html",
+  styleUrl: "./item.component.css",
 })
+export class ItemComponent {
+  // …
+}
 ```
 
 Further down `item.component.ts`, replace the generated `ItemComponent` class with the following:
@@ -276,8 +286,12 @@ In this example, we've defined the selector as `app-item`:
 
 ```ts
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   // ...
+})
+export class ItemComponent {
+  // …
+}
 ```
 
 To use the `ItemComponent` selector within the `AppComponent`, you add the element, `<app-item>`, which corresponds to the selector you defined for the component class to `app.component.html`.
@@ -303,11 +317,14 @@ Change the `imports` in `app.component.ts` to include `ItemComponent` as well as
 ```ts
 @Component({
   standalone: true,
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
   imports: [CommonModule, ItemComponent],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 The double curly brace syntax, `\{{}}`, in the `<h2>` interpolates the length of the `items` array and displays the number.
