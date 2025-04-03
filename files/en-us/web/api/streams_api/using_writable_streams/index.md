@@ -48,7 +48,7 @@ The constructor takes two objects as parameters. The first object is required, a
 
 The first object can contain up to four members, all of which are optional:
 
-1. `start(controller)` — A method that is called once, immediately after the {{domxref("WritableStream")}} is constructed. Inside this method, you should include code that sets up the stream functionality, e.g. getting access to the underlying sink.
+1. `start(controller)` — A method that is called once, immediately after the {{domxref("WritableStream")}} is constructed. Inside this method, you should include code that sets up the stream functionality, e.g., getting access to the underlying sink.
 2. `write(chunk,controller)` — A method that is called repeatedly every time a new chunk is ready to be written to the underlying sink (specified in the `chunk` parameter).
 3. `close(controller)` — A method that is called if the app signals that it has finished writing chunks to the stream. It should do whatever is necessary to finalize writes to the underlying sink, and release access to it.
 4. `abort(reason)` — A method that will be called if the app signals that it wishes to abruptly close the stream and put it in an errored state.

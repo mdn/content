@@ -289,7 +289,7 @@ NVDA has many keyboard commands, and we won't list them all here. The basic ones
     <tr>
       <td>Shift + D and D</td>
       <td>
-        Move to previous/next document landmark (e.g. <code>&#x3C;nav></code>)
+        Move to previous/next document landmark (e.g., <code>&#x3C;nav></code>)
         and read it.
       </td>
     </tr>

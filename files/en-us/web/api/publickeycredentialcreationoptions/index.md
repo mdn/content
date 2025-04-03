@@ -155,7 +155,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
         If omitted, `id` defaults to the document origin — which would be `login.example.com` in the above example.
 
     - `name`
-      - : A string representing the name of the relying party (e.g. `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
+      - : A string representing the name of the relying party (e.g., `"Facebook"`). This is the name the user will be presented with when creating or validating a WebAuthn operation.
 
 - `timeout` {{optional_inline}}
 

@@ -50,7 +50,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - `HTMLVideoElement.canPlayType('video/webm')` now reports `maybe`. ([Firefox bug 884275](https://bugzil.la/884275)).
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ([Firefox bug 933193](https://bugzil.la/933193)).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ([Firefox bug 600117](https://bugzil.la/600117)).
-- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ([Firefox bug 819900](https://bugzil.la/819900)).
+- The {{domxref("File")}} constructor, e.g., `new File(["foo"], "foo.txt")` has been implemented. ([Firefox bug 819900](https://bugzil.la/819900)).
 - The {{domxref("Navigator.plugins")}} is no more enumerable, for privacy reasons ([Firefox bug 757726](https://bugzil.la/757726)).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ([Firefox bug 943668](https://bugzil.la/943668)).
 - The two methods `CanvasRenderingContext2D.drawSystemFocusRing()` and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ([Firefox bug 540456](https://bugzil.la/540456)).

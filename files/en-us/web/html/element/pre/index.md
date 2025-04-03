@@ -15,7 +15,7 @@ Whitespace inside this element is displayed as written, with one exception. If o
 
 `<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
-By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e. its default {{cssxref("display")}} value is `block`.
+By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e., its default {{cssxref("display")}} value is `block`.
 
 {{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
 

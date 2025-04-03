@@ -59,7 +59,7 @@ console.log(0x1f7); // 503
 console.log(5.03e2); // 503
 ```
 
-The [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g. division truncates to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
+The [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) type is an arbitrary length integer. Its behavior is similar to C's integer types (e.g., division truncates to zero), except it can grow indefinitely. BigInts are specified with a number literal and an `n` suffix.
 
 ```js
 console.log(-3n / 2n); // -1n
@@ -781,7 +781,7 @@ async function readFile(filename) {
 
 The core language doesn't specify any asynchronous programming features, but it's crucial when interacting with the external environment — from [asking user permissions](/en-US/docs/Web/API/Permissions_API), to [fetching data](/en-US/docs/Web/API/Fetch_API/Using_Fetch), to [reading files](https://nodejs.org/api/fs.html). Keeping the potentially long-running operations async ensures that other processes can still run while this one waits — for example, the browser will not freeze while waiting for the user to click a button to grant permission.
 
-If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, {{jsxref("Operators/await", "await")}} can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e. you can't have a `Promise<Promise<T>>`).
+If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, {{jsxref("Operators/await", "await")}} can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e., you can't have a `Promise<Promise<T>>`).
 
 In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that are pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 

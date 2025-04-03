@@ -36,7 +36,7 @@ addRoutes(routerRules)
         - `requestMode` {{optional_inline}}
           - : A string representing the [mode](/en-US/docs/Web/API/Request/mode) a request should have for it to match the rule, for example `"same-origin"`, `"no-cors"`, or `"cors"`.
         - `requestDestination` {{optional_inline}}
-          - : A string representing the [destination](/en-US/docs/Web/API/Request/destination) of a request, i.e. what content type should be requested, for it to match the rule. Examples include `"audio"`, `"document"`, `"script"`, and `"worker"`.
+          - : A string representing the [destination](/en-US/docs/Web/API/Request/destination) of a request, i.e., what content type should be requested, for it to match the rule. Examples include `"audio"`, `"document"`, `"script"`, and `"worker"`.
         - `runningStatus` {{optional_inline}}
           - : An enumerated value representing the required running status of the service worker for a request to match the rule. Values can be `"running"` or `"not-running"`.
         - `urlPattern` {{optional_inline}}

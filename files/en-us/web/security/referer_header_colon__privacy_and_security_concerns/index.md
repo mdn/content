@@ -24,7 +24,7 @@ You should use {{HTTPMethod("POST")}} rather than {{HTTPMethod("GET")}} wherever
 
 You should always use {{glossary("HTTPS")}} for your sites. This has many security advantages, including the fact that HTTPS sites will never transmit referrer information to non-HTTPS sites. This advice is less relevant now that most of the web is using HTTPS, but it is still a worthy consideration.
 
-In addition, you should consider removing any third party content (e.g. social networking widgets embedded in {{htmlelement("iframe")}}) from secure areas of your website, like password reset pages, payment forms, login areas, etc.
+In addition, you should consider removing any third party content (e.g., social networking widgets embedded in {{htmlelement("iframe")}}) from secure areas of your website, like password reset pages, payment forms, login areas, etc.
 
 You can also mitigate such risks using:
 

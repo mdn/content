@@ -465,7 +465,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
-4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
    - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified

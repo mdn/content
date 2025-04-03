@@ -71,7 +71,7 @@ This section defines the terms used in this document, some of which are from the
 - (HTTP) cache
   - : Implementation that holds requests and responses for reusing in subsequent requests. It can be either a shared cache or a private cache.
 - Shared cache
-  - : Cache that exists between the origin server and clients (e.g. Proxy, CDN). It stores a single response and reuses it with multiple users — so developers should avoid storing personalized contents to be cached in the shared cache.
+  - : Cache that exists between the origin server and clients (e.g., Proxy, CDN). It stores a single response and reuses it with multiple users — so developers should avoid storing personalized contents to be cached in the shared cache.
 - Private cache
   - : Cache that exists in the client. It is also called _local cache_ or _browser cache_. It can store and reuse personalized content for a single user.
 - Store response
@@ -160,7 +160,7 @@ Cache-Control: no-store
 
 #### `private`
 
-The `private` response directive indicates that the response can be stored only in a private cache (e.g. local caches in browsers).
+The `private` response directive indicates that the response can be stored only in a private cache (e.g., local caches in browsers).
 
 ```http
 Cache-Control: private

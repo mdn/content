@@ -41,7 +41,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     There are two versions of this attribute that you can set:
 
-    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
+    - Boolean, i.e., just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
     - Value containing one or more URLs, for example:
 
       ```html
@@ -120,7 +120,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_blank`: Usually a new tab, but users can configure browsers to open a new window instead.
     - `_parent`: The parent browsing context of the current one. If no parent, behaves as `_self`.
     - `_top`: The topmost browsing context. To be specific, this means the "highest" context that's an ancestor of the current one. If no ancestors, behaves as `_self`.
-    - `_unfencedTop`: Allows embedded [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame (i.e. traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.
+    - `_unfencedTop`: Allows embedded [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame (i.e., traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.
 
     > [!NOTE]
     > Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.

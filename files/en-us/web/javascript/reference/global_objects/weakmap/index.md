@@ -242,7 +242,7 @@ Here, only code that has access to `clicked` knows the clicked state of each but
 
 ### Caching
 
-You can associate objects passed to a function with the result of the function, so that if the same object is passed again, the cached result can be returned without re-executing the function. This is useful if the function is pure (i.e. it doesn't mutate any outside objects or cause other observable side effects).
+You can associate objects passed to a function with the result of the function, so that if the same object is passed again, the cached result can be returned without re-executing the function. This is useful if the function is pure (i.e., it doesn't mutate any outside objects or cause other observable side effects).
 
 ```js
 const cache = new WeakMap();
