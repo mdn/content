@@ -289,4 +289,4 @@ See the {{htmlelement("summary")}} page for an [example of customizing the discl
 ## See also
 
 - {{HTMLElement("summary")}}
-- {{cssxref("::details-content")}} CSS pseudo-element
+- {{cssxref("::details-content")}}
