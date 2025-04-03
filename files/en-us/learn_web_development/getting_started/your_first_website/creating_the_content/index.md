@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
-HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. This article provides a basic understanding of HTML and its functions, and shows you how to create the basic content for your first website.
+HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured as a set of paragraphs, a list of bulleted points, or some images and data tables. This article provides a basic understanding of HTML and its functionality, and shows you how to create the basic content for your first website.
 
 <table>
   <tbody>
@@ -34,66 +34,82 @@ HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to str
 
 ## So what is HTML?
 
-HTML is a _markup language_ that defines the structure of your content. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing {{Glossary("tag", "tags")}} can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:
+HTML is a _markup language_ that can be used to define content structure. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose (or wrap) text content to make it appear a certain way or act a certain way. For example, the following content will all be shown on the same line when displayed on a web page:
 
 ```plain
-My cat is very grumpy
+Instructions for life:
+Eat
+Sleep
+Repeat
 ```
 
-If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:
+If we enclose our text in the following {{Glossary("tag", "tags")}}, we can turn that single line into a paragraph and three bullet points:
 
-```html
-<p>My cat is very grumpy</p>
+```html live-sample___basic-html
+<p>Instructions for life:</p>
+
+<ul>
+  <li>Eat</li>
+  <li>Sleep</li>
+  <li>Repeat</li>
+</ul>
 ```
+
+This HTML will render as follows in a web browser:
+
+{{EmbedLiveSample("basic-html", "100%", "140px")}}
+
+HTML can make a word or image hyperlink to somewhere else, italicize words, embed an image or video in a web page, and so on.
 
 ### Anatomy of an HTML element
 
-Let's explore this paragraph element a bit further.
+Let's explore our paragraph element a bit further:
 
-![paragraph element including opening tag, content reading 'my cat is very grumpy', and a closing tag](grumpy-cat-small.png)
+```html
+<p>Instructions for life:</p>
+```
 
-The main parts of our element are as follows:
+This consists of:
 
-1. **The opening tag:** This consists of the name of the element (in this case, p), wrapped in opening and closing **angle brackets**. This states where the element begins or starts to take effect — in this case where the paragraph begins.
-2. **The closing tag:** This is the same as the opening tag, except that it includes a _forward slash_ before the element name. This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
-3. **The content:** This is the content of the element, which in this case, is just text.
-4. **The element:** The opening tag, the closing tag, and the content together comprise the element.
+1. `<p>`: **The opening tag**, which contains the name of the element (in this case, `p`), wrapped in opening and closing **angle brackets**. This states where the element begins.
+2. `Instructions for life`: **The content**, which in this case is just text.
+3. `</p>`: **The closing tag**, which is the same as the opening tag, except with a _forward slash_ before the element name. This states where the element ends. Failing to add a closing tag is a common beginner error and can lead to strange results.
+
+The opening tag, closing tag, and content together comprise the entire element.
+
+### HTML Attributes
 
 Elements can also have attributes that look like the following:
 
-![Paragraph opening tag with a class attribute highlighted: class=editor-note](grumpy-cat-attribute-small.png)
+```html
+<p class="editorial">Instructions for life:</p>
+```
 
-Attributes contain extra information about the element that you don't want to appear in the actual content. Here, `class` is the attribute _name_ and `editor-note` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same `class` value) with style information and other things.
-Some attributes have no value, such as [`required`](/en-US/docs/Web/HTML/Attributes/required).
+Attributes contain extra information about the element that you don't want to appear in the actual content. Here, [`class`](/en-US/docs/Web/HTML/Global_attributes/class) is the attribute _name_ and `editorial` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it with style information and other things.
 
-Attributes that set a value always have:
-
-1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
-2. The attribute name followed by an equal sign.
-3. The attribute value wrapped by opening and closing quotation marks.
-
-> [!NOTE]
-> Simple attribute values that don't contain {{Glossary("ASCII")}} whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+There is always a space between the element name and each attribute. The attribute name is always wrapped in quotes, and preceded by an equals sign. Some elements can take many attributes, and some generally don't have any.
 
 ### Nesting elements
 
-You can put elements inside other elements too — this is called **nesting**. If we wanted to state that our cat is **very** grumpy, we could wrap the word "very" in a {{htmlelement("strong")}} element, which means that the word is to be strongly emphasized:
+You can put elements inside other elements — this is called **nesting**. For example:
 
-```html
-<p>My cat is <strong>very</strong> grumpy.</p>
+```html live-sample___nested-strong
+<p>Instructions for <strong>life</strong>:</p>
 ```
 
-You do however need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect:
+This will cause the word `life` to be strongly emphasised, which is usually rendered in bold text by default:
+
+{{EmbedLiveSample("nested-strong", "100%", "60px")}}
+
+You need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect, and will probably lead to unexpected results:
 
 ```html-nolint example-bad
-<p>My cat is <strong>very grumpy.</p></strong>
+<p>Instructions for <strong>life:</p></strong>
 ```
 
-The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
+### Empty elements
 
-### Void elements
-
-Some elements have no content and are called **{{glossary("void element", "void elements")}}**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
+Some elements have no content and are called **empty** (or **{{glossary("void element", "void")}}**) elements. For example, an {{htmlelement("img")}} element might look like this:
 
 ```html
 <img src="images/firefox-icon.png" alt="My test image" />
@@ -103,7 +119,7 @@ This contains two attributes, but there is no closing `</img>` tag and no inner 
 
 ## Creating your first HTML document
 
-That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's create a basic HTML file, and have a look at what it is made up of:
+Now we'll show you how individual elements are combined to form an entire HTML page. Let's create a basic HTML file, and have a look at what it is made up of:
 
 1. Inside your `web-projects` folder, create another new folder called `first-website`.
 2. Inside `first-website`, Create a new file called `index.html`, and insert the following code into the file exactly as shown:
@@ -150,9 +166,6 @@ We have also included an `alt` (alternative) attribute. In the [`alt` attribute]
 ![The words: my test image](alt-text-example.png)
 
 The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
-
-> [!NOTE]
-> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn_web_development/Core/Accessibility).
 
 Let's get your image displaying now.
 
