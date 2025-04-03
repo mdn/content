@@ -24,7 +24,7 @@ Base64 encoding schemes are commonly used to encode binary data for storage or t
 
 ## Encoded size increase
 
-Each Base64 digit represents 6 bits of data. So, three 8-bit bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
+Each Base64 digit represents 6 bits of data (64 = 2<sup>6</sup>). So, three 8-bit bytes of the input string/binary file (3×8 bits = 24 bits) can be represented by four 6-bit Base64 digits (4×6 = 24 bits).
 
 This means that the Base64 version of a string or file is typically roughly a third larger than its source (the exact size increase depends on various factors, such as the absolute length of the string, its length modulo 3, and whether padding characters are used).
 

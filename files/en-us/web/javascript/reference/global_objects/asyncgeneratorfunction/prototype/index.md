@@ -41,7 +41,7 @@ console.log(proto(gen) === genFunc.prototype); // true
 console.log(proto(proto(gen)) === AsyncGeneratorFunctionPrototype.prototype); // true
 ```
 
-The following diagram illustrates the prototype chain of an async generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e. a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
+The following diagram illustrates the prototype chain of an async generator function and its instances. Each hollow arrow indicates an inheritance relationship (i.e., a prototype link), and each solid arrow indicates a property relationship. Note that there's no way to access `genFunc` from `gen` — they only have an `instanceof` relationship.
 
 ![The inheritance diagram of async generators and async generator functions](https://mdn.github.io/shared-assets/images/diagrams/javascript/asyncgeneratorfunction/prototype-chain.svg)
 

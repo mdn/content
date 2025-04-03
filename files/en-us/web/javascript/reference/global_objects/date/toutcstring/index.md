@@ -38,9 +38,9 @@ The value returned by `toUTCString()` is a string in the form `Www, dd Mmm yyyy 
 
 | Format String | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
-| `Www`         | Day of week, as three letters (e.g. `Sun`, `Mon`)            |
+| `Www`         | Day of week, as three letters (e.g., `Sun`, `Mon`)           |
 | `dd`          | Day of month, as two digits with leading zero if required    |
-| `Mmm`         | Month, as three letters (e.g. `Jan`, `Feb`)                  |
+| `Mmm`         | Month, as three letters (e.g., `Jan`, `Feb`)                 |
 | `yyyy`        | Year, as four or more digits with leading zeroes if required |
 | `HH`          | Hour, as two digits with leading zero if required            |
 | `mm`          | Minute, as two digits with leading zero if required          |

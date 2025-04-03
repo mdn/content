@@ -91,7 +91,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the window that opened this current window.
 - {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
-- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}}
   - : Returns `true` if this window belongs to an origin-keyed agent cluster.
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the outside of the browser window.
@@ -393,7 +393,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Deprecated events
 
@@ -408,7 +408,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a display can no longer be presented to.
 - {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa.
+  - : Fired when the presenting state of a VR device changes — i.e., goes from presenting to not presenting, or vice versa.
 
 ### Bubbled events
 

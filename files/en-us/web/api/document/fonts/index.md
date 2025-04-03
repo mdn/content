@@ -32,7 +32,7 @@ document.fonts.ready.then((fontFaceSet) => {
 });
 ```
 
-The promise fulfils when loading and layout operations of all used fonts are done. The set of used fonts can be different from the set of _declared_ fonts, e.g. if optional fonts (i.e. fonts declared via `font-display: optional`) were not able to load in time.
+The promise fulfils when loading and layout operations of all used fonts are done. The set of used fonts can be different from the set of _declared_ fonts, e.g., if optional fonts (i.e., fonts declared via `font-display: optional`) were not able to load in time.
 
 ## Specifications
 

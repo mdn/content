@@ -575,7 +575,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g., Mustafa".
 
     > [!NOTE]
     > The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
@@ -995,7 +995,7 @@ input.custom {
 
 ### field-sizing
 
-The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e. they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
+The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e., they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
 
 This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example, [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), input type [`file`](/en-US/docs/Web/HTML/Element/input/file), and {{htmlelement("textarea")}} elements.
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.place-self
 
 {{CSSRef}}
 
-The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e. the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
+The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e., the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
 
 {{InteractiveExample("CSS Demo: place-self")}}
 

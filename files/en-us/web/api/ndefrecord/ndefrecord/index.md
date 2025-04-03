@@ -13,7 +13,7 @@ browser-compat: api.NDEFRecord.NDEFRecord
 The **`NDEFRecord()`**
 constructor of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) returns a
 newly constructed {{DOMxRef("NDEFRecord")}} object that represents data that can be
-read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
+read from, or written to, compatible NFC devices; e.g., NFC tags supporting NDEF.
 
 ## Syntax
 

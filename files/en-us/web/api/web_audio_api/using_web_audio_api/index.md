@@ -138,7 +138,7 @@ audioElement.addEventListener(
 
 Let's delve into some basic modification nodes, to change the sound that we have. This is where the Web Audio API really starts to come in handy. First of all, let's change the volume. This can be done using a {{domxref("GainNode")}}, which represents how big our sound wave is.
 
-There are two ways you can create nodes with the Web Audio API. You can use the factory method on the context itself (e.g. `audioContext.createGain()`) or via a constructor of the node (e.g. `new GainNode()`). We'll use the factory method in our code:
+There are two ways you can create nodes with the Web Audio API. You can use the factory method on the context itself (e.g., `audioContext.createGain()`) or via a constructor of the node (e.g., `new GainNode()`). We'll use the factory method in our code:
 
 ```js
 const gainNode = audioContext.createGain();
@@ -180,7 +180,7 @@ volumeControl.addEventListener(
 ```
 
 > [!NOTE]
-> The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
+> The values of node objects (e.g., `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
 
 Great, now the user can update the track's volume! The gain node is the perfect node to use if you want to add mute functionality.
 
