@@ -119,6 +119,9 @@ When applying styles to a container using container queries, you can use contain
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
 
+> [!NOTE]
+> If no eligible container is available for the query, the corresponding container query length unit defaults to using the small viewport size for that axis.
+
 The container query length units are:
 
 - `cqw`: 1% of a query container's width
