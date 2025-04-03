@@ -82,7 +82,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+- The `align` attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to `center` since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
   ```css
   #urlbar-wrapper {

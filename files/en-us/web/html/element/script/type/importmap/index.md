@@ -109,7 +109,7 @@ They can also contain or end with path separators, or be absolute URLs, or be re
 }
 ```
 
-If there are several module specifier keys in a module specifier map that might match, then the most specific key will be selected (i.e. the one with the longer path/value).
+If there are several module specifier keys in a module specifier map that might match, then the most specific key will be selected (i.e., the one with the longer path/value).
 
 A module specifier of `./foo/../js/app.js` would be resolved to `./js/app.js` before matching.
 This means that a module specifier key of `./js/app.js` would match the module specifier even though they are not exactly the same.
@@ -340,6 +340,6 @@ The import map must be a valid JSON object that can define any of the optional k
 ## See also
 
 - [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#type)
+- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script/type)
 - [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import)

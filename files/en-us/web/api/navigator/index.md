@@ -51,7 +51,7 @@ _Doesn't inherit any properties._
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
-- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Provides access to the browser's {{domxref("NavigatorLogin")}} object, which a federated identity provider (IdP) can use to set a user's login status when they sign into or out of the IdP. See [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details.
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
@@ -99,7 +99,7 @@ _Doesn't inherit any properties._
 ### Non-standard properties
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
+  - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g., `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}

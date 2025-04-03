@@ -14,7 +14,7 @@ If the remote endpoint is aware of this feature, all {{domxref("MediaStreamTrack
 This is true for current browsers, but if connecting to an older endpoint that is not BUNDLE-aware, then separate transports might be used for different media.
 The policy to use in the negotiation is configured in the [`RTCPeerConnection` constructor](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection).
 
-These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `transport`.
+These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCTransportStats/type) of `transport`.
 
 ## Instance properties
 

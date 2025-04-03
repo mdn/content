@@ -425,5 +425,9 @@
     "ru": "Обзор",
     "zh-CN": "概述",
     "zh-TW": "概述"
+  },
+  "sources_prefix": {
+    "de": "Quellen: ",
+    "en-US": "Sources: "
   }
 }

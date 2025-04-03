@@ -40,7 +40,7 @@ isPrototypeOf(object)
 
 ### Return value
 
-A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e. a primitive).
+A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e., a primitive).
 
 ### Exceptions
 
@@ -49,7 +49,7 @@ A boolean indicating whether the calling object (`this`) lies in the prototype c
 
 ## Description
 
-All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `isPrototypeOf()` method. This method allows you to check whether or not the object exists within another object's prototype chain. If the `object` passed as the parameter is not an object (i.e. a primitive), the method directly returns `false`. Otherwise, the `this` value is [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion), and the prototype chain of `object` is searched for the `this` value, until the end of the chain is reached or the `this` value is found.
+All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `isPrototypeOf()` method. This method allows you to check whether or not the object exists within another object's prototype chain. If the `object` passed as the parameter is not an object (i.e., a primitive), the method directly returns `false`. Otherwise, the `this` value is [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion), and the prototype chain of `object` is searched for the `this` value, until the end of the chain is reached or the `this` value is found.
 
 ## Examples
 

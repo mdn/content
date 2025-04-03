@@ -14,7 +14,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 ## Types
 
 - {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or "`fr`".
+  - : A [language tag](https://www.rfc-editor.org/rfc/rfc9110.html#name-language-tags) such as `"en-US"` or `"fr"`.
 
 ## Functions
 

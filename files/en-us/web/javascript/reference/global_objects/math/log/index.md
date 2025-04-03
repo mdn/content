@@ -69,7 +69,7 @@ Math.log(Infinity); // Infinity
 
 ### Using Math.log() with a different base
 
-The following function returns the logarithm of `y` with base `x` (i.e. <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
+The following function returns the logarithm of `y` with base `x` (i.e., <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
 
 ```js
 function getBaseLog(x, y) {

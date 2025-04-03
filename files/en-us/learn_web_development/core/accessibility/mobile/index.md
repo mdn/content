@@ -54,7 +54,7 @@ Let's look at the main two: TalkBack on Android and VoiceOver on iOS.
 
 The TalkBack screen reader is built into the Android operating system.
 
-To turn it on, look up what phone model and Android version you have, and then look up where the TalkBack menu is. It tends to differ widely between Android versions and even between different phone models. Some phone manufacturers (e.g. Samsung) don't even have TalkBack in newer phones, and instead opted for their own screen reader.
+To turn it on, look up what phone model and Android version you have, and then look up where the TalkBack menu is. It tends to differ widely between Android versions and even between different phone models. Some phone manufacturers (e.g., Samsung) don't even have TalkBack in newer phones, and instead opted for their own screen reader.
 
 When you've found the TalkBack menu, press the slider switch to turn TalkBack on. Follow any additional on-screen prompts that you are presented with.
 

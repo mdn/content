@@ -39,6 +39,8 @@ Content-Encoding: compress
 Content-Encoding: deflate
 Content-Encoding: br
 Content-Encoding: zstd
+Content-Encoding: dcb
+Content-Encoding: dcz
 
 // Multiple, in the order in which they were applied
 Content-Encoding: deflate, gzip
@@ -60,6 +62,12 @@ Content-Encoding: deflate, gzip
   - : A format using the {{glossary("Brotli compression","Brotli")}} algorithm structure (defined in {{rfc(7932)}}).
 - `zstd`
   - : A format using the {{glossary("Zstandard compression","Zstandard")}} algorithm structure (defined in {{rfc(8878)}}).
+- `dcb` {{experimental_inline}}
+
+  - : A format that uses the [Dictionary-Compressed Brotli algorithm](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
+
+- `dcz` {{experimental_inline}}
+  - : A format that uses the [Dictionary-Compressed Zstandard algorithm](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan). See [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 
 ## Examples
 
@@ -94,3 +102,4 @@ Whether a server uses compression methods requested by the client depends on ser
 - {{Glossary("Brotli compression")}}
 - {{Glossary("GZip compression")}}
 - {{Glossary("Zstandard compression")}}
+- [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport)

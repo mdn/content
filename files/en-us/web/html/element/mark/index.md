@@ -28,8 +28,8 @@ The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is *
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 mark {
+  /* Add your styles here */
 }
 ```
 
