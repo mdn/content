@@ -39,11 +39,7 @@ createBuffer(descriptor)
 
       - : The {{glossary("Bitwise flags", "bitwise flags")}} representing the allowed usages for the `GPUBuffer`. The possible values are in the [`GPUBuffer.usage` value table](/en-US/docs/Web/API/GPUBuffer/usage#value).
 
-        Note that multiple possible usages can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
-        ```
+        Note that multiple possible usages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE`.
 
 ### Return value
 

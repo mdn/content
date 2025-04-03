@@ -100,7 +100,7 @@ You won't use this file until [later](/en-US/docs/Learn_web_development/Core/Fra
 Now that you know what an `item` is, you can give your application some items by adding them to the app.
 In `app.component.ts`, replace the contents with the following:
 
-```js
+```ts
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 

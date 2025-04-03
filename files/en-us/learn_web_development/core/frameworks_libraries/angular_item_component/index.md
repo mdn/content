@@ -62,7 +62,7 @@ Just as with the `AppComponent`, the `ItemComponent` is made up of the following
 
 You can see a reference to the HTML and CSS files in the `@Component()` decorator metadata in `item.component.ts`.
 
-```js
+```ts
 @Component({
   selector: 'app-item',
   standalone: true,
@@ -186,7 +186,7 @@ import { ItemComponent } from "./item/item.component";
 
 Then, configure the AppComponent by adding the following to the same file's class:
 
-```js
+```ts
 remove(item: Item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
@@ -201,7 +201,7 @@ For more information on the `splice()` method, see the [`Array.prototype.splice(
 To use the `ItemComponent` UI, you must add logic to the component such as functions, and ways for data to go in and out.
 In `item.component.ts`, edit the JavaScript imports as follows:
 
-```js
+```ts
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Item } from "../item";
@@ -211,7 +211,7 @@ The addition of `Input`, `Output`, and `EventEmitter` allows `ItemComponent` to 
 By importing `Item`, the `ItemComponent` can understand what an `item` is.
 You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `@if` blocks:
 
-```js
+```ts
 @Component({
   selector: 'app-item',
   standalone: true,
@@ -223,9 +223,8 @@ You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/
 
 Further down `item.component.ts`, replace the generated `ItemComponent` class with the following:
 
-```js
+```ts
 export class ItemComponent {
-
   editable = false;
 
   @Input() item!: Item;
@@ -275,7 +274,7 @@ To use the `ItemComponent` in `AppComponent`, put the `ItemComponent` selector i
 Angular specifies the selector of a component in the metadata of the `@Component()` decorator.
 In this example, we've defined the selector as `app-item`:
 
-```js
+```ts
 @Component({
   selector: 'app-item',
   // ...
@@ -301,7 +300,7 @@ Replace the current unordered list `<ul>` in `app.component.html` with the follo
 
 Change the `imports` in `app.component.ts` to include `ItemComponent` as well as `CommonModule`:
 
-```js
+```ts
 @Component({
   standalone: true,
   selector: 'app-root',
