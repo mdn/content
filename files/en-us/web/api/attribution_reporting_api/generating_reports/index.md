@@ -124,13 +124,16 @@ The properties are as follows:
 
       - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure:
 
-        ```js
+        ```json
         {
-          "operation": "histogram",  // Allows for the service to support other operations in the future
-          "data": [{
-            "bucket": <bucket, encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>,
-            "value": <value, encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>
-          }, ...]
+          "operation": "histogram", // Allows for the service to support other operations in the future
+          "data": [
+            {
+              "bucket": "...", // encoded as a 16-byte (i.e. 128-bit) big-endian bytestring
+              "value": "..." // encoded as a 4-byte (i.e. 32-bit) big-endian bytestring
+            }
+            // …
+          ]
         }
         ```
 

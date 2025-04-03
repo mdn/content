@@ -22,11 +22,11 @@ In your JavaScript, you would then provide the strings to import in an `importOb
 
 ```js
 importObject = {
-  ...,
+  // …
   string_constants: {
     string_constant_1: "hello ",
     string_constant_2: "world!",
-    ...
+    // …
   },
 };
 ```
@@ -56,11 +56,11 @@ And the accompanying `importObject` like this:
 
 ```js
 importObject = {
-  ...,
+  // …
   string_constants: {
     "hello ": "hello ",
     "world!": "world!",
-    ...
+    // …
   },
 };
 ```

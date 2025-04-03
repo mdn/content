@@ -80,8 +80,12 @@ In the `reporting-worklet.js` worklet, we read the embedding document's event ID
 
 ```js
 class ReportingOperation {
-  convertEventIdToBucket(eventId) { ... }
-  convertEventPayloadToValue(info) { ... }
+  convertEventIdToBucket(eventId) {
+    // …
+  }
+  convertEventPayloadToValue(info) {
+    // …
+  }
 
   async run(data) {
     // Data from the embedder
@@ -92,12 +96,12 @@ class ReportingOperation {
 
     privateAggregation.sendHistogramReport({
       bucket: convertEventIdToBucket(eventId),
-      value: convertEventPayloadToValue(eventPayload)
+      value: convertEventPayloadToValue(eventPayload),
     });
   }
 }
 
-register('send-report', ReportingOperation);
+register("send-report", ReportingOperation);
 ```
 
 ## Specifications
