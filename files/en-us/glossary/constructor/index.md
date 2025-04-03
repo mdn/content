@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 A **constructor** is a specialized {{glossary("function")}} that generates {{glossary("object", "objects")}} with the same shape and behavior. The constructor initializes this object with some data specific to the object. The concept of a constructor can be applied to most {{glossary("OOP","object-oriented programming")}} languages.
 
-In {{glossary("JavaScript")}}, a constructor is usually declared within a [class](/en-US/docs/Web/JavaScript/Reference/Classes), but [functions](/en-US/docs/Web/JavaScript/Reference/Functions) can be constructors as well. In fact, any function that can be called with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator is a constructor.
+In {{glossary("JavaScript")}}, a constructor is usually declared within a [class](/en-US/docs/Web/JavaScript/Reference/Classes), but it can also be declared as a [function](/en-US/docs/Web/JavaScript/Reference/Functions). In fact, any function that can be called with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator is a constructor.
 
 ## See also
 
