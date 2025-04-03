@@ -68,9 +68,9 @@ As a result of this, we invoke the `signalUnknownCredential()` method, passing i
 
 ```js
 const credential = await navigator.credentials.get({
-  challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* … */]),
   rpId: "example.com",
-  allowCredentials: []
+  allowCredentials: [],
   // Empty allowCredentials list means only discoverable
   // credentials are presented to the user
 });
@@ -90,7 +90,7 @@ if (result.status === 404) {
   if (PublicKeyCredential.signalUnknownCredential) {
     await PublicKeyCredential.signalUnknownCredential({
       rpId: "example.com",
-      credentialId: credID
+      credentialId: credID,
     });
   } else {
     // Encourage the user to delete the credential from the authenticator
