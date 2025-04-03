@@ -23,7 +23,7 @@ out-of-date. This is being handled as follows:
 
 1. Different MDN staff members and volunteers have been assigned as "topic
    review owners", meaning that when a pull request comes in related to a
-   particular topic area of the site (e.g. the CSS reference, or the learning
+   particular topic area of the site (e.g., the CSS reference, or the learning
    area), it will be assigned to that area's topic review owner(s) and they
    will receive an email notification asking for a review. This is being
    handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS)

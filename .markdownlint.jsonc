@@ -275,6 +275,20 @@
         "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
         "searchScope": "text",
       },
+      {
+        "name": "comma-after-ie",
+        "message": "Add comma after 'i.e.'",
+        "searchPattern": "/\\bi\\.e\\. /g",
+        "replace": "i.e., ",
+        "searchScope": "text",
+      },
+      {
+        "name": "comma-after-eg",
+        "message": "Add comma after 'e.g.'",
+        "searchPattern": "/\\be\\.g\\. /g",
+        "replace": "e.g., ",
+        "searchScope": "text",
+      },
     ],
   },
 }

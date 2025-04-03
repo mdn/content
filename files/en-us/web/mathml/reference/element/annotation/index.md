@@ -16,7 +16,7 @@ The **`<annotation>`** [MathML](/en-US/docs/Web/MathML) element contains an anno
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) as well as the following attributes:
 
 - `encoding`
-  - : The encoding of the semantic information in the annotation (e.g. `"application/x-tex"`)
+  - : The encoding of the semantic information in the annotation (e.g., `"application/x-tex"`)
 - `src` {{deprecated_inline}}
   - : The location of an external source for semantic information.
 

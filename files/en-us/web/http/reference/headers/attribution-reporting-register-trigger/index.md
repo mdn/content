@@ -89,15 +89,15 @@ A Node.js server might set the `Attribution-Reporting-Register-Trigger` response
 res.set(
   "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
-    "event_trigger_data": [
+    event_trigger_data: [
       {
-        "trigger_data": "4",
-        "priority": "1000000000000",
-        "deduplication_key": "2345698765",
+        trigger_data: "4",
+        priority: "1000000000000",
+        deduplication_key: "2345698765",
       },
     ],
-    "debug_key": "1115698977",
-  });
+    debug_key: "1115698977",
+  }),
 );
 ```
 
@@ -109,22 +109,22 @@ When registering a trigger intended to match with a summary report attribution s
 res.set(
   "Attribution-Reporting-Register-Trigger",
   JSON.stringify({
-    "aggregatable_trigger_data": [
+    aggregatable_trigger_data: [
       {
-        "key_piece": "0x400",
-        "source_keys": ["campaignCounts"]
+        key_piece: "0x400",
+        source_keys: ["campaignCounts"],
       },
       {
-        "key_piece": "0xA80",
-        "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
-      }
+        key_piece: "0xA80",
+        source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+      },
     ],
-    "aggregatable_values": {
-      "campaignCounts": 32768,
-      "geoValue": 1664
+    aggregatable_values: {
+      campaignCounts: 32768,
+      geoValue: 1664,
     },
-    "debug_key": "1115698977"
-  });
+    debug_key: "1115698977",
+  }),
 );
 ```
 

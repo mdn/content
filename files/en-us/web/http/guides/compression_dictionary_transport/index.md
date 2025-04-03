@@ -64,7 +64,7 @@ Compression Dictionary Transport can achieve an order of magnitude more compress
 
 ## Dictionary format
 
-A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
+A compression dictionary is a "raw" file that does not follow any specific format, nor have a specific {{Glossary("MIME type")}}. They are regular files that can be used to compress other files with similar content and so can be text files or even binary. For example, [WASM](/en-US/docs/WebAssembly) binary files are large resources that can also benefit from delta compression.
 
 ## Existing resource as a dictionary
 
@@ -163,7 +163,7 @@ Note that you will need {{glossary("OpenSSL")}} installed locally as well as Bro
 Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
 
 - Dictionaries must same-origin with the resource using the dictionary.
-- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.

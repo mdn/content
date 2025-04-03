@@ -64,7 +64,7 @@ document
 
 ### Example 2: Dynamically changing the content inside an element with an alert role
 
-Using JavaScript, you can dynamically change the content _inside_ the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e. the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will _not_ lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
+Using JavaScript, you can dynamically change the content _inside_ the element with `role="alert"`. Note that if you need to fire the same alert multiple times (i.e., the content you're dynamically inserting is the same as before), this generally won't be seen as a change and will _not_ lead to an announcement. For this reason, it's usually best to briefly "clear" the contents of the alert container before then injecting the alert message.
 
 ```html
 <div id="alertContainer" role="alert"></div>

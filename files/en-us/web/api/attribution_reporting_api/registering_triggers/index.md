@@ -32,15 +32,15 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "event_trigger_data": [
+       event_trigger_data: [
          {
-           "trigger_data": "4",
-           "priority": "1000000000000",
-           "deduplication_key": "2345698765",
+           trigger_data: "4",
+           priority: "1000000000000",
+           deduplication_key: "2345698765",
          },
        ],
-       "debug_key": "1115698977",
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
@@ -62,22 +62,22 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "aggregatable_trigger_data": [
+       aggregatable_trigger_data: [
          {
-           "key_piece": "0x400",
-           "source_keys": ["campaignCounts"]
+           key_piece: "0x400",
+           source_keys: ["campaignCounts"],
          },
          {
-           "key_piece": "0xA80",
-           "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
-         }
+           key_piece: "0xA80",
+           source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+         },
        ],
-       "aggregatable_values": {
-         "campaignCounts": 32768,
-         "geoValue": 1664
+       aggregatable_values: {
+         campaignCounts: 32768,
+         geoValue: 1664,
        },
-       "debug_key": "1115698977"
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
@@ -208,7 +208,7 @@ In this case, the browser will attempt to match the trigger with a stored attrib
 
 ## Specifying a URL inside attributionsrc
 
-In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
+In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e., receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
 However, it might be the case that the requested resource is not on a server you control, or you just want to handle registering the attribution trigger on a different server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 

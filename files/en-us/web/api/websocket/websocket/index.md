@@ -28,7 +28,7 @@ new WebSocket(url, protocols)
 - `protocols` {{optional_inline}}
 
   - : A single string or an array of strings representing the [sub-protocol(s)](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) that the client would like to use, in order of preference.
-    If it is omitted, an empty array is used by default, i.e. `[]`.
+    If it is omitted, an empty array is used by default, i.e., `[]`.
 
     A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value.
     Note however that only one sub-protocol can be selected per connection.
@@ -58,9 +58,11 @@ The examples below show how you might connect to a `WebSocket`.
 The code below shows how we can connect to a socket using an URL with the `wss` schema:
 
 ```js
-const wssWebSocket = new WebSocket('wss://websocket.example.org');
+const wssWebSocket = new WebSocket("wss://websocket.example.org");
 console.log(wssWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
+
+// Do something with socket
+
 wssWebSocket.close();
 ```
 
@@ -68,9 +70,11 @@ The code for connecting to an HTTPS URL is nearly the same.
 Under the hood the browser resolves this to a "WSS" connection, so the {{domxref("WebSocket.url")}} will have the schema "wss:".
 
 ```js
-const httpsWebSocket = new WebSocket('https://websocket.example.org');
+const httpsWebSocket = new WebSocket("https://websocket.example.org");
 console.log(httpsWebSocket.url); // 'wss://websocket.example.org'
-... // Do something with socket
+
+// Do something with socket
+
 httpsWebSocket.close();
 ```
 
@@ -78,8 +82,10 @@ We can also resolve relative URLs.
 The absolute URL will depend on the base URL of the context in which it is called.
 
 ```js
-relativeWebSocket = new WebSocket('/local/url');
-... // Do something with socket
+relativeWebSocket = new WebSocket("/local/url");
+
+// Do something with socket
+
 relativeWebSocket.close();
 ```
 

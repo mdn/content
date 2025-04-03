@@ -180,7 +180,7 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 ## Best practices
 
 - To be keyboard-accessible, authors should [manage focus](https://www.w3.org/TR/wai-aria-1.1/#managingfocus) of all descendants of this role.
-- It is recommended that authors use different styling for the selection when the list is not focused, e.g. a non-active selection is often shown with a lighter background color.
+- It is recommended that authors use different styling for the selection when the list is not focused, e.g., a non-active selection is often shown with a lighter background color.
 - If the listbox is not part of another widget, it should have the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) property set.
 - If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
 - If there is a valid reason to [expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role may be more appropriate.

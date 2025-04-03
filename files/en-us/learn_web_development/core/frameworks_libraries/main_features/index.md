@@ -88,9 +88,9 @@ Given this Handlebars template:
 
 And this data:
 
-```js
+```json
 {
-  subject: "World";
+  "subject": "World"
 }
 ```
 

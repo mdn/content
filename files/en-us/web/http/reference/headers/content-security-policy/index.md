@@ -150,7 +150,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
     > [!WARNING]
-    > This directive is intended to replace [`report-uri`](#report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > This directive is intended to replace [`report-uri`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
     > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
     >
     > ```http
@@ -178,7 +178,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
   - : Provides the browser with a URL where CSP violation reports should be sent.
-    This has been superseded by the [`report-to`](#report-to) directive.
+    This has been superseded by the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) directive.
 
 ## Fetch directive syntax
 
