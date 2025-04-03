@@ -32,15 +32,15 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "event_trigger_data": [
+       event_trigger_data: [
          {
-           "trigger_data": "4",
-           "priority": "1000000000000",
-           "deduplication_key": "2345698765",
+           trigger_data: "4",
+           priority: "1000000000000",
+           deduplication_key: "2345698765",
          },
        ],
-       "debug_key": "1115698977",
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
@@ -62,22 +62,22 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "aggregatable_trigger_data": [
+       aggregatable_trigger_data: [
          {
-           "key_piece": "0x400",
-           "source_keys": ["campaignCounts"]
+           key_piece: "0x400",
+           source_keys: ["campaignCounts"],
          },
          {
-           "key_piece": "0xA80",
-           "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
-         }
+           key_piece: "0xA80",
+           source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+         },
        ],
-       "aggregatable_values": {
-         "campaignCounts": 32768,
-         "geoValue": 1664
+       aggregatable_values: {
+         campaignCounts: 32768,
+         geoValue: 1664,
        },
-       "debug_key": "1115698977"
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
