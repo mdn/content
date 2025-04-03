@@ -110,7 +110,6 @@ Gamepad can return position info: ${gp.pose.hasPosition}
 Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
     listItem.insertBefore(
       document.createElement("strong"),
-      }),
       listItem.firstChild,
     ).textContent = `Gamepad ${gp.index}`;
     list.appendChild(listItem);

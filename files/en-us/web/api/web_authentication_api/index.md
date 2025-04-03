@@ -47,15 +47,15 @@ To illustrate how the credential creation process works, let's describe the typi
    ```js
    let credential = await navigator.credentials.create({
      publicKey: {
-       challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+       challenge: new Uint8Array([117, 61, 252, 231, 191, 241 /* … */]),
        rp: { id: "acme.com", name: "ACME Corporation" },
        user: {
          id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
          name: "jamiedoe",
-         displayName: "Jamie Doe"
+         displayName: "Jamie Doe",
        },
-       pubKeyCredParams: [ {type: "public-key", alg: -7} ]
-     }
+       pubKeyCredParams: [{ type: "public-key", alg: -7 }],
+     },
    });
    ```
 
@@ -92,14 +92,16 @@ A typical authentication flow is as follows:
    ```js
    let credential = await navigator.credentials.get({
      publicKey: {
-       challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+       challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* … */]),
        rpId: "acme.com",
-       allowCredentials: [{
-         type: "public-key",
-         id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-       }],
+       allowCredentials: [
+         {
+           type: "public-key",
+           id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* … */]),
+         },
+       ],
        userVerification: "required",
-     }
+     },
    });
    ```
 
