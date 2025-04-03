@@ -67,9 +67,9 @@ const faceColors = [
 
 // Convert the array of colors into a table for all the vertices.
 
-var colors = [];
+const colors = [];
 
-for (var j = 0; j < faceColors.length; ++j) {
+for (let j = 0; j < faceColors.length; ++j) {
   const c = faceColors[j];
   // Repeat each color four times for the four vertices of the face
   colors = colors.concat(c, c, c, c);
@@ -92,43 +92,14 @@ function initIndexBuffer(gl) {
   // indices into the vertex array to specify each triangle's
   // position.
 
+  // prettier-ignore
   const indices = [
-    0,
-    1,
-    2,
-    0,
-    2,
-    3, // front
-    4,
-    5,
-    6,
-    4,
-    6,
-    7, // back
-    8,
-    9,
-    10,
-    8,
-    10,
-    11, // top
-    12,
-    13,
-    14,
-    12,
-    14,
-    15, // bottom
-    16,
-    17,
-    18,
-    16,
-    18,
-    19, // right
-    20,
-    21,
-    22,
-    20,
-    22,
-    23, // left
+     0,  1,  2,      0,  2,  3,    // front
+     4,  5,  6,      4,  6,  7,    // back
+     8,  9,  10,     8,  10, 11,   // top
+     12, 13, 14,     12, 14, 15,   // bottom
+     16, 17, 18,     16, 18, 19,   // right
+     20, 21, 22,     20, 22, 23,   // left
   ];
 
   // Now send the element array to GL
@@ -151,13 +122,17 @@ Next, you need to call this new function from `initBuffers()`, and return the bu
 > At the end of the `initBuffers()` function of your "init-buffers.js" module, add the following code, replacing the existing `return` statement:
 
 ```js
-const indexBuffer = initIndexBuffer(gl);
+function initBuffers(gl) {
+  // …
 
-return {
-  position: positionBuffer,
-  color: colorBuffer,
-  indices: indexBuffer,
-};
+  const indexBuffer = initIndexBuffer(gl);
+
+  return {
+    position: positionBuffer,
+    color: colorBuffer,
+    indices: indexBuffer,
+  };
+}
 ```
 
 ## Drawing the cube
