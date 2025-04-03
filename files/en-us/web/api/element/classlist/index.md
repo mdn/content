@@ -19,7 +19,7 @@ of classes as a space-delimited string via {{domxref("element.className")}}.
 
 A {{domxref("DOMTokenList")}} representing the contents of the element's
 `class` attribute. If the `class` attribute is not set or empty,
-it returns an empty `DOMTokenList`, i.e. a `DOMTokenList` with
+it returns an empty `DOMTokenList`, i.e., a `DOMTokenList` with
 the `length` property equal to `0`.
 
 Although the `classList` property itself is read-only, you can modify its associated `DOMTokenList` using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.

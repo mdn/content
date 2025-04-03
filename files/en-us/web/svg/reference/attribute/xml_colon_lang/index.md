@@ -43,7 +43,7 @@ You can use this attribute with any SVG element.
 
   - : This value specifies the language used for the element. The syntax of this value is defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
-    The most common syntax is a value formed by a lowercase two-character part for the language and an uppercase two-character part for the region or country, separated by a minus sign, e.g. `en-US` for US English or `de-AT` for Austrian German.
+    The most common syntax is a value formed by a lowercase two-character part for the language and an uppercase two-character part for the region or country, separated by a minus sign, e.g., `en-US` for US English or `de-AT` for Austrian German.
 
 ## Examples
 

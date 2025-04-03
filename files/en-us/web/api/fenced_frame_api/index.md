@@ -109,7 +109,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 ## Interfaces
 
 - {{domxref("FencedFrameConfig")}}
-  - : Represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
+  - : Represents the navigation of a {{htmlelement("fencedframe")}}, i.e., what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
 - {{domxref("Fence")}}
   - : Contains several functions relevant to fenced frame functionality. Available only to documents embedded inside a `<fencedframe>`.
 - {{domxref("HTMLFencedFrameElement")}}

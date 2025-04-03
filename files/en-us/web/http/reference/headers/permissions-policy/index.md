@@ -200,7 +200,7 @@ You can specify
 
 - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
 
-  - : Controls whether a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+  - : Controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
 
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
 
@@ -208,7 +208,7 @@ You can specify
 
 - {{httpheader("Permissions-Policy/web-share", "web-share")}} {{experimental_inline}}
 
-  - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
+  - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g., mobile apps.
 
 - {{httpheader("Permissions-Policy/window-management", "window-management")}} {{experimental_inline}}
 

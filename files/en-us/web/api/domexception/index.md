@@ -89,7 +89,7 @@ Note that the following deprecated historical errors don't have an error name bu
 - `NotReadableError` {{experimental_inline}}
   - : The input/output read operation failed (No legacy code value and constant name).
 - `UnknownError` {{experimental_inline}}
-  - : The operation failed for an unknown transient reason (e.g. out of memory) (No legacy code value and constant name).
+  - : The operation failed for an unknown transient reason (e.g., out of memory) (No legacy code value and constant name).
 - `ConstraintError` {{experimental_inline}}
   - : A mutation operation in a transaction failed because a constraint was not satisfied (No legacy code value and constant name).
 - `DataError` {{experimental_inline}}

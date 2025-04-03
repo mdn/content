@@ -9,7 +9,7 @@ browser-compat: api.MediaQueryList
 
 A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/CSS_media_queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
 
-You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e. when the media query test starts or stops evaluating to `true`).
+You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e., when the media query test starts or stops evaluating to `true`).
 
 This is very useful for adaptive design, since this makes it possible to observe a document to detect when its media queries change, instead of polling the values periodically, and allows you to programmatically make changes to a document based on media query status.
 

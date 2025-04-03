@@ -41,7 +41,7 @@ Not all features and limits will be available to WebGPU in all browsers that sup
 
 A {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object instance.
 
-If you make a duplicate call, i.e. call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via {{domxref("GPUDevice.lost")}}.
+If you make a duplicate call, i.e., call `requestDevice()` on a {{domxref("GPUAdapter")}} that `requestDevice()` was already called on, the promise fulfills with a device that is immediately lost. You can then get information on how the device was lost via {{domxref("GPUDevice.lost")}}.
 
 ### Exceptions
 

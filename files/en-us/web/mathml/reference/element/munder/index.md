@@ -13,7 +13,7 @@ The **`<munder>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes) as well as the following attribute:
 
 - `accentunder`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Reference/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e., drawn bigger and closer to the base expression).
 
 ## Examples
 

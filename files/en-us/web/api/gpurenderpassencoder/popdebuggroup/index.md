@@ -33,7 +33,7 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
-- The render pass encoder's debug stack is not empty (i.e. at least one render pass debug group was previously started with {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The render pass encoder's debug stack is not empty (i.e., at least one render pass debug group was previously started with {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 

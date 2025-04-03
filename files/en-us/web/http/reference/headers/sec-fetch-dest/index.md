@@ -71,7 +71,7 @@ Servers should ignore this header if it contains any other value.
 - `audioworklet`
   - : The destination is data being fetched for use by an audio worklet. This might originate from a call to {{domxref("Worklet.addModule()", "audioWorklet.addModule()")}}.
 - `document`
-  - : The destination is a document (HTML or XML), and the request is the result of a user-initiated top-level navigation (e.g. resulting from a user clicking a link).
+  - : The destination is a document (HTML or XML), and the request is the result of a user-initiated top-level navigation (e.g., resulting from a user clicking a link).
 - `embed`
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`

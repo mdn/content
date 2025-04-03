@@ -342,7 +342,7 @@ The `vertex` object can contain the following properties:
   - : An array of objects, each representing the expected layout of a vertex buffer used in the pipeline. Each object can contain the following properties:
 
     - `arrayStride`
-      - : A number representing the stride, in bytes, between the different structures (e.g. vertices) inside the buffer.
+      - : A number representing the stride, in bytes, between the different structures (e.g., vertices) inside the buffer.
     - `attributes`
       - : An array of objects defining the layout of the vertex attributes within each structure. Each object has the following properties:
         - `format`

@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.vector-effect
 sidebar: svgref
 ---
 
-The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e. filters, masks and clips.
+The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e., filters, masks and clips.
 
 > [!NOTE]
 > As a presentation attribute, `vector-effect` also has a CSS property counterpart: {{cssxref("vector-effect")}}. When both are specified, the CSS property takes priority.
@@ -53,7 +53,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `none`
-  - : This value specifies that no vector effect shall be applied, i.e. the default rendering behavior is used which is to first fill the geometry of a shape with a specified paint, then stroke the outline with a specified paint.
+  - : This value specifies that no vector effect shall be applied, i.e., the default rendering behavior is used which is to first fill the geometry of a shape with a specified paint, then stroke the outline with a specified paint.
 - `non-scaling-stroke`
   - : This value modifies the way an object is stroked. Normally stroking involves calculating stroke outline of the shape's path in current user coordinate system and filling that outline with the stroke paint (color or gradient). The resulting visual effect of this value is that the stroke width is not dependent on the transformations of the element (including non-uniform scaling and shear transformations) and zoom level.
 

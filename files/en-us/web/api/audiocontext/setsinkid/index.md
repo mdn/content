@@ -35,7 +35,7 @@ setSinkId(sinkId)
 
 A {{jsxref("Promise")}} that fulfills with a value of `undefined`.
 
-Attempting to set the sink ID to its existing value (i.e. returned by {{domxref("AudioContext.sinkId")}}), throws no errors, but it aborts the process immediately.
+Attempting to set the sink ID to its existing value (i.e., returned by {{domxref("AudioContext.sinkId")}}), throws no errors, but it aborts the process immediately.
 
 ### Exceptions
 

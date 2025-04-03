@@ -37,7 +37,7 @@ animate(keyframes, options)
       - : A property unique to `animate()`: A string with which to reference the animation.
     - `rangeEnd` {{optional_inline}}
 
-      - : Specifies the end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will end. The JavaScript equivalent of the CSS {{cssxref("animation-range-end")}} property. `rangeEnd` can take several different value types, as follows:
+      - : Specifies the end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will end. The JavaScript equivalent of the CSS {{cssxref("animation-range-end")}} property. `rangeEnd` can take several different value types, as follows:
 
         - A string that can be `normal` (meaning no change to the animation's attachment range), a CSS {{cssxref("length-percentage")}} representing an offset, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. For example:
 
@@ -65,7 +65,7 @@ animate(keyframes, options)
           ```
 
     - `rangeStart` {{optional_inline}}
-      - : Specifies the start of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start. The JavaScript equivalent of the CSS {{cssxref("animation-range-start")}} property. `rangeStart` can take the same value types as `rangeEnd`.
+      - : Specifies the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start. The JavaScript equivalent of the CSS {{cssxref("animation-range-start")}} property. `rangeStart` can take the same value types as `rangeEnd`.
     - `timeline` {{optional_inline}}
       - : A property unique to `animate()`: The {{domxref("AnimationTimeline")}} to associate with the animation. Defaults to {{domxref("Document.timeline")}}. The JavaScript equivalent of the CSS {{cssxref("animation-timeline")}} property.
 
@@ -158,7 +158,7 @@ document.getElementById("tunnel").animate(
 ### Implicit to/from keyframes
 
 In newer browser versions, you are able to set a beginning or end state for an
-animation only (i.e. a single keyframe), and the browser will infer the other end of the
+animation only (i.e., a single keyframe), and the browser will infer the other end of the
 animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
 
 ```js

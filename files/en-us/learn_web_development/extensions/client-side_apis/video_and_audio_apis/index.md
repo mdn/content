@@ -458,7 +458,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - {{domxref("HTMLMediaElement")}}
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide to `<video>` and `<audio>` HTML.
 - [Audio and video delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio and video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
+- [Audio and video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g., with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
 
