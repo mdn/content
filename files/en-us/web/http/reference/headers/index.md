@@ -51,7 +51,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
 - {{HTTPHeader("Cache-Control")}}
   - : Directives for caching mechanisms in both requests and responses.
 - {{HTTPHeader("Clear-Site-Data")}}
-  - : Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
+  - : Clears browsing data (e.g., cookies, storage, cache) associated with the requesting website.
 - {{HTTPHeader("Expires")}}
   - : The date/time after which the response is considered stale.
 - {{HTTPHeader("No-Vary-Search")}} {{experimental_inline}}

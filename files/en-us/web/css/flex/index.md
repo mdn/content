@@ -301,8 +301,8 @@ flexAutoItem.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- The `#flex-auto` item has a `flex` value of `auto`. The `auto` value expands to `1 1 auto`, i.e. the item is allowed to expand.
-- The `#default` item has no `flex` value set so it defaults to the `initial` value. The `initial` value expands to `0 1 auto`, i.e. the item is not allowed to expand.
+- The `#flex-auto` item has a `flex` value of `auto`. The `auto` value expands to `1 1 auto`, i.e., the item is allowed to expand.
+- The `#default` item has no `flex` value set so it defaults to the `initial` value. The `initial` value expands to `0 1 auto`, i.e., the item is not allowed to expand.
 
 The `#default` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by the `#flex-auto` item.
 

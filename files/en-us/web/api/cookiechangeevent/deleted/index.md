@@ -35,7 +35,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
     - `"lax"`
-      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
+      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e., when following a link).
     - `"none"`
       - : Cookies will be sent in all contexts.
 

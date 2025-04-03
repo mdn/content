@@ -122,7 +122,7 @@ try {
 
 ### Differentiate between similar errors
 
-Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
+Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e., with the same type and message).
 
 If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
 The original error should be passed to the new `Error` in the constructor's [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error#options) parameter as its `cause` property. This ensures that the original error and stack trace are available to higher-level try/catch blocks.

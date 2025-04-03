@@ -50,7 +50,7 @@ _No changes._
 
 #### DOM
 
-- [`Window.name`](/en-US/docs/Web/API/Window/name) is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see [Firefox bug 1685089](https://bugzil.la/1685089).
+- [`Window.name`](/en-US/docs/Web/API/Window/name) is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g., by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see [Firefox bug 1685089](https://bugzil.la/1685089).
 - [`EventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) now supports the `signal` option. This option allows an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to be passed to the method. The `AbortSignal` can later be used to remove the listener by calling `abort()`. For more information see [Firefox bug 1679204](https://bugzil.la/1679204).
 
 ### WebDriver conformance (Marionette)

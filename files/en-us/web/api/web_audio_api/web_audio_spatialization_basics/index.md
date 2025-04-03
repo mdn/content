@@ -71,7 +71,7 @@ listener.upY.value = 1;
 listener.upZ.value = 0;
 ```
 
-The forward properties represent the 3D coordinate position of the listener's forward direction (e.g. the direction they are facing in), while the up properties represent the 3D coordinate position of the top of the listener's head.
+The forward properties represent the 3D coordinate position of the listener's forward direction (e.g., the direction they are facing in), while the up properties represent the 3D coordinate position of the top of the listener's head.
 These two together can nicely set the direction.
 
 ## Creating a panner node
@@ -174,7 +174,7 @@ const panner = new PannerNode(audioCtx, {
 
 Now we're going to move our boombox around our 'room'. We've got some controls set up to do this.
 We can move it left and right, up and down, and back and forth; we can also rotate it.
-The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e. make it project to the back when the boombox is rotated 180 degrees and facing away from us.
+The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e., make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
 First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.
@@ -258,7 +258,7 @@ case 'forward':
 ```
 
 Our rotation values are a little more involved, however, as we need to move the sound _around_.
-Not only do we have to update two axis values (e.g. if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this.
+Not only do we have to update two axis values (e.g., if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this.
 The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) and [`Math.cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) to help us draw that circle.
 
 Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:

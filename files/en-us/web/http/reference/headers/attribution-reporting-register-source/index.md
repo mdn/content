@@ -72,7 +72,7 @@ Attribution-Reporting-Register-Source: <json-string>
           > [!NOTE]
           > If `"event_report_windows"` is specified, `"event_report_window"` cannot be specified, otherwise the source registration will fail.
     - `"expiry"` {{optional_inline}}
-      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
+      - : A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e., subsequent triggers won't be attributable to this source). The maximum allowable expiry time is 2592000 seconds (30 days), which is also the default value if `"expiry"` is not explicitly set.
     - `"filter_data"` {{optional_inline}}
       - : An object defining custom data that can be used to filter which conversions generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"max_event_level_reports"` {{optional_inline}}

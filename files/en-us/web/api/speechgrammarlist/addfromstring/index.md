@@ -12,7 +12,7 @@ browser-compat: api.SpeechGrammarList.addFromString
 
 The **`addFromString()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present in a specific
-string within the code base (e.g. stored in a variable) and adds it to
+string within the code base (e.g., stored in a variable) and adds it to
 the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Syntax

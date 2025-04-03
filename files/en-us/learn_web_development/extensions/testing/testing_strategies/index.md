@@ -106,7 +106,7 @@ There is a huge amount of data you could look at using Google Analytics — cust
 You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 
 > [!NOTE]
-> When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> When using Google analytics, you need to beware of misleading bias, e.g., "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
@@ -149,7 +149,7 @@ You might notice that the button isn't usable with only the keyboard. We could r
 These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
-- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
+- They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g., "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
 - They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab
@@ -209,7 +209,7 @@ Virtual machines are applications that run on your desktop computer and allow yo
 
 To use a Virtual Box, you need to:
 
-1. Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
+1. Get hold of an installer disk or image (e.g., ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.
 2. [Download the appropriate installer](https://www.virtualbox.org/wiki/Downloads) for your operating system and install it.
 3. Open the app; you'll be presented with a view like the following: ![Application window left panel lists Windows operating system and Opera TV emulators. Right panel include several subpanels including general, system, display, settings, audio, network and a preview.](virtualbox.png)
 4. To create a new virtual machine, press the _New_ button in the top left-hand corner.
@@ -268,9 +268,9 @@ Generally, you'll get your users to look at the page or view containing the new 
 When running tests, it can also be a good idea to:
 
 - Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
-- Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
+- Use browser's private mode functionality when running tests, where available (e.g., [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
 
-These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
+These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e., there is nothing installed that could affect the results of the tests.
 
 > [!NOTE]
 > Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.

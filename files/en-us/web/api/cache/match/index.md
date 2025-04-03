@@ -42,7 +42,7 @@ match(request, options)
     - `ignoreVary`
       - : A boolean value that when set to
         `true` tells the matching operation not to perform `VARY`
-        header matching — i.e. if the URL matches you will get a match regardless of
+        header matching — i.e., if the URL matches you will get a match regardless of
         whether the {{domxref("Response")}} object has a `VARY` header. It
         defaults to `false`.
 

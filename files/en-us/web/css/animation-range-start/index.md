@@ -9,7 +9,7 @@ browser-compat: css.properties.animation-range-start
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start.
+The **`animation-range-start`** [CSS](/en-US/docs/Web/CSS) property is used to set the start of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start.
 
 The `animation-range-start` and {{cssxref("animation-range-end")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
 

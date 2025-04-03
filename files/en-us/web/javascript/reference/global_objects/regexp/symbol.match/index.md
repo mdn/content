@@ -72,7 +72,7 @@ for (let i = 0; i < 5; i++) {
 // [ 'a' ] 1
 ```
 
-When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it would still perform sticky matches — i.e., it would fail to match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]

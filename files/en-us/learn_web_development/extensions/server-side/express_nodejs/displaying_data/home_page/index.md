@@ -136,7 +136,7 @@ Under the _Dynamic content_ heading we list the number of copies of each model.
 Note that the template values for the data are the keys that were specified when `render()` was called in the route handler function.
 
 > [!NOTE]
-> We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
+> We didn't escape the count values (i.e., we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
 ## What does it look like?
 

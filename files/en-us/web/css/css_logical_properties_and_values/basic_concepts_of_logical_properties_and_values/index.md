@@ -10,7 +10,7 @@ The [CSS logical properties and values module](/en-US/docs/Web/CSS/CSS_logical_p
 
 ## Why are logical properties useful
 
-CSS 2.1 and earlier had sized things according to the physical dimensions of the screen. Therefore we describe boxes as having a {{CSSxRef("width")}} and {{CSSxRef("height")}}, position items from the `top` and `left`, assign borders, margin, and padding to the `top`, `right`, `bottom`, `left`, etc. The Logical properties and values module defines mappings for these {{glossary("physical properties")}} and values to their logical, or flow relative, counterparts — e.g. `start` and `end` as opposed to `left` and `right`/`top` and `bottom`.
+CSS 2.1 and earlier had sized things according to the physical dimensions of the screen. Therefore we describe boxes as having a {{CSSxRef("width")}} and {{CSSxRef("height")}}, position items from the `top` and `left`, assign borders, margin, and padding to the `top`, `right`, `bottom`, `left`, etc. The Logical properties and values module defines mappings for these {{glossary("physical properties")}} and values to their logical, or flow relative, counterparts — e.g., `start` and `end` as opposed to `left` and `right`/`top` and `bottom`.
 
 These mappings are very useful for sites that get translated into languages with a different writing mode than the original layout. For example, with a CSS grid layout, if the grid container has a width applied with the {{CSSxRef("align-self")}} and {{CSSxRef("justify-self")}} properties used to align the grid items, as these properties are flow relative, the `justify-self: start` aligns the item to the start on the inline dimension, and `align-self: start` does the same on the block dimension.
 
@@ -79,7 +79,7 @@ When working with a site in a writing mode other than a horizontal, top-to-botto
 
 A key concept of working with flow relative properties and values is the two dimensions of block and inline. CSS layout methods such as flexbox and grid layout use the concepts of `block` and `inline` rather than `right` and `left`/`top` and `bottom` when aligning items.
 
-The `inline` dimension is the dimension along which a line of text runs in the writing mode in use. Therefore, in an English document with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is _horizontal_. Switch to a vertical writing mode (e.g. a Japanese document) and the inline dimension is now _vertical_, as lines in that writing mode run vertically.
+The `inline` dimension is the dimension along which a line of text runs in the writing mode in use. Therefore, in an English document with the text running horizontally left-to-right, or an Arabic document with the text running horizontally right-to-left, the inline dimension is _horizontal_. Switch to a vertical writing mode (e.g., a Japanese document) and the inline dimension is now _vertical_, as lines in that writing mode run vertically.
 
 The block dimension is the other dimension, and the direction in which blocks — such as paragraphs — display one after the other. In English and Arabic, these run vertically, whereas in any vertical writing mode these run horizontally.
 

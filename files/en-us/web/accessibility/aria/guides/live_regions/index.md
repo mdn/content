@@ -202,7 +202,7 @@ The first time the function executes, the entirety of the string that is added w
 
 One way around this would be to first clear all the contents of the live region (in this case, set the `innerHTML` of both `<span id="clock-hours">` and `<span id="clock-mins">` to be empty), and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.
 
-`aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
+`aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g., "17:34").
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
