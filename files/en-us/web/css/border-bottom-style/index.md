@@ -9,7 +9,54 @@ browser-compat: css.properties.border-bottom-style
 
 The **`border-bottom-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's bottom {{cssxref("border")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-style")}}
+
+```css interactive-example-choice
+border-bottom-style: none;
+```
+
+```css interactive-example-choice
+border-bottom-style: dotted;
+```
+
+```css interactive-example-choice
+border-bottom-style: dashed;
+```
+
+```css interactive-example-choice
+border-bottom-style: solid;
+```
+
+```css interactive-example-choice
+border-bottom-style: groove;
+```
+
+```css interactive-example-choice
+border-bottom-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > The specification doesn't define how borders of different styles connect in the corners.

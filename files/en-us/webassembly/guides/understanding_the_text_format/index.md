@@ -60,7 +60,7 @@ So this is similar to functions in other languages, even if it looks different b
 The signature is a sequence of parameter type declarations followed by a list of return type declarations. It is worth noting here that:
 
 - The absence of a `(result)` means the function doesn't return anything.
-- In the current iteration, there can be at most 1 return type, but [later this will be relaxed](https://github.com/WebAssembly/spec/blob/master/proposals/multi-value/Overview.md) to any number.
+- In the current iteration, there can be at most 1 return type, but [later this will be relaxed](https://github.com/WebAssembly/spec/blob/main/proposals/multi-value/Overview.md) to any number.
 
 Each parameter has a type explicitly declared; Wasm [Number types](#number_types), [Reference types](#reference_types), [Vector types](#vector_types).
 The number types are:
@@ -458,7 +458,7 @@ To show how you can create memory within the WebAssembly module, we've created a
 ```
 
 The three memory instances are automatically assigned an instance based on their order of creation.
-The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+The code below shows how we can specify this index (e.g., `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
 Here we write a string that indicates each memory type.
 
 ```wasm
@@ -624,18 +624,18 @@ So how do we place Wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function () {
+function module() {
   // table section
-  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
+  const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 
   // function sections:
-  const f1 = ... /* some imported WebAssembly function */
-  const f2 = ... /* some imported WebAssembly function */
+  const f1 = () => 42; /* some imported WebAssembly function */
+  const f2 = () => 13; /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
   tbl.set(1, f2);
-};
+}
 ```
 
 #### Using the table
@@ -891,11 +891,11 @@ Over in the text format, you can create a shared memory using the `shared` keywo
 Unlike unshared memories, shared memories must specify a "maximum" size, in both the JavaScript API constructor and Wasm text format.
 
 > [!NOTE]
-> You can find a lot more details in the [Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
+> You can find a lot more details in the [Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md).
 
 ### Atomic memory accesses
 
-A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses).
+A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md#atomic-memory-accesses).
 
 > [!NOTE]
 > The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
@@ -907,4 +907,4 @@ This finishes our high-level tour of the major components of the WebAssembly tex
 ## See also
 
 - The main thing that wasn't included is a comprehensive list of all the instructions that can occur in function bodies. See the [WebAssembly semantics](https://webassembly.github.io/spec/core/exec/index.html) for a treatment of each instruction.
-- See also the [grammar of the text format](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax) that is implemented by the spec interpreter.
+- See also the [grammar of the text format](https://github.com/WebAssembly/spec/blob/main/interpreter/README.md#s-expression-syntax) that is implemented by the spec interpreter.

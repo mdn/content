@@ -201,7 +201,7 @@ It is possible to insert your variables (`$1`, `$2`, `$3`, etc.) directly into t
 }
 ```
 
-This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1` – `$8` refer to, but you'll be more likely to know what your placeholder names refer to.
+This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g., `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1` – `$8` refer to, but you'll be more likely to know what your placeholder names refer to.
 
 ### Hardcoded substitution
 
@@ -228,7 +228,7 @@ In addition, you can use such substitutions to specify parts of the string that 
 Locales can be specified using only a language code, like `fr` or `en`, or they may be further qualified with a region code, like `en_US` or `en_GB`, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:
 
 1. if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
-2. Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
+2. Otherwise, if the current locale is qualified with a region (e.g., `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g., `en`), and that file contains the string, return it.
 3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
 4. Otherwise return an empty string.
 
@@ -393,12 +393,12 @@ padding-right: 0;
 padding-left: 1.5em;
 ```
 
-## Testing out your extension
+## Testing your extension
 
 To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs.
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
-Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
+When Firefox is running in your test language, from `about:debugging`, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) or reload it if already installed. After installing or reloading your extension, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now, exercise the extension's features to ensure the translations are in place.
 
 If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.

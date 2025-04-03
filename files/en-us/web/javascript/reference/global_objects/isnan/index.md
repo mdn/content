@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.isNaN
 
 The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}}, first converting the value to a number if necessary. Because coercion inside the `isNaN()` function can be [surprising](#description), you may prefer to use {{jsxref("Number.isNaN()")}}.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+{{InteractiveExample("JavaScript Demo: isNaN()")}}
 
 ```js interactive-example
 function milliseconds(x) {
@@ -45,7 +45,7 @@ isNaN(value)
 
 `isNaN()` is a function property of the global object.
 
-For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against {{jsxref("NaN")}}.
+For number values, `isNaN()` tests if the number is the value [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). When the argument to the `isNaN()` function is not of type [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against {{jsxref("NaN")}}.
 
 This behavior of `isNaN()` for non-numeric arguments can be confusing! For example, an empty string is coerced to 0, while a boolean is coerced to 0 or 1; both values are intuitively "not numbers", but they don't evaluate to `NaN`, so `isNaN()` returns `false`. Therefore, `isNaN()` answers neither the question "is the input the floating point {{jsxref("NaN")}} value" nor the question "is the input not a number".
 

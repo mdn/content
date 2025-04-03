@@ -61,7 +61,7 @@ To find the correct subtag codes for a language, try [the Language Subtag Lookup
 
 ## Accessibility concerns
 
-WCAG Success Criterion 3.1.1 **requires** that a page language is specified in a way which may be 'programmatically determined' (i.e. via the **`lang`** attribute).
+WCAG Success Criterion 3.1.1 **requires** that a page language is specified in a way which may be 'programmatically determined' (i.e., via the **`lang`** attribute).
 
 WCAG Success Criterion 3.1.2 requires that pages with **parts** in different languages have the languages of those parts specified too. Again, the **`lang`** attribute is the correct mechanism for this.
 
@@ -169,5 +169,5 @@ If an element has no `lang` attribute, it will inherit the `lang` value set on i
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-- [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
+- [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Reference/Headers/Content-Language)
 - HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) attribute

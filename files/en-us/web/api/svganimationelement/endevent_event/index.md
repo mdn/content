@@ -11,7 +11,7 @@ browser-compat: api.SVGAnimationElement.endEvent_event
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
 > [!NOTE]
-> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
+> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e., scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
 This event is not cancelable and does not bubble.
 
@@ -122,6 +122,6 @@ animateElem.onend = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
 - {{domxref("SVGAnimationElement.repeatEvent_event", "repeatEvent")}} event

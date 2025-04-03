@@ -130,7 +130,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Styling with CSS
 
-`<textarea>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is `inline-block`. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.
+`<textarea>` is a {{ glossary("replaced elements", "replaced element")}} — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is `inline-block`. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.
 
 [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
 
@@ -150,7 +150,7 @@ textarea {
 
 ### Styling valid and invalid values
 
-Valid and invalid values of a `<textarea>` element (e.g. those within, and outside the bounds set by `minlength`, `maxlength`, or `required`) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:
+Valid and invalid values of a `<textarea>` element (e.g., those within, and outside the bounds set by `minlength`, `maxlength`, or `required`) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:
 
 ```css
 textarea:invalid {
@@ -280,19 +280,19 @@ textarea {
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#resettable"
           >resettable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
           >submittable</a
         >
-        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated</a
         >
         element.
@@ -319,7 +319,7 @@ textarea {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role"
             >textbox</a
           ></code
         >

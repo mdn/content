@@ -18,8 +18,8 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 s {
+  /* Add your styles here */
 }
 ```
 
@@ -118,7 +118,7 @@ Some people who use screen readers deliberately disable announcing content that 
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
           ></code
         >
       </td>

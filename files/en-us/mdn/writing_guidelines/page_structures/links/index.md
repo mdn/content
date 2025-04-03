@@ -31,10 +31,6 @@ To include an ordered list of links that includes this page and its siblings, wr
 \{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
 ```
 
-This produces:
-
-{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
-
 ## Cross-reference links
 
 Some macros create a single link to cross-reference a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced.

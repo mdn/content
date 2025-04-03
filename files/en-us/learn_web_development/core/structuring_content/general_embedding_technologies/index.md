@@ -1,5 +1,6 @@
 ---
 title: From object to iframe — general embedding technologies
+short-title: Embedding technologies
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 page-type: learn-module-chapter
 ---
@@ -244,7 +245,7 @@ The example includes the bare essentials needed to use an `<iframe>`:
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
-  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
+  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g., IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
 > [!NOTE]
 > In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)
@@ -292,7 +293,7 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 #### Configure CSP directives
 
-{{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/HTTP/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+{{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/HTTP/Guides/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
 > [!NOTE]
 > You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.

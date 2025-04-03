@@ -67,7 +67,7 @@ To try out the example:
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
    > [!WARNING]
-   > Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
+   > Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/Guides/CORS), and will be disallowed by default.
    > Hosting the XML and stylesheet on the same local server ensures that they have the same origin.
 
 3. Open **example.xml** from the browser.

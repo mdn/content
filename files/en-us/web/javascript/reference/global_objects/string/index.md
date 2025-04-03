@@ -171,7 +171,7 @@ Many built-in operations that expect strings first coerce their arguments to str
 - Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
 
 There are several ways to achieve nearly the same effect in JavaScript.
 
@@ -189,8 +189,8 @@ However, the entire Unicode character set is much, much bigger than 65536. The e
 
 A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
 
-- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e. is a leading surrogate), but it is the last code unit in the string, or the next code unit is not a trailing surrogate.
-- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e. is a trailing surrogate), but it is the first code unit in the string, or the previous code unit is not a leading surrogate.
+- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e., is a leading surrogate), but it is the last code unit in the string, or the next code unit is not a trailing surrogate.
+- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e., is a trailing surrogate), but it is the first code unit in the string, or the previous code unit is not a leading surrogate.
 
 Lone surrogates do not represent any Unicode character. Although most JavaScript built-in methods handle them correctly because they all work based on UTF-16 code units, lone surrogates are often not valid values when interacting with other systems — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates, because URI encoding uses UTF-8 encoding, which does not have any encoding for lone surrogates. Strings not containing any lone surrogates are called _well-formed_ strings, and are safe to be used with functions that do not deal with UTF-16 (such as `encodeURI()` or {{domxref("TextEncoder")}}). You can check if a string is well-formed with the {{jsxref("String/isWellFormed", "isWellFormed()")}} method, or sanitize lone surrogates with the {{jsxref("String/toWellFormed", "toWellFormed()")}} method.
 

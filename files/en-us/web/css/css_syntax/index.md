@@ -66,10 +66,10 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag
-- [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-- [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-- [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-- [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+- [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+- [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+- [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+- [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
 - [CSS inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{Glossary("Property/CSS", "CSS property")}}
 
@@ -102,5 +102,6 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 ## See also
 
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

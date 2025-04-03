@@ -76,7 +76,7 @@ const xError = window.frames[window.frames.length - 1].Error;
 const error = new xError();
 
 // Correctly checking for Error
-Error.isERror(error); // true
+Error.isError(error); // true
 // The prototype of error is xError.prototype, which is a
 // different object from Error.prototype
 error instanceof Error; // false
@@ -108,4 +108,5 @@ try {
 ## See also
 
 - [Polyfill of `Error.isError` in `core-js`](https://github.com/zloirock/core-js#erroriserror)
+- [es-shims polyfill of `Error.isError`](https://www.npmjs.com/package/error.iserror)
 - {{jsxref("Error")}}

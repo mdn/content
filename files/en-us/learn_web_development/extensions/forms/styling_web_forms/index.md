@@ -42,7 +42,7 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+3. Single-line text {{HTMLElement("input")}}s (e.g., type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
 4. Multi-line {{HTMLElement("textarea")}}
 5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}
@@ -62,6 +62,8 @@ The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+  > [!NOTE]
+  > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
 For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
@@ -382,8 +384,3 @@ You've reached the end of this article, but can you remember the most important 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. [In the next article](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), we will see how to handle form widgets which fall into the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

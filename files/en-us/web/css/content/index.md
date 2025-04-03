@@ -9,7 +9,7 @@ browser-compat: css.properties.content
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the `content` property specifies whether the element renders normally (`normal` or `none`) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, `content` defines the content as images, text, both, or none, which determines whether the element renders at all.
 
-Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+Objects inserted using the `content` property are **anonymous {{ glossary("replaced elements")}}**.
 
 {{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
 
@@ -159,7 +159,7 @@ CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_
 If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
-- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 - [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/WCAG20-TECHS/F87) Techniques for WCAG 2.0
 
@@ -483,7 +483,7 @@ div {
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements")}}
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 

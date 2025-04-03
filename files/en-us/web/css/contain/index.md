@@ -10,7 +10,69 @@ browser-compat: css.properties.contain
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property indicates that an element and its contents are, as much as possible, independent from the rest of the document tree.
 Containment enables isolating a subsection of the DOM, providing performance benefits by limiting calculations of layout, style, paint, size, or any combination to a DOM subtree rather than the entire page. Containment can also be used to scope CSS counters and quotes.
 
-{{EmbedInteractiveExample("pages/css/contain.html")}}
+{{InteractiveExample("CSS Demo: contain")}}
+
+```css interactive-example-choice
+contain: none;
+```
+
+```css interactive-example-choice
+contain: size;
+```
+
+```css interactive-example-choice
+contain: layout;
+```
+
+```css interactive-example-choice
+contain: paint;
+```
+
+```css interactive-example-choice
+contain: strict;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="card" id="example-element">
+    <h2>Element with '<code>contain</code>'</h2>
+    <p>
+      The Goldfish is a species of domestic fish best known for its bright
+      colors and patterns.
+    </p>
+    <div class="fixed"><p>Fixed right 4px</p></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+h2 {
+  margin-top: 0;
+}
+
+#default-example {
+  text-align: left;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.card {
+  text-align: left;
+  border: 3px dotted;
+  padding: 20px;
+  margin: 10px;
+  width: 85%;
+  min-height: 150px;
+}
+
+.fixed {
+  position: fixed;
+  border: 3px dotted;
+  right: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+```
 
 There are four types of CSS containment: size, layout, style, and paint, which are set on the container.
 The property is a space-separated list of a subset of the five standard values or one of the two shorthand values.
@@ -23,7 +85,7 @@ Using the `contain` property is useful on pages with groups of elements that are
 > Using `layout`, `paint`, `strict` or `content` values for this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
-> 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+> 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 > 3. A new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## Syntax

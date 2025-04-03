@@ -38,13 +38,13 @@ _No changes._
 - [CSS Scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling) spec functionality has been enabled by default ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Interaction Media Features implemented, including [`pointer:coarse`](/en-US/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). For [`any-pointer`](/en-US/docs/Web/CSS/@media/any-pointer) and [`any-hover`](/en-US/docs/Web/CSS/@media/any-hover) implementation, see [Firefox bug 1483111](https://bugzil.la/1483111).
 - The [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature is now supported in Firefox for Android ([Firefox bug 1478505](https://bugzil.la/1478505)).
-- CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g. `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
+- CSS {{cssxref("&lt;gradient&gt;")}} values now support multi-position color stop syntax, e.g., `yellow 25%, yellow 50%` can now be written `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
 - The {{cssxref("text-transform")}} property now accepts the `full-size-kana` value ([Firefox bug 1498148](https://bugzil.la/1498148)).
 - Support added for {{cssxref("appearance", "-webkit-appearance")}} to alleviate associated web compat issues ([Firefox bug 1368555](https://bugzil.la/1368555)).
 - Closely associated with the above update, we've also removed most of the Firefox-specific `-moz-appearance` values ([Firefox bug 1496720](https://bugzil.la/1496720)).
 - {{cssxref("display")}}: `list-item` is now supported on {{htmlelement("legend")}} elements ([Firefox bug 1486602](https://bugzil.la/1486602)).
 - SVG `path()`s, as usable in {{cssxref("offset-path")}}, are now animatable ([Firefox bug 1486094](https://bugzil.la/1486094)).
-- If a selector chain or group includes a `-webkit-`prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
+- If a selector chain or group includes a `-webkit-`-prefixed pseudo-element, that pseudo-element no longer invalidates it (see [Firefox bug 1424106](https://bugzil.la/1424106) for the details, and [Firefox bug 1486325](https://bugzil.la/1486325) for enabling this feature).
 
 #### Removals
 
@@ -104,7 +104,7 @@ _No changes._
 ### Security
 
 - The Symantec CA Distrust plan has been implemented (see [Firefox bug 1409257](https://bugzil.la/1409257); see also the [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) discussion for more details).
-- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) for more information.
+- {{httpheader("Referrer-Policy")}} can now be used to govern resources fetched via stylesheets ([Firefox bug 1330487](https://bugzil.la/1330487)) — see [Integration with CSS](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_css) for more information.
 
 ### Plugins
 
@@ -129,11 +129,11 @@ _No changes._
 
 #### Menus
 
-- A new API, `{{WebExtAPIRef("menus.overrideContext()")}}`, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
+- A new API, {{WebExtAPIRef("menus.overrideContext()")}}, can be called from the `contextmenu` DOM event to set a custom context menu in extension pages. This API allows extensions to hide all default Firefox menu items in favor of providing a custom context menu UI. This context menu can consist of multiple top-level menu items from the extension, and may optionally include tab or bookmark context menu items from other extensions. See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.
 
-  - `{{WebExtAPIRef("menus.overrideContext()")}}` was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
+  - {{WebExtAPIRef("menus.overrideContext()")}} was implemented in ([Firefox bug 1280347](https://bugzil.la/1280347)).
   - The `showDefaults: false` option, which can be used to hide the default context menu options, was implemented in ([Firefox bug 1367160](https://bugzil.la/1367160)).
-  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if `{{WebExtAPIRef("menus.overrideContext()")}}` is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
+  - `documentURLPatterns` can now be used to match a `moz-extension://` document URL, even if {{WebExtAPIRef("menus.overrideContext()")}} is used. This way, it can reliably be used to restrict custom menu items to certain documents ([Firefox bug 1498896](https://bugzil.la/1498896)).
 
 - You can now restrict where context menus can appear in an add-on using the new `viewTypes` property in {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}} ([Firefox bug 1416839](https://bugzil.la/1416839)).
 - {{WebExtAPIRef("menus.update()")}} can now be used to update the icon of an existing menu item ([Firefox bug 1414566](https://bugzil.la/1414566)).

@@ -207,7 +207,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](/en-US/docs/Web/API/CSS_Painting_API/Guide#passing_parameters) in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](#passing_parameters) in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -319,7 +319,7 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Adding complexity
 
-The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g. by positioning some decorative [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) with `::before`, or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
+The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g., by positioning some decorative [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) with `::before`, or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
 
 Let's take a look at a more complex paint example.
 

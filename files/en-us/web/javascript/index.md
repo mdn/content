@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{jsSidebar}}
 
-**JavaScript** (**JS**) is a lightweight interpreted (or {{Glossary("Just_In_Time_Compilation", "just-in-time compiled")}}) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+**JavaScript** (**JS**) is a lightweight interpreted (or {{Glossary("Just_In_Time_Compilation", "just-in-time compiled")}}) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g., functional programming) styles.
 
 JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)), object introspection (via [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object` utilities](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), and source-code recovery (JavaScript functions store their source text and can be retrieved through [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
 
@@ -16,12 +16,12 @@ The standards for JavaScript are the [ECMAScript Language Specification](https:/
 
 Do not confuse JavaScript with the [Java programming language](<https://en.wikipedia.org/wiki/Java_(programming_language)>) — **JavaScript is _not_ "Interpreted Java"**. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.
 
-JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview), for the most part) includes the following:
+JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), for the most part) includes the following:
 
 - The [JavaScript guide](/en-US/docs/Web/JavaScript/Guide)
 - The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 
-For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
+For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Beginner's tutorials
 
@@ -49,25 +49,23 @@ Learn how to program in JavaScript from the ground up with our beginner's tutori
   - : In this module, we take a look at {{Glossary("asynchronous")}} JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
-- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Guide/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
-- [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
   - : Overview of available data structures in JavaScript.
-- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript provides three different value comparison operations: strict equality using `===`, loose equality using `==`, and the {{jsxref("Object.is()")}} method.
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : How different methods that visit a group of object properties one-by-one handle the enumerability and ownership of properties.
-- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
   - : A closure is the combination of a function and the lexical environment within which that function was declared.
 
 ### Advanced
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Explanation of the widely misunderstood and underestimated prototype-based inheritance.
-- [Memory Management](/en-US/docs/Web/JavaScript/Memory_management)
+- [Memory Management](/en-US/docs/Web/JavaScript/Guide/Memory_management)
   - : Memory life cycle and garbage collection in JavaScript.
-- [The event loop](/en-US/docs/Web/JavaScript/Event_loop)
-  - : JavaScript has a runtime model based on an "event loop".
 
 ## Reference
 

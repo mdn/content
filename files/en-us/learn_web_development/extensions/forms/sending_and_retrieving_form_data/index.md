@@ -83,11 +83,11 @@ How the data is sent depends on the `method` attribute.
 
 The [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute defines how data is sent. The [HTTP protocol](/en-US/docs/Web/HTTP) provides several ways to perform a request; HTML form data can be transmitted via a number of different methods, the most common being the `GET` method and the `POST` method
 
-To understand the difference between those two methods, let's step back and examine [how HTTP works](/en-US/docs/Web/HTTP/Overview). Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a [header](/en-US/docs/Web/HTTP/Headers) that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.
+To understand the difference between those two methods, let's step back and examine [how HTTP works](/en-US/docs/Web/HTTP/Guides/Overview). Each time you want to reach a resource on the Web, the browser sends a request to a URL. An HTTP request consists of two parts: a [header](/en-US/docs/Web/HTTP/Reference/Headers) that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.
 
 #### The GET method
 
-The [`GET` method](/en-US/docs/Web/HTTP/Methods/GET) is the method used by the browser to ask the server to send back a given resource: "Hey server, I want to get this resource." In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL.
+The [`GET` method](/en-US/docs/Web/HTTP/Reference/Methods/GET) is the method used by the browser to ask the server to send back a given resource: "Hey server, I want to get this resource." In this case, the browser sends an empty body. Because the body is empty, if a form is sent using this method the data sent to the server is appended to the URL.
 
 Consider the following form:
 
@@ -127,11 +127,11 @@ Host: foo.com
 > You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 > [!NOTE]
-> The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
+> The data will not be appended if the `action` URL scheme cannot handle queries, e.g., `file:`.
 
 #### The POST method
 
-The [`POST` method](/en-US/docs/Web/HTTP/Methods/POST) is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.
+The [`POST` method](/en-US/docs/Web/HTTP/Reference/Methods/POST) is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.
 
 Let's look at an example — this is the same form we looked at in the `GET` section above, but with the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute set to `POST`.
 
@@ -168,7 +168,7 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 > You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
 > [!NOTE]
-> The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
+> The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g., `data:`.
 
 ### Viewing HTTP requests
 
@@ -338,8 +338,3 @@ If you want to learn more about securing a web application, you can dig into the
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

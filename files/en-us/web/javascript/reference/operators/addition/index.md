@@ -9,7 +9,7 @@ browser-compat: javascript.operators.addition
 
 The **addition (`+`)** operator produces the sum of numeric operands or string concatenation.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{InteractiveExample("JavaScript Demo: Addition (+) operator")}}
 
 ```js interactive-example
 console.log(2 + 2);
@@ -33,7 +33,7 @@ x + y
 
 ## Description
 
-The `+` operator is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). Then, the two operands' types are tested:
+The `+` operator is overloaded for two distinct operations: numeric addition and string concatenation. When evaluating, it first [coerces both operands to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). Then, the two operands' types are tested:
 
 - If one side is a string, the other operand is also [converted to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) and they are concatenated.
 - If they are both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), BigInt addition is performed. If one side is a BigInt but the other is not, a {{jsxref("TypeError")}} is thrown.

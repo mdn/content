@@ -20,7 +20,7 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 50, 130, 44];
@@ -88,7 +88,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### Using arrow function and destructuring
 
-The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring):
+The previous example might be written using an arrow function and [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring):
 
 ```js
 const inventory = [
@@ -211,6 +211,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [es-shims polyfill of `Array.prototype.findLast`](https://www.npmjs.com/package/array.prototype.findlast)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}

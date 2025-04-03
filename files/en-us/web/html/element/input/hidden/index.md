@@ -10,7 +10,7 @@ browser-compat: html.elements.input.type_hidden
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
 > [!NOTE]
-> The {{domxref("Element/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g. `hiddenInput.focus()`).
+> The {{domxref("Element/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g., `hiddenInput.focus()`).
 
 ## Value
 
@@ -58,7 +58,7 @@ Hidden inputs don't participate in constraint validation; they have no real valu
 
 ## Examples
 
-Let's look at how we might implement a simple version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
+Let's look at how we might implement a version of the edit form we described earlier (see [Tracking edited content](#tracking_edited_content)), using a hidden input to remember the ID of the record being edited.
 
 The edit form's HTML might look a bit like this:
 

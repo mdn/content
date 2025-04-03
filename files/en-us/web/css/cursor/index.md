@@ -12,7 +12,53 @@ The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if a
 The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on.
 You can specify either the _type_ of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## Syntax
 

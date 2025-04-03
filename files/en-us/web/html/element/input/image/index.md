@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_image
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
+{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e., submit buttons that take the form of an image rather than text.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
@@ -86,7 +86,7 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 A string indicating the HTTP method to use when submitting the form's data; this value overrides any [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute given on the owning form. Permitted values are:
 
 - `get`
-  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for simple forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
+  - : A URL is constructed by starting with the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, appending a question mark ("?") character, then appending the form's data, encoded as described by `formenctype` or the form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute. This URL is then sent to the server using an HTTP {{HTTPMethod("get")}} request. This method works well for forms that contain only {{Glossary("ASCII")}} characters and have no side effects. This is the default value.
 - `post`
   - : The form's data is included in the body of the request that is sent to the URL given by the `formaction` or [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute using an HTTP {{HTTPMethod("post")}} request. This method supports complex data and file attachments.
 - `dialog`
@@ -139,7 +139,7 @@ If `usemap` is specified, it must be the name of an image map element, {{HTMLEle
 
 ## Using image inputs
 
-The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
+The `<input type="image">` element is a {{ glossary("replaced elements", "replaced element")}} (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
 
 ### Essential image input features
 
@@ -159,7 +159,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 - The [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
 - The [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
-- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original {{glossary("aspect ratio")}}.
+- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g., {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original {{glossary("aspect ratio")}}.
 
 ### Overriding default form behaviors
 
@@ -353,7 +353,7 @@ Here, `object-position` is configured to draw the image in the top-right corner 
     </tr>
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

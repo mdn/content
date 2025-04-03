@@ -79,11 +79,6 @@ let mediaConstraints = {
   video: false,
 };
 
-let offerOptions = {
-  offerToReceiveAudio: 1,
-  offerToReceiveVideo: 0,
-};
-
 let dialButton = null;
 let logElement = null;
 ```
@@ -100,8 +95,6 @@ These are, in order:
   - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in [Starting the connection process](#starting_the_connection_process).
 - `mediaConstraints`
   - : An object specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
-- `offerOptions`
-  - : An object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
 - `dialButton` and `logElement`
   - : These variables will be used to store references to the dial button and the {{HTMLElement("div")}} into which logging information will be written. They'll get set up when the page is first loaded. See [Initialization](#initialization) below.
 
@@ -288,36 +281,33 @@ Our call to `insertDTMF()` specifies not only the DTMF to send (`dialString`), b
 
 #### Negotiating the connection
 
-When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by chaining the required calls together for both the caller and receiver, as shown below.
+When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after the microphone's stream is added to it), a {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}} event is delivered to the caller, letting it know that it's time to start negotiating the connection with the receiver. As previously mentioned, our example is simplified somewhat because we control both the caller and the receiver, so `handleCallerNegotiationNeeded()` is able to quickly construct the connection by calling methods for both the caller and receiver, as shown below.
 
 ```js
-function handleCallerNegotiationNeeded() {
+// Offer to receive audio but not video
+const constraints = { audio: true, video: false };
+
+async function handleCallerNegotiationNeeded() {
   log("Negotiating…");
-  callerPC
-    .createOffer(offerOptions)
-    .then((offer) => {
-      log(`Setting caller's local description: ${offer.sdp}`);
-      return callerPC.setLocalDescription(offer);
-    })
-    .then(() => {
-      log(
-        "Setting receiver's remote description to the same as caller's local",
-      );
-      return receiverPC.setRemoteDescription(callerPC.localDescription);
-    })
-    .then(() => {
-      log("Creating answer");
-      return receiverPC.createAnswer();
-    })
-    .then((answer) => {
-      log(`Setting receiver's local description to ${answer.sdp}`);
-      return receiverPC.setLocalDescription(answer);
-    })
-    .then(() => {
-      log("Setting caller's remote description to match");
-      return callerPC.setRemoteDescription(receiverPC.localDescription);
-    })
-    .catch((err) => log(`Error during negotiation: ${err.message}`));
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    for (const track of stream.getTracks()) {
+      pc.addTrack(track, stream);
+    }
+    const offer = await callerPC.createOffer();
+    log(`Setting caller's local description: ${offer.sdp}`);
+    await callerPC.setLocalDescription(offer);
+    log("Setting receiver's remote description to the same as caller's local");
+    await receiverPC.setRemoteDescription(callerPC.localDescription);
+    log("Creating answer");
+    const answer = await receiverPC.createAnswer();
+    log(`Setting receiver's local description to ${answer.sdp}`);
+    await receiverPC.setLocalDescription(answer);
+    log("Setting caller's remote description to match");
+    await callerPC.setRemoteDescription(receiverPC.localDescription);
+  } catch (err) {
+    log(`Error during negotiation: ${err.message}`);
+  }
 }
 ```
 

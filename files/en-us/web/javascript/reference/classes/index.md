@@ -7,7 +7,7 @@ browser-compat: javascript.classes
 
 {{jsSidebar("Classes")}}
 
-Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
+Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on [prototypes](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) but also have some syntax and semantics that are unique to classes.
 
 For more examples and explanations, see the [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide.
 
@@ -180,7 +180,7 @@ class Rectangle {
 }
 ```
 
-Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private properties](#private_properties_2) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
+Class fields are similar to object properties, not variables, so we don't use keywords such as `const` to declare them. In JavaScript, [private properties](#private_properties) use a special identifier syntax, so modifier keywords like `public` and `private` should not be used either.
 
 As seen above, the fields can be declared with or without a default value. Fields without default values default to `undefined`. By declaring fields up-front, class definitions become more self-documenting, and the fields are always present, which help with optimizations.
 

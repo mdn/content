@@ -141,7 +141,7 @@ Each button has some basic styling:
 
 By default, all {{htmlelement("button") }} elements have a border, so this is removed. Since background images will be used to display appropriate icons, the background color of the button is set to be transparent, non-repeated, and the element should fully contain the image.
 
-Simple `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
+The `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
 
 ```css
 .controls button:hover,
@@ -152,7 +152,7 @@ Simple `:hover` and `:focus` states are then set for each button that alters the
 
 To obtain appropriate button images, a set of free common control set icons was downloaded from the web. Each image was then converted to a base64 encoded string (using an online [base64 image encoder](https://www.base64-image.de/)), since the images are quite small, the resultant encoded strings are quite short.
 
-Since some buttons have dual functionality, e.g. play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a `data-state` variable is used to indicate which state such buttons are currently in.
+Since some buttons have dual functionality, e.g., play/pause, and mute/unmute, these buttons have different states that need to be styled. As mentioned earlier, a `data-state` variable is used to indicate which state such buttons are currently in.
 
 For example, the play/pause button has the following background image definitions (the full base64 strings have been omitted for brevity):
 
@@ -371,7 +371,7 @@ The [FullScreen implementation](/en-US/docs/Web/Media/Guides/Audio_and_video_del
 
 Now that the player has its basic look and feel taken care of, some other styling changes — involving media queries — need to be made in order to make it responsive.
 
-The player currently works fairly well until displayed on a "medium" screen (e.g. 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
+The player currently works fairly well until displayed on a "medium" screen (e.g., 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
 
 ```css
 @media screen and (max-width: 64em) {

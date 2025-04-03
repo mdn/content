@@ -71,11 +71,11 @@ restart, we can use code like this:
 
 ```js
 const ssNewCandidate = (signalMsg) => {
-  let candidate = new RTCIceCandidate(signalMsg.candidate);
-  let receivers = pc.getReceivers();
+  const candidate = new RTCIceCandidate(signalMsg.candidate);
+  const receivers = pc.getReceivers();
 
   for (const receiver of receivers) {
-    let parameters = receiver.transport.getParameters();
+    const parameters = receiver.transport.iceTransport.getRemoteParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {
       return;

@@ -1,5 +1,6 @@
 ---
 title: Implementing feature detection
+short-title: Feature detection
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 page-type: learn-module-chapter
 ---
@@ -57,7 +58,7 @@ In this section, we'll look at implementing your own feature detection tests, in
 
 ### CSS
 
-You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.rotate`) in JavaScript.
+You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g., `paragraph.style.rotate`) in JavaScript.
 
 A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns) and [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows), we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
 
@@ -163,11 +164,11 @@ Common patterns for detectable features include:
 
 - Specific return values of a method on an element
 
-  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns. See the feature test in [Dive into HTML Video Format detection](https://diveinto.html5doctor.com/detect.html#video-formats) for an example of this pattern.
+  - : Create an element in memory using {{domxref("Document.createElement()")}} and then check if a method exists on it. If it does, check what value it returns.
 
 - Retention of assigned property value by an element
 
-  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
+  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained.
 
 Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
 

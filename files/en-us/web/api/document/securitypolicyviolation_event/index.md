@@ -8,14 +8,14 @@ browser-compat: api.Document.securitypolicyviolation_event
 
 {{APIRef}}
 
-The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 
 The event is fired on the document when there is a violation of the document CSP policy (and may also bubble from elements in the document).
 
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+> You should add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
 > While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
 
 ## Syntax
@@ -60,4 +60,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 - The {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Element")}} interface
 - The {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("WorkerGlobalScope")}} interface
-- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)

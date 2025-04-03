@@ -11,9 +11,53 @@ The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distributio
 
 The interactive example below uses grid layout to demonstrate some of the values of this property.
 
-{{EmbedInteractiveExample("pages/css/align-content.html")}}
+{{InteractiveExample("CSS Demo: align-content")}}
 
-This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
+```css interactive-example-choice
+align-content: start;
+```
+
+```css interactive-example-choice
+align-content: center;
+```
+
+```css interactive-example-choice
+align-content: space-between;
+```
+
+```css interactive-example-choice
+align-content: space-around;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  column-gap: 10px;
+  height: 180px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
 
 ## Syntax
 
@@ -90,7 +134,7 @@ align-content: unset;
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
 > [!NOTE]
-> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject)
+> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject).
 
 ## Formal definition
 
@@ -251,5 +295,5 @@ In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_a
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Block-level_content](/en-US/docs/Glossary/Block-level_content)
+- [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

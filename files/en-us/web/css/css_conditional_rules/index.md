@@ -89,6 +89,10 @@ There are plans to further extend possible queries by adding the generalized con
 
   - : A look at JavaScript and CSS feature detection, including CSS `@supports`.
 
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+
+  - : Using container scroll-state queries, with an example of each type.
+
 ## Related concepts
 
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
@@ -100,10 +104,10 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-feature>`](/en-US/docs/Web/CSS/@media#media_features)
   - [`<media-type>`](/en-US/docs/Web/CSS/@media#media_types)
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
-  - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
+  - [`<media-query-list>`](/en-US/docs/Web/SVG/Reference/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API

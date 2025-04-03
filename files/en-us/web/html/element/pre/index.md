@@ -15,7 +15,7 @@ Whitespace inside this element is displayed as written, with one exception. If o
 
 `<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
-By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e. its default {{cssxref("display")}} value is `block`.
+By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e., its default {{cssxref("display")}} value is `block`.
 
 {{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
 
@@ -64,7 +64,7 @@ It is important to provide an alternate description for any images or diagrams c
 
 People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
 
-A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes on the `pre` element allow the preformatted {{Glossary("ASCII")}} art to be announced as an image with alternative text, and the `figcaption` serving as the image's caption.
+A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attributes on the `pre` element allow the preformatted {{Glossary("ASCII")}} art to be announced as an image with alternative text, and the `figcaption` serving as the image's caption.
 
 ### Example
 
@@ -87,7 +87,7 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 </figure>
 ```
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## Examples
@@ -177,7 +177,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

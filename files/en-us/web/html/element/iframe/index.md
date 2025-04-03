@@ -39,9 +39,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `allow`
 
-  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
+  - : Specifies a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) for the `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
 
-    See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
+    See [iframes](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
 
     > [!NOTE]
     > A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
@@ -70,7 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `csp` {{experimental_inline}}
 
-  - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
+  - : A [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
 - `height`
   - : The height of the frame in CSS pixels. Default is `150`.
@@ -156,7 +156,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `src`
 
-  - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+  - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 
     > [!NOTE]
     > The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
@@ -208,7 +208,7 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 
 ## Positioning and scaling
 
-Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+Being a {{ glossary("replaced elements", "replaced element")}}, the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
 
 > [!NOTE]
 > The {{cssxref("object-fit")}} property has no effect on `<iframe>` elements.
@@ -332,9 +332,9 @@ Here's how to write escape sequences when using `srcdoc`:
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -354,5 +354,5 @@ Here's how to write escape sequences when using `srcdoc`:
 
 ## See also
 
-- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

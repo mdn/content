@@ -68,7 +68,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 2. A space
 3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press <kbd>Cmd</kbd> + <kbd>I</kbd> to bring up the info screen).
 
-**`sizes`** defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:
+**`sizes`** defines a set of media conditions (e.g., screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:
 
 1. A **media condition** (`(max-width:600px)`) — you'll learn more about these in the [CSS topic](/en-US/docs/Learn_web_development/Core/Styling_basics), but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".
 2. A space
@@ -162,7 +162,7 @@ When the browser starts to load a page, it starts to download (preload) any imag
 
 For this active learning, we're expecting you to be brave and do it alone, mostly. We want you to implement your own suitable art-directed narrow screen/wide screenshot using `<picture>`, and a resolution switching example that uses `srcset`.
 
-1. Write some simple HTML to contain your code (use `not-responsive.html` as a starting point, if you like).
+1. Write some HTML to contain your code (use `not-responsive.html` as a starting point, if you like).
 2. Find a nice wide screen landscape image with some kind of detail contained in it somewhere. Create a web-sized version of it using a graphics editor, then crop it to show a smaller part that zooms in on the detail, and create a second image (about 480px wide is good for this).
 3. Use the `<picture>` element to implement an art direction picture switcher!
 4. Create multiple image files of different sizes, each showing the same picture.

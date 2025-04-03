@@ -150,7 +150,7 @@ Highlights:
   - `mozRTCSessionDescription` is now {{domxref("RTCSessionDescription")}}.
 
 - The {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} property, as well as the {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event and its event handler, have been implemented ([Firefox bug 1178091](https://bugzil.la/1178091)).
-- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()`} removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
+- The attribute {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} has been added, the non-standard method `RTCPeerConnection.updateIce()` removed ([Firefox bug 1209744](https://bugzil.la/1209744)).
 - The {{domxref("MediaStream")}} interface now supports the {{domxref("MediaStream.addTrack()")}} and {{domxref("MediaStream.removeTrack()")}} methods ([Firefox bug 1103188](https://bugzil.la/1103188)).
 - The constructor {{domxref("MediaStream.MediaStream", "MediaStream()")}} has been implemented ([Firefox bug 1070216](https://bugzil.la/1070216)).
 - Support for the non-standard constraint style option list for `RTCOfferOptions` has been removed.
@@ -183,7 +183,7 @@ _No change._
 
 ## HTTP
 
-- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
+- Support for the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm has been added and both [`Accept-Encoding`](/en-US/docs/Web/HTTP/Guides/Content_negotiation#the_accept-encoding_header) and [`Content-Encoding`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding) headers now support the `br` value ([Firefox bug 366559](https://bugzil.la/366559) and [Firefox bug 1211916](https://bugzil.la/1211916)).
 - Incorrect support of HTTP/2 headers containing line breaks (`'/n'`) have been removed as the spec doesn't allow it, unlike HTTP/1 ([Firefox bug 1197847](https://bugzil.la/1197847)).
 
 ## Networking

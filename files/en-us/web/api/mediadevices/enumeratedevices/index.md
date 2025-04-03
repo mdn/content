@@ -11,7 +11,7 @@ browser-compat: api.MediaDevices.enumerateDevices
 The **`enumerateDevices()`** method of the {{domxref("MediaDevices")}} interface requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.
 The returned {{jsxref("Promise")}} is resolved with an array of {{domxref("MediaDeviceInfo")}} objects describing the devices.
 
-The returned list will omit any devices that are blocked by the document [Permission Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy): [`microphone`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
+The returned list will omit any devices that are blocked by the document [Permission Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy): [`microphone`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/microphone), [`camera`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera), [`speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) (for output devices), and so on.
 Access to particular non-default devices is also gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API), and the list will omit devices for which the user has not granted explicit permission.
 
 ## Syntax

@@ -9,7 +9,41 @@ browser-compat: css.types.basic-shape.polygon
 
 The **`polygon()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types). It's used to draw a [polygon](https://en.wikipedia.org/wiki/Polygon) by providing one or more pairs of coordinates, each of which represents a vertex of the shape.
 
-{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+{{InteractiveExample("CSS Demo: polygon()")}}
+
+```css interactive-example-choice
+clip-path: polygon(
+  0% 20%,
+  60% 20%,
+  60% 0%,
+  100% 50%,
+  60% 100%,
+  60% 80%,
+  0% 80%
+);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 
@@ -27,13 +61,13 @@ polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
-The `polygon()` parameters are separated by a comma and optional whitespace. The first parameter is an optional [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) value. Additional parameters are points that define the polygon. Each point is a pair of x/y coordinate {{cssxref("length-percentage")}} values separated by a space, e.g. "0 0" and "100% 100%" for the left/top and bottom right corners, respectively.
+The `polygon()` parameters are separated by a comma and optional whitespace. The first parameter is an optional [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) value. Additional parameters are points that define the polygon. Each point is a pair of x/y coordinate {{cssxref("length-percentage")}} values separated by a space, e.g., "0 0" and "100% 100%" for the left/top and bottom right corners, respectively.
 
-Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Element/polygon) element has separate attributes for [`fill-rule`](/en-US/docs/Web/SVG/Attribute/fill-rule) and [`points`](/en-US/docs/Web/SVG/Attribute/points), and `points` is flexible about the use of space and comma separators. CSS `polygon()` rules for separators are strictly enforced.
+Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Reference/Element/polygon) element has separate attributes for [`fill-rule`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) and [`points`](/en-US/docs/Web/SVG/Reference/Attribute/points), and `points` is flexible about the use of space and comma separators. CSS `polygon()` rules for separators are strictly enforced.
 
 ### Parameters
 
-- [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the filling rule.
 - {{cssxref("length-percentage")}}
   - : Each vertex of the polygon is represented by a pair of `<length-percentage>` values, which give the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes#the_reference_box).

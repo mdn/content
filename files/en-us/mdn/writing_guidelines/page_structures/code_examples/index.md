@@ -11,7 +11,7 @@ This article describes the ways you can add code examples to pages, along with t
 
 > [!NOTE]
 > This page describes **how** code gets included in MDN pages.
-> If you want linting and style hints for adding code in an MDN page, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> If you want linting and style hints for adding code in an MDN page, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 ## What types of code example are on MDN?
 
@@ -108,7 +108,7 @@ An \\{{EmbedGHLiveSample}} takes the content at a specified URL (which must be a
 
 The macro has three parameters:
 
-1. The URL of the document to embed — this is relative to the MDN organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g. `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
+1. The URL of the document to embed — this is relative to the MDN organization, the top level directory of which is at `https://mdn.github.io/`. So this parameter needs to contain the part of the URL after that, e.g., `my-subdirectory/example.html`. You can omit the filename if it is called `index.html`.
 2. The width of the `<iframe>`, which can be expressed as a percentage or in pixels.
 3. The height of the `<iframe>`, which can be expressed as a percentage or in pixels.
 

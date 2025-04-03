@@ -59,4 +59,5 @@ Symbol.for("foo").description; // "foo"
 ## See also
 
 - [Polyfill of `Symbol.prototype.description` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [es-shims polyfill of `Symbol.prototype.description`](https://www.npmjs.com/package/symbol.prototype.description)
 - {{jsxref("Symbol.prototype.toString()")}}

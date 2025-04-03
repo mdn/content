@@ -64,7 +64,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 
 The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
 
-When the regex is sticky and global, it will still perform sticky matches — i.e. it will not match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it will still perform sticky matches — i.e., it will not match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
@@ -134,6 +134,7 @@ console.log(result[1]);
 ## See also
 
 - [Polyfill of `RegExp.prototype[Symbol.matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `RegExp.prototype[Symbol.matchAll]`](https://www.npmjs.com/package/string.prototype.matchall)
 - {{jsxref("String.prototype.matchAll()")}}
 - [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
 - [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)

@@ -1,5 +1,6 @@
 ---
 title: HTML video and audio
+short-title: Video and audio
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 page-type: tutorial-chapter
 ---
@@ -82,13 +83,13 @@ There's a problem with the above example. It is possible that the video might no
 
 ### Contents of a media file
 
-First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM are called **[container formats](/en-US/docs/Web/Media/Guides/Formats/Containers)**. They define a structure in which the audio and/or video tracks that make up the media are stored, along with metadata describing the media, what codecs are used to encode its channels, and so forth.
+First, let's go through the terminology quickly. Formats like OGG, WAV, MP4 and WebM are called **[container formats](/en-US/docs/Web/Media/Guides/Formats/Containers)**. They define a structure in which the audio and/or video tracks that make up the media are stored, along with metadata describing the media, what codecs are used to encode its channels, and so forth.
 
 A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.
 
 ![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.png)
 
-The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an [audio codec](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs), while video tracks are encoded using (as you probably have guessed) [a video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).
+The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an [audio codec](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs), while video tracks are encoded using (as you probably have guessed) [a video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). As we talked about before, different browsers support different video and audio formats, and different container formats (like OGG, MP4, and WebM, which in turn can contain different types of video and audio).
 
 For example:
 
@@ -98,9 +99,9 @@ For example:
 
 There are some special cases. For example, for some types of audio, a codec's data is often stored without a container, or with a simplified container. One such instance is the FLAC codec, which is stored most commonly in FLAC files, which are just raw FLAC tracks.
 
-Another such situation is the always-popular MP3 file. An "MP3 file" is actually an MPEG-1 Audio Layer III (MP3) audio track stored within an MPEG or MPEG-2 container. This is especially interesting since while most browsers don't support using MPEG media in the {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements, they may still support MP3 due to its popularity.
+Another example is the ever-popular "MP3 file". An "MP3 file" is an audio file encoded using MPEG-1 Audio Layer III compression. While it can include metadata, it is not encapsulated within a separate MPEG or MPEG-2 container. Its widespread support in the {{htmlelement("audio")}} and {{htmlelement("video")}} elements is largely a testament to its enduring popularity.
 
-An audio player will tend to play an audio track directly, e.g. an MP3 or Ogg file. These don't need containers.
+An audio player will tend to play an audio track directly, e.g., an MP3 or Ogg file. These don't need containers.
 
 ### Media file support in browsers
 

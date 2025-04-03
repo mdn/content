@@ -59,7 +59,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 ### MathML
 
-- [MathML elements](/en-US/docs/Web/MathML/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
+- [MathML elements](/en-US/docs/Web/MathML/Reference/Element) now implement a MathML DOM and their class is {{domxref("MathMLElement")}}. With a proper MathML DOM, you can now use `mathmlEl.style`, or global event handlers, for example. Prior to this change, MathML elements only implemented the {{domxref("Element")}} class ([Firefox bug 1571487](https://bugzil.la/1571487)).
 
 ### APIs
 

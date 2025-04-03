@@ -45,13 +45,13 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 
 - `brands`
   - : Returns an array of objects containing `brand` and `version` specifying the browser brand and its version (the same information as provided by {{domxref("NavigatorUAData.brands")}}).
-    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)).
 - `mobile`
   - : Returns `true` if the user agent is running on a mobile device (the same information as provided by {{domxref("NavigatorUAData.mobile")}}).
-    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Mobile")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)).
 - `platform`
   - : Returns a string describing the platform the user agent is running on, like `"Windows"` (the same information as provided by {{domxref("NavigatorUAData.platform")}}).
-    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)).
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Platform")}} header (a [low-entropy client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)).
 - `architecture`
   - : A string containing the platform architecture. For example, `"x86"`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Arch")}} header after the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
@@ -111,7 +111,7 @@ navigator.userAgentData
 ## See also
 
 - These values are also available as via HTTP request headers:
-  - [Low-entropy client hints](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) are sent automatically:
+  - [Low-entropy client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) are sent automatically:
     - {{HTTPHeader("Sec-CH-UA")}}
     - {{HTTPHeader("Sec-CH-UA-Mobile")}}
     - {{HTTPHeader("Sec-CH-UA-Platform")}}

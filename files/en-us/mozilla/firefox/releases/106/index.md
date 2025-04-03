@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### MathML
 
-- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) MathML elements now only render the first child element by default ([Firefox bug 1588733](https://bugzil.la/1588733)).
+- The [`<semantics>`](/en-US/docs/Web/MathML/Reference/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Reference/Element/maction) MathML elements now only render the first child element by default ([Firefox bug 1588733](https://bugzil.la/1588733)).
 
 ### CSS
 
@@ -32,7 +32,7 @@ No notable changes.
 
 #### DOM
 
-- The [`HTMLMetaElement.media`](/en-US/docs/Web/API/HTMLMetaElement/media) property is now supported. This property enables you to set different theme colors based on `media` values (e.g. `max-width: 600px`).
+- The [`HTMLMetaElement.media`](/en-US/docs/Web/API/HTMLMetaElement/media) property is now supported. This property enables you to set different theme colors based on `media` values (e.g., `max-width: 600px`).
   Meta elements with `media` properties allow the browser to use the `content` value in conjunction with `theme-color` to set the page or UI colors for a given media query ([Firefox bug 1706179](https://bugzil.la/1706179)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)

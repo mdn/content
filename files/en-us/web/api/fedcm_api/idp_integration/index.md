@@ -20,7 +20,7 @@ To integrate with FedCM, an IdP needs to do the following:
 
 There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
@@ -34,13 +34,13 @@ The `provider_urls` member should contain an array of URLs pointing to valid IdP
 
 ## The `Sec-Fetch-Dest` HTTP header
 
-All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header. All IdP endpoints that receive credentialed requests (i.e. `accounts_endpoint` and `id_assertion_endpoint`) must confirm this header is included to protect against {{glossary("CSRF")}} attacks.
+All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header. All IdP endpoints that receive credentialed requests (i.e., `accounts_endpoint` and `id_assertion_endpoint`) must confirm this header is included to protect against {{glossary("CSRF")}} attacks.
 
 ## Provide a config file and endpoints
 
 The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. The endpoints need to be same-origin with the config.
 
-The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) method, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -93,7 +93,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests (i.e. with a cookie that identifies the user that is signed in) to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
+The browser sends credentialed requests (i.e., with a cookie that identifies the user that is signed in) to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
 
 For example:
 
@@ -147,10 +147,10 @@ This includes the following information:
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
 - `login_hints` {{optional_inline}}
-  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#providers_2) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
+  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/IdentityCredentialRequestOptions#providers) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
 > [!NOTE]
-> If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
+> If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Reference/Status/401).
 
 ### The client metadata endpoint
 
@@ -177,7 +177,7 @@ The response to a successful request includes URLs pointing to the RP's metadata
 
 ### The ID assertion endpoint
 
-The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
+The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method, with a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
 
 It should look something like this:
 
@@ -210,10 +210,23 @@ The request payload contains the following params:
 - `disclosure_text_shown`
   - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
 - `is_auto_selected`
-  - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication), i.e. without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
+  - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication), i.e., without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
 
 > [!NOTE]
 > If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
+
+#### CORS headers for the ID assertion endpoint
+
+The ID assertion endpoint response must include the {{httpheader("Access-Control-Allow-Origin")}} and {{httpheader("Access-Control-Allow-Credentials")}} headers, and the `Access-Control-Allow-Origin` must include the requester's origin:
+
+```http
+Access-Control-Allow-Origin: https://rp.example
+Access-Control-Allow-Credentials: true
+```
+
+Note that the `Access-Control-Allow-Origin` must be set to the specific origin of the requester (the RP) and cannot be the wildcard value `*`.
+
+Without these headers, the request will fail with a network error.
 
 #### ID assertion error responses
 

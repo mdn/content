@@ -39,7 +39,7 @@ As a general rule, you can assume that media will be allowed to autoplay only if
 - The audio is muted or its volume is set to 0
 - The user has interacted with the site (by clicking, tapping, pressing keys, etc.)
 - If the site has been allowlisted; this may happen either automatically if the browser determines that the user engages with media frequently, or manually through preferences or other user interface features
-- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
+- If the autoplay [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) is used to grant autoplay support to an {{HTMLElement("iframe")}} and its document.
 
 Otherwise, the playback will likely be blocked.
 The exact situations that result in blocking, and the specifics of how sites become allowlisted, vary from browser to browser, but the above are good guidelines to go by.
@@ -78,7 +78,7 @@ If autoplay is important for your application, you may need to customize behavio
 For example, if your application needs to autoplay a video and you know that the page only allows the autoplay of inaudible content, you can either mute it or supply a video with no audio track.
 Similarly, if you know that autoplay is not allowed at all, you might provide a default image for the video (using the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) attribute), or choose to defer loading the video until it is requested.
 
-The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) method can be used to check the autoplay policy for a type of media feature (i.e. all media elements, or all audio contexts) in a document, or to check whether a specific media element or audio context can autoplay.
+The [`Navigator.getAutoplayPolicy()`](/en-US/docs/Web/API/Navigator/getAutoplayPolicy) method can be used to check the autoplay policy for a type of media feature (i.e., all media elements, or all audio contexts) in a document, or to check whether a specific media element or audio context can autoplay.
 
 The example below shows how you pass the `mediaelement` string to get the autoplay policy for all media elements in the document (pass `audiocontext` to get the policy for audio contexts).
 The code assumes `video` is an `HTMLVideoElement` media element using the [`<video>`](/en-US/docs/Web/HTML/Element/video#autoplay) tag or [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement), and that it is configured to autoplay with audio by default.
@@ -165,7 +165,7 @@ The term "autoplay" also refers to scenarios in which a script tries to trigger 
 
 #### Example: Playing video
 
-This simple example plays the first {{HTMLElement("video")}} element found in the document. `play()` won't let the playback begin unless the document has permission to automatically play media.
+This example plays the first {{HTMLElement("video")}} element found in the document. `play()` won't let the playback begin unless the document has permission to automatically play media.
 
 ```js
 document.querySelector("video").play();

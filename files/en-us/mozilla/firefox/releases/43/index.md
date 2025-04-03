@@ -46,7 +46,7 @@ Highlights:
 
 - To match the ES2015 specification, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) no longer have their own [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object. The `arguments` object is now lexically bound (inherited from the outer function). In most cases, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are a good alternative `(...args) => args[i]`, see [Firefox bug 889158](https://bugzil.la/889158).
 - The [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object is now allowed in conjunction with [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) ([Firefox bug 1133298](https://bugzil.la/1133298)).
-- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1175394](https://bugzil.la/1175394)).
+- From now on, a mapped [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object in non-strict functions is only provided if the function does **not** contain any [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), any [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) or any [destructured parameters](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1175394](https://bugzil.la/1175394)).
 
 #### Other changes
 
@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
+- Access to Web Storage (i.e., `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
 - This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ([Firefox bug 1201023](https://bugzil.la/1201023)). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
 - Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ([Firefox bug 992096](https://bugzil.la/992096)).
 

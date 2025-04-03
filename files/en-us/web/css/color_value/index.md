@@ -114,7 +114,7 @@ background-color: hsl(0deg 100% 50%);
 
 Color interpolation happens with [gradients](/en-US/docs/Web/CSS/gradient), [transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions), and [animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
-When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
+When interpolating `<color>` values, they are first converted to a given color space, and then each component of the [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) are interpolated linearly, with interpolation's speed being determined by the [easing function](/en-US/docs/Web/CSS/easing-function) in transitions and animations. The interpolation color space defaults to Oklab, but can be overridden through {{CSSXref("&lt;color-interpolation-method&gt;")}} in some color-related functional notations.
 
 ### Interpolation with missing components
 
@@ -190,7 +190,7 @@ The preprocessing procedure is:
 
 ## Accessibility
 
-Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
+Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 
 ## Formal syntax
 

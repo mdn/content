@@ -9,7 +9,87 @@ browser-compat: css.properties.offset-rotate
 
 The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 
-{{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
+{{InteractiveExample("CSS Demo: offset-rotate")}}
+
+```css interactive-example-choice
+offset-rotate: auto;
+```
+
+```css interactive-example-choice
+offset-rotate: 90deg;
+```
+
+```css interactive-example-choice
+offset-rotate: auto 90deg;
+```
+
+```css interactive-example-choice
+offset-rotate: reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+  animation: distance 8000ms infinite linear;
+  animation-play-state: paused;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Provides a reference image of what path the element is following */
+#default-example {
+  position: relative;
+  background-position: calc(50% - 12px) calc(50% + 14px);
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -45 150 140" width="150" height="140"><path d="M-70,-40 C-70,70 70,70 70,-40" fill="none" stroke="lightgrey" stroke-width="2" stroke-dasharray="4.5"/></svg>');
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 > [!NOTE]
 > Early versions of the spec called this property `motion-rotation`.

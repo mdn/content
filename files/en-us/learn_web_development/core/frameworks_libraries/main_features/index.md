@@ -1,5 +1,6 @@
 ---
 title: Framework main features
+short-title: Framework features
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 page-type: learn-module-chapter
 ---
@@ -87,9 +88,9 @@ Given this Handlebars template:
 
 And this data:
 
-```js
+```json
 {
-  subject: "World";
+  "subject": "World"
 }
 ```
 

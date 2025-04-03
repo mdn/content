@@ -7,7 +7,7 @@ browser-compat: css.types.text-edge
 
 {{CSSRef}}
 
-The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_Types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
+The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
 
 The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property to specify an amount of space to trim from the block-start and block-end edge of a text element's block container.
 
@@ -20,7 +20,7 @@ The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property t
 ```
 
 > [!NOTE]
-> The `ideographic` and `ideographic-ink` keywords are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
+> The `ideographic` and `ideographic-ink` keywords are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are not supported by any browser.
 
 ## Values
 

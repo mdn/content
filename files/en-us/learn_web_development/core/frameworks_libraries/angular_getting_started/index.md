@@ -72,7 +72,7 @@ To install Angular on your local system, you need the following:
 
   Angular requires a [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.dev/reference/versions) page.
 
-  For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download/package-manager).
+  For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
 
 - **npm package manager**
@@ -190,7 +190,7 @@ export class ItemComponent {
 ```
 
 This component is called `ItemComponent`, and its selector is `app-item`.
-You use a selector just like regular HTML tags by placing it within other templates, i.e. `<app-item></app-item>`.
+You use a selector just like regular HTML tags by placing it within other templates, i.e., `<app-item></app-item>`.
 When a selector is in a template, the browser renders the template of that component whenever an instance of the selector is encountered.
 This tutorial guides you through creating two components and using one within the other.
 

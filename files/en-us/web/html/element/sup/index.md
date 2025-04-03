@@ -136,7 +136,7 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
           ></code
         >
       </td>
@@ -163,5 +163,5 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
 ## See also
 
 - The {{HTMLElement("sub")}} HTML element that produces subscripts. Note that you cannot use `sub` and `sup` at the same time: you need to use [MathML](/en-US/docs/Web/MathML) to produce both a superscript and a subscript next to the chemical symbol of an element, representing its atomic number and its nuclear number.
-- The [`<msub>`](/en-US/docs/Web/MathML/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Element/msubsup) MathML elements.
+- The [`<msub>`](/en-US/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/en-US/docs/Web/MathML/Reference/Element/msup), and [`<msubsup>`](/en-US/docs/Web/MathML/Reference/Element/msubsup) MathML elements.
 - The CSS {{cssxref("vertical-align")}} property.

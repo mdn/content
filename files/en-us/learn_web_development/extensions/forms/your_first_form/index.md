@@ -125,7 +125,7 @@ You'll find more about this in the [Basic native form controls](/en-US/docs/Lear
   It represents a basic single-line text field that accepts any kind of text input.
 - For the second input, we use the value {{HTMLelement("input/email", "email")}}, which defines a single-line text field that only accepts a well-formed email address.
   This turns a basic text field into a kind of "intelligent" field that will perform some validation checks on the data typed by the user.
-  It also causes a more appropriate keyboard layout for entering email addresses (e.g. with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones.
+  It also causes a more appropriate keyboard layout for entering email addresses (e.g., with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones.
   You'll find out more about form validation in the [client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) article later on.
 
 Last but not least, note the syntax of `<input>` vs. `<textarea></textarea>`.
@@ -287,7 +287,7 @@ Let's look at some of our form code again:
 ```
 
 In our example, the form will send 3 pieces of data named `user_name`, `user_email`, and `user_message`.
-That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) method.
 
 On the server side, the script at the URL `/my-handling-form-page` will receive the data as a list of 3 key/value items contained in the HTTP request.
 The way this script will handle that data is up to you.
@@ -395,8 +395,3 @@ button {
 That's only the beginning, however — now it's time to take a deeper look. Forms have way more power than what we saw here and the other articles in this module will help you to master the rest.
 
 {{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

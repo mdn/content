@@ -164,7 +164,7 @@ In JavaScript, identifiers are commonly made of alphanumeric characters, undersc
 - After the first character, you can use any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category plus U+200C (ZWNJ) and U+200D (ZWJ).
 
 > [!NOTE]
-> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
+> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e., ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
 In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
 
@@ -317,7 +317,7 @@ null
 
 ### Boolean literal
 
-See also [boolean type](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) for more information.
+See also [boolean type](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type) for more information.
 
 ```js-nolint
 true
@@ -326,7 +326,7 @@ false
 
 ### Numeric literals
 
-The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) types use numeric literals.
+The [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) types use numeric literals.
 
 #### Decimal
 
@@ -387,7 +387,7 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 
 #### BigInt literal
 
-The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
+The [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js-nolint
 123456789123456789n     // 123456789123456789
@@ -408,7 +408,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n;
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#bigint_type).
+For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type).
 
 #### Numeric separators
 
@@ -438,7 +438,7 @@ Note these limitations:
 
 ### String literals
 
-A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
+A [string](/en-US/docs/Web/JavaScript/Guide/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these code points:
 
 - U+005C \ (backslash)
 - U+000D \<CR>

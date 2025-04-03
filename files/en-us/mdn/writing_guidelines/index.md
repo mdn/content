@@ -11,13 +11,13 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 
   - : This section covers what we include on MDN Web Docs and what we don't, as well as a number of other policies, such as when we write about new technologies, the content suggestion process, and whether we accept external links. This is a good place to start if you're considering writing or updating content for us. This section also includes:
 
-    - [Inclusion criteria](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [Inclusion criteria](/en-US/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
       - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
 
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+  - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide).
 
 - [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content)
 

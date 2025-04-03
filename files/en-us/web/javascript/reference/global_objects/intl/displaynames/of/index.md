@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.of
 
 The **`of()`** method of {{jsxref("Intl.DisplayNames")}} instances receives a code and returns a string based on the locale and options provided when instantiating this `Intl.DisplayNames` object.
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames.prototype.of()")}}
 
 ```js interactive-example
 const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });

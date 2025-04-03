@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.toUTCString
 
 The **`toUTCString()`** method of {{jsxref("Date")}} instances returns a string representing this date in the [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) format, with negative years allowed. The timezone is always UTC. `toGMTString()` is an alias of this method.
 
-{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype.toUTCString()", "shorter")}}
 
 ```js interactive-example
 const event = new Date("14 Jun 2017 00:00:00 PDT");
@@ -38,9 +38,9 @@ The value returned by `toUTCString()` is a string in the form `Www, dd Mmm yyyy 
 
 | Format String | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
-| `Www`         | Day of week, as three letters (e.g. `Sun`, `Mon`)            |
+| `Www`         | Day of week, as three letters (e.g., `Sun`, `Mon`)           |
 | `dd`          | Day of month, as two digits with leading zero if required    |
-| `Mmm`         | Month, as three letters (e.g. `Jan`, `Feb`)                  |
+| `Mmm`         | Month, as three letters (e.g., `Jan`, `Feb`)                 |
 | `yyyy`        | Year, as four or more digits with leading zeroes if required |
 | `HH`          | Hour, as two digits with leading zero if required            |
 | `mm`          | Minute, as two digits with leading zero if required          |

@@ -15,7 +15,37 @@ spec-urls:
 
 The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Defining _complementary colors_ with `hsl()` can be done by adding or subtracting 180 degrees from the hue value, as they are positioned on the same diameter of the {{glossary("color wheel")}}. For example, if the hue angle of a color is `10deg`, its complementary has `190deg` as its hue angle.
 
@@ -140,7 +170,7 @@ This example:
 The final output color is the equivalent of `hsl(0 30% 60%)` in the sRGB color space — `color(srgb 0.72 0.48 0.48)`.
 
 > [!NOTE]
-> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e., using the same channels).
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 

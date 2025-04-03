@@ -114,13 +114,13 @@ Here, we're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a 
 
 The success callback receives a `stream` object as input. It is the {{HTMLElement("video")}} element's source to our new stream.
 
-Once the stream is linked to the `<video>` element, we start it playing by calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play).
+Once the stream is linked to the `<video>` element, we start it playing by calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play_event).
 
 The error callback is called if opening the stream doesn't work. This will happen for example if there's no compatible camera connected, or the user denied access.
 
 #### Listen for the video to start playing
 
-After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
+After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement/play_event) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js
 video.addEventListener(

@@ -1,5 +1,6 @@
 ---
 title: HTML images
+short-title: Images
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 page-type: tutorial-chapter
 ---
@@ -84,7 +85,7 @@ The previous code snippet, either with the absolute or the relative URL, will gi
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
 > [!NOTE]
-> Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at [Replaced elements](/en-US/docs/Web/CSS/Replaced_element).
+> Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at {{ glossary("replaced elements")}}.
 
 > [!NOTE]
 > You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
@@ -206,7 +207,7 @@ This gives us a tooltip on mouse hover, just like link titles:
 
 ![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum](image-with-title.png)
 
-However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
+However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g., no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
 It is better to include such supporting information in the main article text, rather than attached to the image.
 

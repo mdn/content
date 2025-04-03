@@ -31,12 +31,17 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
-a not a user-verifying platform authenticator is available.
+A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or a not a user-verifying platform authenticator is available.
 
 > [!NOTE]
-> In earlier versions of the specification, the boolean also
-> conveyed the consent of the user to disclose such an authenticator existed.
+> In earlier versions of the specification, the boolean also conveyed the consent of the user to disclose such an authenticator existed.
+
+### Exceptions
+
+The returned {{jsxref("Promise")}} may be rejected with the following values:
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
 
 ## Examples
 

@@ -67,7 +67,7 @@ In this example, we've got a name of `subscribe`, and a value of `newsletter`. W
 If the `value` attribute was omitted, the default value for the checkbox is `on`, so the submitted data in that case would be `subscribe=on`.
 
 > [!NOTE]
-> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
+> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g., `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
 
 ## Additional attributes
 
@@ -202,7 +202,7 @@ Checkboxes do support [validation](/en-US/docs/Web/HTML/Constraint_validation) (
 
 ## Examples
 
-The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a short block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
+The following example is an extended version of the "multiple checkboxes" example we saw above — it has more standard options, plus an "other" checkbox that when checked causes a text field to appear to enter a value for the "other" option. This is achieved with a short block of JavaScript. The example includes implicit labels, with the `<input>` directly inside the `<label>`. The text input, without a visible label, includes the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute which provides its accessible name. This example also includes some CSS to improve the styling.
 
 ### HTML
 
@@ -344,7 +344,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></td>
     </tr>
   </tbody>
 </table>

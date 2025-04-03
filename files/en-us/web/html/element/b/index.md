@@ -21,8 +21,8 @@ The **`<b>`** [HTML](/en-US/docs/Web/HTML) element is used to draw the reader's 
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 b {
+  /* Add your styles here */
 }
 ```
 
@@ -98,7 +98,7 @@ Keywords are displayed with the default style of the
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

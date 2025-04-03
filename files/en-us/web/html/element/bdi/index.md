@@ -28,8 +28,8 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdi {
+  /* Add your styles here */
 }
 
 .name {
@@ -183,7 +183,7 @@ body {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

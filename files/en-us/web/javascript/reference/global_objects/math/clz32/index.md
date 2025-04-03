@@ -46,7 +46,7 @@ The number of leading zero bits in the 32-bit binary representation of `x`.
 
 If `x` is not a number, it will be converted to a number first, then converted to a 32-bit unsigned integer.
 
-If the converted 32-bit unsigned integer is `0`, `32` is returned, because all bits are `0`. If the most significant bit is `1` (i.e. the number is greater than or equal to 2<sup>31</sup>), `0` is returned.
+If the converted 32-bit unsigned integer is `0`, `32` is returned, because all bits are `0`. If the most significant bit is `1` (i.e., the number is greater than or equal to 2<sup>31</sup>), `0` is returned.
 
 This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org/).
 
@@ -167,5 +167,6 @@ const { ctrz, ctron } = countTrailsMethods;
 ## See also
 
 - [Polyfill of `Math.clz32` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.clz32`](https://www.npmjs.com/package/math.clz32)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

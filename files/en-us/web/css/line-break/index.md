@@ -9,7 +9,41 @@ browser-compat: css.properties.line-break
 
 The **`line-break`** [CSS](/en-US/docs/Web/CSS) property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
 
-{{EmbedInteractiveExample("pages/css/line-break.html")}}
+{{InteractiveExample("CSS Demo: line-break")}}
+
+```css interactive-example-choice
+line-break: auto;
+```
+
+```css interactive-example-choice
+line-break: anywhere;
+```
+
+```css interactive-example-choice
+line-break: normal;
+```
+
+```css interactive-example-choice
+line-break: loose;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    この喫茶店は、いつでもコーヒーの香りを漂わせています。<br />彼女はこの喫茶店で働いて、着々と実力をつけていきました。<br />今では知る人ぞ知る、名人です。
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: "Yu Gothic", YuGothic, Meiryo, "ＭＳ ゴシック", sans-serif;
+  border: 2px dashed #999;
+  text-align: left;
+  width: 240px;
+  font-size: 16px;
+}
+```
 
 ## Syntax
 

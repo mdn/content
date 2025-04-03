@@ -20,7 +20,7 @@ There are also downsides to using CDNs, compared to self-hosting static assets:
 
 - It introduces an additional dependency on a third-party service. If the CDN goes down, is blocked in a region, or is permanently shut down, your website will malfunction.
 - It introduces an extra attack vector. Attackers can compromise the CDN and serve malicious content to your users. This necessitates countermeasures like [Subresource Integrity (SRI)](/en-US/docs/Web/Security/Practical_implementation_guides/SRI).
-- Contrary to popular belief, CDN may actually _reduce_ performance. By establishing connection with a third-party website, the user's browser has to go through more rounds of DNS lookup, content negotiation, and so on. In addition, modern browsers do not share cache between different origins for the same resource for privacy reasons, so the user has to download the same asset (e.g. jQuery) multiple times on different websites anyway.
+- Contrary to popular belief, CDN may actually _reduce_ performance. By establishing connection with a third-party website, the user's browser has to go through more rounds of DNS lookup, content negotiation, and so on. In addition, modern browsers do not share cache between different origins for the same resource for privacy reasons, so the user has to download the same asset (e.g., jQuery) multiple times on different websites anyway.
 
 ## See also
 

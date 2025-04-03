@@ -39,13 +39,13 @@ Values of this type are objects. They contain the following properties:
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
 - `hsts` {{optional_inline}}
-  - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
+  - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security), `false` otherwise.
 - `isDomainMismatch` {{optional_inline}}
   - : `Boolean`. `true` if the server's domain name does not match the domain name in its certificate, `false` otherwise.
 - `isExtendedValidation` {{optional_inline}}
   - : `Boolean`. `true` if the server has an [Extended Validation Certificate](https://en.wikipedia.org/wiki/Extended_Validation_Certificate), `false` otherwise.
 - `isNotValidAtThisTime` {{optional_inline}}
-  - : `Boolean`. `true` if the current time falls outside the server certificate's validity period (i.e. the certificate has expired or is not yet valid), `false` otherwise.
+  - : `Boolean`. `true` if the current time falls outside the server certificate's validity period (i.e., the certificate has expired or is not yet valid), `false` otherwise.
 - `isUntrusted` {{optional_inline}}
   - : `Boolean`. `true` if a chain back to a trusted root certificate could not be constructed, `false` otherwise.
 - `keaGroupName` {{optional_inline}}
