@@ -31,7 +31,7 @@ async function example() {
   console.log(str);
   // Expected output: "abc"
 }
-example()
+example();
 ```
 
 ## Syntax
