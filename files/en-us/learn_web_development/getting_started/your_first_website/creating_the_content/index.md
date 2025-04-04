@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
-HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured as a set of paragraphs, a list of bulleted points, or some images and data tables. This article provides a basic understanding of HTML and its functionality, and shows you how to create the basic content for your first website.
+HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. This article provides a basic understanding of HTML and its functionality, and shows you how to create the basic content for your first website.
 
 <table>
   <tbody>
@@ -34,7 +34,9 @@ HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to str
 
 ## So what is HTML?
 
-HTML is a _markup language_ that can be used to define content structure. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose (or wrap) text content to make it appear a certain way or act a certain way. For example, the following content will all be shown on the same line when displayed on a web page:
+HTML is a _markup language_ consisting of a series of **{{Glossary("element", "elements")}}** used to wrap (or enclose) text content to define its structure and cause it to behave in a certain way.
+
+Let's look at an example — the following content will all be shown on the same line when displayed on a web page, as it is not structured in any way:
 
 ```plain
 Instructions for life:
@@ -43,7 +45,7 @@ Sleep
 Repeat
 ```
 
-If we enclose our text in the following {{Glossary("tag", "tags")}}, we can turn that single line into a paragraph and three bullet points:
+If we wrap this content with the following elements, we can turn that single line into a paragraph ({{htmlelement("p")}}) and three bullet points ({{htmlelement("li")}}):
 
 ```html live-sample___basic-html
 <p>Instructions for life:</p>
@@ -59,67 +61,11 @@ This HTML will render as follows in a web browser:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-HTML can make a word or image hyperlink to somewhere else, italicize words, embed an image or video in a web page, and so on.
-
-### Anatomy of an HTML element
-
-Let's explore our paragraph element a bit further:
-
-```html
-<p>Instructions for life:</p>
-```
-
-This consists of:
-
-1. `<p>`: **The opening tag**, which contains the name of the element (in this case, `p`), wrapped in opening and closing **angle brackets**. This states where the element begins.
-2. `Instructions for life`: **The content**, which in this case is just text.
-3. `</p>`: **The closing tag**, which is the same as the opening tag, except with a _forward slash_ before the element name. This states where the element ends. Failing to add a closing tag is a common beginner error and can lead to strange results.
-
-The opening tag, closing tag, and content together comprise the entire element.
-
-### HTML Attributes
-
-Elements can also have attributes that look like the following:
-
-```html
-<p class="editorial">Instructions for life:</p>
-```
-
-Attributes contain extra information about the element that you don't want to appear in the actual content. Here, [`class`](/en-US/docs/Web/HTML/Global_attributes/class) is the attribute _name_ and `editorial` is the attribute _value_. The `class` attribute allows you to give the element a non-unique identifier that can be used to target it with style information and other things.
-
-There is always a space between the element name and each attribute. The attribute name is always wrapped in quotes, and preceded by an equals sign. Some elements can take many attributes, and some generally don't have any.
-
-### Nesting elements
-
-You can put elements inside other elements — this is called **nesting**. For example:
-
-```html live-sample___nested-strong
-<p>Instructions for <strong>life</strong>:</p>
-```
-
-This will cause the word `life` to be strongly emphasised, which is usually rendered in bold text by default:
-
-{{EmbedLiveSample("nested-strong", "100%", "60px")}}
-
-You need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect, and will probably lead to unexpected results:
-
-```html-nolint example-bad
-<p>Instructions for <strong>life:</p></strong>
-```
-
-### Empty elements
-
-Some elements have no content and are called **empty** (or **{{glossary("void element", "void")}}**) elements. For example, an {{htmlelement("img")}} element might look like this:
-
-```html
-<img src="images/firefox-icon.png" alt="My test image" />
-```
-
-This contains two attributes, but there is no closing `</img>` tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.
+As well as structuring text, HTML has many other uses — making text or images link to other web pages, embedding images or videos, creating data tables, and so on.
 
 ## Creating your first HTML document
 
-Now we'll show you how individual elements are combined to form an entire HTML page. Let's create a basic HTML file, and have a look at what it is made up of:
+Let's see how individual elements are combined to form an HTML page. In this section you'll create a basic HTML file and take a look at what it's made up of:
 
 1. Inside your `web-projects` folder, create another new folder called `first-website`.
 2. Inside `first-website`, Create a new file called `index.html`, and insert the following code into the file exactly as shown:
@@ -141,14 +87,17 @@ Now we'll show you how individual elements are combined to form an entire HTML p
 Here, we have the following:
 
 - `<!doctype html>` — The [doctype](/en-US/docs/Glossary/Doctype) is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
-- `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the `lang` attribute, setting the primary language of the document.
-- `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
-- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
-- `<meta name="viewport" content="width=device-width">` — This [viewport element](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#mobile_viewports) ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
+- `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the **root element**. It also includes the `lang` attribute, which sets the primary language of the document.
+- `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, {{glossary("CSS")}} to style the content, character set declarations, and more.
+- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
+- `<meta name="viewport" content="width=device-width">` — This [viewport element](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#mobile_viewports) ensures the page renders at the width of the browser viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
 - `<title></title>` — the {{htmlelement("title")}} element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
-- `<body></body>` — the {{htmlelement("body")}} element. This contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+- `<body></body>` — the {{htmlelement("body")}} element. This contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else. At the moment it only contains a single `<img>` element, but we'll add more content later on.
 
-## Images
+> [!NOTE]
+> Most HTML elements consist of an **opening tag** (for example, `<body>`), followed by the element's content, followed by a **closing tag** (for example, `</body>`). Some HTML elements also have **attributes**, which contain extra settings or information about the element — see for example `charset`, `name`, and `src` in the our code sample.
+
+## Embedding images
 
 Let's turn our attention to the {{htmlelement("img")}} element:
 
@@ -156,23 +105,26 @@ Let's turn our attention to the {{htmlelement("img")}} element:
 <img src="" alt="My test image" />
 ```
 
-This embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to our image file.
+This embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to the image file we want to embed.
 
 We have also included an `alt` (alternative) attribute. In the [`alt` attribute](/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions), you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
 
 1. They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.
-2. Something has gone wrong causing the image not to display. If the `src` attribute does not contain a valid path to an image, the alt text will be displayed instead:
+2. Something has gone wrong, causing the image not to display. If the `src` attribute does not contain a valid path to an image, the alt text will be displayed instead:
 
-![The words: my test image](alt-text-example.png)
+   ![The words: my test image](alt-text-example.png)
 
-The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
+The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
+
+> [!NOTE]
+> Elements such as `<img>` have no content or closing tag and are therefore called **empty** (or **{{glossary("void element", "void")}}**) elements. They are sometimes written with a **trailing slash** at the end of their single tag (`<img />`), but this is optional.
 
 Let's get your image displaying now.
 
-1. Inside the `first-website` folder, Create a new folder called `images`, and put the image you chose in the previous example inside this folder.
+1. Inside the `first-website` folder, create a new folder called `images`, and put the image you chose in the previous example inside this folder.
 2. Inside the `<img>` tag's `src` attribute value, enter the path to your image. It is inside a folder called `images`, which is inside the same directory as your `index.html` file, therefore the path will be `images/` plus the name of your image. For example, if your image was called `firefox-icon.png`, your `src` attribute would look like this: `src="images/firefox-icon.png"`.
 3. replace the `alt` attribute value — `My test image` — with some text that better describes your image.
-4. Open your `index.html` file inside a web browser. You should see your image displayed. If not, check your `<img>` element against our code above; make sure it is not missing any of the syntax, such as the quote marks. Make sure the image filename is correct.
+4. Open your `index.html` file inside a web browser. You should see your image displayed. If not, check your `<img>` element against our code; make sure it is not missing any of the syntax, such as the quote marks. Make sure the image filename is correct.
 
 > [!NOTE]
 > If the image is really large and therefore doesn't fit on the screen, don't worry about this. We'll fix this issue in the next article.
@@ -180,11 +132,11 @@ Let's get your image displaying now.
 
 ## Marking up text
 
-This section will cover some essential HTML elements you'll use for marking up the text.
+This section will cover some essential HTML elements you'll use for marking up text.
 
 ### Headings
 
-Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("Heading_Elements", "&lt;h1&gt; - &lt;h6&gt;")}}, although you'll commonly only use 3 to 4 at most:
+Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("Heading_Elements", "&lt;h1&gt;–&lt;h6&gt;")}}, although you'll commonly only use 3 to 4 at most:
 
 ```html
 <!-- 4 heading levels: -->
@@ -195,16 +147,13 @@ Heading elements allow you to specify that certain parts of your content are hea
 ```
 
 > [!NOTE]
-> Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
+> Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page — just in the code. HTML comments are a way for you to add notes about your code or logic, which might be useful to others working on the same code, or you, if you came back to it after 6 months and can't remember what you did.
 
 Now try adding a suitable main title to your HTML page just above your {{htmlelement("img")}} element. Save the file and view it in a browser to see the effect.
 
-> [!NOTE]
-> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
-
 ### Paragraphs
 
-As explained above, {{htmlelement("p")}} elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:
+Paragraph {{htmlelement("p")}} elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:
 
 ```html
 <p>This is a single paragraph</p>
@@ -221,7 +170,7 @@ A lot of the web's content is lists and HTML has special elements for these. Mar
 
 Each item inside the lists is put inside an {{htmlelement("li")}} (list item) element.
 
-For example, if we wanted to turn the part of the following paragraph fragment into a list
+For example, if we wanted to turn part of the following paragraph fragment into a list
 
 ```html
 <p>
@@ -246,9 +195,9 @@ We could modify the markup to this
 
 Try adding an ordered or unordered list to your example page, and view the result in a browser.
 
-## Links
+## Creating links
 
-Links are very important — they are what makes the web a web! To add a link, we need to use a specific element — {{htmlelement("a")}} — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
+Links are very important — they are what makes the web a web! To add a link, we need to use an {{htmlelement("a")}} element, "a" being short for "anchor". To make text within your paragraph into a link, follow these steps:
 
 1. Choose some text. We chose the text "Mozilla Manifesto".
 2. Wrap the text in an {{htmlelement("a")}} element, as shown below:
@@ -273,7 +222,7 @@ Links are very important — they are what makes the web a web! To add a link, w
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 
-> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands for _**h**ypertext **ref**erence_.
+> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. It stands for _**h**ypertext **ref**erence_.
 
 Add a link to your page now, if you haven't already done so.
 
@@ -285,6 +234,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
-Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module.
+> [!NOTE]
+> Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module later on in the course.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
