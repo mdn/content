@@ -26,14 +26,12 @@ To write content to file, create a FileWriter object by calling [`createWriter()
   <tbody>
     <tr>
       <td>
-        <code>FileWriterSync
-          <a href="#createreader" title="#createWriter">createWriter</a> ());
-        </code>
+        <code>FileWriterSync <a href="#createwriter">createWriter</a> ();</code>
       </td>
     </tr>
     <tr>
       <td>
-        <code>File <a href="#file">file</a> ());</code>
+        <code>File <a href="#file">file</a> ();</code>
       </td>
     </tr>
   </tbody>
