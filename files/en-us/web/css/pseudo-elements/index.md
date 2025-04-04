@@ -81,7 +81,7 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::backdrop")}}
   - : The backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
 - {{CSSxRef("::scroll-button()")}}
-  - : A button for controlling the scrolling of a {{glossary("scroll container")}}. Generated as a sibling of the container's child DOM elements, immediately preceding them, but after a generated {{cssxref("::scroll-marker-group")}} pseudo-element.
+  - : Creates a button that can control the scrolling of the {{glossary("scroll container")}} to which it is applied.
 - {{CSSxRef("::scroll-marker")}}
   - : Creates a pseudo-element that is a scroll marker — a scroll target button for its originating element nested in a scroll-marker group.
 - {{CSSxRef("::scroll-marker-group")}}

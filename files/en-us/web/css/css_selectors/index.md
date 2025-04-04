@@ -159,7 +159,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 
-  - {{cssxref("::column")}}
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}

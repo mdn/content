@@ -9,7 +9,7 @@ browser-compat: css.properties.scroll-marker-group
 
 {{CSSRef}}{{seecompattable}}
 
-The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated, and if so, whether it is generated before _or_ after the container's child DOM elements.
+The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's child DOM elements.
 
 ## Syntax
 
@@ -31,18 +31,18 @@ scroll-marker-group: unset;
 
 - `after`
 
-  - : The {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It does however appear at the end of the container's tab order and layout box order (but not DOM structure).
+  - : A {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It does however appear at the end of the container's tab order and layout box order (but not DOM structure).
 
 - `before`
 
-  - : The `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It also appears at the start of the container's tab order and layout box order.
+  - : A `::scroll-marker-group` pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It also appears at the start of the container's tab order and layout box order.
 
 - `none`
 
 - : No scroll-marker-group pseudo-element will be generated on the element. This is the default value.
 
 > [!NOTE]
-> It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the group at the start of the content, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
+> It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the marker group at the start of the content with styles applied to {{cssxref("::scroll-marker-group")}}, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
 
 ## Formal definition
 
@@ -80,9 +80,15 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
   <li>Item 3</li>
   <li><a href="#">Item 4</a></li>
   <li>Item 5</li>
-  <li><a href="#>Item 6</a></li>
+  <li>
+    <a
+      href="#>Item 6</a></li>
   <li>Item 7</li>
-  <li><a href="#>Item 8</a></li>
+  <li><a href="
+      #
+      >Item 8</a
+    >
+  </li>
 </ul>
 ```
 

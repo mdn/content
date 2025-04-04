@@ -67,7 +67,6 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 
-  - {{cssxref("::column")}}
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
