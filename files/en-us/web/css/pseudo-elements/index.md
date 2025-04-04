@@ -83,7 +83,7 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::scroll-button()")}}
   - : A button for controlling the scrolling of a {{glossary("scroll container")}}. Generated as a sibling of the container's child DOM elements, immediately preceding them, but after a generated {{cssxref("::scroll-marker-group")}} pseudo-element.
 - {{CSSxRef("::scroll-marker")}}
-  - : Represents an element's scroll marker. A scroll marker behaves like an anchor ({{htmlelement("a")}} element) whose scroll target is its originating element — when activated, the element's nearest ancestor {{glossary("scroll container")}} will scroll to it.
+  - : Creates a pseudo-element that is a scroll marker — a scroll target button for its originating element nested in a scroll-marker group.
 - {{CSSxRef("::scroll-marker-group")}}
   - : A container generated inside a {{glossary("scroll container")}}, which contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on the descendants of the scroll container.
 
