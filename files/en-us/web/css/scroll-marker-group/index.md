@@ -178,9 +178,10 @@ Notice the placement of the scroll marker group. Check out how the keyboard tabb
 
 ## See also
 
-- {{cssxref("interactivity")}} property
-- {{cssxref("::scroll-button()")}}, {{cssxref("::scroll-marker-group")}}, {{cssxref("::scroll-marker")}}, and {{cssxref("::column")}} pseudo-elements
-- {{cssxref(":target-current")}} pseudo-class
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker-group")}}
+- {cssxref("::scroll-marker")}}
+- {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS Carousel Gallery](https://chrome.dev/carousel/) on chrome.dev (2025)
+- [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)
