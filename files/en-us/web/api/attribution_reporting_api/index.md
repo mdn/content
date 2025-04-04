@@ -114,6 +114,6 @@ See [Demo: Attribution Reporting API](https://arapi-home.web.app/) for an exampl
 ## See also
 
 - [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)
-- [Attribution reporting](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/) on developers.google.com (2023)
-- [Enable conversion measurement](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement) on developers.google.com (2023)
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox/) on developers.google.com (2023)
+- [Attribution reporting](https://privacysandbox.google.com/private-advertising/attribution-reporting/) on privacysandbox.google.com (2023)
+- [Enable conversion measurement](https://privacysandbox.google.com/private-advertising/attribution-reporting/enable-conversion-measurement) on privacysandbox.google.com (2023)
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com (2023)
