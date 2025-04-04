@@ -113,7 +113,7 @@ The attacker's page then creates an {{htmlelement("iframe")}} that embeds the ta
 </html>
 ```
 
-Note that this attack works even if the target site disallows embedding using a mechanism such as [`frame-ancestors`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
+Note that this attack works even if the target site disallows embedding using a mechanism such as [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
 
 ## Defenses against cross-site leaks
 
