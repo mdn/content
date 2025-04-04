@@ -2,7 +2,7 @@
 title: <content-distribution>
 slug: Web/CSS/content-distribution
 page-type: css-type
-browser-compat: css.types.content-distribution
+spec-urls: https://drafts.csswg.org/css-align/#typedef-content-distribution
 ---
 
 {{CSSRef}}
@@ -38,10 +38,6 @@ The following keyword values are represented by the `<content-distribution>` gra
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
