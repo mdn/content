@@ -22,6 +22,9 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### JavaScript
 
+- The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
+- The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
+
 #### Removals
 
 ### SVG
