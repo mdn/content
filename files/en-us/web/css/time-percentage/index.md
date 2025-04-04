@@ -2,7 +2,7 @@
 title: <time-percentage>
 slug: Web/CSS/time-percentage
 page-type: css-type
-specl-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
+spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
 ---
 
 {{CSSRef}}
