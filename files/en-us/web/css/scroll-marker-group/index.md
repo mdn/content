@@ -90,46 +90,46 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
 
 We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping flex line of `<li>` elements. The {{cssxref("overflow-x")}} is set to `auto`, meaning if the items are wider than, or overflow, their container on the x-axis, the content will scroll in the horizontal direction. We make the `<ul>` a scroll-snap container, ensuring that items always snap into place when the container is scrolled with the {{cssxref("scroll-snap-type")}} value of `mandatory`. 
 
-We create a scroll marker group with the `scroll-marker-group`, placing the group after all the content. 
+We create a scroll marker group with the `scroll-marker-group`, placing the group after all the content.
 
 ```css
-  ul {
-    display: flex;
-    gap: 4vw;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
+ul {
+  display: flex;
+  gap: 4vw;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
 
-    scroll-marker-group: after;
-  }
+  scroll-marker-group: after;
+}
 ```
 
-We style the `<li>` elements, using the {{cssxref("flex")}} property to make them 33% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `left` means when they scroll, the left-hand side of the left-most visible item will snap to the left of the container 
+We style the `<li>` elements, using the {{cssxref("flex")}} property to make them 33% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `left` means when they scroll, the left-hand side of the left-most visible item will snap to the left of the container.
 
 ```css
-  li {
-    list-style-type: none;
-    background-color: #eee;
-    flex: 0 0 33%;
-    scroll-snap-align: left;
-    text-align: center;
-  }
+li {
+  list-style-type: none;
+  background-color: #eee;
+  flex: 0 0 33%;
+  scroll-snap-align: left;
+  text-align: center;
+}
 ```
 
-We then use the {{cssxref("::scroll-marker")}} to create a square marker for each list item with a red border, applying styles on the {{cssxref("::scroll-marker-group")}} pseudo-element that add `0.2em` gap between ever marker in a flex-line of markers. 
+We then use the {{cssxref("::scroll-marker")}} to create a square marker for each list item with a red border, applying styles on the {{cssxref("::scroll-marker-group")}} pseudo-element that add `0.2em` gap between ever marker in a flex-line of markers.
 
-```css  
- li::scroll-marker {
-    content: ' ';
-    border: 1px solid red;
-    height: 1em;
-    width: 1em;
-  }
+```css
+li::scroll-marker {
+  content: " ";
+  border: 1px solid red;
+  height: 1em;
+  width: 1em;
+}
 
 ::scroll-marker-group {
-    display: flex;
-    gap: 0.2em;
-  }
+  display: flex;
+  gap: 0.2em;
+}
 ```
 
 We also style the marker of the currently scrolled element differently from the others, targeting the marker with the {{cssxref(":target-current")}} pseudoclass.
