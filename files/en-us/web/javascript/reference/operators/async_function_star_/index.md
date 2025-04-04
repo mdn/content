@@ -23,12 +23,12 @@ async function example() {
     return str;
   }
   
-  const str = joinAll(async function* () {
+  const str = await joinAll(async function* () {
     yield await Promise.resolve("a");
     yield await Promise.resolve("b");
     yield await Promise.resolve("c");
   });
-  console.log(await str);
+  console.log(str);
   // Expected output: "abc"
 }
 example()
