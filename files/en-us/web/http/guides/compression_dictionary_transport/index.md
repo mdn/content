@@ -2,9 +2,13 @@
 title: Compression Dictionary Transport
 slug: Web/HTTP/Guides/Compression_dictionary_transport
 page-type: guide
+status:
+  - experimental
+browser-compat: http.headers.Use-As-Dictionary
+spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary to dramatically reduce the transport size of HTTP responses.
 
@@ -167,6 +171,14 @@ Compression algorithms are at risk of security attacks, so there are a number of
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
