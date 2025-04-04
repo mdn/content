@@ -62,7 +62,7 @@ In this example, we demonstrate the three values of the `scroll-marker-group` pr
 
 #### HTML
 
-We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")}} list items. Every even list item contains an {{htmlelement("a")}} element, linking to the current page. 
+We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")}} list items. Every even list item contains an {{htmlelement("a")}} element, linking to the current page.
 
 ```html hidden
 <fieldset>
@@ -88,7 +88,7 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
 
 #### CSS
 
-We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping flex line of `<li>` elements. The {{cssxref("overflow-x")}} is set to `auto`, meaning if the items are wider than, or overflow, their container on the x-axis, the content will scroll in the horizontal direction. We make the `<ul>` a scroll-snap container, ensuring that items always snap into place when the container is scrolled with the {{cssxref("scroll-snap-type")}} value of `mandatory`. 
+We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping flex line of `<li>` elements. The {{cssxref("overflow-x")}} is set to `auto`, meaning if the items are wider than, or overflow, their container on the x-axis, the content will scroll in the horizontal direction. We make the `<ul>` a scroll-snap container, ensuring that items always snap into place when the container is scrolled with the {{cssxref("scroll-snap-type")}} value of `mandatory`.
 
 We create a scroll marker group with the `scroll-marker-group`, placing the group after all the content.
 
