@@ -62,39 +62,33 @@ In this example, we demonstrate the three values of the `scroll-marker-group` pr
 
 #### HTML
 
-We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")}} list items. Every even list item contains an {{htmlelement("a")}} element, linking to the current page.
+We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")}} list items.
 
 ```html hidden
 <fieldset>
-  <legend><code>scroll-marker-group</code> value:</legend>
-  <label><input type="radio" name="p" value="before" /> before</label>
-  <label><input type="radio" name="p" value="after" checked /> after</label>
-  <label><input type="radio" name="p" value="none" /> none</label>
+  <legend>Select <code>scroll-marker-group</code> value:</legend>
+  <label><input type="radio" name="p" value="before" />before</label>
+  <label><input type="radio" name="p" value="after" checked />after</label>
+  <label><input type="radio" name="p" value="none" />none</label>
 </fieldset>
 ```
 
 ```html
 <ul>
   <li>Item 1</li>
-  <li><a href="#">Item 2</a></li>
+  <li>Item 2</li>
   <li>Item 3</li>
-  <li><a href="#">Item 4</a></li>
+  <li>Item 4</li>
   <li>Item 5</li>
-  <li>
-    <a
-      href="#>Item 6</a></li>
+  <li>Item 6</li>
   <li>Item 7</li>
-  <li><a href="
-      #
-      >Item 8</a
-    >
-  </li>
+  <li>Item 8</li>
 </ul>
 ```
 
 #### CSS
 
-We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping flex line of `<li>` elements. The {{cssxref("overflow-x")}} is set to `auto`, meaning if the items are wider than, or overflow, their container on the x-axis, the content will scroll in the horizontal direction. We make the `<ul>` a scroll-snap container, ensuring that items always snap into place when the container is scrolled with the {{cssxref("scroll-snap-type")}} value of `mandatory`.
+We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping row of `<li>` elements. The {{cssxref("overflow-x")}} property is set to `auto`, meaning if the items overflow their container on the x-axis, the content will scroll horizontally. We then convert the `<ul>` into a [scroll-snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container), ensuring that items always snap into place when the container is scrolled with a {{cssxref("scroll-snap-type")}} value of `mandatory`.
 
 We create a scroll marker group with the `scroll-marker-group`, placing the group after all the content.
 
@@ -102,6 +96,8 @@ We create a scroll marker group with the `scroll-marker-group`, placing the grou
 ul {
   display: flex;
   gap: 4vw;
+  padding-left: 0;
+  margin: 32px 0;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
@@ -110,19 +106,20 @@ ul {
 }
 ```
 
-We style the `<li>` elements, using the {{cssxref("flex")}} property to make them 33% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `left` means when they scroll, the left-hand side of the left-most visible item will snap to the left of the container.
+Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to make them 33% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `start` causes the left-hand side of the left-most visible item to snap to the left edge of the container when the content is scrolled.
 
 ```css
 li {
   list-style-type: none;
   background-color: #eee;
   flex: 0 0 33%;
-  scroll-snap-align: left;
+  scroll-snap-align: start;
   text-align: center;
+  line-height: 5;
 }
 ```
 
-We then use the {{cssxref("::scroll-marker")}} to create a square marker for each list item with a red border, applying styles on the {{cssxref("::scroll-marker-group")}} pseudo-element that add `0.2em` gap between ever marker in a flex-line of markers.
+We then use the {{cssxref("::scroll-marker")}} pseudo-element to create a square marker for each list item with a red border, and applying styles on the {{cssxref("::scroll-marker-group")}} pseudo-element to lay out the scroll markers in a row with a `0.2em` gap between each one.
 
 ```css
 li::scroll-marker {
@@ -138,7 +135,7 @@ li::scroll-marker {
 }
 ```
 
-We also style the marker of the currently scrolled element differently from the others, targeting the marker with the {{cssxref(":target-current")}} pseudoclass.
+Finally, we style the marker of the currently-scrolled element differently from the others, targeting the marker with the {{cssxref(":target-current")}} pseudoclass.
 
 ```css
 ::scroll-marker:target-current {
@@ -148,7 +145,7 @@ We also style the marker of the currently scrolled element differently from the 
 
 ```css hidden
 fieldset {
-  width: 15em;
+  width: 20em;
 }
 
 label {
@@ -170,9 +167,9 @@ label {
 
 #### Result
 
-{{EmbedLiveSample("Examples", '', '240')}}
+{{EmbedLiveSample("Examples", '', '300')}}
 
-Notice the placement of the scroll marker group. Check out how the keyboard tabbing order is different for `before` versus `after`, and note how the group disappears when the value is set to `none`.
+Note the placement of the scroll marker group. Check out how the keyboard tabbing order is different for `before` versus `after`, and note how the group disappears when the value is set to `none`.
 
 ## Specifications
 
