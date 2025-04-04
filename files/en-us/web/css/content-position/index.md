@@ -2,7 +2,7 @@
 title: <content-position>
 slug: Web/CSS/content-position
 page-type: css-type
-browser-compat: css.types.content-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-content-position
 ---
 
 {{CSSRef}}
@@ -36,10 +36,6 @@ The `<content-position>` enumerated value type is specified using one of the fol
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
