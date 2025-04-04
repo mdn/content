@@ -4,7 +4,15 @@ slug: Web/HTTP/Guides/Compression_dictionary_transport
 page-type: guide
 status:
   - experimental
-browser-compat: http.headers.Use-As-Dictionary
+browser-compat:
+  - html.elements.link.rel.compression-dictionary
+  - http.headers.Accept-Encoding.dcb
+  - http.headers.Accept-Encoding.dcz
+  - http.headers.Available-Dictionary
+  - http.headers.Content-Encoding.dcb
+  - http.headers.Content-Encoding.dcz
+  - http.headers.Dictionary-ID
+  - http.headers.Use-As-Dictionary
 spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary
 ---
 
@@ -99,7 +107,7 @@ If the response is cacheable, it must include a {{HTTPHeader("Vary")}} header to
 Vary: accept-encoding, available-dictionary
 ```
 
-An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header:
+An optional `id` can also be provided in the {{HTTPHeader("Use-As-Dictionary")}} header, to allow the server to more easily find the dictionary file if they do not store the diction by the hash:
 
 ```http
 Use-As-Dictionary: match="/js/app.*.js", id="dictionary-12345"
@@ -112,6 +120,8 @@ Accept-Encoding: gzip, br, zstd, dcb, dcz
 Available-Dictionary: :pZGm1Av0IEBKARczz7exkNYsZb8LzaMrV7J32a2fFG4=:
 Dictionary-ID: "dictionary-12345"
 ```
+
+The server must still check the hash from the `Available-Dictionary` header, so the `Dictionary-ID` is additional information for the server to identify the dictionary, and does not replace the need for the `Available-Dictionary` header.
 
 ## Separate dictionary
 
