@@ -67,9 +67,9 @@ We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")
 ```html hidden
 <fieldset>
   <legend><code>scroll-marker-group</code> value:</legend>
-  <label><input type="radio" name="p" value="before"> before</label>
-  <label><input type="radio" name="p" value="after" checked> after</label>
-  <label><input type="radio" name="p" value="none"> none</label>
+  <label><input type="radio" name="p" value="before" /> before</label>
+  <label><input type="radio" name="p" value="after" checked /> after</label>
+  <label><input type="radio" name="p" value="none" /> none</label>
 </fieldset>
 ```
 
