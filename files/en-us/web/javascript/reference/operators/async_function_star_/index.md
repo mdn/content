@@ -22,7 +22,6 @@ async function example() {
     }
     return str;
   }
-  
   const str = await joinAll(async function* () {
     yield await Promise.resolve("a");
     yield await Promise.resolve("b");
