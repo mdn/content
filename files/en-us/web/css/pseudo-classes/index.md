@@ -204,6 +204,8 @@ These pseudo-classes require some interaction by the user in order for them to a
   - : Matches when an element has focus and the user agent identifies that the element should be visibly focused.
 - {{CSSxRef(":focus-within")}}
   - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
+- {{CSSxRef(":target-current")}}
+  - : Matches the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker.
 
 ## Functional pseudo-classes
 
@@ -365,6 +367,7 @@ S
 T
 
 - {{CSSxRef(":target")}}
+- {{CSSxRef(":target-current")}}
 - {{CSSxRef(":target-within")}} {{Experimental_Inline}}
 
 U
