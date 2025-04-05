@@ -111,7 +111,7 @@ In the future, service workers will be able to do several other useful things fo
 - {{DOMxRef("NavigationPreloadManager")}}
   - : Provides methods for managing the preloading of resources with a service worker.
 - {{DOMxRef("ServiceWorker")}}
-  - : Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same `ServiceWorker` object.
+  - : Represents a service worker. Multiple browsing contexts (e.g., pages, workers, etc.) can be associated with the same `ServiceWorker` object.
 - {{DOMxRef("ServiceWorkerContainer")}}
   - : Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister, and update service workers, and access the state of service workers and their registrations.
 - {{DOMxRef("ServiceWorkerGlobalScope")}}

@@ -13,7 +13,7 @@ browser-compat: api.NDEFReader.NDEFReader
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a
 new `NDEFReader` object, which is used to read NDEF messages from
-compatible NFC devices, e.g. NDEF tags, within the reader's magnetic induction
+compatible NFC devices, e.g., NDEF tags, within the reader's magnetic induction
 field.
 
 ## Syntax

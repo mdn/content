@@ -23,7 +23,7 @@ A `GPURenderPipeline` object instance can be created using the {{domxref("GPUDev
 ## Instance methods
 
 - {{domxref("GPURenderPipeline.getBindGroupLayout", "getBindGroupLayout()")}} {{Experimental_Inline}}
-  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call's pipeline layout).
+  - : Returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e., included in the originating {{domxref("GPUDevice.createRenderPipeline()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call's pipeline layout).
 
 ## Examples
 

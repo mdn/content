@@ -38,15 +38,15 @@ In the previous articles, we covered the styling of various form controls in a g
 The original pseudo-classes (from [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) that are relevant to forms are:
 
 - {{cssxref(":hover")}}: Selects an element only when it is being hovered over by a mouse pointer.
-- {{cssxref(":focus")}}: Selects an element only when it is focused (i.e. by being tabbed to via the keyboard).
-- {{cssxref(":active")}}: selects an element only when it is being activated (i.e. while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
+- {{cssxref(":focus")}}: Selects an element only when it is focused (i.e., by being tabbed to via the keyboard).
+- {{cssxref(":active")}}: selects an element only when it is being activated (i.e., while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
 
 These basic pseudo-classes should be familiar to you now. [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
-- {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g. elements that support the [`required`](/en-US/docs/Web/HTML/Attributes/required) HTML attribute)), based on whether they are required or optional.
+- {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
-- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g. elements that support the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g. elements with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute set).
+- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g., elements that support the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g., elements with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) HTML attribute set).
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g., an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute set).
 
 There are many others, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems. The UI pseudo-classes listed above have excellent browser support, but of course, you should test your form implementations carefully to ensure they work for your target audience.
 
@@ -379,7 +379,7 @@ This is a similar story to what we had before in the `:required` example, except
 
 It is possible for the number input to be both required and out-of-range at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#understanding_the_cascade) come into play, and the out of range message is shown.
 
-This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
+This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e., in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
 
 > [!NOTE]
 > To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
@@ -527,7 +527,7 @@ The full example looks like this:
 
 As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "radio buttons")}} and {{HTMLElement("input/checkbox", "checkboxes")}} can be checked or unchecked. But there are a couple of other states to consider too:
 
-- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them). These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
+- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e., by setting the `checked` attribute on them). These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
 - {{cssxref(":indeterminate")}}: When radios/checkboxes are neither checked nor unchecked, they are considered _indeterminate_ and will match the {{cssxref(":indeterminate")}} pseudo-class. More on what this means below.
 
 ### :checked
@@ -651,7 +651,7 @@ There are a number of other pseudo-classes of interest, and we don't have space 
 
 - The {{cssxref(":focus-within")}} pseudo-class matches an element that has received focus or _contains_ an element that has received focus. This is useful if you want a whole form to highlight in some way when an input inside it is focused.
 - The {{cssxref(":focus-visible")}} pseudo-class matches focused elements that received focus via keyboard interaction (rather than touch or mouse) — useful if you want to show a different style for keyboard focus compared to mouse (or other) focus.
-- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute) because the value of the element is empty.
+- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e., the contents of the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute) because the value of the element is empty.
 
 The following are also interesting, but as yet not well-supported in browsers:
 

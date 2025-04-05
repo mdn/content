@@ -44,7 +44,7 @@ _In addition to the properties below, `Node` inherits properties from its parent
     or `null` if the node has no child.
 - {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
   - : A boolean indicating whether or not the Node is connected (directly or indirectly)
-    to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the
+    to the context object, e.g., the {{DOMxRef("Document")}} object in the case of the
     normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.
 - {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
   - : Returns a `Node` representing the last direct child node of the node,

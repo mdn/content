@@ -30,7 +30,7 @@ The content changes go through the following stages before they are published on
 We want MDN Web Docs to be a welcoming, friendly community that we can all be proud of.
 All participants must follow our [Community Participation Guidelines](/en-US/docs/MDN/Community/Community_Participation_Guidelines) which are derived from [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 Be polite and constructive when opening pull requests, writing review comments, interacting with the pull request author or other community members.
-If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](/en-US/docs/MDN/Community/Community_Participation_Guidelines#how_to_report).
+If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](/en-US/docs/MDN/Community/Community_Participation_Guidelines#reporting_process).
 
 ### Before you start
 

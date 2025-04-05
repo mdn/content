@@ -57,7 +57,7 @@ align-content: space-around;
 }
 ```
 
-This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
+This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
 
 ## Syntax
 

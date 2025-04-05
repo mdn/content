@@ -38,7 +38,7 @@ The next set of selectors we will look at are referred to as **pseudo-classes** 
 
 ## What is a pseudo-class?
 
-A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.
+A pseudo-class is a selector that selects elements that are in a specific state, e.g., they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.
 
 Pseudo-classes are keywords that start with a colon. For example, `:hover` is a pseudo-class.
 

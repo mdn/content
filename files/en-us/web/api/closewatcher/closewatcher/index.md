@@ -46,7 +46,7 @@ Create a new `CloseWatcher` with an {{domxref("AbortSignal")}} that controls des
 
 ```js
 const controller = new AbortController();
-const signalWatcher = new CloseWatcher({ signal: controller.signal };
+const signalWatcher = new CloseWatcher({ signal: controller.signal });
 ```
 
 ## Specifications

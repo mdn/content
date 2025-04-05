@@ -36,7 +36,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.noValidate")}}
   - : A boolean value reflecting the value of the form's [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating whether the form should not be validated.
 
-Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named `action` will have its `action` property return that input instead of the form's [`action`](/en-US/docs/Web/HTML/Element/form#action) HTML attribute).
+Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g., a form with an input named `action` will have its `action` property return that input instead of the form's [`action`](/en-US/docs/Web/HTML/Element/form#action) HTML attribute).
 
 ## Instance methods
 
