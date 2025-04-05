@@ -233,7 +233,7 @@ The `createNoteTable()` function builds the array `noteFreq` to contain an array
 ```js
 function createNoteTable() {
   const noteFreq = [];
-  for (let i=0; i< 9; i++) {
+  for (let i = 0; i < 9; i++) {
     noteFreq[i] = [];
   }
 

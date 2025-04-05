@@ -235,11 +235,15 @@ To achieve this, we want to bind the component's `done` prop to the `checked` at
 To work around this, we can manage the `done` state using Vue's `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 
 ```js
-data() {
-  return {
-    key: value
-  }
-}
+export default {
+  // …
+  data() {
+    return {
+      key: value,
+    };
+  },
+  // …
+};
 ```
 
 You'll note that the `data` property is a function. This is to keep the data values unique for each instance of a component at runtime — the function is invoked separately for each component instance. If you declared data as just an object, all instances of that component would share the same values. This is a side-effect of the way Vue registers components and something you do not want.

@@ -188,9 +188,11 @@ The `publicKey`'s `extensions` property must contain a `credProps` property with
 You must also set `authenticatorSelection.requireResidentKey` to `true`, which indicates that a resident key is required.
 
 ```js
-{(authenticatorSelection: {
-  requireResidentKey: true
-})}
+({
+  authenticatorSelection: {
+    requireResidentKey: true,
+  },
+});
 ```
 
 #### Output

@@ -112,19 +112,19 @@ In the `dev` script we are passing the `-w` argument, which tells rollup to watc
 If we have a look at the `rollup.config.js` file, we can see that the Svelte compiler is just a rollup plugin:
 
 ```js
-import svelte from 'rollup-plugin-svelte';
+import svelte from "rollup-plugin-svelte";
 // …
-import { terser } from 'rollup-plugin-terser';
+import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  input: 'src/main.js',
+  input: "src/main.js",
   output: {
     sourcemap: true,
-    format: 'iife',
-    name: 'app',
-    file: 'public/build/bundle.js'
+    format: "iife",
+    name: "app",
+    file: "public/build/bundle.js",
   },
   plugins: [
     svelte({
@@ -133,26 +133,36 @@ export default {
       // we'll extract any component CSS out into
       // a separate file - better for performance
       css: (css) => {
-        css.write('public/build/bundle.css');
-      }
+        css.write("public/build/bundle.css");
+      },
     }),
+    // More plugins…
+  ],
+  // …
+};
 ```
 
 Later on in the same file you'll also see how rollup minimizes our scripts in production mode and launches a local server in development mode:
 
 ```js
+export default {
+  // …
+  plugins: [
+    // …
     // In dev mode, call `npm run start` once
     // the bundle has been generated
     !production && serve(),
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
-    !production && livereload('public'),
+    !production && livereload("public"),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
+    production && terser(),
   ],
+  // …
+};
 ```
 
 There are [many plugins for rollup](https://github.com/rollup/awesome) that allow you to customize its behavior. A particularly useful plugin which is also maintained by the Svelte team is [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess), which pre-processes many different languages in Svelte files such as PostCSS, SCSS, Less, CoffeeScript, SASS, and TypeScript.

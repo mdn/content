@@ -216,7 +216,7 @@ function handleChange() {
   console.log("Typing!");
 }
 
-...
+// …
 
 // Down in the return statement
 <input
