@@ -2,11 +2,12 @@
 title: Using the fetchLater() API
 slug: Web/API/fetchLater_API/Using_fetchLater
 page-type: guide
+browser-compat: api.Window.fetchLater
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}
 
-The [fetchLater() API](/en-US/docs/Web/API/fetchLater_API) provides a JavaScript interface for making HTTP requests and processing the responses.
+The [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) provides a JavaScript interface for making HTTP requests and processing the responses.
 
 With the fetchLater() API, you make a request by calling {{domxref("Window/fetchLater", "fetchLater()")}}, which is available as a global function in both {{domxref("Window", "window")}}. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
 
