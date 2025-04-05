@@ -82,10 +82,7 @@ If the packing is set using the element's `pack` attribute, then the style is ig
 
 ## Formal syntax
 
-```plain
-box-pack =
-  start | center | end | justify
-```
+{{CSSSyntaxRaw(`box-pack = start | center | end | justify`)}}
 
 ## Examples
 

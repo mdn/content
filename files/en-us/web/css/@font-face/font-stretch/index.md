@@ -122,7 +122,7 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax("font-width")}}
 
 ## Examples
 

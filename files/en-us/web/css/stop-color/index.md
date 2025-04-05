@@ -40,7 +40,7 @@ stop-color: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`stop-color = <color>`)}}
 
 ## Examples
 

@@ -20,7 +20,7 @@ The `framework.themes.dark` is the layer into which the CSS file would be import
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`layer() = layer( <layer-name> )`)}}
 
 ## Specifications
 

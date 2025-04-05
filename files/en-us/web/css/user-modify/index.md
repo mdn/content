@@ -45,10 +45,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
 
 ## Formal syntax
 
-```plain
-user-modify =
-  read-only | read-write | read-write-plaintext-only | write-only
-```
+{{CSSSyntaxRaw(`user-modify = read-only | read-write | read-write-plaintext-only | write-only`)}}
 
 ## Examples
 

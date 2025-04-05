@@ -38,10 +38,7 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ## Formal syntax
 
-```plain
-box-ordinal-group =
-  <integer>
-```
+{{CSSSyntaxRaw(`box-ordinal-group = <integer>`)}}
 
 ## Examples
 

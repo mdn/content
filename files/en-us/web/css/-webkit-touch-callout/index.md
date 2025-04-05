@@ -41,10 +41,7 @@ When a target is touched and held on iOS, Safari displays a callout information 
 
 ## Formal syntax
 
-```plain
--webkit-touch-callout =
-  default | none
-```
+{{CSSSyntaxRaw(`-webkit-touch-callout = default | none`)}}
 
 ## Examples
 

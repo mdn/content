@@ -38,10 +38,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-```plain
--moz-float-edge =
-  content-box | margin-box
-```
+{{CSSSyntaxRaw(`-moz-float-edge = content-box | margin-box`)}}
 
 ## Examples
 
