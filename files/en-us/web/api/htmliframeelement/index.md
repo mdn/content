@@ -67,7 +67,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLIframeElement.getSVGDocument()")}}
+- {{domxref("HTMLIFrameElement.getSVGDocument()")}}
   - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications
