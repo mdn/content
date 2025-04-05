@@ -24,7 +24,7 @@ An array of strings, each containing one line of the address. For example, the `
 
 These, combined with additional values for other properties of the {{domxref("ContactAddress")}}, would represent the full address, which is:
 
-```plaintext
+```plain
 Mozilla
 Metal Box Factory
 Suite 441, 4th floor
