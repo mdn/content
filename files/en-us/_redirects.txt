@@ -2064,7 +2064,7 @@
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/DOM/window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/DOM/window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
@@ -2083,7 +2083,7 @@
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/DOM/window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/DOM/window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/DOM/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/DOM/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/DOM/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/DOM/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/DOM/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -2526,7 +2526,7 @@
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/DOM:window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/DOM:window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM:window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
@@ -2542,7 +2542,7 @@
 /en-US/docs/DOM:window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/DOM:window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/DOM:window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/DOM:window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/DOM:window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/DOM:window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/DOM:window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/DOM:window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -3251,7 +3251,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
-/en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Document_Object_Model_(DOM)/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Document_Object_Model_(DOM)/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Document_Object_Model_(DOM)/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -10576,10 +10576,12 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
+/en-US/docs/Web/API/Window/back	/en-US/docs/Web/API/History/back
 /en-US/docs/Web/API/Window/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
+/en-US/docs/Web/API/Window/forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
@@ -11212,7 +11214,7 @@
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/Web/API/window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
@@ -11231,7 +11233,7 @@
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Web/API/window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/Web/API/window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/Web/API/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/Web/API/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Web/API/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Web/API/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Web/API/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -15606,7 +15608,7 @@
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
-/en-US/docs/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/window.history	/en-US/docs/Web/API/Window/history
