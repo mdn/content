@@ -39,11 +39,11 @@ This however was still not enough. While you could use [CSS](/en-US/docs/Learn_w
 
 The situation started to improve when browsers began to support the {{htmlelement("canvas")}} element and associated [Canvas API](/en-US/docs/Web/API/Canvas_API) in 2004. As you'll see below, canvas provides some useful tools for creating 2D animations, games, data visualizations, and other types of applications, especially when combined with some of the other APIs the web platform provides, but can be difficult or impossible to make accessible
 
-The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) module:
+The following example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) module:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 
-Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the below example shows a simple rotating WebGL cube:
+Around 2006–2007, Mozilla started work on an experimental 3D canvas implementation. This became [WebGL](/en-US/docs/Web/API/WebGL_API), which gained traction among browser vendors, and was standardized around 2009–2010. WebGL allows you to create real 3D graphics inside your web browser; the example below shows a simple rotating WebGL cube:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
@@ -201,7 +201,7 @@ If you want to draw anything more complex than a rectangle, you need to draw a p
 
 Let's start the section off by making a fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)), in which to draw the new example.
 
-We'll be using some common methods and properties across all of the below sections:
+We'll be using some common methods and properties across all the sections that follow:
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — start drawing a path at the point where the pen currently is on the canvas. On a new canvas, the pen starts out at (0, 0).
 - {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — move the pen to a different point on the canvas, without recording or tracing the line; the pen "jumps" to the new position.
@@ -827,7 +827,7 @@ At this point, you should have a useful idea of the basics of graphics programmi
 
 ## See also
 
-Here we have covered only the real basics of canvas — there is so much more to learn! The below articles will take you further.
+Here we have covered only the real basics of canvas — there is so much more to learn! The following articles will take you further:
 
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) — A very detailed tutorial series explaining what you should know about 2D canvas in much more detail than was covered here. Essential reading.
 - [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) — A series that teaches the basics of raw WebGL programming.

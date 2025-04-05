@@ -115,7 +115,7 @@ Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
 
 The `then` method returns a new `Promise`, which allows for method chaining.
 
-If the function passed as handler to `then` returns a `Promise`, an equivalent `Promise` will be exposed to the subsequent `then` in the method chain. The below snippet simulates asynchronous code with the `setTimeout` function.
+If the function passed as handler to `then` returns a `Promise`, an equivalent `Promise` will be exposed to the subsequent `then` in the method chain. The snippet below simulates asynchronous code with the `setTimeout` function.
 
 ```js
 Promise.resolve("foo")

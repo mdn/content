@@ -20,7 +20,7 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 ## Example
 
-In the below example, the stylesheet contains a single rule for `.box`, which has the {{cssxref("float")}} property with a value of `left`. This value will be returned by `cssFloat`. We then set the value to "right" using `cssFloat`, and return the new value.
+In this example, the stylesheet contains a single rule for `.box`, which has the {{cssxref("float")}} property with a value of `left`. This value will be returned by `cssFloat`. We then set the value to "right" using `cssFloat`, and return the new value.
 
 ```css
 .box {

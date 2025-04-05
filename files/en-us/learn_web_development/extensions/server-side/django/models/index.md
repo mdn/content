@@ -90,7 +90,7 @@ class MyModelName(models.Model):
         return self.my_field_name
 ```
 
-In the below sections we'll explore each of the features inside the model in detail:
+In the sections that follow, we'll explore each of the features inside the model in detail.
 
 #### Fields
 

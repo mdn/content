@@ -8,7 +8,7 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 
-In the previous article, we looked at an [overview of the technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) that websites are built from. In this article we walk through the process by which those technologies are rendered — when a browser has received the code files and other assets that make up a web page (as covered in [How the web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)), how are they put together to create the finished experience that the user interacts with?
+In the previous article, we looked at an [overview of the technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) that websites are built from. In this article, we walk you through the rendering process: after a browser has received the code files and other assets that make up a web page (as covered in [How the web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)), we examine how it assembles these components to create the finished experience that users interacts with.
 
 <table>
   <tbody>
@@ -33,7 +33,7 @@ In the previous article, we looked at an [overview of the technologies](/en-US/d
 
 ## What files are returned in HTTP responses?
 
-To summarize the [overview of web technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) we looked at in the last article, HTTP responses (to requests for a web page) will generally contain some of the following file types:
+To summarize the [overview of web technologies](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#overview_of_modern_web_technologies) we looked at in the previous article, HTTP responses (to requests for a web page) will generally contain some of the following file types:
 
 - HTML files, which specify the web page content and its structure.
 - CSS files, which specify styling and layout information.
@@ -45,7 +45,7 @@ To summarize the [overview of web technologies](/en-US/docs/Learn_web_developmen
 
 When the user navigates to a new web page (by clicking a link, or entering a web address in the browser address bar), several HTTP requests are sent, and several files are sent back in HTTP responses. The files received in these responses are processed by the browser and put together into a web page that the user can interact with. This process of assembling the pieces into a web page is called **rendering**.
 
-The below sections provide a high-level explanation of how a browser renders a web page. Bear in mind that this is a very simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of the basics behind how things work.
+The sections below provide a high-level explanation of how a browser renders a web page. Bear in mind that this is a very simplified description, and that different browsers will handle the process in different ways. However, this will still give you an idea of the basics behind how things work.
 
 ## Handling HTML
 

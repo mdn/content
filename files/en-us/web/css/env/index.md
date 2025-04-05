@@ -122,7 +122,7 @@ button {
 
 ### Using the fallback value
 
-The below example makes use of the optional second parameter of `env()`, which allows you to provide a fallback value in case the environment variable is not available.
+This example makes use of the optional second parameter of `env()`, which allows you to provide a fallback value in case the environment variable is not available.
 
 ```html
 <p>

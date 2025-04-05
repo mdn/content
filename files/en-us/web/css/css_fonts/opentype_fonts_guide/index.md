@@ -315,7 +315,7 @@ Associated CSS property: {{cssxref("font-variant-ligatures")}}
 
 Ligatures are glyphs that replace two or more separate glyphs in order to represent them more smoothly (from a spacing or aesthetic perspective). Some of the most common are letters like 'fi', 'fl', or 'ffl' — but there are many other possibilities. There are the most frequent ones (referred to as common ligatures), and there are also more specialized categories like 'discretionary ligatures', 'historical ligatures', and 'contextual alternates'. While these last ones are not technically ligatures, they are generally similar in that they replace specific combinations of letters when they appear together.
 
-While more common in script typefaces, in the below example they are used to create arrows. Click "Play" in the code blocks below to edit the example in the MDN Playground:
+While more common in script typefaces, in the example below they are used to create arrows. Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html hidden live-sample___font-variant-ligatures-example
 <fieldset>

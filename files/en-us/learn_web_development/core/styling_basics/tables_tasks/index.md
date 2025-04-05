@@ -124,7 +124,7 @@ body {
 <details>
 <summary>Click here to show the solution</summary>
 
-The below is a sample of how the end result could be achieved, using similar techniques to the lesson. However there are a number of ways that would be perfectly correct, perhaps slightly more verbose.
+The following code is a sample of how the end result could be achieved using techniques similar to those covered in the lesson. However, there are several ways to achieve the same result that would be perfectly correct, perhaps slightly more verbose.
 
 ```css
 table {

@@ -111,7 +111,7 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 
 ### Accessing files
 
-The below code allows the user to choose a file from the file picker.
+The following code allows the user to choose a file from the file picker:
 
 ```js
 async function getFile() {

@@ -14,7 +14,7 @@ Our game appears to be completed, but if you look close enough you'll notice tha
 
 ## Making rebounds more random
 
-We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the `ballHitPaddle()` function is run using a line along the lines of the below. Add this new line to your code now, and try it out.
+We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the `ballHitPaddle()` function is run, as shown in the following code. Add this new line to your code now, and try it out.
 
 ```js
 function ballHitPaddle(ball, paddle) {

@@ -114,7 +114,7 @@ In this example you will see that we've given each checkbox the same `name`. If 
 
 ### Checking boxes by default
 
-To make a checkbox checked by default, you give it the `checked` attribute. See the below example:
+To make a checkbox checked by default, you give it the `checked` attribute, as shown below:
 
 ```html
 <fieldset>
@@ -153,13 +153,13 @@ When `indeterminate` is `true`, the checkbox has a horizontal line in the box (i
 
 There are not many use cases for this property. The most common is when a checkbox is available that "owns" a number of sub-options (which are also checkboxes). If all of the sub-options are checked, the owning checkbox is also checked, and if they're all unchecked, the owning checkbox is unchecked. If any one or more of the sub-options have a different state than the others, the owning checkbox is in the indeterminate state.
 
-This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/) for the inspiration). In this example we keep track of the ingredients we are collecting for a recipe. When you check or uncheck an ingredient's checkbox, a JavaScript function checks the total number of checked ingredients:
+This can be seen in the example below (thanks to [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/) for the inspiration). In this example, we keep track of the ingredients we are collecting for a recipe. When you check or uncheck an ingredient's checkbox, a JavaScript function checks the total number of checked ingredients:
 
 - If none are checked, the recipe name's checkbox is set to unchecked.
 - If one or two are checked, the recipe name's checkbox is set to `indeterminate`.
 - If all three are checked, the recipe name's checkbox is set to `checked`.
 
-So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
+So in this case, the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
 ```js
 const overall = document.querySelector("#enchantment");

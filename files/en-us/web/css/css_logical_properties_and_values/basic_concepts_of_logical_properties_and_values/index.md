@@ -83,7 +83,7 @@ The `inline` dimension is the dimension along which a line of text runs in the w
 
 The block dimension is the other dimension, and the direction in which blocks — such as paragraphs — display one after the other. In English and Arabic, these run vertically, whereas in any vertical writing mode these run horizontally.
 
-The below diagram shows the inline and block directions in a horizontal writing mode:
+The following diagram shows the inline and block directions in a horizontal writing mode:
 
 ![diagram showing the inline axis running horizontally, block axis vertically.](mdn-horizontal.png)
 

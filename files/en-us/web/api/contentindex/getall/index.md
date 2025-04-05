@@ -75,9 +75,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 
 ## Examples
 
-The below example shows an asynchronous function that retrieves items within the
-[content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building
-a list for the interface.
+This example shows an asynchronous function that retrieves items within the [content index](/en-US/docs/Web/API/Content_Index_API) and iterates over each entry, building a list for the interface.
 
 ```js
 async function createReadingList() {

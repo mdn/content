@@ -259,13 +259,13 @@ ls
 
 But what if we wanted to quickly count the number of files and directories inside the current directory? `ls` can't do that on its own.
 
-There is another Unix tool available called `wc`. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the below example outputs the number of lines in `myfile.txt`:
+There is another Unix tool available called `wc`. This counts the number of words, lines, characters, or bytes of whatever is inputted into it. This can be a text file — the following example outputs the number of lines in `myfile.txt`:
 
 ```bash
 wc -l myfile.txt
 ```
 
-But it can also count the number of lines of whatever output is **piped** into it. For example, the below command counts the number of lines outputted by the `ls` command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:
+But it can also count the number of lines of whatever output is **piped** into it. For example, the following command counts the number of lines outputted by the `ls` command (what it would normally print to the terminal if run on its own) and outputs that count to the terminal instead:
 
 ```bash
 ls | wc -l

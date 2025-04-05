@@ -217,7 +217,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-The below example shows a very basic drawing app created using a {{htmlelement("canvas")}} element and some CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+This example shows a very basic drawing app created using a {{htmlelement("canvas")}} element and some CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
 
 ```html
 <div class="toolbar">

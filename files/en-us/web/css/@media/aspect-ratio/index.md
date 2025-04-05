@@ -17,7 +17,7 @@ The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value 
 
 In the example below, a {{HTMLElement("div")}} element is contained in an {{HTMLElement("iframe")}}. The iframe creates its own viewport. Resize the `<iframe>` to see `aspect-ratio` in action.
 
-Note that, when none of the media query conditions are true, the background will turn white because none of the below rules will be applied to the `<div>` inside the `<iframe>`. See if you can find which width and height values trigger this!
+Note that when none of the media query conditions are true, the background will turn white because none of the rules below will be applied to the `<div>` inside the `<iframe>`. See if you can find which width and height values trigger this!
 
 ### HTML
 

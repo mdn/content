@@ -16,7 +16,7 @@ An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.
 
 ## Examples
 
-In the below example, we're returning all items on the clipboard via the {{domxref("Clipboard.read()")}} method, then checking the `types` property for available types before utilizing the {{domxref("ClipboardItem.getType()")}} method to return each data item as a {{domxref("Blob")}}. If no clipboard contents is found for the specified type, an error is returned.
+In this example, we're returning all items on the clipboard via the {{domxref("Clipboard.read()")}} method, then checking the `types` property for available types before utilizing the {{domxref("ClipboardItem.getType()")}} method to return each data item as a {{domxref("Blob")}}. If no clipboard contents is found for the specified type, an error is returned.
 
 ```js
 async function getClipboardContents() {

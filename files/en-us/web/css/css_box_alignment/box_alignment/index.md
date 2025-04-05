@@ -46,7 +46,7 @@ The **{{Glossary("alignment subject")}}** is the thing that is being aligned. Fo
 
 The **{{Glossary("alignment container")}}** is the box the subject is being aligned inside. This will typically be the alignment subject's containing block. An alignment container may contain one or many alignment subjects.
 
-The below image shows an alignment container with two alignment subjects inside.
+The following image shows an alignment container with two alignment subjects inside:
 
 ![A box containing two rectangles of the same width but different heights. The two rectangles are top aligned, meaning they both have their top lines about 10px inside the top of the box in which they are contained.](align-container-subjects.png)
 
@@ -221,7 +221,7 @@ The `gap` property is a shorthand for `row-gap` and `column-gap`, which allows u
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
 
-In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap between row tracks, and a `2em` gap between column tracks.
+In the following example, a grid layout uses the `gap` shorthand to set a `10px` gap between row tracks and a `2em` gap between column tracks:
 
 ```html live-sample___grid-gap
 <div class="box">

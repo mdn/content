@@ -35,7 +35,7 @@ The **`TrustedTypePolicyFactory`** interface of the {{domxref("Trusted Types API
 
 ## Examples
 
-The below code creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
+The code below creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
 
 We then use the policy to sanitize a string, creating a {{domxref("TrustedHTML")}} object, `escaped`. This object can be tested with {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}} to ensure that it was created by one of our policies.
 

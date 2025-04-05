@@ -44,7 +44,7 @@ new ClipboardItem(data, options)
 
 ## Examples
 
-The below example requests a PNG image using {{domxref("Window/fetch", "fetch()")}}, and in turn, the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
+The example below requests a PNG image using {{domxref("Window/fetch", "fetch()")}}, and in turn, the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
 This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.
 
 > [!NOTE]
