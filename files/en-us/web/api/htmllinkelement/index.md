@@ -29,6 +29,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string representing the URI for the target resource.
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : A string representing the language code for the linked resource.
+- {{domxref("HTMLLinkElement.imageSizes")}}
+  - : A string reflecting the [`imagesizes`](/en-US/docs/Web/HTML/Element/link#imagesizes) HTML attribute; a list of comma-separated image conditions and sizes.
+- {{domxref("HTMLLinkElement.imageSrcset")}}
+  - : A string reflecting the [`imagesrcset`](/en-US/docs/Web/HTML/Element/link#imagesrcset) HTML attribute; a comma-separated list of image candidate strings.
 - {{domxref("HTMLLinkElement.integrity")}}
   - : A string that contains inline metadata that a browser can use to verify that a fetched resource has been delivered without unexpected manipulation. It reflects the `integrity` attribute of the {{HTMLElement("link")}} element.
 - {{domxref("HTMLLinkElement.media")}}
