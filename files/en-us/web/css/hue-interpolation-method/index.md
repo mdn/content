@@ -2,14 +2,7 @@
 title: <hue-interpolation-method>
 slug: Web/CSS/hue-interpolation-method
 page-type: css-type
-browser-compat:
-  - css.types.color.color-mix
-  - css.types.image.gradient.conic-gradient.hue_interpolation_method
-  - css.types.image.gradient.linear-gradient.hue_interpolation_method
-  - css.types.image.gradient.radial-gradient.hue_interpolation_method
-  - css.types.image.gradient.repeating-conic-gradient.hue_interpolation_method
-  - css.types.image.gradient.repeating-linear-gradient.hue_interpolation_method
-  - css.types.image.gradient.repeating-radial-gradient.hue_interpolation_method
+browser-compat: css.types.gradient.conic-gradient.hue_interpolation_method
 spec-urls: https://drafts.csswg.org/css-color/#hue-interpolation
 ---
 
