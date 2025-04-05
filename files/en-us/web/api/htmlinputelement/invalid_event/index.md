@@ -18,10 +18,10 @@ It is not checked on {{domxref("Element/blur_event", "blur")}}.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("invalid", (event) => {});
+```js-nolint
+addEventListener("invalid", (event) => { })
 
-oninvalid = (event) => {};
+oninvalid = (event) => { }
 ```
 
 ## Event type

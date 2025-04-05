@@ -44,10 +44,10 @@ The {{domxref("Blob")}} containing the media data is available in the `dataavail
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dataavailable", (event) => {});
+```js-nolint
+addEventListener("dataavailable", (event) => { })
 
-ondataavailable = (event) => {};
+ondataavailable = (event) => { }
 ```
 
 ## Event type

@@ -16,10 +16,10 @@ The **`paymentrequest`** event of the {{domxref("ServiceWorkerGlobalScope")}} in
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("paymentrequest", (event) => {});
+```js-nolint
+addEventListener("paymentrequest", (event) => { })
 
-onpaymentrequest = (event) => {};
+onpaymentrequest = (event) => { }
 ```
 
 ## Event type

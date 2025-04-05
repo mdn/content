@@ -18,10 +18,10 @@ This event is not cancellable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("rtctransform", (event) => {});
+```js-nolint
+addEventListener("rtctransform", (event) => { })
 
-onrtctransform = (event) => {};
+onrtctransform = (event) => { }
 ```
 
 ## Event type

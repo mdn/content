@@ -21,10 +21,10 @@ In the case of `contenteditable` and `designMode`, the event target is the **edi
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforeinput", (event) => {});
+```js-nolint
+addEventListener("beforeinput", (event) => { })
 
-onbeforeinput = (event) => {};
+onbeforeinput = (event) => { }
 ```
 
 ## Event type

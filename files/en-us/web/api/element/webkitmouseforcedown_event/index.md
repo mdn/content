@@ -18,10 +18,10 @@ After a {{domxref("Element.mousedown_event", "mousedown")}} event has been fired
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("webkitmouseforcedown", (event) => {});
+```js-nolint
+addEventListener("webkitmouseforcedown", (event) => { })
 
-onwebkitmouseforcedown = (event) => {};
+onwebkitmouseforcedown = (event) => { }
 ```
 
 ## Event type

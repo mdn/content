@@ -14,10 +14,10 @@ The **`cut`** event fires when the user initiates a cut action through the brows
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("cut", (event) => {});
+```js-nolint
+addEventListener("cut", (event) => { })
 
-oncut = (event) => {};
+oncut = (event) => { }
 ```
 
 ## Event type

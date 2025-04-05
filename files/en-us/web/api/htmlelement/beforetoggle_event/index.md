@@ -24,10 +24,10 @@ Among other things, this event can be used to:
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("beforetoggle", (event) => {});
+```js-nolint
+addEventListener("beforetoggle", (event) => { })
 
-onbeforetoggle = (event) => {};
+onbeforetoggle = (event) => { }
 ```
 
 ## Event type

@@ -19,10 +19,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-elt.addEventListener("load", (event) => { ... });
-// or
-elt.onload = (event) => { ... };
+```js-nolint
+addEventListener("load", (event) => { })
+
+onload = (event) => { }
 ```
 
 ## Event type

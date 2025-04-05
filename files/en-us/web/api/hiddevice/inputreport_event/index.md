@@ -16,10 +16,10 @@ The **`inputreport`** event of the {{domxref("HIDDevice")}} interface fires when
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("inputreport", (event) => {});
+```js-nolint
+addEventListener("inputreport", (event) => { })
 
-oninputreport = (event) => {};
+oninputreport = (event) => { }
 ```
 
 ## Event type

@@ -14,10 +14,10 @@ The **`animationiteration`** event is fired when an iteration of a [CSS Animatio
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("animationiteration", (event) => {});
+```js-nolint
+addEventListener("animationiteration", (event) => { })
 
-onanimationiteration = (event) => {};
+onanimationiteration = (event) => { }
 ```
 
 ## Event type

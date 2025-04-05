@@ -18,10 +18,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("backgroundfetchabort", (event) => {});
+```js-nolint
+addEventListener("backgroundfetchabort", (event) => { })
 
-onbackgroundfetchabort = (event) => {};
+onbackgroundfetchabort = (event) => { }
 ```
 
 ## Event type

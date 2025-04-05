@@ -26,10 +26,10 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("cut", (event) => {});
+```js-nolint
+addEventListener("cut", (event) => { })
 
-oncut = (event) => {};
+oncut = (event) => { }
 ```
 
 ## Event type

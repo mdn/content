@@ -14,10 +14,10 @@ The `open` event is fired when a connection with a `WebSocket` is opened.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("open", (event) => {});
+```js-nolint
+addEventListener("open", (event) => { })
 
-onopen = (event) => {};
+onopen = (event) => { }
 ```
 
 ## Event type

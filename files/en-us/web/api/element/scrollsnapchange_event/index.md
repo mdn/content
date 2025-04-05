@@ -18,10 +18,10 @@ A scrolling operation ends when the user finishes scrolling within a scroll cont
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollsnapchange", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchange", (event) => { })
 
-onscrollsnapchange = (event) => {};
+onscrollsnapchange = (event) => { }
 ```
 
 ## Event type

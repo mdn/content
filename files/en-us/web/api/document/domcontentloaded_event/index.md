@@ -18,11 +18,14 @@ This event is not cancelable.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-```js
-addEventListener("DOMContentLoaded", (event) => {});
+```js-nolint
+addEventListener("DOMContentLoaded", (event) => { })
 ```
+
+> [!NOTE]
+> There is no `onDOMContentLoaded` event handler property for this event.
 
 ## Event type
 

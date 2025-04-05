@@ -20,10 +20,10 @@ This event is deprecated. Listen for the {{domxref("ScreenOrientation.change_eve
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("orientationchange", (event) => {});
+```js-nolint
+addEventListener("orientationchange", (event) => { })
 
-onorientationchange = (event) => {};
+onorientationchange = (event) => { }
 ```
 
 ## Event type

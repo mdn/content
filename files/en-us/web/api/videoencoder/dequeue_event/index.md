@@ -16,10 +16,10 @@ This eliminates the need for developers to use a {{domxref("Window.setTimeout", 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("dequeue", (event) => {});
+```js-nolint
+addEventListener("dequeue", (event) => { })
 
-ondequeue = (event) => {};
+ondequeue = (event) => { }
 ```
 
 ## Example

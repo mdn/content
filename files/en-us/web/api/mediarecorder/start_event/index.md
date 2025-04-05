@@ -16,10 +16,10 @@ starts being gathered into a {{domxref("Blob")}}.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("start", (event) => {});
+```js-nolint
+addEventListener("start", (event) => { })
 
-onstart = (event) => {};
+onstart = (event) => { }
 ```
 
 ## Event type

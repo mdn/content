@@ -20,10 +20,10 @@ However, it does not fire on all potential snap targets for a scrolling gesture 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("scrollsnapchanging", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchanging", (event) => { })
 
-onscrollsnapchanging = (event) => {};
+onscrollsnapchanging = (event) => { }
 ```
 
 ## Event type

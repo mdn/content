@@ -14,10 +14,10 @@ The **`transitioncancel`** event is fired when a [CSS transition](/en-US/docs/We
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("transitioncancel", (event) => {});
+```js-nolint
+addEventListener("transitioncancel", (event) => { })
 
-ontransitioncancel = (event) => {};
+ontransitioncancel = (event) => { }
 ```
 
 ## Event type

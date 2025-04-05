@@ -21,10 +21,10 @@ The event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbl
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("keypress", (event) => {});
+```js-nolint
+addEventListener("keypress", (event) => { })
 
-onkeypress = (event) => {};
+onkeypress = (event) => { }
 ```
 
 ## Event type
