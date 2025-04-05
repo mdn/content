@@ -393,7 +393,7 @@ This only works if the previous command was a `Q` or a `T` command. If not, then
     <line x1="137.5" y1="150" x2="180" y2="80" stroke="blue" />
     <circle cx="10" cy="80" r="3" fill="red" />
     <circle cx="52.5" cy="10" r="3" fill="red" />
-    <circle cx="95" cy="80" r="3" fill="blue" />
+    <circle cx="95" cy="80" r="3" fill="red" />
     <circle cx="137.5" cy="150" r="3" fill="blue" />
     <circle cx="180" cy="80" r="3" fill="blue" />
   </g>
@@ -472,8 +472,6 @@ The third parameter describes the rotation of the arc. This is best explained wi
       fill="none"
       transform="rotate(-45)"
       transform-origin="193.5 131.5" />
-    <circle cx="162.55" cy="162.45" r="3" fill="red" />
-    <circle cx="110" cy="215" r="3" fill="red" />
   </g>
 </svg>
 <button>Show/hide reference points and lines</button>
