@@ -34,9 +34,9 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.method")}}
   - : A string reflecting the value of the form's [`method`](/en-US/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.rel")}}
-  - : A string reflecting the value of the form's [`rel`](en-US/docs/Web/HTML/Attributes/rel) HTML attribute, which represents what kinds of links the form creates as a space-separated list of enumerated values.
+  - : A string reflecting the value of the form's [`rel`](/en-US/docs/Web/HTML/Attributes/rel) HTML attribute, which represents what kinds of links the form creates as a space-separated list of enumerated values.
 - {{domxref("HTMLFormElement.relList")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](en-US/docs/Web/HTML/Attributes/rel) HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLFormElement.target")}}
   - : A string reflecting the value of the form's [`target`](/en-US/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 
