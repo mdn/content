@@ -53,6 +53,11 @@ Make sure your owned elements have only one owner. Do not specify the `id` of an
 - `id` list
   - : Space separated list of one or more ID values referencing the elements being owned by the current element
 
+## Associated interfaces
+
+- {{domxref("Element.ariaOwnsElements")}} and {{domxref("ElementInternals.ariaOwnsElements")}}
+  - : The `ariaOwnsElements` property is part of each element's interface. Its value is an array of {{domxref("Element")}}s corresponding to the ID values specified in the `aria-owns` attribute (for cases where those ID values reference valid and in-scope elements).
+
 ## Associated roles
 
 Used in **ALL** roles.
