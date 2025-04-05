@@ -30,6 +30,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTTP
 
+- The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) (and `*`) directive to clear the browser network cache. This gives websites more control over data stored for their users, allowing them to, for example, mitigate the risk of privacy leaks by clearing the cache during logout. ([Firefox bug 1942272](https://bugzil.la/1930500)).
+
 #### Removals
 
 ### Security
