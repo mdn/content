@@ -69673,10 +69673,6 @@
       "louisremi"
     ]
   },
-  "Web/API/XMLHttpRequest/channel": {
-    "modified": "2019-04-01T10:07:55.290Z",
-    "contributors": ["Sheppy", "teoli", "MashKao"]
-  },
   "Web/API/XMLHttpRequest/error_event": {
     "modified": "2020-10-15T21:19:53.429Z",
     "contributors": [
@@ -69765,18 +69761,6 @@
       "ethertank",
       "louisremi"
     ]
-  },
-  "Web/API/XMLHttpRequest/mozAnon": {
-    "modified": "2019-03-23T22:32:59.152Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
-  },
-  "Web/API/XMLHttpRequest/mozBackgroundRequest": {
-    "modified": "2019-03-23T22:32:48.788Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
-  },
-  "Web/API/XMLHttpRequest/mozSystem": {
-    "modified": "2019-03-23T22:32:57.199Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
   },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T21:40:00.147Z",

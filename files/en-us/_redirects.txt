@@ -10755,6 +10755,10 @@
 /en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
+/en-US/docs/Web/API/XMLHttpRequest/channel	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozAnon	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozBackgroundRequest	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozSystem	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/onreadystatechange	/en-US/docs/Web/API/XMLHttpRequest/readystatechange_event
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XMLHttpRequestEventTarget/onabort	/en-US/docs/Web/API/XMLHttpRequest/abort_event
