@@ -433,7 +433,7 @@ Not all events that bubble can reach the `Document` object. Only the following d
 - {{domxref("HTMLMediaElement/progress_event", "progress")}}
 - {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
 - {{domxref("HTMLFormElement/reset_event", "reset")}}
-- {{domxref("HTMLElement/resize_event", "resize")}}
+- {{domxref("HTMLVideoElement/resize_event", "resize")}}
 - {{domxref("Element/scroll_event", "scroll")}}
 - {{domxref("Element/scrollend_event", "scrollend")}}
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}

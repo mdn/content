@@ -117,7 +117,7 @@ class KFreqMeasurementOperation {
 register("k-freq-measurement", KFreqMeasurementOperation);
 ```
 
-For more details about this example, see [K+ frequency measurement](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/k-freq-reach). See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for links to other examples.
+For more details about this example, see [K+ frequency measurement](https://privacysandbox.google.com/private-advertising/private-aggregation/k-freq-reach). See the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) landing page for links to other examples.
 
 ## Specifications
 
@@ -130,4 +130,4 @@ For more details about this example, see [K+ frequency measurement](https://deve
 ## See also
 
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
-- [Noise and scaling](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/fundamentals#noise_and_scaling) on developers.google.com (2023)
+- [Noise and scaling](https://privacysandbox.google.com/private-advertising/private-aggregation/fundamentals#noise_and_scaling) on privacysandbox.google.com (2023)
