@@ -42,6 +42,10 @@ The `ElementInternals` interface also includes the following properties.
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) attribute.
 - {{domxref("ElementInternals.ariaAutoComplete")}}
   - : A string reflecting the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
+- {{domxref("ElementInternals.ariaBrailleLabel")}}
+  - : A string reflecting the [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) attribute, which defines the braille label of the element.
+- {{domxref("ElementInternals.ariaBrailleRoleDescription")}}
+  - : A string reflecting the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 - {{domxref("ElementInternals.ariaBusy")}}
   - : A string reflecting the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 - {{domxref("ElementInternals.ariaChecked")}}
