@@ -598,7 +598,15 @@ The four different paths mentioned above are determined by the next two paramete
     fill="none"
     stroke="black" />
   <text x="140" y="20" font-size="20" fill="black">Large arc flag</text>
-  <text x="-15" y="195" font-size="20" fill="black" transform="rotate(-90)" transform-origin="20 195">Sweep flag</text>
+  <text
+    x="-15"
+    y="195"
+    font-size="20"
+    fill="black"
+    transform="rotate(-90)"
+    transform-origin="20 195">
+    Sweep flag
+  </text>
   <text x="120" y="40" font-size="20" fill="black">0</text>
   <text x="270" y="40" font-size="20" fill="black">1</text>
   <text x="30" y="120" font-size="20" fill="black">0</text>
