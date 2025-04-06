@@ -8,7 +8,7 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 {{CSSRef}}
 
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
-A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+A user indicates their preference through an operating system setting (e.g., light or dark mode) or a user agent setting.
 
 ## Embedded elements
 
@@ -155,7 +155,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 
 - {{cssxref("color-scheme")}} property
 - [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme)
-- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)
+- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [Video: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)

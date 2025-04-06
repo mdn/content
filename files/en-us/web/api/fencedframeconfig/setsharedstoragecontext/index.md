@@ -11,7 +11,7 @@ browser-compat: api.FencedFrameConfig.setSharedStorageContext
 {{APIRef("Fenced Frame API")}}{{SeeCompatTable}}
 
 The **`setSharedStorageContext()`** method of the
-{{domxref("FencedFrameConfig")}} interface passes in contextual data from the embedding document to the `<fencedframe>`'s [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
+{{domxref("FencedFrameConfig")}} interface passes in contextual data from the embedding document to the `<fencedframe>`'s [shared storage](https://privacysandbox.google.com/private-advertising/shared-storage).
 
 ## Syntax
 
@@ -32,9 +32,9 @@ None (`Undefined`).
 
 ### Passing contextual data via `setSharedStorageContext()`
 
-You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+You can use the [Private Aggregation API](https://privacysandbox.google.com/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience).
 
-In the following example, we store data from both the embedding page and the fenced frame in [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
+In the following example, we store data from both the embedding page and the fenced frame in [shared storage](https://privacysandbox.google.com/private-advertising/shared-storage).
 
 In the embedding page, we will set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 
@@ -68,8 +68,12 @@ In the `reporting-worklet.js` worklet, we read the embedding document's event ID
 
 ```js
 class ReportingOperation {
-  convertEventIdToBucket(eventId) { ... }
-  convertEventPayloadToValue(info) { ... }
+  convertEventIdToBucket(eventId) {
+    // …
+  }
+  convertEventPayloadToValue(info) {
+    // …
+  }
 
   async run(data) {
     // Data from the embedder
@@ -80,12 +84,12 @@ class ReportingOperation {
 
     privateAggregation.sendHistogramReport({
       bucket: convertEventIdToBucket(eventId),
-      value: convertEventPayloadToValue(eventPayload)
+      value: convertEventPayloadToValue(eventPayload),
     });
   }
 }
 
-register('send-report', ReportingOperation);
+register("send-report", ReportingOperation);
 ```
 
 ## Specifications
@@ -98,5 +102,5 @@ register('send-report', ReportingOperation);
 
 ## See also
 
-- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [Fenced frames](https://privacysandbox.google.com/private-advertising/fenced-frame) on privacysandbox.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com

@@ -46,7 +46,7 @@ object, which updates automatically when the element's styles are changed.
 
     > [!NOTE]
     > Valid pseudo-element selector refers to syntactic
-    > validity, e.g. `::unsupported` is considered valid, even though the
+    > validity, e.g., `::unsupported` is considered valid, even though the
     > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
     > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
 
@@ -150,11 +150,11 @@ Java.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
   using array or [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
-- The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value).
+- The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value).
   These are usually the same as CSS 2.1's
-  [computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value), but for some older properties
+  [computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value), but for some older properties
   like `width`, `height`, or `padding`, they are
-  instead the same as [used values](/en-US/docs/Web/CSS/CSS_cascade/used_value). Originally, CSS
+  instead the same as [used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value). Originally, CSS
   2.0 defined the _computed values_ as the "ready to be used" final values of
   properties after cascading and inheritance, but CSS 2.1 redefined them as pre-layout,
   and _used values_ as post-layout. For CSS 2.0 properties,
@@ -188,4 +188,4 @@ Java.
 
 - {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
-- [Resolved value](/en-US/docs/Web/CSS/resolved_value)
+- [Resolved value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#resolved_value)

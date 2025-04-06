@@ -530,6 +530,7 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onrtctransform
+onsamplebufferfull
 onscreenschange
 onscrollend
 onscrollsnapchange
@@ -634,6 +635,8 @@ rustc
 rustup
 safariextz
 SAMEORIGIN
+samplebufferfull
+sampleinterval
 samplerate
 samr
 sansserif
@@ -658,6 +661,7 @@ seekforward
 seekto
 seeother
 selectchange
+selectedcontent
 selectend
 seltype
 sentenceboundary
@@ -695,6 +699,7 @@ superspeed
 SVGDOMElement
 SVGHKernElement
 SVGMPathElement
+svgref
 SVGVKernElement
 svgz
 swsh

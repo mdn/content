@@ -80,7 +80,7 @@ _No changes._
 
 - The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ([Firefox bug 1469592](https://bugzil.la/1469592)).
 - The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ([Firefox bug 1452569](https://bugzil.la/1452569)).
-- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g. [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
+- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g., [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
 - To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns `"Win32"` even when running on 64-bit Windows ([Firefox bug 1472618](https://bugzil.la/1472618)).
 - Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ([Firefox bug 1419960](https://bugzil.la/1419960)).
 
@@ -135,7 +135,7 @@ _No changes._
 
 #### New features
 
-- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g., is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
 - Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 

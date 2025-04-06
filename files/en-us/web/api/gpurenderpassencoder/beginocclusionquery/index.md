@@ -35,7 +35,7 @@ The following criteria must be met when calling **`beginOcclusionQuery()`**, oth
 - A {{domxref("GPUQuerySet")}} was specified in the `occlusionQuerySet` descriptor property when invoking the originating {{domxref("GPUCommandEncoder.beginRenderPass()")}}.
 - `queryIndex` is smaller than {{domxref("GPUQuerySet.count")}}.
 - The `queryIndex` has not already been written to in the same render pass.
-- An occlusion query is not already active for this render pass (i.e. via a previous `beginOcclusionQuery()` call).
+- An occlusion query is not already active for this render pass (i.e., via a previous `beginOcclusionQuery()` call).
 
 ## Examples
 

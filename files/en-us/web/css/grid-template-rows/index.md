@@ -110,7 +110,7 @@ This property may be specified as:
 - {{cssxref("&lt;percentage&gt;")}}
   - : Is a non-negative {{cssxref("percentage", "&lt;percentage&gt;")}} value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as `auto` for the purpose of calculating the intrinsic size of the grid container. It must then be resolved against the resulting grid container size for the purpose of laying out the grid and its items. The intrinsic size contributions of the track may be adjusted to the size of the grid container and may increase the final size of the track by the minimum amount that would result in honoring the percentage.
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
-  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
+  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e., `minmax(auto, <flex>)`).
 - {{cssxref("max-content")}}
   - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
 - {{cssxref("min-content")}}
@@ -128,7 +128,7 @@ This property may be specified as:
     > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
 - {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+  - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e., `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.
 - [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)

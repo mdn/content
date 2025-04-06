@@ -136,9 +136,9 @@ l10n:
     CORS_errors: Ошибки CORS
     PermissionsPolicyDirectives: Директивы Permissions-Policy
   zh-CN:
-    Guides: 指南：
-    Security: HTTP 安全
-    Reference: 参考：
+    Guides: 指南
+    Security: 安全与隐私
+    Reference: 参考
     Headers: HTTP 标头
     Methods: HTTP 请求方法
     Status: HTTP 响应状态码

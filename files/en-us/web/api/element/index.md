@@ -7,7 +7,7 @@ browser-compat: api.Element
 
 {{APIRef("DOM")}}
 
-**`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
+**`Element`** is the most general base class from which all element objects (i.e., objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
 
 For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements. Similarly, the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements, and the {{DOMxRef("MathMLElement")}} interface is the base interface for MathML elements. Most functionality is specified further down the class hierarchy.
 
@@ -54,18 +54,13 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : A string representing the local part of the qualified name of the element.
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : The namespace URI of the element, or `null` if it is no namespace.
-
-    > [!NOTE]
-    > In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
-
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
 - {{DOMxRef("Element.part")}}
-  - : Represents the part identifier(s) of the element (i.e. set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
+  - : Represents the part identifier(s) of the element (i.e., set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
@@ -176,7 +171,11 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaValueNow")}}
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("Element.ariaValueText")}}
+
   - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
+
+- {{domxref("Element.role")}}
+  - : A string reflecting the explicitly set [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute, which provides the semantic role of the element.
 
 ## Instance methods
 
@@ -285,7 +284,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Sets up mouse event capture, redirecting all mouse events to this element.
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
-  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](#element.innerhtml).
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
 - {{DOMxRef("Element.toggleAttribute()")}}
@@ -445,7 +444,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Touch events
 

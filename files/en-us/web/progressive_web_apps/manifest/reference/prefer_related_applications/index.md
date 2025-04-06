@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.prefer_related_applications
+browser-compat: manifests.webapp.prefer_related_applications
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}

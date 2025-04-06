@@ -10,7 +10,7 @@ browser-compat: api.HTMLFencedFrameElement.config
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e., what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience).
 
 ## Value
 
@@ -23,7 +23,7 @@ When its value is set to a {{domxref("FencedFrameConfig")}} object instance, the
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://privacysandbox.google.com/private-advertising/protected-audience) or [Shared Storage](https://privacysandbox.google.com/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -49,5 +49,5 @@ frame.config = frameConfig;
 
 ## See also
 
-- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [Fenced frames](https://privacysandbox.google.com/private-advertising/fenced-frame) on privacysandbox.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com

@@ -52,7 +52,7 @@ Timeline objects provide the useful property [`currentTime`](/en-US/docs/Web/API
 
 If Animation objects are DVD players, we can think of Animation Effects, or Keyframe Effects, as DVDs. Keyframe Effects are a bundle of information including at the bare minimum a set of keys and the duration they need to be animated over. The Animation Object takes this information and, using the Timeline Object, assembles a playable animation we can view and reference.
 
-We currently have only one animation effect type available: [`KeyframeEffect`](/en-US/docs/Web/API/KeyframeEffect). Potentially we could have all kinds of Animation Effects in the future—e.g. effects for grouping and sequencing, not unlike features we had in Flash. In fact, Group Effects and Sequence Effects have already been outlined in the currently-in-progress level 2 spec of the Web Animations API.
+We currently have only one animation effect type available: [`KeyframeEffect`](/en-US/docs/Web/API/KeyframeEffect). Potentially we could have all kinds of Animation Effects in the future—e.g., effects for grouping and sequencing, not unlike features we had in Flash. In fact, Group Effects and Sequence Effects have already been outlined in the currently-in-progress level 2 spec of the Web Animations API.
 
 ### Assembling the Animation from disparate pieces
 

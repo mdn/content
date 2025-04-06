@@ -8,7 +8,7 @@ browser-compat: api.SVGStringList.numberOfItems
 
 {{APIRef("SVG")}}
 
-The **`numberOfItems`** property of the {{domxref("SVGStringList")}} interface returns the number of items in the list. {{domxref("SVGStringList.length", "length")}} is an alias of of it.
+The **`numberOfItems`** property of the {{domxref("SVGStringList")}} interface returns the number of items in the list. {{domxref("SVGStringList.length", "length")}} is an alias of it.
 
 ## Value
 

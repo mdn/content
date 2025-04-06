@@ -2,7 +2,7 @@
 title: "resource: URLs"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
-page-type: reference
+page-type: uri-scheme
 sidebar: urlsidebar
 ---
 

@@ -43,7 +43,7 @@ _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, thoug
 _This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
 
 - {{domxref("DOMMatrix.invertSelf()")}}
-  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly#is2d) returns `false`.
+  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and [`is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) returns `false`.
 - {{domxref("DOMMatrix.multiplySelf()")}}
   - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.preMultiplySelf()")}}

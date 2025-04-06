@@ -294,7 +294,7 @@ after 3 seconds.
 
 In `sequentialWait`, both timers are created and then `await`ed.
 The timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
-i.e. the slowest timer.
+i.e., the slowest timer.
 However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.
