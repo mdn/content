@@ -7,7 +7,7 @@ browser-compat: css.properties.inline-size
 
 {{CSSRef}}
 
-The **`inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the size of an element's block, depending on its writing mode. If the {{cssxref("writing-mode")}} is horizonal-tb or horizonal-bt it corresponds to the {{cssxref("width")}} if the writing mode vertical-lr or vertical-rl it corresponds to the {{cssxref("height")}} property.
+The **`inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the size of an element's block along the [inline axis](/en-US/docs/Glossary/Grid_Axis). If the {{cssxref("writing-mode")}} is horizontal, it corresponds to the {{cssxref("width")}}; if the writing mode is vertical, it corresponds to the {{cssxref("height")}}. A related property is {{cssxref("block-size")}}, which defines the other dimension of the element.
 
 {{InteractiveExample("CSS Demo: inline-size")}}
 
