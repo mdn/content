@@ -8,11 +8,11 @@ page-type: web-api-interface
 
 The **`DeferredRequestInit`** dictionary of the [fetchLater() API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 
-The `DeferredRequestInit` object is pass directly into the {{DOMxRef("Window.fetchLater()")}} function call as the second argument.
+The `DeferredRequestInit` object is pass directly into the {{domxref("Window.fetchLater()")}} function call as the second argument.
 
 ## Instance properties
 
-This dictionary extends the {{DOMxRef("RequestInit")}} dictionary with the addition of the following properties:
+This dictionary extends the {{domxref("RequestInit")}} dictionary with the addition of the following properties:
 
 - `activateAfter` {{optional_inline}}
 

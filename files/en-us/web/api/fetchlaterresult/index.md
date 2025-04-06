@@ -28,6 +28,6 @@ On successful sending, the whole response is ignored — including body and head
 
 ## See also
 
-- {{DOMxRef("fetchLater() API")}}
+- {{domxref("fetchLater() API")}}
 - [Using fetchLater](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)
 - [HTTP](/en-US/docs/Web/HTTP)

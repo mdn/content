@@ -7,22 +7,22 @@ browser-compat: api.Window.fetchLater
 
 {{DefaultAPISidebar("fetchLater API")}}
 
-The **`fetchLater()` API** provides an interface to request a deferred fetch that can be sent after a specified period of time, or when the document is destroyed — that is when closing the page, or navigating away.
+The **`fetchLater()` API** provides an interface to request a deferred fetch that can be sent after a specified period of time, or when the page is closed or navigated away from.
 
 ## Concepts and usage
 
-Developers often have a need to send (or beacon) data back to the server, particularly at the end of a user's visit to a page, for example for analytics services. There are a number of APIs to for this: from adding 1 pixel {{HTMLElement("img")}} elements to the page, to {{DOMxRef("XMLHttpRequest")}}, to the dedicated {{DOMxRef("Beacon API")}}, to the {{DOMxRef("Fetch API")}} itself.
+Developers often have a need to send (or beacon) data back to the server, particularly at the end of a user's visit to a page, for example for analytics services. There are a number of APIs to for this: from adding 1 pixel {{HTMLElement("img")}} elements to the page, to {{domxref("XMLHttpRequest")}}, to the dedicated {{domxref("Beacon API")}}, to the {{domxref("Fetch API")}} itself.
 
-The issue is that all of those suffer from reliability problems for end-of-visit beaconing. While the Beacon API, and the {{DOMxRef("Request.keepalive", "keepalive")}} property of the Fetch API does ensure the request is sent even if the document is destroyed (to the best efforts that can be made in this scenario), this only solves part of the problem.
+The issue is that all of those suffer from reliability problems for end-of-visit beaconing. While the Beacon API, and the {{domxref("Request.keepalive", "keepalive")}} property of the Fetch API do send even if the document is destroyed (to the best efforts that can be made in this scenario), this only solves part of the problem.
 
-The other, more difficult, part is _when_ to send the beacon, since there is not an ideal time in a page's lifecycle to make the JavaScript call to send out the beacon:
+The other, more difficult, part is to find a reliable time _when_ to send the beacon, since there is not an ideal time in a page's lifecycle to make the JavaScript call to send out the beacon:
 
-- The {{DOMxRef("Window.unload_event", "unload")}} and {{DOMxRef("Window.beforeunload_event", "beforeunload")}} events are unreliable, and outright ignored by several major browsers.
-- The {{DOMxRef("Window.pagehide_event", "pagehide")}} and {{DOMxRef("document.visibilitychange_event", "visibilitychange")}} events are more reliable, but still have issues on mobile platforms.
+- The {{domxref("Window.unload_event", "unload")}} and {{domxref("Window.beforeunload_event", "beforeunload")}} events are unreliable, and outright ignored by several major browsers.
+- The {{domxref("Window.pagehide_event", "pagehide")}} and {{domxref("document.visibilitychange_event", "visibilitychange")}} events are more reliable, but still have issues on mobile platforms.
 
-This means developers need to beacon more frequently than ideal — for example beacon on each change even if they might not yet be the final value for the page. This has costs in network usage, server processing, and needing to merge or discard outdated beacons on the server. Alternatively, developers can accept some level of missing data — either by beaconing after some time cut off and miss collecting later data, or to attempt to only beacon at end of the page but accept that sometimes this will not be reliable.
+This means developers looking to beacon reliably need to beacon more frequently than ideal — for example beacon on each change even if they might not yet be the final value for the page. This has costs in network usage, server processing, and needing to merge or discard outdated beacons on the server. Alternatively, developers can accept some level of missing data — either by beaconing after some time cut off and miss collecting later data, or to attempt to only beacon at end of the page but accept that sometimes this will not be reliable.
 
-The `fetchLater()` API extends the {{DOMxRef("Fetch API")}} to allow fetch requests to be set up in advance. These deferred fetches can be aborted and updated before they have been sent allowing the payload to reflect the latest data needing to be beaconed. The browser then takes care of sending the beacon when the document is page is closed or navigated away from, or after a period of time if specified. This avoids the need to send multiple beacons but still ensures a reliable beacon (within reasonable expectations such as the browser process shutting down unexpectedly during a crash).
+The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow fetch requests to be set up in advance. These deferred fetches can be aborted using an {{domxref("AbortController")}} and updated before they have been sent allowing the payload to reflect the latest data needing to be beaconed. The browser then takes care of sending the beacon when the document is page is closed or navigated away from, or after a period of time if specified. This avoids the need to send multiple beacons but still ensures a reliable beacon (within reasonable expectations such as the browser process shutting down unexpectedly during a crash).
 
 Find out more about using the `fetchLater()` API features in [Using the fetchLater() API](/en-us/docs/Web/API/fetchLater_API/Using_fetchLater).
 
@@ -36,11 +36,11 @@ See [fetchLater() quotas](/en-us/docs/Web/API/fetchLater_API/fetchLater_quotas) 
 
 ## fetchLater interfaces
 
-- {{DOMxRef("Window.fetchLater()")}}
+- {{domxref("Window.fetchLater()")}}
   - : The `fetchLater()` method is used to queue a resource for sending at a later point.
-- {{DOMxRef("DeferredRequestInit")}}
+- {{domxref("DeferredRequestInit")}}
   - : Represents the set of options that can be used to configure a deferred fetch request.
-- {{DOMxRef("FetchLaterResult")}}
+- {{domxref("FetchLaterResult")}}
   - : Represents the result of requesting a deferred fetch.
 - {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
   - : Represents the `deferred-fetch` [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
@@ -59,5 +59,5 @@ See [fetchLater() quotas](/en-us/docs/Web/API/fetchLater_API/fetchLater_quotas) 
 
 - [Usingthe `fetchLater()` API](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)
 - [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- {{DOMxRef("Fetch API")}}
+- {{domxref("Fetch API")}}
 - [HTTP](/en-US/docs/Web/HTTP)
