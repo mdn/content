@@ -13,7 +13,7 @@ The **`NavigationHistoryEntry`** interface of the {{domxref("Navigation API", "N
 
 These objects are commonly accessed via the {{domxref("Navigation.currentEntry")}} property and {{domxref("Navigation.entries()")}} method.
 
-The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
+The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g., not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "History API", "", "nocode")}}.
 
 {{InheritanceDiagram}}
 

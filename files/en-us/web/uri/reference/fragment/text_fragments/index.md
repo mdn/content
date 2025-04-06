@@ -1,7 +1,7 @@
 ---
 title: Text fragments
 slug: Web/URI/Reference/Fragment/Text_fragments
-page-type: reference
+page-type: uri-component
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective
@@ -9,7 +9,7 @@ browser-compat:
 sidebar: urlsidebar
 ---
 
-**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g., with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
@@ -78,7 +78,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ### Text fragment with textStart
 
-- [https://example.com#:~:text=for](https://example.com#:~:text=for) scrolls to and highlights the first instance of the text `for` in the document.
+- [https://example.com/#:~:text=for](https://example.com/#:~:text=for) scrolls to and highlights the first instance of the text `for` in the document.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human](/en-US/docs/Web/HTML/Element/a#:~:text=human) scrolls to and highlights the first instance of the text `human` in the document.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL) scrolls to and highlights the first instance of the text `linked URL` in the document.
 
@@ -89,7 +89,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ### Examples with prefix- and/or -suffix
 
-- [https://example.com#:~:text=asking-,for](https://example.com#:~:text=asking-,for) scrolls to and highlights the second instance of the text `for` in the document.
+- [https://example.com/#:~:text=asking-,for](https://example.com/#:~:text=asking-,for) scrolls to and highlights the second instance of the text `for` in the document.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=sent-,referrer](/en-US/docs/Web/HTML/Element/a#:~:text=sent-,referrer) scrolls to and highlights the first instance of the text `referrer` that has the text `sent` directly before it. This is the 5th instance of `referrer` in the document; without the prefix, the first instance would be highlighted.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format) scrolls to and highlights the first instance of the text `linked URL` that has the text `'s format` directly following it. This is the 5th instance of `linked URL` in the document; without the suffix, the first instance would be highlighted.
 - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins](/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins) scrolls to and highlights the instance of the text `The Referer ... be sent` that is prefixed by `downgrade:` and suffixed by `to origins`. This illustrates a more complex example where the prefix/suffix are used to home in on the specific text instance you want to link to. Try removing the prefix, for example, and seeing what is matched.

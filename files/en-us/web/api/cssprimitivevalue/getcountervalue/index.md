@@ -41,9 +41,9 @@ A {{domxref("Counter")}} object representing the counter value.
 
 ### Exceptions
 
-| **Type**       | **Description**                                                                                                        |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a `Counter` value (e.g. this is not `CSS_COUNTER`). |
+| **Type**       | **Description**                                                                                                         |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a `Counter` value (e.g., this is not `CSS_COUNTER`). |
 
 ## Specifications
 

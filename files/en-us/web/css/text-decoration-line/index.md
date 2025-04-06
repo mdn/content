@@ -28,6 +28,14 @@ text-decoration-line: line-through;
 ```
 
 ```css interactive-example-choice
+text-decoration-line: grammar-error;
+```
+
+```css interactive-example-choice
+text-decoration-line: spelling-error;
+```
+
+```css interactive-example-choice
 text-decoration-line: underline overline;
 ```
 
@@ -133,6 +141,8 @@ The `text-decoration-line` property is specified as `none`, or **one or more** s
 ### Errors example
 
 In this example, the first paragraph contains a spelling mistake and uses the browser's styling for spelling errors on the misspelled word. The second paragraph uses the browser's styling for grammar errors. There is no styling change in browsers that do not support these `text-decoration-line` values.
+
+<!-- cSpell:ignore speling -->
 
 ```html
 <p>This text contains a <span class="spelling">speling</span> mistake.</p>

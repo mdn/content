@@ -22,7 +22,7 @@ browser.management.install(options)
 ### Parameters
 
 - options
-  - : An object that includes the URL of the XPI file of the theme at [addons.mozilla.org](https://addons.mozilla.org) and an optional a hash of the XPI file, using sha256 or stronger.
+  - : An object that includes the URL of the XPI file of the theme at [addons.mozilla.org](https://addons.mozilla.org/) and an optional a hash of the XPI file, using sha256 or stronger.
 
 ### Return value
 

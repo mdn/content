@@ -135,7 +135,7 @@ reload.addEventListener("click", () => {
 
 This example demonstrates how the `<discard>` element might be used with an activation triggered based on time.
 
-It is almost exactly the same as the previous example, the main difference being that the discard element is triggered after 5 seconds (`<discard begin="5s" />`) instead of the the end of the animation (4 seconds). This also removes the id from the `<animate>` element, as it is not used.
+It is almost exactly the same as the previous example, the main difference being that the discard element is triggered after 5 seconds (`<discard begin="5s" />`) instead of the end of the animation (4 seconds). This also removes the id from the `<animate>` element, as it is not used.
 
 ```html
 <svg

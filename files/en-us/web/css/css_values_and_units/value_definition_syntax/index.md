@@ -317,7 +317,7 @@ Some types can accept numeric values within a certain range. For example, the [`
 
 Any value outside this specified range causes the whole declaration to be invalid, therefore the browser will ignore it.
 
-The _bracketed range notation_ `[min, max]` indicates an inclusive range between a `min` and `max` value. This notation is used in numeric type notations and can include units, e.g. `<angle [0,180deg]>`. Positive and negative Infinity (-∞ and ∞) must not have units specified. Types specified in units can have zero values specified with or without units, for example `<time [0s,10s]>` or `<time [0,10s]>`.
+The _bracketed range notation_ `[min, max]` indicates an inclusive range between a `min` and `max` value. This notation is used in numeric type notations and can include units, e.g., `<angle [0,180deg]>`. Positive and negative Infinity (-∞ and ∞) must not have units specified. Types specified in units can have zero values specified with or without units, for example `<time [0s,10s]>` or `<time [0,10s]>`.
 
 Here are some more examples:
 
@@ -452,10 +452,10 @@ Here are some more examples:
   - [Visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#actual_value)
   - **Value definition syntax**
   - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - {{glossary("Replaced elements")}}

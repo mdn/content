@@ -21,13 +21,11 @@ async function joinAll(generator) {
   }
   return str;
 }
-
-const str = joinAll(async function* () {
+joinAll(async function* () {
   yield await Promise.resolve("a");
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
-});
-console.log(str);
+}).then((str) => console.log(str));
 // Expected output: "abc"
 ```
 

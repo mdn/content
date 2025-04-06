@@ -61,7 +61,7 @@ var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```
 
-The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_values), the function uses the second value.
+The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords), the function uses the second value.
 
 The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue`; that is, anything between the first comma and the end of the function is considered a fallback value.
 
@@ -73,9 +73,9 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
 
 - `<declaration-value>`
 
-  - : The custom property's fallback value, which is used in case the custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_values). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property is not defined, the `var()` function resolves to an [invalid value](#invalid_values).
+  - : The custom property's fallback value, which is used in case the custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e., `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property is not defined, the `var()` function resolves to an [invalid value](#invalid_values).
 
-    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_values), the `var()` should be replaced with nothing.
+    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords), the `var()` should be replaced with nothing.
 
 ## Formal syntax
 

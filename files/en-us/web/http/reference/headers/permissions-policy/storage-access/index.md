@@ -9,7 +9,7 @@ browser-compat: http.headers.Permissions-Policy.storage-access
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `storage-access` directive controls whether a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `storage-access` directive controls whether a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) is allowed to use the {{domxref("Storage Access API", "Storage Access API", "", "nocode")}} to request access to unpartitioned cookies.
 
 This is relevant to user agents that by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy (for example, to prevent tracking).
 

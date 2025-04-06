@@ -29,7 +29,7 @@ In terms of behavior, we are recreating a native HTML element. Therefore it shou
 
 - the page loads.
 - the control was active and the user clicks anywhere outside it.
-- the control was active and the user moves the focus to another control using the keyboard (e.g. the <kbd>Tab</kbd> key).
+- the control was active and the user moves the focus to another control using the keyboard (e.g., the <kbd>Tab</kbd> key).
 
 **The control is in its active state when:**
 
@@ -2095,24 +2095,3 @@ Here are a few libraries you should consider before coding your own:
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
 If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
-
-## See also
-
-### Learning path
-
-- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [The native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-- [Additional form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
-- [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-
-### Advanced Topics
-
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- **How to build custom form controls**
-- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

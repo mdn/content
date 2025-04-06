@@ -110,9 +110,9 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
     If all the rows are present in the DOM, this attribute is not necessary.
 
-### Keyboard Interactions
+### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 

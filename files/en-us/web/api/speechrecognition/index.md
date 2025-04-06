@@ -30,7 +30,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.continuous")}}
   - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
-  - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
+  - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g., the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
 

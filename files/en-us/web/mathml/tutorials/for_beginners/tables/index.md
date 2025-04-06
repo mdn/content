@@ -99,7 +99,7 @@ Tables are typically used for matrix-like expressions (including vectors). Here 
 
 ## Allowing cells to span multiple rows and columns
 
-This is again similar to [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
+This is again similar to [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
 
 ```html hidden
 <!doctype html>
@@ -270,7 +270,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
 > [!WARNING]
-> The [`<mtable>` article](/en-US/docs/Web/MathML/Reference/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
+> The [`<mtable>` article](/en-US/docs/Web/MathML/Reference/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e., not actual matrix-like objects) can be replaced with CSS-based alternatives.
 
 ## Summary
 

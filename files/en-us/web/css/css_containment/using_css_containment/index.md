@@ -46,7 +46,7 @@ It tells the browser that the internal layout of the element is completely separ
 
 By setting `contain: content` on each `<article>` we have indicated this; we have told the browser that each article is independent. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
 
-When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
+When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g., with `height: auto`), then the browser will need to account for its size changing.
 
 ## Key concepts and terminology
 

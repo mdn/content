@@ -68,7 +68,7 @@ function download() {
   a.href = url;
   a.download = "test.webm";
   a.click();
-  window.URL.revokeObjectURL(url);
+  URL.revokeObjectURL(url);
 }
 
 // demo: to download after 9sec
