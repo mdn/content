@@ -97,7 +97,7 @@ You can then render the text and selection in the view, using the information pr
 
 ## Extensions to other interfaces
 
-- {{domxref("HTMLInputElement.editContext")}} {{experimental_inline}}
+- {{domxref("HTMLElement.editContext")}} {{experimental_inline}}
   - : The `editContext` property of the {{domxref("HTMLElement")}} interface gets and sets an element's associated {{domxref("EditContext")}} object.
 
 ## Specifications
