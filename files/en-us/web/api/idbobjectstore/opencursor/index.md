@@ -13,7 +13,6 @@ The **`openCursor()`** method of the
 and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object.
 Used for iterating through an object store with a cursor.
 
-
 ## Syntax
 
 ```js-nolint
