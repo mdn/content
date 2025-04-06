@@ -22,7 +22,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGradient
 - {{domxref("SVGRadialGradientElement.r")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("r")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 - {{domxref("SVGRadialGradientElement.fr")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fr")}} attribute
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fr")}} attribute.
 - {{domxref("SVGRadialGradientElement.fx")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fx")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 - {{domxref("SVGRadialGradientElement.fy")}} {{ReadOnlyInline}}
