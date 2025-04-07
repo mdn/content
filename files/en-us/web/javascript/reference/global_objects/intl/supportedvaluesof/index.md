@@ -82,10 +82,10 @@ Below are all values that are commonly supported by browsers for the `calendar` 
 
 The types below are specified in CLDR but do not have implementations distinct from the above calendars in browsers.
 
-| Value                            | Description                           | Notes                                                                                                                                                                                                                                                         |
-| -------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `islamicc` {{deprecated_inline}} | Civil (algorithmic) Arabic calendar.  | This is an alias for `islamic-civil` and therefore is not returned by `supportedValuesOf()`. Use `islamic-civil` instead.                                                                                                                                     |
-| `islamic-rgsa`                   | Hijri calendar, Saudi Arabia sighting | Browsers do not have historical sighting data and future sightings have not occurred yet. As of April 2025, this calendar results in the same behavior as `islamic`. See `islamic-umalqura` for a Mecca-based astronomical calculation.                       |
+| Value                            | Description                           | Notes                                                                                                                                                                                                                                   |
+| -------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `islamicc` {{deprecated_inline}} | Civil (algorithmic) Arabic calendar.  | This is an alias for `islamic-civil` and therefore is not returned by `supportedValuesOf()`. Use `islamic-civil` instead.                                                                                                               |
+| `islamic-rgsa`                   | Hijri calendar, Saudi Arabia sighting | Browsers do not have historical sighting data and future sightings have not occurred yet. As of April 2025, this calendar results in the same behavior as `islamic`. See `islamic-umalqura` for a Mecca-based astronomical calculation. |
 
 References:
 
