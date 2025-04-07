@@ -278,7 +278,7 @@ In the `url` input, we set `pattern` to `".*\.mozilla\..*"`. This regular expres
 
 The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute also describes the `pattern` for users with assistive technologies.
 
-```html
+```html live-sample___url-validation
 <form>
   <label for="myURL"
     >Enter a url from this site:
