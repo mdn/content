@@ -8,7 +8,7 @@ page-type: web-api-interface
 
 The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 
-The `DeferredRequestInit` object is pass directly into the {{domxref("Window.fetchLater()")}} function call as the second argument.
+The `DeferredRequestInit` object is pass directly into the {{domxref("window.fetchLater()")}} function call as the second argument.
 
 ## Instance properties
 
@@ -16,11 +16,13 @@ This dictionary extends the {{domxref("RequestInit")}} dictionary with the addit
 
 - `activateAfter` {{optional_inline}}
 
-  - : A {{ domxref("DOMHighResTimeStamp") }} indicating a timeout after which the fetch request should be sent. The fetch can be sent earlier on navigating away. NOTE: The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, e.g., to optimize batching of deferred fetches. If the `activateAfter` property is not provided the deferred fetch waits until the end of the page visit (including entering the bfcache).
+  - : A {{ domxref("DOMHighResTimeStamp") }} indicating a timeout in milliseconds after which the fetch request should be sent. The fetch can be sent earlier on navigating away. NOTE: The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, e.g., to optimize batching of deferred fetches. If the `activateAfter` property is not provided the deferred fetch waits until the end of the page visit (including entering the bfcache).
 
 ## Examples
 
 ### Defer a `GET` request until page is destroyed or enters the bfcache
+
+In this example, no `DeferredRequestInit` object is provided and no timeout is used:
 
 ```js
 fetchLater("/send_beacon");
@@ -28,7 +30,7 @@ fetchLater("/send_beacon");
 
 ### Defer a `POST` request for around 1 minute
 
-In this example we create a {{domxref("Request")}}, passing the same set of options into its constructor, and then pass the request into `fetch()`:
+In this example we create a {{domxref("Request")}}, and provide an `activateAfter` value to delay sending the request for 60,000 milliseconds (or one minute):
 
 ```js
 fetchLater({

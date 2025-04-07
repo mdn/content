@@ -58,9 +58,9 @@ The [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas
 fetchLater("/send_beacon");
 ```
 
-### Defer a `POST` request for around 1 minute
+### Defer a `POST` request for around one minute
 
-In this example we create a {{domxref("Request")}}, passing the same set of options into its constructor, and then pass the request into `fetch()`:
+In this example we create a {{domxref("Request")}}, and provide an `activateAfter` value to delay sending the request for 60,000 milliseconds (or one minute):
 
 ```js
 fetchLater({
