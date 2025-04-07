@@ -23,11 +23,11 @@ fetchLater(resource, options)
 
 ### Parameters
 
-The `fetchLater()` method takes all the same parameters as {{domxref("Fetch()")}}, but with one additional `activateAfter` option.
+The `fetchLater()` method takes all the same parameters as {{domxref("fetch()")}}, but with one additional `activateAfter` option.
 
 - `resource`
 
-  - : This defines the resource that you wish to fetch. Identical to {{domxref("Fetch")}}, this can either be:
+  - : This defines the resource that you wish to fetch. Identical to {{domxref("fetch()")}}, this can either be:
 
     - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context.
     - A {{domxref("Request")}} object.
