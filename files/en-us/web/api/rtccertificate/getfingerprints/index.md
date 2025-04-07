@@ -83,7 +83,7 @@ let serverFingerprintDict = Object.fromEntries(
 // and all common properties match.
 function compareObjects(obj1, obj2) {
   const commonProperties = Object.keys(obj1).filter((prop) =>
-    obj2.hasOwnProperty(prop)
+    obj2.hasOwnProperty(prop),
   );
   // Return false if there are no common properties
   if (Object.keys(commonProperties).length === 0) return false;
@@ -100,7 +100,7 @@ function compareObjects(obj1, obj2) {
 
 const matchingFingerprints = compareObjects(
   clientFingerprintDict,
-  serverFingerprintDict
+  serverFingerprintDict,
 );
 console.log(matchingFingerprints);
 ```
