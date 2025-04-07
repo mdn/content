@@ -57,6 +57,7 @@ Custom element lifecycle callbacks include:
 
 - `connectedCallback()`: called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
 - `disconnectedCallback()`: called each time the element is removed from the document.
+- `connectedMoveCallback()`: called _instead_ of `connectedCallback()` and `disconnectedCallback()` each time the element is moved to a different place in the DOM via {{domxref("Element.moveBefore()")}}. This can be used to overcome functionality problems encountered as a result of initialization/cleanup code being run multiple times when the element is not actually being added to or removed from the DOM. See [Moving custom elements](/en-US/docs/Web/API/Element/moveBefore#moving_custom_elements) for more details.
 - `adoptedCallback()`: called each time the element is moved to a new document.
 - `attributeChangedCallback()`: called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
 
@@ -78,6 +79,10 @@ class MyCustomElement extends HTMLElement {
 
   disconnectedCallback() {
     console.log("Custom element removed from page.");
+  }
+
+  connectedMoveCallback() {
+    console.log("Custom element moved with moveBefore()");
   }
 
   adoptedCallback() {
