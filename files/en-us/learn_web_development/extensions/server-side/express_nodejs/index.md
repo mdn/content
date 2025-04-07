@@ -11,7 +11,7 @@ page-type: learn-module
 Express is a popular unopinionated web framework, written in JavaScript and hosted within the Node.js runtime environment. This module explains some of the key benefits of the framework, how to set up your development environment and how to perform common web development and deployment tasks.
 
 > [!WARNING]
-> The Express documentation and tutorial are written for Express 4, while the head revision is Express 5.
+> The Express documentation and tutorial are written for Express version 4, while the latest version is Express 5.
 > We plan to update the documentation in the second half of 2025.
 
 ## Prerequisites

@@ -9,7 +9,7 @@ page-type: learn-module-chapter
 In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).
 
 > [!WARNING]
-> The Express tutorial is written for Express 4, while the head revision is Express 5.
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
 > We plan to update the documentation in the second half of 2025.
 
 <table>

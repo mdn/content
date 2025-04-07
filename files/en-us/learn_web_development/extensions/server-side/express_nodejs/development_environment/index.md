@@ -10,8 +10,8 @@ page-type: learn-module-chapter
 Now that you know what [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
 
 > [!WARNING]
-> The Express tutorial is written for Express 4, while the head revision is Express 5.
-> We plan to update the documentation in the second half of 2025.
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation to support Express 5 in the second half of 2025. Until then, we have updated the installation commands so they install Express 4 rather than the latest version, to avoid any potential compatibility problems. 
 
 <table>
   <tbody>
