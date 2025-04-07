@@ -59,18 +59,22 @@ The `Ball` constructor should define a new property called `exists`, which is us
 The `collisionDetect()` method of the `Ball` class needs a small update. A ball needs to be considered for collision detection only if the `exists` property is `true`. So, replace the existing `collisionDetect()` code with the following code:
 
 ```js
-collisionDetect() {
-  for (const ball of balls) {
-    if (!(this === ball) && ball.exists) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+class Ball {
+  // …
+  collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball) && ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
       }
     }
   }
+  // …
 }
 ```
 
