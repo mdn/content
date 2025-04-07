@@ -173,7 +173,7 @@ So, you could have files with names such as `header.component.ts`, `signup.compo
 You create a component with a `@Component()` decorator that has metadata that tells Angular where to find the HTML and CSS.
 A typical component is as follows:
 
-```js
+```ts
 import { Component } from "@angular/core";
 
 @Component({
@@ -208,7 +208,7 @@ You can define this template either inline or by file path.
 
 To refer to an external HTML file, use the `templateUrl` property:
 
-```js
+```ts
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -220,7 +220,7 @@ export class AppComponent {
 
 To write inline HTML, use the `template` property and write your HTML within backticks:
 
-```js
+```ts
 @Component({
   selector: "app-root",
   template: `<h1>To do application</h1>`,
@@ -241,7 +241,7 @@ One use of this feature is inserting dynamic text, as shown in the following exa
 The double curly braces instruct Angular to interpolate the contents within them.
 The value for `title` comes from the component class:
 
-```js-nolint
+```ts
 import { Component } from "@angular/core";
 
 @Component({
@@ -269,23 +269,29 @@ You can write component-specific styles directly in the `@Component()` decorator
 
 To include the styles directly in the component decorator, use the `styles` property:
 
-```js
+```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: ['h1 { color: red; }']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styles: ["h1 { color: red; }"],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 Typically, a component uses styles in a separate file.
 You can use the `styleUrl` property with the path to the CSS file as a string or `styleUrls` with an array of strings if there are multiple CSS stylesheets you want to include:
 
-```js
+```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
 })
+export class AppComponent {
+  // …
+}
 ```
 
 With component-specific styles, you can organize your CSS so that it is easily maintainable and portable.
@@ -297,17 +303,20 @@ This tutorial uses [standalone components](https://angular.dev/guide/components/
 
 It's common to import [`CommonModule`](https://angular.dev/api/common/CommonModule) so that your component can make use of common [directives](https://angular.dev/guide/directives) and [pipes](https://angular.dev/guide/pipes).
 
-```js
+```ts
 import { Component } from "@angular/core";
-import { CommonModule } from '@angular/common';
+import { CommonModule } from "@angular/common";
 
 @Component({
   standalone: true,
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
   imports: [CommonModule],
 })
+export class AppComponent {
+  // …
+}
 ```
 
 ## Summary

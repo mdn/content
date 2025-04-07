@@ -71,7 +71,7 @@ To use a ref in a component, you add a `ref` attribute to the element that you w
 
 So, let's attach a ref to our "Edit" button in `ToDoItem.vue`. Update it like this:
 
-```html
+```vue
 <button
   type="button"
   class="btn"
@@ -85,10 +85,18 @@ So, let's attach a ref to our "Edit" button in `ToDoItem.vue`. Update it like th
 To access the value associated with our ref, we use the `$refs` property provided on our component instance. To see the value of the ref when we click our "Edit" button, add a `console.log()` to our `toggleToItemEditForm()` method, like so:
 
 ```js
-toggleToItemEditForm() {
-  console.log(this.$refs.editButton);
-  this.isEditing = true;
-}
+export default {
+  // …
+  methods: {
+    // …
+    toggleToItemEditForm() {
+      console.log(this.$refs.editButton);
+      this.isEditing = true;
+    },
+    // …
+  },
+  // …
+};
 ```
 
 If you activate the "Edit" button at this point, you should see an HTML `<button>` element referenced in your console.
@@ -100,24 +108,40 @@ We want to set focus on the "Edit" button when a user saves or cancels their edi
 For convenience, create a new method which takes no arguments called `focusOnEditButton()`. Inside it, assign your `ref` to a variable, and then call the `focus()` method on the ref.
 
 ```js
-focusOnEditButton() {
-  const editButtonRef = this.$refs.editButton;
-  editButtonRef.focus();
-}
+export default {
+  // …
+  methods: {
+    // …
+    focusOnEditButton() {
+      const editButtonRef = this.$refs.editButton;
+      editButtonRef.focus();
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Next, add a call to `this.focusOnEditButton()` at the end of the `itemEdited()` and `editCancelled()` methods:
 
 ```js
-itemEdited(newItemName) {
-  this.$emit("item-edited", newItemName);
-  this.isEditing = false;
-  this.focusOnEditButton();
-},
-editCancelled() {
-  this.isEditing = false;
-  this.focusOnEditButton();
-},
+export default {
+  // …
+  methods: {
+    // …
+    itemEdited(newItemName) {
+      this.$emit("item-edited", newItemName);
+      this.isEditing = false;
+      this.focusOnEditButton();
+    },
+    editCancelled() {
+      this.isEditing = false;
+      this.focusOnEditButton();
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Try editing and then saving/cancelling a to-do item via your keyboard. You'll notice that focus isn't being set, so we still have a problem to solve. If you open your console, you'll see an error raised along the lines of _"can't access property "focus", editButtonRef is undefined"_. This seems weird. Your button ref was defined when you activated the "Edit" button, but now it's not. What is going on?
@@ -131,12 +155,20 @@ Instead, we need to wait until after Vue undergoes the next DOM update cycle. To
 Since the `focusOnEditButton()` method needs to be invoked after the DOM has updated, we can wrap the existing function body inside a `$nextTick()` call.
 
 ```js
-focusOnEditButton() {
-  this.$nextTick(() => {
-    const editButtonRef = this.$refs.editButton;
-    editButtonRef.focus();
-  });
-}
+export default {
+  // …
+  methods: {
+    // …
+    focusOnEditButton() {
+      this.$nextTick(() => {
+        const editButtonRef = this.$refs.editButton;
+        editButtonRef.focus();
+      });
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Now when you activate the "Edit" button and then cancel or save your changes via the keyboard, focus should be returned to the "Edit" button. Success!
@@ -167,7 +199,7 @@ Now that we've gone over the lifecycle methods, let's use one to trigger focus w
 
 In `ToDoItemEditForm.vue`, attach `ref="labelInput"` to the `<input>` element, like so:
 
-```html
+```vue
 <input
   :id="id"
   ref="labelInput"
@@ -179,18 +211,24 @@ In `ToDoItemEditForm.vue`, attach `ref="labelInput"` to the `<input>` element, l
 Next, add a `mounted()` property just inside your component object — **note that this should not be put inside the `methods` property, but rather at the same hierarchy level as `props`, `data()`, and `methods`.** Lifecycle methods are special methods that sit on their own, not alongside the user-defined methods. This should take no inputs. Note that you cannot use an arrow function here since we need access to `this` to access our `labelInput` ref.
 
 ```js
-mounted() {
-
-}
+export default {
+  // …
+  mounted() {},
+  // …
+};
 ```
 
 Inside your `mounted()` method, assign your `labelInput` ref to a variable, and then call the `focus()` function of the ref. You don't have to use `$nextTick()` here because the component has already been added to the DOM when `mounted()` is called.
 
 ```js
-mounted() {
-   const labelInputRef = this.$refs.labelInput;
-   labelInputRef.focus();
-}
+export default {
+  // …
+  mounted() {
+    const labelInputRef = this.$refs.labelInput;
+    labelInputRef.focus();
+  },
+  // …
+};
 ```
 
 Now when you activate the "Edit" button with your keyboard, focus should immediately be moved to the edit `<input>`.
@@ -207,7 +245,7 @@ First, we need to add a ref to our list heading. We also need to add a `tabindex
 
 Inside `App.vue`, update your `<h2>` as follows:
 
-```html
+```vue
 <h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
 ```
 
@@ -216,11 +254,19 @@ Inside `App.vue`, update your `<h2>` as follows:
 Now that we have a `ref` and have let browsers know that we can programmatically focus the `<h2>`, we need to set focus on it. At the end of `deleteToDo()`, use the `listSummary` ref to set focus on the `<h2>`. Since the `<h2>` is always rendered in the app, you do not need to worry about using `$nextTick()` or lifecycle methods to handle focusing it.
 
 ```js
-deleteToDo(toDoId) {
-    const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
-    this.ToDoItems.splice(itemIndex, 1);
-    this.$refs.listSummary.focus();
-}
+export default {
+  // …
+  methods: {
+    // …
+    deleteToDo(toDoId) {
+      const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
+      this.ToDoItems.splice(itemIndex, 1);
+      this.$refs.listSummary.focus();
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Now, when you delete an item from your list, focus should be moved up to the list heading. This should provide a reasonable focus experience for all of our users.
