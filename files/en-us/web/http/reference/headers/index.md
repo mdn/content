@@ -434,7 +434,7 @@ Network client hints allow a server to choose what information is sent based on 
 [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is a way of using a shared compression dictionary to reduce the transport size of HTTP responses rather than using the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}.
 
 - {{HTTPHeader("Available-Dictionary")}} {{experimental_inline}}
-  - : Lets the browser indicate that it already has a dictionary available that the server can use for compression.
+  - : A browser can use this request header to indicate the best dictionary it has available for the server to use for compression.
 - {{HTTPHeader("Dictionary-ID")}} {{experimental_inline}}
   - : Used when a browser already has a dictionary available for a resource and the server provided an `id` for the dictionary in the `Use-As-Dictionary` header.
     Requests for resources that can use the dictionary have an `Available-Dictionary` header and the server-provided dictionary `id` in the `Dictionary-ID` header.
