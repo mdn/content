@@ -121,7 +121,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements. Gives a permalink for the nearest ancestor {{htmlelement('article')}} element, if there is one. If there is no ancestor `<article>` element, gives a permalink for the section the linking element is most closely associated with.
 - `canonical`
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which helps search engines reduce duplicate content.
-- `compression-dictionary`
+- `compression-dictionary` {{experimental_inline}}
   - : Valid for {{htmlelement('link')}}, it defines a {{glossary("Compression dictionary transport", "compression dictionary")}} that can be used to compress future downloads for resources on this site so the download sizes of those resources are smaller than standard compression.
 - `dns-prefetch`
   - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
