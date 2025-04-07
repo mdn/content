@@ -331,8 +331,6 @@ Copy this page's url and paste it in the input field and you will see a green ou
 
 There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
 
-You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
-
 ## Technical summary
 
 <table class="properties">
