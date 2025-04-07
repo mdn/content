@@ -60,37 +60,38 @@ A sorted array of unique string values indicating the values supported by the im
 
 Below are all values that are commonly supported by browsers for the `calendar` key. These values can be used for the `calendar` option or the `ca` [Unicode extension key](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument) when creating objects such as {{jsxref("Intl.DateTimeFormat")}}, as well as for creating {{jsxref("Temporal")}} date objects.
 
-| Value              | Description                                                                                      |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| `buddhist`         | Thai Buddhist calendar                                                                           |
-| `chinese`          | Traditional Chinese calendar                                                                     |
-| `coptic`           | Coptic calendar                                                                                  |
-| `dangi`            | Traditional Korean calendar                                                                      |
-| `ethioaa`          | Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)                                         |
-| `ethiopic`         | Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)                                           |
-| `gregory`          | Gregorian calendar                                                                               |
-| `hebrew`           | Traditional Hebrew calendar                                                                      |
-| `indian`           | Indian calendar                                                                                  |
-| `islamic`          | Hijri calendar                                                                                   |
-| `islamic-umalqura` | Hijri calendar, Umm al-Qura                                                                      |
-| `islamic-tbla`     | Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch) |
-| `islamic-civil`    | Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)        |
-| `islamic-rgsa`     | Hijri calendar, Saudi Arabia sighting                                                            |
-| `iso8601`          | ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)                         |
-| `japanese`         | Japanese Imperial calendar                                                                       |
-| `persian`          | Persian calendar                                                                                 |
-| `roc`              | Republic of China calendar                                                                       |
+| Value              | Description                                                                                                                                                                                                                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buddhist`         | Thai Buddhist calendar                                                                                                                                                                                                                                                                               |
+| `chinese`          | Traditional Chinese calendar                                                                                                                                                                                                                                                                         |
+| `coptic`           | Coptic calendar                                                                                                                                                                                                                                                                                      |
+| `dangi`            | Traditional Korean calendar                                                                                                                                                                                                                                                                          |
+| `ethioaa`          | Ethiopic calendar, Amete Alem, single-era variant (epoch approx. 5493 B.C.E)                                                                                                                                                                                                                         |
+| `ethiopic`         | Ethiopic calendar, Amete Mihret, two-era variant (epoch approx, 8 C.E., Amete Alem for years before Amete Mihret)                                                                                                                                                                                    |
+| `gregory`          | Gregorian calendar (proleptic, _not_ Julian hybrid)                                                                                                                                                                                                                                                  |
+| `hebrew`           | Traditional Hebrew calendar                                                                                                                                                                                                                                                                          |
+| `indian`           | Indian calendar                                                                                                                                                                                                                                                                                      |
+| `islamic`          | Hijri calendar, unspecified algorithm (As of April 2025, this is an astronomical simulation whose parameters are undocumented and that is not known to match a specific Hijri calendar variant from non-software context. For well-specified results, use one of the three specific variants below.) |
+| `islamic-umalqura` | Hijri calendar, Umm al-Qura (uses KACST-calculated months from the start of 1300 AH to the end of 1600 AH and falls back to `islamic-civil` outside that range)                                                                                                                                      |
+| `islamic-tbla`     | Hijri calendar, tabular/rule-based with leap year rule II and Thursday/astronomical epoch (leap years 2,5,7,10,13,16,18,21,24,26,29 in the 30-year cycle (1-based numbering), epoch starts on July 15, 622 Julian / 0622-07-18 ISO)                                                                  |
+| `islamic-civil`    | Hijri calendar, tabular/rule-based with leap year rule II and Friday/civil epoch (leap years 2,5,7,10,13,16,18,21,24,26,29 in the 30-year cycle (1-based numbering), epoch starts on July 16, 622 Julian / 0622-07-19 ISO)                                                                           |
+| `iso8601`          | ISO calendar (variant of the Gregorian calendar with some region-dependent week and formatting parameters made region-independent)                                                                                                                                                                   |
+| `japanese`         | Japanese Imperial calendar (this calendar adds an era for each new emperor, so the output year and era for a future date may not match the input year and era when your code runs on a future engine version)                                                                                        |
+| `persian`          | Persian calendar                                                                                                                                                                                                                                                                                     |
+| `roc`              | Republic of China calendar                                                                                                                                                                                                                                                                           |
 
-The types below are specified in CLDR data, but are deprecated, are discouraged from explicit usage, and/or may not be indicated by browsers as supported for various reasons. Avoid using them:
+The types below are specified in CLDR but do not have back ends distinct from the above calendars in browsers.
 
-| Value                            | Description                          | Notes                                                                                                                     |
-| -------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| `islamicc` {{deprecated_inline}} | Civil (algorithmic) Arabic calendar. | This is an alias for `islamic-civil` and therefore is not returned by `supportedValuesOf()`. Use `islamic-civil` instead. |
+| Value                            | Description                           | Notes                                                                                                                                                                                                                                                         |
+| -------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `islamicc` {{deprecated_inline}} | Civil (algorithmic) Arabic calendar.  | This is an alias for `islamic-civil` and therefore is not returned by `supportedValuesOf()`. Use `islamic-civil` instead.                                                                                                                                     |
+| `islamic-rgsa`                   | Hijri calendar, Saudi Arabia sighting | Browsers neither have historical sighting data nor a forward-looking astronomical simulation for this calendar. As of April 2025, this calendar results in the same behavior as `islamic`. See `islamic-umalqura` for a Mecca-based astronomical calculation. |
 
 References:
 
 - [CLDR Calendar type keys](https://github.com/unicode-org/cldr/blob/main/common/bcp47/calendar.xml)
 - [UTS 35, Dates](https://unicode.org/reports/tr35/tr35-dates.html)
+- [Islamic calendar types](https://cldr.unicode.org/development/development-process/design-proposals/islamic-calendar-types) (CLDR design proposal)
 
 #### Supported collation types
 
