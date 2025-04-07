@@ -45,23 +45,24 @@ One approach is to put the needed information from {{domxref("PushSubscription")
 
 ```js
 // Get a PushSubscription object
-const pushSubscription = await serviceWorkerRegistration.pushManager.subscribe();
+const pushSubscription =
+  await serviceWorkerRegistration.pushManager.subscribe();
 
 // Create an object containing the information needed by the app server
 const subscriptionObject = {
   endpoint: pushSubscription.endpoint,
   keys: {
-    p256dh: pushSubscription.getKeys('p256dh'),
-    auth: pushSubscription.getKeys('auth'),
+    p256dh: pushSubscription.getKeys("p256dh"),
+    auth: pushSubscription.getKeys("auth"),
   },
   encoding: PushManager.supportedContentEncodings,
   /* other app-specific data, such as user identity */
 };
 
 // Stringify the object an post to the app server
-fetch(`https://example.com/push/`, {
-  method: "post",
-  body: JSON.stringify(pushSubscription);
+fetch("https://example.com/push/", {
+  method: "POST",
+  body: JSON.stringify(pushSubscription),
 });
 ```
 

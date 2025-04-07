@@ -233,18 +233,18 @@ It is also allowable to include multiple sets of rules in a single HTML file:
 
 And multiple rules in a single result set:
 
-```js
+```html
 <script type="speculationrules">
-{
-  "prerender": [
-    {
-      "urls": ["one.html"]
-    },
-    {
-      "urls": ["two.html"]
-    }
-  ]
-}
+  {
+    "prerender": [
+      {
+        "urls": ["one.html"]
+      },
+      {
+        "urls": ["two.html"]
+      }
+    ]
+  }
 </script>
 ```
 
