@@ -10,7 +10,7 @@ browser-compat: api.SVGFESpecularLightingElement.kernelUnitLengthX
 
 The **`kernelUnitLengthX`** read-only property of the {{domxref("SVGFESpecularLightingElement")}} interface reflects the x value of the {{SVGAttr("kernelUnitLength")}} attribute of the given {{SVGElement("feSpecularLighting")}} element.
 
-The `kernelUnitLength` attribute indicates the intended distance in current filter units, as determined by the value of attribute primitiveUnits, for the x and y coordinates. This property reflects the value, or the first value in a space-separated pair of values.
+The `kernelUnitLength` attribute indicates the intended distance in current filter units, specified by the `primitiveUnits` attribute, for the x and y coordinates. It contains one or two values, with the y value defaulting to x if not present, and the `kernelUnitLengthX` property gets and sets the first value.
 
 ## Value
 
