@@ -11,6 +11,11 @@ Cross-site leaks (also called XS-leaks) are a class of attack which exploit the 
 - What the user's ID on the site is.
 - What the user has recently searched for on the site.
 
+This might seem to be a much less damaging problem than, for example, a [cross-site scripting](/en-US/docs/Web/Security/Attacks/XSS) attack, but it can still have serious consequences for users. For example:
+
+- A user might have accounts on websites that they don't want to make public. Leaking this information to an attacker could expose them to extortion or retaliation from an oppressive government (for example, against a user seeking information about abortions).
+- Knowing a user has an account on a site, especially if their user ID can be determined, can make a subsequent phishing attack much more convincing.
+
 Unlike other attacks such as [XSS](/en-US/docs/Web/Security/Attacks/XSS) or [Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking), cross-site leaks are not a single technique. Instead, they are a term for a whole class of attack which exploit weaknesses in the ways that browsers isolate websites from each other.
 
 In this guide we will not attempt to describe every cross-site leak attack and defense. Instead, we'll start by describing a few example attacks, then outline the common underlying weaknesses that enable them, then describe some general defenses that can work against many known attacks.
