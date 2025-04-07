@@ -42,11 +42,7 @@ An entry object includes the following properties:
     - `GPUShaderStage.FRAGMENT`: The bind group entry will be accessible to fragment shaders.
     - `GPUShaderStage.VERTEX`: The bind group entry will be accessible to vertex shaders.
 
-    Note that multiple stages can be specified by separating values with pipe symbols, for example:
-
-    ```js
-    visibility: GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX;
-    ```
+    Note that multiple stages can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUShaderStage.FRAGMENT | GPUShaderStage.VERTEX`.
 
 - "Resource layout object"
   - : An object that defines the required binding resource type and structure of the {{domxref("GPUBindGroup")}} entry corresponding to this entry. This property can be one of `buffer`, `externalTexture`, `sampler`, `storageTexture`, or `texture`, the object structures of which are described in the next section.
