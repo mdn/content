@@ -299,7 +299,7 @@ The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute also descr
 
 The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes {{cssxref("content", "alternative text", "#alternative_text_string_counter")}} for users with assistive technologies.
 
-```css
+```css live-sample___url-validation
 input:focus:invalid {
   outline: 2px solid red;
 }
