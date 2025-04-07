@@ -140,7 +140,7 @@ Any of the following calls to fetchLater() would throw:
 fetchLater("http://untrusted.example.com");
 
 // The length of the deferred request has to be known when.
-fetchLater("https://origin.example.com", {body: someDynamicStream});
+fetchLater("https://origin.example.com", { body: someDynamicStream });
 
 // Deferred fetching only works on active windows.
 const detachedWindow = iframe.contentWindow;
