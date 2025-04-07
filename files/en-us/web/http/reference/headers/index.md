@@ -510,10 +510,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : General warning information about possible problems.
 
-## Contributing
-
-You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving existing ones.
-
 ## See also
 
 - [Wikipedia page on List of HTTP headers](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
