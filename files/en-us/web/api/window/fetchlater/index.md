@@ -8,7 +8,7 @@ browser-compat: api.Window.fetchLater
 
 {{APIRef("fetchLater API")}}
 
-The **`fetchLater()`** method of the {{domxref("Window")}} creates a deferred fetch and returns a {{domxref("FetchLaterResult")}}.
+The **`fetchLater()`** method of the {{domxref("Window")}} interface creates a deferred fetch and returns a {{domxref("FetchLaterResult")}}.
 
 A `fetchLater()` request is sent once the page is navigated away from (i.e., destroyed or enters the bfcache), or after a provided `activateAfter` timeout — whichever is first.
 
