@@ -229,7 +229,7 @@ We won't focus on CSS in this module, but we have provided a minimal CSS stylesh
 
 ### When should you avoid HTML tables?
 
-HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g., one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.
+HTML tables should be used for tabular data (information that's easy to work with in rows and columns) — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, for example one row to contain a page header, a row to contain each content column, one row to contain the footer, etc. This technique was used because CSS support across browsers used to be a lot more limited. Modern browsers have solid CSS support so table-based layouts are now extremely rare, but you might still see them in some corners of the web.
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn_web_development/Core/CSS_layout) is a bad idea. The main reasons are as follows:
 
