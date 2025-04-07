@@ -191,7 +191,7 @@ While the version number for Firefox OS is not included in the UA string, it is 
 | 2.5                       | 44                   |
 
 > [!NOTE]
-> It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
+> It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg-edge.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
 Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 
