@@ -327,7 +327,7 @@ input:valid + span:after {
 
 Copy this page's url and paste it in the input field and you will see a green outline and green tick. Enter any other URL that doesn't contain **mozilla** or an invalid URL and you will see a red outline and red cross.
 
-{{ EmbedLiveSample('url_validation', , 40) }}
+{{EmbedLiveSample("url-validation", "40px", , , , , "allow-forms")}}
 
 There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
 
