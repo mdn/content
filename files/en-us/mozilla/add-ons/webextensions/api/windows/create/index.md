@@ -61,7 +61,7 @@ let creating = browser.windows.create(
     - `type` {{optional_inline}}
       - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc.).
     - `url` {{optional_inline}}
-      - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
+      - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e., `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
     - `width` {{optional_inline}}
       - : `integer`. The width in pixels of the new window, including the frame. If not specified defaults to a natural width.
 

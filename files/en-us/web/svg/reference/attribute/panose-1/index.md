@@ -43,7 +43,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<integer>{10}`
-  - : This value specifies a Panose-1 number and consists of ten decimal integers, separated by whitespace. The initial value zero for each PANOSE digit means "any", i.e. all fonts will match the Panose number if this value is used.
+  - : This value specifies a Panose-1 number and consists of ten decimal integers, separated by whitespace. The initial value zero for each PANOSE digit means "any", i.e., all fonts will match the Panose number if this value is used.
 
 ## Specifications
 

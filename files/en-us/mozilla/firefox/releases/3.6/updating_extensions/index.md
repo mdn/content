@@ -35,7 +35,7 @@ The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 `if (elt.localName === "img" && elt.namespaceURI === "http://www.w3.org/1999/xhtml")`
 
-#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
+#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g., SVG) script-inserted elements
 
 `if (elt.tagName === "IMG")`
 

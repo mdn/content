@@ -160,7 +160,7 @@ stop.addEventListener("click", (e) => {
 });
 ```
 
-The Media API doesn't have a `stop` method, so to mimic this the video is paused, and its `currentTime` (i.e. the video's current playing position) and the {{ htmlelement("progress") }} element's position is set to 0 (more on the {{ htmlelement("progress") }} element later).
+The Media API doesn't have a `stop` method, so to mimic this the video is paused, and its `currentTime` (i.e., the video's current playing position) and the {{ htmlelement("progress") }} element's position is set to 0 (more on the {{ htmlelement("progress") }} element later).
 
 ### Mute
 

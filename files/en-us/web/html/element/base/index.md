@@ -40,7 +40,7 @@ If multiple `<base>` elements are used, only the first `href` and first `target`
 
 ### In-page anchors
 
-Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached.
+Links pointing to a fragment in the document — e.g., `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached.
 
 For example, given `<base href="https://example.com/">` and this link: `<a href="#anchor">To anchor</a>`. The link points to `https://example.com/#anchor`.
 

@@ -37,7 +37,6 @@
 
 # Templates and sidebars (rari)
 /files/jsondata/L10n-Template.json @mdn/core-dev
-/files/sidebars/ @mdn/core-dev
 
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing

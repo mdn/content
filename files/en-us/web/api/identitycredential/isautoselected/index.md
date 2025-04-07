@@ -10,7 +10,7 @@ browser-compat: api.IdentityCredential.isAutoSelected
 
 {{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
-The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in flow was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e. without user mediation) or not.
+The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in flow was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e., without user mediation) or not.
 
 Automatic reauthentication can occur when a {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for a relying party (RP) to know whether auto reauthentication occurred for analytics/performance evaluation and for UX purposes — automatic sign-in may warrant a different UI flow to non-automatic sign-in.
 
@@ -53,4 +53,4 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)
+- [Federated Credential Management API](https://privacysandbox.google.com/cookies/fedcm)

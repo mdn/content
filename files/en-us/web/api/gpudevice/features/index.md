@@ -11,7 +11,7 @@ browser-compat: api.GPUDevice.features
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`features`** read-only property of the
-{{domxref("GPUDevice")}} interface returns a {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device. Only features requested during the creation of the device (i.e. when {{domxref("GPUAdapter.requestDevice()")}} is called) are included.
+{{domxref("GPUDevice")}} interface returns a {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the device. Only features requested during the creation of the device (i.e., when {{domxref("GPUAdapter.requestDevice()")}} is called) are included.
 
 > [!NOTE]
 > Not all features will be available to WebGPU in all browsers that support it, even if the features are supported by the underlying hardware. See {{domxref("GPUAdapter.features")}} for more details.

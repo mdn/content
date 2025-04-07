@@ -12,7 +12,7 @@ This article provides practical advice on how to write your web content so that 
 
 ## Guideline 4.1 — Compatible: Maximize compatibility with current and future user agents, including assistive technologies
 
-This guideline focuses on making content as compatible as possible, not only with current user agents (e.g. browsers), but also with future ones too.
+This guideline focuses on making content as compatible as possible, not only with current user agents (e.g., browsers), but also with future ones too.
 
 <table class="standard-table">
   <thead>
@@ -49,7 +49,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       <td>4.1.2 Name, Role, Value (A)</td>
       <td>
         <p>
-          The name and role of user interface components (e.g. form inputs,
+          The name and role of user interface components (e.g., form inputs,
           buttons, links, etc.) should be programmatically determinable.
         </p>
         <p>
@@ -57,7 +57,7 @@ This guideline focuses on making content as compatible as possible, not only wit
           this criterion should be passed automatically. When scripting custom
           components, you will need to use WAI-ARIA roles and other features to
           make sure your controls will be interpreted and are able to be used as
-          intended, e.g. not only by sighted mouse users, but also by
+          intended, e.g., not only by sighted mouse users, but also by
           screen reader users, keyboard-only users, etc.
         </p>
       </td>

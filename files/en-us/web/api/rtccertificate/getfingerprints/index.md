@@ -51,7 +51,9 @@ const rtcPeerConnection = new RTCPeerConnection();
 const fingerprintsFromClient = rtcPeerConnection.certificate.getFingerprints();
 
 // Get the certificate fingerprints from the server (pseudo code)
-const fingerprintsFromServer = ...;
+const fingerprintsFromServer = [
+  /* … */
+];
 ```
 
 There are numerous ways to compare the fingerprint arrays.

@@ -24,7 +24,7 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 ## Don't know where to get started?
 
 - Never coded before?
-  - : Our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started) provide setup tutorials and essential concepts and background information for complete beginners. You should start here if you are a complete beginner (i.e. you've not installed a code editor or written any code yet).
+  - : Our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started) provide setup tutorials and essential concepts and background information for complete beginners. You should start here if you are a complete beginner (i.e., you've not installed a code editor or written any code yet).
 - Want to master the essentials?
   - : Our [Core modules](/en-US/docs/Learn_web_development/Core) provide a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer.
 - Beyond the basics?

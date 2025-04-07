@@ -77,7 +77,7 @@ If so ensure they are safe and that no better alternatives are available.
 
 1. Does the application implement suitable permission checks?
 
-   - Ensure the correct APIs are used where available (e.g. shouldLoad, etc.)
+   - Ensure the correct APIs are used where available (e.g., shouldLoad, etc.)
    - Ensure the application fails securely.
 
 ## Remote System Access
@@ -133,7 +133,7 @@ If so ensure they are safe and that no better alternatives are available.
 
    - Can user input change the meaning of messages?
    - Can user input force system messages off the visible screen?
-   - Can user input include special characters that can change the meaning of messages (e.g. Unicode right-to-left override U+202E)
+   - Can user input include special characters that can change the meaning of messages (e.g., Unicode right-to-left override U+202E)
 
 4. Can an attacker use the timing of dialogs to fool the user into clicking on something they didn't intend to?
 
@@ -147,11 +147,11 @@ If so ensure they are safe and that no better alternatives are available.
 
 1. Are safe mechanisms used to create XUL and HTML UI elements?
 
-   - e.g. use createTextNode instead of innerHTML or similar
+   - e.g., use createTextNode instead of innerHTML or similar
 
 2. Does the application create its own docshells (tabs, iframes)?
 
-   - Ensure you are explicit about the type of these, e.g. iframe.setAttribute("type", "content")
+   - Ensure you are explicit about the type of these, e.g., iframe.setAttribute("type", "content")
 
 ## References
 

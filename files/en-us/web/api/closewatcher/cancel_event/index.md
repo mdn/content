@@ -10,7 +10,7 @@ browser-compat: api.CloseWatcher.cancel_event
 
 {{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-A `cancel` event is fired at a {{domxref("CloseWatcher")}} object before the `close` event, so that `close` can be prevented from firing, if necessary. It is triggered by all close signals (e.g. the <kbd>Esc</kbd> key) as well as {{domxref("CloseWatcher.requestClose()")}}.
+A `cancel` event is fired at a {{domxref("CloseWatcher")}} object before the `close` event, so that `close` can be prevented from firing, if necessary. It is triggered by all close signals (e.g., the <kbd>Esc</kbd> key) as well as {{domxref("CloseWatcher.requestClose()")}}.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ watcher.addEventListener("cancel", (e) => {
       e.preventDefault();
     }
   }
-};
+});
 
 // Trigger a close request manually
 watcher.requestClose();

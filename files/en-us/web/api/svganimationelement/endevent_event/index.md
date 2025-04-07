@@ -11,7 +11,7 @@ browser-compat: api.SVGAnimationElement.endEvent_event
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
 > [!NOTE]
-> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
+> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e., scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
 This event is not cancelable and does not bubble.
 

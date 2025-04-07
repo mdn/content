@@ -32,8 +32,7 @@ In this example, calling `paymentResponse.toJSON()` returns a JSON representatio
 
 ```js
 payment.show().then((paymentResponse) => {
-  console.log(paymentResponse.toJSON())
-  };
+  console.log(paymentResponse.toJSON());
 });
 ```
 

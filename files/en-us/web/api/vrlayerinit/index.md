@@ -57,11 +57,15 @@ if (navigator.getVRDisplays) {
 `VRLayerInit` objects look something like this:
 
 ```js
-{
-  leftBounds : [/* … */],
-  rightBounds: [/* … */],
-  source: canvasReference
-}
+const init = {
+  leftBounds: [
+    /* … */
+  ],
+  rightBounds: [
+    /* … */
+  ],
+  source: canvasReference,
+};
 ```
 
 > [!NOTE]

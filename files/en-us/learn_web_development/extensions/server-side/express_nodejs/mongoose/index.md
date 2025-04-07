@@ -87,7 +87,7 @@ We know that we need to store information about books (title, summary, author, g
 
 When designing your models it makes sense to have separate models for every "object" (a group of related information). In this case some obvious candidates for these models are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g. like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g. fantasy, science fiction, etc.).
+You might also want to use models to represent selection-list options (e.g., like a drop-down list of choices), rather than hard-coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. A good example is a genre (e.g., fantasy, science fiction, etc.).
 
 Once we've decided on our models and fields, we need to think about the relationships between them.
 
@@ -130,7 +130,7 @@ When `myFunction()` is run, code execution is paused at `methodThatReturnsPromis
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   await someObject.methodThatReturnsPromise();
   // ...
@@ -143,7 +143,7 @@ try {
   myFunction();
   // ...
 } catch (e) {
- // error handling code
+  // error handling code
 }
 ```
 
@@ -161,11 +161,11 @@ the function then continues to the next `await`, and waits until the promise ret
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   const [resultFunction1, resultFunction2] = await Promise.all([
-     functionThatReturnsPromise1(),
-     functionThatReturnsPromise2()
+    functionThatReturnsPromise1(),
+    functionThatReturnsPromise2(),
   ]);
   // ...
   await anotherFunctionThatReturnsPromise(resultFunction1);
@@ -306,13 +306,13 @@ Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the des
 
 The code also shows both ways of declaring a field:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
+- Field _name_ and _type_ as a key-value pair (i.e., as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
 
   - default values.
-  - built-in validators (e.g. max/min values) and custom validation functions.
+  - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
-  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
+  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g., `{ type: String, lowercase: true, trim: true }`)
 
 For more information about options see [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
 
@@ -370,7 +370,7 @@ We provide a brief overview below. For more information see: [Models](https://mo
 
 > [!NOTE]
 > Creation, update, deletion and querying of records are asynchronous operations that return a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-> The examples below show just the use of the relevant methods and `await` (i.e. the essential code for using the methods).
+> The examples below show just the use of the relevant methods and `await` (i.e., the essential code for using the methods).
 > The surrounding `async function` and `try...catch` block to catch errors are omitted for clarity.
 > For more information on using `await/async` see [Database APIs are asynchronous](#database_apis_are_asynchronous) above.
 
@@ -681,7 +681,7 @@ npm install mongoose
 ## Connect to MongoDB
 
 Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
-Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _MongoDB Atlas_).
+Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
@@ -837,7 +837,7 @@ Everything else should be familiar from our previous schema.
 
 ### Genre model - challenge
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
+Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g., whether it is fiction or non-fiction, romance or military history, etc.).
 
 The definition will be very similar to the other models:
 

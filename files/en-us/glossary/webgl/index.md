@@ -12,7 +12,7 @@ The [Khronos Group](https://www.khronos.org/) maintains WebGL, which is based on
 
 You can invoke WebGL within the {{Glossary("HTML")}} {{HTMLElement("canvas")}} element, which provides a rendering surface.
 
-All major {{Glossary("Browser","browsers")}} now support WebGL, but its availability depends also on external factors (e.g. GPU support).
+All major {{Glossary("Browser","browsers")}} now support WebGL, but its availability depends also on external factors (e.g., GPU support).
 
 ## See also
 

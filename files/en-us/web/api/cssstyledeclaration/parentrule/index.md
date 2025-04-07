@@ -10,7 +10,7 @@ browser-compat: api.CSSStyleDeclaration.parentRule
 
 The **CSSStyleDeclaration.parentRule** read-only
 property returns a {{domxref('CSSRule')}} that is the parent of this style
-block, e.g. a {{domxref('CSSStyleRule')}} representing the style for a CSS
+block, e.g., a {{domxref('CSSStyleRule')}} representing the style for a CSS
 selector.
 
 ## Value

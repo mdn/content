@@ -33,7 +33,7 @@ button.svg:
 
 The specification says that the browser should navigate to the HTML document page2.html when the button graphics are clicked. However, `target` does not work with Mozilla's implementation of the SVG `<a>` element in Firefox 1.5. (The problem will be fixed in Firefox 2.0.)
 
-Anyway, the resultant behavior in Moz SVG is that page2.html will be loaded into the frame where the SVG button was (i.e. you would now have page2.html embedded inside a 100x50 pixel frame inside page1.html).
+Anyway, the resultant behavior in Moz SVG is that page2.html will be loaded into the frame where the SVG button was (i.e., you would now have page2.html embedded inside a 100x50 pixel frame inside page1.html).
 
 To get around this, requires a little ugly JavaScript hacking:
 

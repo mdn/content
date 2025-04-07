@@ -93,7 +93,7 @@ fetch(request)
   });
 ```
 
-In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which need a body payload:
+In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an API request which needs a body payload:
 
 ```js
 const request = new Request("https://example.com", {

@@ -16,7 +16,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}}
 > considered legacy HTML elements and aren't receiving new standardized features (such as
 > the security attributes `sandbox` or `allow` for
 > `<iframe>`). Therefore it is [recommended](https://csp.withgoogle.com/docs/strict-csp.html) to restrict
-> this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
+> this fetch-directive (e.g., explicitly set `object-src 'none'` if possible).
 
 <table class="properties">
   <tbody>

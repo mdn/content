@@ -105,7 +105,7 @@ Each placeholder substring definition has a number of values of its own:
 
 #### placeholder name
 
-The placeholder name is used to represent the placeholder in the substitution string (e.g. `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string [name](#name).
+The placeholder name is used to represent the placeholder in the substitution string (e.g., `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string [name](#name).
 
 #### content
 

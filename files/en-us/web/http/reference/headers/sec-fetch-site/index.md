@@ -44,7 +44,7 @@ Sec-Fetch-Site: none
 ## Directives
 
 - `cross-site`
-  - : The request initiator and the server hosting the resource have a different site (i.e. a request by "potentially-evil.com" for a resource at "example.com").
+  - : The request initiator and the server hosting the resource have a different site (i.e., a request by "potentially-evil.com" for a resource at "example.com").
 - `same-origin`
   - : The request initiator and the server hosting the resource have the same {{Glossary("origin")}} (same scheme, host and port).
 - `same-site`
@@ -64,7 +64,7 @@ Sec-Fetch-Mode: cors
 Sec-Fetch-Site: same-origin
 ```
 
-A fetch request to the same URL from another site, for example `potentially-evil.com`, causes the browser to generate a different header (e.g. `Sec-Fetch-Site: cross-site`), which the server can choose to accept or reject:
+A fetch request to the same URL from another site, for example `potentially-evil.com`, causes the browser to generate a different header (e.g., `Sec-Fetch-Site: cross-site`), which the server can choose to accept or reject:
 
 ```http
 GET /foo.json

@@ -79,8 +79,8 @@ onmessage = (e) => {
 
 The `exports[0]` output looks like this:
 
-```js
-{ name: "exported_func", kind: "function" }
+```json
+{ "name": "exported_func", "kind": "function" }
 ```
 
 ## Specifications

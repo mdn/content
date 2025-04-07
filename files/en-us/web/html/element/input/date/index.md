@@ -137,7 +137,7 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget.
 
-You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable).
+You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g., to only make Saturdays selectable).
 
 ### Controlling input size
 

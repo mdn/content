@@ -12,7 +12,7 @@ Enables extensions to store and retrieve data, and listen for changes to stored 
 The storage system is based on the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), with a few differences. Among other differences, these include:
 
 - It's asynchronous.
-- Values are scoped to the extension, not to a specific domain (i.e. the same set of key/value pairs are available to all scripts in the background context and content scripts).
+- Values are scoped to the extension, not to a specific domain (i.e., the same set of key/value pairs are available to all scripts in the background context and content scripts).
 - The values stored can be any JSON-ifiable value, not just [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Among other things, this includes: [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) and [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), but only when their contents can be represented as JSON, which does not include DOM nodes. You don't need to convert your values to JSON `Strings` prior to storing them, but they are represented as JSON internally, thus the requirement that they be JSON-ifiable.
 - Multiple key/value pairs can be set or retrieved in the same API call.
 

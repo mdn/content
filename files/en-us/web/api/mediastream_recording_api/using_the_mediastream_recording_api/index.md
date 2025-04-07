@@ -198,7 +198,7 @@ stop.onclick = () => {
 };
 ```
 
-Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
+Note that the recording may also stop naturally if the media stream ends (e.g., if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
 
 ## Grabbing and using the blob
 

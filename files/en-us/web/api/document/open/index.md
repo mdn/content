@@ -76,12 +76,12 @@ document.open(type, replace);
 ```
 
 Where `type` specified the MIME type of the data you are writing (e.g.
-`text/html`) and replace if set (i.e. a string of `"replace"`)
+`text/html`) and replace if set (i.e., a string of `"replace"`)
 specified that the history entry for the new document would replace the current history
 entry of the document being written to.
 
 This form is now obsolete; it won't throw an error, but instead just forwards to
-`document.open()` (i.e. is the equivalent of just running it with no
+`document.open()` (i.e., is the equivalent of just running it with no
 arguments). The history-replacement behavior now always happens.
 
 ## Specifications

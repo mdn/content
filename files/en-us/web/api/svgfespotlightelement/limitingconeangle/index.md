@@ -18,7 +18,7 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ### Accessing the `limitingConeAngle` attribute of the `<feSpotLight>` element
 
-In this example, we access the angle in degrees between the spot light axis (i.e. the axis between the light source and the point to which it is pointing at) and the spot light cone, by using the `limitingConeAngle` read-only property of the `SVGFESpotLightElement` interface.
+In this example, we access the angle in degrees between the spot light axis (i.e., the axis between the light source and the point to which it is pointing at) and the spot light cone, by using the `limitingConeAngle` read-only property of the `SVGFESpotLightElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

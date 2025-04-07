@@ -94,16 +94,17 @@ The code snippet below shows how to use the `virtualkeyboardpolicy` attribute an
 
 ```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
-<script>
-  if ("virtualKeyboard" in navigator) {
-    navigator.virtualKeyboard.overlaysContent = true;
+```
 
-    const editor = document.getElementById("editor");
-    editor.addEventListener("dblclick", () => {
-      navigator.virtualKeyboard.show();
-    });
-  }
-</script>
+```js
+if ("virtualKeyboard" in navigator) {
+  navigator.virtualKeyboard.overlaysContent = true;
+
+  const editor = document.getElementById("editor");
+  editor.addEventListener("dblclick", () => {
+    navigator.virtualKeyboard.show();
+  });
+}
 ```
 
 ## Interfaces

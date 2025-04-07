@@ -91,7 +91,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 #### Service Workers/Push
 
-- Messages sent to service worker contexts (e.g. as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}} are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
+- Messages sent to service worker contexts (e.g., as the event object of {{domxref("ServiceWorkerGlobalScope.message_event","onmessage")}} are now represented by {{domxref("MessageEvent")}} objects, for consistency with other web messaging features.
 - The {{domxref("PushManager.subscribe()")}} method now accepts {{jsxref("ArrayBuffer")}}s and Base64-encoded strings as `applicationServerKey` values ([Firefox bug 1337348](https://bugzil.la/1337348)).
 
 #### Web Audio API

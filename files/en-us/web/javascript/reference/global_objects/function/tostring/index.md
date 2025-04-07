@@ -48,7 +48,7 @@ objects, the `toString` method returns a string containing the source text
 segment which was used to define the function.
 
 JavaScript calls the `toString` method automatically when a
-`Function` is to be represented as a text value, e.g. when a function is
+`Function` is to be represented as a text value, e.g., when a function is
 concatenated with a string.
 
 The `toString()` method will throw a {{jsxref("TypeError")}} exception

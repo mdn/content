@@ -28,16 +28,13 @@ Note that:
 ## Examples
 
 ```js
-  // ...
-  const shaderModule = device.createShaderModule({
-    code: shaders,
-  });
+const shaderModule = device.createShaderModule({
+  code: shaders,
+});
 
-  const shaderInfo = await shaderModule.getCompilationInfo();
-  const firstMessage = shaderInfo.messages[0];
-  console.log(firstMessage.linePos);
-  // ...
-}
+const shaderInfo = await shaderModule.getCompilationInfo();
+const firstMessage = shaderInfo.messages[0];
+console.log(firstMessage.linePos);
 ```
 
 See the main [`GPUCompilationInfo` page](/en-US/docs/Web/API/GPUCompilationInfo#examples) for a more detailed example.

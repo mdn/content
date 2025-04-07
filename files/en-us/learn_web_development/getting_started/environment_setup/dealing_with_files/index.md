@@ -233,6 +233,6 @@ You should see a basic webpage displaying your image!
 - You can combine these as much as you like, for example `../subfolder/another-subfolder/my-image.jpg`.
 
 > [!NOTE]
-> The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
+> The Windows file system tends to use backslashes, not forward slashes, e.g., `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

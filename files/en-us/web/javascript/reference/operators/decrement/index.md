@@ -40,7 +40,7 @@ If used postfix, with operator after operand (for example, `x--`), the decrement
 
 If used prefix, with operator before operand (for example, `--x`), the decrement operator decrements and returns the value after decrementing.
 
-The decrement operator can only be applied on operands that are references (variables and object properties; i.e. valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `--x` itself evaluates to a value, not a reference, so you cannot chain multiple decrement operators together.
+The decrement operator can only be applied on operands that are references (variables and object properties; i.e., valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `--x` itself evaluates to a value, not a reference, so you cannot chain multiple decrement operators together.
 
 ```js-nolint example-bad
 --(--x); // SyntaxError: Invalid left-hand side expression in prefix operation

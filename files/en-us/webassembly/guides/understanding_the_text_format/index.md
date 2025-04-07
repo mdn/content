@@ -458,7 +458,7 @@ To show how you can create memory within the WebAssembly module, we've created a
 ```
 
 The three memory instances are automatically assigned an instance based on their order of creation.
-The code below shows how we can specify this index (e.g. `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
+The code below shows how we can specify this index (e.g., `(memory 1)`) in the `data` instruction to choose the memory we want to write a string to (you can use the same approach for all other memory instructions, such as `load` and `grow`).
 Here we write a string that indicates each memory type.
 
 ```wasm
@@ -624,18 +624,18 @@ So how do we place Wasm functions in our table? Just like `data` sections can be
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
 ```js
-function () {
+function module() {
   // table section
-  const tbl = new WebAssembly.Table({initial: 2, element: "anyfunc"});
+  const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 
   // function sections:
-  const f1 = ... /* some imported WebAssembly function */
-  const f2 = ... /* some imported WebAssembly function */
+  const f1 = () => 42; /* some imported WebAssembly function */
+  const f2 = () => 13; /* some imported WebAssembly function */
 
   // elem section
   tbl.set(0, f1);
   tbl.set(1, f2);
-};
+}
 ```
 
 #### Using the table

@@ -11,7 +11,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 
 ## Concepts and usage
 
-A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
+A worker is an object created using a constructor (e.g., {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
 
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("Window")}} object. For information about the code that you _can_ run see [supported functions](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#functions_available_in_workers), and [supported Web APIs](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers).
 
@@ -44,7 +44,7 @@ While {{domxref("Window")}} is not directly available to workers, many of the sa
 - {{DOMxRef("WorkerLocation")}}
   - : Defines the absolute location of the script executed by the {{domxref("Worker")}}.
 - {{DOMxRef("SharedWorker")}}
-  - : Represents a specific kind of worker that can be accessed from several {{glossary("browsing context", "browsing contexts")}} (i.e. windows, tabs, or iframes) or even other workers.
+  - : Represents a specific kind of worker that can be accessed from several {{glossary("browsing context", "browsing contexts")}} (i.e., windows, tabs, or iframes) or even other workers.
 - {{DOMxRef("WorkerGlobalScope")}}
   - : Represents the generic scope of any worker (doing the same job as {{DOMxRef("Window")}} does for normal web content). Different types of worker have scope objects that inherit from this interface and add more specific features.
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}

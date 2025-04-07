@@ -39,16 +39,14 @@ function returnNRR() {
 
 The `PerformanceNavigationTiming.notRestoredReasons` property returns an object with the following structure, which provides reasons why the current document was blocked from using the bfcache. In this example the top-level frame has no embedded child `<iframe>`s:
 
-```js
+```json
 {
-  children: [],
-  id: null,
-  name: null,
-  reasons: [
-    { reason: "unload-listener" }
-  ],
-  src: "",
-  url: "example.com",
+  "children": [],
+  "id": null,
+  "name": null,
+  "reasons": [{ "reason": "unload-listener" }],
+  "src": "",
+  "url": "example.com"
 }
 ```
 

@@ -52,7 +52,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
         implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
-        that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
+        that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
         success or failure. The `reason` parameter contains a

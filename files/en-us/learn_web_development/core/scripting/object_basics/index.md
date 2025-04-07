@@ -83,7 +83,7 @@ person.introduceSelf();
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g. `name` and `age` above), and a value (e.g. `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name (e.g., `name` and `age` above), and a value (e.g., `['Bob', 'Smith']` and `32`). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```js
 const objectName = {
@@ -279,9 +279,12 @@ Adding a property to an object using the method above isn't possible with dot no
 You may have noticed something slightly strange in our methods. Look at this one for example:
 
 ```js
-introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
-}
+const person = {
+  // …
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
 ```
 
 You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.

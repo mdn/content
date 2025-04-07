@@ -53,7 +53,7 @@ From a high-level perspective, you can put client-side tools into the following 
 
 - **Environment** — Tools that help you set up your development environment, such as installing and running other tools.
 - **Safety net** — Tools that are useful during your code development.
-- **Transformation** — Tools that transform code in some way, e.g. turning an intermediate language into JavaScript that a browser can understand.
+- **Transformation** — Tools that transform code in some way, e.g., turning an intermediate language into JavaScript that a browser can understand.
 - **Post-development** — Tools that are useful after you have written your code, such as testing and deployment tools.
 
 Let's look at each one of these in more detail.

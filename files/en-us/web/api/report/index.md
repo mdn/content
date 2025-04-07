@@ -20,7 +20,7 @@ Reports can be accessed in a number of ways:
 - {{domxref("Report.body")}} {{ReadOnlyInline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
 - {{domxref("Report.type")}} {{ReadOnlyInline}}
-  - : The type of report generated, e.g. `deprecation` or `intervention`.
+  - : The type of report generated, e.g., `deprecation` or `intervention`.
 - {{domxref("Report.url")}} {{ReadOnlyInline}}
   - : The URL of the document that generated the report.
 

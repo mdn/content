@@ -187,7 +187,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 Now try adding a suitable main title to your HTML page just above your {{htmlelement("img")}} element. Save the file and view it in a browser to see the effect.
 
 > [!NOTE]
-> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
+> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_well-structured_text_content) and [other reasons such as SEO](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
 
 ### Paragraphs
 

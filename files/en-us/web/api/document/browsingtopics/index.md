@@ -54,13 +54,13 @@ A {{jsxref("Promise")}} that fulfills with an array of up to three objects repre
 
 The exact property values may vary by browser implementation. An example object from Chrome might look as follows:
 
-```js
+```json
 {
-  configVersion: "chrome.1",
-  modelVersion: "1",
-  taxonomyVersion: "1",
-  topic: 43,
-  version: "chrome.1:1:1"
+  "configVersion": "chrome.1",
+  "modelVersion": "1",
+  "taxonomyVersion": "1",
+  "topic": 43,
+  "version": "chrome.1:1:1"
 }
 ```
 

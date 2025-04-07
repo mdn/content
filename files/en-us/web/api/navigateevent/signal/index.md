@@ -11,7 +11,7 @@ browser-compat: api.NavigateEvent.signal
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`signal`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+{{domxref("NavigateEvent")}} interface returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
 
 ## Value
 

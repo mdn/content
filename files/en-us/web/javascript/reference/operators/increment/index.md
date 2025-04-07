@@ -40,7 +40,7 @@ If used postfix, with operator after operand (for example, `x++`), the increment
 
 If used prefix, with operator before operand (for example, `++x`), the increment operator increments and returns the value after incrementing.
 
-The increment operator can only be applied on operands that are references (variables and object properties; i.e. valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
+The increment operator can only be applied on operands that are references (variables and object properties; i.e., valid [assignment targets](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)). `++x` itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
 
 ```js-nolint example-bad
 ++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation

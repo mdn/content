@@ -12,7 +12,7 @@ Now that you have a better idea of MathML, we move focus on text containers (var
 
 ## Unicode characters for mathematics
 
-Mathematical formulas involve many special characters, for example greek letters (e.g. Δ), fraktur letters (e.g. 𝔄), double-struck letter (e.g. ℂ), binary operators (e.g. ≠), arrows (e.g. ⇒), integral symbols (e.g. ∮), summation symbols (e.g. ∑), logical symbols (e.g. ∀), fences (e.g. ⌊) and many more. Wikipedia's article [Mathematical operators and symbols in Unicode](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) provides a good overview of the characters used.
+Mathematical formulas involve many special characters, for example greek letters (e.g., Δ), fraktur letters (e.g., 𝔄), double-struck letter (e.g., ℂ), binary operators (e.g., ≠), arrows (e.g., ⇒), integral symbols (e.g., ∮), summation symbols (e.g., ∑), logical symbols (e.g., ∀), fences (e.g., ⌊) and many more. Wikipedia's article [Mathematical operators and symbols in Unicode](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) provides a good overview of the characters used.
 
 Since most of these characters are not part of Basic Latin Unicode block, it is recommended to specify your [document's character encoding](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#specifying_your_documents_character_encoding) and to serve it with appropriate [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts). Here is a basic template to use UTF-8 encoding and the [Latin Modern Math](/en-US/docs/Web/MathML/Guides/Fonts#fonts_with_a_math_table) font:
 

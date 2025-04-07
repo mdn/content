@@ -51,7 +51,7 @@ _No changes._
 
 #### Workers/Service workers
 
-- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
+- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e., scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ([Firefox bug 1569123](https://bugzil.la/1569123)).
 
 ### WebDriver conformance (Marionette)
 

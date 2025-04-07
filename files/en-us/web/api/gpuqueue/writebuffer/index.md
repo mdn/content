@@ -50,7 +50,7 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`writeBuffer()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUQueue")}} becomes invalid:
 
-- `buffer` is available for use, i.e. not unavailable (`GPUBuffer`s are unavailable if they are currently {{domxref("GPUBuffer.mapAsync", "mapped", "", "nocode")}}) or destroyed (with the {{domxref("GPUBuffer.destroy()")}} method).
+- `buffer` is available for use, i.e., not unavailable (`GPUBuffer`s are unavailable if they are currently {{domxref("GPUBuffer.mapAsync", "mapped", "", "nocode")}}) or destroyed (with the {{domxref("GPUBuffer.destroy()")}} method).
 - The `buffer`'s {{domxref("GPUBuffer.usage")}} includes the `GPUBufferUsage.COPY_DST` flag.
 - `bufferOffset`, when converted to bytes, is a multiple of 4.
 - The size of `data` - `dataOffset` + `bufferOffset`, when converted to bytes, is equal to or less than the `buffer`'s {{domxref("GPUBuffer.size")}}.

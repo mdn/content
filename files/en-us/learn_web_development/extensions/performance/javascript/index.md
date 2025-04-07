@@ -109,7 +109,7 @@ The preload {{htmlelement("link")}} fetches the JavaScript as soon as possible, 
 or inside your script, in the case of a JavaScript module:
 
 ```js
-import { function } from "important-module.js";
+import { someFunction } from "important-module.js";
 ```
 
 > [!NOTE]

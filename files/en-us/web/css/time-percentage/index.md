@@ -2,7 +2,7 @@
 title: <time-percentage>
 slug: Web/CSS/time-percentage
 page-type: css-type
-browser-compat: css.types.time-percentage
+spec-urls: https://drafts.csswg.org/css-values/#typedef-time-percentage
 ---
 
 {{CSSRef}}
@@ -59,10 +59,6 @@ Where a `<time-percentage>` is specified as an allowable type, this means that t
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

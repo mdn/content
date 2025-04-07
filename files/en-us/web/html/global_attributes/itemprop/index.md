@@ -131,7 +131,7 @@ Similarly, for date- and time-related data, the time element and its datetime at
 </div>
 ```
 
-Properties can also be groups of name-value pairs, by putting the itemscope attribute on the element that declares the property. Each value is either a string or a group of name-value pairs (i.e. an item).
+Properties can also be groups of name-value pairs, by putting the itemscope attribute on the element that declares the property. Each value is either a string or a group of name-value pairs (i.e., an item).
 
 ### An outer item representing a person, and an inner one representing a band
 
@@ -279,7 +279,7 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
    1. A defined property name, or
    2. A valid URL, which refers to the vocabulary definition, or
-   3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+   3. A valid URL that is used as a proprietary item property name (i.e., one not defined in a public specification), or
 
 2. If the item is not a typed item it must be:
 

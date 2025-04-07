@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.command_event
 
 {{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
-The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g. it is clicked).
+The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g., it is clicked).
 
 ## Syntax
 

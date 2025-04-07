@@ -31,7 +31,7 @@ browser.browserAction.setPopup(
 
       - : `string` or `null`. The HTML file to show in a popup, specified as a URL.
 
-        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g. `https://example.org/`).
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g., `https://example.org/`).
 
         If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("browserAction.onClicked")}} events.
 

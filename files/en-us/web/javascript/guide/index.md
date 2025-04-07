@@ -19,7 +19,7 @@ Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
 - [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
 - [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
-- [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
+- [What's next](/en-US/docs/Web/JavaScript/Guide/Introduction#whats_next)
 
 ## Grammar and types
 
@@ -70,7 +70,7 @@ Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressio
 - [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
 - [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_(ternary)_operator>)
+- [Conditional (ternary) operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#conditional_ternary_operator)
 
 ## Numbers and strings
 

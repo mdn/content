@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/web-animations/
 
 {{DefaultAPISidebar("Web Animations")}}
 
-The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
+The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e., animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
 
 ## Concepts and usage
 

@@ -21,7 +21,7 @@ new GainNode(context, options)
 ### Parameters
 
 - `context`
-  - : A reference to a {{domxref("BaseAudioContext")}}, e.g. an {{domxref("AudioContext")}}.
+  - : A reference to a {{domxref("BaseAudioContext")}}, e.g., an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
 
   - : Options are as follows:

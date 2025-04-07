@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{LearnSidebar}}
 
-Welcome to **Getting started**! If you are a complete beginner (i.e. you've not installed a code editor or written any code yet), then this is the place to be. The Getting started modules take you through installing the software you need, familiarity with your development environment, taking your first stab at building a simple website, and understanding some of the essential concepts surrounding web development.
+Welcome to **Getting started**! If you are a complete beginner (i.e., you've not installed a code editor or written any code yet), then this is the place to be. The Getting started modules take you through installing the software you need, familiarity with your development environment, taking your first stab at building a simple website, and understanding some of the essential concepts surrounding web development.
 
 ## Prerequisites
 

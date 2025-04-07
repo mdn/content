@@ -59,7 +59,7 @@ You can set a default value for the input by including a date and time inside th
 One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDTHH:mm`. When the above value is submitted to the server, for example, it will look like `party-date=2024-06-01T08:30`.
 
 > [!NOTE]
-> Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `party-date=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
+> Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g., `party-date=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
 
 You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
@@ -131,7 +131,7 @@ In either case, the date/time and time zone values would be submitted to the ser
 
 ## Validation
 
-By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date/time — which is helpful — but a user might still fill in no value and submit, or enter an invalid date and/or time (e.g. the 32nd of April).
+By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date/time — which is helpful — but a user might still fill in no value and submit, or enter an invalid date and/or time (e.g., the 32nd of April).
 
 You can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates_and_times)), and you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date/time mandatory. As a result, browsers will display an error if you try to submit a date that is outside the set bounds or an empty date field.
 
@@ -234,7 +234,7 @@ In some browsers (Chrome and Edge), only the "days" part of the date value will 
 The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
 
 > [!NOTE]
-> You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
+> You should be able to use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g., maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
 
 ## Technical summary
 

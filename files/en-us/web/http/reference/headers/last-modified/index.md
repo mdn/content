@@ -47,13 +47,13 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - `<month>`
   - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case-sensitive).
 - `<year>`
-  - : 4 digit year number, e.g. "1990" or "2016".
+  - : 4 digit year number, e.g., "1990" or "2016".
 - `<hour>`
-  - : 2 digit hour number, e.g. "09" or "23".
+  - : 2 digit hour number, e.g., "09" or "23".
 - `<minute>`
-  - : 2 digit minute number, e.g. "04" or "59".
+  - : 2 digit minute number, e.g., "04" or "59".
 - `<second>`
-  - : 2 digit second number, e.g. "04" or "59".
+  - : 2 digit second number, e.g., "04" or "59".
 - GMT
   - : Greenwich Mean Time. HTTP dates are always expressed in GMT, never in local time.
 

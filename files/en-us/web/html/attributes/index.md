@@ -522,7 +522,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g., <code>type="submit"</code>),
         this attribute sets the encoding type to use during form submission. If
         this attribute is specified, it overrides the
         <code>enctype</code> attribute of the button's
@@ -538,7 +538,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g., <code>type="submit"</code>),
         this attribute sets the submission method to use during form submission
         (<code>GET</code>, <code>POST</code>, etc.). If this attribute is
         specified, it overrides the <code>method</code> attribute of the
@@ -554,7 +554,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g., <code>type="submit"</code>),
         this boolean attribute specifies that the form is not to be validated
         when it is submitted. If this attribute is specified, it overrides the
         <code>novalidate</code> attribute of the button's
@@ -570,7 +570,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("input") }}
       </td>
       <td>
-        If the button/input is a {{Glossary("submit button")}} (e.g. <code>type="submit"</code>),
+        If the button/input is a {{Glossary("submit button")}} (e.g., <code>type="submit"</code>),
         this attribute specifies the browsing context (for example, tab, window,
         or inline frame) in which to display the response that is received after
         submitting the form. If this attribute is specified, it overrides the
@@ -1395,7 +1395,7 @@ IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/
 
 ## Boolean Attributes
 
-Some content attributes (e.g. `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
+Some content attributes (e.g., `required`, `readonly`, `disabled`) are called [boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes). If a boolean attribute is present, its value is **true**, and if it's absent, its value is **false**.
 
 HTML defines restrictions on the allowed values of boolean attributes: If the attribute is present, its value must either be the empty string (equivalently, the attribute may have an unassigned value), or a value that is an ASCII case-insensitive match for the attribute's canonical name, with no leading or trailing whitespace. The following examples are valid ways to mark up a boolean attribute:
 

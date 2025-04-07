@@ -178,7 +178,7 @@ if (
 
 With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.
 
-The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g. 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
+The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g., 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
 
 The `notified === "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
 

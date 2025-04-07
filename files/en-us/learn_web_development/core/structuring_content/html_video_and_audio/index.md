@@ -101,7 +101,7 @@ There are some special cases. For example, for some types of audio, a codec's da
 
 Another example is the ever-popular "MP3 file". An "MP3 file" is an audio file encoded using MPEG-1 Audio Layer III compression. While it can include metadata, it is not encapsulated within a separate MPEG or MPEG-2 container. Its widespread support in the {{htmlelement("audio")}} and {{htmlelement("video")}} elements is largely a testament to its enduring popularity.
 
-An audio player will tend to play an audio track directly, e.g. an MP3 or Ogg file. These don't need containers.
+An audio player will tend to play an audio track directly, e.g., an MP3 or Ogg file. These don't need containers.
 
 ### Media file support in browsers
 

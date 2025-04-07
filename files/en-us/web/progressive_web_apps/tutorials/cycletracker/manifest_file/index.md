@@ -15,10 +15,10 @@ While, according to the spec, all of the manifest keys (or members) are optional
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 
-```js
+```json
 {
   "short_name": "CT",
-  "start_url" : "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "icon-512.png",
@@ -51,7 +51,7 @@ Write the first few lines of your manifest file. You can use the text below, or 
 
 ### Example solution
 
-```js
+```json
 {
   "name": "CycleTracker: Period Tracking app",
   "short_name": "CT",
@@ -89,7 +89,7 @@ As the example application is a single page, we can use `"/"` as the `start_url`
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
-```js
+```json
 {
   "name": "...",
   "short_name": "...",
@@ -107,7 +107,7 @@ PWA icons help users identify your app, make it more visually appealing, and imp
 
 Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` member lists the image's MIME type.
 
-```js
+```json
 {
   "name": "MyApp",
   "icons": [
@@ -164,7 +164,7 @@ img {
 
 ### Example solution
 
-```js
+```json
 {
   "name": "...",
   "short_name": "...",
@@ -174,7 +174,7 @@ img {
   "background_color": "...",
   "display": "...",
   "icons": [
-        {
+    {
       "src": "circle.ico",
       "sizes": "48x48"
     },

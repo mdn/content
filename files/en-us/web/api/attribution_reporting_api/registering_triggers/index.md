@@ -32,15 +32,15 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "event_trigger_data": [
+       event_trigger_data: [
          {
-           "trigger_data": "4",
-           "priority": "1000000000000",
-           "deduplication_key": "2345698765",
+           trigger_data: "4",
+           priority: "1000000000000",
+           deduplication_key: "2345698765",
          },
        ],
-       "debug_key": "1115698977",
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
@@ -51,7 +51,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
        > [!NOTE]
        > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
      - `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
-     - `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication) for more information.
+     - `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/prevent-duplication) for more information.
    - `"debug_key"`: A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
 
    See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
@@ -62,22 +62,22 @@ However, what happens behind the scenes to register triggers, look for matches, 
    res.set(
      "Attribution-Reporting-Register-Trigger",
      JSON.stringify({
-       "aggregatable_trigger_data": [
+       aggregatable_trigger_data: [
          {
-           "key_piece": "0x400",
-           "source_keys": ["campaignCounts"]
+           key_piece: "0x400",
+           source_keys: ["campaignCounts"],
          },
          {
-           "key_piece": "0xA80",
-           "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
-         }
+           key_piece: "0xA80",
+           source_keys: ["geoValue", "nonMatchingKeyIdsAreIgnored"],
+         },
        ],
-       "aggregatable_values": {
-         "campaignCounts": 32768,
-         "geoValue": 1664
+       aggregatable_values: {
+         campaignCounts: 32768,
+         geoValue: 1664,
        },
-       "debug_key": "1115698977"
-     });
+       debug_key: "1115698977",
+     }),
    );
    ```
 
@@ -208,7 +208,7 @@ In this case, the browser will attempt to match the trigger with a stored attrib
 
 ## Specifying a URL inside attributionsrc
 
-In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
+In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e., receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
 However, it might be the case that the requested resource is not on a server you control, or you just want to handle registering the attribution trigger on a different server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 

@@ -13,7 +13,7 @@ The **`<mtr>`** [MathML](/en-US/docs/Web/MathML) element represents a row in a t
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Reference/Global_attributes). Some browsers may also support the following attributes:
 
 - `columnalign` {{Non-standard_Inline}}
-  - : Overrides the horizontal alignment of cells specified by {{ MathMLElement("mtable") }} for this row. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnalign="left center right"`). Possible values are: `left`, `center` and `right`.
+  - : Overrides the horizontal alignment of cells specified by {{ MathMLElement("mtable") }} for this row. Multiple values separated by space are allowed and apply to the corresponding columns (e.g., `columnalign="left center right"`). Possible values are: `left`, `center` and `right`.
 - `rowalign` {{Non-standard_Inline}}
   - : Overrides the vertical alignment of cells specified by {{ MathMLElement("mtable") }} for this row. Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
 

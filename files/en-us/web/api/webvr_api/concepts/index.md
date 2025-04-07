@@ -112,8 +112,8 @@ A term commonly used in VR because it is a major handicap of using an HMD — we
 
 To minimize this unwanted effect, we need to:
 
-- Avoid focusing on different depths (e.g. avoid using a lot of particles with different depths.)
-- Avoid eye convergence (e.g. if you have an object that comes towards the camera your eyes will follow and converge on it.)
+- Avoid focusing on different depths (e.g., avoid using a lot of particles with different depths.)
+- Avoid eye convergence (e.g., if you have an object that comes towards the camera your eyes will follow and converge on it.)
 - Use darker backgrounds with more subdued colors where possible; a bright screen will make the eyes more tired.
 - Avoid rapid brightness changes.
 - Avoid presenting the user with large amounts of text to read. You should also be careful with the distance between the eyes/camera and the text to read. 0.5m is uncomfortable, whereas at more than 2m the stereo effect starts to break down, so somewhere in between is advisable.

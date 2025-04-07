@@ -23,9 +23,9 @@ No notable changes.
 ### JavaScript
 
 - The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
-  - Incorrect day of month (e.g. "31 April") now skips over to the following month (e.g. "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
-  - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
-  - Single number dates are now accepted (e.g. `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
+  - Incorrect day of month (e.g., "31 April") now skips over to the following month (e.g., "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
+  - Incomplete time zone (e.g., "1/1/70 gm") or AM/PM (e.g., "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
+  - Single number dates are now accepted (e.g., `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
 
 ### SVG
 

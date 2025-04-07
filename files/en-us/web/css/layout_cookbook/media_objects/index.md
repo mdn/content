@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The _Media Object_ is a pattern we see all over the web. It refers to a two-column box with an image on one side and descriptive text on the other, e.g. a social media post.
+The _Media Object_ is a pattern we see all over the web. It refers to a two-column box with an image on one side and descriptive text on the other, e.g., a social media post.
 
 ![Example of a media object with profile image on the left side and lorem ipsum text to the right filling up 80% of the space](media-object.png)
 

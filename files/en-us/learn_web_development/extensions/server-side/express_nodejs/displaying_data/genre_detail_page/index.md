@@ -49,7 +49,7 @@ We first use `Genre.findById()` to get Genre information for a specific ID, and 
 Because the two requests do not depend on each other, we use `Promise.all()` to run the database queries in parallel (this same approach for running queries in parallel was demonstrated in the [home page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page#controller)).
 
 We `await` on the returned promise, and once it settles we check the results.
-If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results.
+If the genre does not exist in the database (i.e., it may have been deleted) then `findById()` will return successfully with no results.
 In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 
 > [!NOTE]
@@ -87,7 +87,7 @@ The view is very similar to all our other templates. The main difference is that
 
 ## What does it look like?
 
-Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
+Run the application and open your browser to `http://localhost:3000/`. Select the _All genres_ link, then select one of the genres (e.g., "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 

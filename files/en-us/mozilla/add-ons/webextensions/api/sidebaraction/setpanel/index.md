@@ -37,7 +37,7 @@ browser.sidebarAction.setPanel(
 
       - : `string` or `null`. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or `null`, or an empty string.
 
-        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. `https://example.org/`). It must be a valid URL.
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g., `https://example.org/`). It must be a valid URL.
 
         If `panel` is `null` or `""`, then a previously set panel will be removed, so that:
 

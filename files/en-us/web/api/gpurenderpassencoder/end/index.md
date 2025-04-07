@@ -31,9 +31,9 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`end()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderPassEncoder")}} becomes invalid:
 
-- The {{domxref("GPURenderPassEncoder")}} is open (i.e. not already ended via an `end()` call).
-- There is no occlusion query (i.e. started via {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}) active on the current render pass.
-- The debug stack for the current render pass is empty (i.e. no render pass debug group is currently open, as opened by {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The {{domxref("GPURenderPassEncoder")}} is open (i.e., not already ended via an `end()` call).
+- There is no occlusion query (i.e., started via {{domxref("GPURenderPassEncoder.beginOcclusionQuery", "beginOcclusionQuery()")}}) active on the current render pass.
+- The debug stack for the current render pass is empty (i.e., no render pass debug group is currently open, as opened by {{domxref("GPURenderPassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 - The number of draw commands encoded in this render pass is less than or equal to the `maxDrawCount` property set in the {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
 
 ## Examples

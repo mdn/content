@@ -168,7 +168,7 @@ There's definitely a problem in the game logic somewhere — the game is not ret
 
 ### Working through the logic
 
-To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g. 0.5675493843.
+To fix this, let's consider how this line is working. First, we invoke [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), which generates a random decimal number between 0 and 1, e.g., 0.5675493843.
 
 ```js
 Math.random();

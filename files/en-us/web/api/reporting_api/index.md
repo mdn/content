@@ -79,7 +79,7 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 - {{domxref("DeprecationReportBody")}}
   - : Contains details of deprecated web platform features that a website is using.
 - {{domxref("InterventionReportBody")}}
-  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g. for security reasons.
+  - : Contains details of an intervention report, which is generated when a request made by the website has been denied by the browser; e.g., for security reasons.
 - {{domxref("Report")}}
   - : An object representing a single report.
 - {{domxref("ReportingObserver")}}

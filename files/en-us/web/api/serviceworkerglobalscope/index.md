@@ -80,7 +80,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 - {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
   - : Occurs when a server push notification is received.
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
-  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
+  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g., when a push service sets an expiration time).
 
 ## Examples
 

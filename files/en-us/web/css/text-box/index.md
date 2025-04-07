@@ -58,7 +58,7 @@ If `text-box-trim` is omitted, it is set to `trim-both`. If `text-box-edge` is o
 
 The height of text-only content is relative to the height of the font. In digital font files, the height contains all characters, including capital letters, ascenders, descenders, etc. Different fonts have different base line-heights, meaning that lines of text with the same `font-size` will produce line boxes of differing heights, affecting the appearance of spacing between lines.
 
-The {{cssxref("text-box")}} properties enable trimming off extra spacing from the block-start edge and block-end edge of a text element's block container, which can include the {{glossary("leading")}} at the text's block-start edge and block-end edges, and the spacing defined inside the font (as described above). This makes it much easier to control text spacing in the block direction.
+The `text-box` properties enable trimming off extra spacing from the block-start edge and block-end edge of a text element's block container, which can include the {{glossary("leading")}} at the text's block-start edge and block-end edges, and the spacing defined inside the font (as described above). This makes it much easier to control text spacing in the block direction.
 
 ## Examples
 

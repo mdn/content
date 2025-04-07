@@ -42,7 +42,7 @@ This transformation matrix gets multiplied on the left of a column vector repres
 - `f` (`m42`)
   - : The cell in the second row and third column of the matrix.
 
-Alternatively, you can pass a single parameter which is an object containing the values above as properties. The parameter names are the property keys, and if two synonymous names are both present (e.g. `m11` and `a`), they must be the same number value, or a {{jsxref("TypeError")}} will be thrown. Using the object form allows omitting some parameters — `a` and `d` default to `1`, while the rest default to `0`.
+Alternatively, you can pass a single parameter which is an object containing the values above as properties. The parameter names are the property keys, and if two synonymous names are both present (e.g., `m11` and `a`), they must be the same number value, or a {{jsxref("TypeError")}} will be thrown. Using the object form allows omitting some parameters — `a` and `d` default to `1`, while the rest default to `0`.
 
 If a point originally had coordinates <math><semantics><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="TeX">(x, y)</annotation></semantics></math>, then after the transformation it will have coordinates <math><semantics><mrow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mrow><annotation encoding="TeX">(ax + cy + e, bx + dy + f)</annotation></semantics></math>. This means:
 
@@ -84,7 +84,7 @@ ctx.fillRect(0, 0, 100, 100);
 
 In the following example, we have two {{htmlelement("canvas")}} elements. We apply a transform to the first one's context using the first type of `setTransform()` and draw a square on it, then retrieve the matrix from it using {{domxref("CanvasRenderingContext2D.getTransform()")}}.
 
-We then apply the retrieved matrix directly to the second canvas context by passing the `DOMMatrix` object directly to `setTransform()` (i.e. the second type), and draw a circle on it.
+We then apply the retrieved matrix directly to the second canvas context by passing the `DOMMatrix` object directly to `setTransform()` (i.e., the second type), and draw a circle on it.
 
 #### HTML
 

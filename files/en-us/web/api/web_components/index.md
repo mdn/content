@@ -110,7 +110,7 @@ The basic approach for implementing a web component generally looks something li
   - : Additions to the `Node` interface relevant to shadow DOM:
 
     - The {{domxref("Node.getRootNode()")}} method returns the context object's root, which optionally includes the shadow root if it is available.
-    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g. the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
+    - The {{domxref("Node.isConnected")}} property returns a boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g., the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
 
 - {{domxref("Event")}} extensions
 

@@ -58,7 +58,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
 - {{DOMxRef("ShadowRoot.setHTMLUnsafe()")}}
-  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](#shadowroot.innerhtml).
+  - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the shadowroot's original subtree. The HTML string may include declarative shadow roots, which would be parsed as template elements the HTML was set using [`ShadowRoot.innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
 
 ## Events
 
@@ -74,14 +74,18 @@ The following snippets are taken from our [life-cycle-callbacks](https://github.
 Inside the `<custom-square>` element's class definition we include some life cycle callbacks that make a call to an external function, `updateStyle()`, which actually applies the size and color to the element. You'll see that we are passing it `this` (the custom element itself) as a parameter.
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
-}
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("Custom square element added to page.");
+    updateStyle(this);
+  }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("Custom square element attributes changed.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 

@@ -10,8 +10,6 @@ The **`WebAssembly.Instance()`** constructor creates a new
 `Instance` object which is a stateful, executable instance of a
 [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module).
 
-## Syntax
-
 > [!WARNING]
 > Since instantiation for large modules can be expensive,
 > developers should only use the `Instance()` constructor when synchronous
@@ -19,8 +17,10 @@ The **`WebAssembly.Instance()`** constructor creates a new
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) method should be used at all other
 > times.
 
-```js
-new WebAssembly.Instance(module, importObject);
+## Syntax
+
+```js-nolint
+new WebAssembly.Instance(module, importObject)
 ```
 
 ### Parameters

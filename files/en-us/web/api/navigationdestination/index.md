@@ -31,7 +31,7 @@ It is accessed via the {{domxref("NavigateEvent.destination")}} property.
 ## Instance methods
 
 - {{domxref("NavigationDestination.getState", "getState()")}} {{Experimental_Inline}}
-  - : Returns a clone of the available state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g. {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
+  - : Returns a clone of the available state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g., {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
 
 ## Examples
 

@@ -9,7 +9,7 @@ browser-compat: api.RTCStatsReport.type_local-candidate
 
 The **`RTCIceCandidateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics related to an {{domxref("RTCIceCandidate")}}.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `local-candidate`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCIceCandidateStats/type) of `local-candidate`.
 
 ## Instance properties
 

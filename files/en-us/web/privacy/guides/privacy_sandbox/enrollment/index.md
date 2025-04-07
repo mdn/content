@@ -33,4 +33,4 @@ The documentation of each feature includes more details on exactly which sub-fea
 
 ## See also
 
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com

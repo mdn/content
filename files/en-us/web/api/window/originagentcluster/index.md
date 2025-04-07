@@ -3,12 +3,10 @@ title: "Window: originAgentCluster property"
 short-title: originAgentCluster
 slug: Web/API/Window/originAgentCluster
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Window.originAgentCluster
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`originAgentCluster`** read-only property of the {{domxref("Window")}} interface returns `true` if this window belongs to an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_: this means that the operating system has provided dedicated resources (for example an operating system process) to this window's origin that are not shared with windows from other origins.
 

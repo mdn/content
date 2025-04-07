@@ -51,7 +51,7 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 - {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} event occurs; that is, whenever a server push message is received.
 - {{domxref("ServiceWorkerGlobalScope.pushsubscriptionchange_event", "onpushsubscriptionchange")}}
-  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event occurs; for example, when a push subscription has been invalidated, or is about to be invalidated (e.g., when a push service sets an expiration time.)
 
 ## Examples
 

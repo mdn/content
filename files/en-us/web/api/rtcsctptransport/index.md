@@ -11,7 +11,7 @@ The **`RTCSctpTransport`** interface provides information which describes a Stre
 
 You don't create `RTCSctpTransport` objects yourself; instead, you get access to the `RTCSctpTransport` for a given `RTCPeerConnection` through its **{{DOMxRef("RTCPeerConnection.sctp", "sctp")}}** property.
 
-Possibly the most useful property on this interface is its [`maxMessageSize`](#rtcsctptransport.maxmessagesize) property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
+Possibly the most useful property on this interface is its [`maxMessageSize`](/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize) property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
 
 {{InheritanceDiagram}}
 

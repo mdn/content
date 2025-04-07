@@ -85,9 +85,20 @@ You can then render the text and selection in the view, using the information pr
 ## Interfaces
 
 - {{DOMxRef("EditContext")}} {{experimental_inline}}
-  - : The **`EditContext`** interface is a JavaScript reflection of the text edit context that's normally provided transparently by the browser when using standard editable regions such as `textarea`. `EditContext` provides the state of the text being edited, with information such as the text itself, the current selection, or the location of the text in the app's UI.
-- {{DOMxRef("TextFormat")}}
-  - : The **`TextFormat`** interface is used to represent certain formats that should be applied to text ranges when the user is composing text within the IME composition window.
+  - : The `EditContext` interface is a JavaScript reflection of the text edit context that's normally provided transparently by the browser when using standard editable regions such as `textarea`. `EditContext` provides the state of the text being edited, with information such as the text itself, the current selection, or the location of the text in the app's UI.
+- {{DOMxRef("TextFormat")}} {{experimental_inline}}
+  - : The `TextFormat` interface is used to represent certain formats that should be applied to text ranges when the user is composing text within the IME composition window.
+- {{domxref("TextUpdateEvent")}} {{experimental_inline}}
+  - : The `TextUpdateEvent` interface is a [DOM event](/en-US/docs/Web/API/Event) that represents a text or selection update in an editable text region that's attached to an {{domxref("EditContext")}} instance.
+- {{domxref("TextFormatUpdateEvent")}} {{experimental_inline}}
+  - : The `TextFormatUpdateEvent` interface is a [DOM event](/en-US/docs/Web/API/Event) that represents a list of text formats that an {{glossary("Input Method Editor")}} (IME) window wants to apply to the text being composed in an editable region that's attached to an {{domxref("EditContext")}} instance.
+- {{domxref("CharacterBoundsUpdateEvent")}} {{experimental_inline}}
+  - : The `CharacterBoundsUpdateEvent` interface is a [DOM event](/en-US/docs/Web/API/Event) that represents a request from the operating system to know the bounds of certain characters within an editable region that's attached to an {{domxref("EditContext")}} instance.
+
+## Extensions to other interfaces
+
+- {{domxref("HTMLElement.editContext")}} {{experimental_inline}}
+  - : The `editContext` property of the {{domxref("HTMLElement")}} interface gets and sets an element's associated {{domxref("EditContext")}} object.
 
 ## Specifications
 

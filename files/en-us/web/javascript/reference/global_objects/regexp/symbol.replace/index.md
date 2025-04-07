@@ -71,7 +71,7 @@ for (let i = 0; i < 5; i++) {
 // baa 1
 ```
 
-When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+When the regex is sticky and global, it would still perform sticky matches — i.e., it would fail to match any occurrences beyond the `lastIndex`.
 
 ```js
 console.log("aa-a".replace(/a/gy, "b")); // "bb-a"

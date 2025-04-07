@@ -183,6 +183,6 @@ These will be rendered as:
 <p>Bad example</p>
 ```
 
-## Placeholder text
+## Guidelines for using placeholder text
 
-Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com/) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin.
+Use the placeholder lorem-ipsum text generated from [lipsum.com](https://www.lipsum.com/) or the [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum) VS Code plugin. The standard lorem-ipsum text is included in our spell-checker configuration, so it will not be reported as typos in IDEs or in tests during code review. Using a consistent placeholder text makes example code easier to review, especially when it appears repeatedly. It also helps keep examples clearly for illustration purposes and avoids distracting readers with irrelevant content.

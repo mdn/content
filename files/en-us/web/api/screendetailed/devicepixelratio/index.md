@@ -16,7 +16,7 @@ The **`devicePixelRatio`** read-only property of the
 This is the same as the value returned by {{domxref("Window.devicePixelRatio")}}, except that `Window.devicePixelRatio`:
 
 - always returns the device pixel ratio for the {{domxref("ScreenDetails.currentScreen", "current screen", "", "nocode")}}.
-- also includes scaling of the window itself, i.e. page zoom (at least on some browser implementations).
+- also includes scaling of the window itself, i.e., page zoom (at least on some browser implementations).
 
 ## Value
 

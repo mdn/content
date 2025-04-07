@@ -20,9 +20,9 @@ The meaning of this property depends on the value of this performance entry's {{
 - `element`
   - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 - `event`
-  - : The time the event was created, i.e. the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
+  - : The time the event was created, i.e., the event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp) property.
 - `first-input`
-  - : The time the first input event was created, i.e. that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
+  - : The time the first input event was created, i.e., that event's [`timeStamp`](/en-US/docs/Web/API/Event/timeStamp).
 - `largest-contentful-paint`
   - : The value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("LargestContentfulPaint.loadTime", "loadTime")}}.
 - `layout-shift`

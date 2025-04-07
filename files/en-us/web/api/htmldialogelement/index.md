@@ -32,7 +32,7 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLDialogElement.requestClose()")}}
   - : Requests to close the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
-  - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
+  - : Displays the dialog modelessly, i.e., still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
   - : Displays the dialog as a modal, over the top of any other dialogs that might be present. Everything outside the dialog are [inert](/en-US/docs/Web/API/HTMLElement/inert) with interactions outside the dialog being blocked.
 

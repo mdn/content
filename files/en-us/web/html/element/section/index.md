@@ -47,7 +47,7 @@ As mentioned above, `<section>` is a generic sectioning element, and should only
 
 Also consider these cases:
 
-- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g. a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
+- If the contents of the element represent a standalone, atomic unit of content that makes sense syndicated as a standalone piece (e.g., a blog post or blog comment, or a newspaper article), the {{HTMLElement("article")}} element would be a better choice.
 - If the contents represent useful tangential information that works alongside the main content, but is not directly part of it (like related links, or an author bio), use an {{HTMLElement("aside")}}.
 - If the contents represent the main content area of a document, use {{HTMLElement("main")}}.
 - If you are only using the element as a styling wrapper, use a {{HTMLElement("div")}} instead.

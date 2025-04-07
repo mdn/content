@@ -170,6 +170,17 @@ V
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
 
+## Nesting pseudo-elements
+
+You can chain some pseudo-element selectors together to style pseudo-elements nested inside other pseudo-elements. The following nested pseudo-element combinations are supported:
+
+- {{CSSxRef("::after")}}
+  - `::after::marker`: Selects the {{CSSxRef("::marker")}} pseudo-element of an `::after` pseudo-element, when `::after` is styled as a list item, with {{CSSxRef("display", "display: list-item")}}.
+- {{CSSxRef("::before")}}
+  - `::before::marker`: Selects the {{CSSxRef("::marker")}} pseudo-element of a `::before` pseudo-element, when `::before` is styled as a list item, with {{CSSxRef("display", "display: list-item")}}.
+
+Check out the individual pseudo-element reference pages for examples and browser compatibility information.
+
 ## Specifications
 
 {{Specifications}}

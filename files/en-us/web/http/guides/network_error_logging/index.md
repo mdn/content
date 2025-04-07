@@ -29,7 +29,7 @@ The following object keys can be specified in the NEL header:
 - report_to
   - : The [reporting API](/en-US/docs/Web/API/Reporting_API) group to send network error reports to (see below).
 - max_age
-  - : Specifies the lifetime of the policy, in seconds (in a similar way to e.g. HSTS policies are time-restricted). The referenced reporting group should have a lifetime at least as long as the NEL policy.
+  - : Specifies the lifetime of the policy, in seconds (in a similar way to e.g., HSTS policies are time-restricted). The referenced reporting group should have a lifetime at least as long as the NEL policy.
 - include_subdomains
   - : If true, the policy applies to all subdomains under the origin that the policy header is set. The reporting group should also be set to include subdomains, if this option is to be enabled.
 - success_fraction
@@ -105,7 +105,7 @@ The type of the network error may be one of the following pre-defined values fro
 - `dns.name_not_resolved`
   - : The user's DNS server responded but was unable to resolve an IP address for the requested URI.
 - `dns.failed`
-  - : Request to the DNS server failed due to reasons not covered by previous errors (e.g. SERVFAIL)
+  - : Request to the DNS server failed due to reasons not covered by previous errors (e.g., SERVFAIL)
 - `dns.address_changed`
   - : For security reasons, if the server IP address that delivered the original report is different to the current server IP address at time of error generation, the report data will be downgraded to only include information about this problem and the type set to `dns.address_changed`.
 - `tcp.timed_out`

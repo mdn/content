@@ -26,7 +26,7 @@ Conversion to Markdown is done, so remove the old CSS style guide and redirect t
 
 Multiple updates to the CSS style guide to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.
 
-- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>`).
+- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g., `<h4>Warning</h4>`).
 
   See our [Markdown in MDN](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#notes_warnings_and_callouts) guide for the correct syntax.
 
@@ -39,9 +39,9 @@ Multiple updates to the CSS style guide to reflect the move towards Markdown, an
 
 ### Multiline JavaScript and API syntax blocks
 
-Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can be used in multiple different ways (i.e. various parameters are optional) were commonly written using [BNF formal syntax notation](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form). Most notably, square brackets were used to signify optional parameters.
+Previously, the syntax blocks of JavaScript builtin and WebAPI methods that can be used in multiple different ways (i.e., various parameters are optional) were commonly written using [BNF formal syntax notation](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form). Most notably, square brackets were used to signify optional parameters.
 
-This was problematic — many developers were confused by this, and it conflicts with valid syntax forms in other programming languages (e.g. `[]` is also an array in JavaScript).
+This was problematic — many developers were confused by this, and it conflicts with valid syntax forms in other programming languages (e.g., `[]` is also an array in JavaScript).
 
 As a result, going forward we are now writing multiple syntax forms of a method on separate lines inside the syntax block. See [Syntax sections > Multiple lines/Optional parameters](/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections#multiple_linesoptional_parameters) for further information and examples.
 

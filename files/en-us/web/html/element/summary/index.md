@@ -162,7 +162,7 @@ details:first-of-type summary::marker,
 }
 
 details[open]:first-of-type summary::marker {
-  content: "- ";
+  content: "− ";
 }
 
 details:last-of-type summary {
@@ -177,7 +177,7 @@ details:last-of-type summary {
     margin-inline-start: 5px;
   }
   [open] &::after {
-    content: "-";
+    content: "−";
   }
 }
 details:last-of-type summary::-webkit-details-marker {

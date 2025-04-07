@@ -65843,24 +65843,6 @@
       "alecananian"
     ]
   },
-  "Web/API/Window/back": {
-    "modified": "2020-02-23T02:06:28.448Z",
-    "contributors": [
-      "mfuji09",
-      "bershanskiy",
-      "Bzbarsky",
-      "Sheppy",
-      "Ac1521",
-      "fscholz",
-      "teoli",
-      "kohei.yoshino",
-      "ethertank",
-      "Mgjbot",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/beforeinstallprompt_event": {
     "modified": "2020-10-15T21:36:30.007Z",
     "contributors": [
@@ -66576,22 +66558,6 @@
   "Web/API/Window/focus_event": {
     "modified": "2020-10-15T22:15:43.366Z",
     "contributors": ["wbamberg", "mfuji09"]
-  },
-  "Web/API/Window/forward": {
-    "modified": "2020-02-23T02:09:05.828Z",
-    "contributors": [
-      "mfuji09",
-      "bershanskiy",
-      "Bzbarsky",
-      "Sheppy",
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "kohei.yoshino",
-      "Mgjbot",
-      "Dria",
-      "JesseW"
-    ]
   },
   "Web/API/Window/frameElement": {
     "modified": "2020-10-15T21:08:57.575Z",
@@ -69673,10 +69639,6 @@
       "louisremi"
     ]
   },
-  "Web/API/XMLHttpRequest/channel": {
-    "modified": "2019-04-01T10:07:55.290Z",
-    "contributors": ["Sheppy", "teoli", "MashKao"]
-  },
   "Web/API/XMLHttpRequest/error_event": {
     "modified": "2020-10-15T21:19:53.429Z",
     "contributors": [
@@ -69765,18 +69727,6 @@
       "ethertank",
       "louisremi"
     ]
-  },
-  "Web/API/XMLHttpRequest/mozAnon": {
-    "modified": "2019-03-23T22:32:59.152Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
-  },
-  "Web/API/XMLHttpRequest/mozBackgroundRequest": {
-    "modified": "2019-03-23T22:32:48.788Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
-  },
-  "Web/API/XMLHttpRequest/mozSystem": {
-    "modified": "2019-03-23T22:32:57.199Z",
-    "contributors": ["Sheppy", "david_ross", "MashKao"]
   },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T21:40:00.147Z",

@@ -25,15 +25,14 @@ A {{domxref("DOMRectReadOnly")}} object representing the animated value of the `
 ```
 
 ```js
-  const svgElement = document.getElementById("mySvg");
-  const animatedRect = svgElement.viewBox.animVal;
+const svgElement = document.getElementById("mySvg");
+const animatedRect = svgElement.viewBox.animVal;
 
-  // Log the animated value (assuming an animation is applied)
-  console.log(animatedRect.x);
-  console.log(animatedRect.y);
-  console.log(animatedRect.width);
-  console.log(animatedRect.height);
-</script>
+// Log the animated value (assuming an animation is applied)
+console.log(animatedRect.x);
+console.log(animatedRect.y);
+console.log(animatedRect.width);
+console.log(animatedRect.height);
 ```
 
 ## Specifications

@@ -13,7 +13,7 @@ browser-compat: api.Navigation.canGoBack
 The **`canGoBack`** read-only property of the
 {{domxref("Navigation")}} interface returns `true`
 if it is possible to navigate backwards in the navigation history
-(i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is
+(i.e., the {{domxref("Navigation.currentEntry", "currentEntry")}} is
 not the first one in the history entry list),
 and `false` if it is not.
 

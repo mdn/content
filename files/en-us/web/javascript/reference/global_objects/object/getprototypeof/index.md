@@ -8,7 +8,7 @@ browser-compat: javascript.builtins.Object.getPrototypeOf
 {{JSRef}}
 
 The **`Object.getPrototypeOf()`** static method returns the prototype
-(i.e. the value of the internal `[[Prototype]]` property) of the specified
+(i.e., the value of the internal `[[Prototype]]` property) of the specified
 object.
 
 {{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}

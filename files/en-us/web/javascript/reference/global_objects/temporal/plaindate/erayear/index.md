@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.eraYear
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`eraYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a non-negative integer representing the year of this date within the era, or `undefined` if the calendar does not use eras (e.g. ISO 8601). The year index usually starts from 1 (more common) or 0, and years in an era can decrease with time (e.g. Gregorian BCE). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`eraYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a non-negative integer representing the year of this date within the era, or `undefined` if the calendar does not use eras (e.g., ISO 8601). The year index usually starts from 1 (more common) or 0, and years in an era can decrease with time (e.g., Gregorian BCE). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 Unlike `year`, `era` and `eraYear` may change in the middle of a calendar year. For example, Japan started the Reiwa era on May 1, 2019, so dates from 2019-01-01 to 2019-04-30 have `{ era: "heisei", eraYear: 31 }`, and dates from 2019-05-01 onwards have `{ era: "reiwa", eraYear: 1 }`, but the `year` is always 2019 (because the Japanese calendar uses the ISO 8601 year as the default year).
 

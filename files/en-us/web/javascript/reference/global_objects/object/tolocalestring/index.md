@@ -95,7 +95,7 @@ const frDate = testDate.toLocaleString("fr");
 
 ### Number toLocaleString() override
 
-{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific locales, e.g. with the correct separators. For example:
+{{jsxref("Number.prototype.toLocaleString()")}} is used to print out number displays more suitable for specific locales, e.g., with the correct separators. For example:
 
 ```js
 const testNumber = 2901234564;

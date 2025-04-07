@@ -41,7 +41,7 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-Note how you've got to include a second function invocation operator at the end of the accessor to actually retrieve the value stored inside the reference (e.g. `get(0)()` rather than `get(0)`) — it is a function rather than a simple value.
+Note how you've got to include a second function invocation operator at the end of the accessor to actually retrieve the value stored inside the reference (e.g., `get(0)()` rather than `get(0)`) — it is a function rather than a simple value.
 
 ## Specifications
 

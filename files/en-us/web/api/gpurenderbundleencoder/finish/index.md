@@ -34,8 +34,8 @@ A {{domxref("GPURenderBundle")}} object instance.
 
 The following criteria must be met when calling **`finish()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPURenderBundleEncoder")}} becomes invalid:
 
-- The {{domxref("GPURenderBundleEncoder")}} is open (i.e. not already ended via a `finish()` call).
-- The debug stack for the current render pass is empty (i.e. no render pass debug group is currently open, as opened by {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The {{domxref("GPURenderBundleEncoder")}} is open (i.e., not already ended via a `finish()` call).
+- The debug stack for the current render pass is empty (i.e., no render pass debug group is currently open, as opened by {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 

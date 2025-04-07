@@ -13,7 +13,7 @@ The DOM tree includes elements such as {{HTMLElement("body")}} and {{HTMLElement
 
 {{InheritanceDiagram}}
 
-The `Document` interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g. [HTML](/en-US/docs/Web/HTML), [XML](/en-US/docs/Web/XML), SVG, …), a larger API is available: HTML documents, served with the `"text/html"` content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.
+The `Document` interface describes the common properties and methods for any kind of document. Depending on the document's type (e.g., [HTML](/en-US/docs/Web/HTML), [XML](/en-US/docs/Web/XML), SVG, …), a larger API is available: HTML documents, served with the `"text/html"` content type, also implement the {{DOMxRef("HTMLDocument")}} interface, whereas XML and SVG documents implement the {{DOMxRef("XMLDocument")}} interface.
 
 ## Constructor
 
@@ -259,7 +259,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.replaceChildren()")}}
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
-  - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
+  - : Allows a document loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}}
@@ -322,7 +322,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
-  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
+  - : Fired on a prerendered document when it is activated (i.e., the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
@@ -367,7 +367,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
   - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
 - {{domxref("Document/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
-  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e., it will be selected when the current scroll gesture ends.
 
 ### Selection events
 
@@ -433,7 +433,7 @@ Not all events that bubble can reach the `Document` object. Only the following d
 - {{domxref("HTMLMediaElement/progress_event", "progress")}}
 - {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
 - {{domxref("HTMLFormElement/reset_event", "reset")}}
-- {{domxref("HTMLElement/resize_event", "resize")}}
+- {{domxref("HTMLVideoElement/resize_event", "resize")}}
 - {{domxref("Element/scroll_event", "scroll")}}
 - {{domxref("Element/scrollend_event", "scrollend")}}
 - {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}

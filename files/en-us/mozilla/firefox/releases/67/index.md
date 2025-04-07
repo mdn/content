@@ -83,7 +83,7 @@ _No changes._
 
 #### DOM events
 
-- CSS transition ([Firefox bug 1530239](https://bugzil.la/1530239)) and animation ([Firefox bug 1531605](https://bugzil.la/1531605)) events now fire on disabled (e.g. form) elements.
+- CSS transition ([Firefox bug 1530239](https://bugzil.la/1530239)) and animation ([Firefox bug 1531605](https://bugzil.la/1531605)) events now fire on disabled (e.g., form) elements.
 - {{domxref("InputEvent.data")}} and {{domxref("InputEvent.dataTransfer")}} have been implemented ([Firefox bug 998941](https://bugzil.la/998941)).
 - The `insertFromPasteAsQuotation` {{domxref("InputEvent.inputType")}} value is now supported ([Firefox bug 1532527](https://bugzil.la/1532527)).
 

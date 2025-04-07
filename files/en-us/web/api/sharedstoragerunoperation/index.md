@@ -78,7 +78,7 @@ async function measureUniqueReach() {
 measureUniqueReach();
 ```
 
-For more details about this example, see [Unique reach measurement](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/unique-reach). See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
+For more details about this example, see [Unique reach measurement](https://privacysandbox.google.com/private-advertising/private-aggregation/unique-reach). See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
 
 ## Specifications
 

@@ -11,7 +11,7 @@ browser-compat: api.NavigationDestination.getState
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`getState()`** method of the
-{{domxref("NavigationDestination")}} interface returns a clone of the developer-supplied state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g. {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
+{{domxref("NavigationDestination")}} interface returns a clone of the developer-supplied state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g., {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.
 
 ## Syntax
 

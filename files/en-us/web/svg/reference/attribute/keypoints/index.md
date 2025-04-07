@@ -81,7 +81,7 @@ svg {
 
     If there's a semicolon at the end of the value, optionally followed by white space, both the semicolon and the trailing white space are ignored.
 
-    If there are any errors in the value specification (i.e. bad values, too many or too few values), then that's an error.
+    If there are any errors in the value specification (i.e., bad values, too many or too few values), then that's an error.
 
 ## Specifications
 

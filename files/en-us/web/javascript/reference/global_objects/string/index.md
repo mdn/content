@@ -189,8 +189,8 @@ However, the entire Unicode character set is much, much bigger than 65536. The e
 
 A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
 
-- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e. is a leading surrogate), but it is the last code unit in the string, or the next code unit is not a trailing surrogate.
-- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e. is a trailing surrogate), but it is the first code unit in the string, or the previous code unit is not a leading surrogate.
+- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e., is a leading surrogate), but it is the last code unit in the string, or the next code unit is not a trailing surrogate.
+- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e., is a trailing surrogate), but it is the first code unit in the string, or the previous code unit is not a leading surrogate.
 
 Lone surrogates do not represent any Unicode character. Although most JavaScript built-in methods handle them correctly because they all work based on UTF-16 code units, lone surrogates are often not valid values when interacting with other systems — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates, because URI encoding uses UTF-8 encoding, which does not have any encoding for lone surrogates. Strings not containing any lone surrogates are called _well-formed_ strings, and are safe to be used with functions that do not deal with UTF-16 (such as `encodeURI()` or {{domxref("TextEncoder")}}). You can check if a string is well-formed with the {{jsxref("String/isWellFormed", "isWellFormed()")}} method, or sanitize lone surrogates with the {{jsxref("String/toWellFormed", "toWellFormed()")}} method.
 

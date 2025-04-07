@@ -108,7 +108,7 @@ The `PerformanceObserver` option is preferred because:
 
 ## Managing buffer sizes
 
-There is a buffer limit for performance entries for each global object. It ensures that the browser doesn't consume indefinite memory when holding performance data. Especially when your website or application fetches a lot of resources (e.g. when using polling), you might need to look into the limits for the buffers:
+There is a buffer limit for performance entries for each global object. It ensures that the browser doesn't consume indefinite memory when holding performance data. Especially when your website or application fetches a lot of resources (e.g., when using polling), you might need to look into the limits for the buffers:
 
 | {{domxref("PerformanceEntry.entryType", "entryType")}} identifier | Interface                                  | Maximum number of buffer entries |
 | ----------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |

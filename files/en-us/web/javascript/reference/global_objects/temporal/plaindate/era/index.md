@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.era
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`era`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g. ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"gregory"` or `"gregory-inverse"`.
+The **`era`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g., ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way that `year` does. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent. For Gregorian, it is either `"gregory"` or `"gregory-inverse"`.
 
 The set accessor of `era` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value. When setting eras, each code may have some aliases; for example, `"ce"` and `"ad"` are equivalent to `"gregory"`, and `"bce"` and `"bc"` are equivalent to `"gregory-inverse"`.
 

@@ -2,10 +2,12 @@
 title: Use-As-Dictionary
 slug: Web/HTTP/Reference/Headers/Use-As-Dictionary
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Use-As-Dictionary
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 
@@ -58,7 +60,7 @@ This uses a wildcard to match multiple versions of a file.
 Use-As-Dictionary: match="/product/*", match-dest=("document")
 ```
 
-This uses`match-dest` to ensure the dictionary is only used for `document` requests so `<script src="/product/js/app.js">` resource requests for example would not match.
+This uses `match-dest` to ensure the dictionary is only used for `document` requests so `<script src="/product/js/app.js">` resource requests for example would not match.
 
 ```http
 Use-As-Dictionary: match="/product/*", match-dest=("document" "frame")

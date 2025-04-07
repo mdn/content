@@ -35,7 +35,7 @@ It clones by recursing through the input object while maintaining a map of previ
 - {{jsxref("Error")}} types (but see [Error types](#error_types) below).
 - {{jsxref("Map")}}
 - {{jsxref("Number")}}
-- {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
+- {{jsxref("Object")}} objects: but only plain objects (e.g., from object literals).
 - [Primitive types](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values), except `symbol`.
 - {{jsxref("RegExp")}}: but note that `lastIndex` is not preserved.
 - {{jsxref("Set")}}

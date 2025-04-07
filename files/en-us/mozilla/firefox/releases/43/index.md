@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- Access to Web Storage (i.e. `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
+- Access to Web Storage (i.e., `localStorage` and `sessionStorage`) from third-party IFrames is now denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) ([Firefox bug 536509](https://bugzil.la/536509)).
 - This whitelist has even been removed in Nightly and Aurora/Dev Edition of the browser ([Firefox bug 1201023](https://bugzil.la/1201023)). It is currently scheduled that this removal will also happen for Beta and Release versions for the next version (Firefox 44).
 - Subresource integrity has been implemented for {{htmlelement("script")}} and {{htmlelement("link")}} that links to stylesheets ([Firefox bug 992096](https://bugzil.la/992096)).
 

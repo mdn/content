@@ -15,7 +15,7 @@ Note that the `submit` event fires on the `<form>` element itself, and not on an
 The `submit` event fires when:
 
 - the user clicks a {{Glossary("submit button")}},
-- the user presses <kbd>Enter</kbd> while editing a field (e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
+- the user presses <kbd>Enter</kbd> while editing a field (e.g., {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
 - a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method
 
 However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.

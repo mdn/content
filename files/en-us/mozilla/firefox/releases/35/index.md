@@ -76,7 +76,7 @@ Highlights:
 
 ### MathML
 
-- The `dtls` OpenType feature (via the CSS {{cssxref("font-feature-settings")}} on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g. dotless i with mathematical hat).
+- The `dtls` OpenType feature (via the CSS {{cssxref("font-feature-settings")}} on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g., dotless i with mathematical hat).
 
 ### SVG
 

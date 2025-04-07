@@ -42,7 +42,7 @@ Even with CSS available, browser vendors were reluctant at first to make form el
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+3. Single-line text {{HTMLElement("input")}}s (e.g., type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
 4. Multi-line {{HTMLElement("textarea")}}
 5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
 6. {{HTMLElement("label")}}

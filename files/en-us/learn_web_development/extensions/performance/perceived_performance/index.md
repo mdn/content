@@ -49,7 +49,7 @@ There is no single metric or test that can be run on a site to evaluate how a us
 - [First Paint](/en-US/docs/Glossary/First_paint)
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
 - [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)
-  - : The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
+  - : The time until first significant rendering (e.g., of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
 - [First Meaningful Paint](/en-US/docs/Glossary/First_meaningful_paint) (FMP)
   - : The time at which useful content is rendered to the screen.
 - [Largest Contentful Paint](https://wicg.github.io/largest-contentful-paint/) (LCP)
@@ -57,7 +57,7 @@ There is no single metric or test that can be run on a site to evaluate how a us
 - [Speed index](/en-US/docs/Glossary/Speed_index)
   - : Measures the average time for pixels on the visible screen to be painted.
 - [Time to interactive](/en-US/docs/Glossary/Time_to_interactive)
-  - : Time until the UI is available for user interaction (i.e. the last [long task](/en-US/docs/Glossary/Long_task) of the load process finishes).
+  - : Time until the UI is available for user interaction (i.e., the last [long task](/en-US/docs/Glossary/Long_task) of the load process finishes).
 
 ## Improving performance
 

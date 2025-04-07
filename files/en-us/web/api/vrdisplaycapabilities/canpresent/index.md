@@ -11,7 +11,7 @@ browser-compat: api.VRDisplayCapabilities.canPresent
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`canPresent`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
+The **`canPresent`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a boolean value stating whether the VR display is capable of presenting content (e.g., through an HMD).
 
 > [!NOTE]
 > This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).

@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_image
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.
+{{HTMLElement("input")}} elements of type **`image`** are used to create graphical submit buttons, i.e., submit buttons that take the form of an image rather than text.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
@@ -159,7 +159,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 - The [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
 - The [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
-- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original {{glossary("aspect ratio")}}.
+- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g., {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original {{glossary("aspect ratio")}}.
 
 ### Overriding default form behaviors
 

@@ -29,7 +29,7 @@ We also provide extensive [learning resources](/en-US/docs/Learn_web_development
 - [Communication channels](/en-US/docs/MDN/Community/Communication_channels)
   - : This page lists communication channels used by the MDN team and our community, with hints on which might be best for you.
 - [Community Participation Guidelines (CPG)](/en-US/docs/MDN/Community/Community_Participation_Guidelines)
-  - : This page lists all the Community Participation Guidelines we have that helps us foster a welcoming, inclusive, and safe community. It also covers [How to Report](/en-US/docs/MDN/Community/Community_Participation_Guidelines#how_to_report) a CPG Violation.
+  - : This page lists all the Community Participation Guidelines we have that helps us foster a welcoming, inclusive, and safe community. It also covers [How to Report](/en-US/docs/MDN/Community/Community_Participation_Guidelines#reporting_process) a CPG Violation.
 
 ## Code of conduct
 

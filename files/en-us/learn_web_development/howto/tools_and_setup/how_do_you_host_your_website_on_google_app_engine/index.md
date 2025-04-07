@@ -49,7 +49,7 @@ Now that we've got our project made and sample app files collected together, let
    cd sample-app
    ```
 
-5. You are now ready to deploy your application, i.e. upload your app to App Engine:
+5. You are now ready to deploy your application, i.e., upload your app to App Engine:
 
    ```bash
    gcloud app deploy

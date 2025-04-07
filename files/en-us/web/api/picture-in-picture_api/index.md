@@ -45,7 +45,7 @@ The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxR
 ### Instance properties on the Document interface
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
+  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g., the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
 
 ### Instance properties on the Document or ShadowRoot interfaces
 

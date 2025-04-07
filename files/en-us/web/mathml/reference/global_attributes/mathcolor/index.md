@@ -80,7 +80,7 @@ body {
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element,
-    including e.g. fraction bars or radical symbols.
+    including e.g., fraction bars or radical symbols.
 
 ## Specifications
 

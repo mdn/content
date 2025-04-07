@@ -77,9 +77,9 @@ This property's value can take one of two forms:
 
 ## Description
 
-This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
+This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g., {{cssxref("font-weight")}}, {{cssxref("font-style")}}).
 
-Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g. `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the {{cssxref("@font-face")}} declaration includes a {{cssxref("@font-face/font-weight", "font-weight")}} range.
+Font characteristics set using `font-variation-settings` will always override those set using the corresponding basic font properties, e.g., `font-weight`, no matter where they appear in the cascade. In some browsers, this is currently only true when the {{cssxref("@font-face")}} declaration includes a {{cssxref("@font-face/font-weight", "font-weight")}} range.
 
 ### Registered and custom axes
 

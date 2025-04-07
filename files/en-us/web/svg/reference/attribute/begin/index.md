@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
 
 ## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e., become active.
 
 <table class="properties">
   <tbody>

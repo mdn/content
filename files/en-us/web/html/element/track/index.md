@@ -61,7 +61,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - Closed captions provide a transcription and possibly a translation of audio.
       - It may include important non-verbal information such as music cues or sound effects.
-        It may indicate the cue's source (e.g. music, text, character).
+        It may indicate the cue's source (e.g., music, text, character).
       - Suitable for users who are deaf or when the sound is muted.
 
     - `chapters`
