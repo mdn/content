@@ -2,7 +2,7 @@
 title: <overflow-position>
 slug: Web/CSS/overflow-position
 page-type: css-type
-browser-compat: css.types.overflow-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-overflow-position
 ---
 
 {{CSSRef}}
@@ -32,10 +32,6 @@ The following keyword values are represented by the `<overflow-position>` gramma
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

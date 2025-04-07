@@ -40,7 +40,7 @@ watcher.addEventListener("cancel", (e) => {
       e.preventDefault();
     }
   }
-};
+});
 
 // Trigger a close request manually
 watcher.requestClose();
