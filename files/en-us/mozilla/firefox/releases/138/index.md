@@ -38,6 +38,11 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### APIs
 
+- The {{domxref("RTCCertificate.getFingerprints()","getFingerprints()")}} method of the {{domxref("RTCCertificate")}} interface is now supported.
+  The fingerprints are a {{glossary("hash function","hash")}} of the certificate created using the various algorithms supported by the browser.
+  These can be shared with the remote peer out of band, during the signalling phase, and used by the remote peer to confirm the identity of this peer during DTLS handshake.
+  ([Firefox bug 1525241](https://bugzil.la/1525241)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
