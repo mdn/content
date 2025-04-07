@@ -10,13 +10,17 @@ browser-compat: api.Element.moveBefore
 
 The **`moveBefore()`** method of the {{domxref("Element")}} interface moves a given {{domxref("Node")}} inside the invoking node as a direct child, before a given reference node.
 
-`moveBefore()` provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then insert the node. This means that the state of the node is preserved after the move, which includes:
+`moveBefore()` provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then reinsert the node. This means that the state of the node (which would be reset if moving it with `insertBefore()` and similar mechanisms) is preserved after the move. This includes:
 
 - [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
-- {{htmlelement("video")}} play state.
 - {{htmlelement("iframe")}} loading state.
 - Interactive node {{cssxref(":focus")}} and {{cssxref(":active")}} states.
+- Text selection.
+- [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.
 - Open/close state of [popovers](/en-US/docs/Web/API/Popover_API) and {{htmlelement("dialog")}} elements.
+
+> [!NOTE]
+> The play state of {{htmlelement("video")}} and {{htmlelement("audio")}} elements is not included in the above list, as these elements retain their state when removed and reinserted, regardless of the mechanism used.
 
 If the given `Node` has not already been added to the DOM, `moveBefore()` inserts it into the specified position. If the node being moved is a {{domxref("DocumentFragment")}}, the entire contents of the `DocumentFragment` are moved into the child list of the specified parent node.
 
@@ -127,19 +131,26 @@ Try clicking the `<button>` a few times and note how it toggles between the two 
 
 ### Demonstrating state preservation
 
-In this demo we provide multiple mechanisms to move a `<video>` element between two different containers, demonstrating how `moveBefore()` preserves the play state of the video, but the other mechanisms do not.
+In this demo we provide multiple mechanisms to move a `<div>` element containing a YouTube embed between two different containers, demonstrating how `moveBefore()` preserves the play state of the embed, but the other mechanisms do not.
 
 #### HTML
 
-The HTML features an {{htmlelement("article")}} element containing two {{htmlelement("section")}} elements. The first `<section>` element contains a {{htmlelement("video")}} element. We also have a {{htmlelement("div")}} element containing three {{htmlelement("button")}} elements, to which we will add functionality to move the video between sections via JavaScript later on.
+The HTML features an {{htmlelement("article")}} element containing two {{htmlelement("section")}} elements. The first `<section>` element contains a {{htmlelement("div")}} element containing the YouTube embed code. We also have a {{htmlelement("div")}} element containing three {{htmlelement("button")}} elements, to which we will add functionality to move the embed `<div>` between sections via JavaScript later on.
 
 ```html live-sample___movebefore-state
 <article id="wrapper">
   <section id="section1">
-    <video
-      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-      id="mover"
-      controls></video>
+    <div id="mover">
+      <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/XvoENpR9cCQ?si=o2i6MvxugD-O5yyv"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
   </section>
   <section id="section2"></section>
 </article>
@@ -167,7 +178,6 @@ We use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) for the layout to 
 
 section {
   flex: 1;
-  max-width: 50%;
   padding: 10px;
 }
 
@@ -184,14 +194,15 @@ section {
   background-color: orange;
 }
 
-video {
+#mover {
   max-width: 100%;
+  background-color: black;
 }
 ```
 
 #### JavaScript
 
-In our script, we attach `click` event listeners to each `<button>` via {{domxref("EventTarget.addEventListener", "addEventListener()")}}. When the buttons are clicked, we check which `<section>` element is the {{domxref("Node.parentElement", "parentElement")}} of our `<video>` element, and then use the relevant function (`moveBefore()`, {{domxref("Node.insertBefore", "insertBefore()")}}, or {{domxref("Element.prepend", "prepend()")}}) to move it inside the _other_ `<section>` element.
+In our script, we attach `click` event listeners to each `<button>` via {{domxref("EventTarget.addEventListener", "addEventListener()")}}. When the buttons are clicked, we check which `<section>` element is the {{domxref("Node.parentElement", "parentElement")}} of our embed `<div>`, and then use the relevant function (`moveBefore()`, {{domxref("Node.insertBefore", "insertBefore()")}}, or {{domxref("Element.prepend", "prepend()")}}) to move it inside the _other_ `<section>` element.
 
 ```js live-sample___movebefore-state
 const section1 = document.getElementById("section1");
@@ -232,9 +243,7 @@ The rendered example looks like this:
 
 {{EmbedLiveSample("movebefore-state", "100%", "260px")}}
 
-Try playing the video and then clicking each `<button>` a couple of times to toggle the `<video>` element from left to right. Note how, in the case of `insertBefore()` and `prepend()`, the `<video>` state is reset after each move so it needs to be restarted. However, in the case of `moveBefore()`, the state is preserved after each move.
-
-EDITORIAL: AT THE MOMENT THIS DOESN'T BEHAVE AS EXPECTED — ALL OF THE FUNCTIONS SEEM TO MOVE THE VIDEO WITHOUT RESETTING ITS STATE
+Try playing the YouTube embed and then clicking each `<button>` a couple of times to toggle the `<div>` element screen position from left to right. Note how, in the case of `insertBefore()` and `prepend()`, the embed state is reset after each move so it needs to be restarted. However, in the case of `moveBefore()`, the state is preserved after each move.
 
 ## Specifications
 

@@ -10,13 +10,17 @@ browser-compat: api.DocumentFragment.moveBefore
 
 The **`moveBefore()`** method of the {{domxref("DocumentFragment")}} interface moves a given {{domxref("Node")}} inside the invoking `DocumentFragment` as a direct child, before a given reference node.
 
-`moveBefore()` provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then insert the node. This means that the state of the node is preserved after the move, which includes:
+`moveBefore()` provides similar functionality to the {{domxref("Node.insertBefore()")}} method, except that it doesn't remove and then reinsert the node. This means that the state of the node (which would be reset if moving it with `insertBefore()` and similar mechanisms) is preserved after the move. This includes:
 
 - [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
-- {{htmlelement("video")}} play state.
 - {{htmlelement("iframe")}} loading state.
 - Interactive node {{cssxref(":focus")}} and {{cssxref(":active")}} states.
+- Text selection.
+- [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.
 - Open/close state of [popovers](/en-US/docs/Web/API/Popover_API) and {{htmlelement("dialog")}} elements.
+
+> [!NOTE]
+> The play state of {{htmlelement("video")}} and {{htmlelement("audio")}} elements is not included in the above list, as these elements retain their state when removed and reinserted, regardless of the mechanism used.
 
 If the given `DocumentFragment` has not already been added to the DOM, `moveBefore()` inserts it into the specified position. If the node being moved is a {{domxref("DocumentFragment")}}, the entire contents of the `DocumentFragment` are moved into the child list of the specified parent `DocumentFragment`.
 
