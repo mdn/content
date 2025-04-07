@@ -23,7 +23,7 @@ fetchLater(resource, options)
 
 ### Parameters
 
-The `fetchLater()` method takes all the same parameters as {{domxref("fetch()")}}, but with one additional `activateAfter` option.
+The `fetchLater()` method takes all the same parameters as {{domxref("Fetch()")}}, but with one additional `activateAfter` option.
 
 - `resource`
 
@@ -116,6 +116,5 @@ function createBeacon(data) {
 
 - [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 - [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- {{domxref("Fetch API")}}
 - {{domxref("FetchLaterResult")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

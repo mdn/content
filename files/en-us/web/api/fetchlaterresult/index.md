@@ -29,4 +29,4 @@ On successful sending, the whole response is ignored — including body and head
 ## See also
 
 - {{domxref("fetchLater() API")}}
-- [Fetch](/en-US/docs/Web/Fetch)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

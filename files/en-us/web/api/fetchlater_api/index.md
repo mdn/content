@@ -30,7 +30,7 @@ As deferred fetches are batched and sent once the tab is closed the user has no 
 
 Since this cap makes deferred fetch bandwidth a scarce resource which needs to be shared between multiple reporting origins (e.g., several RUM libraries) and also across subframes of multiple origins, the platform provides a reasonable default division of this quota, but also provides {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} permission policies to allow dividing it in a different way when desired.
 
-See [fetchLater() quotas](/en-us/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
+See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
 
 ## fetchLater interfaces
 
