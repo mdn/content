@@ -174,7 +174,7 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 
 ## Specifications
 
-{{Specifications}}
+This pseudo-element is not currently defined in a specification.
 
 ## Browser compatibility
 

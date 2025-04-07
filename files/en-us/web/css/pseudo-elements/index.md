@@ -85,7 +85,7 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::scroll-marker")}}
   - : Creates a pseudo-element that is a scroll marker — a scroll target button for its originating element nested in a scroll-marker group.
 - {{CSSxRef("::scroll-marker-group")}}
-  - : Generates a container before or after the element's contents, depending on the value of the {{cssxref("scroll-marker-group")}} property, to contain any {{cssxref("::scroll-marker")}} pseudo-elements generated on the element or its descendants.
+  - : Generates a container before or after a scroll container to contain the {{cssxref("::scroll-marker")}} pseudo-elements generated on the element or its descendants.
 
 ## Element-backed pseudo-elements
 

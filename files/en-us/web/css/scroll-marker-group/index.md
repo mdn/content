@@ -119,7 +119,7 @@ li {
 }
 ```
 
-We then use the {{cssxref("::scroll-marker")}} pseudo-element to create a square marker for each list item with a red border, and applying styles on the {{cssxref("::scroll-marker-group")}} pseudo-element to lay out the scroll markers in a row with a `0.2em` gap between each one.
+We then use the {{cssxref("::scroll-marker")}} pseudo-element to create a square marker for each list item with a red border, and apply styles to the {{cssxref("::scroll-marker-group")}} pseudo-element to lay out the scroll markers in a row with a `0.2em` gap between each one.
 
 ```css
 li::scroll-marker {
