@@ -80,7 +80,7 @@ Below are all values that are commonly supported by browsers for the `calendar` 
 | `persian`          | Persian calendar                                                                                                                                                                                                                                                                                     |
 | `roc`              | Republic of China calendar                                                                                                                                                                                                                                                                           |
 
-The types below are specified in CLDR but do not have back ends distinct from the above calendars in browsers.
+The types below are specified in CLDR but do not have implementations distinct from the above calendars in browsers.
 
 | Value                            | Description                           | Notes                                                                                                                                                                                                                                                         |
 | -------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
