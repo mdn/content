@@ -45,16 +45,14 @@ const radialGradients = document.querySelectorAll("radialGradient");
 const frGradient1 = radialGradients[0].fr;
 const frGradient2 = radialGradients[1].fr;
 
-console.dir(frGradient1.baseVal.unitType); // output: 1
-console.dir(frGradient1.baseVal.value); // output: 0.5
-console.dir(frGradient1.baseVal.valueInSpecifiedUnits); // output: 0.5
+console.log(frGradient1.baseVal.unitType); // output: 1
+console.log(frGradient1.baseVal.value); // output: 0.5
+console.log(frGradient1.baseVal.valueInSpecifiedUnits); // output: 0.5
 
-console.dir(frGradient2.baseVal.unitType); // output: 2
-console.dir(frGradient2.baseVal.value); // output: 79.05693817138672
-console.dir(frGradient2.baseVal.valueInSpecifiedUnits); // output: 50
+console.log(frGradient2.baseVal.unitType); // output: 2
+console.log(frGradient2.baseVal.value); // output: 79.05693817138672
+console.log(frGradient2.baseVal.valueInSpecifiedUnits); // output: 50
 ```
-
-{{EmbedLiveSample('example','100%','220')}}
 
 ## Specifications
 
