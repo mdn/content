@@ -76,7 +76,7 @@ let clientFingerprintDict = Object.fromEntries(
   fingerprintsFromClient.map((x) => [x.algorithm, x.value]),
 );
 let serverFingerprintDict = Object.fromEntries(
-  fingerprintsFromServer.map((x) => [x.algorithm, x.value])
+  fingerprintsFromServer.map((x) => [x.algorithm, x.value]),
 );
 
 // Function to compare two objects and return true if there are common properties
