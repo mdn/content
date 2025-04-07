@@ -60,7 +60,7 @@ The purpose of these partner links are as follows:
 
 - Provide access to supporting content that builds on what is taught in our pages.
 - Provide access to multimedia learning experiences (videos, slideshows, other interactive content) that MDN content teams don't have the resources to produce. We are all about the text on MDN, but people often want different learning approaches.
-- Earn revenue through affiliate links to paid content that we can invest in making MDN even better.
+- Earn revenue via affiliate links to paid content options, which we can invest to make MDN even better.
 
 However, we:
 
