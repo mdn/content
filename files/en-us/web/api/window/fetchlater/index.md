@@ -91,7 +91,7 @@ function updateBeacon(data) {
 }
 
 function createBeacon(data) {
-  if (beaconResult && beaconResult.activated) {
+  if (beaconResult && !beaconResult.activated) {
     // Avoid creating duplicated beacon if the previous one is still pending.
     return;
   }
