@@ -45,9 +45,11 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions) can we raised for `fetchLater()`, along with the following additional exceptions:
 
 - `QuotaExceededError` {{domxref("DOMException")}}
+
   - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details.
 
 - `RangeError` {{domxref("DOMException")}}
+
   - : Thrown when a negative `activateAfter` is provided.
 
 - `TypeError` {{domxref("DOMException")}}
@@ -89,9 +91,9 @@ fetchLater({
 
 ```js
 const result = fetchLater("https://report.example.com", {
-    method: "POST",
-    body: JSON.stringify(myReport),
-    activateAfter: 5000
+  method: "POST",
+  body: JSON.stringify(myReport),
+  activateAfter: 5000,
 });
 
 function check_if_fetched() {
@@ -139,7 +141,7 @@ Any of the following calls to fetchLater() would throw:
 fetchLater("http://untrusted.example.com");
 
 // The length of the deferred request has to be known when.
-fetchLater("https://origin.example.com", {body: someDynamicStream});
+fetchLater("https://origin.example.com", { body: someDynamicStream });
 
 // Deferred fetching only works on active windows.
 const detachedWindow = iframe.contentWindow;
