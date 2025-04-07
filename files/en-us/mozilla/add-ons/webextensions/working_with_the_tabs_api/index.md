@@ -224,7 +224,7 @@ document.addEventListener("click", (e) => {
       }
     });
   }
-}
+});
 ```
 
 ## Creating, duplicating, moving, updating, reloading, and removing tabs
