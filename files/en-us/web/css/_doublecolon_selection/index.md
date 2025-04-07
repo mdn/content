@@ -56,13 +56,7 @@ Color contrast ratio is found by comparing the luminosity of the selected text a
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-## Inheritance Behavior
-
-The CSS inheritance model for the `::selection` and `::target-text` pseudo-classes is designed to behave consistently with other highlight pseudo-classes, such as `::highlight`, `::spelling-error`, and `::grammar-error`.
-
-Styles applied to the `::selection` pseudo-element inherit from their parent elements in a manner consistent with these other highlight pseudo-classes.
-
-For more detailed information, refer to the [Chrome Developers Blog](https://developer.chrome.com/blog/selection-styling).
+The `::selection` pseudo-element follows a special inheritance model common to all highlight pseudo-elements. For more details on how this inheritance works, see the [Highlight pseudo-elements inheritance](/en-US/docs/Web/CSS/CSS_pseudo-elements#highlight_pseudo-elements_inheritance) section.
 
 ## Examples
 

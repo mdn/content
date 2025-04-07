@@ -13,6 +13,14 @@ Pseudo-elements are prefixed with a double colon (`::`). You add pseudo-elements
 
 Pseudo-elements enable targeting entities not included in HTML and sections of content that cannot be targeted otherwise without adding extra markup. Consider the placeholder of an {{HTMLelement("input")}} element. This is an abstract element and not a distinct node in the document tree. You can select this placeholder by using the {{CSSXref("::placeholder")}} pseudo-element. As another example, the {{CSSXref("::selection")}} pseudo-element matches the content currently highlighted by a user, allowing you to style what is matched as the user interacts with the content and changes the selection. Similarly, the {{CSSXref("::first-line")}} pseudo-element targets the first line of an element, updating automatically if the character count of the first line changes, without having to query the element's line length.
 
+## Highlight pseudo-elements inheritance
+
+Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs somewhat from regular element inheritance.
+
+Styles applied to highlight pseudo-elements inherit from their parent elements. This means that if you apply a style to a parent element and then to the highlight pseudo-element of its child, the latter will inherit from both its parent element and the highlight pseudo-element styles of its parent.
+
+For detailed information and examples of how this inheritance model works in practice, refer to the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) documentation.
+
 ## Reference
 
 ### Selectors
