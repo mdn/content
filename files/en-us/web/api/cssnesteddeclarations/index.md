@@ -58,7 +58,7 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 
 ### CSSOM (CSS Object Model)
 
-```txt
+```plain
 ↳ CSSStyleRule
   .style
     - background-color: silver

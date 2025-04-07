@@ -35,7 +35,7 @@ There are a few differences, however:
 
 - **Tutorial style**: Most MDN content is a mixture of reference material and guides; Learn, on the other hand, is intended to provide hands-on tutorials. We don't have a strict template for each page, but they should be written in a way that leads readers by the hand, through a combination of step-by-step sections and "Try it out" sections. These should instruct readers to jump in, try things out, and start writing code. See the "Try it out" section at the bottom of our [Search engine](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#search_engine) information, for example. These are created using the following markdown:
 
-  ```markdown
+  ```md
   > [!CALLOUT]
   >
   > **Try it out**
