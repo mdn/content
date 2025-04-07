@@ -144,7 +144,7 @@ The language you use can also affect accessibility. In general, you should use c
 - Expand abbreviations — instead of writing Jan, write January.
 - Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
 
-### Content structure
+### Structure page content logically
 
 You should use appropriate [sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) to structure your main content, for example navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), and repeating content units ({{htmlelement("article")}}). These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating.
 
