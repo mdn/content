@@ -48,6 +48,7 @@ The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions)
   - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details.
 
 - `RangeError` {{domxref("DOMException")}}
+
   - : Thrown when a negative `activateAfter` is provided.
 
 - `TypeError` {{domxref("DOMException")}}
