@@ -44,7 +44,7 @@ The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/
 
 ## Description
 
-`import` declarations can only be present in modules, and only at the top-level (i.e. not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
+`import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
 All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
@@ -166,7 +166,7 @@ import * as myModule from "/modules/my-module.js";
 
 ### Module specifier resolution
 
-The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g. browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
+The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g., browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
 
 There are three types of specifiers widely recognized, as implemented by the HTML spec, Node, and many others:
 

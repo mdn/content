@@ -10,7 +10,7 @@ In this page we'll describe how to interpret a profile captured using the Self-P
 
 The format of the object returned by {{domxref("Profiler.stop()")}} is designed to be space-efficient: for example, the format aims to avoid duplicating URL values for functions which are defined in the same script. This means that some interpretation is needed to understand how a sample in the profile object maps to a location in the program, and this guide page aims to explain how to perform this interpretation.
 
-In the first section, we'll describe the [abstract structure of a profile](#anatomy_of_a_profile). In the next section we'll describe [the format of the profile object](#profile_format) returned by {{domxref("Profiler.stop()")}}. Finally we'll [walk through an example](#an_example) to show what a profile for a given program looks like and how it can be interpreted.
+In the first section, we'll describe the [abstract structure of a profile](#anatomy_of_a_profile). In the next section we'll describe [the format of the profile object](#profile_format) returned by {{domxref("Profiler.stop()")}}. Finally we'll [walk through an example](#example) to show what a profile for a given program looks like and how it can be interpreted.
 
 ## Anatomy of a profile
 

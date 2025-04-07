@@ -35,9 +35,9 @@ The process for identifying the containing block depends entirely on the value o
 4. If the `position` property is **`absolute`** or **`fixed`**, the containing block may also be formed by the edge of the _padding box_ of the nearest ancestor element that has any of the following:
 
    - A {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}, {{cssxref("transform")}}, or {{cssxref("perspective")}} value other than `none`.
-   - A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g. `contain: paint;`).
+   - A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g., `contain: paint;`).
    - A {{cssxref("container-type")}} value other than `normal`.
-   - A {{cssxref("will-change")}} value containing a property for which a non-initial value would form a containing block (e.g. `filter` or `transform`).
+   - A {{cssxref("will-change")}} value containing a property for which a non-initial value would form a containing block (e.g., `filter` or `transform`).
    - A {{cssxref("content-visibility")}} value of `auto`.
 
 > [!NOTE]

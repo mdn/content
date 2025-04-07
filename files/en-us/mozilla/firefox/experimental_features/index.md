@@ -786,7 +786,48 @@ The parts that have been implemented include:
 
 ## SVG
 
-None.
+### `<discard>` element for SVG animations
+
+The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
+The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
+An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
+([Firefox bug 1069931](https://bugzil.la/1069931)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>svg.discard.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## JavaScript
 
@@ -944,7 +985,7 @@ This subset of the API has been implemented:
 - {{domxref("TrustedTypePolicyFactory")}}:
   - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
 - The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
-- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("HTMLElement.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
+- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("Node.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
 - The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
 - The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
 - The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).

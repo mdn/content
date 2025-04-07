@@ -465,7 +465,7 @@ Let's look at a real example to demonstrate scoping.
    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
 > [!NOTE]
-> The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> The same scoping rules do not apply to loop (e.g., `for() { }`) and conditional blocks (e.g., `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > [!NOTE]
 > The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.

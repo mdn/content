@@ -158,7 +158,7 @@ Earlier on, we mentioned giving users a way to see what data of theirs you have 
 Allowing the user to choose when significant portions of data get deleted is very empowering, and builds trust, but there may be some bits of data that you will want to handle deletion of yourself. For example, some data might only be used for a few hours or minutes and then deleted, like data that is used during the administration of a user's session while they are logged in.
 
 > [!NOTE]
-> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
+> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g., [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
 ## Cut down on tracking
 
@@ -220,5 +220,5 @@ The below tips offer some guidance on protecting your user's data:
 
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org

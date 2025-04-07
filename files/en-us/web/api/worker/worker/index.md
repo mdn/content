@@ -49,7 +49,7 @@ new Worker(url, options)
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
+  - : Thrown if the document is not allowed to start workers, e.g., if the URL has an invalid syntax or if the same-origin policy is violated.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript`
     (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types#legacy_javascript_mime_types) may be accepted).

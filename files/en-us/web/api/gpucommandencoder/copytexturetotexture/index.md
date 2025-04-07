@@ -29,21 +29,7 @@ copyTextureToTexture(source, destination, copySize)
 
   - : An object or array specifying the width, height, and depth/array layer count of the copied data. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
 
-    What follows is a sample `copySize` array:
-
-    ```js
-    [16, 16, 2];
-    ```
-
-    The object equivalent would look like this:
-
-    ```js
-    {
-      width: 16,
-      height: 16,
-      depthOrArrayLayers: 2
-    }
-    ```
+    For example, you can pass an array `[16, 16, 2]`, or its equivalent object `{ width: 16, height: 16, depthOrArrayLayers: 2 }`.
 
 ### Copy texture object structure
 
@@ -68,21 +54,7 @@ A copy texture object has the following structure:
 
   - : An object or array specifying the origin of the copy/destination — the minimum corner of the texture region to copy the data from/to. Together with `size`, this defines the full extent of the region to copy from/to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
-    What follows is a sample array:
-
-    ```js
-    [0, 0, 0];
-    ```
-
-    The object equivalent would look like this:
-
-    ```js
-    {
-      x: 0,
-      y: 0,
-      z: 0
-    }
-    ```
+    For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.
 
 - `texture`
   - : A {{domxref("GPUTexture")}} object representing the texture to copy the data from/to.

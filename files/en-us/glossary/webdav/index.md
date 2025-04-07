@@ -12,7 +12,7 @@ WebDAV is rarely used alone, but two extensions are very common: {{Glossary("Cal
 
 WebDAV allows clients to
 
-- add, delete, and retrieve webpage metadata (e.g. author or creation date)
+- add, delete, and retrieve webpage metadata (e.g., author or creation date)
 - link pages of any media type to related pages
 - create sets of documents and retrieve hierarchical list
 - copy and move webpages

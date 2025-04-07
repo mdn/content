@@ -108,15 +108,15 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 #### SVG only (experimental for HTML)
 
 - `visiblePainted`
-  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the `visibility` property is set to `visible` and e.g. when a mouse cursor is over the interior (i.e., 'fill') of the element and the `fill` property is set to a value other than `none`, or when a mouse cursor is over the perimeter (i.e., 'stroke') of the element and the `stroke` property is set to a value other than `none`.
+  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the `visibility` property is set to `visible` and e.g., when a mouse cursor is over the interior (i.e., 'fill') of the element and the `fill` property is set to a value other than `none`, or when a mouse cursor is over the perimeter (i.e., 'stroke') of the element and the `stroke` property is set to a value other than `none`.
 - `visibleFill`
-  - : SVG only. The element can only be the target of a pointer event when the `visibility` property is set to `visible` and when e.g. a mouse cursor is over the interior (i.e., fill) of the element. The value of the `fill` property does not affect event processing.
+  - : SVG only. The element can only be the target of a pointer event when the `visibility` property is set to `visible` and when e.g., a mouse cursor is over the interior (i.e., fill) of the element. The value of the `fill` property does not affect event processing.
 - `visibleStroke`
-  - : SVG only. The element can only be the target of a pointer event when the `visibility` property is set to `visible` and e.g. when the mouse cursor is over the perimeter (i.e., stroke) of the element. The value of the `stroke` property does not affect event processing.
+  - : SVG only. The element can only be the target of a pointer event when the `visibility` property is set to `visible` and e.g., when the mouse cursor is over the perimeter (i.e., stroke) of the element. The value of the `stroke` property does not affect event processing.
 - `visible`
-  - : SVG only (experimental for HTML). The element can be the target of a pointer event when the `visibility` property is set to `visible` and e.g. the mouse cursor is over either the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill` and `stroke` do not affect event processing.
+  - : SVG only (experimental for HTML). The element can be the target of a pointer event when the `visibility` property is set to `visible` and e.g., the mouse cursor is over either the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill` and `stroke` do not affect event processing.
 - `painted`
-  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when e.g. the mouse cursor is over the interior (i.e., 'fill') of the element and the `fill` property is set to a value other than `none`, or when the mouse cursor is over the perimeter (i.e., 'stroke') of the element and the `stroke` property is set to a value other than `none`. The value of the `visibility` property does not affect event processing.
+  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when e.g., the mouse cursor is over the interior (i.e., 'fill') of the element and the `fill` property is set to a value other than `none`, or when the mouse cursor is over the perimeter (i.e., 'stroke') of the element and the `stroke` property is set to a value other than `none`. The value of the `visibility` property does not affect event processing.
 - `fill`
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) of the element. The values of the `fill` and `visibility` properties do not affect event processing.
 - `stroke`

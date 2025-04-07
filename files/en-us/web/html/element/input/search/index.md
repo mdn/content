@@ -34,7 +34,7 @@ label {
 
 ## Value
 
-The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string representing the value contained in the search field. You can retrieve this using the [`HTMLInputElement.value`](/en-US/docs/Web/API/HTMLInputElement#value) property in JavaScript.
+The [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string representing the value contained in the search field. You can retrieve this using the [`HTMLInputElement.value`](/en-US/docs/Web/API/HTMLInputElement/value) property in JavaScript.
 
 ```js
 searchTerms = mySearch.value;

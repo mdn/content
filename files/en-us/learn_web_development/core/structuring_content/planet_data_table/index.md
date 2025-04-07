@@ -39,7 +39,7 @@ The following steps describe what you need to do to complete the table example. 
 ## Hints and tips
 
 - The first cell of the header row needs to be blank, and span two columns.
-- The group row headings (e.g. _Jovian planets_) that sit to the left of the planet name row headings (e.g. _Saturn_) are a little tricky to sort out — you need to make sure each one spans the correct number of rows and columns.
+- The group row headings (e.g., _Jovian planets_) that sit to the left of the planet name row headings (e.g., _Saturn_) are a little tricky to sort out — you need to make sure each one spans the correct number of rows and columns.
 - One way of associating headers with their rows/columns is a lot easier than the other way.
 
 ## Example

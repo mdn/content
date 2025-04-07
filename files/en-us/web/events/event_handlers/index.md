@@ -12,11 +12,11 @@ This page provides a very brief "reminder" of how to work with events and event 
 
 Events are documented in and/or below the pages for the JavaScript objects that emit them. For example, to find out events fired on the browser window or the current document see the events sections in [`Window`](/en-US/docs/Web/API/Window#events) and [`Document`](/en-US/docs/Web/API/Document#events).
 
-You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find out what JavaScript objects fire events for particular APIs, e.g. animation, media, and so on.
+You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find out what JavaScript objects fire events for particular APIs, e.g., animation, media, and so on.
 
 ## Registering event handlers
 
-There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding _onevent_ property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#introduction)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
+There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding _onevent_ property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#interfaces_based_on_event)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
 
 > [!WARNING]
 > A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see [Inline event handlers](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these).

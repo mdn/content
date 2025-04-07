@@ -193,10 +193,14 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 - **Latin abbreviations**: You can use common Latin abbreviations (etc., i.e., e.g.) in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
 
+  <!-- markdownlint-disable search-replace -->
+
   - **Correct**: Web browsers (e.g., Firefox) can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
   - **Incorrect**: Web browsers, e.g. Firefox, can be used ...
   - **Incorrect**: Web browsers, (eg: Firefox) can be used ...
+
+  <!-- markdownlint-enable search-replace -->
 
   In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
@@ -204,24 +208,28 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   - **Incorrect**: ... web browsers, etc.
 
   - **Correct**: Web browsers such as Firefox can be used ...
-  - **Incorrect**: Web browsers e.g. Firefox can be used ...
+  - **Incorrect**: Web browsers e.g., Firefox can be used ...
 
   The following table summarizes the meanings and English equivalents of Latin abbreviations:
 
-  | Abbrev | Latin            | English                 |
-  | ------ | ---------------- | ----------------------- |
-  | cf.    | _confer_         | compare                 |
-  | e.g.   | _exempli gratia_ | for example             |
-  | et al. | _et alii_        | and others              |
-  | etc.   | _et cetera_      | and so forth, and so on |
-  | i.e.   | _id est_         | that is, in other words |
-  | N.B.   | _nota bene_      | note well               |
-  | P.S.   | _post scriptum_  | postscript              |
+<!-- markdownlint-disable search-replace -->
 
-  > [!NOTE]
-  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
-  >
-  > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
+| Abbrev | Latin            | English                 |
+| ------ | ---------------- | ----------------------- |
+| cf.    | _confer_         | compare                 |
+| e.g.   | _exempli gratia_ | for example             |
+| et al. | _et alii_        | and others              |
+| etc.   | _et cetera_      | and so forth, and so on |
+| i.e.   | _id est_         | that is, in other words |
+| N.B.   | _nota bene_      | note well               |
+| P.S.   | _post scriptum_  | postscript              |
+
+<!-- markdownlint-enable search-replace -->
+
+> [!NOTE]
+> Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+>
+> Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
 - **Plurals of abbreviations and acronyms**: For plurals of abbreviations and acronyms, add _s_. Don't use an apostrophe. Ever. Please.
 
@@ -520,7 +528,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 - **Don't create single subsections.** Don't subdivide a topic into a single subtopic.
   It's either two subheadings or more or none at all.
-- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g. "Using `FooBar` interface").
+- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g., "Using `FooBar` interface").
 - **Don't create "bumping heads".** These are headings followed immediately by a subheading, with no content text in between them.
   This doesn't look good and leaves readers without any explanatory text at the beginning of the outer section.
 

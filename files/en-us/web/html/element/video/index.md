@@ -61,7 +61,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     - `use-credentials`
       - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the resource will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    When not present, the resource is fetched without a CORS request (i.e., without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
 - `disablepictureinpicture`
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
@@ -86,7 +86,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
   - : This {{Glossary("enumerated")}} attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience regarding what content is loaded before the video is played. It may have one of the following values:
 
     - `none`: Indicates that the video should not be preloaded.
-    - `metadata`: Indicates that only video metadata (e.g. length) is fetched.
+    - `metadata`: Indicates that only video metadata (e.g., length) is fetched.
     - `auto`: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.
     - _empty string_: A synonym of the `auto` value.
 
@@ -299,6 +299,8 @@ Browsers don't all support the same video formats; you can provide multiple sour
   </p>
 </video>
 ```
+
+When using {{htmlelement("source")}} elements, the browser attempts to load each source sequentially. If a source fails (e.g., due to an invalid URL or unsupported format), the next source is attempted, and so on. An `error` event fires on the `<video>` element after all sources have failed; `error` events are not fired on each individual `<source>` element.
 
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Guides/Formats) and the [guide to the codecs supported for video](/en-US/docs/Web/Media/Guides/Formats/Video_codecs). Also available is a guide to [audio codecs that can be used with them](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs).
 

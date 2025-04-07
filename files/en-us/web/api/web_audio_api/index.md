@@ -63,7 +63,7 @@ General containers and definitions that shape audio graphs in Web Audio API usag
 - {{domxref("AudioContext")}}
   - : The **`AudioContext`** interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}. An audio context controls the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an `AudioContext` before you do anything else, as everything happens inside a context.
 - {{domxref("AudioNode")}}
-  - : The **`AudioNode`** interface represents an audio-processing module like an _audio source_ (e.g. an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), _audio destination_, _intermediate processing module_ (e.g. a filter like {{domxref("BiquadFilterNode")}}, or _volume control_ like {{domxref("GainNode")}}).
+  - : The **`AudioNode`** interface represents an audio-processing module like an _audio source_ (e.g., an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), _audio destination_, _intermediate processing module_ (e.g., a filter like {{domxref("BiquadFilterNode")}}, or _volume control_ like {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
   - : The **`AudioParam`** interface represents an audio-related parameter, like one of an {{domxref("AudioNode")}}. It can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.
 - {{domxref("AudioParamMap")}}

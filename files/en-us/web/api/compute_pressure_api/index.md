@@ -64,7 +64,7 @@ The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Guides/Perm
 The following interfaces are present in the Compute Pressure API and the API surface is similar to other observers, such as {{domxref("IntersectionObserver")}}, {{domxref("MutationObserver")}}, or {{domxref("PerformanceObserver")}}.
 
 - {{domxref("PressureObserver")}} {{experimental_inline}}
-  - : Notifies when the system's pressure changes for a specified number of sources (e.g. the CPU) at a predefined sample interval.
+  - : Notifies when the system's pressure changes for a specified number of sources (e.g., the CPU) at a predefined sample interval.
 - {{domxref("PressureRecord")}}
   - : Describes the pressure trend at a specific moment of transition.
 

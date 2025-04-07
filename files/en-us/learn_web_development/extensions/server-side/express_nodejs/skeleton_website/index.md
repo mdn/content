@@ -11,6 +11,10 @@ page-type: learn-module-chapter
 
 This second article in our [Express Tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.
 
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation in the second half of 2025.
+
 <table>
   <tbody>
     <tr>
@@ -82,7 +86,7 @@ express
 You can also choose a view (template) engine using `--view` and/or a CSS generation engine using `--css`.
 
 > [!NOTE]
-> The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
+> The other options for choosing template engines (e.g., `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
 
 ### What view engine should I use?
 
