@@ -18,6 +18,11 @@ This dictionary extends the {{domxref("RequestInit")}} dictionary with the addit
 
   - : A {{ domxref("DOMHighResTimeStamp") }} indicating a timeout in milliseconds after which the fetch request should be sent. The fetch can be sent earlier on navigating away. NOTE: The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, e.g., to optimize batching of deferred fetches. If the `activateAfter` property is not provided the deferred fetch waits until the end of the page visit (including entering the bfcache).
 
+### Exceptions
+
+- `RangeError` {{domxref("DOMException")}}
+  - : Raised when a negative `activateAfter` is provided.
+
 ## Examples
 
 ### Defer a `GET` request until page is destroyed or enters the bfcache

@@ -14,6 +14,10 @@ A `fetchLater()` request is sent once the page is navigated away from (i.e., des
 
 `fetchLater()` does not return the result of the fetch (since it is often sent after the document has been destroyed) and the whole response will be ignored, including body and headers. Instead the return result is a {{domxref("FetchLaterResult")}} containg a single `activated` value stating whether the request has been sent yet or not.
 
+Requests whose body is a {{domxref("ReadableStream")}} cannot be deferred.
+
+The `fetchLater()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
+
 ## Syntax
 
 ```js-nolint
@@ -38,12 +42,20 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 
 ### Exceptions
 
+The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions) can we raised for `fetchLater()`, along with the following additional exceptions:
+
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details.
 
+- `RangeError` {{domxref("DOMException")}}
+  - : Thrown when a negative `activateAfter` is provided.
+
+- `TypeError` {{domxref("DOMException")}}
+  - : In addition to the reasons for `fetch()`, this exception will also be thrown for a {{domxref("ReadableStream")}} request (which cannot be deferred) or for use of untrustworthy URLs (such as `http://`).
+
 ### Return value
 
-A {{domxref("FetchLaterResult")}} containing an `activated` property indicating if the request has been sent yet or not.
+A {{domxref("FetchLaterResult")}} containing an `activated` boolean property indicating if the request has been sent yet or not.
 
 > [!NOTE]
 > The response of the actual fetch request once it is sent, including the body and headers, is not made avaialble and will be ignored.
@@ -52,7 +64,7 @@ A {{domxref("FetchLaterResult")}} containing an `activated` property indicating 
 
 The [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) article provides examples of how the quotas are applied.
 
-### Defer a `GET` request until page is naviagted away from or closed
+### Defer a `GET` request until page is navigated away from or closed
 
 ```js
 fetchLater("/send_beacon");
@@ -72,6 +84,20 @@ fetchLater({
 
 > [!NOTE]
 > The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, for example to optimize batching of deferred fetches.
+
+### Defer a `POST` request for around one minute and create a function to check if sent
+
+```js
+const result = fetchLater("https://report.example.com", {
+    method: "POST",
+    body: JSON.stringify(myReport),
+    activateAfter: 5000
+});
+
+function check_if_fetched() {
+  return result.activated;
+}
+```
 
 ### Update a pending request
 
@@ -102,6 +128,23 @@ function createBeacon(data) {
     signal: beaconAbort.signal
   });
 }
+```
+
+### Invalid examples
+
+Any of the following calls to fetchLater() would throw:
+
+```js
+// Only potentially trustworthy urls are supported.
+fetchLater("http://untrusted.example.com");
+
+// The length of the deferred request has to be known when.
+fetchLater("https://origin.example.com", {body: someDynamicStream});
+
+// Deferred fetching only works on active windows.
+const detachedWindow = iframe.contentWindow;
+iframe.remove();
+detachedWindow.fetchLater("https://origin.example.com");
 ```
 
 ## Specifications

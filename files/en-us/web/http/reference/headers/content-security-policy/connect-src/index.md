@@ -13,6 +13,7 @@ loaded using script interfaces. The following APIs are controlled by this direct
 
 - The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute in {{htmlelement("a")}} elements
 - {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("Window/fetchLater", "fetchLater()")}} {{experimental_inline}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}
