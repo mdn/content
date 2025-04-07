@@ -1,7 +1,7 @@
 ---
 title: "Window: fetchLater() method"
 short-title: fetchLater()
-slug: Web/API/Window/fetchlater
+slug: Web/API/Window/fetchLater
 page-type: web-api-instance-method
 browser-compat: api.Window.fetchLater
 ---
