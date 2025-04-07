@@ -8,7 +8,7 @@ page-type: guide
 
 The overall quota for `fetchLater()` is 640KB per document and by default this is divided into 512KB for the top-level origin (including direct subframes using that origin), and 128KB for cross-origin subframes. Each cross-origin iframe gets an 8KB quota by default that is allocated at subframe creation time (whether `fetchLater()` will be used in that subframe or not). This means in general only the first 16 subframes can use `fetchLater()` as they will use up the 128KB quota.
 
-Out of the allocated quota for a document, only 64KB can be used concurrently for the same reporting origin (the request’s URL's origin). This prevents a situation where particular third-party libraries would reserve quota opportunistically, before they have data to send.
+Out of the allocated quota for a document, only 64KB can be used concurrently for the same reporting origin (the request's URL's origin). This prevents a situation where particular third-party libraries would reserve quota opportunistically, before they have data to send.
 
 The top-level origin can also choose to allow selected cross-origin subframes to have an increased 64KB quota, taken out of the larger 512KB limit by listing those origins in the {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} Permission Policy (e.g., `deferred-fetch=(self "https://b.com")`). Again this is allocated at subframe creation time, leaving less quota for the top-level origin.
 
