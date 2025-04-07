@@ -13,7 +13,7 @@ The HTTP **`Dictionary-ID`** request header references a dictionary that can be 
 
 A server can indicate that a resource can be used as a dictionary by sending the {{httpheader("Use-As-Dictionary")}} header with the response. The server may include an `id` directive in the `Use-As-Dictionary` header, thus assigning an ID value to the dictionary. If the server does this, then when the browser requests a resource that can be compressed using the dictionary, the resource request must include the `Dictionary-ID` header, and its value must match the ID that was given in `Use-As-Dictionary`.
 
-This allows the server to identify and find a dictionary that is referenced by some arbitrary key, rather than having to use the  {{glossary("hash function","dictionary hash")}} as a key (if that approach is used, the server will have to hash every response that includes the `Use-As-Dictionary` header just in case the resource might eventually be used as a dictionary).
+This allows the server to identify and find a dictionary that is referenced by some arbitrary key, rather than having to use the {{glossary("hash function","dictionary hash")}} as a key (if that approach is used, the server will have to hash every response that includes the `Use-As-Dictionary` header just in case the resource might eventually be used as a dictionary).
 
 Note that while the server can identify and locate the dictionary from its `Dictionary-ID`, it must still check the hash from the `Available-Dictionary` header to confirm that it is a correct match.
 
