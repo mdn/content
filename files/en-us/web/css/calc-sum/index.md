@@ -2,7 +2,7 @@
 title: <calc-sum>
 slug: Web/CSS/calc-sum
 page-type: css-type
-browser-compat: css.types.calc-sum
+spec-urls: https://drafts.csswg.org/css-values/#typedef-calc-sum
 ---
 
 {{CSSRef}}
@@ -38,10 +38,6 @@ The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
