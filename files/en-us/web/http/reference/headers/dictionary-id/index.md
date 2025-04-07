@@ -11,7 +11,7 @@ browser-compat: http.headers.Dictionary-ID
 
 The HTTP **`Dictionary-ID`** request header references a dictionary that can be used in {{glossary("Compression Dictionary Transport")}} to compress the server's response.
 
-In Compression Dictionary Transport, a server can indicate that a resource can be used as a dictionary by sending the {{httpheader("Use-As-Dictionary")}} header with the response. The server may include an `id` directive in the `Use-As-Dictionary` header, thus assigning an ID value to the dictionary. If the server does this, then when the browser requests a resource that can be compressed using the dictionary, then the resource request must include the `Dictionary-ID` header, and its value must be the ID that was given in `Use-As-Dictionary`.
+A server can indicate that a resource can be used as a dictionary by sending the {{httpheader("Use-As-Dictionary")}} header with the response. The server may include an `id` directive in the `Use-As-Dictionary` header, thus assigning an ID value to the dictionary. If the server does this, then when the browser requests a resource that can be compressed using the dictionary, the resource request must include the `Dictionary-ID` header, and its value must match the ID that was given in `Use-As-Dictionary`.
 
 The server must still check the hash from the `Available-Dictionary` header — the `Dictionary-ID` is additional information for the server to identify the dictionary but does not replace the need for the `Available-Dictionary` header.
 
