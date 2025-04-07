@@ -45,6 +45,7 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions) can we raised for `fetchLater()`, along with the following additional exceptions:
 
 - `QuotaExceededError` {{domxref("DOMException")}}
+
   - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details.
 
 - `RangeError` {{domxref("DOMException")}}
