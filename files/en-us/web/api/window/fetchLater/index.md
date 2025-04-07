@@ -12,7 +12,7 @@ The **`fetchLater()`** method of the {{domxref("Window")}} creates a deferred fe
 
 A `fetchLater()` request is sent once the page is navigated away from (i.e., destroyed or enters the bfcache), or after a provided `activateAfter` timeout — whichever is first.
 
-`fetchLater()` does not return the result of the fetch (since it is often sent after the document has been destroyed) and the whole response will be ignored, including body and headers. Instead the return result is a {{domxref("FetchLaterResult")}} containg a single `activated` value stating whether the request has been sent yet or not. This starts as `false` and is updated to `true` after the request is sent.
+`fetchLater()` does not return the result of the fetch (since it is often sent after the document has been destroyed) and the whole response will be ignored, including body and headers. Instead the return result is a {{domxref("FetchLaterResult")}} containg a single `activated` value stating whether the request has been sent yet or not.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ The `fetchLater()` method takes all the same parameters as {{domxref("fetch()")}
 
   - : This defines the resource that you wish to fetch. Identical to {{domxref("Fetch")}}, this can either be:
 
-    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
+    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch. The URL may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context.
     - A {{domxref("Request")}} object.
 
 - `options` {{optional_inline}}
@@ -50,7 +50,7 @@ A {{domxref("FetchLaterResult")}} containing an `activated` property indicating 
 
 ## Examples
 
-The [Using fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch) article provides more examples of using `fetch()`.
+The [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) article provides examples of how the quotas are applied.
 
 ### Defer a `GET` request until page is naviagted away from or closed
 
@@ -73,6 +73,37 @@ fetchLater({
 > [!NOTE]
 > The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, for example to optimize batching of deferred fetches.
 
+### Update a pending request
+
+In this example we use an {{domxref("AbortController")}} to cancel and recreate the request:
+
+```js
+let beaconResult = null;
+let beaconAbort = null;
+
+function updateBeacon(data) {
+  const pending = !beaconResult || !beaconResult.activated;
+  if (pending && beaconAbort) {
+    beaconAbort.abort();
+  }
+
+  createBeacon(data);
+}
+
+function createBeacon(data) {
+  if (beaconResult && beaconResult.activated) {
+    // Avoid creating duplicated beacon if the previous one is still pending.
+    return;
+  }
+
+  beaconAbort = new AbortController();
+  beaconResult = fetchLater({
+    url: data
+    signal: beaconAbort.signal
+  });
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -83,8 +114,8 @@ fetchLater({
 
 ## See also
 
-- {{domxref("fetchLater API")}}
-- [Using the `fetchLater()` API](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)
+- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 - [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
 - {{domxref("Fetch API")}}
 - {{domxref("FetchLaterResult")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

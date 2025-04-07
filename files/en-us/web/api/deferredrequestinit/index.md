@@ -6,7 +6,7 @@ page-type: web-api-interface
 
 {{DefaultAPISidebar("fetchLater API")}}
 
-The **`DeferredRequestInit`** dictionary of the [fetchLater() API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
+The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 
 The `DeferredRequestInit` object is pass directly into the {{domxref("Window.fetchLater()")}} function call as the second argument.
 

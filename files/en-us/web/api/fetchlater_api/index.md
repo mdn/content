@@ -24,8 +24,6 @@ This means developers looking to beacon reliably need to beacon more frequently 
 
 The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow fetch requests to be set up in advance. These deferred fetches can be aborted using an {{domxref("AbortController")}} and updated before they have been sent allowing the payload to reflect the latest data needing to be beaconed. The browser then takes care of sending the beacon when the document is page is closed or navigated away from, or after a period of time if specified. This avoids the need to send multiple beacons but still ensures a reliable beacon (within reasonable expectations such as the browser process shutting down unexpectedly during a crash).
 
-Find out more about using the `fetchLater()` API features in [Using the fetchLater() API](/en-us/docs/Web/API/fetchLater_API/Using_fetchLater).
-
 ### Quotas
 
 As deferred fetches are batched and sent once the tab is closed the user has no way to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network, the overall quota for a top level document is capped at 640 kilobytes.
@@ -57,7 +55,6 @@ See [fetchLater() quotas](/en-us/docs/Web/API/fetchLater_API/fetchLater_quotas) 
 
 ## See also
 
-- [Usingthe `fetchLater()` API](/en-US/docs/Web/API/fetchLater_API/Using_fetchLater)
 - [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
 - {{domxref("Fetch API")}}
-- [HTTP](/en-US/docs/Web/HTTP)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

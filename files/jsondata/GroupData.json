@@ -534,10 +534,7 @@
     },
     "fetchLater API": {
       "overview": ["fetchLater API"],
-      "guides": [
-        "/docs/Web/API/fetchLater_API/Using_fetchLater",
-        "/docs/Web/API/fetchLater_API/fetchLater_quotas"
-      ],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
       "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
       "methods": ["Window.fetchLater()"],
       "properties": [],
