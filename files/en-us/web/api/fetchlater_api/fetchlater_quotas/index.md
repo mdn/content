@@ -8,6 +8,8 @@ page-type: guide
 
 The overall quota for `fetchLater()` is 640KB per document and by default this is divided into 512KB for the top-level origin (including direct subframes using that origin), and 128KB for cross-origin subframes. Each cross-origin iframe gets an 8KB quota by default that is allocated at subframe creation time (whether `fetchLater()` will be used in that subframe or not). This means in general only the first 16 subframes can use `fetchLater()` as they will use up the 128KB quota.
 
+Out of the allocated quota for a document, only 64KB can be used concurrently for the same reporting origin (the request’s URL's origin). This prevents a situation where particular third-party libraries would reserve quota opportunistically, before they have data to send.
+
 The top-level origin can also choose to allow selected cross-origin subframes to have an increased 64KB quota, taken out of the larger 512KB limit by listing those origins in the {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} Permission Policy (e.g., `deferred-fetch=(self "https://b.com")`). Again this is allocated at subframe creation time, leaving less quota for the top-level origin.
 
 The top-level origin can also revoke this entire 128KB default subframe quota and instead have the full 640KB quota for itself and any named `deferred-fetch` cross-origins. It does this by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permission Policy to `()`.
@@ -100,7 +102,39 @@ Assuming a top-level document on `a.com` which embeds an iframe of `b.com` which
 
 1. A top-level frame of `a.com` has the default 512KB quota.
 2. A subframe of `b.com` receives 8KB of the default shared quota.
-3. The 8KB is not transferred to `a.com` when `b.com` redirects to there, but it is able to share the full top-level quota again, anf the 8KB is released.
+3. The 8KB is not transferred to `a.com` when `b.com` redirects to there, but it is able to share the full top-level quota again, and the 8KB is released.
+
+### Examples which throw a `QuotaExceededError`
+
+```js
+// Maximum of 64KB per origin
+fetchLater(a_72_kb_url);
+
+// Maximum of 64KB per origin including headers
+fetchLater("https://origin.example.com", { headers: headers_exceeding_64kb });
+
+// Maximum of 64KB per origin including body and headers
+fetchLater(a_32_kb_url, { headers: headers_exceeding_32kb });
+
+// Maximum of 64KB per origin including body
+fetchLater("https://origin.example.com", {
+  method: "POST",
+  body: body_exceeding_64_kb,
+});
+
+// Maximum of 64KB per origin including body and automatically added headers
+fetchLater(a_62_kb_url /* with a 3kb referrer */);
+```
+
+### Examples which eventually throw a `QuotaExceededError`
+
+In the following sequence int the top-level document, the first two requests would succeed, but the third one would throw. That's because, even though the overall 640KB quota was not exceeded, the 3rd request exceeds the reporting-origin quota for `https://a.example.com`, and would throw.
+
+```js
+fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
+fetchLater("https://b.example.com", { method: "POST", body: a_40kb_body });
+fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
+```
 
 ## See also
 
