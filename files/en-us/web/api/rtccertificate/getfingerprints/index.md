@@ -73,7 +73,7 @@ This works because only one fingerprint value can exist for each algorithm.
 
 ```js
 let clientFingerprintDict = Object.fromEntries(
-  fingerprintsFromClient.map((x) => [x.algorithm, x.value])
+  fingerprintsFromClient.map((x) => [x.algorithm, x.value]),
 );
 let serverFingerprintDict = Object.fromEntries(
   fingerprintsFromServer.map((x) => [x.algorithm, x.value])
