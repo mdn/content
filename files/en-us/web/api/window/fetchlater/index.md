@@ -90,9 +90,9 @@ fetchLater({
 
 ```js
 const result = fetchLater("https://report.example.com", {
-    method: "POST",
-    body: JSON.stringify(myReport),
-    activateAfter: 5000
+  method: "POST",
+  body: JSON.stringify(myReport),
+  activateAfter: 5000,
 });
 
 function check_if_fetched() {
