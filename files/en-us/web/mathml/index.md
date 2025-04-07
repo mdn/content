@@ -3,6 +3,7 @@ title: MathML
 slug: Web/MathML
 page-type: landing-page
 browser-compat: mathml.elements.math
+spec-urls: https://w3c.github.io/mathml/
 sidebar: mathmlref
 ---
 
@@ -88,6 +89,10 @@ The following demos mix MathML with other Web technologies to produce advanced c
 - [CSS](/en-US/docs/Web/CSS)
 - [HTML](/en-US/docs/Web/HTML)
 - [SVG](/en-US/docs/Web/SVG)
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

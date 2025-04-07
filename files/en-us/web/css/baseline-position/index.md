@@ -2,7 +2,7 @@
 title: <baseline-position>
 slug: Web/CSS/baseline-position
 page-type: css-type
-browser-compat: css.types.baseline-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-baseline-position
 ---
 
 {{CSSRef}}
@@ -35,10 +35,6 @@ The `<baseline-position>` enumerated value type is specified using an optional `
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -38,7 +38,7 @@ Use the `close` to listen for close requests.
 watcher.addEventListener("close", () => {
   // Close your UI component
   sidebar.hide();
-};
+});
 ```
 
 ## Specifications

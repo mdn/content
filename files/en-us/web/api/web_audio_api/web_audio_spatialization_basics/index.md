@@ -243,18 +243,21 @@ function moveBoombox(direction) {
 It's a similar story for our move in and out values too:
 
 ```js
-case 'back':
-  if (transform.zAxis > innerBound) {
-    transform.zAxis -= 0.01;
-    panner.positionZ.value += 40;
-  }
-  break;
-case 'forward':
-  if (transform.zAxis < outerBound) {
-    transform.zAxis += 0.01;
-    panner.positionZ.value -= 40;
-  }
-  break;
+switch (direction) {
+  // …
+  case "back":
+    if (transform.zAxis > innerBound) {
+      transform.zAxis -= 0.01;
+      panner.positionZ.value += 40;
+    }
+    break;
+  case "forward":
+    if (transform.zAxis < outerBound) {
+      transform.zAxis += 0.01;
+      panner.positionZ.value -= 40;
+    }
+    break;
+}
 ```
 
 Our rotation values are a little more involved, however, as we need to move the sound _around_.
@@ -281,18 +284,25 @@ const degreesY = (q * 180) / Math.PI;
 Let's take a look at our left rotation as an example. We need to change the x orientation and the z orientation of the panner coordinates, to move around the y-axis for our left rotation:
 
 ```js
-case 'rotate-left':
-  transform.rotateY -= degreesY;
+switch (direction) {
+  // …
+  case "rotate-left":
+    transform.rotateY -= degreesY;
 
-  // 'left' is rotation about y-axis with negative angle increment
-  z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
-  x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
-  y = panner.orientationY.value;
+    // 'left' is rotation about y-axis with negative angle increment
+    z =
+      panner.orientationZ.value * Math.cos(q) -
+      panner.orientationX.value * Math.sin(q);
+    x =
+      panner.orientationZ.value * Math.sin(q) +
+      panner.orientationX.value * Math.cos(q);
+    y = panner.orientationY.value;
 
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
+    panner.orientationX.value = x;
+    panner.orientationY.value = y;
+    panner.orientationZ.value = z;
+    break;
+}
 ```
 
 This _is_ a little confusing, but what we're doing is using sin and cos to help us work out the circular motion the coordinates need for the rotation of the boombox.
@@ -300,36 +310,51 @@ This _is_ a little confusing, but what we're doing is using sin and cos to help 
 We can do this for all the axes. We just need to choose the right orientations to update and whether we want a positive or negative increment.
 
 ```js
-case 'rotate-right':
-  transform.rotateY += degreesY;
-  // 'right' is rotation about y-axis with positive angle increment
-  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
-  x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
-  y = panner.orientationY.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
-case 'rotate-up':
-  transform.rotateX += degreesX;
-  // 'up' is rotation about x-axis with negative angle increment
-  z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
-  y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
-  x = panner.orientationX.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
-case 'rotate-down':
-  transform.rotateX -= degreesX;
-  // 'down' is rotation about x-axis with positive angle increment
-  z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
-  y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
-  x = panner.orientationX.value;
-  panner.orientationX.value = x;
-  panner.orientationY.value = y;
-  panner.orientationZ.value = z;
-  break;
+switch (direction) {
+  // …
+  case "rotate-right":
+    transform.rotateY += degreesY;
+    // 'right' is rotation about y-axis with positive angle increment
+    z =
+      panner.orientationZ.value * Math.cos(-q) -
+      panner.orientationX.value * Math.sin(-q);
+    x =
+      panner.orientationZ.value * Math.sin(-q) +
+      panner.orientationX.value * Math.cos(-q);
+    y = panner.orientationY.value;
+    panner.orientationX.value = x;
+    panner.orientationY.value = y;
+    panner.orientationZ.value = z;
+    break;
+  case "rotate-up":
+    transform.rotateX += degreesX;
+    // 'up' is rotation about x-axis with negative angle increment
+    z =
+      panner.orientationZ.value * Math.cos(-q) -
+      panner.orientationY.value * Math.sin(-q);
+    y =
+      panner.orientationZ.value * Math.sin(-q) +
+      panner.orientationY.value * Math.cos(-q);
+    x = panner.orientationX.value;
+    panner.orientationX.value = x;
+    panner.orientationY.value = y;
+    panner.orientationZ.value = z;
+    break;
+  case "rotate-down":
+    transform.rotateX -= degreesX;
+    // 'down' is rotation about x-axis with positive angle increment
+    z =
+      panner.orientationZ.value * Math.cos(q) -
+      panner.orientationY.value * Math.sin(q);
+    y =
+      panner.orientationZ.value * Math.sin(q) +
+      panner.orientationY.value * Math.cos(q);
+    x = panner.orientationX.value;
+    panner.orientationX.value = x;
+    panner.orientationY.value = y;
+    panner.orientationZ.value = z;
+    break;
+}
 ```
 
 One last thing — we need to update the CSS and keep a reference of the last move for the mouse event.

@@ -126,7 +126,7 @@ The `fragment` object contains an array of objects, each of which can contain th
     A code snippet providing override values for several overridable constants might look like this:
 
     ```js
-    {
+    ({
       // ...
       constants: {
         0: false,
@@ -135,8 +135,8 @@ The `fragment` object contains an array of objects, each of which can contain th
         width: 20,
         depth: -1,
         height: 15,
-      }
-    }
+      },
+    });
     ```
 
 - `entryPoint` {{optional_inline}}
@@ -226,11 +226,7 @@ The `fragment` object contains an array of objects, each of which can contain th
 
         If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
-        Note that multiple flags can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
-        ```
+        Note that multiple flags can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUColorWrite.RED | GPUColorWrite.ALPHA`.
 
 ### `multisample` object structure
 
@@ -316,7 +312,7 @@ The `vertex` object can contain the following properties:
     A code snippet providing override values for several overridable constants might look like this:
 
     ```js
-    {
+    ({
       // ...
       constants: {
         0: false,
@@ -325,8 +321,8 @@ The `vertex` object can contain the following properties:
         width: 20,
         depth: -1,
         height: 15,
-      }
-    }
+      },
+    });
     ```
 
 - `entryPoint` {{optional_inline}}
