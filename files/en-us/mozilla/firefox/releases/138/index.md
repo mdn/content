@@ -42,7 +42,7 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 #### Media, WebRTC, and Web Audio
 
-- WebRTC applications can now set a preference for maintaining framerate or resolution when both the configured frame rate and resolution cannot be maintained.
+- WebRTC applications can now set a preference for prioritizing framerate or resolution when both cannot be maintained at the configured levels due to network degradation.
   The value is set using the [`degradationPreference`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) property in the parameter object passed to the [`setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) method of the `RTCRtpSender` interface.
   It can also be read from the object returned by the [`getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) method.
   ([Firefox bug 1329847](https://bugzil.la/1329847)).
