@@ -2,11 +2,12 @@
 title: "Permissions-Policy: deferred-fetch-minimal"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch-minimal
 page-type: http-permissions-policy-directive
+browser-compat: http.headers.Permission-Policy.deferred-fetch-minimal
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} headers are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
+The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} headers are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
 
 They determine how the overall 640KB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KB, and each cross-origin subframe is granted 8KB out of the remaining 128KB. The `deferred-fetch-minimal` Permission Policy can also block all origins; this will reallocate the 128KB shared limit to the top-level quota, giving it access to the full 640KB limit.
 
@@ -24,7 +25,7 @@ Permissions-policy: deferred-fetch-minimal=(<urllist>)
 - `<urllist>`
   - : A space-separated list of origins that are allowed to use the secondary 128KB quota (with a maximum of 8KB per subframe).
 
-A top-level frame with the `deferred-fetch-minimal` permission set to `self` or `()` does not delegate the minimal 8kb quota to subframes at all. Instead, the 128KB quota for iframes is added to its normal quota.
+A top-level frame with the `deferred-fetch-minimal` permission set to `self` or `()` does not allowed the default shared 128kb quota to be used by cross-origin subframes at all. Instead, the 128KB quota for subframes is added to its normal quota.
 
 ## Default policy
 
@@ -66,6 +67,17 @@ Permissions-Policy: deferred-fetch-minimal=()
 
 1. The top-level document and its same-origin descendants can use up the full 640KB.
 2. Subframes are not allocated any quota and cannot use `fetchLater()`.
+
+## Restricting the minimal quota to named origins
+
+```http
+Permissions-Policy: deferred-fetch=(self "https://b.com")
+Permissions-Policy: deferred-fetch-minimal=("https://c.com")
+```
+
+1. A subframe of `b.com` receives 64KB upon creation.
+2. A subframe of `c.com` receives 8KB upon creation.
+3. A subframe of `d.com` receives no quota upon creation.
 
 ## Specifications
 
