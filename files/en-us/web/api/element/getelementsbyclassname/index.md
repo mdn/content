@@ -47,7 +47,7 @@ The opposite is also true; as elements no longer match the set of names, they ar
 immediately removed from the collection.
 
 > [!NOTE]
-> In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
+> In [quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), the
 > class names are compared in a case-insensitive fashion. Otherwise, they're case
 > sensitive.
 

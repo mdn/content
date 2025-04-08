@@ -39,7 +39,7 @@ sidebar:
         title: Block-level_elements
       - link: /Glossary/Inline-level_content
         title: Inline_elements
-      - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
+      - link: /Web/HTML/Guides/Quirks_mode_and_standards_mode
         title: Quirks_Mode_and_Standards_Mode
       - link: /Web/HTML/Guides/Date_and_time_formats
         title: Date_and_time_formats

@@ -1,6 +1,6 @@
 ---
 title: Quirks Mode
-slug: Web/HTML/Quirks_Mode_and_Standards_Mode
+slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
 page-type: guide
 ---
 
