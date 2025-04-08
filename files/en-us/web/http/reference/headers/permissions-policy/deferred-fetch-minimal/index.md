@@ -22,7 +22,7 @@ Permissions-policy: deferred-fetch-minimal=(<urllist>)
 ```
 
 - `<urllist>`
-  - : A list of origins which are allowed to use the secondary 128KB quota (with a maximum of 8KB per origin). For `*`, `()` or `(self)`
+  - : A space-separated list of origins that are allowed to use the secondary 128KB quota (with a maximum of 8KB per subframe).
 
 A top-level frame with the `deferred-fetch-minimal` permission set to `self` or `()` does not delegate the minimal 8kb quota to subframes at all. Instead, the 128KB quota for iframes is added to its normal quota.
 
@@ -44,7 +44,7 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
 3. 15 more subframes would receive 8KB upon creation (similar to `c.com`, and another `c.com` subframe would also receive another 8KB quota).
 4. The next subframe would not be granted any quota.
-5. One of the subrames is removed. Its deferred fetches are sent.
+5. If one of the subframes is removed, its deferred fetches will be sent.
 6. The next subframe would receive an 8KB quota, as there is quota available again.
 
 ## Revoking the minimal quota altogether with exceptions

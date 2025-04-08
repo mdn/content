@@ -21,7 +21,7 @@ Permissions-policy: deferred-fetch=(<urllist>)
 ```
 
 - `<urllist>`
-  - : A list of origins (each of which is given in quotion marks) which are granted the higher limit of 64KB taken from the parent's main quota. The 64KB quota is taken at the time the subframe is created.
+  - : A space-separated list of origins (each of which is given in quotation marks) which are granted a higher quota of 64KB taken from the parent's main quota. The 64KB quota is taken at the time the subframe is created.
 
 A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if none of the quota is currently being used.
 
@@ -45,7 +45,7 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
 3. 15 more subframes of different origins would receive 8KB upon creation (similar to `c.com`).
 4. The next subframe would not be granted any quota.
-5. One of the subrames is removed. Its deferred fetches are sent.
+5. If one of the subframes is removed, its deferred fetches will be sent.
 6. The next subframe would receive an 8KB quota, as there is quota available again.
 
 ## Revoking the minimal quota altogether

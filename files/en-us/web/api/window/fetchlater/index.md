@@ -78,8 +78,8 @@ In this example we create a {{domxref("Request")}}, and provide an `activateAfte
 
 ```js
 fetchLater({
-  url: '/send_beacon'
-  method: 'POST'
+  url: "/send_beacon"
+  method: "POST"
   body: getBeaconData(),
 }, {activateAfter: 60000 /* 1 minute */});
 ```
@@ -94,8 +94,8 @@ The same example as above, but the best practice is to enclose this in a try/cat
 ```js
 try {
   fetchLater({
-    url: '/send_beacon'
-    method: 'POST'
+    url: "/send_beacon"
+    method: "POST"
     body: getBeaconData(),
   }, {activateAfter: 60000 /* 1 minute */});
 } catch (e) {
@@ -113,7 +113,7 @@ try {
 const result = fetchLater("https://report.example.com", {
   method: "POST",
   body: JSON.stringify(myReport),
-  activateAfter: 5000,
+  activateAfter: 60000 /* 1 minute */,
 });
 
 function check_if_fetched() {

@@ -2,10 +2,12 @@
 title: FetchLaterResult
 slug: Web/API/FetchLaterResult
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.Window.FetchLaterResult
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}
+{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
 
 The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) is returned by the {{domxref("Window.FetchLater()")}} method after a deferred fetch has been created.
 
@@ -15,8 +17,24 @@ After a successful sending, the whole response is ignored — including body and
 
 ## Instance properties
 
-- `activated` {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref('FetchLaterResult.activated')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A read-only boolean field that indicates whether the deferred request has been sent out. This is initially set to `false` and will then be updated by the browser once the deferred fetch has been sent.
+
+## Examples
+
+### Defer a `POST` request for around one minute and create a function to check if sent
+
+```js
+const result = fetchLater("https://report.example.com", {
+  method: "POST",
+  body: JSON.stringify(myReport),
+  activateAfter: 60000 /* 1 minute */,
+});
+
+function check_if_fetched() {
+  return result.activated;
+}
+```
 
 ## Specifications
 

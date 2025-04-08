@@ -51,10 +51,13 @@ See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) 
   - : Represents the set of options that can be used to configure a deferred fetch request.
 - {{domxref("FetchLaterResult")}}
   - : Represents the result of requesting a deferred fetch.
+
+## HTTP headers
+
 - {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
-  - : Represents the `deferred-fetch` [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+  - : Controls [top-level quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for the `fetchLater()` API.
 - {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
-  - : Represents the `deferred-fetch-minimal` [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
+  - : Controls [shared subframe quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for the `fetchLater()` API.
 
 ## Specifications
 

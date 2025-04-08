@@ -4,7 +4,7 @@ slug: Web/API/DeferredRequestInit
 page-type: web-api-interface
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}
+{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
 
 The **`DeferredRequestInit`** dictionary of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) represents the set of options that can be used to configure a deferred fetch request.
 
@@ -14,7 +14,7 @@ The `DeferredRequestInit` object is passed directly into the {{domxref("window.f
 
 This dictionary extends the {{domxref("RequestInit")}} dictionary with the addition of the following properties:
 
-- `activateAfter` {{optional_inline}}
+- {{domxref('DeferredRequestInit.activateAfter')}} {{optional_inline}}
 
   - : A {{ domxref("DOMHighResTimeStamp") }} indicating a timeout in milliseconds after which the fetch request should be sent. The fetch can be sent earlier on navigating away. The _actual_ sending time is unknown, as the browser may wait for a longer or shorter time, for example, to optimize the batching of deferred fetches. If the `activateAfter` property is not provided, the deferred fetch waits until the end of the page visit (including entering the [bfcache](/en-US/docs/Glossary/bfcache)).
 
@@ -39,8 +39,8 @@ In this example we create a {{domxref("Request")}}, and provide an `activateAfte
 
 ```js
 fetchLater({
-  url: '/send_beacon'
-  method: 'POST'
+  url: "/send_beacon"
+  method: "POST"
   body: getBeaconData(),
 }, {activateAfter: 60000 /* 1 minute */});
 ```

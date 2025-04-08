@@ -111,11 +111,11 @@ You can specify
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch', 'deferred-fetch')}} {{experimental_inline}}
 
-  - : Controls whether...
+  - : Controls the allocation of the top-level origin's [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
 
 - {{HTTPHeader('Permissions-Policy/deferred-fetch-minimal', 'deferred-fetch-minimal')}} {{experimental_inline}}
 
-  - : Controls whether...
+  - : Controls the allocation of the shared subframe [`fetchLater()` quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas).
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
 
