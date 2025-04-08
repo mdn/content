@@ -10148,7 +10148,7 @@
 /en-US/docs/Web/API/ServiceWorkerContainer.controller	/en-US/docs/Web/API/ServiceWorkerContainer/controller
 /en-US/docs/Web/API/ServiceWorkerContainer.getRegistration([scope])	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
 /en-US/docs/Web/API/ServiceWorkerContainer.register	/en-US/docs/Web/API/ServiceWorkerContainer/register
-/en-US/docs/Web/API/ServiceWorkerContainer/error_event	/en-US/docs/Web/API/ServiceWorkerContainer/messageerror_event
+/en-US/docs/Web/API/ServiceWorkerContainer/error_event	/en-US/docs/Web/API/ServiceWorker/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorkerContainer/messageerror_event
 /en-US/docs/Web/API/ServiceWorkerContainer/onmessage	/en-US/docs/Web/API/ServiceWorkerContainer/message_event
