@@ -56249,16 +56249,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGEvent": {
-    "modified": "2019-04-04T19:07:39.265Z",
-    "contributors": [
-      "chrisdavidmills",
-      "pcat",
-      "kscarfone",
-      "fscholz",
-      "rabimba"
-    ]
-  },
   "Web/API/SVGFEBlendElement": {
     "modified": "2020-10-15T21:53:39.956Z",
     "contributors": ["fscholz", "Sebastianz"]
