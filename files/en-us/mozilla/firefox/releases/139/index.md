@@ -58,6 +58,8 @@ Firefox 139 is the current [Nightly version of Firefox](https://www.mozilla.org/
 
 ## Changes for add-on developers
 
+- Localized extensions now cascade through locale subtags to find translations before reverting to the extension's default language. Previously, the extension used the extension default if a translation couldn't be found for a language with subtags (such as `en-GB` or `zh-Hans-CN`). Take an extension with the default of Spanish (`es`) and a translation for English (`en`) installed by a user who has chosen British English (`en-GB`) as their browser locale. Previously, the user was served the default (Spanish) translation. After this change, the user is served the English (`en`) translation. ([Firefox bug 1381580](https://bugzil.la/1381580))
+
 ### Removals
 
 ### Other
