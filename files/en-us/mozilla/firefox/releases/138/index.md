@@ -76,7 +76,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
 
-  The CSS {{cssxref("::details-content")}} pseudo-element allows the styling of the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+  The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
 
 ## Older versions
 
