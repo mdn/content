@@ -18,10 +18,10 @@ This event is not cancelable.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("transitionend", (event) => {});
+```js-nolint
+addEventListener("transitionend", (event) => { })
 
-ontransitionend = (event) => {};
+ontransitionend = (event) => { }
 ```
 
 ## Event type

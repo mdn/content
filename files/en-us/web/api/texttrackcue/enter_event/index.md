@@ -14,10 +14,10 @@ The **`enter`** event fires when a cue becomes active. In the case of subtitles 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("enter", (event) => {});
+```js-nolint
+addEventListener("enter", (event) => { })
 
-onenter = (event) => {};
+onenter = (event) => { }
 ```
 
 ## Event type

@@ -18,10 +18,10 @@ In the case of an intercepted navigation, this would occur after any promises re
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("navigatesuccess", (event) => {});
+```js-nolint
+addEventListener("navigatesuccess", (event) => { })
 
-onnavigatesuccess = (event) => {};
+onnavigatesuccess = (event) => { }
 ```
 
 ## Event type

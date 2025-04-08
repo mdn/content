@@ -22,10 +22,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("icecandidate", (event) => {});
+```js-nolint
+addEventListener("icecandidate", (event) => { })
 
-onicecandidate = (event) => {};
+onicecandidate = (event) => { }
 ```
 
 ## Event type

@@ -23,10 +23,10 @@ For most use cases, other pointer event types should suffice as there may be per
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("pointerrawupdate", (event) => {});
+```js-nolint
+addEventListener("pointerrawupdate", (event) => { })
 
-onpointerrawupdate = (event) => {};
+onpointerrawupdate = (event) => { }
 ```
 
 ## Event type

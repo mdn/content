@@ -14,10 +14,10 @@ The **`mark`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("mark", (event) => {});
+```js-nolint
+addEventListener("mark", (event) => { })
 
-onmark = (event) => {};
+onmark = (event) => { }
 ```
 
 ## Event type

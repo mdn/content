@@ -18,10 +18,10 @@ point available for you to use in your application.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener("stop", (event) => {});
+```js-nolint
+addEventListener("stop", (event) => { })
 
-onstop = (event) => {};
+onstop = (event) => { }
 ```
 
 ## Event type
