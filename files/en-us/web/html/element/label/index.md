@@ -62,7 +62,7 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- [`for`](/en-US/docs/Web/HTML/Attributes/for)
+- [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
 
   - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes/id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 

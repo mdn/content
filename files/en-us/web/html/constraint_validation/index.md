@@ -57,7 +57,7 @@ In addition to the `type` attribute described above, the following attributes ar
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code
         >
       </td>
       <td>
@@ -82,7 +82,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/min">min</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>A valid number</td>
@@ -110,7 +110,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/max">max</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>A valid number</td>
@@ -139,7 +139,7 @@ In addition to the `type` attribute described above, the following attributes ar
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/required">required</a></code
         >
       </td>
       <td>
@@ -169,7 +169,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td rowspan="5">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/step">step</a></code>
       </td>
       <td><code>date</code></td>
       <td>An integer number of days</td>
@@ -209,7 +209,7 @@ In addition to the `type` attribute described above, the following attributes ar
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/minlength"
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/minlength"
             >minlength</a
           ></code
         >
@@ -240,7 +240,7 @@ In addition to the `type` attribute described above, the following attributes ar
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/maxlength"
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/maxlength"
             >maxlength</a
           ></code
         >

@@ -67,7 +67,7 @@ sidebar:
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTML/Attributes
+    path: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
   - type: listSubPages

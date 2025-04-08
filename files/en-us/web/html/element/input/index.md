@@ -385,7 +385,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 ### Individual attributes
 
-- [`accept`](/en-US/docs/Web/HTML/Attributes/accept)
+- [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept)
 
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
 
@@ -397,13 +397,13 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
-- [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
 
-  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete#values) for permitted values.
+  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#values) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types.
 
-    See the [`autocomplete` attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
+    See the [`autocomplete` attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
 - `autofocus`
 
@@ -421,7 +421,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     Use careful consideration for accessibility when applying the `autofocus` attribute. Automatically focusing on a control can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will announce the label of the form control receiving focus, the screen reader will not announce anything before the label, and the sighted user on a small device will equally miss the context created by the preceding content.
 
-- [`capture`](/en-US/docs/Web/HTML/Attributes/capture)
+- [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture)
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - `checked`
 
@@ -432,7 +432,7 @@ A few additional non-standard attributes are listed following the descriptions o
     >
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 
-- [`dirname`](/en-US/docs/Web/HTML/Attributes/dirname)
+- [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
 
   - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
@@ -448,9 +448,9 @@ A few additional non-standard attributes are listed following the descriptions o
     ```
 
     When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit-dir=ltr` to be sent.
-    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Reference/Attributes/dirname).
 
-- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
+- [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
@@ -496,19 +496,19 @@ A few additional non-standard attributes are listed following the descriptions o
 
     See the {{htmlelement('datalist')}} element.
 
-- [`max`](/en-US/docs/Web/HTML/Attributes/max)
+- [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)
 
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
-- [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
+- [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength)
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum string length (measured in UTF-16 code units) that the user can enter into the field. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
     The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. Constraint validation is only applied when the value is changed by the user. See [Client-side validation](#client-side_validation) for more information.
 
-- [`min`](/en-US/docs/Web/HTML/Attributes/min)
+- [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min)
 
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
@@ -516,13 +516,13 @@ A few additional non-standard attributes are listed following the descriptions o
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
-- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
+- [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength)
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum string length (measured in UTF-16 code units) that the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
     The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. Constraint validation is only applied when the value is changed by the user. See [Client-side validation](#client-side_validation) for more information.
 
-- [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
+- [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
 
   - : The Boolean `multiple` attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the `file` input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.
 
@@ -559,21 +559,21 @@ A few additional non-standard attributes are listed following the descriptions o
     > [!WARNING]
     > Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
-- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
+- [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern)
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute is used to compile a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). No forward slashes should be specified around the pattern text. When compiling the regular expression:
 
     1. the pattern will be implicitly wrapped with `^(?:` and `)$`, such that the match is required against the _entire_ input value, i.e., `^(?:<pattern>)$`.
     2. the `'v'` flag is specified so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}.
 
-    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission. If the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) is present, the compiled regular expression is matched against each comma separated value.
+    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission. If the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) is present, the compiled regular expression is matched against each comma separated value.
 
     > [!NOTE]
     > If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
 
     See [Client-side validation](#client-side_validation) for more information.
 
-- [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
+- [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder)
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g., Mustafa".
 
@@ -598,19 +598,19 @@ A few additional non-standard attributes are listed following the descriptions o
     - `"toggle"`
       - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
 
-- [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
+- [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly)
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The `readonly` attribute is supported by the `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `password` input types.
 
-    See the [HTML attribute: `readonly`](/en-US/docs/Web/HTML/Attributes/readonly) for more information.
+    See the [HTML attribute: `readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) for more information.
 
-- [`required`](/en-US/docs/Web/HTML/Attributes/required)
+- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
 
   - : `required` is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The `required` attribute is supported by `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, and `file` inputs.
 
-    See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
+    See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Reference/Attributes/required) for more information.
 
-- [`size`](/en-US/docs/Web/HTML/Attributes/size)
+- [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
 
   - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
@@ -618,9 +618,9 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
-- [`step`](/en-US/docs/Web/HTML/Attributes/step)
+- [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step)
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
     If not explicitly included:
 

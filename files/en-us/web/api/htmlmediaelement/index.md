@@ -33,7 +33,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.controlsList")}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for this media element.
+  - : A string indicating the [CORS setting](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for this media element.
 - {{domxref("HTMLMediaElement.currentSrc")}} {{ReadOnlyInline}}
   - : Returns a string with the absolute URL of the chosen media resource.
 - {{domxref("HTMLMediaElement.currentTime")}}

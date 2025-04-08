@@ -82,7 +82,7 @@ open(url, target, windowFeatures)
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
     - `noreferrer`
-      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
+      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) for more information.
 
     A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
 
@@ -328,5 +328,5 @@ When extreme changes in context are explicitly identified before they occur, the
 - [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)
 - [`window.opener`](/en-US/docs/Web/API/Window/opener)
-- [`rel="opener"`](/en-US/docs/Web/HTML/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel#noopener)
+- [`rel="opener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noopener)
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

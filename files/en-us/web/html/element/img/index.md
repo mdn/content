@@ -117,7 +117,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > [!NOTE]
     > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
-- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 
   - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases)".
 
@@ -132,7 +132,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `use-credentials`
       - : The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the `Authorization` request header). If the server does not opt into sharing credentials with the origin site (by sending back the `Access-Control-Allow-Credentials: true` response header), then the browser marks the image as tainted and restricts access to its image data.
 
-    If the attribute has an invalid value, browsers handle it as if the `anonymous` value was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    If the attribute has an invalid value, browsers handle it as if the `anonymous` value was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `decoding`
 
@@ -151,9 +151,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
 
-- [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming)
+- [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming)
 
-  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
+  - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute page.
 
 - `fetchpriority`
 

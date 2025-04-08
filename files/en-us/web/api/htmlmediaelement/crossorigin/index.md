@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.crossOrigin
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this media element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
+The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this media element. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details.
 
 ## Value
 

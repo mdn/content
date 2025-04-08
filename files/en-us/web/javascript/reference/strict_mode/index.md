@@ -20,7 +20,7 @@ Strict mode makes several changes to normal JavaScript semantics:
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 

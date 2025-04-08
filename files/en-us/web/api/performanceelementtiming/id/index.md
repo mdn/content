@@ -20,7 +20,7 @@ A string.
 
 ### Using `id`
 
-In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. It will log `myImage` to the console, this being the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the image element.
+In this example an {{HTMLElement("img")}} element is being observed by adding the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute. A {{domxref("PerformanceObserver")}} is registered to get all performance entries of type `"element"` and the `buffered` flag is used to access data from before observer creation. It will log `myImage` to the console, this being the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the image element.
 
 ```html
 <img

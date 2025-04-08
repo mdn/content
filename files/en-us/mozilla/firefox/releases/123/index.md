@@ -33,9 +33,9 @@ No notable changes.
 
 ### HTTP
 
-- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Reference/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code is now enabled for [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources that the page is likely to need while the server is still preparing the full response.
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Reference/Status/103) HTTP [informational response](/en-US/docs/Web/HTTP/Reference/Status#informational_responses) status code is now enabled for [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) resources that the page is likely to need while the server is still preparing the full response.
   This can significantly reduce page load time.
-  Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
+  Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
   For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
 
 ### APIs

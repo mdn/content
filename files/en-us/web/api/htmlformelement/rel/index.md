@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.rel
 
 {{APIRef("HTML DOM")}}
 
-The **`rel`** property of the {{domxref("HTMLFormElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a string containing what kinds of links the HTML {{HTMLElement("form")}} element creates, as a space-separated list of enumerated values.
+The **`rel`** property of the {{domxref("HTMLFormElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute. It is a string containing what kinds of links the HTML {{HTMLElement("form")}} element creates, as a space-separated list of enumerated values.
 
 To retrieve the value as an array of tokens, use {{domxref("HTMLFormElement.relList")}}.
 

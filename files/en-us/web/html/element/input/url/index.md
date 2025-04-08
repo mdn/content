@@ -95,10 +95,10 @@ If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossa
 
 ### readonly
 
-The [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) Boolean attribute, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
+The [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) Boolean attribute, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
 > [!NOTE]
-> Because a read-only field cannot have a value, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
+> Because a read-only field cannot have a value, [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### size
 

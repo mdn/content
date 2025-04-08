@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.relList
 
 {{APIRef("HTML DOM")}}
 
-The **`relList`** read-only property of the {{domxref("HTMLFormElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
+The **`relList`** read-only property of the {{domxref("HTMLFormElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
 
 The property itself is read-only, meaning you can not reassign the property with another {{domxref("DOMTokenList")}}, but the content of the returned list can be changed.
 

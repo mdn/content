@@ -261,14 +261,14 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 
 See the following articles for detailed information on using `rel="preload"`:
 
-- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > [!NOTE]
 > You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
 > [!NOTE]
-> There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> There are other [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
 
 ## See also
 

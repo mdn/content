@@ -99,7 +99,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
 - **Cut down on image HTTP requests with CSS sprites**: [CSS sprites](https://css-tricks.com/css-sprites/) is a technique that places several small images (such as icons) that you want to use on your site into a single image file, and then uses different {{cssxref("background-position")}} values to display the chunk of image that you want to show in each different place. This can dramatically cut down on the number of HTTP requests needed to fetch the images.
 
-- **Preload important assets**: You can use [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) to turn {{htmlelement("link")}} elements into preloaders for critical assets. This includes CSS files, fonts, and images:
+- **Preload important assets**: You can use [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) to turn {{htmlelement("link")}} elements into preloaders for critical assets. This includes CSS files, fonts, and images:
 
   ```html
   <link rel="preload" href="style.css" as="style" />
@@ -230,7 +230,7 @@ This is more likely to be beneficial if your `font-family` declaration is hidden
 
 You can also consider:
 
-- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
+- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
 - Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
 ### Loading only the glyphs you need

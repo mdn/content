@@ -54,11 +54,11 @@ For further examples, see [The native form widgets: Drop-down content](/en-US/do
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
-  - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
+- [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
+  - : A string providing a hint for a {{Glossary("user agent", "user agent's")}} autocomplete feature. See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) for a complete list of values and details on how to use autocomplete.
 - `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the `autofocus` attribute.
-- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
+- [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
 
@@ -66,13 +66,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
-- [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
+- [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
   - : This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When `multiple` is specified, most browsers will show a scrolling list box instead of a single line dropdown.
 - `name`
   - : This attribute is used to specify the name of the control.
-- [`required`](/en-US/docs/Web/HTML/Attributes/required)
+- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
-- [`size`](/en-US/docs/Web/HTML/Attributes/size)
+- [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
 
   - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
@@ -114,7 +114,7 @@ In browsers that don't support the modern customization features (or legacy code
 
 It is however, hard to get a consistent result across browsers with traditional `<select>` elements. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
 
-You can use the {{cssxref(":open")}} pseudo-class to style `<select>` elements in the open state, that is, when the drop-down options list is displayed. This doesn't apply to multi-line `<select>` elements (those with the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute set) — they tend to render as a scrolling list box rather than a drop-down, so don't have an open state.
+You can use the {{cssxref(":open")}} pseudo-class to style `<select>` elements in the open state, that is, when the drop-down options list is displayed. This doesn't apply to multi-line `<select>` elements (those with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute set) — they tend to render as a scrolling list box rather than a drop-down, so don't have an open state.
 
 For more information on legacy `<select>` styling, see:
 

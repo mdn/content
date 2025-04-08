@@ -55,7 +55,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `nonce`
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `title`
-  - : This attribute specifies [alternative style sheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet) sets.
+  - : This attribute specifies [alternative style sheet](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) sets.
 
 ### Deprecated attributes
 
@@ -226,4 +226,4 @@ In this example we build on the previous one, including a `media` attribute on t
 ## See also
 
 - The {{HTMLElement("link")}} element, which allows us to apply external stylesheets to a document.
-- [Alternative Style Sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet)
+- [Alternative Style Sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)

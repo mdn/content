@@ -59,7 +59,7 @@ The nonce is shared for every credentialless iframe that is a descendant of the 
 
 In addition:
 
-- Pop-ups opened by credentialless iframes are opened with [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) set. This prevents OAuth pop-up flows from being used in credentialless iframes.
+- Pop-ups opened by credentialless iframes are opened with [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) set. This prevents OAuth pop-up flows from being used in credentialless iframes.
 - Browser autofill or password manager functionality is unavailable in credentialless `<iframe>`s.
 
 The result of this is that documents loaded into credentialless `<iframe>`s are effectively vanilla or "public" versions, not customized with any user's sensitive information. Since there is no sensitive information available to leak from these documents, they are of no use to would-be attackers, and so the Cross-Origin Embedder Policy requirement is dropped for those IFrames.

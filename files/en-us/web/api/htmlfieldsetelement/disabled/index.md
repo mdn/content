@@ -34,5 +34,5 @@ fs.disabled = true;
 
 ## See also
 
-- HTML [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute
+- HTML [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute
 - CSS {{cssxref(":disabled")}} and {{cssxref(":enabled")}} pseudoclasses

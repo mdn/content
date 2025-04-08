@@ -18,7 +18,7 @@ Firefox 56 was released on September 28, 2017. This article lists key changes th
 ### HTML
 
 - Implemented the `labels` property for labelable form controls, for example {{domxref("HTMLInputElement.labels")}} ([Firefox bug 556743](https://bugzil.la/556743)).
-- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details ([Firefox bug 1222633](https://bugzil.la/1222633)). Note that currently Firefox only supports preloading of cacheable resources.
+- Implemented `<link rel="preload">`; see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) for more details ([Firefox bug 1222633](https://bugzil.la/1222633)). Note that currently Firefox only supports preloading of cacheable resources.
 
 ### CSS
 

@@ -22,7 +22,7 @@ In this example, {{domxref("HTMLInputElement.setCustomValidity", "setCustomValid
 The "Validate input" button calls {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}, which displays a validation message under the element if a user enters values that do not match the [form's constraints](/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
 
 If you enter the text "good" or "fine" and try to validate the input, the field is marked invalid until the custom error message is cleared (set to an empty string).
-For comparison, there is a [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) attribute on the input element that allows us to demonstrate the [`tooShort` validity state](/en-US/docs/Web/API/ValidityState/tooShort) when the user enters less than two characters.
+For comparison, there is a [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength) attribute on the input element that allows us to demonstrate the [`tooShort` validity state](/en-US/docs/Web/API/ValidityState/tooShort) when the user enters less than two characters.
 When the value in the form control is invalid, even if there is no custom error, the input will have a red outline.
 
 #### HTML

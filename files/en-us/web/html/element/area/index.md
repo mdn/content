@@ -103,7 +103,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)).
       **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
+- [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
   - : For anchors containing the [`href`](#href) attribute, this attribute specifies the relationship of the target object to the link object.
     The value is a space-separated list of link types.
     The values and their semantics will be registered by some authority that might have meaning to the document author.
@@ -125,7 +125,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     Use this attribute only if the [`href`](#href) attribute is present.
 
     > [!NOTE]
-    > Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ## Examples
 

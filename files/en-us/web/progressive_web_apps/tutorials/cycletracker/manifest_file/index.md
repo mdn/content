@@ -207,7 +207,7 @@ PWAs require a manifest file to be linked from the app's HTML document. We have 
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 ```html
 <link rel="icon" href="icons/circle.svg" />

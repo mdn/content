@@ -27,7 +27,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 <link href="main.css" rel="stylesheet" />
 ```
 
-This example provides the path to the stylesheet inside an `href` attribute and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
+This example provides the path to the stylesheet inside an `href` attribute and a [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
@@ -69,7 +69,7 @@ Some interesting new performance and security features have been added to the `<
   crossorigin="anonymous" />
 ```
 
-A `rel` value of `preload` indicates that the browser should preload this resource (see [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
+A `rel` value of `preload` indicates that the browser should preload this resource (see [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
 The `crossorigin` attribute indicates whether the resource should be fetched with a {{Glossary("CORS")}} request.
 
 Other usage notes:
@@ -89,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `as`
 
-  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
+  - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
     Furthermore, `rel="preload"` uses this as a signal for request prioritization.
@@ -122,7 +122,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <div class="notecard note">
               <p>
                 <strong>Note:</strong> This value also requires
-                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Reference/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
               </p>
             </div>
           </td>
@@ -134,7 +134,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
             <div class="notecard note">
               <p>
                 <strong>Note:</strong> This value also requires
-                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Reference/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
               </p>
             </div>
           </td>
@@ -184,7 +184,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 
-- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
@@ -198,7 +198,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         If the server does not give credentials to the origin site (through {{HTTPHeader("Access-Control-Allow-Credentials")}} HTTP header), the resource will be _tainted_ and its usage restricted.
 
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e., without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
-    See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
+    See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `disabled`
 
@@ -257,8 +257,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
-- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
-  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
+- [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
+  - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
@@ -274,7 +274,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `title`
   - : The `title` attribute has special semantics on the `<link>` element.
-    When used on a `<link rel="stylesheet">` it defines a [default or an alternate stylesheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
+    When used on a `<link rel="stylesheet">` it defines a [default or an alternate stylesheet](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 - `type`
   - : This attribute is used to define the type of the content linked to.
     The value of the attribute should be a MIME type such as **text/html**, **text/css**, and so on.
@@ -301,10 +301,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
-    [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
+    [Link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
 
     > [!NOTE]
-    > Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
+    > Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Reference/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples
@@ -319,7 +319,7 @@ To include a stylesheet in a page, use the following syntax:
 
 ### Providing alternative stylesheets
 
-You can also specify [alternative style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
+You can also specify [alternative style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
 The user can choose which style sheet to use by choosing it from the **View > Page Style** menu.
 This provides a way for users to see multiple versions of a page.
@@ -403,7 +403,7 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ### Preload examples
 
-You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload).
+You can find a number of `<link rel="preload">` examples in [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload).
 
 ### Blocking rendering till a resource is fetched
 

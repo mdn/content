@@ -33,7 +33,7 @@ The `radiogroup` must have an accessible name either by a visible label referenc
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Reference to elements providing additional information about the `radiogroup`
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-  - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted. The required state is specified on the `radiogroup` element rather than one of the `radio` elements, unlike when using HTML radio buttons where the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is set directly on one or more radio {{HTMLElement('input')}} elements.
+  - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted. The required state is specified on the `radiogroup` element rather than one of the `radio` elements, unlike when using HTML radio buttons where the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute is set directly on one or more radio {{HTMLElement('input')}} elements.
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
   - : Identifies the element that provides an error message for the `radiogroup`, if there is an error. That message should be hidden while not relevant.
 

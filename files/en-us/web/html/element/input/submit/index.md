@@ -150,7 +150,7 @@ The problem with the above example is that the user will not know what the acces
 
 ### Disabling and enabling a submit button
 
-To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute on it, like so:
+To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute on it, like so:
 
 ```html
 <input type="submit" value="Send" disabled />
