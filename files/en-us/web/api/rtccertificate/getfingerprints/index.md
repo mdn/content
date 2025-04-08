@@ -66,7 +66,7 @@ const fingerprintsFromServer = [
 ];
 ```
 
-There are numerous ways to compare the fingerprint arrays for a particular certificate
+There are numerous ways to compare the fingerprint arrays for a particular certificate.
 Here we convert the arrays to dictionary objects where the algorithm name is the property and then compare them.
 This works because only one fingerprint value can exist for each algorithm.
 (There are many other ways to sort and compare the two arrays).
