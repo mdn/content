@@ -14,6 +14,8 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTML
 
+- The [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap) value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) can now include the [`integrity`](/en-US/docs/Web/HTML/Element/script/type/importmap#integrity) key to the importmaps so that ES module URLs can be matched against their integrity metadata. This means that ES Modules can now work with [CSP](/en-US/docs/Web/HTTP/Guides/CSP) directives that require Subresource integrity ([SRI](/en-US/docs/Web/Security/Practical_implementation_guides/SRI)). ([Firefox bug 1945540](https://bugzil.la/1945540)).
+
 #### Removals
 
 ### CSS
