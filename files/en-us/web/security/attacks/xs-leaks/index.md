@@ -206,9 +206,9 @@ There are two relevant tools here:
 - The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/CSP).
 - The {{httpheader("X-Frame-Options")}} response header.
 
-The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. As [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), this is not a major concern.
+The `frame-ancestors` directive is a replacement for `X-Frame-Options`. Although [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), some very old browsers, notably Internet Explorer, don't support `frame-ancestors`.
 
-If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
+If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`. This means that there's no reason not to set `X-Frame-Options` as well as `frame-ancestors`, and thus prevent embedding even in browsers that don't support `frame-ancestors`.
 
 ### Cross-Origin Opener Policy (COOP)
 
