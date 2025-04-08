@@ -2,7 +2,7 @@
 title: FetchLaterResult
 slug: Web/API/FetchLaterResult
 page-type: web-api-interface
-browser-compat: api.Window.FetchLaterResult
+browser-compat: api.FetchLaterResult
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}

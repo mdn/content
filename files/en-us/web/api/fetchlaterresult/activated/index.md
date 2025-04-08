@@ -3,7 +3,7 @@ title: "FetchLaterResult: activated property"
 short-title: x
 slug: Web/API/FetchLaterResult/activated
 page-type: web-api-instance-property
-browser-compat: api.Window.FetchLaterResult
+browser-compat: api.FetchLaterResult
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}

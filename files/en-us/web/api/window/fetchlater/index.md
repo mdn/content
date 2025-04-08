@@ -38,7 +38,7 @@ The `fetchLater()` method takes all the same parameters as {{domxref("Window.fet
 
 - `options` {{optional_inline}}
 
-  - : A {{domxref("DeferredRequestInit")}} object containing any custom settings that you want to apply to the request, including an `activateAfter` timeout value that defines how long the result should be deferred for before sending.
+  - : A {{domxref("DeferredRequestInit")}} object containing any custom settings that you want to apply to the request, including an {{domxref('DeferredRequestInit.activateAfter', 'activateAfter')}} timeout value that defines how long the result should be deferred for before sending.
 
 ### Exceptions
 

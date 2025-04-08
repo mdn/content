@@ -537,7 +537,10 @@
       "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
       "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
       "methods": ["Window.fetchLater()"],
-      "properties": [],
+      "properties": [
+        "DeferredRequestInit.activateAfter",
+        "FetchLaterResult.activated"
+      ],
       "events": []
     },
     "Fenced Frame API": {
