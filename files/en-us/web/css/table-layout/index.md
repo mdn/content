@@ -172,5 +172,5 @@ td {
 
 ## See also
 
-- [`<table>`](/en-US/docs/Web/HTML/Element/table)
+- [`<table>`](/en-US/docs/Web/HTML/Reference/Element/table)
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module

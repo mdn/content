@@ -364,7 +364,7 @@ The HTML for the form looks like this:
 
 ### References
 
-- [HTML elements reference](/en-US/docs/Web/HTML/Element)
+- [HTML elements reference](/en-US/docs/Web/HTML/Reference/Element)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "Document Object Model (DOM)", "", "1")}} reference
 

@@ -55,10 +55,10 @@ accent-color: hsl(250, 100%, 34%);
 
 Browsers that support `accent-color` currently apply it to the following HTML elements:
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
-- [`<progress>`](/en-US/docs/Web/HTML/Element/progress)
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Element/input/checkbox)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Element/input/radio)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Element/input/range)
+- [`<progress>`](/en-US/docs/Web/HTML/Reference/Element/progress)
 
 Each user agent has an accent color, with variations to ensure legibility and
 contrast. That accent color is not used by every user-interface control nor in

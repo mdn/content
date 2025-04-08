@@ -57,7 +57,7 @@ sidebar:
     link: /Web/HTML/Reference
     title: Reference
   - type: listSubPages
-    path: /Web/HTML/Element
+    path: /Web/HTML/Reference/Element
     title: HTML_Elements
     details: closed
     code: true
@@ -71,7 +71,7 @@ sidebar:
     title: Attributes
     details: closed
   - type: listSubPages
-    path: /Web/HTML/Element/input
+    path: /Web/HTML/Reference/Element/input
     title: Input_types
     details: closed
     code: true

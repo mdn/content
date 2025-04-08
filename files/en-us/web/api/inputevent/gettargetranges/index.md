@@ -40,8 +40,8 @@ Depending on the value of `inputType` and the current editing host, the expected
     <tr>
       <td>All remaining</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/input"><code>input</code></a>
-        or <a href="/en-US/docs/Web/HTML/Element/textarea"><code>textarea</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Element/input"><code>input</code></a>
+        or <a href="/en-US/docs/Web/HTML/Reference/Element/textarea"><code>textarea</code></a>
       </td>
       <td>
         an empty Array

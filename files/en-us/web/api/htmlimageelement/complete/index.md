@@ -19,7 +19,7 @@ otherwise, the value is `false`.
 
 The image is considered completely loaded if any of the following are true:
 
-- Neither the [`src`](/en-US/docs/Web/HTML/Element/img#src) nor the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset)
+- Neither the [`src`](/en-US/docs/Web/HTML/Reference/Element/img#src) nor the [`srcset`](/en-US/docs/Web/HTML/Reference/Element/img#srcset)
   attribute is specified.
 - The `srcset` attribute is absent and the `src` attribute,
   while specified, is the empty string (`""`).
