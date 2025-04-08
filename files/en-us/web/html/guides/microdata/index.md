@@ -1,6 +1,6 @@
 ---
 title: Microdata
-slug: Web/HTML/Microdata
+slug: Web/HTML/Guides/Microdata
 page-type: guide
 ---
 
