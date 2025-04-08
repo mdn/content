@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp
 The **`RTCRemoteInboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report statistics from the remote endpoint about a particular incoming RTP stream.
 These will correspond to an outgoing RTP stream at the local end of the {{domxref("RTCPeerConnection")}}.
 
-The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpReceiver.getStats()")}} until you find a report with the [`type`](#type) of `remote-inbound-rtp`.
+The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpReceiver.getStats()")}} until you find a report with the [`type`](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/type) of `remote-inbound-rtp`.
 
 ## Instance properties
 
@@ -26,10 +26,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number that indicates the estimated round trip time (RTT) for this SSRC, in seconds.
     This property will not exist until valid RTT data has been received.
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTimeMeasurements", "roundTripTimeMeasurements")}} {{optional_inline}}
-  - : A positive integer indicating the total number of valid round trip time measurements received for this [synchronization source (SSRC)](#ssrc).
+  - : A positive integer indicating the total number of valid round trip time measurements received for this [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
   - : A number indicating the cumulative sum of all round trip time measurements since the beginning of the session, in seconds.
-    The average round trip time can be computed by dividing `totalRoundTripTime` by [`roundTripTimeMeasurements`](#roundtriptimemeasurements).
+    The average round trip time can be computed by dividing `totalRoundTripTime` by [`roundTripTimeMeasurements`](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/roundTripTimeMeasurements).
 
 ### Received RTP stream statistics
 

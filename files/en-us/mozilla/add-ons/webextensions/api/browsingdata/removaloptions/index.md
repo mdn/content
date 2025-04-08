@@ -28,7 +28,7 @@ Values of this type are objects. They contain the following properties:
 
 - `originTypes` {{optional_inline}}
 
-  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages ("`unprotectedWeb`") is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
+  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages (`unprotectedWeb`) is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
 
     This object may contain any of the following properties:
 

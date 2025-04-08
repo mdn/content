@@ -28,10 +28,12 @@ We also provide extensive [learning resources](/en-US/docs/Learn_web_development
   - : This article gives guidance on how to behave when contributing to our open source project including rules for contributing, etiquette, and how to handle conflicts.
 - [Communication channels](/en-US/docs/MDN/Community/Communication_channels)
   - : This page lists communication channels used by the MDN team and our community, with hints on which might be best for you.
+- [Community Participation Guidelines (CPG)](/en-US/docs/MDN/Community/Community_Participation_Guidelines)
+  - : This page lists all the Community Participation Guidelines we have that helps us foster a welcoming, inclusive, and safe community. It also covers [How to Report](/en-US/docs/MDN/Community/Community_Participation_Guidelines#reporting_process) a CPG Violation.
 
 ## Code of conduct
 
-By participating in and contributing to any of our projects in-person or online, you acknowledge that you have read and agree to the [Mozilla Community Participation Guidelines](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md) (CPG).
+By participating in and contributing to any of our projects in-person or online, you acknowledge that you have read and agree to the [Mozilla Community Participation Guidelines](/en-US/docs/MDN/Community/Community_Participation_Guidelines) (CPG).
 
 ## General support
 

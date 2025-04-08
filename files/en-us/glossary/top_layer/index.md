@@ -12,7 +12,7 @@ Elements placed in the top layer generate a new [stacking context](/en-US/docs/W
 
 Elements that will appear in the top layer include:
 
-- Fullscreen elements, i.e. elements that have been caused to display in fullscreen mode by a successful {{domxref("Element.requestFullscreen()")}} call.
+- Fullscreen elements, i.e., elements that have been caused to display in fullscreen mode by a successful {{domxref("Element.requestFullscreen()")}} call.
 - {{htmlelement("dialog")}} elements displayed as a modal via a successful {{domxref("HTMLDialogElement.showModal()")}} call.
 - Popover elements shown via a successful {{domxref("HTMLElement.showPopover()")}} call.
 

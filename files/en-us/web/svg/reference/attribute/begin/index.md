@@ -21,7 +21,7 @@ You can use this attribute with the following SVG elements:
 
 ## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e., become active.
 
 <table class="properties">
   <tbody>
@@ -174,8 +174,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
 {{EmbedLiveSample('Offset_example', '100%', 130)}}
 
-[begin-1-offset.svg](begin-1-offset.svg)
-
 ### Syncbase example
 
 ```html
@@ -236,8 +234,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
 {{EmbedLiveSample('Syncbase_example', '100%', 130)}}
 
-[begin-2-syncbase.svg](begin-2-syncbase.svg)
-
 ### Event example
 
 ```html
@@ -295,8 +291,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 ```
 
 {{EmbedLiveSample('Event_example', '100%', 130)}}
-
-[begin-3-event.svg](begin-3-event.svg)
 
 ### Repeat example
 
@@ -358,8 +352,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 
 {{EmbedLiveSample('Repeat_example', '100%', 130)}}
 
-[begin-4-repeat.svg](begin-4-repeat.svg)
-
 ### Accesskey example
 
 ```html
@@ -407,8 +399,6 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 {{EmbedLiveSample('Accesskey_example', '100%', 130)}}
 
 _This example is embedded in an iFrame. If you want to activate the key events, you have to click on it first._
-
-[begin-5-accesskey.svg](begin-5-accesskey.svg)
 
 ## Specifications
 

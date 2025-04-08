@@ -9,7 +9,7 @@ browser-compat: api.HTMLDialogElement.show
 {{ APIRef("HTML DOM") }}
 
 The **`show()`** method of the {{domxref("HTMLDialogElement")}}
-interface displays the dialog modelessly, i.e. still allowing interaction with content
+interface displays the dialog modelessly, i.e., still allowing interaction with content
 outside of the dialog.
 
 ## Syntax
@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the dialog is already open and modal (i.e. if the dialog has already been opened with {{domxref("HTMLDialogElement.showModal()")}}).
+  - : Thrown if the dialog is already open and modal (i.e., if the dialog has already been opened with {{domxref("HTMLDialogElement.showModal()")}}).
 
 ## Examples
 

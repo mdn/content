@@ -80,7 +80,7 @@ _No changes._
 
 - The {{DOMxRef("Element.toggleAttribute()")}} method has been implemented ([Firefox bug 1469592](https://bugzil.la/1469592)).
 - The historical, previously non-standard, {{DOMxRef("Event.returnValue")}} property is now supported for compatibility purposes ([Firefox bug 1452569](https://bugzil.la/1452569)).
-- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g. [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
+- We implemented the {{DOMxRef("Window.event")}} property to improve web compatibility, now that it's become standard ([Firefox bug 218415](https://bugzil.la/218415)). However, due to some web compat issues (e.g., [Firefox bug 1479964](https://bugzil.la/1479964)), this was quickly disabled in non-Nightly channels, hidden behind the `dom.window.event.enabled` pref ([Firefox bug 1493869](https://bugzil.la/1493869)).
 - To bring Firefox into alignment with Edge and Chrome, the {{DOMxRef("Navigator/platform", "navigator.platform")}} property now returns `"Win32"` even when running on 64-bit Windows ([Firefox bug 1472618](https://bugzil.la/1472618)).
 - Prior to Firefox 63, links that open new windows that had `rel="noopener"`, as well as calls to {{DOMxRef("Window.open()")}} with the [`noopener`](/en-US/docs/Web/API/Window/open) window feature enabled would default to having all window features disabled so that you had to explicitly re-enable any standard features you wanted. Now, these windows have the same set of features enabled like any other window, and you need to explicitly turn off any you don't want ([Firefox bug 1419960](https://bugzil.la/1419960)).
 
@@ -109,7 +109,7 @@ _No changes._
 
 #### Removals
 
-- The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
+- The obsolete and non-standard Firefox-only methods `Window.back()` and `Window.forward()` have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
 - The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
 - Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
@@ -135,7 +135,7 @@ _No changes._
 
 #### New features
 
-- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g., is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
 - Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 

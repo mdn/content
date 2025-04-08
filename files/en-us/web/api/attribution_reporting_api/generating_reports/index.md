@@ -30,7 +30,7 @@ If neither of these fields are specified, the report window falls back to the fo
 - For [event-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
 - For [navigation-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), the default report windows are 2 days, 7 days, and the source's `"expiry"`.
 
-See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
+See [Custom report windows](https://privacysandbox.google.com/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 Once an event-level report is received at the appropriate endpoint, how the data is processed, stored, and displayed is completely up to the developer. A typical event-level report might look like this:
 
@@ -71,11 +71,11 @@ The properties are as follows:
 
 ## Summary reports
 
-A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching) to prepare them to be processed by an [aggregation service](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
+A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://privacysandbox.google.com/private-advertising/attribution-reporting/summary-reports-intro#batching) to prepare them to be processed by an [aggregation service](https://privacysandbox.google.com/private-advertising/aggregation-service). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
 
 An aggregatable report by default is generated and scheduled to be sent after a trigger is interacted with, with a random delay to help fuzz the timings and improve privacy. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires - this is referred to as the **report window**.
 
-The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
+The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://privacysandbox.google.com/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 > [!NOTE]
 > To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
@@ -122,17 +122,22 @@ The properties are as follows:
 
     - `"payload"`
 
-      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure:
+      - : A [CBOR](https://cbor.io/) map encrypted via [HPKE](https://datatracker.ietf.org/doc/rfc9180/) and then [base64](/en-US/docs/Glossary/Base64)-encoded, with the following structure (using JSON for notation only):
 
-        ```js
+        ```json
         {
-          "operation": "histogram",  // Allows for the service to support other operations in the future
-          "data": [{
-            "bucket": <bucket, encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>,
-            "value": <value, encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>
-          }, ...]
+          "operation": "histogram",
+          "data": [
+            {
+              "bucket": "<Encoded as a 16-byte (i.e. 128-bit) big-endian bytestring>",
+              "value": "<Encoded as a 4-byte (i.e. 32-bit) big-endian bytestring>"
+            }
+            // …
+          ]
         }
         ```
+
+        The `operation` is always `"histogram"`; it allows for the service to support other operations in the future.
 
     - `"key_id"`
       - : A string identifying the public key used to encrypt the payload.
@@ -191,9 +196,9 @@ Noise is added to reports in order to obscure the output associated with a parti
 
 For information on how noise works in attribution reporting, see:
 
-- [Understanding noise in summary reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise).
+- [Understanding noise in summary reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/understanding-noise).
 - [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [Working with noise](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
+- [Working with noise](https://privacysandbox.google.com/private-advertising/attribution-reporting/working-with-noise)
 
 ## Report priorities and limits
 
@@ -343,6 +348,6 @@ Generated success debug reports are identical to attribution reports, and contai
 
 For further information and examples, see:
 
-- [Introduction to debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/) on developers.google.com (2023)
-- [Set up debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/) on developers.google.com (2023)
-- [Debugging cookbook](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/) on developers.google.com (2023)
+- [Introduction to debug reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/) on privacysandbox.google.com (2023)
+- [Set up debug reports](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/) on privacysandbox.google.com (2023)
+- [Debugging cookbook](https://privacysandbox.google.com/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/) on privacysandbox.google.com (2023)

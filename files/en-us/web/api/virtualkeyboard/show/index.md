@@ -34,29 +34,30 @@ Undefined.
 
 The code snippet below shows how to use the `virtualkeyboardpolicy` attribute to prevent the browser from showing the virtual keyboard on click or tap. The code also uses the `navigator.virtualKeyboard.show()` and `navigator.virtualKeyboard.hide()` methods to show and hide the virtual keyboard when a button is clicked:
 
-```js
+```html
 <div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
 <button id="edit-button">Edit</button>
-<script>
-  if ("virtualKeyboard" in navigator) {
-    const editor = document.getElementById("editor");
-    const editButton = document.getElementById("edit-button");
-    let isEditing = false;
+```
 
-    editButton.addEventListener("click", () => {
-      if (isEditing) {
-        navigator.virtualKeyboard.hide();
-        editButton.textContent = "Edit";
-      } else {
-        editor.focus();
-        navigator.virtualKeyboard.show();
-        editButton.textContent = "Save changes";
-      }
+```js
+if ("virtualKeyboard" in navigator) {
+  const editor = document.getElementById("editor");
+  const editButton = document.getElementById("edit-button");
+  let isEditing = false;
 
-      isEditing = !isEditing;
-    });
-  }
-</script>
+  editButton.addEventListener("click", () => {
+    if (isEditing) {
+      navigator.virtualKeyboard.hide();
+      editButton.textContent = "Edit";
+    } else {
+      editor.focus();
+      navigator.virtualKeyboard.show();
+      editButton.textContent = "Save changes";
+    }
+
+    isEditing = !isEditing;
+  });
+}
 ```
 
 ## Specifications

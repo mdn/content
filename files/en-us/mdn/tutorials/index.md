@@ -86,8 +86,8 @@ These tutorials are created by forward-thinking companies and web developers who
   - : What is JavaScript and how can it help you?
 - [Codecademy](https://www.codecademy.com/)
   - : Codecademy is an easy way to learn how to code JavaScript. It's interactive and you can do it with your friends.
-- [freeCodeCamp](https://www.freecodecamp.org)
-  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://forum.freecodecamp.org/), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://www.freecodecamp.org/news).
+- [freeCodeCamp](https://www.freecodecamp.org/)
+  - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://forum.freecodecamp.org/), an [internet radio station](https://coderadio.freecodecamp.org/), and a [blog](https://www.freecodecamp.org/news).
 
 ### Intermediate JavaScript topics
 

@@ -33,17 +33,17 @@ The following table describes `tabindex` behavior in modern browsers:
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
-      <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
+      <td>Negative (i.e., <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
       <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
-      <td>Zero (i.e. <code>tabindex="0"</code>)</td>
+      <td>Zero (i.e., <code>tabindex="0"</code>)</td>
       <td>Yes</td>
       <td>In tab order relative to element's position in document (note that interactive elements like {{HTMLElement('a')}} have this behavior by default, they don't need the attribute).</td>
     </tr>
     <tr>
-      <td>Positive (e.g. <code>tabindex="33"</code>)</td>
+      <td>Positive (e.g., <code>tabindex="33"</code>)</td>
       <td>Yes</td>
       <td><code>tabindex</code> value determines where this element is positioned in the tab order: smaller values will position elements earlier in the tab order than larger values (for example, <code>tabindex="7"</code> will be positioned before <code>tabindex="11"</code>).</td>
     </tr>
@@ -113,8 +113,6 @@ Bind a key down handler to each element in the group, and when an arrow key is u
 1. programmatically apply focus to the new element,
 2. update the `tabindex` of the focused element to "0", and
 3. update the `tabindex` of the previously focused element to "-1".
-
-Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
 
 ### Technique 2: `aria-activedescendant`
 

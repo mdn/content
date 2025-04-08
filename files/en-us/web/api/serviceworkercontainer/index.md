@@ -31,18 +31,16 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 - {{domxref("ServiceWorkerContainer.register()")}}
   - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
 - {{domxref("ServiceWorkerContainer.startMessages()")}}
-  - : Explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
+  - : Explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g., sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
 
 ## Events
 
 - {{domxref("ServiceWorkerContainer/controllerchange_event", "controllerchange")}}
   - : Fired when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- {{domxref("ServiceWorkerContainer/error_event", "error")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired whenever an error occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer/message_event", "message")}}
-  - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 - {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}
-  - : Fired when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Fired when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Examples
 

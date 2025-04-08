@@ -33,7 +33,7 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`popDebugGroup()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUComputePassEncoder")}} becomes invalid:
 
-- The compute pass encoder's debug stack is not empty (i.e. at least one compute pass debug group was previously started with {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- The compute pass encoder's debug stack is not empty (i.e., at least one compute pass debug group was previously started with {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 
 ## Examples
 

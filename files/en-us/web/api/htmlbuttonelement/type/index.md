@@ -16,7 +16,7 @@ It reflects the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute of 
 
 A string representing the type.
 
-Its possible values are listed in the attribute's [button types](/en-US/docs/Web/API/HTMLButtonElement#htmlbuttonelement.type) section.
+Its possible values are listed in the attribute's [button types](/en-US/docs/Web/HTML/Element/button#type) section.
 
 ## Example
 

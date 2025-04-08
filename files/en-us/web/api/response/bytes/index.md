@@ -102,7 +102,7 @@ function log(text) {
 ```
 
 The code first checks if the `bytes()` method is supported.
-If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) event on the `<select>` element.
+If the method is supported it adds an event handler for the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) on the `<select>` element.
 When the value changes, it passes the value of the selection (a URL for an image file) to the `checkSignature()` method defined below.
 If the method is not supported it logs this information.
 

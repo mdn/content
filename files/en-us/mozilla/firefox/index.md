@@ -27,7 +27,7 @@ Firefox is available in five **channels**.
 
 ### Firefox Nightly
 
-Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
+Each night we build Firefox from the latest code in [mozilla-central](https://hg-edge.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
 [Download Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
 
