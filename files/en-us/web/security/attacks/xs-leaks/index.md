@@ -191,7 +191,7 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 
 The `Lax` value of `SameSite` means that cross-site requests will only include the cookie if the request is a top-level navigation (meaning, essentially, that the value in the browser's address bar changes to the target site) and uses a {{glossary("Safe/HTTP", "safe")}} method (most notably, this excludes {{httpmethod("POST")}} requests).
 
-This can protect against some cross-site leaks. For example, the [Leaking page existence using error events](#leaking_page_existence_using_error_events) attack depends on the attacker making cross-site resource requests that include the user's cookies. Setting `SameSite` to `Lax` on the user's session cookie would prevent this attack, because the cookie would not be included in the attacker's request, so the admin page would never be returned.
+This can protect against some cross-site leaks. For example, the [Leaking page existence using error events](#leaking_page_existence_using_error_events) attack depends on the attacker making cross-site resource requests that include the user's session cookies. Setting `SameSite` to `Lax` on the user's session cookie would prevent this attack, because the cookie would not be included in the attacker's request, and no pages that require a login would ever be returned.
 
 As a rule, `SameSite` should be treated as a defense in depth measure, and should be deployed as well as a more explicit isolation policy such as one based on Fetch metadata.
 
