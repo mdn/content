@@ -26,7 +26,7 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 
 1. A subframe of `b.com` receives 64KB upon creation, from the top-level's 512KB limit.
 2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
-3. 15 more subframes of different origins would receive 8KB upon creation (similar to `c.com`).
+3. 15 more subframes would each receive 8KB upon creation (similar to `c.com`).
 4. The next subframe would not be granted any quota.
 5. If one of the subframes is removed, its deferred fetches will be sent.
 6. The next subframe _would_ receive an 8KB quota, as there is quota available again.
