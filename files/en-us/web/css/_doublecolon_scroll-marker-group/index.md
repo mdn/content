@@ -19,9 +19,9 @@ The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-
 
 ## Description
 
-A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group**. This is a container that automatically has any {{cssxref("::scroll-marker")}} pseudo-elements generated on its descendants placed into it. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel, to provide a scroll position indicator. The individual scroll markers can also be used to navigate to their associated content items.
+A scroll container's **`::scroll-marker-group`** pseudo-element represents a **scroll marker group**. This is a container that automatically contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on itself or its descendants. This allows them to be positioned and laid out as a group, and is typically used when creating a CSS carousel to provide a scroll position indicator. The individual scroll markers can be used to navigate to their associated content items.
 
-The {{cssxref("scroll-marker-group")}} property must be set to a non-`none` value on the scroll container for a `::scroll-marker-group` pseudo-element to be generated; the chosen value determines where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
+The scroll container must have its {{cssxref("scroll-marker-group")}} property set to a non-`none` value for the `::scroll-marker-group` pseudo-element to be generated. The chosen {{cssxref("scroll-marker-group")}} value determines where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, while `after` puts it at the end.
 
 It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the group at the start of the content, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
 
@@ -29,18 +29,17 @@ Accessibility-wise, the scroll marker group and contained scroll markers are ren
 
 ## Examples
 
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for other examples that use the `::scroll-marker` pseudo-element.
+
 ### Creating carousel scroll markers
 
 This demo is a carousel of single pages, with each item taking up the full page. We have included scroll markers to enable the user to move to the next and previous pages.
-
-[Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is used for the general layout of the carousel, [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) is used to enforce clear pagination, and [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) is used to position the scroll markers relative to the carousel.
 
 #### HTML
 
 The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
 
-```html live-sample___carousel-example
-<h1>CSS carousel single item per page</h1>
+```html live-sample___carousel-example live-sample___carousel-example_final
 <ul>
   <li>
     <h2>Page 1</h2>
@@ -59,7 +58,9 @@ The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_El
 
 #### CSS
 
-```css hidden live-sample___carousel-example
+We first convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping row of `<li>` elements. The {{cssxref("overflow-x")}} property is set to `auto`, meaning if the items overflow their container on the x-axis, the content will scroll horizontally. We then convert the `<ul>` into a [scroll-snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container), ensuring that items always snap into place when the container is scrolled with a {{cssxref("scroll-snap-type")}} value of `mandatory`.
+
+```css hidden live-sample___carousel-example live-sample___carousel-example_final
 * {
   box-sizing: border-box;
 }
@@ -68,59 +69,45 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+```
 
-h1 {
-  text-align: center;
-  font-size: 1.7rem;
-}
-
+```css live-sample___carousel-example live-sample___carousel-example_final
 ul {
-  width: 100vw;
-  height: 300px;
-  padding: 20px;
   display: flex;
   gap: 4vw;
-}
-
-li {
-  list-style-type: none;
-  background-color: #eee;
-  border: 1px solid #ddd;
-  padding: 20px;
-
-  flex: 0 0 100%;
-}
-
-li:nth-child(even) {
-  background-color: cyan;
-}
-
-ul {
-  overflow-x: scroll;
+  padding-left: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-}
-
-li {
-  scroll-snap-align: center;
 }
 ```
 
-To begin with, the list's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus and layout box order; this means it comes after the scroll buttons:
+Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to make them 100% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `start` causes the left-hand side of the left-most visible item to snap to the left edge of the container when the content is scrolled.
 
-```css live-sample___carousel-example
+```css live-sample___carousel-example live-sample___carousel-example_final
+li {
+  list-style-type: none;
+  background-color: #eee;
+  flex: 0 0 100%;
+  height: 200px;
+  padding-top: 20px;
+  scroll-snap-align: start;
+  text-align: center;
+}
+```
+
+Next, the list's {{cssxref("scroll-marker-group")}} property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the tabbing order and layout box order; this means it comes after the scroll buttons:
+
+```css live-sample___carousel-example live-sample___carousel-example_final
 ul {
   scroll-marker-group: after;
 }
 ```
 
-Next, the list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning; it is horizontally centered on the carousel using a {{cssxref("justify-self")}} value of `anchor-center`. The group is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
+Next, the list's `::scroll-marker-group` pseudo-element is laid out using flexbox, with a {{cssxref("justify-content")}} value of of `center` and a {{cssxref("gap")}} of `20px` so that its children (the {{cssxref("::scroll-marker")}} pseudo-elements) are centered inside the `::scroll-marker-group` with a gap between each one.
 
-```css live-sample___carousel-example
+```css live-sample___carousel-example live-sample___carousel-example_final
 ul::scroll-marker-group {
-  position: absolute;
-  position-anchor: --myCarousel;
-  top: calc(anchor(bottom) - 70px);
-  justify-self: anchor-center;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -129,7 +116,7 @@ ul::scroll-marker-group {
 
 Next, the scroll markers themselves are styled. The look of each one is handled by setting {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}}, and {{cssxref("border-radius")}}, but we also need to set a non-`none` value for the `content` property so they are actually generated.
 
-```css live-sample___carousel-example
+```css live-sample___carousel-example live-sample___carousel-example_final
 li::scroll-marker {
   width: 16px;
   height: 16px;
@@ -145,7 +132,7 @@ li::scroll-marker {
 
 Finally, the {{cssxref(":target-current")}} pseudo-class is used to select whichever scroll marker corresponds to the currently visible "page", highlighting how far the user has scrolled through the content. In this case, we set the `background-color` to `black` so it is styled as a filled-in circle.
 
-```css live-sample___carousel-example
+```css live-sample___carousel-example live-sample___carousel-example_final
 li::scroll-marker:target-current {
   background-color: black;
 }
@@ -153,9 +140,36 @@ li::scroll-marker:target-current {
 
 #### Result
 
-{{EmbedLiveSample("carousel-example", "100%", "420px")}}
+{{EmbedLiveSample("carousel-example", "100%", "280px")}}
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full carousel example that uses the above technique.
+### Positioning the scroll marker group with anchor-positioning
+
+This example extends the previous one, demonstrating the use of [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) to position the scroll marker group relative to the carousel.
+
+#### CSS
+
+The list's `::scroll-marker-group` pseudo-element is positioned relative to the carousel using CSS anchor positioning by giving the group a value for {{cssxref("position-anchor")}} that matches the {{cssxref("anchor-name")}} of the `<ul>`. We then position the group relative to the scroll container in the block direction by setting a {{cssxref("top")}} value that includes an {{cssxref("anchor()")}} function. We also add a {{cssxref("justify-self")}} value of `anchor-center`, which aligns the group to the center of the scroll container in the inline direction.
+
+```css live-sample___carousel-example_final
+ul {
+  anchor-name: --myCarousel;
+}
+
+ul::scroll-marker-group {
+  /* From the previous example */
+  display: flex;
+  gap: 20px;
+
+  position: absolute;
+  position-anchor: --myCarousel;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("carousel-example_final", "100%", "260px")}}
 
 ## Specifications
 

@@ -24,15 +24,15 @@ The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/d
   - : A value representing which direction of scroll button you want to select. The following values are available:
 
     - `*`
-      - : Selects all four scroll buttons, allowing styles to be applied to each of them in a single rule.
+      - : Selects all the originating element's scroll buttons, allowing styles to be applied to each of them in a single rule.
     - `down`
-      - : Selects the downwards scroll button.
+      - : Selects the button that will scroll the content downwards.
     - `left`
-      - : Selects the leftwards scroll button.
+      - : Selects the button that will scroll the content left.
     - `right`
-      - : Selects the rightwards scroll button.
+      - : Selects the button that will scroll the content right.
     - `up`
-      - : Selects the upwards scroll button.
+      - : Selects the button that will scroll the content upwards.
     - `block-end`
       - : Selects the button that will scroll the content in the block-end direction.
     - `block-start`
@@ -46,11 +46,14 @@ The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/d
 
 ## Description
 
-The `::scroll-button()` pseudo-elements are generated inside a {{glossary("scroll container")}}, only when their {{cssxref("content")}} properties are set to a value other than `none`. They are generated as siblings of the scroll container's child DOM elements, immediately preceding them.
+The `::scroll-button()` pseudo-elements are generated inside a {{glossary("scroll container")}}, only when their {{cssxref("content")}} properties are set to a value other than `none`. They are generated as siblings of the scroll container's child DOM elements, immediately preceding them and any {{cssxref("::scroll-marker-group")}} generated on the container.
 
-The selector's argument specifies which scrolling direction is selected. You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes. You can also specify a value of `*` to target all of the `::scroll-button()` pseudo-elements, providing styles to all the buttons in a single rule.
+You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes. The selector's argument specifies which scrolling direction is selected. You can also specify a value of `*` to target all of the `::scroll-button()` pseudo-elements, providing styles to all the buttons in a single rule.
 
 The generated buttons behave just like regular {{htmlelement("button")}} elements, including sharing their default browser styles. They are focusable, accessible, and can be activated like regular buttons. When a scroll button is pressed, the scroll container's content is scrolled in the specified direction by one "page," or approximately the dimension of the scroll container, similar to pressing <kbd>PgUp</kbd> and <kbd>PgDn</kbd> keys.
+
+> [!NOTE]
+> Because the buttons do not exist in the DOM like regular buttons, they cannot be directly targeted with JavaScript.
 
 The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
 
@@ -58,137 +61,65 @@ When it is not possible to scroll any further in a particular scroll button's sc
 
 ## Examples
 
-### Creating carousel scroll buttons
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for more carousel examples.
 
-This demo creates a responsive, CSS-only carousel. It uses the {{cssxref("columns")}} property and the `::columns` pseudo-element to create arbitary content columns that span the full width of their parent {{glossary("scroll container")}}, which can be scrolled between using scroll buttons. Each column contains multiple items of content, which can vary in number depending on the viewport width.
+### Creating scroll buttons
+
+In this example, we demonstrate how to create scroll buttons on a CSS carousel.
 
 #### HTML
 
-The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+We have a basic HTML {{htmlelement("ul")}} list with several {{htmlelement("li")}} list items.
 
-```html-nolint
+```html live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 <ul>
-...
-  <li>
-    <h2>Item 1</h2>
-  </li>
-...
-</ul>
-```
-
-```html hidden live-sample___carousel-example
-<h1>CSS carousel multiple items per page</h1>
-<ul>
-  <li>
-    <h2>Item 1</h2>
-  </li>
-  <li>
-    <h2>Item 2</h2>
-  </li>
-  <li>
-    <h2>Item 3</h2>
-  </li>
-  <li>
-    <h2>Item 4</h2>
-  </li>
-  <li>
-    <h2>Item 5</h2>
-  </li>
-  <li>
-    <h2>Item 6</h2>
-  </li>
-  <li>
-    <h2>Item 7</h2>
-  </li>
-  <li>
-    <h2>Item 8</h2>
-  </li>
-  <li>
-    <h2>Item 9</h2>
-  </li>
-  <li>
-    <h2>Item 10</h2>
-  </li>
-  <li>
-    <h2>Item 11</h2>
-  </li>
-  <li>
-    <h2>Item 12</h2>
-  </li>
-  <li>
-    <h2>Item 13</h2>
-  </li>
-  <li>
-    <h2>Item 14</h2>
-  </li>
-  <li>
-    <h2>Item 15</h2>
-  </li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+  <li>Item 8</li>
 </ul>
 ```
 
 #### CSS
 
-First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
+##### Styling the carousel
 
-```css hidden live-sample___carousel-example
-* {
-  box-sizing: border-box;
-}
+We convert our `<ul>` into a carousel by setting the {{cssxref("display")}} to `flex`, creating a single, non-wrapping row of `<li>` elements. The {{cssxref("overflow-x")}} property is set to `auto`, meaning if the items overflow their container on the x-axis, the content will scroll horizontally. We then convert the `<ul>` into a [scroll-snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container), ensuring that items always snap into place when the container is scrolled with a {{cssxref("scroll-snap-type")}} value of `mandatory`.
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  text-align: center;
-  font-size: 1.7rem;
-}
-```
-
-```css hidden live-sample___carousel-example
+```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 ul {
-  width: 100vw;
-  height: 300px;
-  padding: 10px;
-
-  overflow-x: scroll;
+  display: flex;
+  gap: 4vw;
+  padding-left: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-
-  columns: 1;
-  text-align: center;
 }
 ```
 
-```css hidden live-sample___carousel-example
+Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to make them 100% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `start` causes the left-hand side of the left-most visible item to snap to the left edge of the container when the content is scrolled.
+
+```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 li {
   list-style-type: none;
-
-  display: inline-block;
-  height: 100%;
-  aspect-ratio: 3/4;
-
   background-color: #eee;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 0 10px;
-
-  text-align: left;
-}
-
-li:nth-child(even) {
-  background-color: cyan;
+  flex: 0 0 100%;
+  height: 100px;
+  padding-top: 20px;
+  scroll-snap-align: start;
+  text-align: center;
 }
 ```
 
-```css hidden live-sample___carousel-example
-ul::column {
-  scroll-snap-align: center;
-}
-```
+##### Creating the scroll buttons
 
-```css live-sample___carousel-example
+First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
+
+```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 ul::scroll-button(*) {
   border: 0;
   font-size: 2rem;
@@ -212,9 +143,12 @@ ul::scroll-button(*):disabled {
 }
 ```
 
-Next, an appropriate icon is set on the left and right scroll buttons via the {{cssxref("content")}} property, which is also what causes the scroll buttons to be generated:
+> [!NOTE]
+> We also set a {{cssxref("cursor")}} value of `pointer` on the scroll buttons to make it more obvious that they can be interacted with (an improvement for both general [UX](/en-US/docs/Glossary/UX) and [cognitive accessibility](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility)), unsetting it when the scroll buttons are `:disabled`.
 
-```css live-sample___carousel-example
+Next, an appropriate icon is set on the left and right scroll buttons via the `content` property, which is also what causes the scroll buttons to be generated:
+
+```css live-sample___creating-scroll-buttons live-sample___positioning-scroll-buttons
 ul::scroll-button(left) {
   content: "◄";
 }
@@ -224,11 +158,21 @@ ul::scroll-button(right) {
 }
 ```
 
-At this point, we've created the scroll buttons. Now we will position them relative to the carousel using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+#### Result
+
+{{EmbedLiveSample("creating-scroll-buttons", '', '220')}}
+
+Note how the scroll buttons are created at the bottom left on the carousel. Try pressing them to see how they cause the content to be scrolled.
+
+### Positioning the scroll buttons
+
+The above example works, but the buttons are not ideally placed. In this section we will add some more CSS to position them appropriately using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)..
+
+#### CSS
 
 First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
 
-```css live-sample___carousel-example
+```css live-sample___positioning-scroll-buttons
 ul {
   anchor-name: --myCarousel;
 }
@@ -239,28 +183,29 @@ ul::scroll-button(*) {
 }
 ```
 
-To actually position each scroll button, you can set values on their {{glossary("inset properties")}} that use {{cssxref("anchor()")}} functions to position the specified sides of the buttons relative to the sides of the container.
+To actually position each scroll button, we first set an {{cssxref("align-self")}} value of `anchor-center` on both of them, to center them vertically on the carousel:
 
-```css live-sample___carousel-example
-ul::scroll-button(left) {
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) + 13px);
-}
-
-ul::scroll-button(right) {
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) + 13px);
+```css live-sample___positioning-scroll-buttons
+ul::scroll-button(*) {
+  align-self: anchor-center;
 }
 ```
 
-> [!NOTE]
-> In each case, the {{cssxref("calc()")}} function is used to add some space between the button edge and the scroll container edge. So for example, the right-hand edge of the left scroll button is positioned 70 pixels to the right of the container's left-hand edge.
+We then set values on their {{glossary("inset properties")}} to handle the horizontal positioning. We use {{cssxref("anchor()")}} functions to position the specified sides of the buttons relative to the sides of the carousel. In each case, the {{cssxref("calc()")}} function is used to add some space between the button edge and the carousel edge. For example, the right-hand edge of the left scroll button is positioned 45 pixels to the right of the carousel's left-hand edge.
+
+```css live-sample___positioning-scroll-buttons
+ul::scroll-button(left) {
+  right: calc(anchor(left) - 45px);
+}
+
+ul::scroll-button(right) {
+  left: calc(anchor(right) - 45px);
+}
+```
 
 #### Result
 
-{{EmbedLiveSample("carousel-example", "100%", "400px")}}
-
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for a full carousel example featuring the technique outlined above.
+{{EmbedLiveSample("positioning-scroll-buttons", '', '220')}}
 
 ## Specifications
 

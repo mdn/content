@@ -9,7 +9,7 @@ browser-compat: css.properties.scroll-marker-group
 
 {{CSSRef}}{{seecompattable}}
 
-The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's child DOM elements.
+The **`scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) property controls whether a {{glossary("scroll container")}} has a {{cssxref("::scroll-marker-group")}} pseudo-element generated and, if so, whether it should be placed immediately `before` _or_ `after` the container's contents in the default visual and tabbing order.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ scroll-marker-group: unset;
 
 - `none`
 
-- : No scroll-marker-group pseudo-element will be generated on the element. This is the default value.
+  - : No scroll-marker-group pseudo-element will be generated on the element. This is the default value.
 
 > [!NOTE]
 > It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the marker group at the start of the content with styles applied to {{cssxref("::scroll-marker-group")}}, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
@@ -183,7 +183,7 @@ Note the placement of the scroll marker group. Check out how the keyboard tabbin
 
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
-- {cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
