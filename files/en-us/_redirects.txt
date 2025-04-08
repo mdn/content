@@ -12931,6 +12931,7 @@
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
+/en-US/docs/Web/HTML/Date_and_time_formats	/en-US/docs/Web/HTML/Guides/Date_and_time_formats
 /en-US/docs/Web/HTML/Element	/en-US/docs/Web/HTML/Reference/Element
 /en-US/docs/Web/HTML/Element/<rb>:_The_Ruby_Base_element	/en-US/docs/Web/HTML/Reference/Element/rb
 /en-US/docs/Web/HTML/Element/Heading_Elements	/en-US/docs/Web/HTML/Reference/Element/Heading_Elements
@@ -13012,7 +13013,7 @@
 /en-US/docs/Web/HTML/Element/input	/en-US/docs/Web/HTML/Reference/Element/input
 /en-US/docs/Web/HTML/Element/input/<input_type=_col_>	/en-US/docs/Web/HTML/Reference/Element/col
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Reference/Element/colgroup
-/en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
+/en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Guides/Date_and_time_formats
 /en-US/docs/Web/HTML/Element/input/button	/en-US/docs/Web/HTML/Reference/Element/input/button
 /en-US/docs/Web/HTML/Element/input/checkbox	/en-US/docs/Web/HTML/Reference/Element/input/checkbox
 /en-US/docs/Web/HTML/Element/input/color	/en-US/docs/Web/HTML/Reference/Element/input/color
