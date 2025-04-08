@@ -24,7 +24,7 @@ A {{jsxref('Boolean')}}.
 const result = fetchLater("https://report.example.com", {
   method: "POST",
   body: JSON.stringify(myReport),
-  activateAfter: 60000, /* 1 minute */
+  activateAfter: 60000 /* 1 minute */,
 });
 
 function check_if_fetched() {
