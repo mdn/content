@@ -22,6 +22,9 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### JavaScript
 
+- The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
+- The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
+
 #### Removals
 
 ### SVG
@@ -41,6 +44,11 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- WebRTC applications can now set a preference for prioritizing framerate or resolution when both cannot be maintained at the configured levels due to network degradation.
+  The value is set using the [`degradationPreference`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) property in the parameter object passed to the [`setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) method of the `RTCRtpSender` interface.
+  It can also be read from the object returned by the [`getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) method.
+  ([Firefox bug 1329847](https://bugzil.la/1329847)).
 
 #### Removals
 
@@ -82,6 +90,9 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   > [!NOTE]
   > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+- **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+  The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+- **`MutationEvent` on path to removal**: {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
 
 ## Older versions
 
