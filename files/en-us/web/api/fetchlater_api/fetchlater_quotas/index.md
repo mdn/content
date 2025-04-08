@@ -6,32 +6,46 @@ page-type: guide
 
 {{DefaultAPISidebar("fetchLater API")}}
 
+Deferred [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) fetches are batched and sent once the tab is closed. At this point, there is no way for the user to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network the API sets quotas on how much data can be deferred to be sent later
+
+These quotas can be managed through {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directives.
+
+## Overview
+
 The overall quota for `fetchLater()` is 640KB per document. By default, this is divided into 512KB top-level quota and a 128KB shared quota:
 
 - The 512KB top-level quota by default is for any `fetchLater()` requests made from the top-level document and also direct subframes using that origin.
 - The 128KB shared quota by default is for any `fetchLater()` requests made in cross-origin subframes.
 
-Note that `fetchLater()` requests can be made to any different URLs and are not restricted to being made to the same origin as the document or the subframe, so it's important to differentiate between requests made in the topilevel document content (whether first-party or third-party) and subframes.
+Note that `fetchLater()` requests can be made to any URLs and are not restricted to being made to the same origin as the document or the subframe, so it's important to differentiate between requests made in the top-level document content (whether to first-party or third-party origins) and those made in subframes.
 
-For example, the top-level `a.com` document may include a `<script>` that makes a `fetchLater()` request to `analytics.example.com` and this would come out of the top-level 512KB limit. Alternatively, it may embed a `<iframe>` with a source of `analytics.example.com` which may make `fetchLater()` requests, in which case it would come out of the 128KB limit.
+For example, the top-level `a.com` document may include a `<script>` that makes a `fetchLater()` request to `analytics.example.com` and this would be bound by the top-level 512KB limit. Alternatively, it may embed a `<iframe>` with a source of `analytics.example.com` which may make `fetchLater()` requests, in which case it would by bound by the 128KB limit.
 
-### Quota limits by reporting origin and subframe
+## Quota limits by reporting origin and subframe
 
 Only 64KB of the top-level 512KB quota can be used concurrently for the same reporting origin (the request URL's origin). This prevents third-party libraries from reserving quota opportunistically before they have data to send.
 
 Each cross-origin subframe gets an 8KB quota of the shared 128KB quota by default, allocated when the subframe is added to the DOM (whether `fetchLater()` will be used in that subframe or not). This means that, in general, only the first 16 cross-origin subframes added to a page can use `fetchLater()` as they will use up the 128KB quota.
 
-### Increasing subframe quotas bt sharing the top-level quota
+## Increasing subframe quotas bt sharing the top-level quota
 
-The top-level origin can allow selected cross-origin subframes to have an increased 64KB quota, taken out of the larger 512KB limit by listing those origins in the {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} Permission Policy. This is allocated when the subframe is added to the DOM, leaving less quota for the top-level document and direct same-origin subframes. Multiple subdomains from he same origin can each get a 64KB quota.
+The top-level origin can allow selected cross-origin subframes to have an increased 64KB quota, taken out of the larger 512KB limit by listing those origins in the {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} Permissions Policy directive. This is allocated when the subframe is added to the DOM, leaving less quota for the top-level document and direct same-origin subframes. Multiple subdomains from he same origin can each get a 64KB quota.
 
-### Restricting the shared quota
+## Restricting the shared quota
 
-The top-level origin can also restrict the 128KB shared quota to named cross-origins by by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permission Policy. It can also revoke the entire 128KB default subframe quota and instead have the full 640KB quota for itself and any named `deferred-fetch` cross-origins by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permission Policy to `()`.
+The top-level origin can also restrict the 128KB shared quota to named cross-origins by by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permissions Policy. It can also revoke the entire 128KB default subframe quota and instead have the full 640KB quota for itself and any named `deferred-fetch` cross-origins by setting the {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} Permissions Policy to `()`.
 
-### Delegating quotes to subframes of subframs
+## Delegating quotes to subframes of subframes
 
-By default subframes of subframes are not allocated a quota and so cannot use `fetchLater()`. Subframes allocated the increased 64KB quota can delegate the full 64KB quota to further subframes to use `fetchLater()` `deferred-fetch` Permission Policy. They can only delegate their quota cannot allow new quotas nor delegate only parts of the 64KB quota to subframes. Subframes using the minimal 8KB quota cannot delegate quotas to subframes. For delegation, sub-subframes must be included in the both the top-level and the subframe `deferred-fetch` Permission Policies.
+By default subframes of subframes are not allocated a quota and so cannot use `fetchLater()`. Subframes allocated the increased 64KB quota can delegate the full 64KB quota to further subframes to use `fetchLater()` `deferred-fetch` Permissions Policy. They can only delegate their quota cannot allow new quotas nor delegate only parts of the 64KB quota to subframes. Subframes using the minimal 8KB quota cannot delegate quotas to subframes. For delegation, sub-subframes must be included in the both the top-level and the subframe `deferred-fetch` {{httpheader('Permissions-Policy')}} directives.
+
+## When quotas are exceeded
+
+When quotas are exceeded a `QuotaExceededError` is thrown when the {{domxref('Window.fetchLater()','fetchLater()')}} method is called to initiate the deferred request.
+
+Permissions Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permissions Policy.
+
+Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they embed third-party JavaScript.
 
 ## Examples
 
@@ -104,7 +118,7 @@ Permissions-Policy: deferred-fetch=("https://c.com" "https://c.com")
 
 Assuming that `b.com` has the following Permissions Policy:
 
-Permission Policy of the following on `b.com`:
+Permissions Policy of the following on `b.com`:
 
 ```http
 Permissions-Policy: deferred-fetch=("https://c.com")
