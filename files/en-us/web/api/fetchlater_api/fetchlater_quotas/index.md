@@ -96,7 +96,7 @@ Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, wh
 2. The subframe of `b.com` receives 8KB of the default shared quota.
 3. The 8KB is not transferred to `c.com` when `b.com` redirects to there, but the 8KB is not released.
 
-### Redirects back to the top-level origin do allow use of the top-level origin
+### Redirects of subframes back to the top-level origin allow use of the top-level quota
 
 Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which redirects to `a.com`, and no explicit top-level Permission Policies.
 
