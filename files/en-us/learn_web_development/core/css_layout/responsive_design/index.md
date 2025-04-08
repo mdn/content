@@ -270,7 +270,7 @@ video {
 This scales media to ensure they never overflow their containers.
 
 > [!NOTE]
-> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Responsive_images).
+> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images).
 
 Other useful tips:
 

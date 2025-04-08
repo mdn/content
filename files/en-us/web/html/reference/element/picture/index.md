@@ -112,7 +112,7 @@ The `sizes` attribute is not mandatory when using srcset, but it is recommended 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
 Please note that sizes will have its effect only if width dimension descriptors are provided with srcset instead of pixel ratio values (200w instead of 2x for example).
-For more information on using `srcset`, see the [Responsive images](/en-US/docs/Web/HTML/Responsive_images) documentation.
+For more information on using `srcset`, see the [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) documentation.
 
 ### The type attribute
 
