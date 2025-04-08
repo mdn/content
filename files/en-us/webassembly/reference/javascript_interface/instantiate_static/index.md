@@ -27,20 +27,26 @@ compile and instantiate WebAssembly code. This function has two overloads:
 
 ## Syntax
 
-### Primary overload — taking Wasm binary code
+```js-nolint
+// Taking Wasm binary code
+WebAssembly.instantiate(bufferSource)
+WebAssembly.instantiate(bufferSource, importObject)
+WebAssembly.instantiate(bufferSource, importObject, compileOptions)
 
-```js
-WebAssembly.instantiate(bufferSource);
-WebAssembly.instantiate(bufferSource, importObject);
-WebAssembly.instantiate(bufferSource, importObject, compileOptions);
+// Taking a module object instance
+WebAssembly.instantiate(module)
+WebAssembly.instantiate(module, importObject)
+WebAssembly.instantiate(module, importObject, compileOptions)
 ```
 
-#### Parameters
+### Parameters
 
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
     {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
     compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module).
+- `module`
+  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object to be instantiated.
 - `importObject` {{optional_inline}}
   - : An object containing the values to be imported into the newly-created
     `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects.
@@ -53,54 +59,20 @@ WebAssembly.instantiate(bufferSource, importObject, compileOptions);
     - `importedStringConstants` {{optional_inline}}
       - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Guides/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
-#### Return value
+### Return value
 
-A `Promise` that resolves to a `ResultObject` which contains two
+If a `bufferSource` is passed, returns a `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
 - `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/Web/Progressive_web_apps/Guides/Caching).
 - `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Guides/Exported_functions).
 
-#### Exceptions
+If a `module` is passed, returns a `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object.
+
+### Exceptions
 
 - If either of the parameters are not of the correct type or structure,
   the promise rejects with a {{jsxref("TypeError")}}.
-- If the operation fails, the promise rejects with a
-  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError), or
-  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError), depending on the cause of the failure.
-
-### Secondary overload — taking a module object instance
-
-```js
-WebAssembly.instantiate(module);
-WebAssembly.instantiate(module, importObject);
-WebAssembly.instantiate(module, importObject, compileOptions);
-```
-
-#### Parameters
-
-- `module`
-  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object to be instantiated.
-- `importObject` {{optional_inline}}
-  - : An object containing the values to be imported into the newly-created
-    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects.
-    There must be one matching property for each declared import of `module` or
-    else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError) is thrown.
-- `compileOptions` {{optional_inline}}
-  - : An object containing compilation options. Properties can include:
-    - `builtins` {{optional_inline}}
-      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/Guides/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
-    - `importedStringConstants` {{optional_inline}}
-      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Guides/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
-
-#### Return value
-
-A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object.
-
-#### Exceptions
-
-- If either of the parameters are not of the correct type or structure, a
-  {{jsxref("TypeError")}} is thrown.
 - If the operation fails, the promise rejects with a
   [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError), or
   [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError), depending on the cause of the failure.

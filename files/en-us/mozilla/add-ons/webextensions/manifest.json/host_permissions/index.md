@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.host_permissions
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "host_permissions": [
   "*://developer.mozilla.org/*",
   "*://*.example.org/*"

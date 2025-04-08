@@ -164,7 +164,7 @@ In JavaScript, identifiers are commonly made of alphanumeric characters, undersc
 - After the first character, you can use any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category plus U+200C (ZWNJ) and U+200D (ZWJ).
 
 > [!NOTE]
-> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
+> If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e., ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
 In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
 
@@ -533,9 +533,9 @@ The lexical grammar is very lenient: not all regular expression literals that ge
 
 See also {{jsxref("RegExp")}} for more information.
 
-```js-nolint
-/ab+c/g
-/[/]/
+```js
+/ab+c/g;
+/[/]/;
 ```
 
 A regular expression literal cannot start with two forward slashes (`//`), because that would be a line comment. To specify an empty regular expression, use `/(?:)/`.
@@ -546,15 +546,15 @@ One template literal consists of several tokens: `` `xxx${ `` (template head), `
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
-```js-nolint
-`string text`
+```js
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag`string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Automatic semicolon insertion

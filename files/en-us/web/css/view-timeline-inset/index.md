@@ -37,7 +37,7 @@ Allowed values for `view-timeline-inset` are:
 - {{cssxref("length-percentage")}}
   - : Any valid `<length-percentage>` value is accepted as an inset/outset value.
     - If the value is positive, the position of the animation's start/end will be moved inside the scrollport by the specified length or percentage.
-    - If the value is negative, the position of the animation's start/end will be moved outside the scrollport by the specified length or percentage, i.e. it will start animating before it appears in the scrollport, or finish animating after it leaves the scrollport.
+    - If the value is negative, the position of the animation's start/end will be moved outside the scrollport by the specified length or percentage, i.e., it will start animating before it appears in the scrollport, or finish animating after it leaves the scrollport.
 
 If two values are provided, the first value represents the start inset/outset in the relevant axis (where the animation begins) and the second value represents the end inset/outset (where the animation ends). If only one value is provided, the start and end inset/outset are both set to the same value.
 

@@ -52,7 +52,7 @@ Two non-standard keyword values are not recommended. Check [browser compatibilit
 - `normal`
   - : Render the element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
 - `reset`
-  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
+  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g., by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 
 ## Formal definition
 
@@ -233,7 +233,7 @@ In this final CSS block we are checking to see if the browser supports `zoom` an
 
 #### JavaScript
 
-This JavaScript watches for a change in the select field and sets the new value for `--zoom-level` on the content `section`, e.g. `style="--zoom-level: 1.5;"`.
+This JavaScript watches for a change in the select field and sets the new value for `--zoom-level` on the content `section`, e.g., `style="--zoom-level: 1.5;"`.
 
 ```js
 const zoomControl = document.querySelector("#zoom");

@@ -137,7 +137,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
       <td><a href="https://mailarchive.ietf.org/arch/msg/hybi/P_1vbD9uyHl63nbIIbFxKMfSwcM/">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
-        e.g. it is overloaded and is casting off some of its clients.
+        e.g., it is overloaded and is casting off some of its clients.
       </td>
     </tr>
     <tr>

@@ -2,10 +2,12 @@
 title: ::picker()
 slug: Web/CSS/::picker
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.picker
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::picker()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) targets the picker part of an element, for example the drop-down picker of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
@@ -28,13 +30,13 @@ The **`::picker()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web
 
 The `::picker()` pseudo-element targets the picker part of a form control, that is, the pop-up part that appears to allow you to make a selection when you press the control button. It is only available to target when the originating element has a picker and has base appearance set on it via the {{cssxref("appearance")}} property `base-select` value.
 
-The `::picker(select)` selector targets all descendants of customizable `<select>` element except for the first `<button>` child; these decendants are grouped together by the browser and rendered as the picker. The first `<button>` child represents the control button that opens the picker when pressed.
+The `::picker(select)` selector targets all descendants of customizable `<select>` element except for the first `<button>` child; these descendants are grouped together by the browser and rendered as the picker. The first `<button>` child represents the control button that opens the picker when pressed.
 
 This allows you to target all of the picker contents as a single entity, for example if you want to customize its border, animate it when it appears and disappears, or position it somewhere different to the default position. Our [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) guide shows many examples of `::picker(select)` usage.
 
 ### Picker popover behavior
 
-The `<select>` element and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API). See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) for a typical usae case allowed by the implicit popover association.
+The `<select>` element and the picker have an implicit invoker/popover relationship assigned to them automatically, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API). See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior, and see [Animating the picker drop-down using popover states](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select#animating_the_picker_using_popover_states) for a typical use case allowed by the implicit popover association.
 
 ### Picker anchor positioning
 

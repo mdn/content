@@ -2,16 +2,19 @@
 title: "<selectedcontent>: The selected option display element"
 slug: Web/HTML/Element/selectedcontent
 page-type: html-element
+status:
+  - experimental
+  - non-standard
 browser-compat: html.elements.selectedcontent
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to display the content of the currently selected `<option>` inside a closed `<select>` element.
 
 ## Attributes
 
-The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered {{glossary("inert")}}.
+The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered [inert](/en-US/docs/Web/HTML/Global_attributes/inert).
 
 The select button and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
 
@@ -52,7 +55,7 @@ selectedcontent img {
 ```
 
 > [!NOTE]
-> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targetting will not be possible.
+> If the `<button>` and/or `<selectedcontent>` elements are not included inside the `<select>` markup, the browser will place the selected option content inside the select button implicitly, but this targeting will not be possible.
 
 ## Examples
 

@@ -57,7 +57,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
   - : A string that indicates whether the browser should provide scrollbars for the frame.
 - {{domxref("HTMLIFrameElement.src")}}
-  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 - {{domxref("HTMLIFrameElement.srcdoc")}}
   - : A string that represents the content to display in the frame.
 - {{domxref("HTMLIFrameElement.width")}}
@@ -67,7 +67,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLIframeElement.getSVGDocument()")}}
+- {{domxref("HTMLIFrameElement.getSVGDocument()")}}
   - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications

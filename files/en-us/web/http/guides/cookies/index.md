@@ -113,7 +113,7 @@ document.cookie = "yummy_cookie=chocolate";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
-You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e. in the `Set-Cookie` header that created it):
+You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e., in the `Set-Cookie` header that created it):
 
 ```js
 console.log(document.cookie);
@@ -125,7 +125,7 @@ console.log(document.cookie);
 // logs "tasty_cookie=strawberry; yummy_cookie=blueberry"
 ```
 
-Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e. via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e. set `HttpOnly` during creation. See the [Security](#security) section for more details.
+Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e., via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e., set `HttpOnly` during creation. See the [Security](#security) section for more details.
 
 ## Security
 
@@ -182,9 +182,13 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   - `/docsets`
   - `/fr/docs`
 
+  > [!NOTE]
+  > The `path` attribute lets you control what cookies the browser sends based on the different parts of a site.
+  > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
+
 ### Controlling third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e., [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
 
 `SameSite` helps to prevent leakage of information, preserving user [privacy](#privacy_and_tracking) and providing some protection against {{Glossary("CSRF", "cross-site request forgery")}} attacks. It takes three possible values: `Strict`, `Lax`, and `None`:
 

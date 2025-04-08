@@ -103,7 +103,7 @@ The arguments to the function are as follows:
 - `match`
   - : The matched substring. (Corresponds to `$&` above.)
 - `p1`, `p2`, …, `pN`
-  - : The `n`th string found by a capture group (including named capturing groups), provided the first argument to `replace()` is a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if the `pattern` is `/(\a+)(\b+)/`, then `p1` is the match for `\a+`, and `p2` is the match for `\b+`. If the group is part of a disjunction (e.g. `"abc".replace(/(a)|(b)/, replacer)`), the unmatched alternative will be `undefined`.
+  - : The `n`th string found by a capture group (including named capturing groups), provided the first argument to `replace()` is a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if the `pattern` is `/(\a+)(\b+)/`, then `p1` is the match for `\a+`, and `p2` is the match for `\b+`. If the group is part of a disjunction (e.g., `"abc".replace(/(a)|(b)/, replacer)`), the unmatched alternative will be `undefined`.
 - `offset`
   - : The offset of the matched substring within the whole string being examined. For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.
 - `string`

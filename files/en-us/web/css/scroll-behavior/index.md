@@ -38,7 +38,6 @@ scroll-behavior: smooth;
 ```
 
 ```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
 .container {
   flex-direction: column;
 }

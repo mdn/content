@@ -35,7 +35,7 @@ A {{domxref("GPUCommandBuffer")}} object instance.
 
 The following criteria must be met when calling **`finish()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUCommandEncoder")}} becomes invalid:
 
-- There are no active debug groups (i.e. started via {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
+- There are no active debug groups (i.e., started via {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}).
 - The {{domxref("GPUCommandEncoder")}} is in an open state — this means that:
   - There are no child {{domxref("GPUComputePassEncoder")}} or {{domxref("GPURenderPassEncoder")}}s active that have not been ended (by calling `end()`).
   - The {{domxref("GPUCommandEncoder")}} has not already had `finish()` called on it (in which case it cannot be used to encode any more commands).

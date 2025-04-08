@@ -32,7 +32,7 @@ put(item, key)
 - `item`
   - : The item you wish to update (or insert).
 - `key` {{optional_inline}}
-  - : The primary key of the record you want to update (e.g. from
+  - : The primary key of the record you want to update (e.g., from
     {{domxref("IDBCursor.primaryKey")}}).
 
 ### Return value

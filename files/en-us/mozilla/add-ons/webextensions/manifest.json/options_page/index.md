@@ -26,7 +26,7 @@ browser-compat: webextensions.manifest.options_page
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">"options_page": "options/options.html"</pre>
+        <pre class="brush: json">"options_page": "options/options.html"</pre>
       </td>
     </tr>
   </tbody>

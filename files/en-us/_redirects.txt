@@ -1119,7 +1119,7 @@
 /en-US/docs/Creating_and_triggering_custom_events	/en-US/docs/Web/Events/Creating_and_triggering_events
 /en-US/docs/CredentialsContainer.preventSilentAccess()	/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess
 /en-US/docs/Cryptanalysis	/en-US/docs/Glossary/Cryptanalysis
-/en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
+/en-US/docs/Cryptographic_hash_function	/en-US/docs/Glossary/Hash_function
 /en-US/docs/CustomElements	/en-US/docs/Web/API/Web_components/Using_custom_elements
 /en-US/docs/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /en-US/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
@@ -2064,7 +2064,7 @@
 /en-US/docs/DOM/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/DOM/window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/DOM/window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/DOM/window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/DOM/window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/DOM/window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/DOM/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
@@ -2083,7 +2083,7 @@
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/DOM/window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/DOM/window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/DOM/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/DOM/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/DOM/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/DOM/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/DOM/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -2526,7 +2526,7 @@
 /en-US/docs/DOM:window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/DOM:window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/DOM:window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/DOM:window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/DOM:window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM:window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
@@ -2542,7 +2542,7 @@
 /en-US/docs/DOM:window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/DOM:window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/DOM:window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/DOM:window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/DOM:window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/DOM:window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/DOM:window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/DOM:window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -3251,7 +3251,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
-/en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Document_Object_Model_(DOM)/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Document_Object_Model_(DOM)/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Document_Object_Model_(DOM)/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -3559,9 +3559,11 @@
 /en-US/docs/Glossary/Client_hints	/en-US/docs/Web/HTTP/Guides/Client_hints
 /en-US/docs/Glossary/Condition	/en-US/docs/Glossary/Conditional
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
+/en-US/docs/Glossary/Cryptographic_hash_function	/en-US/docs/Glossary/Hash_function
 /en-US/docs/Glossary/DOS_attack	/en-US/docs/Glossary/Denial_of_Service
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
 /en-US/docs/Glossary/Descriptor_(CSS)	/en-US/docs/Glossary/CSS_Descriptor
+/en-US/docs/Glossary/Digest	/en-US/docs/Glossary/Hash_function
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
@@ -3571,7 +3573,7 @@
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
 /en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
-/en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
+/en-US/docs/Glossary/Hash	/en-US/docs/Glossary/Hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
 /en-US/docs/Glossary/IMAP4	/en-US/docs/Glossary/IMAP
@@ -10146,8 +10148,9 @@
 /en-US/docs/Web/API/ServiceWorkerContainer.controller	/en-US/docs/Web/API/ServiceWorkerContainer/controller
 /en-US/docs/Web/API/ServiceWorkerContainer.getRegistration([scope])	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
 /en-US/docs/Web/API/ServiceWorkerContainer.register	/en-US/docs/Web/API/ServiceWorkerContainer/register
+/en-US/docs/Web/API/ServiceWorkerContainer/error_event	/en-US/docs/Web/API/ServiceWorker/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event
-/en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorkerContainer/error_event
+/en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorker/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/onmessage	/en-US/docs/Web/API/ServiceWorkerContainer/message_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope.skipWaiting	/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
@@ -10574,10 +10577,12 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
+/en-US/docs/Web/API/Window/back	/en-US/docs/Web/API/History/back
 /en-US/docs/Web/API/Window/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
+/en-US/docs/Web/API/Window/forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozAnimationStartTime	/en-US/docs/Web/API/Animation/startTime
 /en-US/docs/Web/API/Window/mozPaintCount	/en-US/docs/Web/API/Window
@@ -10753,6 +10758,10 @@
 /en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
+/en-US/docs/Web/API/XMLHttpRequest/channel	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozAnon	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozBackgroundRequest	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/mozSystem	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/onreadystatechange	/en-US/docs/Web/API/XMLHttpRequest/readystatechange_event
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XMLHttpRequestEventTarget/onabort	/en-US/docs/Web/API/XMLHttpRequest/abort_event
@@ -11210,7 +11219,7 @@
 /en-US/docs/Web/API/window.URL.revokeObjectURL	/en-US/docs/Web/API/URL/revokeObjectURL_static
 /en-US/docs/Web/API/window.alert	/en-US/docs/Web/API/Window/alert
 /en-US/docs/Web/API/window.atob	/en-US/docs/Web/API/Window/atob
-/en-US/docs/Web/API/window.back	/en-US/docs/Web/API/Window/back
+/en-US/docs/Web/API/window.back	/en-US/docs/Web/API/History/back
 /en-US/docs/Web/API/window.blur	/en-US/docs/Web/API/Window/blur
 /en-US/docs/Web/API/window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/window.cancelAnimationFrame	/en-US/docs/Web/API/Window/cancelAnimationFrame
@@ -11229,7 +11238,7 @@
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Web/API/window.find	/en-US/docs/Web/API/Window/find
 /en-US/docs/Web/API/window.focus	/en-US/docs/Web/API/Window/focus
-/en-US/docs/Web/API/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/Web/API/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/Web/API/window.frameElement	/en-US/docs/Web/API/Window/frameElement
 /en-US/docs/Web/API/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/Web/API/window.fullScreen	/en-US/docs/Web/API/Window/fullScreen
@@ -15604,7 +15613,7 @@
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
-/en-US/docs/window.forward	/en-US/docs/Web/API/Window/forward
+/en-US/docs/window.forward	/en-US/docs/Web/API/History/forward
 /en-US/docs/window.frames	/en-US/docs/Web/API/Window/frames
 /en-US/docs/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/window.history	/en-US/docs/Web/API/Window/history

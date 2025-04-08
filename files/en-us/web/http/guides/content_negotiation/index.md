@@ -42,7 +42,7 @@ Even if server-driven content negotiation is the most common way to agree on a s
 
 ### The `Accept` header
 
-The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. This is a comma-separated list of MIME types, each combined with a quality factor, a parameter that indicates the relative degree of preference between the different MIME types.
+The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. This is a comma-separated list of MIME types, each combined with a [quality factor](/en-US/docs/Glossary/Quality_values), a parameter that indicates the relative degree of preference between the different MIME types.
 
 The `Accept` header is defined by the browser, or any other user agent, and can vary according to the context. For example, fetching an HTML page or an image, a video, or a script. It's different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }}, or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) is available.
 

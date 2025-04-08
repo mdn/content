@@ -39,7 +39,7 @@ audioCtx.onstatechange = () => {
 
 ### Resuming interrupted play states in iOS Safari
 
-In iOS Safari, when a user leaves the page (e.g. switches tabs, minimizes the browser, or
+In iOS Safari, when a user leaves the page (e.g., switches tabs, minimizes the browser, or
 turns off the screen)
 the audio context's state changes to "interrupted" and needs to be resumed. For example:
 

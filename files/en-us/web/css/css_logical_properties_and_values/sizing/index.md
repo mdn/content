@@ -8,7 +8,7 @@ page-type: guide
 
 In this guide we will explain the flow-relative mappings between physical dimension properties and logical properties used for sizing elements on our pages.
 
-When specifying the size of an item, the [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module gives you the ability to indicate sizing as it relates to the flow of text (inline and block) rather than physical sizing which relates to the physical dimensions of horizontal and vertical (e.g. left and right). While these flow relative mappings may well become the default for many of us, in a design you may well use both physical and logical sizing. You might want some features to always relate to the physical dimensions whatever the writing mode.
+When specifying the size of an item, the [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module gives you the ability to indicate sizing as it relates to the flow of text (inline and block) rather than physical sizing which relates to the physical dimensions of horizontal and vertical (e.g., left and right). While these flow relative mappings may well become the default for many of us, in a design you may well use both physical and logical sizing. You might want some features to always relate to the physical dimensions whatever the writing mode.
 
 ## Mappings for dimensions
 

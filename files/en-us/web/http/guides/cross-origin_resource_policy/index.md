@@ -31,7 +31,7 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
     > This is less secure than an {{Glossary("origin")}}. The [algorithm for checking if two origins are same site](https://html.spec.whatwg.org/multipage/origin.html#same-site) is defined in the HTML standard and involves checking the _registrable domain_.
 
 - `same-origin`
-  - : Only requests from the same _{{Glossary("origin")}}_ (i.e. scheme + host + port) can read the resource.
+  - : Only requests from the same _{{Glossary("origin")}}_ (i.e., scheme + host + port) can read the resource.
 - `cross-origin`
   - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource. This is useful when COEP is used (see below).
 

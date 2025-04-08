@@ -32,7 +32,7 @@ When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("Biqua
 
 With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
 
-If you are looking to learn more there's some [information about the maths behind IIR filters here](https://ece.uccs.edu/~mwickert/ece2610/lecture_notes/ece2610_chap8.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
+If you are looking to learn more there's some [information about the maths behind IIR filters here](https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
 If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 
