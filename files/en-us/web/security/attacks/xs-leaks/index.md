@@ -96,7 +96,6 @@ const frames = target.length;
 ### Leaking redirects with a CSP
 
 In some websites, the server will redirect a request, or not, based on whether the user is signed in (or has some special status on the site). For example, imagine a site which shows administrators a page at `https://example.org/admin`. If the user is not signed in, and requests this page, then the server might redirect them to `https://example.org/login`.
-
 This means that if an attacker could determine whether an attempt to load `https://example.org/admin` led to a redirect, then they know whether the user is an administrator on the site.
 
 In the attack described here, the attacker uses the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) feature to detect whether a cross-site request was redirected.
