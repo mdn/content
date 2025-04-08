@@ -17,7 +17,7 @@ Compression algorithms are used in HTTP to reduce the size of resources download
 
 For example, take this JavaScript:
 
-```javascript
+```js
 function a() {
   console.log("Hello World!");
 }
@@ -135,7 +135,7 @@ From here the process is similar to the previous example when a matching resourc
 
 ## Creating dictionary-compressed responses
 
-Dictionary-compressed responses can use either the Brotli or ZStandard algothms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
+Dictionary-compressed responses can use either the Brotli or ZStandard algorithms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
 
 Dictionary-compressed resources can be created dynamically, but for static resources it can be better to create these in advance at build time. When using prior versions as dictionaries, this will require deciding how many delta-compressed versions to create — for the last version only, or for the last X versions for some value of X.
 
