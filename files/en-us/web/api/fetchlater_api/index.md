@@ -29,7 +29,7 @@ Alternatively, developers can choose to accept some level of missing data — ei
 
 The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow setting fetch requests up in advance. These deferred fetches can be updated before they have been sent, allowing the payload to reflect the latest data to be beaconed.
 
-The browser then sends the beacon when the tab is closed or navigated away from, or after a set time if specified. This avoids sending multiple beacons but still ensures a reliable beacon within reasonable expectations (i.e. excluding when the browser process shuts down unexpectedly during a crash).
+The browser then sends the beacon when the tab is closed or navigated away from, or after a set time if specified. This avoids sending multiple beacons but still ensures a reliable beacon within reasonable expectations (i.e., excluding when the browser process shuts down unexpectedly during a crash).
 
 Deferred fetches can also be aborted using an {{domxref("AbortController")}} if they are no longer required, avoiding further unnecessary costs.
 
