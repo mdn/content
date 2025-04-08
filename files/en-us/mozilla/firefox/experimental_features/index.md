@@ -984,6 +984,47 @@ This subset of the API has been implemented:
   </tbody>
 </table>
 
+### Removal of MutationEvent
+
+{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
+([Firefox bug 1951772](https://bugzil.la/1951772)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.mutation_events.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Graphics: Canvas, WebGL, and WebGPU
 
 #### WebGL: Draft extensions
