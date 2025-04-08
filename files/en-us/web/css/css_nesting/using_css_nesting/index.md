@@ -403,7 +403,7 @@ The `background-color` is parsed first and set to silver, then the `@media` rule
 
 The CSSOM parses the CSS in the following way:
 
-```txt
+```plain
 ↳ CSSStyleRule
   .style
     - background-color: silver
