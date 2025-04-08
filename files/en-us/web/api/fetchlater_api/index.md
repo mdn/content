@@ -67,5 +67,4 @@ See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) 
 ## See also
 
 - [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- {{domxref("Fetch API")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
