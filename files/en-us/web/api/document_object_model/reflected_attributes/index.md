@@ -103,7 +103,7 @@ The way that these issues are resolved is that:
   If you read the attribute it will return `""`.
 - Setting the attribute (with {{domxref("Element.setAttribute()")}}) causes the property to reflect the valid and in-scope references.
 - Setting the attribute with a value reference that is subsequently moved out of scope will result in removal of the corresponding element from the property array.
-  Note however that the attribute still contains the reference, and if the element is moved back in-scope the property will again include the element (i.e. the relationship is restored).
+  Note however that the attribute still contains the reference, and if the element is moved back in-scope the property will again include the element (i.e., the relationship is restored).
 
 Note that the allowed scope of a reference is an element in the same scope or an ancestor scope of the element, but not a descendant scope.
 What this means that an element in a shadow root can reference an element from within its own shadow DOM or the parent DOM, but a DOM element can't set an element defined in a (descendent) shadow root.
