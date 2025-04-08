@@ -227,7 +227,7 @@ In addition, you can use such substitutions to specify parts of the string that 
 
 Locales can be specified using a language code, such as `fr` or `en` or qualified with a script and region code, such as `en_US` or `zh-Hans-CN`. When your extension asks the i18n system for a string, it selects a string using this algorithm:
 
-1. Return the string if there is a `messages.json` file for the user's set browser locale containing the string. For example, if the user has set their browser to `en_US` and the extension provides an `en_US` `messages.json` file.
+1. Return the string if there is a `messages.json` file for the user's set browser locale containing the string. For example, if the user has set their browser to `en-US` and the extension provides the `_locales/en_US/messages.json` file.
 2. Otherwise, if the browser locale is qualified with a script or region (e.g., `en_US` or `zh-Hans-CN`) and there is a `messages.json` file for the regionless version and failing that the scriptless version of that locale and that file contains the string, return it. For example, if the user has set their browser to `zh-Hans-CN`, the i18n system looks for a string in `zh-Hans`, and if that isn't available, `zh.`
 3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
 4. Otherwise return an empty string.
@@ -258,8 +258,8 @@ Take this example:
 
 Suppose the `default_locale` is set to `fr`.
 
-- If the browser's locale is `en_GB` when the extension calls `getMessage("colorLocalized")`, it is returned "colour" because `en_GB` has a matching locale.
-- If the browser's locale is `en_US` when the extension calls `getMessage("colorLocalized")`, it is returned "color" because it matches to the `en` locale.
+- If the browser's locale is `en-GB` when the extension calls `getMessage("colorLocalized")`, it is returned "colour" because `_locales/en_GB/messages.json` contains the colorLocalized message.
+- If the browser's locale is `en-US` when the extension calls `getMessage("colorLocalized")`, it returns "color" because it falls back to the message present in `_locales/en/messages.json`.
 - If the browser's locale is `zh-Hans-CN` when the extension calls `getMessage("colorLocalized")`, it is returned "couleur" because there is no language, script, or region match to the `zh-Hans-CN` locale.
 
 ## Predefined messages
