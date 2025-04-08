@@ -33,6 +33,12 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### HTTP
 
+- The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
+  When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
+  This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
+  Developers can test whether the browser has put the document in an origin-keyed agent cluster using the {{domxref("window.originAgentCluster")}} property.
+  ([Firefox bug 1665474](https://bugzil.la/1665474))
+
 #### Removals
 
 ### Security
