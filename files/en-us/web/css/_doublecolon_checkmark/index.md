@@ -99,7 +99,7 @@ To opt-in to customizable select functionality, the `<select>` element and its p
 
 ```css
 select,
-::checkmark(select) {
+::picker(select) {
   appearance: base-select;
 }
 ```
