@@ -6,9 +6,9 @@ page-type: http-permissions-policy-directive
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} header are paert of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
+The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} header are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 
-They determine how the overall 640KB quota limit is distributed between the top level origin and its cross-origin subframes. By default the top-level origin is granted 512KB and each cross-origin subframe is granted 8KB out of the rest of the 128KB but using the `deferred-fetch-minimal` Permission Policy can reallocate the 128KB shared limit to the top-level giving it access to the full 640KB limit.
+They determine how the overall 640KB quota limit is distributed between the top level origin and its cross-origin subframes. By default the top-level origin is granted 512KB and each cross-origin subframe is granted 8KB out of the rest of the 128KB. The `deferred-fetch-minimal` Permission Policy can also block all origins and this will reallocate the 128KB shared limit to the top-level quota giving it access to the full 640KB limit.
 
 See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) guide for more details and examples.
 
@@ -42,7 +42,7 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 
 1. A subframe of `b.com` receives 64KB upon creation, from the top-level's 512KB limit.
 2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
-3. 15 more subframes of different origins would receive 8KB upon creation (similar to `c.com`).
+3. 15 more subframes would receive 8KB upon creation (similar to `c.com`, and another `c.com` subframe would also receive another 8KB quota).
 4. The next subframe would not be greanted any quota.
 5. One of the subrames is removed. Its deferred fetches are sent.
 6. The next subframe would receive an 8KB quota again.

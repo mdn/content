@@ -46,7 +46,7 @@ The [same exceptions for `fetch()`](/en-US/docs/Web/API/Window/fetch#exceptions)
 
 - `QuotaExceededError` {{domxref("DOMException")}}
 
-  - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details.
+  - : Use of this feature was blocked due to exceeding the available quota. See [`Quotas`](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details. Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost in all cases, especially if they are embedding third-party javascript.
 
 - `RangeError` {{domxref("DOMException")}}
 
@@ -86,6 +86,26 @@ fetchLater({
 
 > [!NOTE]
 > The actual sending time is unknown, as the browser may wait for a longer or shorter period of time, for example to optimize batching of deferred fetches.
+
+### Defer a `POST` request for around one minute with a try/catch
+
+The same example as above, but best practice is to enclose this is a try/catch:
+
+```js
+try {
+  fetchLater({
+    url: '/send_beacon'
+    method: 'POST'
+    body: getBeaconData(),
+  }, {activateAfter: 60000 /* 1 minute */});
+} catch (e) {
+  if (e instanceOf QuotaExceededError) {
+    // Handle the quota error
+  } else {
+    // Handle other errors
+  }
+}
+```
 
 ### Defer a `POST` request for around one minute and create a function to check if sent
 
