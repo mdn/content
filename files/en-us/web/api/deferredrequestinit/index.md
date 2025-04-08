@@ -2,6 +2,7 @@
 title: DeferredRequestInit
 slug: Web/API/DeferredRequestInit
 page-type: web-api-interface
+browser-compat: api.Window.fetchLater
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}

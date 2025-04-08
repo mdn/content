@@ -3,9 +3,7 @@ title: "DeferredRequestInit: activateAfter property"
 short-title: x
 slug: Web/API/DeferredRequestInit/activateAfter
 page-type: web-api-instance-property
-status:
-  - experimental
-browser-compat: api.Window.DeferredRequestInit
+browser-compat: api.Window.fetchLater
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}

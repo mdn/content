@@ -3,8 +3,6 @@ title: "FetchLaterResult: activated property"
 short-title: x
 slug: Web/API/FetchLaterResult/activated
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Window.FetchLaterResult
 ---
 
