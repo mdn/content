@@ -16,7 +16,7 @@ A {{domxref("ValidityState")}} object.
 
 ## Examples
 
-The following example demonstrates that a `<button>` is in an invalid state when a {{domxref("ValidityState/customError", "customError")}} is set; in this state, the `validityState`'s `validity` property is `false`, while {{domxref("HTMLButtonElement/checkValidity", "checkValidity()")}} returns `true` if the button's {{domxref("HTMLButtonElement/type", "type")}} is not `"submit"`, because such buttons are not candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
+The following example demonstrates that a `<button>` is in an invalid state when a {{domxref("ValidityState/customError", "customError")}} is set; in this state, the `validityState`'s `validity` property is `false`, while {{domxref("HTMLButtonElement/checkValidity", "checkValidity()")}} returns `true` if the button's {{domxref("HTMLButtonElement/type", "type")}} is not `"submit"`, because such buttons are not candidates for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
 ```js
 const button = document.getElementById("myButton");
@@ -41,4 +41,4 @@ console.log(button.checkValidity()); // false if the button is of the "submit" t
 - {{HTMLElement("button")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

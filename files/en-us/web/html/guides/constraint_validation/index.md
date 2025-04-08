@@ -1,6 +1,6 @@
 ---
 title: Constraint validation
-slug: Web/HTML/Constraint_validation
+slug: Web/HTML/Guides/Constraint_validation
 page-type: guide
 ---
 

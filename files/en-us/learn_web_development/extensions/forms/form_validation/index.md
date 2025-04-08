@@ -402,7 +402,7 @@ This renders as follows:
 
 This [full example is live on GitHub](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) along with the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/full-example.html).
 
-See [Validation-related attributes](/en-US/docs/Web/HTML/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
+See [Validation-related attributes](/en-US/docs/Web/HTML/Guides/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
 
 ## Validating forms using JavaScript
 
