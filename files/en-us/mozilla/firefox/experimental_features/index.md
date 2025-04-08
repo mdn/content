@@ -784,6 +784,46 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
+### `::details-content` pseudo-element
+
+The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.details-content.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### `<discard>` element for SVG animations
@@ -1061,6 +1101,47 @@ This subset of the API has been implemented:
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.performance.event_timing.enable_interactionid</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Notification.actions
+
+The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
+This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.actions.enabled</code></td>
     </tr>
   </tbody>
 </table>
