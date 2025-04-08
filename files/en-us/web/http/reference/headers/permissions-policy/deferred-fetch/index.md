@@ -6,11 +6,11 @@ page-type: http-permissions-policy-directive
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} header are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
+The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} headers are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 
-They determine how the overall 640KB quota limit is distributed between the top level origin and its cross-origin subframes. By default the top-level origin is granted 512KB and each cross-origin subframe is granted 8KB out of the rest of the 128KB. The `deferred-fetch` Permission Policy can allow sub-frame origins to be granted a larger 64KB quota out of the top-level 512KB quota in place of the 8KB minimal quota they would otherwise receive by default.
+They determine how the overall 640KB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KB, and each cross-origin subframe is granted 8KB out of the rest of the 128KB. The `deferred-fetch` Permission Policy can allow sub-frame origins to be granted a larger 64KB quota out of the top-level 512KB quota in place of the 8KB minimal quota they would otherwise receive by default.
 
-See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) guide for more details and examples.
+See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
 
 ## Syntax
 
@@ -23,9 +23,9 @@ Permissions-policy: deferred-fetch=(<urllist>)
 - `<urllist>`
   - : A list of origins (each of which is given in quotion marks) which are granted the higher limit of 64KB taken from the parent's main quota. The 64KB quota is taken at the time the subframe is created.
 
-A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if the quota is not used at all.
+A cross-origin subframe can grant `deferred-fetch` to one of its cross-origin subframe descendants, delegating its entire quota. This only works if none of the quota is currently being used.
 
-Permission Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both for whether the quota is actually exceeeded or if quota was restricted for that origin by Permission Policy.
+Permission Policy checks are not discernable from quota checks. Calling `fetchLater()` will throw a `QuotaExceededError` both if the quota is actually exceeded and if the quota was restricted for that origin via a Permission Policy.
 
 ## Default policy
 
@@ -44,9 +44,9 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 1. A subframe of `b.com` receives 64KB upon creation, from the top-level's 512KB limit.
 2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
 3. 15 more subframes of different origins would receive 8KB upon creation (similar to `c.com`).
-4. The next subframe would not be greanted any quota.
+4. The next subframe would not be granted any quota.
 5. One of the subrames is removed. Its deferred fetches are sent.
-6. The next subframe would receive an 8KB quota again.
+6. The next subframe would receive an 8KB quota, as there is quota available again.
 
 ## Revoking the minimal quota altogether
 
@@ -57,7 +57,7 @@ Permissions-Policy: deferred-fetch-minimal=()
 
 1. A subframe of `b.com` receives 64KB upon creation.
 2. A subframe of `c.com` receives no quota upon creation.
-3. The top-level document and its same-origin descendants can use up to the full 640KB but that is reduced to 574KB if an `b.com` subframe is created.
+3. The top-level document and its same-origin descendants can use up to the full 640KB, but that is reduced to 574KB if a `b.com` subframe is created.
 
 ## Specifications
 

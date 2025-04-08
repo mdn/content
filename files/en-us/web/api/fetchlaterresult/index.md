@@ -1,5 +1,5 @@
 ---
-title: FetchLaterResult interface
+title: FetchLaterResult
 slug: Web/API/FetchLaterResult
 page-type: web-api-interface
 browser-compat: api.Window.FetchLaterResult
@@ -11,12 +11,12 @@ The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web
 
 It contains a single `activated` property that indicates whether the deferred request has been sent out or not.
 
-On successful sending, the whole response is ignored — including body and headers — so the response of the deferred fetch is never returned to the `FetchLaterResult` interface.
+After a successful sending, the whole response is ignored — including body and headers — so the response of the deferred fetch is never returned to the `FetchLaterResult` interface.
 
 ## Instance properties
 
 - `activated` {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A read-only boolean field that indicates whether the deferred request has been sent out or not. This will `false` initially and then be updated by the browser once the deferred fetch has been sent.
+  - : A read-only boolean field that indicates whether the deferred request has been sent out. This is initially set to `false` and will then be updated by the browser once the deferred fetch has been sent.
 
 ## Specifications
 

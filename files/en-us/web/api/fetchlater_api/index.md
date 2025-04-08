@@ -34,10 +34,10 @@ Since this cap makes deferred fetch bandwidth a scarce resource, which needs to 
 
 See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
 
-## fetchLater interfaces
+## Interfaces
 
 - {{domxref("Window.fetchLater()")}}
-  - : The `fetchLater()` method is used to queue a resource for sending at a later point.
+  - : Used to queue a resource for sending at a later point.
 - {{domxref("DeferredRequestInit")}}
   - : Represents the set of options that can be used to configure a deferred fetch request.
 - {{domxref("FetchLaterResult")}}
