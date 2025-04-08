@@ -182,6 +182,10 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   - `/docsets`
   - `/fr/docs`
 
+  > [!NOTE]
+  > The `path` attribute lets you control what cookies the browser sends based on the different parts of a site.
+  > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
+
 ### Controlling third-party cookies with `SameSite`
 
 The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e., [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
