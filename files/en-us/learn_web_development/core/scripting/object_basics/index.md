@@ -279,9 +279,12 @@ Adding a property to an object using the method above isn't possible with dot no
 You may have noticed something slightly strange in our methods. Look at this one for example:
 
 ```js
-introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
-}
+const person = {
+  // …
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name[0]}.`);
+  },
+};
 ```
 
 You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.

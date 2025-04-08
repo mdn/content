@@ -35,7 +35,11 @@ Now let's move on to adding functionality to allow users to filter their to-do i
 Filtering items builds on the `filter` property, which you previously added to `app.component.ts`:
 
 ```ts
-filter: 'all' | 'active' | 'done' = 'all';
+export class AppComponent {
+  // …
+  filter: "all" | "active" | "done" = "all";
+  // …
+}
 ```
 
 The default value for filter is `all`, but it can also be `active` or `done`.
