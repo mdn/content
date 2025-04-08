@@ -190,12 +190,12 @@ To change the indentation of a description term, use the [CSS](/en-US/docs/Web/C
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;dl></code> element's children include one
         name-value group, palpable content.
@@ -225,7 +225,7 @@ To change the indentation of a description term, use the [CSS](/en-US/docs/Web/C
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

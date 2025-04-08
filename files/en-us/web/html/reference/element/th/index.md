@@ -380,7 +380,7 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
@@ -389,7 +389,7 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, but with no header, footer, sectioning content, or heading content
         descendants.

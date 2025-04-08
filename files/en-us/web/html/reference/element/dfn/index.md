@@ -11,7 +11,7 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defi
 
 - The ancestor paragraph (a block of text, sometimes marked by a {{HTMLElement("p")}} element)
 - The {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing
-- The nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element,
+- The nearest [section](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) ancestor of the `<dfn>` element,
 
 {{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
 
@@ -144,18 +144,18 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">Phrasing content</a>,
         but no <code>&lt;dfn&gt;</code> element must be a descendant.
       </td>
     </tr>
@@ -167,7 +167,7 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>

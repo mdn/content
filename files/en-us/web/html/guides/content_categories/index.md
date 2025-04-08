@@ -1,6 +1,6 @@
 ---
 title: Content categories
-slug: Web/HTML/Content_categories
+slug: Web/HTML/Guides/Content_categories
 page-type: guide
 ---
 

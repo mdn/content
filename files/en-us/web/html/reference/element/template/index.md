@@ -303,22 +303,22 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#script-supporting_elements"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#script-supporting_elements"
           >script-supporting element</a
         >
       </td>
@@ -335,14 +335,14 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >, or
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#script-supporting_elements"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#script-supporting_elements"
           >script-supporting elements</a
         >. Also allowed as a child of a {{HTMLElement("colgroup")}}
         element that does <em>not</em> have a

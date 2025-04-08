@@ -226,34 +226,34 @@ You'll see that:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#resettable"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#resettable"
           >resettable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#submittable"
           >submittable</a
         >
-        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content"
           >form-associated </a
         >element
       </td>
@@ -276,7 +276,7 @@ You'll see that:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

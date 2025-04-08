@@ -6,7 +6,7 @@ browser-compat: mathml.elements.math
 sidebar: mathmlref
 ---
 
-The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Content_categories#flow_content) is permitted.
+The **`<math>`** [MathML](/en-US/docs/Web/MathML) element is the top-level MathML element, used to write a single mathematical formula. It can be placed in HTML content where [flow content](/en-US/docs/Web/HTML/Guides/Content_categories#flow_content) is permitted.
 
 > [!NOTE]
 > See the [Authoring MathML page](/en-US/docs/Web/MathML/Guides/Authoring#using_mathml) for tips to properly integrate MathML formulas in your web pages and the [Guides](/en-US/docs/Web/MathML/Guides) page for more demos.

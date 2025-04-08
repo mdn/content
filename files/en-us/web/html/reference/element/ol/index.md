@@ -166,16 +166,16 @@ To determine which list to use, try changing the order of the list items; if the
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, and if the <code>&#x3C;ol></code> element's children include at least
         one {{HTMLElement("li")}} element,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content"
           >palpable content</a
         >.
       </td>
@@ -196,7 +196,7 @@ To determine which list to use, try changing the order of the list items; if the
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

@@ -491,10 +491,10 @@ Some media file types let you provide more specific information using the [`code
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, phrasing content, embedded content. If it has a <a href="#controls"><code>controls</code></a> attribute: interactive content and palpable content.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, phrasing content, embedded content. If it has a <a href="#controls"><code>controls</code></a> attribute: interactive content and palpable content.
       </td>
     </tr>
     <tr>

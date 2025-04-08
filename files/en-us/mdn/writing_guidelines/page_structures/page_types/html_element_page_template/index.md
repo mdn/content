@@ -154,7 +154,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
@@ -177,7 +177,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
       <td>
         What parent elements can the element be a child of? For example "Any
         element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >."
       </td>

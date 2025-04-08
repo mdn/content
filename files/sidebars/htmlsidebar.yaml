@@ -33,7 +33,7 @@ sidebar:
   - title: Guides
     details: closed
     children:
-      - link: /Web/HTML/Content_categories
+      - link: /Web/HTML/Guides/Content_categories
         title: Content_categories
       - link: /Glossary/Block-level_content
         title: Block-level_elements

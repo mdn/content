@@ -81,12 +81,12 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -109,7 +109,7 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
