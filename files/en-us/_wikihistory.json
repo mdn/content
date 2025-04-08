@@ -58125,19 +58125,6 @@
       "kscarfone"
     ]
   },
-  "Web/API/ServiceWorkerContainer/error_event": {
-    "modified": "2020-10-15T21:33:32.607Z",
-    "contributors": [
-      "Wind1808",
-      "anlex-N",
-      "daniel.z.tg",
-      "sideshowbarker",
-      "fscholz",
-      "jpmedley",
-      "chrisdavidmills",
-      "kscarfone"
-    ]
-  },
   "Web/API/ServiceWorkerContainer/getRegistration": {
     "modified": "2020-10-15T21:32:19.814Z",
     "contributors": [
