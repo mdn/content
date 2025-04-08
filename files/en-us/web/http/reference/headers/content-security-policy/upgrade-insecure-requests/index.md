@@ -86,7 +86,7 @@ Content-Security-Policy: upgrade-insecure-requests; default-src https:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
 ```
 
-That way, you still upgrade insecure requests on your secure site, but the only
+That way, you still upgrade insecure requests on your secure site, but only the
 monitoring policy is violated and reports insecure resources to your endpoint.
 
 ## Specifications
