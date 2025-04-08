@@ -49,7 +49,7 @@ sidebar:
         title: Microdata
       - link: /Web/HTML/Guides/Microformats
         title: Microformats
-      - link: /Web/HTML/Viewport_meta_tag
+      - link: /Web/HTML/Guides/Viewport_meta_tag
         title: Viewport_meta_tag
       - link: /Web/HTML/CORS_enabled_image
         title: Allowing_cross-origin_images_and_canvas

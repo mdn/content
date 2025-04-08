@@ -1,6 +1,6 @@
 ---
 title: Viewport meta tag
-slug: Web/HTML/Viewport_meta_tag
+slug: Web/HTML/Guides/Viewport_meta_tag
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-viewport/#viewport-meta
 ---
