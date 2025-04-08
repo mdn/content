@@ -26,8 +26,7 @@ In this section we'll describe three different cross-site leaks, to give an idea
 
 - [Leaking page existence using error events](#leaking_page_existence_using_error_events): in this attack, an attacker can determine whether particular pages in the target site exist, by attempting to load them as resources and listening for the {{domxref("HTMLElement/error_event", "error")}} and {{domxref("HTMLElement/load_event", "load")}} events. If certain pages are only available to logged-in users, the attacker can determine whether the user is signed into the target site.
 - [Frame counting using window references](frame_counting_using_window_references): in this attack, the attacker gets a reference to a {{domxref("Window", "window")}} object hosting a page in the target site, for example as the return value of a call to {{domxref("Window.open()", "window.open()")}}. The attacker can then determine the number of {{htmlelement("iframe")}} elements in the target page, which again might reveal whether the user is signed into the target.
-- [Leaking redirects with a CSP](#leaking_redirects_with_a_csp): in this attack, the attacker's page has a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) that only allows a particular page from the target site to be loaded, and then attempts to load that page. If the page load is blocked, the attacker knows that the target redirected the request.
-This redirect may be indicative that the user was logged (or not logged in) depending on how the site works.
+- [Leaking redirects with a CSP](#leaking_redirects_with_a_csp): in this attack, the attacker's page has a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) that only allows a particular page from the target site to be loaded, and then attempts to load that page. If the page load is blocked, the attacker knows that the target redirected the request. This redirect may indicate that the user was logged (or not logged in) depending on how the site works.
 
 All three attacks are deployed in the same way: the attacker crafts a page that implements the attack, then persuades the user to visit the page, for example by sending them an email or sharing a post containing the link. When the user visits the page the attack executes automatically.
 
@@ -96,9 +95,17 @@ const frames = target.length;
 
 ### Leaking redirects with a CSP
 
-In this attack, the attacker creates a page with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that will generate a {{domxref("Element.securitypolicyviolation_event", "securitypolicyviolation")}} event if the page tries to embed a document that is not from the target URL.
+In some websites, the server will redirect a request, or not, based on whether the user is signed in (or has some special status on the site). For example, imagine a site which shows administrators a page at `https://example.org/admin`. If the user is not signed in, and requests this page, then the server might redirect them to `https://example.org/login`.
 
-The attacker's page then creates an {{htmlelement("iframe")}} that embeds the target URL, and listens for the violation event. If the violation event fires, the attacker knows that a redirect took place, and this in turn may reveal something about the user's relationship with the site (for example, that they are signed in, or that they have some other status on the site).
+This means that if an attacker could determine whether an attempt to load `https://example.org/admin` led to a redirect, then they know whether the user is an administrator on the site.
+
+In the attack described here, the attacker uses the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) feature to detect whether a cross-site request was redirected.
+
+- First, they create a page governed by a CSP that only allows {{htmlelement("iframe")}} elements to contain content from `https://example.org/admin`.
+
+- Next, they add an event listener in the page that listens for the {{domxref("Document.securitypolicyviolation_event", "securitypolicyviolation")}} event.
+
+- Finally, they create an {{htmlelement("iframe")}} element and set its `src` attribute to `https://example.org/admin`.
 
 ```html
 <!DOCTYPE html>
@@ -106,7 +113,7 @@ The attacker's page then creates an {{htmlelement("iframe")}} that embeds the ta
   <head>
     <meta
       http-equiv="Content-Security-Policy"
-      content="frame-src https://example.org" />
+      content="frame-src https://example.org/admin" />
   </head>
   <body>
     <script>
@@ -115,11 +122,14 @@ The attacker's page then creates an {{htmlelement("iframe")}} that embeds the ta
       });
       const frame = document.createElement("iframe");
       document.body.appendChild(frame);
-      frame.src = "https://example.org";
+      frame.src = "https://example.org/admin";
     </script>
   </body>
 </html>
 ```
+
+- If the user is logged in as an admin, then the `<iframe>` will load, and the browser will not fire `securitypolicyviolation`.
+- If the user is not logged in as admin, the server redirects to `https://example.org/login`. Because this URL is not allowed by the attacker's CSP, the browser will block the `<iframe>` and fire the `securitypolicyviolation` event, and the attacker's event handler will run.
 
 Note that this attack works even if the target site disallows embedding using a mechanism such as [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
 
