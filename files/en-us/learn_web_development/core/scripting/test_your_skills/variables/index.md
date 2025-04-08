@@ -1,5 +1,6 @@
 ---
-title: "Test your skills: variables"
+title: "Test your skills: Variables"
+short-title: Variables
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 page-type: learn-module-assessment
 ---

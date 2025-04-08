@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Conditionals"
+short-title: Conditionals
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 page-type: learn-module-assessment
 ---

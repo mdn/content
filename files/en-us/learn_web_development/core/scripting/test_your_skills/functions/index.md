@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Functions"
+short-title: Functions
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
 page-type: learn-module-assessment
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Object basics"
+short-title: Objects
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
 page-type: learn-module-assessment
 ---

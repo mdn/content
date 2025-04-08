@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Loops"
+short-title: Loops
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 page-type: learn-module-assessment
 ---

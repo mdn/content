@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Arrays"
+short-title: Arrays
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 page-type: learn-module-assessment
 ---

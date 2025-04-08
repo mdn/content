@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Math"
+short-title: Math
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Math
 page-type: learn-module-assessment
 ---
