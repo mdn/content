@@ -1027,8 +1027,8 @@ This subset of the API has been implemented:
 
 ### Notification.actions
 
-The {{domxref("Notification.actions","actions")}} read only property of the {{domxref("Notification")}} interface is supported in nightly.
-This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}} .
+The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
+This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 ([Firefox bug 1225110](https://bugzil.la/1225110)).
 
 <table>
