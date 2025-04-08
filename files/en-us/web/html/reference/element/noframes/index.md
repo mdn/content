@@ -20,7 +20,7 @@ A `<noframes>` element can contain any HTML elements that are allowed within the
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes). It has no other attributes available.
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes). It has no other attributes available.
 
 ## Example
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.dir
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLElement.dir`** property indicates the text writing directionality of the content of the current element. It reflects the element's [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute.
+The **`HTMLElement.dir`** property indicates the text writing directionality of the content of the current element. It reflects the element's [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute.
 
 Note that if the `dir` attribute is unspecified, the element itself may still inherit directionality from its parent. However, that inherited directionality is not reflected by this property's value.
 
@@ -46,7 +46,7 @@ para.dir = "rtl";
 ## See also
 
 - {{domxref("document.dir")}}
-- HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir)
+- HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
   global attribute
 - CSS {{cssxref("direction")}} property
 - CSS {{cssxref(":dir")}} pseudo-class

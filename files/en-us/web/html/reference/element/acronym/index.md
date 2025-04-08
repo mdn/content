@@ -16,7 +16,7 @@ The **`<acronym>`** [HTML](/en-US/docs/Web/HTML) element allows authors to clear
 
 ## Attributes
 
-This element only has [global attributes](/en-US/docs/Web/HTML/Global_attributes), which are common to all elements.
+This element only has [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), which are common to all elements.
 
 ## DOM Interface
 

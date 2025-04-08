@@ -71,5 +71,5 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-- [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

@@ -115,7 +115,7 @@ To help the user, you can update the page title value to reflect significant pag
 
 ## Embedded content must be labeled
 
-Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
+Make sure that elements that embed content have a [title](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute that describes the embedded content. This includes the {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements are often used for graphical content, much like the {{HTMLelement("img")}} element. A descriptive title helps users of assistive technology understand what the element is showing.
 
 ## Figures with optional captions should be labeled
 

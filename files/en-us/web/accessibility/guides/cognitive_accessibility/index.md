@@ -145,7 +145,7 @@ For these users, the ability to read and understand may depend on the availabili
 
 ### Declare the language of the page and any content not in that main language
 
-The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
+The language of every page must be declared by using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute on the {{HTMLElement('html')}} element. Include the `lang` attribute again on text that is in a language other than the main language of the document.
 
 Proper use of `lang` allows some screen readers to announce the text properly when converting it into synthetic speech. It also helps people who use text-to-speech software.
 

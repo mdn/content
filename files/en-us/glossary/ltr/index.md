@@ -19,9 +19,9 @@ The opposite of LTR, {{Glossary("RTL")}} (Right To Left) is used in other common
   - {{Glossary("Localization")}}
   - {{Glossary("RTL")}}
   - {{Glossary("BiDi")}}
-- [HTML global attributes](/en-US/docs/Web/HTML/Global_attributes)
-  - [dir](/en-US/docs/Web/HTML/Global_attributes/dir)
-  - [lang](/en-US/docs/Web/HTML/Global_attributes/lang)
+- [HTML global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
+  - [dir](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
+  - [lang](/en-US/docs/Web/HTML/Reference/Global_attributes/lang)
 - [CSS](/en-US/docs/Web/CSS)
   - {{cssxref(":dir")}}
   - {{cssxref("direction")}}

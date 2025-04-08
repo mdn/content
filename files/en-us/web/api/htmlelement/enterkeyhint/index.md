@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.enterKeyHint
 
 The **`enterKeyHint`** property is an enumerated property defining
 what action label (or icon) to present for the enter key on virtual keyboards.
-It reflects the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
+It reflects the [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint)
 HTML global attribute and is an enumerated property, only accepting the following values
 as a string:
 
@@ -46,4 +46,4 @@ search.enterKeyHint = "search";
 
 ## See also
 
-- [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) HTML global attribute
+- [`enterkeyhint`](/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) HTML global attribute

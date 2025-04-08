@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 112 that affect d
 
 ### HTML
 
-- The {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
+- The {{domxref("HTMLElement")}} property [**`inert`**](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) is now fully enabled. It allows the browser to ignore content or interactive elements that are within an HTMLElement with the `inert` attribute. See [Firefox bug 1764263](https://bugzil.la/1764263) for more details.
 
 ### CSS
 

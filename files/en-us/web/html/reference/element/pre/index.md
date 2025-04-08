@@ -51,7 +51,7 @@ pre {
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.

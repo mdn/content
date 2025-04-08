@@ -18,7 +18,7 @@ _Also inherits properties from the {{DOMxRef("Element")}} interface._
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{SVGAttr("style")}} attribute.
 - {{DOMxRef("SVGElement.autofocus")}}
-  - : Whether the control should be focused when the page loads, or when a {{htmlelement("dialog")}} or [popover](/en-US/docs/Web/HTML/Global_attributes/popover) become shown.
+  - : Whether the control should be focused when the page loads, or when a {{htmlelement("dialog")}} or [popover](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) become shown.
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if `class` is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.
 - {{DOMxRef("SVGElement.dataset")}} {{ReadOnlyInline}}

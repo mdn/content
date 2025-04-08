@@ -32,7 +32,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example sets the {{cssxref('padding-top')}} property, with the given value, within
-the element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+the element's [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
 ```js
 // get the button element

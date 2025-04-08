@@ -73,7 +73,7 @@ td {
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `span`
   - : Specifies the number of consecutive columns the `<col>` element spans. The value must be a positive integer greater than zero. If not present, its default value is `1`.

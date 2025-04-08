@@ -210,6 +210,6 @@ popover.hidePopover();
 
 ## See also
 
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)
 - Related event: [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event)

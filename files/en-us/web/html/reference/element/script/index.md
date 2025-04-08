@@ -11,7 +11,7 @@ The **`<script>`** [HTML](/en-US/docs/Web/HTML) element is used to embed executa
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
 

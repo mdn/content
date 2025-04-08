@@ -33,5 +33,5 @@ inputElement.dirName = "rtl";
 ## See also
 
 - {{domxref("HTMLTextAreaElement.dirName")}}
-- [`dir` attribute](/en-US/docs/Web/HTML/Global_attributes/dir)
+- [`dir` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
 - [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

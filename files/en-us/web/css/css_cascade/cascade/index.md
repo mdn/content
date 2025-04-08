@@ -31,7 +31,7 @@ Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 

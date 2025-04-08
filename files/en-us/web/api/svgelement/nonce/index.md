@@ -49,6 +49,6 @@ svg[nonce~="whatever"] {
 ## See also
 
 - {{domxref("HTMLElement.nonce")}} a similar method for HTML elements.
-- [`nonce` global attribute](/en-US/docs/Web/HTML/Global_attributes/nonce)
+- [`nonce` global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
 - [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

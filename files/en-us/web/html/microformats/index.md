@@ -470,7 +470,7 @@ Supported in all browsers' support for the class attribute and its DOM API.
 
 ## See also
 
-- [class attribute](/en-US/docs/Web/HTML/Global_attributes/class)
+- [class attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
 - [Microformat](https://en.wikipedia.org/wiki/Microformat) on Wikipedia
 - [Microformats official website](https://microformats.org/wiki/Main_Page)
 - [Search engines support](https://microformats.org/wiki/search_engines) on Microformats official website

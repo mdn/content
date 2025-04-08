@@ -14,7 +14,7 @@ The specific autocorrection behavior, including which words are substituted, dep
 For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
 Other devices and browsers may use a different approach.
 
-The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
+The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) HTML global attribute.
 
 ## Value
 
@@ -106,4 +106,4 @@ When the autocorrect is enabled, and if the implementation has the appropriate s
 
 ## See also
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) HTML global attribute
+- [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) HTML global attribute

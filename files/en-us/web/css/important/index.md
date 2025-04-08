@@ -53,7 +53,7 @@ Within each of the three origins for style sheets – author, user, and user-age
 
 ### Inline styles
 
-Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attributes. They can also be normal or important. Inline _normal_ styles take precedence over all _normal_ declarations, no matter the origin. Inline _important_ styles take precedence over all other _important_ author styles, no matter the layer, but important styles from user's or user-agent's style sheets and transitions override them.
+Inline styles are styles defined using the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attributes. They can also be normal or important. Inline _normal_ styles take precedence over all _normal_ declarations, no matter the origin. Inline _important_ styles take precedence over all other _important_ author styles, no matter the layer, but important styles from user's or user-agent's style sheets and transitions override them.
 
 ### !important and specificity
 

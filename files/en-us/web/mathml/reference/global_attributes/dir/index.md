@@ -81,4 +81,4 @@ body {
 
 - All [global attributes](/en-US/docs/Web/MathML/Reference/Global_attributes).
 - {{cssxref("direction")}}
-- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute

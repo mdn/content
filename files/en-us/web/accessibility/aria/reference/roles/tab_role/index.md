@@ -52,7 +52,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- [id](/en-US/docs/Web/HTML/Global_attributes/id)
+- [id](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
   - : content
 
 ### Keyboard interactions

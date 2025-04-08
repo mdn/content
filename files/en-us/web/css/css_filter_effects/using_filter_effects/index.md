@@ -73,7 +73,7 @@ img:focus {
 }
 ```
 
-In the {{HTMLElement("img")}} element, [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is set to `0` to enable focus without altering the tabbing order for keyboard users because `<img>` is not an interactive element.
+In the {{HTMLElement("img")}} element, [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is set to `0` to enable focus without altering the tabbing order for keyboard users because `<img>` is not an interactive element.
 
 ```css hidden
 img {

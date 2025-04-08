@@ -70,7 +70,7 @@ For a live example of this code in action, see the [Matching the custom state of
 
 This example shows how the `:state()` pseudo-class can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element.
 
-Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as a shadow part named `checkbox`:
 
 ```js

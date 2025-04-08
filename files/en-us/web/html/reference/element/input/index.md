@@ -342,7 +342,7 @@ The `<input>` element is so powerful because of its attributes; the [`type`](#ty
 
 This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
+Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and additionally:
 
 | Attribute                                     | Type(s)                                                                 | Description                                                                            |
 | --------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -395,7 +395,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `autocapitalize`
 
-  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) global attribute page for more information.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
 
@@ -685,7 +685,7 @@ The following non-standard attributes are also available on some browsers. As a 
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>

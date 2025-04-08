@@ -210,7 +210,7 @@ This example demonstrates line-style and color choice. With some `<line-style>` 
 
 #### HTML
 
-This example uses multiple {{HTMLElement( "div" )}} elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style).
+This example uses multiple {{HTMLElement( "div" )}} elements, each with a different `border-color` set as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
 ```html-nolint hidden
 <section>

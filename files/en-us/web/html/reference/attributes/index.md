@@ -38,10 +38,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey">accesskey</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Keyboard shortcut to activate or add focus to the element.</td>
     </tr>
@@ -105,10 +105,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize">autocapitalize</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Sets whether input is automatically capitalized when entered by user
@@ -233,10 +233,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/class">class</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/class">class</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Often used with CSS to style elements with common properties.</td>
     </tr>
@@ -288,10 +288,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable">contenteditable</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Indicates whether the element's content is editable.</td>
     </tr>
@@ -350,7 +350,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Lets you attach custom attributes to an HTML element.</td>
     </tr>
@@ -393,10 +393,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/dir">dir</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Defines the text direction. Allowed values are ltr (Left-To-Right) or
@@ -439,10 +439,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/draggable">draggable</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/draggable">draggable</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Defines whether the element can be dragged.</td>
     </tr>
@@ -458,11 +458,11 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/enterkeyhint">enterkeyhint</a></code>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         The <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
@@ -617,10 +617,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/hidden">hidden</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Prevents rendering of given element, while keeping child elements, e.g.
@@ -662,10 +662,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/id">id</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Often used with CSS to style a specific element. The value of this
@@ -700,11 +700,11 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes/inputmode"><code>inputmode</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         Provides a hint as to the type of data that might be entered by the user
@@ -723,10 +723,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td></td>
     </tr>
@@ -750,10 +750,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang">lang</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Defines the language used in the element.</td>
     </tr>
@@ -1067,7 +1067,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a></td>
+      <td><a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a></td>
       <td>Defines an explicit role for an element for use by assistive technologies.</td>
     </tr>
     <tr>
@@ -1154,10 +1154,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/slot">slot</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Assigns a slot in a shadow DOM shadow tree to an element.</td>
     </tr>
@@ -1173,10 +1173,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck">spellcheck</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Indicates whether spell checking is allowed for the element.</td>
     </tr>
@@ -1235,10 +1235,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/style">style</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Defines CSS styles which will override styles previously set.</td>
     </tr>
@@ -1252,10 +1252,10 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex">tabindex</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Overrides the browser's default tab order and follows the one specified
@@ -1278,19 +1278,19 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/title">title</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>Text to be displayed in a tooltip when hovering over the element.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/translate">translate</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/translate">translate</a></code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
+        <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
       </td>
       <td>
         Specify whether an element's attribute values and the values of its

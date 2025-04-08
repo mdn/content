@@ -32,7 +32,7 @@ li {
 
 ## Attributes
 
-This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element also accepts the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `reversed`
   - : This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.

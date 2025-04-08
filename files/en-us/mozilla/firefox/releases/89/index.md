@@ -42,7 +42,7 @@ _No changes._
 #### DOM
 
 - {{domxref("PerformanceEventTiming")}} is now enabled by default ([Firefox bug 1701029](https://bugzil.la/1701029)).
-- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
+- The content of {{htmlelement("input")}} and {{htmlelement("textarea")}} elements can now be manipulated using {{domxref("Document.execCommand()")}} commands by default, preserving edit history and providing parity with other browsers, without [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) or any lengthy workarounds required ([Firefox bug 1220696](https://bugzil.la/1220696)).
 
 #### Removals
 

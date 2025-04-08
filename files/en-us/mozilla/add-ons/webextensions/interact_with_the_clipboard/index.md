@@ -165,7 +165,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
 
 ## Browser compatibility
 
@@ -175,4 +175,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Make content editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
+- [Make content editable](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable)

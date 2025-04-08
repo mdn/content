@@ -35,7 +35,7 @@ Each embedded browsing context has its own [document](/en-US/docs/Web/API/Docume
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `allow`
 
@@ -219,7 +219,7 @@ The `error` and `load` events fired on `<iframe>`s could be used to probe the UR
 
 ## Accessibility
 
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
 <iframe

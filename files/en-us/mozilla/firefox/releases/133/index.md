@@ -76,7 +76,7 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
 
-  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 

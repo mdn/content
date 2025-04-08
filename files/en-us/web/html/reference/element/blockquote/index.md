@@ -46,7 +46,7 @@ blockquote + p {
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.

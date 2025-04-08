@@ -33,7 +33,7 @@ You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 
 ### Document language
 
-Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>

@@ -66,7 +66,7 @@ This sample code demonstrates a table-style grouping of information where the th
 
 ### Describing the position of gridcells when the overall structure is unknown
 
-In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
+In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
 
 By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
 
@@ -74,7 +74,7 @@ By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/A
 
 #### Editable cells
 
-Both `<td>` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+Both `<td>` elements and elements with a role of `gridcell` applied to them can be made editable, mimicking functionality similar to editing a spreadsheet. This is done by applying the HTML [`contenteditable` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 ```html
 <td contenteditable="true">Notes</td>

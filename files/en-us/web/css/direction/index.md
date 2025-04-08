@@ -8,7 +8,7 @@ browser-compat: css.properties.direction
 {{CSSRef}}
 
 > [!WARNING]
-> Where possible, authors are encouraged to avoid using the `direction` CSS property and use the HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute instead.
+> Where possible, authors are encouraged to avoid using the `direction` CSS property and use the HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute instead.
 
 The **`direction`** [CSS](/en-US/docs/Web/CSS) property sets the direction of text, table and grid columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
 
@@ -50,7 +50,7 @@ direction: rtl;
 }
 ```
 
-Note that text direction is usually defined within a document (e.g., with [HTML's `dir` attribute](/en-US/docs/Web/HTML/Global_attributes/dir)) rather than through direct use of the `direction` property.
+Note that text direction is usually defined within a document (e.g., with [HTML's `dir` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)) rather than through direct use of the `direction` property.
 
 The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table or grid row.
 
@@ -130,6 +130,6 @@ blockquote {
 - {{CSSxRef("unicode-bidi")}}
 - {{CSSxRef("writing-mode")}}
 - SVG {{SVGAttr("direction")}} attribute
-- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

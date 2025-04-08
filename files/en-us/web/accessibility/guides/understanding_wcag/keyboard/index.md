@@ -18,7 +18,7 @@ Most interactive elements are focusable by default; you can make an element focu
 
 ### See also
 
-- [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
 - Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
@@ -30,7 +30,7 @@ This creates confusion for keyboard-only users when the focus order differs from
 
 ### See also
 
-- [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - [Understanding focus order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
 - [Don't use tabindex greater than 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
@@ -42,7 +42,7 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 
 ### See also
 
-- [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 - Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
 - Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
@@ -61,7 +61,7 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ### See also
 
-- [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
+- [tabindex](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) global HTML attribute
 
 ## Focusable element must have focus styling
 

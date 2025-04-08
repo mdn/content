@@ -32,7 +32,7 @@ new CSSKeywordValue(val)
 
 The following example resets the CSS {{cssxref('display')}} property to its defaults,
 setting the inline
-[`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
+[`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute
 to `style="display: initial"` if viewed in the [developer tools inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html).
 
 ```css hidden

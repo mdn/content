@@ -20,7 +20,7 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact` {{Deprecated_Inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.

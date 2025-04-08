@@ -442,8 +442,8 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 
 - {{SVGElement("feGaussianBlur")}}
 - {{SVGAttr("keySplines")}} SVG attribute
-- [dir](/en-US/docs/Web/HTML/Global_attributes#dir)
-- [lang](/en-US/docs/Web/HTML/Global_attributes#lang)
+- [dir](/en-US/docs/Web/HTML/Reference/Global_attributes#dir)
+- [lang](/en-US/docs/Web/HTML/Reference/Global_attributes#lang)
 - {{cssxref(":dir")}}
 - {{cssxref("direction")}}
 

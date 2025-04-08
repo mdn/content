@@ -42,7 +42,7 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.

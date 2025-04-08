@@ -52,7 +52,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 
 - HTML {{HTMLElement("template")}} element
 - HTML {{HTMLElement("slot")}} element
-- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+- HTML [`slot`](/en-US/docs/Web/HTML/Reference/Global_attributes/slot) attribute
 
 - {{Glossary("Shadow tree")}} glossary term
 - {{Glossary("DOM")}} glossary term

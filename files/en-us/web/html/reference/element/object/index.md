@@ -21,7 +21,7 @@ The **`<object>`** [HTML](/en-US/docs/Web/HTML) element represents an external r
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `archive` {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.

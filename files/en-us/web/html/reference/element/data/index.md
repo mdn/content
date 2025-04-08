@@ -29,7 +29,7 @@ data:hover::after {
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `value`
   - : This attribute specifies the machine-readable translation of the content of the element.

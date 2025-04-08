@@ -13,7 +13,7 @@ Firefox 95 was released on December 7, 2021.
 
 ### HTML
 
-- The [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute is now supported on all platforms, instead of just Android.
+- The [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) global attribute is now supported on all platforms, instead of just Android.
   This provides a hint to browsers about the type of virtual keyboard that would be best suited to editing a particular element ([Firefox bug 1205133](https://bugzil.la/1205133)).
 
 ### CSS

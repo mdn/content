@@ -66,4 +66,4 @@ svg {
 
 ## See also
 
-- [HTML `tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [HTML `tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)

@@ -16,7 +16,7 @@ The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `name` {{deprecated_inline}}
   - : Name of the parameter.

@@ -25,7 +25,7 @@ To apply an SVG effect using CSS styles, you first need to create the CSS style 
 </style>
 ```
 
-In the above example, all paragraphs are masked by an [SVG `<mask>`](/en-US/docs/Web/SVG/Reference/Element/mask) with the [ID](/en-US/docs/Web/HTML/Global_attributes/id) `my-mask`.
+In the above example, all paragraphs are masked by an [SVG `<mask>`](/en-US/docs/Web/SVG/Reference/Element/mask) with the [ID](/en-US/docs/Web/HTML/Reference/Global_attributes/id) `my-mask`.
 
 ### Example: Masking
 

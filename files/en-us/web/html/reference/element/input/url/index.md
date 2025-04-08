@@ -52,10 +52,10 @@ See [Validation](#validation) for details on how URLs are validated to ensure th
 
 ## Additional attributes
 
-In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
 
 > [!NOTE]
-> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
+> The [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
 
 ### list
 
@@ -108,7 +108,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+The [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.
@@ -340,7 +340,7 @@ Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular e
 
 This isn't perfect, but it is good enough for this basic demo's requirements.
 
-It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
+It's advisable to use the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
 
 That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
 

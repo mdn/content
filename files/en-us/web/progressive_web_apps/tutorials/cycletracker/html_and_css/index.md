@@ -69,7 +69,7 @@ The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the c
 <!doctype html>
 ```
 
-The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute defining the primary language of the page.
+The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute defining the primary language of the page.
 
 ```html
 <!doctype html>
@@ -138,7 +138,7 @@ Within the `<form>`, we include a {{HTMLelement("fieldset")}} with a {{HTMLeleme
 
 The date pickers are {{HTMLElement("input")}} elements of type {{HTMLElement("input/date", "date")}}. We include the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute to reduce user errors by preventing the user from accidentally submitting an incomplete form.
 
-To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
+To associate a `<label>` with a form control, each `<input>` has an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute matching the [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute of the associated {{HTMLelement("label")}}. The associated label provides each `<input>` with an {{glossary("accessible name")}}.
 
 ```html
 <label for="start-date">Start date</label>

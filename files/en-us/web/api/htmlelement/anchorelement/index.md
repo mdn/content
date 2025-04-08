@@ -11,7 +11,7 @@ browser-compat: api.HTMLElement.anchorElement
 
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
-The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 ## Value
 
@@ -25,7 +25,7 @@ This example associates an element with an anchor in HTML, and uses JavaScript t
 
 #### HTML
 
-In the HTML, we create a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute set to `example-anchor`. This designates the first `<div>` as the anchor of the second `<div>`, associating the two together.
+In the HTML, we create a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `example-anchor`. This will be our anchor element. We then include another `<div>` with a class of `infobox` and an [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute set to `example-anchor`. This designates the first `<div>` as the anchor of the second `<div>`, associating the two together.
 
 We also include a {{htmlelement("p")}} element to output some results into.
 
@@ -70,6 +70,6 @@ This attribute is not currently part of the HTML specification. Read the discuss
 
 ## See also
 
-- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
+- HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

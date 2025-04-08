@@ -50,7 +50,7 @@ The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Reference/
 
 ## Additional attributes
 
-In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
 
 ### list
 

@@ -45,7 +45,7 @@ If providing higher-density versions of an image for high-DPI (Retina) display, 
 
 ## Attributes
 
-This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes only [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 

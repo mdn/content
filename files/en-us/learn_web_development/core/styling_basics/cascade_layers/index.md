@@ -398,7 +398,7 @@ Normal styles declared inside layers receive the lowest priority and are sorted 
 
 Next up are any styles declared outside of layers. The styles in `C.css` were not imported into a layer and will override any conflicting styles from `firstLayer` and `secondLayer`. Styles not declared in a layer always have higher precedence than styles that _are_ declared inside a layer (with the exception of important styles).
 
-Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, and `C.css`).
+Inline styles are declared using the [`style` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style). Normal styles declared in this way will take precedence over normal styles found in the unlayered and layered style sheets (`firstLayer – A.css`, `secondLayer – B.css`, and `C.css`).
 
 Animating styles have higher precedence than all normal styles, including inline normal styles.
 

@@ -29,7 +29,7 @@ This guideline focuses on making text content as understandable as possible.
         The default human language of each web page should be detectable via
         code. This is essential for purposes like making sure the reader has
         arrived at a page written in a language suitable for them. The simplest
-        way to achieve this is to set the <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a>
+        way to achieve this is to set the <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang">lang</a>
         attribute on the page's {{htmlelement("html")}} element, giving
         it a value equal to the language code that best represents the language
         the page is written in.
@@ -48,7 +48,7 @@ This guideline focuses on making text content as understandable as possible.
         <p>
           In cases where the content of a page includes words or phrases that
           are in a different language to the primary language, use the
-          <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a> attribute on an element wrapped
+          <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/lang">lang</a> attribute on an element wrapped
           around the term in question (e.g., a {{htmlelement("span")}}
           if no semantic element is available) to set an appropriate language
           for it.
@@ -87,7 +87,7 @@ This guideline focuses on making text content as understandable as possible.
         <p>
           The {{htmlelement("abbr")}} element is often thought of as
           the preferred way to provide an expansion for an abbreviation — it
-          takes a <a href="/en-US/docs/Web/HTML/Global_attributes/title">title</a> attribute that contains the
+          takes a <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/title">title</a> attribute that contains the
           expansion, and this appears when the acronym is moused over. However,
           the title contents are not accessible via keyboard, nor are they
           reliably read out by screen readers. A better way to handle this is to

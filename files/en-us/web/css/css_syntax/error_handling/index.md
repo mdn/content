@@ -128,7 +128,7 @@ In this example, the last declaration in each block is valid in all browsers —
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
 > [!NOTE]
-> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframes` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 

@@ -153,5 +153,5 @@ closeButton.addEventListener("click", () => {
 - {{cssxref(":fullscreen")}} pseudo-class
 - {{HTMLElement("dialog")}} HTML element
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

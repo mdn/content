@@ -58,7 +58,7 @@ img {
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `alt`
   - : A text string alternative to display on browsers that do not display images.

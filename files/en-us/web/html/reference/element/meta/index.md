@@ -14,14 +14,14 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 - If the [`name`](#name) attribute is set, the `<meta>` element provides _document-level metadata_, applying to the whole page.
 - If the [`http-equiv`](#http-equiv) attribute is set, the `<meta>` element is a _pragma directive_, providing information equivalent to what can be given by a similarly-named HTTP header.
 - If the [`charset`](#charset) attribute is set, the `<meta>` element is a _charset declaration_, giving the character encoding in which the document is encoded.
-- If the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
+- If the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is set, the `<meta>` element provides _user-defined metadata_.
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> The attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
+> The attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
@@ -104,7 +104,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >. If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
+        >. If the <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> attribute is present:
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,

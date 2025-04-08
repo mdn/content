@@ -216,7 +216,7 @@ li {
 
 So far, we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. To select a subset of the elements without changing the others, you can add a `class` to your HTML element and target that class in your CSS.
 
-1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Global_attributes/class) to the second list item. Your list will now look like this:
+1. In your HTML document, add a [class attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/class) to the second list item. Your list will now look like this:
 
    ```html
    <ul>

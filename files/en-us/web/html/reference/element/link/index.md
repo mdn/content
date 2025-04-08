@@ -85,7 +85,7 @@ Other usage notes:
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `as`
 
@@ -424,7 +424,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
       </th>
       <td>
         Metadata content.
-        If <code><a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> is present:
+        If <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code> is present:
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a> and
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
@@ -441,7 +441,7 @@ the rendering of the page will be blocked till the resource is fetched. For exam
       <th>Permitted parents</th>
       <td>
         Any element that accepts metadata elements.
-        If <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> is present: any element that accepts
+        If <a href="/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a> is present: any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
