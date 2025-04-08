@@ -182,8 +182,9 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   - `/docsets`
   - `/fr/docs`
 
-  > [!NOTE]
-  > The `path` attribute [does _not_ protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
+    > [!NOTE]
+    > The `path` attribute lets you control what cookies the browser sends based on the different parts of a site.
+    > It is not intended as a security measure, and [does not protect](/en-US/docs/Web/API/Document/cookie#security) against unauthorized reading of the cookie from a different path.
 
 ### Controlling third-party cookies with `SameSite`
 
