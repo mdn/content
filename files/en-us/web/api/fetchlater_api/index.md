@@ -11,11 +11,11 @@ The **`fetchLater()` API** provides an interface to request a deferred fetch tha
 
 ## Concepts and usage
 
-Developers often have a need to send (or beacon) data back to the server, particularly at the end of a user's visit to a page, for example for analytics services. There are a number of APIs to for this: from adding 1 pixel {{HTMLElement("img")}} elements to the page, to {{domxref("XMLHttpRequest")}}, to the dedicated {{domxref("Beacon API")}}, to the {{domxref("Fetch API")}} itself.
+Developers often need to send (or beacon) data back to the server, particularly at the end of a user's visit to a page — for example, for analytics services. There are several ways to do this: from adding 1 pixel {{HTMLElement("img")}} elements to the page, to {{domxref("XMLHttpRequest")}}, to the dedicated {{domxref("Beacon API", "Beacon API", "", "nocode")}}, and the {{domxref("Fetch API", "Fetch API", "", "nocode")}} itself.
 
-The issue is that all of those suffer from reliability problems for end-of-visit beaconing. While the Beacon API, and the {{domxref("Request.keepalive", "keepalive")}} property of the Fetch API do send even if the document is destroyed (to the best efforts that can be made in this scenario), this only solves part of the problem.
+The issue is that all of these methods suffer from reliability problems for end-of-visit beaconing. While the Beacon API and the {{domxref("Request.keepalive", "keepalive")}} property of the Fetch API will send data, even if the document is destroyed (to the best efforts that can be made in this scenario), this only solves part of the problem.
 
-The other, more difficult, part is to find a reliable time _when_ to send the beacon, since there is not an ideal time in a page's lifecycle to make the JavaScript call to send out the beacon:
+The other — more difficult — part to solve concerns deciding _when_ to send the data, since there is not an ideal time in a page's lifecycle to make the JavaScript call to send out the beacon:
 
 - The {{domxref("Window.unload_event", "unload")}} and {{domxref("Window.beforeunload_event", "beforeunload")}} events are unreliable, and outright ignored by several major browsers.
 - The {{domxref("Window.pagehide_event", "pagehide")}} and {{domxref("document.visibilitychange_event", "visibilitychange")}} events are more reliable, but still have issues on mobile platforms.
@@ -28,9 +28,9 @@ The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow fetch reque
 
 As deferred fetches are batched and sent once the tab is closed the user has no way to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network, the overall quota for a top level document is capped at 640 kilobytes.
 
-Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost in all cases, especially if they are embedding third-party javascript.
+Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they embed third-party JavaScript.
 
-Since this cap makes deferred fetch bandwidth a scarce resource which needs to be shared between multiple reporting origins (e.g., several RUM libraries) and also across subframes of multiple origins, the platform provides a reasonable default division of this quota, but also provides {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} permission policies to allow dividing it in a different way when desired.
+Since this cap makes deferred fetch bandwidth a scarce resource, which needs to be shared between multiple reporting origins (for example, several RUM libraries) and subframes from multiple origins, the platform provides a reasonable default division of this quota. In addition, it provides {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} permission policies to allow dividing it differently when desired.
 
 See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for more details and examples.
 
