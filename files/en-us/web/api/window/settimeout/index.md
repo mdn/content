@@ -323,6 +323,9 @@ The specifics of this are browser-dependent:
 - Firefox for Android has a minimum timeout of 15 minutes for inactive tabs and may unload them entirely.
 - Firefox does not throttle inactive tabs if the tab contains an {{domxref("AudioContext")}}.
 
+> [!NOTE]
+> For a deeper understanding of how timer throttling works in modern browsers, especially regarding chained JavaScript timers, please see [“Heavy throttling of chained JS timers beginning in Chrome 88”](https://developer.chrome.com/blog/timer-throttling-in-chrome-88#terminology). This article provides additional context and discusses related performance implications in detail.
+
 #### Throttling of tracking scripts
 
 Firefox enforces additional throttling for scripts that it recognizes as tracking scripts.
