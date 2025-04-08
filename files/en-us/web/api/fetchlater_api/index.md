@@ -20,7 +20,12 @@ The other — more difficult — part to solve concerns deciding _when_ to send 
 - The {{domxref("Window.unload_event", "unload")}} and {{domxref("Window.beforeunload_event", "beforeunload")}} events are unreliable, and outright ignored by several major browsers.
 - The {{domxref("Window.pagehide_event", "pagehide")}} and {{domxref("document.visibilitychange_event", "visibilitychange")}} events are more reliable, but still have issues on mobile platforms.
 
-This means developers looking to beacon reliably need to beacon more frequently than ideal — for example beacon on each change even if they might not yet be the final value for the page. This has costs in network usage, server processing, and needing to merge or discard outdated beacons on the server. Alternatively, developers can accept some level of missing data — either by beaconing after some time cut off and miss collecting later data, or to attempt to only beacon at end of the page but accept that sometimes this will not be reliable.
+This means developers looking to reliably send out data via a beacon need to do so more frequently than is ideal. For example, they may send a beacon on each change, even if the final value for the page has not yet been reached. This has costs in network usage, server processing, and merging or discarding outdated beacons on the server.
+
+Alternatively, developers can choose to accept some level of missing data — either by:
+
+- Beaconing after a designated cut-off time and not collecting later data.
+- Beaconing at the end of the page lifecycle but accepting that sometimes this will not be reliable.
 
 The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow fetch requests to be set up in advance. These deferred fetches can be aborted using an {{domxref("AbortController")}} and updated before they have been sent allowing the payload to reflect the latest data needing to be beaconed. The browser then takes care of sending the beacon when the document is page is closed or navigated away from, or after a period of time if specified. This avoids the need to send multiple beacons but still ensures a reliable beacon (within reasonable expectations such as the browser process shutting down unexpectedly during a crash).
 
