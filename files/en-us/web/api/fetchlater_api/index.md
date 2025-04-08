@@ -27,7 +27,11 @@ Alternatively, developers can choose to accept some level of missing data — ei
 - Beaconing after a designated cut-off time and not collecting later data.
 - Beaconing at the end of the page lifecycle but accepting that sometimes this will not be reliable.
 
-The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow fetch requests to be set up in advance. These deferred fetches can be aborted using an {{domxref("AbortController")}} and updated before they have been sent allowing the payload to reflect the latest data needing to be beaconed. The browser then takes care of sending the beacon when the document is page is closed or navigated away from, or after a period of time if specified. This avoids the need to send multiple beacons but still ensures a reliable beacon (within reasonable expectations such as the browser process shutting down unexpectedly during a crash).
+The `fetchLater()` API extends the {{domxref("Fetch API")}} to allow setting fetch requests up in advance. These deferred fetches can be updated before they have been sent, allowing the payload to reflect the latest data to be beaconed.
+
+The browser then sends the beacon when the tab is closed or navigated away from, or after a set time if specified. This avoids sending multiple beacons but still ensures a reliable beacon within reasonable expectations (i.e. excluding when the browser process shuts down unexpectedly during a crash).
+
+Deferred fetches can also be aborted using an {{domxref("AbortController")}} if they are no longer required, avoiding further unnecessary costs.
 
 ### Quotas
 
