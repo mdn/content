@@ -7,7 +7,7 @@ browser-compat: css.selectors.scroll-button
 
 {{CSSRef}}
 
-The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a button for controlling the scrolling of a {{glossary("scroll container")}}.
+The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a button for controlling the scrolling of a {{glossary("scroll container")}}. They are generated on scroll containers when their {{cssxref("content")}} value is not `none`. The direction of the scrolling is determined by the parameter value.
 
 ## Syntax
 
