@@ -34,5 +34,5 @@ A string.
 - {{domxref("HTMLButtonElement.reportValidity()")}}
 - {{domxref("HTMLButtonElement.setCustomValidity()")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

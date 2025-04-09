@@ -1,6 +1,7 @@
 ---
-title: Constraint validation
-slug: Web/HTML/Constraint_validation
+title: Using HTML form validation and the Constraint Validation API
+short-title: Constraint validation
+slug: Web/HTML/Guides/Constraint_validation
 page-type: guide
 ---
 

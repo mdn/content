@@ -75,6 +75,6 @@ textarea:valid {
 - [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength)
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern)
-- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{htmlelement('input')}}

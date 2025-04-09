@@ -86,5 +86,5 @@ userInput.addEventListener("input", () => {
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

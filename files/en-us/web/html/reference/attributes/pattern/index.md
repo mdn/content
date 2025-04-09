@@ -45,7 +45,7 @@ input:invalid {
 
 The `pattern` attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.
 
-The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
+The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
 The pattern's regular expression is compiled with the [`'v'` flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class). This makes the regular expression [unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), and also changes how character classes are interpreted. This allows character class set intersection and subtraction operations, and in addition to `]` and `\`, the following characters must be escaped using a `\` backslash if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Before mid-2023, the `'u'` flag was specified instead; If you're updating older code, [this document outlines the differences](https://github.com/tc39/proposal-regexp-v-flag#how-is-the-v-flag-different-from-the-u-flag).
 
@@ -188,6 +188,6 @@ This renders like so:
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

@@ -3878,7 +3878,7 @@
 /en-US/docs/HTML/Forms_in_HTML	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/HTML/Forms_in_HTML5	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/HTML/Global_attributes	/en-US/docs/Web/HTML/Reference/Global_attributes
-/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
+/en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Reference/Elements
@@ -12828,7 +12828,7 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-/en-US/docs/Web/Guide/HTML/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
+/en-US/docs/Web/Guide/HTML/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
@@ -12857,7 +12857,7 @@
 /en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls
 /en-US/docs/Web/Guide/HTML/Forms_in_HTML	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Web/Guide/HTML/HTML5	/en-US/docs/Glossary/HTML5
-/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
+/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Reference/Elements
@@ -12939,6 +12939,7 @@
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/Web/HTML/Comments	/en-US/docs/Web/HTML/Guides/Comments
+/en-US/docs/Web/HTML/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck

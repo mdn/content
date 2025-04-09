@@ -43,7 +43,7 @@ sidebar:
         title: Quirks_Mode_and_Standards_Mode
       - link: /Web/HTML/Date_and_time_formats
         title: Date_and_time_formats
-      - link: /Web/HTML/Constraint_validation
+      - link: /Web/HTML/Guides/Constraint_validation
         title: Constraint_validation
       - link: /Web/HTML/Microdata
         title: Microdata
@@ -67,8 +67,8 @@ sidebar:
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTML/Reference/Global_attributes
-    title: Global_attributes
+    path: /Web/HTML/Reference/Elements/input
+    title: Input_types
     details: closed
     code: true
   - type: listSubPages
@@ -76,8 +76,8 @@ sidebar:
     title: Attributes
     details: closed
   - type: listSubPages
-    path: /Web/HTML/Reference/Elements/input
-    title: Input_types
+    path: /Web/HTML/Reference/Global_attributes
+    title: Global_attributes
     details: closed
     code: true
 l10n:
