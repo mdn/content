@@ -284,7 +284,7 @@ If you have experience working with CSS, the following snippet should make sense
 </style>
 ```
 
-We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
+We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 

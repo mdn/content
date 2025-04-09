@@ -489,7 +489,7 @@ Before running a cross-document transition, you ideally want to wait until the s
 2. Critical scripts are loaded and run.
 3. The HTML visible for the user's initial view of the page has been parsed, so it renders consistently.
 
-Styles are render blocked by default, and scripts can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Element/script#blocking) attribute.
+Styles are render blocked by default, and scripts can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Reference/Elements/script#blocking) attribute.
 
 To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect). In this element, you include the following attributes:
 
@@ -528,7 +528,7 @@ Let's explore what this looks like with an example HTML document:
 
 The result is that document rendering is blocked until the lead content `<div>` has been parsed, ensuring a consistent view transition.
 
-You can also specify a [`media`](/en-US/docs/Web/HTML/Element/link#media) attribute on `<link rel="expect">` elements. For example, you might want to block rendering on a smaller amount of content when loading the page on a narrow-screen device, than on a wide-screen device. This makes sense — on a mobile, less content will be visible when the page first loads than in the case of a desktop.
+You can also specify a [`media`](/en-US/docs/Web/HTML/Reference/Elements/link#media) attribute on `<link rel="expect">` elements. For example, you might want to block rendering on a smaller amount of content when loading the page on a narrow-screen device, than on a wide-screen device. This makes sense — on a mobile, less content will be visible when the page first loads than in the case of a desktop.
 
 This could be achieved with the following HTML:
 

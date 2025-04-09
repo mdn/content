@@ -78,7 +78,7 @@ Some information, called tabular data, needs to be organized into tables with co
 
 ### Advanced text semantics
 
-- [How to take control of HTML line breaking](/en-US/docs/Web/HTML/Element/br)
+- [How to take control of HTML line breaking](/en-US/docs/Web/HTML/Reference/Elements/br)
 - How to mark changes (added and removed text) — see the {{htmlelement("ins")}} and {{htmlelement("del")}} elements.
 
 ### Advanced images & multimedia

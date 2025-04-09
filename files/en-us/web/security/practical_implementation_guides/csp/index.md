@@ -41,7 +41,7 @@ Implement a strict CSP, then start to pinpoint resources that are failing to loa
 > Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only) HTTP header; see [Report-only CSPs](#report-only_csps) below.
 
 1. Decide whether to use nonces or hashes. You should use nonces if you can dynamically generate content or hashes if you need to serve static content.
-2. Implement a strict CSP, as outlined in the [Solution](#solution) section. Make sure that external and internal scripts (included via {{htmlelement("script")}} elements) that you want to run have the correct nonce inserted into the [`nonce`](/en-US/docs/Web/HTML/Element/script#nonce) attributes by the server. If you are instead using hashes, external scripts should have the correct hash inserted into [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attributes.
+2. Implement a strict CSP, as outlined in the [Solution](#solution) section. Make sure that external and internal scripts (included via {{htmlelement("script")}} elements) that you want to run have the correct nonce inserted into the [`nonce`](/en-US/docs/Web/HTML/Reference/Elements/script#nonce) attributes by the server. If you are instead using hashes, external scripts should have the correct hash inserted into [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attributes.
 3. If an allowed script goes on to load third-party scripts, those scripts will fail to load because they won't have the required nonce or hash. Mitigate this problem by adding the [`strict-dynamic`](/en-US/docs/Web/HTTP/Guides/CSP#the_strict-dynamic_keyword) directive, which gives scripts loaded by the first script the same level of trust without being explicitly given a nonce or hash.
 4. Refactor patterns disallowed by the strict CSP, such as inline event handlers and `eval()`. For example, replace inline event handlers with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) calls inside scripts.
 5. Unless sites need the ability to include embeds, their execution should be disabled with `object-src 'none'`.
@@ -57,7 +57,7 @@ If you are unable to get a strict CSP to work, an allowlist-based CSP is much be
 > - `data:` URIs inside `script-src`, `object-src`, or `default-src`.
 > - Overly broad sources or form submission targets.
 
-If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
+If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
 
 ### Report-only CSPs
 

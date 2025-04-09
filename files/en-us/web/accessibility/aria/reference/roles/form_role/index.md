@@ -89,7 +89,7 @@ It is recommended to use `<form>` instead.
 
 ### Inputs are not forms
 
-You do not need to declare `role="form"` on every [form element](/en-US/docs/Web/HTML/Element#forms) (inputs, text areas, selects, etc.). It should be declared on the HTML element that wraps the form elements. Ideally, use the {{HTMLElement('form')}} element as the wrapping element and do not declare `role="form"`.
+You do not need to declare `role="form"` on every [form element](/en-US/docs/Web/HTML/Reference/Elements#forms) (inputs, text areas, selects, etc.). It should be declared on the HTML element that wraps the form elements. Ideally, use the {{HTMLElement('form')}} element as the wrapping element and do not declare `role="form"`.
 
 ### Search
 

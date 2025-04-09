@@ -20,8 +20,8 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Input with numeric underflow
 
-The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
-A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input.
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
+A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/number#min) which sets a minimum value of `18` for the input.
 If the user enters a number lower than 18, the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes
 
 ```css

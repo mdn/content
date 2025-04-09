@@ -7,7 +7,7 @@ browser-compat: css.selectors.read-only
 
 {{CSSRef}}
 
-The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements (such as certain {{htmlelement("input")}} types and {{htmlelement("textarea")}}) that are not editable by the user. Elements on which the HTML attribute [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) doesn't have an effect (such as [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), and all other non-form elements) are also selected by the `:read-only` pseudo-class. In fact, `:read-only` matches anything that {{cssxref(":read-write")}} doesn't match, making it equivalent to `:not(:read-write)`.
+The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements (such as certain {{htmlelement("input")}} types and {{htmlelement("textarea")}}) that are not editable by the user. Elements on which the HTML attribute [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) doesn't have an effect (such as [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), and all other non-form elements) are also selected by the `:read-only` pseudo-class. In fact, `:read-only` matches anything that {{cssxref(":read-write")}} doesn't match, making it equivalent to `:not(:read-write)`.
 
 {{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
 

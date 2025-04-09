@@ -261,7 +261,7 @@ Sometimes you might want to count differently on an ordered list — e.g., start
 
 ### start
 
-The [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute allows you to start the list counting from a number other than 1. The following example:
+The [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute allows you to start the list counting from a number other than 1. The following example:
 
 ```html
 <ol start="4">
@@ -280,7 +280,7 @@ Gives you this output:
 
 ### reversed
 
-The [`reversed`](/en-US/docs/Web/HTML/Element/ol#reversed) attribute will start the list counting down instead of up. The following example:
+The [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute will start the list counting down instead of up. The following example:
 
 ```html
 <ol start="4" reversed>
@@ -302,7 +302,7 @@ Gives you this output:
 
 ### value
 
-The [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute allows you to set your list items to specific numerical values. The following example:
+The [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute allows you to set your list items to specific numerical values. The following example:
 
 ```html
 <ol>

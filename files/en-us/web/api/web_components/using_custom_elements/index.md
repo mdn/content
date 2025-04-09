@@ -512,7 +512,7 @@ Using the built-in element in a web document also looks somewhat different:
 
 You use a `<ul>` element as normal, but specify the name of the custom element inside the `is` attribute.
 
-Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Element/script#defer) attribute to the line that includes the script:
+Note that in this case we must ensure that the script defining our custom element is executed after the DOM has been fully parsed, because `connectedCallback()` is called as soon as the expanding list is added to the DOM, and at that point its children have not been added yet, so the `querySelectorAll()` calls will not find any items. One way to ensure this is to add the [defer](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to the line that includes the script:
 
 ```html
 <script src="main.js" defer></script>

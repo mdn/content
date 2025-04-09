@@ -142,11 +142,11 @@ The language you use can also affect accessibility. In general, you should use c
 
 - Don't use dashes if you can avoid it. Instead of writing 5–7, write 5 to 7.
 - Expand abbreviations — instead of writing Jan, write January.
-- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Element/abbr) tag to describe them.
+- Expand acronyms, at least once or twice, then use the [`<abbr>`](/en-US/docs/Web/HTML/Reference/Elements/abbr) tag to describe them.
 
 ### Structure page sections logically
 
-You should use appropriate [sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) to structure your webpages, for example navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), and repeating content units ({{htmlelement("article")}}). These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating.
+You should use appropriate [sectioning elements](/en-US/docs/Web/HTML/Reference/Elements#content_sectioning) to structure your webpages, for example navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), and repeating content units ({{htmlelement("article")}}). These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating.
 
 For example, a modern content structure could look something like this:
 
@@ -488,7 +488,7 @@ The reason to use an empty `alt` instead of not including it is because many scr
 
 ## More on links
 
-Links (the [`<a>`](/en-US/docs/Web/HTML/Element/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
+Links (the [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
 
 ### Link styling
 
@@ -524,7 +524,7 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Element/img#alt).
+If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/en-US/docs/Web/HTML/Reference/Elements/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)

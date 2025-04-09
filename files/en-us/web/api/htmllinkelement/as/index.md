@@ -14,7 +14,7 @@ The `as` property must have a value for link elements when [`rel="preload"`](/en
 It may also be applied to link elements where [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload), but if omitted, will default to `script`.
 The property should not be set for other types of link elements, such as `rel="prefetch"`.
 
-This property reflects the value of the [`as` attribute](/en-US/docs/Web/HTML/Element/link#as) of the [`<link>`](/en-US/docs/Web/HTML/Element/link) HTML element.
+This property reflects the value of the [`as` attribute](/en-US/docs/Web/HTML/Reference/Elements/link#as) of the [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) HTML element.
 
 ## Value
 

@@ -13,8 +13,8 @@ The **`ownerNode`** property of the
 with the document.
 
 This is usually an HTML
-[`<link>`](/en-US/docs/Web/HTML/Element/link) or
-[`<style>`](/en-US/docs/Web/HTML/Element/style) element, but
+[`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) or
+[`<style>`](/en-US/docs/Web/HTML/Reference/Elements/style) element, but
 can also return a [processing instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
 
 ## Value

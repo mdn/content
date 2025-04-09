@@ -57,7 +57,7 @@ sidebar:
     link: /Web/HTML/Reference
     title: Reference
   - type: listSubPages
-    path: /Web/HTML/Element
+    path: /Web/HTML/Reference/Elements
     title: HTML_Elements
     details: closed
     code: true
@@ -71,7 +71,7 @@ sidebar:
     title: Attributes
     details: closed
   - type: listSubPages
-    path: /Web/HTML/Element/input
+    path: /Web/HTML/Reference/Elements/input
     title: Input_types
     details: closed
     code: true
@@ -101,7 +101,7 @@ l10n:
     Creating_the_content: "Your first website: Creating the content"
     Structuring_content_with_HTML: Structuring content with HTML
     Reference: References
-    HTML_Elements: HTML elements
+    HTML_Elements: Elements
     Global_attributes: Global attributes
     Attributes: Attributes
     Input_types: <code>&lt;input&gt;</code> types

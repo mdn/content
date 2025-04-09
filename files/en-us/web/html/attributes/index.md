@@ -31,7 +31,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>The character set, which if provided must be <code>"UTF-8"</code>.</td>
@@ -47,7 +47,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#action">action</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -72,7 +72,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#allow">allow</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
@@ -89,7 +89,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/link#as">as</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/link#as">as</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}
@@ -98,7 +98,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#async">async</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>Executes the script asynchronously.</td>
@@ -204,7 +204,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meta#charset">charset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#charset">charset</a></code>
       </td>
       <td>
         {{ HTMLElement("meta") }}
@@ -213,7 +213,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#checked">checked</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input#checked">checked</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}
@@ -260,7 +260,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#cols">cols</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of columns in a textarea.</td>
@@ -278,7 +278,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meta#content">content</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -309,7 +309,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/area#coords">coords</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -340,7 +340,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/object#data">data</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/object#data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>Specifies the URL of the resource.</td>
@@ -366,14 +366,14 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#decoding">decoding</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates the preferred method to decode the image.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#default">default</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/track#default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -383,7 +383,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#defer">defer</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/script#defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -448,7 +448,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#enctype">enctype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -526,7 +526,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         this attribute sets the encoding type to use during form submission. If
         this attribute is specified, it overrides the
         <code>enctype</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/form">form</a> owner.
       </td>
     </tr>
     <tr>
@@ -542,7 +542,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         this attribute sets the submission method to use during form submission
         (<code>GET</code>, <code>POST</code>, etc.). If this attribute is
         specified, it overrides the <code>method</code> attribute of the
-        button's <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        button's <a href="/en-US/docs/Web/HTML/Reference/Elements/form">form</a> owner.
       </td>
     </tr>
     <tr>
@@ -558,7 +558,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         this boolean attribute specifies that the form is not to be validated
         when it is submitted. If this attribute is specified, it overrides the
         <code>novalidate</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/form">form</a> owner.
       </td>
     </tr>
     <tr>
@@ -575,7 +575,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         or inline frame) in which to display the response that is received after
         submitting the form. If this attribute is specified, it overrides the
         <code>target</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/form">form</a> owner.
       </td>
     </tr>
     <tr>
@@ -629,7 +629,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#high">high</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meter#high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the lower bound of the upper range.</td>
@@ -655,7 +655,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>Defines a pragma directive.</td>
@@ -689,7 +689,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -716,7 +716,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/img#ismap">ismap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>Indicates that the image is part of a server-side image map.</td>
@@ -732,7 +732,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#kind">kind</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -759,7 +759,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/script#language">language</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/script#language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -778,7 +778,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/input#list">list</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>Identifies a list of pre-defined options to suggest to the user.</td>
@@ -799,7 +799,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#low">low</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meter#low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the upper bound of the lower range.</td>
@@ -851,7 +851,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#method">method</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -918,7 +918,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -943,7 +943,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/meter#optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the optimal numeric value.</td>
@@ -960,7 +960,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/a#ping">ping</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -980,7 +980,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/video#playsinline">playsinline</a></code>
       </td>
       <td>
         {{ HTMLElement("video") }}
@@ -989,7 +989,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/video#poster">poster</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/video#poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
@@ -1055,7 +1055,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/ol#reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -1072,7 +1072,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#rows">rows</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/textarea#rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Defines the number of rows in a text area.</td>
@@ -1088,7 +1088,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1098,7 +1098,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/th#scope">scope</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/th#scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -1108,7 +1108,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/style#scoped">scoped</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
@@ -1116,7 +1116,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/option#selected">selected</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>Defines a value which will be selected on page load.</td>
@@ -1198,14 +1198,14 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/track#srclang">srclang</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/track#srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1221,7 +1221,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/ol#start">start</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/ol#start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>Defines the first number if other than 1.</td>
@@ -1244,7 +1244,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/table#summary">summary</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/table#summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1371,7 +1371,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Elements/textarea#wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>Indicates whether the text should be wrapped.</td>
@@ -1427,4 +1427,4 @@ All event handler attributes accept a string. The string will be used to synthes
 
 ## See also
 
-- [HTML elements](/en-US/docs/Web/HTML/Element)
+- [HTML elements](/en-US/docs/Web/HTML/Reference/Elements)

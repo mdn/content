@@ -21,7 +21,7 @@ In its simplest form, a popover is created by adding the [`popover`](/en-US/docs
 > [!NOTE]
 > Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
 
-Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add at least one control button (also know as the popover **invoker**). You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
+Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add at least one control button (also know as the popover **invoker**). You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -30,7 +30,7 @@ Adding this attribute causes the element to be hidden on page load by having {{c
 
 The default behavior is for the button to be a toggle button — pressing it repeatedly will toggle the popover between showing and hidden.
 
-If you want to change that behavior, you can use the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) attribute — this takes a value of `"hide"`, `"show"`, or `"toggle"`. For example, to create separate show and hide buttons, you could do this:
+If you want to change that behavior, you can use the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) attribute — this takes a value of `"hide"`, `"show"`, or `"toggle"`. For example, to create separate show and hide buttons, you could do this:
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -108,8 +108,8 @@ function supportsPopover() {
 
 Similarly:
 
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}} provide an equivalent to the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, allowing you to set up the control button(s) for a popover, although the property value taken is a reference to the popover DOM element to control.
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}} provide an equivalent to the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) global HTML attribute, allowing you to specify the action taken by a control button.
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}} provide an equivalent to the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute, allowing you to set up the control button(s) for a popover, although the property value taken is a reference to the popover DOM element to control.
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}} provide an equivalent to the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) global HTML attribute, allowing you to specify the action taken by a control button.
 
 Putting these three together, you can programmatically set up a popover and its control button, like so:
 

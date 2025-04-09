@@ -15,7 +15,7 @@ Other devices and browsers may use a different approach.
 
 Autocorrection is relevant to editable text elements:
 
-- {{htmlelement("input")}} elements, except for [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email), and [`url`](/en-US/docs/Web/HTML/Element/input/url), which do not support autocorrection.
+- {{htmlelement("input")}} elements, except for [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email), and [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url), which do not support autocorrection.
 - {{htmlelement("textarea")}} elements.
 - Any element that has the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
@@ -34,7 +34,7 @@ Possible values are:
 
   - : Disable automatic correction of editable text.
 
-The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
+The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url).
 
 For all other editable elements, setting any other value than those listed above is always treated as `on`.
 The default value for elements that are not nested inside a `<form>` is `on`.
@@ -73,7 +73,7 @@ This example shows how you can enable and disable autocorrection using the `auto
 
 #### HTML
 
-The HTML markup defines a {{htmlelement("button")}}, a "name" {{htmlelement("input")}} element of [`type="text"`](/en-US/docs/Web/HTML/Element/input/text), a "bio" {{htmlelement("textarea")}} element, and two {{htmlelement("label")}} elements.
+The HTML markup defines a {{htmlelement("button")}}, a "name" {{htmlelement("input")}} element of [`type="text"`](/en-US/docs/Web/HTML/Reference/Elements/input/text), a "bio" {{htmlelement("textarea")}} element, and two {{htmlelement("label")}} elements.
 
 The "username" element has `autocorrect="off"` set because auto-correcting a name would be annoying!
 The bio does not specify a value for `autocorrect`, which means that it is enabled (we could have set any value other than `off`).

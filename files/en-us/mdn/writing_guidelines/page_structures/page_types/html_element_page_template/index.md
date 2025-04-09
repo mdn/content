@@ -30,11 +30,11 @@ sidebar: mdnsidebar
 > - **title**
 >   - : Title heading displayed at the top of the page.
 >     Format as `'<NameOfTheElement>: Description of element's purpose'`.
->     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
->     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**

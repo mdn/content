@@ -24,7 +24,7 @@ This problem can be solved by IFrame credentialless.
 
 ## The solution — Iframe credentialless
 
-An `<iframe>` is made credentialless by applying the [`credentialless`](/en-US/docs/Web/HTML/Element/iframe#credentialless) attribute to it, or setting the equivalent DOM property — {{domxref("HTMLIFrameElement.credentialless")}} — to `true`.
+An `<iframe>` is made credentialless by applying the [`credentialless`](/en-US/docs/Web/HTML/Reference/Elements/iframe#credentialless) attribute to it, or setting the equivalent DOM property — {{domxref("HTMLIFrameElement.credentialless")}} — to `true`.
 
 ```html
 <iframe
@@ -86,5 +86,5 @@ Use the [https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS)
-- The `<iframe>` [`credentialless`](/en-US/docs/Web/HTML/Element/iframe#credentialless) attribute
+- The `<iframe>` [`credentialless`](/en-US/docs/Web/HTML/Reference/Elements/iframe#credentialless) attribute
 - {{domxref("HTMLIFrameElement.credentialless")}}

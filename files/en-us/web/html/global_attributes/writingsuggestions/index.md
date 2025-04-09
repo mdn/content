@@ -46,4 +46,4 @@ To enable writing suggestions:
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("datalist")}} and [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute
+- {{HTMLElement("datalist")}} and [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute

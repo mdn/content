@@ -28,7 +28,7 @@ It is always best to use native scroll bars. You can use the CSS {{CSSXref('over
 
 Because native scroll bar styling has historically been limited, you may come across a scrollbar implemented in JavaScript that you need to support and make fully accessible. For this, you can use the `scrollbar` role to inform assistive technologies that a UI control is an interactive scrollbar.
 
-An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).
+An element with the `scrollbar` role is a graphical object that controls the scrolling of content within a viewing area; it is the ARIA role which indicates an element is a scroll bar. The HTML element that is most similar is the `range` {{HTMLElement('input')}} type, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
 The `scrollbar` element has two required attributes: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) and [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow). The `aria-controls` attribute references the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the scrollable area it controls. The `aria-valuenow` property defines the current value of the scrollbar.
 
@@ -159,7 +159,7 @@ The above CSS means a native scroll bar will appear when the user interacts with
 
 ## See also
 
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range),
 - HTML {{HTMLElement('progress')}} element
 - HTML {{HTMLElement('meter')}} element
 - Other range widgets include:

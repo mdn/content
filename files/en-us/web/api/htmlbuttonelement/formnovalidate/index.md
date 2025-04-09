@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.formNoValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`formNoValidate`** property of the {{domxref("HTMLButtonElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted via the {{htmlelement("button")}}. It reflects the `<button>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/button#formnovalidate) attribute.
+The **`formNoValidate`** property of the {{domxref("HTMLButtonElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted via the {{htmlelement("button")}}. It reflects the `<button>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Reference/Elements/button#formnovalidate) attribute.
 
 Its value overrides the {{domxref("HTMLFormElement.noValidate", "noValidate")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the button. This property can be retrieved or set.
 

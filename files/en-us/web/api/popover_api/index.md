@@ -42,9 +42,9 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
   - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"`, `"hint"`, or `"manual"`) as its value.
-- [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
+- [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget)
   - : Turns a {{htmlelement("button")}} or {{htmlelement("input")}} element into a popover control button; takes the ID of the popover element to control as its value.
-- [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
   - : Specifies the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by a control {{htmlelement("button")}} or {{htmlelement("input")}}.
 
 ## CSS features
@@ -66,9 +66,9 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 - {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}}
-  - : Gets and sets the popover element being controlled by the control button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
+  - : Gets and sets the popover element being controlled by the control button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}}
-  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by the control button. Reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by the control button. Reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute.
 
 ### Instance methods
 
@@ -102,7 +102,7 @@ See our [Popover API examples landing page](https://mdn.github.io/dom-examples/p
 ## See also
 
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
-- [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute
-- [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute
+- [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute
+- [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute
 - [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) CSS pseudo-element
 - [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) CSS pseudo-class

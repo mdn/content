@@ -18,8 +18,8 @@ A boolean that is `true` if the `ValidityState` is not set and the `required` at
 
 ### Missing required input value
 
-The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
-Constraints have been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input, and the [`required` attribute](/en-US/docs/Web/HTML/Attributes/required) which disallows empty values.
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
+Constraints have been added using the [`min` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/number#min) which sets a minimum value of `18` for the input, and the [`required` attribute](/en-US/docs/Web/HTML/Attributes/required) which disallows empty values.
 If the user enters any value that's not a number greater than 17, the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} are applied.
 
 ```css

@@ -11,7 +11,7 @@ browser-compat: api.Window.opener
 The {{domxref("Window")}} interface's
 **`opener`** property returns a reference to the window that
 opened the window, either with {{domxref("Window.open", "open()")}}, or by navigating
-a link with a [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute.
+a link with a [`target`](/en-US/docs/Web/HTML/Reference/Elements/a#target) attribute.
 
 In other words, if window `A` opens window `B`,
 `B.opener` returns `A`.
@@ -19,7 +19,7 @@ In other words, if window `A` opens window `B`,
 ## Value
 
 A {{domxref("Window")}}-like object referring to the window that opened the current
-window (using {{domxref("window.open()")}}, or by a link with [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute set). If this window was not opened by being linked to or created by
+window (using {{domxref("window.open()")}}, or by a link with [`target`](/en-US/docs/Web/HTML/Reference/Elements/a#target) attribute set). If this window was not opened by being linked to or created by
 another, returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 If the opener is not on the same origin as the current page, functionality of the
@@ -54,7 +54,7 @@ leaves it [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
 - The opener can be omitted by specifying
   [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener) on a link, or passing
   `noopener` in the {{domxref("Window.open", "windowFeatures")}} parameter.
-- Windows opened because of links with a [`target`](/en-US/docs/Web/HTML/Element/a#target) of `_blank` don't get an `opener`, unless explicitly
+- Windows opened because of links with a [`target`](/en-US/docs/Web/HTML/Reference/Elements/a#target) of `_blank` don't get an `opener`, unless explicitly
   requested with [`rel=opener`](/en-US/docs/Web/HTML/Attributes/rel#opener).
 - Having a {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with a value of
   `same-origin` prevents setting `opener`. Since the new window is

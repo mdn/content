@@ -30,11 +30,11 @@ Multiple actors are involved when entering text in an editable region of an appl
 
 While the three first actors are provided by the operating system, the application is responsible for providing the editable region and the text edit context.
 
-On the web, editable regions are often [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, [`<input>`](/en-US/docs/Web/HTML/Element/input) elements, or elements with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set to `true`. For these elements, the browser automatically provides the text edit context, and web authors are not required to write any code to support text input.
+On the web, editable regions are often [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea) elements, [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) elements, or elements with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set to `true`. For these elements, the browser automatically provides the text edit context, and web authors are not required to write any code to support text input.
 
 ### Creating custom editable regions
 
-Web authors can also create custom editable regions using the EditContext API. For example, a web author could create a rich text editor using a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element to render the text. In this case, the web author needs to write code to support text input.
+Web authors can also create custom editable regions using the EditContext API. For example, a web author could create a rich text editor using a [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) element to render the text. In this case, the web author needs to write code to support text input.
 
 ### Author's responsibilities
 

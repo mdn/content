@@ -67,7 +67,7 @@ For pages that set an initial or maximum scale, this means the `width` property 
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
+Other [attributes](/en-US/docs/Web/HTML/Reference/Elements/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.
 
 ## The effect of interactive UI widgets
 

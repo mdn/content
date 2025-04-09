@@ -139,10 +139,10 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### HTML
 
-- [`<picture>`](/en-US/docs/Web/HTML/Element/picture) element
-- [`<video>`](/en-US/docs/Web/HTML/Element/video) element
-- [`<source>`](/en-US/docs/Web/HTML/Element/source) element
-- [`<img>`](/en-US/docs/Web/HTML/Element/img#attributes) attributes (like `srcset`) for responsive images
+- [`<picture>`](/en-US/docs/Web/HTML/Reference/Elements/picture) element
+- [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element
+- [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source) element
+- [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#attributes) attributes (like `srcset`) for responsive images
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) attribute for preloading content via HTML
 
 ### CSS

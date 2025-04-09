@@ -60,7 +60,7 @@ In the sections below, we'll summarize how to implement responsive replaced elem
 
 ### Providing different image resolutions via srcset
 
-To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
+To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 
 This example provides different size images for different screen widths:
 

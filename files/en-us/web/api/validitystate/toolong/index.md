@@ -18,8 +18,8 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Textarea with too long character count
 
-The following example checks the validity of a [textarea element](/en-US/docs/Web/HTML/Element/textarea).
-A constraint has been added using the [`maxlength` attribute](/en-US/docs/Web/HTML/Element/input/text#maxlength) so the textarea expects a maximum of 10 characters.
+The following example checks the validity of a [textarea element](/en-US/docs/Web/HTML/Reference/Elements/textarea).
+A constraint has been added using the [`maxlength` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/text#maxlength) so the textarea expects a maximum of 10 characters.
 If there are too many characters in the textarea (which is true below), the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} CSS pseudo-class are applied.
 
 When editing the textarea, the browser will not allow the user to add characters that would fail constraint validation of maximum character count, so at first, only deleting characters is allowed.

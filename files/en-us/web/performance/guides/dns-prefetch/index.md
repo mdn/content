@@ -11,7 +11,7 @@ sidebar: performancesidebar
 
 When a browser requests a resource from a (third party) server, that [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS)'s domain name must be resolved to an IP address before the browser can issue the request. This process is known as DNS resolution. While DNS caching can help to reduce this latency, DNS resolution can add significant latency to requests. For websites that open connections to many third parties, this latency can significantly reduce loading performance.
 
-`dns-prefetch` helps developers mask DNS resolution latency. The [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link) offers this functionality by way of a [`rel` attribute](/en-US/docs/Web/HTML/Attributes/rel) value of `dns-prefetch`. The [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS) domain is then specified in the [href attribute](/en-US/docs/Web/HTML/Attributes):
+`dns-prefetch` helps developers mask DNS resolution latency. The [HTML `<link>` element](/en-US/docs/Web/HTML/Reference/Elements/link) offers this functionality by way of a [`rel` attribute](/en-US/docs/Web/HTML/Attributes/rel) value of `dns-prefetch`. The [cross-origin](/en-US/docs/Web/HTTP/Guides/CORS) domain is then specified in the [href attribute](/en-US/docs/Web/HTML/Attributes):
 
 ## Syntax
 
@@ -35,7 +35,7 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 </html>
 ```
 
-You should place `dns-prefetch` hints in the [`<head>` element](/en-US/docs/Web/HTML/Element/head) any time your site references resources on cross-origin domains, but there are some things to keep in mind.
+You should place `dns-prefetch` hints in the [`<head>` element](/en-US/docs/Web/HTML/Reference/Elements/head) any time your site references resources on cross-origin domains, but there are some things to keep in mind.
 
 ## Best practices
 
@@ -55,7 +55,7 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 Link: <https://fonts.googleapis.com/>; rel=preconnect
 ```
 
-or via the [HTML `<link>` element](/en-US/docs/Web/HTML/Element/link):
+or via the [HTML `<link>` element](/en-US/docs/Web/HTML/Reference/Elements/link):
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
@@ -70,7 +70,7 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 
 ## See also
 
-- [\<link>](/en-US/docs/Web/HTML/Element/link)
+- [\<link>](/en-US/docs/Web/HTML/Reference/Elements/link)
 - [HTML attribute: rel](/en-US/docs/Web/HTML/Attributes/rel)
 - [HTML rel attribute: preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect)
 - [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)

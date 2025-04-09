@@ -31,7 +31,7 @@ more information on that area." />
 </map>
 ```
 
-See the [`<area>` element reference page](/en-US/docs/Web/HTML/Element/area) for a live interactive example.
+See the [`<area>` element reference page](/en-US/docs/Web/HTML/Reference/Elements/area) for a live interactive example.
 
 ### See also
 
@@ -163,7 +163,7 @@ Users of assistive technology find this description helpful when trying to work 
 </form>
 ```
 
-You can see a live, interactive version of this example on the [`<fieldset>` reference page](/en-US/docs/Web/HTML/Element/fieldset).
+You can see a live, interactive version of this example on the [`<fieldset>` reference page](/en-US/docs/Web/HTML/Reference/Elements/fieldset).
 
 ### See also
 
@@ -215,7 +215,7 @@ As a best practice, also provide a {{htmlelement("title")}} for the document tha
 
 Make sure that your headings have non-empty text content, and are not hidden, such as with CSS `display:none` or `aria-hidden=true`. Users of screen readers rely on headings to understand the structure and content of a document.
 
-Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) only for actual section headings, and not as a shortcut way to make text stand out. Screen reader users typically "skim" a page's headings, much like sighted users; non-heading text that is marked-up with heading elements can cause confusion.
+Also, be sure you are using [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) only for actual section headings, and not as a shortcut way to make text stand out. Screen reader users typically "skim" a page's headings, much like sighted users; non-heading text that is marked-up with heading elements can cause confusion.
 
 ## Headings should have visible text content
 

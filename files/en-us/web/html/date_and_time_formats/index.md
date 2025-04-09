@@ -8,15 +8,15 @@ page-type: guide
 
 Certain HTML elements use date and/or time values. The formats of the strings that specify these values are described in this article.
 
-Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
+Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Reference/Elements/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the [`type`](/en-US/docs/Web/HTML/Element/input#type) values of inputs whose [`value`](/en-US/docs/Web/HTML/Element/input#value) contains a string representing a date and/or time are:
+For `<input>`, the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) values of inputs whose [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) contains a string representing a date and/or time are:
 
-- [`date`](/en-US/docs/Web/HTML/Element/input/date)
-- [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-- [`month`](/en-US/docs/Web/HTML/Element/input/month)
-- [`time`](/en-US/docs/Web/HTML/Element/input/time)
-- [`week`](/en-US/docs/Web/HTML/Element/input/week)
+- [`date`](/en-US/docs/Web/HTML/Reference/Elements/input/date)
+- [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month)
+- [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time)
+- [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week)
 
 ## Examples
 
@@ -286,9 +286,9 @@ There are some additional basic rules:
 
 ## Local date and time strings
 
-A valid [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter `T` or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
+A valid [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter `T` or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the [`value`](/en-US/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter `T` to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter `T` to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 <table class="standard-table">
   <caption>

@@ -22,7 +22,7 @@ The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 The `:open` pseudo-class selects any element currently in the open state, which includes the following elements:
 
 - {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they have the `open` attribute set.
-- {{htmlelement("input")}} elements that display a picker interface for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)), when the picker is displayed.
+- {{htmlelement("input")}} elements that display a picker interface for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)), when the picker is displayed.
 - {{htmlelement("select")}} elements that display a drop-down picker for the user to choose a value from, when the picker is displayed. Note that when implementing [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the picker itself can be selected using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element.
 
 Note that the open and closed states are semantic states, and don't necessary correlate with the visibility of the element in question. For example, a `<details>` element that is expanded to show its content is open, and will be selected by the `details:open` selector, even if it is hidden with a {{cssxref("visibility")}} value of `hidden`.

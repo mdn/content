@@ -130,7 +130,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ## Sectioning content
 
-Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
+Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
 The sectioning elements are:
 
@@ -252,12 +252,12 @@ The interactive content elements are:
 
 Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("a")}}, if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present
-- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
-- {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute is present
-- {{HTMLElement("input")}}, if the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
-- {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Element/object#usemap) attribute is present
-- {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/video#controls) attribute is present
+- {{HTMLElement("a")}}, if the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/audio#controls) attribute is present
+- {{HTMLElement("img")}}, if the [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) attribute is present
+- {{HTMLElement("input")}}, if the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is not in the hidden state
+- {{HTMLElement("object")}}, if the [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/object#usemap) attribute is present
+- {{HTMLElement("video")}}, if the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/video#controls) attribute is present
 
 ## Palpable content
 
@@ -329,9 +329,9 @@ The palpable elements are:
 
 Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/audio#controls) attribute is present
 - {{HTMLElement("dl")}}, if the element's children include at least one name-value group
-- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
+- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is not in the hidden state
 - {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
 - {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
 

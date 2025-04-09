@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.popoverTargetElement
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLInputElement")}} interface gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`.
 
-It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
+It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) HTML attribute.
 
 Establishing a relationship between a popover and its invoker button using the `popoverTargetElement` property has two additional useful effects:
 
@@ -44,11 +44,11 @@ if (popoverSupported) {
 
 ### Toggle popover action with an auto popover
 
-This example shows the basic use of the popover API, setting a `<div>` element as a popover, and then setting it as the `popoverTargetElement` of an [`<input>`](/en-US/docs/Web/HTML/Element/input/button) of `type="button"`.
+This example shows the basic use of the popover API, setting a `<div>` element as a popover, and then setting it as the `popoverTargetElement` of an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input/button) of `type="button"`.
 The `popover` attribute is set to [`"auto"`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so the popover can be closed ("light-dismissed") by clicking outside the popover area.
 
 First we define an `<input>` that we will use to display and hide the popover, and a `<div>` that will be the popover.
-In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute on the `<input>` or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute on the `<input>` or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
 
 ```html
 <input id="toggleBtn" type="button" value="Toggle popover" />

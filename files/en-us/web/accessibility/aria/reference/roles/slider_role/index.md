@@ -20,7 +20,7 @@ The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressb
 
 The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
 
-The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
+The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range), is a read-write input range. Sliders allow users to select a value between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
 While all three of these ranges have the same ARIA states and properties, the `slider` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
@@ -36,7 +36,7 @@ The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/ar
 
 The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, inclusive. This attribute is required for `slider` and `meter`, and optional for `progressbar`.
 
-For `slider`, unless using the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) element, the `aria-valuenow` value must be updated programmatically when the user updates the value.
+For `slider`, unless using the [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) element, the `aria-valuenow` value must be updated programmatically when the user updates the value.
 
 The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small through to XX-large as the `aria-valuenow` increases.
 
@@ -57,7 +57,7 @@ Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, ac
 The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
 > [!NOTE]
-> It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
+> It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
 ### Range with multiple thumbs
 
@@ -191,7 +191,7 @@ HTML's `<input type="range">` implicitly has the `role` of `slider`. Do not use 
 
 ### Prefer HTML
 
-It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), rather than the `slider` role.
+It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range), rather than the `slider` role.
 
 ## Specifications
 
@@ -199,7 +199,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## See also
 
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range),
 - HTML {{HTMLElement('progress')}} element
 - HTML {{HTMLElement('meter')}} element
 - Other range widgets include:

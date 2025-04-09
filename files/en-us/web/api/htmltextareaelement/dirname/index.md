@@ -10,7 +10,7 @@ browser-compat: api.HTMLTextAreaElement.dirName
 
 The **`dirName`** property of the {{domxref("HTMLTextAreaElement")}} interface is the directionality of the element. It reflects the value of the {{htmlelement("textarea")}} element's [`dirName`](/en-US/docs/Web/HTML/Attributes/dirname) attribute. This property can be retrieved or set.
 
-The `dirname` attribute controls how the element's directionality is submitted. When included, the form control will submit with two name/value pairs: the first being the [`name`](/en-US/docs/Web/API/HTMLTextAreaElement/name) and [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) of the `<textarea>`, and the second being the value of the [`dirname`](/en-US/docs/Web/HTML/Element/textarea#dirname) attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
+The `dirname` attribute controls how the element's directionality is submitted. When included, the form control will submit with two name/value pairs: the first being the [`name`](/en-US/docs/Web/API/HTMLTextAreaElement/name) and [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) of the `<textarea>`, and the second being the value of the [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
 ## Value
 

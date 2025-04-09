@@ -8,7 +8,7 @@ browser-compat: api.HTMLFieldSetElement.disabled
 
 {{ APIRef("HTML DOM") }}
 
-The **`disabled`** property of the {{domxref("HTMLFieldSetElement")}} interface is a boolean value that reflects the {{htmlelement("fieldset")}} element's [`disabled`](/en-US/docs/Web/HTML/Element/fieldset#disabled) attribute, which indicates whether the control is disabled.
+The **`disabled`** property of the {{domxref("HTMLFieldSetElement")}} interface is a boolean value that reflects the {{htmlelement("fieldset")}} element's [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#disabled) attribute, which indicates whether the control is disabled.
 
 When disabled, all the form control descendants of the `<fieldset>` element, excluding elements that are descendants of the {{htmlelement("legend")}} child of the `<fieldset>`, if any, are disabled. A disabled element is unusable and un-clickable, and match the {{cssxref(":disabled")}} selector, even if their `disabled` property value is false.
 

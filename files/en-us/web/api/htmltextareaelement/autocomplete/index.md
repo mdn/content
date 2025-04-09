@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.autocomplete
 
 {{ APIRef("HTML DOM") }}
 
-The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<textarea>` element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
+The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<textarea>` element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute.
 
 ## Value
 

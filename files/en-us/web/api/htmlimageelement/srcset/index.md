@@ -24,7 +24,7 @@ can be used together to make pages that use appropriate images for the rendering
 situation.
 
 > [!NOTE]
-> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> If the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 

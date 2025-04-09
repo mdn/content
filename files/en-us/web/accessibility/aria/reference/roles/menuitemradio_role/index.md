@@ -20,7 +20,7 @@ The three menu item elements can only be contained in, or owned by, an element w
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute should be used.
 
 Similar to the `checked` attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). There is no `mixed` value like there is for `menuitemcheckbox`.
 
@@ -137,7 +137,7 @@ Don't use the [`background`](/en-US/docs/Web/CSS/background) shorthand property,
 
 ### Prefer HTML
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio button](/en-US/docs/Web/HTML/Element/input/radio) form control instead of recreating a radio button's functionality with JavaScript and ARIA.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form control instead of recreating a radio button's functionality with JavaScript and ARIA.
 
 ## Specifications
 
@@ -146,4 +146,4 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)

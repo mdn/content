@@ -8,7 +8,7 @@ browser-compat: api.HTMLSelectElement.autocomplete
 
 {{ APIRef("HTML DOM") }}
 
-The **`autocomplete`** property of the {{DOMxRef("HTMLSelectElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<select>` element's [`autocomplete`](/en-US/docs/Web/HTML/Element/select#autocomplete) attribute.
+The **`autocomplete`** property of the {{DOMxRef("HTMLSelectElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<select>` element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/select#autocomplete) attribute.
 
 ## Value
 

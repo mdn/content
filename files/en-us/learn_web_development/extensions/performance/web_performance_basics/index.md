@@ -19,7 +19,7 @@ Below is a quick review of best practices, tools, APIs with links to provide mor
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g., render full page for bot traffic); for example, by using the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on the {{HTMLElement("img")}} element
+- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g., render full page for bot traffic); for example, by using the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on the {{HTMLElement("img")}} element
 - It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance).
 
 ## Quick Wins
@@ -49,7 +49,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simple
 
 ### JavaScript
 
-Avoid JavaScript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid JavaScript blocking by using the [async](/en-US/docs/Web/HTML/Reference/Elements/script) or [defer](/en-US/docs/Web/HTML/Reference/Elements/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 

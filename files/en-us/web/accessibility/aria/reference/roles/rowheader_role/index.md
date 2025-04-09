@@ -146,8 +146,8 @@ none
 
 ## See also
 
-- [The HTML `<table>` element](/en-US/docs/Web/HTML/Element/table)
-- [The HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
+- [The HTML `<table>` element](/en-US/docs/Web/HTML/Reference/Elements/table)
+- [The HTML `<th>` element](/en-US/docs/Web/HTML/Reference/Elements/th)
 - [HTML table tutorial](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 - [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)

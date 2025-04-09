@@ -8,7 +8,7 @@ browser-compat: api.ValidityState.typeMismatch
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`typeMismatch`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute.
+The read-only **`typeMismatch`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#input_types) attribute.
 
 If the `type` attribute expects specific strings, such as the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types and the value doesn't conform to the constraints set by the type, the `typeMismatch` property will be true.
 
@@ -29,7 +29,7 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Type mismatch on input element
 
-The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Element/input#value) expected via the [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute and the data that is actually present.
+The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) expected via the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#input_types) attribute and the data that is actually present.
 The `typeMismatch` is only one of the many possible errors and is only relevant for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types.
 When the value provided doesn't match the expected value based on the type for other input types, you get different errors.
 For example, if the {{HTMLElement("input/number", "number")}} input value is not a floating point number, the `badInput` is `true`.

@@ -103,7 +103,7 @@ Click the button next to each input type to show its picker.
 
 ### showPicker() for a datalist input
 
-`showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Element/datalist).
+`showPicker()` can launch the picker for a list of options defined in a [`<datalist>`](/en-US/docs/Web/HTML/Reference/Elements/datalist).
 
 First we define a `<datalist>` in HTML consisting of a number of internet browsers, an input of type `text` that uses it, and a button.
 

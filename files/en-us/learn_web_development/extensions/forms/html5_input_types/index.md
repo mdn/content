@@ -33,7 +33,7 @@ Because HTML form control appearance may be quite different from a designer's sp
 
 ## Email address field
 
-This type of field is set using the value `email` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
+This type of field is set using the value `email` for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute:
 
 ```html hidden live-sample___email
 <label for="email">Enter your email address:</label><br />
@@ -45,7 +45,7 @@ This type of field is set using the value `email` for the [`type`](/en-US/docs/W
 
 {{EmbedLiveSample('email','100%','50')}}
 
-When this [`type`](/en-US/docs/Web/HTML/Element/input#type) is used, the value must be an email address to be valid. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the screenshot below.
+When this [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) is used, the value must be an email address to be valid. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the screenshot below.
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -77,7 +77,7 @@ Note that `a@b` is a valid email address according to the default provided const
 
 ## Search field
 
-Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
+Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute:
 
 ```html hidden
 <label for="search">Enter a search term:</label><br />
@@ -95,7 +95,7 @@ Another worth-noting feature is that the values of a `search` field can be autom
 
 ## Phone number field
 
-A special field for filling in phone numbers can be created using `tel` as the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
+A special field for filling in phone numbers can be created using `tel` as the value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute:
 
 ```html hidden
 <label for="tel">Enter a telephone number:</label><br />
@@ -117,7 +117,7 @@ As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern
 
 ## URL field
 
-A special type of field for entering URLs can be created using the value `url` for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute:
+A special type of field for entering URLs can be created using the value `url` for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute:
 
 ```html hidden
 <label for="url">Enter a URL:</label><br />
@@ -136,7 +136,7 @@ It adds special validation constraints to the field. The browser will report an 
 
 ## Numeric field
 
-Controls for entering numbers can be created with an {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Element/input#type) of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
+Controls for entering numbers can be created with an {{HTMLElement("input")}} [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) of `number`. This control looks like a text field but allows only floating-point numbers, and usually provides buttons in the form of a spinner to increase and decrease the value of the control. On devices with dynamic keyboards, the numeric keyboard is generally displayed.
 
 ```html hidden live-sample___number
 <label for="number">Enter a number:</label><br />
@@ -148,7 +148,7 @@ Controls for entering numbers can be created with an {{HTMLElement("input")}} [`
 
 {{EmbedLiveSample('number','100%','50')}}
 
-With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes.
+With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes.
 
 You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer, as the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute defaults to `1`. To allow float numbers, specify `step="any"` or a specific value, like `step="0.01"` to restrict the floating point. If omitted, as the `step` value defaults to `1`, only whole numbers are valid.
 
@@ -188,7 +188,7 @@ Another way to pick a number is to use a **slider**. You see these quite often o
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 
-A slider is created using the {{HTMLElement("input")}} with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+A slider is created using the {{HTMLElement("input")}} with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
 It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum, and increment values, respectively.
 
@@ -242,7 +242,7 @@ Generally, for a good user experience when gathering date and time values, it is
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example:
+A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example:
 
 ```html hidden live-sample___date1
 <label for="party">Choose a date and time for your party:</label>
@@ -266,7 +266,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `date`
 
-[`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) creates a widget to display and pick a date (year, month, and day, with no time).
+[`<input type="date">`](/en-US/docs/Web/HTML/Reference/Elements/input/date) creates a widget to display and pick a date (year, month, and day, with no time).
 
 ```html hidden
 <label for="date">Enter the date:</label><br />
@@ -280,7 +280,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
+[`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
 
 ```html hidden
 <label for="month">Enter the date and time:</label><br />
@@ -294,7 +294,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `month`
 
-[`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month) creates a widget to display and pick a month with a year.
+[`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month) creates a widget to display and pick a month with a year.
 
 ```html hidden
 <label for="month">Enter the month:</label><br />
@@ -308,7 +308,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `time`
 
-[`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time) creates a widget to display and pick a time value. While time may _display_ in 12-hour format, the _value returned_ is in 24-hour format.
+[`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) creates a widget to display and pick a time value. While time may _display_ in 12-hour format, the _value returned_ is in 24-hour format.
 
 ```html hidden
 <label for="time">Enter a time:</label><br />
@@ -322,7 +322,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 ### `week`
 
-[`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week) creates a widget to display and pick a week number and its year.
+[`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/week) creates a widget to display and pick a week number and its year.
 
 Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.
 
@@ -357,7 +357,7 @@ All date and time controls can be constrained using the [`min`](/en-US/docs/Web/
 
 Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, and so on.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
+A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `color`:
 
 ```html hidden
 <label for="color">Pick a color:</label><br />

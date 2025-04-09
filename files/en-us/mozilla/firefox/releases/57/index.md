@@ -25,7 +25,7 @@ _No changes._
 
 ### HTML
 
-- The [date](/en-US/docs/Web/HTML/Element/input/date) and [time](/en-US/docs/Web/HTML/Element/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
+- The [date](/en-US/docs/Web/HTML/Reference/Elements/input/date) and [time](/en-US/docs/Web/HTML/Reference/Elements/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
 
 ### CSS
 

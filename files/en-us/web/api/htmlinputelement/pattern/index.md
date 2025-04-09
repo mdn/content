@@ -37,5 +37,5 @@ console.log(input.pattern);
 
 - {{HTMLElement("input")}}
 - {{DOMXref("HTMLInputElement.value")}}
-- [Client-side validation](/en-US/docs/Web/HTML/Element/input#client-side_validation)
+- [Client-side validation](/en-US/docs/Web/HTML/Reference/Elements/input#client-side_validation)
 - {{CSSXref(":valid")}} and {{CSSXref(":invalid")}} pseudo-classes

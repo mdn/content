@@ -9,7 +9,7 @@ sidebar: svgref
 The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to an SVG document.
 
 > [!NOTE]
-> While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of [`src`](/en-US/docs/Web/HTML/Element/script#src) and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
+> While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of [`src`](/en-US/docs/Web/HTML/Reference/Elements/script#src) and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
 
 ## Example
 
@@ -52,7 +52,7 @@ Click the circle to change colors.
 
 ## Attributes
 
-- [`crossorigin`](/en-US/docs/Web/HTML/Element/script#crossorigin)
+- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin)
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
     _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
@@ -79,4 +79,4 @@ Click the circle to change colors.
 
 ## See also
 
-- [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
+- [`script` element in HTML](/en-US/docs/Web/HTML/Reference/Elements/script)

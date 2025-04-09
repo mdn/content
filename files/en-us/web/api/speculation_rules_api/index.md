@@ -24,7 +24,7 @@ The Speculation Rules API provides an alternative to the widely-available [`<lin
 
 ## Concepts and usage
 
-Speculation rules can be specified inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
+Speculation rules can be specified inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
 
 A script example:
 
@@ -70,7 +70,7 @@ The text resource containing the speculation rules JSON can have any valid name 
 
 You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit {{httpheader("Referrer-Policy")}} setting for each rule. Note that prerendered URLs are also prefetched.
 
-See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) for a full explanation of the available syntax.
+See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) for a full explanation of the available syntax.
 
 ### Using prefetching
 
@@ -428,7 +428,7 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## HTML features
 
-- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
   - : Used to define a set of prefetch and/or prerender speculation rules inside the current document, which are added to the document's speculation rule set.
 
 ## Examples

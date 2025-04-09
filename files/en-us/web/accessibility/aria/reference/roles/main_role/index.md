@@ -123,7 +123,7 @@ Which is the equivalent of:
 ## See also
 
 - The {{HTMLElement('main')}} element
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)

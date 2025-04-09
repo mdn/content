@@ -43,7 +43,7 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
   - {{cssxref("text-emphasis-position")}}
   - {{cssxref("text-emphasis-style")}}
   - {{cssxref("text-emphasis")}} shorthand
-- [HTML elements](/en-US/docs/Web/HTML/Element)
+- [HTML elements](/en-US/docs/Web/HTML/Reference/Elements)
   - {{HTMLElement("rb")}}
   - {{HTMLElement("rp")}}
   - {{HTMLElement("rt")}}

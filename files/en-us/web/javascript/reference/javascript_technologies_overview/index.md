@@ -89,7 +89,7 @@ Looking for the {{domxref("Document")}} object, {{domxref("Window")}} object, an
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas).
 - The [WebAssembly interface](https://webassembly.github.io/spec/js-api/) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
 Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as {{domxref("Window.fetch", "fetch()")}} and {{domxref("Window.setTimeout", "setTimeout()")}}.

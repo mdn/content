@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 120 that affect d
 
 ### HTML
 
-- Support for the `media` attribute in the [`<source>`](/en-US/docs/Web/HTML/Element/source) element has been reintroduced and expanded to include `<audio>` and `<video>` elements. This attribute was first added in Firefox 15 but was removed in Firefox 53 when its use was limited to `<source>` element within `<picture>`. With this release, the `media` attribute will be available in `<source>` elements within `<audio>`, `<video>`, and `<picture>` ([Firefox bug 1836128](https://bugzil.la/1836128)).
+- Support for the `media` attribute in the [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source) element has been reintroduced and expanded to include `<audio>` and `<video>` elements. This attribute was first added in Firefox 15 but was removed in Firefox 53 when its use was limited to `<source>` element within `<picture>`. With this release, the `media` attribute will be available in `<source>` elements within `<audio>`, `<video>`, and `<picture>` ([Firefox bug 1836128](https://bugzil.la/1836128)).
 
 ### CSS
 

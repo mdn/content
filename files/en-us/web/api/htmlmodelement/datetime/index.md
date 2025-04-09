@@ -8,11 +8,11 @@ browser-compat: api.HTMLModElement.dateTime
 
 {{ APIRef("HTML DOM") }}
 
-The **`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
+The **`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Reference/Elements/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
 
 ## Value
 
-A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
+A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values).
 
 ## Examples
 

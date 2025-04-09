@@ -154,7 +154,7 @@ To further improve performance, you should consider moving animation work off th
 - 3D transform animations such as [`transform: translateZ()`](/en-US/docs/Web/CSS/transform) and [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d).
 - Elements with certain other properties animated such as [`position: fixed`](/en-US/docs/Web/CSS/position).
 - Elements with [`will-change`](/en-US/docs/Web/CSS/will-change) applied (see the section below).
-- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
+- Certain elements that are rendered in their own layer, including [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video), [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas), and [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Animation on the GPU can result in improved performance, especially on mobile. However, moving animations to GPU is not always that simple. Read [CSS GPU Animation: Doing It Right](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) (smashingmagazine.com, 2016) for a very useful and detailed analysis.
 
@@ -172,7 +172,7 @@ Browsers may set up optimizations before an element is actually changed. These k
 
 ## Optimizing for render blocking
 
-CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
+CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
 ```html
 <!-- Loading and parsing styles.css is render-blocking -->

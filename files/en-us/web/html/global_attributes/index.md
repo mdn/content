@@ -9,7 +9,7 @@ browser-compat: html.global_attributes
 
 **Global attributes** are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.
 
-Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as `<foo hidden>…</foo>`, even though `<foo>` is not a valid HTML element.
+Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Reference/Elements), _even those not specified in the standard_. That means that any non-standard elements must still permit these attributes, even though using those elements means that the document is no longer HTML5-compliant. For example, HTML5-compliant browsers hide content marked as `<foo hidden>…</foo>`, even though `<foo>` is not a valid HTML element.
 
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
@@ -27,7 +27,7 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
   - : Controls whether input text is automatically corrected for spelling errors.
-    This can be applied to elements that have editable text except for {{HTMLElement("input")}} elements with the attribute: [`type="password"`](/en-US/docs/Web/HTML/Element/input/password), [`type="email"`](/en-US/docs/Web/HTML/Element/input/email), or [`type="url"`](/en-US/docs/Web/HTML/Element/input/url).
+    This can be applied to elements that have editable text except for {{HTMLElement("input")}} elements with the attribute: [`type="password"`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`type="email"`](/en-US/docs/Web/HTML/Reference/Elements/input/email), or [`type="url"`](/en-US/docs/Web/HTML/Reference/Elements/input/url).
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
@@ -92,11 +92,11 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
-  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
+  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
-  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Reference/Elements/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:

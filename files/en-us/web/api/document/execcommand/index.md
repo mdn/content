@@ -10,7 +10,7 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Element/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
 To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
@@ -81,11 +81,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
-      - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Element/ol) for the selection or at the insertion point.
+      - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Reference/Elements/ol) for the selection or at the insertion point.
     - `insertUnorderedList`
-      - : Creates a [bulleted unordered list](/en-US/docs/Web/HTML/Element/ul) for the selection or at the insertion point.
+      - : Creates a [bulleted unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul) for the selection or at the insertion point.
     - `insertParagraph`
-      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Element/p) around the selection or the current line.
+      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Reference/Elements/p) around the selection or the current line.
     - `insertText`
       - : Inserts the given plain text at the insertion point (deletes selection).
     - `italic`
@@ -111,15 +111,15 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `strikeThrough`
       - : Toggles strikethrough on/off for the selection or at the insertion point.
     - `subscript`
-      - : Toggles [subscript](/en-US/docs/Web/HTML/Element/sub) on/off for the selection or at the insertion point.
+      - : Toggles [subscript](/en-US/docs/Web/HTML/Reference/Elements/sub) on/off for the selection or at the insertion point.
     - `superscript`
-      - : Toggles [superscript](/en-US/docs/Web/HTML/Element/sup) on/off for the selection or at the insertion point.
+      - : Toggles [superscript](/en-US/docs/Web/HTML/Reference/Elements/sup) on/off for the selection or at the insertion point.
     - `underline`
-      - : Toggles [underline](/en-US/docs/Web/HTML/Element/u) on/off for the selection or at the insertion point.
+      - : Toggles [underline](/en-US/docs/Web/HTML/Reference/Elements/u) on/off for the selection or at the insertion point.
     - `undo`
       - : Undoes the last executed command.
     - `unlink`
-      - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
+      - : Removes the [anchor element](/en-US/docs/Web/HTML/Reference/Elements/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
         > [!NOTE]

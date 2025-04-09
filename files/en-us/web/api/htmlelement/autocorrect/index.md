@@ -28,7 +28,7 @@ This example shows how you can enable and disable autocorrection.
 
 #### HTML
 
-The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Element/input/search).
+The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Reference/Elements/input/search).
 Note that if auto-correction is supported, it will be enabled by default.
 
 ```html

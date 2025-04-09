@@ -26,7 +26,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{domxref("HTMLElement.autocapitalize")}}
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
-  - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
+  - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Reference/Elements/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
 - {{domxref("HTMLElement.autocorrect")}}
   - : A boolean that represents whether or not text input by a user should be automatically corrected.
     This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.

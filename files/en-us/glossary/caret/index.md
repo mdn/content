@@ -24,11 +24,11 @@ You can set the color of the caret for a given element's editable content by set
 
 These elements provide text entry fields or boxes and therefore make use of the caret.
 
-- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-- [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number), [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
-- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)
+- [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text)
+- [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password)
+- [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)
+- [`<input type="date">`](/en-US/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time), and [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), and [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url)
 - {{HTMLElement("textarea")}}
 - Any element with its [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set

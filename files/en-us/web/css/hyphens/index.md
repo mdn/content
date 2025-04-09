@@ -91,7 +91,7 @@ There are two Unicode characters used to manually specify potential line break p
   - : An invisible, "**s**oft" **hy**phen. This character is not rendered visibly; instead, it marks a place where the browser should break the word if hyphenation is necessary. In HTML, use `&shy;` to insert a soft hyphen.
 
 > [!NOTE]
-> When the HTML [`<wbr>`](/en-US/docs/Web/HTML/Element/wbr) element leads to a line break, no hyphen is added.
+> When the HTML [`<wbr>`](/en-US/docs/Web/HTML/Reference/Elements/wbr) element leads to a line break, no hyphen is added.
 
 ## Formal definition
 

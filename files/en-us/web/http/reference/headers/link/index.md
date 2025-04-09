@@ -98,7 +98,7 @@ In this case, `rel="prev"` and `rel="next"` show link relations for previous and
 ### Controlling fetch priority
 
 Even when using [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) to fetch a resource as early as possible, different types of content will be fetched earlier or later based on the browser's internal prioritization.
-The [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) attribute can be used to hint to the browser that a particular resource will have a greater or lesser relative impact on user experience than other resources of the same type.
+The [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority) attribute can be used to hint to the browser that a particular resource will have a greater or lesser relative impact on user experience than other resources of the same type.
 
 For example, the header below might be used to preload `style.css` with a higher priority than other stylesheets:
 

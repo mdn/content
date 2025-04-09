@@ -20,8 +20,8 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Input with step mismatch
 
-The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
-A constraint has been added using the [`step` attribute](/en-US/docs/Web/HTML/Element/input/number#step) which means the input expects increments of 5 as values.
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
+A constraint has been added using the [`step` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/number#step) which means the input expects increments of 5 as values.
 If the user enters a number that's not divisible by 5, the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} CSS pseudo-class are applied.
 
 ```css

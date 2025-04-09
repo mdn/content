@@ -84,7 +84,7 @@ This section lists `page-type` values for pages under [Web/HTML](/en-US/docs/Web
 
 - `html-attribute`: an HTML attribute, like [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete).
 - `html-attribute-value`: a single value for an HTML attribute, like [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch).
-- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Element/button).
+- `html-element`: an HTML element, like [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button).
 
 ### HTTP page types
 

@@ -23,19 +23,19 @@ For a basic introduction to these concepts, with examples, see the [Form validat
 
 In HTML, basic constraints are declared in two ways:
 
-- By choosing the most semantically appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
+- By choosing the most semantically appropriate value for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
 - By setting values on validation-related attributes, allowing basic constraints to be described without the need for JavaScript.
 
 ### Semantic input types
 
-The intrinsic constraints for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute are:
+The intrinsic constraints for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute are:
 
-| Input type                                                         | Constraint description                                                                                                                                                           | Associated violation                                                                    |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.                 | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| Input type                                                                    | Constraint description                                                                                                                                                           | Associated violation                                                                    |
+| ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/en-US/docs/Web/HTML/Reference/Elements/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.                 | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
-For both of these input types, if the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
+For both of these input types, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/input#multiple) attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 
 Note that most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.
 
@@ -281,7 +281,7 @@ Calling `checkValidity()` is called _statically_ validating the constraints, whi
 
 > [!NOTE]
 >
-> - If the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
+> - If the [`novalidate`](/en-US/docs/Web/HTML/Reference/Elements/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
 > - The `minlength` and `maxlength` constraints are only checked on user-provided input. They are not checked if a value is set programmatically, even when explicitly calling `checkValidity()` or `reportValidity()`.
 
@@ -428,7 +428,7 @@ The look of elements can be controlled via CSS pseudo-classes.
 
 #### :required and :optional CSS pseudo-classes
 
-The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, or that don't have it.
+The {{cssxref(':required')}} and {{cssxref(':optional')}} [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) allow writing selectors that match form elements that have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, or that don't have it.
 
 #### :placeholder-shown CSS pseudo-class
 

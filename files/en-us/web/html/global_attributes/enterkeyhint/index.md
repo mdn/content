@@ -20,8 +20,8 @@ is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what acti
 
 ## Description
 
-[Form controls](/en-US/docs/Learn_web_development/Extensions/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
-or [`<input>`](/en-US/docs/Web/HTML/Element/input) elements) or elements using
+[Form controls](/en-US/docs/Learn_web_development/Extensions/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea)
+or [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) elements) or elements using
 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) can specify an
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute to control what kind of virtual keyboard
 will be used. To further improve the user's experience, the enter key can be customized specifically by providing an `enterkeyhint`
@@ -30,8 +30,8 @@ represents what the user should do next; typical actions are: sending text, inse
 
 If no `enterkeyhint` attribute is provided, the user agent might use contextual information from the
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode),
-[`type`](/en-US/docs/Web/HTML/Element/input#input_types),
-or [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern)
+[`type`](/en-US/docs/Web/HTML/Reference/Elements/input#input_types),
+or [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern)
 attributes to display a suitable enter key label (or icon).
 
 ### Values
@@ -98,6 +98,6 @@ The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated)
 - [`HTMLElement.enterKeyHint`](/en-US/docs/Web/API/HTMLElement/enterKeyHint) property reflecting this attribute
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute
-- [`type`](/en-US/docs/Web/HTML/Element/input#input_types) and
-  [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attributes on
-  [`<input>`](/en-US/docs/Web/HTML/Element/input) elements
+- [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#input_types) and
+  [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attributes on
+  [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) elements

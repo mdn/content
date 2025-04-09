@@ -16,7 +16,7 @@ to `n` multiples of the step attribute if a number is passed as the
 parameter.
 
 The method, when invoked, decrements the
-[`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n
+[`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) by ([`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) \* n), where n
 defaults to 1 if not specified, and
 [`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
 default value for `step` if not specified.
@@ -114,11 +114,11 @@ None ({{jsxref("undefined")}}).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown in one of the following cases:
     - if the method is not applicable to for the current
-      [`type`](/en-US/docs/Web/HTML/Element/input#type) value,
-    - if the element has no [`step`](/en-US/docs/Web/HTML/Element/input#step) value,
-    - if the [`value`](/en-US/docs/Web/HTML/Element/input#value) cannot be converted to a number,
-    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the
-      [`min`](/en-US/docs/Web/HTML/Element/input#min).
+      [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) value,
+    - if the element has no [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) value,
+    - if the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) cannot be converted to a number,
+    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) or below the
+      [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min).
 
 ## Examples
 

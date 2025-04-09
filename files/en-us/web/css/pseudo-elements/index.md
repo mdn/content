@@ -97,7 +97,7 @@ The pseudo-elements are related to form controls.
 - {{CSSxRef("::checkmark")}}
   - : Targets the checkmark placed inside the currently-selected `<option>` element of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) to provide a visual indication of which one is selected.
 - {{CSSxRef("::file-selector-button")}}
-  - : The button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
+  - : The button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file).
 - {{CSSxRef("::picker()")}}
   - : The picker part of an element, for example the drop-down picker of a [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 - {{CSSxRef("::picker-icon")}}

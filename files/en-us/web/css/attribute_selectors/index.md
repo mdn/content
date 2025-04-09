@@ -190,7 +190,7 @@ div[data-lang="zh-Hant-TW"] {
 
 ### HTML ordered lists
 
-The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
+The HTML specification requires the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute to be matched case-insensitively because it is primarily used in the {{HTMLElement("input")}} element.
 Note that if a modifier is not supported by the user agent, then the selector will not match.
 
 #### CSS

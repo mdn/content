@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.capture
 
 {{ApiRef("HTML DOM")}}
 
-The **`capture`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute. Only relevant to the [`<input>` of type `file`](/en-US/docs/Web/HTML/Element/input/file), the property and attribute specify whether, a new file should be captured from a user-facing (`user`) or outward facing (`environment`) camera or microphone. The type of file is defined the [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute. If the attribute is not explicitly set, the `capture` property is an empty string.
+The **`capture`** property of the {{domxref("HTMLInputElement")}} interface reflects the {{HTMLElement("input")}} element's [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute. Only relevant to the [`<input>` of type `file`](/en-US/docs/Web/HTML/Reference/Elements/input/file), the property and attribute specify whether, a new file should be captured from a user-facing (`user`) or outward facing (`environment`) camera or microphone. The type of file is defined the [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute. If the attribute is not explicitly set, the `capture` property is an empty string.
 
 ## Value
 
@@ -36,6 +36,6 @@ inputElement.capture = "user"; // sets the capture value
 - {{domxref("HTMLInputElement.multiple")}}
 - {{domxref("HTMLInputElement.accept")}}
 - {{domxref("HTMLInputElement.files")}}
-- [File type specifiers](/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers)
+- [File type specifiers](/en-US/docs/Web/HTML/Reference/Elements/input/file#unique_file_type_specifiers)
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File_API)

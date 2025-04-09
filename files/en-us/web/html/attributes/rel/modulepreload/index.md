@@ -21,7 +21,7 @@ When using `modulepreload` the fetch request mode is always [`cors`](/en-US/docs
 If `crossorigin` is set to [`anonymous`](/en-US/docs/Web/HTML/Attributes/crossorigin#anonymous) or [`""`](/en-US/docs/Web/HTML/Attributes/crossorigin#sect) (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
 If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
 
-The [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
+The [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
 It can be set to `"script"` or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`.
 An [`Event`](/en-US/docs/Web/API/Event/Event) named "error" is fired on the element if any other destination is used.
 

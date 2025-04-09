@@ -113,7 +113,7 @@ Providing more than one way to navigate your site can help people find informati
 
 ### Ability to bypass blocks of content
 
-Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
+Providing a mechanism, such as a [skip link](/en-US/docs/Web/HTML/Reference/Elements/a#skip_links), to bypass blocks of content that are repeated on multiple web pages.
 
 ### Focus order makes sense
 
@@ -162,7 +162,7 @@ Abbreviations can be confusing for people who:
 - Have difficulty using context to aid understanding.
 - Rely on screen magnifiers (which often reduce contextual cues).
 
-Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an {{HTMLElement('abbr')}} element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using [ruby text](/en-US/docs/Web/HTML/Element/ruby) for initialism (pronunciation of acronyms).
+Provide an expanded form of the abbreviation the first time it is used, followed by the abbreviation placed within an {{HTMLElement('abbr')}} element. If an abbreviation has no expanded form, or is an abbreviation for a word that is not in the document's main language (such as Latin), explain its meaning. Also, consider using [ruby text](/en-US/docs/Web/HTML/Reference/Elements/ruby) for initialism (pronunciation of acronyms).
 
 ### Reading level
 

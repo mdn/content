@@ -114,7 +114,7 @@ btn.addEventListener("click", () => {
 The HTML {{HTMLElement("button")}} element will fire an event when the user clicks the button. So it defines an `addEventListener()` function, which we are calling here. We're passing in two parameters:
 
 - the string `"click"`, to indicate that we want to listen to the click event. Buttons can fire lots of other events, such as [`"mouseover"`](/en-US/docs/Web/API/Element/mouseover_event) when the user moves their mouse over the button, or [`"keydown"`](/en-US/docs/Web/API/Element/keydown_event) when the user presses a key and the button is focused.
-- a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Element/body) to that color.
+- a function to call when the event happens. In our case, the function generates a random RGB color and sets the [`background-color`](/en-US/docs/Web/CSS/background-color) of the page [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) to that color.
 
 It is fine to make the handler function a separate named function, like this:
 

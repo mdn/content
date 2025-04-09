@@ -44,10 +44,10 @@ A radio button is a checkable input that when associated with other radio button
 </div>
 ```
 
-The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
+The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Reference/Elements/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
 
 > [!NOTE]
-> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <fieldset>
@@ -67,7 +67,7 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio form control ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
+The native HTML radio form control ([`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)) has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
 
 If a radio button is checked, the radio element has `aria-checked` set to `true`. If it is not checked, it has `aria-checked` set to `false`.
 
@@ -290,11 +290,11 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use native [HTML radio button](/en-US/docs/Web/HTML/Element/input/radio) form controls instead of recreating a radio's functionality with JavaScript and ARIA.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use native [HTML radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio) form controls instead of recreating a radio's functionality with JavaScript and ARIA.
 
 ## See also
 
-- [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Element/input/radio)
+- [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio)
 - [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex)
 - [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
 - [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)

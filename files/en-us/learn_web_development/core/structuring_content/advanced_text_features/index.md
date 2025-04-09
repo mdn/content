@@ -46,7 +46,7 @@ HTML contains features available for marking up quotations; which element you us
 
 ### Blockquotes
 
-If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
+If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a [`cite`](/en-US/docs/Web/HTML/Reference/Elements/blockquote#cite) attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
 
 ```html
 <p>
@@ -61,7 +61,7 @@ To turn this into a block quote, we would just do this:
 ```html
 <p>Here is a blockquote:</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -81,7 +81,8 @@ Inline quotations work in exactly the same way, except that they use the {{htmle
 ```html
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q
+    cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
 </p>
@@ -93,19 +94,19 @@ Browser default styling will render this as normal text put in quotes to indicat
 
 ### Citations
 
-The content of the [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute sounds useful, but unfortunately browsers, screen readers, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
+The content of the [`cite`](/en-US/docs/Web/HTML/Reference/Elements/blockquote#cite) attribute sounds useful, but unfortunately browsers, screen readers, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
 
 There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g., the name of the book. There is no reason, however, why you couldn't link the text inside `<cite>` to the quote source in some way:
 
 ```html-nolint
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+  <a href="/en-US/docs/Web/HTML/Reference/Elements/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -115,10 +116,10 @@ There is a {{htmlelement("cite")}} element, but this is meant to contain the tit
 
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a href="/en-US/docs/Web/HTML/Reference/Elements/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 

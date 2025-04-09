@@ -115,7 +115,7 @@ We will revisit the `<link>` element and its `rel` attribute in a future section
 
 The {{HTMLelement("body")}} element contains all the content we want displayed when users visit the site on the Internet.
 
-Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and a {{HTMLelement("form")}}.
+Within the `<body>`, we include the name of the app as a level-1 heading using an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and a {{HTMLelement("form")}}.
 
 ```html
 <body>
@@ -194,7 +194,7 @@ This content, other than the container `<section id="past-periods"></section>`, 
 
 ### JavaScript link
 
-Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
+Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Reference/Elements/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>

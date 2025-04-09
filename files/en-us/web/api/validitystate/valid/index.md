@@ -20,8 +20,8 @@ A boolean that is `true` if the `ValidityState` does conform to all the constrai
 
 ### Displaying validity state
 
-The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
-A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input.
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
+A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/number#min) which sets a minimum value of `18` for the input.
 If the user enters any value that's not a number greater than 17, the element fails constraint validation, and the styles matching `input:invalid` are applied.
 
 ```css

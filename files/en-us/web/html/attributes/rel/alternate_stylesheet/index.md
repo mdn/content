@@ -7,7 +7,7 @@ browser-compat: html.elements.link.rel.alternate_stylesheet
 
 {{HTMLSidebar}}
 
-The **`alternate stylesheet`** keyword pair, when used as a value for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element, indicates that the target resource is an _alternative style sheet_. Specifying **alternative style sheets** in a web page allows users to see multiple versions of a page based on their needs or preferences.
+The **`alternate stylesheet`** keyword pair, when used as a value for the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute of the {{HTMLElement("link")}} element, indicates that the target resource is an _alternative style sheet_. Specifying **alternative style sheets** in a web page allows users to see multiple versions of a page based on their needs or preferences.
 
 > [!NOTE]
 > This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/@media#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.

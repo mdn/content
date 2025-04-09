@@ -8,7 +8,7 @@ page-type: landing-page
 
 This [HTML](/en-US/docs/Web/HTML) reference describes all **elements** and **attributes** of HTML, including **global attributes** that apply to all elements.
 
-- [HTML element reference](/en-US/docs/Web/HTML/Element)
+- [HTML element reference](/en-US/docs/Web/HTML/Reference/Elements)
   - : This page lists all the HTML elements, which are created using tags.
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
   - : Elements in HTML have attributes; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.

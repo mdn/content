@@ -142,19 +142,19 @@ The following example creates a table-style grouping of information:
 
 ## Accessibility concerns
 
-Support for `gridcell` and certain `gridcell` related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Element/table) in their place.
+Support for `gridcell` and certain `gridcell` related ARIA roles and properties have poor support with assistive technologies. If at all possible, use [HTML table markup](/en-US/docs/Web/HTML/Reference/Elements/table) in their place.
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Element/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use [native HTML table markup](/en-US/docs/Web/HTML/Reference/Elements/table) instead of recreating a table's form and functionality with ARIA and JavaScript.
 
 ## See also
 
-- [The Table element](/en-US/docs/Web/HTML/Element/table)
+- [The Table element](/en-US/docs/Web/HTML/Reference/Elements/table)
 - [ARIA: Grid role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [The Table row element](/en-US/docs/Web/HTML/Element/tr)
+- [The Table row element](/en-US/docs/Web/HTML/Reference/Elements/tr)
 - [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-- [The Table header element](/en-US/docs/Web/HTML/Element/th)
-- [The Table Data Cell element](/en-US/docs/Web/HTML/Element/td)
+- [The Table header element](/en-US/docs/Web/HTML/Reference/Elements/th)
+- [The Table Data Cell element](/en-US/docs/Web/HTML/Reference/Elements/td)
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
