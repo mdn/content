@@ -420,7 +420,7 @@ li {
 
   display: inline-block;
   height: 100%;
-  aspect-ratio: 3/4;
+  width: 200px;
 
   background-color: #eee;
   border: 1px solid #ddd;
