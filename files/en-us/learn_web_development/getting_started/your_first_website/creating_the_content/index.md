@@ -45,7 +45,7 @@ Sleep
 Repeat
 ```
 
-If we wrap this content with the following elements, we can turn that single line into a paragraph ({{htmlelement("p")}}) and three bullet points ({{htmlelement("li")}}):
+If we wrap this content with the following HTML elements, we can turn that single line into a paragraph ({{htmlelement("p")}}) and three bullet points ({{htmlelement("li")}}):
 
 ```html live-sample___basic-html
 <p>Instructions for life:</p>
