@@ -114,7 +114,7 @@ We have also included an `alt` (alternative) attribute. In the [`alt` attribute]
 
    ![The words: my test image](alt-text-example.png)
 
-The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
+The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is not good because it doesn't convey descriptive information about the image. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
 
 > [!NOTE]
 > Elements such as `<img>` have no content or closing tag and are therefore called **empty** (or **{{glossary("void element", "void")}}**) elements. They are sometimes written with a **trailing slash** at the end of their single tag (`<img />`), but this is optional.
