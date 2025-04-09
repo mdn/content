@@ -30,7 +30,6 @@ if ('presentation' in navigator) {
   const presentationUrls = ["https://example.com/presentation.html"];
   const presentationRequest = new PresentationRequest(presentationUrls);
   console.log("Created a PresentationRequest:", presentationRequest);
-  
   // Start a presentation session
   presentationRequest.start()
     .then(session => {
