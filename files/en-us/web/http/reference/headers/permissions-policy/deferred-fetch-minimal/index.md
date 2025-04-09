@@ -2,7 +2,7 @@
 title: "Permissions-Policy: deferred-fetch-minimal"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch-minimal
 page-type: http-permissions-policy-directive
-browser-compat: http.headers.Permission-Policy.deferred-fetch-minimal
+browser-compat: http.headers.Permissions-Policy.deferred-fetch-minimal
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

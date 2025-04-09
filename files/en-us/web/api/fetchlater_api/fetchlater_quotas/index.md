@@ -2,6 +2,9 @@
 title: fetchLater() quotas
 slug: Web/API/fetchLater_API/fetchLater_quotas
 page-type: guide
+browser-compat:
+  - http.headers.Permissions-Policy.deferred-fetch
+  - http.headers.Permissions-Policy.deferred-fetch-minimal
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}
@@ -184,6 +187,14 @@ fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
 fetchLater("https://b.example.com", { method: "POST", body: a_40kb_body });
 fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
