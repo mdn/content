@@ -54,6 +54,11 @@ sidebar:
       - link: /Web/HTML/CORS_enabled_image
         title: Allowing_cross-origin_images_and_canvas
   - type: section
+    link: /Web/HTML/Guides
+    title: Guides
+  - type: listSubPages
+    path: /Web/HTML/Guides
+  - type: section
     link: /Web/HTML/Reference
     title: Reference
   - type: listSubPages

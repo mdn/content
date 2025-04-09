@@ -12938,6 +12938,7 @@
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+/en-US/docs/Web/HTML/Comments	/en-US/docs/Web/HTML/Guides/Comments
 /en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck

@@ -1,7 +1,7 @@
 ---
-title: HTML Comments (<!-- … -->)
+title: Using comments in HTML (<!-- … -->)
 short-title: Comments
-slug: Web/HTML/Comments
+slug: Web/HTML/Guides/Comments
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/syntax.html#comments
 ---
