@@ -98,22 +98,22 @@ Non-browser environments (like Node.js) often do not have DOM APIs — because t
 
 JavaScript engines used in current web browsers include:
 
-- [SpiderMonkey](https://spidermonkey.dev/), used in Firefox (and its forks), Servo, and Flow (and in MongoDB, CouchDB, and more).
-- [V8](https://v8.dev/), used in Chrome and in other Chromium-based browsers (and in [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more).
-- [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html), used in Safari and in other WebKit-based browsers (and in [Bun](https://bun.sh/).
+- Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox, Servo, and Flow. Other non-browser usage includes MongoDB, CouchDB, and more. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
+- Google's [V8](https://v8.dev/), used in Chrome and Chromium-based browsers such as Opera, Edge, and Brave. Other non-browser usage includes [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
+- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.sh/).
 - [LibJS](https://serenityos.github.io/libjs-website/), used in [Ladybird](https://ladybird.org/).
 
 Some JavaScript engines used in earlier browsers include:
 
-- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in Opera it became a Chromium-based browser.
-- [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>), used in Internet Explorer and in Edge before it became a Chromium-based browser.
+- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in Opera before it became a Chromium-based browser.
+- Microsoft’s [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>), used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used another JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>), before it became a Chromium-based browser.
 
 Some JavaScript engines specifically tailored for non-browser purposes include:
 
 - [Engine262](https://engine262.js.org/), written in JavaScript and intended essentially as a reference implementation of the language.
-- [Hermes](https://github.com/facebook/hermes), optimized for [React Native](https://reactnative.dev/docs/hermes).
-- [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), written in Java.
-- [GraalJS](https://www.graalvm.org/), written in Java and built on top of GraalVM.
+- Meta's [Hermes](https://github.com/facebook/hermes), optimized for [React Native](https://reactnative.dev/docs/hermes).
+- Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>), written in Java.
+- Oracle's [GraalJS](https://www.graalvm.org/), written in Java and built on top of GraalVM.
 - [Moddable XS](https://www.moddable.com/), intended for IoT/embedded systems.
 - [QuickJS](https://bellard.org/quickjs/), intended to be small and lightweight.
 
