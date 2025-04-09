@@ -86,13 +86,13 @@ Let's see how individual elements are combined to form an HTML page. In this sec
 
 Here, we have the following:
 
-- `<!doctype html>` — The [doctype](/en-US/docs/Glossary/Doctype) is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
-- `<html></html>` — the {{htmlelement("html")}} element. This element wraps all the content on the entire page and is sometimes known as the **root element**. It also includes the `lang` attribute, which sets the primary language of the document.
-- `<head></head>` — the {{htmlelement("head")}} element. This element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, {{glossary("CSS")}} to style the content, character set declarations, and more.
-- `<meta charset="utf-8">` — This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
-- `<meta name="viewport" content="width=device-width">` — This [viewport element](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#mobile_viewports) ensures the page renders at the width of the browser viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
-- `<title></title>` — The {{htmlelement("title")}} element sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
-- `<body></body>` — the {{htmlelement("body")}} element. This contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else. At the moment it only contains a single `<img>` element, but we'll add more content later on.
+- `<!doctype html>`: The [doctype](/en-US/docs/Glossary/Doctype) is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+- `<html></html>`: The {{htmlelement("html")}} element wraps all the content on the entire page and is sometimes known as the **root element**. It also includes the `lang` [attribute](/en-US/docs/Glossary/Attribute), which sets the primary language of the document.
+- `<head></head>`: The {{htmlelement("head")}} element acts as a container for all the stuff you want to include on the HTML page that _isn't_ the content you are showing to your page's viewers. This includes things like {{Glossary("keyword", "keywords")}} and a page description that you want to appear in search results, {{glossary("CSS")}} to style the content, character set declarations, and more.
+- `<meta charset="utf-8">`: This element sets the character set your document should use to [UTF-8](/en-US/docs/Glossary/UTF-8), which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
+- `<meta name="viewport" content="width=device-width">`: This [viewport element](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts#mobile_viewports) ensures the page renders at the width of the browser viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
+- `<title></title>`: The {{htmlelement("title")}} element sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+- `<body></body>`: The {{htmlelement("body")}} element contains _all_ the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else. At the moment it only contains a single `<img>` element, but we'll add more content later on.
 
 > [!NOTE]
 > Most HTML elements consist of an **opening tag** (for example, `<body>`), followed by the element's content, followed by a **closing tag** (for example, `</body>`). Some HTML elements also have **attributes**, which contain extra settings or information about the element — see for example `charset`, `name`, and `src` in the our code sample.
@@ -126,8 +126,9 @@ Let's get your image displaying now.
 3. Replace the `alt` attribute value — `My test image` — with some text that better describes your image.
 4. Open your `index.html` file inside a web browser. You should see your image displayed. If not, check your `<img>` element against our code; make sure it is not missing any of the syntax, such as the quote marks. Make sure the image filename is correct.
 
+If the image is really large and therefore doesn't fit on the screen, don't worry about it. We'll fix this issue in the next article.
+
 > [!NOTE]
-> If the image is really large and therefore doesn't fit on the screen, don't worry about this. We'll fix this issue in the next article.
 > Find out more about using an `alt` attribute for images in various situations in our [accessible multimedia tutorial](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia) and [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
 ## Marking up text
@@ -179,7 +180,7 @@ For example, if we wanted to turn part of the following paragraph fragment into 
 </p>
 ```
 
-We could modify the markup to this
+We could modify the markup to this:
 
 ```html
 <p>At Mozilla, we're a global community of</p>
@@ -234,7 +235,6 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
-> [!NOTE]
-> Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module later on in the course.
+Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module later on in the course.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
