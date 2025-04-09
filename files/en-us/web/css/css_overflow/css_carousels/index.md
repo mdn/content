@@ -32,7 +32,7 @@ Fortunately, we can create accessible carousels with associated controls without
 The CSS carousel features enable creating carousels using only CSS and HTML, with the browser handling most of the scrolling and link references in an accessible, flexible, consistent manner. These features are as follows:
 
 - {{cssxref("::scroll-button()")}}
-  - : Generated inside a {{glossary("scroll container")}}, these pseudo-elements represent scroll buttons, which will be wired up to scroll the container in the specified direction.
+  - : Generated inside a {{glossary("scroll container")}}, these pseudo-elements represent scroll buttons, which scroll the container in a specified direction.
 - {{cssxref("::scroll-marker-group")}}
   - : Generated inside a scroll container; used to collect together and lay out scroll markers.
 - {{cssxref("::scroll-marker")}}
