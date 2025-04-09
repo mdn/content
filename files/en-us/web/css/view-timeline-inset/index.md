@@ -17,7 +17,7 @@ See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animati
 > [!NOTE]
 > If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
-The `view-timeline-inset`, {{cssxref("view-timeline-axis")}} and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+The `view-timeline-inset`, {{cssxref("view-timeline-axis")}}, and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
 
 ## Syntax
 
