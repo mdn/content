@@ -158,7 +158,7 @@ li:last-child::scroll-marker {
 }
 ```
 
-We set a different color on the markers on {{cssxref(":hover")}}. Finally, we use the `:target-current` pseudo-class to set a different {{cssxref("color")}} and {{cssxref("background-color")}} on the currently-scrolled element's marker:
+To improve user experience, we set a different color on the markers on {{cssxref(":hover")}} and use the `:target-current` pseudo-class to set a different {{cssxref("color")}} and {{cssxref("background-color")}} on the currently-scrolled element's marker so users know which item is currently in view:
 
 ```css live-sample___custom-numbering
 ::scroll-marker:hover {
