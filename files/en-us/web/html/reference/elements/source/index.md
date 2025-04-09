@@ -164,7 +164,7 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
@@ -184,7 +184,7 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
         <div>
           A media element—{{HTMLElement("audio")}} or
           {{HTMLElement("video")}}—and it must be placed before any
-          <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
             >flow content</a
           >
           or {{HTMLElement("track")}} element.

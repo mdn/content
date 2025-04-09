@@ -128,7 +128,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
@@ -139,7 +139,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

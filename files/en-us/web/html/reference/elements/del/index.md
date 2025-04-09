@@ -95,15 +95,15 @@ Some people who use screen readers deliberately disable announcing content that 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >Phrasing content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -112,7 +112,7 @@ Some people who use screen readers deliberately disable announcing content that 
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#transparent_content_model"
           >Transparent</a
         >.
       </td>
@@ -125,7 +125,7 @@ Some people who use screen readers deliberately disable announcing content that 
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

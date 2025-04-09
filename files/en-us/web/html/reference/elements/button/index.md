@@ -265,32 +265,32 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >Interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#labelable"
           >labelable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#submittable"
           >submittable</a
         >
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -299,12 +299,12 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >Phrasing content</a
         >
         but there must be no
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >Interactive content</a
         >. If the <code>&lt;button&gt;</code> is the first child of a <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select element</a>, then it may also
    contain zero or one {{htmlelement("selectedcontent")}} element.
@@ -318,7 +318,7 @@ Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

@@ -91,15 +91,15 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -109,7 +109,7 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
       <td>
         Any
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#transparent_content_model"
           >transparent</a
         >
         element.
@@ -123,7 +123,7 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

@@ -95,18 +95,18 @@ ctx.fillRect(10, 10, 100, 100);
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#embedded_content"
           >embedded content</a
         >, palpable content.
       </td>
@@ -116,7 +116,7 @@ ctx.fillRect(10, 10, 100, 100);
       <td>
         Transparent but with no
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content"
           >interactive content</a
         >
         descendants except for {{HTMLElement("a")}} elements,
@@ -134,7 +134,7 @@ ctx.fillRect(10, 10, 100, 100);
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>

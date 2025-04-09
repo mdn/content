@@ -71,7 +71,7 @@ This is to prevent dangling markup injection attacks, a script-less attack in wh
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>Metadata content.</td>
     </tr>

@@ -117,16 +117,16 @@ This example demonstrates a page with two search features. The first is a global
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>.
       </td>
     </tr>
     <tr>

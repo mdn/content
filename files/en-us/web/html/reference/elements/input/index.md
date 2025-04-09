@@ -1276,11 +1276,11 @@ Interactive elements such as form input should provide an area large enough that
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
         <code>hidden</code>, then labelable element, palpable content.
       </td>
     </tr>
@@ -1296,7 +1296,7 @@ Interactive elements such as form input should provide an area large enough that
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>

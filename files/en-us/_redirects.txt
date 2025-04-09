@@ -3634,7 +3634,7 @@
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /en-US/docs/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
-/en-US/docs/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
+/en-US/docs/HTML/Content_categories	/en-US/docs/Web/HTML/Guides/Content_categories
 /en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Reference/Elements
 /en-US/docs/HTML/Element/HTMLHeadElement	/en-US/docs/Web/API/HTMLHeadElement
@@ -12830,7 +12830,7 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
 /en-US/docs/Web/Guide/HTML/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
-/en-US/docs/Web/Guide/HTML/Content_categories	/en-US/docs/Web/HTML/Content_categories
+/en-US/docs/Web/Guide/HTML/Content_categories	/en-US/docs/Web/HTML/Guides/Content_categories
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
@@ -12941,6 +12941,7 @@
 /en-US/docs/Web/HTML/Comments	/en-US/docs/Web/HTML/Guides/Comments
 /en-US/docs/Web/HTML/Constraint_validation	/en-US/docs/Web/HTML/Guides/Constraint_validation
 /en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable
+/en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/HTML/Guides/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
@@ -13185,7 +13186,7 @@
 /en-US/docs/Web/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Inline_elmements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/Web/HTML/Introduction	/en-US/docs/Learn_web_development/Core/Structuring_content
-/en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Content_categories
+/en-US/docs/Web/HTML/Kinds_of_HTML_content	/en-US/docs/Web/HTML/Guides/Content_categories
 /en-US/docs/Web/HTML/Link_types	/en-US/docs/Web/HTML/Reference/Attributes/rel
 /en-US/docs/Web/HTML/Link_types/Link_types:_noopener	/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener
 /en-US/docs/Web/HTML/Link_types/dns-prefetch	/en-US/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch

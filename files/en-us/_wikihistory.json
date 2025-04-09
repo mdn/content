@@ -90957,7 +90957,19 @@
       "louisremi"
     ]
   },
-  "Web/HTML/Content_categories": {
+  "Web/HTML/Date_and_time_formats": {
+    "modified": "2020-09-28T12:25:10.223Z",
+    "contributors": [
+      "mfuji09",
+      "John-Page",
+      "pranavkp",
+      "sideshowbarker",
+      "black_white2018",
+      "jswisher",
+      "Sheppy"
+    ]
+  },
+  "Web/HTML/Guides/Content_categories": {
     "modified": "2020-10-18T10:42:38.994Z",
     "contributors": [
       "mfuji09",
@@ -90995,18 +91007,6 @@
       "xaky",
       "fscholz",
       "jswisher"
-    ]
-  },
-  "Web/HTML/Date_and_time_formats": {
-    "modified": "2020-09-28T12:25:10.223Z",
-    "contributors": [
-      "mfuji09",
-      "John-Page",
-      "pranavkp",
-      "sideshowbarker",
-      "black_white2018",
-      "jswisher",
-      "Sheppy"
     ]
   },
   "Web/HTML/Microdata": {

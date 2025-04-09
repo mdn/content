@@ -39,18 +39,18 @@ Rocks!
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -66,7 +66,7 @@ Rocks!
         disabled and when it isn't a descendant of the
         {{HTMLElement("head")}} element: any
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#transparent_content_model"
           >transparent content</a
         >, but no <code>&#x3C;noscript></code> element must be among its
         descendants.<br />Otherwise: flow content or phrasing content.
@@ -80,7 +80,7 @@ Rocks!
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >phrasing content</a
         >, if there are no ancestor <code>&#x3C;noscript></code> element, or in
         a {{HTMLElement("head")}} element (but only for an HTML

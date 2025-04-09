@@ -231,12 +231,12 @@ See the {{htmlelement("summary")}} page for an [example of customizing the discl
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, sectioning root, interactive content, palpable content.
       </td>
@@ -245,7 +245,7 @@ See the {{htmlelement("summary")}} page for an [example of customizing the discl
       <th scope="row">Permitted content</th>
       <td>
         One {{HTMLElement("summary")}} element followed by
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -258,7 +258,7 @@ See the {{htmlelement("summary")}} page for an [example of customizing the discl
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >.
       </td>

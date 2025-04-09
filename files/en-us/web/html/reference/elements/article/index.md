@@ -122,19 +122,19 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#sectioning_content"
+          href="/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content"
           >sectioning content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content"
           >palpable content</a
         >
       </td>
@@ -142,7 +142,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -155,7 +155,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >. Note that an <code>&#x3C;article></code> element must not be a
         descendant of an {{HTMLElement("address")}} element.

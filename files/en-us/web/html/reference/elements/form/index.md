@@ -164,17 +164,17 @@ The following attributes control behavior during form submission.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#palpable_content">palpable content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, but not containing <code>&#x3C;form></code> elements
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, but not containing <code>&#x3C;form></code> elements
       </td>
     </tr>
     <tr>
@@ -185,7 +185,7 @@ The following attributes control behavior during form submission.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>

@@ -118,12 +118,12 @@ Browser reader mode functionality looks for the presence of the `<main>` element
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >, palpable content.
       </td>
@@ -131,7 +131,7 @@ Browser reader mode functionality looks for the presence of the `<main>` element
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>
@@ -144,7 +144,7 @@ Browser reader mode functionality looks for the presence of the `<main>` element
       <th scope="row">Permitted parents</th>
       <td>
         Where
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >
         is expected, but only if it is a

@@ -7,7 +7,7 @@ browser-compat: html.elements.footer
 
 {{HTMLSidebar}}
 
-The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#labeling_section_content) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
+The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest ancestor [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#labeling_section_content) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
 
@@ -93,16 +93,16 @@ footer {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, palpable content.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, but with no <code>&#x3C;footer></code> or
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>, but with no <code>&#x3C;footer></code> or
         {{HTMLElement("header")}} descendants.
       </td>
     </tr>
@@ -114,7 +114,7 @@ footer {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>. Note that a <code>&#x3C;footer></code> element must not be a
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">flow content</a>. Note that a <code>&#x3C;footer></code> element must not be a
         descendant of an {{HTMLElement("address")}},
         {{HTMLElement("header")}} or another
         <code>&#x3C;footer></code> element.

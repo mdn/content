@@ -135,7 +135,7 @@ The `TextTrack` objects associated with a media element stored in a {{domxref("T
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>None</td>
     </tr>

@@ -72,12 +72,12 @@ This example establishes a page whose title (as displayed at the top of the wind
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >Metadata content</a
         >.
       </td>
