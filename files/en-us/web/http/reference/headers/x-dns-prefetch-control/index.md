@@ -86,7 +86,7 @@ You can reverse this setting by setting `content` to `"on"`.
 
 You can force the lookup of specific hostnames without providing specific anchors using
 that hostname by using the [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute on the
-{{HTMLElement("link")}} element with a [link type](/en-US/docs/Web/HTML/Attributes/rel) of `dns-prefetch`:
+{{HTMLElement("link")}} element with a [link type](/en-US/docs/Web/HTML/Reference/Attributes/rel) of `dns-prefetch`:
 
 ```html
 <link rel="dns-prefetch" href="https://www.mozilla.org" />

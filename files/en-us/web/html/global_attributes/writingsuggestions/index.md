@@ -41,7 +41,7 @@ To enable writing suggestions:
 
 ## See also
 
-- [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
+- [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
 - {{HTMLElement("textarea")}}

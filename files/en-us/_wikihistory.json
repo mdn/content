@@ -90910,191 +90910,6 @@
       "omercier67"
     ]
   },
-  "Web/HTML/Attributes": {
-    "modified": "2020-11-18T22:39:41.849Z",
-    "contributors": [
-      "horuskol",
-      "nbriz",
-      "amitnarayan707",
-      "sideshowbarker",
-      "pateldhruv90040",
-      "mfuji09",
-      "Malvoz",
-      "dannyniu",
-      "MihaiCristea-IBM",
-      "xp44mm",
-      "chrisdavidmills",
-      "estelle",
-      "perfmattersconf",
-      "jswisher",
-      "tomoharu-fujita",
-      "JonathanPool",
-      "chharvey",
-      "hrvoj3e",
-      "peterwilsoncc",
-      "ntutangyun",
-      "evilpie",
-      "Sheppy",
-      "fvsch",
-      "SphinxKnight",
-      "rudijuri",
-      "xgqfrms-GitHub",
-      "madmurphy",
-      "m59peacemaker",
-      "ChrisPermijo",
-      "mfluehr",
-      "shubhamg931",
-      "diervo",
-      "Kinifwyne",
-      "piglovesyou",
-      "leleofg",
-      "Tigt",
-      "myuller",
-      "rogerxas",
-      "rk17",
-      "louuis",
-      "George8211",
-      "klez",
-      "kscarfone",
-      "Shokr",
-      "Techsin",
-      "haboqueferus",
-      "Srggamer",
-      "lmorchard",
-      "shirayuki",
-      "jonathan.camenisch",
-      "tregagnon",
-      "Markus Prokott",
-      "McGurk",
-      "masondesu",
-      "hobophobe",
-      "fscholz",
-      "thatryan",
-      "garann"
-    ]
-  },
-  "Web/HTML/Attributes/accept": {
-    "modified": "2020-12-05T11:17:40.105Z",
-    "contributors": ["mfuji09", "mattd", "hardik-singhal", "estelle"]
-  },
-  "Web/HTML/Attributes/autocomplete": {
-    "modified": "2020-10-15T22:06:23.258Z",
-    "contributors": [
-      "em_te",
-      "sideshowbarker",
-      "mfuji09",
-      "brucelawson",
-      "PTSTUDIOS",
-      "chrisdavidmills",
-      "mnoorenberghe",
-      "hartman",
-      "thgh",
-      "EdwardC94",
-      "Sheppy"
-    ]
-  },
-  "Web/HTML/Attributes/capture": {
-    "modified": "2020-10-15T22:25:05.353Z",
-    "contributors": ["estelle", "pans9"]
-  },
-  "Web/HTML/Attributes/crossorigin": {
-    "modified": "2020-12-04T01:11:19.194Z",
-    "contributors": [
-      "sideshowbarker",
-      "Taon",
-      "rachelandrew",
-      "samdutton",
-      "Malvoz",
-      "estelle",
-      "SphinxKnight",
-      "Tigt",
-      "stenno",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "8shashank",
-      "yan",
-      "kgreen",
-      "mrbenlearnjs",
-      "sakjur",
-      "anotherkabab",
-      "Jeremie",
-      "rogerxas",
-      "Corysek",
-      "SimonSimCity",
-      "teoliTest2",
-      "kscarfone",
-      "Dan",
-      "teoli",
-      "myakura",
-      "julienw",
-      "BYK"
-    ]
-  },
-  "Web/HTML/Attributes/disabled": {
-    "modified": "2020-10-15T22:24:45.850Z",
-    "contributors": ["Menno_vdH", "dominicegginton", "estelle"]
-  },
-  "Web/HTML/Attributes/max": {
-    "modified": "2020-11-12T07:31:09.216Z",
-    "contributors": [
-      "chrisdavidmills",
-      "faiz555c2",
-      "mfuji09",
-      "pans9",
-      "estelle"
-    ]
-  },
-  "Web/HTML/Attributes/maxlength": {
-    "modified": "2020-10-19T11:04:05.219Z",
-    "contributors": ["mattd", "mfuji09", "dominicegginton", "estelle"]
-  },
-  "Web/HTML/Attributes/min": {
-    "modified": "2020-10-19T11:04:15.608Z",
-    "contributors": [
-      "mattd",
-      "mfuji09",
-      "dominicegginton",
-      "cadorej",
-      "estelle"
-    ]
-  },
-  "Web/HTML/Attributes/minlength": {
-    "modified": "2020-10-19T11:02:38.145Z",
-    "contributors": ["mattd", "mfuji09", "valtlai", "fredj", "estelle"]
-  },
-  "Web/HTML/Attributes/multiple": {
-    "modified": "2020-11-10T05:11:00.190Z",
-    "contributors": ["mfuji09", "mattd", "estelle"]
-  },
-  "Web/HTML/Attributes/pattern": {
-    "modified": "2020-11-08T15:04:02.028Z",
-    "contributors": [
-      "mfuji09",
-      "masitito",
-      "mattd",
-      "pieterdd",
-      "chrisdavidmills",
-      "estelle"
-    ]
-  },
-  "Web/HTML/Attributes/readonly": {
-    "modified": "2020-10-15T22:24:43.179Z",
-    "contributors": ["vaxul", "dominicegginton", "estelle"]
-  },
-  "Web/HTML/Attributes/rel": {
-    "modified": "2020-11-06T05:34:40.505Z",
-    "contributors": [
-      "rachelandrew",
-      "srehaider",
-      "edwinm",
-      "sideshowbarker",
-      "thxiami",
-      "Itazulay",
-      "estelle",
-      "perfmattersconf"
-    ]
-  },
   "Web/HTML/Attributes/rel/Alternate_stylesheet": {
     "modified": "2020-10-15T21:15:55.661Z",
     "contributors": [
@@ -91114,66 +90929,6 @@
       "Kohei",
       "Sevenspade",
       "DBaron"
-    ]
-  },
-  "Web/HTML/Attributes/rel/dns-prefetch": {
-    "modified": "2020-10-15T22:29:03.654Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/manifest": {
-    "modified": "2020-10-15T22:29:03.916Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/modulepreload": {
-    "modified": "2020-10-15T22:29:02.735Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/noopener": {
-    "modified": "2020-10-15T22:29:03.663Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/noreferrer": {
-    "modified": "2020-10-15T22:29:06.663Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/preconnect": {
-    "modified": "2020-10-15T22:29:05.087Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/prefetch": {
-    "modified": "2020-10-15T22:29:05.730Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/preload": {
-    "modified": "2020-10-15T22:29:04.820Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/rel/prerender": {
-    "modified": "2020-10-15T22:29:04.645Z",
-    "contributors": ["sideshowbarker"]
-  },
-  "Web/HTML/Attributes/required": {
-    "modified": "2020-11-09T13:04:56.530Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "oberocks",
-      "dominicegginton",
-      "estelle"
-    ]
-  },
-  "Web/HTML/Attributes/size": {
-    "modified": "2020-10-15T22:25:14.384Z",
-    "contributors": ["mfuji09", "estelle"]
-  },
-  "Web/HTML/Attributes/step": {
-    "modified": "2020-09-28T04:18:28.027Z",
-    "contributors": [
-      "mfuji09",
-      "sideshowbarker",
-      "dominicegginton",
-      "cadorej",
-      "estelle"
     ]
   },
   "Web/HTML/CORS_enabled_image": {
@@ -91806,6 +91561,251 @@
       "Tee37",
       "teoli",
       "codemetro"
+    ]
+  },
+  "Web/HTML/Reference/Attributes": {
+    "modified": "2020-11-18T22:39:41.849Z",
+    "contributors": [
+      "horuskol",
+      "nbriz",
+      "amitnarayan707",
+      "sideshowbarker",
+      "pateldhruv90040",
+      "mfuji09",
+      "Malvoz",
+      "dannyniu",
+      "MihaiCristea-IBM",
+      "xp44mm",
+      "chrisdavidmills",
+      "estelle",
+      "perfmattersconf",
+      "jswisher",
+      "tomoharu-fujita",
+      "JonathanPool",
+      "chharvey",
+      "hrvoj3e",
+      "peterwilsoncc",
+      "ntutangyun",
+      "evilpie",
+      "Sheppy",
+      "fvsch",
+      "SphinxKnight",
+      "rudijuri",
+      "xgqfrms-GitHub",
+      "madmurphy",
+      "m59peacemaker",
+      "ChrisPermijo",
+      "mfluehr",
+      "shubhamg931",
+      "diervo",
+      "Kinifwyne",
+      "piglovesyou",
+      "leleofg",
+      "Tigt",
+      "myuller",
+      "rogerxas",
+      "rk17",
+      "louuis",
+      "George8211",
+      "klez",
+      "kscarfone",
+      "Shokr",
+      "Techsin",
+      "haboqueferus",
+      "Srggamer",
+      "lmorchard",
+      "shirayuki",
+      "jonathan.camenisch",
+      "tregagnon",
+      "Markus Prokott",
+      "McGurk",
+      "masondesu",
+      "hobophobe",
+      "fscholz",
+      "thatryan",
+      "garann"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/accept": {
+    "modified": "2020-12-05T11:17:40.105Z",
+    "contributors": ["mfuji09", "mattd", "hardik-singhal", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/autocomplete": {
+    "modified": "2020-10-15T22:06:23.258Z",
+    "contributors": [
+      "em_te",
+      "sideshowbarker",
+      "mfuji09",
+      "brucelawson",
+      "PTSTUDIOS",
+      "chrisdavidmills",
+      "mnoorenberghe",
+      "hartman",
+      "thgh",
+      "EdwardC94",
+      "Sheppy"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/capture": {
+    "modified": "2020-10-15T22:25:05.353Z",
+    "contributors": ["estelle", "pans9"]
+  },
+  "Web/HTML/Reference/Attributes/crossorigin": {
+    "modified": "2020-12-04T01:11:19.194Z",
+    "contributors": [
+      "sideshowbarker",
+      "Taon",
+      "rachelandrew",
+      "samdutton",
+      "Malvoz",
+      "estelle",
+      "SphinxKnight",
+      "Tigt",
+      "stenno",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "8shashank",
+      "yan",
+      "kgreen",
+      "mrbenlearnjs",
+      "sakjur",
+      "anotherkabab",
+      "Jeremie",
+      "rogerxas",
+      "Corysek",
+      "SimonSimCity",
+      "teoliTest2",
+      "kscarfone",
+      "Dan",
+      "teoli",
+      "myakura",
+      "julienw",
+      "BYK"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/disabled": {
+    "modified": "2020-10-15T22:24:45.850Z",
+    "contributors": ["Menno_vdH", "dominicegginton", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/max": {
+    "modified": "2020-11-12T07:31:09.216Z",
+    "contributors": [
+      "chrisdavidmills",
+      "faiz555c2",
+      "mfuji09",
+      "pans9",
+      "estelle"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/maxlength": {
+    "modified": "2020-10-19T11:04:05.219Z",
+    "contributors": ["mattd", "mfuji09", "dominicegginton", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/min": {
+    "modified": "2020-10-19T11:04:15.608Z",
+    "contributors": [
+      "mattd",
+      "mfuji09",
+      "dominicegginton",
+      "cadorej",
+      "estelle"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/minlength": {
+    "modified": "2020-10-19T11:02:38.145Z",
+    "contributors": ["mattd", "mfuji09", "valtlai", "fredj", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/multiple": {
+    "modified": "2020-11-10T05:11:00.190Z",
+    "contributors": ["mfuji09", "mattd", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/pattern": {
+    "modified": "2020-11-08T15:04:02.028Z",
+    "contributors": [
+      "mfuji09",
+      "masitito",
+      "mattd",
+      "pieterdd",
+      "chrisdavidmills",
+      "estelle"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/readonly": {
+    "modified": "2020-10-15T22:24:43.179Z",
+    "contributors": ["vaxul", "dominicegginton", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/rel": {
+    "modified": "2020-11-06T05:34:40.505Z",
+    "contributors": [
+      "rachelandrew",
+      "srehaider",
+      "edwinm",
+      "sideshowbarker",
+      "thxiami",
+      "Itazulay",
+      "estelle",
+      "perfmattersconf"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/rel/dns-prefetch": {
+    "modified": "2020-10-15T22:29:03.654Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/manifest": {
+    "modified": "2020-10-15T22:29:03.916Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/modulepreload": {
+    "modified": "2020-10-15T22:29:02.735Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/noopener": {
+    "modified": "2020-10-15T22:29:03.663Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/noreferrer": {
+    "modified": "2020-10-15T22:29:06.663Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/preconnect": {
+    "modified": "2020-10-15T22:29:05.087Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/prefetch": {
+    "modified": "2020-10-15T22:29:05.730Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/preload": {
+    "modified": "2020-10-15T22:29:04.820Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/rel/prerender": {
+    "modified": "2020-10-15T22:29:04.645Z",
+    "contributors": ["sideshowbarker"]
+  },
+  "Web/HTML/Reference/Attributes/required": {
+    "modified": "2020-11-09T13:04:56.530Z",
+    "contributors": [
+      "mfuji09",
+      "sideshowbarker",
+      "oberocks",
+      "dominicegginton",
+      "estelle"
+    ]
+  },
+  "Web/HTML/Reference/Attributes/size": {
+    "modified": "2020-10-15T22:25:14.384Z",
+    "contributors": ["mfuji09", "estelle"]
+  },
+  "Web/HTML/Reference/Attributes/step": {
+    "modified": "2020-09-28T04:18:28.027Z",
+    "contributors": [
+      "mfuji09",
+      "sideshowbarker",
+      "dominicegginton",
+      "cadorej",
+      "estelle"
     ]
   },
   "Web/HTML/Reference/Elements": {

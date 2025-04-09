@@ -30,9 +30,9 @@ The articles below can help you learn more about HTML.
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g., registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
   - : The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
-- [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Some HTML elements that provide support for [CORS](/en-US/docs/Web/HTTP/Guides/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Elements/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 - [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
   - : In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices.
@@ -43,7 +43,7 @@ The articles below can help you learn more about HTML.
   - : HTML consists of **elements**, each of which may be modified by some number of **attributes**. HTML documents are connected to each other with **links**.
 - [HTML element reference](/en-US/docs/Web/HTML/Reference/Elements)
   - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
   - : Elements in HTML have **attributes**. These are additional values that configure the elements or adjust their behavior in various ways.
 - [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
   - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Reference/Elements), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.

@@ -30,7 +30,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(102, "102 Processing")}} {{deprecated_inline}}
   - : This code was used in {{Glossary("WebDAV")}} contexts to indicate that a request has been received by the server, but no status was available at the time of the response.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources while the server prepares a response or [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to an origin from which the page will need resources.
+  - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) resources while the server prepares a response or [preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) to an origin from which the page will need resources.
 
 ## Successful responses
 

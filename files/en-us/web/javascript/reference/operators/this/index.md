@@ -457,7 +457,7 @@ for (const element of elements) {
 
 ### this in inline event handlers
 
-When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
+When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

@@ -35,7 +35,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
 - {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
 - The {{ domxref("HTMLMediaElement.preload") }} attribute now correctly reflects as an _enumerated value_.
-- [`crossOrigin` property](/en-US/docs/Web/HTML/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
+- [`crossOrigin` property](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
 - {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.
 
 ### JavaScript

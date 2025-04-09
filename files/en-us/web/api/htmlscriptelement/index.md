@@ -26,7 +26,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - `HTMLScriptElement.charset` {{deprecated_inline}}
   - : A string representing the character encoding of an external script. It reflects the [`charset`](/en-US/docs/Web/HTML/Reference/Elements/script#charset) attribute.
 - {{domxref("HTMLScriptElement.crossOrigin")}}
-  - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
+  - : A string reflecting the [CORS setting](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
 - {{domxref("HTMLScriptElement.defer")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `defer` property is set to `true`, the external script will be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the `defer` property has no effect.
 - `HTMLScriptElement.event` {{deprecated_inline}}

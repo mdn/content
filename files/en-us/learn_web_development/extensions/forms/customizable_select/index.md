@@ -392,7 +392,7 @@ After the last two sections, the final updated state of our `<select>` is render
 
 The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they currently work alongside customizable selects:
 
-- [`<select multiple>`](/en-US/docs/Web/HTML/Attributes/multiple)
+- [`<select multiple>`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
   - : There isn't currently any support specified for the `multiple` attribute on customizable `<select>` elements, but this will be worked on in the future.
 - {{htmlelement("optgroup")}}
   - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.

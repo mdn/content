@@ -84,7 +84,7 @@ svg|a:active {
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
 - [`rel`](/en-US/docs/Web/HTML/Reference/Elements/a#rel)
   - : The relationship of the target object to the link object.
-    _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **no**
+    _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Reference/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("target")}}
   - : Where to display the linked {{Glossary("URL")}}.
     _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<XML-Name>** ; _Default value_: `_self`; _Animatable_: **yes**

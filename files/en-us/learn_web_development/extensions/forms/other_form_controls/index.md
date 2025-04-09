@@ -136,7 +136,7 @@ For example:
 </select>
 ```
 
-By default, the height of the select box is enough to display a single value. The optional [`size`](/en-US/docs/Web/HTML/Attributes/size) attribute provides control over how many options are visible when the select does not have focus.
+By default, the height of the select box is enough to display a single value. The optional [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size) attribute provides control over how many options are visible when the select does not have focus.
 
 ### Multiple choice select box
 
@@ -160,7 +160,7 @@ By default, a select box lets a user select only one value. By adding the [`mult
 {{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}
 
 > [!NOTE]
-> In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional [`size`](/en-US/docs/Web/HTML/Attributes/size) attribute determining the height of the widget.
+> In the case of multiple choice select boxes, you'll notice that the select box no longer displays the values as drop-down content — instead, all values are displayed at once in a list, with the optional [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size) attribute determining the height of the widget.
 
 > [!NOTE]
 > All browsers that support the {{HTMLElement("select")}} element also support the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute.

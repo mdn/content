@@ -49,7 +49,7 @@ When this [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) is used, 
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
-You can use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute in combination with the `email` input type to allow several comma-separated email addresses to be entered in the same input:
+You can use the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute in combination with the `email` input type to allow several comma-separated email addresses to be entered in the same input:
 
 ```html
 <input type="email" id="email" name="email" multiple />
@@ -70,7 +70,7 @@ As you can see above, `email` — along with other newer `input` types — provi
 
 But it _should not be considered_ an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the _server-side_ as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
 
-Note that `a@b` is a valid email address according to the default provided constraints. This is because the `email` input type allows intranet email addresses by default. To implement different validation behavior, you can use the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute. You can also customize the error messages. We'll talk about how to use these features in the [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) article later on.
+Note that `a@b` is a valid email address according to the default provided constraints. This is because the `email` input type allows intranet email addresses by default. To implement different validation behavior, you can use the [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute. You can also customize the error messages. We'll talk about how to use these features in the [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) article later on.
 
 > [!NOTE]
 > If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return `true`.
@@ -113,7 +113,7 @@ When accessed via a touch device with a dynamic keyboard, most devices will disp
 
 Due to the wide variety of phone number formats around the world, this type of field does not enforce any constraints on the value entered by a user (this means it may include letters, etc.).
 
-As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute can be used to enforce constraints, which you'll learn about in [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
+As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute can be used to enforce constraints, which you'll learn about in [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ## URL field
 
@@ -150,7 +150,7 @@ Controls for entering numbers can be created with an {{HTMLElement("input")}} [`
 
 With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes.
 
-You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer, as the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute defaults to `1`. To allow float numbers, specify `step="any"` or a specific value, like `step="0.01"` to restrict the floating point. If omitted, as the `step` value defaults to `1`, only whole numbers are valid.
+You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer, as the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute defaults to `1`. To allow float numbers, specify `step="any"` or a specific value, like `step="0.01"` to restrict the floating point. If omitted, as the `step` value defaults to `1`, only whole numbers are valid.
 
 Let's look at some examples:
 
@@ -190,7 +190,7 @@ Usage-wise, sliders are less accurate than text fields. Therefore, they are used
 
 A slider is created using the {{HTMLElement("input")}} with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
-It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum, and increment values, respectively.
+It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min), [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attributes which set the minimum, maximum, and increment values, respectively.
 
 Let's look at the code behind the above example, so you can see how it's done. First of all, the basic HTML:
 
@@ -338,7 +338,7 @@ Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each 
 
 ### Constraining date/time values
 
-All date and time controls can be constrained using the [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max) attributes, with further constraining possible via the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute (whose value varies according to input type).
+All date and time controls can be constrained using the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attributes, with further constraining possible via the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute (whose value varies according to input type).
 
 ```html
 <label for="myDate">When are you available this summer?</label><br />

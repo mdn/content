@@ -472,7 +472,7 @@ As mentioned earlier, it is possible to use another function inside `calc-size()
 
 #### HTML
 
-The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
+The HTML contains a {{htmlelement("form")}} element containing three textual `<input>` types. Each `<input>` has a {{htmlelement("label")}} associated with it to make the form accessible, and a [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) applied to stop entered values getting long enough to break the form layout.
 
 ```html
 <form>

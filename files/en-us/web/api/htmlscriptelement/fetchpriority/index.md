@@ -15,7 +15,7 @@ The property allows a developer to signal that fetching a particular script earl
 This in turn allows the browser to increase or decrease the priority, and potentially load the script earlier or later than it would otherwise.
 The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
 
-The fetch priority allows you to decrease the priority of late-body scripts, or to increase the priority of `async` scripts without having to use [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload).
+The fetch priority allows you to decrease the priority of late-body scripts, or to increase the priority of `async` scripts without having to use [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload).
 When early loading of a script is important, the priority can be used to complement preloading, boosting the priority ahead of less-impactful resources that have a higher default priority.
 
 Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.

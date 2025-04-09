@@ -404,7 +404,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
 
 > [!NOTE]
-> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
 ## Other differences between modules and classic scripts

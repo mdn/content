@@ -491,7 +491,7 @@ Before running a cross-document transition, you ideally want to wait until the s
 
 Styles are render blocked by default, and scripts can be render blocked using the [`blocking="render"`](/en-US/docs/Web/HTML/Reference/Elements/script#blocking) attribute.
 
-To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect). In this element, you include the following attributes:
+To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect). In this element, you include the following attributes:
 
 - `rel="expect"` to indicate that you want to use this `<link>` element to render block some HTML on the page.
 - `href="#element-id"` to indicate the ID of the element you want to render block.

@@ -8,7 +8,7 @@ page-type: guide
 
 HTML provides a [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in a {{HTMLElement("canvas")}} as if they had been loaded from the current origin.
 
-See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details on how the `crossorigin` attribute is used.
+See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details on how the `crossorigin` attribute is used.
 
 ## Security and tainted canvases
 

@@ -112,7 +112,7 @@ Update your form code to look like the above.
 
 The {{HTMLelement("p")}} elements are there to conveniently structure our code and make styling easier (see later in the article).
 For usability and accessibility, we include an explicit label for each form control.
-Note the use of the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute on all {{HTMLelement("label")}} elements, which takes as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the form control with which it is associated — this is how you associate a form control with its label.
+Note the use of the [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for) attribute on all {{HTMLelement("label")}} elements, which takes as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the form control with which it is associated — this is how you associate a form control with its label.
 
 There is great benefit to doing this — it associates the label with the form control, enabling mouse, trackpad, and touch device users to click on the label to activate the corresponding control, and it also provides an accessible name for screen readers to read out to their users.
 You'll find further details of form labels in [How to structure a web form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form).

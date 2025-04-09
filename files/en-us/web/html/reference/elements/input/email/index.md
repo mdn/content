@@ -7,7 +7,7 @@ browser-compat: html.elements.input.type_email
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is specified, a list of email addresses.
+{{HTMLElement("input")}} elements of type **`email`** are used to let the user enter and edit an email address, or, if the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute is specified, a list of email addresses.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
@@ -68,7 +68,7 @@ The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_vali
 
 ### multiple
 
-A Boolean attribute which, if present, indicates that the user can enter a list of multiple email addresses, separated by commas and, optionally, whitespace characters. See [Allowing multiple email addresses](#allowing_multiple_email_addresses) for an example, or [HTML attribute: multiple](/en-US/docs/Web/HTML/Attributes/multiple) for more details.
+A Boolean attribute which, if present, indicates that the user can enter a list of multiple email addresses, separated by commas and, optionally, whitespace characters. See [Allowing multiple email addresses](#allowing_multiple_email_addresses) for an example, or [HTML attribute: multiple](/en-US/docs/Web/HTML/Reference/Attributes/multiple) for more details.
 
 > [!NOTE]
 > Normally, if you specify the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, the user must enter a valid email address for the field to be considered valid. However, if you add the `multiple` attribute, a list of zero email addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one email address when `multiple` is specified, regardless of the value of `required`.
@@ -129,7 +129,7 @@ Notice that it's considered valid when empty and when a single validly-formatted
 
 ### Allowing multiple email addresses
 
-By adding the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute, the input can be configured to accept multiple email addresses.
+By adding the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) Boolean attribute, the input can be configured to accept multiple email addresses.
 
 ```html
 <input id="emailAddress" type="email" multiple />
@@ -330,7 +330,7 @@ That's why, instead, we specify the string "Please provide only a Best Startup E
 
 ## Examples
 
-Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
+Here we have an email input with the ID `emailAddress` which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text `user@example.gov` as a placeholder anytime the field is empty. In addition, by using the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in [Allowing multiple email addresses](#allowing_multiple_email_addresses). As a final touch, the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.
 
 As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its [`for`](/en-US/docs/Web/HTML/Reference/Elements/label#for) attribute referencing the `emailAddress` ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.
 
@@ -432,10 +432,10 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
 - [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url)
 - Attributes:
   - [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list)
-  - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
-  - [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
-  - [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
-  - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
+  - [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength)
+  - [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength)
+  - [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
+  - [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern)
   - [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder)
-  - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
-  - [`size`](/en-US/docs/Web/HTML/Attributes/size)
+  - [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly)
+  - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)

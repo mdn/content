@@ -146,7 +146,7 @@ function updateButton() {
 
 ### Disabling and enabling a button
 
-To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) global attribute on it, like so:
+To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) global attribute on it, like so:
 
 ```html
 <input type="button" value="Disable me" disabled />

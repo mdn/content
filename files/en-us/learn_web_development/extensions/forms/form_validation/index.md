@@ -82,11 +82,11 @@ One of the most significant features of [form controls](/en-US/docs/Learn_web_de
 This is done by using validation attributes on form elements.
 We've seen many of these earlier in the course, but to recap:
 
-- [`required`](/en-US/docs/Web/HTML/Attributes/required): Specifies whether a form field needs to be filled in before the form can be submitted.
-- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Specifies the minimum and maximum length of textual data (strings).
-- [`min`](/en-US/docs/Web/HTML/Attributes/min), [`max`](/en-US/docs/Web/HTML/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Attributes/step): Specifies the minimum and maximum values of numerical input types, and the increment, or step, for values, starting from the minimum.
+- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required): Specifies whether a form field needs to be filled in before the form can be submitted.
+- [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength): Specifies the minimum and maximum length of textual data (strings).
+- [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min), [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max), and [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step): Specifies the minimum and maximum values of numerical input types, and the increment, or step, for values, starting from the minimum.
 - [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#input_types): Specifies whether the data needs to be a number, an email address, or some other specific preset type.
-- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) that defines a pattern the entered data needs to follow.
+- [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) that defines a pattern the entered data needs to follow.
 
 If the data entered in a form field follows all of the rules specified by the attributes applied to the field, it is considered valid. If not, it is considered invalid.
 
@@ -133,7 +133,7 @@ To begin, make a copy of the [`fruit-start.html` file found on GitHub](https://g
 
 ### The required attribute
 
-A common HTML validation feature is the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute.
+A common HTML validation feature is the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) attribute.
 Add this attribute to an input to make an element mandatory.
 When this attribute is set, the element matches the {{cssxref(':required')}} UI pseudo-class and the form won't submit, displaying an error message on submission, if the input is empty.
 While empty, the input will also be considered invalid, matching the {{cssxref(':invalid')}} UI pseudo-class.
@@ -180,7 +180,7 @@ Try submitting the form from the [live `required` example](https://mdn.github.io
 
 ### Validating against a regular expression
 
-Another useful validation feature is the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, which expects a [Regular Expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) as its value.
+Another useful validation feature is the [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute, which expects a [Regular Expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) as its value.
 A regular expression (regexp) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.
 
 Regexps are quite complex, and we don't intend to teach you them exhaustively in this article.
@@ -197,7 +197,7 @@ There are many more possibilities that we don't cover here.
 For a complete list and many examples, consult our [Regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) documentation.
 
 Let's implement an example.
-Update your HTML to add a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute like this:
+Update your HTML to add a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute like this:
 
 ```html
 <form>
@@ -225,21 +225,21 @@ You can find this [example live on GitHub](https://mdn.github.io/learning-area/h
 
 In this example, the {{HTMLElement("input")}} element accepts one of four possible values: the strings "banana", "Banana", "cherry", or "Cherry". Regular expressions are case-sensitive, but we've made it support capitalized as well as lower-case versions using an extra "Aa" pattern nested inside square brackets.
 
-At this point, try changing the value inside the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute to equal some of the examples you saw earlier, and look at how that affects the values you can enter to make the input value valid.
+At this point, try changing the value inside the [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute to equal some of the examples you saw earlier, and look at how that affects the values you can enter to make the input value valid.
 Try writing some of your own, and see how it goes.
 Make them fruit-related where possible so that your examples make sense!
 
 If a non-empty value of the {{HTMLElement("input")}} doesn't match the regular expression's pattern, the `input` will match the {{cssxref(':invalid')}} pseudo-class. If empty, and the element is not required, it is not considered invalid.
 
-Some {{HTMLElement("input")}} element types don't need a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute to be validated against a regular expression. For example, specifying the `email` type validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute.
+Some {{HTMLElement("input")}} element types don't need a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute to be validated against a regular expression. For example, specifying the `email` type validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute.
 
 > [!NOTE]
-> The {{HTMLElement("textarea")}} element doesn't support the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
+> The {{HTMLElement("textarea")}} element doesn't support the [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute.
 
 ### Constraining the length of your entries
 
-You can constrain the character length of all text fields created by {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by using the [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes.
-A field is invalid if it has a value and that value has fewer characters than the [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) value or more than the [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) value.
+You can constrain the character length of all text fields created by {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by using the [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) attributes.
+A field is invalid if it has a value and that value has fewer characters than the [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength) value or more than the [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) value.
 
 Browsers often don't let the user type a longer value than expected into text fields. A better user experience than just using `maxlength` is to also provide character count feedback in an accessible manner and let the user edit their content down to size.
 An example of this is the character limit when posting on social media. JavaScript, including [solutions using `maxlength`](https://github.com/mimo84/bootstrap-maxlength), can be used to provide this.
@@ -249,7 +249,7 @@ An example of this is the character limit when posting on social media. JavaScri
 
 ### Constraining the values of your entries
 
-For numeric fields, including [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) and the various date input types, the [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max) attributes can be used to provide a range of valid values.
+For numeric fields, including [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) and the various date input types, the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attributes can be used to provide a range of valid values.
 If the field contains a value outside this range, it will be invalid.
 
 Let's look at another example.
@@ -305,7 +305,7 @@ Here is the example running live:
 
 Try this [example live on GitHub](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) and view the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-length.html).
 
-Numeric input types, like `number`, `range` and `date`, can also take the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute. This attribute specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons, or sliding the ranges thumb). The `step` attribute is omitted in our example, so the value defaults to `1`. This means that floats, like 3.2, will also show as invalid.
+Numeric input types, like `number`, `range` and `date`, can also take the [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute. This attribute specifies what increment the value will go up or down by when the input controls are used (such as the up and down number buttons, or sliding the ranges thumb). The `step` attribute is omitted in our example, so the value defaults to `1`. This means that floats, like 3.2, will also show as invalid.
 
 ### Full example
 

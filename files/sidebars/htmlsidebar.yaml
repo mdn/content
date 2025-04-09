@@ -67,7 +67,7 @@ sidebar:
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTML/Attributes
+    path: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
   - type: listSubPages
@@ -100,7 +100,7 @@ l10n:
     Beginners: Beginner's tutorials
     Creating_the_content: "Your first website: Creating the content"
     Structuring_content_with_HTML: Structuring content with HTML
-    Reference: References
+    Reference: Reference
     HTML_Elements: Elements
     Global_attributes: Global attributes
     Attributes: Attributes

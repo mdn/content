@@ -161,5 +161,5 @@ Inherited into roles:
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('option')}} element
 - HTML {{HTMLElement('input')}} element
-- [multiple](/en-US/docs/Web/HTML/Attributes/multiple) attribute
+- [multiple](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

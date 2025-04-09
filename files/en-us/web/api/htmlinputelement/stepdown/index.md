@@ -11,14 +11,14 @@ browser-compat: api.HTMLInputElement.stepDown
 The
 **`HTMLInputElement.stepDown()`** method decrements the
 value of a numeric type of {{HTMLElement("input")}} element by the value of the
-[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute or up
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute or up
 to `n` multiples of the step attribute if a number is passed as the
 parameter.
 
 The method, when invoked, decrements the
 [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) by ([`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) \* n), where n
 defaults to 1 if not specified, and
-[`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) defaults to the
 default value for `step` if not specified.
 
 Valid on all numeric, date, and time input types that support the step attribute,
@@ -72,11 +72,11 @@ The method, when invoked, changes the form control's value by the value given in
 `step` attribute, multiplied by the parameter, within the constraints set
 within the form control. The default value for the parameter, if not is passed, is 1.
 The method will not cause the value to go below the
-[`min`](/en-US/docs/Web/HTML/Attributes/min) value set or defy the
+[`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) value set or defy the
 constraints set by the
-[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute. A
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute. A
 negative value for `n` will increment the value, but will not increment
-beyond the [`max`](/en-US/docs/Web/HTML/Attributes/max) value.
+beyond the [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) value.
 
 If the value before invoking the `stepDown()` method is invalid, for
 example, if it doesn't match the constraints set by the `step` attribute,
@@ -205,6 +205,6 @@ invoke the method?
 - {{HTMLElement("input")}}
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepUp", "HTMLInputElement.stepUp()")}}
-- [`step`](/en-US/docs/Web/HTML/Attributes/step),
-  [`min`](/en-US/docs/Web/HTML/Attributes/min) and
-  [`max`](/en-US/docs/Web/HTML/Attributes/max) attributes
+- [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step),
+  [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and
+  [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attributes

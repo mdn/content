@@ -13,7 +13,7 @@ The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element i
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- [`for`](/en-US/docs/Web/HTML/Attributes/for)
+- [`for`](/en-US/docs/Web/HTML/Reference/Attributes/for)
   - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
 - `form`
 

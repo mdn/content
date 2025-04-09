@@ -12,7 +12,7 @@ The HTTP **`Sec-Purpose`** {{Glossary("fetch metadata request header")}} indicat
 The only purpose that is currently defined is `prefetch`, which indicates that the resource is being requested in anticipation that it will be needed by a page that is likely to be navigated to in the near future, such as a page linked in search results or a link that a user has hovered over.
 The server can use this knowledge to: adjust the caching expiry for the request, disallow the request, or perhaps to treat it differently when counting page visits.
 
-The header is sent when a page is loaded that has a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch).
+The header is sent when a page is loaded that has a [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch).
 Note that if this header is set then a {{HTTPHeader("Sec-Fetch-Dest")}} header in the request must be set to `empty` (any value in the [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) attribute [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) is ignored) and the {{HTTPHeader("Accept")}} header should match the value used for normal navigation requests.
 
 <table class="properties">
@@ -89,4 +89,4 @@ Cache-Control: no-cache
 
 - {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-Site")}}, {{HTTPHeader("Sec-Fetch-User")}} fetch metadata request headers
 - {{Glossary("Prefetch")}} (Glossary)
-- [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)
+- [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch)

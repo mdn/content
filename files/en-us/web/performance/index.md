@@ -143,7 +143,7 @@ The following APIs are also useful for measuring and influencing page performanc
 - [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element
 - [`<source>`](/en-US/docs/Web/HTML/Reference/Elements/source) element
 - [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#attributes) attributes (like `srcset`) for responsive images
-- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) attribute for preloading content via HTML
+- [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) attribute for preloading content via HTML
 
 ### CSS
 
@@ -158,7 +158,7 @@ The following APIs are also useful for measuring and influencing page performanc
 ### HTTP
 
 - [Content-encoding](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
+- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
 - [HTTP/2](/en-US/docs/Web/HTTP/Guides/Messages#http2_messages)
 - [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 

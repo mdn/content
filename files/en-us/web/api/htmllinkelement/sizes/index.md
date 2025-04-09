@@ -52,4 +52,4 @@ console.log(link.sizes[1]); // output: '114x114'
 - {{domxref("HTMLLinkElement.type")}}
 - {{domxref("HTMLLinkElement.href")}}
 - {{HTMLElement("link")}}
-- [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute
+- [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute

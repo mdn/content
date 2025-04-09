@@ -49,7 +49,7 @@ All basic text controls share some common behaviors:
 
 - They can be marked as [`readonly`](/en-US/docs/Web/HTML/Reference/Elements/input#readonly) (the user cannot modify the input value but it is still sent with the rest of the form data) or [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/input#disabled) (the input value can't be modified and is never sent with the rest of the form data).
 - They can have a [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder); this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
-- They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
+- They can be constrained in [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
 - They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute).
 
 > [!NOTE]
@@ -368,7 +368,7 @@ Many of the elements used to define form controls have some of their own specifi
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/disabled">disabled</a></code
+          ><a href="/en-US/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code
         >
       </td>
       <td>false</td>

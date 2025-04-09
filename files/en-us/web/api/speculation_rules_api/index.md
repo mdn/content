@@ -17,7 +17,7 @@ spec-urls:
 
 The **Speculation Rules API** is designed to improve performance for future navigations. It targets document URLs rather than specific resource files, and so makes sense for multi-page applications (MPAs) rather than single-page applications (SPAs).
 
-The Speculation Rules API provides an alternative to the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) feature and is designed to supersede the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
+The Speculation Rules API provides an alternative to the widely-available [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) feature and is designed to supersede the Chrome-only deprecated [`<link rel="prerender">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender) feature. It provides many improvements over these technologies, along with a more expressive, configurable syntax for specifying which documents should be prefetched or prerendered.
 
 > [!NOTE]
 > The Speculation Rules API doesn't handle subresource prefetches; for that you'll need to use `<link rel="prefetch">`.
@@ -85,7 +85,7 @@ Same-site and cross-site prefetches will work, but cross-site prefetches are lim
 > [!NOTE]
 > In the future an opt-in for cross-site prefetches will be provided via the {{httpheader("Supports-Loading-Mode")}} header, but this was not implemented at the time of writing (only cross-origin, same-site [prerendering](#using_prerendering) opt-in was available).
 
-For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
+For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) and {{domxref("Window/fetch", "fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
 
 - It can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
 - It doesn't get blocked by {{httpheader("Cache-Control")}} headers, whereas `<link rel="prefetch">` often does.
@@ -112,7 +112,7 @@ Prerendering uses memory and network bandwidth. If you prerender something the u
 
 Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation target to opt-in using the {{httpheader("Supports-Loading-Mode")}} header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
 
-For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
+For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender):
 
 - `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it.
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.

@@ -20,7 +20,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.action")}}
   - : A string reflecting the value of the form's [`action`](/en-US/docs/Web/HTML/Reference/Elements/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : A string reflecting the value of the form's [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+  - : A string reflecting the value of the form's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
   - : A string reflecting the value of the form's [`enctype`](/en-US/docs/Web/HTML/Reference/Elements/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.elements")}} {{ReadOnlyInline}}
@@ -34,9 +34,9 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.method")}}
   - : A string reflecting the value of the form's [`method`](/en-US/docs/Web/HTML/Reference/Elements/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.rel")}}
-  - : A string reflecting the value of the form's [`rel`](/en-US/docs/Web/HTML/Attributes/rel) HTML attribute, which represents what kinds of links the form creates as a space-separated list of enumerated values.
+  - : A string reflecting the value of the form's [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) HTML attribute, which represents what kinds of links the form creates as a space-separated list of enumerated values.
 - {{domxref("HTMLFormElement.relList")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLFormElement.target")}}
   - : A string reflecting the value of the form's [`target`](/en-US/docs/Web/HTML/Reference/Elements/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 

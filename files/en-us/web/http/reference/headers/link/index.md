@@ -12,9 +12,9 @@ This allows the server to point a client to another resource containing metadata
 This header has the same semantics as the HTML {{HTMLElement("link")}} element.
 One benefit of using the `Link` header is that the browser can start preconnecting or preloading resources before the HTML itself is fetched and processed.
 
-In practice, most [`rel` link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect when used with the HTTP header.
+In practice, most [`rel` link types](/en-US/docs/Web/HTML/Reference/Attributes/rel) don't have an effect when used with the HTTP header.
 For example, the `icon` relation only works in HTML, and `stylesheet` does not work reliably across browsers (only in Firefox).
-The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) and [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload), which can be combined with {{HTTPStatus(103, "103 Early Hints")}}.
+The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) and [`preload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), which can be combined with {{HTTPStatus(103, "103 Early Hints")}}.
 
 <table class="properties">
   <tbody>
@@ -97,7 +97,7 @@ In this case, `rel="prev"` and `rel="next"` show link relations for previous and
 
 ### Controlling fetch priority
 
-Even when using [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) to fetch a resource as early as possible, different types of content will be fetched earlier or later based on the browser's internal prioritization.
+Even when using [`preload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) to fetch a resource as early as possible, different types of content will be fetched earlier or later based on the browser's internal prioritization.
 The [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority) attribute can be used to hint to the browser that a particular resource will have a greater or lesser relative impact on user experience than other resources of the same type.
 
 For example, the header below might be used to preload `style.css` with a higher priority than other stylesheets:

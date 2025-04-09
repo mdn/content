@@ -37,9 +37,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > [!NOTE]
     > Unless the `value` attribute is between `0` and `1` (inclusive), the `min` and `max` attributes should define the range so that the `value` attribute's value is within it.
 
-- [`min`](/en-US/docs/Web/HTML/Attributes/min)
+- [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min)
   - : The lower numeric bound of the measured range. This must be less than the maximum value (`max` attribute), if specified. If unspecified, the minimum value is `0`.
-- [`max`](/en-US/docs/Web/HTML/Attributes/max)
+- [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max)
   - : The upper numeric bound of the measured range. This must be greater than the minimum value (`min` attribute), if specified. If unspecified, the maximum value is `1`.
 - `low`
   - : The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (`min` attribute), and it also must be less than the high value and maximum value (`high` attribute and `max` attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the `low` value is equal to the minimum value.

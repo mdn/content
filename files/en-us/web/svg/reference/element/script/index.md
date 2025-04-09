@@ -53,7 +53,7 @@ Click the circle to change colors.
 ## Attributes
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/script#crossorigin)
-  - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
+  - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
     _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.

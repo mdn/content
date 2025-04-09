@@ -10,7 +10,7 @@ This [HTML](/en-US/docs/Web/HTML) reference describes all **elements** and **att
 
 - [HTML element reference](/en-US/docs/Web/HTML/Reference/Elements)
   - : This page lists all the HTML elements, which are created using tags.
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
   - : Elements in HTML have attributes; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.
 - [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
   - : Global attributes are attributes common to all HTML elements; they can be used on all elements, though they may have no effect on some elements.

@@ -86,15 +86,15 @@ See the [adding tick marks](#adding_tick_marks) below for an example of how the 
 
 ### max
 
-The greatest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute isn't a number, then the element has no maximum value.
+The greatest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attribute isn't a number, then the element has no maximum value.
 
-This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute. See the HTML [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute.
+This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) attribute. See the HTML [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attribute.
 
 ### min
 
 The lowest value in the range of permitted values. If the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
+This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) attribute.
 
 > [!NOTE]
 > If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
@@ -108,7 +108,7 @@ The `step` attribute can also be set to the `any` string value. This `step` valu
 > [!NOTE]
 > When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
-The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
+The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Reference/Attributes/step).
 
 ## Non-standard attributes
 

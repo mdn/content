@@ -26,7 +26,7 @@ Implementing a [strict CSP](/en-US/docs/Web/HTTP/Guides/CSP#strict_csp) is the b
 
 Strict CSPs also:
 
-- Disable the use of unsafe [inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript), meaning inline [event handler attributes](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) such as `onclick`. This prevents improperly-escaped user inputs from being interpreted by the web browser as JavaScript.
+- Disable the use of unsafe [inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript), meaning inline [event handler attributes](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) such as `onclick`. This prevents improperly-escaped user inputs from being interpreted by the web browser as JavaScript.
 - Disable the use of [risky API calls such as `eval()`](/en-US/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis), which is another effect of the `script-src` directive.
 - Disable all object embeds via `object-src 'none'`.
 - Disable uses of the `<base>` element to set a base URI via `base-uri 'none';`.
