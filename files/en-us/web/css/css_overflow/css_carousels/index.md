@@ -540,7 +540,7 @@ The Responsive carousel is rendered as follows:
 
 {{EmbedLiveSample("second-example", "100%", "400px")}}
 
-Try navigating between the different pages by swiping left and right, using the scroll bar, pressing the scroll buttons, and pressing the scroll markers. The functionality is similar to the single page flexbox example, except that now there are multiple list items in each navigated position; the scroll markers are on columns potentially containing multiple items, instead of on each item.
+Try navigating between the different pages by swiping left and right, using the scroll bar, pressing the scroll buttons, and pressing the scroll markers. The functionality is similar to the single page flexbox example, except that now there are multiple list items in each navigated position; the scroll markers are set on column fragments, potentially containing multiple items, instead of on each item.
 
 Also, try resizing the screen width and you'll see that the number of list items that can fit inside the list changes — and therefore the number of generated columns changes too. As the number of columns changes, the number of scroll markers dynamically updates so that each column is represented in the scroll marker group.
 
