@@ -135,7 +135,7 @@ li::scroll-marker {
 }
 ```
 
-Finally, we style the marker of the currently-scrolled element differently from the others, targeting the marker with the {{cssxref(":target-current")}} pseudoclass.
+Finally, to ensure good user experience, we style the marker of the currently-scrolled element differently from the others, targeting the marker with the {{cssxref(":target-current")}} pseudoclass.
 
 ```css
 ::scroll-marker:target-current {
