@@ -12,6 +12,7 @@ sidebar:
   - /Web/HTTP/Guides/Messages
   - /Web/HTTP/Guides/MIME_types
   - /Web/HTTP/Guides/Compression
+  - /Web/HTTP/Guides/Compression_dictionary_transport
   - /Web/HTTP/Guides/Caching
   - /Web/HTTP/Guides/Authentication
   - /Web/HTTP/Guides/Cookies
