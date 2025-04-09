@@ -22,7 +22,7 @@ The following example demonstrates how to use the [Presentation API](/en-US/docs
 
 ```js
 // Check if the Presentation API is available in the current browser
-if ('presentation' in navigator) {
+if ("presentation" in navigator) {
   // Access the Presentation object
   const presentationObj = navigator.presentation;
   console.log("Presentation object:", presentationObj);
