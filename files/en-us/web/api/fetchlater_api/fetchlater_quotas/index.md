@@ -102,7 +102,7 @@ Permissions-Policy: deferred-fetch-minimal=()
 Assuming a top-level document on `a.com`, which embeds a subframe of `a.com`, which embeds a subframe of `b.com`, and no explicit Permission Policies.
 
 1. The top-level document of `a.com` has the default 512KiB quota.
-2. An iframe `<iframe src="https://a.com/embed">` shares the 512KiB quota upon being added to the top-level document.
+2. `<iframe src="https://a.com/embed">` shares the 512KiB quota upon being added to the top-level document.
 3. An iframe `<iframe src="https://b.com/embed">` receives an 8KiB quotaupon being added to the top-level document.
 
 ### Same-origin subframes canot share quota with the top-level when separated by a cross-origin subframe
