@@ -2,6 +2,8 @@
 title: FetchLaterResult
 slug: Web/API/FetchLaterResult
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.FetchLaterResult
 ---
 

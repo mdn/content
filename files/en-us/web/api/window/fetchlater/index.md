@@ -3,10 +3,12 @@ title: "Window: fetchLater() method"
 short-title: fetchLater()
 slug: Web/API/Window/fetchLater
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Window.fetchLater
 ---
 
-{{APIRef("fetchLater API")}}
+{{APIRef("fetchLater API")}}{{SeeCompatTable}}
 
 The **`fetchLater()`** method of the {{domxref("Window")}} interface creates a deferred fetch.
 

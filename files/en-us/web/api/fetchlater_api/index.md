@@ -2,10 +2,12 @@
 title: fetchLater() API
 slug: Web/API/fetchLater_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.Window.fetchLater
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}
+{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
 
 The **`fetchLater()` API** provides an interface to request a deferred fetch that can be sent after a specified period of time, or when the page is closed or navigated away from.
 

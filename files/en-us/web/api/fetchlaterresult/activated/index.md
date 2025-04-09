@@ -3,7 +3,9 @@ title: "FetchLaterResult: activated property"
 short-title: activated
 slug: Web/API/FetchLaterResult/activated
 page-type: web-api-instance-property
-browser-compat: api.FetchLaterResult
+status:
+  - experimental
+browser-compat: api.FetchLaterResult.activated
 ---
 
 {{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}

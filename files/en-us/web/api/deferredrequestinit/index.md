@@ -2,6 +2,8 @@
 title: DeferredRequestInit
 slug: Web/API/DeferredRequestInit
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.Window.fetchLater
 ---
 

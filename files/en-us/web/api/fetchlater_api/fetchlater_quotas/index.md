@@ -2,12 +2,14 @@
 title: fetchLater() quotas
 slug: Web/API/fetchLater_API/fetchLater_quotas
 page-type: guide
+status:
+  - experimental
 browser-compat:
   - http.headers.Permissions-Policy.deferred-fetch
   - http.headers.Permissions-Policy.deferred-fetch-minimal
 ---
 
-{{DefaultAPISidebar("fetchLater API")}}
+{{DefaultAPISidebar("fetchLater API")}}{{SeeCompatTable}}
 
 Deferred [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) fetches are batched and sent once the tab is closed. At this point, there is no way for the user to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network the API sets quotas on how much data can be deferred to be sent later.
 

@@ -2,6 +2,8 @@
 title: "Permissions-Policy: deferred-fetch"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
 page-type: http-permissions-policy-directive
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy.deferred-fetch
 ---
 
