@@ -153,7 +153,7 @@ Try scrolling the list by swiping or using the scrollbar to see the scroll snapp
 
 In this section we add "previous" and "next" scroll buttons to the demo to provide a tool to navigate between carousel pages. This is achieved using the {{cssxref("::scroll-button()")}} pseudo-element.
 
-The `::scroll-button()` pseudo-elements generate buttons inside a scroll container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each `::scroll-button()` represents a scroll button, the scrolling direction of which is specified by the selector's argument. You can generate up to four scroll buttons per scroll container, which will scroll the container's content towards the start or end of the block or inline axis.
+The `::scroll-button()` pseudo-elements generate buttons inside a scroll container only when their {{cssxref("content")}} properties are set to a value other than `none`. Each `::scroll-button()` represents a scroll button, the scrolling direction of which is specified by the selector's argument. You can generate up to four scroll buttons per scroll container, each scrolling the container's content towards the start or end of the block or inline axis.
 
 You can also specify an argument of `*` to target all of the `::scroll-button()` pseudo-elements with styles.
 
