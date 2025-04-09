@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Events"
-slug: Learn_web_development/Core/Scripting/Test_your_skills:_Events
+short-title: Events
+slug: Learn_web_development/Core/Scripting/Test_your_skills/Events
 page-type: learn-module-assessment
 ---
 

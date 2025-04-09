@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Strings"
-slug: Learn_web_development/Core/Scripting/Test_your_skills:_Strings
+short-title: Strings
+slug: Learn_web_development/Core/Scripting/Test_your_skills/Strings
 page-type: learn-module-assessment
 ---
 

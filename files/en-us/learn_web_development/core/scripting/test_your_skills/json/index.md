@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: JSON"
-slug: Learn_web_development/Core/Scripting/Test_your_skills:_JSON
+short-title: JSON
+slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
 page-type: learn-module-assessment
 ---
 
