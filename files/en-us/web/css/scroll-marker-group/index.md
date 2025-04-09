@@ -39,7 +39,7 @@ scroll-marker-group: unset;
 
 - `none`
 
-  - : No scroll-marker-group pseudo-element will be generated on the element. This is the default value.
+  - : No `::scroll-marker-group` pseudo-element will be generated on the element. This is the default value.
 
 > [!NOTE]
 > It is a best practice to match the visual rendering position of the scroll marker group with the tab order. When placing the marker group at the start of the content with styles applied to {{cssxref("::scroll-marker-group")}}, put it at the beginning of the tab order using `before`. When placing the group at the end of the content, put it at the end of the tab order using `after`.
