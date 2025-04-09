@@ -16,7 +16,7 @@ The **`<big>`** [HTML](/en-US/docs/Web/HTML) deprecated element renders the encl
 
 ## Attributes
 
-This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), common to all elements.
 
 ## Examples
 

@@ -99,7 +99,7 @@ tfoot td {
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ### Deprecated attributes
 
@@ -162,7 +162,7 @@ The `<table>` box establishes a table formatting context. Elements inside the `<
 
 1. The row boxes fill the table in the source code order from top to bottom. Each row box occupies one row of cells.
 2. A row group box occupies one or more row boxes.
-3. Column boxes are placed next to each other in source code order. Depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute, the columns are laid in left-to-right or right-to-left direction. A column box occupies one or more columns of table cells.
+3. Column boxes are placed next to each other in source code order. Depending on the value of the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute, the columns are laid in left-to-right or right-to-left direction. A column box occupies one or more columns of table cells.
 4. A column group box occupies one or more column boxes.
 5. A cell box may span over multiple rows and columns. User agents trim cells to fit in the available number of rows and columns.
 
@@ -202,7 +202,7 @@ Assistive technologies such as screen readers may have difficulty parsing tables
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 
-If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attributes to programmatically associate each table cell with the header(s) ({{HTMLElement("th")}} elements) the cell is associated with.
+If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attributes to programmatically associate each table cell with the header(s) ({{HTMLElement("th")}} elements) the cell is associated with.
 
 - [MDN table accessibility guide](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)

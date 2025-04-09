@@ -16,7 +16,7 @@ The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Examples
 

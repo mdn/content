@@ -12,7 +12,7 @@ The **Popover API** provides developers with a standard, consistent, flexible me
 
 ## Creating declarative popovers
 
-In its simplest form, a popover is created by adding the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute to the element that you want to contain your popover content. An `id` is also needed to associate the popover with its controls.
+In its simplest form, a popover is created by adding the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute to the element that you want to contain your popover content. An `id` is also needed to associate the popover with its controls.
 
 ```html
 <div id="mypopover" popover>Popover content</div>
@@ -98,7 +98,7 @@ You can see this behavior in action in our [Multiple manual popovers example](ht
 
 You can also control popovers using a JavaScript API.
 
-The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute. This can be used to create a popover via JavaScript, and is also useful for feature detection. For example:
+The {{domxref("HTMLElement.popover")}} property can be used to get or set the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute. This can be used to create a popover via JavaScript, and is also useful for feature detection. For example:
 
 ```js
 function supportsPopover() {
@@ -442,7 +442,7 @@ Let's have a look at an example so you can see what this looks like:
 
 #### HTML
 
-The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's display control:
+The HTML contains a {{htmlelement("div")}} element declared to be a popover via the global [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML attribute, and a {{htmlelement("button")}} element designated as the popover's display control:
 
 ```html
 <button popovertarget="mypopover">Show the popover</button>

@@ -60,7 +60,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 
 The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) should only be used once per document.
 
-If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
+If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden).
 
 ```html
 <main>
@@ -86,7 +86,7 @@ Using the {{HTMLElement('main')}} element will automatically communicate a secti
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This allows the user to access the main content of the page faster.
 
-Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link users.
+Adding an [`id` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link users.
 
 ```html
 <body>

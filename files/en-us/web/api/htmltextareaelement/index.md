@@ -26,7 +26,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
+  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}

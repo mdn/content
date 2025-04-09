@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 60 that will affe
 
 ### HTML
 
-Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
+Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
 
 ### CSS
 

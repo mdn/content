@@ -69,7 +69,7 @@ If an error occurs while loading or rendering an image, and an `onerror` event h
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`alt`](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes)
 
@@ -280,13 +280,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
 - `longdesc` {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Global_attributes/id).
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id).
 
     > [!NOTE]
     > This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
-  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute instead.
+  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute instead.
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
@@ -340,7 +340,7 @@ Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correc
 
 ### The title attribute
 
-The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Reference/Elements/figure) and [`figcaption`](/en-US/docs/Web/HTML/Reference/Elements/figcaption) elements.
 

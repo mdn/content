@@ -125,8 +125,8 @@ The flow elements are:
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
-- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
-- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
 
 ## Sectioning content
 
@@ -215,9 +215,9 @@ A few other elements belong to this category, but only if a specific condition i
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("del")}}, if it contains only phrasing content
 - {{HTMLElement("ins")}}, if it contains only phrasing content
-- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("map")}}, if it contains only phrasing content
-- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [`itemprop`](/en-US/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
 
 ## Embedded content
 
@@ -368,7 +368,7 @@ This category contains several sub-categories:
 - resettable
   - : Elements that can be affected when a form is reset. Includes {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - autocapitalize-and-autocorrect-inheriting
-  - : Elements that inherit the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) and [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attributes from their form owner. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+  - : Elements that inherit the [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) and [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) attributes from their form owner. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 - labelable
   - : Elements that can be associated with {{HTMLElement("label")}} elements. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}} (all types other than `hidden`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 

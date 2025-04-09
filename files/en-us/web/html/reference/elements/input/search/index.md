@@ -44,7 +44,7 @@ If no validation constraints are in place for the input (see [Validation](#valid
 
 ## Additional attributes
 
-In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes.
 
 ### list
 
@@ -97,7 +97,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-[`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+[`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.

@@ -44,7 +44,7 @@ Values of this type are objects. They contain the following properties:
 - `srcUrl` {{optional_inline}}
   - : `string`. If present, the `src` value for the media in the clicked element.
 - `targetElementId` {{optional_inline}}
-  - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute of the page element.
+  - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute of the page element.
 - `viewType` {{optional_inline}}
   - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. The type of extension view.
 - `wasChecked` {{optional_inline}}

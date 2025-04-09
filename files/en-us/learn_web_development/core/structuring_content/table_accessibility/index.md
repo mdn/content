@@ -258,7 +258,7 @@ The same applies to headers for multiple grouped rows. Take another look at the 
 
 ## The id and headers attributes
 
-An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attributes to create associations between headers and cells.
+An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and [`headers`](/en-US/docs/Web/HTML/Reference/Elements/td#headers) attributes to create associations between headers and cells.
 
 The `headers` attribute takes a list of unordered, space-separated {{Glossary("string", "strings")}}, each corresponding to the unique `id` of the `<th>` elements that provide headings for either a data cell (`<td>` element) or another header cell (`<th>` element).
 

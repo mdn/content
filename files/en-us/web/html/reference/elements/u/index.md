@@ -37,7 +37,7 @@ See the [Usage notes](#usage_notes) section for further details on when it's app
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 

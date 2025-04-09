@@ -40,7 +40,7 @@ select {
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
   - : If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.

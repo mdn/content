@@ -11,7 +11,7 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Examples
 

@@ -136,7 +136,7 @@ In this example, a positioned element is tethered and positioned relative to its
 
 #### HTML
 
-The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute.
 
 ```html-nolint
 <div class="anchor" contenteditable="true">⚓︎</div>

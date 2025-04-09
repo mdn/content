@@ -20,7 +20,7 @@ The `<fencedframe>` element is a type of `<iframe>` with more native privacy fea
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `allow` {{experimental_inline}}
 
@@ -69,7 +69,7 @@ The size of the embedded content may be set by internal `contentWidth` and `cont
 
 ## Accessibility
 
-People navigating with assistive technology, such as a screen reader, can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on a `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
+People navigating with assistive technology, such as a screen reader, can use the [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on a `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
 <fencedframe

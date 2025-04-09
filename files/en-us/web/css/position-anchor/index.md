@@ -30,7 +30,7 @@ position-anchor: unset;
 
 - `auto`
 
-  - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
+  - : Associates a positioned element with its implicit anchor element, if it has one — for example as set by the non-standard HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute.
 
 - {{cssxref("dashed-ident")}}
 
@@ -303,6 +303,6 @@ Select different values from the drop-down menus to change the anchors that the 
 ## See also
 
 - {{cssxref("anchor-name")}}
-- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
+- HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

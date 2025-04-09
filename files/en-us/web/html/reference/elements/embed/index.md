@@ -26,7 +26,7 @@ Keep in mind that most modern browsers have deprecated and removed support for b
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `height`
   - : The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are _not_ allowed.
@@ -46,7 +46,7 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
 
 ## Accessibility
 
-Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `embed` element to label its content so that people navigating with assistive technology such as a screen reader can understand what it contains. The title's value should concisely describe the embedded content. Without a title, they may not be able to determine what its embedded content is. This context shift can be confusing and time-consuming, especially if the `embed` element contains interactive content like video or audio.
+Use the [`title` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/title) on an `embed` element to label its content so that people navigating with assistive technology such as a screen reader can understand what it contains. The title's value should concisely describe the embedded content. Without a title, they may not be able to determine what its embedded content is. This context shift can be confusing and time-consuming, especially if the `embed` element contains interactive content like video or audio.
 
 ## Examples
 

@@ -41,7 +41,7 @@ The text's characters are drawn from the starting point in the given direction; 
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `dir`
 

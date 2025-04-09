@@ -58,10 +58,10 @@ If the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attrib
 
 ## Additional attributes
 
-In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
 
 > [!NOTE]
-> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to password inputs, but the stored state is always `off`.
+> The [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) global attribute can be added to password inputs, but the stored state is always `off`.
 
 ### maxlength
 

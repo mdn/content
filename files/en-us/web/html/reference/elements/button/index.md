@@ -52,7 +52,7 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
 

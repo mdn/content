@@ -11,7 +11,7 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism 
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `shadowrootmode`
 
@@ -378,7 +378,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
+- [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
 - {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements

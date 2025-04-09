@@ -39,7 +39,7 @@ As you can see from the above example, a `<br>` element is included at each poin
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ### Deprecated attributes
 

@@ -11,7 +11,7 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), event attributes, and deprecated attributes:
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), event attributes, and deprecated attributes:
 
 ### Event attributes
 

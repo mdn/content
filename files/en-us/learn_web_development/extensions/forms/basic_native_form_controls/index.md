@@ -50,7 +50,7 @@ All basic text controls share some common behaviors:
 - They can be marked as [`readonly`](/en-US/docs/Web/HTML/Reference/Elements/input#readonly) (the user cannot modify the input value but it is still sent with the rest of the form data) or [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/input#disabled) (the input value can't be modified and is never sent with the rest of the form data).
 - They can have a [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder); this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
-- They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute).
+- They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) attribute).
 
 > [!NOTE]
 > The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
@@ -354,7 +354,7 @@ Many of the elements used to define form controls have some of their own specifi
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Global_attributes/autofocus"
+          ><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus"
             >autofocus</a
           ></code
         >

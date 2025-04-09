@@ -45,7 +45,7 @@ In the same manner as `<link>` elements, `<style>` elements can include `media` 
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `blocking`
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.

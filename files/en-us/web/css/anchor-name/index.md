@@ -172,7 +172,7 @@ This example demonstrates how you can associate multiple positioned elements wit
 
 #### HTML
 
-The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s to identify them.
+The HTML is the same as for the previous example, except this time we have multiple positioned element `<div>`s with different [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)s to identify them.
 
 ```html
 <p>
@@ -386,6 +386,6 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 ## See also
 
 - {{cssxref("position-anchor")}}
-- HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute
+- HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide

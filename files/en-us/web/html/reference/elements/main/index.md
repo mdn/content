@@ -35,11 +35,11 @@ header {
 }
 ```
 
-A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute specified.
+A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute specified.
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 
@@ -57,7 +57,7 @@ The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibil
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This lets the user access the main content of the page faster.
 
-Adding an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute to the `<main>` element lets it be a target of a skip navigation link.
+Adding an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute to the `<main>` element lets it be a target of a skip navigation link.
 
 ```html
 <body>

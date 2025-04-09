@@ -51,7 +51,7 @@ It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS 
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `accept` {{deprecated_inline}}
 
@@ -66,7 +66,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `autocapitalize`
 
-  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize) global attribute page for more information.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
 

@@ -45,7 +45,7 @@ The articles below can help you learn more about HTML.
   - : Browse a list of all {{glossary("HTML")}} {{glossary("Element", "elements")}}.
 - [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
   - : Elements in HTML have **attributes**. These are additional values that configure the elements or adjust their behavior in various ways.
-- [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- [Global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
   - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Reference/Elements), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content) and [block-level elements](/en-US/docs/Glossary/Block-level_content)
   - : HTML elements are usually "inline-level" or "block-level" elements. An inline-level element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block box".

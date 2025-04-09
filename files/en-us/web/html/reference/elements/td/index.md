@@ -79,7 +79,7 @@ caption {
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `colspan`
   - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, setting to the default value (`1`).
@@ -94,7 +94,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `abbr` {{deprecated_inline}}
 
-  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute, as this attribute is deprecated. Or, preferably, include the content within the data cell, and use CSS to [visually clip overflowing text](/en-US/docs/Web/CSS/text-overflow).
+  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute, as this attribute is deprecated. Or, preferably, include the content within the data cell, and use CSS to [visually clip overflowing text](/en-US/docs/Web/CSS/text-overflow).
 
 - `align` {{deprecated_inline}}
 
@@ -305,10 +305,10 @@ For more complex relationships between data cells (`<td>` elements) and header c
 
 #### HTML
 
-To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each data cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Each row header cell ({{HTMLElement("th")}} element) associated with the "ABC" data cell, i.e., the letters "A", "B", and "C", is given a unique identifier with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The "ABC" data cell (`<td>` element) then uses these `id` values in a space-separated list for the [`headers`](#headers) attribute.
+To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each data cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes. Each row header cell ({{HTMLElement("th")}} element) associated with the "ABC" data cell, i.e., the letters "A", "B", and "C", is given a unique identifier with the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute. The "ABC" data cell (`<td>` element) then uses these `id` values in a space-separated list for the [`headers`](#headers) attribute.
 
 > [!NOTE]
-> It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
+> It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>

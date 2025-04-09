@@ -58,7 +58,7 @@ h4 {
 
 ## Attributes
 
-These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+These elements only include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 
@@ -194,7 +194,7 @@ When headings are nested, heading levels may be "skipped" when closing a subsect
 
 Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Reference/Elements#content_sectioning) and use it to determine the page's layout.
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### Sectioning content examples
 

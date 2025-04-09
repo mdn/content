@@ -93,7 +93,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - {{HTMLElement("style")}} element
 - {{HTMLElement("link")}} element
-- [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute
+- [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) attribute
 - [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet) attribute
 
 ## Specifications

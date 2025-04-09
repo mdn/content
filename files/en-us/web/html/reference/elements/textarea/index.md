@@ -54,9 +54,9 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
+- [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
 
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 
@@ -70,7 +70,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     `<textarea>` elements that don't specify the `autocomplete` attribute inherit the `autocomplete` `on` or `off` status set on the `<textarea>`'s form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
-- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
+- [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect)
 
   - : Controls whether automatic spelling correction and processing of text is enabled while the user is editing this `textarea`.
     Permitted values are:
@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `off`
       - : Disable automatic spelling correction and text substitutions.
 
-- [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
+- [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
 - `cols`
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
@@ -110,7 +110,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - `rows`
   - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
-- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
+- [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
 
   - : Specifies whether the `<textarea>` is subject to spell-checking by the underlying browser/OS. The value can be:
 

@@ -28,7 +28,7 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 
 The native HTML checkbox ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)) form control had two states ("checked" or "not checked"), with an [`indeterminate`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) state settable via JavaScript. Similarly, an element with `role="checkbox"` can expose three states through the `aria-checked` attribute: `true`, `false`, or `mixed`.
 
-Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
+Since a checkbox is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a checkbox is the <kbd>Space</kbd> key.
 
 The developer is required to change the value of the `aria-checked` attribute dynamically when the checkbox is activated.
 

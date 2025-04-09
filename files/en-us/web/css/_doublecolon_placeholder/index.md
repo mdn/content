@@ -90,7 +90,7 @@ Placeholder text will appear with the same styling as user-entered text content 
 
 ### Labels
 
-Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Reference/Elements/label#for) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
+Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Reference/Elements/label#for) and [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 

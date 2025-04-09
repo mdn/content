@@ -15,7 +15,7 @@ Using the `<frame>` element is not encouraged because of certain disadvantages s
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `src` {{Deprecated_Inline}}
   - : This attribute specifies the document that will be displayed by the frame.

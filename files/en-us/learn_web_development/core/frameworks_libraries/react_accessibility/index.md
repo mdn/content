@@ -284,7 +284,7 @@ const listHeadingRef = useRef(null);
 
 ### Prepare the heading
 
-Heading elements like our `<h2>` are not usually focusable. This isn't a problem — we can make any element programmatically focusable by adding the attribute [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to it. This means _only focusable with JavaScript_. You can't press <kbd>Tab</kbd> to focus on an element with a tabindex of `-1` the same way you could do with a [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) or [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element (this can be done using `tabindex="0"`, but that's not appropriate in this case).
+Heading elements like our `<h2>` are not usually focusable. This isn't a problem — we can make any element programmatically focusable by adding the attribute [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) to it. This means _only focusable with JavaScript_. You can't press <kbd>Tab</kbd> to focus on an element with a tabindex of `-1` the same way you could do with a [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) or [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element (this can be done using `tabindex="0"`, but that's not appropriate in this case).
 
 Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `listHeadingRef`:
 

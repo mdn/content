@@ -111,9 +111,9 @@ The script gets a reference to the {{domxref("HTMLInputElement")}} object repres
 
 ### Adding keyboard shortcuts to buttons
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey) for a useful list of those).
 
 ```html
 <form>

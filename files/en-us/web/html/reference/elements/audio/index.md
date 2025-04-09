@@ -31,7 +31,7 @@ The content inside the opening and closing `<audio></audio>` tags is shown as a 
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
 

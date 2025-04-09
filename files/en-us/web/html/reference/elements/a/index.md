@@ -31,7 +31,7 @@ li {
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `attributionsrc` {{experimental_inline}}
 
@@ -94,7 +94,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Pieces of media files with media fragments
 
 - `hreflang`
-  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
+  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/lang).
 - `ping`
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
 - `referrerpolicy`
@@ -144,7 +144,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > [!NOTE]
-    > Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes/id) instead.
+    > Use the global attribute [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) instead.
 
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -510,7 +510,7 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Refere
         > or an
         <code>&lt;a&gt;</code> element, and no descendant may have a specified
         <a
-          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
+          href="/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex"
           >tabindex</a
         > attribute.
       </td>

@@ -41,7 +41,7 @@ This element is often (but need not be) rendered by applying a strike-through st
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : A URI for a resource that explains the change (for example, meeting minutes).

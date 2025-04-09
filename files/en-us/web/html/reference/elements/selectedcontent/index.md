@@ -14,7 +14,7 @@ The **`<selectedcontent>`** [HTML](/en-US/docs/Web/HTML) element can be used to 
 
 ## Attributes
 
-The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered [inert](/en-US/docs/Web/HTML/Global_attributes/inert).
+The `<selectedcontent>` element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), but they will essentially be ignored because when used correctly as a child of a select button, the element is rendered [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 
 The select button and all its content are inert by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes.
 

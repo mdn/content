@@ -56,7 +56,7 @@ Arrow keys are used to navigate among elements of a toolbar. When a `radiogroup`
 
 User interactions for `radiogroup`s must replicate the user interaction of a user entering into a group of same-named HTML radio buttons. Keyboard events for tabs, space, and arrow keys must be captured. Click events on both the radio elements and their associated labels must also be captured. Additionally, [focus must be managed](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability).
 
-While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate through a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is one method to manage arrow key events.
+While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate through a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is one method to manage arrow key events.
 
 ### Required CSS features
 

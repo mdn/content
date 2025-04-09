@@ -31,7 +31,7 @@ This example shows the basic use of the popover API with a "toggle" value set fo
 The `popover` attribute is set to [`"auto"`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), so the popover can be closed ("light-dismissed") by clicking outside the popover area.
 
 First we define an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input/button) of `type="button"` that we will use to show and hide the popover, and a `<div>` that will be the popover.
-In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
+In this case we don't set the [`popovertargetaction`](/en-US/docs/Web/HTML/Reference/Elements/button#popovertargetaction) HTML attribute on the button or the [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) attribute on the `<div>`, as we will be doing so programmatically.
 
 ```html
 <input id="toggleBtn" type="button" value="Toggle popover" />
@@ -135,5 +135,5 @@ The popover can be displayed by selecting the "Show popover" button, and dismiss
 
 ## See also
 
-- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
+- [`popover`](/en-US/docs/Web/HTML/Reference/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

@@ -25,7 +25,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies one or more me
 
 ## Attributes
 
-This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attributes). In addition, the following attributes can be used with it:
+This element supports all [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes). In addition, the following attributes can be used with it:
 
 - `type`
 

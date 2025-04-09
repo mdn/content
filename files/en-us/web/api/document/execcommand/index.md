@@ -10,7 +10,7 @@ browser-compat: api.Document.execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Reference/Elements/input), [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
 To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
@@ -149,7 +149,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 

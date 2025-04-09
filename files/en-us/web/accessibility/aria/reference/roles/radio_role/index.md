@@ -44,7 +44,7 @@ A radio button is a checkable input that when associated with other radio button
 </div>
 ```
 
-The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Reference/Elements/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
+The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Reference/Elements/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute.
 
 > [!NOTE]
 > The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
@@ -75,7 +75,7 @@ Each radio button element has role `radio`. The radio role should always be nest
 
 Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing `radiogroup` element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the `radiogroup` element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
 
-As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
+As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
 
 To programmatically indicate that a radio button must be chosen from a radio group the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) attribute, with a value of `true`, must be specified on the `radiogroup` element. It is not expected to use the `aria-required` attribute on individual ARIA radio buttons.
 
@@ -117,7 +117,7 @@ From the assistive technology user's perspective, the heading does not exist sin
       - : The radio is not checked.
 
 > [!NOTE]
-> Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
+> Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
 
 ### Keyboard interactions
 
@@ -295,7 +295,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Reference/Elements/input/radio)
-- [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)
 - [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
 - [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)

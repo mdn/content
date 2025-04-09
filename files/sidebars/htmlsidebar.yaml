@@ -62,7 +62,7 @@ sidebar:
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTML/Global_attributes
+    path: /Web/HTML/Reference/Global_attributes
     title: Global_attributes
     details: closed
     code: true

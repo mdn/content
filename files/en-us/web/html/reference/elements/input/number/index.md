@@ -94,7 +94,7 @@ The default stepping value for `number` inputs is `1`, allowing only integers to
 
 ## Using number inputs
 
-The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute:
+The `number` input type should only be used for incremental numbers, especially when spinbutton incrementing and decrementing are helpful to user experience. The `number` input type is not appropriate for values that happen to only consist of numbers but aren't strictly speaking a number, such as postal codes in many countries or credit card numbers. For non-numeric inputs, consider using a different input type, such as [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel) or other {{HTMLElement('input')}} type with the [`inputmode`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) attribute:
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -180,7 +180,7 @@ If you want to allow arbitrary decimal values, you can set the `step` value to `
 
 {{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
 
-For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
+For example, to adjust the width of the input to be only as wide as is needed to enter a three-digit number, we can change our HTML to include an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) and to shorten our placeholder since the field will be too narrow for the text we have been using so far:
 
 ```html
 <input
@@ -206,7 +206,7 @@ The result looks like this:
 
 ### Offering suggested values
 
-You can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
+You can provide a list of default options from which the user can select by specifying the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute, which contains as its value the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value. Each `option`'s `value` is the corresponding suggested value for the number entry box.
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -295,7 +295,7 @@ The rationale for this is that number inputs won't be valid if they contain anyt
 
 ## Accessibility
 
-The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
+The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
 Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute to help users complete forms more quickly and with fewer chances of errors. For example, to enable autofill on a zip code field, set `autocomplete="postal-code"`.
 

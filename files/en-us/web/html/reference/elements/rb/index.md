@@ -13,7 +13,7 @@ The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base 
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 

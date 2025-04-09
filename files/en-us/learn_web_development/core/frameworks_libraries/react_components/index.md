@@ -191,7 +191,7 @@ If you change each `<Todo />` component's `completed` prop, your browser will ch
 
 We have still _another_ problem: our `<Todo />` component gives every task an `id` attribute of `todo-0`. This is bad for a couple of reasons:
 
-- [`id` attributes](/en-US/docs/Web/HTML/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
+- [`id` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/id) must be unique (they are used as unique identifiers for document fragments, by CSS, JavaScript, etc.).
 - When `id`s are not unique, the functionality of [label elements](/en-US/docs/Web/HTML/Reference/Elements/label) can break.
 
 The second problem is affecting our app right now. If you click on the word "Sleep" next to the second checkbox, you'll notice the "Eat" checkbox toggles instead of the "Sleep" checkbox. This is because every checkbox's `<label>` element has an `htmlFor` attribute of `todo-0`. The `<label>`s only acknowledge the first element with a given `id` attribute, which causes the problem you see when clicking on the other labels.

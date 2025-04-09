@@ -19,7 +19,7 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Global_attributes/is) for more information.
+  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/is) for more information.
 
 ## Implementing a custom element
 
@@ -121,7 +121,7 @@ customElements.define("popup-info", PopupInfo);
 
 Once you've defined and registered a custom element, you can use it in your code.
 
-To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute:
+To use a customized built-in element, use the built-in element but with the custom name as the value of the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute:
 
 ```html
 <p is="word-count"></p>
@@ -428,7 +428,7 @@ Now let's have a look at a customized built in element example. This example ext
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+> Please see the [`is`](/en-US/docs/Web/HTML/Reference/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
 
 First of all, we define our element's class:
 

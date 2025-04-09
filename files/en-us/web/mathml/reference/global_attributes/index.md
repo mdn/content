@@ -18,11 +18,11 @@ In addition to the basic MathML global attributes, the following global attribut
 
 ## List of global attributes
 
-- [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
+- [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
 
   - : A boolean attribute that indicates that the element should be focused on page load.
 
-- [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
+- [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class)
 
   - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 
@@ -43,7 +43,7 @@ In addition to the basic MathML global attributes, the following global attribut
     - `true`, which means `normal`.
     - `false`, which means `compact`.
 
-- [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
+- [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id)
 
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 
@@ -59,7 +59,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
   - : A {{cssxref("length-percentage")}} used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
-- [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
+- [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce)
 
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 
@@ -67,11 +67,11 @@ In addition to the basic MathML global attributes, the following global attribut
 
   - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Reference/Global_attributes/scriptlevel#values) for accepted values and mapping.
 
-- [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
+- [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style)
 
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{MathMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
 
-- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)
 
   - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:
 

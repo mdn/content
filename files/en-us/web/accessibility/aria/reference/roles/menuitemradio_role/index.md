@@ -111,7 +111,7 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 <li role="menuitemradio" tabindex="-1" aria-checked="false">Purple</li>
 ```
 
-The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
+The [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
 The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/CSS_generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/background-color).
 

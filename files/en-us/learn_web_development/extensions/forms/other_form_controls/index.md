@@ -45,7 +45,7 @@ The main difference between a `<textarea>` and a regular single-line text field 
 
 `<textarea>` also takes a closing tag; any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute.
 
-Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
+Note that even though you can put anything inside a `<textarea>` element (including other HTML elements, CSS, and JavaScript), because of its nature, it is all rendered as if it was plain text content. (Using [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) on non-form controls provides an API for capturing HTML/"rich" content instead of plain text).
 
 Visually, the text entered wraps and the form control is by default resizable. Most browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 

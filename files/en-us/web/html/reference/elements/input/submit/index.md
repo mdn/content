@@ -124,9 +124,9 @@ Upon submitting, the data name/value pair gets sent to the server. In this insta
 
 ### Adding a keyboard shortcut to a submit button
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination). In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) for further details.
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination). In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See [`accesskey`](/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey) for further details.
 
 Here's the previous example with the <kbd>s</kbd> access key added:
 
@@ -146,7 +146,7 @@ For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<
 
 {{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
-The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute) can also help, although it's not a complete solution for accessibility purposes.
+The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute) can also help, although it's not a complete solution for accessibility purposes.
 
 ### Disabling and enabling a submit button
 

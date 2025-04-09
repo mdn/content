@@ -31,7 +31,7 @@ label {
 }
 ```
 
-To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
+To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
 Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
 
 Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
@@ -40,7 +40,7 @@ Each `<option>` element should have a `value` attribute, which represents a sugg
 
 ## Attributes
 
-This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Global_attributes), common to all elements.
+This element has no other attributes than the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes), common to all elements.
 
 ## Accessibility
 

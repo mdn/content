@@ -31,7 +31,7 @@ The content inside the opening and closing `<video></video>` tags is shown as a 
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
 
