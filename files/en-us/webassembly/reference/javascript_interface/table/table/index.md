@@ -77,7 +77,7 @@ const importObject = {
 
 Next, we load and instantiate a WebAssembly module. The `table2.wasm` module defines a table containing two functions. The first function returns 42, and the second returns 83:
 
-```wasm
+```wat
 (module
     (import "js" "tbl" (table 2 anyfunc))
     (func $f42 (result i32) i32.const 42)

@@ -33,7 +33,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; push multiple values onto the stack
 i32.const 1
 i32.const 2
