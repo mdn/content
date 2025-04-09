@@ -163,7 +163,7 @@
 /en-US/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
 /en-US/docs/Building_an_Extension	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/CER_temp	/en-US/docs/Web/API/Document
-/en-US/docs/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
+/en-US/docs/CORS_Enabled_Image	/en-US/docs/Web/HTML/How_to/CORS_enabled_image
 /en-US/docs/CSS	/en-US/docs/Web/CSS
 /en-US/docs/CSS-2_Quick_Reference	/en-US/docs/Web/CSS
 /en-US/docs/CSS-2_Quick_Reference/All_in_a_page	/en-US/docs/Web/CSS/Reference
@@ -3626,7 +3626,7 @@
 /en-US/docs/HTML/Attributes	/en-US/docs/Web/HTML/Reference/Attributes
 /en-US/docs/HTML/Bad_copy_pasting_habits	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/HTML/Block-level_elements	/en-US/docs/Glossary/Block-level_content
-/en-US/docs/HTML/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
+/en-US/docs/HTML/CORS_Enabled_Image	/en-US/docs/Web/HTML/How_to/CORS_enabled_image
 /en-US/docs/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Reference/Attributes/crossorigin
 /en-US/docs/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
@@ -12933,6 +12933,7 @@
 /en-US/docs/Web/HTML/Attributes/size	/en-US/docs/Web/HTML/Reference/Attributes/size
 /en-US/docs/Web/HTML/Attributes/step	/en-US/docs/Web/HTML/Reference/Attributes/step
 /en-US/docs/Web/HTML/Block-level_elements	/en-US/docs/Glossary/Block-level_content
+/en-US/docs/Web/HTML/CORS_enabled_image	/en-US/docs/Web/HTML/How_to/CORS_enabled_image
 /en-US/docs/Web/HTML/CORS_settings_attributes	/en-US/docs/Web/HTML/Reference/Attributes/crossorigin
 /en-US/docs/Web/HTML/Canvas	/en-US/docs/Web/API/Canvas_API
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial

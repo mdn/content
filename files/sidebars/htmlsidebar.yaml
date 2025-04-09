@@ -45,7 +45,7 @@ sidebar:
         title: Microformats
       - link: /Web/HTML/Viewport_meta_tag
         title: Viewport_meta_tag
-      - link: /Web/HTML/CORS_enabled_image
+      - link: /Web/HTML/How_to/CORS_enabled_image
         title: Allowing_cross-origin_images_and_canvas
   - type: section
     link: /Web/HTML/Guides

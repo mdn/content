@@ -187,7 +187,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
-    [CORS-enabled images](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
+    [CORS-enabled images](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
     The allowed values are:
 
     - `anonymous`

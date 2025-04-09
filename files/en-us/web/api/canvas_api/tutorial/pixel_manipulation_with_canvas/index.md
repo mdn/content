@@ -286,7 +286,7 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 
 > [!NOTE]
 > Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
-> See [Security and tainted canvases](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
+> See [Security and tainted canvases](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.
