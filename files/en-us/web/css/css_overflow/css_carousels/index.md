@@ -300,7 +300,7 @@ li::scroll-marker:target-current {
 
 ## Single page carousel final result
 
-All of the above code combines together to create the following final result:
+All of the above code combines together to create the following result:
 
 {{EmbedLiveSample("first-example", "100%", "400px")}}
 
