@@ -167,7 +167,7 @@ Note how the scroll buttons are created at the bottom left on the carousel. Try 
 
 ### Positioning the scroll buttons
 
-The above example works, but the buttons are not ideally placed. In this section we will add some more CSS to position them appropriately using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)..
+The previous example works, but the buttons are not ideally placed. In this section, we will add some CSS to position them using [anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 #### CSS
 
