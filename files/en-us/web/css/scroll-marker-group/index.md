@@ -106,7 +106,7 @@ ul {
 }
 ```
 
-Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to make them 33% of the width of the container. The {{cssxref("scroll-snap-align")}} value of `start` causes the left-hand side of the left-most visible item to snap to the left edge of the container when the content is scrolled.
+Next, we style the `<li>` elements, using the {{cssxref("flex")}} property to make them `33%` of the width of the container. The {{cssxref("scroll-snap-align")}} value of `start` makes the left-hand side of the left-most visible item snap to the left edge of the container when the content is scrolled.
 
 ```css
 li {
