@@ -310,7 +310,7 @@ You can also navigate between pages by swiping left and right, dragging the scro
 
 ## Responsive carousel: multiple items per page
 
-The second demo is a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. The demo is also responsive — different numbers of items appear on each page depending on the viewport width.
+The second demo is a carousel with multiple items per page, which again includes [scroll buttons](#creating_scroll_buttons) and [scroll markers](#creating_scroll_markers) for navigating through the pages. This demo is also responsive — different numbers of items appear on each page depending on the viewport width.
 
 This demo is very similar to the [Carousel with single pages](#carousel_with_single_pages) demo, except that instead of using flexbox for layout, it uses [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) and the {{cssxref("::column")}} pseudo-element to create arbitary columns that span the full width of the carousel and may contain multiple items.
 
