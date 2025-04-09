@@ -29,7 +29,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
+        <pre class="brush: json">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",

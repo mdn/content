@@ -321,15 +321,15 @@ WebGL provides a minimum of 8 texture units; the first of these is `gl.TEXTURE0`
 
 Lastly, add `texture` as a parameter to the `drawScene()` function, both where it is defined and where it is called.
 
-> [!NOTE]
-> Update the declaration of your `drawScene()` function to add the new parameter:
+Update the declaration of your `drawScene()` function to add the new parameter:
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+  // …
+}
 ```
 
-> [!NOTE]
-> Update the place in your `main()` function where you call `drawScene()`:
+Update the place in your `main()` function where you call `drawScene()`:
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
