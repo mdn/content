@@ -19,7 +19,7 @@ The overall quota for `fetchLater()` is 640KB per document. By default, this is 
 
 `fetchLater()` requests can be made to any URL and are not restricted to the same origin as the document or the subframe, so it's important to differentiate between requests made in the top-level document content (whether to first-party or third-party origins) and those made in subframes.
 
-For example, if a top-level `a.com` document includes a `<script>` that makes a `fetchLater()` request to `analytics.example.com, this request would be bound by the top-level 512KB limit. Alternatively, if the top-level document embeds an`<iframe>`with a source of`analytics.example.com`that makes a`fetchLater()` request, that request would be bound by the 128KB limit.
+For example, if a top-level `a.com` document includes a `<script>` that makes a `fetchLater()` request to `analytics.example.com`, this request would be bound by the top-level 512KB limit. Alternatively, if the top-level document embeds an`<iframe>`with a source of`analytics.example.com`that makes a`fetchLater()` request, that request would be bound by the 128KB limit.
 
 ## Quota limits by reporting origin and subframe
 
