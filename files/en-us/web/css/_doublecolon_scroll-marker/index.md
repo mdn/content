@@ -190,5 +190,6 @@ To improve user experience, we set a different color on the markers on {{cssxref
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

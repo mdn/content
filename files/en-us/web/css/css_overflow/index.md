@@ -236,7 +236,6 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ### Selectors and pseudo-elements
 
-- {{cssxref("::column")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
@@ -257,6 +256,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Related concepts
 
+- {{cssxref("::column")}}
 - {{CSSxRef("scrollbar-width")}} CSS property
 - {{CSSxRef("scrollbar-color")}} CSS property
 - {{CSSxRef("scrollbar-gutter")}} CSS property

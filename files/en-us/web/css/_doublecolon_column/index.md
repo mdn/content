@@ -21,9 +21,13 @@ The **`::column`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/C
 
 When CSS multi-column layout is used to lay out a container's content in multiple columns (for example, using the {{cssxref("column-count")}} property), `::column` pseudo-elements are generated to contain each individual column.
 
-This is useful for [CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) — `::column` can be used to generate {{cssxref("::scroll-marker")}} pseudo-elements for each column, and set them as [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) using [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap).
+The `::column` pseudo-element only accepts scroll snap properties that apply to elements inside a scroll container, including {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-align")}}, and {{cssxref("scroll-snap-stop")}}.
 
-Beyond that, the styling that can be applied to `::column` is very limited, but may be expanded in the future. Any properties and values supported in the future will be limited to ones that do not affect layout.
+The `::column` pseudo-element can have a {{cssxref("::scroll-marker")}} pseudo-element. Other pseudo-elements like {{cssxref("::before")}} and {{cssxref("::after")}} are not generated on `::column`. Applying `::column::scroll-marker` creates a marker for every column of the orginating [scroll container](/en-US/docs/Glossary/Scroll_container), with the `::scroll-marker` pseudo-elements inheriting from the `::column` pseudo-element's originating element rather than the `::column` itself.
+
+This is useful for [CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) — `::column` can be used to generate `::scroll-marker` pseudo-elements for each column, and set them as [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) using [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap).
+
+While the styling that can be applied to `::column` is very limited, it may be expanded in the future. Any properties and values supported in the future will be limited to ones that do not affect layout.
 
 ## Examples
 
@@ -138,13 +142,12 @@ li {
   display: inline-block;
   height: 100%;
   width: 200px;
+  text-align: left;
 
   background-color: #eee;
   outline: 1px solid #ddd;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 10px;
-
-  text-align: left;
 }
 
 li:nth-child(even) {
@@ -166,7 +169,7 @@ ul::column {
 
 ### Column-based carousel with scroll markers
 
-Expanding on the previous example, we can use apply a {{cssxref("scroll-marker-group")}} to the container and a {{cssxref("::scroll-marker")}} to every column fragment with `::column`. The HTML remains unchanged, and we can achieve the above with just a few lines of CSS.
+Expanding on the previous example, we will create scroll markers to enable direct navigation to different columns by applying a {{cssxref("scroll-marker-group")}} to the container and a {{cssxref("::scroll-marker")}} to each `::column` pseudo-element. The HTML remains unchanged.
 
 #### CSS
 
@@ -215,7 +218,7 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 
 ## Specifications
 
-This pseudo-element is not currently defined in a specification.
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -223,11 +226,11 @@ This pseudo-element is not currently defined in a specification.
 
 ## See also
 
-- {{cssxref("scroll-marker-group")}}
-- {{cssxref("::scroll-button()")}}
+- {{cssxref("columns")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

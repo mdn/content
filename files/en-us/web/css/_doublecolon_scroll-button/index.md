@@ -26,13 +26,13 @@ The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/d
     - `*`
       - : Selects all the originating element's scroll buttons, allowing styles to be applied to each of them in a single rule.
     - `down`
-      - : Selects the button that will scroll the content downwards.
+      - : Selects the button that will scroll the content downward.
     - `left`
       - : Selects the button that will scroll the content left.
     - `right`
       - : Selects the button that will scroll the content right.
     - `up`
-      - : Selects the button that will scroll the content upwards.
+      - : Selects the button that will scroll the content upward.
     - `block-end`
       - : Selects the button that will scroll the content in the block-end direction.
     - `block-start`
@@ -51,9 +51,6 @@ The `::scroll-button()` pseudo-elements are generated inside a {{glossary("scrol
 You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes. The selector's argument specifies which scrolling direction is selected. You can also specify a value of `*` to target all of the `::scroll-button()` pseudo-elements, providing styles to all the buttons in a single rule.
 
 The generated buttons behave just like regular {{htmlelement("button")}} elements, including sharing their default browser styles. They are focusable, accessible, and can be activated like regular buttons. When a scroll button is pressed, the scroll container's content is scrolled in the specified direction by one "page," or approximately the dimension of the scroll container, similar to pressing <kbd>PgUp</kbd> and <kbd>PgDn</kbd> keys.
-
-> [!NOTE]
-> Because the buttons do not exist in the DOM like regular buttons, they cannot be directly targeted with JavaScript.
 
 The recommendation is to set up [CSS scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) on the scroll container and set each separate item of content you want to scroll to as a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target). This being the case, activating a scroll button will scroll the content to the snap target that is one "page" away. While the scroll buttons will work without scroll snapping, you might not get the desired effect.
 
@@ -172,7 +169,7 @@ The previous example works, but the buttons are not ideally placed. In this sect
 
 #### CSS
 
-First of all, a reference {{cssxref("anchor-name")}} is set on the list. Next, each scroll button has its {{cssxref("position")}} set to `absolute`, and its {{cssxref("position-anchor")}} property set to the same reference name defined on the list, to associate the two together.
+First of all, a reference {{cssxref("anchor-name")}} is set on the `<ul>` to define it as a named anchor. Next, each scroll button has its {{cssxref("position")}} set to `absolute` and its {{cssxref("position-anchor")}} property set to the list's `anchor-name`, to [associate the two together](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements).
 
 ```css live-sample___positioning-scroll-buttons
 ul {

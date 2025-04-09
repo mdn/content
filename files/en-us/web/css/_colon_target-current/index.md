@@ -22,7 +22,7 @@ The **`:target-current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for examples of using the `:target-current` pseudo-class.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) and {{cssxref("::scroll-marker")}} for complete examples that use the `:target-current` pseudo-class.
 
 ### Basic usage
 

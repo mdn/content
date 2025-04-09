@@ -164,6 +164,10 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
+
+  - {{cssxref("::column")}}
+
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
 
   - {{CSSXref(":left")}} pseudo-class

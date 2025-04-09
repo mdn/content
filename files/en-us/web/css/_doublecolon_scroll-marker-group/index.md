@@ -7,7 +7,7 @@ browser-compat: css.selectors.scroll-marker-group
 
 {{CSSRef}}
 
-The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a container generated inside a {{glossary("scroll container")}}, which contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on the descendants of the scroll container.
+The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is generated inside a {{glossary("scroll container")}} and contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on descendants of the scroll container.
 
 ## Syntax
 
@@ -33,11 +33,11 @@ See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for
 
 ### Creating carousel scroll markers
 
-This demo is a carousel of single pages, with each item taking up the full page. We have included scroll markers to enable the user to move to the next and previous pages.
+This demo is a carousel of single pages, with each item taking up the full page. We have included scroll markers to enable the user to navigate to any page with the click of a marker.
 
 #### HTML
 
-The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
 
 ```html live-sample___carousel-example live-sample___carousel-example_final
 <ul>
@@ -187,5 +187,6 @@ ul::scroll-marker-group {
 - {{cssxref("::column")}}
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)
