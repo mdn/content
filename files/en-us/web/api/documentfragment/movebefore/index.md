@@ -46,7 +46,7 @@ The `moveBefore()` method moves a given node to a new place in the DOM. It provi
 
 - [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
 - {{htmlelement("iframe")}} loading state.
-- Interactive node {{cssxref(":focus")}} and {{cssxref(":active")}} states.
+- Interactivity states (for example, {{cssxref(":focus")}} and {{cssxref(":active")}}).
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.
 - Open/close state of [popovers](/en-US/docs/Web/API/Popover_API).
 - Modal state of {{htmlelement("dialog")}} elements (modal dialog will not be closed).
@@ -56,7 +56,7 @@ The play state of {{htmlelement("video")}} and {{htmlelement("audio")}} elements
 > [!NOTE]
 > When observing changes to the DOM using a {{domxref("MutationObserver")}}, nodes moved with `moveBefore()` will be recorded with a [removed node](/en-US/docs/Web/API/MutationRecord/removedNodes) and an [added node](/en-US/docs/Web/API/MutationRecord/addedNodes).
 
-### `moveBefore()` constaints
+### `moveBefore()` constraints
 
 There are some constraints to be aware of when using `moveBefore()`:
 
@@ -67,9 +67,7 @@ In such cases, `moveBefore()` will fail with a `HierarchyRequestError` exception
 
 ### Moving custom elements
 
-When moving a [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements), care needs to be taken to handle the `connectedCallback()` and `disconnectedCallback()` [lifecycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) appropriately, if any are defined in the custom element's constructor.
-
-The problem is that `disconnectedCallback()` then `connectedCallback()` are fired each time a custom element is moved with `movedBefore()` (or similar methods such as {{domxref("Node.insertBefore()")}}), whereas they are supposed to be called only when the element is removed from or added to the DOM.
+Each time a [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) is moved via `moveBefore()` (or similar methods such as {{domxref("Node.insertBefore()")}}), the `disconnectedCallback()` and `connectedCallback()` [lifecycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) are fired.
 
 Consider this minimal example:
 
@@ -91,9 +89,9 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-In this case, "Custom element removed from page." and "Custom element added to page." are logged to the console with each move, which isn't too problematic. In more complex examples, however, initialization and cleanup code could be called multiple times, which could cause problems with the state and functionality of the moved element.
+In this case, "Custom element removed from page." and "Custom element added to page." are logged to the console with each move. This might be your intended behavior. However, if you use the callbacks to run initialization and cleanup code, it might cause problems with the state of the moved element.
 
-The `moveBefore()` method has a way to solve this problem. Custom elements have a lifecycle callback called `connectedMoveCallback()` which, if defined in the constructor, will run instead of `connectedCallback()` and `disconnectedCallback()` when an element instance is moved via `moveBefore()`. You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
+Custom elements can be opted in to state-preserving moves via the `connectedMoveCallback()` lifecycle callback. If defined in the constructor, this will run instead of `connectedCallback()` and `disconnectedCallback()` when an element instance is moved via `moveBefore()`. You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
 
 ```js
 connectedMoveCallback() {

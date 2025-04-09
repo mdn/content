@@ -46,7 +46,7 @@ The `moveBefore()` method moves a given node to a new place in the DOM. It provi
 
 - [Animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state.
 - {{htmlelement("iframe")}} loading state.
-- Interactive node {{cssxref(":focus")}} and {{cssxref(":active")}} states.
+- Interactivity states (for example, {{cssxref(":focus")}} and {{cssxref(":active")}}).
 - [Fullscreen](/en-US/docs/Web/API/Fullscreen_API) element state.
 - Open/close state of [popovers](/en-US/docs/Web/API/Popover_API).
 - Modal state of {{htmlelement("dialog")}} elements (modal dialog will not be closed).
@@ -56,7 +56,7 @@ The play state of {{htmlelement("video")}} and {{htmlelement("audio")}} elements
 > [!NOTE]
 > When observing changes to the DOM using a {{domxref("MutationObserver")}}, nodes moved with `moveBefore()` will be recorded with a [removed node](/en-US/docs/Web/API/MutationRecord/removedNodes) and an [added node](/en-US/docs/Web/API/MutationRecord/addedNodes).
 
-### `moveBefore()` constaints
+### `moveBefore()` constraints
 
 There are some constraints to be aware of when using `moveBefore()`:
 
