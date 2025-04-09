@@ -26,7 +26,6 @@ if ('presentation' in navigator) {
   // Access the Presentation object
   const presentationObj = navigator.presentation;
   console.log("Presentation object:", presentationObj);
-  
   // Create a PresentationRequest
   const presentationUrls = ["https://example.com/presentation.html"];
   const presentationRequest = new PresentationRequest(presentationUrls);
