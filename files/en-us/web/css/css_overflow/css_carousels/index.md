@@ -264,6 +264,7 @@ ul::scroll-marker-group {
   position-anchor: --myCarousel;
   top: calc(anchor(bottom) - 70px);
   justify-self: anchor-center;
+
   display: flex;
   justify-content: center;
   gap: 20px;
