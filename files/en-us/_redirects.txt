@@ -9242,7 +9242,7 @@
 /en-US/docs/Web/API/KeyboardEvent.code	/en-US/docs/Web/API/KeyboardEvent/code
 /en-US/docs/Web/API/KeyboardEvent.ctrlKey	/en-US/docs/Web/API/KeyboardEvent/ctrlKey
 /en-US/docs/Web/API/KeyboardEvent.getModifierState	/en-US/docs/Web/API/KeyboardEvent/getModifierState
-/en-US/docs/Web/API/KeyboardEvent.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
+/en-US/docs/Web/API/KeyboardEvent.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent.initKeyboardEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent.isComposing	/en-US/docs/Web/API/KeyboardEvent/isComposing
 /en-US/docs/Web/API/KeyboardEvent.key	/en-US/docs/Web/API/KeyboardEvent/key
@@ -9252,6 +9252,7 @@
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
 /en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyboardEvent/code/code_values	/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+/en-US/docs/Web/API/KeyboardEvent/initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent/key/Key_Values	/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values
 /en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
@@ -10070,6 +10071,7 @@
 /en-US/docs/Web/API/SVGElement/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/SVGElement/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/SVGElement/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
+/en-US/docs/Web/API/SVGEvent	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/SVGGeometryElement/getTotalPathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
 /en-US/docs/Web/API/SVGGraphicsElement/SVGGraphicsElement:_cut_event	/en-US/docs/Web/API/SVGGraphicsElement/cut_event
 /en-US/docs/Web/API/SVGMatrix	/en-US/docs/Web/API/DOMMatrix
@@ -10148,8 +10150,9 @@
 /en-US/docs/Web/API/ServiceWorkerContainer.controller	/en-US/docs/Web/API/ServiceWorkerContainer/controller
 /en-US/docs/Web/API/ServiceWorkerContainer.getRegistration([scope])	/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration
 /en-US/docs/Web/API/ServiceWorkerContainer.register	/en-US/docs/Web/API/ServiceWorkerContainer/register
+/en-US/docs/Web/API/ServiceWorkerContainer/error_event	/en-US/docs/Web/API/ServiceWorker/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/en-US/docs/Web/API/ServiceWorkerContainer/controllerchange_event
-/en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorkerContainer/error_event
+/en-US/docs/Web/API/ServiceWorkerContainer/onerror	/en-US/docs/Web/API/ServiceWorker/error_event
 /en-US/docs/Web/API/ServiceWorkerContainer/onmessage	/en-US/docs/Web/API/ServiceWorkerContainer/message_event
 /en-US/docs/Web/API/ServiceWorkerGlobalScope.skipWaiting	/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
@@ -10770,6 +10773,8 @@
 /en-US/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType
 /en-US/docs/Web/API/XPathEvaluator/XPathEvaluator.createExpression()	/en-US/docs/Web/API/XPathEvaluator/createExpression
+/en-US/docs/Web/API/XPathException	/en-US/docs/Web/API/DOMException
+/en-US/docs/Web/API/XPathException/code	/en-US/docs/Web/API/DOMException/code
 /en-US/docs/Web/API/XPathNSResolver	/en-US/docs/Web/API/Node/lookupNamespaceURI
 /en-US/docs/Web/API/XPathNSResolver/lookupNamespaceURI	/en-US/docs/Web/API/Node/lookupNamespaceURI
 /en-US/docs/Web/API/XPathResult/XPathResult.booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue
@@ -11058,7 +11063,7 @@
 /en-US/docs/Web/API/event.eventPhase	/en-US/docs/Web/API/Event/eventPhase
 /en-US/docs/Web/API/event.explicitOriginalTarget	/en-US/docs/Web/API/Event/explicitOriginalTarget
 /en-US/docs/Web/API/event.initEvent	/en-US/docs/Web/API/Event/initEvent
-/en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
+/en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Web/API/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
 /en-US/docs/Web/API/event.isTrusted	/en-US/docs/Web/API/Event/isTrusted

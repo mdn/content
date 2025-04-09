@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
 
   <tr>
       <th scope="row">Example</th>
-      <td><pre class="brush:json">
+      <td><pre class="brush: json">
 "chrome_settings_overrides" : {
   "homepage": "https://developer.mozilla.org/"
  },
