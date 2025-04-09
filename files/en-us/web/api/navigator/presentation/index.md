@@ -29,7 +29,6 @@ if ("presentation" in navigator) {
 } else {
   console.error("Presentation API is not available in this browser.");
 }
-
 ```
 
 ## Specifications
