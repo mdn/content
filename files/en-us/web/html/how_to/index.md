@@ -5,6 +5,6 @@ page-type: listing-page
 sidebar: htmlsidebar
 ---
 
-How-to guides for HTML:
+This page lists the how-to guides for HTML.
 
 {{SubPagesWithSummaries}}

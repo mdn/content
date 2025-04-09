@@ -1,5 +1,6 @@
 ---
 title: HTML reference
+short-title: Reference
 slug: Web/HTML/Reference
 page-type: landing-page
 ---

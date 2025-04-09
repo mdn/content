@@ -33,8 +33,6 @@ sidebar:
   - title: Guides
     details: closed
     children:
-      - link: /Web/HTML/Guides/Content_categories
-        title: Content_categories
       - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
         title: Quirks_Mode_and_Standards_Mode
       - link: /Web/HTML/Date_and_time_formats
@@ -45,13 +43,15 @@ sidebar:
         title: Microformats
       - link: /Web/HTML/Viewport_meta_tag
         title: Viewport_meta_tag
-      - link: /Web/HTML/How_to/CORS_enabled_image
-        title: Allowing_cross-origin_images_and_canvas
   - type: section
     link: /Web/HTML/Guides
     title: Guides
   - type: listSubPages
     path: /Web/HTML/Guides
+  - type: section
+    link: /Web/HTML/How_to
+  - type: listSubPages
+    path: /Web/HTML/How_to
   - type: section
     link: /Web/HTML/Reference
     title: Reference
@@ -85,13 +85,11 @@ l10n:
     Attributes: Attribute
     Input_types: <code>&lt;input&gt;</code>-Typen
     Guides: Anleitungen
-    Content_categories: Inhaltskategorien
     Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
     Date_and_time_formats: Datums- und Zeitformate in HTML
     Microdata: Mikrodaten
     Microformats: Mikroformate
     Viewport_meta_tag: Viewport-Meta-Tag
-    Allowing_cross-origin_images_and_canvas: Erlauben der Cross-Origin-Nutzung von Bildern und Canvas
   en-US:
     Beginners: Beginner's tutorials
     Creating_the_content: "Your first website: Creating the content"
@@ -102,13 +100,11 @@ l10n:
     Attributes: Attributes
     Input_types: <code>&lt;input&gt;</code> types
     Guides: Guides
-    Content_categories: Content categories
     Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
     Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: Viewport meta tag
-    Allowing_cross-origin_images_and_canvas: Allowing cross-origin use of images and canvas
   fr:
     Beginners: Tutoriels
     Reference: Références
@@ -117,12 +113,10 @@ l10n:
     Attributes: Attributs
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
-    Content_categories: Catégories de contenu
     Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
     Date_and_time_formats: Formats de date et d'heure utilisés en HTML
     Microdata: Microdonnées
     Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
-    Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
   ja:
     Beginners: チュートリアル
     Creating_the_content: "初めてのウェブサイト: コンテンツの作成"
@@ -133,13 +127,11 @@ l10n:
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 型
     Guides: ガイド
-    Content_categories: コンテンツカテゴリー
     Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
     Date_and_time_formats: HTML で使用される日付と時刻の形式
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: ビューポートメタタグ
-    Allowing_cross-origin_images_and_canvas: 別オリジンの画像とキャンバスを利用可能にする
   ko:
     Beginners: "자습서:"
     Reference: "참고서:"
@@ -153,7 +145,6 @@ l10n:
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: 뷰포트 메타 태그
-    Allowing_cross-origin_images_and_canvas: cross-origin이 가능한 이미지와 캔버스
   pt-BR:
     Beginners: Tutoriais
     Reference: Referências
@@ -162,12 +153,10 @@ l10n:
     Attributes: Atributos
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
-    Content_categories: Categorias de conteúdo
     Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
     Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Viewport_meta_tag: Viewport meta tag
-    Allowing_cross-origin_images_and_canvas: CORS habilitar imagens
   ru:
     Beginners: Уроки
     Reference: Справочники
@@ -176,12 +165,10 @@ l10n:
     Attributes: Aтрибуты
     Input_types: Типы <code>&lt;input&gt;</code>
     Guides: Путеводитель
-    Content_categories: Категории контента
     Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
     Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Viewport_meta_tag: Viewport meta tag
-    Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
   zh-CN:
     Beginners: 初学者教程
     Creating_the_content: 你的第一个网站：创建内容
@@ -192,10 +179,8 @@ l10n:
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 类型
     Guides: 指南
-    Content_categories: 内容分类
     Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
     Date_and_time_formats: HTML 中使用的日期与时间格式
     Microdata: 微数据
     Microformats: 微格式
     Viewport_meta_tag: Viewport meta 标签
-    Allowing_cross-origin_images_and_canvas: 允许图片和 canvas 跨源使用
