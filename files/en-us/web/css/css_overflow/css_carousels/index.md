@@ -36,7 +36,7 @@ The CSS carousel features enable creating carousels using only CSS and HTML, wit
 - {{cssxref("::scroll-marker-group")}}
   - : Generated inside a scroll container; used to collect together and lay out scroll markers.
 - {{cssxref("::scroll-marker")}}
-  - : Generated inside the children of a scroll container ancestor to represent their scroll markers. These can be selected to scroll the container to their associated child elements, and are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
+  - : Generated inside the children of a scroll container ancestor or within a scroll container's columns, to represent their scroll markers. These can be selected to scroll the container to their associated child elements or column, and are collected inside the scroll container's {{cssxref("::scroll-marker-group")}} for layout purposes.
 - {{cssxref(":target-current")}}
   - : This pseudo-class can be used to select the currently-active scroll marker. It can be used to provide a highlight style to the currently active marker, which is important for usability and accessibility.
 - {{cssxref("::column")}}
