@@ -16,6 +16,22 @@ returns a reference to {{DOMxRef("Presentation")}} object.
 
 A reference to {{DOMxRef("Presentation")}} object.
 
+## Examples
+
+The following example verifies whether the browser supports the [Presentation API](/en-US/docs/Web/API/Presentation_API). If supported, it logs the presentation object to the console; otherwise, it displays an error message.
+
+```javascript
+// Check if the Presentation API is available in the current browser
+if ('presentation' in navigator) {
+  // The presentation property returns a reference to the Presentation object.
+  const presentationObj = navigator.presentation;
+  console.log("Presentation object:", presentationObj);
+} else {
+  console.error("Presentation API is not available in this browser.");
+}
+
+```
+
 ## Specifications
 
 {{Specifications}}
