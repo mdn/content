@@ -22,7 +22,7 @@ The following example verifies whether the browser supports the [Presentation AP
 
 ```javascript
 // Check if the Presentation API is available in the current browser
-if ('presentation' in navigator) {
+if ("presentation" in navigator) {
   // The presentation property returns a reference to the Presentation object.
   const presentationObj = navigator.presentation;
   console.log("Presentation object:", presentationObj);
