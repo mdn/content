@@ -31,8 +31,9 @@ if ('presentation' in navigator) {
   const presentationRequest = new PresentationRequest(presentationUrls);
   console.log("Created a PresentationRequest:", presentationRequest);
   // Start a presentation session
-  presentationRequest.start()
-    .then(session => {
+  presentationRequest
+    .start()
+    .then((session) => {
       console.log("Presentation session started:", session);
     })
     .catch((error) => {
