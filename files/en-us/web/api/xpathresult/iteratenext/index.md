@@ -31,13 +31,13 @@ The next {{domxref("Node")}} within the node set of the `XPathResult`.
 #### TYPE_ERR
 
 In case {{domxref("XPathResult.resultType")}} is not
-`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 #### INVALID_STATE_ERR
 
-If the document is mutated since the result was returned, an
-{{domxref("XPathException")}} of type `INVALID_STATE_ERR` is thrown.
+If the document is mutated since the result was returned, a
+{{domxref("DOMException")}} of type `INVALID_STATE_ERR` is thrown.
 
 ## Examples
 

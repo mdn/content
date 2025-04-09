@@ -49,13 +49,13 @@ expression.
 #### INVALID_EXPRESSION_ERR
 
 If the expression is not legal according to the rules of the
-{{domxref("XPathEvaluator")}}, an {{domxref("XPathException")}} of type
+{{domxref("XPathEvaluator")}}, a {{domxref("DOMException")}} of type
 `INVALID_EXPRESSION_ERR` is raised.
 
 #### TYPE_ERR
 
-In case result cannot be converted to the specified type, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is raised.
+In case result cannot be converted to the specified type, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is raised.
 
 #### NAMESPACE_ERR
 

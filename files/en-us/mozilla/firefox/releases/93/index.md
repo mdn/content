@@ -48,7 +48,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 #### Removals
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} has been moved behind the preference `dom.keyboardevent.init_key_event.enabled` and is disabled by default.
+- `KeyboardEvent.initKeyEvent()` has been moved behind the preference `dom.keyboardevent.init_key_event.enabled` and is disabled by default.
   The method is not present in any current specification or supported in other current browsers ([Firefox bug 1717760](https://bugzil.la/1717760)).
 
 ### WebDriver conformance (Marionette)
