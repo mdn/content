@@ -20,7 +20,7 @@ A reference to {{DOMxRef("Presentation")}} object.
 
 The following example verifies whether the browser supports the [Presentation API](/en-US/docs/Web/API/Presentation_API). If supported, it logs the presentation object to the console; otherwise, it displays an error message.
 
-```javascript
+```js
 // Check if the Presentation API is available in the current browser
 if ("presentation" in navigator) {
   // The presentation property returns a reference to the Presentation object.
