@@ -47,7 +47,6 @@ if ('presentation' in navigator) {
 
 The code first checks if the [Presentation API](/en-US/docs/Web/API/Presentation_API) is supported by testing for the existence of `navigator.presentation`. If supported, it creates a new `PresentationRequest` object with a URL to the presentation content. It then attempts to start a presentation session using the `start()` method, which returns a Promise that resolves with a `PresentationConnection` object on success or rejects with an error if the session cannot be started.
 
-
 ## Specifications
 
 {{Specifications}}
