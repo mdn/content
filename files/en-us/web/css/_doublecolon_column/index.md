@@ -126,7 +126,7 @@ ul {
 
 The list items are then styled:
 
-- A {{cssxref("display")}} value of `inline-block` is set to force the list items to sit alongside one another and make the list scroll horizontally.
+- A {{cssxref("display")}} value of `inline-block` is set to make the list items sit alongside one another and make the list scroll horizontally.
 - A fixed {{cssxref("width")}} and {{cssxref("height")}} has been set on them.
 - A `text-align` value of `left` is set on them to override the `text-align: center` set on the parent container, so the item content will be left-aligned.
 - Every even-numbered list item is given a different background-color via {{cssxref(":nth-child()")}}, so that it is easier to see the scrolling effect.
