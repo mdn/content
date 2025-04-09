@@ -65,7 +65,7 @@ As well as structuring text, HTML has many other uses — making text or images 
 
 ## Creating your first HTML document
 
-Let's see how individual elements are combined to form an HTML page. In this section you'll create a basic HTML file and take a look at what it's made up of:
+Let's see how individual elements are combined to form an HTML page. In this section, you'll create a basic HTML file and take a look at what it's made up of.
 
 1. Inside your `web-projects` folder, create another new folder called `first-website`.
 2. Inside `first-website`, Create a new file called `index.html`, and insert the following code into the file exactly as shown:
