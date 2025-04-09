@@ -57,7 +57,7 @@ See [fetchLater() quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) 
 - {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
   - : Controls [top-level quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for the `fetchLater()` API.
 - {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
-  - : Controls [shared subframe quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for the `fetchLater()` API.
+  - : Controls [shared cross-origin subframe quota](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) for the `fetchLater()` API.
 
 ## Specifications
 

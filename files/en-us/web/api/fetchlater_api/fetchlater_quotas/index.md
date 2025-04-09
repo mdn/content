@@ -15,17 +15,17 @@ These quotas can be managed through {{HTTPHeader("Permissions-Policy/deferred-fe
 The overall quota for `fetchLater()` is 640KB per document. By default, this is divided into a 512KB top-level quota and a 128KB shared quota:
 
 - The 512KB top-level quota by default is for any `fetchLater()` requests made from the top-level document and direct subframes using that origin.
-- The 128KB shared quota by default is for any `fetchLater()` requests made in cross-origin subframes.
+- The 128KB shared quota by default is for any `fetchLater()` requests made in cross-origin subframes (for exmaple, `<iframe>`s, `<object>`s, `<embed>`s, and`<frame>`s).
 
 `fetchLater()` requests can be made to any URL and are not restricted to the same origin as the document or the subframe, so it's important to differentiate between requests made in the top-level document content (whether to first-party or third-party origins) and those made in subframes.
 
-For example, if a top-level `a.com` document includes a `<script>` that makes a `fetchLater()` request to `analytics.example.com`, this request would be bound by the top-level 512KB limit. Alternatively, if the top-level document embeds an`<iframe>`with a source of`analytics.example.com`that makes a`fetchLater()` request, that request would be bound by the 128KB limit.
+For example, if a top-level `a.com` document includes a `<script>` that makes a `fetchLater()` request to `analytics.example.com`, this request would be bound by the top-level 512KB limit. Alternatively, if the top-level document embeds an `<iframe>` with a source of `analytics.example.com` that makes a `fetchLater()` request, that request would be bound by the 128KB limit.
 
 ## Quota limits by reporting origin and subframe
 
 Only 64KB of the top-level 512KB quota can be used concurrently for the same reporting origin (the request URL's origin). This prevents third-party libraries from reserving quota opportunistically before they have data to send.
 
-Each cross-origin subframe gets an 8KB quota of the shared 128KB quota by default, allocated when the subframe is added to the DOM (whether `fetchLater()` will be used in that subframe or not). This means that, in general, only the first 16 cross-origin subframes added to a page can use `fetchLater()` as they will use up the 128KB quota.
+Each cross-origin subframe gets an 8KB quota out of the shared 128KB quota by default, allocated when the subframe is added to the DOM (whether `fetchLater()` will be used in that subframe or not). This means that, in general, only the first 16 cross-origin subframes added to a page can use `fetchLater()` as they will use up the 128KB quota.
 
 ## Increasing subframe quotas by sharing the top-level quota
 
@@ -55,22 +55,32 @@ Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` err
 Permissions-Policy: deferred-fetch=(self "https://b.com")
 ```
 
-1. A subframe of `b.com` receives 64KB upon creation, from the top-level's 512KB limit.
-2. A subframe of `c.com` is not listed and so receives 8KB upon creation from the 128KB shared limit.
-3. 15 more subframes would each receive 8KB upon creation (similar to `c.com`).
-4. The next subframe would not be granted any quota.
-5. If one of the subframes is removed, its deferred fetches will be sent.
-6. The next subframe _would_ receive an 8KB quota, as there is quota available again.
+1. A `<iframe src="https://b.com/page">` receives 64KB upon being added to the top-level document, from the top-level's 512KB limit.
+2. A `<iframe src="https://c.com/page">` is not listed and so receives 8KB upon being added to the top-level document from the 128KB shared limit.
+3. 15 more cross-origin iframes would each receive 8KB upon being added to the top-level document (similar to `c.com`).
+4. The next cross-origin iframe would not be granted any quota.
+5. If one of the cross-origin iframes is removed, its deferred fetches will be sent.
+6. The next cross-origin iframe _would_ receive an 8KB quota, as there is quota available again.
 
-### Revoking the minimal quota altogether with exceptions
+### RevokiRestricting the minimal quota to named origins
+
+```http
+Permissions-Policy: deferred-fetch-minimal=("https://b.com")
+```
+
+1. `<iframe src="https://b.com/page">` receives 8KB upon being added to the top-level document.
+2. `<iframe src="https://c.com/page">` receives no quota upon being added to the top-level document.
+3. The top-level document and its same-origin descendants can use up to 512KB.
+
+### Revoking the minimal quota altogether with top-level exceptions
 
 ```http
 Permissions-Policy: deferred-fetch=(self "https://b.com")
 Permissions-Policy: deferred-fetch-minimal=()
 ```
 
-1. A subframe of `b.com` receives 64KB upon creation.
-2. A subframe of `c.com` receives no quota upon creation.
+1. `<iframe src="https://b.com/page">` receives 64KB upon being added to the top-level document.
+2. `<iframe src="https://c.com/page">` receives no quota upon being added to the top-level document.
 3. The top-level document and its same-origin descendants can use up to the full 640KB but that is reduced to 574KB if a `b.com` subframe is created (or even less if multiple `b.com` subframes are created, each of which will be allocated a 64KB quota).
 
 ### Revoking the minimal quota altogether with no exceptions
@@ -87,28 +97,28 @@ Permissions-Policy: deferred-fetch-minimal=()
 Assuming a top-level document on `a.com`, which embeds a subframe of `a.com`, which embeds a subframe of `b.com`, and no explicit Permission Policies.
 
 1. The top-level document of `a.com` has the default 512KB quota.
-2. The subframe of `a.com` shares the 512KB quota.
-3. The subframe `b.com` receives an 8KB quota.
+2. An iframe `<iframe src="https://a.com/embed">` shares the 512KB quota upon being added to the top-level document.
+3. An iframe `<iframe src="https://b.com/embed">` receives an 8KB quotaupon being added to the top-level document.
 
 ### Same-origin subframes canot share quota with the top-level when separated by a cross-origin subframe
 
-Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which embeds a subframe of `a.com`, and no explicit Permission Policies.
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which embeds a subframe of `<iframe src="https://a.com/embed">`, and no explicit Permission Policies.
 
-1. The top-level frame of `a.com` has the default 512KB quota.
-2. The subframe of `b.com` shares the 8KB quota.
-3. The subframe `a.com` receives no quota; even though this is same-origin with the top origin, it is separated by a cross-origin.
+1. The top-level document of `a.com` has the default 512KB quota.
+2. `<iframe src="https://b.com/">` shares the 8KB quota.
+3. `<iframe src="https://a.com/embed">` receives no quota; even though this is same-origin with the top origin, it is separated by a cross-origin.
 
 ### Secondary subframes of subframes do not get quota by default
 
-Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which embeds a subframe of `c.com`, and no explicit Permission Policies.
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which embeds a `<iframe src="https://c.com/">`, and no explicit Permission Policies.
 
 1. The top-level frame of `a.com` has the default 512KB quota.
-2. The subframe of `b.com` receives 8KB of the default shared quota.
-3. The subframe `c.com` receives no quota.
+2. `<iframe src="https://b.com/">` receives 8KB of the default shared quota.
+3. `<iframe src="https://c.com/">` receives no quota.
 
 ### Granting the full quota to a further subframe
 
-Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which embeds a subframe of `c.com`.
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which embeds a `<iframe src="https://c.com/">`.
 
 Assuming that `a.com` has the following Permissions Policy:
 
@@ -118,32 +128,30 @@ Permissions-Policy: deferred-fetch=("https://c.com" "https://c.com")
 
 And, assuming that `b.com` has the following Permissions Policy:
 
-Permissions Policy of the following on `b.com`:
-
 ```http
 Permissions-Policy: deferred-fetch=("https://c.com")
 ```
 
 1. The top-level frame of `a.com` has the default 512KB quota.
-2. The subframe of `b.com` receives 64KB of the default shared quota.
-3. The subframe of `b.com` delegates its full quota of 8KB to `c.com`. `b.com` cannot use `fetchLater()`.
-4. The subframe `c.com` receives 8KB of quota.
+2. `<iframe src="https://b.com/">` receives 64KB of the default quota.
+3. `<iframe src="https://b.com/">` delegates its full quota of 8KB to `c.com`. `b.com` cannot use `fetchLater()`.
+4. `<iframe src="https://c.com/">` receives 8KB of quota.
 
 ### Redirects do not transfer quota
 
-Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which redirects to `c.com`, and no explicit top-level Permission Policies.
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which redirects to `c.com`, and no explicit top-level Permission Policies.
 
 1. The top-level frame of `a.com` has the default 512KB quota.
-2. The subframe of `b.com` receives 8KB of the default shared quota.
-3. The 8KB is not transferred to `c.com` when `b.com` redirects to there, but the 8KB is not released.
+2. `<iframe src="https://b.com/">` receives 8KB of the default shared quota.
+3. The 8KB is not transferred to `c.com` when `<iframe src="https://b.com/">` redirects to there, but the 8KB is not released.
 
 ### Redirects of subframes back to the top-level origin allow use of the top-level quota
 
-Assuming a top-level document on `a.com`, which embeds a subframe of `b.com`, which redirects to `a.com`, and no explicit top-level Permission Policies.
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which redirects to `a.com`, and no explicit top-level Permission Policies.
 
 1. The top-level frame of `a.com` has the default 512KB quota.
-2. The subframe of `b.com` receives 8KB of the default shared quota.
-3. The 8KB is not transferred to `a.com` when `b.com` redirects to there, but it is able to share the full top-level quota again, and the 8KB is released.
+2. `<iframe src="https://b.com/">` receives 8KB of the default shared quota.
+3. The 8KB is not transferred to `a.com` when `<iframe src="https://b.com/">` redirects to there, but it is able to share the full top-level quota again, and the 8KB is released.
 
 ### Examples which throw a `QuotaExceededError`
 
