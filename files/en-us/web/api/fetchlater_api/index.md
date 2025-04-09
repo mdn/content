@@ -35,7 +35,7 @@ Deferred fetches can also be aborted using an {{domxref("AbortController")}} if 
 
 ### Quotas
 
-Deferred fetches are batched and sent once the tab is closed; at this point, there is no way for the user to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network, the overall quota for a top-level document is capped at 640KB.
+Deferred fetches are batched and sent once the tab is closed; at this point, there is no way for the user to abort them. To avoid situations where documents abuse this bandwidth to send unlimited amounts of data over the network, the overall quota for a top-level document is capped at 640KiB.
 
 Callers of `fetchLater()` should be defensive and catch `QuotaExceededError` errors in almost all cases, especially if they embed third-party JavaScript.
 
