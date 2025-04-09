@@ -46,7 +46,7 @@ The **`::scroll-button()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/d
 
 ## Description
 
-The `::scroll-button()` pseudo-elements are generated inside a {{glossary("scroll container")}}, only when their {{cssxref("content")}} properties are set to a value other than `none`. They are generated as siblings of the scroll container's child DOM elements, immediately preceding them and any {{cssxref("::scroll-marker-group")}} generated on the container.
+The `::scroll-button()` pseudo-elements are generated inside a {{glossary("scroll container")}} only when their {{cssxref("content")}} properties are set to a value other than `none`. They are generated as siblings of the scroll container's child DOM elements, immediately preceding them and any {{cssxref("::scroll-marker-group")}} generated on the container.
 
 You can generate up to four scroll buttons per scroll container, which will scroll the content towards the start and end of the block and inline axes. The selector's argument specifies which scrolling direction is selected. You can also specify a value of `*` to target all of the `::scroll-button()` pseudo-elements, providing styles to all the buttons in a single rule.
 
