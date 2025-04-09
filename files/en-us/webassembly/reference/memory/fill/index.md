@@ -17,7 +17,7 @@ It traps (exception) if the indicated memory region is out of bounds.
 
 Fill within default memory
 
-```wasm
+```wat
 ;; Fill region at offset/range in default memory with 255
 i32.const 200 ;; The pointer to the region to update
 i32.const 255 ;; The value to set each byte to (must be < 256)
@@ -30,7 +30,7 @@ memory.fill ;; Fill default memory
 
 Fill specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Fill specific memory referenced by its index
 i32.const 200 ;; The pointer to the region to update
 i32.const 255 ;; The value to set each byte to (must be < 256)

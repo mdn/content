@@ -41,7 +41,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 This imports a tag, which it refers to as `$tagname` internally, and imports a function that it refers to as `$throwExnWithStack`.
 It exports the method `run` that can be called by external code to call `$throwExnWithStack` (and hence the JavaScript function).
 
-```wasm
+```wat
 (module
   ;; import tag that will be referred to here as $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))

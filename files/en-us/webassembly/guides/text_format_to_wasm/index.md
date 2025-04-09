@@ -14,7 +14,7 @@ WebAssembly has an S-expression-based textual representation, an intermediate fo
 
 Let's look at an example of this — the following program imports a function called `imported_func` from a module called `my_namespace`, and exports a function called `exported_func`:
 
-```wasm
+```wat
 (module
   (func $i (import "my_namespace" "imported_func") (param i32))
   (func (export "exported_func")
