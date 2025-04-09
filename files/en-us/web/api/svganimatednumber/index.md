@@ -12,11 +12,9 @@ The **`SVGAnimatedNumber`** interface represents attributes of type [\<number>](
 ## Instance properties
 
 - {{domxref("SVGAnimatedNumber.baseVal", "baseVal")}}
-
-  - : An {{domxref("SVGAnimatedNumber")}} representing the base value as a floating point value of the given attribute before applying any animations.
-
+  - : An `SVGAnimatedNumber` representing the base value as a floating point value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedNumber.animVal", "animVal")}} {{ReadOnlyInline}}
-  - : If the given attribute or property is being animated, an {{domxref("SVGAnimatedNumber")}} containing the current animated value of the attribute or property. If the given attribute or property is not currently being animated, an {{domxref("SVGAnimatedNumber")}} containing the same value as `baseVal`.
+  - : If the given attribute or property is being animated, an `SVGAnimatedNumber` containing the current animated value of the attribute or property. If the given attribute or property is not currently being animated, an `SVGAnimatedNumber` containing the same value as `baseVal`.
 
 ## Instance methods
 
