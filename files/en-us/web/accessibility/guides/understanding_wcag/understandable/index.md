@@ -234,8 +234,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts"
-          >Page layouts</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#structure_page_sections_logically"
+          >Structure page sections logically</a
         >
         for information on modern markup for layouts. See also
         <a
@@ -259,8 +259,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
       <td>
         "Labels" can refer to descriptive information in text content, or HTML
         form labels. See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >
         for more information.
       </td>
@@ -373,8 +373,8 @@ This guideline centers around helping users enter correct information when requi
         <ul>
           <li>
             <a
-              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-              >Meaningful text labels</a
+              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+              >Use meaningful text labels</a
             >
           </li>
           <li>

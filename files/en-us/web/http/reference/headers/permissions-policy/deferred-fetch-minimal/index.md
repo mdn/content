@@ -9,9 +9,9 @@ browser-compat: http.headers.Permissions-Policy.deferred-fetch-minimal
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The `deferred-fetch` and {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} {{HTTPHeader("Permissions-Policy")}} directives are part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
+The **`deferred-fetch-minimal`** {{HTTPHeader("Permissions-Policy")}} directive is part of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API).
 
-They determine how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the remaining 128KiB. The `deferred-fetch-minimal` Permissions Policy can also block all origins; this will reallocate the 128KiB shared limit to the top-level quota, giving it access to the full 640KiB limit.
+This directive, along with {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}, determines how the overall 640KiB quota limit is distributed between the top-level origin and its cross-origin subframes. By default, the top-level origin is granted 512KiB, and each cross-origin subframe is granted 8KiB out of the remaining 128KiB. The `deferred-fetch-minimal` Permissions Policy can also block all origins; this will reallocate the 128KiB shared limit to the top-level quota, giving it access to the full 640KiB limit.
 
 See [`fetchLater()` quotas](/en-US/docs/Web/API/fetchLater_API/fetchLater_quotas) guide for more details and examples.
 

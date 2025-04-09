@@ -20,7 +20,7 @@ These quotas can be managed through {{HTTPHeader("Permissions-Policy/deferred-fe
 The overall quota for `fetchLater()` is 640KiB per document. By default, this is divided into a 512KiB top-level quota and a 128KiB shared quota:
 
 - The 512KiB top-level quota by default is for any `fetchLater()` requests made from the top-level document and direct subframes using that origin.
-- The 128KiB shared quota by default is for any `fetchLater()` requests made in cross-origin subframes (for exmaple, `<iframe>`s, `<object>`s, `<embed>`s, and`<frame>`s).
+- The 128KiB shared quota by default is for any `fetchLater()` requests made in cross-origin subframes (for exmaple, `<iframe>`, `<object>`, `<embed>`, and `<frame>` elements).
 
 `fetchLater()` requests can be made to any URL and are not restricted to the same origin as the document or the subframe, so it's important to differentiate between requests made in the top-level document content (whether to first-party or third-party origins) and those made in subframes.
 

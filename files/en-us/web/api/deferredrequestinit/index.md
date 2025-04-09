@@ -41,11 +41,16 @@ fetchLater("/send_beacon");
 In this example we create a {{domxref("Request")}}, and provide an `activateAfter` value to delay sending the request for 60,000 milliseconds (or one minute):
 
 ```js
-fetchLater({
-  url: "/send_beacon"
-  method: "POST"
-  body: getBeaconData(),
-}, {activateAfter: 60000 /* 1 minute */});
+fetchLater(
+  {
+    url: "/send_beacon",
+    method: "POST",
+    body: getBeaconData(),
+  },
+  {
+    activateAfter: 60000, // 1 minute
+  },
+);
 ```
 
 > [!NOTE]
