@@ -225,4 +225,5 @@ ul::scroll-button(right) {
 - {{cssxref(":target-current")}}
 - [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)
