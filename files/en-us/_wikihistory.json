@@ -70216,14 +70216,6 @@
     "modified": "2020-10-15T22:12:44.902Z",
     "contributors": ["Sebastianz"]
   },
-  "Web/API/XPathException": {
-    "modified": "2020-10-15T22:12:44.764Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/API/XPathException/code": {
-    "modified": "2020-10-15T22:12:44.730Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/API/XPathExpression": {
     "modified": "2020-10-15T21:03:49.074Z",
     "contributors": [

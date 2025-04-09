@@ -10772,6 +10772,8 @@
 /en-US/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType
 /en-US/docs/Web/API/XPathEvaluator/XPathEvaluator.createExpression()	/en-US/docs/Web/API/XPathEvaluator/createExpression
+/en-US/docs/Web/API/XPathException	/en-US/docs/Web/API/DOMException
+/en-US/docs/Web/API/XPathException/code	/en-US/docs/Web/API/DOMException/code
 /en-US/docs/Web/API/XPathNSResolver	/en-US/docs/Web/API/Node/lookupNamespaceURI
 /en-US/docs/Web/API/XPathNSResolver/lookupNamespaceURI	/en-US/docs/Web/API/Node/lookupNamespaceURI
 /en-US/docs/Web/API/XPathResult/XPathResult.booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue
