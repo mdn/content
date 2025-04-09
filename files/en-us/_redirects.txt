@@ -9242,7 +9242,7 @@
 /en-US/docs/Web/API/KeyboardEvent.code	/en-US/docs/Web/API/KeyboardEvent/code
 /en-US/docs/Web/API/KeyboardEvent.ctrlKey	/en-US/docs/Web/API/KeyboardEvent/ctrlKey
 /en-US/docs/Web/API/KeyboardEvent.getModifierState	/en-US/docs/Web/API/KeyboardEvent/getModifierState
-/en-US/docs/Web/API/KeyboardEvent.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
+/en-US/docs/Web/API/KeyboardEvent.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent.initKeyboardEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent.isComposing	/en-US/docs/Web/API/KeyboardEvent/isComposing
 /en-US/docs/Web/API/KeyboardEvent.key	/en-US/docs/Web/API/KeyboardEvent/key
@@ -9252,6 +9252,7 @@
 /en-US/docs/Web/API/KeyboardEvent.shiftKey	/en-US/docs/Web/API/KeyboardEvent/shiftKey
 /en-US/docs/Web/API/KeyboardEvent.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyboardEvent/code/code_values	/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+/en-US/docs/Web/API/KeyboardEvent/initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/KeyboardEvent/key/Key_Values	/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values
 /en-US/docs/Web/API/KeyboardEvent/which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/Web/API/KeyframeEffect/KeyframeEffect.getKeyframes()	/en-US/docs/Web/API/KeyframeEffect/getKeyframes
@@ -11059,7 +11060,7 @@
 /en-US/docs/Web/API/event.eventPhase	/en-US/docs/Web/API/Event/eventPhase
 /en-US/docs/Web/API/event.explicitOriginalTarget	/en-US/docs/Web/API/Event/explicitOriginalTarget
 /en-US/docs/Web/API/event.initEvent	/en-US/docs/Web/API/Event/initEvent
-/en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/initKeyEvent
+/en-US/docs/Web/API/event.initKeyEvent	/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent
 /en-US/docs/Web/API/event.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Web/API/event.initUIEvent	/en-US/docs/Web/API/UIEvent/initUIEvent
 /en-US/docs/Web/API/event.isTrusted	/en-US/docs/Web/API/Event/isTrusted

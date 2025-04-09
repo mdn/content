@@ -43922,27 +43922,6 @@
       "Masayuki"
     ]
   },
-  "Web/API/KeyboardEvent/initKeyEvent": {
-    "modified": "2019-03-24T00:10:53.315Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "Noitidart",
-      "teoli",
-      "MHasan",
-      "willlma",
-      "kscarfone",
-      "Sheppy",
-      "mcomella",
-      "Jorend",
-      "Nickolay",
-      "Ynvich",
-      "Ptak82",
-      "Mgjbot",
-      "DBaron",
-      "Gary.johnson.53"
-    ]
-  },
   "Web/API/KeyboardEvent/initKeyboardEvent": {
     "modified": "2019-03-23T23:04:44.260Z",
     "contributors": ["mfluehr", "wbamberg", "fscholz", "teoli"]
