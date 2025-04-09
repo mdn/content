@@ -34,7 +34,7 @@ This module is totally empty, but is still a valid module.
 
 If we convert our module to binary now (see [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm)), we'll see just the 8 byte module header described in the [binary format](https://webassembly.github.io/spec/core/binary/modules.html#binary-module):
 
-```wat
+```plain
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
 0000004: 0100 0000              ; WASM_BINARY_VERSION
 ```
