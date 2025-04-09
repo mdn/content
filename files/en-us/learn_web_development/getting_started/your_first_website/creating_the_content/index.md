@@ -170,7 +170,7 @@ A lot of the web's content is lists and HTML has special elements for these. Mar
 
 Each item inside the lists is put inside an {{htmlelement("li")}} (list item) element.
 
-For example, if we wanted to turn part of the following paragraph fragment into a list
+For example, if we wanted to turn part of the following paragraph fragment into a list:
 
 ```html
 <p>
