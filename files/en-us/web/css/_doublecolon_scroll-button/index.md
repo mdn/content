@@ -159,6 +159,7 @@ ul::scroll-button(right) {
 ```
 
 We don't need to set [alternative text](/en-US/docs/Web/CSS/content#alternative_text_string_counter) for the icons on the `content` as the browser takes care of providing appropriate accessible names automatically.
+
 #### Result
 
 {{EmbedLiveSample("creating-scroll-buttons", '', '220')}}
