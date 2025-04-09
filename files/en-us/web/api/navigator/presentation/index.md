@@ -36,7 +36,7 @@ if ('presentation' in navigator) {
     .then(session => {
       console.log("Presentation session started:", session);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error starting presentation session:", error);
     });
 } else {
