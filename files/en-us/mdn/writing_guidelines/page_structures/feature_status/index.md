@@ -38,7 +38,7 @@ The following sections document the mechanisms that are used to insert and rende
 
 The `status` property in page front matter is used to generate status icons for features when they are displayed in sidebars.
 
-```yml
+```yaml
 ---
 title: Feature name
 status:
