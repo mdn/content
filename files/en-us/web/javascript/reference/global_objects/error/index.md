@@ -48,7 +48,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- {{jsxref("Error.captureStackTrace()")}} {{non-standard_inline}}
+- {{jsxref("Error.captureStackTrace()")}}
   - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
 - {{jsxref("Error.isError()")}}
   - : Returns `true` if the argument is an error, or `false` otherwise.
