@@ -114,7 +114,7 @@ ul::scroll-marker-group {
 }
 ```
 
-Next, the scroll markers themselves are styled. The look of each one is handled by setting {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}}, and {{cssxref("border-radius")}}, but we also need to set a non-`none` value for the `content` property so they are actually generated.
+Next, the scroll markers themselves are styled. The look of each one is handled by setting {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("background-color")}}, {{cssxref("border")}}, and {{cssxref("border-radius")}}, but we also need to set a non-`none` value for the {{cssxref("content")}}, property so they are actually generated.
 
 ```css live-sample___carousel-example live-sample___carousel-example_final
 li::scroll-marker {
