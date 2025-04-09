@@ -448,7 +448,7 @@ You can see the equality operator being used just inside the `updateBtn()` funct
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math).
 
 ## Summary
 

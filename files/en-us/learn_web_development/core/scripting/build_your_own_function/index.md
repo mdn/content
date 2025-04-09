@@ -293,7 +293,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
 
 ## Summary
 

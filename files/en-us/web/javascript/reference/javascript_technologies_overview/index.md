@@ -106,7 +106,7 @@ JavaScript engines used in current web browsers include:
 Some JavaScript engines used in earlier browsers include:
 
 - [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in Opera before it became a Chromium-based browser.
-- Microsoft’s [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>), used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used another JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>), before it became a Chromium-based browser.
+- Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>), used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used another JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>), before it became a Chromium-based browser.
 
 Some JavaScript engines specifically tailored for non-browser purposes include:
 
