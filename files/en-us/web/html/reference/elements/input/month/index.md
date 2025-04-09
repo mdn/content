@@ -47,7 +47,7 @@ The Microsoft Edge `month` control looks like this:
 ## Value
 
 A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen (`-`), followed by the two-digit month).
-The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Date_and_time_formats#month_strings).
+The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#month_strings).
 
 ### Setting a default value
 
@@ -545,6 +545,6 @@ function populateYears() {
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
 - [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/week)

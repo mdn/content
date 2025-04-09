@@ -41,7 +41,7 @@ label {
 
 ## Value
 
-A string representing the date entered in the input. The date is formatted according to [Date strings format](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings).
+A string representing the date entered in the input. The date is formatted according to [Date strings format](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings).
 
 You can set a default value for the input with a date inside the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute, like so:
 
@@ -302,4 +302,4 @@ input:valid + span::after {
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)

@@ -43,7 +43,7 @@ The control's user interface varies from browser to browser; cross-browser suppo
 
 ## Value
 
-A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [Week strings](/en-US/docs/Web/HTML/Date_and_time_formats#week_strings).
+A string representing the value of the week/year entered into the input. The format of the date and time value used by this input type is described in [Week strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#week_strings).
 
 You can set a default value for the input by including a value inside the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute, like so:
 
@@ -413,5 +413,5 @@ function populateWeeks() {
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month)

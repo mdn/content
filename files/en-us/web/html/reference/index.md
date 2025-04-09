@@ -19,5 +19,5 @@ This [HTML](/en-US/docs/Web/HTML) reference describes all **elements** and **att
   - : Every HTML element is a member of one or more content categories — these categories group elements that share common characteristics.
 - [HTML comments](/en-US/docs/Web/HTML/Guides/Comments)
   - : HTML comments are used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Certain HTML elements allow you to specify dates and/or times as the value or as the value of an attribute. These include the date and time variations of the {{HTMLElement("input")}} element as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements.

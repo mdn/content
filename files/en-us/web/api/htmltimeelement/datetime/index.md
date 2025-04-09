@@ -38,5 +38,5 @@ t.dateTime = "6w 5h 34m 5s";
 
 - {{domxref("HTMLTimeElement")}}
 - {{domxref("HTMLModElement.dateTime")}}
-- [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)
-- [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)
+- [Date strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)
+- [Local date and time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)

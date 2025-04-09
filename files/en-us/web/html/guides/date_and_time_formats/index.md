@@ -1,6 +1,7 @@
 ---
-title: Date and time formats used in HTML
-slug: Web/HTML/Date_and_time_formats
+title: Using date and time formats in HTML
+short-title: Date and time formats
+slug: Web/HTML/Guides/Date_and_time_formats
 page-type: guide
 ---
 

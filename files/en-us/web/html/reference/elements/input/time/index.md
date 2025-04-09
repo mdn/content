@@ -67,7 +67,7 @@ timeControl.value = "15:30";
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format that includes leading zeros: `HH:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `HH:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
+The `value` of the `time` input is always in 24-hour format that includes leading zeros: `HH:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `HH:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#time_strings).
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
@@ -406,5 +406,5 @@ input:valid + span::after {
 - [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/week)
 - [`<input type="month">`](/en-US/docs/Web/HTML/Reference/Elements/input/month)
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
 - [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)

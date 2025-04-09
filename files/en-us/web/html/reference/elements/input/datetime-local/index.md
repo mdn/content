@@ -41,7 +41,7 @@ The control's UI varies in general from browser to browser. The control is inten
 
 ## Value
 
-A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings).
 
 You can set a default value for the input by including a date and time inside the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute, like so:
 
@@ -303,5 +303,5 @@ The valid range included all times between the `min` and `max` values; the time 
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [`<input type="date">`](/en-US/docs/Web/HTML/Reference/Elements/input/date) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time)
-- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Guides/Date_and_time_formats)
 - [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)

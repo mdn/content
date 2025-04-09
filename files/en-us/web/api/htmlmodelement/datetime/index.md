@@ -63,7 +63,7 @@ If our script ran on January 9, 2025, our HTML would be as follows:
 - {{domxref("HTMLModElement")}}
 - {{domxref("HTMLModElement.cite")}}
 - {{domxref("HTMLTimeElement.dateTime")}}
-- [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)
-- [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)
+- [Date strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)
+- [Local date and time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)
 - {{jsxref("Date")}}
 - {{domxref("Element.insertAdjacentElement()")}}

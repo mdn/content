@@ -35,8 +35,6 @@ sidebar:
     children:
       - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
         title: Quirks_Mode_and_Standards_Mode
-      - link: /Web/HTML/Date_and_time_formats
-        title: Date_and_time_formats
       - link: /Web/HTML/Microdata
         title: Microdata
       - link: /Web/HTML/microformats
@@ -86,7 +84,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code>-Typen
     Guides: Anleitungen
     Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
-    Date_and_time_formats: Datums- und Zeitformate in HTML
     Microdata: Mikrodaten
     Microformats: Mikroformate
     Viewport_meta_tag: Viewport-Meta-Tag
@@ -101,7 +98,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> types
     Guides: Guides
     Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
-    Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: Viewport meta tag
@@ -114,7 +110,6 @@ l10n:
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
     Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
-    Date_and_time_formats: Formats de date et d'heure utilisés en HTML
     Microdata: Microdonnées
     Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
   ja:
@@ -128,7 +123,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> 型
     Guides: ガイド
     Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
-    Date_and_time_formats: HTML で使用される日付と時刻の形式
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: ビューポートメタタグ
@@ -141,7 +135,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
     Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
-    Date_and_time_formats: HTML의 날짜와 시간 형식
     Microdata: Microdata
     Microformats: Microformats
     Viewport_meta_tag: 뷰포트 메타 태그
@@ -154,7 +147,6 @@ l10n:
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
     Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
-    Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Viewport_meta_tag: Viewport meta tag
   ru:
@@ -166,7 +158,6 @@ l10n:
     Input_types: Типы <code>&lt;input&gt;</code>
     Guides: Путеводитель
     Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
-    Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
     Viewport_meta_tag: Viewport meta tag
   zh-CN:
@@ -180,7 +171,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> 类型
     Guides: 指南
     Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
-    Date_and_time_formats: HTML 中使用的日期与时间格式
     Microdata: 微数据
     Microformats: 微格式
     Viewport_meta_tag: Viewport meta 标签
