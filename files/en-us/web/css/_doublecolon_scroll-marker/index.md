@@ -129,7 +129,7 @@ li {
 }
 ```
 
-We then set the ::scroll-marker pseudo-element's {{cssxref("content")}} property to the {{cssxref("counter()")}} function, passing it the `markers` counter name as an argument. This has the effect of inserting a number into each marker, which increments automatically. The rest of the styling is rudimentary, but it illustrates how the markers can be fully-styled.
+We then set the `::scroll-marker` pseudo-element's {{cssxref("content")}} property to the {{cssxref("counter()")}} function, passing it the `markers` counter name as an argument. This has the effect of inserting a number into each marker, which increments automatically. The rest of the styling is rudimentary, but it illustrates how the markers can be fully-styled.
 
 ```css live-sample___custom-numbering
 li::scroll-marker {
