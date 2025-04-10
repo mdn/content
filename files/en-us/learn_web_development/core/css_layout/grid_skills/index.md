@@ -2,9 +2,8 @@
 title: "Test your skills: Grid"
 slug: Learn_web_development/Core/CSS_layout/Grid_skills
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
 

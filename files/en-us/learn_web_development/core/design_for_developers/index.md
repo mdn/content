@@ -2,9 +2,8 @@
 title: Design for developers
 slug: Learn_web_development/Core/Design_for_developers
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
 

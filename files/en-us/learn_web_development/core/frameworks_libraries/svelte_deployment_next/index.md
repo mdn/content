@@ -2,9 +2,8 @@
 title: Deployment and next steps
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 

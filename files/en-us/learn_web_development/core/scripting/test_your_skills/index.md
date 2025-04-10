@@ -3,9 +3,8 @@ title: "Test your skills: JavaScript"
 short-title: Test your skills
 slug: Learn_web_development/Core/Scripting/Test_your_skills
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 This page lists JavaScript tests you can try so you can verify if you've understood the content in this module.
 

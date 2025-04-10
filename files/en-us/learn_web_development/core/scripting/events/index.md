@@ -3,9 +3,8 @@ title: Introduction to events
 short-title: Events
 slug: Learn_web_development/Core/Scripting/Events
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 

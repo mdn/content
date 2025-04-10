@@ -2,9 +2,8 @@
 title: "Test your skills: The Cascade"
 slug: Learn_web_development/Core/Styling_basics/Cascade_tasks
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 

@@ -2,9 +2,8 @@
 title: Research and learning
 slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 

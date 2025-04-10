@@ -2,9 +2,8 @@
 title: Accessibility
 slug: Learn_web_development/Core/Accessibility
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 

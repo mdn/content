@@ -2,9 +2,8 @@
 title: Build your own function
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 

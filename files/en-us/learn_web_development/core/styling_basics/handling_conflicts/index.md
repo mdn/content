@@ -2,9 +2,8 @@
 title: Handling conflicts
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 

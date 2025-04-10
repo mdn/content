@@ -3,9 +3,8 @@ title: Basic CSS selectors
 short-title: Basic selectors
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 

@@ -2,9 +2,8 @@
 title: "Test your skills: Form validation"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_validation
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) article.
 

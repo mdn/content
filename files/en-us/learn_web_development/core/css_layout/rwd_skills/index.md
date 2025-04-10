@@ -2,9 +2,8 @@
 title: "Test your skills: Responsive web design and media queries"
 slug: Learn_web_development/Core/CSS_layout/rwd_skills
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [how to use media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries) and get you working with responsive web design with a practical task. Everything you need to know to complete this task is covered in the layout lessons in the [CSS layout module](/en-US/docs/Learn_web_development/Core/CSS_layout).
 
