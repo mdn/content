@@ -1,5 +1,6 @@
 ---
 title: Learn web development writing guidelines
+short-title: Learning content
 slug: MDN/Writing_guidelines/Learning_content
 page-type: mdn-writing-guide
 ---
@@ -28,13 +29,13 @@ If you do not see a topic covered in Learn and you think it should be covered, d
 
 ## Approach
 
-To create and update MDN Learn web development content, you should follow the same approach as for the rest of MDN, in many ways. You should follow the same general [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), [code style](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide), and [techniques](/en-US/docs/MDN/Writing_guidelines/Howto).
+To create and update MDN Learn web development content, you should follow the same approach as for the rest of MDN, in many ways. You should follow the same general [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), [code style](/en-US/docs/MDN/Writing_guidelines/Code_style_guide), and [techniques](/en-US/docs/MDN/Writing_guidelines/Howto).
 
 There are a few differences, however:
 
 - **Tutorial style**: Most MDN content is a mixture of reference material and guides; Learn, on the other hand, is intended to provide hands-on tutorials. We don't have a strict template for each page, but they should be written in a way that leads readers by the hand, through a combination of step-by-step sections and "Try it out" sections. These should instruct readers to jump in, try things out, and start writing code. See the "Try it out" section at the bottom of our [Search engine](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#search_engine) information, for example. These are created using the following markdown:
 
-  ```markdown
+  ```md
   > [!CALLOUT]
   >
   > **Try it out**

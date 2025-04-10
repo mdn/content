@@ -22,7 +22,7 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
 
 A string. There are two versions of this property that you can get and set:
 
-- Empty string, i.e. `aElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server that the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
+- Empty string, i.e., `aElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server that the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
 - Value containing one or more URLs, for example:
 
   ```js

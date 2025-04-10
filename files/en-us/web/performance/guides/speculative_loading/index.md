@@ -17,7 +17,7 @@ There are several mechanisms for speculative loading:
 
 - **Prefetching** involves fetching some or all of the resources required to render a document (or part of a document) before they are needed, so that when the time comes to render it, rendering can be achieved much more quickly.
 - **Prerendering** goes a step further, and actually renders the content ready to be shown when required. Depending on how this is done, this can result in an instant navigation from old page to new page.
-- **Preconnecting** involves speeding up future loads from a given origin by preemptively performing part or all of the connection handshake (i.e. DNS + TCP + TLS).
+- **Preconnecting** involves speeding up future loads from a given origin by preemptively performing part or all of the connection handshake (i.e., DNS + TCP + TLS).
 
 > [!NOTE]
 > The above descriptions are high-level and general. Exactly what browsers will do to achieve prefetching and prerendering depends on the features used. More exact feature descriptions are provided in the [Speculative loading features](#speculative_loading_features) section below.
@@ -34,7 +34,7 @@ Second, there are several different platform features that developers can use to
 
 ### `<link rel="preconnect">`
 
-[`<link rel="preconnect">`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) provides a hint to browsers that the user is likely to need resources from the specified resource's origin, and therefore the browser can likely improve performance by preemptively initiating a connection to that origin. Supporting browsers will preemptively perform part or all of the connection handshake (i.e. DNS + TCP + TLS).
+[`<link rel="preconnect">`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) provides a hint to browsers that the user is likely to need resources from the specified resource's origin, and therefore the browser can likely improve performance by preemptively initiating a connection to that origin. Supporting browsers will preemptively perform part or all of the connection handshake (i.e., DNS + TCP + TLS).
 
 For example:
 

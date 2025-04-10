@@ -44,7 +44,7 @@ const transport = new WebTransport(url);
 // ...
 
 transport.close({
-  closeCode: 017,
+  closeCode: 17,
   reason: "CloseButtonPressed",
 });
 ```

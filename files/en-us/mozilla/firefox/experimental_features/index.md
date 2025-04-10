@@ -289,8 +289,8 @@ The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/e
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>128</td>
-      <td>No</td>
+      <td>137</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -619,7 +619,7 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
 
 ### `shape()` function
 
-The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is similar in some respects to the `{{cssxref("basic-shape/path","path()")}}` function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
 For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
 
 <table>
@@ -784,9 +784,90 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
+### `::details-content` pseudo-element
+
+The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.details-content.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
-None.
+### `<discard>` element for SVG animations
+
+The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
+The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
+An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
+([Firefox bug 1069931](https://bugzil.la/1069931)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>svg.discard.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## JavaScript
 
@@ -840,48 +921,6 @@ This includes:
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Error.captureStackTrace
-
-The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
-Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
-([Firefox bug 1886820](https://bugzil.la/1886820)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>136</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.error_capture_stack_trace</code></td>
     </tr>
   </tbody>
 </table>
@@ -944,7 +983,7 @@ This subset of the API has been implemented:
 - {{domxref("TrustedTypePolicyFactory")}}:
   - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
 - The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
-- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLScriptElement.innerText","innerText")}}, and {{domxref("HTMLScriptElement.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
+- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("Node.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
 - The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
 - The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
 - The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
@@ -981,6 +1020,89 @@ This subset of the API has been implemented:
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.security.trusted_types.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Removal of MutationEvent
+
+{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
+([Firefox bug 1951772](https://bugzil.la/1951772)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.mutation_events.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Notification.actions
+
+The {{domxref("Notification.actions","actions")}} read-only property of the {{domxref("Notification")}} interface is supported in Nightly.
+This contains notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+([Firefox bug 1225110](https://bugzil.la/1225110)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>138</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>138</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webnotifications.actions.enabled</code></td>
     </tr>
   </tbody>
 </table>

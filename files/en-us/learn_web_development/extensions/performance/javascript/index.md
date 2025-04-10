@@ -1,5 +1,6 @@
 ---
 title: JavaScript performance optimization
+short-title: Performant JavaScript
 slug: Learn_web_development/Extensions/Performance/JavaScript
 page-type: learn-module-chapter
 ---
@@ -108,7 +109,7 @@ The preload {{htmlelement("link")}} fetches the JavaScript as soon as possible, 
 or inside your script, in the case of a JavaScript module:
 
 ```js
-import { function } from "important-module.js";
+import { someFunction } from "important-module.js";
 ```
 
 > [!NOTE]

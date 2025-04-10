@@ -67,13 +67,17 @@ You can see the behavior described above in action in our [Multiple auto popover
 
 When a relationship is established between a popover and its control (invoker) via the `popovertarget` attribute, the API automatically makes two other changes to the environment to allow keyboard and assistive technology (AT) users to more easily interact with the popover:
 
-- When the popover is shown, the keyboard focus navigation order is updated so that the popover is next in the sequence: for example, when a button is pressed to show a popover, any buttons inside the popover will be next in the tabbing order (will be focused by pressing the <kbd>Tab</kbd> key). Conversely, when closing the popover via the keyboard (usually via via the <kbd>Esc</kbd> key), focus is shifted back to the invoker.
+- When the popover is shown, the keyboard focus navigation order is updated so that the popover is next in the sequence: for example, when a button is pressed to show a popover, any buttons inside the popover will be next in the tabbing order (will be focused by pressing the <kbd>Tab</kbd> key). Conversely, when closing the popover via the keyboard (usually via the <kbd>Esc</kbd> key), focus is shifted back to the invoker.
 - To allow AT such as screen readers to make sense of the relationship between the invoker and the popover, an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship is set up between them.
 
 Setting up a relationship between a popover and its control in this manner also creates an implicit anchor reference between the two — see [Popover anchor positioning](#popover_anchor_positioning) for more details.
 
-> [!NOTE]
-> You can also set up a popover-invoker relationship using the `source` option of the {{domxref("HTMLElement.showPopover()")}} and {{domxref("HTMLElement.togglePopover()")}} methods, but bear in mind that in this case, only the focus navigation order changes are made, not the implicit ARIA relationship. This because the `source` option can be set to any kind of element, not just `<button>` elements, and it cannot be guaranteed that the relationship would make sense.
+## Other ways to set up a popover-invoker relationship
+
+You can set up a popover-invoker relationship in other ways, in addition to using the `popovertarget` attribute:
+
+- Using the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods. Bear in mind that in this case, only the focus navigation order changes are made, not the implicit ARIA relationship. This because the `source` option can be set to any kind of element, not just `<button>` elements, and it cannot be guaranteed that the relationship would make sense.
+- Between a {{htmlelement("select")}} element and its dropdown picker, when opting it into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two.
 
 ## Using manual popover state
 
@@ -385,7 +389,7 @@ You can see an isolated example of this in our [Popover positioning example](htt
 
 There is another useful positioning option that the Popover API provides. If you want to position a popover relative to its invoker rather than the viewport or a positioned ancestor, you can take advantage of the fact that popovers and their invokers have an **implicit anchor reference**.
 
-Associating any kind of popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
+[Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 

@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 5: Displaying library data"
+short-title: "5: Displaying data"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
 page-type: learn-module-chapter
 ---

@@ -27,7 +27,7 @@ Values of this type are objects. They contain these properties:
   - : An array of `string`. If specified, this condition matches if the header's value matches at least one pattern in this list. This supports case-insensitive header value matching plus the following constructs:
     - `'*'` : Matches any number of characters.
     - `'?'` : Matches zero or one character(s).
-    - `'*'` and `'?'` can be escaped with a backslash, e.g. `'\*'` and `'\?'`.
+    - `'*'` and `'?'` can be escaped with a backslash, e.g., `'\*'` and `'\?'`.
 - `excludedValues` {{optional_inline}}
   - : An array of `string`. If specified, this condition is not matched if the header exists but its value contains at least one element in this list. This uses the same glob pattern syntax as `values`. If `values` and `excludedValues` are both matched, then `excludedValues` takes precedence.
 

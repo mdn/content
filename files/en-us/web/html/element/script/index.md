@@ -20,7 +20,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 
     > [!WARNING]
-    > This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts) for classic scripts, in this case it would have no effect.
+    > This attribute must not be used if the `src` attribute is absent (i.e., for inline scripts) for classic scripts, in this case it would have no effect.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
@@ -39,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     There are two versions of this attribute that you can set:
 
-    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
+    - Boolean, i.e., just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
     - Value containing one or more URLs, for example:
 
       ```html
@@ -69,7 +69,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
     > [!WARNING]
-    > This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
+    > This attribute must not be used if the `src` attribute is absent (i.e., for inline scripts), in this case it would have no effect.
     >
     > The `defer` attribute has no effect on [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) — they defer by default.
 
@@ -96,7 +96,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
 
 - `integrity`
-  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+  - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not be specified when the `src` attribute is absent. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `nomodule`
   - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - `nonce`
@@ -115,7 +115,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
     > [!NOTE]
-    > An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
+    > An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e., one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
@@ -185,7 +185,7 @@ You get no guarantee that scripts will run in any specific order.
 It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
 
 Scripts loaded with the `defer` attribute will load in the order they appear on the page.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g., they modify one or more elements on the page).
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
@@ -216,7 +216,7 @@ Scripts loaded using the `defer` attribute (see below) will run in the order the
 ```
 
 In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g., they modify one or more elements on the page).
 
 To summarize:
 
@@ -229,7 +229,7 @@ To summarize:
 
 ### Module fallback
 
-Browsers that support the `module` value for the [`type`](#type) attribute ignore any script with a `nomodule` attribute. That enables you to use module scripts while providing `nomodule`-marked fallback scripts for non-supporting browsers.
+Browsers that support the `module` value for the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute ignore any script with a `nomodule` attribute. That enables you to use module scripts while providing `nomodule`-marked fallback scripts for non-supporting browsers.
 
 ```html
 <script type="module" src="main.js"></script>
@@ -238,7 +238,7 @@ Browsers that support the `module` value for the [`type`](#type) attribute ignor
 
 ### Importing modules with importmap
 
-When importing modules in scripts, if you don't use the [`type=importmap`](#importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
+When importing modules in scripts, if you don't use the [`type=importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap) feature, then each module must be imported using a module specifier that is either an absolute or relative URL.
 In the example below, the first module specifier ("./shapes/square.js") resolves relative to the base URL of the document, while the second is an absolute URL.
 
 ```js

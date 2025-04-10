@@ -49,7 +49,7 @@ This guideline focuses on making text content as understandable as possible.
           In cases where the content of a page includes words or phrases that
           are in a different language to the primary language, use the
           <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a> attribute on an element wrapped
-          around the term in question (e.g. a {{htmlelement("span")}}
+          around the term in question (e.g., a {{htmlelement("span")}}
           if no semantic element is available) to set an appropriate language
           for it.
         </p>
@@ -70,7 +70,7 @@ This guideline focuses on making text content as understandable as possible.
         link to when they appear, or at the very least provide definitions
         somewhere in the surrounding text, or in a
         <a
-          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#description_lists"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Lists#description_lists"
           >description list</a
         >
         at the bottom of the page.
@@ -119,8 +119,8 @@ This guideline focuses on making text content as understandable as possible.
           everyone, but that the style of writing should be accessible by
           everyone. It is better to just write all content at lower secondary
           level, even technical documentation like programming tutorials, unless
-          there is a good reason not to (e.g. an alternative style for poetic
-          effect), or they have to be written in a strict style (e.g. W3C
+          there is a good reason not to (e.g., an alternative style for poetic
+          effect), or they have to be written in a strict style (e.g., W3C
           specs).
         </p>
       </td>
@@ -223,7 +223,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
           Navigation menu/control style and positioning should be consistent
           between different pages or views of a web page, and the existing items
           should appear in the same order, even if for example new items are
-          added. If the user has initiated a change, e.g. choosing a different
+          added. If the user has initiated a change, e.g., choosing a different
           color scheme or position for the navigation, their choice should be
           respected across all pages.
         </p>
@@ -234,8 +234,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts"
-          >Page layouts</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#structure_page_sections_logically"
+          >Structure page sections logically</a
         >
         for information on modern markup for layouts. See also
         <a
@@ -259,8 +259,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
       <td>
         "Labels" can refer to descriptive information in text content, or HTML
         form labels. See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >
         for more information.
       </td>
@@ -275,8 +275,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
         <p>
           If you need to have something that significantly changes the current
-          view (e.g. content or controls), let the user control when they want
-          that change to occur (e.g. what page to show, when to advance to the
+          view (e.g., content or controls), let the user control when they want
+          that change to occur (e.g., what page to show, when to advance to the
           next photo in the gallery...)
         </p>
         <p>
@@ -373,8 +373,8 @@ This guideline centers around helping users enter correct information when requi
         <ul>
           <li>
             <a
-              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-              >Meaningful text labels</a
+              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+              >Use meaningful text labels</a
             >
           </li>
           <li>
@@ -396,10 +396,10 @@ This guideline centers around helping users enter correct information when requi
       <td>
         <p>
           When an error is detected and suggestions for correction are known,
-          provide these to the user (e.g. suggesting alternatives when the user
+          provide these to the user (e.g., suggesting alternatives when the user
           is choosing a user name and has selected one that is already taken),
-          unless doing so would cause a security issue (e.g. when entering a
-          password) or context problem (e.g. they are trying to answer a
+          unless doing so would cause a security issue (e.g., when entering a
+          password) or context problem (e.g., they are trying to answer a
           question in a quiz app).
         </p>
         <p>
@@ -463,7 +463,7 @@ This guideline centers around helping users enter correct information when requi
       </td>
       <td>
         This really just builds on 3.3.1 and other similar criteria but requires
-        more thorough contextual help information and services, e.g. providing a
+        more thorough contextual help information and services, e.g., providing a
         dedicated link to a help page or service on each page, providing
         examples showing what successful completion should look like.
       </td>

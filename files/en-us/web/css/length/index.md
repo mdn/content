@@ -19,7 +19,7 @@ The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by
 > [!NOTE]
 > Some properties allow negative `<length>` values, while others do not.
 
-The [specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
+The [specified value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
 
@@ -155,6 +155,9 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+
+If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](#small_viewport_units) for that axis (`sv*`).
+
 For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 
 - `cqw`
@@ -215,7 +218,7 @@ When animated, values of the `<length>` data type are interpolated as real, floa
 
 ### Comparing different length units
 
-The following example provides you with an input field in which you can enter a `<length>` value (e.g. `300px`, `50%`, `30vw`) to set the width of a result bar that will appear below it once you've pressed the <kbd>Enter</kbd> or the <kbd>Return</kbd> key.
+The following example provides you with an input field in which you can enter a `<length>` value (e.g., `300px`, `50%`, `30vw`) to set the width of a result bar that will appear below it once you've pressed the <kbd>Enter</kbd> or the <kbd>Return</kbd> key.
 
 This allows you to compare and contrast the effects of different length units.
 

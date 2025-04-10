@@ -83,7 +83,7 @@ Using semantic HTML, this could be written as:
 <progress id="loadinglabel" max="100" value="23"></progress>
 ```
 
-## Best Practices
+## Best practices
 
 If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
 

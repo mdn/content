@@ -23,14 +23,6 @@ overscroll-behavior: contain;
 overscroll-behavior: none;
 ```
 
-```css interactive-example-choice
-overscroll-behavior: auto;
-```
-
-```css interactive-example-choice
-overscroll-behavior: contain;
-```
-
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
@@ -163,7 +155,7 @@ Both of these areas scroll; normally if you scrolled the chat window until you h
 }
 ```
 
-We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g. Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting `overscroll-behavior: none` on the {{htmlelement("html")}} element:
+We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g., Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting `overscroll-behavior: none` on the {{htmlelement("html")}} element:
 
 ```css
 html {
@@ -183,4 +175,5 @@ html {
 ## See also
 
 - [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
 - [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

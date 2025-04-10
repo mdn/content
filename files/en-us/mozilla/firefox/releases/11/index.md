@@ -73,7 +73,7 @@ _No change._
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 - The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an `onabort` handler has been added.
 - IndexedDB can now be used to store files/blobs.
-- IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
+- IndexedDB now supports complex key paths, e.g., `foo.bar` to access property `bar` of property `foo`.
 - IndexedDB can now accept an array as a `keyPath` when creating an [object store](/en-US/docs/Web/API/IDBDatabase/createObjectStore) or an [index](/en-US/docs/Web/API/IDBObjectStore/createIndex) ([Firefox bug 694138](https://bugzil.la/694138).)
 
 ### Network

@@ -1,5 +1,6 @@
 ---
 title: "React interactivity: Events and state"
+short-title: React events and state
 slug: Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state
 page-type: learn-module-chapter
 ---
@@ -215,7 +216,7 @@ function handleChange() {
   console.log("Typing!");
 }
 
-...
+// …
 
 // Down in the return statement
 <input

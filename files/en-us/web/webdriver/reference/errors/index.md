@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: webdriver
 ---
 
-Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
+Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Reference/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
 
@@ -26,7 +26,7 @@ The **error object** is a JSON Object that bears three, and sometimes four, fiel
 
 ## Example
 
-For example a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to `/session/1234/url`, where `1234` is a bogus session, would return a response with the {{HTTPStatus(404, "404 Not Found")}} status and the following body:
+For example a [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request to `/session/1234/url`, where `1234` is a bogus session, would return a response with the {{HTTPStatus(404, "404 Not Found")}} status and the following body:
 
 ```json
 {
@@ -66,7 +66,7 @@ In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represen
 | [insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate)      | {{HTTPStatus(400, "400 Bad Request")}}           | Navigation caused the user agent to hit a certificate warning, which is usually the result of an expired or invalid TLS certificate.                                                                                                                                  |
 | [invalid argument](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)              | {{HTTPStatus(400, "400 Bad Request")}}           | The arguments passed to a [command](/en-US/docs/Web/WebDriver/Command) are either invalid or malformed.                                                                                                                                                               |
 | [invalid cookie domain](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidCookieDomain)     | {{HTTPStatus(400, "400 Bad Request")}}           | An illegal attempt was made to set a cookie under a different domain than the current page.                                                                                                                                                                           |
-| [invalid element state](/en-US/docs/Web/WebDriver/Errors/InvalidElementState)               | {{HTTPStatus(400, "400 Bad Request")}}           | A [command](/en-US/docs/Web/WebDriver/Command) could not be completed because the element is in an invalid state, e.g. attempting to [clear](/en-US/docs/Web/WebDriver/ElementClear) an element that isn't both editable and resettable.                              |
+| [invalid element state](/en-US/docs/Web/WebDriver/Errors/InvalidElementState)               | {{HTTPStatus(400, "400 Bad Request")}}           | A [command](/en-US/docs/Web/WebDriver/Command) could not be completed because the element is in an invalid state, e.g., attempting to [clear](/en-US/docs/Web/WebDriver/ElementClear) an element that isn't both editable and resettable.                             |
 | [invalid selector](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSelector)              | {{HTTPStatus(400, "400 Bad Request")}}           | An element retrieval command provided an unknown selector strategy.                                                                                                                                                                                                   |
 | [invalid session id](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)           | {{HTTPStatus(404, "404 Not Found")}}             | Given session ID is not recognized, meaning the session either does not exist of that it's not active. Note that a session that [has been deleted](/en-US/docs/Web/WebDriver/DeleteSession) cannot be re-used.                                                        |
 | [JavaScript error](/en-US/docs/Web/WebDriver/Reference/Errors/JavaScriptError)              | {{HTTPStatus(500, "500 Internal Server Error")}} | An error occurred while executing JavaScript supplied by the user.                                                                                                                                                                                                    |

@@ -1,5 +1,6 @@
 ---
 title: "Express Tutorial Part 4: Routes and controllers"
+short-title: "4: Routes and controllers"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
 page-type: learn-module-chapter
 ---
@@ -133,10 +134,10 @@ The route paths define the endpoints at which requests can be made. The examples
 
 Route paths can also be string patterns. String patterns use a form of regular expression syntax to define _patterns_ of endpoints that will be matched. The syntax is listed below (note that the hyphen (`-`) and the dot (`.`) are interpreted literally by string-based paths):
 
-- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g. a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
-- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g. a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
+- `?` : The endpoint must have 0 or 1 of the preceding character (or group), e.g., a route path of `'/ab?cd'` will match endpoints `acd` or `abcd`.
+- `+` : The endpoint must have 1 or more of the preceding character (or group), e.g., a route path of `'/ab+cd'` will match endpoints `abcd`, `abbcd`, `abbbcd`, and so on.
 - `*` : The endpoint may have an arbitrary string where the `*` character is placed. E.g. a route path of `'/ab*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
-- `()` : Grouping match on a set of characters to perform another operation on, e.g. `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
+- `()` : Grouping match on a set of characters to perform another operation on, e.g., `'/ab(cd)?e'` will perform a `?`-match on the group `(cd)` — it will match `abe` and `abcde`.
 
 The route paths can also be JavaScript [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
@@ -238,18 +239,18 @@ exports.get(
 The URLs that we're ultimately going to need for our pages are listed below, where _object_ is replaced by the name of each of our models (book, bookinstance, genre, author), _objects_ is the plural of object, and _id_ is the unique instance field (`_id`) that is given to each Mongoose model instance by default.
 
 - `catalog/` — The home/index page.
-- `catalog/<objects>/` — The list of all books, bookinstances, genres, or authors (e.g. /`catalog/books/`, /`catalog/genres/`, etc.)
-- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37)`.
-- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g. `/catalog/book/create)`.
-- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/update)`.
-- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g. `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
+- `catalog/<objects>/` — The list of all books, bookinstances, genres, or authors (e.g., /`catalog/books/`, /`catalog/genres/`, etc.)
+- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37)`.
+- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g., `/catalog/book/create)`.
+- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/update)`.
+- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
 
 The first home page and list pages don't encode any additional information. While the results returned will depend on the model type and the content in the database, the queries run to get the information will always be the same (similarly the code run for object creation will always be similar).
 
-By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
+By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g., one route to handle the display of every single book item).
 
 > [!NOTE]
-> Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g., `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 
 Next we create our route handler callback functions and route code for all the above URLs.
 
@@ -644,7 +645,7 @@ module.exports = router;
 The module requires Express and then uses it to create a `Router` object. The routes are all set up on the router, which is then exported.
 
 The routes are defined either using `.get()` or `.post()` methods on the router object. All the paths are defined using strings (we don't use string patterns or regular expressions).
-Routes that act on some specific resource (e.g. book) use path parameters to get the object id from the URL.
+Routes that act on some specific resource (e.g., book) use path parameters to get the object id from the URL.
 
 The handler functions are all imported from the controller modules we created in the previous section.
 

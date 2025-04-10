@@ -3,7 +3,7 @@ title: Web app manifests
 short-title: Manifest
 slug: Web/Progressive_web_apps/Manifest
 page-type: landing-page
-browser-compat: html.manifest
+browser-compat: manifests.webapp
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}

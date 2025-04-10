@@ -86,7 +86,7 @@ The controls attribute provides play/pause buttons, seek bar, etc. — the basic
 
 However, there are problems with these controls:
 
-- They are not keyboard-accessible in most browsers, i.e. you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
+- They are not keyboard-accessible in most browsers, i.e., you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
 - Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.
 
 To remedy this, we can create our own custom controls. Let's look at how.

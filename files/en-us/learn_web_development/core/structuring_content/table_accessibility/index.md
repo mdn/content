@@ -1,5 +1,6 @@
 ---
 title: HTML table accessibility
+short-title: Table accessibility
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 page-type: learn-module-chapter
 ---

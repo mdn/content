@@ -232,8 +232,6 @@ The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTrans
 
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
-> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
-
 ## Examples
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)

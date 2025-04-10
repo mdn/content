@@ -13,7 +13,7 @@ The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CS
 {{InteractiveExample("CSS Demo: translate3d()")}}
 
 ```css interactive-example-choice
-transform: translate3d(0);
+transform: translate3d(0, 0, 0);
 ```
 
 ```css interactive-example-choice

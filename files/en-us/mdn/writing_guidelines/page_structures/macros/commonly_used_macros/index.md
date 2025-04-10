@@ -92,7 +92,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
@@ -104,7 +104,7 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG Element reference</a> (/Web/SVG/Element).
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}
@@ -232,7 +232,7 @@ They can also be used to mark up a section on a page.
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
-  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
+  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g., `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 #### Indicating that a feature is available in web workers

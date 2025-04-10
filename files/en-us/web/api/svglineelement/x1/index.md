@@ -10,7 +10,7 @@ browser-compat: api.SVGLineElement.x1
 
 The **`x1`** read-only property of the {{domxref("SVGLineElement")}} interface describes the start of the SVG line along the x-axis as an {{domxref("SVGAnimatedLength")}}. It reflects the {{SVGElement("line")}} element's {{SVGAttr("x1")}} geometric attribute.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that start position as a length along the x-axis in user coordinate system units.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that start position as a length along the x-axis in user coordinate system units.
 
 ## Value
 

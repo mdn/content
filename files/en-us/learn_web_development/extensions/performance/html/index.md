@@ -1,5 +1,6 @@
 ---
 title: HTML performance optimization
+short-title: Performant HTML
 slug: Learn_web_development/Extensions/Performance/HTML
 page-type: learn-module-chapter
 ---

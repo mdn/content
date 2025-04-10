@@ -8,14 +8,12 @@ browser-compat: api.SubtleCrypto.digest
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-The **`digest()`** method of the {{domxref("SubtleCrypto")}}
-interface generates a {{Glossary("digest")}} of the given data. A digest is a short
-fixed-length value derived from some variable-length input. Cryptographic digests should
-exhibit collision-resistance, meaning that it's hard to come up with two different
-inputs that have the same digest value.
+The **`digest()`** method of the {{domxref("SubtleCrypto")}} interface generates a _digest_ of the given data, using the specified {{glossary("hash function")}}.
+A digest is a short fixed-length value derived from some variable-length input.
+Cryptographic digests should exhibit collision-resistance, meaning that it's hard to come up with two different inputs that have the same digest value.
 
-It takes as its arguments an identifier for the digest algorithm to use and the data to
-digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.
+It takes as its arguments an identifier for the digest algorithm to use and the data to digest.
+It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.
 
 Note that this API does not support streaming input: you must read the entire input into memory before passing it into the digest function.
 
@@ -42,10 +40,8 @@ A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containi
 
 ## Supported algorithms
 
-Digest algorithms, also known as [cryptographic hash functions](/en-US/docs/Glossary/Cryptographic_hash_function),
-transform an arbitrarily large block of data into a fixed-size output,
-usually much shorter than the input. They have a variety of applications in
-cryptography.
+Digest algorithms, also known as {{glossary("Hash function", "hash functions")}}, transform an arbitrarily large block of data into a fixed-size output, usually much shorter than the input.
+They have a variety of applications in cryptography.
 
 <table class="standard-table">
   <tbody>
@@ -99,12 +95,10 @@ cryptography.
 </table>
 
 > [!WARNING]
-> SHA-1 is now considered vulnerable and should not
-> be used for cryptographic applications.
+> SHA-1 is now considered vulnerable and should not be used for cryptographic applications.
 
 > [!NOTE]
-> If you are looking here for how to create a keyed-hash message authentication
-> code ([HMAC](/en-US/docs/Glossary/HMAC)), you need to use the [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) instead.
+> If you are looking here for how to create a keyed-hash message authentication code ([HMAC](/en-US/docs/Glossary/HMAC)), you need to use the [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) instead.
 
 ## Examples
 
@@ -133,9 +127,8 @@ digestMessage(text).then((digestBuffer) =>
 
 ### Converting a digest to a hex string
 
-The digest is returned as an `ArrayBuffer`, but for comparison and display
-digests are often represented as hex strings. This example calculates a digest, then
-converts the `ArrayBuffer` to a hex string:
+The digest is returned as an `ArrayBuffer`, but for comparison and display digests are often represented as hex strings.
+This example calculates a digest, then converts the `ArrayBuffer` to a hex string:
 
 ```js
 const text =

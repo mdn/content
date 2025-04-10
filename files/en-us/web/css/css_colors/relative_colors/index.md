@@ -100,7 +100,7 @@ To reiterate, when a relative color is defined, the channel values of the origin
 rgb(from red r g b)
 ```
 
-However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the output channel values in the right order (e.g. red, then green, then blue in the case of `rgb()`), but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
+However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the output channel values in the right order (e.g., red, then green, then blue in the case of `rgb()`), but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
 
 For example, if you wanted to, you could specify absolute values like those shown below, transforming `red` into `blue`:
 
@@ -320,7 +320,7 @@ The full HTML is included below for reference. The most interesting parts are as
 
 - The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
 - The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
-- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g. `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
+- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g., `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
 - The `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note that an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.
 
 ```html
@@ -386,7 +386,7 @@ The full HTML is included below for reference. The most interesting parts are as
 
 #### CSS
 
-Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
+Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendant selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
 
 In the last rule we've used the [general sibling selector (`~`)](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to target the unused `<div>` elements in each palette type, setting [`display: none`](/en-US/docs/Web/CSS/Subsequent-sibling_combinator) to stop them being rendered.
 

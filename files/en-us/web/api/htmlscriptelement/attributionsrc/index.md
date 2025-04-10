@@ -23,7 +23,7 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
 
 A string. There are two versions of this property that you can get and set:
 
-- Empty string, i.e. `scriptElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
+- Empty string, i.e., `scriptElem.attributionSrc=""`. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `src` attribute points to. This is fine when you are handling the attribution source or trigger registration on the same server. When registering an attribution trigger this property is optional, and an empty string value will be used if it is omitted.
 - Value containing one or more URLs, for example:
 
   ```js

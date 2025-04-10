@@ -67,7 +67,7 @@ In this example, we've got a name of `subscribe`, and a value of `newsletter`. W
 If the `value` attribute was omitted, the default value for the checkbox is `on`, so the submitted data in that case would be `subscribe=on`.
 
 > [!NOTE]
-> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
+> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g., `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
 
 ## Additional attributes
 

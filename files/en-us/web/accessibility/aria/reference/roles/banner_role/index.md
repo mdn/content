@@ -24,15 +24,15 @@ Each page may have a `banner` landmark, but each page should generally be limite
 
 ### Associated ARIA roles, states, and properties
 
-None
+None.
 
 ### Keyboard interactions
 
-None
+None.
 
 ### Required JavaScript features
 
-None
+None.
 
 ## Examples
 

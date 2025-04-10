@@ -1,5 +1,6 @@
 ---
 title: Handling text — strings in JavaScript
+short-title: Strings
 slug: Learn_web_development/Core/Scripting/Strings
 page-type: learn-module-chapter
 ---

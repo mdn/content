@@ -175,7 +175,7 @@ Beyond the structures specific to web forms, it's good to remember that form mar
 
 As you can see in the examples, it's common practice to wrap a label and its widget with a {{HTMLElement("li")}} element within a {{HTMLElement("ul")}} or {{HTMLElement("ol")}} list. {{HTMLElement("p")}} and {{HTMLElement("div")}} elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
 
-In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
+In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g., {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) and sectioning (e.g., {{htmlelement("section")}}) to structure complex forms.
 
 Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
 
@@ -403,8 +403,3 @@ You now have all the knowledge you'll need to properly structure your web forms.
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

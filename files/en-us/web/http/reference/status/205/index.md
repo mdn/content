@@ -2,7 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 page-type: http-status-code
-spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.205
 ---
 
 {{HTTPSidebar}}
@@ -16,7 +16,8 @@ The instruction to "reset content" can mean clearing the contents of a form, res
 > In web applications that use the `205` status, it's assumed that the client handles resetting content after a `205` response.
 > This is typically done via JavaScript, as resetting content such as forms after a `205` response is not handled natively by browsers.
 
-There must be no content in the response body, and this can be indicated using {{HTTPHeader("Content-Length", "Content-Length: 0")}} header or {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} header with an empty chunk.
+Note that the response must not include any content or the {{HTTPHeader("Content-Length")}} header (browsers may reject responses that include content).
+The empty response may also be indicated using the {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} header with an empty chunk.
 
 ## Status
 
@@ -51,11 +52,6 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## Specifications
 
 {{Specifications}}
-
-## Compatibility notes
-
-Browser behaviors differ if this response erroneously includes a body on persistent connections.
-See [`204 No Content` compatibility notes](/en-US/docs/Web/HTTP/Reference/Status/204#compatibility_notes) for more details.
 
 ## See also
 

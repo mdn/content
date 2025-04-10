@@ -42,7 +42,7 @@ await WebAssembly.instantiateStreaming(fetch(url), {
 
 ## Syntax
 
-```wasm
+```wat
 ;; declare new variable named $val of type i32
 (global $val i32)
 ```

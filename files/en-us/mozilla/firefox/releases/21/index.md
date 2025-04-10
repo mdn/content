@@ -44,7 +44,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### SVG
 
-- The [paint-order](/en-US/docs/Web/SVG/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
+- The [paint-order](/en-US/docs/Web/SVG/Reference/Attribute/paint-order) attribute has been implemented ([Firefox bug 828805](https://bugzil.la/828805)).
 - The `svg.smil.enabled` preference has been removed. SMIL is always on. ([Firefox bug 835030](https://bugzil.la/835030))
 
 ### Networking

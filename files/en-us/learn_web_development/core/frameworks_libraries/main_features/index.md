@@ -1,12 +1,13 @@
 ---
 title: Framework main features
+short-title: Framework features
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
 
@@ -87,9 +88,9 @@ Given this Handlebars template:
 
 And this data:
 
-```js
+```json
 {
-  subject: "World";
+  "subject": "World"
 }
 ```
 
@@ -320,4 +321,4 @@ it("Increments the count when clicked", () => {
 
 At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you're enthusiastic to get going and actually do some coding, and that's what you are going to do next!
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -142,7 +142,7 @@ Each object can contain the following properties:
     > A cross-site prefetch requires a referrer policy that is at least as strict as the default `"strict-origin-when-cross-origin"` value — so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`. A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case.
 
     > [!NOTE]
-    > In the case of document rules, the matched link's specified referrer policy (e.g. using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
+    > In the case of document rules, the matched link's specified referrer policy (e.g., using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
 
 - `"relative_to"` {{experimental_inline}}
 
@@ -153,7 +153,7 @@ Each object can contain the following properties:
     - `ruleset`
       - : URLs should be matched relative to the file the rules are specified in. This is the default value.
 
-    This key setting is only relevant for rules defined in an external file (set using the {{httpheader("Speculation-Rules")}} header). When rules are specified inside the same document they are being set for (i.e. in an inline `<script>` element), it makes no difference.
+    This key setting is only relevant for rules defined in an external file (set using the {{httpheader("Speculation-Rules")}} header). When rules are specified inside the same document they are being set for (i.e., in an inline `<script>` element), it makes no difference.
 
 - `"requires"` {{experimental_inline}}
 
@@ -233,18 +233,18 @@ It is also allowable to include multiple sets of rules in a single HTML file:
 
 And multiple rules in a single result set:
 
-```js
+```html
 <script type="speculationrules">
-{
-  "prerender": [
-    {
-      "urls": ["one.html"]
-    },
-    {
-      "urls": ["two.html"]
-    }
-  ]
-}
+  {
+    "prerender": [
+      {
+        "urls": ["one.html"]
+      },
+      {
+        "urls": ["two.html"]
+      }
+    ]
+  }
 </script>
 ```
 
@@ -359,7 +359,7 @@ In the following complete speculation rule example, all same-origin pages are ma
 
 ### `"relative_to"` example
 
-For rule sets that are externally fetched (i.e. via the {{httpheader("Speculation-Rules")}}) response header, URLs in list rules and URL patterns in document rules are parsed relative to the containing external text file's URL by default. To parse URLs in a list rule relative to the document's base URL, `"relative_to"` is used like this:
+For rule sets that are externally fetched (i.e., via the {{httpheader("Speculation-Rules")}}) response header, URLs in list rules and URL patterns in document rules are parsed relative to the containing external text file's URL by default. To parse URLs in a list rule relative to the document's base URL, `"relative_to"` is used like this:
 
 ```json
 {
@@ -507,8 +507,8 @@ The following set of document rules shows how `eagerness` can be used to hint at
 
 Here we are hinting that:
 
-- All same-site links contained in the document should be conservatively prerendered (i.e. when the user starts to activate them).
-- Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e. if the user makes any kind of move towards navigating to them).
+- All same-site links contained in the document should be conservatively prerendered (i.e., when the user starts to activate them).
+- Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e., if the user makes any kind of move towards navigating to them).
 
 > [!NOTE]
 > The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and for these you are more likely to use document rules to find them on the page.

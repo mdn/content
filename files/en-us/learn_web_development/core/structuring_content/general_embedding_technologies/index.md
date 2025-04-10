@@ -1,5 +1,6 @@
 ---
 title: From object to iframe — general embedding technologies
+short-title: Embedding technologies
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 page-type: learn-module-chapter
 ---
@@ -244,7 +245,7 @@ The example includes the bare essentials needed to use an `<iframe>`:
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
-  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
+  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g., IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
 > [!NOTE]
 > In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)

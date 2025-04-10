@@ -160,7 +160,7 @@ fixed.newProp = "ohai"; // TypeError
 
 #### Failing to delete object properties
 
-Attempts to [delete](/en-US/docs/Web/JavaScript/Reference/Operators/delete) a non-configurable or otherwise undeletable (e.g. it's intercepted by a proxy's [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) handler which returns `false`) property throw in strict mode (where before the attempt would have no effect):
+Attempts to [delete](/en-US/docs/Web/JavaScript/Reference/Operators/delete) a non-configurable or otherwise undeletable (e.g., it's intercepted by a proxy's [`deleteProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty) handler which returns `false`) property throw in strict mode (where before the attempt would have no effect):
 
 ```js
 "use strict";
@@ -409,7 +409,7 @@ These errors are good, because they reveal plain errors or bad practices. They o
 JavaScript used to silently fail in contexts where what was done should be an error. Strict mode throws in such cases. If your code base contains such cases, testing will be necessary to be sure nothing is broken. You can screen for such errors at the function granularity level.
 
 - Assigning to an undeclared variable throws a {{jsxref("ReferenceError")}}. This used to set a property on the global object, which is rarely the expected effect. If you really want to set a value to the global object, explicitly assign it as a property on `globalThis`.
-- Failing to assign to an object's property (e.g. it's read-only) throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
+- Failing to assign to an object's property (e.g., it's read-only) throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
 - Deleting a non-deletable property throws a {{jsxref("TypeError")}}. In sloppy mode, this would silently fail.
 - Accessing [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee), [`strictFunction.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller), or [`strictFunction.arguments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments) throws a {{jsxref("TypeError")}} if the function is in strict mode. If you are using `arguments.callee` to call the function recursively, you can use a named function expression instead.
 

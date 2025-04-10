@@ -29,12 +29,12 @@ setProperty(propertyName, value, priority)
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
 
-  - : A string allowing the "important" CSS priority to be set. If not
-    specified, treated as the empty string. The following values are accepted:
+  - : A string allowing the CSS priority to be set to important. Only the values listed below are accepted:
 
-    - String value `"important"`
-    - Keyword `undefined`
-    - String empty value `""`
+    - `"important"` (case-insensitive) for setting the property as `!important`;
+    - `""`, `undefined`, or `null` for removing the `!important` flag if present.
+
+    Anything else causes the method to return early and no change to happen (unless `value` is empty, in which case the property is removed regardless of the `priority` value). `false`, for example, is not a valid priority value.
 
 ### Return value
 

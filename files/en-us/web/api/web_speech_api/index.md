@@ -56,7 +56,7 @@ For more details on using these features, see [Using the Web Speech API](/en-US/
   - : Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
 - {{domxref("SpeechSynthesisUtterance")}}
   - : Represents a speech request.
-    It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
+    It contains the content the speech service should read and information about how to read it (e.g., language, pitch and volume.)
 - {{domxref("SpeechSynthesisVoice")}}
   - : Represents a voice that the system supports.
     Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
@@ -85,5 +85,3 @@ The [Web Speech API examples](https://github.com/mdn/dom-examples/tree/main/web-
 ## See also
 
 - [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
-- [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
-- [HTML5Rocks article](https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api/)

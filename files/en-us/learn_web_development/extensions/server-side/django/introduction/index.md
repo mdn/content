@@ -39,7 +39,7 @@ Django helps you write software that is:
 
   - : Django can be (and has been) used to build almost any type of website — from content management systems and wikis, through to social networks and news sites. It can work with any client-side framework, and can deliver content in almost any format (including HTML, RSS feeds, JSON, and XML).
 
-    Internally, while it provides choices for almost any functionality you might want (e.g. several popular databases, templating engines, etc.), it can also be extended to use other components if needed.
+    Internally, while it provides choices for almost any functionality you might want (e.g., several popular databases, templating engines, etc.), it can also be extended to use other components if needed.
 
 - Secure
 
@@ -50,7 +50,7 @@ Django helps you write software that is:
     Django enables protection against many vulnerabilities by default, including SQL injection, cross-site scripting, cross-site request forgery and [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) (see [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) for more details of such attacks).
 
 - Scalable
-  - : Django uses a component-based "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" architecture (each part of the architecture is independent of the others, and can hence be replaced or changed if needed). Having a clear separation between the different parts means that it can scale for increased traffic by adding hardware at any level: caching servers, database servers, or application servers. Some of the busiest sites have successfully scaled Django to meet their demands (e.g. Instagram and Disqus, to name just two).
+  - : Django uses a component-based "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" architecture (each part of the architecture is independent of the others, and can hence be replaced or changed if needed). Having a clear separation between the different parts means that it can scale for increased traffic by adding hardware at any level: caching servers, database servers, or application servers. Some of the busiest sites have successfully scaled Django to meet their demands (e.g., Instagram and Disqus, to name just two).
 - Maintainable
   - : Django code is written using design principles and patterns that encourage the creation of maintainable and reusable code. In particular, it makes use of the Don't Repeat Yourself (DRY) principle so there is no unnecessary duplication, reducing the amount of code. Django also promotes the grouping of related functionality into reusable "applications" and, at a lower level, groups related code into modules (along the lines of the [Model View Controller (MVC)](/en-US/docs/Glossary/MVC) pattern).
 - Portable
@@ -122,7 +122,7 @@ The `urlpatterns` object is a list of `path()` and/or `re_path()` functions (Pyt
 
 The first argument to both methods is a route (pattern) that will be matched. The `path()` method uses angle brackets to define parts of a URL that will be captured and passed through to the view function as named arguments. The `re_path()` function uses a flexible pattern matching approach known as a regular expression. We'll talk about these in a later article!
 
-The second argument is another function that will be called when the pattern is matched. The notation `views.book_detail` indicates that the function is called `book_detail()` and can be found in a module called `views` (i.e. inside a file named `views.py`)
+The second argument is another function that will be called when the pattern is matched. The notation `views.book_detail` indicates that the function is called `book_detail()` and can be found in a module called `views` (i.e., inside a file named `views.py`)
 
 ### Handling the request (views.py)
 
@@ -183,7 +183,7 @@ class Team(models.Model):
 
 ### Querying data (views.py)
 
-The Django model provides a simple query API for searching the associated database. This can match against a number of fields at a time using different criteria (e.g. exact, case-insensitive, greater than, etc.), and can support complex statements (for example, you can specify a search on U11 teams that have a team name that starts with "Fr" or ends with "al").
+The Django model provides a simple query API for searching the associated database. This can match against a number of fields at a time using different criteria (e.g., exact, case-insensitive, greater than, etc.), and can support complex statements (for example, you can specify a search on U11 teams that have a team name that starts with "Fr" or ends with "al").
 
 The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The `list_teams = Team.objects.filter(team_level__exact="U09")` line shows how we can use the model query API to filter for all records where the `team_level` field has exactly the text `U09` (note how this criteria is passed to the `filter()` function as an argument, with the field name and match type separated by a double underscore: **`team_level__exact`**).
 

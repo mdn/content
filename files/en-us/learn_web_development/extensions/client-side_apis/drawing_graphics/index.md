@@ -298,7 +298,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    The pattern here is very similar, but with two differences:
 
    - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
-   - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e. one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
+   - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e., one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
 
 That's it for now; your final example should look like this:
 
@@ -516,7 +516,7 @@ Optimizing animation of graphics is an entire specialty of programming, with lot
 
 In general, the process of doing a canvas animation involves the following steps:
 
-1. Clear the canvas contents (e.g. with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
+1. Clear the canvas contents (e.g., with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
 2. Save state (if necessary) using {{domxref("CanvasRenderingContext2D.save", "save()")}} — this is needed when you want to save settings you've updated on the canvas before continuing, which is useful for more advanced applications.
 3. Draw the graphics you are animating.
 4. Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}

@@ -150,7 +150,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
     > [!WARNING]
-    > This directive is intended to replace [`report-uri`](#report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > This directive is intended to replace [`report-uri`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
     > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
     >
     > ```http
@@ -159,9 +159,9 @@ Reporting directives control the destination URL for CSP violation reports in `C
 
 ### Other directives
 
-- {{CSP("require-trusted-types-for")}} {{experimental_inline}}
+- {{CSP("require-trusted-types-for")}}
   - : Enforces [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) at the DOM XSS injection sinks.
-- {{CSP("trusted-types")}} {{experimental_inline}}
+- {{CSP("trusted-types")}}
   - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
     Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
@@ -178,7 +178,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
   - : Provides the browser with a URL where CSP violation reports should be sent.
-    This has been superseded by the [`report-to`](#report-to) directive.
+    This has been superseded by the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) directive.
 
 ## Fetch directive syntax
 
@@ -215,7 +215,7 @@ See [Nonces](/en-US/docs/Web/HTTP/Guides/CSP#nonces) in the CSP guide for more u
 This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
 
 - The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
-- The hash value is the base64-encoded {{glossary("Cryptographic_hash_function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
+- The hash value is the base64-encoded {{glossary("hash function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
 
 For example:
 

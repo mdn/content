@@ -44,7 +44,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
-          Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
+          Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e., using the <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari.
         </p>
       </td>
@@ -116,7 +116,7 @@ The image file formats that are most commonly used on the web are listed below.
 </table>
 
 > [!NOTE]
-> The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
+> The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e., have virtually zero market share).
 
 The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
 
@@ -286,11 +286,11 @@ However it also has disadvantages for some cases, as video and image encoding ha
 
 The format offers:
 
-- Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
+- Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g., lossy AVIF images are around 50% smaller than JPEG images).
 - Generally, AVIF has better compression than WebP — median 50% vs. 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
 - Lossless compression.
 - Animation/multi-image storage (similar to animated GIFs, but with much better compression)
-- Alpha channel support (i.e. for transparency).
+- Alpha channel support (i.e., for transparency).
 - _High Dynamic Range_ (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image.
 - Wide Color Gamut: Support for images that can contain a larger range of colors.
 
@@ -951,7 +951,7 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 
 SVG can be used in web content in two ways:
 
-1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
+1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
 2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.

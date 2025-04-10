@@ -28,7 +28,7 @@ The feature statuses of all the features documented on MDN are tracked in its ac
 The automation uses [`browser-compat`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#using_bcd_data_in_mdn_pages) key in the front-matter. The key stores BCD query required to locate the feature in the compatibility data. If the `browser-compat` key has multiple values then the automation uses only the first value to render status macros.
 
 > [!NOTE]
-> To update a feature's status in the MDN content, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an [automated pull request](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) updates the statuses in the `mdn/content` repository.
+> To update a feature's status in the MDN content, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, it goes into a weekly release, and an automated pull request updates the statuses in the `mdn/content` repository for every release.
 
 ## How are feature statuses specified in content?
 
@@ -36,9 +36,9 @@ The following sections document the mechanisms that are used to insert and rende
 
 ### Feature status icons in sidebars
 
-The `status` property in page [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) is used to generate status icons for features when they are displayed in sidebars.
+The `status` property in page front matter is used to generate status icons for features when they are displayed in sidebars.
 
-```yml
+```yaml
 ---
 title: Feature name
 status:

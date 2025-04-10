@@ -66,7 +66,7 @@ offset-position: unset;
 
 ### Setting initial offset-position for an offset-path
 
-In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("basic-shape/path", "path()")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
+In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("basic-shape/path", "path()")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Reference/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
 
 #### HTML
 

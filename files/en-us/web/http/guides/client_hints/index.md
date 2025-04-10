@@ -110,7 +110,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ## Hint types
 
-### User-agent client hints
+### User agent client hints
 
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
 For a list of `Sec-CH-UA-*` headers, see [User agent client hints headers](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints).

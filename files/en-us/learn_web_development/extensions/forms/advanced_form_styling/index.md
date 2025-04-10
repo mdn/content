@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
 
 In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the more problematic bits.
 
@@ -38,6 +38,8 @@ To recap what we said in the previous article, we have:
 **The ugly**: Some elements can't be styled thoroughly using CSS. These include:
 
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
+  > [!NOTE]
+  > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
 - [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
@@ -367,9 +369,9 @@ Let's talk about some specifics of each of these types of control, highlighting 
 
 ### Selects and datalists
 
-In modern browsers, selects and datalists are generally not too bad to style provided you don't want to vary the look and feel too much from the defaults.
+Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements. In supporting browsers and codebases, you no longer need to worry about the legacy techniques described below for `<select>` elements.
 
-We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist control is `<input type="text">` anyway, so we knew this wouldn't be a problem.
+Styling datalists and selects (in browsers that don't support customizable selects) allows an acceptable level of customization provided you don't want to vary the look and feel too much from the defaults. We've managed to get the basic look of the boxes looking pretty uniform and consistent. The datalist invoking control is an `<input type="text">` anyway, so we knew this wouldn't be a problem.
 
 Two things are slightly more problematic. First of all, the select's "arrow" icon that indicates it is a dropdown differs across browsers. It also tends to change if you increase the size of the select box, or resize in an ugly fashion. To fix this in our example we first used our old friend `appearance: none` to get rid of the icon altogether:
 
@@ -425,7 +427,7 @@ Of course, this might also not fit in with the design you are going for, but it'
 
 The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Element/input/time), [`week`](/en-US/docs/Web/HTML/Element/input/week), [`month`](/en-US/docs/Web/HTML/Element/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
-However, the internal parts of the control (e.g. the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
+However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
 > [!NOTE]
 > It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
@@ -508,17 +510,10 @@ You can see the result of the above CSS styling in the below live example (see a
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
-The article [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS, and JavaScript.
-
 ## Summary
 
 While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.
 
-In the next article of this module, we will explore the different [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) available to us in modern browsers for styling forms in different states.
+In the next article of this module, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}

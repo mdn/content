@@ -1,5 +1,6 @@
 ---
 title: Introducing asynchronous JavaScript
+short-title: Introduction
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 page-type: learn-module-chapter
 ---

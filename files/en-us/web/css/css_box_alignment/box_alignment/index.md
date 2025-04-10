@@ -54,9 +54,9 @@ The below image shows an alignment container with two alignment subjects inside.
 
 There are three different types of alignment that the specification details; these use keyword values.
 
-- [Positional alignment](#positional-alignment)
-- [Baseline alignment](#baseline-alignment)
-- [Distributed alignment](#distributed-alignment)
+- [Positional alignment](#positional_alignment)
+- [Baseline alignment](#baseline_alignment)
+- [Distributed alignment](#distributed_alignment)
 
 ### Positional alignment
 

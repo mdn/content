@@ -20,8 +20,8 @@ The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress e
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 em {
+  /* Add your styles here */
 }
 ```
 

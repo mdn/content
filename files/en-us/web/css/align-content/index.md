@@ -57,7 +57,7 @@ align-content: space-around;
 }
 ```
 
-This property has no effect on single line flex containers (i.e. ones with `flex-wrap: nowrap`).
+This property has no effect on single line flex containers (i.e., ones with `flex-wrap: nowrap`).
 
 ## Syntax
 
@@ -134,7 +134,7 @@ align-content: unset;
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
 > [!NOTE]
-> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject)
+> The `<content-distribution>` values (`space-between`, `space-around`, `space-evenly`, and `stretch`) have no effect in [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content) as all the content in that block is treated as a single [alignment-subject](/en-US/docs/Glossary/Alignment_Subject).
 
 ## Formal definition
 
@@ -295,5 +295,5 @@ In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_a
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Block-level_content](/en-US/docs/Glossary/Block-level_content)
+- [Block-level content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

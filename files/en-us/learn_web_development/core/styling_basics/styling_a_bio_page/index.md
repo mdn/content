@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Styling a biography page"
+short-title: "Challenge: Biography page"
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 page-type: learn-module-assessment
 ---

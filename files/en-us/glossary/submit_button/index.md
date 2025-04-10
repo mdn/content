@@ -28,7 +28,7 @@ Submit buttons can override the form's submission behavior through various attri
 
 If the submit button is a {{HtmlElement("button")}} or `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}` and has a `name` attribute, the form data set will include an entry for its `name` and `value`.
 
-If the submit button is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, the form data set will include entries for the X and Y coordinates that the user clicked on (e.g. `x=100&y=200` or `buttonName.x=123&buttonName.y=234`).
+If the submit button is an `{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}`, the form data set will include entries for the X and Y coordinates that the user clicked on (e.g., `x=100&y=200` or `buttonName.x=123&buttonName.y=234`).
 
 ## See also
 

@@ -239,6 +239,7 @@ fencedframe
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
+firefoxsidebar
 fiuv
 font.mathfont-family
 fontconfig
@@ -290,6 +291,8 @@ HTTPWG
 hvline
 iarc_rating_id
 icccolor
+idbversionchangeevent
+idledetector
 IDOM
 ifequal
 ifnotequal
@@ -349,6 +352,7 @@ KEY_dead_perispomeni
 KEY_dead_psili
 KEY_dead_semivoiced_sound
 keybase.txt
+keyboardlock
 KEYCODE_ENDCALL
 KEYCODE_HEADSETHOOK
 KEYCODE_SYSRQ
@@ -393,6 +397,8 @@ mathbold
 mathdbl
 mathit
 mathml
+mathmlref
+mathmlsidebar
 mathmono
 mathrm
 mathsanb
@@ -525,6 +531,7 @@ onpageswap
 onpaymentrequest
 onpointerrawupdate
 onrtctransform
+onsamplebufferfull
 onscreenschange
 onscrollend
 onscrollsnapchange
@@ -545,6 +552,7 @@ ornm
 orya
 oscpu
 osma
+otpcredential
 outbound-rtpp
 overlayinfo
 packetlossperc
@@ -566,6 +574,7 @@ permessage
 personaltoolbar
 phonebk
 PHPSESSID
+pictureinpicturewindow
 PINGOTHER
 pjpeg
 PlatformNaclArch
@@ -627,6 +636,8 @@ rustc
 rustup
 safariextz
 SAMEORIGIN
+samplebufferfull
+sampleinterval
 samplerate
 samr
 sansserif
@@ -651,6 +662,7 @@ seekforward
 seekto
 seeother
 selectchange
+selectedcontent
 selectend
 seltype
 sentenceboundary
@@ -667,10 +679,12 @@ sizemodechange
 skipad
 slnt
 slotchange
+smartcardconnection
 smpl
 smsto
 SPACEBAR
 speculationrules
+speechrecognition
 spreadsheetml
 sprop-parameter-sets
 squeezeend
@@ -686,6 +700,7 @@ superspeed
 SVGDOMElement
 SVGHKernElement
 SVGMPathElement
+svgref
 SVGVKernElement
 svgz
 swsh
@@ -800,6 +815,7 @@ webglcontextcreationerror
 webglcontextlost
 webglcontextrestored
 webgpu
+webhid
 webidentity
 webidl
 webkitmouseforcechanged
@@ -813,6 +829,7 @@ webshell
 webtransport
 WEBVTT
 webxr
+webxrdevice
 wentaway
 wght
 wimax

@@ -21,8 +21,8 @@ document.title = newTitle;
 
 `newTitle` is the new title of the document. The assignment
 affects the return value of `document.title`, the title displayed for the
-document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the
-document (e.g. the content of the `<title>` element in an HTML
+document (e.g., in the titlebar of the window or tab), and it also affects the DOM of the
+document (e.g., the content of the `<title>` element in an HTML
 document).
 
 ## Examples

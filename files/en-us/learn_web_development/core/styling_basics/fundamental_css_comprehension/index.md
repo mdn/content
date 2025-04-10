@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Fundamental CSS comprehension"
+short-title: "Challenge: Business card"
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 page-type: learn-module-assessment
 ---

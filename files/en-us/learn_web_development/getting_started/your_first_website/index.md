@@ -44,5 +44,5 @@ If this is not the case, we'd suggest that you run through the [Environment setu
 
 ## See also
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
+- [The Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

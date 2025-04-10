@@ -262,7 +262,7 @@ It is also potentially risky to prefetch a document whose server-rendered conten
 
 Prefetching is safe if all side effects of fetching the page result from JavaScript execution, since the JavaScript will not run until activation.
 
-One final tip is to audit the URLs listed as disallowed in your {{glossary("robots.txt")}} file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e. they exhibit the conditions described above).
+One final tip is to audit the URLs listed as disallowed in your {{glossary("robots.txt")}} file — normally these URLs point to pages that can only be accessed by authenticated users, and therefore should not be included in search engine results. Many of these will be fine, but it can be a good place to find URLs unsafe for prefetching (i.e., they exhibit the conditions described above).
 
 ### Unsafe prerendering
 
@@ -314,7 +314,7 @@ From the developer's perspective, a prerendering document can be thought of as h
 
 While API features that operate on session history (for example {{domxref("History")}} and {{domxref("Navigation")}}) can be called within prerendering documents, they only operate on the context's trivial session history. Consequently, prerendering documents do not take part in their referring page's joint session history. For example, they cannot navigate their referrer via {{domxref("History.back()")}}.
 
-This design ensures that users get the expected experience when using the back button — i.e. that they are taken back to the last thing they saw. Once a prerendering document is activated, only a single session history entry gets appended to the joint session history, ignoring any previous navigations that happened within the prerendering browsing context. Going back one step in the joint session history — for example, by pressing the back button — takes the user back to the referrer page.
+This design ensures that users get the expected experience when using the back button — i.e., that they are taken back to the last thing they saw. Once a prerendering document is activated, only a single session history entry gets appended to the joint session history, ignoring any previous navigations that happened within the prerendering browsing context. Going back one step in the joint session history — for example, by pressing the back button — takes the user back to the referrer page.
 
 ## Platform features deferred or restricted during prerender
 
@@ -386,7 +386,7 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
 
 ### Other restricted features
 
-- Download links, i.e. {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
+- Download links, i.e., {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
 - No cross-site navigations: Any prerendering document that navigates to a different site will be immediately discarded before a request to that other site is sent.
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
   - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
@@ -411,7 +411,7 @@ The Speculation Rules API does not define any interfaces of its own.
 - {{domxref("Document.prerendering")}} {{experimental_inline}}
   - : A boolean property that returns `true` if the document is currently in the process of prerendering.
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event {{experimental_inline}}
-  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
+  - : Fired on a prerendered document when it is activated (i.e., the user views the page).
 - {{domxref("PerformanceNavigationTiming.activationStart")}} {{experimental_inline}}
   - : A number representing the time between when a document starts prerendering and when it is activated.
 - {{domxref("PerformanceResourceTiming.deliveryType")}} `"navigational-prefetch"` value {{experimental_inline}}

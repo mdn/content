@@ -23,8 +23,8 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defi
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 dfn {
+  /* Add your styles here */
 }
 ```
 

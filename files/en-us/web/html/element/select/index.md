@@ -74,7 +74,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A Boolean attribute indicating that an option with a non-empty string value must be selected.
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
+  - : If the control is presented as a scrolling list box (e.g., when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
     > [!NOTE]
     > According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
@@ -94,25 +94,29 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
 - Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
 - Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
 
-The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
+The `<select>` element has historically been notoriously difficult to style productively with CSS, hence features being introduced to enable creating [fully customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 
-However, these properties don't produce a consistent result across browsers, and it is hard to do things like line different types of form element up with one another in a column. The `<select>` element's internal structure is complex, and hard to control. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
+### Legacy select styling
 
-You can also use the {{cssxref(":open")}} pseudo-class to style a `<select>` element when it is in the open state, that is, when the drop-down options list is displayed. This doesn't apply to multi-line `<select>` elements (those with the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute set) — they tend to render as a scrolling list box rather than a drop-down, so don't have an open state.
+In browsers that don't support the modern customization features (or legacy codebases where they can't be used), you are limited to manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc. You can also use the {{cssxref("appearance")}} property to remove the default system `appearance`.
 
-For more useful information on styling `<select>`, see:
+It is however, hard to get a consistent result across browsers with traditional `<select>` elements. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
+
+You can use the {{cssxref(":open")}} pseudo-class to style `<select>` elements in the open state, that is, when the drop-down options list is displayed. This doesn't apply to multi-line `<select>` elements (those with the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute set) — they tend to render as a scrolling list box rather than a drop-down, so don't have an open state.
+
+For more information on legacy `<select>` styling, see:
 
 - [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
@@ -237,19 +241,19 @@ You'll see that:
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_listed"
+        <a href="/en-US/docs/Web/HTML/Content_categories#listed"
           >listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_labelable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_resettable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#resettable"
           >resettable</a
         >, and
-        <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable"
+        <a href="/en-US/docs/Web/HTML/Content_categories#submittable"
           >submittable</a
         >
-        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_"
+        <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content"
           >form-associated </a
         >element
       </td>
@@ -258,7 +262,10 @@ You'll see that:
       <th scope="row">Permitted content</th>
       <td>
         Zero or more {{HTMLElement("option")}},
-        {{HTMLElement("optgroup")}} or {{HTMLElement("hr")}} elements.
+        {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements in traditional <code>&lt;select&gt;</code> elements. In <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select">customizable select elements</a>:
+        <ul>
+        <li>The select {{htmlelement("button")}} is optionally included as a child <code>&lt;button&gt;</code> element with a nested {{htmlelement("selectedcontent")}} element.</li>
+        <li>The drop-down picker is defined as any other content, which can include zero or more <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;hr&gt;</code>, {{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.
       </td>
     </tr>
     <tr>
@@ -312,3 +319,4 @@ You'll see that:
 - Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element
+- [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)

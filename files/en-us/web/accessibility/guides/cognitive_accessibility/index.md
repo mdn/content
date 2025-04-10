@@ -278,4 +278,4 @@ The above are good design practices. They will benefit everyone.
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)
+- [CDC information on disabilities](https://www.cdc.gov/disability-and-health/)

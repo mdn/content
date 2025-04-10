@@ -32,8 +32,8 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdo {
+  /* Add your styles here */
 }
 ```
 

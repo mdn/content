@@ -56,7 +56,7 @@ Firefox 20 was released on April, 2nd 2013. This article provides information ab
 ### MathML
 
 - To help MathML authors debugging "invalid-markup" errors in their documents, MathML parsing errors (such as having too many / too few child elements) and warnings about deprecated attributes or wrong attribute values are now reported to the error console.
-- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value ("`8pt`").
+- The `scriptminsize` attribute now accepts unitless values and percent values. They are interpreted as multiples of the default value (`8pt`).
 - Unitless values are now also allowed for the `mathsize` and `fontsize` attributes; they multiply the default value.
 
 ## Changes for add-on and Mozilla developers

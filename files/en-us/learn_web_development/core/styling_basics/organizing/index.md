@@ -46,7 +46,7 @@ Here are some general suggestions for ways to keep your stylesheets organized an
 
 If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS. The team style guide should always win over your own personal preferences. There often isn't a right or wrong way to do things, but consistency is important.
 
-For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS).
+For example, have a look at the [CSS guidelines for MDN code examples](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/CSS).
 
 ### Keep it consistent
 

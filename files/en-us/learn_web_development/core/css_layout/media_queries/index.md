@@ -1,5 +1,6 @@
 ---
 title: Media query fundamentals
+short-title: Media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 page-type: learn-module-chapter
 ---
@@ -52,7 +53,7 @@ The simplest media query syntax looks like this:
 
 It consists of:
 
-- A media type, which tells the browser what kind of media this code is for (e.g. print, or screen).
+- A media type, which tells the browser what kind of media this code is for (e.g., print, or screen).
 - A media expression, which is a rule, or test that must be passed for the contained CSS to be applied.
 - A set of CSS rules that will be applied if the test passes and the media type is correct.
 

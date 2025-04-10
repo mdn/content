@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendent elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
+**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendant elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
 
 This article explains how to use container scroll-state queries, walking through an example of each type. It assumes that you know the basics of container queries. If you are new to container queries, read [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) before continuing.
 
@@ -92,126 +92,136 @@ We have hidden most of the HTML for brevity.
     </header>
 
     <p>
-      Nunc vides, quid faciat. Quonam, inquit, modo? Nam quid possumus facere
-      melius? Duo Reges: constructio interrete. Cur iustitia laudatur? Videmus
-      igitur ut conquiescere ne infantes quidem possint.
+      Mauris non malesuada est, sed vestibulum nibh. Duis vestibulum iaculis
+      lectus, eu sagittis dolor dignissim iaculis. Nunc et orci sed sapien
+      eleifend placerat. Curabitur dapibus risus eget odio sollicitudin, sit
+      amet luctus justo pellentesque.
     </p>
 
     <p>
-      <strong>Nihil enim hoc differt.</strong> Neutrum vero, inquit ille.
-      <em>Huius ego nunc auctoritatem sequens idem faciam.</em> Prioris generis
-      est docilitas, memoria; Quae sequuntur igitur?
+      <strong>Morbi non pharetra quam.</strong> Fusce vestibulum sem diam, ac
+      consequat augue consectetur ut. Donec at augue viverra, tempus urna sit
+      amet, porta augue.
+      <em>Phasellus fringilla tincidunt sem ullamcorper varius.</em> Aenean
+      gravida feugiat sem nec ultricies.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Ne discipulum abducam, times. Quis enim redargueret?
-      <a href="#">Rationis enim perfectio est virtus;</a>
-      Erat enim Polemonis.
+      Sed pellentesque placerat mi sed maximus. Sed vitae dui vitae mi pulvinar
+      gravida sed et libero.
+      <a href="#">Duis nec venenatis dolor, sed tristique felis.</a>
+      Integer dapibus facilisis leo elementum vulputate. Curabitur a urna quis
+      nulla vulputate tincidunt quis ac enim.
     </p>
 
     <p>
-      Qua tu etiam inprudens utebare non numquam. Sed erat aequius Triarium
-      aliquid de dissensione nostra iudicare.
-      <strong
-        >Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;</strong
-      >
-      Omnes enim iucundum motum, quo sensus hilaretur.
+      Cras non elit vel leo dignissim convallis. Duis eros urna, varius sit amet
+      lorem vel, feugiat euismod est.
+      <strong>Aliquam ornare eu elit ut iaculis.</strong>
+      Suspendisse vulputate tempor leo, non rhoncus risus aliquam vel.
     </p>
   </section>
   <section>
     <header>
       <h2>This one, not so much</h2>
 
-      <p>Confecta res esset.</p>
+      <p>Suspendisse varius est ac turpis mollis cursus.</p>
     </header>
 
     <p>
-      <strong>Nam quid possumus facere melius?</strong> Tu quidem reddes; Omnia
-      peccata paria dicitis.
+      <strong
+        >Curabitur faucibus condimentum eros, ut auctor felis lacinia
+        sed.</strong
+      >
+      Praesent vitae scelerisque eros.
     </p>
 
     <p>
-      <em>Scrupulum, inquam, abeunti;</em> Quae cum dixisset, finem ille. Hoc
-      sic expositum dissimile est superiori.
+      <em>Ut vitae suscipit augue.</em> Cras et orci condimentum ante dignissim
+      iaculis. Sed consectetur quis est sed dignissim. Nulla egestas orci erat,
+      et commodo arcu feugiat ut.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Quid, de quo nulla dissensio est?
-      <a href="#">Nunc agendum est subtilius.</a>
-      Praeteritis, inquit, gaudeo. Iam in altera philosophiae parte.
+      Sed non tempor massa, at accumsan ante. Pellentesque habitant morbi
+      <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis
+      egestas.
     </p>
 
     <p>
-      Itaque ad tempus ad Pisonem omnes. Quantum Aristoxeni ingenium consumptum
-      videmus in musicis? Quis non odit sordidos, vanos, leves, futtiles? Atqui
-      reperies, inquit, in hoc quidem pertinacem; Duarum enim vitarum nobis
-      erunt instituta capienda.
+      Pellentesque placerat luctus tempor. Nunc congue dapibus eros, at
+      vulputate nulla. Sed rutrum eleifend magna vel porta. Integer cursus orci
+      faucibus turpis scelerisque, nec pharetra arcu molestie.
     </p>
   </section>
   <section>
     <header>
       <h2>Hopefully this section provides some clarity?</h2>
 
-      <p>Quid ad utilitatem tantae pecuniae?</p>
+      <p>Curabitur facilisis ornare lorem et eleifend.</p>
     </header>
 
     <p>
-      <strong>Memini me adesse P.</strong> Omnes enim iucundum motum, quo sensus
-      hilaretur. Optime, inquam.
+      <strong>Aenean mollis non neque sed finibus.</strong> Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Suspendisse sagittis viverra urna.
+      In hac habitasse platea dictumst. Vestibulum neque orci, mollis sagittis
+      augue et, pharetra vehicula diam.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      <a href="#">Sint modo partes vitae beatae.</a>
-      Sic enim censent, oportunitatis esse beate vivere.
-      <strong>Sed hoc sane concedamus.</strong> Aliter homines, aliter
-      philosophos loqui putas oportere? Non laboro, inquit, de nomine. Bork
+      <a href="#">Pellentesque sollicitudin</a> nunc quis nisl condimentum, ac
+      iaculis libero feugiat.
+      <strong>Nullam ultrices purus a nulla dignissim hendrerit.</strong> In
+      molestie consectetur est quis pulvinar.
     </p>
 
     <p>
-      Quo tandem modo? Ut pulsi recurrant? Quid ad utilitatem tantae pecuniae?
-      <strong>Sed in rebus apertissimis nimium longi sumus.</strong>
-      Rationis enim perfectio est virtus; Beatus autem esse in maximarum rerum
-      timore nemo potest.
+      Vivamus ac erat eu est lobortis commodo. Orci varius natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus. In nulla turpis,
+      <strong>mollis et est tempor</strong>, dignissim aliquam metus. Proin eu
+      arcu quis erat mollis pulvinar. Vivamus at facilisis neque.
     </p>
 
     <p>
-      Nulla erit controversia. Quae in controversiam veniunt, de iis, si placet,
-      disseramus. Sed potestne rerum maior esse dissensio? Tria genera bonorum;
-      Memini vero, inquam; Quam ob rem tandem, inquit, non satisfacit?
+      Integer bibendum laoreet erat, quis vulputate mauris bibendum nec. Class
+      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Nam ut est in arcu interdum hendrerit.
     </p>
   </section>
   <section>
     <header>
       <h2>A summary of sorts</h2>
 
-      <p>Quae est igitur causa istarum angustiarum?</p>
+      <p>Nunc facilisis augue quis ex porta aliquam.</p>
     </header>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      <strong>An eiusdem modi?</strong>
-      <strong>Et ille ridens: Video, inquit, quid agas;</strong> Conferam tecum,
-      quam cuique verso rem subicias; Putabam equidem satis, inquit, me dixisse.
-      Sed haec quidem liberius ab eo dicuntur et saepius.
+      <strong
+        >Fusce nisi enim, venenatis a est vel, varius placerat lacus.</strong
+      >
+      Nunc tempus rutrum nisl bibendum aliquet. Pellentesque vitae nunc sed nisl
+      tincidunt elementum a sit amet nisi. Morbi pretium at dolor in pulvinar.
+      Curabitur dapibus eleifend accumsan.
     </p>
 
     <p>
-      Non laboro, inquit, de nomine. <em>Falli igitur possumus.</em>
-      <a href="#">Praeteritis, inquit, gaudeo.</a>
-      Nescio quo modo praetervolavit oratio. Huius, Lyco, oratione locuples,
-      rebus ipsis ielunior. Quod ea non occurrentia fingunt, vincunt Aristonem;
+      Donec rhoncus, leo vitae mollis maximus, tellus lorem interdum arcu, eu
+      <em>tempor lectus libero in risus</em>. Ut sit amet magna vitae mauris
+      tempor bibendum. <a href="#">Integer id mauris ut ex mattis finibus.</a>
     </p>
 
     <p>
-      Cur deinde Metrodori liberos commendas? Quo modo? Ergo hoc quidem apparet,
-      nos ad agendum esse natos. Scrupulum, inquam, abeunti;
+      Curabitur dui felis, elementum et tellus id, blandit facilisis lorem.
+      Aliquam sed posuere ligula, at auctor ipsum. Morbi dignissim accumsan
+      tellus pretium iaculis.
     </p>
   </section>
 </article>
@@ -521,7 +531,7 @@ section {
 }
 ```
 
-Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `snapped: y`. This query applies the rules contained inside the block only if a `<section>` element is being snapped vertically to its container. If that is the case, we apply a new {{cssxref("background")}} and {{cssxref("color")}} to the `<section>` element's child `.wrapper` `<div>` to highlight it.
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targeting with this query, and the query itself — `snapped: y`. This query applies the rules contained inside the block only if a `<section>` element is being snapped vertically to its container. If that is the case, we apply a new {{cssxref("background")}} and {{cssxref("color")}} to the `<section>` element's child `.wrapper` `<div>` to highlight it.
 
 ```css live-sample___snapped
 @container snap-container scroll-state(snapped: y) {
@@ -596,32 +606,33 @@ We have hidden most of the HTML for brevity.
     </header>
 
     <p>
-      Nunc vides, quid faciat. Quonam, inquit, modo? Nam quid possumus facere
-      melius? Duo Reges: constructio interrete. Cur iustitia laudatur? Videmus
-      igitur ut conquiescere ne infantes quidem possint.
+      Id deserunt exercitation in incididunt in dolor ipsum enim occaecat quis
+      officia et. In dolore Lorem anim enim. Dolor nulla deserunt laboris irure
+      incididunt labore tempor amet consectetur. Commodo eu tempor qui laboris
+      duis ipsum adipisicing sunt. Do anim laboris commodo aliquip consequat ut
+      eiusmod mollit sint nostrud sunt exercitation do.
     </p>
 
     <p>
-      <strong>Nihil enim hoc differt.</strong> Neutrum vero, inquit ille.
-      <em>Huius ego nunc auctoritatem sequens idem faciam.</em> Prioris generis
-      est docilitas, memoria; Quae sequuntur igitur?
+      <strong>Est proident voluptate dolore.</strong> Aute irure ea culpa mollit
+      <em>anim aute proident consectetur.</em> Duis deserunt consequat elit non.
+      Cupidatat et amet anim labore est. Incididunt aute incididunt ex amet
+      sint.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Ne discipulum abducam, times. Quis enim redargueret?
-      <a href="#">Rationis enim perfectio est virtus;</a>
-      Erat enim Polemonis.
+      Ullamco duis qui amet sunt eu nulla deserunt dolore officia irure nulla.
+      <a href="#">Qui enim dolore est virtus;</a>
+      Erat enim consectetur.
     </p>
 
     <p>
-      Qua tu etiam inprudens utebare non numquam. Sed erat aequius Triarium
-      aliquid de dissensione nostra iudicare.
-      <strong
-        >Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;</strong
-      >
-      Omnes enim iucundum motum, quo sensus hilaretur.
+      Dolor aliquip officia id esse Lorem ullamco ea veniam.
+      <strong>Voluptate cillum commodo anim veniam;</strong>
+      Ad nulla amet anim eu incididunt reprehenderit proident in aliqua sit
+      commodo magna.
     </p>
   </section>
   <section>
@@ -632,90 +643,105 @@ We have hidden most of the HTML for brevity.
     </header>
 
     <p>
-      <strong>Nam quid possumus facere melius?</strong> Tu quidem reddes; Omnia
-      peccata paria dicitis.
+      <strong>Nam quid possums facere delius?</strong> Tu quidem reddes; Omnis
+      peccant para dicts.
     </p>
 
     <p>
-      <em>Scrupulum, inquam, abeunti;</em> Quae cum dixisset, finem ille. Hoc
-      sic expositum dissimile est superiori.
+      <em>Pariatur ex cupidatat exercitation</em> reprehenderit quis culpa est
+      proident pariatur ut.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      Quid, de quo nulla dissensio est?
-      <a href="#">Nunc agendum est subtilius.</a>
-      Praeteritis, inquit, gaudeo. Iam in altera philosophiae parte.
+      Non nulla pariatur cillum pariatur.
+      <a href="#">Ipsum magna proident fugiat qui duis et.</a>
+      Reprehenderit sit ipsum ut adipisicing aliqua eiusmod nulla consectetur
+      deserunt dolor dolor.
     </p>
 
     <p>
-      Itaque ad tempus ad Pisonem omnes. Quantum Aristoxeni ingenium consumptum
-      videmus in musicis? Quis non odit sordidos, vanos, leves, futtiles? Atqui
-      reperies, inquit, in hoc quidem pertinacem; Duarum enim vitarum nobis
-      erunt instituta capienda.
+      Cupidatat deserunt adipisicing adipisicing occaecat voluptate duis laboris
+      excepteur labore et in aliquip aute. Quis aliquip reprehenderit dolor
+      nostrud cupidatat nostrud nisi occaecat elit. Magna dolor ullamco eiusmod
+      deserunt elit cillum qui amet. Dolor ad consequat anim commodo eu sunt do
+      tempor eu velit est.
     </p>
   </section>
   <section>
     <header>
       <h2>Hopefully this section provides some clarity?</h2>
 
-      <p>Quid ad utilitatem tantae pecuniae?</p>
+      <p>Dolor consectetur esse aute eiusmod ex reprehenderit cupidatat.</p>
     </header>
 
     <p>
-      <strong>Memini me adesse P.</strong> Omnes enim iucundum motum, quo sensus
-      hilaretur. Optime, inquam.
+      <strong>Ipsum quis sint incididunt aliquip</strong>. Duis tempor sunt enim
+      Lorem ut officia cillum magna.
     </p>
 
     <img src="#" alt="Placeholder" />
 
     <p>
       <a href="#">Sint modo partes vitae beatae.</a>
-      Sic enim censent, oportunitatis esse beate vivere.
-      <strong>Sed hoc sane concedamus.</strong> Aliter homines, aliter
-      philosophos loqui putas oportere? Non laboro, inquit, de nomine. Bork
+      Ipsum esse nostrud incididunt ipsum ipsum esse aliquip Lorem enim.
+      <strong>Sed hoc sane concedays.</strong> Voluptate qui consequat dolor
+      dolor dolore ex. Enim dolor enim sit proident. Ad laborum incididunt
+      dolore aliquip exercitation exercitation. Sunt cupidatat esse enim duis
+      proident.
     </p>
 
     <p>
-      Quo tandem modo? Ut pulsi recurrant? Quid ad utilitatem tantae pecuniae?
-      <strong>Sed in rebus apertissimis nimium longi sumus.</strong>
-      Rationis enim perfectio est virtus; Beatus autem esse in maximarum rerum
-      timore nemo potest.
+      Labore dolor cupidatat ut velit in minim cupidatat enim nisi proident
+      eiusmod.
+      <strong
+        >Non nostrud consectetur est occaecat ut esse esse tempor eiusmod
+        non.</strong
+      >
+      Cupidatat aliqua dolore est sit ad exercitation nostrud nostrud eu. Qui
+      consequat et aliquip ea labore.
     </p>
 
     <p>
-      Nulla erit controversia. Quae in controversiam veniunt, de iis, si placet,
-      disseramus. Sed potestne rerum maior esse dissensio? Tria genera bonorum;
-      Memini vero, inquam; Quam ob rem tandem, inquit, non satisfacit?
+      Pariatur quis quis nostrud exercitation pariatur magna veniam Lorem
+      commodo cupidatat irure reprehenderit. Nostrud pariatur est pariatur elit
+      sit ea voluptate minim mollit. Aliqua pariatur cupidatat et cillum. Velit
+      exercitation adipisicing laboris ullamco. Incididunt id eiusmod id cillum
+      qui anim. Aliquip minim nostrud excepteur dolore deserunt pariatur eu
+      eiusmod reprehenderit ullamco magna.
     </p>
   </section>
   <section>
     <header>
       <h2>A summary of sorts</h2>
 
-      <p>Quae est igitur causa istarum angustiarum?</p>
+      <p>Irure adipisicing occaecat dolore in ex voluptate.</p>
     </header>
 
     <img src="#" alt="Placeholder" />
 
     <p>
-      <strong>An eiusdem modi?</strong>
-      <strong>Et ille ridens: Video, inquit, quid agas;</strong> Conferam tecum,
-      quam cuique verso rem subicias; Putabam equidem satis, inquit, me dixisse.
-      Sed haec quidem liberius ab eo dicuntur et saepius.
+      <strong>An quidem modi?</strong>
+      <strong
+        >Excepteur non Lorem ex aliqua est reprehenderit incididunt sunt in
+        ullamco in et;</strong
+      >
+      Aliqua veniam nulla magna anim labore amet proident nisi mollit non.
+      Consequat incididunt exercitation nisi consequat culpa officia aliqua
+      veniam. Anim aliqua consectetur pariatur mollit proident incididunt id.
     </p>
 
     <p>
-      Non laboro, inquit, de nomine. <em>Falli igitur possumus.</em>
-      <a href="#">Praeteritis, inquit, gaudeo.</a>
-      Nescio quo modo praetervolavit oratio. Huius, Lyco, oratione locuples,
-      rebus ipsis ielunior. Quod ea non occurrentia fingunt, vincunt Aristonem;
+      Non labore, inquit, de nomin. <em>Fall igniter possimus.</em>
+      <a href="#">Preterits, inquit, gaud.</a>
+      Est commodo adipisicing qui duis excepteur sit ea irure amet voluptate
+      deserunt anim deserunt.
     </p>
 
     <p>
-      Cur deinde Metrodori liberos commendas? Quo modo? Ergo hoc quidem apparet,
-      nos ad agendum esse natos. Scrupulum, inquam, abeunti;
+      Ad mollit laboris reprehenderit magna tempor. Consequat pariatur esse
+      ipsum duis laboris.
     </p>
   </section>
 </article>
@@ -789,7 +815,7 @@ header p {
 }
 ```
 
-Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scroll container. When that is the case, a different `background` and a {{cssxref("box-shadow")}} are applied to the contained `<h2>` and `<p>`.
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targeting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scroll container. When that is the case, a different `background` and a {{cssxref("box-shadow")}} are applied to the contained `<h2>` and `<p>`.
 
 ```css live-sample___stuck
 @container sticky-heading scroll-state(stuck: top) {

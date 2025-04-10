@@ -55,4 +55,4 @@ Get comprehensive details about the methods, properties, types, and events for a
 
 ### Manifest keys
 
-Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings. There's also detailed information on the [compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) of each key with the major browsers.
+Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings.

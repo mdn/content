@@ -468,7 +468,7 @@
         "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["HTMLElement.editContext"],
       "events": []
     },
     "Encoding API": {
@@ -529,6 +529,14 @@
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
+      "properties": [],
+      "events": []
+    },
+    "fetchLater API": {
+      "overview": ["fetchLater API"],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
+      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
+      "methods": ["Window.fetchLater()"],
       "properties": [],
       "events": []
     },
@@ -968,6 +976,13 @@
         "HTMLButtonElement.command"
       ],
       "events": ["HTMLElement: command"]
+    },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
     },
     "Keyboard API": {
       "overview": ["Keyboard API"],
@@ -1796,7 +1811,7 @@
     },
     "View Transition API": {
       "overview": ["View Transition API"],
-      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
+      "guides": ["/docs/Web/API/View_Transition_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],

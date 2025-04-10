@@ -10,7 +10,7 @@ browser-compat: api.SVGFESpotLightElement.z
 
 The **`z`** read-only property of the {{domxref("SVGFESpotLightElement")}} interface describes the z-axis value of the position of an SVG filter primitive as a {{domxref("SVGAnimatedNumber")}}. A positive Z-axis comes out towards the person viewing the content.
 
-It reflects the {{SVGAttr("z")}} attribute of the {{SVGElement("feSpotLight")}} element, which can be used to define the light source in a spotlight effect. The attribute is a [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The default value is `0`.
+It reflects the {{SVGAttr("z")}} attribute of the {{SVGElement("feSpotLight")}} element, which can be used to define the light source in a spotlight effect. The attribute is a [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The default value is `0`.
 
 ## Value
 

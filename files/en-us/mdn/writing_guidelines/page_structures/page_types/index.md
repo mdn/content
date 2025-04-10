@@ -24,7 +24,7 @@ When creating a new page you can ensure that you've used the right page structur
 You can find the exact source code of each template (if you want to copy it) by following the "Source on **GitHub**" link at the bottom of each one.
 These page templates don't make much sense as published pages, but if you view their source code you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.
 
-At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article).
+At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g., information that doesn't actually appear in the body of the article).
 You need to delete this section after you've followed the instructions in it, before the page can be considered finished.
 
 ## Old-style page layouts
@@ -142,7 +142,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 #### Example
 
-- [\<g> element](/en-US/docs/Web/SVG/Element/g)
+- [\<g> element](/en-US/docs/Web/SVG/Reference/Element/g)
 
 #### Templates
 
@@ -260,4 +260,4 @@ There are only a few types of page inside Learn web development:
 ## See also
 
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Creating code examples in markdown](/en-US/docs/MDN/Writing_guidelines/Code_style_guide)

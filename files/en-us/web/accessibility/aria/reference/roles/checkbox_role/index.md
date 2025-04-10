@@ -54,7 +54,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 <div role="checkbox">Name of my checkbox</div>
 ```
 
-### Associated WAI-ARIA Roles, States, and Properties
+### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 

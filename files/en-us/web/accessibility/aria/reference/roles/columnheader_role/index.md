@@ -55,7 +55,7 @@ JavaScript is only required if the `aria-sort` attribute is used.
 </table>
 ```
 
-## Best Practices
+## Best practices
 
 Column headers should contain a title or header information for the column.
 

@@ -1,5 +1,6 @@
 ---
-title: What's in the head? Webpage metadata
+title: What's in the head? Web page metadata
+short-title: Web page metadata
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 page-type: tutorial-chapter
 ---

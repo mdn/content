@@ -1,5 +1,6 @@
 ---
 title: CSS values and units
+short-title: Values and units
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
 page-type: learn-module-chapter
 ---

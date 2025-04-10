@@ -23,12 +23,12 @@ This article provides information about the changes in Firefox 119 that affect d
 ### JavaScript
 
 - The {{jsxref("Object.groupBy()")}} and {{jsxref("Map.groupBy()")}} static methods for grouping the elements of an iterable are now supported (See [Firefox bug 1792650](https://bugzil.la/1792650) for more details.)
-- The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods respectively can be used to check if a string contains well-formed Unicode text (i.e. contains no [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)) and sanitize an ill-formed string to well-formed Unicode text.
+- The {{jsxref("String.prototype.isWellFormed()")}} and {{jsxref("String.prototype.toWellFormed()")}} methods respectively can be used to check if a string contains well-formed Unicode text (i.e., contains no [lone surrogates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)) and sanitize an ill-formed string to well-formed Unicode text.
   (See [Firefox bug 1850755](https://bugzil.la/1850755) for more details).
 
 ### SVG
 
-- The [SVG attributes](/en-US/docs/Web/SVG/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g. `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://www.w3.org/TR/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 ### HTTP
 

@@ -242,7 +242,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     - `both`
       - : The container is both a horizontal and vertical scroll snap target for its ancestor scroll container and is snapping to its ancestor in both directions. The container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
 
-    To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor having a {{cssxref("scroll-snap-type")}} value other than `none`. A `snapped: none` query will will match even when there is no scroll container ancestor.
+    To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor having a {{cssxref("scroll-snap-type")}} value other than `none`. A `snapped: none` query will match even when there is no scroll container ancestor.
 
     Evaluations occur when [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) events fire on the scroll snap container. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
 
@@ -437,7 +437,7 @@ A style feature without a value evaluates to true if the computed value is diffe
 
 If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
 
-The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
+The following container query checks if the [computed value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#computed_value) of the container element's `--accent-color` is `blue`:
 
 ```css
 @container style(--accent-color: blue) {

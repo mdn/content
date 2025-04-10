@@ -127,7 +127,7 @@ Host: foo.com
 > You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 > [!NOTE]
-> The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
+> The data will not be appended if the `action` URL scheme cannot handle queries, e.g., `file:`.
 
 #### The POST method
 
@@ -168,7 +168,7 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 > You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
 > [!NOTE]
-> The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
+> The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g., `data:`.
 
 ### Viewing HTTP requests
 
@@ -338,8 +338,3 @@ If you want to learn more about securing a web application, you can dig into the
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
 {{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

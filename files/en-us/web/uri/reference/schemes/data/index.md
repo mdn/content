@@ -2,7 +2,7 @@
 title: "data: URLs"
 short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
-page-type: reference
+page-type: uri-scheme
 browser-compat: http.data-url
 sidebar: urlsidebar
 ---

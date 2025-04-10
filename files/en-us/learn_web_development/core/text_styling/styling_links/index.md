@@ -38,7 +38,7 @@ When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/
 
 ## Link states
 
-The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes_and_pseudo-elements):
+The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements):
 
 - **Link**: A link that has a destination (i.e., not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.
 - **Visited**: A link that has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.
@@ -361,7 +361,7 @@ So what's going on here? We'll skip over most of the CSS, as it's just the same 
 
 We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes the icon size also adjusts accordingly.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 

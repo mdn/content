@@ -38,7 +38,7 @@ A CDN is a geographically distributed network of servers that work together to s
 
 Further reading:
 
-- [Understanding CDNs](https://www.imperva.com/Learn_web_development/Extensions/Performance/what-is-cdn-how-it-works/)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### Reduce domain lookups
 
@@ -50,7 +50,7 @@ This may not always be practical; however, you should always take care to use on
 
 Make sure that any content that can be cached, is cached, and with appropriate expiration times.
 
-In particular, pay attention to the `Last-Modified` header. It allows for efficient page caching; by means of this header, information is conveyed to the user agent about the file it wants to load, such as when it was last modified. Most web servers automatically append the `Last-Modified` header to static pages (e.g. `.html`, `.css`), based on the last-modified date stored in the file system. With dynamic pages (e.g. `.php`, `.aspx`), this, of course, can't be done, and the header is not sent.
+In particular, pay attention to the `Last-Modified` header. It allows for efficient page caching; by means of this header, information is conveyed to the user agent about the file it wants to load, such as when it was last modified. Most web servers automatically append the `Last-Modified` header to static pages (e.g., `.html`, `.css`), based on the last-modified date stored in the file system. With dynamic pages (e.g., `.php`, `.aspx`), this, of course, can't be done, and the header is not sent.
 
 So, in particular, for pages which are generated dynamically, a little research on this subject is beneficial. It can be somewhat involved, but it will save a lot in page requests on pages which would normally not be cacheable.
 

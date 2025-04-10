@@ -41,7 +41,7 @@ This renders like so:
 
 {{EmbedLiveSample("Multi-line_text_fields", 120, 160)}}
 
-The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e. pressing return) that will be included when the data is submitted.
+The main difference between a `<textarea>` and a regular single-line text field is that users are allowed to include hard line breaks (i.e., pressing return) that will be included when the data is submitted.
 
 `<textarea>` also takes a closing tag; any default text you want it to contain should be put between the opening and closing tags. In contrast, the {{HTMLElement("input")}} is a {{glossary("void element")}} with no closing tag — any default value is put inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
@@ -120,7 +120,7 @@ The {{HTMLElement("option")}} elements can be nested inside {{HTMLElement("optgr
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e. by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
+On the {{HTMLElement("optgroup")}} element, the value of the [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute is displayed before the values of the nested options. The browser usually sets them visually apart from the options (i.e., by being bolded and at a different nesting level) so they are less likely to be confused for actual options.
 
 #### Using the value attribute
 
@@ -169,7 +169,7 @@ By default, a select box lets a user select only one value. By adding the [`mult
 
 You can provide suggested, automatically-completed values for form widgets using the {{HTMLElement("datalist")}} element with child {{HTMLElement("option")}} elements to specify the values to display. The `<datalist>` needs to be given an `id`.
 
-The data list is then bound to an {{htmlelement("input")}} element (e.g. a `text` or `email` input type) using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, the value of which is the `id` of the data list to bind.
+The data list is then bound to an {{htmlelement("input")}} element (e.g., a `text` or `email` input type) using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute, the value of which is the `id` of the data list to bind.
 
 Once a data list is affiliated with a form widget, its options are used to auto-complete text entered by the user; typically, this is presented to the user as a drop-down box listing possible matches for what they've typed into the input.
 
@@ -272,8 +272,3 @@ As you'll have seen in the last few articles, there are many types of form contr
 Now that you have a grasp of the HTML behind the different available form controls, we'll take a look at [Styling them](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
-
-### Advanced Topics
-
-- [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

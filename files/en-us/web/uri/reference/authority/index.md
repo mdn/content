@@ -2,7 +2,7 @@
 title: URI authority
 short-title: Authority
 slug: Web/URI/Reference/Authority
-page-type: reference
+page-type: uri-component
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
 sidebar: urlsidebar
 ---

@@ -20,7 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableSectionElement.rows")}} {{ReadOnlyInline}}
   - : Returns a live {{domxref("HTMLCollection")}} containing the rows in the section. The `HTMLCollection` is live and is automatically updated when rows are added or removed.
 - {{domxref("HTMLTableSectionElement.ch")}} {{deprecated_inline}}
-  - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the [`char`](/en-US/docs/Web/HTML/Element/tr#char) and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
+  - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the [`char`](/en-US/docs/Web/HTML/Element/tr#char) and default to the decimal points associated with the language, e.g., `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableSectionElement.chOff")}} {{deprecated_inline}}
   - : A string containing an integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableRowElement.ch`. This property was optional and was not very well supported.
 - {{domxref("HTMLTableSectionElement.vAlign")}} {{deprecated_inline}}

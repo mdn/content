@@ -68,7 +68,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
   - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
@@ -92,7 +92,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
-  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e. a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
+  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e., a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
 - [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
@@ -112,7 +112,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
     - a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
     - `0` means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
-    - a _positive value_ means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the [**tabindex**](#tabindex). If several elements share the same tabindex, their relative order follows their relative positions in the document.
+    - a _positive value_ means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex). If several elements share the same tabindex, their relative order follows their relative positions in the document.
 
 - [`title`](/en-US/docs/Web/HTML/Global_attributes/title)
   - : Contains a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip.

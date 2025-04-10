@@ -106,7 +106,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
       <td>—</td>
       <td>
         <p>Chrome (113+), Firefox (136+)</p>
-        <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
+        <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
       </td>
     </tr>
   </tbody>
@@ -183,7 +183,7 @@ AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#
 
 WebRTC supports two main technologies for efficiently sending video for consumption by recipients that are operating with different capabilities and network conditions.
 
-AV1 uses the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) to provide frame dependency information needed to support [multi-party conferencing use cases](/en-US/docs/Web/API/WebRTC_API/Protocols#multi-party_video_conferencing).
+AV1 uses the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) to provide frame dependency information needed to support [multi-party conferencing use cases](/en-US/docs/Web/API/WebRTC_API/Protocols#multi-party_video_conferencing).
 
 ## Supported audio codecs
 

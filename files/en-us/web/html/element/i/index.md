@@ -26,8 +26,8 @@ The **`<i>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text th
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 i {
+  /* Add your styles here */
 }
 ```
 

@@ -111,7 +111,7 @@ _No change._
 
 - RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ([Firefox bug 1093595](https://bugzil.la/1093595)).
 - Also, RC4 is no longer offered in the initial handshake of TLS ([Firefox bug 1088915](https://bugzil.la/1088915)).
-- The [`form-action`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
+- The [`form-action`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/form-action) directive of CSP 1.1 is now supported ([Firefox bug 529697](https://bugzil.la/529697)).
 - In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Reference/Headers/DNT) selection widget is again an on/off switch ([Firefox bug 1071747](https://bugzil.la/1071747)).
 
 ## Changes for add-on and Mozilla developers

@@ -37,36 +37,10 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 ### Interfaces
 
 - {{domxref("MediaQueryList")}}
-  - {{domxref("MediaQueryList.matches", "matches")}}
-  - {{domxref("MediaQueryList.media", "media")}}
-  - {{domxref("MediaQueryList.addListener", "addListener()")}}
-  - {{domxref("MediaQueryList.removeListener", "removeListener()")}}
-  - {{domxref("MediaQueryList.onchange", "onchange")}}
 - {{domxref("MediaQueryListEvent")}}
-  - {{domxref("MediaQueryListEvent.media", "media")}}
-  - {{domxref("MediaQueryListEvent.matches", "matches")}}
 - {{domxref("Screen")}}
-  - {{domxref("Screen.availHeight", "availHeight")}}
-  - {{domxref("Screen.availWidth", "availWidth")}}
-  - {{domxref("Screen.colorDepth", "colorDepth")}}
-  - {{domxref("Screen.height", "height")}}
-  - {{domxref("Screen.pixelDepth", "pixelDepth")}}
-  - {{domxref("Screen.width", "width")}}
 - {{domxref("CaretPosition")}}
-  - {{domxref("CaretPosition.offsetNode", "offsetNode")}}
-  - {{domxref("CaretPosition.offset", "offset")}}
-  - {{domxref("CaretPosition.getClientRect", "getClientRect()")}}
 - {{domxref("VisualViewport")}}
-  - {{domxref("VisualViewport.height", "height")}}
-  - {{domxref("VisualViewport.offsetLeft", "offsetLeft")}}
-  - {{domxref("VisualViewport.offsetTop", "offsetTop")}}
-  - {{domxref("VisualViewport.onresize", "onresize")}}
-  - {{domxref("VisualViewport.onscroll", "onscroll")}}
-  - {{domxref("VisualViewport.onscrollend", "onscrollend")}}
-  - {{domxref("VisualViewport.pageLeft", "pageLeft")}}
-  - {{domxref("VisualViewport.pageTop", "pageTop")}}
-  - {{domxref("VisualViewport.scale", "scale")}}
-  - {{domxref("VisualViewport.width", "width")}}
 
 ### Inteface extensions
 
@@ -140,7 +114,7 @@ This module adds properties and methods to interfaces defined in other specifica
   - {{domxref("MouseEvent.x", "x")}}
   - {{domxref("MouseEvent.y", "y")}}
 
-This module define geometric utility methods which will apply to the {{domxref("Text")}}, {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, and {{domxref("Document")}} interfaces. These `GeometryUtils` features are not yet implemented in any browsers.
+This module defines geometric utility methods that apply to the {{domxref("Text")}}, {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, and {{domxref("Document")}} interfaces. These `GeometryUtils` features are not yet implemented in any browser.
 
 ## Guides
 

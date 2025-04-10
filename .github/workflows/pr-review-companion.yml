@@ -42,14 +42,16 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Check for artifacts
+        id: check
         if: hashFiles('build/') != ''
         run: |
-          echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
-          PR_NUMBER=`cat build/NR`
-          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_ENV"
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_OUTPUT"
+          PR_NUMBER=`cat build/NR | tr -dc '0-9'`
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Authenticate with GCP
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         uses: google-github-actions/auth@v2
         with:
           token_format: access_token
@@ -57,15 +59,15 @@ jobs:
           workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
 
       - name: Setup gcloud
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Upload to GCS
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         uses: google-github-actions/upload-cloud-storage@v2
         with:
           path: "build"
-          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ steps.check.outputs.PREFIX }}"
           resumable: false
           concurrency: 500
           parent: false
@@ -73,18 +75,18 @@ jobs:
 
       - name: Checkout (mdn/content)
         uses: actions/checkout@v4
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
           path: content
 
       - name: Setup (mdn/content)
         uses: actions/setup-node@v4
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         with:
           node-version-file: "content/.nvmrc"
 
       - name: Install (mdn/content)
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -92,21 +94,21 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Analyze PR build
-        if: env.HAS_ARTIFACT
+        if: steps.check.outputs.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
+          PREFIX: ${{ steps.check.outputs.PREFIX }}
+          PR_NUMBER: ${{ steps.check.outputs.PR_NUMBER }}
         working-directory: content
         run: |
-          PR_NUMBER=`cat "$BUILD_OUT_ROOT/NR"`
-
           echo "Pull request:"
           echo "https://github.com/mdn/content/pull/$PR_NUMBER"
 
           node scripts/analyze-pr-build.js \
-            --prefix="pr$PR_NUMBER" \
+            --prefix="$PREFIX" \
             --analyze-flaws \
             --analyze-dangerous-content \
-            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --github-token="${{ secrets.GITHUB_TOKEN }}" \
             --repo=$GITHUB_REPOSITORY \
             --pr-number="$PR_NUMBER" \
             --diff-file=$BUILD_OUT_ROOT/DIFF \

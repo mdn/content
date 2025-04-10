@@ -150,13 +150,13 @@ The function takes a list of comma-separated coordinate pairs, each consisting o
 
 ### Syntax for paths
 
-The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
+The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Reference/Attribute/d).
 
 ```plain
 path( <'fill-rule'>? , <string> )
 ```
 
-The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
+The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Reference/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ### Syntax for shapes
 
@@ -166,7 +166,7 @@ The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an
 shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
-The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
+The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.
 
 ## Description
 
@@ -197,7 +197,7 @@ Each value in the lists of the two `<basic-shape>` functions is interpolated bas
 
 - **Both shapes are of type `polygon()`**: Interpolation is applied between each corresponding value if they use the same `<fill-rule>` and have the same number of comma-separated coordinate pairs.
 
-- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Attribute/d#path_commands).
+- **Both shapes are of type `path()`**: Interpolation is applied to each parameter as a {{cssxref("&lt;number&gt;")}} if the path strings in both the shapes match the number, type, and sequence of [path data commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands).
 
 - **Both shapes are of type `shape()`**: Interpolation is applied between each corresponding value if they have the identical command keyword and use the same `<by-to>` keyword. If `shape()` is used in the {{cssxref("clip-path")}} property, the two shapes interpolate if they also have the same `<fill-rule>`.
 

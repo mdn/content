@@ -28,7 +28,7 @@ copyBufferToTexture(source, destination, copySize)
     - `offset` {{optional_inline}}
       - : The offset, in bytes, from the beginning of `data` to the start of the image data to be copied. If omitted, `offset` defaults to 0.
     - `bytesPerRow` {{optional_inline}}
-      - : A number representing the stride, in bytes, between the start of each block row (i.e. a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e. the copy height or depth is more than one block).
+      - : A number representing the stride, in bytes, between the start of each block row (i.e., a row of complete texel blocks) and the subsequent block row. This is required if there are multiple block rows (i.e., the copy height or depth is more than one block).
     - `rowsPerImage` {{optional_inline}}
       - : The number of block rows per single image inside the data. `bytesPerRow` &times; `rowsPerImage` will give you the stride, in bytes, between the start of each complete image. This is required if there are multiple images to copy.
 - `destination`
@@ -54,21 +54,7 @@ copyBufferToTexture(source, destination, copySize)
 
       - : An object or array specifying the origin of the copy — the minimum corner of the texture region to write the data to. Together with `size`, this defines the full extent of the region to copy to. The `x`, `y`, and `z` values default to 0 if any of all of `origin` is omitted.
 
-        What follows is a sample array:
-
-        ```js
-        [0, 0, 0];
-        ```
-
-        The object equivalent would look like this:
-
-        ```js
-        {
-          x: 0,
-          y: 0,
-          z: 0
-        }
-        ```
+        For example, you can pass an array like `[0, 0, 0]`, or its equivalent object `{ x: 0, y: 0, z: 0 }`.
 
     - `texture`
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
@@ -77,21 +63,7 @@ copyBufferToTexture(source, destination, copySize)
 
   - : An object or array specifying the width, height, and depth/array layer count of the copied data. The width value must always be specified, while the height and depth/array layer count values are optional and will default to 1 if omitted.
 
-    What follows is a sample `copySize` array:
-
-    ```js
-    [16, 16, 2];
-    ```
-
-    The object equivalent would look like this:
-
-    ```js
-    {
-      width: 16,
-      height: 16,
-      depthOrArrayLayers: 2
-    }
-    ```
+    For example, you can pass an array `[16, 16, 2]`, or its equivalent object `{ width: 16, height: 16, depthOrArrayLayers: 2 }`.
 
 ### Return value
 

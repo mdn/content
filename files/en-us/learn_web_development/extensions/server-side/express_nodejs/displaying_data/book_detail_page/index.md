@@ -53,11 +53,11 @@ Create **/views/book_detail.pug** and add the text below.
 extends layout
 
 block content
-  h1 Title: #{book.title}
+  h1 Title: !{book.title}
 
   p #[strong Author: ]
     a(href=book.author.url) #{book.author.name}
-  p #[strong Summary:] #{book.summary}
+  p #[strong Summary:] !{book.summary}
   p #[strong ISBN:] #{book.isbn}
   p #[strong Genre: ]
     each val, index in book.genre
@@ -86,7 +86,11 @@ block content
       p There are no copies of this book in the library.
 ```
 
-Almost everything in this template has been demonstrated in previous sections.
+Note the preceding `!` in `!{book.title}` and `!{book.summary}`, which ensures that values are not escaped for display.
+That's done because we've already sanitized the data we're displaying programmatically, and sanitizing again would display our "sanitized markup" rather than the safe version of the original text.
+We've chosen not to do the same thing for Author, Genre, and so on (though we could), because we're not expecting them to include any "dangerous" characters that require sanitization.
+
+Almost everything else in this template has been demonstrated in previous sections.
 
 > [!NOTE]
 > The list of genres associated with the book is implemented in the template as below. This adds a comma and a non breaking space after every genre associated with the book except for the last one.

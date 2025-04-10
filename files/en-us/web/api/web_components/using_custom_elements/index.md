@@ -14,12 +14,12 @@ This article introduces custom elements, and walks through some examples.
 
 There are two types of custom element:
 
+- **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
+
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
   > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Global_attributes/is) for more information.
-
-- **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
 
 ## Implementing a custom element
 
@@ -528,16 +528,20 @@ So far we've seen only one lifecycle callback in action: `connectedCallback()`. 
 In the class constructor, we attach a shadow DOM to the element, then attach empty {{htmlelement("div")}} and {{htmlelement("style")}} elements to the shadow root:
 
 ```js
-constructor() {
-  // Always call super first in constructor
-  super();
+class Square extends HTMLElement {
+  // …
+  constructor() {
+    // Always call super first in constructor
+    super();
 
-  const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "open" });
 
-  const div = document.createElement("div");
-  const style = document.createElement("style");
-  shadow.appendChild(style);
-  shadow.appendChild(div);
+    const div = document.createElement("div");
+    const style = document.createElement("style");
+    shadow.appendChild(style);
+    shadow.appendChild(div);
+  }
+  // …
 }
 ```
 
@@ -559,37 +563,53 @@ function updateStyle(elem) {
 The actual updates are all handled by the lifecycle callbacks. The `connectedCallback()` runs each time the element is added to the DOM — here we run the `updateStyle()` function to make sure the square is styled as defined in its attributes:
 
 ```js
-connectedCallback() {
-  console.log("Custom square element added to page.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  connectedCallback() {
+    console.log("Custom square element added to page.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 The `disconnectedCallback()` and `adoptedCallback()` callbacks log messages to the console to inform us when the element is either removed from the DOM, or moved to a different page:
 
 ```js
-disconnectedCallback() {
-  console.log("Custom square element removed from page.");
-}
+class Square extends HTMLElement {
+  // …
+  disconnectedCallback() {
+    console.log("Custom square element removed from page.");
+  }
 
-adoptedCallback() {
-  console.log("Custom square element moved to new page.");
+  adoptedCallback() {
+    console.log("Custom square element moved to new page.");
+  }
+  // …
 }
 ```
 
 The `attributeChangedCallback()` callback is run whenever one of the element's attributes is changed in some way. As you can see from its parameters, it is possible to act on attributes individually, looking at their name, and old and new attribute values. In this case however, we are just running the `updateStyle()` function again to make sure that the square's style is updated as per the new values:
 
 ```js
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log("Custom square element attributes changed.");
-  updateStyle(this);
+class Square extends HTMLElement {
+  // …
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log("Custom square element attributes changed.");
+    updateStyle(this);
+  }
+  // …
 }
 ```
 
 Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside the custom element class - this should return an array containing the names of the attributes you want to observe:
 
 ```js
-static get observedAttributes() {
-  return ["color", "size"];
+class Square extends HTMLElement {
+  // …
+  static get observedAttributes() {
+    return ["color", "size"];
+  }
+  // …
 }
 ```

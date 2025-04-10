@@ -2,7 +2,7 @@
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
 page-type: web-manifest-member
-browser-compat: html.manifest.scope
+browser-compat: manifests.webapp.scope
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
@@ -51,7 +51,7 @@ This helps users understand that they're viewing pages outside the app's defined
 
 > [!NOTE]
 > The `scope` member doesn't prevent users from navigating to app pages outside of the defined scope.
-> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
+> Off-scope navigations are not blocked by browsers and are allowed to be opened in a new top-level browsing context.
 
 Consider a web app for exploring hiking trails with the following directory structure:
 

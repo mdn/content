@@ -1,5 +1,6 @@
 ---
 title: Accessibility in React
+short-title: React accessibility
 slug: Learn_web_development/Core/Frameworks_libraries/React_accessibility
 page-type: learn-module-chapter
 ---

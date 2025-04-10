@@ -170,7 +170,7 @@ In the following example we specify a minimum month of `1900-01` and a maximum m
 The result here is that:
 
 - Only months between in January 1900 and December 2013 can be selected; months outside that range can't be scrolled to in the control.
-- Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see [Validation](#validation)) but still available (e.g. Chrome).
+- Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g., Edge), or invalid (see [Validation](#validation)) but still available (e.g., Chrome).
 
 ### Controlling input size
 
@@ -180,7 +180,7 @@ You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 ## Validation
 
 By default, `<input type="month">` does not apply any validation to entered values.
-The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still submit the form with the `month` input empty, or enter an invalid date (e.g. the 32nd of April).
+The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still submit the form with the `month` input empty, or enter an invalid date (e.g., the 32nd of April).
 
 To help avoid this, you can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), and in addition use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory.
 As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.

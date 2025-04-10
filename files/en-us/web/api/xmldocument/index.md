@@ -11,7 +11,7 @@ The **XMLDocument** interface represents an XML document. It inherits from the g
 
 {{InheritanceDiagram}}
 
-## Property
+## Instance properties
 
 _Also inherits properties from: {{DOMxRef("Document")}}_.
 

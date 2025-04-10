@@ -1,5 +1,6 @@
 ---
 title: Implementing feature detection
+short-title: Feature detection
 slug: Learn_web_development/Extensions/Testing/Feature_detection
 page-type: learn-module-chapter
 ---
@@ -37,7 +38,7 @@ Feature detection involves working out whether a browser supports a certain bloc
 
 The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that _do_ support the feature, and browsers that _don't_. If you don't do this, browsers that don't support the features you are using in your code may not display your sites properly or might fail altogether, creating a bad user experience.
 
-Let's recap and look at the example we touched on in our [Handling common JavaScript problems](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#feature_detection) — the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+Let's recap and look at the example we touched on in our [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#feature_detection) article — the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a `geolocation` property available on the global [Navigator](/en-US/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
 
 ```js
 if ("geolocation" in navigator) {
@@ -49,7 +50,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [don't browser sniff](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#dont_browser_sniff) for more details.
+Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Browser detection using the user agent string (UA sniffing)](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) for more details.
 
 ## Writing your own feature detection tests
 
@@ -57,7 +58,7 @@ In this section, we'll look at implementing your own feature detection tests, in
 
 ### CSS
 
-You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.rotate`) in JavaScript.
+You can write tests for CSS features by testing for the existence of _[element.style.property](/en-US/docs/Web/API/HTMLElement/style)_ (e.g., `paragraph.style.rotate`) in JavaScript.
 
 A classic example might be to test for [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) support in a browser; for browsers that support the `subgrid` value for a subgrid value for [`grid-template-columns`](/en-US/docs/Web/CSS/grid-template-columns) and [`grid-template-rows`](/en-US/docs/Web/CSS/grid-template-rows), we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
 

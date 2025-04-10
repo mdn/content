@@ -34,8 +34,8 @@ In addition to the basic MathML global attributes, the following global attribut
 
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating the directionality of the MathML element. It can have the following values:
 
-    - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g. English or Moroccan style);
-    - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
+    - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g., English or Moroccan style);
+    - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g., Maghreb or Machrek style);
 
 - [`displaystyle`](/en-US/docs/Web/MathML/Reference/Global_attributes/displaystyle):
 

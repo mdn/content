@@ -1,5 +1,6 @@
 ---
 title: "CSS: Styling the content"
+short-title: Styling the content
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
 ---
@@ -176,7 +177,7 @@ There are many more selectors to discover. To learn more, see our selectors tuto
 
 Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the `style.css` file.
 
-1. First, find the [output from Google Fonts](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
+1. First, find the [output from Google Fonts](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_font) that you previously saved from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
    ```html
    <link
@@ -187,7 +188,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
    This code links your page to a style sheet that loads the Open Sans font family with your webpage.
 
 2. Next, delete the existing rule you have in your `style.css` file. It was a good test, but let's not continue with lots of red text.
-3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
+3. Add the following lines (shown below), replacing the `font-family` assignment with your `font-family` selection from [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_font). The property `font-family` refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since {{HTMLElement("html")}} is the parent element of the whole page, all elements inside it inherit the same `font-size` and `font-family`.
 
    ```css
    html {
@@ -254,7 +255,7 @@ html {
 }
 ```
 
-This rule sets a background color for the entire page. Change the color code to [the color you chose in What will my website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#theme_color).
+This rule sets a background color for the entire page. Change the color code to [the color you chose in What will my website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_theme_color).
 
 ### Styling the body
 

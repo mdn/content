@@ -44,17 +44,11 @@ new NDEFReadingEvent(type, options)
         - `mediaType` {{optional_inline}}
           - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
         - `recordType`
-
           - : A string indicating the type of data stored in `data`. It must be one of the following values:
-
             - `"absolute-url"`
-
-              An absolute URL to the data.
-
-              `"empty"`
-
+              - : An absolute URL to the data.
+            - `"empty"`
               - : An empty {{domxref("NDEFRecord")}}.
-
             - `"mime"`
               - : A valid [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types).
             - `"smart-poster"`

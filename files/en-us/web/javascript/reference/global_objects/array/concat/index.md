@@ -117,7 +117,7 @@ console.log(numbers);
 
 ### Concatenating array-like objects with Symbol.isConcatSpreadable
 
-`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g. `true`).
+`concat` does not treat all array-like objects as arrays by default — only if `Symbol.isConcatSpreadable` is set to a truthy value (e.g., `true`).
 
 ```js
 const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };

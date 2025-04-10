@@ -60,7 +60,7 @@ When `multiple` is set on the {{HTMLElement("input/email", "email")}} input type
 
 If and only if the `multiple` attribute is specified, the value can be a list of properly-formed comma-separated email addresses. Any trailing and leading whitespace is removed from each address in the list.
 
-When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
+When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, the user can select one or more files. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g., by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking).
 
 ```html
 <input type="file" multiple name="uploads" id="uploads" />

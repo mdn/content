@@ -58,7 +58,7 @@ Events have three functions:
 - `timeStamp`
   - : `number`. The time that the fragment identifier for the page was changed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`. The reason for the navigation: for example, `"link"` if the user clicked a link.
+  - : {{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}. The reason for the navigation: for example, `"link"` if the user clicked a link.
 - `transitionQualifiers`
   - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
 

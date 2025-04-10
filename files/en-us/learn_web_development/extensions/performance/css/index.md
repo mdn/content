@@ -1,5 +1,6 @@
 ---
 title: CSS performance optimization
+short-title: Performant CSS
 slug: Learn_web_development/Extensions/Performance/CSS
 page-type: learn-module-chapter
 ---

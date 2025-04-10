@@ -91,7 +91,7 @@ text-emphasis-position: unset;
 The property accepts one or two values:
 
 - If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
-- If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+- If two values are provided, they must include one of `over` or `under` and one of `right` or `left`. Their order does not matter.
 
 The values include:
 

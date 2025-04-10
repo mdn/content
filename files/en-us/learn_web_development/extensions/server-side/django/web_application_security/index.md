@@ -1,5 +1,6 @@
 ---
 title: Django web application security
+short-title: Django security
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 page-type: learn-module-chapter
 ---

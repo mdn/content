@@ -10,7 +10,7 @@ browser-compat: api.SVGLineElement.y1
 
 The **`y1`** read-only property of the {{domxref("SVGLineElement")}} interface describes the start of the SVG line along the y-axis as an {{domxref("SVGAnimatedLength")}}. It reflects the {{SVGElement("line")}} element's {{SVGAttr("y1")}} geometric attribute.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that start position as a length along the y-axis in user coordinate system units.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Guides/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is that start position as a length along the y-axis in user coordinate system units.
 
 ## Value
 

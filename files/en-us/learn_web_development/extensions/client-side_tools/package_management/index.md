@@ -1,5 +1,6 @@
 ---
 title: Package management basics
+short-title: Package management
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 page-type: learn-module-chapter
 ---
@@ -260,7 +261,7 @@ Go back to `http://localhost:5173` and you'll see a graph on the page. Change th
 
 ### Building our code for production
 
-However, this code is not ready for production. Most build tooling systems, including Vite, have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
+However, this code is not ready for production. Most build tooling systems, including Vite, have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g., "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
 
 Now stop the running Vite dev server using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 

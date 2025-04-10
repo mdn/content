@@ -15,16 +15,16 @@ This article provides information about the changes in Firefox 65 that will affe
 - The [Flexbox inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) is now enabled by default.
 - Support has been added to the [JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) for XHR Breakpoints ([Firefox bug 821610](https://bugzil.la/821610)).
 - Right-click on an item in the accessibility tree from the Accessibility viewer to [print it as JSON](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json) to the JSON viewer.
-- The [color contrast](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g. a gradient or complex image), it shows a range of color contrast values.
+- The [color contrast](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast) display of the Accessibility Picker has been updated so that if a text's background is complex (e.g., a gradient or complex image), it shows a range of color contrast values.
 - The Headers tab of the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) now displays the Referrer Policy for the selected request ([Firefox bug 1496742](https://bugzil.la/1496742)).
-- When displaying stack traces (e.g. in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
+- When displaying stack traces (e.g., in console logs or the JavaScript debugger), calls to framework methods are identified and collapsed by default, making it easier to home in on your code.
 - In the same fashion as native terminals, you can now use reverse search to find entries in your JavaScript console history (`F9` on Windows/Linux or `Ctrl` + `R` on macOS, then type a search term, followed by `Ctrl` + `R`/`Ctrl` + `S` to toggle through results).
 - The JavaScript console's `$0` shortcut (references the currently inspected element on the page) now has autocomplete available, so for example you could type `$0.te` to get autocomplete suggestions for properties like `$0.textContent`.
 - The edits you make in the Rules view of the Inspector are now listed in the Changes panel ([Firefox bug 1503920](https://bugzil.la/1503920)).
 
 ### HTML
 
-- Events are now dispatched on disabled HTML elements, i.e. {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements with `disabled` attributes set on them ([Firefox bug 329509](https://bugzil.la/329509)).
+- Events are now dispatched on disabled HTML elements, i.e., {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements with `disabled` attributes set on them ([Firefox bug 329509](https://bugzil.la/329509)).
 - Removing the `src` attribute of an {{htmlelement("iframe")}} element now causes `about:blank` to be loaded into it, giving it parity with Chrome and Safari ([Firefox bug 1507842](https://bugzil.la/1507842)). Previously removing `src` had no effect on the `iframe` content.
 - We have added support for the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) attribute on {{htmlelement("script")}} elements ([Firefox bug 1460920](https://bugzil.la/1460920)).
 

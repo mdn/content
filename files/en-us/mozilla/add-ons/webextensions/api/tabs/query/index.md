@@ -64,7 +64,7 @@ let querying = browser.tabs.query(queryInfo)
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing information about each matching tab.
 
 If any error occurs, the promise will be rejected with an error message.
 

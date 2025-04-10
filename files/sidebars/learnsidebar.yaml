@@ -132,6 +132,10 @@ sidebar:
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
       - /Learn_web_development/Core/Scripting/Debugging_JavaScript
+      - type: listSubPages
+        path: /Learn_web_development/Core/Scripting/Test_your_skills
+        link: /Learn_web_development/Core/Scripting/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Frameworks_libraries
     title: JavaScript_frameworks_and_libraries
     details: closed
@@ -202,6 +206,7 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/Other_form_controls
       - /Learn_web_development/Extensions/Forms/Styling_web_forms
       - /Learn_web_development/Extensions/Forms/Advanced_form_styling
+      - /Learn_web_development/Extensions/Forms/Customizable_select
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
@@ -214,11 +219,9 @@ sidebar:
       - /Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
       - /Learn_web_development/Extensions/Client-side_tools/Deployment
   - link: /Learn_web_development/Extensions/Server-side
-    title: Server-side_websites
     details: closed
     children:
       - link: /Learn_web_development/Extensions/Server-side/First_steps
-        title: Server-side_first_steps
         details: closed
         children:
           - /Learn_web_development/Extensions/Server-side/First_steps/Introduction
@@ -327,8 +330,6 @@ l10n:
     Version_control: Versionskontrolle
     Extension_modules: Erweiterungsmodule
     Understanding_client-side_tools: Verständnis für clientseitige Tools
-    Server-side_websites: Serverseitige Programmierung
-    Server-side_first_steps: Erste Schritte auf der Serverseite
     Express_web_framework_(Node.js): Express Web-Framework (Node.js)
     Web_performance: Web-Performance
     Testing: Tests
@@ -359,10 +360,8 @@ l10n:
     Asynchronous_JavaScript: Asynchronous JavaScript
     Web_forms: Web forms
     Understanding_client-side_tools: Understanding client-side tools
-    Server-side_websites: Server-side websites
-    Server-side_first_steps: Server-side first steps
-    Django_web_framework_(Python): Django web framework (Python)
-    Express_web_framework_(Node.js): Express web framework (Node.js)
+    Django_web_framework_(Python): Django (Python)
+    Express_web_framework_(Node.js): Express (Node.js)
     Web_performance: Web performance
     Testing: Testing
     Transform_and_animate_CSS: Transform and animate CSS
@@ -407,8 +406,6 @@ l10n:
     Asynchronous_JavaScript: 异步 JavaScript
     Web_forms: Web 表单
     Understanding_client-side_tools: 理解客户端工具
-    Server-side_websites: 服务端网站
-    Server-side_first_steps: 服务端基础
     Django_web_framework_(Python): Django web 框架（Python）
     Express_web_framework_(Node.js): Express web 框架（Node.js）
     Web_performance: Web 性能

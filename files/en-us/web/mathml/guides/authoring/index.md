@@ -54,7 +54,7 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/Re
 ```
 
 > [!NOTE]
-> To use MathML in XML documents (e.g. XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
+> To use MathML in XML documents (e.g., XHTML, EPUB or OpenDocument) place an explicit `xmlns="http://www.w3.org/1998/Math/MathML"` attribute on each `<math>` element.
 
 > [!NOTE]
 > Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
@@ -80,8 +80,8 @@ Alternatively, you can also just display a warning at the top of the page for br
 ```
 
 > [!NOTE]
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
+> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
+> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
 
 #### Mathematical fonts
 
@@ -236,7 +236,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 ```
 
 > [!NOTE]
-> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid).
+> Command-line tools can be used server-side e.g., [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid).
 
 ## Graphical interfaces
 

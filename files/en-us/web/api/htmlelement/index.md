@@ -114,8 +114,6 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 
-- {{DOMxRef("HTMLElement/cancel_event", "cancel")}}
-  - : Fired for {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key.
 - {{DOMxRef("HTMLElement/change_event", "change")}}
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 - {{DOMxRef("HTMLElement/error_event", "error")}}
