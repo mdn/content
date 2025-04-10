@@ -1,6 +1,7 @@
 ---
-title: Responsive images
-slug: Web/HTML/Responsive_images
+title: Using responsive images in HTML
+short-title: Responsive images
+slug: Web/HTML/Guides/Responsive_images
 page-type: guide
 ---
 

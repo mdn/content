@@ -102,7 +102,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
   - : Tips and techniques for helping improve web content printer output.
 
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 
   - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 

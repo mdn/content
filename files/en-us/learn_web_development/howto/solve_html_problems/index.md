@@ -83,7 +83,7 @@ Some information, called tabular data, needs to be organized into tables with co
 
 ### Advanced images & multimedia
 
-- [How to add a responsive image to a webpage](/en-US/docs/Web/HTML/Responsive_images)
+- [How to add a responsive image to a webpage](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [How to add vector image to a webpage](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [How to add a hit map on top of an image](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 

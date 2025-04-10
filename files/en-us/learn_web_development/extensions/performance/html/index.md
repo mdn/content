@@ -56,7 +56,7 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 
 The so-called "mobile first" technique can ensure that the default layout is for small-screen devices, so mobiles can just download images suitable for their screens, and don't need to take the performance hit of downloading larger desktop images. However, since this is controlled using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) in your CSS, it can only positively affect performance of images loaded in CSS.
 
-In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Responsive_images) guides.
+In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) guides.
 
 ### Providing different image resolutions via srcset
 

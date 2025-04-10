@@ -153,7 +153,7 @@ reloading the page to see the results change.
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images).
 
 ## Specifications
 
@@ -166,5 +166,5 @@ For additional examples, see our guide to [responsive images](/en-US/docs/Web/HT
 ## See also
 
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

@@ -5433,7 +5433,7 @@
 /en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Learn/HTML/Howto/Add_citations_to_webpages	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Quotations
 /en-US/docs/Learn/HTML/Howto/Add_images_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage
-/en-US/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage	/en-US/docs/Web/HTML/Responsive_images
+/en-US/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Howto/Annotate_images_and_graphics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#Annotating_images_with_figures_and_figure_captions
 /en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
@@ -5470,7 +5470,7 @@
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
-/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Responsive_images
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
 /en-US/docs/Learn/HTML/Tables	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -13206,6 +13206,7 @@
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/Speculative_parsing
 /en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Reference/Attributes/rel/preload
 /en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
+/en-US/docs/Web/HTML/Responsive_images	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Guides/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio

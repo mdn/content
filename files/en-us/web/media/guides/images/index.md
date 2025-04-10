@@ -5,7 +5,7 @@ page-type: guide
 sidebar: mediasidebar
 ---
 
-The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Web/HTML/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.
+The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.
 These articles provide guidance on selecting and configuring image types.
 
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
@@ -35,5 +35,5 @@ These articles cover some of the HTML elements and CSS properties that are used 
 
 ## See also
 
-- [Responsive Images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive Images](/en-US/docs/Web/HTML/Guides/Responsive_images)
   - : In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them.

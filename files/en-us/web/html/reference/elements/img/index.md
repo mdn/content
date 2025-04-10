@@ -33,7 +33,7 @@ There are many other attributes to achieve various purposes:
 
 - [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial).
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
 
 ## Supported image formats
 
@@ -246,7 +246,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     If the `srcset` attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
-    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial for an example.
+    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial for an example.
 
 - `width`
   - : The intrinsic width of the image in pixels. Must be an integer without a unit.
@@ -545,4 +545,4 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 - {{domxref("HTMLImageElement")}} interface for this element
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)

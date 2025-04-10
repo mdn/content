@@ -164,7 +164,7 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ## See also
 
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images) HTML guide
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) HTML guide
 - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API), including [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) and [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
 - [Caching](/en-US/docs/Web/HTTP/Guides/Caching)
