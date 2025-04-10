@@ -29,6 +29,7 @@ sidebar:
     path: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Global_attributes
     title: Global_attributes
