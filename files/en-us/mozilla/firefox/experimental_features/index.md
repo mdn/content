@@ -1026,7 +1026,7 @@ This subset of the API has been implemented:
 
 ### Removal of MutationEvent
 
-{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
+{{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`, `DOMAttrModified`) are on the path for removal, and have been disabled on nightly.
 ([Firefox bug 1951772](https://bugzil.la/1951772)).
 
 <table>

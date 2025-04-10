@@ -6871,43 +6871,43 @@
       "fscholz"
     ]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Arrays": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Arrays": {
     "modified": "2020-07-16T22:31:05.831Z",
     "contributors": ["vgiffin", "chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals": {
     "modified": "2020-07-16T22:31:45.710Z",
     "contributors": ["jpfkd", "jmliu", "chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Events": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Events": {
     "modified": "2020-07-16T22:31:46.881Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Functions": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Functions": {
     "modified": "2020-07-16T22:31:46.557Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_JSON": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/JSON": {
     "modified": "2020-07-16T22:32:38.003Z",
     "contributors": ["chrisdavidmills", "blueblots"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Loops": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Loops": {
     "modified": "2020-07-16T22:31:46.034Z",
     "contributors": ["neuroptera", "chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Math": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Math": {
     "modified": "2020-07-31T08:15:10.749Z",
     "contributors": ["chrisdavidmills", "AJMcDee"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Object_basics": {
     "modified": "2020-12-11T06:18:00.445Z",
     "contributors": ["chrisdavidmills", "iJacKP", "neuroptera"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Strings": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Strings": {
     "modified": "2020-07-16T22:31:05.493Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_variables": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Variables": {
     "modified": "2020-07-16T22:31:04.800Z",
     "contributors": ["neuroptera", "chrisdavidmills"]
   },
@@ -43922,27 +43922,6 @@
       "Masayuki"
     ]
   },
-  "Web/API/KeyboardEvent/initKeyEvent": {
-    "modified": "2019-03-24T00:10:53.315Z",
-    "contributors": [
-      "mfluehr",
-      "fscholz",
-      "Noitidart",
-      "teoli",
-      "MHasan",
-      "willlma",
-      "kscarfone",
-      "Sheppy",
-      "mcomella",
-      "Jorend",
-      "Nickolay",
-      "Ynvich",
-      "Ptak82",
-      "Mgjbot",
-      "DBaron",
-      "Gary.johnson.53"
-    ]
-  },
   "Web/API/KeyboardEvent/initKeyboardEvent": {
     "modified": "2019-03-23T23:04:44.260Z",
     "contributors": ["mfluehr", "wbamberg", "fscholz", "teoli"]
@@ -56247,16 +56226,6 @@
       "kscarfone",
       "Sheppy",
       "Jeremie"
-    ]
-  },
-  "Web/API/SVGEvent": {
-    "modified": "2019-04-04T19:07:39.265Z",
-    "contributors": [
-      "chrisdavidmills",
-      "pcat",
-      "kscarfone",
-      "fscholz",
-      "rabimba"
     ]
   },
   "Web/API/SVGFEBlendElement": {
@@ -70235,14 +70204,6 @@
   },
   "Web/API/XPathEvaluator/evaluate": {
     "modified": "2020-10-15T22:12:44.902Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/API/XPathException": {
-    "modified": "2020-10-15T22:12:44.764Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/API/XPathException/code": {
-    "modified": "2020-10-15T22:12:44.730Z",
     "contributors": ["Sebastianz"]
   },
   "Web/API/XPathExpression": {
