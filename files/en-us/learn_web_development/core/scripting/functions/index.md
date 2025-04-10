@@ -465,14 +465,14 @@ Let's look at a real example to demonstrate scoping.
    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
 > [!NOTE]
-> The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> The same scoping rules do not apply to loop (e.g., `for() { }`) and conditional blocks (e.g., `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
 > [!NOTE]
 > The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying them.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying them.
 
 ## Summary
 
@@ -482,6 +482,6 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 - [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
 - [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN learning partner_</sup> - An interactive lesson providing a useful functions introduction.
+- [Using functions to write less code](https://scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN learning partner_</sup> - An interactive lesson providing a useful functions introduction.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

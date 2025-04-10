@@ -145,7 +145,7 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 
 ### Counter inheritance and propagation
 
-Each element or pseudo-element has a set of counters in the scope of that element. Initial counters in the set are received from the element's parent and the preceding sibling. The counter values are received from the last descendent of the previous sibling, the last sibling, or the parent.
+Each element or pseudo-element has a set of counters in the scope of that element. Initial counters in the set are received from the element's parent and the preceding sibling. The counter values are received from the last descendant of the previous sibling, the last sibling, or the parent.
 
 When an element declares a counter, the counter is nested inside the counter with the same name received from the parent. If the parent doesn't have a counter with the same name then the counter is added to the element's counters set as it is. A counter with the same name received from the previous sibling is removed from the counters set.
 

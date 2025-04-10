@@ -52,7 +52,7 @@ console.log(top.innerHeight);
 To change the size of a window, see {{domxref("window.resizeBy()")}} and
 {{domxref("window.resizeTo()")}}.
 
-To get the outer height of a window, i.e. the height of the whole browser window, see
+To get the outer height of a window, i.e., the height of the whole browser window, see
 {{domxref("window.outerHeight")}}.
 
 ### Graphical example

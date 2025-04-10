@@ -44,7 +44,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "4.8.0",
+    "@mdn/yari": "4.9.0",
     "@octokit/rest": "^21.1.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
@@ -55,20 +55,20 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.4.3",
     "gray-matter": "^4.0.3",
-    "yaml": "^2.7.0"
+    "yaml": "^2.7.1"
   },
   "devDependencies": {
-    "cspell": "8.17.5",
+    "cspell": "8.18.1",
     "cspell-group-by-file-reporter": "^1.0.1",
     "jest": "^29.7.0",
-    "lefthook": "^1.11.4",
+    "lefthook": "^1.11.8",
     "lint-staged": "15.5.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
     "node-html-parser": "^7.0.1",
     "parse-diff": "^0.11.1",
     "prettier": "3.5.3",
-    "yaml": "^2.7.0",
+    "yaml": "^2.7.1",
     "yargs": "^17.7.2"
   },
   "packageManager": "yarn@1.22.22"

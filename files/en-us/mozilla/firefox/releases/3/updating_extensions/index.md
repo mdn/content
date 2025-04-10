@@ -8,7 +8,7 @@ page-type: guide
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.
 
-Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the `maxVersion` field in its install manifest, and you host your extension at [addons.mozilla.org](https://addons.mozilla.org), you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the `maxVersion`. You can avoid having to have your extension re-reviewed this way.
+Before going further, there's one helpful hint we can offer: if the only change your extension requires is a bump to the `maxVersion` field in its install manifest, and you host your extension at [addons.mozilla.org](https://addons.mozilla.org/), you don't actually need to upload a new version of your extension! Use the Developer Control Panel at AMO to adjust the `maxVersion`. You can avoid having to have your extension re-reviewed this way.
 
 ## Step 1: Update the install manifest
 
@@ -41,7 +41,7 @@ Firefox 3 supports new properties in the install manifest to specify localized d
 
 ## Step 2: Ensure you are providing secure updates
 
-If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates) for more information.
+If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org/) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates) for more information.
 
 ## Step 3: Deal with changed APIs
 

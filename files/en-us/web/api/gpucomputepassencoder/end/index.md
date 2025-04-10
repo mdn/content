@@ -31,7 +31,7 @@ None ({{jsxref("Undefined")}}).
 
 The following criteria must be met when calling **`end()`**, otherwise a {{domxref("GPUValidationError")}} is generated and the {{domxref("GPUComputePassEncoder")}} becomes invalid:
 
-- The {{domxref("GPUComputePassEncoder")}} is open (i.e. not already ended via an `end()` call).
+- The {{domxref("GPUComputePassEncoder")}} is open (i.e., not already ended via an `end()` call).
 - any {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} calls made on this encoder have a corresponding {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} call before `end()` is called.
 
 ## Examples

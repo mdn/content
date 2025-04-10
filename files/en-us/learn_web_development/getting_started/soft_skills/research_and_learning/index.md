@@ -48,7 +48,7 @@ You should make sure that the resources you choose for research are high quality
 - [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup>
 - [YouTube](https://www.youtube.com/)
 - [freeCodeCamp](https://www.freecodecamp.org/)
-- [Codecademy](https://www.codecademy.com)
+- [Codecademy](https://www.codecademy.com/)
 - [Dev.to](https://dev.to/)
 
 ### Learn what resources to use and when
@@ -77,7 +77,7 @@ If you can't find a solution to your problem on your favorite sites, you'll need
 - Check the dates on the resources you find. Are they recently maintained, or not updated for some time and, therefore, possibly out-of-date? Reputable sites tend to include publication and "last-updated" dates on them, precisely so you can easily check this. Ideally, an article from a reputable site covering a modern technology or technique shouldn't be left unmaintained for longer than a few years (say 2–3). It is perfectly possible that older documentation covering a mature technology (for example, fundamental HTML or CSS features) can still be accurate, but you should keep this in mind.
 - As a follow-on from the previous point, even newly-published resources can contain out-of-date information. For example, does an article on CSS page layout talk about modern approaches like grid and flexbox, or does it still present obsolete techniques like using floats to create multi-column layouts?
 - Don't just rely on one single source of truth. Cross-reference different sources, especially if you are not sure whether a source is trustworthy or not.
-- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://resources.github.com/copilot-for-business/)). You should use AI tools with caution (especially as a beginner), and familiarize yourself with their strengths and weaknesses:
+- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/index/chatgpt) or [GitHub Copilot](https://github.com/features/copilot/copilot-business)). You should use AI tools with caution (especially as a beginner), and familiarize yourself with their strengths and weaknesses:
   - On the plus side, they can speed up research/searches enormously, and help with structuring code and copy.
   - On the other hand, AI tools have no reasoning skills and frequently provide answers that are misleading or just plain wrong. You shouldn't just assume that AI answers are correct — test them, and verify them with other sources.
 

@@ -189,7 +189,7 @@ Here is a screenshot of an online text editor:
 When your website is ready for public viewing, you'll have to upload your webpages to your web server. You can buy space on a server from various providers (see [How much does it cost to do something on the web?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)). Once you settle on which provider to use, the provider will email you the access information, usually in the form of an SFTP URL, username, password, and other information needed to connect to their server. Bear in mind that (S)FTP is now somewhat old-fashioned, and other uploading systems are starting to become popular, such as [RSync](https://en.wikipedia.org/wiki/Rsync) and [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 > [!NOTE]
-> FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g. SFTP or RSync over SSH.
+> FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g., SFTP or RSync over SSH.
 
 Uploading files to a web server is a very important step while creating a website, so we cover it in detail in [a separate article](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server). For now, here's a short list of free basic (S)FTP clients:
 
@@ -223,7 +223,7 @@ Uploading files to a web server is a very important step while creating a websit
         <ul>
           <li>
             <a
-              href="https://wiki.gnome.org/action/show/Apps/Files?action=show&#x26;redirect=Apps%2FNautilus"
+              href="https://apps.gnome.org/en/Nautilus/"
               rel="external"
               >Nautilus/Files</a
             >

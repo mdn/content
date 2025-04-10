@@ -19,7 +19,7 @@ The color syntax converter below shows the values of the currently selected colo
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-Selecting a color via the [color picker](/en-US/docs/Web/HTML/Element/input/color) and an opacity via the [slider](/en-US/docs/Web/HTML/Element/input/range) updates the RGB, HEX, HSL, and HWB values. When you choose a new color or opacity value, the color of the background and the slider update via the CSS properties {{cssxref("background-color")}} and {{cssxref("accent-color")}}, respectively.
+Selecting a color via the [color picker](/en-US/docs/Web/HTML/Reference/Elements/input/color) and an opacity via the [slider](/en-US/docs/Web/HTML/Reference/Elements/input/range) updates the RGB, HEX, HSL, and HWB values. When you choose a new color or opacity value, the color of the background and the slider update via the CSS properties {{cssxref("background-color")}} and {{cssxref("accent-color")}}, respectively.
 
 To see the code for this color syntax converter, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/colors.html).
 

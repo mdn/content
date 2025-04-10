@@ -25,7 +25,7 @@ new RTCPeerConnection(configuration)
 
     - `bundlePolicy` {{optional_inline}}
 
-      - : Specifies how to handle negotiation of candidates when the remote peer is not compatible with the [SDP BUNDLE standard](https://webrtcstandards.info/sdp-bundle/). If the remote endpoint is BUNDLE-aware, all media tracks and data channels are bundled onto a single transport at the completion of negotiation, regardless of policy used, and any superfluous transports that were created initially are closed at that point.
+      - : Specifies how to handle negotiation of candidates when the remote peer is not compatible with the [SDP BUNDLE standard](https://datatracker.ietf.org/doc/rfc8843/). If the remote endpoint is BUNDLE-aware, all media tracks and data channels are bundled onto a single transport at the completion of negotiation, regardless of policy used, and any superfluous transports that were created initially are closed at that point.
 
         In technical terms, a BUNDLE lets all media flow between two peers flow across a single **5-tuple**; that is, from a single IP and port on one peer to a single IP and port on the other peer, using the same transport protocol.
 

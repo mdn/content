@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.roundTripTimeMeasurem
 
 {{APIRef("WebRTC")}}
 
-The **`roundTripTimeMeasurements`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary contains a positive integer value that represents the total number valid round trip time measurements received for this [synchronizing source](#ssrc).
+The **`roundTripTimeMeasurements`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary contains a positive integer value that represents the total number valid round trip time measurements received for this [synchronizing source](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 
 The count can be used as a measure of the availability and reliability of round-trip-time measurement data.
 
@@ -16,7 +16,7 @@ The count can be used as a measure of the availability and reliability of round-
 
 A positive number indicating the number of valid round trip time measurements.
 
-This is the count of _RTCP Receiver Reports (RR)_ received for this [synchronizing source](#ssrc) that contain a non-zero value for the "delay since last SR (DLSR)" field.
+This is the count of _RTCP Receiver Reports (RR)_ received for this [synchronizing source](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) that contain a non-zero value for the "delay since last SR (DLSR)" field.
 
 ## Specifications
 

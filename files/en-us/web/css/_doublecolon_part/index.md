@@ -7,7 +7,7 @@ browser-compat: css.selectors.part
 
 {{CSSRef}}
 
-The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute.
 
 ```css
 custom-element::part(foo) {
@@ -17,11 +17,11 @@ custom-element::part(foo) {
 
 ## Description
 
-The global [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute makes a shadow tree element visible to its parent DOM. The part names declared using the `part` attribute are used as the parameter of the `::part()` pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it.
+The global [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute makes a shadow tree element visible to its parent DOM. The part names declared using the `part` attribute are used as the parameter of the `::part()` pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it.
 
 Part names are similar to CSS classes: multiple elements can have the same part name, and a single element can have multiple part names. All part names used in `::part()` pseudo-element must be present in the `part` value declared on the shadow tree element but the order of the part names doesn't matter, i.e., the selectors `::part(tab active)` and `::part(active tab)` are the same.
 
-The `::part()` pseudo-element is only visible to the parent DOM. This means that when a shadow tree is nested, the parts are not visible to any ancestors other than the direct parent. The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) attribute solves this limitation by explicitly exporting already defined `part` names, making them globally stylable.
+The `::part()` pseudo-element is only visible to the parent DOM. This means that when a shadow tree is nested, the parts are not visible to any ancestors other than the direct parent. The [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) attribute solves this limitation by explicitly exporting already defined `part` names, making them globally stylable.
 
 [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (such as `::part(label):hover`) can be appended to the `::part()` selector, but [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) that match based on tree information, such as `:empty` and `:last-child`, cannot be appended.
 
@@ -106,7 +106,7 @@ globalThis.customElements.define(
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute
+- [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) attribute
 - {{CSSxRef(":state",":state()")}} pseudo-class function
-- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) attribute
+- [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) attribute
 - [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module

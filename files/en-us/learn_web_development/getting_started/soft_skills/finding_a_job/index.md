@@ -123,7 +123,7 @@ Here are some general tips for CV/résumé writing:
 When you start searching for jobs, you will find yourself in a vicious circle — _you need experience to get a job, but you also need to get a job to get experience._ Don't despair — there are other ways to get experience. Here are some ideas:
 
 - Contact local business, charities, churches, schools, etc., to see if they want a website, or help updating their existing website. If you are just starting out, you could offer to do it for free, just to get the experience.
-- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com).
+- Following on from the previous item, move on to doing some small bits of freelance work, once you feel that you are experienced enough to start charging for your work. You could ask around at local businesses, or find work through dedicated services such as [UpWork](https://www.upwork.com/).
 - Build your own hobby projects, for example, your own website to showcase your work, some fun demos and games, or a web app related to a company that you want to work at.
   - You could even identify an existing issue on a company's website, fix it, and send them a link to a deployed version of the fix.
 - Hang around on forums and help others with their coding problems. (See [Help others, ask questions](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork#help_others_ask_questions).)
@@ -320,7 +320,7 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 
 ## See also
 
-- [Getting hired](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
+- [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
 - [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024

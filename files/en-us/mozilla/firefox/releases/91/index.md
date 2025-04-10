@@ -28,7 +28,7 @@ No changes
 
 ### JavaScript
 
-- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ([Firefox bug 1653024](https://bugzil.la/1653024)).
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g., "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ([Firefox bug 1653024](https://bugzil.la/1653024)).
 - The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ([Firefox bug 1653024](https://bugzil.la/1653024)).
 - The {{jsxref("Global_Objects/Error/Error", "Error()")}} constructor can now take the error `cause` as value in the `option` parameter.
   This allows code to catch errors and throw new/modified versions that retain the original error and stack trace ([Firefox bug 1679653](https://bugzil.la/1679653)).
@@ -49,7 +49,7 @@ No changes
   and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
   The default `allowlist` is `*`; this default will be updated to `self` in a future release, in order to match the specification. ([Firefox bug 1704005](https://bugzil.la/1704005)).
 - `Window.clientInformation` has been added as an alias for {{domxref("Window.navigator")}}, in order to match recent specification updates and improve compatibility with other major browsers ([Firefox bug 1717072](https://bugzil.la/1717072)).
-- Changing the playback speed of a media element ([`<video>`](/en-US/docs/Web/HTML/Element/video) or [`<audio>`](/en-US/docs/Web/HTML/Element/audio)) using the [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) attribute now works when the media element is captured to a [`MediaStream`](/en-US/docs/Web/API/MediaStream) or via [`AudioContext.createMediaElementSource`](/en-US/docs/Web/API/AudioContext/createMediaElementSource) ([Firefox bug 1517199](https://bugzil.la/1517199)).
+- Changing the playback speed of a media element ([`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) or [`<audio>`](/en-US/docs/Web/HTML/Reference/Elements/audio)) using the [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) attribute now works when the media element is captured to a [`MediaStream`](/en-US/docs/Web/API/MediaStream) or via [`AudioContext.createMediaElementSource`](/en-US/docs/Web/API/AudioContext/createMediaElementSource) ([Firefox bug 1517199](https://bugzil.la/1517199)).
 
 ### WebDriver conformance (Marionette)
 

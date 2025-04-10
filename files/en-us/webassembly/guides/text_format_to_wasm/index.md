@@ -14,7 +14,7 @@ WebAssembly has an S-expression-based textual representation, an intermediate fo
 
 Let's look at an example of this — the following program imports a function called `imported_func` from a module called `my_namespace`, and exports a function called `exported_func`:
 
-```wasm
+```wat
 (module
   (func $i (import "my_namespace" "imported_func") (param i32))
   (func (export "exported_func")
@@ -24,7 +24,7 @@ Let's look at an example of this — the following program imports a function ca
 )
 ```
 
-The WebAssembly function `exported_func` is exported for use in our environment (e.g. the web app in which we are using our WebAssembly module). When it is called, it calls an imported JavaScript function called `imported_func`, which is run with the value (42) provided as a parameter.
+The WebAssembly function `exported_func` is exported for use in our environment (e.g., the web app in which we are using our WebAssembly module). When it is called, it calls an imported JavaScript function called `imported_func`, which is run with the value (42) provided as a parameter.
 
 ## Converting the text .wat into a binary .wasm file
 

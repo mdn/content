@@ -8,7 +8,7 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
-There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.
+There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
 
 <table>
   <tbody>
@@ -46,7 +46,7 @@ HTML contains features available for marking up quotations; which element you us
 
 ### Blockquotes
 
-If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
+If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a [`cite`](/en-US/docs/Web/HTML/Reference/Elements/blockquote#cite) attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
 
 ```html
 <p>
@@ -61,7 +61,7 @@ To turn this into a block quote, we would just do this:
 ```html
 <p>Here is a blockquote:</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -81,7 +81,8 @@ Inline quotations work in exactly the same way, except that they use the {{htmle
 ```html
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q
+    cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
 </p>
@@ -93,19 +94,19 @@ Browser default styling will render this as normal text put in quotes to indicat
 
 ### Citations
 
-The content of the [`cite`](/en-US/docs/Web/HTML/Element/blockquote#cite) attribute sounds useful, but unfortunately browsers, screen readers, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
+The content of the [`cite`](/en-US/docs/Web/HTML/Reference/Elements/blockquote#cite) attribute sounds useful, but unfortunately browsers, screen readers, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page you need to make it available in the text via a link or some other appropriate way.
 
-There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book. There is no reason, however, why you couldn't link the text inside `<cite>` to the quote source in some way:
+There is a {{htmlelement("cite")}} element, but this is meant to contain the title of the resource being quoted, e.g., the name of the book. There is no reason, however, why you couldn't link the text inside `<cite>` to the quote source in some way:
 
 ```html-nolint
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+  <a href="/en-US/docs/Web/HTML/Reference/Elements/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -115,10 +116,10 @@ There is a {{htmlelement("cite")}} element, but this is meant to contain the tit
 
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a href="/en-US/docs/Web/HTML/Reference/Elements/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 
@@ -274,7 +275,7 @@ textarea.onkeyup = () => {
 
 Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym. When including either, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means.
 
-If providing the expansion in addition to the abbreviation makes little sense, and the abbreviation or acronym is a fairly shortened term, provide the full expansion of the term as the value of [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute:
+If providing the expansion in addition to the abbreviation makes little sense, and the abbreviation or acronym is a fairly shortened term, provide the full expansion of the term as the value of [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute:
 
 ### Abbreviation example
 

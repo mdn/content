@@ -19,7 +19,7 @@ Before we look at the transformation methods, let's look at two other methods wh
 
 Canvas states are stored on a stack. Every time the `save()` method is called, the current drawing state is pushed onto the stack. A drawing state consists of
 
-- The transformations that have been applied (i.e. `translate`, `rotate` and `scale` – see below).
+- The transformations that have been applied (i.e., `translate`, `rotate` and `scale` – see below).
 - The current values of the following attributes:
   - {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
   - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}

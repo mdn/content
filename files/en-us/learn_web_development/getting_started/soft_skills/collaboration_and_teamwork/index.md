@@ -54,13 +54,13 @@ You should dive into some of those groups, say hello, get to know people, share 
 
 Here are some initial ideas for how to get involved in some community networks:
 
-- Do some research in your local area, see what local in-person meetup groups there are, and attend some of them. You can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk).
-- Have a look at resources such as [confs.tech](https://confs.tech) to find tech conferences of interest. If they are out of your price range, try contacting the organizers to see if you could work the conference as a volunteer — you'll still get to attend it and meet lots of people.
+- Do some research in your local area, see what local in-person meetup groups there are, and attend some of them. You can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk/).
+- Have a look at resources such as [confs.tech](https://confs.tech/) to find tech conferences of interest. If they are out of your price range, try contacting the organizers to see if you could work the conference as a volunteer — you'll still get to attend it and meet lots of people.
 - [Stack Overflow](https://stackoverflow.com/) is a great place to ask questions and answer other people's questions.
 - The [freeCodeCamp forums](https://forum.freecodecamp.org/) is another great place to ask and answer questions.
 - Check out the [Frontend Developers](https://discord.me/frontenddevelopers) Discord server.
 - Also hang out on [MDN's Discord](/discord).
-- Our learning partner, Scrimba, provides a [strong community and collaboration experience](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn) via their Discord server, intending to help their students gain experience in working with others.
+- Our learning partner, Scrimba, provides a [strong community and collaboration experience](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn) via their Discord server, intending to help their students gain experience in working with others.
 - Find web developers on the social networks, see what they are saying, and join in conversations.
 
 If you are not sure how to participate, you could start off by reading existing threads and observing how experienced folks engage in discussions.

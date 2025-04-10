@@ -16,7 +16,7 @@ This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubb
 It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+> You should add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
 > While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
 
 ## Syntax

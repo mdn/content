@@ -259,9 +259,9 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 In the global execution context (outside of any functions or classes; may be inside [blocks](/en-US/docs/Web/JavaScript/Reference/Statements/block) or [arrow functions](#arrow_functions) defined in the global scope), the `this` value depends on what execution context the script runs in. Like [callbacks](#callbacks), the `this` value is determined by the runtime environment (the caller).
 
-At the top level of a script, `this` refers to {{jsxref("globalThis")}} whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML [`<script>`](/en-US/docs/Web/HTML/Element/script) element and executed as a script, `this === window`.
+At the top level of a script, `this` refers to {{jsxref("globalThis")}} whether in strict mode or not. This is generally the same as the global object — for example, if the source is put inside an HTML [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element and executed as a script, `this === window`.
 
-> **Note:** `globalThis` is generally the same concept as the global object (i.e. adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
+> **Note:** `globalThis` is generally the same concept as the global object (i.e., adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
 
 ```js
 // In web browsers, the window object is also the global object:
@@ -402,7 +402,7 @@ const fn2 = obj.getThisGetter;
 console.log(fn2()() === globalThis); // true in non-strict mode
 ```
 
-This behavior is very useful when defining callbacks. Usually, each function expression creates its own `this` binding, which shadows the `this` value of the upper scope. Now, you can define functions as arrow functions if you don't care about the `this` value, and only create `this` bindings where you do (e.g. in class methods). See [example with `setTimeout()`](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply).
+This behavior is very useful when defining callbacks. Usually, each function expression creates its own `this` binding, which shadows the `this` value of the upper scope. Now, you can define functions as arrow functions if you don't care about the `this` value, and only create `this` bindings where you do (e.g., in class methods). See [example with `setTimeout()`](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply).
 
 ### this with a getter or setter
 
@@ -457,7 +457,7 @@ for (const element of elements) {
 
 ### this in inline event handlers
 
-When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
+When the code is called from an inline [event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes), its `this` is bound to the DOM element on which the listener is placed:
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>
@@ -471,7 +471,7 @@ The above alert shows `button`. Note, however, that only the outer scope has its
 </button>
 ```
 
-In this case, the `this` parameter of the inner function is bound to `globalThis` (i.e. the default object in non–strict mode where `this` isn't passed in the call).
+In this case, the `this` parameter of the inner function is bound to `globalThis` (i.e., the default object in non–strict mode where `this` isn't passed in the call).
 
 ### Bound methods in classes
 

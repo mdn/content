@@ -38,7 +38,7 @@ A CDN is a geographically distributed network of servers that work together to s
 
 Further reading:
 
-- [Understanding CDNs](https://www.imperva.com/Learn_web_development/Extensions/Performance/what-is-cdn-how-it-works/)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### Reduce domain lookups
 
@@ -50,7 +50,7 @@ This may not always be practical; however, you should always take care to use on
 
 Make sure that any content that can be cached, is cached, and with appropriate expiration times.
 
-In particular, pay attention to the `Last-Modified` header. It allows for efficient page caching; by means of this header, information is conveyed to the user agent about the file it wants to load, such as when it was last modified. Most web servers automatically append the `Last-Modified` header to static pages (e.g. `.html`, `.css`), based on the last-modified date stored in the file system. With dynamic pages (e.g. `.php`, `.aspx`), this, of course, can't be done, and the header is not sent.
+In particular, pay attention to the `Last-Modified` header. It allows for efficient page caching; by means of this header, information is conveyed to the user agent about the file it wants to load, such as when it was last modified. Most web servers automatically append the `Last-Modified` header to static pages (e.g., `.html`, `.css`), based on the last-modified date stored in the file system. With dynamic pages (e.g., `.php`, `.aspx`), this, of course, can't be done, and the header is not sent.
 
 So, in particular, for pages which are generated dynamically, a little research on this subject is beneficial. It can be somewhat involved, but it will save a lot in page requests on pages which would normally not be cacheable.
 
@@ -131,13 +131,13 @@ Tables should use the CSS selector: property combination:
 table-layout: fixed;
 ```
 
-and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
+and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Reference/Elements/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Reference/Elements/colgroup) elements.
 
 ### Use lazy loading for images
 
 By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the window's [`load`](/en-US/docs/Web/API/Window/load_event) event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
-To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
+To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
 <img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
@@ -155,7 +155,7 @@ Note, however, that many of the tips listed in this article are common-sense tec
 
 ### Use async and defer, if possible
 
-Make the JavaScript scripts such that they are compatible with both the [async](/en-US/docs/Web/HTML/Element/script#attributes) and the [defer](/en-US/docs/Web/HTML/Element/script#attributes) attributes, and use [async](/en-US/docs/Web/HTML/Element/script#attributes) whenever possible, especially if you have multiple script elements.
+Make the JavaScript scripts such that they are compatible with both the [async](/en-US/docs/Web/HTML/Reference/Elements/script#attributes) and the [defer](/en-US/docs/Web/HTML/Reference/Elements/script#attributes) attributes, and use [async](/en-US/docs/Web/HTML/Reference/Elements/script#attributes) whenever possible, especially if you have multiple script elements.
 
 With that, the page can stop rendering while JavaScript is still loading. Otherwise, the browser will not render anything that is after the script elements that do not have these attributes.
 

@@ -24,7 +24,7 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
@@ -62,7 +62,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 
 There are two ways to define buttons within HTML forms:
 
-- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Element/input#type) set to the values `button`, `submit`, `reset` or `image`
+- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) set to the values `button`, `submit`, `reset` or `image`
 - The {{HTMLElement("button")}} element
 
 ##### {{HTMLElement("input")}}
@@ -143,24 +143,3 @@ Even though some polyfills are very aware of performance, loading additional scr
 As you can see, considering browser and operating system default form control appearance is important. There are many techniques to handle these issue; however mastering all of them is beyond the scope of this article. The basic premise is to consider whether altering the default implementation is worth the work before embarking on the challenge.
 
 If you read all the articles of this [HTML Forms guide](/en-US/docs/Learn_web_development/Extensions/Forms), you should now be at ease with using forms. If you discover new techniques or hints, please help improve the guide.
-
-## See also
-
-### Learning path
-
-- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
-- [HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
-- [Additional form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
-- [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-
-### Advanced Topics
-
-- [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- **HTML forms in legacy browsers**
-- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

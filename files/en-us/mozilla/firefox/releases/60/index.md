@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 60 that will affe
 
 ### HTML
 
-Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
+Pressing the Enter key in `designMode` and `contenteditable` now inserts `<div>` elements when the caret is in an inline element or text node which is a child of a block level editing host — instead of inserting `<br>` elements like it used to. If you want to use the old behavior on your app, you can do it with `document.execCommand()`. See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details (also see [Firefox bug 1430551](https://bugzil.la/1430551)).
 
 ### CSS
 
@@ -38,7 +38,7 @@ _No changes._
 
 - ECMAScript 2015 modules have been enabled by default in ([Firefox bug 1438139](https://bugzil.la/1438139)). See [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) and [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) for more information, or consult MDN reference docs:
 
-  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Element/script#type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Element/script#nomodule)
+  - [`<script src="main.js" type="module">`](/en-US/docs/Web/HTML/Reference/Elements/script/type) and [`<script nomodule src="fallback.js">`](/en-US/docs/Web/HTML/Reference/Elements/script#nomodule)
   - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements.
 
 - The {{jsxref("Array.prototype.values()")}} method has been added again ([Firefox bug 1420101](https://bugzil.la/1420101)). Make sure your code doesn't have any custom implementation of this method.

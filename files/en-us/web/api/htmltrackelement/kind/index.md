@@ -8,7 +8,7 @@ browser-compat: api.HTMLTrackElement.kind
 
 {{ApiRef("HTML DOM")}}
 
-The **`kind`** property of the {{domxref("HTMLTrackElement")}} interface represents the type of track, or how the text track is meant to be used. It reflects the {{htmlelement("track")}} element's enumerated [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute.
+The **`kind`** property of the {{domxref("HTMLTrackElement")}} interface represents the type of track, or how the text track is meant to be used. It reflects the {{htmlelement("track")}} element's enumerated [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) attribute.
 
 If no `kind` is set, `subtitles` is used. If the attribute is not set to one of the valid enumerated values, it is invalid and `metadata` is used. Other valid values include `captions`, `descriptions`, and `chapters`.
 

@@ -113,10 +113,10 @@ channel.port1.postMessage(encryptionKeyBuffer, [encryptionKeyBuffer]);
 The worker would listen for the `message` event to get the key:
 
 ```js
-  messagePort.addEventListener("message", (event) => {
-    const encryptionKeyBuffer = event.data;
-    // ... Use the encryptionKeyBuffer for encryption or any other purpose
-  };
+messagePort.addEventListener("message", (event) => {
+  const encryptionKeyBuffer = event.data;
+  // ... Use the encryptionKeyBuffer for encryption or any other purpose
+});
 ```
 
 See [message channel](/en-US/docs/Web/API/Channel_Messaging_API) for more information and examples.

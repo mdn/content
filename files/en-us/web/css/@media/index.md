@@ -154,7 +154,7 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/scan", "scan")}}
   - : Whether display output is progressive or interlaced.
 - {{cssxref("@media/scripting", "scripting")}}
-  - : Detects whether scripting (i.e. JavaScript) is available.
+  - : Detects whether scripting (i.e., JavaScript) is available.
     Added in Media Queries Level 5.
 - {{cssxref("@media/shape", "shape")}}
   - : Detects the shape of the device to distinguish rectangular and round displays.

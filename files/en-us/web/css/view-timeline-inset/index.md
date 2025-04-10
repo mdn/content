@@ -14,6 +14,11 @@ The **`view-timeline-inset`** [CSS](/en-US/docs/Web/CSS) property is used to spe
 This can be combined with or used instead of {{cssxref("animation-range")}} and its longhand properties, which can be used to set the attachment range of an animation along its timeline.
 See [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details.
 
+> [!NOTE]
+> If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
+
+The `view-timeline-inset`, {{cssxref("view-timeline-axis")}}, and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
+
 ## Syntax
 
 ```css
@@ -37,7 +42,7 @@ Allowed values for `view-timeline-inset` are:
 - {{cssxref("length-percentage")}}
   - : Any valid `<length-percentage>` value is accepted as an inset/outset value.
     - If the value is positive, the position of the animation's start/end will be moved inside the scrollport by the specified length or percentage.
-    - If the value is negative, the position of the animation's start/end will be moved outside the scrollport by the specified length or percentage, i.e. it will start animating before it appears in the scrollport, or finish animating after it leaves the scrollport.
+    - If the value is negative, the position of the animation's start/end will be moved outside the scrollport by the specified length or percentage, i.e., it will start animating before it appears in the scrollport, or finish animating after it leaves the scrollport.
 
 If two values are provided, the first value represents the start inset/outset in the relevant axis (where the animation begins) and the second value represents the end inset/outset (where the animation ends). If only one value is provided, the start and end inset/outset are both set to the same value.
 
@@ -174,7 +179,7 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-axis`](/en-US/docs/Web/CSS/view-timeline-axis), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-name")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

@@ -48,4 +48,3 @@ Server: Apache/2.4.1 (Unix)
 - [TLS 1.3](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3)
 - [Server Name Indication (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
 - [Transport Layer Security (TLS) configuration](/en-US/docs/Web/Security/Practical_implementation_guides/TLS)
-- Apache [error code `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) implementation

@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLInputElement")}} interface indicates the name of the {{HTMLElement("input")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute.
+The **`name`** property of the {{domxref("HTMLInputElement")}} interface indicates the name of the {{HTMLElement("input")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute.
 
 ## Value
 

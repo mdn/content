@@ -39,13 +39,13 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `new`
-  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_blank`.
+  - : This value specifies that the referenced resource is opened in a new window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Reference/Elements/a#target) set to `_blank`.
 - `replace`
-  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Element/a#target) set to `_self`.
+  - : This value specifies that the referenced resource is opened in the same window or tab. This is similar to the effect achieved by an HTML {{HTMLElement("a")}} element with [target](/en-US/docs/Web/HTML/Reference/Elements/a#target) set to `_self`.
 - `embed`
   - : This value specifies that instead of linking to the resource it will be loaded and shown within the document. This is similar to the effect achieved by an HTML {{HTMLElement("img")}} element.
 - `other`
-  - : This value indicates that other markup present in the link, i.e. the {{SVGAttr("target")}} attribute, determines its behavior.
+  - : This value indicates that other markup present in the link, i.e., the {{SVGAttr("target")}} attribute, determines its behavior.
 - `none`
   - : This value specifies that there is no indication for how to refer to the linked resource.
 

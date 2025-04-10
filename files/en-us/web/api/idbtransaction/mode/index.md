@@ -10,7 +10,7 @@ browser-compat: api.IDBTransaction.mode
 
 The **`mode`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns the current mode for accessing the
-data in the object stores in the scope of the transaction (i.e. is the mode to be
+data in the object stores in the scope of the transaction (i.e., is the mode to be
 read-only, or do you want to write to the object stores?) The default value is
 `readonly`.
 

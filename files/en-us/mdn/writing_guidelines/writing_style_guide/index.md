@@ -154,7 +154,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Ensure all concepts are fully fleshed-out**: It's easy to give a quick explanation of something, but make sure that all the nuances are covered. Are there special cases? Are there any known restrictions that the reader might need to know about?
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
-  - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
+  - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > [!NOTE]
     > It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
@@ -193,10 +193,14 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 - **Latin abbreviations**: You can use common Latin abbreviations (etc., i.e., e.g.) in parenthetical expressions and notes. Use periods in these abbreviations, followed by a comma or other appropriate punctuation.
 
+  <!-- markdownlint-disable search-replace -->
+
   - **Correct**: Web browsers (e.g., Firefox) can be used ...
   - **Incorrect**: Web browsers e.g. Firefox can be used ...
   - **Incorrect**: Web browsers, e.g. Firefox, can be used ...
   - **Incorrect**: Web browsers, (eg: Firefox) can be used ...
+
+  <!-- markdownlint-enable search-replace -->
 
   In regular text (i.e., text outside of notes or parentheses), use the English equivalent of the abbreviation.
 
@@ -204,24 +208,28 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   - **Incorrect**: ... web browsers, etc.
 
   - **Correct**: Web browsers such as Firefox can be used ...
-  - **Incorrect**: Web browsers e.g. Firefox can be used ...
+  - **Incorrect**: Web browsers e.g., Firefox can be used ...
 
   The following table summarizes the meanings and English equivalents of Latin abbreviations:
 
-  | Abbrev | Latin            | English                 |
-  | ------ | ---------------- | ----------------------- |
-  | cf.    | _confer_         | compare                 |
-  | e.g.   | _exempli gratia_ | for example             |
-  | et al. | _et alii_        | and others              |
-  | etc.   | _et cetera_      | and so forth, and so on |
-  | i.e.   | _id est_         | that is, in other words |
-  | N.B.   | _nota bene_      | note well               |
-  | P.S.   | _post scriptum_  | postscript              |
+<!-- markdownlint-disable search-replace -->
 
-  > [!NOTE]
-  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
-  >
-  > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
+| Abbrev | Latin            | English                 |
+| ------ | ---------------- | ----------------------- |
+| cf.    | _confer_         | compare                 |
+| e.g.   | _exempli gratia_ | for example             |
+| et al. | _et alii_        | and others              |
+| etc.   | _et cetera_      | and so forth, and so on |
+| i.e.   | _id est_         | that is, in other words |
+| N.B.   | _nota bene_      | note well               |
+| P.S.   | _post scriptum_  | postscript              |
+
+<!-- markdownlint-enable search-replace -->
+
+> [!NOTE]
+> Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+>
+> Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
 - **Plurals of abbreviations and acronyms**: For plurals of abbreviations and acronyms, add _s_. Don't use an apostrophe. Ever. Please.
 
@@ -511,7 +519,7 @@ On the other hand, first-party shorteners that are maintained by the organizatio
 ### Heading levels
 
 When a new paragraph starts a new section, a header should be added.
-Use these markdown heading levels in decreasing order without skipping levels: `##`, then `###`, and then `####`; these translate to the [HTML heading tags](/en-US/docs/Web/HTML/Element/Heading_Elements) `<h2>`, `<h3>`, and `<h4>` tags, respectively.
+Use these markdown heading levels in decreasing order without skipping levels: `##`, then `###`, and then `####`; these translate to the [HTML heading tags](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) `<h2>`, `<h3>`, and `<h4>` tags, respectively.
 
 `##` is the highest level allowed because `#` is reserved for the page title.
 We recommend to not add more than three levels of headers. If you feel the need for adding the fourth header level, consider breaking up the article into several smaller articles with a landing page. Alternatively, see if you can present the information in bulleted points to avoid adding level four header.
@@ -520,7 +528,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 - **Don't create single subsections.** Don't subdivide a topic into a single subtopic.
   It's either two subheadings or more or none at all.
-- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g. "Using `FooBar` interface").
+- **Don't use inline styles, classes, or macros within headings.** However, you can use backticks to indicate code terms (e.g., "Using `FooBar` interface").
 - **Don't create "bumping heads".** These are headings followed immediately by a subheading, with no content text in between them.
   This doesn't look good and leaves readers without any explanatory text at the beginning of the outer section.
 
@@ -587,8 +595,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
-  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) page in correct sentence case will be:
+  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
 - On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.

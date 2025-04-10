@@ -7,7 +7,7 @@ sidebar: svgref
 ---
 
 The **`<use>`** element takes nodes from within the SVG document, and duplicates them somewhere else.
-The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template).
+The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Reference/Elements/template).
 
 ## Example
 
@@ -47,7 +47,7 @@ svg {
 - {{SVGAttr("height")}}
   - : The height of the use element.<br/> _Value type_: [**`<length>`**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
+> **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > [!NOTE]
 > Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.

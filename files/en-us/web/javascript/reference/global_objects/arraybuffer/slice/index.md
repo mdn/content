@@ -44,7 +44,7 @@ slice(start, end)
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
     - Negative index counts back from the end of the buffer — if `-buffer.length <= end < 0`, `end + buffer.length` is used.
     - If `end < -buffer.length`, `0` is used.
-    - If `end >= buffer.length` or `end` is omitted, `buffer.length` is used, causing all elements until the end to be extracted.
+    - If `end >= buffer.length` or `end` is omitted is `undefined`, `buffer.length` is used, causing all elements until the end to be extracted.
     - If `end` implies a position before or at the position that `start` implies, an empty buffer is returned.
 
 ### Return value

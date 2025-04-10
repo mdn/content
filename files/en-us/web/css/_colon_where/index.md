@@ -20,7 +20,6 @@ ol {
 }
 
 /* Not applied to ol, because of lower specificity */
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :where(ol, ul, menu:unsupported) :where(ol, ul) {
   color: green;
 }

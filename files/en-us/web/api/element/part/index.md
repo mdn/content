@@ -9,7 +9,7 @@ browser-compat: api.Element.part
 {{ ApiRef("DOM") }}
 
 The **`part`** property of the {{domxref("Element")}} interface
-represents the part identifier(s) of the element (i.e. set using the `part`
+represents the part identifier(s) of the element (i.e., set using the `part`
 attribute), returned as a {{domxref("DOMTokenList")}}. These can be used to style parts
 of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.
 
@@ -57,4 +57,4 @@ tabs.forEach((tab) => {
 ## See also
 
 - {{cssxref("::part")}}
-- [part](/en-US/docs/Web/HTML/Global_attributes/part)
+- [part](/en-US/docs/Web/HTML/Reference/Global_attributes/part)

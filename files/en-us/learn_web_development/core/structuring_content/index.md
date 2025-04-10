@@ -1,5 +1,6 @@
 ---
 title: Structuring content with HTML
+short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 page-type: landing-page
 ---
@@ -32,7 +33,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 - [Structuring documents](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
   - : In addition to defining individual parts of your page (such as "a paragraph" or "an image"), HTML also boasts a number of block level elements used to define areas of your website (such as "the header", "the navigation menu", "the main content column"). This article looks into how to plan a basic website structure, and write the HTML to represent this structure.
 - [Advanced text features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)
-  - : There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.
+  - : There are many other elements in HTML for defining text semantics, which we didn't get to in the [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance) article. The elements described in this article are less known, but still useful to know about (and this is still not a complete list by any means). Here you'll learn about marking up quotations, computer code and other related text, subscript and superscript, contact information, and more.
 - [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
   - : Links (also known as hyperlinks) are really important — they are what makes the Web _a web_. This article shows the syntax required to make a link, and discusses link best practices.
 - [Marking up a letter](/en-US/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter) <sup>Challenge</sup>
@@ -55,6 +56,8 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : HTML forms and buttons are powerful tools for interacting with users — most commonly they are used for collecting data from users or allowing them to control a user interface. In this article we provide an introduction to the basics of forms and buttons.
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
+- [Test your skills: HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills)
+  - : This page lists HTML tests you can try so you can verify if you've understood the content in this module.
 
 ## Additional tutorials
 
@@ -69,9 +72,9 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 - [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
   - : A useful (and free resource) for learning HTML basics.
-- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
-- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Learn HTML and CSS](https://scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
+- [The basics of semantic HTML](https://scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
   - : This interactive lesson provides a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}

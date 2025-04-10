@@ -239,6 +239,7 @@ fencedframe
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
+firefoxsidebar
 fiuv
 font.mathfont-family
 fontconfig
@@ -661,6 +662,7 @@ seekforward
 seekto
 seeother
 selectchange
+selectedcontent
 selectend
 seltype
 sentenceboundary

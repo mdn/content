@@ -28,7 +28,7 @@ Subresource Integrity enables you to mitigate some risks of attacks such as this
 
 ## Using Subresource Integrity
 
-You use the Subresource Integrity feature by specifying a base64-encoded cryptographic hash of a resource (file) you're telling the browser to fetch, in the value of the `integrity` attribute of a {{HTMLElement("script")}} element or a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Attributes/rel#stylesheet), [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload), or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+You use the Subresource Integrity feature by specifying a base64-encoded cryptographic hash of a resource (file) you're telling the browser to fetch, in the value of the `integrity` attribute of a {{HTMLElement("script")}} element or a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), or [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 
 An `integrity` value begins with at least one string, with each string including a prefix indicating a particular hash algorithm (currently the allowed prefixes are `sha256`, `sha384`, and `sha512`), followed by a dash, and ending with the actual base64-encoded hash.
 
@@ -80,7 +80,7 @@ To use that code:
 4. Press any key to dismiss the command box.
 
 > [!NOTE]
-> If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org/) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
+> If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org/) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://github.com/openssl/openssl/wiki/Binaries.
 
 #### Using shasum
 
@@ -117,7 +117,7 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
 ```
 
 > [!NOTE]
-> For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
+> For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin).
 
 ## How browsers handle Subresource Integrity
 
