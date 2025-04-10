@@ -20,7 +20,7 @@ values are:
 - `None`
   - : No selection has currently been made.
 - `Caret`
-  - : The selection is collapsed (i.e. the caret is placed on some
+  - : The selection is collapsed (i.e., the caret is placed on some
     text, but no range has been selected).
 - `Range`
   - : A range has been selected.

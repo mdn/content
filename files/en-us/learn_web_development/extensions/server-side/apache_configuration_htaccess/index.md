@@ -79,7 +79,7 @@ One alternative is to explicitly state what domains have access to the content o
 
 ### Cross-origin images
 
-As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
+As reported in the [Chromium Blog](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html) and documented in [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can lead to [fingerprinting](/en-US/docs/Glossary/Fingerprinting) attacks.
 
 To mitigate the possibility of these attacks, you should use the `crossorigin` attribute in the images you request and the code snippet below in your `.htaccess` to set the CORS header from the server.
 
@@ -465,7 +465,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
-4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
+4. Prevents all websites (including your own) from embedding your webpages within e.g., the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
    - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified

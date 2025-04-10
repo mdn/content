@@ -25,7 +25,7 @@ getPropertyPriority(property)
 
 ### Return value
 
-A string that represents the priority (e.g. `"important"`) if one exists.
+A string that represents the priority (e.g., `"important"`) if one exists.
 If none exists, returns the empty string.
 
 ## Examples

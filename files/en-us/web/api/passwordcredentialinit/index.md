@@ -11,7 +11,7 @@ The **`PasswordCredentialInit`** dictionary represents the object passed to {{do
 
 ## Initialization from a form
 
-Instead of passing this dictionary directly, a website can pass an {{domxref("HTMLFormElement")}}, and the implementation of `create()` will populate the credential's data from the values of the form's submittable elements, based on the value of the element's [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute.
+Instead of passing this dictionary directly, a website can pass an {{domxref("HTMLFormElement")}}, and the implementation of `create()` will populate the credential's data from the values of the form's submittable elements, based on the value of the element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute.
 
 | `autocomplete` value                     | Credential property targeted |
 | ---------------------------------------- | ---------------------------- |

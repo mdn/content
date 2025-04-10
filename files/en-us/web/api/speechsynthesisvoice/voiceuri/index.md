@@ -15,7 +15,7 @@ the speech synthesis service for this voice.
 ## Value
 
 A string representing the URI of the voice. This is a generic URI and
-can point to local or remote services, e.g. it could be a proprietary system URN or a URL to a remote service.
+can point to local or remote services, e.g., it could be a proprietary system URN or a URL to a remote service.
 
 ## Examples
 

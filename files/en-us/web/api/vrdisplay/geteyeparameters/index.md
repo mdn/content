@@ -29,7 +29,7 @@ getEyeParameters(whichEye)
 
 ### Return value
 
-A {{domxref("VREyeParameters")}} object, or null if the VR is not able to present content (e.g. {{domxref("VRDisplayCapabilities.canPresent")}} returns `false`).
+A {{domxref("VREyeParameters")}} object, or null if the VR is not able to present content (e.g., {{domxref("VRDisplayCapabilities.canPresent")}} returns `false`).
 
 ## Examples
 

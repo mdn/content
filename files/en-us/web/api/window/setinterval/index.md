@@ -10,8 +10,6 @@ browser-compat: api.setInterval
 
 The **`setInterval()`** method of the {{domxref("Window")}} interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
-This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("Window.clearInterval", "clearInterval()")}}.
-
 ## Syntax
 
 ```js-nolint
@@ -40,9 +38,11 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 ### Return value
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the interval.
+The `setInterval()` method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the interval timer created by the call. This identifier, often referred to as an "interval ID", can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to stop the repeated execution of the specified function.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("Window.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("Window.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
+Within the same global environment (e.g., a particular window or worker), the interval ID is ensured to remain unique and is not reused for any new interval timer as long as the original timer is still active. However, different global environments maintain their own independent pools of interval IDs.
+
+Be aware that `setInterval()` and {{domxref("Window.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("Window.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > [!NOTE]

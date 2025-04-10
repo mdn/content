@@ -170,8 +170,8 @@ There are many other types of form fields, which you will largely recognize from
 The arguments that are common to most fields are listed below (these have sensible default values):
 
 - [`required`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#required): If `True`, the field may not be left blank or given a `None` value. Fields are required by default, so you would set `required=False` to allow blank values in the form.
-- [`label`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g. _Renewal date_).
-- [`label_suffix`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g. Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
+- [`label`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g., _Renewal date_).
+- [`label_suffix`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g., Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
 - [`initial`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#initial): The initial value for the field when the form is displayed.
 - [`widget`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#widget): The display widget to use.
 - [`help_text`](https://docs.djangoproject.com/en/5.0/ref/forms/fields/#help-text) (as seen in the example above): Additional text that can be displayed in forms to explain how to use the field.
@@ -242,7 +242,7 @@ The URL configuration will redirect URLs with the format **/catalog/book/_\<book
 
 As discussed in the [Django form handling process](#django_form_handling_process) above, the view has to render the default form when it is first called and then either re-render it with error messages if the data is invalid, or process the data and redirect to a new page if the data is valid. In order to perform these different actions, the view has to be able to know whether it is being called for the first time to render the default form, or a subsequent time to validate data.
 
-For forms that use a `POST` request to submit information to the server, the most common pattern is for the view to test against the `POST` request type (`if request.method == 'POST':`) to identify form validation requests and `GET` (using an `else` condition) to identify the initial form creation request. If you want to submit your data using a `GET` request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g. to read a hidden value in the form).
+For forms that use a `POST` request to submit information to the server, the most common pattern is for the view to test against the `POST` request type (`if request.method == 'POST':`) to identify form validation requests and `GET` (using an `else` condition) to identify the initial form creation request. If you want to submit your data using a `GET` request, then a typical approach for identifying whether this is the first or subsequent view invocation is to read the form data (e.g., to read a hidden value in the form).
 
 The book renewal process will be writing to our database, so, by convention, we use the `POST` request approach.
 The code fragment below shows the (very standard) pattern for this sort of function view.
@@ -347,7 +347,7 @@ return render(request, 'catalog/book_renew_librarian.html', context)
 
 If the form is not valid we call `render()` again, but this time the form value passed in the context will include error messages.
 
-If the form is valid, then we can start to use the data, accessing it through the `form.cleaned_data` attribute (e.g. `data = form.cleaned_data['renewal_date']`). Here, we just save the data into the `due_back` value of the associated `BookInstance` object.
+If the form is valid, then we can start to use the data, accessing it through the `form.cleaned_data` attribute (e.g., `data = form.cleaned_data['renewal_date']`). Here, we just save the data into the `due_back` value of the associated `BookInstance` object.
 
 > [!WARNING]
 > While you can also access the form data directly through the request (for example, `request.POST['renewal_date']` or `request.GET['renewal_date']` if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.
@@ -573,7 +573,7 @@ class RenewBookModelForm(ModelForm):
 > [!NOTE]
 > This might not look all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However, if you have a lot of fields, it can considerably reduce the amount of code required!
 
-The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due Back_), and we also want our help text to be specific to this use case.
+The rest of the information comes from the model field definitions (e.g., labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form, we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due Back_), and we also want our help text to be specific to this use case.
 The `Meta` below shows you how to override these fields, and you can similarly set `widgets` and `error_messages` if the defaults aren't sufficient.
 
 ```python

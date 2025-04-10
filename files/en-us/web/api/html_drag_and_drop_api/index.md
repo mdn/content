@@ -44,7 +44,7 @@ This section is a summary of the basic steps to add drag-and-drop functionality 
 
 #### Identify what is draggable
 
-Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
+Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
 
 ```html
 <script>
@@ -66,7 +66,7 @@ Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/
 
 For more information, see:
 
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable)
 - [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#the_draggable_attribute)
 
 #### Define the drag's data
@@ -231,8 +231,6 @@ Each {{domxref("DataTransfer")}} object contains an {{domxref("DataTransfer.item
 The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTransferItem")}} objects. The list object has methods to add a drag item to the list, remove a drag item from the list, and clear the list of all drag items.
 
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
-
-> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
 ## Examples
 

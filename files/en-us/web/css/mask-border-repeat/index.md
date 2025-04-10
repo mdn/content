@@ -57,7 +57,7 @@ The `mask-border-repeat` property may be specified using one or two values chose
 
 ### Basic usage
 
-This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define how the border mask slice will repeat around the border — i.e. will it just repeat, or be scaled slightly so a whole number of slices fits, or be stretched so one slice fits?
+This property doesn't appear to be supported anywhere yet. When it eventually starts to be supported, it will serve to define how the border mask slice will repeat around the border — i.e., will it just repeat, or be scaled slightly so a whole number of slices fits, or be stretched so one slice fits?
 
 ```css
 mask-border-repeat: round;

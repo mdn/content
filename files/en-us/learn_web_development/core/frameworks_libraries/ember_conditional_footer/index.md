@@ -7,7 +7,7 @@ page-type: learn-module-chapter
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state","Learn_web_development/Core/Frameworks_libraries/Ember_routing", "Learn_web_development/Core/Frameworks_libraries")}}
 
-Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
+Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e., where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
 
 <table>
   <tbody>
@@ -58,7 +58,7 @@ To get the footer working, we need to implement the following three areas of fun
 
 2. Next, go and find the newly-created `todomvc/app/components/footer.js` file and update it to the following:
 
-   ```js
+   ```ts
    import Component from "@glimmer/component";
    import { inject as service } from "@ember/service";
 
@@ -71,7 +71,7 @@ To get the footer working, we need to implement the following three areas of fun
 
    In `todo-data.js`, add the following getter underneath the existing `all()` getter to define what the incomplete todos actually are:
 
-   ```js
+   ```ts
    get incomplete() {
      return this.todos.filter((todo) => !todo.isCompleted);
    }
@@ -81,7 +81,7 @@ To get the footer working, we need to implement the following three areas of fun
 
 4. Next, add the following action underneath the existing `add(text)` action:
 
-   ```js
+   ```ts
    @action
    clearCompleted() {
      this.todos = this.incomplete;
@@ -148,7 +148,7 @@ This will give us an error, however — in Ember, these simple if statements can
 
 Add the following new getter to `todo-data.js`, just below the existing getters. Note that here we need `this.incomplete.length`, not `this.todos.incomplete.length`, because we are doing this inside the service, where the `incomplete()` getter is available directly (in the template, the contents of the service has been made available as `todos` via the `@service('todo-data') todos;` line inside the footer class, hence it being `this.todos.incomplete.length` there).
 
-```js
+```ts
 get todoCountIsOne() {
   return this.incomplete.length === 1;
 }
@@ -183,7 +183,7 @@ As with the other components, we need a class to access the service.
 
 2. Now go to the newly-created `todomvc/app/components/todo.js` file and update the contents to look like so, to give the todo component access to the service:
 
-   ```js
+   ```ts
    import Component from "@glimmer/component";
    import { inject as service } from "@ember/service";
 
@@ -194,7 +194,7 @@ As with the other components, we need a class to access the service.
 
 3. Next, go back again to our `todo-data.js` service file and add the following action just below the previous ones, which will allow us to toggle a completion state for each todo:
 
-   ```js
+   ```ts
    @action
    toggleCompletion(todo) {
      todo.isCompleted = !todo.isCompleted;

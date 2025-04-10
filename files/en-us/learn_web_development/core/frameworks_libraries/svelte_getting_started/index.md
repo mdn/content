@@ -70,7 +70,7 @@ Nevertheless, Svelte is particularly appropriate to tackle the following situati
 
 The Svelte team launched [SvelteKit](https://kit.svelte.dev/), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev/) and [documentation](https://kit.svelte.dev/docs/introduction).
 
-Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology/).
+Svelte is also available for mobile development via [Svelte Native](https://svelte.nativescript.org/).
 
 ## How does Svelte work?
 
@@ -238,7 +238,7 @@ The `<script>` block contains JavaScript that runs when a component instance is 
 </script>
 ```
 
-Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.
+Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g., other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.
 
 ### The markup section
 
@@ -284,7 +284,7 @@ If you have experience working with CSS, the following snippet should make sense
 </style>
 ```
 
-We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
+We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 
@@ -467,7 +467,7 @@ Whenever you change any file on the REPL, Svelte will recompile the app and upda
 We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.
 
 > [!NOTE]
-> At the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g. `import Todos from './Todos.svelte'`.
+> At the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g., `import Todos from './Todos.svelte'`.
 
 ## The code so far
 

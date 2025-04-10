@@ -60,6 +60,10 @@ The [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_
 
 The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) article shows how to use [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) to access the camera on a computer or mobile phone with `getUserMedia()` support and take a photo with it.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

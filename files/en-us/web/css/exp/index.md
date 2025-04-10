@@ -35,7 +35,7 @@ Returns a non-negative {{CSSxRef("number")}} representing e<sup>number</sup>, wh
 
 - If `number` is `-Infinity`, the result is `0`.
 - If `number` is `0`, the result is `1`.
-- If `number` is `1`, the result is `e` (i.e. `2.718281828459045`).
+- If `number` is `1`, the result is `e` (i.e., `2.718281828459045`).
 - If `number` is `Infinity`, the result is `Infinity`.
 
 ## Formal syntax

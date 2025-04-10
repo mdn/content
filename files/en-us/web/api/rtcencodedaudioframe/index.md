@@ -33,7 +33,7 @@ The `transform()` method shows how this might be read, modified using a fictiona
 
 ```js
 addEventListener("rtctransform", (event) => {
-  const async transform = new TransformStream({
+  const transform = new TransformStream({
     async transform(encodedFrame, controller) {
       // Reconstruct the original frame.
       const view = new DataView(encodedFrame.data);

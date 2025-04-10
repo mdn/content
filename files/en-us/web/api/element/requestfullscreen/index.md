@@ -85,7 +85,7 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   attribute applied to it.
 
 Additionally, any set Permissions Policies must allow the use of this feature.
@@ -191,4 +191,4 @@ The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{do
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

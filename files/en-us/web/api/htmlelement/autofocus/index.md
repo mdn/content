@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.autofocus
 
 {{APIRef("HTML DOM")}}
 
-The **`autofocus`** property of the {{domxref("HTMLElement")}} interface represents a boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
+The **`autofocus`** property of the {{domxref("HTMLElement")}} interface represents a boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Reference/Elements/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
 
 Only one form-associated element inside a document, or a {{htmlelement("dialog")}} element, or an element whose `popover` attribute is set, can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, gets the initial focus.
 

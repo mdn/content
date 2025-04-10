@@ -10,13 +10,13 @@ browser-compat: api.HTMLButtonElement.type
 
 The **`type`** property of the {{domxref("HTMLButtonElement")}} interface is a string that indicates the behavior type of the {{HTMLElement("button")}} element.
 
-It reflects the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute of the {{HTMLElement("button")}} element.
+It reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/button#type) attribute of the {{HTMLElement("button")}} element.
 
 ## Value
 
 A string representing the type.
 
-Its possible values are listed in the attribute's [button types](/en-US/docs/Web/API/HTMLButtonElement#htmlbuttonelement.type) section.
+Its possible values are listed in the attribute's [button types](/en-US/docs/Web/HTML/Reference/Elements/button#type) section.
 
 ## Example
 

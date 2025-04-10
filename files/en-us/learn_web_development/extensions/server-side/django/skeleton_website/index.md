@@ -108,7 +108,7 @@ py manage.py startapp catalog
 > If you're working on Windows, wherever you see a command starting with `python3` you should instead use `py` (or `py -3`).
 
 The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
-Most of the files are named after their purpose (e.g. views should be stored in **views.py**, models in **models.py**, tests in **tests.py**, administration site configuration in **admin.py**, application registration in **apps.py**) and contain some minimal boilerplate code for working with the associated objects.
+Most of the files are named after their purpose (e.g., views should be stored in **views.py**, models in **models.py**, tests in **tests.py**, administration site configuration in **admin.py**, application registration in **apps.py**) and contain some minimal boilerplate code for working with the associated objects.
 
 The updated project directory should now look like this:
 
@@ -222,7 +222,7 @@ urlpatterns = [
 The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls`, which contains the Administration application's own URL mapping definitions.
 
 > [!NOTE]
-> The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
+> The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g., `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
 
 To add a new list item to the `urlpatterns` list, add the following lines to the bottom of the file. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **catalog/urls.py**).
 
@@ -238,7 +238,7 @@ urlpatterns += [
 > [!NOTE]
 > Note that we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
 
-Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`. This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
+Now let's redirect the root URL of our site (i.e., `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`. This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
 
 Add the following lines to the bottom of the file:
 

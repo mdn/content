@@ -38,7 +38,7 @@ Only the following elements are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -78,7 +78,7 @@ const inputByName = inputs["username"];
 
 This example gets the form's element list, then iterates over the list, looking for
 {{HTMLElement("input")}} elements of type
-[`"text"`](/en-US/docs/Web/HTML/Element/input/text) so that some
+[`"text"`](/en-US/docs/Web/HTML/Reference/Elements/input/text) so that some
 form of processing can be performed on them.
 
 ```js

@@ -468,7 +468,7 @@
         "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["HTMLElement.editContext"],
       "events": []
     },
     "Encoding API": {
@@ -529,6 +529,14 @@
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
       "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
+      "properties": [],
+      "events": []
+    },
+    "fetchLater API": {
+      "overview": ["fetchLater API"],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
+      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
+      "methods": ["Window.fetchLater()"],
       "properties": [],
       "events": []
     },

@@ -9,6 +9,10 @@ page-type: learn-module-chapter
 
 Now that you know what [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#introducing_express) is for, we'll show you how to set up and test a Node/Express development environment on Windows, or Linux (Ubuntu), or macOS. For any of those operating systems, this article provides what you need to start developing Express apps.
 
+> [!WARNING]
+> The Express tutorial is written for Express version 4, while the latest version is Express 5.
+> We plan to update the documentation to support Express 5 in the second half of 2025. Until then, we have updated the installation commands so they install Express 4 rather than the latest version, to avoid any potential compatibility problems.
+
 <table>
   <tbody>
     <tr>
@@ -224,7 +228,7 @@ The following steps show how you can use npm to download a package, save it into
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
-    npm install express
+   npm install express @4
    ```
 
    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
@@ -241,7 +245,7 @@ The following steps show how you can use npm to download a package, save it into
      "author": "",
      "license": "ISC",
      "dependencies": {
-       "express": "^4.17.1"
+       "express": "^4.21.2"
      }
    }
    ```

@@ -19,7 +19,7 @@ It is used to define options which control how Firefox gets started and run.
 
 Absolute path to the custom Firefox binary to use.
 
-On macOS you may either give the path to the application bundle, i.e. `/Applications/Firefox.app`, or the
+On macOS you may either give the path to the application bundle, i.e., `/Applications/Firefox.app`, or the
 absolute path to the executable binary inside this bundle, for example
 `/Applications/Firefox.app/Contents/MacOS/firefox-bin`.
 
@@ -93,7 +93,7 @@ default locations of Firefox are:
 ##### `args` (array of strings)
 
 Command line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
-required, e.g. `["-headless"]`.
+required, e.g., `["-headless"]`.
 
 To have geckodriver pick up an existing [profile](#profile_string) on the local filesystem, you may pass
 `["-profile", "/path/to/profile"]`. But if a profile has to be transferred to a target machine it is
@@ -101,7 +101,7 @@ recommended to use the `profile` entry.
 
 ##### `profile` (string)
 
-Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
+Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g., install
 extensions or custom certificates, but for setting custom preferences we recommend using the `prefs` ([Preferences Object](#prefs_preferences_object)) entry instead.
 
 Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when
@@ -129,13 +129,13 @@ Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an 
 
 #### `androidPackage` (string, required)
 
-The package name of Firefox, e.g. `org.mozilla.firefox`,
+The package name of Firefox, e.g., `org.mozilla.firefox`,
 `org.mozilla.firefox_beta`, or `org.mozilla.fennec` depending on the release
-channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
+channel, or the package name of the application embedding GeckoView, e.g., `org.mozilla.geckoview_example`.
 
 #### `androidActivity` (string, optional)
 
-The fully qualified class name of the activity to be launched, e.g. `.GeckoViewActivity`. If not
+The fully qualified class name of the activity to be launched, e.g., `.GeckoViewActivity`. If not
 specified, the package's default activity will be used.
 
 #### `androidDeviceSerial` (string, optional)

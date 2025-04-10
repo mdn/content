@@ -43,12 +43,12 @@ This tutorial provides some guidance on your options for choosing a hosting site
 The production environment is the environment provided by the server computer where you will run your website for external consumption. The environment includes:
 
 - Computer hardware on which the website runs.
-- Operating system (e.g. Linux or Windows).
+- Operating system (e.g., Linux or Windows).
 - Programming language runtime and framework libraries on top of which your website is written.
 - Web server infrastructure, possibly including a web server, reverse proxy, load balancer, etc.
 - Databases on which your website is dependent.
 
-The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g. CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
+The server computer could be located on your premises and connected to the Internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (e.g., CPU, RAM, storage memory, etc.) and Internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
@@ -75,9 +75,9 @@ Some of the things to consider when choosing a host:
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
 - The locations where the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
-- Tools provided for managing the site — are they easy to use and are they secure (e.g. SFTP vs. FTP).
+- Tools provided for managing the site — are they easy to use and are they secure (e.g., SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
-- Known limitations. Some hosts will deliberately block certain services (e.g. email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
+- Known limitations. Some hosts will deliberately block certain services (e.g., email). Others offer only a certain number of hours of "live time" in some price tiers, or only offer a small amount of storage.
 - Additional benefits. Some providers will offer free domain names and support for TLS certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
@@ -153,7 +153,7 @@ This change can be made either by using `export`, an environment file, or the OS
 
 ### Log appropriately
 
-Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g. tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
+Logging calls can have an impact on a high-traffic website. In a production environment, you may need to log website activity (e.g., tracking traffic or logging API calls) but you should attempt to minimize the amount of logging added for debugging purposes.
 
 One way to minimize "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable.
 For example, the code fragment below shows how you might set up "author" logging.
@@ -360,7 +360,7 @@ The steps are:
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Enter a new repository name (e.g., _express-locallibrary-tutorial_), and description (e.g., "Local Library website written in Express (Node)".
    - Choose **Node** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.

@@ -77,7 +77,7 @@ function handleSubmit(event) {
 }
 ```
 
-To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Element/form) element, and set its value to the `handleSubmit` function:
+To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) element, and set its value to the `handleSubmit` function:
 
 ```jsx
 <form onSubmit={handleSubmit}>
@@ -216,7 +216,7 @@ function handleChange() {
   console.log("Typing!");
 }
 
-...
+// …
 
 // Down in the return statement
 <input

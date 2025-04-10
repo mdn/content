@@ -8,7 +8,7 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 {{CSSRef}}
 
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features) is used to detect if a user has requested light or dark color themes.
-A user indicates their preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
+A user indicates their preference through an operating system setting (e.g., light or dark mode) or a user agent setting.
 
 ## Embedded elements
 
@@ -17,7 +17,7 @@ SVGs must be used embedded (i.e., `<img src="circle.svg" alt="circle" />`) as op
 An example of using `prefers-color-scheme` in SVGs can be found in the ["Inherited color scheme in embedded elements"](#inherited_color_scheme_in_embedded_elements) section.
 
 Using `prefers-color-scheme` is allowed in [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) `<svg>` and `<iframe>` elements. Cross-origin elements are elements retrieved from a different host than the page that is referencing them.
-To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and for more information about iframes, see the [iframe documentation](/en-US/docs/Web/HTML/Element/iframe).
+To learn more about SVGs, see the [SVG documentation](/en-US/docs/Web/SVG) and for more information about iframes, see the [iframe documentation](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 ## Syntax
 
@@ -154,7 +154,7 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 ## See also
 
 - {{cssxref("color-scheme")}} property
-- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme)
+- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#color-scheme)
 - {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
 - [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view-media-rules-for-prefers-color-scheme)
 - [Video: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)

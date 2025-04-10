@@ -28,7 +28,7 @@ A new {{jsxref("Iterator")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e. when the `Iterator` constructor itself is constructed.
+  - : When [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is the `Iterator` function itself, i.e., when the `Iterator` constructor itself is constructed.
 
 ## Description
 
