@@ -50,7 +50,7 @@ const ym1 = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
 const ym2 = Temporal.PlainYearMonth.from({
   year: 2021,
   month: 8,
-  calendar: "islamic",
+  calendar: "islamic-umalqura",
 });
 const ym3 = Temporal.PlainYearMonth.from({
   year: 2021,
@@ -58,7 +58,7 @@ const ym3 = Temporal.PlainYearMonth.from({
   calendar: "hebrew",
 });
 console.log(ym1.toString()); // "2021-08"
-console.log(ym2.toString()); // "2582-12-18[u-ca=islamic]"
+console.log(ym2.toString()); // "2582-12-18[u-ca=islamic-umalqura]"
 console.log(ym3.toString()); // "-001739-04-06[u-ca=hebrew]"
 console.log(Temporal.PlainYearMonth.compare(ym1, ym2)); // -1
 console.log(Temporal.PlainYearMonth.compare(ym1, ym3)); // 1
@@ -74,14 +74,14 @@ const months = [
   Temporal.PlainYearMonth.from({
     year: 2021,
     month: 8,
-    calendar: "islamic",
+    calendar: "islamic-umalqura",
   }),
   Temporal.PlainYearMonth.from({ year: 2021, month: 8, calendar: "hebrew" }),
 ];
 
 months.sort(Temporal.PlainYearMonth.compare);
 console.log(months.map((d) => d.toString()));
-// [ "-001739-04-06[u-ca=hebrew]", "2021-08", "2582-12-18[u-ca=islamic]" ]
+// [ "-001739-04-06[u-ca=hebrew]", "2021-08", "2582-12-18[u-ca=islamic-umalqura]" ]
 ```
 
 ## Specifications
