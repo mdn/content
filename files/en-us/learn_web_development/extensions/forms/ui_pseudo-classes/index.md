@@ -2,9 +2,10 @@
 title: UI pseudo-classes
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 In the previous articles, we covered the styling of various form controls in a general manner. This included some usage of pseudo-classes, for example, using `:checked` to target a checkbox only when it is selected. In this article, we explore the different UI pseudo-classes available for styling forms in different states.
 

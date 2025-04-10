@@ -3,9 +3,10 @@ title: HTML performance optimization
 short-title: Performant HTML
 slug: Learn_web_development/Extensions/Performance/HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML is by default fast and accessible. It is our job, as developers, to ensure that we preserve these two properties when creating or editing HTML code. Complications can occur when, for example, the file size of a {{htmlelement("video")}} embed is too large or when JavaScript parsing blocks the rendering of critical page elements. This article walks you through the key HTML performance features that can drastically improve the quality of your web page.
 

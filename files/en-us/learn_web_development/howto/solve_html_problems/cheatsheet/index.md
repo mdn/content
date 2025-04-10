@@ -2,9 +2,8 @@
 title: HTML Cheat Sheet
 slug: Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with extended [HTML reference documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [set of HTML guides](/en-US/docs/Learn_web_development/Core/Structuring_content). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheat sheet, to give you some quick accurate ready to use code snippets for common usages.
 

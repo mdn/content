@@ -2,9 +2,8 @@
 title: User input methods and controls
 slug: Learn_web_development/Extensions/Forms/User_input_methods
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 

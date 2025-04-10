@@ -2,9 +2,10 @@
 title: The HTML5 input types
 slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 In the [previous article](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) we looked at the {{htmlelement("input")}} element, covering the original values of the `type` attribute available since the early days of HTML. Now we'll look in detail at the functionality of some input types that were added later.
 

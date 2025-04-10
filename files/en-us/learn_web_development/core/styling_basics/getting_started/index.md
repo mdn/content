@@ -3,9 +3,8 @@ title: Getting started with CSS
 short-title: CSS getting started
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 

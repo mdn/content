@@ -3,9 +3,8 @@ title: Dynamic scripting with JavaScript
 short-title: JavaScript
 slug: Learn_web_development/Core/Scripting
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core")}}
 

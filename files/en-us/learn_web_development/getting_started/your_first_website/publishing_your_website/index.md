@@ -3,9 +3,8 @@ title: Publishing your website
 short-title: Publishing
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 

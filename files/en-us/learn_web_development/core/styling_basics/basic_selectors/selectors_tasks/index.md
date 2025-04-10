@@ -2,9 +2,8 @@
 title: "Test your skills: Selectors"
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 

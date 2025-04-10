@@ -2,9 +2,8 @@
 title: Debugging HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 

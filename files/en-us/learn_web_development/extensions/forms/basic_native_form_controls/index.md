@@ -2,9 +2,10 @@
 title: Basic native form controls
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 In the [previous article](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form), we marked up a functional web form example, introducing some form controls and common structural elements, and focusing on accessibility best practices. Next, we will look at the functionality of the different form controls, or widgets, in detail — studying all the different options available to collect different types of data. In this particular article, we will look at the original set of form controls, available in all browsers since the early days of the web.
 

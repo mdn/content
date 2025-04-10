@@ -2,9 +2,8 @@
 title: Basic HTML syntax
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 

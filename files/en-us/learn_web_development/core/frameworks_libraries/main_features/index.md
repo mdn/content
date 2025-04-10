@@ -3,9 +3,8 @@ title: Framework main features
 short-title: Framework features
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Introduction","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 

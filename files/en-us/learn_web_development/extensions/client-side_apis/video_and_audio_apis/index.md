@@ -3,9 +3,8 @@ title: Video and audio APIs
 short-title: Video and audio
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 

@@ -3,9 +3,8 @@ title: Getting started with React
 short-title: React getting started
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 

@@ -3,9 +3,8 @@ title: "Challenge: Silly story generator"
 short-title: "Challenge: Story generator"
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 

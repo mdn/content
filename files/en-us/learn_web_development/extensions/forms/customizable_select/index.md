@@ -3,9 +3,10 @@ title: Customizable select elements
 short-title: Customizable selects
 slug: Learn_web_development/Extensions/Forms/Customizable_select
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 This article explains how to use dedicated, modern HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, current selection checkmark, and each individual {{htmlelement("option")}} element.
 

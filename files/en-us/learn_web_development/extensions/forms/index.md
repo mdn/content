@@ -2,9 +2,8 @@
 title: Web forms
 slug: Learn_web_development/Extensions/Forms
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}
 

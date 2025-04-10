@@ -2,9 +2,8 @@
 title: HTML forms in legacy browsers
 slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. This used to mean "Internet Explorer", but there are millions of people using old devices, especially mobile phones, where neither the browser nor the OS can be updated.
 

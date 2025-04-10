@@ -3,9 +3,8 @@ title: Functions — reusable blocks of code
 short-title: Functions
 slug: Learn_web_development/Core/Scripting/Functions
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 

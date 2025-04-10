@@ -2,9 +2,8 @@
 title: Practical positioning examples
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 page-type: guide
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 

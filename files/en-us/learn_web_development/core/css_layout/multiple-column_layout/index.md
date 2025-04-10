@@ -2,9 +2,8 @@
 title: Multiple-column layout
 slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
 

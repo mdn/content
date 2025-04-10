@@ -2,9 +2,8 @@
 title: "Test your skills: Tables"
 slug: Learn_web_development/Core/Styling_basics/Tables_tasks
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how to [style HTML tables in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables).
 

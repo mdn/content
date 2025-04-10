@@ -2,9 +2,8 @@
 title: "Test your skills: Writing modes and logical properties"
 slug: Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how to [handle different text directions using writing modes and logical properties in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 

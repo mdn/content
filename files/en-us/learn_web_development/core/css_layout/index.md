@@ -2,9 +2,8 @@
 title: CSS layout
 slug: Learn_web_development/Core/CSS_layout
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core")}}
 

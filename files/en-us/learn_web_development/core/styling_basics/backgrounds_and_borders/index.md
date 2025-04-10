@@ -2,9 +2,8 @@
 title: Backgrounds and borders
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
