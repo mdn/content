@@ -13209,6 +13209,7 @@
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Web/HTML/element/content	/en-US/docs/Web/HTML/Reference/Elements/slot
+/en-US/docs/Web/HTML/microformats	/en-US/docs/Web/HTML/Guides/Microformats
 /en-US/docs/Web/HTTP/Access_control_CORS	/en-US/docs/Web/HTTP/Guides/CORS
 /en-US/docs/Web/HTTP/Authentication	/en-US/docs/Web/HTTP/Guides/Authentication
 /en-US/docs/Web/HTTP/Basic_access_authentication	/en-US/docs/Web/HTTP/Guides/Authentication

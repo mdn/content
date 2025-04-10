@@ -1,6 +1,7 @@
 ---
-title: Microformats
-slug: Web/HTML/microformats
+title: Using microformats in HTML
+short-title: Microformats
+slug: Web/HTML/Guides/Microformats
 page-type: guide
 ---
 
@@ -197,7 +198,7 @@ Example h-entry as a blog post:
     Replied to
     <a
       class="u-in-reply-to"
-      href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Microformats">
       a post on <strong>developer.mozilla.org</strong>
     </a>
     :
@@ -228,7 +229,7 @@ Example h-entry as a blog post:
       "type": ["h-entry"],
       "properties": {
         "in-reply-to": [
-          "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats"
+          "https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Microformats"
         ],
         "name": ["Hey thanks for making this microformats resource"],
         "url": [

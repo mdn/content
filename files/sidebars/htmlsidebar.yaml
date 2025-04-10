@@ -35,8 +35,6 @@ sidebar:
     children:
       - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
         title: Quirks_Mode_and_Standards_Mode
-      - link: /Web/HTML/microformats
-        title: Microformats
       - link: /Web/HTML/Viewport_meta_tag
         title: Viewport_meta_tag
   - type: section
@@ -82,7 +80,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code>-Typen
     Guides: Anleitungen
     Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
-    Microformats: Mikroformate
     Viewport_meta_tag: Viewport-Meta-Tag
   en-US:
     Beginners: Beginner's tutorials
@@ -95,7 +92,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> types
     Guides: Guides
     Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
-    Microformats: Microformats
     Viewport_meta_tag: Viewport meta tag
   fr:
     Beginners: Tutoriels
@@ -118,7 +114,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> 型
     Guides: ガイド
     Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
-    Microformats: Microformats
     Viewport_meta_tag: ビューポートメタタグ
   ko:
     Beginners: "자습서:"
@@ -129,7 +124,6 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
     Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
-    Microformats: Microformats
     Viewport_meta_tag: 뷰포트 메타 태그
   pt-BR:
     Beginners: Tutoriais
@@ -162,5 +156,4 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> 类型
     Guides: 指南
     Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
-    Microformats: 微格式
     Viewport_meta_tag: Viewport meta 标签

@@ -91001,6 +91001,31 @@
       "duncanmcdonald"
     ]
   },
+  "Web/HTML/Guides/Microformats": {
+    "modified": "2019-10-10T12:40:00.802Z",
+    "contributors": [
+      "Tantek",
+      "SphinxKnight",
+      "sknebel",
+      "schmarty",
+      "jgmac1106",
+      "mfluehr",
+      "ExE-Boss",
+      "PushpitaPikuDey",
+      "jsx",
+      "jenifferhomes",
+      "Seta00",
+      "codeforuk",
+      "RenRen",
+      "teoli",
+      "marie-ototoi",
+      "rogerxas",
+      "mehmetaergun",
+      "xfq",
+      "Akilan_Arasu",
+      "barnabywalters"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-11-03T13:26:20.578Z",
     "contributors": [
@@ -97384,31 +97409,6 @@
       "Jeremie",
       "hbloomer",
       "Andrew_Pfeiffer"
-    ]
-  },
-  "Web/HTML/microformats": {
-    "modified": "2019-10-10T12:40:00.802Z",
-    "contributors": [
-      "Tantek",
-      "SphinxKnight",
-      "sknebel",
-      "schmarty",
-      "jgmac1106",
-      "mfluehr",
-      "ExE-Boss",
-      "PushpitaPikuDey",
-      "jsx",
-      "jenifferhomes",
-      "Seta00",
-      "codeforuk",
-      "RenRen",
-      "teoli",
-      "marie-ototoi",
-      "rogerxas",
-      "mehmetaergun",
-      "xfq",
-      "Akilan_Arasu",
-      "barnabywalters"
     ]
   },
   "Web/HTTP": {
