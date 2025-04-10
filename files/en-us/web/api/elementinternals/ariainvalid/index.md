@@ -28,10 +28,22 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the value of `ariaInvalid` is set to "true".
+In this example, we define and create a `<custom-text>` element, and then retrieve the value of `ariaInvalid` from the first `<custom-text>` element in the document.
 
 ```js
-this.internals_.ariaInvalid = "true";
+class CustomControl extends HTMLElement {
+  constructor() {
+    super();
+    this.internals_ = this.attachInternals();
+    this.internals_.ariaInvalid = "false";
+  }
+  // …
+}
+
+window.customElements.define("custom-text", CustomControl);
+
+let element = document.querySelector("custom-text");
+console.log(element.internals_.ariaInvalid);
 ```
 
 ## Specifications
