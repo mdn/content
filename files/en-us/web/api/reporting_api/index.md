@@ -2,16 +2,17 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
-status:
-  - experimental
 spec-urls:
   - https://w3c.github.io/reporting/#intro
   - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
+browser-compat:
+  - http.headers.Reporting-Endpoints
+  - http.headers.Report-To
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
+{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
@@ -156,9 +157,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Browser compatibility
 
-The API is supported by Chromium browsers, and by Firefox behind a preference (`dom.reporting.enabled`).
-
-See the specific interfaces for more detailed support information.
+{{Compat}}
 
 ## See also
 
