@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Overflow"
-slug: Learn_web_development/Core/Styling_basics/Overflow_Tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 page-type: learn-module-assessment
 ---
 

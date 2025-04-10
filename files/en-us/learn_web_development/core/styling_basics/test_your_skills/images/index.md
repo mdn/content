@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Images and form elements"
-slug: Learn_web_development/Core/Styling_basics/Images_tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 page-type: learn-module-assessment
 ---
 

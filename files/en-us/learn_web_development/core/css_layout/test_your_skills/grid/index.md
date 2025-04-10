@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Grid"
+short-title: Grid
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 page-type: learn-module-assessment
 ---

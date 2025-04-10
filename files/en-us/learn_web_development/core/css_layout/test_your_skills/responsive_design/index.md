@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Responsive web design and media queries"
+short-title: Responsive design and media queries
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
 page-type: learn-module-assessment
 ---

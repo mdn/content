@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Values and units"
-slug: Learn_web_development/Core/Styling_basics/Values_tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 page-type: learn-module-assessment
 ---
 

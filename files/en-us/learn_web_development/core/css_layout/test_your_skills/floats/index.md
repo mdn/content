@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Floats"
+short-title: Floats
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
 page-type: learn-module-assessment
 ---

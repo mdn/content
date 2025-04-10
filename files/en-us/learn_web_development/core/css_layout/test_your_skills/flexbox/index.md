@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Flexbox"
+short-title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 page-type: learn-module-assessment
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Backgrounds and borders"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 page-type: learn-module-assessment
 ---
 

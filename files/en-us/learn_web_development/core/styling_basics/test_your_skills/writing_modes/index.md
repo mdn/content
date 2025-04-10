@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Writing modes and logical properties"
-slug: Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
 page-type: learn-module-assessment
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: The box model"
-slug: Learn_web_development/Core/Styling_basics/Box_Model_Tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 page-type: learn-module-assessment
 ---
 

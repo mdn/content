@@ -846,7 +846,7 @@ Knowing about CSS functions is useful so you recognize them when you see them. Y
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values).
 
 ## Summary
 

@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Multicol"
+short-title: Multicol
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
 page-type: learn-module-assessment
 ---
