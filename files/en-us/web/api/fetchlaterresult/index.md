@@ -46,5 +46,5 @@ function check_if_fetched() {
 
 ## See also
 
-- {{domxref("fetchLater() API")}}
+- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

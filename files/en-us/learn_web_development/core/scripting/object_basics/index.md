@@ -410,7 +410,7 @@ const myNotification = new Notification("Hello!");
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Object_basics).
 
 ## Summary
 
