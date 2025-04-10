@@ -4,9 +4,6 @@ sidebar:
   - type: section
     link: /Web/HTML
   - type: section
-    link: /Web/HTML/Tutorials
-    title: Tutorials
-  - type: section
     link: /Web/HTML/Guides
     title: Guides
   - type: listSubPages
