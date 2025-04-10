@@ -1,6 +1,7 @@
 ---
-title: Microdata
-slug: Web/HTML/Microdata
+title: Using microdata in HTML
+short-title: Microdata
+slug: Web/HTML/Guides/Microdata
 page-type: guide
 ---
 

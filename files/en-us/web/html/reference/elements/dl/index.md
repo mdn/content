@@ -151,7 +151,7 @@ dt::after {
 
 ### Wrapping name-value groups in `div` elements
 
-HTML allows wrapping each name-value group in a `<dl>` element in a {{HTMLElement("div")}} element. This can be useful when using [microdata](/en-US/docs/Web/HTML/Microdata), or when [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) apply to a whole group, or for styling purposes.
+HTML allows wrapping each name-value group in a `<dl>` element in a {{HTMLElement("div")}} element. This can be useful when using [microdata](/en-US/docs/Web/HTML/Guides/Microdata), or when [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes) apply to a whole group, or for styling purposes.
 
 ```html
 <dl>

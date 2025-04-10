@@ -90983,6 +90983,24 @@
       "Sheppy"
     ]
   },
+  "Web/HTML/Guides/Microdata": {
+    "modified": "2020-09-06T05:55:47.630Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta",
+      "Tantek",
+      "germain",
+      "evan-brass",
+      "sideshowbarker",
+      "Annevk",
+      "fscholz",
+      "stevenwdv",
+      "getschomp",
+      "teoli",
+      "rolfedh",
+      "duncanmcdonald"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-11-03T13:26:20.578Z",
     "contributors": [
@@ -91007,24 +91025,6 @@
       "myakura",
       "Sephr",
       "louisremi"
-    ]
-  },
-  "Web/HTML/Microdata": {
-    "modified": "2020-09-06T05:55:47.630Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "Tantek",
-      "germain",
-      "evan-brass",
-      "sideshowbarker",
-      "Annevk",
-      "fscholz",
-      "stevenwdv",
-      "getschomp",
-      "teoli",
-      "rolfedh",
-      "duncanmcdonald"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {

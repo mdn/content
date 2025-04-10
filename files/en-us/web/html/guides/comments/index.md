@@ -1,5 +1,5 @@
 ---
-title: Using comments in HTML (<!-- … -->)
+title: Using HTML comments <!-- … -->
 short-title: Comments
 slug: Web/HTML/Guides/Comments
 page-type: guide

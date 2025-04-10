@@ -9436,7 +9436,7 @@
 /en-US/docs/Web/API/MessagePort.start	/en-US/docs/Web/API/MessagePort/start
 /en-US/docs/Web/API/MessagePort/onmessage	/en-US/docs/Web/API/MessagePort/message_event
 /en-US/docs/Web/API/MessagePort/onmessageerror	/en-US/docs/Web/API/MessagePort/messageerror_event
-/en-US/docs/Web/API/Microdata_DOM_API	/en-US/docs/Web/HTML/Microdata
+/en-US/docs/Web/API/Microdata_DOM_API	/en-US/docs/Web/HTML/Guides/Microdata
 /en-US/docs/Web/API/MouseEvent.MouseEvent	/en-US/docs/Web/API/MouseEvent/MouseEvent
 /en-US/docs/Web/API/MouseEvent.altKey	/en-US/docs/Web/API/MouseEvent/altKey
 /en-US/docs/Web/API/MouseEvent.button	/en-US/docs/Web/API/MouseEvent/button
@@ -13202,6 +13202,7 @@
 /en-US/docs/Web/HTML/Link_types/preload	/en-US/docs/Web/HTML/Reference/Attributes/rel/preload
 /en-US/docs/Web/HTML/Link_types/prerender	/en-US/docs/Web/HTML/Reference/Attributes/rel/prerender
 /en-US/docs/Web/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
+/en-US/docs/Web/HTML/Microdata	/en-US/docs/Web/HTML/Guides/Microdata
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/Speculative_parsing
 /en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Reference/Attributes/rel/preload
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Guides/Formats

@@ -302,7 +302,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element is an `audio`, `embed`, `iframe`, `img`, `source`, `track`, or `video` element
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/en-US/docs/Web/HTML/Guides/Microdata)) of the element at the time the attribute is set
 
 - If the element is an `a`, `area`, or `link` element
 
