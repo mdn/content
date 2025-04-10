@@ -70,7 +70,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)
+        <a href="/en-US/docs/Web/HTML/Reference/Elements">HTML Elements reference</a> (/Web/HTML/Element)
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}

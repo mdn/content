@@ -176,7 +176,7 @@ foo(1, 2, 3);
 
 ### Iterating over a NodeList
 
-The following example adds a `read` class to paragraphs that are direct descendants of the [`<article>`](/en-US/docs/Web/HTML/Element/article) element by iterating over a [`NodeList`](/en-US/docs/Web/API/NodeList) DOM collection.
+The following example adds a `read` class to paragraphs that are direct descendants of the [`<article>`](/en-US/docs/Web/HTML/Reference/Elements/article) element by iterating over a [`NodeList`](/en-US/docs/Web/API/NodeList) DOM collection.
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");

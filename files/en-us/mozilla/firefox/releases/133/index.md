@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### HTML
 
-- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
+- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
 
 ### CSS
 
@@ -76,7 +76,7 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
 
-  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 

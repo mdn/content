@@ -242,8 +242,8 @@ In short, using tables for layout rather than [CSS layout techniques](/en-US/doc
 We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
 
 1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) in a new directory on your local machine.
-2. The content of every table is enclosed by these two tags: **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
-3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
+2. The content of every table is enclosed by these two tags: **[`<table></table>`](/en-US/docs/Web/HTML/Reference/Elements/table)**. Add these inside the body of your HTML.
+3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
 
    ```html
    <td>Hi, I'm your first cell.</td>
@@ -260,7 +260,7 @@ We've talked table theory enough, so, let's dive into a practical example and bu
 
 As you will see, the cells are not placed underneath each other, rather they are automatically aligned with each other on the same row. Each `<td>` element creates a single cell and together they make up the first row. Every cell we add makes the row grow longer.
 
-To stop this row from growing and start placing subsequent cells on a second row, we need to use the **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** element ('tr' stands for 'table row'). Let's investigate this now.
+To stop this row from growing and start placing subsequent cells on a second row, we need to use the **[`<tr>`](/en-US/docs/Web/HTML/Reference/Elements/tr)** element ('tr' stands for 'table row'). Let's investigate this now.
 
 1. Place the four cells you've already created inside `<tr>` tags, like so:
 
@@ -379,7 +379,7 @@ The problem here is that, while you can kind of make out what's going on, it is 
 Let's have a go at improving this table.
 
 1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
-2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
+2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
 > [!NOTE]

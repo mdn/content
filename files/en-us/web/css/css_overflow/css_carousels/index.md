@@ -48,7 +48,7 @@ Our first demo is a carousel of single pages, with each item taking up the full 
 
 We'll use [flexbox](#carousel_layout_with_flexbox) to lay out the carousel, [scroll snapping](#setting_up_scroll_snapping_on_the_list) to enforce clear pagination, and anchor positioning to [position the scroll buttons](#positioning_scroll_buttons) and scroll markers relative to the carousel.
 
-The HTML consists of a [heading element](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of a [heading element](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) containing some sample content:
 
 ```html live-sample___first-example live-sample___first-example-step1 live-sample___first-example-step2
 <h1>CSS carousel single item per page</h1>
@@ -157,7 +157,7 @@ The `::scroll-button()` pseudo-elements generate buttons inside a scroll contain
 
 You can also specify an argument of `*` to target all of the `::scroll-button()` pseudo-elements with styles.
 
-First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
+First, all scroll buttons are targeted with some rudimentary styles, as well as styling based on different states. It is important to set {{cssxref(":focus")}} styles for keyboard users. Also, as scroll buttons are automatically set to [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) when no more scrolling can occur in that direction, we use the {{cssxref(":disabled")}} pseudo-class to target this state.
 
 ```css live-sample___first-example live-sample___first-example-step2
 ul::scroll-button(*) {

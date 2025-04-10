@@ -60,7 +60,7 @@ For example, the BBC homepage contains many links that point not only to multipl
 
 ## Anatomy of a link
 
-A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
+A basic link is created by wrapping the text or other content inside an {{htmlelement("a")}} element and using the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute, also known as a **Hypertext Reference**, or **target**, that contains the web address.
 
 ```html
 <p>
@@ -191,7 +191,7 @@ Let's look at some examples of links between some different files in this direct
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute to the element you want to link to.
+To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute to the element you want to link to.
 It normally makes sense to link to a specific heading, so this would look something like the following:
 
 ```html
@@ -304,7 +304,7 @@ When you are linking to a resource that's to be downloaded rather than opened in
 
 ### When to open links in a new tab
 
-Links by default open in the same tab as the page they are on, which allows the user to navigate back to the previous page using the browser's back button. However, many sites (including MDN) choose to open certain links, especially external links, in a new tab. This is done by setting the [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute to `"_blank"`.
+Links by default open in the same tab as the page they are on, which allows the user to navigate back to the previous page using the browser's back button. However, many sites (including MDN) choose to open certain links, especially external links, in a new tab. This is done by setting the [`target`](/en-US/docs/Web/HTML/Reference/Elements/a#target) attribute to `"_blank"`.
 
 ```html
 Firefox is developed by the
@@ -362,7 +362,7 @@ In its most basic and commonly used form, a `mailto:` link indicates the email a
 
 This results in a link that looks like this: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-In fact, the email address is optional. If you omit it and your [`href`](/en-US/docs/Web/HTML/Element/a#href) is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
+In fact, the email address is optional. If you omit it and your [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) is "mailto:", a new outgoing email window will be opened by the user's email client with no destination address.
 This is often useful as "Share" links that users can click to send an email to an address of their choosing.
 
 ### Specifying details

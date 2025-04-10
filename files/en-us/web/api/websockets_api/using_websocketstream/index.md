@@ -117,7 +117,7 @@ To demonstrate basic usage of `WebSocketStream`, we've created a sample client. 
 > [!NOTE]
 > To get the example working, you'll also need a server component. We wrote our client to work along with the Deno server explained in [Writing a WebSocket server in JavaScript (Deno)](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno), but any compatible server will do.
 
-The HTML for the demo is as follows. It includes informational [`<h2>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and {{htmlelement("p")}} elements, a {{htmlelement("button")}} to close the WebSocket connection that is initially disabled, and a {{htmlelement("div")}} for us to write output messages into.
+The HTML for the demo is as follows. It includes informational [`<h2>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and {{htmlelement("p")}} elements, a {{htmlelement("button")}} to close the WebSocket connection that is initially disabled, and a {{htmlelement("div")}} for us to write output messages into.
 
 ```html
 <h2>WebSocketStream Test</h2>

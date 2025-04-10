@@ -18,8 +18,8 @@ input:indeterminate {
 
 Elements targeted by this selector are:
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) elements whose [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property is set to `true`
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) elements, when all radio buttons with the same `name` value in the form are unchecked
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements whose [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property is set to `true`
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) elements, when all radio buttons with the same `name` value in the form are unchecked
 - {{HTMLElement("progress")}} elements in an indeterminate state
 
 ## Syntax
@@ -131,6 +131,6 @@ progress:indeterminate {
 
 - [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- The [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element's [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property
+- The [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element's [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The {{cssxref(":checked")}} CSS selector lets you style checkboxes based on whether they're checked or not

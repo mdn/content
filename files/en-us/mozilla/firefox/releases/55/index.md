@@ -19,7 +19,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
+- Elements on which [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) has been set to `true` now use {{htmlelement("div")}} elements to separate different lines of text, to give Firefox parity with other modern browsers ([Firefox bug 1297414](https://bugzil.la/1297414)). See [Differences in markup generation](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
 - Enable `dom.forms.datetime` by default on Nightly ([Firefox bug 1366188](https://bugzil.la/1366188)).
 
 ### CSS
@@ -138,12 +138,12 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 
 ### HTML
 
-- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, for example —
+- The `xml:base` attribute can no longer be used to set the base URL for paths appearing in the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute, for example —
 
   `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` ([Firefox bug 1350521](https://bugzil.la/1350521)).
 
-- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Element/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
-- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
+- The {{htmlelement("style")}} element's [`scoped`](/en-US/docs/Web/HTML/Reference/Elements/style#scoped) attribute has been hidden behind a pref (`layout.css.scoped-style.enabled`) in content documents in Firefox 55+, as no other browsers support it.
+- Support for the obscure `MSThemeCompatible` value of the {{htmlelement("meta")}} element's [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute has been removed from Gecko. No other modern browsers support it, and it was causing compatibility problems ([Firefox bug 966240](https://bugzil.la/966240)).
 
 ### CSS
 

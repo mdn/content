@@ -14,11 +14,11 @@ begins the process of selecting a media source and loading the media in preparat
 for playback to begin at the beginning.
 
 The amount of media data that is
-prefetched is determined by the value of the element's [`preload`](/en-US/docs/Web/HTML/Element/video#preload) attribute.
+prefetched is determined by the value of the element's [`preload`](/en-US/docs/Web/HTML/Reference/Elements/video#preload) attribute.
 
 This method is generally only useful when you've made dynamic changes to the set of
 sources available for the media element, either by changing the element's
-[`src`](/en-US/docs/Web/HTML/Element/video#src) attribute or by adding or removing
+[`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or by adding or removing
 {{HTMLElement("source")}} elements nested within the media element itself.
 `load()` will reset the element and rescan the available sources, thereby
 causing the changes to take effect.
@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 Calling `load()` aborts all ongoing operations involving this media element,
 then begins the process of selecting and loading an appropriate media resource given the
 options specified in the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element
-and its [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute or child {{HTMLElement("source")}}
+and its [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute or child {{HTMLElement("source")}}
 element(s). This is described in more detail in the
 [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#using_multiple_source_formats_to_improve_compatibility) page.
 

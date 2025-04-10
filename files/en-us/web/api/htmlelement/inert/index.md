@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.inert
 
 {{ APIRef("HTML DOM") }}
 
-The {{domxref("HTMLElement")}} property **`inert`** specifies whether the referenced element and all of its flat tree descendants are {{glossary("inert")}}. It reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
+The {{domxref("HTMLElement")}} property **`inert`** specifies whether the referenced element and all of its flat tree descendants are {{glossary("inert")}}. It reflects the value of the element's [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
 Note that if the `inert` attribute is unspecified, the element itself may still inherit inertness from its parent. However, that inherited inertness is not reflected by this property's value.
 
@@ -16,7 +16,7 @@ Note that if the `inert` attribute is unspecified, the element itself may still 
 
 A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -54,8 +54,8 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 
 ## See also
 
-- [Global attribute: `inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
 - CSS {{cssxref("interactivity")}} property
+- [Global attribute: `inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert)
 - {{HTMLElement("dialog")}}
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 - [Introducing inert](https://web.dev/articles/inert) on web.dev (2024)

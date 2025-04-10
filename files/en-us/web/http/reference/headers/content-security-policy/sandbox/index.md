@@ -9,7 +9,7 @@ browser-compat: http.headers.Content-Security-Policy.sandbox
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`sandbox`** directive enables a sandbox for the requested
-resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
+resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox)
 attribute. It applies restrictions to a page's actions including preventing popups,
 preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
@@ -44,7 +44,7 @@ Content-Security-Policy: sandbox <value>;
 where `<value>` can optionally be one of the following values:
 
 - `allow-downloads`
-  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
+  - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
 - `allow-forms`
   - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
 - `allow-modals`
@@ -92,5 +92,5 @@ Content-Security-Policy: sandbox allow-scripts;
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}}
+- [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute on {{HTMLElement("iframe")}}
   elements

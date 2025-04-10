@@ -54,7 +54,7 @@ This example shows a basic section of horizontally-scrolling paginated content, 
 
 #### HTML
 
-The HTML consists of a [top-level heading](/en-US/docs/Web/HTML/Element/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Element/ul). Each [list item](/en-US/docs/Web/HTML/Element/li) inside the list contains the content for a separate page.
+The HTML consists of a [top-level heading](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) and an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul). Each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) inside the list contains the content for a separate page.
 
 ```html
 <h1>Pagination interactivity demo</h1>
@@ -182,5 +182,5 @@ Scroll the unordered list horizontally to see the pagination effect — each pag
 
 ## See also
 
-- HTML [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute
+- HTML [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute
 - {{domxref("HTMLElement.inert")}}

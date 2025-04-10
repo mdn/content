@@ -107,7 +107,7 @@ Let's turn our attention to the {{htmlelement("img")}} element:
 
 This embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to the image file we want to embed.
 
-We have also included an `alt` (alternative) attribute. In the [`alt` attribute](/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions), you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
+We have also included an `alt` (alternative) attribute. In the [`alt` attribute](/en-US/docs/Web/HTML/Reference/Elements/img#authoring_meaningful_alternate_descriptions), you specify descriptive text for users who cannot see the image, possibly because of the following reasons:
 
 1. They are visually impaired. Users with significant visual impairments often use tools called screen readers to read out the alt text to them.
 2. Something has gone wrong, causing the image not to display. If the `src` attribute does not contain a valid path to an image, the alt text will be displayed instead:
