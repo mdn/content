@@ -37,7 +37,7 @@ This demo creates a responsive container that snaps each "page" of content into 
 
 #### HTML
 
-The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Reference/Element/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Element/li) containing some sample content:
 
 ```html-nolint
 <ul>

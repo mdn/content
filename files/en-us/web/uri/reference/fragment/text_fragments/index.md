@@ -16,7 +16,7 @@ sidebar: urlsidebar
 Historically, one of the web's key features has always been its ability to provide links between different documents — it is what makes _the web_, a web:
 
 - You can link to the top of a document by linking to its URL, for example:
-  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a](/en-US/docs/Web/HTML/Reference/Elements/a).
+  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Element/a](/en-US/docs/Web/HTML/Reference/Elements/a).
 - You can link to a specific section of a document by linking to its URL plus the _document fragment_ (ID) of that section, for example:
   - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility](/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility).
 

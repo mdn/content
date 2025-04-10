@@ -37,7 +37,7 @@ This demo is a carousel of single pages, with each item taking up the full page.
 
 #### HTML
 
-The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Reference/Element/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Element/li) containing some sample content:
 
 ```html live-sample___carousel-example live-sample___carousel-example_final
 <ul>

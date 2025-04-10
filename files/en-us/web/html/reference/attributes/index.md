@@ -347,7 +347,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
