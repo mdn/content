@@ -11,9 +11,11 @@ sidebar: accessibilitysidebar
 The `search` role is used to identify the search functionality; the section of the page used to search the page, site, or collection of sites.
 
 ```html
-<form role="search">
-  <!-- search input -->
-</form>
+<search>
+  <form>
+    <!-- search input -->
+  </form>
+</search>
 ```
 
 ## Description
@@ -25,11 +27,13 @@ The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/R
 When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/form_role) role.
 
 ```html
-<form id="search" role="search">
-  <label for="search-input">Search this site</label>
-  <input type="search" id="search-input" name="search" spellcheck="false" />
-  <input value="Submit" type="submit" />
-</form>
+<search>
+  <form>
+    <label for="search-input">Search this site</label>
+    <input type="search" id="search-input" name="search" spellcheck="false" />
+    <input value="Submit" type="submit" />
+  </form>
+</search>
 ```
 
 ## Accessibility concerns
@@ -49,14 +53,9 @@ Using the {{HTMLElement('form')}} element in conjunction with a declaration of `
 If there is more than one `search` landmark role in a document, provide a label for each landmark. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
 
 ```html
-<form id="site-search" role="search" aria-label="Sitewide">
-  <!-- search input -->
-</form>
-
-…
-
-<form id="page-search" role="search" aria-label="On this page">
-  <!-- search input -->
+<form>
+  <label for="site-search">Search this site</label>
+  <input type="search" id="site-search" name="search" spellcheck="false" />
 </form>
 ```
 
@@ -66,16 +65,38 @@ If a `search` landmark role in a document is repeated in a document, and both la
 
 ```html
 <header>
-  <form id="site-search-top" role="search" aria-label="Sitewide">
-    <!-- search input -->
+  <form id="site-search-top" role="search">
+    <label for="search-input-top">Search this site</label>
+    <search>
+      <input
+        type="text"
+        id="search-input-top"
+        name="search"
+        spellcheck="false"
+        role="searchbox"
+        aria-label="Search this site" />
+    </search>
+    <input value="Submit" type="submit" />
   </form>
 </header>
+```
 
 …
 
+```html
 <footer>
-  <form id="site-search-bottom" role="search" aria-label="Sitewide">
-    <!-- search input -->
+  <form id="site-search-bottom" role="search">
+    <label for="search-input-bottom">Search this site</label>
+    <search>
+      <input
+        type="text"
+        id="search-input-bottom"
+        name="search"
+        spellcheck="false"
+        role="searchbox"
+        aria-label="Search this site" />
+    </search>
+    <input value="Submit" type="submit" />
   </form>
 </footer>
 ```

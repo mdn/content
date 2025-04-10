@@ -200,12 +200,14 @@ Let's have a look at an example:
 ```html
 <form role="search">
   <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…"
-      aria-label="Search through site content" />
+    <label for="mySearch">Search:</label>
+    <search>
+      <input
+        type="search"
+        id="mySearch"
+        name="q"
+        aria-label="Search through site content" />
+    </search>
     <button>Search</button>
   </div>
 </form>
