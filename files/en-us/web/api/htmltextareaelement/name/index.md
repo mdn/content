@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLTextAreaElement")}} interface indicates the name of the {{HTMLElement("textarea")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute.
+The **`name`** property of the {{domxref("HTMLTextAreaElement")}} interface indicates the name of the {{HTMLElement("textarea")}} element. It reflects the element's [`name`](/en-US/docs/Web/HTML/Reference/Elements/textarea#name) attribute.
 
 ## Value
 

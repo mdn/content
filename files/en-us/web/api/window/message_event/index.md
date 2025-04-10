@@ -45,7 +45,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-Suppose a script sends a message to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), using code like this:
+Suppose a script sends a message to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), using code like this:
 
 ```js
 const targetFrame = window.top.frames[1];

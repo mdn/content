@@ -231,7 +231,7 @@ The second rule we'll add here makes it so that a panel with a class of `is-hidd
 
 ### JavaScript
 
-The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Element/script) tag:
+The final part that makes this feature work is the JavaScript code. The `tabs-manual.js` file has been included using the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) tag:
 
 ```html
 <script src="tabs-manual.js"></script>
@@ -363,7 +363,7 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 </aside>
 ```
 
-To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Element/aside) info panel. In the below sections we'll explain how this all works.
+To start with here we've got a {{htmlelement("button")}} element with a special question mark character as the button text. The button will be pressed to show/hide the [`aside`](/en-US/docs/Web/HTML/Reference/Elements/aside) info panel. In the below sections we'll explain how this all works.
 
 ### Styling the button
 

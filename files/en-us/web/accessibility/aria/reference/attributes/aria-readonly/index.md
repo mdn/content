@@ -70,5 +70,5 @@ Inherited into roles:
 
 ## See also
 
-- [HTML `readonly` attribute](/en-US/docs/Web/HTML/Attributes/readonly)
+- [HTML `readonly` attribute](/en-US/docs/Web/HTML/Reference/Attributes/readonly)
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
