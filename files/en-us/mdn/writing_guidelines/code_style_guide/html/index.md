@@ -59,7 +59,7 @@ Finally, you should always add the viewport meta tag into your HTML {{HTMLElemen
 <meta name="viewport" content="width=device-width" />
 ```
 
-See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag) for further details.
+See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for further details.
 
 ## Attributes
 

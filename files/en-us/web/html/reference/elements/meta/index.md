@@ -186,4 +186,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Reference/Elements/meta/name)
 - [Learn: `<meta>`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
-- [The viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- [The viewport meta tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)

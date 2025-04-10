@@ -262,5 +262,5 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 
 ## See also
 
-- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
 - [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

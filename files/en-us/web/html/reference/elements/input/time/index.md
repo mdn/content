@@ -1,7 +1,7 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
-page-type: html-element
+page-type: html-attribute-value
 browser-compat: html.elements.input.type_time
 ---
 

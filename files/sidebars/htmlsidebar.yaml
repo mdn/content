@@ -33,7 +33,7 @@ sidebar:
   - title: Guides
     details: closed
     children:
-      - link: /Web/HTML/Viewport_meta_tag
+      - link: /Web/HTML/Guides/Viewport_meta_element
         title: Viewport_meta_tag
   - type: section
     link: /Web/HTML/Guides

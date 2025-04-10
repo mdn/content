@@ -1,7 +1,7 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
-page-type: html-element
+page-type: html-attribute-value
 browser-compat: html.elements.input.type_checkbox
 ---
 

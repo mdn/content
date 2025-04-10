@@ -1,7 +1,7 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
-page-type: html-element
+page-type: html-attribute-value
 browser-compat: html.elements.input.type_file
 ---
 

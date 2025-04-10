@@ -1,7 +1,7 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
-page-type: html-element
+page-type: html-attribute-value
 browser-compat: html.elements.input.type_button
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: theme-color
+title: <meta name="theme-color">
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.theme-color

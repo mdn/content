@@ -64,7 +64,7 @@ meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);
 ```
 
-For more information on setting the viewport, see [Viewport basics](/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics).
+For more information on setting the viewport, see [Viewport basics](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#viewport_basics).
 
 ## Specifications
 

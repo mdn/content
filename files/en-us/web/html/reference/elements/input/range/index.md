@@ -1,7 +1,7 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
-page-type: html-element
+page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
 ---
 
