@@ -10,9 +10,6 @@ spec-urls:
   - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
   - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
   - https://wicg.github.io/intervention-reporting/#intervention-report
-browser-compat:
-  - http.headers.Reporting-Endpoints
-  - http.headers.Report-To
 ---
 
 {{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
