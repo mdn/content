@@ -6082,7 +6082,7 @@
 /en-US/docs/Memory_Sanitizer	https://firefox-source-docs.mozilla.org/tools/sanitizer/memory_sanitizer.html#memory-sanitizer
 /en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
-/en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+/en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /en-US/docs/Mozilla/Add-ons/AMO/Policy	https://extensionworkshop.com/documentation/publish/add-on-policies/
 /en-US/docs/Mozilla/Add-ons/Themes	https://extensionworkshop.com/documentation/themes/
 /en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts	https://extensionworkshop.com/documentation/themes/
@@ -6849,9 +6849,9 @@
 /en-US/docs/Python	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
 /en-US/docs/Python/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Python_binding_for_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
-/en-US/docs/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
-/en-US/docs/Quirks_Mode_and_Standards_Mode/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
-/en-US/docs/Quirks_Mode_and_Standards_Mode1/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+/en-US/docs/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
+/en-US/docs/Quirks_Mode_and_Standards_Mode/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
+/en-US/docs/Quirks_Mode_and_Standards_Mode1/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /en-US/docs/RandomSource.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Range	/en-US/docs/Web/API/Range
 /en-US/docs/Range/Range	/en-US/docs/Web/API/Range/Range
@@ -13205,6 +13205,7 @@
 /en-US/docs/Web/HTML/Microdata	/en-US/docs/Web/HTML/Guides/Microdata
 /en-US/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/en-US/docs/Glossary/Speculative_parsing
 /en-US/docs/Web/HTML/Preloading_content	/en-US/docs/Web/HTML/Reference/Attributes/rel/preload
+/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode	/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /en-US/docs/Web/HTML/Supported_media_formats	/en-US/docs/Web/Media/Guides/Formats
 /en-US/docs/Web/HTML/The_Importance_of_Correct_HTML_Commenting	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#HTML_comments
 /en-US/docs/Web/HTML/Using_HTML5_audio_and_video	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio

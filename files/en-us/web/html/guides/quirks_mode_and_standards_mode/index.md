@@ -1,6 +1,7 @@
 ---
-title: Quirks Mode
-slug: Web/HTML/Quirks_Mode_and_Standards_Mode
+title: Understanding quirks and standards modes
+short-title: Quirks and standards modes
+slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
 page-type: guide
 ---
 

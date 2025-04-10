@@ -33,8 +33,6 @@ sidebar:
   - title: Guides
     details: closed
     children:
-      - link: /Web/HTML/Quirks_Mode_and_Standards_Mode
-        title: Quirks_Mode_and_Standards_Mode
       - link: /Web/HTML/Viewport_meta_tag
         title: Viewport_meta_tag
   - type: section
@@ -79,7 +77,6 @@ l10n:
     Attributes: Attribute
     Input_types: <code>&lt;input&gt;</code>-Typen
     Guides: Anleitungen
-    Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
     Viewport_meta_tag: Viewport-Meta-Tag
   en-US:
     Beginners: Beginner's tutorials
@@ -91,7 +88,6 @@ l10n:
     Attributes: Attributes
     Input_types: <code>&lt;input&gt;</code> types
     Guides: Guides
-    Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
     Viewport_meta_tag: Viewport meta tag
   fr:
     Beginners: Tutoriels
@@ -101,7 +97,6 @@ l10n:
     Attributes: Attributs
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
-    Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
     Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
   ja:
     Beginners: チュートリアル
@@ -113,7 +108,6 @@ l10n:
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 型
     Guides: ガイド
-    Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
     Viewport_meta_tag: ビューポートメタタグ
   ko:
     Beginners: "자습서:"
@@ -123,7 +117,6 @@ l10n:
     Attributes: 속성
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
-    Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
     Viewport_meta_tag: 뷰포트 메타 태그
   pt-BR:
     Beginners: Tutoriais
@@ -133,7 +126,6 @@ l10n:
     Attributes: Atributos
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
-    Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
     Viewport_meta_tag: Viewport meta tag
   ru:
     Beginners: Уроки
@@ -143,7 +135,6 @@ l10n:
     Attributes: Aтрибуты
     Input_types: Типы <code>&lt;input&gt;</code>
     Guides: Путеводитель
-    Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
     Viewport_meta_tag: Viewport meta tag
   zh-CN:
     Beginners: 初学者教程
@@ -155,5 +146,4 @@ l10n:
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 类型
     Guides: 指南
-    Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
     Viewport_meta_tag: Viewport meta 标签

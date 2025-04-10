@@ -595,8 +595,8 @@ To maintain consistency across MDN Web Docs, keep the following guidelines in mi
 
 - The link text should be the same as the title of the page or the section being linked to. For example, the link text to this [ARIA](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) page with the page title "ARIA states and properties" will be:
   - **Correct**: [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes)
-- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) page in correct sentence case will be:
-  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- Use sentence casing in the link text even if it is different from the linked page title or section title. It might be that the case used in the page or section title is incorrect. For example, the link text to the [Quirks Mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) page in correct sentence case will be:
+  - **Correct**: [Quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 - For external links as well, use sentence casing even if the casing on the target article page is different. This is to ensure consistency across MDN Web Docs. Exceptions include names of books.
 - On MDN, you can optionally use a macro to link to a page, as is explained in the [Linking to pages in references](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) section on the _Commonly used macros_ page. The use of macro will add code formatting to the keyword in the link text, as shown in the next example.
 - No article ("A", "An", "The") is needed at the beginning of the link list item. No punctuation is required at the end of the list item because it will invariably be a term or a phrase.

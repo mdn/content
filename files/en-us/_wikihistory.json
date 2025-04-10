@@ -91026,33 +91026,7 @@
       "barnabywalters"
     ]
   },
-  "Web/HTML/How_to/CORS_enabled_image": {
-    "modified": "2020-11-03T13:26:20.578Z",
-    "contributors": [
-      "germain",
-      "mfuji09",
-      "Sheppy",
-      "fscholz",
-      "mfluehr",
-      "markg",
-      "teoli",
-      "groovecoder",
-      "anotherkabab",
-      "Jeremie",
-      "cesy",
-      "rogerxas",
-      "alrra",
-      "teoliTest2",
-      "paul.irish",
-      "kscarfone",
-      "enderandpeter",
-      "ziyunfei",
-      "myakura",
-      "Sephr",
-      "louisremi"
-    ]
-  },
-  "Web/HTML/Quirks_Mode_and_Standards_Mode": {
+  "Web/HTML/Guides/Quirks_mode_and_standards_mode": {
     "modified": "2020-10-03T02:40:04.174Z",
     "contributors": [
       "mfuji09",
@@ -91079,6 +91053,32 @@
       "DBaron",
       "Dria",
       "Mcaruso"
+    ]
+  },
+  "Web/HTML/How_to/CORS_enabled_image": {
+    "modified": "2020-11-03T13:26:20.578Z",
+    "contributors": [
+      "germain",
+      "mfuji09",
+      "Sheppy",
+      "fscholz",
+      "mfluehr",
+      "markg",
+      "teoli",
+      "groovecoder",
+      "anotherkabab",
+      "Jeremie",
+      "cesy",
+      "rogerxas",
+      "alrra",
+      "teoliTest2",
+      "paul.irish",
+      "kscarfone",
+      "enderandpeter",
+      "ziyunfei",
+      "myakura",
+      "Sephr",
+      "louisremi"
     ]
   },
   "Web/HTML/Reference": {
