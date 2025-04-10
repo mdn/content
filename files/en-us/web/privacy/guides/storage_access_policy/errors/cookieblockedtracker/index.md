@@ -29,4 +29,4 @@ If the blocked resource doesn't need authentication, you can fix the warning mes
 ## See also
 
 - [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) on [support.mozilla.org](https://support.mozilla.org/)
-- [The `crossorigin` attribute](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [The `crossorigin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

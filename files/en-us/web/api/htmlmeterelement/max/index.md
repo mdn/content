@@ -8,7 +8,7 @@ browser-compat: api.HTMLMeterElement.max
 
 {{ APIRef("HTML DOM") }}
 
-The **`max`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the maximum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's [`max`](/en-US/docs/Web/HTML/Element/meter#max) attribute, or the `min` value if no `max` is set, or `1` if neither the `min` or the `max` is defined.
+The **`max`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the maximum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) attribute, or the `min` value if no `max` is set, or `1` if neither the `min` or the `max` is defined.
 
 This property can also be set directly, for example to set a default value based on some condition.
 

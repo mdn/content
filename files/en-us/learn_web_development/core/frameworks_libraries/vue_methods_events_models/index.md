@@ -57,7 +57,7 @@ We now have an app that displays a list of to-do items. However, we can't update
    </script>
    ```
 
-3. Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a [`<form>`](/en-US/docs/Web/HTML/Element/form) with a [`<label>`](/en-US/docs/Web/HTML/Element/label), an [`<input>`](/en-US/docs/Web/HTML/Element/input), and a [`<button>`](/en-US/docs/Web/HTML/Element/button). Update your template as follows:
+3. Let's add in an HTML form that lets you enter a new todo item and submit it into the app. We need a [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) with a [`<label>`](/en-US/docs/Web/HTML/Reference/Elements/label), an [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), and a [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button). Update your template as follows:
 
    ```vue
    <template>

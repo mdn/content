@@ -17,7 +17,7 @@ If either the source or destination range is out of bounds, the instruction trap
 
 Copy within default memory
 
-```wasm
+```wat
 ;; Copy data in default memory from [100, 125] to [50, 75]
 i32.const 50 ;; Destination address to copy to
 i32.const 100 ;; Source address to copy from
@@ -30,7 +30,7 @@ memory.copy  ;; Copy memory
 
 Copy specified memory (if multi-memory supported)
 
-```wasm
+```wat
 ;; Copy data in specific memory  [100, 125] to [50, 75]
 i32.const 50 ;; Destination address to copy to
 i32.const 100 ;; Source address to copy from

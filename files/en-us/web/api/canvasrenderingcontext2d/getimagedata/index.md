@@ -65,7 +65,7 @@ canvas specified. The coordinates of the rectangle's top-left corner are
     than the one from which the document itself was loaded.
     To avoid a `SecurityError` {{domxref("DOMException")}} being thrown in this situation,
     configure CORS to allow the source image to be used in this way.
-    See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
+    See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image).
 
 ## Examples
 

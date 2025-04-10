@@ -49,7 +49,7 @@ it may be either imported into or exported from the calling code.
 Consider the following WebAssembly code, which is assumed to be compiled to a file "example.wasm".
 This imports a tag, which it refers to internally as `$tagname`, and exports a method `run` that can be called by external code to throw an exception using the tag.
 
-```wasm
+```wat
 (module
   ;; import tag that will be referred to here as $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))
@@ -106,7 +106,7 @@ In this case, it is just "1".
 The process for using an exported tag is very similar to that shown in the previous section.
 Here is the same WebAssembly module, simply replacing the import with an export.
 
-```wasm
+```wat
 (module
   ;; Export tag giving it external name: "exptag"
   (tag $tagname (export "exptag") (param i32))

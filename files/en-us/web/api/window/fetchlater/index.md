@@ -79,11 +79,16 @@ fetchLater("/send_beacon");
 In this example we create a {{domxref("Request")}}, and provide an `activateAfter` value to delay sending the request for 60,000 milliseconds (or one minute):
 
 ```js
-fetchLater({
-  url: "/send_beacon"
-  method: "POST"
-  body: getBeaconData(),
-}, {activateAfter: 60000 /* 1 minute */});
+fetchLater(
+  {
+    url: "/send_beacon",
+    method: "POST",
+    body: getBeaconData(),
+  },
+  {
+    activateAfter: 60000, // 1 minute
+  },
+);
 ```
 
 > [!NOTE]
@@ -95,13 +100,18 @@ The same example as above, but the best practice is to enclose this in a try/cat
 
 ```js
 try {
-  fetchLater({
-    url: "/send_beacon"
-    method: "POST"
-    body: getBeaconData(),
-  }, {activateAfter: 60000 /* 1 minute */});
+  fetchLater(
+    {
+      url: "/send_beacon",
+      method: "POST",
+      body: getBeaconData(),
+    },
+    {
+      activateAfter: 60000, // 1 minute
+    },
+  );
 } catch (e) {
-  if (e instanceOf QuotaExceededError) {
+  if (e instanceof QuotaExceededError) {
     // Handle the quota error
   } else {
     // Handle other errors
@@ -118,7 +128,7 @@ const result = fetchLater("https://report.example.com", {
   activateAfter: 60000 /* 1 minute */,
 });
 
-function check_if_fetched() {
+function checkIfFetched() {
   return result.activated;
 }
 ```
@@ -148,8 +158,8 @@ function createBeacon(data) {
 
   beaconAbort = new AbortController();
   beaconResult = fetchLater({
-    url: data
-    signal: beaconAbort.signal
+    url: data,
+    signal: beaconAbort.signal,
   });
 }
 ```

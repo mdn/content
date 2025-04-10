@@ -26,7 +26,7 @@ In this example, when the user presses "Play", we load an audio track, decode it
 
 The example then sets the `loop` property to `true`, so the track loops, and plays the track.
 
-The user can set the `loopStart` and `loopEnd` properties using [range controls](/en-US/docs/Web/HTML/Element/input/range).
+The user can set the `loopStart` and `loopEnd` properties using [range controls](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
 > [!NOTE]
 > You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop).)

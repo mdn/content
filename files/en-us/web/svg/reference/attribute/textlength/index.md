@@ -65,7 +65,7 @@ svg {
 
 ## Interactive example
 
-This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Element/input/range).
+This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Reference/Elements/input/range).
 
 ### CSS
 

@@ -287,9 +287,9 @@ If a link performs the action of a button, giving the element `role="button"` he
 
 - The {{HTMLElement('button')}} element
 - The {{HTMLElement("input")}} element
-- [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button)
-- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
-- [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset)
+- [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset)
 - [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
 - [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
