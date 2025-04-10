@@ -246,7 +246,7 @@ In this section, we will add scroll markers to the carousel, which involves thre
 
 - The {{cssxref("scroll-marker-group")}} property is set on the scroll container element. It needs to be set to a non-`none` value for the {{cssxref("::scroll-marker-group")}} pseudo-element to be generated; its value specifies where the scroll marker group appears in the carousel's tab order and layout box order (but not DOM structure) — `before` puts it at the start, before the scroll buttons, while `after` puts it at the end.
 - The {{cssxref("::scroll-marker-group")}} pseudo-element exists inside a scroll container, and is used to collect together and lay out scroll markers.
-- {{cssxref("::scroll-marker")}} pseudo-elements exist inside children and {{cssxref("::column")}} fragments of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
+- {{cssxref("::scroll-marker")}} pseudo-elements exist inside the children and {{cssxref("::column")}} fragments of a scroll container ancestor, and represent their scroll markers. These are collected inside the ancestor's {{cssxref("::scroll-marker-group")}} for layout purposes.
 
 To begin with, the list's `scroll-marker-group` property is set to `after`, so the `::scroll-marker-group` pseudo-element is placed after the list's DOM content in the focus and layout box order; this means it comes after the scroll buttons:
 
@@ -271,7 +271,7 @@ ul::scroll-marker-group {
 }
 ```
 
-Next, we handle the look and feel of the scroll markers themselves; they can be styled just like any other [generated content](/en-US/docs/Web/CSS/CSS_generated_content). It is important to note that we need to set a non-`none` value for the `content` property so the scroll markers are actually generated. We also set some rudimentary styles to make the markers appear as outline circles:
+Next, we handle the look and feel of the scroll markers themselves; they can be styled just like any other [generated content](/en-US/docs/Web/CSS/CSS_generated_content). It is important to note that we need to set a non-`none` value for the `content` property so the scroll markers are actually generated. We also set some rudimentary styles to make the markers appear as outlined circles:
 
 ```css live-sample___first-example
 li::scroll-marker {
