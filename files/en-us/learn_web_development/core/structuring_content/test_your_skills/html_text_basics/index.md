@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: HTML text basics"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics
+short-title: HTML text basics
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 page-type: learn-module-assessment
 ---
 
