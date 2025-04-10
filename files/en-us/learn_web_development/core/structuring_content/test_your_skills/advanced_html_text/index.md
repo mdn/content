@@ -1,6 +1,7 @@
 ---
 title: "Test your skills: Advanced HTML text"
-slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text
+short-title: Advanced HTML text
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 page-type: learn-module-assessment
 ---
 

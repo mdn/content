@@ -5459,9 +5459,9 @@
 /en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 /en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter	/en-US/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 /en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content	/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
-/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text
-/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics
-/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links
+/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
+/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
+/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /en-US/docs/Learn/HTML/Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content
@@ -5772,6 +5772,9 @@
 /en-US/docs/Learn_web_development/Core/Structuring_content/Document_and_website_structure	/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
 /en-US/docs/Learn_web_development/Core/Structuring_content/Getting_started	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
+/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
+/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
+/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
 /en-US/docs/Learn_web_development/Core/Structuring_content/The_head_metadata_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /en-US/docs/Learn_web_development/Core/Styling_basics/A_cool_looking_box	/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
 /en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Attribute_selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors
