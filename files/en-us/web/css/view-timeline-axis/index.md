@@ -14,7 +14,7 @@ The **`view-timeline-axis`** [CSS](/en-US/docs/Web/CSS) property is used to spec
 > [!NOTE]
 > If the scroller element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no scroll progress timeline will be created.
 
-The `view-timeline-axis` and {{cssxref("view-timeline-name")}} properties can also be set using the [`view-timeline`](/en-US/docs/Web/CSS/view-timeline) shorthand property.
+The `view-timeline-axis`, {{cssxref("view-timeline-inset")}} and {{cssxref("view-timeline-name")}} properties can also be set using the {{cssxref("view-timeline")}} shorthand property.
 
 ## Syntax
 
@@ -176,7 +176,7 @@ Scroll the horizontal bar at the bottom to see the subject element animate as yo
 
 ## See also
 
-- [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline)
+- {{cssxref("animation-timeline")}}
 - {{cssxref("timeline-scope")}}
-- [`view-timeline`](/en-US/docs/Web/CSS/view-timeline), [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name)
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

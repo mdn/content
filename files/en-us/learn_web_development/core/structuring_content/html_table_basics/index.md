@@ -227,9 +227,9 @@ Be under no illusion; for tables to be effective on the web, you need to provide
 
 We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the [stylesheet here](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), and you can also find an [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.
 
-### When should you NOT use HTML tables?
+### When should you avoid HTML tables?
 
-HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g., one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at [Page Layouts](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts) in our [Accessibility Learning Module](/en-US/docs/Learn_web_development/Core/Accessibility). This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.
+HTML tables should be used for tabular data (information that's easy to work with in rows and columns) — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, for example one row to contain a page header, a row to contain each content column, one row to contain the footer, etc. This technique was used because CSS support across browsers used to be a lot more limited. Modern browsers have solid CSS support so table-based layouts are now extremely rare, but you might still see them in some corners of the web.
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn_web_development/Core/CSS_layout) is a bad idea. The main reasons are as follows:
 

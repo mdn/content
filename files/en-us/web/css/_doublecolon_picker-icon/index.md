@@ -38,7 +38,7 @@ To opt-in to customizable select functionality, the `<select>` element and its p
 
 ```css
 select,
-::picker-icon(select) {
+::picker(select) {
   appearance: base-select;
 }
 ```

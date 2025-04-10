@@ -130,7 +130,7 @@ When `myFunction()` is run, code execution is paused at `methodThatReturnsPromis
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   await someObject.methodThatReturnsPromise();
   // ...
@@ -143,7 +143,7 @@ try {
   myFunction();
   // ...
 } catch (e) {
- // error handling code
+  // error handling code
 }
 ```
 
@@ -161,11 +161,11 @@ the function then continues to the next `await`, and waits until the promise ret
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   const [resultFunction1, resultFunction2] = await Promise.all([
-     functionThatReturnsPromise1(),
-     functionThatReturnsPromise2()
+    functionThatReturnsPromise1(),
+    functionThatReturnsPromise2(),
   ]);
   // ...
   await anotherFunctionThatReturnsPromise(resultFunction1);

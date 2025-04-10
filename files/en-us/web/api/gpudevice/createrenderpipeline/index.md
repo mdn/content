@@ -226,11 +226,7 @@ The `fragment` object contains an array of objects, each of which can contain th
 
         If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
-        Note that multiple flags can be specified by separating values with pipe symbols, for example:
-
-        ```js
-        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
-        ```
+        Note that multiple flags can be specified by separating values with [bitwise OR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR), for example: `GPUColorWrite.RED | GPUColorWrite.ALPHA`.
 
 ### `multisample` object structure
 

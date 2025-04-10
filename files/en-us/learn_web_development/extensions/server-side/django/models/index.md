@@ -134,7 +134,7 @@ The following common arguments can be used when declaring many/most of the diffe
   > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
   >
-  > ```py
+  > ```python
   > class CatalogConfig(AppConfig):
   >   default_auto_field = 'django.db.models.BigAutoField'
   > ```

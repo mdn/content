@@ -733,7 +733,7 @@ textarea.onkeyup = function () {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Strings](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Strings](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings).
 
 ## Conclusion
 

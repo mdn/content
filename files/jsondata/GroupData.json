@@ -532,6 +532,14 @@
       "properties": [],
       "events": []
     },
+    "fetchLater API": {
+      "overview": ["fetchLater API"],
+      "guides": ["/docs/Web/API/fetchLater_API/fetchLater_quotas"],
+      "interfaces": ["DeferredRequestInit", "FetchLaterResult"],
+      "methods": ["Window.fetchLater()"],
+      "properties": [],
+      "events": []
+    },
     "Fenced Frame API": {
       "overview": ["Fenced Frame API"],
       "guides": [

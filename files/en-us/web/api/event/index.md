@@ -62,7 +62,6 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("RTCPeerConnectionIceEvent")}}
 - {{domxref("StorageEvent")}}
 - {{domxref("SubmitEvent")}}
-- {{domxref("SVGEvent")}} {{Deprecated_Inline}}
 - {{domxref("TimeEvent")}}
 - {{domxref("TouchEvent")}}
 - {{domxref("TrackEvent")}}
