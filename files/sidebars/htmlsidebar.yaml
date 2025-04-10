@@ -17,21 +17,25 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/HTML/Reference/Elements
+    link: /Web/HTML/Reference/Elements
     title: HTML_Elements
     details: closed
     code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Elements/input
+    link: /Web/HTML/Reference/Elements/input
     title: Input_types
     details: closed
     code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Attributes
+    link: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
     code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Global_attributes
+    link: /Web/HTML/Reference/Global_attributes
     title: Global_attributes
     details: closed
     code: true
