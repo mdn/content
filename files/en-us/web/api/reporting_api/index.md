@@ -100,8 +100,6 @@ These HTTP response headers define the endpoints where reports are sent.
 - {{HTTPHeader("Reporting-Endpoints")}}
   - : Sets the name and URL of reporting endpoints.
     These endpoints can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}} and or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
-- {{HTTPHeader("Report-To")}} {{deprecated_inline}}
-  - : Sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Policy`.
 
 Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
 
