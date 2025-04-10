@@ -2,6 +2,9 @@
 title: Reporting API
 slug: Web/API/Reporting_API
 page-type: web-api-overview
+browser-compat:
+  - http.headers.Reporting-Endpoints
+  - http.headers.Report-To
 spec-urls:
   - https://w3c.github.io/reporting/#intro
   - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
