@@ -1,6 +1,6 @@
 ---
 title: "Test your skills: Positioning"
-slug: Learn_web_development/Core/CSS_layout/Position_skills
+slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 page-type: learn-module-assessment
 ---
 

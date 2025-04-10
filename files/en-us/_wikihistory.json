@@ -5832,7 +5832,7 @@
       "qdirks"
     ]
   },
-  "Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility": {
+  "Learn_web_development/Core/Accessibility/Test_your_skills/HTML": {
     "modified": "2020-07-16T22:40:37.539Z",
     "contributors": ["chrisdavidmills"]
   },
@@ -5946,15 +5946,6 @@
       "Sebastianz"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Flexbox_skills": {
-    "modified": "2020-07-16T22:27:33.630Z",
-    "contributors": [
-      "chrisdavidmills",
-      "soham1sawant",
-      "vinaya22",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Floats": {
     "modified": "2020-07-16T22:26:35.746Z",
     "contributors": [
@@ -5987,32 +5978,9 @@
       "richardzacur"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Floats_skills": {
-    "modified": "2020-11-08T17:35:30.832Z",
-    "contributors": [
-      "ohaver",
-      "mjibrower",
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "kyonlee",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension": {
     "modified": "2020-07-16T22:27:23.817Z",
     "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
-  "Learn_web_development/Core/CSS_layout/Grid_skills": {
-    "modified": "2020-10-20T06:22:56.547Z",
-    "contributors": [
-      "Oeekker",
-      "MelchiorIm3Tal",
-      "arjenlgill",
-      "santimirandarp",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
   },
   "Learn_web_development/Core/CSS_layout/Grids": {
     "modified": "2020-10-28T07:33:10.063Z",
@@ -6085,15 +6053,6 @@
       "kruschk"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Multicol_skills": {
-    "modified": "2020-07-16T22:27:35.746Z",
-    "contributors": [
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
     "modified": "2020-07-16T22:27:08.953Z",
     "contributors": [
@@ -6115,15 +6074,6 @@
       "andrei-gheorghiu",
       "PushpitaPikuDey",
       "BunnyWong",
-      "rachelandrew"
-    ]
-  },
-  "Learn_web_development/Core/CSS_layout/Position_skills": {
-    "modified": "2020-07-16T22:27:34.985Z",
-    "contributors": [
-      "jpfkd",
-      "MelchiorIm3Tal",
-      "chrisdavidmills",
       "rachelandrew"
     ]
   },
@@ -6202,7 +6152,57 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/rwd_skills": {
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox": {
+    "modified": "2020-07-16T22:27:33.630Z",
+    "contributors": [
+      "chrisdavidmills",
+      "soham1sawant",
+      "vinaya22",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats": {
+    "modified": "2020-11-08T17:35:30.832Z",
+    "contributors": [
+      "ohaver",
+      "mjibrower",
+      "jpfkd",
+      "MelchiorIm3Tal",
+      "chrisdavidmills",
+      "kyonlee",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Grid": {
+    "modified": "2020-10-20T06:22:56.547Z",
+    "contributors": [
+      "Oeekker",
+      "MelchiorIm3Tal",
+      "arjenlgill",
+      "santimirandarp",
+      "chrisdavidmills",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
+    "modified": "2020-07-16T22:27:35.746Z",
+    "contributors": [
+      "jpfkd",
+      "MelchiorIm3Tal",
+      "chrisdavidmills",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
+    "modified": "2020-07-16T22:27:34.985Z",
+    "contributors": [
+      "jpfkd",
+      "MelchiorIm3Tal",
+      "chrisdavidmills",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design": {
     "modified": "2020-07-16T22:27:36.041Z",
     "contributors": ["MelchiorIm3Tal", "chrisdavidmills", "rachelandrew"]
   },
