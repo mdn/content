@@ -58,7 +58,7 @@ const date3 = Temporal.PlainDate.from({
   calendar: "hebrew",
 });
 console.log(date1.toString()); // "2021-08-01"
-console.log(date2.toString()); // "2582-12-18[u-ca=islamic-umalqura]"
+console.log(date2.toString()); // "2582-12-17[u-ca=islamic-umalqura]"
 console.log(date3.toString()); // "-001739-04-06[u-ca=hebrew]"
 console.log(Temporal.PlainDate.compare(date1, date2)); // -1
 console.log(Temporal.PlainDate.compare(date1, date3)); // 1
@@ -82,7 +82,7 @@ const dates = [
 
 dates.sort(Temporal.PlainDate.compare);
 console.log(dates.map((d) => d.toString()));
-// [ "-001739-04-06[u-ca=hebrew]", "2021-08-01", "2582-12-18[u-ca=islamic-umalqura]" ]
+// [ "-001739-04-06[u-ca=hebrew]", "2021-08-01", "2582-12-17[u-ca=islamic-umalqura]" ]
 ```
 
 ## Specifications
