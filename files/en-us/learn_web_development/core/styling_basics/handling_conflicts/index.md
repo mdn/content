@@ -51,7 +51,7 @@ Let's start by taking a quick look at the key things we are dealing with, then w
 
 Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) — at a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
-In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
+In the following example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
 ```html live-sample___cascade-simple
 <h1>This is my heading.</h1>
@@ -244,7 +244,7 @@ body {
 
 The CSS shorthand property [`all`](/en-US/docs/Web/CSS/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
-In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
+In the following example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
 ```html live-sample___all
 <blockquote>

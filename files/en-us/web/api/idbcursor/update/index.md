@@ -59,12 +59,8 @@ cursor to iterate through all the records in the object store. If the
 `albumTitle` of the current cursor is "A farewell to kings", we update year
 the album was released using `const request = cursor.update();`.
 
-Note that you cannot change primary keys using `cursor.update()`, hence us
-not changing the album title; this would ruin the integrity of the data. In such a
-situation, you would have to delete the record altogether and then add a new one using
-{{domxref("IDBObjectStore.add")}}. Note also that you can't directly put
-`cursor.value` into an update call, hence the below example using an
-intermediary `updateData` variable.
+Note that you cannot change primary keys using `cursor.update()`, which is why we're not changing the album title – doing so would ruin the integrity of the data. In such a situation, you would have to delete the record altogether and then add a new one using {{domxref("IDBObjectStore.add")}}.
+Also note that you can't directly put `cursor.value` into an update call, so the example below uses an intermediary `updateData` variable.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,

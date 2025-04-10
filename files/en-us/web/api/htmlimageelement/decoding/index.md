@@ -34,7 +34,7 @@ For images inserted into the DOM outside of the viewport, modern browsers will u
 
 ## Examples
 
-In the below example, you'll likely get an empty image shown on the page as the image is downloaded. Setting `decoding` won't prevent that.
+In this example, you'll likely get an empty image shown on the page as the image is downloaded. Setting `decoding` won't prevent that.
 
 ```js
 const img = new Image();

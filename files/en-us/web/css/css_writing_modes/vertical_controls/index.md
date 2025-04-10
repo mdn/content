@@ -143,7 +143,7 @@ This section shows how to handle vertical {{htmlelement("select")}} elements.
 
 ### Select basic example
 
-The below HTML creates two `<select>` elements, one where a single selection can be made and one with multiple selections:
+The following HTML creates two `<select>` elements, one where a single selection can be made and one with multiple selections:
 
 ```html
 <form>
@@ -278,7 +278,7 @@ This section shows how to handle vertical {{htmlelement("button")}} elements. No
 
 ### Basic button example
 
-The below HTML creates two `<button>` elements, one with a single line of text, and one with three:
+The following HTML creates two `<button>` elements, one with a single line of text, and one with three:
 
 ```html
 <button>Press me</button> <button>Press me<br />Please?<br />Thanks</button>
@@ -364,7 +364,7 @@ Last but not least, we'll look at handling vertical {{htmlelement("textarea")}}s
 
 ### Basic text input and textarea example
 
-The below HTML creates a `<textarea>` and an `<input type="text">`:
+The following HTML creates a `<textarea>` and an `<input type="text">`:
 
 ```html
 <form>

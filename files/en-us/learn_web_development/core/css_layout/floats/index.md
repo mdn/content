@@ -50,7 +50,7 @@ In this article we'll just concentrate on the proper uses of floats.
 
 ## A float example
 
-Let's explore the use of floats. We'll start with an example involving floating a block of text around an element. You can follow along by creating a new `index.html` file on your computer, filling it with an [HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the below code into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.
+Let's explore the use of floats. We'll start with an example involving floating a block of text around an element. You can follow along by creating a new `index.html` file on your computer, filling it with an [HTML template](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html), and inserting the code below into it at the appropriate places. At the bottom of the section, you can see a live example of what the final code should look like.
 
 First, we'll start off with some HTML. Add the following to your HTML body, removing anything that was inside there before:
 

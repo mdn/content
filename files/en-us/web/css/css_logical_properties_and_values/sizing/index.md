@@ -129,7 +129,7 @@ body {
 
 ## Max-width and max-height example
 
-Finally you can use {{CSSxRef("max-inline-size")}} and {{CSSxRef("max-block-size")}} as logical replacements for {{CSSxRef("max-width")}} and {{CSSxRef("max-height")}}. Try playing with the below example in the same way as before.
+Finally you can use {{CSSxRef("max-inline-size")}} and {{CSSxRef("max-block-size")}} as logical replacements for {{CSSxRef("max-width")}} and {{CSSxRef("max-height")}}. Try playing with the example below in the same way as before.
 
 ```html live-sample___size-max
 <div class="container">
@@ -175,7 +175,7 @@ body {
 
 The {{CSSxRef("resize")}} property sets whether or not an item can be resized and has physical values of `horizontal` and `vertical`. The `resize` property also has logical keyword values. Using `resize: inline` allows resizing in the inline dimension and `resize: block` allow resizing in the block dimension.
 
-The keyword value of `both` for the resize property works whether you are thinking physically or logically. It sets both dimensions at once. Try playing with the below example.
+The keyword value of `both` for the resize property works whether you are thinking physically or logically. It sets both dimensions at once. Try playing with the example below.
 
 ```html live-sample___size-resize
 <div class="container">

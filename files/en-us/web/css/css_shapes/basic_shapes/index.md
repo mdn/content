@@ -54,7 +54,7 @@ For a more extensive explanation of reference boxes as they apply to CSS Shapes,
 
 The [`inset()`](/en-US/docs/Web/CSS/basic-shape/inset) function defines a rectangle. This may not seem very useful as floating an item, without shapes, will give you a rectangular shape around it. However, the `inset()` type enables the definition of offsets, thus pulling the wrapping text around the reduced-size rectangle, over parts of the floated element.
 
-The `inset()` function takes up to four side offset values, plus an optional `round` keyword, followed by a {{cssxref("border-radius")}} value. The below CSS creates a rectangular shape inset from the reference box of the floated element 20 pixels from the top and bottom and 10 pixels from the left and right, with a `border-radius` value of 10 pixels.
+The `inset()` function takes up to four side offset values, plus an optional `round` keyword, followed by a {{cssxref("border-radius")}} value. The following CSS creates a rectangular shape inset from the reference box of the floated element 20 pixels from the top and bottom and 10 pixels from the left and right, with a `border-radius` value of 10 pixels:
 
 ```css
 .shape {
@@ -205,7 +205,7 @@ img {
 
 Play with increasing or decreasing the size of the circle by changing the size of the radius, moving the circle around with the position value, or setting a reference box as we did for `inset()`.
 
-The below example combines generated content with a `circle()` function that uses the keywords `top left` for position. This creates a quarter circle shape in the top left corner of the page for text to flow around.
+The example below combines generated content with a `circle()` function that uses the keywords `top left` for position. This creates a quarter circle shape in the top left corner of the page for text to flow around.
 
 ```html live-sample___circle-generated
 <div class="box">

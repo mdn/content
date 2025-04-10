@@ -16,7 +16,7 @@ A string containing the name of the policy.
 
 ## Examples
 
-In the below example a policy called `myEscapePolicy` is created using {{domxref("TrustedTypePolicyFactory.createPolicy()")}} and is represented by the object `escapeHTMLPolicy`. Calling `name` on this object returns the string "myEscapePolicy".
+In this example, a policy called `myEscapePolicy` is created using {{domxref("TrustedTypePolicyFactory.createPolicy()")}} and is represented by the object `escapeHTMLPolicy`. Calling `name` on this object returns the string "myEscapePolicy".
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {

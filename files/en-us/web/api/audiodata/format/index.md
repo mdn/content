@@ -33,7 +33,7 @@ A string. One of:
 
 ## Examples
 
-The below example prints the value of `format` to the console.
+The following example prints the value of `format` to the console:
 
 ```js
 console.log(AudioData.format);

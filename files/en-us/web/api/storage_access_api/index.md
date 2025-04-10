@@ -67,7 +67,7 @@ Embedded content that has a legitimate need for third party cookie or unpartitio
 
 ## Security measures
 
-Several different security measures could cause a {{domxref("Document.requestStorageAccess()")}} call to fail. Check the below list if you are having trouble getting a request to work:
+Several different security measures could cause a {{domxref("Document.requestStorageAccess()")}} call to fail. Check the following list if you are having trouble getting a request to work:
 
 1. The call must be associated with a user gesture ({{Glossary("transient activation")}}) such as a tap or click. This prevents embedded content on the page from spamming the browser or user with excessive access requests. Note that this isn't required if:
    - Permission to use the API has already been granted, for example by another same-site resource calling `requestStorageAccess()`.

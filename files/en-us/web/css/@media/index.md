@@ -249,7 +249,7 @@ Because of this potential, a browser may opt to fudge the returned values in som
 }
 ```
 
-The range syntax allows for less verbose media queries when testing for any feature accepting a range, as shown in the below examples:
+The range syntax allows for less verbose media queries when testing for any feature accepting a range, as shown in the following examples:
 
 ```css
 @media (height > 600px) {

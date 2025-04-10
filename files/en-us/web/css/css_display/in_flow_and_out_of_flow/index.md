@@ -112,7 +112,7 @@ You can see the background color of the following paragraph running underneath, 
 
 ### Absolute positioning
 
-Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example I have three paragraph elements, the second element has `position: absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
+Giving an item `position: absolute` or `position: fixed` removes it from flow, and any space that it would have taken up is removed. In the next example, I have three paragraph elements, the second element has `position: absolute`, with offset values of `top: 30px` and `right: 30px`. It has been removed from document flow.
 
 ```html live-sample___abspos
 <div class="box">

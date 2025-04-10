@@ -76,7 +76,7 @@ Browser default styling will render this as an indented paragraph, as an indicat
 
 ### Inline quotations
 
-Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the below bit of markup contains a quotation from the MDN `<q>` page:
+Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the markup below contains a quotation from the MDN `<q>` page:
 
 ```html
 <p>
@@ -534,7 +534,7 @@ HTML also provides the {{htmlelement("time")}} element for marking up times and 
 <time datetime="2016-01-20">20 January 2016</time>
 ```
 
-Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
+Why is this useful? Well, there are many different ways people write dates. The date above could be written as:
 
 <!-- markdownlint-disable MD033 -->
 

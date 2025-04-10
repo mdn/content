@@ -21,9 +21,8 @@ A string.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with
-`/books/:id(\\d)` for the `pathname` part. This pattern matches URLs starting
-with `/books/`, followed by an integer.
+This example creates a {{domxref("URLPattern")}} object with `/books/:id(\\d)` for the `pathname` part.
+This pattern matches URLs starting with `/books/`, followed by an integer.
 
 ```js
 const pattern = new URLPattern({ pathname: "/books/:id(\\d)" });

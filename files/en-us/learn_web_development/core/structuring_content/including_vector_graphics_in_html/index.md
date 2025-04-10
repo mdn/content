@@ -130,7 +130,7 @@ For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you
   srcset="equilateral.svg" />
 ```
 
-You can also use SVGs as CSS background images, as shown below. In the below code, older browsers will stick with the PNG that they understand, while newer browsers will load the SVG:
+You can also use SVGs as CSS background images. In the following code, older browsers will use the PNG that they understand, while newer browsers will load the SVG:
 
 ```css
 background: url("fallback.png") no-repeat center;

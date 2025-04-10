@@ -506,7 +506,7 @@ Let's play with some browser objects a bit.
    guesses.textContent = "Where is my paragraph?";
    ```
 
-8. Now for some fun stuff. Try entering the below lines, one by one:
+8. Now for some fun stuff. Try entering the following lines, one by one:
 
    ```js
    guesses.style.backgroundColor = "yellow";

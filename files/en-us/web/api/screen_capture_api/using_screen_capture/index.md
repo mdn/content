@@ -14,7 +14,7 @@ In this article, we will examine how to use the Screen Capture API and its {{dom
 
 ## Capturing screen contents
 
-Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents. The `displayMediaOptions` object referenced in the below examples might look something like this:
+Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents. The `displayMediaOptions` object referenced in the examples below might look something like this:
 
 ```js
 const displayMediaOptions = {

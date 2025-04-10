@@ -46,7 +46,7 @@ A {{domxref("TrustedTypePolicy")}} object.
 
 ### Creating a policy for HTML sinks
 
-The below code creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
+The following code creates a policy named `"myEscapePolicy"` with a `createHTML()` function that sanitizes HTML:
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {

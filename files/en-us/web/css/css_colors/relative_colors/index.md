@@ -33,7 +33,7 @@ Relative colors are created using the same [color functions](/en-US/docs/Web/CSS
 
 The browser converts the origin color to a syntax compatible with the color function then destructures it into component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, `b`, and `alpha` in the case of the `rgb()` function, `l`, `a`, `b`, and `alpha` in the case of the `lab()` function, `h`, `w`, `b`, and `alpha` in the case of `hwb()`, etc. — that can be used to calculate new output channel values.
 
-Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
+Let's look at relative color syntax in action. The CSS below is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
 ```html hidden live-sample___simple-relative-color
 <div id="container">
@@ -175,7 +175,7 @@ It is worth mentioning again that the color system of the origin color doesn't n
 
 When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.
 
-In the below CSS we define two custom properties:
+In the CSS below, we define two custom properties:
 
 - `--base-color` contains our base brand color — `purple`. Here we are using a named color keyword, but relative colors can accept any color syntax for the origin color.
 - `--standard-opacity` contains the standard brand opacity value that we want to apply to semi-transparent boxes — `0.75`.
@@ -233,7 +233,7 @@ The output is as follows:
 
 You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
 
-The below CSS is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given an unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
+The CSS below is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given an unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
 
 ```html hidden
 <div id="container">

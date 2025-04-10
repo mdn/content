@@ -36,7 +36,7 @@ If the `<iframe>` content from `ad-tech1.example` implements a [feature that ena
 ### Selecting topics of interest to influence ad choice
 
 > [!NOTE]
-> Different browser implementations may select topics in different ways. The below text is based on how Chrome currently selects topics, for demonstration purposes.
+> Different browser implementations may select topics in different ways. The text below is based on how Chrome currently selects topics, for demonstration purposes.
 
 On an ongoing basis, the browser will:
 

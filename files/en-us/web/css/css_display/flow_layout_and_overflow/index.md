@@ -168,7 +168,7 @@ As we have already learned, using any of these values, other than the default of
 > [!NOTE]
 > In the [Working Draft of Overflow Level 3](https://www.w3.org/TR/css-overflow-3/), there is an additional value `overflow: clip`. This acts like `overflow: hidden`, however it does not allow for programmatic scrolling, the box becomes non-scrollable. In addition it does not create a block formatting context.
 
-The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/docs/Web/CSS/overflow-x) and [`overflow-y`](/en-US/docs/Web/CSS/overflow-y) properties. If you specify only one value for overflow, this value is used for both axes. However, you can specify both values in which case the first is used for `overflow-x` and therefore the horizontal direction, and the second for `overflow-y` and the vertical direction. In the below example, I have only specified `overflow-y: scroll` so we do not get the unwanted horizontal scrollbar.
+The overflow property is in reality a shorthand for the [`overflow-x`](/en-US/docs/Web/CSS/overflow-x) and [`overflow-y`](/en-US/docs/Web/CSS/overflow-y) properties. If you specify only one value for overflow, this value is used for both axes. However, you can specify both values in which case the first is used for `overflow-x` and therefore the horizontal direction, and the second for `overflow-y` and the vertical direction. In the example below, I have only specified `overflow-y: scroll` so we do not get the unwanted horizontal scrollbar.
 
 ```html hidden live-sample___overflow-y
 <div class="box">

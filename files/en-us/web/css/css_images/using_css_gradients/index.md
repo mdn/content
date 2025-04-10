@@ -569,7 +569,7 @@ div {
 
 #### Example: length or percentage for ellipses
 
-For ellipses only, you can size the ellipse using a length or percentage. The first value represents the horizontal radius, the second the vertical radius, where you use a percentage this corresponds to the size of the box in that dimension. In the below example I have used a percentage for the horizontal radius.
+For ellipses only, you can size the ellipse using a length or percentage. The first value represents the horizontal radius, the second the vertical radius, where you use a percentage this corresponds to the size of the box in that dimension. In this example, I have used a percentage for the horizontal radius.
 
 ```html hidden
 <div class="radial-ellipse-size"></div>

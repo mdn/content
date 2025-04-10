@@ -314,7 +314,7 @@ In addition, if you try to submit the form with no search term entered into it, 
 
 ![form field with attached message that says Please fill out this field](firefox-required-message.png)
 
-Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the below examples.
+Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the examples below.
 
 ### Input value length
 

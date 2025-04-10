@@ -102,7 +102,7 @@ async function registerContent(data) {
 
 ### Retrieving items within the current index
 
-The below example shows an asynchronous function that retrieves items within the content index and iterates over each entry, building a list for the interface.
+This example shows an asynchronous function that retrieves items within the content index and iterates over each entry, building a list for the interface.
 
 ```js
 async function createReadingList() {

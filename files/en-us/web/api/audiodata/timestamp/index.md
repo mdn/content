@@ -16,7 +16,7 @@ An integer.
 
 ## Examples
 
-The below example prints the value of `timestamp` to the console.
+The following example prints the value of `timestamp` to the console:
 
 ```js
 console.log(AudioData.timestamp);

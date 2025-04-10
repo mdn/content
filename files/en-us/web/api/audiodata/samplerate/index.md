@@ -16,7 +16,7 @@ A decimal value.
 
 ## Examples
 
-The below example prints the value of `sampleRate` to the console.
+The following example prints the value of `sampleRate` to the console:
 
 ```js
 console.log(audioData.sampleRate);

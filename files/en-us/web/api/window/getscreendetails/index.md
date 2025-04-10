@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("ScreenDetails")}} object
 
 When `getScreenDetails()` is invoked, the user will be asked for permission to manage windows on all their displays (the status of this permission can be checked using {{domxref("Permissions.query()")}} to query `window-management`). Provided they grant permission, the resulting {{domxref("ScreenDetails")}} object contains details of all the screens available to the user's system.
 
-The below example opens a full-size window on each available display.
+The following example opens a full-size window on each available display:
 
 ```js
 const screenDetails = await window.getScreenDetails();

@@ -250,7 +250,7 @@ To combine media features you can use `and` in much the same way as we have used
 
 ### "or" logic in media queries
 
-If you have a set of queries, any of which could match, then you can comma separate these queries. In the below example the text will be blue if the viewport is at least 600 pixels wide OR the device is in landscape orientation. If either of these things are true the query matches.
+If you have a set of queries, any of which could match, then you can comma separate these queries. In the following example, the text will be blue if the viewport is at least 600 pixels wide OR the device is in landscape orientation. If either of these conditions is true, the query matches.
 
 ```css live-sample___or
 @media screen and (min-width: 600px), screen and (orientation: landscape) {
@@ -326,7 +326,7 @@ Broadly, you can take two approaches to a responsive design. You can start with 
 
 The view for the very smallest devices is quite often a simple single column of content, much as it appears in normal flow. This means that you probably don't need to do a lot of layout for small devices — order your source well and you will have a readable layout by default.
 
-The below walkthrough takes you through this approach with a very simple layout. In a production site you are likely to have more things to adjust within your media queries, however the approach would be exactly the same.
+The following walkthrough takes you through this approach with a very simple layout. In a production site, you are likely to have more things to adjust within your media queries; however, the approach would be exactly the same.
 
 ### Walkthrough: a mobile-first layout
 

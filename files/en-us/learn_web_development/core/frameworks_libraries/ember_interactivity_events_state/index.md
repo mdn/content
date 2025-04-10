@@ -46,7 +46,7 @@ At this point we'll start adding some interactivity to our app, providing the ab
 
 Now we've got a refactored componentized version of our todo app, lets walk through how we can add the interactivity we need to make the app functional.
 
-When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the below sections we'll do this for each component, and then walk you through how the functionality can be implemented.
+When beginning to think about interactivity, it's good to declare what each component's goals and responsibilities are. In the sections that follow, we'll do this for each component, and then walk you through how the functionality can be implemented.
 
 ## Creating todos
 
