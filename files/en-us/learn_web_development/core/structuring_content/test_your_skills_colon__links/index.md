@@ -2,9 +2,8 @@
 title: "Test your skills: Links"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_Links
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 

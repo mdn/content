@@ -3,9 +3,8 @@ title: "Test your skills: JSON"
 short-title: JSON
 slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Working with JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON) article.
 

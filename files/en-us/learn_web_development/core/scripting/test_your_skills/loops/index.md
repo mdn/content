@@ -3,9 +3,8 @@ title: "Test your skills: Loops"
 short-title: Loops
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Looping code](/en-US/docs/Learn_web_development/Core/Scripting/Loops) article.
 

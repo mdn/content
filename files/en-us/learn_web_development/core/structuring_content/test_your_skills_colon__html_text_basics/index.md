@@ -2,9 +2,8 @@
 title: "Test your skills: HTML text basics"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to mark up text in HTML to give it structure and meaning.
 

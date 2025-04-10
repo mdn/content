@@ -2,9 +2,8 @@
 title: "Test your skills: Advanced HTML text"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 

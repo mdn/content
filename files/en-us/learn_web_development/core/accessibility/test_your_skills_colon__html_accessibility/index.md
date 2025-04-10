@@ -2,9 +2,8 @@
 title: "Test your skills: HTML accessibility"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 

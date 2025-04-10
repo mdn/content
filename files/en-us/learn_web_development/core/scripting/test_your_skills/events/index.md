@@ -3,9 +3,8 @@ title: "Test your skills: Events"
 short-title: Events
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Events
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) article.
 

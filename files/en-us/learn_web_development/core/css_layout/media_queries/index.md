@@ -3,9 +3,8 @@ title: Media query fundamentals
 short-title: Media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
 
