@@ -137,7 +137,7 @@ For example:
 - **Incorrect**: "Refer to the Accessibility section below."
 
 - **Correct**: "In the following code example, we animate a circle using CSS transitions."
-- **Incorrect**: "In the code example below, we animate a circle."
+- **Incorrect**: "In the code example below, we animate a circle using CSS transitions."
 
 - **Correct**: "This concept is explained in the earlier section titled Creating a media query."
 - **Incorrect**: "This concept is explained in the section above."
@@ -330,7 +330,7 @@ The following list describes some of the common situations where we need to be a
 - **After introductory clauses**: An introductory clause is a dependent clause, usually found at the beginning of a sentence. Use a comma after an introductory clause to separate it from the following independent clause.
 
   - Example 1:
-    - **Correct**: "In this example, you learn how to use a comma."
+    - **Correct**: "In this example, you will learn how to use a comma."
     - **Incorrect**: "In this example you learn how to use a comma."
   - Example 2:
     - **Correct**: "If you are looking for guidelines, refer to our writing style guide."
