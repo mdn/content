@@ -20,6 +20,25 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 > [!WARNING]
 > The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
+- `closedby`
+
+  - : Specifies the types of user actions that can be used to close the `<dialog>` element. Possible values are:
+
+    - `none`
+
+      - : No user actions can be used to close the `<dialog>` element, only developer-specified mechanisms such as a JavaScript-powered "Close" {{htmlelement("button")}} or a {{htmlelement("form")}} submission.
+
+    - `closerequest`
+
+      - : The `<dialog>` element can be closed via relevant platform-specific close requests, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+
+    - `any`
+
+      - : The `<dialog>` element can be closed via relevant platform-specific close requests, or by pressing outside the `<dialog>`. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+
+    > [!NOTE]
+    > If the `<dialog>` element does not have a `closedby` value specified, or it is specified with an invalid value, it behaves as if the value was `closerequest` if the `<dialog>` was shown via {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, or `none` if it was not.
+
 - `open`
 
   - : Indicates that the dialog box is active and is available for interaction. If the `open` attribute is not set, the dialog box will not be visible to the user.
@@ -271,6 +290,116 @@ jsCloseBtn.addEventListener("click", (e) => {
 {{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
 
 From the output, we see it is impossible to close the dialog using the _Normal close_ button. But the dialog can be closed if we bypass the form validation using the `formnovalidate` attribute on the _Cancel_ button. Programmatically, `dialog.close()` will also close such dialog.
+
+### Comparison of different closedby behaviors
+
+This example demonstrates the difference in behavior between different values of the [`closedby`](#closedby) attribute.
+
+#### HTML
+
+We provide three {{htmlelement("button")}} elements and three {{htmlelement("dialog")}} elements. Each button will be programmed to open a different dialog that demonstrates the behavior one of the three values of the `closedby` attribute — `none`, `closedby`, and `any`. Note that each `<dialog>` element contains a `<button>` element that will be used to close it.
+
+```html live-sample___closedbyvalues
+<p>Choose a <code>&lt;dialog&gt;</code> type to show:</p>
+<div id="controls">
+  <button id="none-btn"><code>closedby="none"</code></button>
+  <button id="closerequest-btn">
+    <code>closedby="closerequest"</code>
+  </button>
+  <button id="any-btn"><code>closedby="any"</code></button>
+</div>
+
+<dialog closedby="none">
+  <h2><code>closedby="none"</code></h2>
+  <p>
+    Only closable using a specific provided mechanism, which in this case is
+    pressing the "Close" button below.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="closerequest">
+  <h2><code>closedby="closerequest"</code></h2>
+  <p>Closable using the "Close" button or the Esc key.</p>
+  <button class="close">Close</button>
+</dialog>
+
+<dialog closedby="any">
+  <h2><code>closedby="any"</code></h2>
+  <p>
+    Closable using the "Close" button, the Esc key, or by clicking outside the
+    dialog. "Light dismiss" behavior.
+  </p>
+  <button class="close">Close</button>
+</dialog>
+```
+
+```css hidden live-sample___closedbyvalues
+body {
+  font-family: sans-serif;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+dialog {
+  width: 480px;
+  border-radius: 5px;
+  border-color: rgb(0 0 0 / 0.3);
+}
+
+dialog h2 {
+  margin: 0;
+}
+
+dialog p {
+  line-height: 1.4;
+}
+```
+
+#### JavaScript
+
+Here we assign different variables to reference the main control `<button>` elements, the `<dialog>` elements, and the "Close" `<button>` elements inside the dialogs. First we assign a [`click`](/en-US/docs/Web/API/Element/click_event) event listener to each control button using [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener), the event handler function of which opens the associated `<dialog>` element via [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal). We then loop through the "Close" `<button>` references, assigning each one a `click` event handler function that closes its `<dialog>` element via [`close()`](/en-US/docs/Web/API/HTMLDialogElement/close).
+
+```js live-sample___closedbyvalues
+const noneBtn = document.getElementById("none-btn");
+const closerequestBtn = document.getElementById("closerequest-btn");
+const anyBtn = document.getElementById("any-btn");
+
+const noneDialog = document.querySelector("[closedby='none']");
+const closerequestDialog = document.querySelector("[closedby='closerequest']");
+const anyDialog = document.querySelector("[closedby='any']");
+
+const closeBtns = document.querySelectorAll(".close");
+
+noneBtn.addEventListener("click", () => {
+  noneDialog.showModal();
+});
+
+closerequestBtn.addEventListener("click", () => {
+  closerequestDialog.showModal();
+});
+
+anyBtn.addEventListener("click", () => {
+  anyDialog.showModal();
+});
+
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+  });
+});
+```
+
+#### Result
+
+The rendered result is as follows:
+
+{{EmbedLiveSample("closedby-values", "100%", 300)}}
+
+Try clicking each button to open a dialog. The first one can only be closed by pressing its "Close" button. The second one can also be closed via a device specific close request such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), and can additionally be closed by pressing outside the dialog.
 
 ### Animating dialogs
 
