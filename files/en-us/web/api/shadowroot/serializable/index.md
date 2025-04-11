@@ -12,7 +12,7 @@ The **`serializable`** read-only property of the {{domxref("ShadowRoot")}} inter
 
 If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
 
-The serializable property of a shadow root is specified when the shadow root is created, either declaratively by adding the [`shadowrootserializable`](/en-US/docs/Web/HTML/Element/template#shadowrootserializable) attribute on a `<template>` element (along with an allowed [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) value), or by setting the [`options.serializable`](/en-US/docs/Web/API/Element/attachShadow#serializable) parameter to `true` when using [`Element.attachShadow()`](/en-US/docs/Web/API/Element/attachShadow).
+The serializable property of a shadow root is specified when the shadow root is created, either declaratively by adding the [`shadowrootserializable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) attribute on a `<template>` element (along with an allowed [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) value), or by setting the [`options.serializable`](/en-US/docs/Web/API/Element/attachShadow#serializable) parameter to `true` when using [`Element.attachShadow()`](/en-US/docs/Web/API/Element/attachShadow).
 
 ## Value
 

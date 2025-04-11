@@ -290,14 +290,16 @@ If the merchant desires to collect additional information not part of the API (e
 ```js
 request
   .show()
-  .then((paymentResponse) => {
+  .then((paymentResponse) => paymentResponse.complete("success"))
+  .then(() => {
     // Process payment here.
     // Close the UI:
-    paymentResponse.complete('success').then(() => {
-      // Request additional shipping address details.
-      const additionalDetailsContainer = document.getElementById('additional-details-container');
-      additionalDetailsContainer.style.display = 'block';
-      window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
+    // Request additional shipping address details.
+    const additionalDetailsContainer = document.getElementById(
+      "additional-details-container",
+    );
+    additionalDetailsContainer.style.display = "block";
+    window.scrollTo(additionalDetailsContainer.getBoundingClientRect().x, 0);
   })
   .catch((error) => {
     // Handle error.

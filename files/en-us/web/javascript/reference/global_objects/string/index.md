@@ -361,7 +361,7 @@ These properties are own properties of each `String` instance.
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
-  - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)
+  - : [`<a name="name">`](/en-US/docs/Web/HTML/Reference/Elements/a#name) (hypertext target)
 - {{jsxref("String.prototype.big()")}} {{deprecated_inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{deprecated_inline}}
@@ -371,13 +371,13 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}
-  - : [`<font color="color">`](/en-US/docs/Web/HTML/Element/font#color)
+  - : [`<font color="color">`](/en-US/docs/Web/HTML/Reference/Elements/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}
-  - : [`<font size="size">`](/en-US/docs/Web/HTML/Element/font#size)
+  - : [`<font size="size">`](/en-US/docs/Web/HTML/Reference/Elements/font#size)
 - {{jsxref("String.prototype.italics()")}} {{deprecated_inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{deprecated_inline}}
-  - : [`<a href="url">`](/en-US/docs/Web/HTML/Element/a#href) (link to URL)
+  - : [`<a href="url">`](/en-US/docs/Web/HTML/Reference/Elements/a#href) (link to URL)
 - {{jsxref("String.prototype.small()")}} {{deprecated_inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{deprecated_inline}}

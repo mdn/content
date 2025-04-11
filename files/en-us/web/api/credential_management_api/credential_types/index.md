@@ -32,7 +32,7 @@ In this guide we'll introduce the different credential types and explain at a hi
 ## Passwords
 
 > [!NOTE]
-> Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in a password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Element/input/password).
+> Most browsers do not support this credential type and it is not widely used on the web. Instead, browsers automatically offer to store passwords in a password manager, and can automatically retrieve stored passwords to autofill [password input elements](/en-US/docs/Web/HTML/Reference/Elements/input/password).
 
 Modern browsers provide users with a password manager, which enables users to store the passwords they enter on websites, and later retrieve them when they need to log in again. Password managers can help with password security by remembering passwords for users and autofilling them, which allows users to choose stronger passwords.
 

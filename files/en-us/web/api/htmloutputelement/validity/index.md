@@ -8,7 +8,7 @@ browser-compat: api.HTMLOutputElement.validity
 
 {{APIRef("HTML DOM")}}
 
-The **`validity`** read-only property of the {{domxref("HTMLOutputElement")}} interface returns a {{domxref("ValidityState")}} object that represents the validity states this element is in. Although {{HTMLElement("output")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation), the validity state may still be invalid if a custom validity message has been set.
+The **`validity`** read-only property of the {{domxref("HTMLOutputElement")}} interface returns a {{domxref("ValidityState")}} object that represents the validity states this element is in. Although {{HTMLElement("output")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation), the validity state may still be invalid if a custom validity message has been set.
 
 ## Value
 
@@ -41,4 +41,4 @@ console.log(output.checkValidity()); // true
 - {{HTMLElement("output")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)

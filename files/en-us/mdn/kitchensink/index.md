@@ -76,7 +76,7 @@ const f = () => {
 
 ### WebAssembly
 
-```wasm
+```wat
 (func (param i32) (param f32) (local f64)
   local.get 0
   local.get 1
@@ -216,17 +216,17 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -236,7 +236,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        Any element that accepts <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -442,8 +442,8 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
 
 - {{SVGElement("feGaussianBlur")}}
 - {{SVGAttr("keySplines")}} SVG attribute
-- [dir](/en-US/docs/Web/HTML/Global_attributes#dir)
-- [lang](/en-US/docs/Web/HTML/Global_attributes#lang)
+- [dir](/en-US/docs/Web/HTML/Reference/Global_attributes#dir)
+- [lang](/en-US/docs/Web/HTML/Reference/Global_attributes#lang)
 - {{cssxref(":dir")}}
 - {{cssxref("direction")}}
 

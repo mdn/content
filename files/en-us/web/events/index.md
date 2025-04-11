@@ -460,8 +460,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
         <a href="/en-US/docs/Web/API/TextTrackList#events"
           ><code>TextTrackList</code></a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/en-US/docs/Web/HTML/Element/video#events">Element/video</a>.
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/audio#events">Element/audio</a>,
+        <a href="/en-US/docs/Web/HTML/Reference/Elements/video#events">Element/video</a>.
       </td>
     </tr>
     <tr>

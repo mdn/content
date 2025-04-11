@@ -130,7 +130,7 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 #### Example
 
-- [`<video>` element](/en-US/docs/Web/HTML/Element/video)
+- [`<video>` element](/en-US/docs/Web/HTML/Reference/Elements/video)
 
 #### Templates
 

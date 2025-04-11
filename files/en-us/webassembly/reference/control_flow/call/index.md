@@ -80,7 +80,7 @@ console.log(result);
 
 ## Syntax
 
-```wasm
+```wat
 call $greet
 ```
 

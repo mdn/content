@@ -13,7 +13,7 @@ The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is {{Gloss
 Successive identical `POST` requests may have additional effects, such as creating the same order several times.
 
 [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms) typically send data using `POST` and this usually results in a change on the server.
-For HTML forms the format/encoding of the body content is determined by the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements.
+For HTML forms the format/encoding of the body content is determined by the [`enctype`](/en-US/docs/Web/HTML/Reference/Elements/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Reference/Elements/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements.
 The encoding may be one of the following:
 
 - `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by an ampersand (`&`), with an equals symbol (`=`) between the key and the value (e.g., `first-name=Frida&last-name=Kahlo`).

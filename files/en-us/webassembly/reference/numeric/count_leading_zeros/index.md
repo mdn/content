@@ -39,7 +39,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
 
 ## Syntax
 
-```wasm
+```wat
 ;; load a number onto the stack
 i32.const 8388608 ;; 00000000_10000000_00000000_00000000
 

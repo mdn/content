@@ -10,13 +10,13 @@ browser-compat: api.HTMLInputElement.type
 
 The **`type`** property of the {{domxref("HTMLInputElement")}} interface indicates the kind of data allowed in the {{HTMLElement("input")}} element, for example a number, a date, or an email. Browsers will select the appropriate widget and behavior to help users to enter a valid value.
 
-It reflects the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{HTMLElement("input")}} element.
+It reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute of the {{HTMLElement("input")}} element.
 
 ## Value
 
 A string representing the type.
 
-Its possible values are listed in the attribute's [input types](/en-US/docs/Web/HTML/Element/input#input_types) section.
+Its possible values are listed in the attribute's [input types](/en-US/docs/Web/HTML/Reference/Elements/input#input_types) section.
 
 ## Example
 

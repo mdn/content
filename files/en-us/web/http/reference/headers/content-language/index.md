@@ -9,7 +9,7 @@ browser-compat: http.headers.Content-Language
 
 The HTTP **`Content-Language`** {{Glossary("representation header")}} is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language.
 
-For example, `Content-Language: de-DE` indicates that the document is intended for German language speakers. The document may be written in English, not German, as part of a language course for German speakers. To indicate the language the document is **written in**, use the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute instead.
+For example, `Content-Language: de-DE` indicates that the document is intended for German language speakers. The document may be written in English, not German, as part of a language course for German speakers. To indicate the language the document is **written in**, use the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute instead.
 
 If no `Content-Language` is specified, the default is that the content is intended for all language audiences. Multiple language tags are also possible, as well as applying the `Content-Language` header to various media types and not only to textual documents.
 
@@ -62,7 +62,7 @@ Content-Language: de-DE, en-CA
 
 ### Indicating the language a document is written in
 
-The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is used on HTML elements to indicate the language of an entire [HTML](/en-US/docs/Web/HTML) document or parts of it.
+The global [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute is used on HTML elements to indicate the language of an entire [HTML](/en-US/docs/Web/HTML) document or parts of it.
 
 ```html
 <html lang="de">
@@ -96,4 +96,4 @@ Content-Language: de, en
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)
-- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang)
+- [HTML `lang` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/lang)

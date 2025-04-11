@@ -39,7 +39,7 @@ The following is a list of elements you _can_ attach a shadow root to:
 
 ## Calling this method on an element that is already a shadow host
 
-The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
+The method may be called on an element that already has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom), provided the specified mode `mode` matches the existing mode.
 In this case the {{domxref("ShadowRoot")}} that was already present will be cleared and returned.
 This allows for cases where, for example, server-side rendering has already declaratively created a shadow root, and then client-side code attempts to attach the root again.
 
@@ -120,7 +120,7 @@ Returns a {{domxref("ShadowRoot")}} object.
     - outside the HTML namespace or that can't have a shadow attached to it.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
-    - that has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
+    - that has a [declarative shadow root](/en-US/docs/Web/HTML/Reference/Elements/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
 
 ## Examples
 
@@ -209,5 +209,5 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.mode")}}
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
-- Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Element/template)
+- Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Reference/Elements/template)
 - [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

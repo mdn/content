@@ -33,7 +33,7 @@ If the server has a preferred choice that the client should request, it can incl
 The following example demonstrates a Transparent Content Negotiation request-response exchange.
 An Apache server offers multiple variants of a resource defined in a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps); `index.html.en` for a resource in English, and `index.html.fr` for a French version:
 
-```plain
+```http
 URI: index.html.en
 Content-Language: en
 

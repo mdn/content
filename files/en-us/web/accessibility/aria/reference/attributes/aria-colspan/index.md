@@ -12,7 +12,7 @@ The `aria-colspan` attribute defines the number of columns spanned by a cell or 
 
 Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) which are not contained in a native HTML {{HTMLElement('table')}}, the `aria-colspan` property value defines the number of columns spanned by an individual cell an ARIA [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
 
-In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute. When using the semantic {{HTMLElement('table')}}, use the native `colspan` attribute as designed. This ARIA attribute is intended for cells and gridcells which are not contained in a native table, and will be ignored if used on a cell in a {{HTMLElement('table')}}.
+In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#attributes) attribute. When using the semantic {{HTMLElement('table')}}, use the native `colspan` attribute as designed. This ARIA attribute is intended for cells and gridcells which are not contained in a native table, and will be ignored if used on a cell in a {{HTMLElement('table')}}.
 
 > [!NOTE]
 > The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ HTML {{HTMLelement('table')}} elements, including {{HTMLelement('td')}} and {{HTMLelement('th')}} with the `colspan` attribute instead of non-semantic elements with ARIA roles and attributes whenever possible.
@@ -163,7 +163,7 @@ Inherits into roles:
 
 ## See also
 
-- The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute
+- The {{HTMLElement('th')}} and {{HTMLElement('td')}} [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#attributes) attribute
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) property
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) property
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) role

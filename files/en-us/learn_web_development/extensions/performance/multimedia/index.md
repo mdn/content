@@ -49,7 +49,7 @@ Despite being the largest consumer of bandwidth, the impact of image downloading
 
 ### Loading strategy
 
-One of the biggest improvements to most websites is [lazy-loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) images beneath the fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Browsers provide this natively via the [`loading="lazy"`](/en-US/docs/Web/HTML/Element/img#loading) attribute on the `<img>` element, and there are also many client-side JavaScript libraries that can do this.
+One of the biggest improvements to most websites is [lazy-loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) images beneath the fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Browsers provide this natively via the [`loading="lazy"`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on the `<img>` element, and there are also many client-side JavaScript libraries that can do this.
 
 Beyond loading a subset of images, you should look into the format of the images themselves:
 
@@ -86,7 +86,7 @@ Other formats improve on JPEG's capabilities regarding compression, but are not 
 - [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. [Squoosh](https://squoosh.app/) is a good online tool for converting previous image formats to AVIF.
 - **JPEG2000** — once to be the successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
-Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
+Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Reference/Elements/picture#the_type_attribute).
 
 If all of this sounds a bit complicated or feels like too much work for your team then there are also online services that you can use as image CDNs that will automate the serving of the correct image format on the fly, according to the type of device or browser requesting the image. Popular choices include [Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps), [Image Engine](https://imageengine.io/), [ImageKit](https://imagekit.io/docs/image-optimization#automatic-format-conversion), and [imgix](https://www.imgix.com/).
 
@@ -102,7 +102,7 @@ Finally, should you want to include animated images on your page, then know that
 
 #### Serving the optimal size
 
-In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g., "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g., "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Reference/Elements/source#media) and/or [sizes](/en-US/docs/Web/HTML/Reference/Elements/source#sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 

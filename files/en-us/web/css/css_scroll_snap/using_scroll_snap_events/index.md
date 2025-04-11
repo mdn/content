@@ -197,7 +197,7 @@ The style changes mentioned above will be applied through classes applied to the
 
 ### JavaScript
 
-In the JavaScript, we start by grabbing a reference to the `<main>` element and defining the number of `<section>` elements to generate (in this case, 21) and a variable to begin counting from. We then use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to generate the `<section>` elements, giving each one a child [`h2`](/en-US/docs/Web/HTML/Element/Heading_Elements) with text that reads `Section` plus the current value of `n`.
+In the JavaScript, we start by grabbing a reference to the `<main>` element and defining the number of `<section>` elements to generate (in this case, 21) and a variable to begin counting from. We then use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to generate the `<section>` elements, giving each one a child [`h2`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) with text that reads `Section` plus the current value of `n`.
 
 ```js
 const mainElem = document.querySelector("main");

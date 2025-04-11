@@ -9,7 +9,7 @@ browser-compat: api.HTMLTrackElement.src
 {{APIRef("HTML DOM")}}
 
 The **`src`** property of the {{domxref("HTMLTrackElement")}} interface reflects the value of
-the {{HTMLElement("track")}} element's [`src`](/en-US/docs/Web/HTML/Element/track#src) attribute, which
+the {{HTMLElement("track")}} element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/track#src) attribute, which
 indicates the URL of the text track's data.
 
 ## Value

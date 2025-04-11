@@ -27,7 +27,7 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 
 ## Syntax
 
-```wasm
+```wat
 unreachable
 ```
 

@@ -49,7 +49,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ### HTML attributes
 
-- [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+- [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
 
 ### Interfaces
 

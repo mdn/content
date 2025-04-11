@@ -31,7 +31,7 @@ HTMLScriptElement.supports(type)
     - `"module"`
       - : Test if [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) are supported.
     - `"importmap"`
-      - : Test if [import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are supported.
+      - : Test if [import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are supported.
     - `"speculationrules"`
       - : Test if [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) are supported and enabled.
 

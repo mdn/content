@@ -52,7 +52,7 @@ flex-direction: column-reverse;
 }
 ```
 
-Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
+Note that the values `row` and `row-reverse` are affected by the directionality of the flex container. If its [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute is `ltr`, `row` represents the horizontal axis oriented from the left to the right, and `row-reverse` from the right to the left; if the `dir` attribute is `rtl`, `row` represents the axis oriented from the right to the left, and `row-reverse` from the left to the right.
 
 ## Syntax
 

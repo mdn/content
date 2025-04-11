@@ -36,7 +36,7 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : Fired on an `HTMLSlotElement` instance ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) element) when the node(s) contained in that slot change.
+  - : Fired on an `HTMLSlotElement` instance ([`<slot>`](/en-US/docs/Web/HTML/Reference/Elements/slot) element) when the node(s) contained in that slot change.
 
 ## Examples
 

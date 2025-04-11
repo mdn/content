@@ -10,7 +10,7 @@ browser-compat: api.HTMLObjectElement.type
 
 The **`type`** property of the
 {{domxref("HTMLObjectElement")}} interface returns a string that
-reflects the [`type`](/en-US/docs/Web/HTML/Element/object#type) HTML attribute, specifying the MIME type
+reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/object#type) HTML attribute, specifying the MIME type
 of the resource.
 
 ## Value

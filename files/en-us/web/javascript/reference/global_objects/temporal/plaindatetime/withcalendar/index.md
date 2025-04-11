@@ -41,8 +41,8 @@ A new `Temporal.PlainDateTime` object, representing the date-time specified by t
 
 ```js
 const dt = Temporal.PlainDateTime.from("2021-07-01T12:34:56");
-const newDT = dt.withCalendar("islamic");
-console.log(newDT.toLocaleString("en-US", { calendar: "islamic" }));
+const newDT = dt.withCalendar("islamic-umalqura");
+console.log(newDT.toLocaleString("en-US", { calendar: "islamic-umalqura" }));
 // 11/21/1442 AH, 12:34:56 PM
 ```
 

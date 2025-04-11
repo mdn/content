@@ -37,18 +37,7 @@ This is an incorrect way to write links on MDN:
 
 ## Example code blocks
 
-In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string".
-The first word of the info string is typically used to specify the language of the code sample, and rendered in the class attribute of the code tag.
-
-The info string may contain multiple words:
-
-````md
-```fee fi fo fum
-// some example code
-```
-````
-
-On MDN, writers will use code fences for example code blocks. They must specify the language of the code sample using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
+In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks. The opening code fence may be followed by some text that is called the "info string". The language of the code sample must be specified using the first word of the info string, and this will be used to provide syntax highlighting for the block. The following words are supported:
 
 - Programming Languages
   - JavaScript
@@ -67,7 +56,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
     - `sql` - SeQueL commands
-    - `wasm` - WebAssembly
+    - `wat` - WebAssembly
     - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS
@@ -96,7 +85,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
 - Templates
   - `django` - Django templates
   - `svelte` - Svelte templates
-  - `handlebars` - Handlebars templates
+  - `hbs` - Handlebars templates
   - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
@@ -115,6 +104,9 @@ const greeting = "I will get JavaScript syntax highlighting";
 
 If the highlighting that you wish to use is not listed above, you should markup the code block as `plain`.
 Additional languages may be requested in the process [discussed on GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
+
+> [!NOTE]
+> Use the language identifier exactly as listed above. For example, `javascript` is not allowed and you must write `js`.
 
 ### Suppressing linting
 

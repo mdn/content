@@ -189,7 +189,7 @@ Once you have audited your third-party resources and understand what they are do
 The following list provides some tips on how to mitigate privacy risks inherent with using third-party resources:
 
 - When embedding third-party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? Also, some third-party services have privacy-enhancing options. See, for example, YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
-- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
+- Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
   > [!NOTE]
   > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).

@@ -155,6 +155,9 @@ Viewport-percentage lengths define `<length>` values in percentage relative to t
 When applying styles to a container using container queries, you can use container query length units.
 These units specify a length relative to the dimensions of a query container.
 Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
+
+If no eligible container is available for the query, the container query length unit defaults to the [small viewport unit](#small_viewport_units) for that axis (`sv*`).
+
 For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
 
 - `cqw`

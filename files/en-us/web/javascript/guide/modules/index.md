@@ -18,7 +18,7 @@ All modern browsers support module features natively without needing transpilati
 
 ## Introducing an example
 
-To demonstrate usage of modules, we've created a [set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+To demonstrate usage of modules, we've created a [set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
 
 These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
@@ -44,7 +44,7 @@ The modules directory's two modules are described below:
 
 - `canvas.js` — contains functions related to setting up the canvas:
 
-  - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Element/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
+  - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
   - `createReportList()` — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.
 
 - `square.js` — contains:
@@ -154,11 +154,11 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
+[Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
 
 For example, the `imports` key in the import map below defines a "module specifier map" JSON object where the property names can be used as module specifiers, and the corresponding values will be substituted when the browser resolves the module URL.
 The values must be absolute or relative URLs.
-Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Element/base) of the document containing the import map.
+Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Reference/Elements/base) of the document containing the import map.
 
 ```html
 <script type="importmap">
@@ -174,7 +174,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 </script>
 ```
 
-The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
+The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap).
 Note that an import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
@@ -376,7 +376,7 @@ document.adoptedStyleSheets = [styles];
 
 Now we just need to apply the `main.js` module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.
 
-First of all, you need to include `type="module"` in the [`<script>`](/en-US/docs/Web/HTML/Element/script) element, to declare this script as a module. To import the `main.js` script, we use this:
+First of all, you need to include `type="module"` in the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, to declare this script as a module. To import the `main.js` script, we use this:
 
 ```html
 <script type="module" src="main.js"></script>
@@ -404,14 +404,14 @@ You can only use `import` and `export` statements inside modules, not regular sc
 You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
 
 > [!NOTE]
-> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
 ## Other differences between modules and classic scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e., with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
 - Also, note that you might get different behavior from sections of script defined inside modules as opposed to in classic scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
-- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Element/script#attributes)) when loading a module script; modules are deferred automatically.
+- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; modules are deferred automatically.
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
 

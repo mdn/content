@@ -18,9 +18,9 @@ A boolean that is `true` if the `ValidityState` object does not conform to the e
 
 ### Detecting bad input
 
-The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Reference/Elements/input/number).
 If the user enters text instead of a number, the element fails constraint validation, and the styles matching [`input:invalid`](/en-US/docs/Web/CSS/:invalid) are applied.
-The [`<pre>`](/en-US/docs/Web/HTML/Element/pre) element above the input shows the validation message when the element `badInput` evaluates to `true`:
+The [`<pre>`](/en-US/docs/Web/HTML/Reference/Elements/pre) element above the input shows the validation message when the element `badInput` evaluates to `true`:
 
 ```css
 input:invalid {
@@ -74,5 +74,5 @@ userInput.addEventListener("input", () => {
 ## See also
 
 - ValidityState [valid](/en-US/docs/Web/API/ValidityState/valid), [customError](/en-US/docs/Web/API/ValidityState/customError) properties.
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Tutorial: Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

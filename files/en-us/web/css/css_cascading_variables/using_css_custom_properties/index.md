@@ -35,7 +35,7 @@ section {
 }
 ```
 
-The selector given to the ruleset ([`<section>`](/en-US/docs/Web/HTML/Element/section) elements in the example above) defines the scope in which the custom property can be used.
+The selector given to the ruleset ([`<section>`](/en-US/docs/Web/HTML/Reference/Elements/section) elements in the example above) defines the scope in which the custom property can be used.
 For this reason, a common practice is to define custom properties on the {{cssxref(":root")}} pseudo-class, so that it can be referenced globally:
 
 ```css

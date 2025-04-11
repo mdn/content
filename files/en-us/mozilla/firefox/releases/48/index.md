@@ -28,7 +28,7 @@ page-type: firefox-release-notes
   - The default style for these elements has been adapted to match the spec ([Firefox bug 1258657](https://bugzil.la/1258657)).
   - The `toggle` event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
 
-- The [`meta`](/en-US/docs/Web/HTML/Element/meta) attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
+- The [`meta`](/en-US/docs/Web/HTML/Reference/Elements/meta) attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
 
 ### CSS
 

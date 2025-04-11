@@ -11,7 +11,7 @@ spec-urls: https://w3c.github.io/FileAPI/
 
 The File API enables web applications to access files and their contents.
 
-Web applications can access files when the user makes them available, either using a [file `<input>` element](/en-US/docs/Web/HTML/Element/input/file) or [via drag and drop](/en-US/docs/Web/API/DataTransfer/files).
+Web applications can access files when the user makes them available, either using a [file `<input>` element](/en-US/docs/Web/HTML/Reference/Elements/input/file) or [via drag and drop](/en-US/docs/Web/API/DataTransfer/files).
 
 Sets of files made available in this way are represented as {{domxref("FileList")}} objects, which enable a web application to retrieve individual {{domxref("File")}} objects. In turn {{domxref("File")}} objects provide access to metadata such as the file's name, size, type, and last modified date.
 
@@ -51,7 +51,7 @@ The File System API provides a virtual file system for web applications, so that
 
 ### Reading a file
 
-In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Element/input/file), and when the user selects a file, we read the contents of the first file selected as text, and display the result in a {{HTMLElement("div")}}.
+In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Reference/Elements/input/file), and when the user selects a file, we read the contents of the first file selected as text, and display the result in a {{HTMLElement("div")}}.
 
 #### HTML
 
@@ -95,6 +95,6 @@ fileInput.addEventListener("change", async () => {
 
 ## See also
 
-- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file): the file input element
+- [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file): the file input element
 - {{domxref("Blob.text()")}}
 - The {{domxref("DataTransfer")}} interface

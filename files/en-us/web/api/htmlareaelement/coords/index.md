@@ -8,7 +8,7 @@ browser-compat: api.HTMLAreaElement.coords
 
 {{APIRef("HTML DOM")}}
 
-The **`coords`** property of the {{DOMxRef("HTMLAreaElement")}} interface specifies the coordinates of the element's shape as a list of floating-point numbers. It reflects the {{htmlelement("area")}} element's [`coords`](/en-US/docs/Web/HTML/Element/area#coords) attribute.
+The **`coords`** property of the {{DOMxRef("HTMLAreaElement")}} interface specifies the coordinates of the element's shape as a list of floating-point numbers. It reflects the {{htmlelement("area")}} element's [`coords`](/en-US/docs/Web/HTML/Reference/Elements/area#coords) attribute.
 
 If the `shape` is `rect`, the shape is a rectangle and the string value's four comma separated numbers specify the coordinates of the top-left and bottom-right corners of the rectangle. For example, `0,0,200,20` defines the coordinates as `0,0`, which is the top-left of the image map, and `200,20`, which is 200px from the left and 20px from the top of the top-left corner of the image map.
 

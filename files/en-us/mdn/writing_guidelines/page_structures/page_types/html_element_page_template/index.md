@@ -30,11 +30,11 @@ sidebar: mdnsidebar
 > - **title**
 >   - : Title heading displayed at the top of the page.
 >     Format as `'<NameOfTheElement>: Description of element's purpose'`.
->     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
->     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
+>     For example, the [`<video>`](/en-US/docs/Web/HTML/Reference/Elements/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **page-type**
 >   - : Always `html-element`.
 > - **status**
@@ -88,7 +88,7 @@ Further information — at this point, include a few more paragraphs explaining 
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : Include description here of what the attribute does. Include one term and definition for each attribute. If the attribute is not experimental/deprecated, remove the relevant macro calls.
@@ -154,7 +154,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>
@@ -177,7 +177,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
       <td>
         What parent elements can the element be a child of? For example "Any
         element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content"
           >flow content</a
         >."
       </td>

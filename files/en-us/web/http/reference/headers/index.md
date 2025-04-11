@@ -31,7 +31,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
 - End-to-end headers
   - : These headers _must_ be transmitted to the final recipient of the message: the server for a request, or the client for a response. Intermediate proxies must retransmit these headers unmodified and caches must store them.
 - Hop-by-hop headers
-  - : These headers are meaningful only for a single transport-level connection, and _must not_ be retransmitted by proxies or cached. Note that only hop-by-hop headers may be set using the {{httpheader("Connection")}} header.
+  - : These headers are meaningful only for a single transport-level connection, and _must not_ be retransmitted by proxies or cached. Note that only hop-by-hop headers may be set using the {{HTTPHeader("Connection")}} header.
 
 ## Authentication
 
@@ -204,7 +204,7 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("Location")}}
   - : Indicates the URL to redirect a page to.
 - {{HTTPHeader("Refresh")}}
-  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Element/meta#http-equiv).
+  - : Directs the browser to reload the page or redirect to another. Takes the same value as the `meta` element with [`http-equiv="refresh"`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv).
 
 ## Request context
 
@@ -347,11 +347,11 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
 
 The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies, instead relying on various headers to register **sources** and **triggers** that are matched to indicate a conversion.
 
-- {{httpheader("Attribution-Reporting-Eligible")}}
+- {{HTTPHeader("Attribution-Reporting-Eligible")}}
   - : Used to indicate that the response corresponding to the current request is eligible to take part in attribution reporting, by registering either an attribution source or trigger.
-- {{httpheader("Attribution-Reporting-Register-Source")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Source")}}
   - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution source.
-- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Trigger")}}
   - : Included as part of a response to a request that included an `Attribution-Reporting-Eligible` header, this is used to register an attribution trigger.
 
 ### Client hints
@@ -361,9 +361,9 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) are a set of reque
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
+  - : Servers use `Critical-CH` along with {{HTTPHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 
 The different categories of client hints are listed below.
 
@@ -428,6 +428,18 @@ Network client hints allow a server to choose what information is sent based on 
   - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : A string `on` that indicates the user agent's preference for reduced data usage.
+
+### Compression Dictionary Transport
+
+[Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) is a way of using a shared compression dictionary to reduce the transport size of HTTP responses rather than using the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}.
+
+- {{HTTPHeader("Available-Dictionary")}} {{experimental_inline}}
+  - : A browser can use this request header to indicate the best dictionary it has available for the server to use for compression.
+- {{HTTPHeader("Dictionary-ID")}} {{experimental_inline}}
+  - : Used when a browser already has a dictionary available for a resource and the server provided an `id` for the dictionary in the `Use-As-Dictionary` header.
+    Requests for resources that can use the dictionary have an `Available-Dictionary` header and the server-provided dictionary `id` in the `Dictionary-ID` header.
+- {{HTTPHeader("Use-As-Dictionary")}} {{experimental_inline}}
+  - : Lists the matching criteria that the dictionary can be used for in future requests.
 
 ### Privacy
 
@@ -497,12 +509,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` header is not yet present.
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : General warning information about possible problems.
-
-## Contributing
-
-You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
-
-<!-- Check https://github.com/mdn/content/issues/1458 for known missing pages -->
 
 ## See also
 

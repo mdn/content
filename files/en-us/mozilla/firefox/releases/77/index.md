@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### HTML
 
-- Firefox now displays the [label value](/en-US/docs/Web/HTML/Element/option#browser_compatibility) on an {{HTMLElement("option")}} element when the element's content is empty. ([Firefox bug 40545](https://bugzil.la/40545))
+- Firefox now displays the [label value](/en-US/docs/Web/HTML/Reference/Elements/option#browser_compatibility) on an {{HTMLElement("option")}} element when the element's content is empty. ([Firefox bug 40545](https://bugzil.la/40545))
 
 ### SVG
 

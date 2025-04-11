@@ -8,7 +8,7 @@ browser-compat: api.Window.open
 
 {{APIRef}}
 
-The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Element/iframe)) under a specified name.
+The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe)) under a specified name.
 
 ## Syntax
 
@@ -27,9 +27,9 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank` (default), `_parent`, `_top`, and `_unfencedTop` can also be used. `_unfencedTop` is only relevant to [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
+  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Reference/Elements/a#target), `_self`, `_blank` (default), `_parent`, `_top`, and `_unfencedTop` can also be used. `_unfencedTop` is only relevant to [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
-    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
+    This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#target) or [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
 
@@ -82,7 +82,7 @@ open(url, target, windowFeatures)
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
     - `noreferrer`
-      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
+      - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Reference/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/noreferrer) for more information.
 
     A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
 
@@ -185,7 +185,7 @@ link.addEventListener(
 The above code solves a few usability problems related to links opening popups. The purpose of the `event.preventDefault()` in the code is to cancel the default action of the link: if the event listener for `click` is executed, then there is no need to execute the default action of the link. But if JavaScript support is disabled or non-existent on the user's browser, then the event listener for `click` is ignored, and the browser loads the referenced resource in the target frame or window that has the name `"WikipediaWindowName"`. If no frame nor window has the name `"WikipediaWindowName"`, then the browser will create a new window and name it `"WikipediaWindowName"`.
 
 > [!NOTE]
-> For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target).
+> For more details about the `target` attribute, see [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#target) or [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form#target).
 
 ### Reuse existing windows and avoid `target="_blank"`
 
@@ -290,7 +290,7 @@ Avoid `<a href="#" onclick="window.open(…);">` or `<a href="javascript:window\
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
-If necessary, use a [`<button>`](/en-US/docs/Web/HTML/Element/button) element instead. In general, _you should only use a link for navigation to a real URL_.
+If necessary, use a [`<button>`](/en-US/docs/Web/HTML/Reference/Elements/button) element instead. In general, _you should only use a link for navigation to a real URL_.
 
 ### Always identify links leading to a secondary window
 
@@ -322,11 +322,11 @@ When extreme changes in context are explicitly identified before they occur, the
 ## See also
 
 - `target` attribute documentation:
-  - [`<a>`](/en-US/docs/Web/HTML/Element/a#target)
-  - [`<form>`](/en-US/docs/Web/HTML/Element/form#target)
+  - [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a#target)
+  - [`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form#target)
 - [`window.close()`](/en-US/docs/Web/API/Window/close)
 - [`window.closed`](/en-US/docs/Web/API/Window/closed)
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)
 - [`window.opener`](/en-US/docs/Web/API/Window/opener)
-- [`rel="opener"`](/en-US/docs/Web/HTML/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel#noopener)
+- [`rel="opener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noopener)
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

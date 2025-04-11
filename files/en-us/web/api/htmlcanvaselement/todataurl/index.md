@@ -41,7 +41,7 @@ toDataURL(type, quality)
 
 A string containing the requested [data URL](/en-US/docs/Web/URI/Reference/Schemes/data).
 
-If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
+If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Reference/Elements/canvas#maximum_canvas_size), the string `"data:,"` is returned.
 
 ### Exceptions
 

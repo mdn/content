@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 59 that will affe
 
 ### HTML
 
-- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
+- The {{HTMLElement("textarea")}} element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute has been implemented. This lets you enable or disable form auto-fill for the element.
 
 ### CSS
 
@@ -108,7 +108,7 @@ _No changes._
 
 ### HTML
 
-The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute (e.g., `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
+The non-standard `version` parameter of the {{htmlelement("script")}} element's [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute (e.g., `type="application/javascript;version=1.8"`) has been removed ([Firefox bug 1428745](https://bugzil.la/1428745)).
 
 ### CSS
 

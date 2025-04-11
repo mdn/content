@@ -161,8 +161,6 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ### Obsolete methods
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : Initializes a `KeyboardEvent` object. This was implemented only by Firefox, and is no longer supported even there; instead, you should use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
   - : Initializes a `KeyboardEvent` object. This is now deprecated. You should instead use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor.
 
@@ -268,7 +266,7 @@ document.addEventListener(
 
 {{Specifications}}
 
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, `KeyboardEvent.initKeyEvent()` by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 
 ## Browser compatibility
 

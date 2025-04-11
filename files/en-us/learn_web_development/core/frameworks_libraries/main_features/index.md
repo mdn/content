@@ -51,7 +51,7 @@ const header = (
 );
 ```
 
-This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `{subject}` tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
+This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element inside. The curly braces around `{subject}` tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
 
 When used with React, the JSX from the previous snippet would be compiled into this:
 
@@ -159,7 +159,7 @@ function AuthorCredit(props) {
 />
 ```
 
-This will ultimately render the following [`<figure>`](/en-US/docs/Web/HTML/Element/figure) element in the browser, with its structure as defined in the `AuthorCredit` component, and its content as defined in the props included on the `AuthorCredit` component call:
+This will ultimately render the following [`<figure>`](/en-US/docs/Web/HTML/Reference/Elements/figure) element in the browser, with its structure as defined in the `AuthorCredit` component, and its content as defined in the props included on the `AuthorCredit` component call:
 
 ```html
 <figure>

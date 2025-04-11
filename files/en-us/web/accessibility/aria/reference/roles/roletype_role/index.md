@@ -24,4 +24,4 @@ The `roletype` role's properties describe the structural and functional purpose 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structure_role)
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role)
 - [ARIA: `window` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/window_role)
-- The HTML [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute
+- The HTML [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute

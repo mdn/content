@@ -58,8 +58,8 @@ Used in roles:
 
 ## See also
 
-- [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button)
-- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
+- [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
 - {{HTMLElement('button')}}
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)

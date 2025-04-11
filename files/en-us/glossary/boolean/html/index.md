@@ -32,7 +32,7 @@ Here's an example of a HTML boolean attribute `checked`:
 
 ## See also
 
-- [Boolean attributes](/en-US/docs/Web/HTML/Attributes#boolean_attributes)
+- [Boolean attributes](/en-US/docs/Web/HTML/Reference/Attributes#boolean_attributes)
 - [Boolean attributes](https://html.spec.whatwg.org/#boolean-attributes) in HTML specification
 - Related glossary terms:
   - {{Glossary("Attribute")}}

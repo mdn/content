@@ -56,7 +56,7 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject).then(
 
 The WebAssembly module might then import the tag as shown below:
 
-```wasm
+```wat
 (module
   (import "extmod" "exttag" (tag $tagname (param i32 f32))
 )

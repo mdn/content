@@ -100,15 +100,15 @@ You won't use this file until [later](/en-US/docs/Learn_web_development/Core/Fra
 Now that you know what an `item` is, you can give your application some items by adding them to the app.
 In `app.component.ts`, replace the contents with the following:
 
-```js
+```ts
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 @Component({
   standalone: true,
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
   imports: [CommonModule],
 })
 export class AppComponent {
@@ -128,7 +128,7 @@ export class AppComponent {
       return this.allItems;
     }
     return this.allItems.filter((item) =>
-      this.filter === "done" ? item.done : !item.done
+      this.filter === "done" ? item.done : !item.done,
     );
   }
 }
@@ -200,13 +200,17 @@ A to-do list needs a way to add items, so let's get started.
 In `app.component.ts`, add the following method to the class after the `allItems` array:
 
 ```ts
-addItem(description: string) {
-  if (!description) return;
+export class AppComponent {
+  // …
+  addItem(description: string) {
+    if (!description) return;
 
-  this.allItems.unshift({
-    description,
-    done: false
-  });
+    this.allItems.unshift({
+      description,
+      done: false,
+    });
+  }
+  // …
 }
 ```
 

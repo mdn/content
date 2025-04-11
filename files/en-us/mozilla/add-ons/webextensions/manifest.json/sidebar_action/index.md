@@ -140,11 +140,11 @@ The `sidebar_action` key is an object that may have any of the properties listed
         <p>
           The HTML file may include CSS and JavaScript files using
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/link">&#x3C;link></a></code
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code
           >
           and
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >

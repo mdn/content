@@ -13,7 +13,6 @@ The **`Number.NaN`** static data property represents Not-A-Number, which is equi
 
 ```js interactive-example
 function clean(x) {
-  // eslint-disable-next-line use-isnan
   if (x === Number.NaN) {
     // Can never be true
     return null;

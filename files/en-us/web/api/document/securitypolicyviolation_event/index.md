@@ -15,8 +15,8 @@ The event is fired on the document when there is a violation of the document CSP
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
-> You should add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
-> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
+> You should generally add the handler for this event to a top level object (i.e., {{domxref("Window")}} or {{domxref("Document")}}).
+> While HTML elements can technically be the target of the `securitypolicyviolation` event, in reality this event does not fire on them—for example, a blocked `<img>` source directly triggers this event on `document` as the target, instead of bubbling from the `<img>` element.
 
 ## Syntax
 

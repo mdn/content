@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.required
 
 {{ APIRef("HTML DOM") }}
 
-The **`required`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies that the user must fill in a value before submitting a form. It reflects the {{htmlelement("input")}} element's [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute.
+The **`required`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies that the user must fill in a value before submitting a form. It reflects the {{htmlelement("input")}} element's [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute.
 
 While the HTML boolean `required` attribute is ignored if the type is `hidden`, `range`, `color`, `submit`, `reset`, `button`, and `image`, the `required` property is `true` for these input types if the attribute is present, `false` otherwise.
 

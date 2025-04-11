@@ -18,8 +18,8 @@ A boolean that is `true` if the `ValidityState` does not conform to the constrai
 
 ### Input with too short string value
 
-The following example checks the validity of a [text input element](/en-US/docs/Web/HTML/Element/input/text).
-A constraint has been added using the [`minlength` attribute](/en-US/docs/Web/HTML/Element/input/text#minlength) so the input expects a string with a minimum of 4 characters.
+The following example checks the validity of a [text input element](/en-US/docs/Web/HTML/Reference/Elements/input/text).
+A constraint has been added using the [`minlength` attribute](/en-US/docs/Web/HTML/Reference/Elements/input/text#minlength) so the input expects a string with a minimum of 4 characters.
 If the user enters a string that's too short, the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} CSS pseudo-class are applied.
 
 ```css
@@ -75,5 +75,5 @@ userInput.addEventListener("input", () => {
 
 ## See also
 
-- [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation)
 - [Tutorial: Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

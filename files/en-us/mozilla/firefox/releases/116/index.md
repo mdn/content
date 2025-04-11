@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTML
 
-- The [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Element/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Element/textarea#dirname) elements.
+- The [`dirname`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) attribute is now supported on [`input`](/en-US/docs/Web/HTML/Reference/Elements/input#dirname) and [`textarea`](/en-US/docs/Web/HTML/Reference/Elements/textarea#dirname) elements.
   This attribute allows for passing text directionality information (`ltr` or `rtl`) to the server during form submission ([Firefox bug 675943](https://bugzil.la/675943)).
 
 ### CSS

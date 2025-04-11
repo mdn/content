@@ -28,4 +28,4 @@ If the resource that is being blocked doesn't need authentication, you can fix t
 ## See also
 
 - [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
-- [The `crossorigin` attribute](/en-US/docs/Web/HTML/Attributes/crossorigin)
+- [The `crossorigin` attribute](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)

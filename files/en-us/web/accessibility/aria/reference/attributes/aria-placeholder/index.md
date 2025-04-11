@@ -10,7 +10,7 @@ The `aria-placeholder` attribute defines a short hint (a word or short phrase) i
 
 ## Description
 
-A placeholder is text that appears in the form control when it has no value set. The HTML [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute enables providing a sample value or a brief description of the expected format for several HTML {{HTMLElement('input')}} types and {{HTMLElement('textarea')}}.
+A placeholder is text that appears in the form control when it has no value set. The HTML [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute enables providing a sample value or a brief description of the expected format for several HTML {{HTMLElement('input')}} types and {{HTMLElement('textarea')}}.
 
 If you are creating a `textbox` using any other element, `placeholder` is not supported. That is where `aria-placeholder` comes into play. The `aria-placeholder` attribute can be used to defines a short hint to help the user understand what type of data is expected when a non-semantic form control has no value.
 
@@ -66,6 +66,6 @@ Inherited into roles:
 
 ## See also
 
-- [HTML `placeholder` attribute](/en-US/docs/Web/HTML/Element/input#placeholder)
+- [HTML `placeholder` attribute](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)

@@ -31,7 +31,7 @@ Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 
@@ -352,7 +352,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Element/img#align) or [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Reference/Elements/img#align) or [`fill`](/en-US/docs/Web/SVG/Reference/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 

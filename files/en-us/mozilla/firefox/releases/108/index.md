@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 108 that will aff
 
 ### HTML
 
-- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Element/source#height) & [`width`](/en-US/docs/Web/HTML/Element/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
+- The {{HTMLElement("source")}} element supports [`height`](/en-US/docs/Web/HTML/Reference/Elements/source#height) & [`width`](/en-US/docs/Web/HTML/Reference/Elements/source#width) attributes when it is a child of a {{HTMLElement("picture")}} element.
   This functionality can be configured via the `dom.picture_source_dimension_attributes.enabled` preference which is now set to `true` by default ([Firefox bug 1795953](https://bugzil.la/1795953)).
 
 ### CSS
@@ -40,7 +40,7 @@ No notable changes
 
 ### APIs
 
-- [Import maps](/en-US/docs/Web/HTML/Element/script/type/importmap) are now supported.
+- [Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) are now supported.
   Import maps provide flexibility and additional control over how browsers resolve module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
   ([Firefox bug 1795647](https://bugzil.la/1795647)).
 

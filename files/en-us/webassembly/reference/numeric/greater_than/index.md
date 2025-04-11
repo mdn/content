@@ -41,7 +41,7 @@ await WebAssembly.instantiateStreaming(fetch(url), {
 
 ## Syntax
 
-```wasm
+```wat
 ;; load 2 numbers on to the stack
 local.get $num
 i32.const 2

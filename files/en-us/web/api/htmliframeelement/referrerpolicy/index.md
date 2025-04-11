@@ -10,7 +10,7 @@ browser-compat: api.HTMLIFrameElement.referrerPolicy
 
 The
 **`HTMLIFrameElement.referrerPolicy`**
-property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) attribute of the
+property reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) attribute of the
 {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
 resource.
 

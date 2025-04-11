@@ -27,7 +27,7 @@ Some systems implement `414 URI Too Long` as `414 Request-URI Too Large`.
 
 ### Form submission using GET
 
-In the following example, an HTML [`<form>` method](/en-US/docs/Web/HTML/Element/form#method) accidentally uses `get` instead of `post`.
+In the following example, an HTML [`<form>` method](/en-US/docs/Web/HTML/Reference/Elements/form#method) accidentally uses `get` instead of `post`.
 A large amount of form data is appended to the URL specified at the form's `action` attribute and is sent as a GET request:
 
 ```http

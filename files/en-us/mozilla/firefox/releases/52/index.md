@@ -23,7 +23,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### HTML
 
-- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel) has been implemented (see [Firefox bug 1222516](https://bugzil.la/1222516)).
+- The `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel) has been implemented (see [Firefox bug 1222516](https://bugzil.la/1222516)).
 
 ### CSS
 
@@ -106,7 +106,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see [Firefox bug 1298243](https://bugzil.la/1298243)).
 - The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see [Firefox bug 1264769](https://bugzil.la/1264769)).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see [Firefox bug 862395](https://bugzil.la/862395).)
-- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Attributes/rel).
+- The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see [Firefox bug 1267339](https://bugzil.la/1267339)), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/API/Web_components) has been implemented (see [Firefox bug 1275838](https://bugzil.la/1275838)).
 - [Pointer Event](/en-US/docs/Web/API/Pointer_events) {{domxref("PointerEvent.width","width")}} and {{domxref("PointerEvent.height","height")}} properties now default to a value of 1 (see [Firefox bug 1304315](https://bugzil.la/1304315)).
 - The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) has been updated to include changes in the [latest spec](https://wicg.github.io/entries-api/) (see [Firefox bug 1284987](https://bugzil.la/1284987) for the exact details).
@@ -165,7 +165,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ([Firefox bug 1319119](https://bugzil.la/1319119)). Autofill is also disabled on insecure login forms ([Firefox bug 1217152](https://bugzil.la/1217152)). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 - Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ([Firefox bug 1330043](https://bugzil.la/1330043)).
 
 ## Plugins

@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableCellElement.rowSpan
 
 {{ APIRef("HTML DOM") }}
 
-The **`rowSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute.
+The **`rowSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} interface represents the number of rows this cell must span; this lets the cell occupy space across multiple rows of the table. It reflects the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
 
 ## Value
 

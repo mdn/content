@@ -299,7 +299,7 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 #### HTML
 
-We use the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute on the {{HTMLElement("ol")}} element to demonstrate that counting doesn't need to start at `1`. Additionally, we use the [`value`](/en-US/docs/Web/HTML/Element/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that the counters you define using `@counter-style` behave just like native counters.
+We use the [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute on the {{HTMLElement("ol")}} element to demonstrate that counting doesn't need to start at `1`. Additionally, we use the [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute on the fifth {{HTMLElement("li")}} element to demonstrate that the counters you define using `@counter-style` behave just like native counters.
 
 ```html
 <ol start="48">

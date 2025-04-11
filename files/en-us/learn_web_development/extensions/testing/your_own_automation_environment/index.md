@@ -569,7 +569,7 @@ Let's update our `bstack_duck_test.js` demo, to show how these features work:
 
 1. Install the [axios](https://www.npmjs.com/package/axios) module by running the following command inside your project directory:
 
-   ```js
+   ```bash
    npm install axios
    ```
 

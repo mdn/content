@@ -23,7 +23,7 @@ This message is still widely used.
 
 ### File upload limit exceeded
 
-The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element includes an image on form submission with `method="post"`:
+The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file) element includes an image on form submission with `method="post"`:
 
 ```http
 POST /upload HTTP/1.1

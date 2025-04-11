@@ -41,7 +41,7 @@ If calling `requestPointerLock()` immediately after releasing the pointer lock v
 
 If calling `requestPointerLock()` with {{domxref("Element.requestFullscreen()", "requestFullscreen()")}}, the `requestPointerLock()` must be called first, because the {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} will consume the state of {{Glossary("Transient activation", "transient activation")}}.
 
-The `allow-pointer-lock` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) must be added when calling `requestPointerLock()` in an {{htmlelement("iframe")}} element. Also, no other elements in other {{htmlelement("iframe")}} elements may be in pointer lock mode.
+The `allow-pointer-lock` [sandbox token](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) must be added when calling `requestPointerLock()` in an {{htmlelement("iframe")}} element. Also, no other elements in other {{htmlelement("iframe")}} elements may be in pointer lock mode.
 
 ## Examples
 

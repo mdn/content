@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 68 that will affe
 
 #### Removals
 
-- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Element/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/en-US/docs/Web/HTML/Reference/Elements/meta) is no longer supported ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 

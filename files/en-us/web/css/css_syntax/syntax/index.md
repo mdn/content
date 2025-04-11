@@ -34,7 +34,7 @@ A CSS declaration block is visualized in the diagram below.
 ![Within a CSS block, encompassed in braces, semicolons separate declarations, with the final semicolon being optional but recommended as good practice.](declaration-block.png)
 
 > [!NOTE]
-> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute.
 
 ## CSS rulesets
 

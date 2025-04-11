@@ -8,11 +8,11 @@ browser-compat: api.HTMLTextAreaElement.autocomplete
 
 {{ APIRef("HTML DOM") }}
 
-The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<textarea>` element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
+The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface indicates whether the value of the control can be automatically completed by the browser. It reflects the `<textarea>` element's [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/textarea#autocomplete) attribute.
 
 ## Value
 
-A string representing the value of the `autocomplete` attribute (`"on"`, `"off"`, or a [`<token-list>`](/en-US/docs/Web/HTML/Attributes/autocomplete#token_list_tokens)) or the empty string (`""`) if unspecified.
+A string representing the value of the `autocomplete` attribute (`"on"`, `"off"`, or a [`<token-list>`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens)) or the empty string (`""`) if unspecified.
 
 ## Examples
 
@@ -32,6 +32,6 @@ console.log(textArea.autocomplete);
 ## See also
 
 - {{HTMLElement("textarea")}}
-- HTML [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute
+- HTML [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute
 - ARIA [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) attribute
 - [Turning off autocompletion](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

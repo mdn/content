@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.click
 
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`** method simulates a mouse click on an element. When called on an element, the element's {{domxref("Element/click_event", "click")}} event is fired (unless its [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute is set).
+The **`HTMLElement.click()`** method simulates a mouse click on an element. When called on an element, the element's {{domxref("Element/click_event", "click")}} event is fired (unless its [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute is set).
 
 ## Syntax
 

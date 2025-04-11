@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptGroupElement.disabled
 
 {{ APIRef("HTML DOM") }}
 
-The **`disabled`** property of the {{domxref("HTMLOptGroupElement")}} interface is a boolean value that reflects the {{htmlelement("optgroup")}} element's [`disabled`](/en-US/docs/Web/HTML/Element/optgroup#disabled) attribute, which indicates whether the control is disabled.
+The **`disabled`** property of the {{domxref("HTMLOptGroupElement")}} interface is a boolean value that reflects the {{htmlelement("optgroup")}} element's [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/optgroup#disabled) attribute, which indicates whether the control is disabled.
 
 When disabled, the {{htmlelement("option")}} element descendants of the `<optgroup>` element are unusable, un-clickable, and unselectable. These disabled `<option>`s will match the {{cssxref(":disabled")}} selector, even if their `disabled` property value is false.
 
@@ -34,5 +34,5 @@ optionGroup.disabled = true;
 
 ## See also
 
-- HTML [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute
+- HTML [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) attribute
 - CSS {{cssxref(":disabled")}} and {{cssxref(":enabled")}} pseudoclasses

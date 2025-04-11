@@ -84,7 +84,7 @@ If your website or application contains sound, you should allow the user control
 
 If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute.
 
 ## Setting AudioParam values
 

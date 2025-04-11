@@ -49,7 +49,7 @@ await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
 
 ## Syntax
 
-```wasm
+```wat
 ;; push two values onto the stack
 i32.const 10
 i32.const 20

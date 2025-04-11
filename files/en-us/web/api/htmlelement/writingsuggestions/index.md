@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.writingSuggestions
 
 The **`writingSuggestions`** property of the {{domxref("HTMLElement")}} interface is a string indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 
-It reflects the value of the [`writingsuggestions`](/en-US/docs/Web/HTML/Global_attributes/writingsuggestions) HTML global attribute.
+It reflects the value of the [`writingsuggestions`](/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions) HTML global attribute.
 
 ## Value
 
@@ -42,4 +42,4 @@ element.writingSuggestions = "false";
 
 ## See also
 
-- [`writingsuggestions`](/en-US/docs/Web/HTML/Global_attributes/writingsuggestions) HTML global attribute
+- [`writingsuggestions`](/en-US/docs/Web/HTML/Reference/Global_attributes/writingsuggestions) HTML global attribute

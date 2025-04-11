@@ -5,7 +5,7 @@ page-type: aria-role
 sidebar: accessibilitysidebar
 ---
 
-The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
+The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Reference/Elements/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
 
 ## Description
 

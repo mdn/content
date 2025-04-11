@@ -7,7 +7,7 @@ sidebar: svgref
 ---
 
 The **`<use>`** element takes nodes from within the SVG document, and duplicates them somewhere else.
-The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template).
+The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Reference/Elements/template).
 
 ## Example
 

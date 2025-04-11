@@ -52,7 +52,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 - The `$throwException` function throws an exception using the `throw` instruction, taking the `$tagname` and the parameter argument.
 - The module exports the function `run()` that throws an exception with the value "42".
 
-```wasm
+```wat
 (module
   ;; import tag that will be referred to here as $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))

@@ -46,7 +46,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
+Using the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
 
 ### Using other canvas elements
 

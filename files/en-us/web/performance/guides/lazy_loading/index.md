@@ -55,7 +55,7 @@ By default, font requests are delayed until the render tree is constructed, whic
 
 It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS `font-display` descriptor](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
+See also: [Element Link](/en-US/docs/Web/HTML/Reference/Elements/link).
 
 ### Images and iframes
 
@@ -63,7 +63,7 @@ Very often, webpages contain many images that contribute to data-usage and how f
 
 #### Loading attribute
 
-The [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on an {{HTMLElement("img")}} element, or the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) attribute on an {{HTMLElement("iframe")}}, can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
+The [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on an {{HTMLElement("img")}} element, or the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) attribute on an {{HTMLElement("iframe")}}, can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 This allows non-critical resources to load only if needed, potentially speeding up initial page loads and reducing network usage.
 
 ```html

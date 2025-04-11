@@ -9,7 +9,7 @@ browser-compat: api.HTMLIFrameElement.src
 {{APIRef}}
 
 The **`HTMLIFrameElement.src`**
-A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded.
+A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src) HTML attribute, containing the address of the content to be embedded.
 
 Note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame.
 

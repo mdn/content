@@ -9,7 +9,7 @@ browser-compat: api.SVGStyleElement.title
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Reference/Element/style#title) attribute of the given SVG style element.
-It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
+It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
 
 ## Value
 

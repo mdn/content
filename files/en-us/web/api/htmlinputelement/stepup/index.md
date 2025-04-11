@@ -10,12 +10,12 @@ browser-compat: api.HTMLInputElement.stepUp
 
 The **`HTMLInputElement.stepUp()`** method increments the value
 of a numeric type of {{HTMLElement("input")}} element by the value of the
-[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute, or the
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute, or the
 default `step` value if the step attribute is not explicitly set. The method,
-when invoked, increments the [`value`](/en-US/docs/Web/HTML/Element/input#value) by
-([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where `n` defaults to
+when invoked, increments the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) by
+([`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) \* n), where `n` defaults to
 `1` if not specified, and
-[`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) defaults to the
 default value for `step` if not specified.
 
 <table class="no-markdown">
@@ -91,9 +91,9 @@ The method, when invoked, changes the form control's value by the value given in
 `step` attribute, multiplied by the parameter, within the constraints set on
 the form control. The default value for the parameter, if no value is passed, is
 `1`. The method will not cause the value to exceed the
-set [`max`](/en-US/docs/Web/HTML/Attributes/max) value, or defy
+set [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) value, or defy
 the constraints set by the
-[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute.
+[`step`](/en-US/docs/Web/HTML/Reference/Attributes/step) attribute.
 
 If the value before invoking the `stepUp()` method is invalid—for example,
 if it doesn't match the constraints set by the step attribute—invoking the
@@ -207,6 +207,6 @@ invoke the method?
 - {{HTMLElement("input")}}
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepDown")}}
-- [`step`](/en-US/docs/Web/HTML/Attributes/step),
-  [`min`](/en-US/docs/Web/HTML/Attributes/min) and
-  [`max`](/en-US/docs/Web/HTML/Attributes/max) attributes
+- [`step`](/en-US/docs/Web/HTML/Reference/Attributes/step),
+  [`min`](/en-US/docs/Web/HTML/Reference/Attributes/min) and
+  [`max`](/en-US/docs/Web/HTML/Reference/Attributes/max) attributes

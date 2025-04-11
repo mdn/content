@@ -67,7 +67,7 @@ as {{HTTPHeader("Accept-Language")}}.
 ### Indicating the URL of a transaction's result
 
 Say you have a
-[`<form>`](/en-US/docs/Web/HTML/Element/form) for sending
+[`<form>`](/en-US/docs/Web/HTML/Reference/Elements/form) for sending
 money to another user of a site.
 
 ```html

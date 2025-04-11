@@ -14,7 +14,7 @@ Prefetching might be used, for example, to fetch the page linked by a "Next" but
 
 Resources should be prefetched based on how likely it is that they will be needed in a future navigation. Browsers can infer this automatically for some resources, such as the current URL in the address bar.
 
-This can be done using [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) (the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) only handles document prefetches for navigations):
+This can be done using [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) (the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) only handles document prefetches for navigations):
 
 ```html
 <link rel="prefetch" href="next.html" />
@@ -24,7 +24,7 @@ This can be done using [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes
 
 Developers can provide hints to the browser of navigations that should be prefetched in a couple of different ways:
 
-[`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch):
+[`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch):
 
 ```html
 <link rel="prefetch" href="next.html" />
@@ -45,11 +45,11 @@ Developers can provide hints to the browser of navigations that should be prefet
 </script>
 ```
 
-The Speculation Rules API handles document prefetches for navigations much better than `<link rel="prefetch">`; the former was designed specifically for that purpose whereas the latter has a number of limitations; see [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) for details.
+The Speculation Rules API handles document prefetches for navigations much better than `<link rel="prefetch">`; the former was designed specifically for that purpose whereas the latter has a number of limitations; see [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch) for details.
 
 ### DNS prefetching
 
-[DNS prefetching](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch) resolves domain names in advance, speeding up load times by reducing the time associated with domain lookup at request time.
+[DNS prefetching](/en-US/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch) resolves domain names in advance, speeding up load times by reducing the time associated with domain lookup at request time.
 
 ```html
 <link rel="dns-prefetch" href="https://example.com/" />

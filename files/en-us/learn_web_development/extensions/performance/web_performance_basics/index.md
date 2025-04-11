@@ -12,14 +12,14 @@ Below is a quick review of best practices, tools, APIs with links to provide mor
 ## Best practices
 
 - Start with learning the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
-- Using _resource hints_ such as [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Attributes/rel/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Attributes/rel/preload).
+- Using _resource hints_ such as [`rel=preconnect`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect), [`rel=dns-prefetch`](/en-US/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch), [`rel=prefetch`](/en-US/docs/Web/HTML/Reference/Attributes/rel/prefetch), [`rel=preload`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload).
 - Keep the size of JavaScript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much JavaScript as needed for the current page.
 - [CSS](/en-US/docs/Learn_web_development/Extensions/Performance/CSS) performance factors
 - Use {{Glossary("HTTP_2", "HTTP/2")}} on your server (or CDN).
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g., render full page for bot traffic); for example, by using the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute on the {{HTMLElement("img")}} element
+- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g., render full page for bot traffic); for example, by using the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute on the {{HTMLElement("img")}} element
 - It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance).
 
 ## Quick Wins
@@ -49,7 +49,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simple
 
 ### JavaScript
 
-Avoid JavaScript blocking by using the [async](/en-US/docs/Web/HTML/Element/script) or [defer](/en-US/docs/Web/HTML/Element/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid JavaScript blocking by using the [async](/en-US/docs/Web/HTML/Reference/Elements/script) or [defer](/en-US/docs/Web/HTML/Reference/Elements/script) attributes, or link JavaScript assets after the page's DOM elements. JavaScript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 

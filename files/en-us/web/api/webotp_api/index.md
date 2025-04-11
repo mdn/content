@@ -116,7 +116,7 @@ In this example, when an SMS message arrives and the user grants permission, an 
 
 [Try this demo using a phone](https://web-otp.glitch.me/).
 
-The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute with the value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even though the WebOTP API isn't fully supported in Safari.
+The form field includes an [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete) attribute with the value of `one-time-code`. This is not needed for the WebOTP API to work, but it is worth including. As a result, Safari will prompt the user to autofill this field with the OTP when a correctly-formatted SMS is received, even though the WebOTP API isn't fully supported in Safari.
 
 ```html
 <input type="text" autocomplete="one-time-code" inputmode="numeric" />

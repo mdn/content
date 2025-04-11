@@ -81,7 +81,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 ### Comparing :focus and :focus-visible
 
-This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Element/input/text) input and a button.
+This example presents three pairs of controls. Each pair consists of a [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) input and a button.
 
 - The first pair does not add any custom styles for focus states, and shows the default case.
 - The second pair adds styles using the `:focus` pseudo-class.

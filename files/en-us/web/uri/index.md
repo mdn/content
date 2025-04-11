@@ -10,7 +10,7 @@ sidebar: urlsidebar
 URIs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data.
 The most common type of URI is a Uniform Resource Locator ({{Glossary("URL")}}), which is known as the _web address_.
 
-URIs can be used to trigger behaviors other than fetching a resource, including opening an email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
+URIs can be used to trigger behaviors other than fetching a resource, including opening an email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) of an HTML `<a>` link.
 
 ## URLs and URNs
 

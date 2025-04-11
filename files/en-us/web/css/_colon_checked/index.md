@@ -7,7 +7,7 @@ browser-compat: css.selectors.checked
 
 {{CSSRef}}
 
-The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}} element) that is checked or toggled to an `on` state.
+The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}} element) that is checked or toggled to an `on` state.
 
 {{InteractiveExample("CSS Demo: :checked", "tabbed-shorter")}}
 
@@ -221,5 +221,5 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 
 - [Web forms — working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- Related HTML elements: [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), {{HTMLElement("select")}}, and {{HTMLElement("option")}}
+- Related HTML elements: [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio), {{HTMLElement("select")}}, and {{HTMLElement("option")}}
 - {{glossary("Replaced elements")}}

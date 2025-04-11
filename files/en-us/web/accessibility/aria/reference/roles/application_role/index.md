@@ -57,7 +57,7 @@ The `application` role is designed to provide a means for widgets that are not p
 
 Keyboard interaction is completely under the web author's control and can be anything associated with the particular widget being implemented. In a slides application, for example, a widget could be created that uses the arrow keys to position elements on the slide, and uses audio feedback via an ARIA live region to communicate the position and overlap status with other objects. Focus is being managed via _aria-activedescendant_.
 
-The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd>, must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Element/input) element.
+The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>Escape</kbd>, must be handled by the application. The one exception is if focus is set to a standard widget inside the application that supports keyboard navigation from the browser, for example an [input](/en-US/docs/Web/HTML/Reference/Elements/input) element.
 
 ### Required JavaScript features
 

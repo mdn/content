@@ -37,8 +37,6 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 
 - {{domxref("ServiceWorkerContainer/controllerchange_event", "controllerchange")}}
   - : Fired when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- {{domxref("ServiceWorkerContainer/error_event", "error")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Fired whenever an error occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer/message_event", "message")}}
   - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 - {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}

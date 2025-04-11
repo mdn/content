@@ -32,7 +32,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; push an f64 onto the stack
 f64.const 10.5
 

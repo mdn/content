@@ -48,5 +48,5 @@ b1.tabIndex = 1;
 
 - [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
 - The HTML
-  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+  [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)
   global attribute.

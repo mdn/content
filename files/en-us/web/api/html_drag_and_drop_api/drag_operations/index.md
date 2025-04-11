@@ -18,7 +18,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 To make other HTML elements draggable, three things must be done:
 
-1. Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute to `"true"` on the element that you wish to make draggable.
+1. Set the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute to `"true"` on the element that you wish to make draggable.
 2. Add a listener for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 3. [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
 
@@ -36,9 +36,9 @@ draggableElement.addEventListener("dragstart", (event) =>
 );
 ```
 
-The [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute is set to `"true"`, so this element becomes draggable. If this attribute were omitted or set to `"false"`, the element would not be dragged, and instead the text would be selected.
+The [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute is set to `"true"`, so this element becomes draggable. If this attribute were omitted or set to `"false"`, the element would not be dragged, and instead the text would be selected.
 
-The [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute with a value of `false` to disable dragging of these elements.
+The [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the [`draggable`](/en-US/docs/Web/HTML/Reference/Global_attributes/draggable) attribute with a value of `false` to disable dragging of these elements.
 
 > [!NOTE]
 > When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.
@@ -240,7 +240,7 @@ There are several ways in which you can indicate to the user that a drop is allo
 
 Although the exact appearance depends on the user's platform, typically a plus sign icon will appear for a `copy` for example, and a 'cannot drop here' icon will appear when a drop is not allowed. This mouse pointer feedback is sufficient in many cases.
 
-For more complex visual effects, you can perform other operations during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [`<img>`](/en-US/docs/Web/HTML/Element/img) element and insert it into the document during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
+For more complex visual effects, you can perform other operations during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img) element and insert it into the document during the {{domxref("HTMLElement/dragenter_event", "dragenter")}} event.
 
 The {{domxref("HTMLElement/dragover_event", "dragover")}} event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a {{domxref("HTMLElement/dragover_event", "dragover")}} event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
 

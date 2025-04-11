@@ -33,7 +33,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; push an i64 onto the stack
 i64.const 10
 

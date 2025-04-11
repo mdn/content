@@ -10,12 +10,12 @@ browser-compat: api.HTMLTimeElement.dateTime
 
 The
 **`dateTime`**
-property of the {{domxref("HTMLTimeElement")}} interface is a string that reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute, containing a machine-readable form of the element's date and
+property of the {{domxref("HTMLTimeElement")}} interface is a string that reflects the [`datetime`](/en-US/docs/Web/HTML/Reference/Elements/time#datetime) HTML attribute, containing a machine-readable form of the element's date and
 time value.
 
 ## Value
 
-A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
+A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Reference/Elements/time#valid_datetime_values).
 
 ## Examples
 
@@ -38,5 +38,5 @@ t.dateTime = "6w 5h 34m 5s";
 
 - {{domxref("HTMLTimeElement")}}
 - {{domxref("HTMLModElement.dateTime")}}
-- [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)
-- [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)
+- [Date strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)
+- [Local date and time strings](/en-US/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)

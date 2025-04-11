@@ -43,7 +43,7 @@ The most useful directives available for `Referrer-Policy` are listed below, in 
 
 While there are other `Referrer-Policy` directives, they do not protect user privacy or limit exposure as effectively as the options listed above. In recent versions of Firefox and Safari, "unsafe" directives (`no-referrer-when-downgrade`, `origin-when-cross-origin`, and `unsafe-url`) behave like `strict-origin-when-cross-origin`.
 
-If you are unable to use the `Referrer-Policy` header, you can alternatively set page-wide policies using a [`<meta http-equiv="Referrer-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears in the document {{htmlelement("head")}}. You can also set policies on individual elements using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) HTML attribute and on individual [fetch](/en-US/docs/Web/API/Window/fetch) requests using the {{domxref("Request.referrerPolicy")}} property.
+If you are unable to use the `Referrer-Policy` header, you can alternatively set page-wide policies using a [`<meta http-equiv="Referrer-Policy" content="…">`](/en-US/docs/Web/HTML/Reference/Elements/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears in the document {{htmlelement("head")}}. You can also set policies on individual elements using the [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/a#referrerpolicy) HTML attribute and on individual [fetch](/en-US/docs/Web/API/Window/fetch) requests using the {{domxref("Request.referrerPolicy")}} property.
 
 ## Examples
 

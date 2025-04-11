@@ -227,9 +227,9 @@ Be under no illusion; for tables to be effective on the web, you need to provide
 
 We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the [stylesheet here](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css), and you can also find an [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.
 
-### When should you NOT use HTML tables?
+### When should you avoid HTML tables?
 
-HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g., one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. You can find more details and an example at [Page Layouts](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts) in our [Accessibility Learning Module](/en-US/docs/Learn_web_development/Core/Accessibility). This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.
+HTML tables should be used for tabular data (information that's easy to work with in rows and columns) — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, for example one row to contain a page header, a row to contain each content column, one row to contain the footer, etc. This technique was used because CSS support across browsers used to be a lot more limited. Modern browsers have solid CSS support so table-based layouts are now extremely rare, but you might still see them in some corners of the web.
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn_web_development/Core/CSS_layout) is a bad idea. The main reasons are as follows:
 
@@ -242,8 +242,8 @@ In short, using tables for layout rather than [CSS layout techniques](/en-US/doc
 We've talked table theory enough, so, let's dive into a practical example and build up a simple table.
 
 1. First of all, make a local copy of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) in a new directory on your local machine.
-2. The content of every table is enclosed by these two tags: **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
-3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
+2. The content of every table is enclosed by these two tags: **[`<table></table>`](/en-US/docs/Web/HTML/Reference/Elements/table)**. Add these inside the body of your HTML.
+3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Reference/Elements/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
 
    ```html
    <td>Hi, I'm your first cell.</td>
@@ -260,7 +260,7 @@ We've talked table theory enough, so, let's dive into a practical example and bu
 
 As you will see, the cells are not placed underneath each other, rather they are automatically aligned with each other on the same row. Each `<td>` element creates a single cell and together they make up the first row. Every cell we add makes the row grow longer.
 
-To stop this row from growing and start placing subsequent cells on a second row, we need to use the **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** element ('tr' stands for 'table row'). Let's investigate this now.
+To stop this row from growing and start placing subsequent cells on a second row, we need to use the **[`<tr>`](/en-US/docs/Web/HTML/Reference/Elements/tr)** element ('tr' stands for 'table row'). Let's investigate this now.
 
 1. Place the four cells you've already created inside `<tr>` tags, like so:
 
@@ -379,7 +379,7 @@ The problem here is that, while you can kind of make out what's going on, it is 
 Let's have a go at improving this table.
 
 1. First, make a local copy of our [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) files in a new directory on your local machine. The HTML contains the same Dogs example as you saw above.
-2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
+2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Reference/Elements/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
 > [!NOTE]

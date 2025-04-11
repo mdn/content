@@ -27,5 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("input")}}
-- HTML [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute
+- HTML [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

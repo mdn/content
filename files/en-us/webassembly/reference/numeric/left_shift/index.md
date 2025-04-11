@@ -47,7 +47,7 @@ function numToBin(num) {
 
 ## Syntax
 
-```wasm
+```wat
 ;; load two numbers onto the stack
 i32.const 7   ;; 00000111
 i32.const 1   ;; left shift one spot

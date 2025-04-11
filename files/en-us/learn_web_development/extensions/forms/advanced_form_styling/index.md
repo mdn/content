@@ -33,17 +33,17 @@ To recap what we said in the previous article, we have:
 **The bad**: Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:
 
 - Checkboxes and radio buttons
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search)
 
 **The ugly**: Some elements can't be styled thoroughly using CSS. These include:
 
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
   > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
-- [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)
-- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color)
+- Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
 Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is pretty useful for making all of the above more stylable.
@@ -99,7 +99,7 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
+[`<input type="search">`](/en-US/docs/Web/HTML/Reference/Elements/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
 
 This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
@@ -249,7 +249,7 @@ If you view these checkboxes in a browser that doesn't support {{cssxref("appear
 
 ## What can be done about the "ugly" elements?
 
-Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Element/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+Now let's turn our attention to the "ugly" controls — the ones that are really hard to thoroughly style. In short, these are drop-down boxes, complex control types like [`color`](/en-US/docs/Web/HTML/Reference/Elements/input/color) and [`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), and feedback—oriented controls like {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
 The problem is that these elements have very different default looks across browsers, and while you can style them in some ways, some parts of their internals are literally impossible to style.
 
@@ -327,7 +327,7 @@ button {
 > [!NOTE]
 > If you want to test these examples across a number of browsers simultaneously, you can [find it live here](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (also [see here for the source code](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
 >
-> Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file#examples) reference page.
+> Also bear in mind that we've added some JavaScript to the page that lists the files selected by the file picker, below the control itself. This is a simplified version of the example found on the [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file#examples) reference page.
 
 As you can see, we've done fairly well at getting these to look uniform across modern browsers.
 
@@ -425,16 +425,16 @@ Of course, this might also not fit in with the design you are going for, but it'
 
 ### Date input types
 
-The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Element/input/time), [`week`](/en-US/docs/Web/HTML/Element/input/week), [`month`](/en-US/docs/Web/HTML/Element/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
+The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local), [`time`](/en-US/docs/Web/HTML/Reference/Elements/input/time), [`week`](/en-US/docs/Web/HTML/Reference/Elements/input/week), [`month`](/en-US/docs/Web/HTML/Reference/Elements/input/month)) all have the same major associated issue. The actual containing box is as easy to style as any text input, and what we've got in this demo looks fine.
 
 However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
 > [!NOTE]
-> It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
+> It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
 
 ### Range input types
 
-[`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is annoying to style. You can use something like the following to remove the default slider track completely and replace it with a custom style (a thin red track, in this case):
+[`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) is annoying to style. You can use something like the following to remove the default slider track completely and replace it with a custom style (a thin red track, in this case):
 
 ```css
 input[type="range"] {
@@ -506,7 +506,7 @@ You can see the result of the above CSS styling in the below live example (see a
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Element/meter) and [`<progress>`](/en-US/docs/Web/HTML/Element/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background, but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 

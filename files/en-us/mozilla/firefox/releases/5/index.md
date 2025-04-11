@@ -14,7 +14,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 - All HTML elements now have the {{ domxref("HTMLElement.accessKey", "accessKey") }} attribute, as well as the {{ domxref("HTMLElement.blur()", "blur()") }}, {{ domxref("HTMLElement.click()", "click()") }}, and {{ domxref("HTMLElement.focus()", "focus()") }} methods. These are specified in the {{ domxref("HTMLElement") }} interface.
 - In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
-- When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Element/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
+- When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Reference/Elements/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
 - WebGL [no longer loads textures from domains other than the originating domain](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#cross-domain_textures), as a security measure. [HTTP access control](/en-US/docs/Web/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
 
@@ -97,7 +97,7 @@ For a guide to updating your add-on for Firefox 5, please see [Updating add-ons 
 ### Interface changes
 
 - The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
-- The {{ HTMLElement("canvas") }} element's [`width`](/en-US/docs/Web/HTML/Element/canvas#width) and [`height`](/en-US/docs/Web/HTML/Element/canvas#height) attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
+- The {{ HTMLElement("canvas") }} element's [`width`](/en-US/docs/Web/HTML/Reference/Elements/canvas#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/canvas#height) attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement)).
 - The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
 - The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
 - The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.

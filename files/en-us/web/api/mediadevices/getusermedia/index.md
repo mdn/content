@@ -205,13 +205,13 @@ situations in which `getUserMedia()` is not permitted to be called:
 
 - A document loaded into a sandboxed {{HTMLElement("iframe")}} element cannot call
   `getUserMedia()` unless the `<iframe>` has its
-  [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute set to `allow-same-origin`.
+  [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute set to `allow-same-origin`.
 - A document loaded using a `data://` or `blob://` URL which has
   no origin (such as when one of these URLs is typed by the user into the address bar)
   cannot call `getUserMedia()`. These kinds of URLs loaded from JavaScript
   code inherit the script's permissions.
 - Any other situation in which there is no origin, such as when the
-  [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#srcdoc) attribute is used to specify the contents of a
+  [`srcdoc`](/en-US/docs/Web/HTML/Reference/Elements/iframe#srcdoc) attribute is used to specify the contents of a
   frame.
 
 ## Examples

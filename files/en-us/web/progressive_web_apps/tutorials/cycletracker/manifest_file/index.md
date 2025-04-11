@@ -105,7 +105,7 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_an
 
 PWA icons help users identify your app, make it more visually appealing, and improve discoverability. The PWA app icon appears on home screens, app launchers, or app store search results. The size of the rendered icon and the file requirements varies depending on where it is displayed and by whom. The manifest is where you define your images.
 
-Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. The `type` member lists the image's MIME type.
+Within the manifest JSON object, the `icons` member specifies an array of one or more icon objects for use in different contexts, each with a `src` and `sizes` member, and optional `type` and `purpose` members. Each icon object's `src` list the source of a single image file. The `sizes` member provides a list of space-separated sizes for which that particular image should be used or the keyword `any`; the value is the same as the {{HTMLElement("link")}} element's [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) attribute. The `type` member lists the image's MIME type.
 
 ```json
 {
@@ -207,7 +207,7 @@ PWAs require a manifest file to be linked from the app's HTML document. We have 
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
+The `<link>` element is most commonly used to link to stylesheets and, with PWAs, the required manifest file, but is also used to [establish site icons](/en-US/docs/Web/HTML/Reference/Attributes/rel#icon) (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
 ```html
 <link rel="icon" href="icons/circle.svg" />

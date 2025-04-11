@@ -65,14 +65,14 @@ showNumber.addEventListener("click", () => {
 
 Examples of elements that will prevent user interaction with the rest of the page and will be selected by the `:modal` pseudo-class include:
 
-- The [`dialog`](/en-US/docs/Web/HTML/Element/dialog) element opened with the `showModal()` API.
+- The [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/dialog) element opened with the `showModal()` API.
 - The element selected by the [`:fullscreen`](/en-US/docs/Web/CSS/:fullscreen) pseudo-class when opened with the `requestFullscreen()` API.
 
 ## Examples
 
 ### Styling a modal dialog
 
-This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Element/dialog#handling_the_return_value_from_the_dialog).
+This example styles a modal dialog that opens when the "Update details" button is activated. This example has been built on top of the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Reference/Elements/dialog#handling_the_return_value_from_the_dialog).
 
 ```html hidden
 <!-- Basic modal dialog containing a form -->
@@ -158,6 +158,6 @@ favDialog.addEventListener("close", () => {
 
 ## See also
 
-- [`dialog`](/en-US/docs/Web/HTML/Element/dialog) element
+- [`dialog`](/en-US/docs/Web/HTML/Reference/Elements/dialog) element
 - Other element display state pseudo-classes: {{CSSxRef(":fullscreen")}} and {{CSSxRef(":picture-in-picture")}}
 - Complete list of [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)

@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### HTML
 
-- The [`target`](/en-US/docs/Web/HTML/Element/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
+- The [`target`](/en-US/docs/Web/HTML/Reference/Elements/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
 
 ### CSS
 

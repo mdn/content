@@ -47,7 +47,7 @@ This page just contains a link to another page `../report_sample/index.html`.
 ```
 
 The `../report_sample/index.html` HTML file is defined below.
-This uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
+This uses the [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element to set the {{httpheader('Content-Security-Policy')}} `script-src-elem` to `self`, which allows scripts to be loaded from the same domain, but does not allow inline scripts to be executed.
 The document also includes an inline script, which will trigger a CSP violation.
 
 ```html

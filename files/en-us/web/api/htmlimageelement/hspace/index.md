@@ -16,7 +16,7 @@ _obsolete_ **`hspace`** property of the
 space to leave empty on the left and right sides of the {{HTMLElement("img")}} element
 when laying out the page.
 
-This property reflects the {{Glossary("HTML")}} [`hspace`](/en-US/docs/Web/HTML/Element/img#hspace)
+This property reflects the {{Glossary("HTML")}} [`hspace`](/en-US/docs/Web/HTML/Reference/Elements/img#hspace)
 attribute.
 
 ## Value

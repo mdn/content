@@ -9,14 +9,14 @@ browser-compat: api.HTMLImageElement.fetchPriority
 {{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the {{domxref("HTMLImageElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular image relative to other images.
-It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Element/img#fetchpriority) attribute of the corresponding {{htmlelement("img")}} element.
+It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/img#fetchpriority) attribute of the corresponding {{htmlelement("img")}} element.
 
 The property allows a developer to signal that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.
 This in turn allows the browser to increase or decrease the priority, and potentially load the image earlier or later than it would otherwise.
 The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
 
-The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload), allowing a developer to boost the priority ahead of less-impactful resources that have a higher default priority.
-For example, if a developer knows that a particular image significantly contributes to the website's {{glossary("Largest Contentful Paint")}} (LCP) they could add [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload) for the image and then further boost the priority using the `fetchpriority` property.
+The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), allowing a developer to boost the priority ahead of less-impactful resources that have a higher default priority.
+For example, if a developer knows that a particular image significantly contributes to the website's {{glossary("Largest Contentful Paint")}} (LCP) they could add [`<link rel="preload">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) for the image and then further boost the priority using the `fetchpriority` property.
 
 Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.
 

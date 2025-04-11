@@ -119,7 +119,7 @@ The following nuances should be kept in mind while using the various keywords fo
 
 A scrolling content area cannot be scrolled by a keyboard-only user, with the exception of users on Firefox (which makes the container keyboard focusable by default).
 
-As a developer, to allow non-Firefox keyboard-only users to scroll the container, you will need to give it a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, they will have no context for what it is and their screen reader will likely announce the entirety of its contents. Giving it an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)) can mitigate this.
+As a developer, to allow non-Firefox keyboard-only users to scroll the container, you will need to give it a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) using `tabindex="0"`. Unfortunately, when a screen reader encounters this tab-stop, they will have no context for what it is and their screen reader will likely announce the entirety of its contents. Giving it an appropriate [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) (`role="region"`, for example) and an accessible name (via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)) can mitigate this.
 
 ## Examples
 

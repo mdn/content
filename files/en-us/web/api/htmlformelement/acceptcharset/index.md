@@ -12,7 +12,7 @@ The **`HTMLFormElement.acceptCharset`** property represents the {{glossary("char
 
 The specification allows a single case-insensitive value of `"UTF-8"`, reflecting the ubiquity of this encoding (historically multiple character encodings could be specified as a comma-separated or space-separated list).
 
-This reflects the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Element/form#accept-charset) HTML attribute.
+This reflects the value of the form's [`accept-charset`](/en-US/docs/Web/HTML/Reference/Elements/form#accept-charset) HTML attribute.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.list
 
 {{ApiRef("HTML DOM")}}
 
-The **`list`** read-only property of the {{domxref("HTMLInputElement")}} interface returns the {{domxref("HTMLDataListElement")}} pointed to by the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute of the element, or `null` if the `list` attribute is not defined or the `list` attribute's value is not associated with any `<datalist>` in the same tree.
+The **`list`** read-only property of the {{domxref("HTMLInputElement")}} interface returns the {{domxref("HTMLDataListElement")}} pointed to by the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute of the element, or `null` if the `list` attribute is not defined or the `list` attribute's value is not associated with any `<datalist>` in the same tree.
 
 > [!NOTE]
 > This is a read-only property. To associate a `<datalist>` with an element, set the value of the `list` attribute with {{domxref("Element.setAttribute", "setAttribute()")}}.

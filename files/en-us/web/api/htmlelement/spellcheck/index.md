@@ -8,9 +8,9 @@ browser-compat: api.HTMLElement.spellcheck
 
 {{APIRef("HTML DOM")}}
 
-The **`spellcheck`** property of the {{domxref("HTMLElement")}} interface represents a boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
+The **`spellcheck`** property of the {{domxref("HTMLElement")}} interface represents a boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
 
-It reflects the value of the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) HTML global attribute.
+It reflects the value of the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) HTML global attribute.
 
 ## Value
 
@@ -18,7 +18,7 @@ A boolean value that is `true` if the spelling and grammar of the text content i
 
 ## Examples
 
-The following example shows how to control the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint via script:
+The following example shows how to control the [spell-checking](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) hint via script:
 
 ```html
 <div>
@@ -59,4 +59,4 @@ Note that you must enable the browser setting to check spelling and grammar.
 
 ## See also
 
-- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) HTML global attribute
+- [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) HTML global attribute

@@ -111,4 +111,4 @@ The heading role overrides the native semantic meaning of the element it is bein
 
 ## See also
 
-- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)

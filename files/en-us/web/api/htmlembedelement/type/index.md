@@ -8,7 +8,7 @@ browser-compat: api.HTMLEmbedElement.type
 
 {{APIRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that reflects the `type` attribute of the {{HTMLElement("embed")}} element, indicating the {{glossary("MIME type")}} of the resource. It reflects the {{htmlelement("embed")}} element's [`type`](/en-US/docs/Web/HTML/Element/embed#type) attribute
+The **`type`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that reflects the `type` attribute of the {{HTMLElement("embed")}} element, indicating the {{glossary("MIME type")}} of the resource. It reflects the {{htmlelement("embed")}} element's [`type`](/en-US/docs/Web/HTML/Reference/Elements/embed#type) attribute
 
 ## Value
 

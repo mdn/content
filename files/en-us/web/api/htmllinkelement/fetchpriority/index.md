@@ -9,13 +9,13 @@ browser-compat: api.HTMLLinkElement.fetchPriority
 {{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the {{domxref("HTMLLinkElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular resource relative to other resources of the same type.
-It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) attribute of the corresponding {{htmlelement("link")}} element.
+It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Elements/link#fetchpriority) attribute of the corresponding {{htmlelement("link")}} element.
 
 The property allows a developer to signal that fetching a particular resource early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority, in particular when preloading resources.
 This in turn allows the browser to increase or decrease the priority, and potentially load the resource earlier or later than it would otherwise.
 The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
 
-The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload), allowing a developer to boost the priority of a resource ahead of less-impactful resources that are by default preloaded with a higher priority.
+The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload), allowing a developer to boost the priority of a resource ahead of less-impactful resources that are by default preloaded with a higher priority.
 For example, if a particular image significantly contributes to the website's {{glossary("Largest Contentful Paint")}} (LCP) it might be set to be preloaded and with a high fetch priority.
 
 Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.

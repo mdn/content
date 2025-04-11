@@ -270,7 +270,7 @@ video {
 This scales media to ensure they never overflow their containers.
 
 > [!NOTE]
-> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Responsive_images).
+> Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than required. It can also look bad — a landscape image for example might look good on a widescreen monitor, but it might be hard to see on a mobile device, which would suit a portrait image better. Such problems can be solved using the {{htmlelement("picture")}} element and the {{htmlelement("img")}} `srcset` and `sizes` attributes. These are advanced features that are beyond the scope of this course, but you can find a detailed guide at [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images).
 
 Other useful tips:
 
@@ -465,7 +465,7 @@ If you look at the HTML source of a responsive page, you will usually see the fo
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-This [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
+This [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
 
 Why is this needed? Because mobile browsers tend to lie about their viewport width.
 

@@ -43,24 +43,24 @@ field-sizing: unset;
 
 Specifically, `field-sizing` to `content` affects the following elements:
 
-- Form input types that accept direct text input from users. This includes [`email`](/en-US/docs/Web/HTML/Element/input/email), [`number`](/en-US/docs/Web/HTML/Element/input/number), [`password`](/en-US/docs/Web/HTML/Element/input/password), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`text`](/en-US/docs/Web/HTML/Element/input/text), and [`url`](/en-US/docs/Web/HTML/Element/input/url) types.
+- Form input types that accept direct text input from users. This includes [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email), [`number`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`search`](/en-US/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), and [`url`](/en-US/docs/Web/HTML/Reference/Elements/input/url) types.
   - If no minimum width is set on the control, it will only be as wide as the text cursor.
-  - Controls with [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attributes will be rendered large enough to display the placeholder text.
-  - The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute modifies the default preferred size of such `<input>` elements. As a result, `size` has no effect on `<input>` elements with `field-sizing: content` set.
-- [`file`](/en-US/docs/Web/HTML/Element/input/file) inputs. Direct text input is not possible; however, the displayed filename changes as the user selects a new file to upload. When `field-sizing: content` is set, the control will change size to shrinkwrap the filename.
+  - Controls with [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attributes will be rendered large enough to display the placeholder text.
+  - The [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute modifies the default preferred size of such `<input>` elements. As a result, `size` has no effect on `<input>` elements with `field-sizing: content` set.
+- [`file`](/en-US/docs/Web/HTML/Reference/Elements/input/file) inputs. Direct text input is not possible; however, the displayed filename changes as the user selects a new file to upload. When `field-sizing: content` is set, the control will change size to shrinkwrap the filename.
 - {{htmlelement("textarea")}} controls. It is worth noting that `<textarea>` elements with `field-sizing: content` set behave much like single-line text controls, with the following additions:
   - If `<textarea>` elements are unable to grow due to a width constraint, they will start to grow in height to display additional rows of content. When a height constraint is then reached, they will then start to show a scrollbar to allow all the content to be viewed.
-  - [`rows`](/en-US/docs/Web/HTML/Element/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attributes modify the default preferred size of a `<textarea>`. As a result, `rows`/`cols` have no effect on `<textarea>` elements with `field-sizing: content` set.
+  - [`rows`](/en-US/docs/Web/HTML/Reference/Elements/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Reference/Elements/textarea#cols) attributes modify the default preferred size of a `<textarea>`. As a result, `rows`/`cols` have no effect on `<textarea>` elements with `field-sizing: content` set.
 - {{htmlelement("select")}} controls. These behave a bit differently to what you might expect with `field-sizing: content` set. The effect depends on the type of `<select>` control you are creating:
   - Regular drop-down boxes will change their width to always fit the displayed option value as new values are selected. (By default, the drop-down's size is set to be large enough to display the longest option value.)
-  - List boxes (`<select>` elements with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) or [`size`](/en-US/docs/Web/HTML/Element/select#multiple) attribute) will be large enough to display all the options without needing to scroll. (By default, the drop-down box will require scrolling to view all the option values.)
-  - The [`size`](/en-US/docs/Web/HTML/Element/select#size) attribute has very little effect on `<select>` elements that have `field-sizing: content` set. In such cases, the browser checks if the `size` is equal to `1` to determine whether the `<select>` control should appear as a drop-down or a listbox. However, it will always display all the options of a listbox, even if `size` is smaller than the number of options.
+  - List boxes (`<select>` elements with the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) or [`size`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute) will be large enough to display all the options without needing to scroll. (By default, the drop-down box will require scrolling to view all the option values.)
+  - The [`size`](/en-US/docs/Web/HTML/Reference/Elements/select#size) attribute has very little effect on `<select>` elements that have `field-sizing: content` set. In such cases, the browser checks if the `size` is equal to `1` to determine whether the `<select>` control should appear as a drop-down or a listbox. However, it will always display all the options of a listbox, even if `size` is smaller than the number of options.
 
 ### `field-sizing` interaction with other size settings
 
 The sizing flexibility provided to form controls by `field-sizing: content` can be overridden if you use other CSS sizing properties. Avoid setting a fixed {{cssxref("width")}} and {{cssxref("height")}} when using `field-sizing: content` because they will reimpose a fixed size on the control. However, using properties like {{cssxref("min-width")}} and {{cssxref("max-width")}} alongside `field-sizing: content` is quite effective because they allow the control to grow and shrink with the entered text and also prevent the control from becoming too large or too small.
 
-The [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute causes the control to stop growing in size when the maximum character limit is reached.
+The [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/input#maxlength) attribute causes the control to stop growing in size when the maximum character limit is reached.
 
 ## Formal definition
 
@@ -78,7 +78,7 @@ This example illustrates the effect of `field-sizing: content` on single- and mu
 
 #### HTML
 
-The HTML in this example contains three form fields, each with an associated {{htmlelement("label")}}: two `<input>` elements of types [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`email`](/en-US/docs/Web/HTML/Element/input/email) and a {{htmlelement("textarea")}} element.
+The HTML in this example contains three form fields, each with an associated {{htmlelement("label")}}: two `<input>` elements of types [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text) and [`email`](/en-US/docs/Web/HTML/Reference/Elements/input/email) and a {{htmlelement("textarea")}} element.
 
 ```html
 <div>
@@ -97,7 +97,7 @@ The HTML in this example contains three form fields, each with an associated {{h
 
 Note the following points about the HTML:
 
-- The first two fields have a [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute set, which stops the size of the field from increasing when the character limit is reached.
+- The first two fields have a [`maxlength`](/en-US/docs/Web/HTML/Reference/Elements/input#maxlength) attribute set, which stops the size of the field from increasing when the character limit is reached.
 - The `<textarea>` will grow in the inline direction until the edge of the {{cssxref("min-width")}} constraint (set in the CSS code below) is reached, then start to add new lines in the block direction to contain subsequent characters.
 - The `email` input has a placeholder set. This causes the field to render big enough to show the entire placeholder. Once the field is focused and the user starts typing, the field changes size to the `min-width` value. The `text` field, which doesn't have a placeholder, renders initially at `min-width`.
 
@@ -146,7 +146,7 @@ This example illustrates the effect of `field-sizing: content` on {{htmlelement(
 
 #### HTML
 
-The HTML contains two sets of `<select>` elements: one with `field-sizing: content` applied, and one without, allowing you to see the difference (though the effect may be less obvious than on text fields). Each set includes one drop-down menu type and one multiline listbox type (with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute set).
+The HTML contains two sets of `<select>` elements: one with `field-sizing: content` applied, and one without, allowing you to see the difference (though the effect may be less obvious than on text fields). Each set includes one drop-down menu type and one multiline listbox type (with the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute set).
 
 ```html
 <div class="field-sizing">
@@ -186,7 +186,7 @@ The HTML contains two sets of `<select>` elements: one with `field-sizing: conte
 ```
 
 > [!NOTE]
-> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
+> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Use meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
 
 #### CSS
 

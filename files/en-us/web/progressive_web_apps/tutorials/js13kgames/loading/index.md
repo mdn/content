@@ -125,7 +125,7 @@ This problem can be solved by loading the images only when needed: this is calle
 
 ### The loading attribute on \<img>
 
-The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
+The easiest way to tell the browser to load lazily doesn't involve JavaScript. You add the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) attribute to an {{HTMLElement("img")}} element with the value `lazy`, and the browser will know to load this image only when needed.
 
 ```html
 <img

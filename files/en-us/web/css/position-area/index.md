@@ -136,7 +136,7 @@ In this example, a positioned element is tethered and positioned relative to its
 
 #### HTML
 
-The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+The HTML includes a {{htmlelement("div")}} and a {{htmlelement("p")}}. The `<p>` will be positioned relative to the `<div>` with CSS. We also include a style block that will be made visible. All elements are set to be directly editable via the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute.
 
 ```html-nolint
 <div class="anchor" contenteditable="true">⚓︎</div>
@@ -199,7 +199,7 @@ This demo creates an anchor and tethers a positioned element to it. It also prov
 
 In the HTML, we specify two {{htmlelement("div")}} elements, one with a class of `anchor` and one with a class of `infobox`. These are intended to be the anchor element and the positioned element we will associate with it, respectively. We've included the `contenteditable` attribute on both, making them directly editable.
 
-We've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) elements for setting different `position-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off. The code for these, along with the JavaScript, has been hidden for the sake of brevity.
+We've also included two forms that contain the {{htmlelement("select")}} and [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text) elements for setting different `position-area` values, and the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) element for toggling the vertical {{cssxref("writing-mode")}} on and off. The code for these, along with the JavaScript, has been hidden for the sake of brevity.
 
 ```html
 <div class="anchor" contenteditable>⚓︎</div>

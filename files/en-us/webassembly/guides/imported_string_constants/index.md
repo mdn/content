@@ -13,7 +13,7 @@ This article explains how imported global string constants work.
 
 Let's start by exploring how string imports have traditionally worked in WebAssembly. In a Wasm module, you could import a couple of strings from a namespace called `"string_constants"` with the following snippet:
 
-```wasm
+```wat
 (global (import "string_constants" "string_constant_1") externref)
 (global (import "string_constants" "string_constant_2") externref)
 ```
@@ -47,7 +47,7 @@ This is sub-optimal for several reasons:
 
 Import names can be any unicode string you like, so developers often set the entire string as the import name for convenience (for example, when debugging). This would result in our above Wasm snippet being rewritten like so:
 
-```wasm
+```wat
 (global (import "string_constants" "hello ") externref)
 (global (import "string_constants" "world!") externref)
 ```
@@ -96,7 +96,7 @@ The `compileOptions` object is available to the following functions:
 
 Over in your WebAssembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
 
-```wasm
+```wat
 (global $h (import "string_constants" "hello ") externref)
 (global $w (import "string_constants" "world!") externref)
 ```
@@ -138,7 +138,7 @@ fetch("log-concat.wasm")
 
 The text representation of our WebAssembly module code looks like this — notice how it imports two strings in the specified namespace, which are later used in the `$concat` function:
 
-```wasm
+```wat
 (module
   (global $h (import "string_constants" "hello ") externref)
   (global $w (import "string_constants" "world!") externref)

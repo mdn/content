@@ -472,7 +472,7 @@ Let's look at a real example to demonstrate scoping.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying them.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions). These tests require skills that are covered in the next two articles, so you might want to read those first before trying them.
 
 ## Summary
 

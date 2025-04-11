@@ -12,7 +12,7 @@ The read-only **`href`** property of the
 {{domxref("CSSImportRule")}} interface returns the URL specified by the
 {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
-The resolved URL will be the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of the
+The resolved URL will be the [`href`](/en-US/docs/Web/HTML/Reference/Elements/link#href) attribute of the
 associated stylesheet.
 
 ## Value

@@ -86,7 +86,7 @@ If a script is really important and you are concerned that it is affecting perfo
 </head>
 ```
 
-This works OK, but is render-blocking. A better strategy is to use [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) to create a preloader for critical JavaScript:
+This works OK, but is render-blocking. A better strategy is to use [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) to create a preloader for critical JavaScript:
 
 ```html
 <head>
@@ -109,7 +109,7 @@ The preload {{htmlelement("link")}} fetches the JavaScript as soon as possible, 
 or inside your script, in the case of a JavaScript module:
 
 ```js
-import { function } from "important-module.js";
+import { someFunction } from "important-module.js";
 ```
 
 > [!NOTE]

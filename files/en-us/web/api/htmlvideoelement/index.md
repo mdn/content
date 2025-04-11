@@ -20,15 +20,15 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : Indicates if the user agent should suggest the picture-in-picture to users, or not.
 - {{domxref("HTMLVideoElement.height")}}
-  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
+  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Reference/Elements/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : A string that reflects the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) HTML attribute, which specifies an image to show while no video data is available.
+  - : A string that reflects the [`poster`](/en-US/docs/Web/HTML/Reference/Elements/video#poster) HTML attribute, which specifies an image to show while no video data is available.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic height of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
-  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Reference/Elements/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
 
 ### Firefox-specific properties
 

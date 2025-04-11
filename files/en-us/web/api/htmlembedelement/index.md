@@ -21,15 +21,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
   - : A string representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"center"`, and `"justify"`.
 - {{domxref("HTMLEmbedElement.height")}}
-  - : A string reflecting the [`height`](/en-US/docs/Web/HTML/Element/embed#height) HTML attribute, containing the displayed height of the resource.
+  - : A string reflecting the [`height`](/en-US/docs/Web/HTML/Reference/Elements/embed#height) HTML attribute, containing the displayed height of the resource.
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
   - : A string representing the name of the embedded object.
 - {{domxref("HTMLEmbedElement.src")}}
-  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/embed#src) HTML attribute, containing the address of the resource.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/embed#src) HTML attribute, containing the address of the resource.
 - {{domxref("HTMLEmbedElement.type")}}
-  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Element/embed#type) HTML attribute, containing the type of the resource.
+  - : A string that reflects the [`type`](/en-US/docs/Web/HTML/Reference/Elements/embed#type) HTML attribute, containing the type of the resource.
 - {{domxref("HTMLEmbedElement.width")}}
-  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/embed#width) HTML attribute, containing the displayed width of the resource.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Reference/Elements/embed#width) HTML attribute, containing the displayed width of the resource.
 
 ## Instance methods
 

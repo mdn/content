@@ -29,7 +29,7 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
-Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).
+Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe).
 
 Each event's `addListener()` call accepts an optional filter parameter. The filter will specify one or more URL patterns, and the event will then only be fired for navigations in which the target URL matches one of the patterns.
 
@@ -47,7 +47,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 ## Functions
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+  - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe), and is uniquely identified by a tab ID and a frame ID.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Given a tab ID, retrieves information about all the frames it contains.
 

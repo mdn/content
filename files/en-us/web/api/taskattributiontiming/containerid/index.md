@@ -15,7 +15,7 @@ attribute. A container is the iframe, embed or object etc. that is being implica
 
 ## Value
 
-A string containing the container's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) HTML content attribute.
+A string containing the container's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) HTML content attribute.
 
 ## Specifications
 

@@ -6,7 +6,7 @@ page-type: learn-faq
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
 
-HTML is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
+HTML is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. [`data-*` attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) allow us to store extra information on standard, semantic HTML elements without other hacks such as non-standard attributes, or extra properties on DOM.
 
 ## HTML syntax
 

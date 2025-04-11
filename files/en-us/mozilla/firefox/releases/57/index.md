@@ -25,7 +25,7 @@ _No changes._
 
 ### HTML
 
-- The [date](/en-US/docs/Web/HTML/Element/input/date) and [time](/en-US/docs/Web/HTML/Element/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
+- The [date](/en-US/docs/Web/HTML/Reference/Elements/input/date) and [time](/en-US/docs/Web/HTML/Reference/Elements/input/time) {{htmlelement("input")}} types are now enabled in all builds ([Firefox bug 1399036](https://bugzil.la/1399036)).
 
 ### CSS
 
@@ -115,7 +115,7 @@ _No changes._
 
 ### HTML
 
-- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Attributes/rel/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g., [Firefox bug 1405761](https://bugzil.la/1405761)). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
+- `<link rel="preload">` (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)) has been disabled in Firefox 57 because of various web compatibility issues (e.g., [Firefox bug 1405761](https://bugzil.la/1405761)). An improved version that works for non-cacheable resources is expected to land in Firefox 58.
 
 ### APIs
 

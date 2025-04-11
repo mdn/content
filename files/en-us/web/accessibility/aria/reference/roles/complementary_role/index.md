@@ -8,7 +8,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
+The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Reference/Elements/aside) instead.
 
 ```html
 <div role="complementary">
@@ -89,9 +89,9 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 ## See also
 
-- [\<aside>: The Aside element](/en-US/docs/Web/HTML/Element/aside)
+- [\<aside>: The Aside element](/en-US/docs/Web/HTML/Reference/Elements/aside)
 - [complementary (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#complementary)
-- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

@@ -12,7 +12,7 @@ browser-compat: api.HTMLButtonElement.commandForElement
 
 The **`commandForElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the element to control via a button.
 
-It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
+It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) HTML attribute.
 
 ## Value
 

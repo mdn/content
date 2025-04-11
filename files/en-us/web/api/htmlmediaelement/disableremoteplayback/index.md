@@ -32,5 +32,5 @@ obj.disableRemotePlayback = true;
 
 ## See also
 
-- [The `disableremoteplayback` attribute of the `<audio>` element](/en-US/docs/Web/HTML/Element/audio#disableremoteplayback)
-- [The `disableremoteplayback` attribute of the `<video>` element](/en-US/docs/Web/HTML/Element/video#disableremoteplayback)
+- [The `disableremoteplayback` attribute of the `<audio>` element](/en-US/docs/Web/HTML/Reference/Elements/audio#disableremoteplayback)
+- [The `disableremoteplayback` attribute of the `<video>` element](/en-US/docs/Web/HTML/Reference/Elements/video#disableremoteplayback)

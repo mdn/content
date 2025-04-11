@@ -40,7 +40,7 @@ video::cue {
 
 The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 
-In the example above, the `::cue(u)` selector selects all the [`<u>`](/en-US/docs/Web/HTML/Element/u) elements inside [the cue text](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
+In the example above, the `::cue(u)` selector selects all the [`<u>`](/en-US/docs/Web/HTML/Reference/Elements/u) elements inside [the cue text](https://raw.githubusercontent.com/mdn/interactive-examples/main/live-examples/media/examples/friday.vtt).
 
 ## Syntax
 

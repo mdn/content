@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webNavigation.getFrame
 
 {{AddonSidebar}}
 
-Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), and is uniquely identified by a tab ID and a frame ID.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

@@ -19,11 +19,11 @@ This article provides information about the changes in Firefox 81 that will affe
 
 ### HTML
 
-- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) element ([Firefox bug 1558394](https://bugzil.la/1558394)).
 
 #### Removals
 
-- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
+- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe). Consider using `allow="fullscreen"` instead ([Firefox bug 1657599](https://bugzil.la/1657599)).
 
 ### CSS
 

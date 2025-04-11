@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.dataset
 {{APIRef("HTML DOM")}}
 
 The **`dataset`** read-only property
-of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/HTML/Global_attributes/data-*)
+of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
 (`data-*`) on elements. It exposes a map of strings
 ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
@@ -130,7 +130,7 @@ if (el.dataset.someDataAttr === undefined) {
 
 ## See also
 
-- The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
+- The HTML [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) class
   of global attributes
 - [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

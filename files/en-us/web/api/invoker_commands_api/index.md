@@ -22,9 +22,9 @@ Historically creating these kinds of controls has required JavaScript event list
 
 ## HTML attributes
 
-- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) {{experimental_inline}}
+- [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) {{experimental_inline}}
   - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
-- [`command`](/en-US/docs/Web/HTML/Element/button#command) {{experimental_inline}}
+- [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) {{experimental_inline}}
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
 
 ## Interfaces
@@ -37,9 +37,9 @@ Historically creating these kinds of controls has required JavaScript event list
 ### Instance properties
 
 - {{domxref("HTMLButtonElement.commandForElement")}}
-  - : Gets and sets the element being controlled by the button. The JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
+  - : Gets and sets the element being controlled by the button. The JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) HTML attribute.
 - {{domxref("HTMLButtonElement.command")}}
-  - : Gets and sets the action to be performed on the element being controlled by the button. Reflects the value of the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
+  - : Gets and sets the action to be performed on the element being controlled by the button. Reflects the value of the [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command) HTML attribute.
 
 ### Events
 

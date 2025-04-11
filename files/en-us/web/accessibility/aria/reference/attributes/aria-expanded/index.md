@@ -20,7 +20,7 @@ Use the `aria-owns` property on the elements that own expandable grouping contai
 
 ### Buttons
 
-A button that toggles a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the toggled widget and `aria-expanded` set to the current state of the widget.
+A button that toggles a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of the toggled widget and `aria-expanded` set to the current state of the widget.
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Toggle widget</button>
@@ -120,4 +120,4 @@ Inherits into roles:
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
+- HTML [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute

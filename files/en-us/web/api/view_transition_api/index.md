@@ -52,7 +52,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 
 ## HTML additions
 
-- [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect)
+- [`<link rel="expect">`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect)
   - : Identifies the most critical content in the associated document for the user's initial view of the page. Document rendering will be blocked until the critical content has been parsed, ensuring a consistent first paint — and therefore, view transition — across all supporting browsers.
 
 ## CSS additions

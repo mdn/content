@@ -10,14 +10,14 @@ browser-compat: api.HTMLAreaElement.target
 
 The **`target`** property of the {{domxref("HTMLAreaElement")}} interface is a string that indicates where to display the linked resource.
 
-It reflects the [`target`](/en-US/docs/Web/HTML/Element/area#target) attribute of the {{HTMLElement("area")}} element.
+It reflects the [`target`](/en-US/docs/Web/HTML/Reference/Elements/area#target) attribute of the {{HTMLElement("area")}} element.
 
 ## Value
 
 A string representing the target. Its value can be:
 
 - The name of a {{HTMLElement("frame")}}.
-- One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/area#target): `_blank`, `_self`, `_parent`, or `_top`.
+- One of the [keyword with specific values](/en-US/docs/Web/HTML/Reference/Elements/area#target): `_blank`, `_self`, `_parent`, or `_top`.
 
 ## Example
 

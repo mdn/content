@@ -46,7 +46,7 @@ svg {
   - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
     _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/@media#syntax); _Default value_: `all`; _Animatable_: **no**
 - {{SVGAttr("title")}}
-  - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
+  - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet).
     _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: _none_; _Animatable_: **no**
 
 ## Usage context

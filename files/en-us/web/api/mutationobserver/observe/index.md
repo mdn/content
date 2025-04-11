@@ -178,7 +178,7 @@ observer.observe(userListElement, {
 
 ### Monitoring attribute values
 
-In this example we observe an element for attribute value changes, and add a button which toggles the element's [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute between `"ltr"` and `"rtl"`. Inside the observer's callback, we log the old value of the attribute.
+In this example we observe an element for attribute value changes, and add a button which toggles the element's [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) attribute between `"ltr"` and `"rtl"`. Inside the observer's callback, we log the old value of the attribute.
 
 #### HTML
 

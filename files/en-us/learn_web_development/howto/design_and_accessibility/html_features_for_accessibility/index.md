@@ -40,7 +40,7 @@ Note that, most of the time, it is better to instead write useful link text:
 
 ## Skip Links
 
-To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip_links) that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
+To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Reference/Elements/a#skip_links) that allow users to jump over chunks of your web page. You might want to allow someone to jump over a plethora of navigation links that are found on every page. This enables keyboard users to quickly tab over repeated content and go directly to the page's main content:
 
 ```html
 <header>
@@ -59,7 +59,7 @@ To aid tabbing, you can supply a [skip link](/en-US/docs/Web/HTML/Element/a#skip
 
 ## Alt attribute for image
 
-Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
+Every image should have an [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute. If the image is purely decoration and adds no meaning to the content or context of the document, the `alt` attribute should be present, but empty. You can optionally also add [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role). All other images should include an `alt` attribute providing [alternative text describing the image](/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes) in a way that is helpful to users who can read the rest of the content but can't see the image. Think about how you would describe the image to someone who can't load your image: that's the information you should include as the value of the `alt` attribute.
 
 ```html
 <!-- decorative image -->
@@ -70,7 +70,7 @@ Every image should have an [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribu
   role="img" />
 ```
 
-The `alt` attribute for the same content may vary depending on the context. In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Element/progress) element:
+The `alt` attribute for the same content may vary depending on the context. In the following example, an animated gif is used instead of a progress bar to show the page load progress for a document teaching developers how to use the HTML [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) element:
 
 ```html
 <img alt="20% complete" src="load-progress.gif" />

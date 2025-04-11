@@ -33,7 +33,7 @@ You should use the HTML5 {{Glossary("Doctype", "doctype")}}.
 
 ### Document language
 
-Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>
@@ -59,7 +59,7 @@ Finally, you should always add the viewport meta tag into your HTML {{HTMLElemen
 <meta name="viewport" content="width=device-width" />
 ```
 
-See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag) for further details.
+See [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) for further details.
 
 ## Attributes
 

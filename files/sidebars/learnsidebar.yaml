@@ -62,6 +62,10 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
+      - type: listSubPages
+        path: /Learn_web_development/Core/Structuring_content/Test_your_skills
+        link: /Learn_web_development/Core/Structuring_content/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
@@ -132,6 +136,10 @@ sidebar:
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
       - /Learn_web_development/Core/Scripting/Debugging_JavaScript
+      - type: listSubPages
+        path: /Learn_web_development/Core/Scripting/Test_your_skills
+        link: /Learn_web_development/Core/Scripting/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Frameworks_libraries
     title: JavaScript_frameworks_and_libraries
     details: closed

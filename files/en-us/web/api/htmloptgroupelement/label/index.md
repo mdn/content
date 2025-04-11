@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptGroupElement.label
 
 {{ APIRef("HTML DOM") }}
 
-The **`label`** property of the {{domxref("HTMLOptGroupElement")}} interface is a string value that reflects the {{htmlelement("optgroup")}} element's [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute, which provides a textual label to the group of options.
+The **`label`** property of the {{domxref("HTMLOptGroupElement")}} interface is a string value that reflects the {{htmlelement("optgroup")}} element's [`label`](/en-US/docs/Web/HTML/Reference/Elements/optgroup#label) attribute, which provides a textual label to the group of options.
 
 ## Value
 
@@ -33,4 +33,4 @@ optionGroup.label = `${optionGroup.label} (${optionGroup.children.length})`;
 ## See also
 
 - {{htmlelement("optgroup")}}
-- HTML [`label`](/en-US/docs/Web/HTML/Element/optgroup#label) attribute
+- HTML [`label`](/en-US/docs/Web/HTML/Reference/Elements/optgroup#label) attribute

@@ -7,7 +7,7 @@ page-type: guide
 
 {{CSSRef}}
 
-With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
+With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Reference/Elements) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
 > [!NOTE]
 > It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensuring the contrast between text and the background is sufficient to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
@@ -46,7 +46,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 
 - {{cssxref("caret-color")}}
 
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is set to `true`.
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute is set to `true`.
 
 ### Boxes
 

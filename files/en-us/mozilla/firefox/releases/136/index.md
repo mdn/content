@@ -12,8 +12,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### HTML
 
-- The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
-- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
+- The [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
+- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
 
 ### CSS
 
@@ -44,6 +44,13 @@ This article provides information about the changes in Firefox 136 that affect d
 
   Note that while any of the supported cookie properties can be [set](/en-US/docs/Web/API/CookieStore/set), the cookie objects returned by the [`get()`](/en-US/docs/Web/API/CookieStore/get) and [`getAll()`](/en-US/docs/Web/API/CookieStore/getAll) methods, and in the `change` event, omit all properties other than `name` and `value` (matching the information returned by the {{domxref("document.cookie")}}).
   The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies), [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), and [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
+
+- Element properties are now reflected for the [Aria attributes that contain element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) ([Firefox bug 1919102](https://bugzil.la/1919102)).
+
+  This includes:
+
+  - {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("Element/ariaControlsElements","ariaControlsElements")}}, {{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("Element/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("Element")}} interface
+  - {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}, {{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}, {{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}, {{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}, {{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}, {{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}, {{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}, {{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}} in the {{domxref("ElementInternals")}} interface.
 
 #### Media, WebRTC, and Web Audio
 

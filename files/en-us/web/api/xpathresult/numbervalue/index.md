@@ -21,8 +21,8 @@ The return value is the numeric value of the `XPathResult` returned by
 
 #### TYPE_ERR
 
-In case {{domxref("XPathResult.resultType")}} is not `NUMBER_TYPE`, an
-{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
+In case {{domxref("XPathResult.resultType")}} is not `NUMBER_TYPE`, a
+{{domxref("DOMException")}} of type `TYPE_ERR` is thrown.
 
 ## Examples
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptionElement.disabled
 
 {{ APIRef("HTML DOM") }}
 
-The **`disabled`** property of the {{domxref("HTMLOptionElement")}} is a boolean value that indicates whether the {{htmlelement("option")}} element is unavailable to be selected. The property reflects the value of the [`disabled`](/en-US/docs/Web/HTML/Element/option#disabled) HTML attribute.
+The **`disabled`** property of the {{domxref("HTMLOptionElement")}} is a boolean value that indicates whether the {{htmlelement("option")}} element is unavailable to be selected. The property reflects the value of the [`disabled`](/en-US/docs/Web/HTML/Reference/Elements/option#disabled) HTML attribute.
 
 The property reflects the value of the `disabled` attribute on the `<option>` element itself. If an option is disabled because it is a child of an {{HTMLElement("optgroup")}} element that is disabled, the `true` of the {{domxref("HTMLOptGroupElement.disabled")}} property is not inherited by the option itself.
 

@@ -30,7 +30,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; load the value of a global variable onto the stack
 global.get $val
 ```

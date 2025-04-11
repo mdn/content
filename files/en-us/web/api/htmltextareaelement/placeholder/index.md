@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.placeholder
 
 {{ APIRef("HTML DOM") }}
 
-The **`placeholder`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents a hint to the user of what can be entered in the control. It reflects the {{htmlelement("textarea")}} element's [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute.
+The **`placeholder`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents a hint to the user of what can be entered in the control. It reflects the {{htmlelement("textarea")}} element's [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/textarea#placeholder) attribute.
 
 ## Value
 

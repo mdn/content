@@ -20,7 +20,7 @@ A string.
 ### Reading the metadata name of a meta element
 
 The following example queries the first `<meta>` element in a document.
-The `name` value is logged to the console, showing that [keywords](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) have been specified for the document:
+The `name` value is logged to the console, showing that [keywords](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification) have been specified for the document:
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
@@ -31,7 +31,7 @@ console.log(meta.name);
 
 ### Creating a meta element with `author` metadata
 
-The following example creates a new `<meta>` element with a `name` attribute set to [`author`](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification).
+The following example creates a new `<meta>` element with a `name` attribute set to [`author`](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification).
 The `content` attribute sets the author of the document and the element is appended to the document `<head>`:
 
 ```js
@@ -52,4 +52,4 @@ document.head.appendChild(meta);
 ## See also
 
 - {{HTMLElement("meta")}}
-- [Possible values for the name attribute](/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification)
+- [Possible values for the name attribute](/en-US/docs/Web/HTML/Reference/Elements/meta/name#standard_metadata_names_defined_in_the_html_specification)

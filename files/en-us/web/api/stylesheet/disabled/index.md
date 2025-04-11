@@ -13,7 +13,7 @@ The **`disabled`** property of the
 applying to the document.
 
 A style sheet may be disabled by manually setting this property to `true` or
-if it's an inactive [alternative style sheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet). Note that `disabled === false` does not guarantee the style
+if it's an inactive [alternative style sheet](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet). Note that `disabled === false` does not guarantee the style
 sheet is applied (it could be removed from the document, for instance).
 
 ## Value

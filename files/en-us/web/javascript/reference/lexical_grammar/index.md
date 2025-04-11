@@ -533,9 +533,9 @@ The lexical grammar is very lenient: not all regular expression literals that ge
 
 See also {{jsxref("RegExp")}} for more information.
 
-```js-nolint
-/ab+c/g
-/[/]/
+```js
+/ab+c/g;
+/[/]/;
 ```
 
 A regular expression literal cannot start with two forward slashes (`//`), because that would be a line comment. To specify an empty regular expression, use `/(?:)/`.
@@ -546,15 +546,15 @@ One template literal consists of several tokens: `` `xxx${ `` (template head), `
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 
-```js-nolint
-`string text`
+```js
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag`string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Automatic semicolon insertion

@@ -67,7 +67,7 @@ values are described below, in [Media error code constants](#media_error_code_co
 ## Examples
 
 This example creates a {{HTMLElement("video")}} element, establishes an error handler
-for it, and then sets the element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute to the
+for it, and then sets the element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/video#src) attribute to the
 video resource to present in the element. The error handler outputs a message
 
 ```js

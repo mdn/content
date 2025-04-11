@@ -16,7 +16,7 @@ In the example below, the user has previously signed into their bank, and the br
 
 In this guide, we'll call a request like this, that carries out some special action, a _state-changing request_.
 
-In a CSRF attack, the attacker creates a website containing a form. The form's [`action` attribute](/en-US/docs/Web/HTML/Element/form#action) is set to the bank's website, and the form contains hidden input fields mimicking the bank's fields:
+In a CSRF attack, the attacker creates a website containing a form. The form's [`action` attribute](/en-US/docs/Web/HTML/Reference/Elements/form#action) is set to the bank's website, and the form contains hidden input fields mimicking the bank's fields:
 
 ```html
 <form action="https://my-bank.example.org/transfer" method="POST">

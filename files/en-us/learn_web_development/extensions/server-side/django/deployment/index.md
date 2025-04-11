@@ -121,7 +121,7 @@ pip3 install python-dotenv
 
 Then open **/locallibrary/settings.py** and insert the following code after `BASE_DIR` is defined, but before the security warning: `# SECURITY WARNING: keep the secret key used in production secret!`
 
-```py
+```python
 # Support env variables from .env file if defined
 import os
 from dotenv import load_dotenv
@@ -560,7 +560,7 @@ After getting the local library sources and installing the dependencies in a vir
 
    Replace the content in the file with the following text (first updating "hamishwillee" with your own username), and then select the **Save** button.
 
-   ```py
+   ```python
    import os
    import sys
 

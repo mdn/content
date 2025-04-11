@@ -19,7 +19,7 @@ Responses for all other bindings will report with this `208` status code, so no 
 
 ## Status
 
-```plain
+```http
 208 Already Reported
 ```
 

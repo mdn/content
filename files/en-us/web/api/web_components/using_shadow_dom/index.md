@@ -66,13 +66,13 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ### Attribute inheritance
 
-The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attributes from their shadow host.
+The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attributes from their shadow host.
 
 ## Creating a shadow DOM
 
 ### Imperatively with JavaScript
 
-The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
+The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
 
 ```html
 <div id="host"></div>

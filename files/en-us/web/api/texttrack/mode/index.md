@@ -26,7 +26,7 @@ A string which indicates the track's current mode. One of:
   - : The text track is currently disabled. While the track's presence is exposed in the
     DOM, the user agent is otherwise ignoring it. No cues are active, no events are being
     fired, and the user agent won't attempt to obtain the track's cues. This is the
-    default value, unless the text track has the [`default`](/en-US/docs/Web/HTML/Element/track#default)
+    default value, unless the text track has the [`default`](/en-US/docs/Web/HTML/Reference/Elements/track#default)
     Boolean attribute is specified, in which case the default is `showing`.
 - `hidden`
   - : The text track is currently active but the cues aren't being displayed. If the user
@@ -41,12 +41,12 @@ A string which indicates the track's current mode. One of:
     list is being maintained and events are firing at the appropriate
     times; the track's text is also being drawn appropriately based on the styling and the
     track's {{domxref("TextTrack.kind", "kind")}}. This is the default value if the text
-    track's [`default`](/en-US/docs/Web/HTML/Element/track#default) Boolean attribute is specified.
+    track's [`default`](/en-US/docs/Web/HTML/Reference/Elements/track#default) Boolean attribute is specified.
 
 ## Usage notes
 
 The default `mode` is `disabled`, unless the
-[`default`](/en-US/docs/Web/HTML/Element/track#default) Boolean attribute is specified, in which case the
+[`default`](/en-US/docs/Web/HTML/Reference/Elements/track#default) Boolean attribute is specified, in which case the
 default `mode` is `showing`. When a text track is loaded in the
 `disabled` state, the corresponding WebVTT file is not loaded until the state
 changes to either `showing` or `hidden`. This way, the resource

@@ -286,14 +286,14 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 
 > [!NOTE]
 > Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
-> See [Security and tainted canvases](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
+> See [Security and tainted canvases](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#security_and_tainted_canvases).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("img")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
+Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("img")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Reference/Elements/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 

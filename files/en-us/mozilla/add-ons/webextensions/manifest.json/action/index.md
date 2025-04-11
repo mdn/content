@@ -173,24 +173,24 @@ The `action` key is an object that may have any of these properties, all optiona
         <p>
           The HTML file may include CSS and JavaScript files using
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/link">&#x3C;link></a></code
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code
           >
           and
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >
           elements, just like a normal web page. However,
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script>
             </a></code
           > must have
-          <code><a href="/en-US/docs/Web/HTML/Element/script">src</a></code>
+          <code><a href="/en-US/docs/Web/HTML/Reference/Elements/script">src</a></code>
           attribute to load a file. Don't use
           <code
-            ><a href="/en-US/docs/Web/HTML/Element/script"
+            ><a href="/en-US/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >

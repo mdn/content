@@ -50,9 +50,9 @@ Not just any image is acceptable.
 - The image must clearly indicate where hotspots begin and end.
 - Hotspots must be large enough to tap comfortably, at any viewport size. How large is large enough? [72 × 72 CSS pixels is a good minimum,](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) with additional generous gaps between touch targets. The map of the world at [50languages.com](https://www.goethe-verlag.com/book2/) (as of time of writing) illustrates the problem perfectly. It's much easier to tap Russia or North America than Albania or Estonia.
 
-You insert your image [much the same way as always](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage) (with an {{htmlelement("img")}} element and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text). If the image is only present as a navigation device, you may write `alt=""`, provided you furnish appropriate [`alt`](/en-US/docs/Web/HTML/Element/area#alt) text in the {{htmlelement('area')}} elements later on.
+You insert your image [much the same way as always](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage) (with an {{htmlelement("img")}} element and [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) text). If the image is only present as a navigation device, you may write `alt=""`, provided you furnish appropriate [`alt`](/en-US/docs/Web/HTML/Reference/Elements/area#alt) text in the {{htmlelement('area')}} elements later on.
 
-You will need a special [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute. Come up with a unique name, containing no spaces, for your image map. Then assign that name (preceded by a hash) as the value for the `usemap` attribute:
+You will need a special [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) attribute. Come up with a unique name, containing no spaces, for your image map. Then assign that name (preceded by a hash) as the value for the `usemap` attribute:
 
 ```html
 <img src="image-map.png" alt="" usemap="#example-map-1" />
@@ -60,7 +60,7 @@ You will need a special [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attr
 
 ### Step 2: Activate your hotspots
 
-In this step, put all your code inside a {{htmlelement('map')}} element. `<map>` only needs one attribute, the same map [`name`](/en-US/docs/Web/HTML/Element/map#name) as you used in your `usemap` attribute above:
+In this step, put all your code inside a {{htmlelement('map')}} element. `<map>` only needs one attribute, the same map [`name`](/en-US/docs/Web/HTML/Reference/Elements/map#name) as you used in your `usemap` attribute above:
 
 ```html
 <map name="example-map-1"> </map>
@@ -70,13 +70,13 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 `<area>` elements are {{glossary("void element", "void elements")}}, but do require four attributes:
 
-- [`shape`](/en-US/docs/Web/HTML/Element/area#shape)
+- [`shape`](/en-US/docs/Web/HTML/Reference/Elements/area#shape)
 
   - : The `shape` attribute takes one of four values: `circle`, `rect`, `poly`, and `default`. An `<area>` whose `shape` is `default` occupies the entire image, minus any other hotspots you've defined.
     If there is any overlap between the defined areas, the source order determines which area takes preference.
     The shape you choose determines the coordinate information you'll need to provide in `coords`.
 
-- [`coords`](/en-US/docs/Web/HTML/Element/area#coords)
+- [`coords`](/en-US/docs/Web/HTML/Reference/Elements/area#coords)
 
   - : Coordinates are given in CSS pixels, and its value is dependent on the `shape` selected.
 
@@ -84,11 +84,11 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
     - For a rectangle, provide the x and y coordinates of the upper-left and bottom-right corners.
     - For a polygon, to provide the x and y coordinates of each corner (so, at least six values).
 
-- [`href`](/en-US/docs/Web/HTML/Element/area#href)
+- [`href`](/en-US/docs/Web/HTML/Reference/Elements/area#href)
 
   - : The URL of the resource you're linking to. You may leave this attribute blank if you _don't_ want the current area to link anywhere (say, if you're making a hollow circle.)
 
-- [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
+- [`alt`](/en-US/docs/Web/HTML/Reference/Elements/area#alt)
 
   - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#use_clear_link_wording).
 

@@ -80,7 +80,7 @@ The `visibility` property is specified as one of the keyword values listed below
 - `visible`
   - : The element box is visible.
 - `hidden`
-  - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
+  - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex)).
 - `collapse`
 
   - : The `collapse` keyword has different effects for different elements:
