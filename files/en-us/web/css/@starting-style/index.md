@@ -24,7 +24,8 @@ The `@starting-style` at rule can be used in two ways:
 2. Nested within an existing ruleset, in which case it contains one or more declarations defining starting property values for the elements already selected by that ruleset:
 
    ```css
-   selector { /* existing ruleset */
+   selector {
+     /* existing ruleset */
      /* ... */
 
      @starting-style {
