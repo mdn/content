@@ -9,7 +9,7 @@ browser-compat: webextensions.api.webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_
 
 The maximum number of times that {{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.
 
-This property is read-only.
+This property is read-only and has a value of `20`.
 
 ## Browser compatibility
 
