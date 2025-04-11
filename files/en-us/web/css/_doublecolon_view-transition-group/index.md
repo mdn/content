@@ -46,7 +46,7 @@ The accepted values are as follows:
 - `*`
   - : The [universal selector (`*`)](/en-US/docs/Web/CSS/Universal_selectors); selects all view transition groups on a page.
 - `root`
-  - : The  {{cssxref("view-transition-name")}} applied to {{cssxref(":root")}}. Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the `view-transition-name` property.
+  - : The {{cssxref("view-transition-name")}} applied to {{cssxref(":root")}}. Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the `view-transition-name` property.
 - `<pt-name-selector>`
   - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-name")}} property.
 - `<pt-class-selector>`
