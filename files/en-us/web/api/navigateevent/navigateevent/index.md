@@ -43,7 +43,7 @@ new NavigateEvent(type, init)
     - `signal`
       - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
     - `sourceElement`
-      - : An {{domxref("Element")}} object representing the initiating element in cases where a navigation was initiated by an element, or `null` if the navigation was not initiated by an element. Defaults to `null`.
+      - : An {{domxref("Element")}} object representing the initiating element in cases where the navigation was initiated by an element, or `null` if the navigation was not initiated by an element. Defaults to `null`.
     - `userInitiated` {{optional_inline}}
       - : A boolean defining whether the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons). Defaults to `false`.
 

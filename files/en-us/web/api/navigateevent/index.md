@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
 - {{domxref("NavigateEvent.sourceElement", "sourceElement")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : When a navigation was initiated by an element (for example clicking a link), returns an {{domxref("Element")}} object representing the initiating element.
+  - : When the navigation was initiated by an element (for example clicking a link), returns an {{domxref("Element")}} object representing the initiating element.
 - {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the navigation was initiated by the user (e.g., by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons), or `false` otherwise.
 

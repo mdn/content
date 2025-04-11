@@ -11,11 +11,11 @@ browser-compat: api.NavigateEvent.sourceElement
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`sourceElement`** read-only property of the
-{{domxref("NavigateEvent")}} interface returns an {{domxref("Element")}} object representing the initiating element, in cases where a navigation was initiated by an element.
+{{domxref("NavigateEvent")}} interface returns an {{domxref("Element")}} object representing the initiating element, in cases where the navigation was initiated by an element.
 
 The initiating element can be:
 
-- An {{htmlelement("a")}} element.
+- An HTML {{htmlelement("a")}} element (or SVG [`<a>`](/en-US/docs/Web/SVG/Reference/Element/a) element).
 - An {{htmlelement("area")}} element.
 - A submit button ([`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) or [`<button type="submit">`](/en-US/docs/Web/HTML/Element/button)).
 - A submitted {{htmlelement("form")}} element.
