@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Tables"
+short-title: Tables
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
 page-type: learn-module-assessment
 ---

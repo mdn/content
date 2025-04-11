@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Selectors"
+short-title: Selectors
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 page-type: learn-module-assessment
 ---

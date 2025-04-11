@@ -1,5 +1,6 @@
 ---
 title: "Test your skills: Writing modes and logical properties"
+short-title: Writing modes
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
 page-type: learn-module-assessment
 ---
