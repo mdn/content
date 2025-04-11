@@ -100,6 +100,8 @@ These HTTP response headers define the endpoints where reports are sent.
 - {{HTTPHeader("Reporting-Endpoints")}}
   - : Sets the name and URL of reporting endpoints.
     These endpoints can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}} and or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}}
+  - : No longer part of the Reporting API but still supported by some browsers. This sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers especially for [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) that has not yet been updated to support `Reporting-Endpoints`. Other Reporting API reports should use `Reporting-Endpoints` instead for better future support.
 
 Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
 
