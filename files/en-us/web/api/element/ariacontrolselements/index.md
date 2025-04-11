@@ -20,8 +20,7 @@ An array of subclasses of {{domxref("HTMLElement")}}, representing the elements 
 ## Description
 
 The property is a flexible alternative to using the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute to set the controlled elements.
-Unlike `aria-controls`, the elements assigned to this property do not have to have an `id`: they can be selected.
-This can be convenient as it avoids having to unnecessarily create ids for elements in order to set them as controlled.
+Unlike `aria-controls`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute.
 
 The property reflects the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.

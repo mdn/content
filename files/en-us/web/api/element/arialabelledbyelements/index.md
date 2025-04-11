@@ -24,8 +24,7 @@ The inner text of these elements can be joined with spaces to get the accessible
 ## Description
 
 The property is a flexible alternative to using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to set the accessible name.
-Unlike `aria-labelledby`, the elements assigned to this property can be selected: they do not have to have an `id`.
-This can be convenient as it avoids having to unnecessarily create ids for elements in order to use them for the description.
+Unlike `aria-labelledby`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute.
 
 The property reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.

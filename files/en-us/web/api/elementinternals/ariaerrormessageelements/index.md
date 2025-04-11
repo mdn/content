@@ -20,8 +20,7 @@ The inner text of these elements can be joined with spaces to get the error mess
 ## Description
 
 The property is a flexible alternative to using the [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute to set the error message for an element.
-Unlike `aria-errormessage`, the elements assigned to this property can be selected: they do not have to have an `id`.
-This can be convenient as it avoids having to unnecessarily create ids for elements in order to assign them as the message.
+Unlike `aria-errormessage`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute.
 
 The property reflects the element's [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.
