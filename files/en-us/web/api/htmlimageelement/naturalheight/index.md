@@ -45,7 +45,7 @@ its rendered size as altered by the page's CSS and other factors.
 ```html
 <div class="box">
   <img
-    src="/en-US/docs/Web/HTML/Reference/Element/img/clock-demo-400px.png"
+    src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png"
     class="image"
     alt="A round wall clock with a white dial and black numbers" />
 </div>
