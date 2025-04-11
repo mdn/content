@@ -33,7 +33,6 @@ class MyCustomElement extends HTMLElement {
     this.internals_ = this.attachInternals();
     this.internals_.ariaAtomic = "true";
   }
-  // …
 }
 ```
 
