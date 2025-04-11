@@ -9,7 +9,7 @@ browser-compat: css.properties.view-transition-class
 
 {{CSSRef}}
 
-The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with an identifying class (a {{cssxref("custom-ident")}}) and provides an additional method of styling the view transitions for those elements.
+The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the selected elements with an identifying class (a {{cssxref("custom-ident")}}), providing an additional method of styling the view transitions for those elements.
 
 > [!NOTE]
 > Each individual element still needs its own unique {{cssxref("view-transition-name")}}. In browsers that don't support `view-transition-class`, you would also need to have a custom `::view-transition-group` for each element. Support for determining the `view-transition-name` automatically is being discussed in the [CSS View Transitions Module Level 2](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name) spec.
@@ -22,6 +22,13 @@ view-transition-class: card;
 
 /* Keyword value */
 view-transition-class: none;
+
+/* Global values */
+view-transition-class: inherit;
+view-transition-class: initial;
+view-transition-class: revert;
+view-transition-class: revert-layer;
+view-transition-class: unset;
 ```
 
 ### Values
