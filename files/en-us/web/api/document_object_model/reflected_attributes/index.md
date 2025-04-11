@@ -6,10 +6,10 @@ page-type: guide
 
 {{DefaultAPISidebar("DOM")}}
 
-An {{Glossary("attribute")}} extends an {{Glossary("HTML")}}, {{Glossary("XML")}}, {{Glossary("SVG")}} or other {{Glossary("element")}}, changing its behavior or providing metadata.
+An {{glossary("attribute")}} extends an {{glossary("HTML")}}, {{glossary("XML")}}, {{glossary("SVG")}} or other {{glossary("element")}}, changing its behavior or providing metadata.
 
 Many attributes are _reflected_ in the corresponding [DOM](/en-US/docs/Web/API/Document_Object_Model) interface.
-What this means is that the value of the attribute can be read or written directly in JavaScript through a property on the corresponding interface, and vice versa.
+This means that the value of the attribute can be read or written directly in JavaScript through a property on the corresponding interface, and vice versa.
 The reflected properties offer a more natural programming approach than getting and setting attribute values using the {{domxref("Element.getAttribute()","getAttribute()")}} and {{domxref("Element.setAttribute()","setAttribute()")}} methods of the {{domxref("Element")}} interface.
 
 This guide provides an overview of reflected attributes and how they are used.
@@ -96,7 +96,7 @@ There are several potential issues with using element references in attributes:
 - The property may be assigned an element that does not have an `id`, and which therefore can't be referenced in the attribute (being able to assign elements without having to create an id is actually a benefit of using properties!)
 
 For these reasons, unlike for other reflected elements, there may not be a 1:1 correspondence between the reflected attributes and their associated property.
-The way that these issues are resolved is that:
+These issues are resolved as follows:
 
 - The attribute is only reflected when it is defined, and only for listed reference `id` values that match valid in-scope elements.
 - Setting the property clears ("undefines") the attribute, so that the property and attribute no longer reflect each other.
@@ -106,7 +106,7 @@ The way that these issues are resolved is that:
   Note however that the attribute still contains the reference, and if the element is moved back in-scope the property will again include the element (i.e., the relationship is restored).
 
 Note that the allowed scope of a reference is an element in the same scope or an ancestor scope of the element, but not a descendant scope.
-What this means that an element in a shadow root can reference an element from within its own shadow DOM or the parent DOM, but a DOM element can't set an element defined in a (descendent) shadow root.
+This means that an element in a shadow root can reference an element from within its own shadow DOM or the parent DOM, but a DOM element can't set an element defined in a (descendent) shadow root.
 
 ## Examples
 

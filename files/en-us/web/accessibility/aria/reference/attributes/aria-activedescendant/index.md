@@ -40,7 +40,7 @@ The value of `aria-activedescendant` refers to an owned element of the controlle
 ## Associated interfaces
 
 - {{domxref("Element.ariaActiveDescendantElement")}} and {{domxref("ElementInternals.ariaActiveDescendantElement")}}
-  - : The `ariaActiveDescendantElement` property is part of each element's interface. Its value is an {{domxref("Element")}}s corresponding to the ID value specified in the `aria-activedescendant` attribute (for cases where the ID values references a valid and in-scope element).
+  - : The `ariaActiveDescendantElement` property is part of each element's interface. Its value is an {{domxref("Element")}} corresponding to the ID value specified in the `aria-activedescendant` attribute (for cases where the ID values references a valid and in-scope element).
 
 ## Associated roles
 
