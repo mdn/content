@@ -23,7 +23,7 @@ This response uses the `226` status code, an `IM:` header that describes the dif
 
 ## Status
 
-```plain
+```http
 226 IM Used
 ```
 

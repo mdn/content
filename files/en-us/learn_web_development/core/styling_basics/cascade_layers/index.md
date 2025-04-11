@@ -543,7 +543,7 @@ Here's a summary of the properties that are used and why each declaration is app
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#task_2).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#task_2).
 
 ## Summary
 

@@ -1,5 +1,6 @@
 ---
-title: Accessibility
+title: Accessibility on the web
+short-title: Accessibility
 slug: Learn_web_development/Core/Accessibility
 page-type: learn-module
 sidebar: learnsidebar

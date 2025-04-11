@@ -17,6 +17,7 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/HTML/Reference/Elements
+    link: /Web/HTML/Reference/Elements
     title: HTML_Elements
     details: closed
     code: true
@@ -27,10 +28,13 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Attributes
+    link: /Web/HTML/Reference/Attributes
     title: Attributes
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTML/Reference/Global_attributes
+    link: /Web/HTML/Reference/Global_attributes
     title: Global_attributes
     details: closed
     code: true

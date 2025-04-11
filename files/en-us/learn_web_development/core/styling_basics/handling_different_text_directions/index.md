@@ -342,7 +342,7 @@ The logical properties and values are newer than their physical equivalents, and
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Writing modes and logical properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Writing modes and logical properties](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes).
 
 ## Summary
 
