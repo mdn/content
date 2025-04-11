@@ -14,12 +14,12 @@ The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attri
 
 ## Value
 
-An element that is the active descendant, or `null` if there is no active descendant.
+An subclass of {{domxref("HTMLElement")}} that represents the active descendant, or `null` if there is no active descendant.
 
 ## Description
 
 The property is a flexible alternative to using the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) attribute.
-Unlike `aria-activedescendant`, the element assigned to this property can be selected: it does not have to have an `id`.
+Unlike `aria-activedescendant`, the element assigned to this property does not have to have an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute.
 
 The property reflects the element's [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage) attribute when it is defined, but only for reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.

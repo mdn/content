@@ -16,7 +16,7 @@ The [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria
 
 ## Value
 
-An array of elements.
+An array of subclasses of {{domxref("HTMLElement")}}.
 
 ## Description
 
