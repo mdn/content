@@ -31,15 +31,9 @@ class MyCustomElement extends HTMLElement {
   constructor() {
     super();
     this.internals_ = this.attachInternals();
-    class CustomEl extends HTMLElement {
-      constructor() {
-        super();
-        this.internals_ = this.attachInternals();
-        this.internals_.ariaAtomic = "true";
-      }
-      // …
-    }
+    this.internals_.ariaAtomic = "true";
   }
+  // …
 }
 ```
 
