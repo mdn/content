@@ -14,7 +14,7 @@ The [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attri
 
 ## Value
 
-A subclass of {{domxref("HTMLElement")}} that is the active descendant, or `null` if there is no active descendant.
+An subclass of {{domxref("HTMLElement")}} that represents the active descendant, or `null` if there is no active descendant.
 
 ## Description
 

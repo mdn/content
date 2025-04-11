@@ -15,7 +15,7 @@ The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes
 
 ## Value
 
-An array of elements.
+An array of subclasses of {{domxref("HTMLElement")}}.
 The inner text of these elements can be joined with spaces to get the accessible description.
 
 ## Description

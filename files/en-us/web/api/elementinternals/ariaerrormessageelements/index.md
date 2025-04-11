@@ -14,7 +14,7 @@ The [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attribute
 
 ## Value
 
-An array of elements.
+An array of subclasses of {{domxref("HTMLElement")}}.
 The inner text of these elements can be joined with spaces to get the error message.
 
 ## Description

@@ -15,7 +15,7 @@ The [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/ar
 
 ## Value
 
-An array of elements that are controlled by this element.
+An array of subclasses of {{domxref("HTMLElement")}}, representing the elements that are controlled by this element.
 
 ## Description
 
