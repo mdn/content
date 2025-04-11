@@ -33,14 +33,7 @@ class CustomControl extends HTMLElement {
   constructor() {
     super();
     this.internals_ = this.attachInternals();
-    class CustomControl extends HTMLElement {
-      constructor() {
-        super();
-        this.internals_ = this.attachInternals();
-        this.internals_.ariaInvalid = "false";
-      }
-      // …
-    }
+    this.internals_.ariaInvalid = "true";
   }
   // …
 }
