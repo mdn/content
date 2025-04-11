@@ -40,7 +40,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - `false`, which indicates that the element must not be editable.
     - `plaintext-only`, which indicates the element's raw text is editable, but rich text formatting is disabled.
 
-- [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
+- [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
 
