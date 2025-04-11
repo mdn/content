@@ -24,6 +24,7 @@ sidebar: mdnsidebar
 >   - experimental
 >   - non-standard
 > browser-compat: svg.elements.NameOfTheElement
+> sidebar: svgref
 > ---
 > ```
 >
@@ -46,6 +47,10 @@ sidebar: mdnsidebar
 >     Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+> - **sidebar**
+>   - : This is always `svgref`.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+>
 > ---
 >
 > **Top-of-page macros**
@@ -65,7 +70,6 @@ sidebar: mdnsidebar
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
 > - `\{{SVGRef}}` — this generates the left-hand-side reference sidebar for the element.
 >   The content of the sidebar depends on the tags in the page metadata.
-> - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
@@ -73,7 +77,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{SVGRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph — start by naming the element and saying what it does.
 This should ideally be one or two short sentences.

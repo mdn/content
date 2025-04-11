@@ -24,6 +24,7 @@ sidebar: mdnsidebar
 >   - experimental
 >   - non-standard
 > browser-compat: css.selectors.NameOfTheSelector
+> sidebar: cssref
 > ---
 > ```
 >
@@ -45,6 +46,10 @@ sidebar: mdnsidebar
 >     Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+> - **sidebar**
+>   - : This is always `cssref`.
+>     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+>
 > ---
 >
 > **Top-of-page macros**
@@ -58,9 +63,6 @@ sidebar: mdnsidebar
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
->
-> - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
@@ -76,7 +78,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The summary paragraph — start by naming the selector and saying what it does. This should ideally be one or two short sentences.
 

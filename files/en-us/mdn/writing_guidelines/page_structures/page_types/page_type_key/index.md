@@ -12,10 +12,11 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 
 ```md
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
+title: 100 Continue
+slug: Web/HTTP/Reference/Status/100
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+sidebar: httpsidebar
 ---
 ```
 
