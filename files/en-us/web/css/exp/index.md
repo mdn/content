@@ -116,22 +116,22 @@ The `exp()` function can be useful for strategies like CSS modular scale, which 
 
 ```css
 h1 {
-  font-size: calc(1rem * exp(1.25)); // 3.4903429574618414rem
+  font-size: calc(1rem * exp(1.25)); /* 3.4903429574618414rem */
 }
 h2 {
-  font-size: calc(1rem * exp(1)); // 2.718281828459045rem
+  font-size: calc(1rem * exp(1)); /* 2.718281828459045rem */
 }
 h3 {
-  font-size: calc(1rem * exp(0.75)); // 2.117000016612675rem
+  font-size: calc(1rem * exp(0.75)); /* 2.117000016612675rem */
 }
 h4 {
-  font-size: calc(1rem * exp(0.5)); // 1.6487212707001282rem
+  font-size: calc(1rem * exp(0.5)); /* 1.6487212707001282rem */
 }
 h5 {
-  font-size: calc(1rem * exp(0.25)); // 1.2840254166877414rem
+  font-size: calc(1rem * exp(0.25)); /* 1.2840254166877414rem */
 }
 h6 {
-  font-size: calc(1rem * exp(0)); // 1rem
+  font-size: calc(1rem * exp(0)); /* 1rem */
 }
 ```
 

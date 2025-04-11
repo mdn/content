@@ -65,7 +65,9 @@ In the example below, we are matching only the `<p>` element which is inside an 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
 
 ```css
-article > p
+article > p {
+  /* … */
+}
 ```
 
 In this next example, we have an ordered list ({{htmlelement("ol")}}) nested inside an unordered list ({{htmlelement("ul")}}). The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
@@ -98,7 +100,9 @@ ul > li {
 The **next-sibling combinator** (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that come right after the element matched by the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
-p + img
+p + img {
+  /* … */
+}
 ```
 
 A common use case is to do something with a paragraph that follows a heading, as in the example below. In that example, we are looking for any paragraph which shares a parent element with an `<h1>`, and immediately follows that `<h1>`.
@@ -141,7 +145,9 @@ h1 + p {
 If you want to select siblings of an element even if they are not directly adjacent, then you can use the **subsequent-sibling combinator** (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
-p ~ img
+p ~ img {
+  /* … */
+}
 ```
 
 In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
