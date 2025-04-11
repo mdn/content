@@ -88,6 +88,9 @@ Try clicking on the text label to see what happens.
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
+> [!NOTE]
+> Before moving on, why not jump in and get your hands dirty with a challenge from Scrimba at this early stage? Check out [Render a welcome message](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>. If you don't know how to write this code, don't worry at all; you could try doing some web searches to find some answers, or view the solution at the end of the scrim.
+
 ## So what can it really do?
 
 The core client-side JavaScript language consists of some common programming features that allow you to do things like:

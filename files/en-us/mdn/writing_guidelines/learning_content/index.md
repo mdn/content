@@ -48,9 +48,9 @@ There are a few differences, however:
 - **Stable learning outcomes**: The learning outcomes at the top of each tutorial provide a summary of what each tutorial teaches, and together provide a structured curriculum for front-end web development. It is vital that the learning outcomes and what is taught both remain stable and in sync, otherwise the content cannot be trusted as a basis for formal learning (for example educational courses of certifications). As such, changes to the learning outcomes should happen slowly, and not without good reason. If you try to add content that is not covered in the associated learning outcomes (or vice versa), your pull request will be closed. [Make a suggestion](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) first.
 
 > [!NOTE]
-> We maintain a [changelog](/en-US/docs/Learn_web_development/Changelog) that details any significant changes made to the learning outcomes, so educations are able to maintain any resources based on MDN Learn.
+> We maintain a [changelog](/en-US/docs/Learn_web_development/Changelog) that details any significant changes made to the learning outcomes, so educators are able to maintain any resources based on MDN Learn.
 
-## External links and embeds
+## Partner links and embeds
 
 As outlined in our [External links](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links) guidelines, MDN generally does not allow external links (or embeds) that appear to endorse commercial products of services or point to paywalled content. This is to mitigate the risk of MDN's content losing trust and being made less useful due to being flooded by spam links.
 
@@ -60,7 +60,7 @@ The purpose of these partner links are as follows:
 
 - Provide access to supporting content that builds on what is taught in our pages.
 - Provide access to multimedia learning experiences (videos, slideshows, other interactive content) that MDN content teams don't have the resources to produce. We are all about the text on MDN, but people often want different learning approaches.
-- Earn revenue through affiliate links to paid content that we can invest in making MDN even better.
+- Earn revenue via affiliate links to paid content options, which we can invest to make MDN even better.
 
 However, we:
 
