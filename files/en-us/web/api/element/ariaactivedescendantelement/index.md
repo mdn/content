@@ -29,14 +29,14 @@ For more information about reflected element references and scope see [Reflected
 
 The [Reflected element reference examples](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#setting_and_getting_reflected_element_references) in the _Attribute reflection_ guide are also relevant.
 
-### Get the active descendent
+### Get the active descendant
 
 This example shows how `ariaActiveDescendantElement` can be used to get the current active descendant.
 
 #### HTML
 
 The HTML defines a listbox for selecting different kinds of streets, consisting of a {{htmlelement("div")}} element with the [`listbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) and nested `<div>` items for each of the options.
-The active descendent is initially set to the element with `id` of `avenue` using `aria-activedescendant`.
+The active descendant is initially set to the element with `id` of `avenue` using `aria-activedescendant`.
 
 ```html
 <div id="streetType" role="listbox" aria-activedescendant="avenue">
@@ -88,7 +88,7 @@ if ("ariaActiveDescendantElement" in Element.prototype) {
 The log below shows the output of the above code.
 The value returned from the `aria-activedescendant` property should be `"avenue"`, the associated element should be a `HTMLDivElement` element, and the text in that element should be `Avenue`.
 
-{{EmbedLiveSample("Get the active descendent","100%","190px")}}
+{{EmbedLiveSample("Get the active descendant","100%","190px")}}
 
 ## Specifications
 

@@ -87,26 +87,35 @@ Some attributes take element _references_ as values: either an element `id` valu
 These attributes refer to other elements which are related to the attribute, or contain the information needed by the attribute.
 For example, the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute lists the elements controlled by a button, while [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) lists elements that contain the accessible name for an element in their inner text.
 
-The attribute's element references are reflected in the property as an array of the corresponding {{domxref("HTMLElement")}}-derived object instances, with some caveats!
+The attribute's element references are reflected in the property as an array of the corresponding {{domxref("HTMLElement")}}-derived object instances, with some caveats.
 
-There are several potential issues with using element references in attributes:
+### Element reference scope
 
-- Elements referenced in the attribute may not exist, for example because the developer omitted or mistyped an id, or because a specified `id` reference is not in scope for the element.
-- Elements referenced in the attribute may initially be in scope, but may later be removed.
-- The property may be assigned an element that does not have an `id`, and which therefore can't be referenced in the attribute (being able to assign elements without having to create an id is actually a benefit of using properties!)
+Element references can only match to elements that are "in scope" with the referencing element.
 
-For these reasons, unlike for other reflected elements, there may not be a 1:1 correspondence between the reflected attributes and their associated property.
-These issues are resolved as follows:
+An HTML document is represented to JavaScript as a hierarchical tree of objects referred to as the [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model).
+Elements within the model may contain and encapsulate "child" DOMs, referred to as [Shadow DOMs](/en-US/docs/Web/API/Web_components#shadow_dom_2) within a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot), which can in turn nest their own Shadow DOMs.
 
-- The attribute is only reflected when it is defined, and only for listed reference `id` values that match valid in-scope elements.
-- Setting the property clears ("undefines") the attribute, so that the property and attribute no longer reflect each other.
-  If you read the attribute it will return `""`.
-- Setting the attribute (with {{domxref("Element.setAttribute()")}}) causes the property to reflect the valid and in-scope references.
+The scope of a referencing element is the DOM in which it is defined, and any parent DOMs in which that DOM is nested. Shadow DOMS that are nested children of the DOM in which the referencing element is defined are out of scope.
+
+What this means is that an element in the main DOM can only reference elements in the main DOM (since elements in a Shadow DOM are necessarily children of its DOM, and hence out of scope).
+However an element in a shadow root can nest elements in that same shadow root and also in the main DOM (and any DOM's that are parents), since they are in scope.
+
+<!-- diagrams? -->
+
+Note that a referenced element may initially be "in scope" and then moved out of scope into a nested shadow root.
+In this case the referenced element may still be listed in the attribute
+
+### Relationship between attribute and property
+
+The relationship between attributes containing element references and their corresponding property is as follows:
+
+- Only attribute `id` values that match [in-scope elements](#element_reference_scope) are reflected in the property.
+- Setting the property clears the attribute and the property and attribute no longer reflect each other.
+  If the attributes is read, with {{domxref("Element.getAttribute()")}}, the value is `""`.
+- Setting the attribute, with {{domxref("Element.setAttribute()")}}, also sets the property and restores the "reflection relationship".
 - Setting the attribute with a value reference that is subsequently moved out of scope will result in removal of the corresponding element from the property array.
   Note however that the attribute still contains the reference, and if the element is moved back in-scope the property will again include the element (i.e., the relationship is restored).
-
-Note that the allowed scope of a reference is an element in the same scope or an ancestor scope of the element, but not a descendant scope.
-This means that an element in a shadow root can reference an element from within its own shadow DOM or the parent DOM, but a DOM element can't set an element defined in a (descendent) shadow root.
 
 ## Examples
 
@@ -155,7 +164,9 @@ const inputElement = document.querySelector("input");
 
 // Log placeholder attribute and property
 log(
-  `(Original) attr: "${inputElement.getAttribute("placeholder")}", prop: "${inputElement.placeholder}"`,
+  `(Original) attr: "${inputElement.getAttribute("placeholder")}", prop: "${
+    inputElement.placeholder
+  }"`
 );
 ```
 
@@ -170,7 +181,9 @@ const setPropertyButton = document.querySelector("#prop");
 setAttributeButton.addEventListener("click", () => {
   inputElement.setAttribute("placeholder", "Set from attribute");
   log(
-    `(Set attribute) attr: "${inputElement.getAttribute("placeholder")}", prop: "${inputElement.placeholder}"`,
+    `(Set attribute) attr: "${inputElement.getAttribute(
+      "placeholder"
+    )}", prop: "${inputElement.placeholder}"`
   );
 });
 
@@ -178,7 +191,9 @@ setAttributeButton.addEventListener("click", () => {
 setPropertyButton.addEventListener("click", () => {
   inputElement.placeholder = "Set from property";
   log(
-    `(Set property) attr: "${inputElement.getAttribute("placeholder")}", prop: "${inputElement.placeholder}"`,
+    `(Set property) attr: "${inputElement.getAttribute(
+      "placeholder"
+    )}", prop: "${inputElement.placeholder}"`
   );
 });
 ```
@@ -295,7 +310,7 @@ The log below shows the output of the above code:
 
 ### Reflected element reference DOM scope
 
-This example demonstrates that an element can't reference a descendent scope, but that a referenced that is moved out of scope will be reflected again when it is moved back into scope.
+This example demonstrates that an element can't reference a descendant scope, but that a referenced that is moved out of scope will be reflected again when it is moved back into scope.
 
 While the example uses the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute and corresponding property {{domxref("Element.ariaLabelledByElements")}}, other attributes containing element references should behave similarly.
 
@@ -303,7 +318,7 @@ While the example uses the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARI
 
 The HTML defines two {{htmlelement("span")}} elements in the DOM (`label_1` and `label_2`), and a third (`label_3`) in a shadow root.
 These are all referenced in the `aria-labelledby` attribute of an {{htmlelement("input")}} in the DOM.
-Note that the shadow root is a descendent scope of the input element, so `label_3` cannot be reflected by the property that reflects the attribute.
+Note that the shadow root is a descendant scope of the input element, so `label_3` cannot be reflected by the property that reflects the attribute.
 There is also a toggle button for moving the `label_1` element in and out of the shadow root, and a reset button to clear the log.
 
 ```html

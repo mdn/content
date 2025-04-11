@@ -44,6 +44,6 @@ The examples in the following documents are relevant:
 
 ## See also
 
-- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto) attribute
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute
 - {{domxref("Element.ariaOwnsElements")}}
 - [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Attribute reflection_ guide.
