@@ -3,9 +3,8 @@ title: Structuring content with HTML
 short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}
 

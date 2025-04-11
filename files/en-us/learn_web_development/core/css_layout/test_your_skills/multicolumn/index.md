@@ -3,9 +3,8 @@ title: "Test your skills: Multicol"
 short-title: Multicol
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [CSS multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), including the {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} and {{CSSxRef("column-rule")}} properties and values. You will be working through three small tasks that use different elements of the material you have just covered.
 

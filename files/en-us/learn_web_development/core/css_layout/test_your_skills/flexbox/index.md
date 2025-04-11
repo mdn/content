@@ -3,9 +3,8 @@ title: "Test your skills: Flexbox"
 short-title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how [flexbox and flex items](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) behave. Below are four common design patterns that you might use flexbox to create. Your task is to build them.
 

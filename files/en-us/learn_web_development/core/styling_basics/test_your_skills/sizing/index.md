@@ -3,9 +3,8 @@ title: "Test your skills: Sizing"
 short-title: Sizing
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
 

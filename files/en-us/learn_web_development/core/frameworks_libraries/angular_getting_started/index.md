@@ -2,9 +2,8 @@
 title: Getting started with Angular
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 

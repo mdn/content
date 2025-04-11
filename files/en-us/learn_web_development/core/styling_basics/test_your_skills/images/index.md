@@ -3,9 +3,8 @@ title: "Test your skills: Images and form elements"
 short-title: Images and forms
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 

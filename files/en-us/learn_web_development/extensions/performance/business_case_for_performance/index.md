@@ -3,9 +3,10 @@ title: The business case for web performance
 short-title: Performance business case
 slug: Learn_web_development/Extensions/Performance/business_case_for_performance
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}
 
 We've discussed the importance of web performance. You've learned what you need to do to optimize for web performance. But how do you convince your clients and/or management to prioritize and invest in performance? In this section, we discuss creating a clear business case to convince decision-makers to make the investment.
 

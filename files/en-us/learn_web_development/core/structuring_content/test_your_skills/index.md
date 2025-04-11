@@ -3,9 +3,8 @@ title: "Test your skills: HTML"
 short-title: Test your skills
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 This page lists HTML tests you can try so you can verify you've understood the content in this module.
 

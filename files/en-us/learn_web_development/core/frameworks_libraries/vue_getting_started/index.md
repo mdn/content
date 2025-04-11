@@ -2,9 +2,8 @@
 title: Getting started with Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 

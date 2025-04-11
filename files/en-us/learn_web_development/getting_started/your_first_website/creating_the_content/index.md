@@ -3,9 +3,8 @@ title: "HTML: Creating the content"
 short-title: Creating the content
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 

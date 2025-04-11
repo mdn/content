@@ -3,9 +3,8 @@ title: "HTML: A good basis for accessibility"
 short-title: Accessible HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 

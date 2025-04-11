@@ -2,9 +2,10 @@
 title: Advanced form styling
 slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
 
 In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the more problematic bits.
 

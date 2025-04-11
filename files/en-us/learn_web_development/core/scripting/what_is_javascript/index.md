@@ -2,9 +2,8 @@
 title: What is JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 

@@ -3,9 +3,8 @@ title: "Test your skills: Backgrounds and borders"
 short-title: Backgrounds and borders
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders).
 

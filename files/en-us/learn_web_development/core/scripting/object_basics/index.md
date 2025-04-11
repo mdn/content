@@ -3,9 +3,8 @@ title: JavaScript object basics
 short-title: Objects
 slug: Learn_web_development/Core/Scripting/Object_basics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
 

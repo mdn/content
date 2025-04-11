@@ -3,9 +3,8 @@ title: "Test your skills: Floats"
 short-title: Floats
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [floats in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) using the {{CSSxRef("float")}} and {{CSSxRef("clear")}} properties and values as well as other methods for clearing floats. You will be working through three small tasks that use different elements of the material you have just covered.
 

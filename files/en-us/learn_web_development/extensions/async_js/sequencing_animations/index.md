@@ -3,9 +3,8 @@ title: "Challenge: Sequencing animations"
 short-title: "Challenge: Animation sequence"
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 

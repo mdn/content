@@ -3,9 +3,8 @@ title: CSS and JavaScript accessibility best practices
 short-title: Accessible CSS and JS
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 

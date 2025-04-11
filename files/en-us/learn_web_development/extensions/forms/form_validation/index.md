@@ -2,9 +2,10 @@
 title: Client-side form validation
 slug: Learn_web_development/Extensions/Forms/Form_validation
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 It is important to ensure all required form controls are filled out, in the correct format, before submitting user entered form data to the server. This **client-side form validation** helps ensure data entered matches the requirements set forth in the various form controls.
 
