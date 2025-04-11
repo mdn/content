@@ -331,7 +331,7 @@ The following list describes some of the common situations where we need to be a
 
   - Example 1:
     - **Correct**: "In this example, you will learn how to use a comma."
-    - **Incorrect**: "In this example you learn how to use a comma."
+    - **Incorrect**: "In this example you will learn how to use a comma."
   - Example 2:
     - **Correct**: "If you are looking for guidelines, refer to our writing style guide."
     - **Incorrect**: "If you are looking for guidelines refer to our writing style guide."
