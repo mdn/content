@@ -212,7 +212,9 @@ For example, in the Firefox dev tools, you get this kind of output at the bottom
 If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:
 
 ```css
-form > #date
+form > #date {
+  /* … */
+}
 ```
 
 (The `date` form input isn't a direct child of the `<form>`; you'd be better off using a general descendant selector instead of a child selector).

@@ -269,6 +269,7 @@ body {
   80%, 100% {
     offset-distance: 100%;
   }
+}
 ```
 
 ```html hidden

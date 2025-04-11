@@ -131,7 +131,7 @@ h2 {
   width: 100%;
   .wrapper {
     flex: 1 1;
-    margin: 0
+    margin: 0;
     padding: 0;
   }
   h3 {

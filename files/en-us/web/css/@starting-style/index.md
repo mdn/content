@@ -17,7 +17,7 @@ The `@starting-style` at rule can be used in two ways:
 
    ```css
    @starting-style {
-     rulesets
+     /* rulesets */
    }
    ```
 
@@ -28,7 +28,7 @@ The `@starting-style` at rule can be used in two ways:
      /* ... */
 
      @starting-style {
-       declarations
+       /* declarations */
      }
    }
    ```
