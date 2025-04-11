@@ -158,7 +158,7 @@ The one thing to note is the line where we set the "due back" date to `bookinsta
 input#due_back.form-control(type='date', name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 ```
 
-The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Element/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
+The date value has to be set in the format `YYYY-MM-DD` because this is expected by [`<input>` elements with `type="date"`](/en-US/docs/Web/HTML/Reference/Elements/input/date), however the date is not stored in this format so we have to convert it before setting the value in the control.
 The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the next section.
 
 ## Model—virtual `due_back_yyyy_mm_dd()` method

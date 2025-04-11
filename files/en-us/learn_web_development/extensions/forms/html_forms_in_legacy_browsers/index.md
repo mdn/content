@@ -24,7 +24,7 @@ Let's see some examples related to HTML forms.
 
 #### HTML input types
 
-All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
+All HTML input types are useable in all browsers, even ancient ones, because the way they degrade is highly predictable. If a browser does not know the value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute of an {{HTMLElement("input")}} element, it will fall back as if the value were `text`.
 
 ```html
 <label for="myColor">
@@ -62,7 +62,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 
 There are two ways to define buttons within HTML forms:
 
-- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Element/input#type) set to the values `button`, `submit`, `reset` or `image`
+- The {{HTMLElement("input")}} element with its attribute [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) set to the values `button`, `submit`, `reset` or `image`
 - The {{HTMLElement("button")}} element
 
 ##### {{HTMLElement("input")}}

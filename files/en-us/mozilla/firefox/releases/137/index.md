@@ -25,13 +25,6 @@ No notable changes
 - The {{jsxref("Math.sumPrecise()")}} static method is now supported. This takes an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of numbers and returns their sum. It is more precise than summing the numbers in a loop because it avoids floating point precision loss in intermediate results. ([Firefox bug 1943120](https://bugzil.la/1943120)).
 - The {{jsxref("Atomics.pause()")}} static method is now supported. This method provides a hint to the CPU that the current thread is in a spinlock while waiting on access to a shared resource. The system can then reduce the resources allocated to the core (such as power) or thread, without yielding the current thread. ([Firefox bug 1937805](https://bugzil.la/1937805)).
 
-### SVG
-
-- The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
-  The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
-  An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
-  ([Firefox bug 1945330](https://bugzil.la/1945330)).
-
 ### APIs
 
 - The {{domxref("SVGPathElement/getPathData", "getPathData()")}}, {{domxref("SVGPathElement/setPathData", "setPathData()")}}, and {{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} methods of the {{domxref("SVGPathElement")}} interface are now supported. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1945312](https://bugzil.la/1945312)).

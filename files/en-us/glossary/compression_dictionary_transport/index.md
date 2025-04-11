@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 **Compression Dictionary Transport** is a way of using a shared compression dictionary, rather than the standard static dictionary in {{glossary("Brotli compression")}} or {{glossary("Zstandard compression")}}, to dramatically reduce the transport size of HTTP responses.
 
-For example, when downloading `app.v2.js`, if the client already has `app.v1.js` then they can reference text from that by using it as a dictionary and effectivelly only download the delta and a small amount of references to the `v1` file.
+For example, when downloading `app.v2.js`, if the client already has `app.v1.js` then they can reference text from that by using it as a dictionary and effectively only download the delta and a small amount of references to the `v1` file.
 
 See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
@@ -18,7 +18,7 @@ See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Com
 - Related glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Attributes/rel/compression-dictionary)- {{HTTPHeader("Accept-encoding")}}
+- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)- {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}
 - {{HTTPHeader("Dictionary-ID")}}

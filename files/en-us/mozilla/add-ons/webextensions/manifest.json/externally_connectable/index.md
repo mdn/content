@@ -24,7 +24,7 @@ browser-compat: webextensions.manifest.externally_connectable
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre>
+        <pre class="brush: json">
 "externally_connectable": {
   "ids": [
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",

@@ -10,7 +10,7 @@ browser-compat: api.HTMLScriptElement.referrerPolicy
 
 The **`referrerPolicy`** property of the
 {{domxref("HTMLScriptElement")}} interface reflects the HTML
-[`referrerpolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) of the {{HTMLElement("script")}} element, which defines how the referrer is set when fetching the script and any scripts it imports.
+[`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/script#referrerpolicy) of the {{HTMLElement("script")}} element, which defines how the referrer is set when fetching the script and any scripts it imports.
 
 ## Value
 

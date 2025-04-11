@@ -14,17 +14,17 @@ Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9
 
 - The `value` attribute of {{ HTMLElement("li") }} now can be negative. Previously negative values were converted to 0.
 - You can now [specify the start and stop time of media](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) in the URI of the media when using {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
-- {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements [now respect the value of the `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) when invoking the spell checker.
+- {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements [now respect the value of the `lang` attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language) when invoking the spell checker.
 - Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with `type="file"` and `accept="image/*"`.
 - Windows Vista style PNG ICO images are now supported.
-- Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) when CORS is granted.
-- The value of the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute may now be as large as 65,534, up from 8190.
+- Drawing images that use the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) when CORS is granted.
+- The value of the [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute may now be as large as 65,534, up from 8190.
 
 ### CSS
 
 - The {{ cssxref("font-stretch") }} property is now supported.
 - The {{ cssxref("columns") }} property is now supported, with the `-moz` prefix. This is a shorthand for the following properties: {{ cssxref("column-width") }} and {{ cssxref("column-count") }}.
-- When a stylesheet included using the {{ HTMLElement("link") }} element has been fully loaded and parsed (but not yet applied to the document), a [`load` event](/en-US/docs/Web/HTML/Element/link#stylesheet_load_events) is now fired. Also, if an error occurs processing a style sheet, an `error` event is fired.
+- When a stylesheet included using the {{ HTMLElement("link") }} element has been fully loaded and parsed (but not yet applied to the document), a [`load` event](/en-US/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) is now fired. Also, if an error occurs processing a style sheet, an `error` event is fired.
 - You can now specify overflow settings for both the left and right edges of content using a new two-value syntax for {{ cssxref("text-overflow") }}.
 
 ### JavaScript

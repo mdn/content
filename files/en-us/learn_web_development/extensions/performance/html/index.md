@@ -56,11 +56,11 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 
 The so-called "mobile first" technique can ensure that the default layout is for small-screen devices, so mobiles can just download images suitable for their screens, and don't need to take the performance hit of downloading larger desktop images. However, since this is controlled using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) in your CSS, it can only positively affect performance of images loaded in CSS.
 
-In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Responsive_images) guides.
+In the sections below, we'll summarize how to implement responsive replaced elements. You can find a lot more detail about these implementations in the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) and [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) guides.
 
 ### Providing different image resolutions via srcset
 
-To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
+To provide different resolution versions of the same image depending on the device's resolution and viewport size, you can use the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) and [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attributes.
 
 This example provides different size images for different screen widths:
 
@@ -261,14 +261,14 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 
 See the following articles for detailed information on using `rel="preload"`:
 
-- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > [!NOTE]
 > You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
 > [!NOTE]
-> There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> There are other [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
 
 ## See also
 

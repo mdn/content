@@ -30,7 +30,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 - Plain old {{htmlelement("select")}}, {{htmlelement("option")}}, and {{htmlelement("optgroup")}} elements. These work just the same as in "classic" selects, except that they have additional permitted content types.
 - A {{htmlelement("button")}} element included as the first child inside the `<select>` element, which wasn't previously allowed in "classic" selects. When this is included, it replaces the default "button" rendering of the closed `<select>` element. This is commonly known as the **select button** (as it is the button you need to press to open the drop-down picker).
   > [!NOTE]
-  > The select button is [inert](/en-US/docs/Web/HTML/Global_attributes/inert) by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes — for example, the child items won't be focusable or clickable.
+  > The select button is [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) by default so that if interactive children (for example, links or buttons) are included inside it, it will still be treated like a single button for interaction purposes — for example, the child items won't be focusable or clickable.
 - The {{htmlelement("selectedcontent")}} element can optionally be included inside the `<select>` element's first child `<button>` element in order to display the currently selected value inside the _closed_ `<select>` element.
   This contains a clone of the currently-selected `<option>` element's content (created using {{domxref("Node.cloneNode", "cloneNode()")}} under the hood).
 - The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the picker. This includes all elements inside the `<select>` element, except the first child `<button>`.
@@ -392,7 +392,7 @@ After the last two sections, the final updated state of our `<select>` is render
 
 The above sections have covered all the new functionality available in customizable selects, and shown how it interacts with both classic single-line selects, and related modern features such as popovers and anchor positioning. There are some other `<select>` element features not mentioned above; this section talks about how they currently work alongside customizable selects:
 
-- [`<select multiple>`](/en-US/docs/Web/HTML/Attributes/multiple)
+- [`<select multiple>`](/en-US/docs/Web/HTML/Reference/Attributes/multiple)
   - : There isn't currently any support specified for the `multiple` attribute on customizable `<select>` elements, but this will be worked on in the future.
 - {{htmlelement("optgroup")}}
   - : The default styling of `<optgroup>` elements is the same as in classic `<select>` elements — bolded and indented less than the contained options. You need to make sure to style the `<optgroup>` elements so they fit into the overall design, and bear in mind that they will behave just as containers are expected to behave in conventional HTML. In customizable `<select>` elements, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.

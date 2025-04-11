@@ -45,7 +45,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer indicating the number of times the receiver sent a Slice Loss Indication (SLI) frame to the sender to tell it that one or more consecutive (in terms of scan order) video macroblocks have been lost or corrupted. Available only for video streams.
 - `trackIdentifier`
   - : A string that contains the {{domxref("MediaStreamTrack.id", "id")}} value of the `MediaStreamTrack` associated with the inbound stream.
-- {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}} {{deprecated_inline}}
+- `trackId` {{deprecated_inline}}
   - : A string which identifies the statistics object representing the receiving track; this object is one of two types: {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or {{domxref("RTCReceiverVideoTrackAttachmentStats")}}. This ID is stable across multiple calls to `getStats()`.
 
 ### Statistics measured at the receiver of an RTP stream

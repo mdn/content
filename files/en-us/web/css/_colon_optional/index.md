@@ -7,7 +7,7 @@ browser-compat: css.selectors.optional
 
 {{CSSRef}}
 
-The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute set on it.
+The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
 {{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
 
@@ -61,7 +61,7 @@ This pseudo-class is useful for styling fields that are not required to submit a
 
 ## Accessibility
 
-If a [form](/en-US/docs/Web/HTML/Element/form) contains optional {{htmlelement("input")}}s, required inputs should be indicated using the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful form submission.
+If a [form](/en-US/docs/Web/HTML/Reference/Elements/form) contains optional {{htmlelement("input")}}s, required inputs should be indicated using the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful form submission.
 
 Required inputs should also be indicated visually, using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 

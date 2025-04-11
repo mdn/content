@@ -23,7 +23,7 @@ Highlights:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Element/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
+- [`<link rel="prefetch">`](/en-US/docs/Glossary/Prefetch) now obeys the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute ([Firefox bug 1214819](https://bugzil.la/1214819)).
 
 ### CSS
 

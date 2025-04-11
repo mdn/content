@@ -48,12 +48,9 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
 ### Return value
 
-The returned `timeoutID` is a positive integer value which
-identifies the timer created by the call to `setTimeout()`. This value can be
-passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to
-cancel the timeout.
+The `setTimeout()` method returns a positive integer (typically within the range of 1 to 2,147,483,647) that uniquely identifies the timer created by the call. This identifier, often referred to as a "timeout ID", can be passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to cancel the timer.
 
-It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to `setTimeout()` or `setInterval()` on the same window while the timer is still active. However, different objects use separate pools of IDs.
+Within the same global environment (e.g., a specific window or worker) the timeout ID is guaranteed not to be reused for any new timer as long as the original timer remains active. However, separate global environments maintain their own independent pools of timer IDs.
 
 ## Description
 
