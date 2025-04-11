@@ -43,6 +43,7 @@ sidebar:
     children:
       - /Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
       - /Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+      - /Mozilla/Add-ons/WebExtensions/Make_network_requests
       - /Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
       - /Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
       - /Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
