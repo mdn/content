@@ -47,6 +47,10 @@ Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-
 
 ### APIs
 
+- The {{domxref("RTCCertificate.getFingerprints()","getFingerprints()")}} method of the {{domxref("RTCCertificate")}} interface is now supported.
+  The fingerprints are a {{glossary("hash function","hash")}} of the certificate created using the various algorithms supported by the browser.
+  These can be shared with the remote peer out of band, during the signalling phase, and used by the remote peer to confirm the identity of this peer during DTLS handshake.
+  ([Firefox bug 1525241](https://bugzil.la/1525241)).
 - The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
   This includes support for the {{domxref("NavigatorLogin")}} interface, the {{domxref("navigator.login")}} property, and the {{httpheader("Set-Login")}} HTTP response header.
   ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
