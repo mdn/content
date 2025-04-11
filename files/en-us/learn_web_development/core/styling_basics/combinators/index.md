@@ -243,7 +243,7 @@ It is often better to create a simple class and apply that to the element in que
 
 ## Test your skills!
 
-You've reached the end of our set of lessons about selectors, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks).
+You've reached the end of our set of lessons about selectors, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors).
 
 ## Summary
 
