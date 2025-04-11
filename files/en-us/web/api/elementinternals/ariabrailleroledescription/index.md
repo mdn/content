@@ -21,60 +21,32 @@ The [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference
 
 ## Examples
 
-### Getting and setting ariaBrailleRoleDescription
-
-This example shows how you can get and set the `ariaBrailleRoleDescription` property.
-
-#### HTML
-
-First we define an `<article>` element that would be use as a slide in a slideshow.
-We set the `aria-roledescription` attribute to "slide", and its braille contraction in `aria-brailleroledescription` to "sld".
-
-```html
-<article
-  id="article"
-  aria-roledescription="slide"
-  aria-brailleroledescription="sld"
-  aria-labelledby="slide1heading">
-  <h1 id="slide1heading">Welcome to my talk</h1>
-</article>
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 70px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-#### JavaScript
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-To get the element's role description we use the `ariaBrailleRoleDescription` property.
-The code below first gets and then logs the value.
-It then sets the braille role description to "sd" and logs the value again (for illustration only — in production code you would not set this value).
+Assuming we have a custom slide element:
 
 ```js
-const article = document.getElementById("article");
-log(article.ariaBrailleRoleDescription);
-article.ariaBrailleRoleDescription = "sd";
-log(article.ariaBrailleRoleDescription);
+class CustomSlide extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this._internals.role = "slide";
+  }
+
+  // ...
+}
+
+customElements.define("custom-slide", CustomSlide);
 ```
 
-#### Result
+We can retrieve and set the value of the custom element's `aria-brailleroledescription` value:
+
+```js
+const customEl = document.querySelector("custom-slide");
+log(customEl.ariaBrailleRoleDescription);
+customEl.ariaBrailleRoleDescription = "sd";
+log(customEl.ariaBrailleRoleDescription);
+```
+
+### Result
 
 {{EmbedLiveSample("Getting and setting ariaBrailleRoleDescription")}}
 
@@ -85,3 +57,7 @@ log(article.ariaBrailleRoleDescription);
 ## Browser compatibility
 
 {{Compat}}
+
+### See also
+
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)

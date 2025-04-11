@@ -20,17 +20,30 @@ The [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attribute
 
 ## Examples
 
-### Getting and setting ariaBrailleLabel
-
 This example shows how to get and set the `ariaBrailleLabel` property.
 
-#### HTML
+Assuming we have defined a custom element called `<star-rating>`, in which the element internal's braille label is set to be the value of the element's `aria-braillelabel` attribute:
 
-First we define a button with label text "3 out of 5 stars" and an `aria-braillelabel` attribute with a value of `"\*\*\*"`.
-This allows a braille display to show "btn \*\*\*" in braille rather than the more verbose "btn gra 3 out of 5 stars".
+```js
+class StarRating extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this._internals.ariaRole = "slider";
+    this._internals.ariaBrailleLabel = this.ariaBrailleLabel;
+  }
+
+  // ...
+}
+
+customElements.define("star-rating", StarRating);
+```
+
+And we include the custom element with label text "3 out of 5 stars" and an `aria-braillelabel` attribute with a value of `"3"`.
+This allows a braille display to show "slider 3" in braille rather than the more verbose "slider gra 3 out of 5 stars".
 
 ```html
-<button id="button" aria-braillelabel="\*\*\*">3 out of 5 stars</button>
+<star-rating id="rate" aria-braillelabel="3">3 out of 5 stars</star-rating>
 ```
 
 ```html hidden
@@ -46,29 +59,24 @@ This allows a braille display to show "btn \*\*\*" in braille rather than the mo
 }
 ```
 
-#### JavaScript
-
 ```js hidden
-const logElementInternals = document.querySelector("#log");
+const logInternals = document.querySelector("#log");
 function log(text) {
-  logElementInternals.innerText = `${logElementInternals.innerText}${text}\n`;
-  logElementInternals.scrollTop = logElementInternals.scrollHeight;
+  logInternals.innerText = `${logInternals.innerText}${text}\n`;
+  logInternals.scrollTop = logInternals.scrollHeight;
 }
 ```
 
-The code then uses the button's `ariaBrailleLabel` property to first get and log the braille label.
-It then sets the braille label to "3\*" and logs the value again.
+The code uses the `ariaBrailleLabel` property to get and set the braille label.
 
 ```js
-const button = document.getElementById("button");
-log(button.ariaBrailleLabel);
-button.ariaBrailleLabel = "3*";
-log(button.ariaBrailleLabel);
+const el = document.querySelector("star-rating");
+log(el._internals.ariaBrailleLabel);
+el._internals.ariaBrailleLabel += "*";
+log(el._internals.ariaBrailleLabel);
 ```
 
-#### Result
-
-{{EmbedLiveSample("Getting and setting ariaBrailleLabel")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -77,3 +85,8 @@ log(button.ariaBrailleLabel);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ElementInternals.ariaBrailleRoleDescription")}}
+- {{domxref("ElementInternals.ariaBrailleRole")}}
