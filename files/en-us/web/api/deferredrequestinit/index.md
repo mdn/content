@@ -60,6 +60,10 @@ fetchLater(
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
