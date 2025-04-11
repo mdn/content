@@ -42,10 +42,7 @@ The `user-input` property is currently not on a standards track.
 
 ## Formal syntax
 
-```plain
--moz-user-input =
-  auto | none
-```
+{{CSSSyntaxRaw(`-moz-user-input = auto | none`)}}
 
 ## Examples
 

@@ -45,10 +45,7 @@ The default is `none`, which disables focussing on the element and removes focus
 
 ## Formal syntax
 
-```plain
--moz-user-focus =
-  ignore | normal | none
-```
+{{CSSSyntaxRaw(`-moz-user-focus = ignore | normal | none`)}}
 
 ## Examples
 

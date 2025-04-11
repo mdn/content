@@ -50,10 +50,7 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ## Formal syntax
 
-```plain
--webkit-mask-repeat-x =
-  repeat | no-repeat | space | round
-```
+{{CSSSyntaxRaw(`-webkit-mask-repeat-x = repeat | no-repeat | space | round`)}}
 
 ## Examples
 

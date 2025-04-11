@@ -50,10 +50,7 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 
 ## Formal syntax
 
-```plain
--webkit-mask-repeat-y =
-  repeat | no-repeat | space | round
-```
+{{CSSSyntaxRaw(`-webkit-mask-repeat-y = repeat | no-repeat | space | round`)}}
 
 ## Examples
 

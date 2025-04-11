@@ -60,10 +60,7 @@ The standard-track equivalent of this property is {{cssxref("border-block-start"
 
 ## Formal syntax
 
-```plain
--webkit-border-before =
-  <'border-width'> || <'border-style'> || <color>
-```
+{{CSSSyntaxRaw(`-webkit-border-before = <'border-width'> || <'border-style'> || <color>`)}}
 
 ## Examples
 

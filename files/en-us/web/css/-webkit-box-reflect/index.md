@@ -49,10 +49,7 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Formal syntax
 
-```plain
--webkit-box-reflect =
-  [ above | below | right | left ]? <length>? <image>?
-```
+{{CSSSyntaxRaw(`-webkit-box-reflect = [ above | below | right | left ]? <length>? <image>?`)}}
 
 ## Specifications
 

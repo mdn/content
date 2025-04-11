@@ -53,10 +53,7 @@ The `box-lines` property is specified as one of the keyword values listed below.
 
 ## Formal syntax
 
-```plain
-box-lines =
-  single | multiple
-```
+{{CSSSyntaxRaw(`box-lines = single | multiple`)}}
 
 ## Examples
 
