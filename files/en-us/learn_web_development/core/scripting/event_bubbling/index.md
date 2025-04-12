@@ -2,9 +2,8 @@
 title: Event bubbling
 slug: Learn_web_development/Core/Scripting/Event_bubbling
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
@@ -417,7 +416,7 @@ The `target` property is commonly used in event delegation, as in our [Event del
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events).
+You've reached the end of this article, but can you remember the most important information? To verify you've retained this information before you move on — see [Test your skills: Events](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events).
 
 ## Summary
 

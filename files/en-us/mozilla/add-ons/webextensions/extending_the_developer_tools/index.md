@@ -23,7 +23,7 @@ This manifest key implicitly sets the `"devtools"` permission, which triggers [a
 
 The devtools page is loaded when the browser devtools are opened, and unloaded when it is closed. Note that because the devtools window is associated with a single tab, it's quite possible for more than one devtools window - hence more than one devtools page - to exist at the same time.
 
-The devtools page doesn't have any visible DOM, but can include JavaScript sources using [`<script>`](/en-US/docs/Web/HTML/Element/script) tags. The sources must be bundled with the extension itself. The sources get access to:
+The devtools page doesn't have any visible DOM, but can include JavaScript sources using [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) tags. The sources must be bundled with the extension itself. The sources get access to:
 
 - The normal DOM APIs accessible through the global [`window`](/en-US/docs/Web/API/Window) object
 - The same [WebExtension APIs as in Content Scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)

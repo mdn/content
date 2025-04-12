@@ -145,6 +145,11 @@ _In addition to the methods below, `Node` inherits methods from its parent, {{DO
   - : Replaces one child `Node` of the current one with the second one given
     in parameter.
 
+## Events
+
+- {{domxref("Node/selectstart_event", "selectstart")}}
+  - : Fires when the user starts a new selection in this node.
+
 ## Examples
 
 ### Remove all children nested within a node

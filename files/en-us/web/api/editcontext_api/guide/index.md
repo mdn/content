@@ -26,7 +26,7 @@ To use the live demo, open [Edit Context API: HTML editor demo](https://mdn.gith
 
 ## Creating the editor UI
 
-The first step is to create the UI for the editor. The editor is a {{HTMLElement("div")}} element with the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute set to `false` to disable spell checking:
+The first step is to create the UI for the editor. The editor is a {{HTMLElement("div")}} element with the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) attribute set to `false` to disable spell checking:
 
 ```html
 <div id="html-editor" spellcheck="false"></div>
@@ -53,7 +53,7 @@ To style the editor element, the following CSS code is used. The code makes the 
 
 ## Making the editor editable
 
-To make an element editable on the web, most of the time, you use an {{HTMLElement("input")}} element, a {{HTMLElement("textarea")}} element, or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+To make an element editable on the web, most of the time, you use an {{HTMLElement("input")}} element, a {{HTMLElement("textarea")}} element, or the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute.
 
 However, with the EditContext API, you can make other types of elements editable without using an attribute. To see the list of elements that can be used with the EditContext API, see [Possible elements](/en-US/docs/Web/API/HTMLElement/editContext#possible_elements) on the HTMLElement `editContext` property page.
 

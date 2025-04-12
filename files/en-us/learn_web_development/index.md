@@ -2,9 +2,8 @@
 title: Learn web development
 slug: Learn_web_development
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 ## The essential skillset for new front-end developers
 

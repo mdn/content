@@ -3,9 +3,8 @@ title: Introduction to the server side
 short-title: Introduction
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 

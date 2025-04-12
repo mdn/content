@@ -2,9 +2,8 @@
 title: Arrays
 slug: Learn_web_development/Core/Scripting/Arrays
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
@@ -676,7 +675,7 @@ textarea.onkeyup = () => {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays).
 
 ## Conclusion
 

@@ -2,9 +2,8 @@
 title: Web standards
 slug: Learn_web_development/Getting_started/Web_standards
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
 

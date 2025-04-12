@@ -2,9 +2,8 @@
 title: "Test your skills: HTML images"
 slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you understand [images and how to embed them in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 

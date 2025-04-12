@@ -56,7 +56,7 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
 </div>
 ```
 
-We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to find an option list whose ID matches; in this case, the data set is named `"volumes"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
+We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to find an option list whose ID matches; in this case, the data set is named `"volumes"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
 
 ##### The waveform picker
 
@@ -233,7 +233,7 @@ The `createNoteTable()` function builds the array `noteFreq` to contain an array
 ```js
 function createNoteTable() {
   const noteFreq = [];
-  for (let i=0; i< 9; i++) {
+  for (let i = 0; i < 9; i++) {
     noteFreq[i] = [];
   }
 
@@ -498,7 +498,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
+After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
 
 ### Making music
 

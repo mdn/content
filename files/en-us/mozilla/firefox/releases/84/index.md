@@ -64,7 +64,7 @@ _No changes._
 - The new Fission-compatible API has been enabled by default now. To revert to the former API the `marionette.actors.enabled` preference has to be set to `false` ([Firefox bug 1669169](https://bugzil.la/1669169)).
 - Fixed `WebDriver:SwitchToWindow` to always switch back to the top-level browsing context ([Firefox bug 1305822](https://bugzil.la/1305822)).
 - Improved browsing context checks for `WebDriver:SwitchToParentFrame` ([Firefox bug 1671622](https://bugzil.la/1671622)).
-- Fixed a hang for `WebDriver:Back` encountered when the currently-selected [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) gets unloaded ([Firefox bug 1672758](https://bugzil.la/1672758)).
+- Fixed a hang for `WebDriver:Back` encountered when the currently-selected [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) gets unloaded ([Firefox bug 1672758](https://bugzil.la/1672758)).
 
 #### Known bugs
 

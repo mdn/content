@@ -485,7 +485,7 @@ setupHelp();
 
 This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input), as shown:
 
 ```js
 function showHelp(help) {

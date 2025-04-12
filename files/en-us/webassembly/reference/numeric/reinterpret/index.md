@@ -33,7 +33,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 ;; the value `10000000_00000000_00000000_00000000` in binary
 ;; maps to `-0` as a floating point and to `-2147483648` as an integer
 

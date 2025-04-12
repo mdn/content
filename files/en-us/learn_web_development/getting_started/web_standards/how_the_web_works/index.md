@@ -2,9 +2,8 @@
 title: How the web works
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 

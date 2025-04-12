@@ -2,9 +2,8 @@
 title: "Test your skills: Styling basics"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) article.
 

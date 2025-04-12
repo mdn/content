@@ -18,7 +18,7 @@ The HTTP **`DPR`** {{Glossary("request header")}} provides [device client hints]
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
 The hint is useful when selecting image sources that best correspond to a screen's pixel density.
-This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute to allow user agents to select a preferred image.
+This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute to allow user agents to select a preferred image.
 
 If a server uses the `DPR` hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header.
 The client must use the value in `Content-DPR` for layout if it differs from the value in the request's `DPR` header.

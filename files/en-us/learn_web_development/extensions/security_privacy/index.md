@@ -2,9 +2,8 @@
 title: Security and privacy
 slug: Learn_web_development/Extensions/Security_privacy
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 > [!NOTE]
 > As you'll see below, this module is currently only a curriculum outline/syllabus, with some links provided to starter guides. We are intending to convert this into a full course in the future, as time allows.

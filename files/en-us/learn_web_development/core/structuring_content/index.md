@@ -1,10 +1,10 @@
 ---
 title: Structuring content with HTML
+short-title: HTML
 slug: Learn_web_development/Core/Structuring_content
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}
 
@@ -55,6 +55,8 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : HTML forms and buttons are powerful tools for interacting with users — most commonly they are used for collecting data from users or allowing them to control a user interface. In this article we provide an introduction to the basics of forms and buttons.
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
+- [Test your skills: HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills)
+  - : This page lists HTML tests you can try so you can verify if you've understood the content in this module.
 
 ## Additional tutorials
 

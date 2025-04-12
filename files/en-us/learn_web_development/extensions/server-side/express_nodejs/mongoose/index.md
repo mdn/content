@@ -3,9 +3,10 @@ title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 short-title: "3: Using databases with Mongoose"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 This article briefly introduces databases, and how to use them with Node/Express apps. It then goes on to show how we can use [Mongoose](https://mongoosejs.com/) to provide database access for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) website. It explains how object schema and models are declared, the main field types, and basic validation. It also briefly shows a few of the main ways in which you can access model data.
 
@@ -130,7 +131,7 @@ When `myFunction()` is run, code execution is paused at `methodThatReturnsPromis
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   await someObject.methodThatReturnsPromise();
   // ...
@@ -143,7 +144,7 @@ try {
   myFunction();
   // ...
 } catch (e) {
- // error handling code
+  // error handling code
 }
 ```
 
@@ -161,11 +162,11 @@ the function then continues to the next `await`, and waits until the promise ret
 You would call the `myFunction()` in a `try...catch` block to catch any errors.
 
 ```js
-async function myFunction {
+async function myFunction() {
   // ...
   const [resultFunction1, resultFunction2] = await Promise.all([
-     functionThatReturnsPromise1(),
-     functionThatReturnsPromise2()
+    functionThatReturnsPromise1(),
+    functionThatReturnsPromise2(),
   ]);
   // ...
   await anotherFunctionThatReturnsPromise(resultFunction1);

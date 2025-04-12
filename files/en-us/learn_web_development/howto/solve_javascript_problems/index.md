@@ -3,9 +3,8 @@ title: Solve common JavaScript problems
 short-title: Common JavaScript problems
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
 

@@ -2,9 +2,8 @@
 title: Debugging CSS
 slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
 

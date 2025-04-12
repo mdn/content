@@ -2,9 +2,8 @@
 title: Getting started with Svelte
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -70,7 +69,7 @@ Nevertheless, Svelte is particularly appropriate to tackle the following situati
 
 The Svelte team launched [SvelteKit](https://kit.svelte.dev/), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev/) and [documentation](https://kit.svelte.dev/docs/introduction).
 
-Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology/).
+Svelte is also available for mobile development via [Svelte Native](https://svelte.nativescript.org/).
 
 ## How does Svelte work?
 
@@ -284,7 +283,7 @@ If you have experience working with CSS, the following snippet should make sense
 </style>
 ```
 
-We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
+We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element. What will happen to other components with `<h1>` elements in them?
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 

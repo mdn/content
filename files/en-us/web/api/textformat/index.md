@@ -11,7 +11,7 @@ browser-compat: api.TextFormat
 
 The **`TextFormat`** interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an {{domxref("EditContext")}} instance. The text formatting is requested by the {{glossary("Input Method Editor")}} (IME) window that the user is composing text with.
 
-When using one of the default editable regions of the web, such as a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:
+When using one of the default editable regions of the web, such as a [`<textarea>`](/en-US/docs/Web/HTML/Reference/Elements/textarea) element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:
 
 - When text is being composed with the keyboard, the typed characters have a thin wavy underline:
 
