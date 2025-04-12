@@ -263,7 +263,7 @@ Safari & Chrome contain the string `like Gecko`, for instance.
 | Seamonkey                       | `Seamonkey/xyz` |                                |
 | Chrome                          | `Chrome/xyz`    | `Chromium/xyz` or `Edg.*/xyz`  |
 | Chromium                        | `Chromium/xyz`  |                                |
-| Safari                          | `Safari/xyz`\*  | `Chrome/xyz` or `Chromium/xyz` |
+| Safari                          | `Safari/xyz` \* | `Chrome/xyz` or `Chromium/xyz` |
 | Opera 15+ (Blink-based engine)  | `OPR/xyz`       |                                |
 | Opera 12- (Presto-based engine) | `Opera/xyz`     |                                |
 
