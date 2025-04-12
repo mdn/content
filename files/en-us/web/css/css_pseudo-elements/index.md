@@ -13,13 +13,99 @@ Pseudo-elements are prefixed with a double colon (`::`). You add pseudo-elements
 
 Pseudo-elements enable targeting entities not included in HTML and sections of content that cannot be targeted otherwise without adding extra markup. Consider the placeholder of an {{HTMLelement("input")}} element. This is an abstract element and not a distinct node in the document tree. You can select this placeholder by using the {{CSSXref("::placeholder")}} pseudo-element. As another example, the {{CSSXref("::selection")}} pseudo-element matches the content currently highlighted by a user, allowing you to style what is matched as the user interacts with the content and changes the selection. Similarly, the {{CSSXref("::first-line")}} pseudo-element targets the first line of an element, updating automatically if the character count of the first line changes, without having to query the element's line length.
 
-## Highlight pseudo-elements inheritance
+## Description
 
-Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs somewhat from regular element inheritance.
+### Highlight pseudo-elements inheritance
 
-Styles applied to highlight pseudo-elements inherit from their parent elements. This means that if you apply a style to a parent element and then to the highlight pseudo-element of its child, the latter will inherit from both its parent element and the highlight pseudo-element styles of its parent.
+Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from regular element inheritance.
 
-For detailed information and examples of how this inheritance model works in practice, refer to the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) documentation.
+When you apply styles to highlight pseudo-elements, they inherit from both:
+
+1. Their parent elements (following normal inheritance)
+2. The highlight pseudo-elements of their parent elements (following highlight inheritance)
+
+This means that if you style both a parent element's highlight pseudo-element and a child element's highlight pseudo-element, the child's highlighted text will combine properties from both sources.
+
+#### Custom Properties Behavior
+
+CSS custom properties (variables) in highlight pseudo-elements inherit from their originating element (the element they're being applied to), not through the highlight inheritance chain. For example:
+
+```css
+:root {
+  --selection-color: lightgreen;
+}
+
+::selection {
+  color: var(--selection-color);
+}
+
+.blue {
+  --selection-color: blue;
+}
+```
+
+#### Universal Selector Considerations
+
+When using the universal selector with highlight pseudo-elements, it prevents highlight inheritance. For example:
+
+```css
+/* This prevents highlight inheritance */
+*::selection {
+  color: lightgreen;
+}
+
+/* Prefer this to allow inheritance */
+:root::selection {
+  color: lightgreen;
+}
+```
+
+#### Example
+
+This example demonstrates how highlight pseudo-elements inherit styles from their parent elements.
+
+```html
+<div class="parent">
+  Parent text
+  <div class="child">Child text</div>
+</div>
+```
+
+```css
+/* Style for the parent element */
+.parent {
+  color: blue;
+}
+
+/* Style for the parent's selected text */
+.parent::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* Style for the child element */
+.child {
+  color: green;
+}
+
+/* Style for the child's selected text */
+.child::selection {
+  background-color: orange;
+}
+```
+
+Try selecting the text in both the parent and child elements. Notice that:
+
+1. When you select the parent text, it uses the yellow background and red text color defined in `.parent::selection`
+2. When you select the child text, it uses:
+   - The orange background from `.child::selection`
+   - The red text color inherited from the parent's `::selection` pseudo-element
+   - This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element
+
+{{EmbedLiveSample("Example", "100%", "150")}}
+
+> [!NOTE]
+> The exact appearance of selected text may vary slightly between browsers. For detailed information about browser support and implementation details, see the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) documentation.
 
 ## Reference
 
@@ -128,3 +214,4 @@ The specification also defines the `::details-content` and `::search-text` pseud
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)
+- [Inheritance changes for CSS selection styling](https://developer.chrome.com/blog/selection-styling) - Detailed explanation of the highlight pseudo-elements inheritance model changes in Chrome 134
