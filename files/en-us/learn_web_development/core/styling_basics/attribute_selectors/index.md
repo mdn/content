@@ -37,9 +37,9 @@ As you know from your study of HTML, elements can have attributes that give furt
 
 These selectors enable the selection of an element based on the presence of an attribute alone (for example `href`), or on various different matches against the value of the attribute.
 
-| Selector             | Example                         | Description                                                                                                                            |
-| -------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `[attr]`           | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
+| Selector         | Example                         | Description                                                                                                                            |
+| ---------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`         | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
 | `[attr=value]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
 | `[attr~=value]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
 | `[attr\|=value]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
