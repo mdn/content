@@ -77,19 +77,19 @@ div.box {
   background: linear-gradient(orange, red);
 }
 div.box-1 {
-  transform: rotate(calc(1turn * exp(-1))); // 0.3678794411714423turn
+  transform: rotate(calc(1turn * exp(-1))); /* 0.3678794411714423turn */
 }
 div.box-2 {
-  transform: rotate(calc(1turn * exp(-0.75))); // 0.4723665527410147turn
+  transform: rotate(calc(1turn * exp(-0.75))); /* 0.4723665527410147turn */
 }
 div.box-3 {
-  transform: rotate(calc(1turn * exp(-0.5))); // 0.6065306597126334turn
+  transform: rotate(calc(1turn * exp(-0.5))); /* 0.6065306597126334turn */
 }
 div.box-4 {
-  transform: rotate(calc(1turn * exp(-0.25))); // 0.7788007830714049turn
+  transform: rotate(calc(1turn * exp(-0.25))); /* 0.7788007830714049turn */
 }
 div.box-5 {
-  transform: rotate(calc(1turn * exp(0))); // 1turn
+  transform: rotate(calc(1turn * exp(0))); /* 1turn */
 }
 ```
 
