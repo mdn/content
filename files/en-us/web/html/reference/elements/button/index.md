@@ -58,7 +58,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 
-- `command` {{experimental_inline}}
+- `command`
 
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
 
