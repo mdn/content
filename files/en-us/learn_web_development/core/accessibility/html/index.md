@@ -551,7 +551,7 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
+You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) to verify that you've retained this information before you move on.
 
 ## Summary
 
