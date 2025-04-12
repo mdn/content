@@ -474,6 +474,21 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/elementtiming">elementtiming</a></code>
+      </td>
+      <td>
+        {{htmlelement("img")}},
+        {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
+        poster images of {{htmlelement("video")}} elements,
+        elements which have a {{cssxref("background-image")}},
+        and elements containing text nodes, such as a {{htmlelement("p")}}
+      </td>
+      <td>
+        Indicates that an element is flagged for tracking by {{domxref("PerformanceObserver")}} objects using the <code>"element"</code> type. For more details, see the {{domxref("PerformanceElementTiming")}} interface.
+      </td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
