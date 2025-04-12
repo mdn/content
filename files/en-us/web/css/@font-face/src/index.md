@@ -162,6 +162,8 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 
 {{CSSSyntax}}
 
+{{CSSSyntaxRaw(`<font-src>`)}}
+
 ## Examples
 
 ### Specifying font resources using url() and local()
