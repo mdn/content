@@ -2,8 +2,7 @@
 title: Network Information API
 slug: Web/API/Network_Information_API
 page-type: web-api-overview
-browser-compat:
-  - api.NetworkInformation
+browser-compat: api.NetworkInformation
 spec-urls: https://wicg.github.io/netinfo/
 ---
 
