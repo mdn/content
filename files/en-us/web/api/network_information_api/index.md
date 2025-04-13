@@ -4,7 +4,6 @@ slug: Web/API/Network_Information_API
 page-type: web-api-overview
 browser-compat:
   - api.NetworkInformation
-  - api.Navigator.connection
 spec-urls: https://wicg.github.io/netinfo/
 ---
 
