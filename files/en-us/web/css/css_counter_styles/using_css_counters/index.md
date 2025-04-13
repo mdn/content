@@ -81,7 +81,7 @@ h3 {
 }
 
 h3::before {
- content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
+  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
 }
 ```
 
