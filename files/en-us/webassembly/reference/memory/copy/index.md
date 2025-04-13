@@ -3,7 +3,7 @@ title: "copy: Wasm text instruction"
 short-title: copy
 slug: WebAssembly/Reference/Memory/Copy
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat: webassembly.bulk-memory-operations
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 sidebar: webassemblysidebar
 ---

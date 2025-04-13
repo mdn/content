@@ -3,7 +3,7 @@ title: "fill: Wasm text instruction"
 short-title: fill
 slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
-browser-compat: webassembly.multiMemory
+browser-compat: webassembly.bulk-memory-operations
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 sidebar: webassemblysidebar
 ---
