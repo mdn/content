@@ -3,7 +3,9 @@ title: "fill: Wasm text instruction"
 short-title: fill
 slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
-browser-compat: webassembly.bulk-memory-operations
+browser-compat:
+  - webassembly.bulk-memory-operations
+  - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
 sidebar: webassemblysidebar
 ---
@@ -59,8 +61,7 @@ memory.fill (memory $memoryName) ;; Fill memory with name "$memoryName"
 
 ## Browser compatibility
 
-> [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `fill` can be used with a specified memory.
