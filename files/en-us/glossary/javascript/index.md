@@ -16,7 +16,7 @@ JavaScript is primarily used in the browser, enabling developers to manipulate w
 
 Conceived as a server-side language by Brendan Eich (then employed by the Netscape Corporation), JavaScript soon came to Netscape Navigator 2.0 in September 1995. JavaScript enjoyed immediate success and {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduced JavaScript support under the name JScript in August 1996.
 
-In November 1996, Netscape began working with Ecma International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (fourteenth, ES2023) edition is available as of June 2023.
+In November 1996, Netscape began working with Ecma International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262, whose latest (fifteenth, ES2024) edition is available as of June 2024.
 
 Recently, JavaScript's popularity has expanded even further through the successful [Node.js](https://nodejs.org/en) platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using [Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.
 
