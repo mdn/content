@@ -84,7 +84,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
-      - : `object`. Details about the request. See the [details](#details_2) section for more information.
+      - : `object`. Details about the request. See the [details](#details) section for more information.
     - `asyncCallback` {{optional_inline}}
 
       - : A function to call, at most once, to asynchronously modify the request object.
