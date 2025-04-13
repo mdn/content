@@ -239,6 +239,7 @@ fencedframe
 filecheck
 FILLMODE_FILL_WINDOW
 finishedtransferringdata
+firefoxsidebar
 fiuv
 font.mathfont-family
 fontconfig
@@ -370,6 +371,7 @@ largeop
 latexmlc
 Latf
 layers.offmainthreadcomposition
+learnsidebar
 leavepictureinpicture
 legacycaller
 lepc

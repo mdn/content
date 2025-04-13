@@ -36,7 +36,7 @@ A constant indicating the position of the {{DOMxRef("Node")}}. The possible valu
 - `NODE_BEFORE_AND_AFTER` (`2`)
   - : Node starts before and ends after the Range
 - `NODE_INSIDE` (`3`)
-  - : Node starts after and ends before the Range, i.e. the Node is completely selected by
+  - : Node starts after and ends before the Range, i.e., the Node is completely selected by
     the Range.
 
 ## Examples

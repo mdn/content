@@ -58,7 +58,7 @@ You should notice that:
 - The text inside scripts is scaled down.
 
 > [!NOTE]
-> The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow authors to provide arbitrary MathML subtrees as scripts, not just text.
+> The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Reference/Elements/sub) and [`<sup>`](/en-US/docs/Web/HTML/Reference/Elements/sup). They allow authors to provide arbitrary MathML subtrees as scripts, not just text.
 
 ## Underscripts and overscripts
 

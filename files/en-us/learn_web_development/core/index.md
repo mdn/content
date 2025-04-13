@@ -2,9 +2,8 @@
 title: Core learning modules
 slug: Learn_web_development/Core
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Our **Core modules** cover topics that we feel every web developer should have a good grounding in. This includes all the information they need to design and build a basic, accessible web app that follows modern best practices, and manage and deploy their code using appropriate tools.
 

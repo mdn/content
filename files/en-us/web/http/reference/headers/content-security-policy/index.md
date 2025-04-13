@@ -126,7 +126,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 
 ### Navigation directives
 
@@ -150,7 +150,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
     The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
     > [!WARNING]
-    > This directive is intended to replace [`report-uri`](#report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > This directive is intended to replace [`report-uri`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
     > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
     >
     > ```http
@@ -178,7 +178,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
   - : Provides the browser with a URL where CSP violation reports should be sent.
-    This has been superseded by the [`report-to`](#report-to) directive.
+    This has been superseded by the [`report-to`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) directive.
 
 ## Fetch directive syntax
 
@@ -225,7 +225,7 @@ For example:
 
 When the browser receives the document, it hashes the contents of any `<script>` and `<style>` elements, compares the result with any hashes in the CSP directive, and loads the resource only if there is a match.
 
-If the element loads an external resource (for example, using the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute), then the element must also have the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute set.
+If the element loads an external resource (for example, using the [`src`](/en-US/docs/Web/HTML/Reference/Elements/script#src) attribute), then the element must also have the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute set.
 
 If a directive contains a hash and `unsafe-inline`, then the browser ignores `unsafe-inline`.
 
@@ -341,7 +341,7 @@ If the hash value matches the hash of an inline event handler attribute value or
 
 ### 'inline-speculation-rules'
 
-By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. The `'inline-speculation-rules'` allows the browser to load inline `<script>` elements that have a [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules).
+By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. The `'inline-speculation-rules'` allows the browser to load inline `<script>` elements that have a [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of [`speculationrules`](/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules).
 
 See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 

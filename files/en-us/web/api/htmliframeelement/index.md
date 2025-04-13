@@ -38,10 +38,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
-  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/iframe#height) HTML attribute, indicating the height of the frame.
+  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Reference/Elements/iframe#height) HTML attribute, indicating the height of the frame.
 - {{domxref("HTMLIFrameElement.loading")}}
   - : A string providing a hint to the browser that the iframe should be loaded immediately (`eager`) or on an as-needed basis (`lazy`).
-    This reflects the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) HTML attribute.
+    This reflects the [`loading`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) HTML attribute.
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
   - : A string that contains the URI of a long description of the frame.
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
@@ -49,25 +49,25 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
-  - : A string that reflects the [`name`](/en-US/docs/Web/HTML/Element/iframe#name) HTML attribute, containing a name by which to refer to the frame.
+  - : A string that reflects the [`name`](/en-US/docs/Web/HTML/Reference/Elements/iframe#name) HTML attribute, containing a name by which to refer to the frame.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
-  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
+  - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
   - : A string that indicates whether the browser should provide scrollbars for the frame.
 - {{domxref("HTMLIFrameElement.src")}}
-  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src) HTML attribute, containing the address of the content to be embedded. Note that programmatically removing an `<iframe>`'s src attribute (e.g., via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 - {{domxref("HTMLIFrameElement.srcdoc")}}
   - : A string that represents the content to display in the frame.
 - {{domxref("HTMLIFrameElement.width")}}
-  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/iframe#width) HTML attribute, indicating the width of the frame.
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Reference/Elements/iframe#width) HTML attribute, indicating the width of the frame.
 
 ## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLIframeElement.getSVGDocument()")}}
+- {{domxref("HTMLIFrameElement.getSVGDocument()")}}
   - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications

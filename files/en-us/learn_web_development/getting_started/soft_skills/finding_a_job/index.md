@@ -2,9 +2,8 @@
 title: Finding a job
 slug: Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 

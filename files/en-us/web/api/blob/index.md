@@ -67,7 +67,7 @@ The following example creates a JavaScript [typed array](/en-US/docs/Web/JavaScr
 </p>
 ```
 
-The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute (assuming the data contains an image, of course).
+The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) attribute (assuming the data contains an image, of course).
 
 ```js live-sample___url-from-array
 function showViewLiveResultButton() {

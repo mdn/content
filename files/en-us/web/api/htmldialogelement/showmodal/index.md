@@ -11,7 +11,7 @@ browser-compat: api.HTMLDialogElement.showModal
 The **`showModal()`** method of the
 {{domxref("HTMLDialogElement")}} interface displays the dialog as a modal, over the top
 of any other dialogs that might be present. It displays in the {{glossary("top layer")}}, along with a
-{{cssxref('::backdrop')}} pseudo-element. Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute is specified). Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
+{{cssxref('::backdrop')}} pseudo-element. Elements inside the same document as the dialog, except the dialog and its descendants, become _inert_ (as if the [`inert`](/en-US/docs/Web/HTML/Reference/Global_attributes/inert) attribute is specified). Only the containing document becomes blocked; if the dialog is rendered inside an iframe, the rest of the page remains interactive.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the dialog is already open and non-modal (i.e. if the dialog has already been opened with {{domxref("HTMLDialogElement.show()")}}).
+  - : Thrown if the dialog is already open and non-modal (i.e., if the dialog has already been opened with {{domxref("HTMLDialogElement.show()")}}).
 
 ## Examples
 

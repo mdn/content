@@ -16,7 +16,7 @@ This status code is only sent if the server expects the request to take signific
 
 ## Status
 
-```plain
+```http
 102 Processing
 ```
 
@@ -26,7 +26,7 @@ This status code is only sent if the server expects the request to take signific
 
 ## Browser compatibility
 
-This feature is deprecated and browsers will ignore this response header.
+This feature is deprecated and browsers will ignore this response status code.
 
 ## See also
 

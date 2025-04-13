@@ -70,7 +70,7 @@ First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the H
 Content-Security-Policy: default-src 'self';
 ```
 
-or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element:
+or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Reference/Elements/meta) element:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
@@ -105,23 +105,23 @@ observer.observe();
 Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
 Note that the `body` is an instance of the `CSPViolationReportBody` and the `type` is `"csp-violation"`.
 
-```js
+```json
 {
-    "type": "csp-violation",
-    "url": "http://127.0.0.1:9999/",
-    "body": {
-        "sourceFile": null,
-        "lineNumber": null,
-        "columnNumber": null,
-        "documentURL": "http://127.0.0.1:9999/",
-        "referrer": "",
-        "blockedURL": "https://apis.google.com/js/platform.js",
-        "effectiveDirective": "script-src-elem",
-        "originalPolicy": "default-src 'self';",
-        "sample": "",
-        "disposition": "enforce",
-        "statusCode": 200
-    }
+  "type": "csp-violation",
+  "url": "http://127.0.0.1:9999/",
+  "body": {
+    "sourceFile": null,
+    "lineNumber": null,
+    "columnNumber": null,
+    "documentURL": "http://127.0.0.1:9999/",
+    "referrer": "",
+    "blockedURL": "https://apis.google.com/js/platform.js",
+    "effectiveDirective": "script-src-elem",
+    "originalPolicy": "default-src 'self';",
+    "sample": "",
+    "disposition": "enforce",
+    "statusCode": 200
+  }
 }
 ```
 

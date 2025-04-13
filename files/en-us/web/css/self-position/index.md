@@ -2,7 +2,7 @@
 title: <self-position>
 slug: Web/CSS/self-position
 page-type: css-type
-browser-compat: css.types.self-position
+spec-urls: https://drafts.csswg.org/css-align/#typedef-self-position
 ---
 
 {{CSSRef}}
@@ -40,10 +40,6 @@ The following keyword values are represented by the `<self-position>` grammar te
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

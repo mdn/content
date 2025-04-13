@@ -3,9 +3,8 @@ title: "JavaScript: Adding interactivity"
 short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -452,7 +451,7 @@ Next, let's change the page heading to a personalized welcome message when the u
    }
    ```
 
-   This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data item is already stored in in localStorage. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
+   This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data item is already stored in `localStorage`. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
 
 5. Add a `click` event handler function to the button, as shown below. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 

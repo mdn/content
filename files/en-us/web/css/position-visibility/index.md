@@ -143,7 +143,7 @@ We specify two {{htmlelement("div")}} elements; an anchor element with a class o
 </form>
 ```
 
-The HTML also includes filler text to make the content taller than the viewport so scrolling is required. We've also included a {{htmlelement("fieldset")}} with a group of [radio inputs](/en-US/docs/Web/HTML/Element/input/radio) with different `position-visibility` values. The markup for these is not shown for the sake of brevity.
+The HTML also includes filler text to make the content taller than the viewport so scrolling is required. We've also included a {{htmlelement("fieldset")}} with a group of [radio inputs](/en-US/docs/Web/HTML/Reference/Elements/input/radio) with different `position-visibility` values. The markup for these is not shown for the sake of brevity.
 
 #### CSS
 

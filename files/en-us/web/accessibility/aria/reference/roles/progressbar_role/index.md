@@ -12,7 +12,7 @@ The `progressbar` role defines an element that displays the progress status for 
 
 The `progressbar` range widget indicates that a request has been received and the application is making progress toward completing the requested action.
 
-Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range):
+Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range):
 
 - If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
 - If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) is missing or not a number, it defaults to `100`.
@@ -58,7 +58,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the progressbar element providing an accessible name. An accessible name is required.
 
-It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `progressbar` role. User agents provide a stylize widget for the {{HTMLElement("progress")}} element based on the current `value` as it relates to the `0`, the minimum value, and the `max` value. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
+It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `progressbar` role. User agents provide a stylize widget for the {{HTMLElement("progress")}} element based on the current `value` as it relates to the `0`, the minimum value, and the `max` value. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
 ## Examples
 
@@ -89,7 +89,7 @@ If the progress bar is describing the loading progress of a particular region of
 
 ### Prefer HTML
 
-It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `progressbar` role.
+It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements rather than the `progressbar` role.
 
 ## Specifications
 

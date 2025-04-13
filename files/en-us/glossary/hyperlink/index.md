@@ -12,5 +12,5 @@ Hyperlinks connect webpages or data items to one another. In HTML, {{HTMLElement
 
 - [Hyperlink](https://en.wikipedia.org/wiki/Hyperlink) on Wikipedia
 - [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- [`<a>` on MDN](/en-US/docs/Web/HTML/Element/a)
-- [`<link>` on MDN](/en-US/docs/Web/HTML/Element/link)
+- [`<a>` on MDN](/en-US/docs/Web/HTML/Reference/Elements/a)
+- [`<link>` on MDN](/en-US/docs/Web/HTML/Reference/Elements/link)

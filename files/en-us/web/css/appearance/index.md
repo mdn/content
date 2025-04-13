@@ -250,7 +250,7 @@ select.none {
 
 ### Basic custom select usage
 
-To opt-in to custom select functionality, the `<select>` element and its picker both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
+To opt-in to custom select functionality, the `<select>` element and its picker both need to have an `appearance` value of `base-select` set on them:
 
 ```css
 select,

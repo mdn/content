@@ -27,5 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLSelectElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("select")}}
-- HTML [`form`](/en-US/docs/Web/HTML/Element/select#form) attribute
+- HTML [`form`](/en-US/docs/Web/HTML/Reference/Elements/select#form) attribute
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

@@ -38,7 +38,7 @@ createComputePipeline(descriptor)
             A code snippet providing override values for several overridable constants might look like this:
 
             ```js
-            {
+            ({
               // ...
               constants: {
                 0: false,
@@ -47,8 +47,8 @@ createComputePipeline(descriptor)
                 width: 20,
                 depth: -1,
                 height: 15,
-              }
-            }
+              },
+            });
             ```
 
         - `entryPoint` {{optional_inline}}

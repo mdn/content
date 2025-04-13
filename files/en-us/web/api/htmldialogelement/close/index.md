@@ -90,7 +90,7 @@ From there you can click the _X_ button to close the dialog (via the `HTMLDialog
 ```
 
 If the "X" button was of `type="submit"`, the dialog would have closed without requiring JavaScript.
-A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Element/form#method), so no "close" button is required.
+A form submission closes the `<dialog>` it is nested within if the [form's method is `dialog`](/en-US/docs/Web/HTML/Reference/Elements/form#method), so no "close" button is required.
 
 ### Result
 

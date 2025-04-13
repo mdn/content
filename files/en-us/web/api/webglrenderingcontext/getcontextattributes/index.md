@@ -46,17 +46,17 @@ gl.getContextAttributes();
 the `getContextAttributes` method returns an object that describes the
 attributes set on this context, for example:
 
-```js
+```json
 {
-  alpha: true,
-  antialias: true,
-  depth: true,
-  failIfMajorPerformanceCaveat: false,
-  powerPreference: "default",
-  premultipliedAlpha: true,
-  preserveDrawingBuffer: false,
-  stencil: false,
-  desynchronized: false
+  "alpha": true,
+  "antialias": true,
+  "depth": true,
+  "failIfMajorPerformanceCaveat": false,
+  "powerPreference": "default",
+  "premultipliedAlpha": true,
+  "preserveDrawingBuffer": false,
+  "stencil": false,
+  "desynchronized": false
 }
 ```
 

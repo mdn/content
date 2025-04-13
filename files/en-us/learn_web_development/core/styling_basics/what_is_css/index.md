@@ -2,9 +2,8 @@
 title: What is CSS?
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 

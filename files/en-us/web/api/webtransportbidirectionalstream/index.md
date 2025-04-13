@@ -34,7 +34,7 @@ async function setUpBidirectional() {
   // stream.writable is a WebTransportSendStream
   const writable = stream.writable;
 
-  ...
+  // …
 }
 ```
 

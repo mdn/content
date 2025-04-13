@@ -149,7 +149,6 @@ button.addEventListener("click", function (event) {
   console.log(a + b);
 })(1, 2); // logs 3
 
-
 // IIFE being used to initialize a variable
 const value = (() => {
   const randomValue = Math.random();
@@ -158,7 +157,7 @@ const value = (() => {
   } else {
     return "tails";
   }
-}());
+})();
 ```
 
 Here, we introduce several use cases with examples.

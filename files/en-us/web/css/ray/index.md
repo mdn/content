@@ -226,10 +226,10 @@ body {
 }
 
 .container {
-   transform-style: preserve-3d;
-   width: 150px;
-   height: 100px;
-   border: 2px dotted green;
+  transform-style: preserve-3d;
+  width: 150px;
+  height: 100px;
+  border: 2px dotted green;
 }
 
 .shape {
@@ -263,12 +263,15 @@ body {
 }
 
 @keyframes move {
-  0%, 20% {
+  0%,
+  20% {
     offset-distance: 0%;
   }
-  80%, 100% {
+  80%,
+  100% {
     offset-distance: 100%;
   }
+}
 ```
 
 ```html hidden

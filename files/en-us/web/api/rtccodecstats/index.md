@@ -9,14 +9,14 @@ browser-compat: api.RTCStatsReport.type_codec
 
 The **`RTCCodecStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics about a codec used by {{Glossary("RTP")}} streams that are being sent or received by the associated {{domxref("RTCPeerConnection")}} object.
 
-These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} object returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `codec`.
+These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} object returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](/en-US/docs/Web/API/RTCCodecStats/type) of `codec`.
 
 The codec statistics can be correlated with the inbound or outbound stream statistics (both local and remote) by matching their `codecId` property to the codec's `id`.
-For example, if [`RTCInboundRtpStreamStats.codecId`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#codecid) matches an [`RTCCodecStats.id`](#id) in the same report, then we know that the codec is being used on this peer connection's inbound stream.
+For example, if [`RTCInboundRtpStreamStats.codecId`](/en-US/docs/Web/API/RTCInboundRtpStreamStats/codecId) matches an [`RTCCodecStats.id`](/en-US/docs/Web/API/RTCCodecStats/id) in the same report, then we know that the codec is being used on this peer connection's inbound stream.
 If no stream `codecId` references a codec statistic, then that codec statistic object is deleted — if the codec is used again, the statistics object will be recreated with the same `id`.
 
 Codec objects may be referenced by multiple RTP streams in media sections using the same transport.
-In fact, user agents are expected to consolidate information into a single "codec" entry per payload type per transport (unless [sdpFmtpLine](#sdpfmtpline) is different when sending or receiving, in which case, different codecs will be needed for encoding and decoding).
+In fact, user agents are expected to consolidate information into a single "codec" entry per payload type per transport (unless [sdpFmtpLine](/en-US/docs/Web/API/RTCCodecStats/sdpFmtpLine) is different when sending or receiving, in which case, different codecs will be needed for encoding and decoding).
 Note that other transports will use their own distinct `RTCCodecStats` objects.
 
 ## Instance properties

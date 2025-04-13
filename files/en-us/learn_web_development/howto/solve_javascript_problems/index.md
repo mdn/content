@@ -3,9 +3,8 @@ title: Solve common JavaScript problems
 short-title: Common JavaScript problems
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
 
@@ -52,7 +51,7 @@ myFunction();
 
 #### Function scope
 
-Remember that [functions have their own scope](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts) — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e. not inside any functions), or [return the value](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) from the function.
+Remember that [functions have their own scope](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts) — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e., not inside any functions), or [return the value](/en-US/docs/Learn_web_development/Core/Scripting/Return_values) from the function.
 
 #### Running code after a return statement
 
@@ -112,7 +111,7 @@ const myObject = {
 - [How do you do basic math in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators)
 - [What is operator precedence, and how is it handled in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#operator_precedence)
 - [How do you increment and decrement values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#increment_and_decrement_operators)
-- [How do you compare values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) (e.g. to see which one is bigger, or to see if one value is equal to another).
+- [How do you compare values in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) (e.g., to see which one is bigger, or to see if one value is equal to another).
 
 ### Strings
 
@@ -143,7 +142,7 @@ const myObject = {
 - [How do you log a value to the JavaScript console?](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#the_console_api)
 - [How do you use breakpoints and other JavaScript debugging features?](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#using_the_javascript_debugger)
 
-For more information on JavaScript debugging, see [Handling common JavaScript problems](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript). Also, see [Other common errors](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong#other_common_errors) for a description of common errors.
+For more information on JavaScript debugging, see [JavaScript debugging and error handling](/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript). Also, see [Other common errors](/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong#other_common_errors) for a description of common errors.
 
 ### Making decisions in code
 
@@ -212,4 +211,4 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 ### Web APIs
 
-- [How do you manipulate the DOM (e.g. adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
