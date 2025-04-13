@@ -3,9 +3,8 @@ title: HTML table accessibility
 short-title: Table accessibility
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 

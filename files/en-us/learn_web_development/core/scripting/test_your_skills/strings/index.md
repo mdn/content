@@ -3,9 +3,8 @@ title: "Test your skills: Strings"
 short-title: Strings
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Strings
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
 

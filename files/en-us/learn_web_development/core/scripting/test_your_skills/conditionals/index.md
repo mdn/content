@@ -3,9 +3,8 @@ title: "Test your skills: Conditionals"
 short-title: Conditionals
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals) article.
 

@@ -2,9 +2,8 @@
 title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Flexbox
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
@@ -872,7 +871,7 @@ button {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox).
 
 ## Summary
 

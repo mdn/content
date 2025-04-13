@@ -3,9 +3,8 @@ title: Images, media, and form elements
 short-title: Images, media, forms
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
@@ -330,7 +329,7 @@ textarea {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images).
 
 ## Summary
 

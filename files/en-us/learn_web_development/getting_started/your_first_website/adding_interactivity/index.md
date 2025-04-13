@@ -3,9 +3,8 @@ title: "JavaScript: Adding interactivity"
 short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 

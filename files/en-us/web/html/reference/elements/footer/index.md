@@ -132,12 +132,12 @@ footer {
         <a href="/en-US/docs/Web/HTML/Reference/Elements/nav">nav</a> or
         <a href="/en-US/docs/Web/HTML/Reference/Elements/section">section</a> element, or
         an element with
-        <code>role=<a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>,
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code>
         or
-        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> role
       </td>
     </tr>
     <tr>

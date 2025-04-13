@@ -116,6 +116,8 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement/change_event", "change")}}
   - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
+- {{domxref("HTMLElement/command_event", "command")}}
+  - : Fires on an element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g., it is clicked).
 - {{DOMxRef("HTMLElement/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used.
 - {{DOMxRef("HTMLElement/load_event", "load")}}

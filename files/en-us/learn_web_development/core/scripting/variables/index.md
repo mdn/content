@@ -3,9 +3,8 @@ title: Storing the information you need — Variables
 short-title: Variables
 slug: Learn_web_development/Core/Scripting/Variables
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 

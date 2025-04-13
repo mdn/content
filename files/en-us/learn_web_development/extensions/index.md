@@ -2,9 +2,8 @@
 title: Extension modules
 slug: Learn_web_development/Extensions
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Our **Extension modules** constitute useful additional skills to learn as web developers start to expand their knowledge and develop specialisms.
 

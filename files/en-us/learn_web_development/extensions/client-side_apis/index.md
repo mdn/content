@@ -2,9 +2,8 @@
 title: Client-side web APIs
 slug: Learn_web_development/Extensions/Client-side_APIs
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions")}}
 

@@ -3,9 +3,8 @@ title: Media query fundamentals
 short-title: Media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
 
@@ -609,7 +608,7 @@ Make the screen wider and narrower to see the number of column tracks change. Th
 
 ## Test your skills
 
-You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills).
+You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design).
 
 ## Summary
 

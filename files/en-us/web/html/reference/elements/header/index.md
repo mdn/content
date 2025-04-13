@@ -169,7 +169,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
         <code><a href="/en-US/docs/Web/HTML/Reference/Elements/section">section</a></code>
         element, or an element with
         <code
-          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
             >article</a
           ></code
         >,
@@ -193,7 +193,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
-        >
+        > role
       </td>
     </tr>
     <tr>

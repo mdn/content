@@ -26,7 +26,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
   - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 
-- [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
+- [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
 
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 

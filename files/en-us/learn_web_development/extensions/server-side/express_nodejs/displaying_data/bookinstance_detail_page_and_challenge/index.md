@@ -2,9 +2,8 @@
 title: BookInstance detail page and challenge
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 ## BookInstance detail page
 
