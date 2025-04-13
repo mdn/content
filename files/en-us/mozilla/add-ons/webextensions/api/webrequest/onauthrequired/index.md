@@ -158,7 +158,7 @@ Events have three functions:
     - `proxyDNS`
       - : `boolean`. True if the proxy performs domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.
     - `failoverTimeout`
-      - : `integer`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) is used.
+      - : `integer`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from [FindProxyForURL()](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) is used.
 
 - `realm` {{optional_inline}}
   - : `string`. The authentication [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11) provided by the server, if there is one.
