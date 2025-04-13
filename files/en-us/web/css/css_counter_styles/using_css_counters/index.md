@@ -77,7 +77,7 @@ For example, the following declaration uses `counter()` to prefix each `h3` head
 
 ```css
 h3 {
- counter-increment: section; /* Increment the value of section counter by 1 */
+  counter-increment: section; /* Increment the value of section counter by 1 */
 }
 
 h3::before {
