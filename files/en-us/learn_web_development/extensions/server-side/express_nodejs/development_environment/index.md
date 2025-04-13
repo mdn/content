@@ -229,7 +229,7 @@ The following steps show how you can use npm to download a package, save it into
 3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
 
    ```bash
-   npm install express @4
+   npm install express@4
    ```
 
    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
