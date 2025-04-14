@@ -175,7 +175,7 @@ _No changes._
 
 ### Manifest changes
 
-_No changes._
+- Support added for the [`dark_theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dark_theme). This key enables a static theme to define its looks when Firefox is using the dark color scheme ([Firefox bug 1525762](https://bugzil.la/1525762)).
 
 ## See also
 
