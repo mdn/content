@@ -20,7 +20,7 @@ Historically creating these kinds of controls has required JavaScript event list
 
 ## HTML attributes
 
-- [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) {{experimental_inline}}
+- [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor)
   - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`command`](/en-US/docs/Web/HTML/Reference/Elements/button#command)
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
