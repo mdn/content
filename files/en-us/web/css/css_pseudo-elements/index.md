@@ -62,7 +62,9 @@ When using the universal selector with highlight pseudo-elements, it prevents hi
 
 #### Example
 
-This example demonstrates how highlight pseudo-elements inherit styles from their parent elements.
+Let's look at an example to demonstrate how highlight pseudo-elements inherit styles from their parent elements.
+
+First, we have some HTML that includes two nested {{htmlelement("div")}} elements. Some of the included text content is contained directly inside the parent `<div>`, and some is nested inside the child `<div>`.
 
 ```html
 <div class="parent">
