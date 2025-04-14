@@ -15,8 +15,7 @@ The [`aria-braillelabel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attribute
 
 ## Value
 
-- `<string>`
-  - : The value is a string, an unconstrained value type, that is intended to be converted into braille.
+A string that is intended to be converted into braille.
 
 ## Examples
 
