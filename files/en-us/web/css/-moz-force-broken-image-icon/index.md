@@ -28,9 +28,7 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Formal syntax
 
-```plain
--moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
-```
+{{CSSSyntaxRaw(`-moz-force-broken-image-icon = <integer>`)}}
 
 ## Examples
 
