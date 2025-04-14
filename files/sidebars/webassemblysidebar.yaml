@@ -106,23 +106,23 @@ sidebar:
     details: open
     children:
       - type: listSubPages
-        path: /en-US/docs/WebAssembly/Reference/Control_flow
-        link: /en-US/docs/WebAssembly/Reference/Control_flow
+        path: /WebAssembly/Reference/Control_flow
+        link: /WebAssembly/Reference/Control_flow
         title: Control flow
         details: closed
       - type: listSubPages
-        path: /en-US/docs/WebAssembly/Reference/Memory
-        link: /en-US/docs/WebAssembly/Reference/Memory
+        path: /WebAssembly/Reference/Memory
+        link: /WebAssembly/Reference/Memory
         title: Memory
         details: closed
       - type: listSubPages
-        path: /en-US/docs/WebAssembly/Reference/Numeric
-        link: /en-US/docs/WebAssembly/Reference/Numeric
+        path: /WebAssembly/Reference/Numeric
+        link: /WebAssembly/Reference/Numeric
         title: Numeric
         details: closed
       - type: listSubPages
-        path: /en-US/docs/WebAssembly/Reference/Variables
-        link: /en-US/docs/WebAssembly/Reference/Variables
+        path: /WebAssembly/Reference/Variables
+        link: /WebAssembly/Reference/Variables
         title: Variables
         details: closed
 l10n:
