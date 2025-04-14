@@ -72,6 +72,4 @@ math1.focus(); // Works, even though it is not in the tabbing order
 
 - {{domxref("HTMLElement.tabIndex")}}
 - [Accessibility of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
-- The HTML
-  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
-  global attribute.
+- [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
