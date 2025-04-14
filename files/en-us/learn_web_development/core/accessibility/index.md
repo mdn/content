@@ -1,10 +1,10 @@
 ---
-title: Accessibility
+title: Accessibility on the web
+short-title: Accessibility
 slug: Learn_web_development/Core/Accessibility
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 
@@ -46,7 +46,7 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
   - : Includes guides, checklists, tools, and more.
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : Includes a list of web accessibility evaluation tools.
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
+- [Learn Accessible Web Design](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com/?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

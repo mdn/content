@@ -18,9 +18,9 @@ There are instances in which Firefox doesn't cache pages. Below are some common 
   - "Pragma: no-cache"
   - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);
 
-- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g. `XMLHttpRequest`));
+- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g., `XMLHttpRequest`));
 - the page has running IndexedDB transactions;
-- the top-level page contains frames (e.g. {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
+- the top-level page contains frames (e.g., {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
 - the page is in a frame and the user loads a new page within that frame (in this case, when the user navigates away from the page, the content that was last loaded into the frames is what is cached).
 
 This new caching feature changes page loading behavior, and Web authors may want to:

@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 
 ### Using the `requestClose()` method
 
-In this example, you have your own UI component (a picker), and you want to support both the platform's default close method (e.g. the <kbd>Esc</kbd> key) and your custom close method (a close button).
+In this example, you have your own UI component (a picker), and you want to support both the platform's default close method (e.g., the <kbd>Esc</kbd> key) and your custom close method (a close button).
 
 The `onclick` handler of your UI component can call `requestClose` to request a close and to route your close request through the same `onclose` handler the platform close method uses.
 

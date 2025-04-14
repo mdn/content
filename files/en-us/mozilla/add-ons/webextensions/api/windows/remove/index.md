@@ -51,7 +51,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-Close the current, e.g. popup, window when the user clicks a button on the page:
+Close the current, e.g., popup, window when the user clicks a button on the page:
 
 ```js
 // in a script loaded by the page in the window

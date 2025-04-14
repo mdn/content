@@ -2,9 +2,8 @@
 title: Arrays
 slug: Learn_web_development/Core/Scripting/Arrays
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
@@ -676,7 +675,7 @@ textarea.onkeyup = () => {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays).
 
 ## Conclusion
 
@@ -690,7 +689,7 @@ In the next article we're giving you a challenge to test your understanding of t
   - : An advanced level guide to arrays and their cousins, typed arrays.
 - {{jsxref("Array")}}
   - : The `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
-- [Aside: Intro to arrays](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Aside: Intro to arrays](https://scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
   - : An interactive lesson providing an introduction to arrays.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

@@ -2,9 +2,8 @@
 title: Accessible multimedia
 slug: Learn_web_development/Core/Accessibility/Multimedia
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
@@ -86,7 +85,7 @@ The controls attribute provides play/pause buttons, seek bar, etc. — the basic
 
 However, there are problems with these controls:
 
-- They are not keyboard-accessible in most browsers, i.e. you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
+- They are not keyboard-accessible in most browsers, i.e., you can't tab between the controls inside the native player. Opera and Chrome provide this to some degree, but it still isn't ideal.
 - Different browsers give the native controls differing styling and functionality, and they aren't stylable, meaning that they can't be easily made to follow a site style guide.
 
 To remedy this, we can create our own custom controls. Let's look at how.
@@ -307,7 +306,7 @@ This is the second.
 To get this displayed along with the HTML media playback, you need to:
 
 - Save it as a .vtt file in a sensible place.
-- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) to tell the browser what language you have written the subtitles in.
+- Link to the .vtt file with the {{htmlelement("track")}} element. `<track>` should be placed within `<audio>` or `<video>`, but after all `<source>` elements. Use the [`kind`](/en-US/docs/Web/HTML/Reference/Elements/track#kind) attribute to specify whether the cues are subtitles, captions, or descriptions. Furthermore, use [`srclang`](/en-US/docs/Web/HTML/Reference/Elements/track#srclang) to tell the browser what language you have written the subtitles in.
 
 Here's an example:
 

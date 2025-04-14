@@ -37,7 +37,7 @@ browser-compat: webextensions.manifest.content_security_policy
   </tbody>
 </table>
 
-Extensions have a content security policy (CSP) applied to them by default. The default policy restricts the sources from which extensions can load code (such as [\<script>](/en-US/docs/Web/HTML/Element/script) resources) and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy) to learn more about the implications of this.
+Extensions have a content security policy (CSP) applied to them by default. The default policy restricts the sources from which extensions can load code (such as [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) resources) and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy) to learn more about the implications of this.
 
 You can use the `"content_security_policy"` manifest key to loosen or tighten the default policy. This key is specified in the same way as the Content-Security-Policy HTTP header. See [Using Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) for a general description of CSP syntax.
 
@@ -167,7 +167,7 @@ Allow remote scripts from any subdomain of "jquery.com":
 
 - Manifest V3 does not allow remote URLs in `script-src` of `extension_pages`.
 
-Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends):
+Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_and_friends):
 
 - Manifest V2
 

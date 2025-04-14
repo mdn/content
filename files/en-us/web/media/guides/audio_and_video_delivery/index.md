@@ -15,7 +15,7 @@ To deliver video and audio, the general workflow is usually something like this:
 
 1. Check what format the browser supports via feature detection (usually a choice of two, as stated above).
 2. If the browser doesn't support playback of any of the provided formats natively, either present a still image or use a fallback technology to present the video.
-3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+3. Identify how you want to play/instantiate the media (e.g., a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
 4. Deliver the media file to the player.
 
 ### HTML Audio
@@ -72,7 +72,7 @@ The code above creates a video player of dimensions 640x480 pixels, displaying a
 > [!NOTE]
 > The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) to learn how to use autoplay wisely.
 
-For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player).
+For further info see [\<video> element](/en-US/docs/Web/HTML/Reference/Elements/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player).
 
 ### JavaScript Audio
 
@@ -468,7 +468,7 @@ lastSource.addEventListener(
 
 ## Audio/Video JavaScript libraries
 
-A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the [`<track>`](/en-US/docs/Web/HTML/Element/track) element for subtitles can also be provided through media libraries.
+A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the [`<track>`](/en-US/docs/Web/HTML/Reference/Elements/track) element for subtitles can also be provided through media libraries.
 
 ### Audio only
 
@@ -527,7 +527,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Reference
 
-- [The video element](/en-US/docs/Web/HTML/Element/video)
+- [The video element](/en-US/docs/Web/HTML/Reference/Elements/video)
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/en-US/docs/Web/API/MediaSource)
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

@@ -79,7 +79,7 @@ svg {
 - `<clock-value>`
   - : This value specifies the duration in presentation time to repeat the animation.
 - `indefinite`
-  - : This value indicates that the animation will be repeated indefinitely (i.e. until the document ends).
+  - : This value indicates that the animation will be repeated indefinitely (i.e., until the document ends).
 
 ## Specifications
 

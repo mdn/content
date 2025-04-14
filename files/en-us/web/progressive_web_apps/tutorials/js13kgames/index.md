@@ -4,7 +4,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames
 page-type: landing-page
 ---
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{Next("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure")}}
 
 {{PWASidebar}}
 
@@ -14,4 +14,4 @@ You can [see this app in action](https://mdn.github.io/pwa-examples/js13kpwa/) o
 
 Let's start by looking at the structure of our example app.
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{Next("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure")}}

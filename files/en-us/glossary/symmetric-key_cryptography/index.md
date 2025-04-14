@@ -21,4 +21,4 @@ Most symmetric-key algorithms currently in use are block {{Glossary("Cipher", "c
 - Related glossary terms:
   - {{Glossary("Block cipher mode of operation")}}
   - {{Glossary("Cryptography")}}
-  - {{Glossary("Cryptographic hash function")}}
+  - {{Glossary("Hash function")}}

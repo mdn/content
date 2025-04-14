@@ -2,9 +2,8 @@
 title: BookInstance detail page and challenge
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 ## BookInstance detail page
 
@@ -79,7 +78,7 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ## Challenge
 
-Currently most _dates_ displayed on the site use the default JavaScript format (e.g. _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))_. The challenge for this article is to improve the appearance of the date display for `Author` lifespan information (date of death/birth) and for _BookInstance detail_ pages to use the format: Oct 6th, 2016.
+Currently most _dates_ displayed on the site use the default JavaScript format (e.g., _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time))_. The challenge for this article is to improve the appearance of the date display for `Author` lifespan information (date of death/birth) and for _BookInstance detail_ pages to use the format: Oct 6th, 2016.
 
 > [!NOTE]
 > You can use the same approach as we used for the _Book Instance List_ (adding the virtual property for the lifespan to the `Author` model and use [luxon](https://www.npmjs.com/package/luxon) to format the date strings).

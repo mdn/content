@@ -50,15 +50,17 @@ When authorizing an already registered user, a relying party server will supply 
 The code below defines this information in the form described in the [`options` parameter](#options) above:
 
 ```js
-const requestCredentialOptionsJSON =  {
-    challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
-    rpId: "acme.com",
-    allowCredentials: [{
+const requestCredentialOptionsJSON = {
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203 /* … */]),
+  rpId: "acme.com",
+  allowCredentials: [
+    {
       type: "public-key",
-      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
-    }],
-    userVerification: "required",
-  }
+      id: new Uint8Array([64, 66, 25, 78, 168, 226, 174 /* … */]),
+    },
+  ],
+  userVerification: "required",
+};
 ```
 
 Because this object only uses JSON data types, it can be serialized to JSON using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and sent to the web app.

@@ -11,7 +11,7 @@ The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System API
 
 This class is only accessible inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (so that its methods do not block execution on the main thread) for files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system), which is not visible to end-users.
 
-As a result, its methods are not subject to the same security checks as methods running on files within the user-visible file system, and so are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://www.sqlite.org/wasm) database modifications.
+As a result, its methods are not subject to the same security checks as methods running on files within the user-visible file system, and so are much more performant. This makes them suitable for significant, large-scale file updates such as [SQLite](https://sqlite.org/wasm) database modifications.
 
 The interface is accessed through the {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} method.
 

@@ -56,7 +56,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<animation-timeline>`](/en-US/docs/Web/CSS/animation-timeline)
 - [`<attr-name>`](/en-US/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/en-US/docs/Web/CSS/attr#attr-type)
-- [`<attr-unit>`](/en-US/docs/Web/CSS/attr#attr-unit)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
 - [`<calc-size-basis>`](/en-US/docs/Web/CSS/calc-size#calc-size-basis)
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)

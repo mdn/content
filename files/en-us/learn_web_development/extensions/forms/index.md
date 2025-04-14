@@ -2,9 +2,8 @@
 title: Web forms
 slug: Learn_web_development/Extensions/Forms
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}
 
@@ -60,7 +59,7 @@ The above text is a good indicator as to why we've put web forms into its own st
 The following articles aren't included in the learning pathway, but they'll prove interesting and useful when you've mastered the above techniques and want to know more.
 
 - [How to build custom form controls](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-  - : You'll come across some cases where the native form widgets just don't provide what you need, e.g. because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
+  - : You'll come across some cases where the native form widgets just don't provide what you need, e.g., because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
 - [Sending forms through JavaScript](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
   - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
 - [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select)
@@ -68,9 +67,9 @@ The following articles aren't included in the learning pathway, but they'll prov
 
 ## See also
 
-- [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms)
-- [HTML \<input> types reference](/en-US/docs/Web/HTML/Element/input)
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [HTML forms element reference](/en-US/docs/Web/HTML/Reference/Elements#forms)
+- [HTML \<input> types reference](/en-US/docs/Web/HTML/Reference/Elements/input)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
 - [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

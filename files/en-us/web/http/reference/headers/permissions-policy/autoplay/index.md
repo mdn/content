@@ -15,7 +15,7 @@ autoplay media requested through the {{domxref("HTMLMediaElement")}} interface.
 
 Specifically, where a defined policy blocks use of this feature and there were no user gestures, the {{jsxref("Promise")}}
 returned by {{domxref("HTMLMediaElement.play()")}} will reject with
-a {{domxref("DOMException")}}. The [`autoplay`](/en-US/docs/Web/HTML/Element/audio#autoplay) attribute on
+a {{domxref("DOMException")}}. The [`autoplay`](/en-US/docs/Web/HTML/Reference/Elements/audio#autoplay) attribute on
 {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
 > [!NOTE]

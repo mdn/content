@@ -2,9 +2,8 @@
 title: Positioning
 slug: Learn_web_development/Core/CSS_layout/Positioning
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
@@ -667,7 +666,7 @@ Sticky elements are "sticky" relative to the nearest ancestor with a "scrolling 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position).
 
 ## Summary
 

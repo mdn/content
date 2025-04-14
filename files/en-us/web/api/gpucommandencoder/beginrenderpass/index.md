@@ -56,24 +56,9 @@ Color attachment objects can have the following properties:
 
   - : A color value to clear the `view` texture to, prior to executing the render pass. This value is ignored if `loadOp` is not set to `"clear"`. `clearValue` takes an array or object representing the four color components `r`, `g`, `b`, and `a` as decimals.
 
-    What follows is a sample array:
+    For example, you can pass an array like `[0.0, 0.5, 1.0, 1.0]`, or its equivalent object `{ r: 0.0, g: 0.5, b: 1.0, a: 1.0 }`.
 
-    ```js
-    clearValue: [0.0, 0.5, 1.0, 1.0];
-    ```
-
-    The object equivalent would look like this:
-
-    ```js
-    clearValue: {
-      r: 0.0,
-      g: 0.5,
-      b: 1.0,
-      a: 1.0
-    }
-    ```
-
-    If `clearValue` is omitted, it defaults to `{r: 0, g: 0, b: 0, a: 0}`.
+    If `clearValue` is omitted, it defaults to `{ r: 0, g: 0, b: 0, a: 0 }`.
 
 - `depthSlice` {{optional_inline}}
 
@@ -170,7 +155,7 @@ General:
 
 For color attachment objects
 
-- The `view` is renderable, and the `view`'s format (i.e. specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
+- The `view` is renderable, and the `view`'s format (i.e., specified in the descriptor of the originating {{domxref("GPUTexture.createView()")}} call) is a color renderable format.
 - If `resolveTarget` is provided:
   - The `view`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is greater than 1.
   - The `resolveTarget`'s originating {{domxref("GPUTexture")}}'s {{domxref("GPUTexture.sampleCount", "sampleCount")}} is 1.

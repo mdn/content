@@ -2,11 +2,11 @@
 title: Firefox 138 for developers
 slug: Mozilla/Firefox/Releases/138
 page-type: firefox-release-notes
+sidebar: firefoxsidebar
 ---
 
-{{FirefoxSidebar}}
-
-This article provides information about the changes in Firefox 138 that affect developers. Firefox 138 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
+This article provides information about the changes in Firefox 138 that affect developers.
+Firefox 138 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 29, 2025](https://whattrainisitnow.com/release/?version=138).
 
 ## Changes for web developers
 
@@ -22,6 +22,9 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Error.captureStackTrace()")}} static method is now supported. This installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property. Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface. ([Firefox bug 1950508](https://bugzil.la/1950508)).
+- The {{jsxref("Error.isError()")}} static method can now be used to check whether or not an object is an instance of an {{jsxref("Error")}} or a {{domxref("DOMException")}}. This is more reliable than using `instanceof` for the same purpose. ([Firefox bug 1952249](https://bugzil.la/1952249)).
+
 #### Removals
 
 ### SVG
@@ -29,6 +32,12 @@ This article provides information about the changes in Firefox 138 that affect d
 #### Removals
 
 ### HTTP
+
+- The HTTP {{httpheader("Origin-Agent-Cluster")}} response header can now be used by a site to hint that the associated document should be placed in an origin-keyed [agent cluster](/en-US/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing).
+  When in such a cluster, the operating system process and/or other OS resources used by the document are only shared with other documents from the same [origin](/en-US/docs/Glossary/Origin).
+  This makes it less likely that a resource-intensive document will degrade the performance of documents from other origins.
+  Developers can test whether the browser has put the document in an origin-keyed agent cluster using the {{domxref("window.originAgentCluster")}} property.
+  ([Firefox bug 1665474](https://bugzil.la/1665474))
 
 #### Removals
 
@@ -38,9 +47,18 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ### APIs
 
+- The [Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) is now supported when using the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API). It can be used to set and check whether a browser user is logged in to an identity provider.
+  This includes support for the {{domxref("NavigatorLogin")}} interface, the {{domxref("navigator.login")}} property, and the {{httpheader("Set-Login")}} HTTP response header.
+  ([Firefox bug 1945576](https://bugzil.la/1945576) and [Firefox bug 1945573](https://bugzil.la/1945573)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- WebRTC applications can now set a preference for prioritizing framerate or resolution when both cannot be maintained at the configured levels due to network degradation.
+  The value is set using the [`degradationPreference`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) property in the parameter object passed to the [`setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) method of the `RTCRtpSender` interface.
+  It can also be read from the object returned by the [`getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) method.
+  ([Firefox bug 1329847](https://bugzil.la/1329847)).
 
 #### Removals
 
@@ -70,7 +88,23 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 138 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are newly shipped in Firefox 138 but are disabled by default.
+To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
+You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **UA styles for `<h1>` nested into sectioning elements:** `layout.css.h1-in-section-ua-styles.enabled`.
+
+  The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
+
+  As part of a staged rollout of this removal 5% of users of Firefox 138 and 50% of users of Firefox Beta 138 will have the value of `layout.css.h1-in-section-ua-styles.enabled` set to `false` ([Intent to unship: UA styles for h1 in article, aside, nav, section](https://groups.google.com/a/mozilla.org/g/dev-platform/c/CzG_pVa7pws/m/Ab3Bwsg2BQAJ)).
+
+  > [!NOTE]
+  > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+
+- **::details-content CSS pseudo-element:** `layout.css.details-content.enabled`.
+  The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
+- **`MutationEvent` on path to removal**: {{domxref("MutationEvent")}} and its associated events (`DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`, `DOMCharacterDataModified`,`DOMAttrModified`) are now disabled on Firefox Nightly by default. ([Firefox bug 1951772](https://bugzil.la/1951772)).
+- **`Notification.actions`:** (Nightly release): The {{domxref("Notification.actions")}} property can get the actions associated with a `Notification`, as set using {{domxref("ServiceWorkerRegistration.showNotification()")}}. ([Firefox bug 1225110](https://bugzil.la/1225110)).
 
 ## Older versions
 

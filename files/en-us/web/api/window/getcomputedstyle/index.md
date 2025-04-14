@@ -46,7 +46,7 @@ object, which updates automatically when the element's styles are changed.
 
     > [!NOTE]
     > Valid pseudo-element selector refers to syntactic
-    > validity, e.g. `::unsupported` is considered valid, even though the
+    > validity, e.g., `::unsupported` is considered valid, even though the
     > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
     > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
 

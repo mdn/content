@@ -2,9 +2,10 @@
 title: "Vue conditional rendering: editing existing todos"
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
 
@@ -43,11 +44,11 @@ Now it is time to add one of the major parts of functionality that we're still m
 
 We can start by creating a separate component to handle the editing functionality. In your `components` directory, create a new file called `ToDoItemEditForm.vue`. Copy the following code into that file:
 
-```html
+```vue
 <template>
   <form class="stack-small" @submit.prevent="onSubmit">
     <div>
-      <label class="edit-label">Edit Name for &quot;\{{label}}&quot;</label>
+      <label class="edit-label">Edit Name for &quot;\{{ label }}&quot;</label>
       <input
         :id="id"
         type="text"
@@ -57,69 +58,69 @@ We can start by creating a separate component to handle the editing functionalit
     <div class="btn-group">
       <button type="button" class="btn" @click="onCancel">
         Cancel
-        <span class="visually-hidden">editing \{{label}}</span>
+        <span class="visually-hidden">editing \{{ label }}</span>
       </button>
       <button type="submit" class="btn btn__primary">
         Save
-        <span class="visually-hidden">edit for \{{label}}</span>
+        <span class="visually-hidden">edit for \{{ label }}</span>
       </button>
     </div>
   </form>
 </template>
 <script>
-  export default {
-    props: {
-      label: {
-        type: String,
-        required: true,
-      },
-      id: {
-        type: String,
-        required: true,
-      },
+export default {
+  props: {
+    label: {
+      type: String,
+      required: true,
     },
-    data() {
-      return {
-        newLabel: this.label,
-      };
+    id: {
+      type: String,
+      required: true,
     },
-    methods: {
-      onSubmit() {
-        if (this.newLabel && this.newLabel !== this.label) {
-          this.$emit("item-edited", this.newLabel);
-        }
-      },
-      onCancel() {
-        this.$emit("edit-cancelled");
-      },
+  },
+  data() {
+    return {
+      newLabel: this.label,
+    };
+  },
+  methods: {
+    onSubmit() {
+      if (this.newLabel && this.newLabel !== this.label) {
+        this.$emit("item-edited", this.newLabel);
+      }
     },
-  };
+    onCancel() {
+      this.$emit("edit-cancelled");
+    },
+  },
+};
 </script>
 <style scoped>
-  .edit-label {
-    font-family: Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #0b0c0c;
-    display: block;
-    margin-bottom: 5px;
-  }
-  input {
-    display: inline-block;
-    margin-top: 0.4rem;
-    width: 100%;
-    min-height: 4.4rem;
-    padding: 0.4rem 0.8rem;
-    border: 2px solid #565656;
-  }
-  form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  form > * {
-    flex: 0 0 100%;
-  }
+.edit-label {
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0b0c0c;
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  display: inline-block;
+  margin-top: 0.4rem;
+  width: 100%;
+  min-height: 4.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #565656;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+form > * {
+  flex: 0 0 100%;
+}
 </style>
 ```
 
@@ -139,7 +140,7 @@ Before we can add `ToDoItemEditForm` to our app, we need to make a few modificat
 
 Update your `ToDoItem`'s template as shown below.
 
-```html
+```vue
 <template>
   <div class="stack-small">
     <div class="custom-checkbox">
@@ -149,14 +150,14 @@ Update your `ToDoItem`'s template as shown below.
         :id="id"
         :checked="isDone"
         @change="$emit('checkbox-changed')" />
-      <label :for="id" class="checkbox-label">\{{label}}</label>
+      <label :for="id" class="checkbox-label">\{{ label }}</label>
     </div>
     <div class="btn-group">
       <button type="button" class="btn" @click="toggleToItemEditForm">
-        Edit <span class="visually-hidden">\{{label}}</span>
+        Edit <span class="visually-hidden">\{{ label }}</span>
       </button>
       <button type="button" class="btn btn__danger" @click="deleteToDo">
-        Delete <span class="visually-hidden">\{{label}}</span>
+        Delete <span class="visually-hidden">\{{ label }}</span>
       </button>
     </div>
   </div>
@@ -175,25 +176,33 @@ Let's define our click handlers, and the necessary `isEditing` flag.
 Add `isEditing` below your existing `isDone` data point:
 
 ```js
-data() {
-  return {
-    isDone: this.done,
-    isEditing: false
-  };
-}
+export default {
+  // …
+  data() {
+    return {
+      isDone: this.done,
+      isEditing: false,
+    };
+  },
+  // …
+};
 ```
 
 Now add your methods inside a methods property, right below your `data()` property:
 
 ```js
-methods: {
+export default {
+  // …
+  methods: {
     deleteToDo() {
-      this.$emit('item-deleted');
+      this.$emit("item-deleted");
     },
     toggleToItemEditForm() {
       this.isEditing = true;
-    }
-  }
+    },
+  },
+  // …
+};
 ```
 
 ## Conditionally displaying components via v-if and v-else
@@ -208,13 +217,13 @@ Lastly, you can use a `v-if` + `v-else` at the root of your component to display
 
 First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
 
-```html
+```vue
 <div class="stack-small" v-if="!isEditing"></div>
 ```
 
 Next, below that `<div>`'s closing tag add the following line:
 
-```html
+```vue
 <to-do-item-edit-form v-else :id="id" :label="label"></to-do-item-edit-form>
 ```
 
@@ -227,9 +236,13 @@ import ToDoItemEditForm from "./ToDoItemEditForm";
 And add a `components` property above the `props` property inside the component object:
 
 ```js
-components: {
-  ToDoItemEditForm
-},
+export default {
+  // …
+  components: {
+    ToDoItemEditForm,
+  },
+  // …
+};
 ```
 
 Now, if you go to your app and click a todo item's "Edit" button, you should see the checkbox replaced with the edit form.
@@ -245,25 +258,41 @@ First, we need to add an `itemEdited()` method to our `ToDoItem` component's `me
 Add it now, below your existing methods:
 
 ```js
-itemEdited(newLabel) {
-  this.$emit('item-edited', newLabel);
-  this.isEditing = false;
-}
+export default {
+  // …
+  methods: {
+    // …
+    itemEdited(newLabel) {
+      this.$emit("item-edited", newLabel);
+      this.isEditing = false;
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Next, we'll need an `editCancelled()` method. This method will take no arguments and just serve to set `isEditing` back to `false`. Add this method below the previous one:
 
 ```js
-editCancelled() {
-  this.isEditing = false;
-}
+export default {
+  // …
+  methods: {
+    // …
+    editCancelled() {
+      this.isEditing = false;
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Last for this section, we'll add event handlers for the events emitted by the `ToDoItemEditForm` component, and attach the appropriate methods to each event.
 
 Update your `<to-do-item-edit-form></to-do-item-edit-form>` call to look like so:
 
-```html
+```vue
 <to-do-item-edit-form
   v-else
   :id="id"
@@ -280,14 +309,22 @@ Now we can toggle between the edit form and the checkbox. However, we haven't ac
 Add the following new methods to your `App.vue`'s component object, below the existing methods inside the `methods` property:
 
 ```js
-deleteToDo(toDoId) {
-  const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
-  this.ToDoItems.splice(itemIndex, 1);
-},
-editToDo(toDoId, newLabel) {
-  const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
-  toDoToEdit.label = newLabel;
-}
+export default {
+  // …
+  methods: {
+    // …
+    deleteToDo(toDoId) {
+      const itemIndex = this.ToDoItems.findIndex((item) => item.id === toDoId);
+      this.ToDoItems.splice(itemIndex, 1);
+    },
+    editToDo(toDoId, newLabel) {
+      const toDoToEdit = this.ToDoItems.find((item) => item.id === toDoId);
+      toDoToEdit.label = newLabel;
+    },
+    // …
+  },
+  // …
+};
 ```
 
 Next, we'll add the event listeners for the `item-deleted` and `item-edited` events:
@@ -297,7 +334,7 @@ Next, we'll add the event listeners for the `item-deleted` and `item-edited` eve
 
 Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
-```html
+```vue
 <to-do-item
   :label="item.label"
   :done="item.done"
@@ -327,17 +364,25 @@ So, let's implement the fix in `ToDoItem.vue`:
 1. Remove the following line from inside our `data()` property:
 
    ```js
-   isDone: this.done,
+   export default {
+     // …
+     isDone: this.done,
+     // …
+   };
    ```
 
-2. Add the following block below the data() { } block:
+2. Add the following block below the `data() {}` block:
 
    ```js
-   computed: {
-     isDone() {
-       return this.done;
-     }
-   },
+   export default {
+     // …
+     computed: {
+       isDone() {
+         return this.done;
+       },
+     },
+     // …
+   };
    ```
 
 Now when you save and reload, you'll find that the problem is solved — the checkbox state is now preserved when you switch between todo item templates.

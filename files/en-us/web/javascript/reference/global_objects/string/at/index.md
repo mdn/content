@@ -34,7 +34,7 @@ at(index)
 ### Parameters
 
 - `index`
-  - : The index (position) of the string character to be returned. Supports relative indexing from the end of the string when passed a negative index; i.e. if a negative number is used, the character returned will be found by counting back from the end of the string.
+  - : The index (position) of the string character to be returned. Supports relative indexing from the end of the string when passed a negative index; i.e., if a negative number is used, the character returned will be found by counting back from the end of the string.
 
 ### Return value
 

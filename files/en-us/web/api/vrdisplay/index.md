@@ -22,9 +22,9 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 - {{domxref("VRDisplay.capabilities")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 - {{domxref("VRDisplay.depthFar")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.
+  - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e., the furthest viewable boundary of the scene.
 - {{domxref("VRDisplay.depthNear")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the nearest viewable boundary of the scene.
+  - : Gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e., the nearest viewable boundary of the scene.
 - {{domxref("VRDisplay.displayId")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an identifier for this particular VRDisplay, which is also used as an association point in the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) (see {{domxref("Gamepad.displayId")}}).
 - {{domxref("VRDisplay.displayName")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
