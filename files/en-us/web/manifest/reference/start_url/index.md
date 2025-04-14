@@ -39,7 +39,7 @@ The `start_url` manifest member is used to specify the URL that should be opened
     > You can set `"start_url": "./"` to use the default behavior on all browsers.
 
     > [!NOTE]
-    > If [`scope`](/en-US/docs/Web/Manifest/Reference/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).
+    > If [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).
 
 ## Description
 
