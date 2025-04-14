@@ -24,6 +24,6 @@ A boolean value.
 
 ## See also
 
-- {{domxref("MathMLElement.focus")}}
+- {{domxref("MathMLElement.focus()")}}
 - {{domxref("HTMLElement.autofocus")}}
 - [Popover API](/en-US/docs/Web/API/Popover_API)
