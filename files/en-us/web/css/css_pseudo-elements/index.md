@@ -71,6 +71,8 @@ This example demonstrates how highlight pseudo-elements inherit styles from thei
 </div>
 ```
 
+Next we include some CSS, which selects the parent and child `<div>` elements separately and gives them different {{cssxref("color")}} values, and selects the parent and child's selected text ({{cssxref("::selection")}}), giving each a different {{cssxref("background-color")}} as well as setting a different text `color` on the parent selection.
+
 ```css
 /* Style for the parent element */
 .parent {
