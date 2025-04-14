@@ -65,6 +65,7 @@ sidebar:
     link: /Mozilla/Add-ons/WebExtensions/manifest.json
     title: WebExtensions#manifest.json
     details: closed
+    code: true
   - title: extension_workshop
     details: closed
     children:
