@@ -24,12 +24,12 @@ svg {
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- A link around a shape -->
-  <a href="/docs/Web/SVG/Element/circle">
+  <a href="/docs/Web/SVG/Reference/Element/circle">
     <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- A link around a text -->
-  <a href="/docs/Web/SVG/Element/text">
+  <a href="/docs/Web/SVG/Reference/Element/text">
     <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
