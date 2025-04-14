@@ -71,5 +71,5 @@ blurButton.addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("MathMLElement.focus")}} makes the element the current keyboard focus.
-- {{domxref("HTMLElement.blur")}} a similar method for HTML elements.
+- {{domxref("MathMLElement.focus()")}}
+- {{domxref("HTMLElement.blur()")}}
