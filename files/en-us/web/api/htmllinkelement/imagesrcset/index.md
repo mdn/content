@@ -18,11 +18,11 @@ Each image candidate string contains an image URL and an optional width and/or p
 
 For HTML {{htmlelement("link")}} elements with [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) and [`as="image"`](/en-US/docs/Web/HTML/Element/link#as) set, the `imagesrcset` attribute has similar syntax and semantics as the {{htmlelement("img")}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute, which indicates to preload the appropriate resource used by an `<img>` element with corresponding values for its `srcset` and `sizes` attributes.
 
-If the `imageSrcset` property includes width descriptors, the {{domxref("HTMLLinkElement.imageSizes", "imageSizes")}} property must be non-null, or the `imageSrcset` will be ignored.
+If the `imageSrcset` property includes width descriptors, the {{domxref("HTMLLinkElement.imageSizes", "imageSizes")}} property must be non-null, or the `imageSrcset` value will be ignored.
 
 ## Value
 
-A string; composed of a comma-separated list of one or more image candidate strings or the empty string `""` if unspecified..
+A string composed of a comma-separated list of one or more image candidate strings, or the empty string `""` if unspecified..
 
 ## Examples
 
@@ -56,7 +56,7 @@ function log(text) {
 }
 ```
 
-We can access the `imagesrcset` attribute value, and update it, using the `imageSrcset` property:
+…we can access the `imagesrcset` attribute value, and update it, using the `imageSrcset` property:
 
 ```js
 const link = document.querySelector("link");
