@@ -55,5 +55,5 @@ console.log(el.dataset.equation); // "euler"
 
 ## See also
 
-- The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class of global attributes
+- [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
 - [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
