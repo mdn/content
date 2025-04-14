@@ -21,7 +21,7 @@ Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::targ
 
 When you apply styles to highlight pseudo-elements, they inherit from both:
 
-1. Their parent elements (following normal inheritance)
+1. Their parent elements (following normal inheritance).
 2. The highlight pseudo-elements of their parent elements (following highlight inheritance).
 
 This means that if you style both a parent element's highlight pseudo-element and a child element's highlight pseudo-element, the child's highlighted text will combine properties from both sources.
