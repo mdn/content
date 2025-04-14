@@ -89,7 +89,7 @@ In effect, there are three style states to manage in these situations — starti
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`@starting-style = @starting-style { <rule-list> }`)}}
 
 ## Examples
 
