@@ -27,9 +27,9 @@ The following example shows how to enable or disable translation via script:
 </div>
 <div>
   <span id="translate-label">The content may be translated:</span>
-  <span id="translate-element" translate="no"
-    >El contenido puede ser traducido.</span
-  >
+  <span id="translate-element" translate="no">
+    El contenido puede ser traducido.
+  </span>
 </div>
 <input id="translate-controller" type="checkbox" /> Enable translation
 ```
