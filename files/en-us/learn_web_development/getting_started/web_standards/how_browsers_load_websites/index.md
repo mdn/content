@@ -2,9 +2,8 @@
 title: How browsers load websites
 slug: Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 

@@ -3,9 +3,8 @@ title: Package management basics
 short-title: Package management
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 

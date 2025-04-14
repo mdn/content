@@ -85,17 +85,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal syntax
 
-```plain
--webkit-mask-box-image: <mask-image-source> [<mask-image-offset>{4} <mask-border-repeat>{1,2} ]
-
-Where:
-
-<mask-image-source> = {{cssxref("url_value", "&lt;url&gt;")}} | <gradient> | none
-
-<mask-image-offset> = <length> | <percentage> | <number>
-
-<repeat-style> = repeat | stretch | round | space
-```
+{{CSSSyntaxRaw(`-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]`)}}
 
 ## Examples
 

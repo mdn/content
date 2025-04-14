@@ -3,9 +3,8 @@ title: Solve common JavaScript problems
 short-title: Common JavaScript problems
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
 
@@ -116,10 +115,9 @@ const myObject = {
 
 ### Strings
 
-- [How do you create a string in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#creating_a_string)
-- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#single_quotes_vs._double_quotes)
-- [How do you escape characters in strings?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#escaping_characters_in_a_string)
-- [How do you join strings together?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenating_strings)
+- [How do you create a string in JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#declaring_strings)
+- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#single_quotes_double_quotes_and_backticks)
+- [How do you join strings together?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_in_context)
 - [Can you join strings and numbers together?](/en-US/docs/Learn_web_development/Core/Scripting/Strings#numbers_vs._strings)
 - [How do you find the length of a string?](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods#finding_the_length_of_a_string)
 - [How do you find what character is at a certain position in a string?](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character)
@@ -159,7 +157,7 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [How do you run the same bit of code over and over again?](/en-US/docs/Learn_web_development/Core/Scripting/Loops)
 - [How do you exit a loop before the end if a certain condition is met?](/en-US/docs/Learn_web_development/Core/Scripting/Loops#exiting_loops_with_break)
 - [How do you skip to the next iteration of a loop if a certain condition is met?](/en-US/docs/Learn_web_development/Core/Scripting/Loops#skipping_iterations_with_continue)
-- [How do you use while and do...while loops?](/en-US/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while)
+- [How do you use while and do...while loops?](/en-US/docs/Learn_web_development/Core/Scripting/Loops#while_and_do...while)
 
 ## Intermediate use cases
 
@@ -169,7 +167,7 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [What is the difference between a function and a method?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#functions_versus_methods)
 - [How do you create your own functions?](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
 - [How do you run (call, or invoke) a function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#invoking_functions)
-- [What is an anonymous function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#anonymous_functions)
+- [What is an anonymous function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#anonymous_functions_and_arrow_functions)
 - [How do you specify parameters (or arguments) when invoking a function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_parameters)
 - [What is function scope?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts)
 - [What are return values, and how do you use them?](/en-US/docs/Learn_web_development/Core/Scripting/Return_values)
@@ -181,22 +179,19 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [What is bracket notation?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#what_is_this)
-- [What is object-oriented programming?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
+- [What is object-oriented programming?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#classes_and_instances)
 
 ### JSON
 
 - [How do you structure JSON data, and read it from JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/JSON#json_structure)
-- [How can you load a JSON file into a page?](/en-US/docs/Learn_web_development/Core/Scripting/JSON#loading_our_json)
 - [How do you convert a JSON object to a text string, and back again?](/en-US/docs/Learn_web_development/Core/Scripting/JSON#converting_between_objects_and_text)
 
 ### Events
 
 - [What are event handlers and how do you use them?](/en-US/docs/Learn_web_development/Core/Scripting/Events#event_handler_properties)
-- [What are inline event handlers?](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_%e2%80%94_don%27t_use_these)
+- [What are inline event handlers?](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these)
 - [What does the `addEventListener()` function do, and how do you use it?](/en-US/docs/Learn_web_development/Core/Scripting/Events#using_addeventlistener)
-- [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn_web_development/Core/Scripting/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn_web_development/Core/Scripting/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn_web_development/Core/Scripting/Events#preventing_default_behavior)
 - [How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
@@ -205,10 +200,9 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 ### Object-oriented JavaScript
 
 - [What are object prototypes?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
-- [What is the constructor property, and how can you use it?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#the_constructor_property)
-- [How do you add methods to the constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#modifying_prototypes)
+- [How do you add methods to the constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#setting_a_prototype)
 - [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object_member_summary)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#inheritance)
 
 ### Web APIs
 

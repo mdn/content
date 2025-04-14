@@ -3,9 +3,8 @@ title: "Test your skills: Object basics"
 short-title: Objects
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Object_basics
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) article.
 

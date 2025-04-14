@@ -2,9 +2,8 @@
 title: CSS styling basics
 slug: Learn_web_development/Core/Styling_basics
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core")}}
 

@@ -92,7 +92,7 @@ Most macros will also take a second argument allowing you to change the display 
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
+        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG attribute reference</a> (/Web/SVG/Reference/Attribute).
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> results in {{SVGAttr("d")}}
@@ -104,7 +104,7 @@ Most macros will also take a second argument allowing you to change the display 
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/en-US/docs/Web/SVG/Reference/Attribute">SVG Element reference</a> (/Web/SVG/Element).
+        <a href="/en-US/docs/Web/SVG/Reference/Element">SVG Element reference</a> (/Web/SVG/Reference/Element).
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> results in {{SVGElement("view")}}

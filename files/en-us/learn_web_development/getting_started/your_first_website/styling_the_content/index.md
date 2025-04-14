@@ -3,9 +3,8 @@ title: "CSS: Styling the content"
 short-title: Styling the content
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 

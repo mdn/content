@@ -3,9 +3,8 @@ title: "Test your skills: Positioning"
 short-title: Positioning
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 The aim of this skill test is to assess whether you understand [positioning in CSS](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) using the CSS {{CSSxRef("position")}} property and values. You will be working through two small tasks that use different elements of the material you have just covered.
 
