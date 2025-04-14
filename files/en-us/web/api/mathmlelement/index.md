@@ -28,7 +28,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}_.
 
 ## Instance methods
 
-_This interface has no methods, but inherits methods from its parent, {{DOMxRef("Element")}}_.
+_This interface also inherits methods from its parent, {{DOMxRef("Element")}}_.
 
 - {{DOMxRef("MathMLElement.blur()")}}
   - : Removes keyboard focus from the currently focused element.
