@@ -80,5 +80,5 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 ## See also
 
-- {{domxref("MathMLElement.blur")}} to remove the focus from an element.
-- {{domxref("HTMLElement.focus")}} a similar method for HTML elements.
+- {{domxref("MathMLElement.blur()")}}
+- {{domxref("HTMLElement.focus()")}}
