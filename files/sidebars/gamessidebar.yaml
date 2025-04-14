@@ -63,9 +63,7 @@ sidebar:
       - link: /Games/Techniques/Tilemaps
         title: Tiles_and_tilemaps_overview
       - link: /Games/Techniques/Controls_Gamepad_API
-        title: Controls_Gamepad_API
       - link: /Games/Techniques/Crisp_pixel_art_look
-        title: Crisp_pixel_art_look
   - link: /Games/Techniques/3D_on_the_web
     title: 3D_games_on_the_Web
     details: closed
@@ -81,7 +79,6 @@ sidebar:
       - link: /Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
         title: Building_up_a_basic_demo_with_Three.js
       - link: /Games/Techniques/3D_on_the_web/GLSL_Shaders
-        title: GLSL_Shaders
       - link: /Games/Techniques/3D_on_the_web/WebXR
         title: WebXR_guide
       - link: /Games/Techniques/3D_collision_detection
@@ -150,15 +147,12 @@ l10n:
     Audio_for_Web_Games: Audio für Webspiele
     2D_collision_detection: 2D-Kollisionserkennung
     Tiles_and_tilemaps_overview: Überblick über Kacheln und Kachelkarten
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: 3D-Spiele im Web
     Explaining_basic_3D_theory: Erklärung der grundlegenden 3D-Theorie
     Building_up_a_basic_demo_with_A-Frame: Aufbau einer einfachen Demo mit A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Aufbau einer einfachen Demo mit Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: Aufbau einer einfachen Demo mit PlayCanvas
     Building_up_a_basic_demo_with_Three.js: Aufbau einer einfachen Demo mit Three.js
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR-Anleitung
     3D_collision_detection: 3D-Kollisionserkennung
     Bounding_volume_collision_detection_with_THREE.js: Erkennung von Kollisionen mit Begrenzungsvolumen mit THREE.js
@@ -203,15 +197,12 @@ l10n:
     Audio_for_Web_Games: Audio for Web Games
     2D_collision_detection: 2D collision detection
     Tiles_and_tilemaps_overview: Tiles and tilemaps overview
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: 3D games on the Web
     Explaining_basic_3D_theory: Explaining basic 3D theory
     Building_up_a_basic_demo_with_A-Frame: Building up a basic demo with A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Building up a basic demo with Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: Building up a basic demo with PlayCanvas
     Building_up_a_basic_demo_with_Three.js: Building up a basic demo with Three.js
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: 3D collision detection
     Bounding_volume_collision_detection_with_THREE.js: Bounding volume collision detection with THREE.js
@@ -256,15 +247,12 @@ l10n:
     Audio_for_Web_Games: Audio pour les jeux web
     2D_collision_detection: Détection de collision 2D
     Tiles_and_tilemaps_overview: Carreaux et carrelages
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: Jeux 3D sur le Web
     Explaining_basic_3D_theory: Théorie de base sur la 3D
     Building_up_a_basic_demo_with_A-Frame: Construire une démo avec A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Construire une démo avec Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: Construire une démo avec PlayCanvas
     Building_up_a_basic_demo_with_Three.js: Construire une démo avec Three.js
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR (réalité virtuelle)
     3D_collision_detection: Détection de collision en 3D
     Bounding_volume_collision_detection_with_THREE.js: Détection de collision de volumes avec THREE.js
@@ -309,15 +297,12 @@ l10n:
     Audio_for_Web_Games: Web ゲーム向けの音
     2D_collision_detection: 2D 衝突検出
     Tiles_and_tilemaps_overview: タイルとタイルマップの概要
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: Web上の 3D ゲームの概要
     Explaining_basic_3D_theory: 基本の 3D理論の説明
     Building_up_a_basic_demo_with_A-Frame: A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: PlayCanvas を利用した基本的なデモの制作
     Building_up_a_basic_demo_with_Three.js: Three.js を使った基本的なデモ製作
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: 3D 衝突検出の概要
     Bounding_volume_collision_detection_with_THREE.js: THREE.js を使ったバウンディングボリューム衝突検出
@@ -362,15 +347,12 @@ l10n:
     Audio_for_Web_Games: 웹 게임을 위한 오디오
     2D_collision_detection: 2D 충돌 감지
     Tiles_and_tilemaps_overview: 타일과 타일맵 개요
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: 웹 3D 게임
     Explaining_basic_3D_theory: 기본적인 3D 이론
     Building_up_a_basic_demo_with_A-Frame: A-Frame를 사용하여 데모 만들기
     Building_up_a_basic_demo_with_Babylon.js: Babylon.js를 사용하여 데모 만들기
     Building_up_a_basic_demo_with_PlayCanvas: PlayCanvas를 사용하여 데모 만들기
     Building_up_a_basic_demo_with_Three.js: Three.js를 사용하여 데모 만들기
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: 3D 충돌 감지
     Bounding_volume_collision_detection_with_THREE.js: THREE.js를 사용한 충돌 용적 감지
@@ -415,15 +397,12 @@ l10n:
     Audio_for_Web_Games: Audio para Jogos Web
     2D_collision_detection: Detecção de colisão 2D
     Tiles_and_tilemaps_overview: Visão geral de Tiles e tilemaps
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: Visão geral de jogos 3D na Web
     Explaining_basic_3D_theory: Explicando teoria básica 3D
     Building_up_a_basic_demo_with_A-Frame: Desenvolvendo um demo básico com A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Desenvolvendo um demo básico com Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: Desenvolvendo um demo básico com PlayCanvas
     Building_up_a_basic_demo_with_Three.js: Desenvolvendo um demo básico com Three.js
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: Detecção de colisão 3D
     Bounding_volume_collision_detection_with_THREE.js: BDetecção da quantidade de&nbsp;choque de colisão com THREE.js
@@ -468,15 +447,12 @@ l10n:
     Audio_for_Web_Games: Аудио для веб-игр
     2D_collision_detection: Обнаружение столкновений в 2D
     Tiles_and_tilemaps_overview: Обзор тайлов и тайловых карт
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: 3D игры в Интернете
     Explaining_basic_3D_theory: Объяснение основ теории 3D
     Building_up_a_basic_demo_with_A-Frame: Создание базового демо с помощью A-Frame
     Building_up_a_basic_demo_with_Babylon.js: Создание базового демо с помощью Babylon.js
     Building_up_a_basic_demo_with_PlayCanvas: Создание базового демо с помощью PlayCanvas
     Building_up_a_basic_demo_with_Three.js: Создание базового демо с помощью Three.js
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: Обнаружение столкновений в 3D
     Bounding_volume_collision_detection_with_THREE.js: Обнаружение столкновений объёмных фигур с помощью Three.js
@@ -521,15 +497,12 @@ l10n:
     Audio_for_Web_Games: Web 游戏的音频
     2D_collision_detection: 2D 碰撞检测
     Tiles_and_tilemaps_overview: 平铺和平铺贴图概述
-    Controls_Gamepad_API: Implementing controls using the Gamepad API
-    Crisp_pixel_art_look: Crisp pixel art look with image-rendering
     3D_games_on_the_Web: Web 中的 3D 游戏
     Explaining_basic_3D_theory: 基本的 3D 理论
     Building_up_a_basic_demo_with_A-Frame: 使用 A-Frame 构建基础演示
     Building_up_a_basic_demo_with_Babylon.js: 使用 Babylon.js 构建基础演示
     Building_up_a_basic_demo_with_PlayCanvas: 使用 PlayCanvas 构建基础演示
     Building_up_a_basic_demo_with_Three.js: 使用 Three.js 构建基础演示
-    GLSL_Shaders: GLSL Shaders
     WebXR_guide: WebXR
     3D_collision_detection: 3D 碰撞检测
     Bounding_volume_collision_detection_with_THREE.js: 使用 THREE.js 进行边界体积碰撞检测
