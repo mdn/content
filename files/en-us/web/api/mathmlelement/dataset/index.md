@@ -10,12 +10,7 @@ browser-compat: api.MathMLElement.dataset
 
 The **`dataset`** read-only property of the {{DOMxRef("MathMLElement")}} interface provides read/write access to [custom data attributes](/en-US/docs/Web/HTML/Global_attributes/data-*) (`data-*`) on elements. It exposes a map of strings ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
-For more information on the behavior of `dataset`, see {{domxref("HTMLElement.dataset")}}.
-
-> [!NOTE]
-> The `dataset` property itself can be read, but not directly written.
-> Instead, all writes must be to the individual properties within the
-> `dataset`, which in turn represent the data attributes.
+The `dataset` property itself can be read, but not directly written. Instead, all writes must be to the individual properties within the `dataset`, which in turn represent the data attributes.
 
 ## Value
 
@@ -55,5 +50,6 @@ console.log(el.dataset.equation); // "euler"
 
 ## See also
 
+- {{domxref("HTMLElement.dataset")}}
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
 - [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
