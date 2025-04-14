@@ -152,10 +152,10 @@ Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b
 
 ### Sandboxed same-origin iframes are effectively separate origins
 
-Given this iframe embedded on `http://www.example.com`:
+Given this iframe embedded on `https://www.example.com`:
 
 ```html
-<iframe src="http://www.example.com/iframe" sandbox="allow-scripts"></iframe>
+<iframe src="https://www.example.com/iframe" sandbox="allow-scripts"></iframe>
 ```
 
 This would not be seem as "same-origin" despite being hosted on the same origin as the top-level dcument as it is in it's own sandbox iframe. Therefore, by default, it should be allocated 8KiB quota from the shared 128KiB quota.
@@ -166,7 +166,7 @@ You can use the `allow` attribute of `<iframe>` elements to prevent `fetchLater(
 
 ```html
 <iframe
-  src="http://www.example.com/iframe"
+  src="https://www.example.com/iframe"
   allow="deferred-fetch;deferred-fetch-minimal;"></iframe>
 ```
 
