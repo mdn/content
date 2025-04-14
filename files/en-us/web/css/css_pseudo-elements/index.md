@@ -17,7 +17,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 
 ### Highlight pseudo-elements inheritance
 
-Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from regular element inheritance.
+Highlight pseudo-elements, such as {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, and {{CSSxref("::grammar-error")}}, follow a consistent inheritance model that differs from [regular element inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance).
 
 When you apply styles to highlight pseudo-elements, they inherit from both:
 
