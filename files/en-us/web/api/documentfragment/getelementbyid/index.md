@@ -57,7 +57,7 @@ List content:
 Fragment content:
 <ul id="fragment"></ul>
 Current status:
-<pre id="log" />
+<pre id="log"></pre>
 ```
 
 ```css hidden
