@@ -202,7 +202,7 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [What are object prototypes?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
 - [How do you add methods to the constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#setting_a_prototype)
 - [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/CObject-oriented_programming#inheritance)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming#inheritance)
 
 ### Web APIs
 

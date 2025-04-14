@@ -23,7 +23,7 @@ When CSS multi-column layout is used to lay out a container's content in multipl
 
 The `::column` pseudo-element only accepts scroll snap properties that apply to elements inside a scroll container, including {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-align")}}, and {{cssxref("scroll-snap-stop")}}.
 
-The `::column` pseudo-element can have a {{cssxref("::scroll-marker")}} pseudo-element. Other pseudo-elements like {{cssxref("::before")}} and {{cssxref("::after")}} are not generated on `::column`. Applying `::column::scroll-marker` creates a marker for every column of the orginating [scroll container](/en-US/docs/Glossary/Scroll_container), with the `::scroll-marker` pseudo-elements inheriting from the `::column` pseudo-element's originating element rather than the `::column` itself.
+The `::column` pseudo-element can have a {{cssxref("::scroll-marker")}} pseudo-element. Other pseudo-elements like {{cssxref("::before")}} and {{cssxref("::after")}} are not generated on `::column`. Applying `::column::scroll-marker` creates a marker for every column of the originating [scroll container](/en-US/docs/Glossary/Scroll_container), with the `::scroll-marker` pseudo-elements inheriting from the `::column` pseudo-element's originating element rather than the `::column` itself.
 
 This is useful for [CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) — `::column` can be used to generate `::scroll-marker` pseudo-elements for each column, and set them as [snap targets](/en-US/docs/Glossary/Scroll_snap#snap_target) using [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap).
 
