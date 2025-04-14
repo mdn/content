@@ -94,15 +94,18 @@ This example demonstrates how highlight pseudo-elements inherit styles from thei
 }
 ```
 
-Try selecting the text in both the parent and child elements. Notice that:
-
-1. When you select the parent text, it uses the yellow background and red text color defined in `.parent::selection`
-2. When you select the child text, it uses:
-   - The orange background from `.child::selection`
-   - The red text color inherited from the parent's `::selection` pseudo-element
-   - This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element
+The example renders as follows:
 
 {{EmbedLiveSample("Example", "100%", "150")}}
+
+Try selecting the text in both the parent and child elements. Notice that:
+
+1. When you select the parent text, it uses the yellow background and red text color defined in `.parent::selection`.
+2. When you select the child text, it uses:
+   - The orange background from `.child::selection`.
+   - The red text color inherited from the parent's `::selection` pseudo-element.
+
+This demonstrates how the child's highlight pseudo-element inherits from both its parent element and the parent's highlight pseudo-element.
 
 > [!NOTE]
 > The exact appearance of selected text may vary slightly between browsers. For detailed information about browser support and implementation details, see the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) documentation.
