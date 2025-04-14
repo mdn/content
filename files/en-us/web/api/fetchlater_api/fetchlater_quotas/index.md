@@ -150,13 +150,27 @@ Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b
 2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota.
 3. The 8KiB is not transferred to `c.com` when `<iframe src="https://b.com/">` redirects to there, but the 8KiB is not released.
 
-### Redirects of subframes back to the top-level origin allow use of the top-level quota
+### Sandboxed same-origin iframes are effectively separate origins
 
-Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which redirects to `a.com`, and no explicit top-level Permission Policies.
+Given this iframe embedded on `http://www.example.com`:
 
-1. The top-level frame of `a.com` has the default 512KiB quota.
-2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota.
-3. The 8KiB is not transferred to `a.com` when `<iframe src="https://b.com/">` redirects to there, but it is able to share the full top-level quota again, and the 8KiB is released.
+```html
+<iframe src="http://www.example.com/iframe" sandbox="allow-scripts"></iframe>
+```
+
+This would not be seem as "same-origin" despite being hosted on the same origin as the top-level dcument as it is in it's own sandbox iframe. Therefore, by default, it should be allocated 8KiB quota from the shared 128KiB quota.
+
+### Disallowing `fetchLater()` from iframes
+
+You can use the `allow` attribute of `<iframe>`s to prevent `fetchLater()` quota from being allocated to the iframe:
+
+```html
+<iframe
+  src="http://www.example.com/iframe"
+  allow="deferred-fetch;deferred-fetch-minimal;"></iframe>
+```
+
+Where `allow="deferred-fetch"` is needed to prevent same-origin iframes using up the 512KiB quota, and `allow="deferred-fetch-minimal"` is needed to prevent cross-origin iframes using up the 128KiB quota, and including both will prevent either being used no matter what the `src`.
 
 ### Examples which throw a `QuotaExceededError`
 
@@ -189,6 +203,14 @@ fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
 fetchLater("https://b.example.com", { method: "POST", body: a_40kb_body });
 fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
 ```
+
+### Redirects of subframes back to the top-level origin allow use of the top-level quota
+
+Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b.com/">`, which redirects to `a.com`, and no explicit top-level Permission Policies.
+
+1. The top-level frame of `a.com` has the default 512KiB quota.
+2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota.
+3. The 8KiB is not transferred to `a.com` when `<iframe src="https://b.com/">` redirects to there, but it is able to share the full top-level quota again, and the 8KiB is released.
 
 ## Specifications
 
