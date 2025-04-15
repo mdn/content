@@ -152,7 +152,7 @@ Assuming a top-level document on `a.com`, which embeds a `<iframe src="https://b
 
 ### Sandboxed same-origin iframes are effectively separate origins
 
-Given this iframe embedded on `https://www.example.com`:
+As an example, if the following `<iframe>` is embedded on `https://www.example.com`:
 
 ```html
 <iframe src="https://www.example.com/iframe" sandbox="allow-scripts"></iframe>
