@@ -126764,33 +126764,6 @@
       "CitizenK"
     ]
   },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
-    "modified": "2019-03-23T23:43:18.530Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Fredchat",
-      "jswisher",
-      "trevorh",
-      "Dria",
-      "CitizenK"
-    ]
-  },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
-    "modified": "2019-03-23T23:43:15.921Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "ethertank",
-      "jswisher",
-      "Fredchat",
-      "Major Small",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
-      "CitizenK"
-    ]
-  },
   "Web/XML/XSLT/Reference/Element": {
     "modified": "2019-03-24T00:14:46.715Z",
     "contributors": [
