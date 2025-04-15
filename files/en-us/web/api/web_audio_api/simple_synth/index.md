@@ -36,7 +36,7 @@ Beneath the keyboard, we'll put some controls for configuring the layer. For now
 
 First we create the `<div>` to contain the settings bar, so it can be styled as needed. Then we establish a box that will be presented on the left side of the bar and place a label and an {{HTMLElement("input")}} element of type `"range"`. The range element will typically be presented as a slider control; we configure it to allow any value between 0.0 and 1.0, stepping by 0.01 each position.
 
-```html
+```html-nolint
 <div class="settingsBar">
   <div class="left">
     <span>Volume: </span>
@@ -53,16 +53,15 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
       <option value="1.0" label="100%"></option>
     </datalist>
   </div>
-</div>
 ```
 
-We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to find an option list whose ID matches; in this case, the data set is named `"volumes"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
+We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to find an option list whose ID matches; in this case, the data set is named `"volumes"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
 
 ##### The waveform picker
 
 On the right side of the settings bar, we place a label and a {{HTMLElement("select")}} element named `"waveform"` whose options correspond to the available waveforms.
 
-```html
+```html-nolint
   <div class="right">
     <span>Current waveform: </span>
     <select name="waveform">
@@ -498,7 +497,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
+After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
 
 ### Making music
 

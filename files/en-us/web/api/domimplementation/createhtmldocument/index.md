@@ -40,7 +40,7 @@ Here's the HTML for this example:
     Click <a href="javascript:makeDocument()">here</a> to create a new document
     and insert it below.
   </p>
-  <iframe id="theFrame" src="about:blank" />
+  <iframe id="theFrame" src="about:blank"></iframe>
 </body>
 ```
 

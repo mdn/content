@@ -3,9 +3,8 @@ title: HTML images
 short-title: Images
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
@@ -127,7 +126,7 @@ Essentially, the key is to deliver a usable experience, even when the images can
 
 ### Width and height
 
-You can use the [`width`](/en-US/docs/Web/HTML/Element/img#width) and [`height`](/en-US/docs/Web/HTML/Element/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.
+You can use the [`width`](/en-US/docs/Web/HTML/Reference/Elements/img#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/img#height) attributes to specify the width and height of your image. They are given as integers without a unit, and represent the image's width and height in pixels.
 
 You can find your image's width and height in a number of ways. For example, on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the display information for the image file. Returning to our example, we could do this:
 
@@ -456,7 +455,7 @@ A better solution, is to use the HTML {{htmlelement("figure")}} and {{htmlelemen
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
 > [!NOTE]
-> From an accessibility viewpoint, captions and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> From an accessibility viewpoint, captions and [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 

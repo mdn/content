@@ -3,9 +3,8 @@ title: "CSS: Styling the content"
 short-title: Styling the content
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -127,8 +126,11 @@ p,
 }
 ```
 
+In the above CSS rule we have included an **element** (or **type**) selector, which selects a specific HTML element, but we have also included two other selector types, which aren't relevant to the rest of this tutorial. If you are curious as to what they do, check out our [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) guide to find out.
+
 > [!NOTE]
-> In the above CSS rule we have included an **element** (or **type**) selector, which selects a specific HTML element, but we have also included two other selector types, which aren't relevant to the rest of this tutorial. If you are curious as to what they do, check out our [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) guide to find out.
+> Scrimba's [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
+
 
 ## Fonts and text
 
@@ -300,5 +302,10 @@ If you followed all the instructions in this article, you should have a page tha
 You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
 Here, we have just scratched the surface of CSS. You'll learn a lot more in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) Core module later on in the course.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

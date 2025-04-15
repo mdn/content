@@ -2,9 +2,8 @@
 title: Classes in JavaScript
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 

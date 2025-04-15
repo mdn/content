@@ -3,9 +3,8 @@ title: Fundamental text and font styling
 short-title: Text and font fundamentals
 slug: Learn_web_development/Core/Text_styling/Fundamentals
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
@@ -113,6 +112,9 @@ p {
 ```
 
 This would make all paragraphs on a page adopt the arial font, which is found on any computer.
+
+> [!NOTE]
+> Scrimba's [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide to why fonts are important, web-safe fonts, and how to specify fonts in CSS — along with a challenge to test your knowledge.
 
 #### Web safe fonts
 
@@ -794,6 +796,6 @@ We hope you enjoyed playing with text in this article! The next article will pro
 ## See also
 
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
-- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

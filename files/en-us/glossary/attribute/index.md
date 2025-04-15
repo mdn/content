@@ -41,8 +41,8 @@ console.log(attr.value); // Prints `Modified placeholder`
 
 ## See also
 
-- [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
-- Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- [HTML attribute reference](/en-US/docs/Web/HTML/Reference/Attributes)
+- Information about HTML's [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes)
 - XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)
 - Related glossary terms:
   - {{Glossary("Element")}}

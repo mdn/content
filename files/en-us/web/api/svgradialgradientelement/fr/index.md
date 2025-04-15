@@ -27,7 +27,6 @@ Given the following SVG, with two identical gradients declared with different un
       <stop offset="0%" stop-color="red" />
       <stop offset="100%" stop-color="yellow" />
     </radialGradient>
-    </radialGradient>
     <radialGradient id="gradient2" r="20%" fr="50%">
       <stop offset="0%" stop-color="red" />
       <stop offset="100%" stop-color="yellow" />

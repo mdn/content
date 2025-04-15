@@ -2,9 +2,8 @@
 title: Flexbox
 slug: Learn_web_development/Core/CSS_layout/Flexbox
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
@@ -48,6 +47,9 @@ CSS flexible box layout enables you to:
 - Make all columns in a multiple-column layout adopt the same height even if they contain a different amount of content.
 
 Flexbox features may be the perfect solution for your one dimensional layout needs. Let's dig in and find out!
+
+> [!NOTE]
+> Scrimba's introductory [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide covering how common flexbox is on the web and therefore why it is so important to learn, and walks you through a typical use case that demonstrates the power of flexbox.
 
 ## Introducing a simple example
 
@@ -333,7 +335,7 @@ You'll see that the layout looks much better with this included:
 
 {{EmbedLiveSample("flex-wrap_1", "100", "430")}}
 
-We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least `200px` wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
+We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line.
 
 But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
 
@@ -872,7 +874,7 @@ button {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox).
 
 ## Summary
 

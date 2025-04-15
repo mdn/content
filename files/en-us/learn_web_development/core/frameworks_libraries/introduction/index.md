@@ -3,9 +3,8 @@ title: Introduction to client-side frameworks
 short-title: Introduction
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -94,7 +93,7 @@ const state = [
 ];
 ```
 
-How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Element/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Element/ul)). How do we make it? That could look something like this:
+How do we show one of those tasks to our users? We want to represent each task as a list item – an HTML [`<li>`](/en-US/docs/Web/HTML/Reference/Elements/li) element inside of an unordered list element (a [`<ul>`](/en-US/docs/Web/HTML/Reference/Elements/ul)). How do we make it? That could look something like this:
 
 ```js
 function buildTodoItemEl(id, name) {

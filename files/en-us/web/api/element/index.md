@@ -42,7 +42,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : A number indicating the effective zoom size of the element, or 1.0 if the element is not rendered.
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
+  - : A string reflecting the [`elementtiming`](/en-US/docs/Web/HTML/Reference/Attributes/elementtiming) attribute which marks an element for observation in the {{domxref("PerformanceElementTiming")}} API.
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of this element.
 - {{DOMxRef("Element.id")}}
@@ -299,7 +299,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an input element is about to be modified.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
+  - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script is about to be executed.
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}

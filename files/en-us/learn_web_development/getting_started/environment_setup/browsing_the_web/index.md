@@ -2,9 +2,8 @@
 title: Browsing the web
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 

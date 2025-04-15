@@ -20,7 +20,7 @@ Values of this type are objects. They contain the following properties:
 - `checked` {{optional_inline}}
   - : `boolean`. A flag indicating whether a checkbox or radio item was checked after it was clicked.
 - `editable`
-  - : `boolean`. A flag indicating whether the element is editable: for example, if it is a [textarea](/en-US/docs/Web/HTML/Element/textarea).
+  - : `boolean`. A flag indicating whether the element is editable: for example, if it is a [textarea](/en-US/docs/Web/HTML/Reference/Elements/textarea).
 - `frameId` {{optional_inline}}
   - : `integer`. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top level document, `frameId` is zero. If the item was clicked outside the page entirely (for example, in the `tools_menu` or `tab` context), then `frameId` is `undefined`.
 - `frameUrl` {{optional_inline}}
@@ -44,7 +44,7 @@ Values of this type are objects. They contain the following properties:
 - `srcUrl` {{optional_inline}}
   - : `string`. If present, the `src` value for the media in the clicked element.
 - `targetElementId` {{optional_inline}}
-  - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute of the page element.
+  - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute of the page element.
 - `viewType` {{optional_inline}}
   - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. The type of extension view.
 - `wasChecked` {{optional_inline}}

@@ -127,7 +127,7 @@ The server must still check the hash from the `Available-Dictionary` header — 
 
 An HTML document can also provide a compression dictionary to the browser which isn't a resource that the browser is downloading anyway via an element such as a {{htmlelement("script")}} tag. There are two methods to do this:
 
-- Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute is set to `compression-dictionary`:
+- Include a {{HTMLElement("link")}} element whose [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute is set to `compression-dictionary`:
 
   ```html
   <link rel="compression-dictionary" href="/dictionary.dat" />
@@ -177,7 +177,7 @@ Note that you will need {{glossary("OpenSSL")}} installed locally as well as Bro
 Compression algorithms are at risk of security attacks, so there are a number of restrictions for Compression Dictionary Transport, including:
 
 - Dictionaries must same-origin with the resource using the dictionary.
-- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+- Dictionary-compressed resources must be same-origin with the document origin, or follow the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) rules, and so be requested with the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute and served with an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
 - Dictionaries are bound by the usual HTTP Cache partitioning and so cannot be shared between origins even if they download the same resources. The dictionary will need to be downloaded again for each origin.
 
 Additionally, dictionaries could themselves become tracking vectors so browsers may restrict this feature when cookies are disabled or when other extra privacy protections are enabled.
@@ -195,7 +195,7 @@ Additionally, dictionaries could themselves become tracking vectors so browsers 
 - Glossary terms:
   - {{Glossary("Brotli compression")}}
   - {{Glossary("Zstandard compression")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Attributes/rel/compression-dictionary)
+- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/en-US/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
 - {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}

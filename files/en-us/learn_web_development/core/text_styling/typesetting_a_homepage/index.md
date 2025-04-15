@@ -3,9 +3,8 @@ title: "Challenge: Typesetting a community school homepage"
 short-title: "Challenge: Community school homepage"
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 

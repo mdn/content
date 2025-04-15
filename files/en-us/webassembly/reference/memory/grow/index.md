@@ -180,7 +180,7 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** `grow` support in Wasm modules matches the grow support in the JavaScript [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) API.
-> The [multiMemory](#webassembly.multimemory) key indicates versions in which `grow` can be used with a specified memory.
-
 {{Compat}}
+
+> [!NOTE]
+> The `multiMemory` compatibility table indicates versions in which `grow` can be used with a specified memory.

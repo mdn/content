@@ -62,6 +62,10 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
+      - type: listSubPages
+        path: /Learn_web_development/Core/Structuring_content/Test_your_skills
+        link: /Learn_web_development/Core/Structuring_content/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Styling_basics
     title: CSS_styling_basics
     details: closed
@@ -85,6 +89,10 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
       - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
       - /Learn_web_development/Core/Styling_basics/Cool-looking_box
+      - type: listSubPages
+        path: /Learn_web_development/Core/Styling_basics/Test_your_skills
+        link: /Learn_web_development/Core/Styling_basics/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Text_styling
     title: CSS_text_styling
     details: closed
@@ -106,6 +114,10 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Responsive_Design
       - /Learn_web_development/Core/CSS_layout/Media_queries
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
+      - type: listSubPages
+        path: /Learn_web_development/Core/CSS_layout/Test_your_skills
+        link: /Learn_web_development/Core/CSS_layout/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Scripting
     title: Dynamic_scripting_with_JavaScript
     details: closed
@@ -161,6 +173,10 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+      - type: listSubPages
+        path: /Learn_web_development/Core/Accessibility/Test_your_skills
+        link: /Learn_web_development/Core/Accessibility/Test_your_skills
+        details: closed
   - link: /Learn_web_development/Core/Design_for_developers
     title: Design_for_developers
   - link: /Learn_web_development/Core/Version_control

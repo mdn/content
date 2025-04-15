@@ -189,6 +189,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Writes a message to the console.
 - {{domxref("Window.fetch()")}}
   - : Starts the process of fetching a resource from the network.
+- {{domxref("Window.fetchLater()")}} {{experimental_inline}}
+  - : Creates a deferred fetch, which is sent once the page is navigated away from (it is destroyed or enters the [bfcache](/en-US/docs/Glossary/bfcache)), or after a provided `activateAfter` timeout — whichever comes first.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}

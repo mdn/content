@@ -3,9 +3,8 @@ title: Basic math in JavaScript — numbers and operators
 short-title: Numbers and operators
 slug: Learn_web_development/Core/Scripting/Math
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
@@ -98,7 +97,7 @@ twoDecimalPlaces;
 
 ### Converting to number data types
 
-Sometimes you might end up with a number that is stored as a string type, which makes it difficult to perform calculations with it. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input, and the [input type is text](/en-US/docs/Web/HTML/Element/input/text). There is a way to solve this problem — passing the string value into the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
+Sometimes you might end up with a number that is stored as a string type, which makes it difficult to perform calculations with it. This most commonly happens when data is entered into a [form](/en-US/docs/Learn_web_development/Extensions/Forms) input, and the [input type is text](/en-US/docs/Web/HTML/Reference/Elements/input/text). There is a way to solve this problem — passing the string value into the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor to return a number version of the same value.
 
 For example, try typing these lines into your console:
 

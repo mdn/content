@@ -2,9 +2,8 @@
 title: Web performance
 slug: Learn_web_development/Extensions/Performance
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions")}}
 
@@ -49,7 +48,7 @@ It would also be helpful to go a bit deeper into these topics, with modules such
 
 - [Web performance resources](/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features at the basic level and provide links to deeper dives to improve performance for each topic.
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
   - : In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of [responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a future CSS topic for you to learn.
 - [Main web performance section on MDN](/en-US/docs/Web/Performance)
   - : Our main web performance section — here you'll find much more detail on web performance including overviews of performance APIs, testing and analysis tools, and performance bottleneck gotchas.

@@ -3,9 +3,8 @@ title: "JavaScript: Adding interactivity"
 short-title: Adding interactivity
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -353,6 +352,9 @@ multiply(0.5, 3);
 > [!NOTE]
 > The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement tells the browser to return the `result` variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about [variable scoping](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
 
+> [!NOTE]
+> If you want some more practice at writing functions, our learning partner Scrimba has several interactive function challenges that you can access for free, and many other learning topics besides. See [Write a function that logs the sum](https://scrimba.com/learn-javascript-c0v/~0c?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> for an example.
+
 ### Events
 
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
@@ -496,8 +498,8 @@ Now that you've finished creating your website, the next step is to get it onlin
 
 ## See also
 
-- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
-  - : We have just scratched the surface of JavaScript in this article. You'll find a lot more JavaScript later on in our learning pathway, starting with our _Dynamic scripting with JavaScript_ module.
+- [Scrimba: Learn JavaScript](https://v2.scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn JavaScript_ course teaches you JavaScript through solving 140+ interactive coding challenges, building projects including a game, a browser extension, and even a mobile app. Scrimba features fun interactive lessons taught by knowledgeable teachers.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.
 

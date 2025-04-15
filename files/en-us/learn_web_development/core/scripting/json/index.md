@@ -3,9 +3,8 @@ title: Working with JSON
 short-title: JSON
 slug: Learn_web_development/Core/Scripting/JSON
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 

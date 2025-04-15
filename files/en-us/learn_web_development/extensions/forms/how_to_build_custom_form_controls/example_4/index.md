@@ -2,9 +2,8 @@
 title: Example 4
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This is the fourth example that explain [how to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
