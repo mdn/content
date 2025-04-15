@@ -44,37 +44,37 @@ svg {
 
 - {{SVGAttr("cx")}}
   - : This attribute defines the x coordinate of the end circle of the radial gradient.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `50%`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `50%`; _Animatable_: **yes**
 - {{SVGAttr("cy")}}
   - : This attribute defines the y coordinate of the end circle of the radial gradient.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `50%`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `50%`; _Animatable_: **yes**
 - {{SVGAttr("fr")}}
   - : This attribute defines the radius of the start circle of the radial gradient. The gradient will be drawn such that the 0% {{SVGElement('stop','gradient stop')}} is mapped to the perimeter of the start circle.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `0%`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `0%`; _Animatable_: **yes**
 - {{SVGAttr("fx")}}
   - : This attribute defines the x coordinate of the start circle of the radial gradient.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: Same as `cx`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: Same as `cx`; _Animatable_: **yes**
 - {{SVGAttr("fy")}}
   - : This attribute defines the y coordinate of the start circle of the radial gradient.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: Same as `cy`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: Same as `cy`; _Animatable_: **yes**
 - {{SVGAttr("gradientUnits")}}
   - : This attribute defines the coordinate system for attributes `cx`, `cy`, `r`, `fx`, `fy`, `fr`
-    _Value type_: `userSpaceOnUse` | `objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("gradientTransform")}}
   - : This attribute provides additional [transformation](/en-US/docs/Web/SVG/Reference/Attribute/transform) to the gradient coordinate system.
-    _Value type_: [**\<transform-list>**](/en-US/docs/Web/SVG/Guides/Content_type#transform-list) ; _Default value_: _identity transform_; _Animatable_: **yes**
+    _Value type_: [**\<transform-list>**](/en-US/docs/Web/SVG/Guides/Content_type#transform-list); _Default value_: _identity transform_; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : This attribute defines a reference to another `<radialGradient>` element that will be used as a template.
-    _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("r")}}
   - : This attribute defines the radius of the end circle of the radial gradient. The gradient will be drawn such that the 100% {{SVGElement('stop','gradient stop')}} is mapped to the perimeter of the end circle.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `50%`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length); _Default value_: `50%`; _Animatable_: **yes**
 - {{SVGAttr("spreadMethod")}}
   - : This attribute indicates how the gradient behaves if it starts or ends inside the bounds of the shape containing the gradient.
-    _Value type_: `pad` | `reflect` | `repeat` ; _Default value_: `pad`; _Animatable_: **yes**
+    _Value type_: `pad` | `reflect` | `repeat`; _Default value_: `pad`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : An [\<IRI>](/en-US/docs/Web/SVG/Guides/Content_type#iri) reference to another `<radialGradient>` element that will be used as a template.
-    _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Guides/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Guides/Content_type#iri); _Default value_: none; _Animatable_: **yes**
 
 ## Usage context
 

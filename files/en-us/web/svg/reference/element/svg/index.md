@@ -93,28 +93,28 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
 
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
-    _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
+    _Value type_: **\<string>**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("height")}}
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : How the `svg` fragment must be deformed if it is displayed with a different {{glossary("aspect ratio")}}.
-    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.
-    _Value type_: **[\<number>](/en-US/docs/Web/SVG/Guides/Content_type#number)** ; _Default value_: none; _Animatable_: **no**
+    _Value type_: **[\<number>](/en-US/docs/Web/SVG/Guides/Content_type#number)**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("viewBox")}}
   - : The SVG viewport coordinates for the current SVG fragment.
-    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)**; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : The displayed x coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _Default value_: `0`; _Animatable_: **yes**
 
 > [!NOTE]
 > Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.

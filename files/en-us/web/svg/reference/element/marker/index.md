@@ -167,28 +167,28 @@ svg {
 
 - {{SVGAttr("markerHeight")}}
   - : This attribute defines the height of the marker viewport.
-    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** ; _Default value_: `3`; _Animatable_: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)**; _Default value_: `3`; _Animatable_: **yes**
 - {{SVGAttr("markerUnits")}}
   - : This attribute defines the coordinate system for the attributes `markerWidth`, `markerHeight` and the contents of the `<marker>`.
-    _Value type_: `userSpaceOnUse` | `strokeWidth` ; _Default value_: `strokeWidth`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `strokeWidth`; _Default value_: `strokeWidth`; _Animatable_: **yes**
 - {{SVGAttr("markerWidth")}}
   - : This attribute defines the width of the marker viewport.
-    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** ; _Default value_: `3`; _Animatable_: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)**; _Default value_: `3`; _Animatable_: **yes**
 - {{SVGAttr("orient")}}
   - : This attribute defines the orientation of the marker relative to the shape it is attached to.
-    _Value type_: `auto` | `auto-start-reverse` | **[\<angle>](/en-US/docs/Web/SVG/Guides/Content_type#angle)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: `auto` | `auto-start-reverse` | **[\<angle>](/en-US/docs/Web/SVG/Guides/Content_type#angle)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
-    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)?; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute defines the x coordinate for the reference point of the marker.
-    _Value type_: `left` | `center` | `right` | **[\<coordinate>](/en-US/docs/Web/SVG/Guides/Content_type#coordinate)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: `left` | `center` | `right` | **[\<coordinate>](/en-US/docs/Web/SVG/Guides/Content_type#coordinate)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("refY")}}
   - : This attribute defines the y coordinate for the reference point of the marker.
-    _Value type_: `top` | `center` | `bottom` | **[\<coordinate>](/en-US/docs/Web/SVG/Guides/Content_type#coordinate)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: `top` | `center` | `bottom` | **[\<coordinate>](/en-US/docs/Web/SVG/Guides/Content_type#coordinate)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the current SVG fragment.
-    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)**; _Default value_: none; _Animatable_: **yes**
 
 ## Usage context
 

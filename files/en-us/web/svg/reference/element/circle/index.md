@@ -30,16 +30,16 @@ svg {
 
 - {{SVGAttr("cx")}}
   - : The x-axis coordinate of the center of the circle.
-    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("cy")}}
   - : The y-axis coordinate of the center of the circle.
-    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("r")}}
   - : The radius of the circle. A value lower or equal to zero disables rendering of the circle.
-    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)** ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: **[\<length>](/en-US/docs/Web/SVG/Guides/Content_type#length)** | **[\<percentage>](/en-US/docs/Web/SVG/Guides/Content_type#percentage)**; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : The total length for the circle's circumference, in user units.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
 
 > [!NOTE]
 > Starting with SVG2, `cx`, `cy`, and `r` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
