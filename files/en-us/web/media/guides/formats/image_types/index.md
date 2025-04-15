@@ -953,7 +953,7 @@ SVG can be used in web content in three ways:
 
 1. An {{SVGElement("svg")}} element can appear directly within the HTML. It can contain [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
 2. An SVG image can be embedded in HTML using elements such as {{HTMLElement("iframe")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}}.
-3. It is possible to use SVG images anywhere where other image types can be used, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth. However, there are [additional restrictions](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) when SVG is used in this way.
+3. It is possible to use SVG images anywhere where other image types can be used, including with the {{HTMLElement("img")}} element, the {{cssxref("background-image")}} CSS property, and so forth. However, there are [additional restrictions](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) when SVG is used in this way.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
 It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.
