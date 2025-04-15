@@ -162,7 +162,7 @@ This would not be considered "same-origin", despite being hosted on the same ori
 
 ### Disallowing `fetchLater()` from iframes
 
-You can use the `allow` attribute of `<iframe>` elements to prevent `fetchLater()` quota from being allocated to the iframe:
+You can use the `<iframe>` [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute to prevent `fetchLater()` quota from being allocated to the `<iframe>`:
 
 ```html
 <iframe
