@@ -131,7 +131,6 @@ In the above CSS rule we have included an **element** (or **type**) selector, wh
 > [!NOTE]
 > Scrimba's [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
 
-
 ## Fonts and text
 
 Let's return to our example and use CSS to improve the appearance of the text — we'll set a new font for the page and change some text settings on the different elements.
