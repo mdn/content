@@ -40,7 +40,7 @@ browser-compat: webextensions.manifest.theme
   </tbody>
 </table>
 
-Use the theme key to define a static theme to apply to Firefox.
+Use the `theme` key to define a static theme to apply to Firefox. When provided alone, this defines the theme used when Firefox is using either the light or dark color schemes. If the [`dark_theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dark_theme) key is provided, this key provides the theme used when Firefox is using the light color scheme.
 
 > [!NOTE]
 > If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
