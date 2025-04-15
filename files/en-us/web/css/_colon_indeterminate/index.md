@@ -20,12 +20,14 @@ Elements targeted by this selector are:
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements whose [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property is set to `true`
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) elements, when all radio buttons with the same `name` value in the form are unchecked
-- {{HTMLElement("progress")}} elements in an indeterminate state
+- {{HTMLElement("progress")}} elements, whose `value` is in an indeterminate state
 
 ## Syntax
 
-```plain
-:indeterminate
+```css
+:indeterminate {
+  /* ... */
+}
 ```
 
 ## Examples
