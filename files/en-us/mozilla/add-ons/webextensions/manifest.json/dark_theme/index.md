@@ -42,7 +42,7 @@ browser-compat: webextensions.manifest.dark_theme
 
 Use the `dark_theme` key to define a static theme to apply when Firefox is using the dark color scheme. The `dark_theme` key uses the same syntax and supports the same image, color, and property objects as the `theme` key.
 
-See the [`theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) for more information. 
+See the [`theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) for more information.
 
 ## Browser compatibility
 
@@ -66,4 +66,4 @@ In Chrome:
   }
   ```
 
-  The array form and the CSS color form are accepted for all properties. 
+  The array form and the CSS color form are accepted for all properties.
