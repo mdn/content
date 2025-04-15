@@ -56,7 +56,7 @@ In GFM and CommonMark, authors can use "code fences" to demarcate `<pre>` blocks
     - `rust` - Rust
     - `glsl` - GLSL (OpenGL Shaders)
     - `sql` - SeQueL commands
-    - `wasm` - WebAssembly
+    - `wat` - WebAssembly
     - `webidl` - Web Interface Definition Language
 - Styling
   - `css` - CSS

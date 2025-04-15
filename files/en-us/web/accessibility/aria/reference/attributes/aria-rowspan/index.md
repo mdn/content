@@ -48,6 +48,6 @@ Inherited into roles:
 
 ## See also
 
-- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
+- The [`rowspan`](/en-US/docs/Web/HTML/Reference/Elements/td#rowspan) attribute on {{HTMLElement('td')}}
 - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
 - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)

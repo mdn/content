@@ -3,9 +3,8 @@ title: Getting started with React
 short-title: React getting started
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -57,9 +56,9 @@ React utilizes features of modern JavaScript for many of its patterns. Its bigge
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) tag in our app.
+This heading constant is known as a **JSX expression**. React can use it to render that [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) tag in our app.
 
-Suppose we wanted to wrap our heading in a [`<header>`](/en-US/docs/Web/HTML/Element/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
+Suppose we wanted to wrap our heading in a [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
 
 ```jsx
 const header = (
@@ -78,7 +77,7 @@ const header = (
 > </header>;
 > ```
 >
-> However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Element/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
+> However, this looks kind of awkward, because the [`<header>`](/en-US/docs/Web/HTML/Reference/Elements/header) tag that starts the expression is not indented to the same position as its corresponding closing tag.
 
 Of course, your browser can't read JSX without help. When compiled (using a tool like [Babel](https://babeljs.io/) or [Parcel](https://parceljs.org/)), our header expression would look like this:
 
@@ -100,7 +99,7 @@ To read more about JSX, check out the React team's [Writing Markup with JSX](htt
 
 There are many ways to create a new React application. We're going to use Vite to create a new application via the command line.
 
-It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Element/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
+It's possible to [add React to an existing project](https://react.dev/learn/add-react-to-an-existing-project) by copying some [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) elements into an HTML file, but using Vite will allow you to spend more time building your app and less time fussing with setup.
 
 ### Requirements
 
@@ -180,7 +179,7 @@ moz-todo-react
 └── vite.config.js
 ```
 
-**`index.html`** is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility.
+**`index.html`** is the most important top-level file. Vite injects your code into this file so that your browser can run it. You won't need to edit this file during our tutorial, but you should change the text inside the [`<title>`](/en-US/docs/Web/HTML/Reference/Elements/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility.
 
 The **`public`** directory contains static files that will be served directly to your browser without being processed by Vite's build tooling. Right now, it only contains a Vite logo.
 
@@ -352,7 +351,7 @@ You can read up on these React APIs, if you'd like:
 
 Before we start building our app, we're going to delete some of the boilerplate code that Vite provided for us.
 
-First, as an experiment, change the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element in `App.jsx` so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Bear this in mind as you work on your app.
+First, as an experiment, change the [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) element in `App.jsx` so that it reads "Hello, World!", then save your file. You'll notice that this change is immediately rendered in the development server running at `http://localhost:3000` in your browser. Bear this in mind as you work on your app.
 
 We won't be using the rest of the code! Replace the contents of `App.jsx` with the following:
 

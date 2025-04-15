@@ -22,7 +22,7 @@ A {{DOMxRef("StyleSheet")}} object, or `null` if none is associated with the ele
 ```html
 <html>
   <header>
-    <style media="print" />
+    <style media="print"></style>
     …
   </header>
 </html>

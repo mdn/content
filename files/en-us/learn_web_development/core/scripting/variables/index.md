@@ -3,9 +3,8 @@ title: Storing the information you need — Variables
 short-title: Variables
 slug: Learn_web_development/Core/Scripting/Variables
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
@@ -427,7 +426,7 @@ This means that if you can initialize a variable when you declare it, and don't 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables).
 
 ## Summary
 

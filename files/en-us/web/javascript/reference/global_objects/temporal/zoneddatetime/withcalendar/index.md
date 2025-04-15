@@ -43,8 +43,8 @@ A new `Temporal.ZonedDateTime` object, representing the date-time specified by t
 const zdt = Temporal.ZonedDateTime.from(
   "2021-07-01T12:34:56[America/New_York]",
 );
-const newZDT = zdt.withCalendar("islamic");
-console.log(newZDT.toLocaleString("en-US", { calendar: "islamic" }));
+const newZDT = zdt.withCalendar("islamic-umalqura");
+console.log(newZDT.toLocaleString("en-US", { calendar: "islamic-umalqura" }));
 // 11/21/1442 AH, 12:34:56 PM EDT
 ```
 

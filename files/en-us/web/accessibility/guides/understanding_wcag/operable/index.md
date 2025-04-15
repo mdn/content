@@ -34,8 +34,8 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         and
         <a
@@ -71,8 +71,8 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         and
         <a
@@ -302,8 +302,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >
         for general advice on tabbing to controls. If you need to place elements
         in an unusual layout, it is better to make sure the source order is
@@ -325,8 +325,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
@@ -374,11 +374,11 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           See
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-            >UI controls</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+            >Use semantic UI controls where possible</a
           >,
-          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-            >Meaningful text labels</a
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+            >Use meaningful text labels</a
           >,
           <a
             href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
@@ -408,8 +408,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
-          >UI controls</a
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_semantic_ui_controls_where_possible"
+          >Use semantic UI controls where possible</a
         >.
       </td>
     </tr>
@@ -431,8 +431,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
-          >Meaningful text labels</a
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#use_meaningful_text_labels"
+          >Use meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out

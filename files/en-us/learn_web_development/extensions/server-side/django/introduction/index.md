@@ -2,9 +2,10 @@
 title: Django introduction
 slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.
 

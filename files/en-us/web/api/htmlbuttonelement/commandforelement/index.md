@@ -3,16 +3,14 @@ title: "HTMLButtonElement: commandForElement property"
 short-title: commandForElement
 slug: Web/API/HTMLButtonElement/commandForElement
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLButtonElement.commandForElement
 ---
 
-{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}
 
 The **`commandForElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the element to control via a button.
 
-It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
+It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Reference/Elements/button#commandfor) HTML attribute.
 
 ## Value
 

@@ -3,9 +3,8 @@ title: Supporting older browsers
 slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 page-type: learn-module-chapter
 browser-compat: css.properties.grid-template-columns
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Visitors to your website may include users who either use older browsers or use browsers that do not support the CSS features you've implemented. This is a common scenario on the web, where new features are continuously being added to CSS. Browsers differ in their support for these features because different browsers tend to prioritize implementing different features. This article explains how you as a web developer can use modern web techniques to ensure that your website remains accessible to users with older technology.
 

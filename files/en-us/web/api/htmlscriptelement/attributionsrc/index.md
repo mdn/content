@@ -10,7 +10,7 @@ browser-compat: api.HTMLScriptElement.attributionSrc
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`attributionSrc`** property of the {{domxref("HTMLScriptElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/script#attributionsrc) attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request.
+The **`attributionSrc`** property of the {{domxref("HTMLScriptElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc) attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request.
 
 On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 

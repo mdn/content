@@ -39,7 +39,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-```wasm
+```wat
 i32.const 0
 (if
   (then
@@ -53,7 +53,7 @@ i32.const 0
 
 To leave return values on the stack, add the `result` statement.
 
-```wasm
+```wat
 i32.const 0
 (if (result i32)
   (then

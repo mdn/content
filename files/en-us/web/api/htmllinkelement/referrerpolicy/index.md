@@ -9,7 +9,7 @@ browser-compat: api.HTMLLinkElement.referrerPolicy
 {{APIRef("HTML DOM")}}
 
 The **`referrerPolicy`** property of the {{domxref("HTMLLinkElement")}} interface
-reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Element/link#referrerpolicy) attribute of the
+reflects the HTML [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/link#referrerpolicy) attribute of the
 {{HTMLElement("link")}} element defining which referrer is sent when fetching the
 resource.
 
