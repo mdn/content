@@ -24,7 +24,7 @@ Given the following HTML:
 ```html
 <p>
   <label for="comment">Comment</label>
-  <textarea id="comment" minlength="10" maxlength="200" /></textarea>
+  <textarea id="comment" minlength="10" maxlength="200"></textarea>
 </p>
 ```
 

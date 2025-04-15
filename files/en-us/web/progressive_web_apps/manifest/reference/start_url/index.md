@@ -35,7 +35,7 @@ The `start_url` manifest member is used to specify the URL that should be opened
     If `start_url` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or not {{glossary("origin", "same-origin")}} as the page that links to the manifest), the URL of the page that links to the manifest is used.
 
     > [!NOTE]
-    > On some browsers the `start_url` _must_ be specified for a [PWA to be installable](/en-US/docs/web/progressive_web_apps/guides/making_pwas_installable#installability) (see the compatibility section below).
+    > On some browsers the `start_url` _must_ be specified for a [PWA to be installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) (see the compatibility section below).
     > You can set `"start_url": "./"` to use the default behavior on all browsers.
 
     > [!NOTE]

@@ -68,7 +68,7 @@ This allows you to upload a file to a server; it displays a progress bar while t
         <label for="file">File to upload</label><input type="file" id="file" />
       </p>
       <p>
-        <progress />
+        <progress></progress>
       </p>
       <p>
         <output></output>
