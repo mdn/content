@@ -57,7 +57,7 @@ Custom element lifecycle callbacks include:
 
 - `connectedCallback()`: Called each time the element is added to the document. The specification recommends that, as far as possible, developers should implement custom element setup in this callback rather than the constructor.
 - `disconnectedCallback()`: Called each time the element is removed from the document.
-- `connectedMoveCallback()`: When defined, called _instead_ of `connectedCallback()` and `disconnectedCallback()` each time the element is moved to a different place in the DOM via {{domxref("Element.moveBefore()")}}. This can be used to overcome functionality problems encountered as a result of initialization/cleanup code being run in the `connectedCallback()` and `disconnectedCallback()` callbacks when the element is not actually being added to or removed from the DOM. See [Moving custom elements](/en-US/docs/Web/API/Element/moveBefore#moving_custom_elements) for more details.
+- `connectedMoveCallback()`: When defined, this is called _instead of_ `connectedCallback()` and `disconnectedCallback()` each time the element is moved to a different place in the DOM via {{domxref("Element.moveBefore()")}}. Use this to avoid running initialization/cleanup code in the `connectedCallback()` and `disconnectedCallback()` callbacks when the element is not actually being added to or removed from the DOM. See [Moving custom elements](#moving_custom_elements_lifecycle_side-effects) for more details.
 - `adoptedCallback()`: Called each time the element is moved to a new document.
 - `attributeChangedCallback()`: Called when attributes are changed, added, removed, or replaced. See [Responding to attribute changes](#responding_to_attribute_changes) for more details about this callback.
 
@@ -240,6 +240,44 @@ my-custom-element:state(hidden) {
 The `:state()` pseudo-class can also be used within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom). Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that is in a particular state.
 
 There are several live examples in {{domxref("CustomStateSet")}} showing how this works.
+
+## Moving custom elements: lifecycle side-effects
+
+The position of a custom element in the DOM can be manipulated just like any regular HTML element, but there are [lifecycle](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) side-effects to consider.
+
+Each time a custom element is moved via methods such as {{domxref("Element.moveBefore()")}} or {{domxref("Node.insertBefore()")}}, the `disconnectedCallback()` and `connectedCallback()` lifecycle callbacks are fired, because the element is being removed from and then added back to the DOM.
+
+Consider this minimal example:
+
+```js
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    console.log("Custom element added to page.");
+  }
+
+  disconnectedCallback() {
+    console.log("Custom element removed from page.");
+  }
+}
+
+customElements.define("my-custom-element", MyCustomElement);
+```
+
+In this case, "Custom element removed from page." and "Custom element added to page." are logged to the console each time an instance of the custom element is moved. This might be your intended behavior. However, since these callbacks are typically used to implement any required initialization or cleanup code, moving the element may cause problems with its state.
+
+Custom elements can be opted in to state-preserving moves via the {{domxref("Element.moveBefore()")}} method and the `connectedMoveCallback()` lifecycle callback. If defined in the element constructor, `connectedMoveCallback()` will run instead of `connectedCallback()` and `disconnectedCallback()` when an element instance is moved via `moveBefore()`.
+
+You could add an empty `connectedMoveCallback()` to stop the other two callbacks running, or include some custom logic to handle the move:
+
+```js
+connectedMoveCallback() {
+  console.log("Custom element moved with moveBefore()");
+}
+```
 
 ## Examples
 
