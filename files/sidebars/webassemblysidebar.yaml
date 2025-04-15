@@ -33,7 +33,7 @@ sidebar:
     link: /WebAssembly/Reference
     title: Reference
   - title: JavaScript_interface
-    details: open
+    details: closed
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/JavaScript_interface
@@ -103,7 +103,7 @@ sidebar:
         details: closed
         code: true
   - title: Instructions
-    details: open
+    details: closed
     children:
       - type: listSubPages
         path: /WebAssembly/Reference/Control_flow
