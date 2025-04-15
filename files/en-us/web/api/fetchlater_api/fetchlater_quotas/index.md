@@ -158,7 +158,7 @@ As an example, if the following `<iframe>` is embedded on `https://www.example.c
 <iframe src="https://www.example.com/iframe" sandbox="allow-scripts"></iframe>
 ```
 
-This would not be seem as "same-origin" despite being hosted on the same origin as the top-level dcument as it is in it's own sandbox iframe. Therefore, by default, it should be allocated 8KiB quota from the shared 128KiB quota.
+This would not be considered "same-origin", despite being hosted on the same origin as the top-level document, as the `<iframe>` is in a sandboxed environment. Therefore, by default, it should be allocated an 8KiB quota from the total shared 128KiB quota.
 
 ### Disallowing `fetchLater()` from iframes
 
