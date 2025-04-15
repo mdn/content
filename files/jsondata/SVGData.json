@@ -371,9 +371,9 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>, in any order.",
-          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002",
-          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a> e exatamente um <a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>, em qualquer ordem."
+          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Reference/Element#descriptive_elements\">descriptive elements</a> and exactly one <a href=\"/en-US/docs/Web/SVG/Reference/Element#light_source_elements\">light source element</a>, in any order.",
+          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Reference/Element#descriptive_elements\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Reference/Element#light_source_elements\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Reference/Element#descriptive_elements\">elementos descritivos</a> e exatamente um <a href=\"/pt-BR/docs/Web/SVG/Reference/Element#light_source_elements\">elemento de fonte de luz</a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -609,9 +609,9 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Exactly one\u00a0<a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
-          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002",
-          "pt-BR": "Exatamente um primeiro\u00a0<a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>\u00a0e qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0em qualquer ordem."
+          "en-US": "Exactly one\u00a0<a href=\"/en-US/docs/Web/SVG/Reference/Element#light_source_elements\">light source element</a>\u00a0first and any number of <a href=\"/en-US/docs/Web/SVG/Reference/Element#descriptive_elements\">descriptive elements</a>\u00a0in any order.",
+          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Reference/Element#light_source_elements\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Reference/Element#descriptive_elements\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Exatamente um primeiro\u00a0<a href=\"/pt-BR/docs/Web/SVG/Reference/Element#light_source_elements\">elemento de fonte de luz</a>\u00a0e qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Reference/Element#descriptive_elements\">elementos descritivos</a>\u00a0em qualquer ordem."
         }
       },
       "attributes": [
@@ -744,8 +744,8 @@
       "categories": ["fontElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
-          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0\u00bb e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
+          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Reference/Element#descriptive_elements\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Reference/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Reference/Element#descriptive_elements\">elementos descritivos</a>\u00a0\u00bb e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Reference/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
         }
       },
       "attributes": [
