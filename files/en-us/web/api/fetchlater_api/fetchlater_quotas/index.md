@@ -170,7 +170,7 @@ You can use the `<iframe>` [`allow`](/en-US/docs/Web/HTML/Reference/Elements/ifr
   allow="deferred-fetch;deferred-fetch-minimal;"></iframe>
 ```
 
-Where `allow="deferred-fetch"` is needed to prevent same-origin iframes using up the 512KiB quota, and `allow="deferred-fetch-minimal"` is needed to prevent cross-origin iframes using up the 128KiB quota, and including both will prevent either being used no matter what the `src`.
+The `allow="deferred-fetch"` directive is needed to prevent same-origin iframes from using up the 512KiB quota, and the `allow="deferred-fetch-minimal"` directive is needed to prevent cross-origin iframes from using up the 128KiB quota. Including both will prevent both from being used, regardless of the `src` value.
 
 ### Examples which throw a `QuotaExceededError`
 
