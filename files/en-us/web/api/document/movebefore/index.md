@@ -90,7 +90,7 @@ The HTML is a minimal template that features a comment inside the {{htmlelement(
 
 #### JavaScript
 
-In our script, we loop through all the {{domxref("Node.childNodes", "childNodes")}} of the `<body>` element. When we find a node with a {{domxref("Node.nodeType", "nodeType")}} value of `8` (which indicates a comment node), we store a reference to it insidea variable called `commentNode`. We then invoke `document.moveBefore()`, specifying that we want to move the comment node, and specifying a second argument of `null` to inserted our comment the end of the `Document`'s child nodes.
+In our script, we loop through all the {{domxref("Node.childNodes", "childNodes")}} of the `<body>` element. When we find a node with a {{domxref("Node.nodeType", "nodeType")}} value of `8` (which indicates a comment node), we store a reference to it inside a variable called `commentNode`. We then invoke `document.moveBefore()`, specifying that we want to move the comment node, and specifying a second argument of `null` to insert our comment the end of the `Document`'s child nodes.
 
 ```js live-sample___movebefore-comment
 let commentNode;
