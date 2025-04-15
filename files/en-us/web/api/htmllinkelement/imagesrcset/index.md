@@ -8,7 +8,7 @@ browser-compat: api.HTMLLinkElement.imageSrcset
 
 {{APIRef("HTML DOM")}}
 
-The **`imageSrcset`** property of the {{domxref("HTMLLinkElement")}} interface is a string which identifies one or more comma-separated **image candidate strings**. This property reflects the value of the {{htmlelement("link")}} element's [`imagesrcset`](/en-US/docs/Web/HTML/Element/link#imagesrcset) attribute. This property can retrieved or set the `imagesrcset` attribute value.
+The **`imageSrcset`** property of the {{domxref("HTMLLinkElement")}} interface is a string which identifies one or more comma-separated **image candidate strings**. This property reflects the value of the {{htmlelement("link")}} element's [`imagesrcset`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesrcset) attribute. This property can retrieved or set the `imagesrcset` attribute value.
 
 Each image candidate string contains an image URL and an optional width and/or pixel density descriptor indicating the conditions under which that candidate image should be used.
 
@@ -16,7 +16,7 @@ Each image candidate string contains an image URL and an optional width and/or p
 "images/team-photo.jpg, images/team-photo-retina.jpg 2x, images/team-photo-large.jpg 1400w"
 ```
 
-For HTML {{htmlelement("link")}} elements with [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) and [`as="image"`](/en-US/docs/Web/HTML/Element/link#as) set, the `imagesrcset` attribute has similar syntax and semantics as the {{htmlelement("img")}} element's [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute, which indicates to preload the appropriate resource used by an `<img>` element with corresponding values for its `srcset` and `sizes` attributes.
+For HTML {{htmlelement("link")}} elements with [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) and [`as="image"`](/en-US/docs/Web/HTML/Reference/Elements/link#as) set, the `imagesrcset` attribute has similar syntax and semantics as the {{htmlelement("img")}} element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute, which indicates to preload the appropriate resource used by an `<img>` element with corresponding values for its `srcset` and `sizes` attributes.
 
 If the `imageSrcset` property includes width descriptors, the {{domxref("HTMLLinkElement.imageSizes", "imageSizes")}} property must be non-null, or the `imageSrcset` value will be ignored.
 
@@ -82,4 +82,4 @@ log(`Updated: ${link.imageSrcset}`);
 - {{domxref("HTMLLinkElement.imageSizes")}}
 - {{domxref("HTMLImageElement.srcset")}}
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading#link_relpreload)
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)

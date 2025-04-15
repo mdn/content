@@ -61,7 +61,7 @@ Permissions-Policy: geolocation=(self b.example.com)
 The `allow="geolocation"` attribute must then be added to the iframe element with sources from that origin:
 
 ```html
-<iframe src="https://b.example.com" allow="geolocation"/></iframe>
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
 ```
 
 Geolocation data may reveal information that the device owner does not want to share.
