@@ -209,7 +209,7 @@ fetchLater("https://a.example.com", { method: "POST", body: a_40kb_body });
 Assuming a top-level document at `a.com`, which embeds `<iframe src="https://b.com/">`, which redirects to `a.com`, and no explicit top-level Permission Policies:
 
 1. The top-level frame of `a.com` has the default 512KiB quota.
-2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota.
+2. `<iframe src="https://b.com/">` receives 8KiB of the default shared quota of 128KiB.
 3. The 8KiB is not transferred to `a.com` when `<iframe src="https://b.com/">` redirects to there, but it is able to share the full top-level quota again, and the 8KiB is released.
 
 ## Specifications
