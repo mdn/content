@@ -139,22 +139,24 @@ In addition we now have:
 
 Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
+Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the top of the list, as shown below:
 
 ```bash
 INSTALLED_APPS = [
+    # Add our new application
+    'catalog.apps.CatalogConfig', # This object was created for us in /catalog/apps.py
+
+    # Previous applications
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Add our new application
-    'catalog.apps.CatalogConfig', # This object was created for us in /catalog/apps.py
 ]
 ```
 
-The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application. Pay attention to the fact that you added it to the top of the list : Order of applications matter, and when multiple apps have the same page, the first in the list will be chosen.
 
 > [!NOTE]
 > You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
