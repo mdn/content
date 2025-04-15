@@ -45,25 +45,25 @@ svg {
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Guides/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("lengthAdjust")}}
   - : Where length adjustment should be applied to the text: the space between glyphs, or both the space and the glyphs themselves.
-    _Value type_: `spacing`|`spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
+    _Value type_: `spacing` | `spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
 - {{SVGAttr("method")}}
   - : Which method to render individual glyphs along the path.
-    _Value type_: `align`|`stretch` ; _Default value_: `align`; _Animatable_: **yes**
+    _Value type_: `align` | `stretch` ; _Default value_: `align`; _Animatable_: **yes**
 - {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
     _Value type_: [**\<path_data>**](/en-US/docs/Web/SVG/Reference/Attribute/path#path-data) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("side")}} {{Experimental_Inline}}
   - : Which side of the path the text should be rendered.
-    _Value type_: `left`|`right` ; _Default value_: `left`; _Animatable_: **yes**
+    _Value type_: `left` | `right` ; _Default value_: `left`; _Animatable_: **yes**
 - {{SVGAttr("spacing")}}
   - : How space between glyphs should be handled.
-    _Value type_: `auto`|`exact` ; _Default value_: `exact`; _Animatable_: **yes**
+    _Value type_: `auto` | `exact` ; _Default value_: `exact`; _Animatable_: **yes**
 - {{SVGAttr("startOffset")}}
   - : How far the beginning of the text should be offset from the beginning of the path.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("textLength")}}
   - : The width of the space into which the text will render.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _auto_; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _auto_; _Animatable_: **yes**
 
 ## Usage context
 

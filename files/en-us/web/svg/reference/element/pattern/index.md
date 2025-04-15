@@ -52,7 +52,7 @@ svg {
 - {{SVGAttr("patternContentUnits")}}
 
   - : This attribute defines the coordinate system for the contents of the `<pattern>`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
     > [!NOTE]
     > This attribute has no effect if a `viewBox` attribute is specified on the `<pattern>` element.
@@ -62,10 +62,10 @@ svg {
     _Value type_: **[\<transform-list>](/en-US/docs/Web/SVG/Guides/Content_type#transform-list)**; _Default value_: _identity transform_; _Animatable_: **yes**
 - {{SVGAttr("patternUnits")}}
   - : This attribute defines the coordinate system for attributes `x`, `y`, `width`, and `height`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
-    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the pattern fragment.
     _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**

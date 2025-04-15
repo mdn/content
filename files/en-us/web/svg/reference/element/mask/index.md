@@ -47,10 +47,10 @@ svg {
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 - {{SVGAttr("maskContentUnits")}}
   - : This attribute defines the coordinate system for the contents of the `<mask>`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 - {{SVGAttr("maskUnits")}}
   - : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
-    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
+    _Value type_: `userSpaceOnUse` | `objectBoundingBox` ; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
     _Value type_: [**\<coordinate>**](/en-US/docs/Web/SVG/Guides/Content_type#coordinate) ; _Default value_: `-10%`; _Animatable_: **yes**

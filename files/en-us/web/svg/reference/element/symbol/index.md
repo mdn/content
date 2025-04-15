@@ -48,28 +48,28 @@ svg {
 
 - {{SVGAttr("height")}}
   - : This attribute determines the height of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the svg fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
-    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+    _Value type_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet` | `slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("refX")}}
   - : This attribute determines the x coordinate of the reference point of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|`left`|`center`|`right` ; _Default value_: None; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | `left` | `center` | `right` ; _Default value_: None; _Animatable_: **yes**
 - {{SVGAttr("refY")}}
   - : This attribute determines the y coordinate of the reference point of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|`top`|`center`|`bottom` ; _Default value_: None; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | `top` | `center` | `bottom` ; _Default value_: None; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the current symbol.
     _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : This attribute determines the width of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : This attribute determines the x coordinate of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : This attribute determines the y coordinate of the symbol.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
 ## Usage context
 

@@ -33,16 +33,16 @@ svg {
 
 - {{SVGAttr('x1')}}
   - : Defines the x-axis coordinate of the line starting point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr('x2')}}
   - : Defines the x-axis coordinate of the line ending point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr('y1')}}
   - : Defines the y-axis coordinate of the line starting point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr('y2')}}
   - : Defines the y-axis coordinate of the line ending point.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage) | [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : Defines the total path length in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
