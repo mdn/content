@@ -26,18 +26,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     - `none`
 
-      - : No user actions can be used to close the `<dialog>` element, only developer-specified mechanisms such as a JavaScript-powered "Close" {{htmlelement("button")}} or a {{htmlelement("form")}} submission.
+      - : No user actions can be used to close the `<dialog>` element, only developer-specified mechanisms such as a close {{htmlelement("button")}} (for example with a [`click`](/en-US/docs/Web/API/Element/click_event) handler that invokes {{domxref("HTMLDialogElement.close()")}}) or a {{htmlelement("form")}} submission.
 
     - `closerequest`
 
-      - : The `<dialog>` element can be closed via relevant platform-specific close requests, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
+      - : The `<dialog>` element can be closed via relevant platform-specific user actions, such as pressing the <kbd>Esc</kbd> key on desktop platforms, or a "back" or "dismiss" gesture on mobile platforms.
 
     - `any`
 
-      - : The `<dialog>` element can be closed via relevant platform-specific close requests, or by pressing outside the `<dialog>`. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
+      - : The `<dialog>` element can be closed via relevant platform-specific user actions, or by clicking or tapping outside the `<dialog>`. This is equivalent to the ["light dismiss" behavior of "auto" state popovers](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss).
 
     > [!NOTE]
-    > If the `<dialog>` element does not have a `closedby` value specified, or it is specified with an invalid value, it behaves as if the value was `closerequest` if the `<dialog>` was shown via {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, or `none` if it was not.
+    > If the `<dialog>` element does not have a `closedby` value specified, or it is specified with an invalid value, it behaves as if the value was `"closerequest"` if the `<dialog>` was shown via {{domxref("HTMLDialogElement.showModal()", "showModal()")}}, or `"none"` if it was not.
 
 - `open`
 
@@ -399,7 +399,7 @@ The rendered result is as follows:
 
 {{EmbedLiveSample("closedby-values", "100%", 300)}}
 
-Try clicking each button to open a dialog. The first one can only be closed by pressing its "Close" button. The second one can also be closed via a device specific close request such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), and can additionally be closed by pressing outside the dialog.
+Try clicking each button to open a dialog. The first one can only be closed by clicking its "Close" button. The second one can also be closed via a device specific user action such as pressing the <kbd>Esc</kbd> key. The third one has full ["light-dismiss" behavior](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss), and can additionally be closed by clicking or tapping outside the dialog.
 
 ### Animating dialogs
 
