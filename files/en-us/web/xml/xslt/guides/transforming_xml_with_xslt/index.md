@@ -13,19 +13,15 @@ At present, Gecko (the layout engine behind Firefox) supports two forms of XML s
 
 Our focus here is on the second type of stylesheet that Gecko supports: the XSLT stylesheet. XSLT stands for eXtensible Stylesheet Language/Transform and the name is apt. XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format (and in the case of Firefox, the focus is on converting it on the fly into HTML which can then be displayed by the browser).
 
-## XSLT/XPath reference
-
-- [Elements](/en-US/docs/Web/XML/XSLT/Reference/Element)
-- [Axes](/en-US/docs/Web/XML/XPath/Reference/Axes)
-- [Functions](/en-US/docs/Web/XML/XPath/Reference/Functions)
-
-## Overview
+## What is XSLT?
 
 The eXtensible Stylesheet Language/Transform is a very powerful language, and a complete discussion of it is well beyond the scope of this article, but a brief discussion of some basic concepts will be helpful in understanding the description of Netscape's capabilities that follows.
 
 An XSLT stylesheet is an XML document. Unlike CSS, which has its own specialized syntax, an XSLT stylesheet is an XML document, which must conform to all XML rules, including well-formedness. So the model for transformation is that one XML document is used to transform another XML document.
 
 An XSLT stylesheet is marked as such by the inclusion of a standard XSLT heading. The outermost element in an XSLT stylesheet must be the `<xsl:stylesheet>` element (an acceptable alternate is the `<xsl:transform>` element). This element will include at least one namespace declaration and the mandatory version attribute. Other namespaces and three optional attributes may also be included.
+
+## The XSLT namespace
 
 The mandatory namespace for XSLT is `"http://www.w3.org/1999/XSL/Transform"`. Namespaces are the subject of a fair amount of confusion in XML. Despite the fact that very often namespaces appear to be URIs, they do not, in fact, refer to a resource located at that address. Instead they are a way of specifying a unique identifier for a known set of elements. The string `"http://www.w3.org/1999/XSL/Transform"` is a constant that designates the elements so marked as belonging to the set of tags designated by the W3C in the 1999 XSLT Recommendation. Another string that is occasionally seen in stylesheets, `"http://www.w3.org/TR/WD-xsl"`, indicates compliance with an earlier working draft (hence the WD) of the W3C document. This latter namespace is not compatible with the one that the W3C eventually adopted and is not supported by Netscape.
 
@@ -35,15 +31,19 @@ Because typing `"http://www.w3.org/1999/XSL/Transform"` repeatedly would be tedi
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 ```
 
-The `xmlns` pseudo-attribute maps the shorthand name xsl onto the full namespace for use throughout the document that follows. Thus the stylesheet element above is prefixed with `xsl:`. Although `xsl` is the conventionally used shorthand name (called the prefix), it is not mandatory and it is quite possible to choose a different one. The examples in this article all assume the use of the `xsl` prefix.
+The `xmlns` pseudo-attribute maps the shorthand name `xsl` onto the full namespace for use throughout the document that follows. Thus the stylesheet element above is prefixed with `xsl:`. Although `xsl` is the conventionally used shorthand name (called the prefix), it is not mandatory and it is quite possible to choose a different one. The examples in this article all assume the use of the `xsl` prefix.
 
-All XSLT transformations are performed on trees, not documents. The XSLT transformation engine, called the processor, does not work directly on documents. Before transformation can take place, the primary XML document(s) and the stylesheet document(s) must be run through a parser, which creates an abstract representation of the structure of the document in memory. This representation, called the tree, is what is actually manipulated by the processor. The tree is an abstract datatype, a conceptual model which can be implemented in various ways depending on the parser and the processor. :Netscape's uses a structure similar to the W3C DOM as its tree structure, but others are possible. The only requirements concern the disposition of objects in the tree, their properties, and their relationships.
+## How XSLT processes XML trees
+
+The XSLT transformation engine, called the processor, does not work directly on documents. Before transformation can take place, the primary XML document(s) and the stylesheet document(s) must be run through a parser, which creates an abstract representation of the structure of the document in memory. This representation, called the tree, is what is actually manipulated by the processor. The tree is an abstract datatype, a conceptual model which can be implemented in various ways depending on the parser and the processor. :Netscape's uses a structure similar to the W3C DOM as its tree structure, but others are possible. The only requirements concern the disposition of objects in the tree, their properties, and their relationships.
 
 The tree consists of a hierarchical framework of nodes. It can be made up of seven different types of nodes: the single root node, element nodes, text nodes, attribute nodes, comment nodes, processing instruction nodes, and namespace nodes.
 
 At the top of the tree is the root node. The root node does not correspond to any individual part of the XML document: it represents the document as whole. Below the root node are its children, which can be elements, comments, processing instructions and so on. Some of those children may also have children. And this can continue for several levels. There are certain constraints on which type of nodes can occur where: for example, text nodes can have no children.
 
 The result of the processor's action is also a tree. Netscape uses this tree to render the contents in the browser window.
+
+## XPath and node selection
 
 In essence, an XSLT stylesheet is a set of rules, called templates, which declare that any node that matches this specific pattern should be manipulated in this specific way and end up in this specific position in the result tree. The particulars of how this is to be accomplished are left up to the processor. Because the order of execution of the stylesheet cannot be guaranteed, XSLT does not support any functionality that produces side-effects. In this it is like Lisp or Scheme.
 
@@ -61,9 +61,7 @@ This must be placed in the prolog section of the XML document.
 
 ## For further reading
 
-### Print
-
-#### Books
+### Books
 
 - **XSLT: Programmer's Reference, Second Edition**
 
@@ -98,40 +96,30 @@ This must be placed in the prolog section of the XML document.
 
 <https://www.amazon.com/gp/product/0596004206>
 
-### Digital
+### XSLT/XPath reference
 
-#### Websites
+- [Elements](/en-US/docs/Web/XML/XSLT/Reference/Element)
+- [Axes](/en-US/docs/Web/XML/XPath/Reference/Axes)
+- [Functions](/en-US/docs/Web/XML/XPath/Reference/Functions)
 
-- **World Wide Web Consortium**
+### Specifications
 
-  - **The W3C homepage**: <https://www.w3.org>
-  - **The main XSL page**: <https://www.w3.org/Style/XSL/>
-  - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
-  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
-  - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
+- **The main XSL page**: <https://www.w3.org/Style/XSL/>
+- **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
+- **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
+- **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
 
-    - The World Wide Web Consortium is the body that publishes Recommendations for a number of web-based technologies, many of which become the de-facto standard.
-
-#### Articles
+### Articles
 
 - [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
-#### Tutorials/Examples
+### Tutorials/Examples
 
 - [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
 - [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
 - [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
 
-#### Other
+### Other
 
 - [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
-- **XSL-List**
-
-  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
-  - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
-
-## Original Document Information
-
-- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
-- Note: This reprinted article was originally part of the DevEdge site.
