@@ -59,6 +59,12 @@ Stylesheets can be attached to an XML document via a processing instruction. To 
 
 This must be placed in the prolog section of the XML document.
 
+## XSLT/XPath reference
+
+- [Elements](/en-US/docs/Web/XML/XSLT/Reference/Element)
+- [Axes](/en-US/docs/Web/XML/XPath/Reference/Axes)
+- [Functions](/en-US/docs/Web/XML/XPath/Reference/Functions)
+
 ## For further reading
 
 ### Books
@@ -95,12 +101,6 @@ This must be placed in the prolog section of the XML document.
     - As the title indicates, this is an overview of XML generally. Chapter 6 is devoted specifically to XSLT.
 
 <https://www.amazon.com/gp/product/0596004206>
-
-### XSLT/XPath reference
-
-- [Elements](/en-US/docs/Web/XML/XSLT/Reference/Element)
-- [Axes](/en-US/docs/Web/XML/XPath/Reference/Axes)
-- [Functions](/en-US/docs/Web/XML/XPath/Reference/Functions)
 
 ### Specifications
 
