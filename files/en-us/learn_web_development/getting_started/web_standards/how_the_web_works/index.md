@@ -2,9 +2,8 @@
 title: How the web works
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
@@ -31,7 +30,7 @@ This theory is not essential to writing web code in the short term, but before l
           <li>DNS and how it works at a high level.</li>
           <li>The purpose of TCP/IP, HTTP, and packets.</li>
           <li>HTTP syntax at a basic level.</li>
-          <li>Common HTTP response codes (e.g. 200, 301, 403, 404, and 500).</li>
+          <li>Common HTTP response codes (e.g., 200, 301, 403, 404, and 500).</li>
           <li>Basic components of a URL (protocol, domain, subdomain, path).</li>
         </ul>
       </td>

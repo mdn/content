@@ -37,7 +37,7 @@ Values of this type are objects. They contain the following properties:
   - : `boolean`. Whether the tab is hidden.
 - `highlighted`
 
-  - : `boolean`. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
+  - : `boolean`. Whether the tab is highlighted, i.e., part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
     Firefox for Android doesn't support highlighting multiple tabs.
 

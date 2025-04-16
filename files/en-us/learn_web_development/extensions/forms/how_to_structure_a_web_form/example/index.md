@@ -2,9 +2,8 @@
 title: Example
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form).
 

@@ -26,7 +26,7 @@ You may have an `import` declaration that's nested in another construct, such as
 
 If the `import` is already at the top level of the code, it may be because the file is not interpreted as a module. Runtimes require external hints to determine whether a file is a module or not, and here are several ways to provide such hints:
 
-- If the file is directly loaded from HTML, make sure the [`<script>`](/en-US/docs/Web/HTML/Element/script) tag has the `type="module"` attribute.
+- If the file is directly loaded from HTML, make sure the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) tag has the `type="module"` attribute.
 - If the file is run in Node, make sure either the file has the `.mjs` extension, or the closest `package.json` file has the `"type": "module"` field.
 - If the file is run as a [worker](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), make sure you call the `Worker()` constructor with the `type: "module"` option.
 - Import this file from another module.

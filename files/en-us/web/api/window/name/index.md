@@ -22,7 +22,7 @@ Browsing contexts do not need to have names.
 
 Modern browsers will reset `Window.name` to an empty string if a tab loads a
 page from a different domain, and restore the name if the original page is reloaded
-(e.g. by selecting the "back" button). This prevents an untrusted page from accessing
+(e.g., by selecting the "back" button). This prevents an untrusted page from accessing
 any information that the previous page might have stored in the property (potentially
 the new page might also modify such data, which might then be read by the original page
 if it was reloaded).

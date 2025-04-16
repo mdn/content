@@ -60,8 +60,8 @@ body {
 
 ### Values
 
-- `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g. English or Moroccan style);
-- `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
+- `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g., English or Moroccan style);
+- `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g., Maghreb or Machrek style);
 
 > [!NOTE]
 >
@@ -81,4 +81,4 @@ body {
 
 - All [global attributes](/en-US/docs/Web/MathML/Reference/Global_attributes).
 - {{cssxref("direction")}}
-- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) global attribute

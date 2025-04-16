@@ -55,7 +55,7 @@ If the flex value is set using the element's `flex` attribute, then the style is
 
 To make XUL elements in a containing box the same size, set the containing box's `equalsize` attribute to the value `always`. This attribute does not have a corresponding CSS property.
 
-A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g. `height: 0`), and the same `box-flex` value greater than zero (e.g. `-moz-box-flex: 1`).
+A trick to make all content elements in a containing box the same size, is to give them all a fixed size (e.g., `height: 0`), and the same `box-flex` value greater than zero (e.g., `-moz-box-flex: 1`).
 
 ## Formal definition
 
@@ -63,10 +63,7 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ## Formal syntax
 
-```plain
-box-flex =
-  <number>
-```
+{{CSSSyntaxRaw(`box-flex = <number>`)}}
 
 ## Examples
 

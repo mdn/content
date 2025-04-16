@@ -50,32 +50,17 @@ read(view, options)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of the stream.
+A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of the stream. The result object contains two properties, `value` and `done`.
 
 The following are possible:
 
-- If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
-
-  ```js
-  { value: theChunk, done: false }
-  ```
-
-  `theChunk` is a view containing the new data.
+- If a chunk is available and the stream is still active, the result's `done` is `false`, and `value` is a view containing the new data.
   This is a view of the same type and over the same backing memory as the `view` passed to the `read()` method.
   The original `view` will be detached and no longer usable.
 
-- If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
+- If the stream is closed, the result's `done` is `true`, and `value` has the same properties as above.
 
-  ```js
-  { value: theChunk, done: true }
-  ```
-
-- If the stream is cancelled, the promise fulfills with an object of the form:
-
-  ```js
-  { value: undefined, done: true }
-  ```
-
+- If the stream is cancelled, the result's `done` is `true`, and `value` is `undefined`.
   In this case the backing memory is discarded.
 
 - If the stream throws an error, the promise rejects with the relevant error.

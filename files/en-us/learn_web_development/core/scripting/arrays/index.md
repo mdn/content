@@ -2,9 +2,8 @@
 title: Arrays
 slug: Learn_web_development/Core/Scripting/Arrays
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
@@ -38,6 +37,9 @@ Arrays are generally described as "list-like objects"; they are basically single
 If we didn't have arrays, we'd have to store every item in a separate variable, then call the code that does the printing and adding separately for each item. This would be much longer to write out, less efficient, and more error-prone. If we had 10 items to add to the invoice it would already be annoying, but what about 100 items, or 1000? We'll return to this example later on in the article.
 
 As in previous articles, let's learn about the real basics of arrays by entering some examples into [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
+
+> [!NOTE]
+> Scrimba's [Aside: Intro to arrays](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn) scrim <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to arrays with example walkthroughs and a challenge to test your knowledge.
 
 ## Creating arrays
 
@@ -676,12 +678,18 @@ textarea.onkeyup = () => {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays).
 
 ## Conclusion
 
 After reading through this article, we are sure you will agree that arrays seem pretty darn useful; you'll see them crop up everywhere in JavaScript, often in association with loops in order to do the same thing to every item in an array. We'll be teaching you all about loops later on in the module.
 
 In the next article we're giving you a challenge to test your understanding of the articles that came before it.
+
+
+## See also
+
+- {{jsxref("Array")}}
+  - : The `Array` object reference page provides a detailed reference guide to the features discussed in this page, and many other `Array` features.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

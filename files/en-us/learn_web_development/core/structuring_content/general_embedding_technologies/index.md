@@ -3,9 +3,8 @@ title: From object to iframe — general embedding technologies
 short-title: Embedding technologies
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
 
@@ -238,14 +237,14 @@ The example includes the bare essentials needed to use an `<iframe>`:
 
 - [`border: none`](/en-US/docs/Web/CSS/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).
-- [`src`](/en-US/docs/Web/HTML/Element/iframe#src)
+- [`src`](/en-US/docs/Web/HTML/Reference/Elements/iframe#src)
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
-- [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
+- [`width`](/en-US/docs/Web/HTML/Reference/Elements/iframe#width) and [`height`](/en-US/docs/Web/HTML/Reference/Elements/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
-- [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
-  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
+- [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox)
+  - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g., IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
 > [!NOTE]
 > In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)
@@ -286,7 +285,7 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Content that's not sandboxed may be able to execute JavaScript, submit forms, trigger popup windows, etc. By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
 > [!NOTE]
 > Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
@@ -319,26 +318,26 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   <tbody>
     <tr>
       <td>{{glossary("URL")}} of the embedded content</td>
-      <td><a href="/en-US/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         <em>Accurate </em>{{glossary("MIME type", "media type")}}
         of the embedded content
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         Height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="/en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

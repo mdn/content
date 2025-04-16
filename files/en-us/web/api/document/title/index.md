@@ -9,11 +9,11 @@ browser-compat: api.Document.title
 {{APIRef("DOM")}}
 
 The **`document.title`** property gets or sets the current title of the document.
-When present, it defaults to the value of the [`<title>`](/en-US/docs/Web/HTML/Element/title).
+When present, it defaults to the value of the [`<title>`](/en-US/docs/Web/HTML/Reference/Elements/title).
 
 ## Value
 
-A string containing the _document_'s title. If the title was overridden by setting `document.title`, it contains that value. Otherwise, it contains the title specified in the [`<title>`](/en-US/docs/Web/HTML/Element/title) element.
+A string containing the _document_'s title. If the title was overridden by setting `document.title`, it contains that value. Otherwise, it contains the title specified in the [`<title>`](/en-US/docs/Web/HTML/Reference/Elements/title) element.
 
 ```js
 document.title = newTitle;
@@ -21,8 +21,8 @@ document.title = newTitle;
 
 `newTitle` is the new title of the document. The assignment
 affects the return value of `document.title`, the title displayed for the
-document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the
-document (e.g. the content of the `<title>` element in an HTML
+document (e.g., in the titlebar of the window or tab), and it also affects the DOM of the
+document (e.g., the content of the `<title>` element in an HTML
 document).
 
 ## Examples

@@ -154,7 +154,7 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/scan", "scan")}}
   - : Whether display output is progressive or interlaced.
 - {{cssxref("@media/scripting", "scripting")}}
-  - : Detects whether scripting (i.e. JavaScript) is available.
+  - : Detects whether scripting (i.e., JavaScript) is available.
     Added in Media Queries Level 5.
 - {{cssxref("@media/shape", "shape")}}
   - : Detects the shape of the device to distinguish rectangular and round displays.
@@ -164,6 +164,18 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Combination of brightness, contrast ratio, and color depth that are supported by the video plane of user agent and the output device. Added in Media Queries Level 5.
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
+- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : The number of device pixels per CSS pixel. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("animation")}}. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
+  - : The number of device pixels per CSS pixel. Use the [`resolution`](/en-US/docs/Web/CSS/@media/resolution) feature with the `dppx` unit instead.
+- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : The browser supports `-webkit` prefixed 2D CSS {{cssxref("transform")}}. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+  - : The browser supports `-webkit` prefixed 3D CSS {{cssxref("transform")}}. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : The browser supports `-webkit` prefixed CSS {{cssxref("transition")}}. Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 ### Logical operators
 

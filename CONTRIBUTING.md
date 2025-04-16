@@ -251,7 +251,7 @@ yarn content move <from-slug> <to-slug> [locale]
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
 The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`). For other locales,
 `CONTENT_TRANSLATED_ROOT` has to be set correctly in your environment.
-If the document you'd like to move contains child documents (i.e. it represents a document tree), the `yarn content move` command will move the entire tree.
+If the document you'd like to move contains child documents (i.e., it represents a document tree), the `yarn content move` command will move the entire tree.
 
 Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`, you can do so as follows:
 

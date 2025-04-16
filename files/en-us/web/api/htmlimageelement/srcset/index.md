@@ -24,7 +24,7 @@ can be used together to make pages that use appropriate images for the rendering
 situation.
 
 > [!NOTE]
-> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> If the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -97,9 +97,11 @@ a `2x` descriptor) should be used for 2x displays.
 ```html
 <div class="box">
   <img
-    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+    src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
+    srcset="
+      /en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png 2x
+    " />
 </div>
 ```
 
@@ -153,7 +155,7 @@ reloading the page to see the results change.
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Responsive_images).
+For additional examples, see our guide to [responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images).
 
 ## Specifications
 
@@ -166,5 +168,5 @@ For additional examples, see our guide to [responsive images](/en-US/docs/Web/HT
 ## See also
 
 - [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

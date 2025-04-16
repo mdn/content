@@ -9,16 +9,16 @@ browser-compat:
 sidebar: urlsidebar
 ---
 
-**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g., with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
 Historically, one of the web's key features has always been its ability to provide links between different documents — it is what makes _the web_, a web:
 
 - You can link to the top of a document by linking to its URL, for example:
-  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a](/en-US/docs/Web/HTML/Element/a).
+  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a](/en-US/docs/Web/HTML/Reference/Elements/a).
 - You can link to a specific section of a document by linking to its URL plus the _document fragment_ (ID) of that section, for example:
-  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#browser_compatibility](/en-US/docs/Web/HTML/Element/a#browser_compatibility).
+  - [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility](/en-US/docs/Web/HTML/Reference/Elements/a#browser_compatibility).
 
 The issue with linking to specific document fragments is that the author of the linked page needs to put an anchor in place to _actually_ link to. The second example above links to an {{htmlelement("Heading_Elements", "h2")}} element with an ID of `browser_compatibility`:
 
@@ -79,27 +79,27 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 ### Text fragment with textStart
 
 - [https://example.com/#:~:text=for](https://example.com/#:~:text=for) scrolls to and highlights the first instance of the text `for` in the document.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human](/en-US/docs/Web/HTML/Element/a#:~:text=human) scrolls to and highlights the first instance of the text `human` in the document.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL) scrolls to and highlights the first instance of the text `linked URL` in the document.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=human](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=human) scrolls to and highlights the first instance of the text `human` in the document.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL) scrolls to and highlights the first instance of the text `linked URL` in the document.
 
 ### textStart and textEnd
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=human,URL](/en-US/docs/Web/HTML/Element/a#:~:text=human,url) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,defining%20a%20value) scrolls to and highlights the first instance of a text string starting with `linked URL` and ending with `defining a value`. Note how the highlighted text spans across multiple block-level elements.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=human,URL](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=human,url) scrolls to and highlights the first instance of a text string starting with `human` and ending with `URL`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,defining%20a%20value) scrolls to and highlights the first instance of a text string starting with `linked URL` and ending with `defining a value`. Note how the highlighted text spans across multiple block-level elements.
 
 ### Examples with prefix- and/or -suffix
 
 - [https://example.com/#:~:text=asking-,for](https://example.com/#:~:text=asking-,for) scrolls to and highlights the second instance of the text `for` in the document.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=sent-,referrer](/en-US/docs/Web/HTML/Element/a#:~:text=sent-,referrer) scrolls to and highlights the first instance of the text `referrer` that has the text `sent` directly before it. This is the 5th instance of `referrer` in the document; without the prefix, the first instance would be highlighted.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format) scrolls to and highlights the first instance of the text `linked URL` that has the text `'s format` directly following it. This is the 5th instance of `linked URL` in the document; without the suffix, the first instance would be highlighted.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins](/en-US/docs/Web/HTML/Element/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins) scrolls to and highlights the instance of the text `The Referer ... be sent` that is prefixed by `downgrade:` and suffixed by `to origins`. This illustrates a more complex example where the prefix/suffix are used to home in on the specific text instance you want to link to. Try removing the prefix, for example, and seeing what is matched.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=sent-,referrer) scrolls to and highlights the first instance of the text `referrer` that has the text `sent` directly before it. This is the 5th instance of `referrer` in the document; without the prefix, the first instance would be highlighted.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format) scrolls to and highlights the first instance of the text `linked URL` that has the text `'s format` directly following it. This is the 5th instance of `linked URL` in the document; without the suffix, the first instance would be highlighted.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,The%20Referer,be%20sent,-to%20origins) scrolls to and highlights the instance of the text `The Referer ... be sent` that is prefixed by `downgrade:` and suffixed by `to origins`. This illustrates a more complex example where the prefix/suffix are used to home in on the specific text instance you want to link to. Try removing the prefix, for example, and seeing what is matched.
 
 ### URLs with multiple text fragments
 
 You can specify multiple text fragments to highlight in the same URL by separating them with ampersand (`&`) characters. Let's look at a couple of examples:
 
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Element/a#:~:text=causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
-- [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute](/en-US/docs/Web/HTML/Element/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute) scrolls to and highlights two text instances:
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=Causes&text=linked](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=causes&text=linked) scrolls to and highlights the first instances of the text strings `Causes` and `linked`.
+- [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute](/en-US/docs/Web/HTML/Reference/Elements/a#:~:text=linked%20URL,-'s%20format&text=Deprecated-,attributes,attribute) scrolls to and highlights two text instances:
   - The first instance of the text `linked URL` that has the text `'s format` directly following it.
   - The first instance of a text string starting with `attributes` and ending with `attribute`, which is prefixed by `Deprecated`.
 

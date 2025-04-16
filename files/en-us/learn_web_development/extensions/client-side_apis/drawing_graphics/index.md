@@ -2,9 +2,8 @@
 title: Drawing graphics
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -298,7 +297,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    The pattern here is very similar, but with two differences:
 
    - We have set the last parameter of `arc()` to `true`, meaning that the arc is drawn counterclockwise, which means that even though the arc is specified as starting at -45 degrees and ending at 45 degrees, we draw the arc around the 270 degrees not inside this portion. If you were to change `true` to `false` and then re-run the code, only the 90 degree slice of the circle would be drawn.
-   - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e. one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
+   - Before calling `fill()`, we draw a line to the center of the circle. This means that we get the rather nice Pac-Man-style cutout rendered. If you removed this line (try it!) then re-ran the code, you'd get just an edge of the circle chopped off between the start and end point of the arc. This illustrates another important point of the canvas — if you try to fill an incomplete path (i.e., one that is not closed), the browser fills in a straight line between the start and end point and then fills it in.
 
 That's it for now; your final example should look like this:
 
@@ -364,7 +363,7 @@ It is possible to render external images onto your canvas. These can be simple i
    image.src = "firefox.png";
    ```
 
-   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
+   Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element. We then set its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) attribute to equal our Firefox logo image. At this point, the browser starts loading the image.
 
 3. We could now try to embed the image using `drawImage()`, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the `load` event, which will only be fired when the image has finished loading. Add the following block below the previous one:
 
@@ -516,7 +515,7 @@ Optimizing animation of graphics is an entire specialty of programming, with lot
 
 In general, the process of doing a canvas animation involves the following steps:
 
-1. Clear the canvas contents (e.g. with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
+1. Clear the canvas contents (e.g., with {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}).
 2. Save state (if necessary) using {{domxref("CanvasRenderingContext2D.save", "save()")}} — this is needed when you want to save settings you've updated on the canvas before continuing, which is useful for more advanced applications.
 3. Draw the graphics you are animating.
 4. Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
@@ -545,7 +544,7 @@ Now let's create our own simple animation — we'll get a character from a certa
    ctx.translate(width / 2, height / 2);
    ```
 
-4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
+4. Now let's create a new {{domxref("HTMLImageElement")}} object, set its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) to the image we want to load, and add an `onload` event handler that will cause the `draw()` function to fire when the image is loaded:
 
    ```js
    const image = new Image();

@@ -1,5 +1,6 @@
 ---
 title: Crisp pixel art look with image-rendering
+short-title: Image rendering for pixel art
 slug: Games/Techniques/Crisp_pixel_art_look
 page-type: guide
 ---

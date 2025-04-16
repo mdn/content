@@ -77,7 +77,7 @@ However, an even simpler solution to these problems can be achieved
 with {{jsxref("Statements/async_function", "async functions", "", 1)}}.
 
 A `return` statement in a generator, when executed, will make the generator
-finish (i.e. the `done` property of the object returned by it will be set to
+finish (i.e., the `done` property of the object returned by it will be set to
 `true`). If a value is returned, it will be set as the `value`
 property of the object returned by the generator.
 Much like a `return` statement, an error thrown inside the generator will

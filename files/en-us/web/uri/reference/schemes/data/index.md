@@ -81,7 +81,7 @@ bash$ echo -n hello | base64
 
 This section describes problems that commonly occur when creating and using `data` URLs.
 
-```html
+```plain
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 

@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Canvas API")}}
 
-By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
+By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Reference/Elements/video) element with a [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
 
 {{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
@@ -45,7 +45,7 @@ The HTML document used to render this content is shown below.
         id="video"
         src="media/video.mp4"
         controls
-        crossorigin="anonymous" />
+        crossorigin="anonymous"></video>
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
@@ -58,7 +58,7 @@ The HTML document used to render this content is shown below.
 
 The key bits to take away from this are:
 
-1. This document establishes two [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements, with the IDs `c1` and `c2`. Canvas `c1` is used to display the current frame of the original video, while `c2` is used to display the video after performing the chroma-keying effect; `c2` is preloaded with the still image that will be used to replace the green background in the video.
+1. This document establishes two [`canvas`](/en-US/docs/Web/HTML/Reference/Elements/canvas) elements, with the IDs `c1` and `c2`. Canvas `c1` is used to display the current frame of the original video, while `c2` is used to display the video after performing the chroma-keying effect; `c2` is preloaded with the still image that will be used to replace the green background in the video.
 2. The JavaScript code is imported from a script named `processor.js`.
 
 ## The JavaScript code

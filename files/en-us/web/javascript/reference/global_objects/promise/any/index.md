@@ -94,7 +94,7 @@ Promise.any([failure]).catch((err) => {
 
 ### Displaying the first image loaded
 
-In this example, we have a function that fetches an image and returns a blob. We use `Promise.any()` to fetch a couple of images and display the first one available (i.e. whose promise has resolved).
+In this example, we have a function that fetches an image and returns a blob. We use `Promise.any()` to fetch a couple of images and display the first one available (i.e., whose promise has resolved).
 
 ```js
 async function fetchAndDecode(url, description) {

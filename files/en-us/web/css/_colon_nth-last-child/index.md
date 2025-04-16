@@ -82,7 +82,8 @@ By passing a selector argument, we can select the **nth-last** element that matc
 > This is different from moving the selector outside of the function, like:
 
 ```css
-li.important: nth-last-child(-n + 3);
+li.important:nth-last-child(-n + 3) {
+}
 ```
 
 This selector applies a style to list items if they are also within the last three children.
