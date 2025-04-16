@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
-CSS (Cascading Style Sheets) is the code that styles web content. This article walks through a basic understanding of CSS and its functionality and shows you how to improve the look and feel of the content structure you created in the previous article.
+CSS (Cascading Style Sheets) is the code that styles web content. This article walks you through a basic understanding of CSS â€” how it works and how to improve the look and feel of the content structure you created in the previous article.
 
 <table>
   <tbody>
@@ -33,9 +33,9 @@ CSS (Cascading Style Sheets) is the code that styles web content. This article w
 
 ## What is CSS?
 
-Like HTML, CSS is not a programming language. It's not a markup language either. **CSS is a style sheet language.** CSS is used to style HTML elements; you select which elements you want to style, and set values for their style properties that define how they will look.
+Like HTML, CSS is not a programming language. It's not a markup language either. **CSS is a style sheet language.** CSS is used to style HTML elements: you select the elements you want to style and set values for their style properties, which define how they will look.
 
-Let's revisit the HTML example we saw at the start of [Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content):
+Let's revisit the basic HTML example from the article [Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content):
 
 ```html live-sample___basic-html live-sample___basic-css
 <p>Instructions for life:</p>
@@ -51,7 +51,7 @@ This renders as follows on its own:
 
 {{EmbedLiveSample("basic-html", "100%", "140px")}}
 
-If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/font-family) and a red text {{cssxref("color")}}. It then selects all of the {{htmlelement("li")}} elements and gives each one a yellow {{cssxref("background-color")}}, a one-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/margin-bottom):
+If we add some CSS into the mix, we can change how the HTML looks. The following snippet selects the {{htmlelement("p")}} element and gives it a different [font](/en-US/docs/Web/CSS/font-family) and a red text {{cssxref("color")}}. It then selects all the {{htmlelement("li")}} elements and gives each one a greeny-yellow {{cssxref("background-color")}}, a 1-pixel solid black {{cssxref("border")}}, and a 5-pixel [bottom margin](/en-US/docs/Web/CSS/margin-bottom):
 
 ```css live-sample___basic-css
 p {
@@ -60,7 +60,7 @@ p {
 }
 
 li {
-  background-color: yellow;
+  background-color: greenyellow;
   border: 1px solid black;
   margin-bottom: 5px;
 }
@@ -70,14 +70,16 @@ With the CSS applied to the HTML, the demo now renders like this:
 
 {{EmbedLiveSample("basic-css", "100%", "160px")}}
 
-CSS has many other functions, from specifying background images and gradients and precisely controlling typography and scrolling behavior, to implementing animations and entire web page layouts!
+As you can see, with just a little CSS, we were able to change the appearance of a plain-looking list.
+
+CSS has many other functions, from specifying background images and gradients, to controlling typography and scrolling behavior, to adding animations and building entire web page layouts.
 
 ## Applying CSS to your HTML
 
-When using CSS, the first thing to get right is making sure that your CSS is successfully applied to your HTML. In this section we will add a CSS **stylesheet** to your `first-website`, and apply it to your HTML.
+When using CSS, the first thing to get right is to make sure that your CSS is successfully applied to your HTML. In this section, we'll add a CSS **stylesheet** to your `first-website` and apply it to your page.
 
 1. Inside your `first-website` folder, create another new folder called `styles`.
-2. Using a text editor, paste the following CSS into a new file, which will give your `<p>` elements a red text color. It is useful to insert something like this into your stylesheet to begin with, to test whether it is being applied to your HTML correctly.
+2. Using a text editor, paste the following CSS into a new file, which will give your `<p>` elements a red text color. It's useful to start with something like this to test whether your stylesheet is being applied to your HTML correctly.
 
    ```css
    p {
@@ -85,7 +87,7 @@ When using CSS, the first thing to get right is making sure that your CSS is suc
    }
    ```
 
-3. Save the file inside your `styles` folder with a filename of `style.css`.
+3. Save the file in the `styles` folder with the filename `style.css`.
 4. Open your `index.html` file. Paste the following line inside the HTML head (between the {{HTMLElement("head")}} and `</head>` tags):
 
    ```html
@@ -98,9 +100,9 @@ When using CSS, the first thing to get right is making sure that your CSS is suc
 
 If your paragraph text is red, congratulations! Your CSS is working. If not, go through the above steps and check carefully that you have followed each one correctly.
 
-## A brief aside on CSS syntax
+## CSS syntax basics
 
-In the above CSS, the `p` is called a **selector** â€” it selects which element(s) to style, in this case all the paragraphs in the HTML it is applied to. The line inside the curly braces (`{ }`) is called a **declaration**, which sets a new value for a specific **property** (in this case, `color`, which represents the text color of the paragraphs); the **property value** set is `red`.
+In the previous CSS example, `p` is called a **selector** â€” it selects the element(s) to style. In particular, `p` selects all the paragraphs in the HTML. The line inside the curly braces (`{ }`) is called a **declaration** â€“ it sets a value for a specific property. In this case, the **property** is `color`, which controls the text color of the paragraphs, and the **property value** set is `red`.
 
 The whole structure is called a **ruleset**. (The term _ruleset_ is often referred to as just _rule_.)
 
@@ -114,9 +116,9 @@ p {
 }
 ```
 
-Within a ruleset, you must use a semicolon (`;`) to separate each declaration from the next one. Within each declaration, you must use a colon (`:`) to separate the property from its value.
+Within a ruleset, you must use a semicolon (`;`) to separate one declaration from the next. Within each declaration, you must use a colon (`:`) to separate the property and its value.
 
-You can also include multiple selectors on one rule, separated by commas, to select multiple elements. For example:
+You can also include multiple selectors in one rule, separated by commas, to select multiple elements. For example:
 
 ```css
 p,
@@ -126,14 +128,14 @@ p,
 }
 ```
 
-In the above CSS rule we have included an **element** (or **type**) selector, which selects a specific HTML element, but we have also included two other selector types, which aren't relevant to the rest of this tutorial. If you are curious as to what they do, check out our [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) guide to find out.
+In this CSS rule, we've included an **element** (or **type**) selector, which selects a specific HTML element. We've also included two other selector types, which aren't relevant to the rest of this tutorial. If you're curious about what they do, check out our [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) guide.
 
 > [!NOTE]
 > Scrimba's [Write your first lines of CSS!](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~015?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides a useful interactive introduction to CSS syntax.
 
-## Fonts and text
+## Improving the text
 
-Let's return to our example and use CSS to improve the appearance of the text â€” we'll set a new font for the page and change some text settings on the different elements.
+Let's return to our example and use CSS to improve the appearance of the text. We'll set a new font for the page and change some text settings for different elements.
 
 1. First, find the [output from Google Fonts](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_font) that you previously saved. If you've not already chosen a font, follow the link and do it now.
 2. Add the {{htmlelement("link")}} elements inside your `index.html`'s {{HTMLElement("head")}}, just before the closing `</head>` tag. They should look something like this:
@@ -146,16 +148,16 @@ Let's return to our example and use CSS to improve the appearance of the text â€
      rel="stylesheet" />
    ```
 
-   This code links your page to a style sheet on the Google Font service that loads your chosen font.
+   This code links your page to a stylesheet hosted by the Google Fonts service, which loads your chosen font.
 
 3. Next, go to your `style.css` file and delete the existing rule. We no longer want our paragraphs to be red.
 4. Add the following lines to `style.css`:
 
    ```css
    html {
-     /* px means "pixels": the base font size is now 10 pixels high */
+     /* px means "pixels". The base font size is now 10 pixels high */
      font-size: 10px;
-     /* This should be replaced with the font-family output you got from Google Fonts */
+     /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
      font-family: PLACEHOLDER;
    }
    ```
@@ -163,7 +165,7 @@ Let's return to our example and use CSS to improve the appearance of the text â€
    > [!NOTE]
    > Anything in CSS between `/*` and `*/` is a **CSS comment**, which is ignored by the browser. CSS comments are a way for you to include helpful notes about your code or logic, without affecting how your webpage is rendered.
 
-5. Replace the `font-family` placeholder line with the `font-family` line in your Google Fonts code, for example:
+5. Replace the `font-family` placeholder line with the `font-family` line from your Google Fonts code, for example:
 
    ```css
    font-family: "Roboto", sans-serif;
@@ -171,7 +173,7 @@ Let's return to our example and use CSS to improve the appearance of the text â€
 
    The `font-family` property sets the font(s) you want to apply to your HTML. This rule defines a global base font and font size for the whole page. All elements inside the {{HTMLElement("html")}} element will inherit the same `font-size` and `font-family`.
 
-6. Now let's set some font and text styles on our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), {{htmlelement("li")}}, and {{htmlelement("p")}} elements. Here we set new {{cssxref("font-size")}} values for each element. We also center the heading using {{cssxref("text-align")}} and increase the {{cssxref("line-height")}} and {{cssxref("letter-spacing")}} of the paragraphs and list items to make the body content more readable.
+6. Now let's set some font and text styles on our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), {{htmlelement("li")}}, and {{htmlelement("p")}} elements. We'll set new {{cssxref("font-size")}} values for each element. We'll also center the heading using {{cssxref("text-align")}} and increase the {{cssxref("line-height")}} and {{cssxref("letter-spacing")}} of the paragraphs and list items to make the body content more readable.
 
    ```css
    h1 {
@@ -196,32 +198,32 @@ Let's return to our example and use CSS to improve the appearance of the text â€
 
 ## CSS: all about boxes
 
-Something you'll notice about CSS as you use it more is that a lot of it is about boxes. Most HTML elements on your page can be thought of as boxes sitting on top of (or alongside) other boxes, which you will then set values on for sizing, colors, positioning information, etc. This is referred to as **the box model**.
+Something you'll notice about CSS as you use it more is that a lot of it is about boxes. Most HTML elements on your page can be thought of as boxes sitting on top of (or alongside) other boxes, which you will then set values on for sizing, colors, positioning information, etc. This is referred to as [**the box model**](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 
 ![Three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
-Each box taking up space on your page has properties like:
+Each box that takes up space on your page has properties like:
 
-- {{cssxref("padding")}}: The space around the content. In the example below, it is the space around the paragraph text.
-- {{cssxref("border")}}: The solid line that is just outside the padding.
-- {{cssxref("margin")}}, the space around the outside of the border.
+- {{cssxref("padding")}}: The space around the content. In the previous example, it is the space around the paragraph text.
+- {{cssxref("border")}}: The solid line just outside the padding.
+- {{cssxref("margin")}}: The space outside the border.
 
-In this section we also use the following properties, some of which you've met before:
+In this section, we also use the following properties, some of which you've seen before:
 
 - {{cssxref("width")}}: The width of an element.
 - {{cssxref("background-color")}}: The color behind an element's content and padding.
 - {{cssxref("color")}}: The color of an element's content (usually text).
-- {{cssxref("text-shadow")}}: Sets a drop shadow on the text inside an element.
-- {{cssxref("display")}}: Sets the display mode of an element (which basically refers to how it appears or is laid out inside the webpage).
+- {{cssxref("text-shadow")}}: A drop shadow on the text inside an element.
+- {{cssxref("display")}}: The display mode of an element (which basically refers to how it appears or is laid out on the web page).
 
-In each of the below sections:
+In each of the sections that follow:
 
 1. Add the provided CSS code to the bottom of your `style.css` file.
 2. Save the file and refresh your browser to see how the CSS has affected the HTML rendering.
 3. Read the provided explanation to help you understand how the CSS works.
-4. If you are feeling brave, experiment with changing the property values to further customize your page.
+4. If you are feeling adventurous, experiment with changing the property values to further customize your page.
 
-### Changing the page color
+## Changing the page color
 
 ```css
 html {
@@ -231,7 +233,7 @@ html {
 
 This rule sets a background color for the entire page. Change the color code to the color you chose in [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#choosing_a_theme_color).
 
-### Styling the body
+## Styling the body
 
 ```css
 body {
@@ -247,11 +249,11 @@ The above code sets new values for several properties of the {{htmlelement("body
 
 - `width: 600px;`: This forces the body to always be 600 pixels wide.
 - `margin: 0 auto;`: When you set two values on a property like `margin` or `padding`, the first value affects the element's top _and_ bottom side (setting it to `0` in this case); the second value affects the left _and_ right side. `auto` is a special value that divides the available horizontal space evenly between left and right.
-- `background-color: #FF9500;`: This sets the element's background color. Our project uses a reddish orange for the body background color, as opposed to dark blue for the {{htmlelement("html")}} element.
-- `padding: 0 20px 20px 20px;`: This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, and left padding, in that order.
-- `border: 5px solid black;`: This sets values for the width, style and color of the border. In this case, it's a five-pixelâ€“wide, solid black border, on all sides of the body.
+- `background-color: #FF9500;`: This sets the element's background color. Our project uses a reddish orange for the `<body>` background color to contrast with the dark blue used for the {{htmlelement("html")}} element.
+- `padding: 0 20px 20px 20px;`: This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom, and left. The values set top, right, bottom, and left padding, in that order.
+- `border: 5px solid black;`: This sets values for the width, style, and color of the border. In this case, it's a 5-pixel-wide solid black border around all sides of the body.
 
-### Positioning and styling the main page title
+## Positioning and styling the main page title
 
 ```css
 h1 {
@@ -273,7 +275,7 @@ Finally, `text-shadow` applies a shadow to the text content of the element:
 - The third pixel value sets the **blur radius** of the shadow. A larger value produces a more fuzzy-looking shadow.
 - The fourth value sets the base color of the shadow.
 
-### Centering the image
+## Centering the image
 
 ```css
 img {
@@ -285,9 +287,9 @@ img {
 
 Next, we center the image to make it look better. We can use the same `margin: 0 auto` trick as we did for the body, but there are differences that require an additional setting to make the CSS work.
 
-The {{htmlelement("body")}} element is a **block** element, meaning it takes up space on the page and can accept margin, padding, etc. {{htmlelement("img")}} (image) elements, on the other hand, are **inline** elements: by default, they don't accept margin values like block elements do. For the auto-margin trick to work on this image, we must give it block-level behavior using `display: block;`.
+The {{htmlelement("body")}} element is a **block** element, meaning it takes up space on the page and can accept margin, padding, and other box properties. {{htmlelement("img")}} (image) elements, on the other hand, are **inline** elements: by default, they don't accept margin values in the same way block elements do. For the auto-margin trick to work on this image, we must give it block-level behavior by using `display: block;`.
 
-Finally, we set the {{cssxref("max-width")}} property to `100%` to make sure that, if the image is larger than the `width` set on the body (600 pixels), it will be constained to `600px` and no wider.
+Finally, we set the {{cssxref("max-width")}} property to `100%` to ensure that if the image is larger than the `width` set on the body (600 pixels), it will be constrained to `600px` and won't stretch wider.
 
 > [!NOTE]
 > Don't be too concerned if you don't completely understand `display: block;` and the differences between a block element and an inline element, or `max-width: 100%;`. They will make more sense as you continue your study of CSS.
@@ -300,7 +302,7 @@ If you followed all the instructions in this article, you should have a page tha
 
 You can [view our version here](https://mdn.github.io/beginner-html-site-styled/). If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Here, we have just scratched the surface of CSS. You'll learn a lot more in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) Core module later on in the course.
+In this article, we've only scratched the surface of CSS. You'll learn a lot more in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) Core module later in the course.
 
 ## See also
 

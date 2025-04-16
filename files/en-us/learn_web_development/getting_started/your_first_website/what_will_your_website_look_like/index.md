@@ -78,19 +78,19 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 ## Choosing a font
 
-There is a set of fonts called the [web safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) — such as Arial, Times New Roman, or Courier New — which are considered to be generally available on all computer systems. If you want to use these fonts on a website, you can use the fonts available locally on a user's computer.
+There is a set of fonts called the [web safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) — such as Arial, Times New Roman, or Courier New — that are generally available on most computer systems. If you use one of these fonts on your website, the browser will load the font file available on the user's computer.
 
-However, if you want to use different fonts, you need to include them in your website files or reference a third-party font service's font files, so they can be downloaded as needed. [Google Fonts](https://fonts.google.com/) is one such font service, which provides access to many fonts.
+However, if you want to use other fonts not generally available on devices, you need to either include them along with your website files or reference the font files from a third-party font service so the browser can download them as needed. [Google Fonts](https://fonts.google.com/) is one such service that provides access to many fonts.
 
 Let's use Google fonts to choose a font for your website:
 
 1. Go to [Google Fonts](https://fonts.google.com/).
 2. Scroll down the list of fonts until you find one you like. If you are having trouble finding one, you can use the filters available in the other column to narrow down your search.
 3. Click your font option, then on the next page click the "Get font" button.
-4. On the next page, click "Get embed code"
-5. Copy both of the code blocks that you are given, and save them somewhere safe for later use.
+4. On the next page, click "Get embed code".
+5. Copy both of the provided code blocks, and save them somewhere safe for later use.
 
 > [!NOTE]
-> As with images, many fonts are protected by licenses, meaning you cannot necessarily use them freely on commercial websites. You will be fine for now as you create learning examples, but bear this in mind for the future.
+> As with images, many fonts are protected by licenses, meaning you cannot necessarily use them freely on commercial websites. You will be fine for now while working on learning examples, but keep this in mind when choosing fonts for real websites.
 
 {{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
