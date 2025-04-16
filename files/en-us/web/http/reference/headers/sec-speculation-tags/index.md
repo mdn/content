@@ -29,7 +29,7 @@ For example, a CDN may automatically insert speculation rules, but block specula
 ## Syntax
 
 ```http
-Speculation-Rules: <tag-list>
+Sec-Speculation-Tags: <tag-list>
 ```
 
 ## Directives
@@ -56,7 +56,7 @@ Speculation-Rules: <tag-list>
 If a speculation happens due to a speculation rule with no tag, then `null` is sent in the `Speculation-Rules` header.
 
 ```http
-Speculation-Rules: null
+Sec-Speculation-Tags: null
 ```
 
 ### Speculation from a rule with a tag
@@ -77,7 +77,7 @@ Speculation-Rules: null
 If a speculation happens due to a speculation rule with a tag, then the tag name is sent in the `Speculation-Rules` header.
 
 ```http
-Speculation-Rules: "my-rule"
+Sec-Speculation-Tags: "my-rule"
 ```
 
 ### Speculation from multiple rules
@@ -110,13 +110,13 @@ Speculation-Rules: "my-rule"
 In this example, if the speculation is initiated by the user hovering over the link for 200 milliseconds (`"eagerness": "moderate"`), then only the `my-rule` tag will be sent in the header:
 
 ```http
-Speculation-Rules: "my-rule"
+Sec-Speculation-Tags: "my-rule"
 ```
 
 However, if the link is clicked immediately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation, so both tags will be included in the header:
 
 ```http
-Speculation-Rules: "my-rule" "cdn-rule"
+Sec-Speculation-Tags: "my-rule" "cdn-rule"
 ```
 
 ### Speculation from multiple rules with and without tags
@@ -148,7 +148,7 @@ Speculation-Rules: "my-rule" "cdn-rule"
 Similar to the previous example, if the link is clicked immediately without waiting for the 200 milliseconds hover, both rules would have triggered a speculation, so both tags will be included in the header. However, because the first rule does not include a `tag` field, it is represented in the header with a `null` value:
 
 ```http
-Speculation-Rules: null "cdn-rule"
+Sec-Speculation-Tags: null "cdn-rule"
 ```
 
 ## Specifications
