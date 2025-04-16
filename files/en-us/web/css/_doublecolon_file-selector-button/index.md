@@ -34,7 +34,9 @@ input::file-selector-button {
 ## Syntax
 
 ```css
-selector::file-selector-button
+selector::file-selector-button {
+  /* ... */
+}
 ```
 
 ## Examples
