@@ -297,8 +297,10 @@ body {
   </div>
 </div>
 
-<pre>offset-path: ray(120deg sides contain);
-offset-rotate: 0deg;</pre>
+<pre>
+offset-path: ray(120deg sides contain);
+offset-rotate: 0deg;
+</pre>
 
 <div>
   <div class="container">
@@ -308,7 +310,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg closest-corner)</pre>
+  offset-path: ray(120deg closest-corner);
+</pre>
 
 <div>
   <div class="container">
@@ -318,8 +321,8 @@ offset-rotate: 0deg;</pre>
 
 <pre>
   offset-position: auto;
-  offset-path: ray(120deg farthest-corner)</pre>
-</div>
+  offset-path: ray(120deg farthest-corner);
+</pre>
 ```
 
 #### Result

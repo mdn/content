@@ -60,7 +60,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("number")}} [; {{cssxref("number")}}]* ;?</td>
+      <td>{{cssxref("number")}} [; {{cssxref("number")}} ]* ;?</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

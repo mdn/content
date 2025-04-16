@@ -718,6 +718,10 @@
     },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
+      "guides": [
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide",
+        "/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth"
+      ],
       "interfaces": [
         "BeforeUnloadEvent",
         "DOMStringMap",
@@ -823,7 +827,6 @@
         "Element: DOMActivate",
         "Element: focus",
         "Element: select",
-        "Element: show",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
@@ -1578,7 +1581,6 @@
         "SVGCircleElement",
         "SVGClipPathElement",
         "SVGComponentTransferFunctionElement",
-        "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
         "SVGDiscardElement",
@@ -1610,19 +1612,11 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFontElement",
-        "SVGFontFaceElement",
-        "SVGFontFaceFormatElement",
-        "SVGFontFaceNameElement",
-        "SVGFontFaceSrcElement",
-        "SVGFontFaceUriElement",
         "SVGForeignObjectElement",
         "SVGGElement",
-        "SVGGlyphElement",
         "SVGGradientElement",
         "SVGGraphicsElement",
         "SVGMarkerElement",
-        "SVGHKernElement",
         "SVGImageElement",
         "SVGLength",
         "SVGLengthList",
@@ -1630,7 +1624,6 @@
         "SVGLineElement",
         "SVGMaskElement",
         "SVGMetadataElement",
-        "SVGMissingGlyphElement",
         "SVGMPathElement",
         "SVGNumber",
         "SVGNumberList",
@@ -1659,12 +1652,10 @@
         "SVGTitleElement",
         "SVGTransform",
         "SVGTransformList",
-        "SVGTRefElement",
         "SVGTSpanElement",
         "SVGUnitTypes",
         "SVGUseElement",
         "SVGViewElement",
-        "SVGVKernElement",
         "TimeEvent"
       ],
       "methods": [],
@@ -1839,7 +1830,8 @@
       "guides": [
         "/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API",
         "/docs/Web/API/Web_Animations_API/Web_Animations_API_Concepts",
-        "/docs/Web/API/Web_Animations_API/Keyframe_Formats"
+        "/docs/Web/API/Web_Animations_API/Keyframe_Formats",
+        "/docs/Web/API/Web_Animations_API/Tips"
       ],
       "interfaces": [
         "Animation",
@@ -2265,9 +2257,7 @@
         "RTCPeerConnection: connectionstatechange",
         "RTCPeerConnection: datachannel",
         "RTCDataChannel: error",
-        "RTCIceTransport: error",
         "RTCDtlsTransport: error",
-        "RTCSctpTransport: error",
         "RTCIceTransport: gatheringstatechange",
         "RTCPeerConnection: icecandidate",
         "RTCPeerConnection: icecandidateerror",
@@ -2436,8 +2426,8 @@
       "methods": ["Navigator.getVRDisplays()"],
       "properties": ["Gamepad.displayId", "Navigator.activeVRDisplays"],
       "events": [
-        "Window: vrdisplayconnected",
-        "Window: vrdisplaydisconnected",
+        "Window: vrdisplayconnect",
+        "Window: vrdisplaydisconnect",
         "Window: vrdisplayactivate",
         "Window: vrdisplaydeactivate",
         "Window: vrdisplayblur",

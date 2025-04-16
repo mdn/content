@@ -70,8 +70,8 @@ This example shows all the `<line-style>` values as values for the CSS {{cssxref
 This example uses multiple {{HTMLElement( "div" )}} elements, each with a class representing the `<line-style>` value that is being demonstrated.
 
 ```html
-<div class="<line-style>">
-  <p><line-style></p>
+<div class="{line-style}">
+  <p>{line-style}</p>
   <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
 </div>
 ```

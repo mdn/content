@@ -936,7 +936,7 @@ PNG is widely supported, with all major browsers offering full support for its f
 
 ### SVG (Scalable Vector Graphics)
 
-SVG is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
+[SVG](/en-US/docs/Web/SVG) is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
 SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
 As such, SVG is popular for user interface elements in modern Web design.
 
@@ -949,10 +949,11 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 </svg>
 ```
 
-SVG can be used in web content in two ways:
+SVG can be used in web content in three ways:
 
-1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
-2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
+1. An {{SVGElement("svg")}} element can appear directly within the HTML. It can contain [SVG elements](/en-US/docs/Web/SVG/Reference/Element) to draw the image.
+2. An SVG image can be embedded in HTML using elements such as {{HTMLElement("iframe")}}, {{HTMLElement("object")}} and {{HTMLElement("embed")}}.
+3. It is possible to use SVG images anywhere where other image types can be used, including with the {{HTMLElement("img")}} element, the {{cssxref("background-image")}} CSS property, and so forth. However, there are [additional restrictions](/en-US/docs/Web/SVG/Guides/SVG_as_an_image) when SVG is used in this way.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
 It's not generally useful for strictly bitmap or photographic images, although it is possible to include bitmap images within an SVG.

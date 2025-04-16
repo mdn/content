@@ -15,15 +15,15 @@ The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotatio
 
 ```html interactive-example
 <ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
+  <rbc>
+    <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+    <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+    <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+    <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+  </rbc>
+  <rtc xml:lang="en" style="ruby-position: over;">
+    <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+  </rtc>
 </ruby>
 ```
 

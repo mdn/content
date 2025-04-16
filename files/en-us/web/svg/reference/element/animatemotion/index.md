@@ -56,7 +56,7 @@ svg {
     _Value type_: **\<string>**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("rotate")}}
   - : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) | `auto` | `auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
 > [!NOTE]
 > For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
