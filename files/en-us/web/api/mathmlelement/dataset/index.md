@@ -40,6 +40,10 @@ console.log(el.dataset.value); // "-1"
 console.log(el.dataset.equation); // "euler"
 ```
 
+### Result
+
+{{EmbedLiveSample("dataset",100,100)}}
+
 ## Specifications
 
 {{Specifications}}
