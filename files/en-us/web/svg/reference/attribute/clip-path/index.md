@@ -18,7 +18,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('clipPath')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('g')}}
-- {{SVGElement('glyph')}}
 - {{SVGElement('image')}}
 - {{SVGElement('line')}}
 - {{SVGElement('marker')}}

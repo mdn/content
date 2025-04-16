@@ -793,174 +793,197 @@ This example provides one way to display tables in small spaces. We've hidden th
 <table>
   <thead>
     <tr>
-      <th>1<sup>3</sup> equals:
-      <th>2<sup>3</sup> equals:
-      <th>3<sup>3</sup> equals:
-      <th>4<sup>3</sup> equals:
-      <th>5<sup>3</sup> equals:
-      <th>6<sup>3</sup> equals:
-      <th>7<sup>3</sup> equals:
+      <th>1<sup>3</sup> equals:</th>
+      <th>2<sup>3</sup> equals:</th>
+      <th>3<sup>3</sup> equals:</th>
+      <th>4<sup>3</sup> equals:</th>
+      <th>5<sup>3</sup> equals:</th>
+      <th>6<sup>3</sup> equals:</th>
+      <th>7<sup>3</sup> equals:</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>row 1: 1
-      <td>row 1: 8
-      <td>row 1: 27
-      <td>row 1: 64
-      <td>row 1: 125
-      <td>row 1: 216
-      <td>row 1: 343
+      <td>row 1: 1</td>
+      <td>row 1: 8</td>
+      <td>row 1: 27</td>
+      <td>row 1: 64</td>
+      <td>row 1: 125</td>
+      <td>row 1: 216</td>
+      <td>row 1: 343</td>
+    </tr>
     <tr>
-      <td>row 2: 1
-      <td>row 2: 8
-      <td>row 2: 27
-      <td>row 2: 64
-      <td>row 2: 125
-      <td>row 2: 216
-      <td>row 2: 343
+      <td>row 2: 1</td>
+      <td>row 2: 8</td>
+      <td>row 2: 27</td>
+      <td>row 2: 64</td>
+      <td>row 2: 125</td>
+      <td>row 2: 216</td>
+      <td>row 2: 343</td>
+    </tr>
     <tr>
-      <td>row 3: 1
-      <td>row 3: 8
-      <td>row 3: 27
-      <td>row 3: 64
-      <td>row 3: 125
-      <td>row 3: 216
-      <td>row 3: 343
+      <td>row 3: 1</td>
+      <td>row 3: 8</td>
+      <td>row 3: 27</td>
+      <td>row 3: 64</td>
+      <td>row 3: 125</td>
+      <td>row 3: 216</td>
+      <td>row 3: 343</td>
+    </tr>
     <tr>
-      <td>row 4: 1
-      <td>row 4: 8
-      <td>row 4: 27
-      <td>row 4: 64
-      <td>row 4: 125
-      <td>row 4: 216
-      <td>row 4: 343
+      <td>row 4: 1</td>
+      <td>row 4: 8</td>
+      <td>row 4: 27</td>
+      <td>row 4: 64</td>
+      <td>row 4: 125</td>
+      <td>row 4: 216</td>
+      <td>row 4: 343</td>
+    </tr>
     <tr>
-      <td>row 5: 1
-      <td>row 5: 8
-      <td>row 5: 27
-      <td>row 5: 64
-      <td>row 5: 125
-      <td>row 5: 216
-      <td>row 5: 343
+      <td>row 5: 1</td>
+      <td>row 5: 8</td>
+      <td>row 5: 27</td>
+      <td>row 5: 64</td>
+      <td>row 5: 125</td>
+      <td>row 5: 216</td>
+      <td>row 5: 343</td>
+    </tr>
     <tr>
-      <td>row 6: 1
-      <td>row 6: 8
-      <td>row 6: 27
-      <td>row 6: 64
-      <td>row 6: 125
-      <td>row 6: 216
-      <td>row 6: 343
+      <td>row 6: 1</td>
+      <td>row 6: 8</td>
+      <td>row 6: 27</td>
+      <td>row 6: 64</td>
+      <td>row 6: 125</td>
+      <td>row 6: 216</td>
+      <td>row 6: 343</td>
+    </tr>
     <tr>
-      <td>row 7: 1
-      <td>row 7: 8
-      <td>row 7: 27
-      <td>row 7: 64
-      <td>row 7: 125
-      <td>row 7: 216
-      <td>row 7: 343
+      <td>row 7: 1</td>
+      <td>row 7: 8</td>
+      <td>row 7: 27</td>
+      <td>row 7: 64</td>
+      <td>row 7: 125</td>
+      <td>row 7: 216</td>
+      <td>row 7: 343</td>
+    </tr>
     <tr>
-      <td>row 8: 1
-      <td>row 8: 8
-      <td>row 8: 27
-      <td>row 8: 64
-      <td>row 8: 125
-      <td>row 8: 216
-      <td>row 8: 343
+      <td>row 8: 1</td>
+      <td>row 8: 8</td>
+      <td>row 8: 27</td>
+      <td>row 8: 64</td>
+      <td>row 8: 125</td>
+      <td>row 8: 216</td>
+      <td>row 8: 343</td>
+    </tr>
     <tr>
-      <td>row 9: 1
-      <td>row 9: 8
-      <td>row 9: 27
-      <td>row 9: 64
-      <td>row 9: 125
-      <td>row 9: 216
-      <td>row 9: 343
+      <td>row 9: 1</td>
+      <td>row 9: 8</td>
+      <td>row 9: 27</td>
+      <td>row 9: 64</td>
+      <td>row 9: 125</td>
+      <td>row 9: 216</td>
+      <td>row 9: 343</td>
+    </tr>
     <tr>
-      <td>row 10: 1
-      <td>row 10: 8
-      <td>row 10: 27
-      <td>row 10: 64
-      <td>row 10: 125
-      <td>row 10: 216
-      <td>row 10: 343
+      <td>row 10: 1</td>
+      <td>row 10: 8</td>
+      <td>row 10: 27</td>
+      <td>row 10: 64</td>
+      <td>row 10: 125</td>
+      <td>row 10: 216</td>
+      <td>row 10: 343</td>
+    </tr>
     <tr>
-      <td>row 11: 1
-      <td>row 11: 8
-      <td>row 11: 27
-      <td>row 11: 64
-      <td>row 11: 125
-      <td>row 11: 216
-      <td>row 11: 343
+      <td>row 11: 1</td>
+      <td>row 11: 8</td>
+      <td>row 11: 27</td>
+      <td>row 11: 64</td>
+      <td>row 11: 125</td>
+      <td>row 11: 216</td>
+      <td>row 11: 343</td>
+    </tr>
     <tr>
-      <td>row 12: 1
-      <td>row 12: 8
-      <td>row 12: 27
-      <td>row 12: 64
-      <td>row 12: 125
-      <td>row 12: 216
-      <td>row 12: 343
+      <td>row 12: 1</td>
+      <td>row 12: 8</td>
+      <td>row 12: 27</td>
+      <td>row 12: 64</td>
+      <td>row 12: 125</td>
+      <td>row 12: 216</td>
+      <td>row 12: 343</td>
+    </tr>
     <tr>
-      <td>row 13: 1
-      <td>row 13: 8
-      <td>row 13: 27
-      <td>row 13: 64
-      <td>row 13: 125
-      <td>row 13: 216
-      <td>row 13: 343
+      <td>row 13: 1</td>
+      <td>row 13: 8</td>
+      <td>row 13: 27</td>
+      <td>row 13: 64</td>
+      <td>row 13: 125</td>
+      <td>row 13: 216</td>
+      <td>row 13: 343</td>
+    </tr>
     <tr>
-      <td>row 14: 1
-      <td>row 14: 8
-      <td>row 14: 27
-      <td>row 14: 64
-      <td>row 14: 125
-      <td>row 14: 216
-      <td>row 14: 343
+      <td>row 14: 1</td>
+      <td>row 14: 8</td>
+      <td>row 14: 27</td>
+      <td>row 14: 64</td>
+      <td>row 14: 125</td>
+      <td>row 14: 216</td>
+      <td>row 14: 343</td>
+    </tr>
     <tr>
-      <td>row 15: 1
-      <td>row 15: 8
-      <td>row 15: 27
-      <td>row 15: 64
-      <td>row 15: 125
-      <td>row 15: 216
-      <td>row 15: 343
+      <td>row 15: 1</td>
+      <td>row 15: 8</td>
+      <td>row 15: 27</td>
+      <td>row 15: 64</td>
+      <td>row 15: 125</td>
+      <td>row 15: 216</td>
+      <td>row 15: 343</td>
+    </tr>
     <tr>
-      <td>row 16: 1
-      <td>row 16: 8
-      <td>row 16: 27
-      <td>row 16: 64
-      <td>row 16: 125
-      <td>row 16: 216
-      <td>row 16: 343
+      <td>row 16: 1</td>
+      <td>row 16: 8</td>
+      <td>row 16: 27</td>
+      <td>row 16: 64</td>
+      <td>row 16: 125</td>
+      <td>row 16: 216</td>
+      <td>row 16: 343</td>
+    </tr>
     <tr>
-      <td>row 17: 1
-      <td>row 17: 8
-      <td>row 17: 27
-      <td>row 17: 64
-      <td>row 17: 125
-      <td>row 17: 216
-      <td>row 17: 343
+      <td>row 17: 1</td>
+      <td>row 17: 8</td>
+      <td>row 17: 27</td>
+      <td>row 17: 64</td>
+      <td>row 17: 125</td>
+      <td>row 17: 216</td>
+      <td>row 17: 343</td>
+    </tr>
     <tr>
-      <td>row 18: 1
-      <td>row 18: 8
-      <td>row 18: 27
-      <td>row 18: 64
-      <td>row 18: 125
-      <td>row 18: 216
-      <td>row 18: 343
+      <td>row 18: 1</td>
+      <td>row 18: 8</td>
+      <td>row 18: 27</td>
+      <td>row 18: 64</td>
+      <td>row 18: 125</td>
+      <td>row 18: 216</td>
+      <td>row 18: 343</td>
+    </tr>
     <tr>
-      <td>row 19: 1
-      <td>row 19: 8
-      <td>row 19: 27
-      <td>row 19: 64
-      <td>row 19: 125
-      <td>row 19: 216
-      <td>row 19: 343
+      <td>row 19: 1</td>
+      <td>row 19: 8</td>
+      <td>row 19: 27</td>
+      <td>row 19: 64</td>
+      <td>row 19: 125</td>
+      <td>row 19: 216</td>
+      <td>row 19: 343</td>
+    </tr>
     <tr>
-      <td>row 20: 1
-      <td>row 20: 8
-      <td>row 20: 27
-      <td>row 20: 64
-      <td>row 20: 125
-      <td>row 20: 216
-      <td>row 20: 343
+      <td>row 20: 1</td>
+      <td>row 20: 8</td>
+      <td>row 20: 27</td>
+      <td>row 20: 64</td>
+      <td>row 20: 125</td>
+      <td>row 20: 216</td>
+      <td>row 20: 343</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -113,6 +113,9 @@ p {
 
 This would make all paragraphs on a page adopt the arial font, which is found on any computer.
 
+> [!NOTE]
+> Scrimba's [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim provides an interactive guide to why fonts are important, web-safe fonts, and how to specify fonts in CSS — along with a challenge to test your knowledge.
+
 #### Web safe fonts
 
 Speaking of font availability, there are only a certain number of fonts that are generally available across all systems and can therefore be used without much worry. These are the so-called **web safe fonts**.
@@ -793,6 +796,6 @@ We hope you enjoyed playing with text in this article! The next article will pro
 ## See also
 
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
-- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

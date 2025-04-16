@@ -91,17 +91,9 @@ We add a "Fix me" button to the HTML from the previous example.
   <p>
     <button type="submit">Submit</button>
     <button type="button" id="report">reportValidity()</button>
+    <button type="button" id="fix">Fix issues</button>
   </p>
-</form>
-```
-
-```html
-<button type="button" id="fix">Fix issues</button>
-```
-
-```html hidden
-   </p>
-<p id="log"></p>
+  <p id="log"></p>
 </form>
 ```
 
