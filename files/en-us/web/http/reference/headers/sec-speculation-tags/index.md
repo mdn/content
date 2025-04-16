@@ -53,7 +53,7 @@ Sec-Speculation-Tags: <tag-list>
 </script>
 ```
 
-If a speculation happens due to a speculation rule with no tag, then `null` is sent in the `Speculation-Rules` header.
+If a speculation happens due to a speculation rule with no tag, then `null` is sent in the `Sec-Speculation-Tags` header.
 
 ```http
 Sec-Speculation-Tags: null
@@ -74,11 +74,36 @@ Sec-Speculation-Tags: null
 </script>
 ```
 
-If a speculation happens due to a speculation rule with a tag, then the tag name is sent in the `Speculation-Rules` header.
+If a speculation happens due to a speculation rule with a tag, then the tag name is sent in the `Sec-Speculation-Tags` header.
 
 ```http
 Sec-Speculation-Tags: "my-rule"
 ```
+
+### Speculation from a rule with multiple tags
+
+The `tag` can be set at multiple levels:
+
+```html
+<script type="speculationrules">
+  {
+    "tag": "my-ruleset",
+    "prefetch": [
+      {
+        "tag": "my-rule",
+        "urls": ["next.html", "next2.html"]
+      }
+    ]
+  }
+</script>
+```
+
+All matching tags are sent in the `Sec-Speculation-Tags` header so in this case both `"my-ruleset"` and `"my-rule"` would be sent:
+
+```http
+Sec-Speculation-Tags: "my-ruleset", "my-rule"
+```
+
 
 ### Speculation from multiple rules
 
@@ -116,7 +141,7 @@ Sec-Speculation-Tags: "my-rule"
 However, if the link is clicked immediately, without waiting for the 200 milliseconds hover, then both rules would have triggered a speculation, so both tags will be included in the header:
 
 ```http
-Sec-Speculation-Tags: "my-rule" "cdn-rule"
+Sec-Speculation-Tags: "my-rule", "cdn-rule"
 ```
 
 ### Speculation from multiple rules with and without tags
@@ -148,7 +173,7 @@ Sec-Speculation-Tags: "my-rule" "cdn-rule"
 Similar to the previous example, if the link is clicked immediately without waiting for the 200 milliseconds hover, both rules would have triggered a speculation, so both tags will be included in the header. However, because the first rule does not include a `tag` field, it is represented in the header with a `null` value:
 
 ```http
-Sec-Speculation-Tags: null "cdn-rule"
+Sec-Speculation-Tags: null, "cdn-rule"
 ```
 
 ## Specifications
