@@ -49,7 +49,7 @@ With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the
 
 ## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`stop-opacity = <number> | <percentage>`)}}
 
 ## Examples
 

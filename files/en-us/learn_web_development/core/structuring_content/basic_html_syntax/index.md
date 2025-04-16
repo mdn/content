@@ -2,9 +2,8 @@
 title: Basic HTML syntax
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 page-type: tutorial-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
@@ -67,6 +66,9 @@ The anatomy of our element is:
 - **The closing tag:** This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.
 
 The element is the opening tag, followed by content, followed by the closing tag.
+
+> [!NOTE]
+> Head on over to our learning partner Scrimba's [HTML tags](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> scrim for an interactive explanation of HTML tags.
 
 ### Active learning: creating your first HTML element
 

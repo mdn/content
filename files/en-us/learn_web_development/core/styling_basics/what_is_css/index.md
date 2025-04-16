@@ -2,9 +2,8 @@
 title: What is CSS?
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
@@ -164,5 +163,10 @@ When the CSS is applied to the HTML, the rendered output is as follows:
 ## Summary
 
 Now that you have some understanding of what CSS is and how it works, let's move on to giving you some practice with writing CSS yourself and explaining the syntax in more detail.
+
+## See also
+
+- [Write your first lines of CSS!](https://scrimba.com/learn-html-and-css-c0p/~0j?via=mdn), Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+  - : This scrim gives a useful rundown of basic CSS syntax, and provides an interactive challenge where you can get some more practice with writing CSS declarations.
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

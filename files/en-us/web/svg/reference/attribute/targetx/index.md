@@ -6,7 +6,7 @@ browser-compat: svg.elements.feConvolveMatrix.targetX
 sidebar: svgref
 ---
 
-The **`targetX`** attribute determines the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image. The leftmost column of the matrix is column number zero. The value must be such that: `0` <= `targetX` < {{SVGAttr("order")}} `X`.
+The **`targetX`** attribute determines the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image. The leftmost column of the matrix is column number zero. The value must be such that: `0` <= `targetX` < `x` of {{SVGAttr("order")}}.
 
 You can use this attribute with the following SVG elements:
 
@@ -22,7 +22,7 @@ You can use this attribute with the following SVG elements:
     </tr>
     <tr>
       <th scope="row">Default value</th>
-      <td><code>floor({{SVGAttr("order")}}X / 2)</code></td>
+      <td><code>floor(<code>x</code> of {{SVGAttr("order")}} / 2)</code></td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

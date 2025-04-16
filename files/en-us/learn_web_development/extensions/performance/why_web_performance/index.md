@@ -2,9 +2,10 @@
 title: The "why" of web performance
 slug: Learn_web_development/Extensions/Performance/why_web_performance
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 Web performance is all about making websites fast, including making slow processes _seem_ fast. This article provides an introduction into why web performance is important to site visitors and for your business goals.
 

@@ -3,9 +3,8 @@ title: What went wrong? Troubleshooting JavaScript
 short-title: Troubleshooting
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 

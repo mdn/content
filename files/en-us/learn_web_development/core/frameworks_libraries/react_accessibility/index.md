@@ -3,9 +3,8 @@ title: Accessibility in React
 short-title: React accessibility
 slug: Learn_web_development/Core/Frameworks_libraries/React_accessibility
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/React_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 

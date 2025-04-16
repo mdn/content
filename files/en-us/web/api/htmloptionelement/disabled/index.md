@@ -27,7 +27,7 @@ A boolean value.
   <option value="lemonade">Lemonade</option>
   <option value="beer">Beer</option>
   <option value="whisky" disabled>Whisky</option>
-</option>
+</select>
 ```
 
 ### JavaScript

@@ -35,10 +35,10 @@ svg {
 
 - {{SVGAttr("d")}}
   - : This attribute defines the shape of the path.
-    _Value type_: **\<string>** ; _Default value_: `''`; _Animatable_: **yes**
+    _Value type_: **\<string>**; _Default value_: `''`; _Animatable_: **yes**
 - {{SVGAttr("pathLength")}}
   - : This attribute lets authors specify the total length for the path, in user units.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: _none_; _Animatable_: **yes**
 
 ## Usage context
 

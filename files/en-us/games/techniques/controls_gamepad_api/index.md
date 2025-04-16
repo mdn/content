@@ -1,5 +1,6 @@
 ---
 title: Implementing controls using the Gamepad API
+short-title: Using the Gamepad API
 slug: Games/Techniques/Controls_Gamepad_API
 page-type: guide
 ---

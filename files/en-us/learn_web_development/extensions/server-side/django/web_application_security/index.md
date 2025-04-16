@@ -3,9 +3,10 @@ title: Django web application security
 short-title: Django security
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Protecting user data is an essential part of any website design. We previously explained some of the more common security threats in the article [Web security](/en-US/docs/Web/Security) — this article provides a practical demonstration of how Django's in-built protections handle such threats.
 

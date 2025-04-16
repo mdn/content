@@ -2,9 +2,8 @@
 title: Django Web Framework (Python)
 slug: Learn_web_development/Extensions/Server-side/Django
 page-type: learn-module
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side")}}
 

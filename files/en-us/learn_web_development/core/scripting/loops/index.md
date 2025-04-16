@@ -3,9 +3,8 @@ title: Looping code
 short-title: Loops
 slug: Learn_web_development/Core/Scripting/Loops
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 

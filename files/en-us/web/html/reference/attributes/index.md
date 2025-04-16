@@ -79,7 +79,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/alt">alt</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/alt">alt</a></code>
       </td>
       <td>
         {{ HTMLElement("area") }},
@@ -130,7 +130,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/autoplay">autoplay</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -222,7 +222,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/cite">cite</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/cite">cite</a></code>
       </td>
       <td>
         {{ HTMLElement("blockquote") }},
@@ -267,7 +267,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/colspan">colspan</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/colspan">colspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -297,7 +297,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/controls">controls</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/controls">controls</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -347,7 +347,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Reference/Global_attributes">Global attribute</a>
@@ -356,7 +356,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/datetime">datetime</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/datetime">datetime</a></code>
       </td>
       <td>
         {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
@@ -430,7 +430,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/download">download</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/download">download</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -474,6 +474,21 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/elementtiming">elementtiming</a></code>
+      </td>
+      <td>
+        {{htmlelement("img")}},
+        {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
+        poster images of {{htmlelement("video")}} elements,
+        elements which have a {{cssxref("background-image")}},
+        and elements containing text nodes, such as a {{htmlelement("p")}}
+      </td>
+      <td>
+        Indicates that an element is flagged for tracking by {{domxref("PerformanceObserver")}} objects using the <code>"element"</code> type. For more details, see the {{domxref("PerformanceElementTiming")}} interface.
+      </td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
@@ -484,7 +499,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/form">form</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -502,7 +517,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/formaction">formaction</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/formaction">formaction</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -515,7 +530,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/formenctype">formenctype</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/formenctype">formenctype</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -531,7 +546,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/formmethod">formmethod</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/formmethod">formmethod</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -547,7 +562,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/formnovalidate">formnovalidate</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/formnovalidate">formnovalidate</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -563,7 +578,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/formtarget">formtarget</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/formtarget">formtarget</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -580,7 +595,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/headers">headers</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/headers">headers</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -636,7 +651,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/href">href</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/href">href</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -646,7 +661,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
@@ -739,7 +754,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/label">label</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/label">label</a></code>
       </td>
       <td>
         {{ HTMLElement("optgroup") }},
@@ -785,7 +800,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/loop">loop</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/loop">loop</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -837,7 +852,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/media">media</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/media">media</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -885,7 +900,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/muted">muted</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/muted">muted</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -897,7 +912,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/name">name</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/name">name</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }}, {{ HTMLElement("form") }},
@@ -928,7 +943,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/open">open</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/open">open</a></code>
       </td>
       <td>
         {{ HTMLElement("details") }},
@@ -998,7 +1013,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/preload">preload</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/preload">preload</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -1021,7 +1036,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/referralpolicy">referrerpolicy</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -1079,7 +1094,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/rowspan">rowspan</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/rowspan">rowspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -1123,7 +1138,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/shape">shape</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/shape">shape</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td></td>
@@ -1144,7 +1159,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/sizes">sizes</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/sizes">sizes</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("img") }},
@@ -1163,7 +1178,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/span">span</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/span">span</a></code>
       </td>
       <td>
         {{ HTMLElement("col") }},
@@ -1182,7 +1197,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/src">src</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/src">src</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -1212,7 +1227,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/srcset">srcset</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/srcset">srcset</a></code>
       </td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("source") }}
@@ -1264,7 +1279,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/target">target</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/target">target</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -1301,7 +1316,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/type">type</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/type">type</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -1318,7 +1333,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/usemap">usemap</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/usemap">usemap</a></code>
       </td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }},
@@ -1328,7 +1343,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/value">value</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/value">value</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }}, {{ HTMLElement("data") }},
@@ -1345,7 +1360,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/width">width</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Reference/Attributes/width">width</a></code>
       </td>
       <td>
         {{ HTMLElement("canvas") }},

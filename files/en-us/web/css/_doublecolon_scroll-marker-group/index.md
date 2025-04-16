@@ -2,10 +2,12 @@
 title: ::scroll-marker-group
 slug: Web/CSS/::scroll-marker-group
 page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.scroll-marker-group
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`::scroll-marker-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is generated inside a {{glossary("scroll container")}} and contains any {{cssxref("::scroll-marker")}} pseudo-elements generated on descendants of the scroll container.
 
@@ -37,7 +39,7 @@ This demo is a carousel of single pages, with each item taking up the full page.
 
 #### HTML
 
-The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Element/ul), with each [list item](/en-US/docs/Web/HTML/Element/li) containing some sample content:
+The HTML consists of an [unordered list](/en-US/docs/Web/HTML/Reference/Elements/ul), with each [list item](/en-US/docs/Web/HTML/Reference/Elements/li) containing some sample content:
 
 ```html live-sample___carousel-example live-sample___carousel-example_final
 <ul>

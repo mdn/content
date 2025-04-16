@@ -2,9 +2,8 @@
 title: Responsive design
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 

@@ -3,9 +3,8 @@ title: Making decisions in your code — conditionals
 short-title: Conditionals
 slug: Learn_web_development/Core/Scripting/Conditionals
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 

@@ -3,9 +3,8 @@ title: "Test your skills: Variables"
 short-title: Variables
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 page-type: learn-module-assessment
+sidebar: learnsidebar
 ---
-
-{{learnsidebar}}
 
 The aim of this skill test is to assess whether you've understood our [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables) article.
 

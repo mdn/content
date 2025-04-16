@@ -3,9 +3,10 @@ title: "Django Tutorial Part 2: Creating a skeleton website"
 short-title: "2: Skeleton website"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 page-type: learn-module-chapter
+sidebar: learnsidebar
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 This second article in our [Django Tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) shows how you can create a "skeleton" website project as a basis, which you can then populate with site-specific settings, paths, models, views, and templates.
 
