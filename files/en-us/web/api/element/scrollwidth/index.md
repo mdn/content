@@ -21,10 +21,6 @@ as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content c
 without a need for horizontal scrollbar, its `scrollWidth` is equal to
 {{domxref("Element.clientWidth", "clientWidth")}}.
 
-> [!NOTE]
-> This property will round the value to an integer. If you need a fractional value,
-> use {{domxref("Element.getBoundingClientRect()")}}.
-
 ## Value
 
 An integer.
@@ -124,4 +120,5 @@ Click the buttons to check if the content is overflowing the containers.
 ## See also
 
 - {{domxref("Element.clientWidth")}}
+- {{domxref("Element.getBoundingClientRect()")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
